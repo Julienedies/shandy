@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jHandy</title>
+</head>
+<body>
+<h1>Hello jHandy!</h1>
+We are using node <script>document.write(process.versions.node)</script>,
+<br/>
+Chrome <script>document.write(process.versions.chrome)</script>,
+<br/>
+and Electron <script>document.write(process.versions.electron)</script>.
+
+<canvas id="canvas"></canvas>
+<div id="message"></div>
+
+<script>
+    require('./renderer-process/index')
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "jhandy",
+  "version": "1.0.0",
+  "description": "self use",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julienedies/jHandy.git"
+  },
+  "author": "julienedies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Julienedies/jHandy/issues"
+  },
+  "homepage": "https://github.com/Julienedies/jHandy#readme",
+  "devDependencies": {
+    "electron": "^2.0.1"
+  },
+  "dependencies": {
+  }
+}
