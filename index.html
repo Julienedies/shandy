@@ -1,8 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>jHandy</title>
+    <style>
+        html{
+            font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        body{
+        }
+        button{
+            font-size:1.5em;
+            display: inline-block;
+            padding:3px 5px;
+        }
+    </style>
 </head>
 <body>
 <h1>Hello jHandy!</h1>
@@ -15,8 +29,17 @@ and Electron <script>document.write(process.versions.electron)</script>.
 <canvas id="canvas"></canvas>
 <div id="message"></div>
 
+<div>
+    <button id="ycj">云财经</button>
+    <button id="company">个股资料</button>
+    <button>官网</button>
+    <br/>
+    <input type="checkbox" id="openByChrome">总是外部浏览器打开</input>
+</div>
+
 <script>
-    require('./renderer-process/index')
+    require('./assets/js/vendor/jquery.min.js');
+    require('./renderer-process/index');
 </script>
 </body>
 </html>
