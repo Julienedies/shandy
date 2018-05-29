@@ -12,6 +12,7 @@ const clipboard = electron.clipboard;
 const screenshot = require('../libs/screenshot.js');
 const baiduOcr = require('../libs/baidu-ocr.js');
 const checkStockCode = require('../libs/check-stock-code');
+//const tdx = require('../libs/tdx.js');
 
 let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
 
@@ -22,13 +23,17 @@ win.loadURL('http://basic.10jqka.com.cn/000001/');
 win.show();
 
 let currentCode;
+let noOpen = false;
 let isOpenByChrome = false;
 let domCanvas = document.getElementById('canvas');
 let $openByChrome = $('#openByChrome').on('click', function(){
     isOpenByChrome = !isOpenByChrome;
 });
+$('#noOpen').on('click', function(){
+    noOpen = !noOpen;
+});
 
-$('#ycj').on('click', function(e){
+let $ycj = $('#ycj').on('click', function(e){
     var prefix_code = (/^6/.test(currentCode) ? 'sh' : 'sz') + currentCode;
     var ycj_url = 'http://www.yuncaijing.com/quote/*.html'.replace('*', prefix_code);
     shell.openExternal(ycj_url);
@@ -46,7 +51,7 @@ function drawImage(dataUrl){
 function screenshotWrap (){
     screenshot({
         returnType: 'dataUrl',
-        crop: {x: 2372,y: 88, width: 200,height: 42},
+        crop: {x: 2372,y: 88, width: 220,height: 42},
         callback: function(dataUrl){
             drawImage(dataUrl);
             baiduOcr({
@@ -55,8 +60,12 @@ function screenshotWrap (){
                     let code = currentCode = checkStockCode(words);
                     let ths_url = 'http://basic.10jqka.com.cn/*/'.replace('*', code );
                     clipboard.writeText(code);
+                    if(noOpen){
+                        return;
+                    }
                     if(isOpenByChrome){
-                        shell.openExternal(ths_url);
+                        $ycj.click();
+                        //shell.openExternal(ths_url);
                     }else{
                         win.loadURL(ths_url);
                         win.focus();
@@ -77,5 +86,15 @@ ipc.on('screenshot', function (event, arg) {
 });
 
 
+$('#test').on('click', function(){
+
+/*    setTimeout(function(){
+        tdx(['.','+','.','enter']);
+        //tdx(['2', '1', 'enter']);
+        console.log(new Date);
+    },3000);*/
+
+
+});
 
 

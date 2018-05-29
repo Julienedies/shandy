@@ -18,8 +18,28 @@
   },
   "homepage": "https://github.com/Julienedies/jHandy#readme",
   "devDependencies": {
-    "electron": "^2.0.1"
+    "electron": "^2.0.1",
+    "iohook": "^0.1.16",
+    "keypress": "^0.2.1",
+    "messenger": "0.0.9",
+    "robotjs": "^0.5.1"
   },
   "dependencies": {
+    "artyom.js": "^1.0.6",
+    "iohook": "^0.1.16"
+  },
+  "iohook": {
+    "targets": [
+      "node-59",
+      "electron-54"
+    ],
+    "platforms": [
+      "win32",
+      "darwin"
+    ],
+    "arches": [
+      "x64",
+      "ia32"
+    ]
   }
 }

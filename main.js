@@ -2,12 +2,24 @@
  * Created by j on 18/5/21.
  */
 
+const path = require('path');
+
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const globalShortcut = electron.globalShortcut;
 
-const path = require('path');
+//const messenger = require('messenger');
+
+//const tdx = require('./libs/tdx.js');
+
+//const server = messenger.createListener(8001);
+
+//server.on('tdx', function(m, data){
+    //console.log(data);1
+    //tdx(data.msg);
+    //m.reply({greetings:'server 1 got some data'});
+//});
 
 // 保持一个对于 window 对象的全局引用，如果你不这样做，
 // 当 JavaScript 对象被垃圾回收， window 会被自动地关闭
@@ -45,11 +57,7 @@ function ready() {
     createWindow();
 
     globalShortcut.register('CommandOrControl+Alt+x', function () {
-        mainWindow.webContents.send('screenshot', 1)
-    });
-
-    globalShortcut.register('Alt+z', function () {
-        mainWindow.webContents.send('screenshot', 1)
+        mainWindow.webContents.send('screenshot', 1);
     });
 
 }
