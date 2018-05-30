@@ -25,6 +25,7 @@
     "robotjs": "^0.5.1"
   },
   "dependencies": {
+    "applescript": "^1.0.0",
     "artyom.js": "^1.0.6",
     "iohook": "^0.1.16"
   },

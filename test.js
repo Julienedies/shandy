@@ -1,10 +1,11 @@
 /**
  * Created by j on 18/5/27.
  */
-// Using the /build/artyom.js file
 
-    require('artyom.js');
 
-const Jarvis = new Artyom();
+const applescript = require('applescript');
 
-Jarvis.say("Hello World !");
+applescript.execFile('./applescript/get_stock_name.scpt', function (err, result) {
+    if (err) return console.error(err);
+    console.log(result)
+});

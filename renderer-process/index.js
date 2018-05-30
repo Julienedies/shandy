@@ -33,10 +33,14 @@ $('#noOpen').on('click', function(){
     noOpen = !noOpen;
 });
 
+let get_ycj_url = function(){
+    let prefix_code = (/^6/.test(currentCode) ? 'sh' : 'sz') + currentCode;
+    return 'http://www.yuncaijing.com/quote/*.html'.replace('*', prefix_code);
+};
+
+
 let $ycj = $('#ycj').on('click', function(e){
-    var prefix_code = (/^6/.test(currentCode) ? 'sh' : 'sz') + currentCode;
-    var ycj_url = 'http://www.yuncaijing.com/quote/*.html'.replace('*', prefix_code);
-    shell.openExternal(ycj_url);
+    shell.openExternal(get_ycj_url());
 });
 
 function drawImage(dataUrl){
@@ -48,6 +52,26 @@ function drawImage(dataUrl){
     image.src = dataUrl;
 }
 
+function showStock(words){
+    let code = currentCode = checkStockCode(words);
+    let ths_url = 'http://basic.10jqka.com.cn/*/'.replace('*', code );
+    clipboard.writeText(code);
+    if(noOpen){
+        return;
+    }
+    if(isOpenByChrome){
+        $ycj.click();
+        //shell.openExternal(ths_url);
+    }else{
+        win.loadURL(ths_url);
+        win.focus();
+        setTimeout(function(){
+            win.loadURL('http://basic.10jqka.com.cn/*/company.html'.replace('*', code));
+        },15 * 1000);
+    }
+}
+
+
 function screenshotWrap (){
     screenshot({
         returnType: 'dataUrl',
@@ -56,33 +80,19 @@ function screenshotWrap (){
             drawImage(dataUrl);
             baiduOcr({
                 image: dataUrl,
-                callback: function(words){
-                    let code = currentCode = checkStockCode(words);
-                    let ths_url = 'http://basic.10jqka.com.cn/*/'.replace('*', code );
-                    clipboard.writeText(code);
-                    if(noOpen){
-                        return;
-                    }
-                    if(isOpenByChrome){
-                        $ycj.click();
-                        //shell.openExternal(ths_url);
-                    }else{
-                        win.loadURL(ths_url);
-                        win.focus();
-                    }
-                }
+                callback: showStock
             });
-
         }
     });
 }
 
 
 // 接收主进程发来的按下截图快捷键消息
-ipc.on('screenshot', function (event, arg) {
+ipc.on('stock_code', function (event, arg) {
     console.log(arg);
     const message = `异步消息回复: ${arg}`;
-    screenshotWrap();
+    let words = '通达信金融终端V7.38 - [组合图-天首发展]'.replace('通达信金融终端V7.38 - [组合图-', '').replace(']','');
+    showStock(words);
 });
 
 

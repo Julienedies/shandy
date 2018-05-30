@@ -9,6 +9,8 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const globalShortcut = electron.globalShortcut;
 
+const applescript = require('applescript');
+
 //const messenger = require('messenger');
 
 //const tdx = require('./libs/tdx.js');
@@ -57,7 +59,14 @@ function ready() {
     createWindow();
 
     globalShortcut.register('CommandOrControl+Alt+x', function () {
-        mainWindow.webContents.send('screenshot', 1);
+        applescript.execFile('./applescript/get-stock-name.scpt', function (err, result) {
+            if (err) {
+                return console.error(err);
+            }
+            console.log(result, typeof result);
+            mainWindow.webContents.send('stock_code', result);
+        });
+        //mainWindow.webContents.send('screenshot', 1);
     });
 
 }
