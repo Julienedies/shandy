@@ -1,5 +1,6 @@
 /**
  * Created by j on 18/5/26.
+ * @todo 接收字符串参数
  */
 
 const stocks = require('../stocks.json');
