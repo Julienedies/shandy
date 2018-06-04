@@ -9,9 +9,9 @@ function voiceWarning(){
 var list = [];
 
 $('#mistake li').each(function(){
-    list.push($(this).text());
+    let text = $(this).text();
+    text && list.push(text);
 });
-
 
 var speechSU = new window.SpeechSynthesisUtterance();
 
