@@ -7,9 +7,8 @@ const stocks = require('../stocks.json');
 
 // words = '天首发展000611' or '天首发展'
 module.exports = function (words) {
-
-    let matchs = words.match(/([\u4e00-\u9fa5]+[A]?)(\d{4,6})?/) || ['', '', ''];
-    console.log(matchs);
+    let matchs = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]+[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
+    console.log( matchs);
     let name = matchs[1];
     let code = matchs[2];
     let _code;

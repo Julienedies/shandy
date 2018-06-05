@@ -2,6 +2,8 @@
  * Created by j on 18/5/22.
  */
 
+const path = require('path');
+
 const electron = require('electron');
 const electronScreen = electron.screen;
 const shell = electron.shell;
@@ -9,13 +11,11 @@ const BrowserWindow = electron.remote.BrowserWindow;
 const ipc = electron.ipcRenderer;
 const clipboard = electron.clipboard;
 
-const path = require('path');
-
 const screenshot = require('../libs/screenshot.js');
 const baiduOcr = require('../libs/baidu-ocr.js');
 const checkStockCode = require('../libs/check-stock-code.js');
-const ac = require('../libs/ac.js');
 const stockUrl = require('../libs/stockUrl.js');
+const ac = require('../libs/ac.js');
 
 let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
 
