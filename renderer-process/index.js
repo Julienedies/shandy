@@ -45,7 +45,9 @@ $('#noOpen').on('click', function(){
 });
 
 let $ycj = $('#ycj').on('click', function(e){
-    shell.openExternal(stockUrl(currentCode, 7));
+    ac.getStockName(function(code){
+        shell.openExternal(stockUrl(code, 7));
+    });
 });
 
 function drawImage(dataUrl){
@@ -57,18 +59,19 @@ function drawImage(dataUrl){
     image.src = dataUrl;
 }
 
-function showStock(words){
-    let code =  checkStockCode(words);
-    if(code == currentCode) {
-        return;
-    }
+function showStock(code){
     if(code){
+        if(code == currentCode) {
+            return;
+        }
+        currentCode = code;
         clipboard.writeText(code);
+
         if(noOpen){
             return;
         }
         if(isOpenByChrome){
-            shell.openExternal(stockUrl(code, 1));
+            shell.openExternal( stockUrl(code, 1) + '?self=1' );
             ac.activeTdx();
         }else{
             stockWin = stockWin || createWin();
@@ -134,8 +137,8 @@ voiceWarning();
 function getStockNameTimer(){
     let timer;
     function f(){
-        ac.getStockName(function(result){
-            showStock(result);
+        ac.getStockName(function(code){
+            showStock(code);
         });
     }
     $('#getStockNameTimer').on('change', function(){

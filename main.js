@@ -51,8 +51,8 @@ function ready() {
     createWindow();
 
     globalShortcut.register('CommandOrControl+Alt+x', function () {
-        ac.getStockName(function(result){
-            mainWindow.webContents.send('stock_code', result);
+        ac.getStockName(function(code){
+            mainWindow.webContents.send('stock_code', code);
         });
     });
 
