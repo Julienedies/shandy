@@ -110,7 +110,7 @@ Rts.prototype = {
         return (/^6/.test(code) ? 'sh' : 'sz') + code;
     },
     clear: function(){
-        clearInterval(this.interval);
+        clearInterval(this.timer);
     },
     config: function(conf){
     },
