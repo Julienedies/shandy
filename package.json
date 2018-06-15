@@ -30,7 +30,8 @@
     "artyom.js": "^1.0.6",
     "iconv-lite": "^0.4.23",
     "iohook": "^0.1.16",
-    "request": "^2.87.0"
+    "request": "^2.87.0",
+    "underscore": "^1.9.1"
   },
   "iohook": {
     "targets": [

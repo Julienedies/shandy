@@ -16,6 +16,9 @@
             display: inline-block;
             padding:3px 5px;
         }
+        div[ic-ctrl="rtsCtrl"] button{
+            margin-right:20px;
+        }
     </style>
 </head>
 <body>
@@ -38,9 +41,17 @@ and Electron <script>document.write(process.versions.electron)</script>.
     <br/>
     <input type="checkbox" id="openByChrome" checked>总是外部浏览器打开</input>
     <br/>
-    <input type="text" id="stock_code">
-    <button id="add">添加</button>&nbsp;&nbsp;&nbsp;<button id="change">改变</button>&nbsp;&nbsp;&nbsp;<button id="clear">暂停</button>
-    &nbsp;&nbsp;&nbsp;<button id="query">继续</button>
+    <div ic-ctrl="rts_ctrl">
+        <input type="text" id="stock_code" value="002917">
+        <br/>
+        <button ic-click="add">添加</button>
+        <button ic-click="change">改变</button>
+        <button ic-click="pause">暂停</button>
+        <button ic-click="clear">清除</button>
+        <button ic-click="query">继续</button>
+        <button ic-click="reset">重置</button>
+    </div>
+
     <div>
         <input type="checkbox" id="voiceWarning">交易错误语音警醒</input>
     </div>
@@ -50,8 +61,11 @@ and Electron <script>document.write(process.versions.electron)</script>.
 </div>
 
 <script>
+    var _ = require('underscore');
+    //require('./assets/js/vendor/underscore.js');
     require('./assets/js/vendor/jquery.min.js');
-    require('./renderer-process/index');
+    require('./assets/js/brick/0.7/brick.js');
+    require('./renderer-process/index.js');
 </script>
 </body>
 </html>
