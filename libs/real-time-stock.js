@@ -8,31 +8,32 @@ const iconv = require('iconv-lite');
 
 const _ = require('underscore');
 
-module.exports = function(code, callback){
+module.exports = function (code, callback) {
     return new Rts(code, callback);
 };
 
-function Rts(code, callback){
+function Rts(code, callback) {
     let _opt = {};
-    if(typeof code == 'object'){
+    if (typeof code == 'object') {
+
         let opt = code;
         Object.assign(this, _opt, opt);
         code = opt.code;
         callback = this.callback;
         let api = this.stock_api;
-        if(api == 'qq' || api == 'sina'){
+        if (api == 'qq' || api == 'sina') {
             this.stock_api = this[api];
         }
 
         this.codes = this._codes(code);
         this.createUrl();
 
-    }else if(code == 'qq' || code == 'sina'){
+    } else if (code == 'qq' || code == 'sina') {
 
         this.stock_api = this[code];
         this.callback = callback;
 
-    }else{
+    } else {
 
         this.codes = this._codes(code);
         this.callback = callback;
@@ -43,78 +44,95 @@ function Rts(code, callback){
 }
 
 Rts.prototype = {
-    codes:[],
+    codes: [],
     url: '',
     timer: null,
     interval: 2,
     stock_api: 'http://qt.gtimg.cn/q=*',
-    qq:'http://qt.gtimg.cn/q=*',
+    qq: 'http://qt.gtimg.cn/q=*',
     sina: 'https://hq.sinajs.cn/list=*',
-    query: function(){
+    query: function () {
         let that = this;
         let interval = this.interval;
         clearInterval(this.timer);
-        if(interval){
-            this.timer = setInterval(function(){
+        if (interval) {
+            this.timer = setInterval(function () {
                 that._query();
             }, 1000 * interval);
-        }else{
+        } else {
             this._query();
         }
     },
-    _query: function(){
+    _query: function () {
         var that = this;
-        //let url = this.url;
         let options = {
             url: this.url,
-            encoding : null
+            encoding: null
         };
         request(options, function (error, response, body) {
-            error && console.log('error:', error);
+            if(error){
+                console.log('error:', error);
+                return that.callback('出现错误！');
+            }
             //console.log('statusCode:', response && response.statusCode);
             //console.log('body:', body);
             body = iconv.decode(body, 'GBK');
             let arr = that.parse(body);
             let item;
-            while(item = arr.shift()){
+            while (item = arr.shift()) {
                 console.log(item);
                 that.callback(item);
             }
         });
     },
-    parse: function(str){
-        let that = this;
+    /*
+     * qq: http://qt.gtimg.cn/q=sz000858
+     * v_sz000858="51~五 粮 液~000858~83.25~84.41~84.00~240696~114844~125666~83.25~628~83.24~8~83.23~22~83.22~6~83.21~66~83.26~194~83.27~8~83.28~134~83.29~71~83.30~189~15:00:04/83.25/2580/S/21475670/9656|14:57:01/83.26/57/S/474580/9570|14:56:58/83.28/23/B/191556/9568|14:56:55/83.25/31/S/258188/9566|14:56:52/83.26/64/S/532873/9564|14:56:49/83.25/102/S/849439/9562~20180615150130~-1.16~-1.37~84.51~82.61~83.25/240696/2003984497~240696~200398~0.63~29.24~~84.51~82.61~2.25~3159.98~3231.44~5.42~92.85~75.97~0.71~134~83.27~16.25~33.40";
+     *
+     * sina: http://hq.sinajs.cn/list=sh601006  （可以一次性请求多个如： https://hq.sinajs.cn/list=sh601003,sh601001）
+     * var hq_str_sh601006=”大秦铁路, 27.55, 27.25, 26.91, 27.55, 26.20, 26.91, 26.92,
+     22114263, 589824680, 4695, 26.91, 57590, 26.90, 14700, 26.89, 14300,
+     26.88, 15100, 26.87, 3100, 26.92, 8900, 26.93, 14230, 26.94, 25150, 26.95, 15220, 26.96, 2008-01-11, 15:05:32”;
+     */
+    parse: function (str) {
+        let api = this.stock_api;
+        let qq = this.qq;
+        let sina = this.sina;
         let arr = str.split(/;\s*/);
-        arr = arr.filter(function(v){
+        arr = arr.filter(function (v) {
             return v.length;
         });
-        return arr.map(function(v){
+        return arr.map(function (v) {
             let arr = v.split('=');
             let code = arr[0].match(/\d{6}/)[0];
-            arr = arr[1].split(/[~,]/);
-            if(that.stock_api == that.qq){
-                return {code: arr[2], name: arr[1], v: arr[6], b1: arr[10], p: arr[9]};
-            } else if(that.stock_api == that.sina){
-                return {code: code, name: arr[0], v: arr[8], b1: arr[10], p: arr[11]};
+            arr = arr[1].replace('"','').split(/[~,]/);
+            if (api == qq) {
+                return {code: arr[2], name: arr[1], v: arr[6] *1 , b1: arr[10] * 1, p: arr[9]};
+            } else if (api == sina) {
+                return {code: code, name: arr[0], v: Math.floor(arr[8]/100), b1: Math.floor(arr[10]/100), p: arr[11]};
             }
         });
     },
-    add: function(code){
+    add: function (code) {
         let codes = this._codes(code);
         this.codes = this.codes.concat(codes);
         this.codes = _.uniq(this.codes);
         this.update();
     },
-    change: function(code){
+    change: function (code) {
         this.codes = this._codes(code);
         this.update();
     },
-    update: function(){
+    remove: function (code){
+        this.codes = _.without(this.codes, code);
+        this.update();
+    },
+    update: function () {
         this.createUrl();
     },
-    createUrl: function(){
+    createUrl: function () {
         let codes = this.codes;
-        if(!codes.length){
+        if (!codes.length) {
             return;
         }
         codes = codes.map(this._prefix);
@@ -122,37 +140,39 @@ Rts.prototype = {
         this.url = this.stock_api.replace('*', codes);
         this.query();
     },
-    _codes: function(code){
+    _toggle: function(){
+        this.stock_api = this.stock_api == this.qq ? this.sina : this.sina;
+        this.createUrl();
+    },
+    _codes: function (code) {
         let codes;
-        if(Array.isArray(code)){
+        if (Array.isArray(code)) {
             return code;
-        }else{
+        } else {
             return code.split(',');
         }
     },
-    _prefix: function(code){
+    _prefix: function (code) {
         return (/^6/.test(code) ? 'sh' : 'sz') + code;
     },
-    pause: function(){
+    pause: function () {
         clearInterval(this.timer);
     },
-    clear: function(){
+    clear: function () {
         this.codes = [];
         clearInterval(this.timer);
     },
-    config: function(conf){
+    config: function (conf) {
     },
-    callback: function(data){
-        let arr = data.split('=');
-        arr = arr[1].split('~');
+    callback: function (data) {
         console.log(data);
     }
 };
 
 /*new Rts('601138', function(data){
-    let arr = data.split('=');
-    arr = arr[1].split('~');
-    arr.forEach(function(v, i){
-        console.log(i, '  ', v);
-    });
-});*/
+ let arr = data.split('=');
+ arr = arr[1].split('~');
+ arr.forEach(function(v, i){
+ console.log(i, '  ', v);
+ });
+ });*/

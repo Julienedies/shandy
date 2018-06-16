@@ -4,16 +4,26 @@
  * ac : apple script
  */
 
+const fs = require('fs');
 const path = require('path');
 const applescript = require('applescript');
+
+const iconv = require('iconv-lite');
 
 const config = require('../config.json');
 
 const checkStockCode = require('./check-stock-code.js');
 
-function _exec(fileName, callback){
+function _exec(fileName, args, callback){
+
     let filePath = path.join(config.dir.ac_dir, '*.scpt'.replace('*', fileName));
-    applescript.execFile(filePath, function (err, result) {
+
+    if(!Array.isArray(args)){
+        callback = args;
+        args = [];
+    }
+
+    applescript.execFile(filePath, args, function (err, result) {
         if (err) {
             return console.error(err);
         }
@@ -38,6 +48,42 @@ module.exports = {
     },
     activeTdx: function(){
         _exec('active-tdx');
+    },
+    keystroke: function(code){
+
+        return _exec('keystroke');
+
+        const chardet = require('chardet');
+        //let encode = chardet.detectFileSync(file); //windows-1252
+        let encode = chardet.detectFileSync(path.join(config.dir.ac_dir, 'xx.scpt')); //windows-1252
+        return console.log(encode);
+
+        let file = path.join(config.dir.ac_dir, 'keystroke.scpt');
+        let _file = file.replace(/(\w+\.scpt)$/, '_$1');
+        //let str = fs.readFileSync(file, 'windows-1252');
+
+
+        fs.createReadStream(file)
+            .pipe(iconv.decodeStream('win1252'))
+            .pipe(process.stdout)
+            //.pipe(iconv.encodeStream('utf-8'))
+            //.pipe(fs.createWriteStream(_file));
+
+
+
+        //let str = fs.readFileSync(_file, 'utf-8').replace('*', code);
+        //console.log(str);
+
+        //fs.writeFileSync(file, str, 'utf8');
+
+        //_exec('__keystroke');
+
+        /*applescript.execString(script, function(err, result) {
+            if (err) {
+                return console.error(err);
+            }
+            console.log(result);
+        });*/
     }
 
 };

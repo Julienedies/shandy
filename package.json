@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Julienedies/jHandy#readme",
   "devDependencies": {
+    "debug-menu": "^0.6.1",
     "electron": "^2.0.1",
+    "electron-debug": "^2.0.0",
     "iohook": "^0.1.16",
     "keypress": "^0.2.1",
     "messenger": "0.0.9",

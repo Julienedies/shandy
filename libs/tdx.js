@@ -5,19 +5,50 @@
 
 const robot = require("robotjs");
 
+const ac = require('./ac.js');
+
 function keyTap(keys){
     let key = keys.shift();
     console.log(key);
+    let delay = 200;
     if(key){
-        robot.keyTap(key);
-        //setTimeout(function(){
+        if(key == 'enter') delay = 350;
+        setTimeout(function(){
+            robot.keyTap(key);
             keyTap(keys);
-        //}, 300);
+        }, delay);
     }
-
 }
 
-module.exports = function(msg){
+
+module.exports = {
+
+    active: function(){
+        ac.activeTdx();
+    },
+    _show:{},
+    show: function(code){
+        let _show = this._show;
+        console.log(+new Date - _show[code]);
+        if(_show[code] && +new Date - _show[code] < 1000 * 60 * 2){
+            return;  //避免短时间不断重复
+        }
+        let keys = code.split('');
+        keys.push('enter');
+        this.active();
+        keyTap(keys);
+        this._show[code] = +new Date;
+    }
+
+
+
+
+
+};
+
+
+
+/*module.exports = function(msg){
 
     if(Array.isArray(msg)){
         return keyTap(msg);
@@ -43,5 +74,5 @@ module.exports = function(msg){
     }
 
 
-};
+};*/
 

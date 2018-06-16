@@ -10,6 +10,10 @@ const BrowserWindow = electron.remote.BrowserWindow;
 
 const config = require('../config.json');
 
+let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
+
+
+
 module.exports = function win(opt){
     return new Win(opt);
 };
