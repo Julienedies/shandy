@@ -56,6 +56,12 @@ function ready() {
         });
     });
 
+    globalShortcut.register('CommandOrControl+Alt+z', function () {
+        ac.getStockName(function(code){
+            mainWindow.webContents.send('real-time-stock', code);
+        });
+    });
+
 }
 
 // Electron 会在初始化后并准备

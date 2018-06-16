@@ -50,10 +50,12 @@ getStockNameTimer();*/
 ipc.on('stock_code', function (event, arg) {
     const message = `异步消息回复: ${arg}`;
     view_stock(arg);
-    rtsc(arg);
+    rtsc.on_view_stock(arg);
 });
 
-
+ipc.on('real-time-stock', function (event, arg) {
+    rtsc.on_real_time_stock(arg);
+});
 
 
 

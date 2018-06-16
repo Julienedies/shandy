@@ -10,6 +10,53 @@ const _objm = require('../../libs/objm.js');
 const tdx = require('../../libs/tdx.js');
 
 
+window.objm = _objm();
+window.voice = voice;
+
+function f(stock) {
+    console.log(stock);
+    if(typeof stock == 'string') {
+        return voice(stock);
+    }
+    // stock => {code: code, name: name, b1: 买一量, v:成交量, p: price}
+    //return voice(stock.name + ' ' + stock.b1 + '手');
+
+    let s_first = '_first';
+    let code = stock.code;
+    let b1 = stock.b1;
+    let v = stock.v;
+
+    let p_stock = objm.get(code);
+
+    if(p_stock){
+        let threshold = objm.get('threshold');
+        let p_b1 = p_stock.b1;
+        let p_v = p_stock.v;
+        let bx = -1000;
+        let vx = 2000;
+        /* 如果当前打板封单相对于上次封单减少量超过阈值,
+         * 或者当前成交量相对于上次成交量增加量超过阈值
+         * 发出声音预警并显示股票撤单界面
+         */
+        if(p_b1 - b1 > bx || p_v - v > vx){
+            let t = stock.name + ' ' + stock.b1 + '手';
+            voice(t);
+            tdx.show(code);
+            objm.set(code, stock);
+        }
+    }else{
+        objm.set('threshold', 15);
+        objm.set(code + s_first, stock);
+        objm.set(code, stock);
+    }
+
+}
+
+let q_rtso = rts('qq', f);
+let s_rtso = rts('sina', f);
+
+
+
 let $stock_code = $('#stock_code');
 
 brick.controllers.reg('rts_ctrl', function (scope) {
@@ -17,8 +64,6 @@ brick.controllers.reg('rts_ctrl', function (scope) {
     let $elm = scope.$elm;
     let $stock_code = $elm.find('#stock_code');
 
-    window.objm = _objm();
-    window.voice = voice;
 
     objm.on('*', function(e, msg){
         console.log('on', e);
@@ -28,47 +73,7 @@ brick.controllers.reg('rts_ctrl', function (scope) {
         scope.render('list', model);
     });
 
-    function f(stock) {
-        console.log(stock);
-        if(typeof stock == 'string') {
-            return voice(stock);
-        }
-        // stock => {code: code, name: name, b1: 买一量, v:成交量, p: price}
-        //return voice(stock.name + ' ' + stock.b1 + '手');
 
-        let s_first = '_first';
-        let code = stock.code;
-        let b1 = stock.b1;
-        let v = stock.v;
-
-        let p_stock = objm.get(code);
-
-        if(p_stock){
-            let threshold = objm.get('threshold');
-            let p_b1 = p_stock.b1;
-            let p_v = p_stock.v;
-            let bx = -1000;
-            let vx = 2000;
-            /* 如果当前打板封单相对于上次封单减少量超过阈值,
-             * 或者当前成交量相对于上次成交量增加量超过阈值
-             * 发出声音预警并显示股票撤单界面
-             */
-            if(p_b1 - b1 > bx || p_v - v > vx){
-                let t = stock.name + ' ' + stock.b1 + '手';
-                voice(t);
-                tdx.show(code);
-                objm.set(code, stock);
-            }
-        }else{
-            objm.set('threshold', 15);
-            objm.set(code + s_first, stock);
-            objm.set(code, stock);
-        }
-
-    }
-
-    let q_rtso = rts('qq', f);
-    let s_rtso = rts('sina', f);
 
     scope.reset = function () {
     };
@@ -103,6 +108,15 @@ brick.controllers.reg('rts_ctrl', function (scope) {
 });
 
 
-module.exports = function(code){
-    $stock_code.val(code);
+
+module.exports = {
+
+    on_view_stock: function(code){
+        $stock_code.val(code);
+    },
+    on_real_time_stock: function(code){
+        q_rtso.add(code);
+    }
 };
+
+
