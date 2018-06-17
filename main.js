@@ -6,12 +6,15 @@ const path = require('path');
 
 const electron = require('electron');
 const app = electron.app;
+const ipcMain = electron.ipcMain;
 const BrowserWindow = electron.BrowserWindow;
 const globalShortcut = electron.globalShortcut;
 
 global.AC_DIR = path.join(__dirname, './applescript/');
 
 console.log(global.AC_DIR);
+
+const server = require('./server/server.js');
 
 const ac = require('./libs/ac.js');
 
@@ -60,6 +63,11 @@ function ready() {
         ac.getStockName(function(code){
             mainWindow.webContents.send('real-time-stock', code);
         });
+    });
+
+    ipcMain.on('rts-push', (event, arg) => {
+        //console.log(arg);
+        server.push('rts', arg);
     });
 
 }

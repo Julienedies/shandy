@@ -28,7 +28,7 @@ function createWin() {
     return win;
 }
 
-function showStock(code){
+function view_stock(code){
 
     if(code){
 
@@ -81,4 +81,4 @@ brick.controllers.reg('view_stock_ctrl', function(scope){
 });
 
 
-module.exports = showStock;
+module.exports = view_stock;

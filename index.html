@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>jHandy</title>
-    <link rel="stylesheet" href="js/brick/0.7/brick.css" />
+    <link rel="stylesheet" href="js/brick/0.7/brick.mobile.css" />
     <link rel="stylesheet" href="css/photon/css/photon.min.css"/>
     <style>
         html,body {
             font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
             font-size: 20px;
             line-height: 1.6;
+            overflow: auto;
         }
 
         body {
@@ -30,6 +31,11 @@
             padding: 20px 20px;
             border-bottom: solid 1px #ccc;
         }
+        ul{
+            list-style: none;
+            margin:0;
+            padding:0;
+        }
     </style>
 </head>
 <body>
@@ -40,6 +46,13 @@
         <section style="height: 140px;">
             <button id="test">test</button>
         </section>
+
+        <section ic-ctrl="voice_warning_ctrl">
+            <input type="checkbox" id="voiceWarning">&nbsp;交易错误语音警醒</input>
+        </section>
+        <!--<section>
+            <input type="checkbox" id="getStockNameTimer"> 定时获取股票名称</input>
+        </section>-->
 
         <section class="" ic-ctrl="view_stock_ctrl">
             <button ic-click="go_ycj">云财经</button>
@@ -53,29 +66,27 @@
         </section>
 
         <section ic-ctrl="rts_ctrl">
-            <div ic-tpl="list">
+            <div id="rts_list" ic-tpl="list">
                 <ul>
-                    <li ic-for="i,v in model" code="{{v.code}}" ic-click="fill">{{v.code}} {{v.name}}</li>
+                    <li ic-for="i,v in model" code="{{v.code}}" ic-click="fill" ic-class="{{v.warning ? 'yellow':''}}">
+                        {{v.code}} {{v.name}}
+                        <span style="color:red;">{{v.b1/1000}} <i>k</i></span>
+                        <span>{{v.b1_reduce}} </span>
+                    </li>
                 </ul>
             </div>
-            <input type="text" id="stock_code" value="">
-            <br/>
-            <button ic-click="add">添加</button>
-            <button ic-click="change">改变</button>
-            <button ic-click="pause">暂停</button>
-            <button ic-click="clear">清除</button>
-            <button ic-click="query">继续</button>
-            <button ic-click="reset">重置</button>
-            <button ic-click="remove">删除</button>
+            <div>
+                <input type="text" id="stock_code" value="">
+                <br/>
+                <button ic-click="add">添加</button>
+                <button ic-click="remove">删除</button>
+                <button ic-click="change">改变</button>
+                <button ic-click="pause">暂停</button>
+                <button ic-click="query">继续</button>
+                <button ic-click="clear">清除</button>
+                <!--<button ic-click="reset">重置</button>-->
+            </div>
         </section>
-
-        <section ic-ctrl="voice_warning_ctrl">
-            <input type="checkbox" id="voiceWarning">&nbsp;交易错误语音警醒</input>
-        </section>
-
-        <!--<section>
-            <input type="checkbox" id="getStockNameTimer"> 定时获取股票名称</input>
-        </section>-->
 
 
         <footer>
@@ -100,7 +111,7 @@
 <script>
     var _ = require('underscore');
     require('./js/vendor/jquery.min.js');
-    require('./js/brick/0.7/brick.js');
+    require('./js/brick/0.7/brick.mobile.js');
     require('./renderer/index.js');
 </script>
 </body>

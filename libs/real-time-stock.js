@@ -55,12 +55,11 @@ Rts.prototype = {
         let that = this;
         let interval = this.interval;
         clearInterval(this.timer);
+        this._query();
         if (interval) {
             this.timer = setInterval(function () {
                 that._query();
             }, 1000 * interval);
-        } else {
-            this._query();
         }
     },
     _query: function () {
@@ -78,11 +77,12 @@ Rts.prototype = {
             //console.log('body:', body);
             body = iconv.decode(body, 'GBK');
             let arr = that.parse(body);
-            let item;
+            that.callback(arr);
+            /*let item;
             while (item = arr.shift()) {
                 console.log(item);
                 that.callback(item);
-            }
+            }*/
         });
     },
     /*
@@ -125,7 +125,15 @@ Rts.prototype = {
     },
     remove: function (code){
         this.codes = _.without(this.codes, code);
+        clearInterval(this.timer);
         this.update();
+    },
+    pause: function () {
+        clearInterval(this.timer);
+    },
+    clear: function () {
+        this.codes = [];
+        clearInterval(this.timer);
     },
     update: function () {
         this.createUrl();
@@ -155,13 +163,7 @@ Rts.prototype = {
     _prefix: function (code) {
         return (/^6/.test(code) ? 'sh' : 'sz') + code;
     },
-    pause: function () {
-        clearInterval(this.timer);
-    },
-    clear: function () {
-        this.codes = [];
-        clearInterval(this.timer);
-    },
+
     config: function (conf) {
     },
     callback: function (data) {

@@ -10,9 +10,9 @@ const ac = require('./ac.js');
 function keyTap(keys){
     let key = keys.shift();
     console.log(key);
-    let delay = 200;
+    let delay = 100;
     if(key){
-        if(key == 'enter') delay = 350;
+        if(key == 'enter') delay = 300;
         setTimeout(function(){
             robot.keyTap(key);
             keyTap(keys);
@@ -28,19 +28,22 @@ module.exports = {
     },
     _show:{},
     show: function(code){
-        let _show = this._show;
-        console.log(+new Date - _show[code]);
-        if(_show[code] && +new Date - _show[code] < 1000 * 60 * 2){
-            return;  //避免短时间不断重复
+        let o = this._show;
+        let now = + new Date;
+        let last = o.last;
+        if(last && now - last < 1000 * 60 * 0.5){
+            return console.log('keyTap 调用限制');
+        }
+        if(o[code] && now - o[code] < 1000 * 60 * 2){
+            return console.log('keyTap 调用限制 2');  //避免短时间不断重复
         }
         let keys = code.split('');
         keys.push('enter');
         this.active();
+        o[code] = now;
+        o.last = now;
         keyTap(keys);
-        this._show[code] = +new Date;
     }
-
-
 
 
 
