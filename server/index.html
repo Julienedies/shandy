@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jHandy~股票实时行情监控</title>
+    <link rel="stylesheet" href="/js/brick/0.7/brick.mobile.css">
+    <style>
+        html, body {
+            font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+            font-size: 24px;
+            line-height: 1.8;
+        }
+        .warning{
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+
+    <div id="rts" ic-tpl="list">
+        <ul>
+            <li ic-for="i,v in model" code="{{v.code}}" ic-click="fill" ic-class="{{v.warning ? 'yellow':''}}">
+                {{v.code}} {{v.name}}
+                <span style="color:red;">{{v.b1/1000}} <i>k</i></span>
+                <span>{{v.b1_reduce}} </span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="/js/vendor/underscore.js"></script>
+<script src="/js/vendor/jquery.min.js"></script>
+<script src="/js/brick/0.7/brick.mobile.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+    var $rts = $('#rts');
+
+    socket.on('rts', function (arr) {
+        console.log(arr, +new Date);
+        $rts.icRender({model: arr});
+    });
+
+</script>
+</body>
+</html>
