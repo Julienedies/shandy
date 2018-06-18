@@ -2,6 +2,8 @@
  * Created by j on 18/5/21.
  */
 
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
+
 const path = require('path');
 
 const electron = require('electron');
@@ -9,10 +11,6 @@ const app = electron.app;
 const ipcMain = electron.ipcMain;
 const BrowserWindow = electron.BrowserWindow;
 const globalShortcut = electron.globalShortcut;
-
-global.AC_DIR = path.join(__dirname, './applescript/');
-
-console.log(global.AC_DIR);
 
 const server = require('./server/server.js');
 
@@ -66,7 +64,6 @@ function ready() {
     });
 
     ipcMain.on('rts-push', (event, arg) => {
-        //console.log(arg);
         server.push('rts', arg);
     });
 

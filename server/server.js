@@ -2,23 +2,24 @@
  * Created by j on 18/6/17.
  */
 
-var path = require('path');
-var express = require('express');
-var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+const path = require('path');
+const express = require('express');
+const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 
-var config = require('../config.json');
-
-app.use('/js', express.static(path.join(config.dir.root, '/js')));
-app.use('/css', express.static(path.join(config.dir.root, '/css')));
+const config = require('../config.json');
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
+app.use('/js', express.static(path.join(config.dir.root, '/js')));
+app.use('/css', express.static(path.join(config.dir.root, '/css')));
 
-let clients = [];
+
+const clients = [];
+
 io.on('connection', function(socket){
     console.log('a user connected');
     clients.push(socket.id);
@@ -28,24 +29,17 @@ io.on('connection', function(socket){
         clients.splice(i, 1);
     });
 
-    socket.broadcast.emit('message', 'xxxxxx');
-
-    socket.on('chat message', function(msg){
-        io.emit('chat message', msg);
+    socket.on('channel', function(msg){
+        io.emit('channel', msg);
     });
 
 });
+
 
 http.listen(3000, function(){
     console.log('listening on *:3000');
 });
 
-//http.close();
-/*setTimeout(function(){
-    clients.map(v => {
-        io.sockets.connected[v].emit('rts', [1,2]);
-    });
-}, 5000);*/
 
 module.exports = {
     http: http,
@@ -53,15 +47,19 @@ module.exports = {
     io:io,
     push: function(e, msg){
         try{
-
             io.emit(e, msg);
-            /*clients.map(v => {
-                if(io.sockets.connected[v]){
-                    io.sockets.connected[v].emit(e, msg);
-                }
-            });*/
         }catch(err){
             console.log(err);
         }
     }
 };
+
+
+//http.close();
+/*setTimeout(function(){
+ clients.map(v => {
+ if(io.sockets.connected[v]){
+ io.sockets.connected[v].emit(e, msg);
+ }
+ });
+ }, 5000);*/

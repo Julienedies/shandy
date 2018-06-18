@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="js/brick/0.7/brick.mobile.css" />
     <link rel="stylesheet" href="css/photon/css/photon.min.css"/>
     <style>
+        ::selection {
+        background:rgba(255, 255, 125, 0.99);
+        color:#032764;}
+     </style>
+    <style>
+
         html,body {
             font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
             font-size: 20px;
@@ -68,7 +74,7 @@
         <section ic-ctrl="rts_ctrl">
             <div id="rts_list" ic-tpl="list">
                 <ul>
-                    <li ic-for="i,v in model" code="{{v.code}}" ic-click="fill" ic-class="{{v.warning ? 'yellow':''}}">
+                    <li ic-for="i,v in model" data-code="{{v.code}}" ic-click="fill" ic-class="{{v.warning ? 'yellow':''}}">
                         {{v.code}} {{v.name}}
                         <span style="color:red;">{{v.b1/1000}} <i>k</i></span>
                         <span>{{v.b1_reduce}} </span>
@@ -90,7 +96,7 @@
 
 
         <footer>
-            <h1>Hello jHandy!</h1>
+            <h4>Hello jHandy!</h4>
             We are using node
             <script>document.write(process.versions.node)</script>
             ,

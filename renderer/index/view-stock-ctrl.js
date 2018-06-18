@@ -49,7 +49,7 @@ function view_stock(code){
         ac.activeTdx();
 
     }else{
-        let msg = '不能查看个股资料，没有获取到有效的股票代码！';
+        let msg = '不能查看个股资料，无效股票代码！';
         voice(msg);
         return console.error(msg);
     }

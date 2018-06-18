@@ -61,8 +61,8 @@ ipc.on('real-time-stock', function (event, arg) {
 
 $('#test').click(function(){
 
-/*    setTimeout(function(){
-        ac.activeTdx();
-        ac.keystroke('601138');
-    }, 3000);*/
+    setTimeout(function(){
+        tdx.show('601138');
+    }, 3000);
+
 });

@@ -70,19 +70,21 @@ Rts.prototype = {
         };
         request(options, function (error, response, body) {
             if(error){
-                console.log('error:', error);
-                return that.callback('出现错误！');
+                console.error('error:', error);
+                this.toggle();
+                return that.callback('请求实时行情数据出现错误！');
             }
             //console.log('statusCode:', response && response.statusCode);
             //console.log('body:', body);
             body = iconv.decode(body, 'GBK');
-            let arr = that.parse(body);
-            that.callback(arr);
-            /*let item;
-            while (item = arr.shift()) {
-                console.log(item);
-                that.callback(item);
-            }*/
+            try{
+                let arr = that.parse(body);
+                that.callback(arr);
+            }catch(e){
+                console.error(e);
+                this.toggle();
+                that.callback('解析错误，查看控制台。');
+            }
         });
     },
     /*
@@ -107,9 +109,10 @@ Rts.prototype = {
             let code = arr[0].match(/\d{6}/)[0];
             arr = arr[1].replace('"','').split(/[~,]/);
             if (api == qq) {
-                return {code: arr[2], name: arr[1], v: arr[6] *1 , b1: arr[10] * 1, p: arr[9]};
+                let time = arr[30].replace(/^\d{8}/, '').replace(/(\d{2})(\d{2})(\d{2})/, '$1:$2:$3');
+                return {code: arr[2], name: arr[1], v: arr[6] *1 , b1: arr[10] * 1, p: arr[9], time: time};
             } else if (api == sina) {
-                return {code: code, name: arr[0], v: Math.floor(arr[8]/100), b1: Math.floor(arr[10]/100), p: arr[11]};
+                return {code: code, name: arr[0], v: Math.floor(arr[8]/100), b1: Math.floor(arr[10]/100), p: arr[11], time: arr[31]};
             }
         });
     },
@@ -148,7 +151,7 @@ Rts.prototype = {
         this.url = this.stock_api.replace('*', codes);
         this.query();
     },
-    _toggle: function(){
+    toggle: function(){
         this.stock_api = this.stock_api == this.qq ? this.sina : this.sina;
         this.createUrl();
     },
@@ -163,7 +166,6 @@ Rts.prototype = {
     _prefix: function (code) {
         return (/^6/.test(code) ? 'sh' : 'sz') + code;
     },
-
     config: function (conf) {
     },
     callback: function (data) {
