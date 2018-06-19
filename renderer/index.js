@@ -16,8 +16,9 @@ const stockUrl = require('../libs/stockUrl.js');
 const ac = require('../libs/ac.js');
 const tdx = require('../libs/tdx.js');
 
+// activate context menu
 const debugMenu = require('debug-menu');
-debugMenu.install();  // activate context menu
+debugMenu.install();
 
 const view_stock = require('./index/view-stock-ctrl.js');
 
@@ -57,12 +58,20 @@ ipc.on('real-time-stock', function (event, arg) {
     rtsc.on_real_time_stock(arg);
 });
 
+ipc.on('rts_cancel', function (event, arg) {
+    rtsc.on_rts_cancel(arg);
+});
+
+ipc.on('rts_view', function (event, arg) {
+    tdx.show(arg);
+});
+
 
 
 $('#test').click(function(){
 
     setTimeout(function(){
-        tdx.show('601138');
+        tdx.show('600121');
     }, 3000);
 
 });

@@ -8,6 +8,7 @@
     let speechSU = new SpeechSynthesisUtterance();
 
     function s() {
+        console.log(q);
         let text = q.shift();
         if (text) {
             speechSU.text = text;
@@ -15,7 +16,7 @@
         }
     }
 
-    speechSU.onend = setTimeout(s, 30);
+    speechSU.onend = setTimeout(s, 100);
 
     function voice(text) {
         q.push(text);

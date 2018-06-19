@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/*!
+ * scss scaffold basic by Julien.
+ * https://github.com/julienedies/basic.git
+ * https://github.com/Julienedies/basic/wiki
+ */
+/*    scss变量定义
+==========================================================*/
+/*   define mixin
+==========================================================*/
+/*    define extend
+==========================================================*/
+.select-none {
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  user-select: none; }
+
+.__flex, .flex-middle, .flex-mc, .flex-mj, .flex-mr, .flex-center, .flex-justify, .flex-right, .flex-end, .flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1; }
+
+.flex-middle, .flex-mc, .flex-mj, .flex-mr {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+
+.flex-center, .flex-mc {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+
+.flex-justify, .flex-mj {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+
+.flex-right, .flex-mr {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end; }
+
+.flex-end {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end; }
+
+/*
+字体样式定义
+=========================================================
+ */
+/*
+定义字体颜色
+字体颜色   r: red; b: blue; y: yellow; g: green; w: white; k: black & gray;
+fc -> color
+w - > 颜色前缀
+1 - > 同颜色区分，值越大，颜色越深
+*/
+.fc-w {
+  color: #FFFFFF; }
+
+.fc-r1 {
+  color: #fc6e51; }
+
+.fc-b1 {
+  color: #549efd; }
+
+/* b 蓝色 */
+.fc-b4 {
+  color: #0daed4; }
+
+/* y 黄色 */
+.fc-y4 {
+  color: #f6ad01; }
+
+.fc-y5 {
+  color: #f6ad00; }
+
+/* k 各种灰色 数字越大，颜色越深 */
+/*
+定义字体大小,相对于父元素
+fz -> font-size
+x - > 区分 em rem
+8 -> 8/10 em
+*/
+.fz-x6 {
+  font-size: 0.6em; }
+
+.fz-x8 {
+  font-size: 0.8em; }
+
+.fz-x12 {
+  font-size: 1.2em; }
+
+.fz-x14 {
+  font-size: 1.4em; }
+
+.fz-sm {
+  font-size: 0.8em; }
+
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+legend {
+  color: #000; }
+
+i, b {
+  font-style: normal; }
+
+html, body {
+  font-family: Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;
+  line-height: 1.6;
+  font-size: 12px; }
+
+body {
+  font-family: "Helvetica Neue","Verdana","Arial","Hiragino Sans GB","WenQuanYi Micro Hei","Heiti SC",STHeiti,"Microsoft Yahei",SimSun,sans-serif;
+  font-family: 'Helvetica Neue',Helvetica,Arial,"Microsoft Yahei",FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-x: hidden; }
+
+/*input{
+    -webkit-appearance: none; */
+/*去除浏览器默认样式*/
+/*
+}*/
+a {
+  text-decoration: none; }
+
+* {
+  box-sizing: border-box; }
+
+/*
+常用属性简写定义
+=========================================================
+ */
+/*
+常用属性简写定义规则：
+使用属性值做为类名
+*/
+.relative {
+  position: relative; }
+
+.right {
+  float: right; }
+
+.none {
+  display: none; }
+
+/*
+组件样式定义
+=========================================================
+ */

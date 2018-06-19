@@ -25,23 +25,36 @@ function keyTap(keys) {
 
 
 module.exports = {
-
+    _datum: 1, //默认调用间隔限制为60秒
+    _obj_limit:{},
+    _call_limit: function(f_id, datum ){
+        datum = datum || this._datum;
+        let o = this._obj_limit;
+        let f_o = o[f_id];
+        let now = + new Date();
+        if(!f_o){
+            o[f_id] = {datum: datum, last: now};
+            return true;
+        }else{
+            let last = f_o.last;
+            return (now - last) > 1000 * 60 * datum;
+        }
+    },
     active: function () {
         ac.activeTdx();
     },
     _show: {},
-    _limit: 1,
     show: function (code) {
         code = code + '';
         this.active();
-        let limit = this._limit;
+        let datum = this._datum;
         let o = this._show;
         let now = +new Date;
         let last = o.last;
-        if (last && now - last < 1000 * 60 * (limit / 2)) {
+        if (last && now - last < 1000 * 60 * datum/2) {
             return console.log('keyTap 调用限制');
         }
-        if (o[code] && now - o[code] < 1000 * 60 * (limit * 2)) {
+        if (o[code] && now - o[code] < 1000 * 60 * datum/2 ) {
             return console.log('keyTap 调用限制 2');  //避免短时间不断重复
         }
         let keys = code.split('');
@@ -50,9 +63,15 @@ module.exports = {
         o.last = now;
         keyTap(keys);
     },
+    _cancel_order: {},
     cancel_order: function(){
-        this.active();
-        keyTap(['2','2','enter']);
+        //需要做调用限制
+        if(this._call_limit('cancel_order', 1)){
+            this.active();
+            keyTap(['2','2','enter']);
+        }else{
+            console.log('tdx.cancel_order 调用限制');
+        }
     },
     keystroke: function (str, enter) {
         str = str + '';

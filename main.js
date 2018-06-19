@@ -12,6 +12,8 @@ const ipcMain = electron.ipcMain;
 const BrowserWindow = electron.BrowserWindow;
 const globalShortcut = electron.globalShortcut;
 
+//const console_ctrl = require('./libs/console.js');
+
 const server = require('./server/server.js');
 
 const ac = require('./libs/ac.js');
@@ -65,6 +67,14 @@ function ready() {
 
     ipcMain.on('rts-push', (event, arg) => {
         server.push('rts', arg);
+    });
+
+    server.on_msg('rts_cancel', function(e, msg){
+        mainWindow.webContents.send('rts_cancel', msg);
+    });
+
+    server.on_msg('rts_view', function(e, msg){
+        mainWindow.webContents.send('rts_view', msg);
     });
 
 }
