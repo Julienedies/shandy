@@ -8,78 +8,57 @@ const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
+const EventEmitter = require('events').EventEmitter;
+const events = new EventEmitter();
+
 const config = require('../config.json');
+
+const channel = 'j_handy';
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/favicon.ico', function(req, res){
-    res.sendFile(__dirname + '/favicon.ico');
-});
-
+app.use('/', express.static(__dirname));
 app.use('/js', express.static(path.join(config.dir.root, '/js')));
 app.use('/css', express.static(path.join(config.dir.root, '/css')));
 
-const clients = [];
-
 io.on('connection', function(socket){
-    //console.log('a user connected');
-    clients.push(socket.id);
     socket.on('disconnect', function(){
-        //console.log('user disconnected');
-        let i = clients.indexOf(socket.id);
-        clients.splice(i, 1);
+
     });
 
-    socket.on('rts', function(msg){
-        //io.emit('channel', msg);
+    socket.on(channel, function(msg){
         console.log('server:', msg);
-        broadcast(msg.event, msg.code);
+        let event = msg.event || 'msg';
+        events.emit(event, msg);
     });
 
 });
 
-const listener = {};
-function broadcast(event, msg){
-    let e;
-    let f;
-    for(e in listener){
-        if(e == event){
-            f = listener[e];
-            f(event, msg);
-        }
-    }
-}
-
-
+//
 http.listen(3000, function(){
     console.log('listening on *:3000');
 });
 
 
-module.exports = {
-    http: http,
-    close: () => http.close(),
-    io:io,
-    push: function(e, msg){
+function F(){
+    this.http = http;
+    this.io = io;
+    this.close = function(){
+        http.close();
+    };
+    this.push = function(msg){
         try{
-            io.emit(e, msg);
+            io.emit(channel, msg);
         }catch(err){
             console.log(err);
         }
-    },
-    on_msg : function(e, f){
-        listener[e] = f;
-    }
-};
+    };
+}
+
+F.prototype = events;
+
+module.exports = new F();
 
 
-//http.close();
-/*setTimeout(function(){
- clients.map(v => {
- if(io.sockets.connected[v]){
- io.sockets.connected[v].emit(e, msg);
- }
- });
- }, 5000);*/

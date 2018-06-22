@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>jHandy</title>
+    <link rel="stylesheet" href="css/basic/0.7/basic.base.css" />
     <link rel="stylesheet" href="js/brick/0.7/brick.mobile.css" />
     <link rel="stylesheet" href="css/photon/css/photon.min.css"/>
     <style>
@@ -42,6 +43,18 @@
             margin:0;
             padding:0;
         }
+        ul li span{
+            display:inline-block;
+            min-width:4em;
+            padding:0 3px;
+            flex:1;
+        }
+        .up{
+            color:red!important;
+        }
+        .down{
+            color:green!important;
+        }
     </style>
 </head>
 <body>
@@ -74,10 +87,13 @@
         <section ic-ctrl="rts_ctrl">
             <div id="rts_list" ic-tpl="list">
                 <ul>
-                    <li ic-for="i,v in model" code="{{v.code}}" ic-click="fill" ic-class="{{v.warning ? 'yellow':''}}">
-                        {{v.code}} {{v.name}}
+                    <li ic-for="i,v in model" code="{{v.code}}" ic-click="fill" ic-class="flex-mc {{v.warning ? 'yellow':''}}">
+                        <span>{{v.code}}</span>
+                        <span>{{v.name}}</span>
                         <span style="color:red;">{{v.b1/1000}} <i>k</i></span>
                         <span>{{v.b1_reduce}} </span>
+                        <span>-{{v.b1_reduce_base/1000}}k</span>
+                        <span>+{{v.v_plus_base/1000}}k</span>
                     </li>
                 </ul>
             </div>

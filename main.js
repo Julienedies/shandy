@@ -12,11 +12,10 @@ const ipcMain = electron.ipcMain;
 const BrowserWindow = electron.BrowserWindow;
 const globalShortcut = electron.globalShortcut;
 
-//const console_ctrl = require('./libs/console.js');
+const ac = require('./libs/ac.js');
+const tdx = require('./libs/tdx.js');
 
 const server = require('./server/server.js');
-
-const ac = require('./libs/ac.js');
 
 // 保持一个对于 window 对象的全局引用，如果你不这样做，
 // 当 JavaScript 对象被垃圾回收， window 会被自动地关闭
@@ -53,28 +52,39 @@ function ready() {
 
     createWindow();
 
+    // 鼠标手势  => 快捷键 =>  apple script获取通达信个股代码  => 在浏览器打开同花顺个股资料页面
     globalShortcut.register('CommandOrControl+Alt+x', function () {
         ac.getStockName(function(code){
             mainWindow.webContents.send('stock_code', code);
         });
     });
 
+    // 鼠标手势 => 快捷键 =>  apple script获取通达信个股代码  => 打板封单监控
     globalShortcut.register('CommandOrControl+Alt+z', function () {
         ac.getStockName(function(code){
             mainWindow.webContents.send('real-time-stock', code);
         });
     });
 
+    // 打板封单监控数据 => socket.io => 浏览器页面 http://192.168.3.20:3000/
     ipcMain.on('rts-push', (event, arg) => {
-        server.push('rts', arg);
+        server.push(arg);
     });
 
-    server.on_msg('rts_cancel', function(e, msg){
-        mainWindow.webContents.send('rts_cancel', msg);
+    // 浏览器页面 http://192.168.3.20:3000/  => socket.io => 取消个股打板封单监控
+    server.on('rts_cancel', function(msg){
+        mainWindow.webContents.send('rts_cancel', msg.code);
     });
 
-    server.on_msg('rts_view', function(e, msg){
-        mainWindow.webContents.send('rts_view', msg);
+    // 淘股吧页面 => chrome扩展 => socket.io => 在通达信显示个股
+    server.on('rts_view', function(msg){
+        tdx.show(msg.code);
+    });
+
+    // 同花顺个股资料页面 => chrome扩展 => socket.io => 激活富途牛牛
+    server.on('active_ftnn', function(msg){
+        ac.activeFtnn();
+        ac.activeTdx();
     });
 
 }
@@ -101,5 +111,3 @@ app.on('activate', () => {
     }
 });
 
-// 在这个文件中，你可以续写应用剩下主进程代码。
-// 也可以拆分成几个文件，然后用 require 导入。

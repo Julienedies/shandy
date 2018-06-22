@@ -1,14 +1,17 @@
 /**
  * Created by j on 18/5/26.
- * @todo 接收字符串参数
+ * @todo 根据股票名称，查找股票代码
  */
 
 const stocks = require('../stocks.json');
 
-// words = '天首发展000611' or '天首发展'
+/**
+ * @param words {String} words = '天首发展000611' or '天首发展'
+ * @returns {undefined|string}  没有找到股票代码或股票代码字符串
+ */
 module.exports = function (words) {
     let matchs = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]+[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
-    console.log( matchs);
+    //console.log( matchs);
     let name = matchs[1];
     let code = matchs[2];
     let _code;
@@ -22,7 +25,7 @@ module.exports = function (words) {
         _code = stock[0];
 
     }
-    console.log(name, _code, code);
+    //console.log(name, _code, code);
     return _code || code;
 
 };

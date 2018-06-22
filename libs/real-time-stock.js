@@ -26,7 +26,7 @@ function Rts(code, callback) {
         }
 
         this.codes = this._codes(code);
-        this.createUrl();
+        this.update();
 
     } else if (code == 'qq' || code == 'sina') {
 
@@ -37,7 +37,7 @@ function Rts(code, callback) {
 
         this.codes = this._codes(code);
         this.callback = callback;
-        this.createUrl();
+        this.update();
 
     }
 
@@ -55,6 +55,9 @@ Rts.prototype = {
         let that = this;
         let interval = this.interval;
         clearInterval(this.timer);
+        if(this.codes.length == 0){
+            return;
+        }
         this._query();
         if (interval) {
             this.timer = setInterval(function () {
@@ -68,10 +71,11 @@ Rts.prototype = {
             url: this.url,
             encoding: null
         };
+        //console.log(this.url);
         request(options, function (error, response, body) {
             if(error){
                 console.error('error:', error);
-                this.toggle();
+                that.toggle();
                 return that.callback('请求实时行情数据出现错误！');
             }
             //console.log('statusCode:', response && response.statusCode);
@@ -82,7 +86,9 @@ Rts.prototype = {
                 that.callback(arr);
             }catch(e){
                 console.error(e);
-                this.toggle();
+                console.log(that.url);
+                console.log('body:', body);
+                that.toggle();
                 that.callback('解析错误，查看控制台。');
             }
         });
@@ -110,9 +116,13 @@ Rts.prototype = {
             arr = arr[1].replace('"','').split(/[~,]/);
             if (api == qq) {
                 let time = arr[30].replace(/^\d{8}/, '').replace(/(\d{2})(\d{2})(\d{2})/, '$1:$2:$3');
-                return {code: arr[2], name: arr[1], v: arr[6] *1 , b1: arr[10] * 1, p: arr[9], time: time};
+                return {code: arr[2], name: arr[1], v: arr[6] *1 , b1: arr[10] * 1, price: arr[9], time: time, increase: arr[32] * 1, timestamp: +new Date};
             } else if (api == sina) {
-                return {code: code, name: arr[0], v: Math.floor(arr[8]/100), b1: Math.floor(arr[10]/100), p: arr[11], time: arr[31]};
+                let price = arr[11];
+                let yesterday_price = arr[2];
+                let increase = (price - yesterday_price)/yesterday_price * 100;
+                increase = increase.toFixed(2);
+                return {code: code, name: arr[0], v: Math.floor(arr[8]/100), b1: Math.floor(arr[10]/100), price: arr[11], time: arr[31], increase: increase * 1, timestamp: +new Date};
             }
         });
     },
@@ -140,20 +150,17 @@ Rts.prototype = {
     },
     update: function () {
         this.createUrl();
+        this.query();
     },
     createUrl: function () {
         let codes = this.codes;
-        if (!codes.length) {
-            return;
-        }
         codes = codes.map(this._prefix);
         codes = codes.join(',');
         this.url = this.stock_api.replace('*', codes);
-        this.query();
     },
     toggle: function(){
-        this.stock_api = this.stock_api == this.qq ? this.sina : this.sina;
-        this.createUrl();
+        //this.stock_api = this.stock_api == this.qq ? this.sina : this.sina;
+        //this.update();
     },
     _codes: function (code) {
         let codes;

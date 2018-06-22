@@ -62,16 +62,12 @@ ipc.on('rts_cancel', function (event, arg) {
     rtsc.on_rts_cancel(arg);
 });
 
-ipc.on('rts_view', function (event, arg) {
-    tdx.show(arg);
-});
+
 
 
 
 $('#test').click(function(){
 
-    setTimeout(function(){
-        tdx.show('600121');
-    }, 3000);
+
 
 });

@@ -49,6 +49,9 @@ module.exports = {
     activeTdx: function(){
         _exec('active-tdx');
     },
+    activeFtnn: function(){
+        _exec('active-ftnn');
+    },
     keystroke: function(code){
 
         return _exec('keystroke');
