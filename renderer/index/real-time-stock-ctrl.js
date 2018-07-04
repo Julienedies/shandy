@@ -34,12 +34,12 @@ function f(stocks) {
     let arr2 = [];
     let stock;
     while (stock = stocks.shift()) {
-        arr2.push(_f(stock));
-       /* if(stock.increase * 1 > 9){
+        //arr2.push(_f(stock));
+        if(stock.increase * 1 > 9 || first_objm.get(stock.code)){
             arr2.push(_f(stock));
         }else{
             q_rtso.remove(stock.code);
-        }*/
+        }
     }
 
     ipcRenderer.send('rts-push', arr2);
@@ -80,7 +80,7 @@ function _f(stock) {
         let time_reduce = Math.floor((stock.timestamp - p_stock.timestamp)/1000); //间隔秒数
         let b1_reduce_base = Math.floor(p_b1/rtsc_threshold) || 3000;
         let v_plus_base = Math.floor(p_v/rtsc_threshold) || 5000;
-        let least = 5000;
+        let least = 9000;
         let d = new Date();
         d = d.getHours();
         //console.log(name, '预警：封单-',Math.floor(b1_reduce_base/1000) + 'k', '成交量+', Math.floor(v_plus_base/1000) + 'k');

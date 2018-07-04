@@ -2,6 +2,8 @@
  * Created by j on 18/6/17.
  */
 
+console.log('server.js ======================== ', +new Date);
+
 const path = require('path');
 const express = require('express');
 const app = express();
@@ -22,6 +24,8 @@ app.get('/', function(req, res){
 app.use('/', express.static(__dirname));
 app.use('/js', express.static(path.join(config.dir.root, '/js')));
 app.use('/css', express.static(path.join(config.dir.root, '/css')));
+
+
 
 io.on('connection', function(socket){
     socket.on('disconnect', function(){

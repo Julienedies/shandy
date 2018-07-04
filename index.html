@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>jHandy</title>
     <link rel="stylesheet" href="css/basic/0.7/basic.base.css" />
-    <link rel="stylesheet" href="js/brick/0.7/brick.mobile.css" />
+    <link rel="stylesheet" href="js/brick/0.8/brick.mobile.css" />
     <link rel="stylesheet" href="css/photon/css/photon.min.css"/>
     <style>
         ::selection {
@@ -59,11 +59,12 @@
 </head>
 <body>
 
-<div class="">
+<div class="" ic-ctrl="main_ctrl">
     <div class="">
         
         <section style="height: 140px;">
             <button id="test">test</button>
+            <button id="open_client"></button>
         </section>
 
         <section ic-ctrl="voice_warning_ctrl">
@@ -123,6 +124,9 @@
             and Electron
             <script>document.write(process.versions.electron)</script>
             .
+            <div>
+                <a class="btn btn-large btn-primary" ic-click="relaunch">relaunch</a>
+            </div>
         </footer>
 
     </div>
@@ -132,7 +136,7 @@
 <script>
     var _ = require('underscore');
     require('./js/vendor/jquery.min.js');
-    require('./js/brick/0.7/brick.mobile.js');
+    require('./js/brick/0.8/brick.mobile.js');
     require('./renderer/index.js');
 </script>
 </body>

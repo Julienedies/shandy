@@ -1,9 +1,20 @@
-_site/*
-_theme_packages/*
-~*.xlsx
-.idea/
+#系统创建文件
 Thumbs.db
 .DS_Store
+
+#IDE创建
+.idea/
+.settings/
+.project
+
+#外部类库
+bower_components/
+node_modules/
+
+#私有配置文件
+config.json
+scripts.js
+applescript/
 
 !.gitkeep
 
@@ -12,10 +23,5 @@ Thumbs.db
 
 .tmp_*~
 
-node_modules
 out
 npm-debug.log
-
-config.json
-scripts.js
-applescript/
