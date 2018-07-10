@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <title>jHandy</title>
     <link rel="stylesheet" href="css/basic/0.7/basic.base.css" />
-    <link rel="stylesheet" href="js/brick/0.8/brick.mobile.css" />
+    <link rel="stylesheet" href="js/vendor/brick/0.8/brick.mobile.css" />
+    <link rel="stylesheet" href="css/vendor/bulma/bulma.css" />
     <link rel="stylesheet" href="css/photon/css/photon.min.css"/>
     <style>
         ::selection {
-        background:rgba(255, 255, 125, 0.99);
-        color:#032764;}
-     </style>
-    <style>
+            background:rgba(255, 255, 125, 0.99);
+            color:#032764;}
 
         html,body {
             font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
-            font-size: 20px;
-            line-height: 1.6;
+            font-size:18px;
             overflow: auto;
         }
 
-        body {
-        }
-
-        input,button {
+        input{
             font-size: 20px;
             display: inline-block;
             margin:5px;
@@ -63,21 +58,17 @@
     <div class="">
         
         <section style="height: 140px;">
-            <button id="test">test</button>
-            <button id="open_client"></button>
+            <button class="button" id="test">test</button>
         </section>
 
         <section ic-ctrl="voice_warning_ctrl">
             <input type="checkbox" id="voiceWarning">&nbsp;交易错误语音警醒</input>
         </section>
-        <!--<section>
-            <input type="checkbox" id="getStockNameTimer"> 定时获取股票名称</input>
-        </section>-->
 
         <section class="" ic-ctrl="view_stock_ctrl">
-            <button ic-click="go_ycj">云财经</button>
-            <button id="company">个股资料</button>
-            <button>官网</button>
+            <button class="button" ic-click="go_ycj">云财经</button>
+            <button class="button" id="company">个股资料</button>
+            <button class="button">官网</button>
             <br/>
             <input type="checkbox" id="open" checked>&nbsp;打开</input>
             <br/>
@@ -100,19 +91,29 @@
             </div>
             <div>
                 <input type="text" id="stock_code" value="">
-                <br/>
-                <button ic-click="add">添加</button>
-                <button ic-click="remove">删除</button>
-                <button ic-click="change">改变</button>
-                <button ic-click="pause">暂停</button>
-                <button ic-click="query">继续</button>
-                <button ic-click="clear">清除</button>
-                <!--<button ic-click="reset">重置</button>-->
+
+                <div class="buttons has-addons">
+                    <button class="button" ic-click="add">添加</button>
+                    <button class="button" ic-click="remove">删除</button>
+                    <button class="button" ic-click="change">改变</button>
+                    <button class="button" ic-click="pause">暂停</button>
+                    <button class="button" ic-click="query">继续</button>
+                    <button class="button" ic-click="clear">清除</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="buttons has-addons">
+                <button class="button" ic-click="relaunch">relaunch</button>
+                <button class="button" ic-click="open" data-id="gushenwei">gushenwei</button>
+                <button class="button" ic-click="open" data-id="jhandy">jhandy</button>
             </div>
         </section>
 
         <footer>
             <h4>Hello jHandy!</h4>
+            <p>IP is <span id="ip"></span></p>
             We are using node
             <script>document.write(process.versions.node)</script>
             ,
@@ -124,9 +125,6 @@
             and Electron
             <script>document.write(process.versions.electron)</script>
             .
-            <div>
-                <a class="btn btn-large btn-primary" ic-click="relaunch">relaunch</a>
-            </div>
         </footer>
 
     </div>
@@ -136,7 +134,7 @@
 <script>
     var _ = require('underscore');
     require('./js/vendor/jquery.min.js');
-    require('./js/brick/0.8/brick.mobile.js');
+    require('./js/vendor/brick/0.8/brick.mobile.js');
     require('./renderer/index.js');
 </script>
 </body>

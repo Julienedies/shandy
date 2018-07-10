@@ -2,8 +2,6 @@
  * Created by j on 18/6/17.
  */
 
-console.log('server.js ======================== ', +new Date);
-
 const path = require('path');
 const express = require('express');
 const app = express();

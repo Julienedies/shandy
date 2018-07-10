@@ -2,7 +2,7 @@
  * Created by j on 18/5/22.
  */
 
-const os = require("os");
+
 const electron = require('electron');
 const remote = electron.remote;
 const shell = electron.shell;
@@ -65,17 +65,7 @@ ipc.on('rts_cancel', function (event, arg) {
 });
 
 
-try {
-    let networkInterfaces = os.networkInterfaces();
-    let ip = networkInterfaces.en0[0].address;
-    let home_url = 'http://*:3000/'.replace('*', ip);
-    console.log(home_url);
-    $('#open_client').click(function () {
-        shell.openExternal(home_url);
-    }).text(home_url);
-} catch (e) {
-    console.error(e);
-}
+
 
 const shelljs = require('shelljs');
 $('#test').click(function () {

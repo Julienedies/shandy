@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>jHandy-股票实时行情监控</title>
-    <link rel="stylesheet" href="/css/vendor/bulma/css/bulma.css" />
+    <link rel="stylesheet" href="/css/vendor/bulma/bulma.css" />
     <link rel="stylesheet" href="/css/basic/0.7/basic.base.css" />
-    <link rel="stylesheet" href="/js/brick/0.7/brick.mobile.css" />
+    <link rel="stylesheet" href="/js/vendor/brick/0.8/brick.mobile.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -32,6 +32,12 @@
         </ul>
     </div>
 
+    <footer ic-ctrl="links_ctrl" style="position: fixed;bottom:0; left:0; right:0;">
+        <a class="button is-info" href="http://*:2018/public/static/html/stock/plan/sell/" target="_blank">平仓预案</a>
+        <a class="button is-info" href="http://*:2018/public/static/html/stock/plan/buy/" target="_blank">建仓条件</a>
+        <a class="button is-info" href="http://*:2018/public/static/html/stock/plan/index/" target="_blank">当前计划</a>
+    </footer>
+
 
     <div style="position:absolute;top:-100px;left:0;">
         <button id="tdx_view" class="button" code="" ic-click="view">查看股票</button>
@@ -42,7 +48,7 @@
 
 <script src="/js/vendor/underscore.js"></script>
 <script src="/js/vendor/jquery.min.js"></script>
-<script src="/js/brick/0.7/brick.mobile.js"></script>
+<script src="/js/vendor/brick/0.8/brick.mobile.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script>
 
@@ -80,6 +86,17 @@
         };
 
     });
+
+    brick.controllers.reg('links_ctrl', function(){
+
+        var ip = location.hostname;
+
+        this.$elm.find('a').each(function(){
+            this.href = this.href.replace('*', ip);
+        })
+
+    });
+
 </script>
 </body>
 </html>
