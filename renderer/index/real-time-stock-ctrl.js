@@ -97,8 +97,8 @@ function _f(stock) {
 
             // 早盘封单小于阈值
             if(b1 < least && d < 14 ){
-                //tdx.show(code);
                 voice(code, `${name}有破板风险`);
+                //tdx.show(code);
             }
 
             // 封单减少量超过阈值,（ 当前封单 - 上次记录的封单 = 封单减少量 ）
@@ -106,6 +106,7 @@ function _f(stock) {
                 //短时间大量减少（小于60秒）
                 if(time_reduce < 60){
                     console.log(`间隔${time_reduce}秒封单减少`);
+                    voice(code, `${name}封单急速减少`);
                     //tdx.show(code);
                 }
                 // 撤单量超过阈值,（ 封单减少，成交量没有对应增加, 则说明是撤单）
@@ -113,8 +114,8 @@ function _f(stock) {
                     console.log(name, `大量撤单${-b1_reduce - v_plus}手`);
                     voice(code, `${name}大量撤单`);
                 }else{
-                    console.log(`${stock.name} 封单减少 ${-b1_reduce}手，余${b1}手`);
-                    voice(code, `${stock.name} 封单减少`);
+                    console.log(`${stock.name}封单减少 ${-b1_reduce}手，余${b1}手`);
+                    voice(code, `${stock.name}封单减少`);
                 }
             }
 
