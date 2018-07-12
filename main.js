@@ -52,6 +52,12 @@ function ready() {
 
     createWindow();
 
+    electron.powerMonitor.on('resume', () => {
+        console.log('The system is going to resume');
+        app.relaunch();
+        app.exit();
+    });
+
     // 鼠标手势  => 快捷键 =>  apple script获取通达信个股代码  => 在浏览器打开同花顺个股资料页面
     globalShortcut.register('CommandOrControl+Alt+x', function () {
         ac.getStockName(function(code){
