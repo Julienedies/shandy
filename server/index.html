@@ -2,20 +2,22 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>jHandy-股票实时行情监控</title>
-    <link rel="stylesheet" href="/css/vendor/bulma/bulma.css" />
-    <link rel="stylesheet" href="/css/basic/0.7/basic.base.css" />
-    <link rel="stylesheet" href="/js/vendor/brick/0.8/brick.mobile.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="/css/basic/0.7/basic.base.css"/>
+    <link rel="stylesheet" href="/js/vendor/brick/0.8/css/brick.mobile.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<div ic-ctrl="rts_ctrl" >
+<div ic-ctrl="rts_ctrl">
 
     <div id="rts" ic-tpl="list">
         <ul id="rts_list">
-            <li ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
+            <li ic-for="i,v in model" code="{{v.code}}"
+                ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
                 <div class="flex flex-mc">
                     <span class="code">{{v.code}} </span>
                     <span class="name"> {{v.name}} </span>
@@ -26,16 +28,16 @@
                 </div>
                 <div class="flex flex-mj">
                     <button class="button" code="{{v.code}}" ic-click="view">查看股票</button>
-                    <button class="button" code="{{v.code}}" ic-click="cancel" >取消监控</button>
+                    <button class="button" code="{{v.code}}" ic-click="cancel">取消监控</button>
                 </div>
             </li>
         </ul>
     </div>
 
-    <footer ic-ctrl="links_ctrl" style="position: fixed;bottom:0; left:0; right:0;">
-        <a class="button is-info" href="http://*:2018/public/static/html/stock/plan/sell/" target="_blank">平仓预案</a>
-        <a class="button is-info" href="http://*:2018/public/static/html/stock/plan/buy/" target="_blank">建仓条件</a>
-        <a class="button is-info" href="http://*:2018/public/static/html/stock/plan/index/" target="_blank">当前计划</a>
+    <footer ic-ctrl="links_ctrl" style="position: fixed;bottom:0; left:0; right:0;" ic-tpl>
+        <a class="button is-info" ic-href="http://{{model.ip}}:2018/public/static/html/stock/plan/sell/" target="_blank">平仓预案</a>
+        <a class="button is-info" ic-href="http://{{model.ip}}:2018/public/static/html/stock/plan/buy/" target="_blank">建仓条件</a>
+        <a class="button is-info" ic-href="http://{{model.ip}}:2018/public/static/html/stock/plan/index/" target="_blank">当前计划</a>
     </footer>
 
 
@@ -56,45 +58,48 @@
     var socket = io();
     var $rts = $('#rts');
 
-    function emit(msg){
+    function emit(msg) {
         socket.emit(channel, msg);
     }
 
     socket.on(channel, function (arr) {
         console.log(arr, +new Date);
-        $rts.icRender({model: arr});
+        $rts.icRender(arr);
     });
 
     //
-    brick.controllers.reg('rts_ctrl', function(scope){
+    brick.controllers.reg('rts_ctrl', function (scope) {
 
-        scope.cancel = function(){
+        scope.cancel = function () {
             let $th = $(this);
             let code = $th.attr('code');
             $th.closest('li').remove();
-            emit({event:'rts_cancel', code:code});
+            emit({event: 'rts_cancel', code: code});
         };
 
-        scope.view = function(){
+        scope.view = function () {
             let $th = $(this);
             let code = $th.attr('code');
-            emit({event:'rts_view', code:code});
+            emit({event: 'rts_view', code: code});
         };
 
-        scope.active_ftnn = function(){
-            emit({event:'active_ftnn'});
+        scope.active_ftnn = function () {
+            emit({event: 'active_ftnn'});
         };
 
     });
 
-    brick.controllers.reg('links_ctrl', function(){
+    brick.controllers.reg('links_ctrl', function () {
 
         var ip = location.hostname;
 
-        this.$elm.find('a').each(function(){
-            this.href = this.href.replace('*', ip);
-        })
+        this.$elm.icRender({ip: ip});
 
+        /*this.$elm.find('a').each(function(){
+         console.log(this.href, this.href.replace('*', ip))
+         this.href = this.href.replace('*', ip);
+         })
+         */
     });
 
 </script>

@@ -53,7 +53,7 @@ function ready() {
     createWindow();
 
     electron.powerMonitor.on('resume', () => {
-        console.log('The system is going to resume');
+        //console.log(`System resume, relaunch at ${(new Date).toLocaleString()}`);
         app.relaunch();
         app.exit();
     });

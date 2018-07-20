@@ -71,7 +71,7 @@ Rts.prototype = {
             url: this.url,
             encoding: null
         };
-        //console.log(this.url);
+        console.log(this.url);
         request(options, function (error, response, body) {
             if(error){
                 console.error('error:', error);
@@ -86,8 +86,8 @@ Rts.prototype = {
                 that.callback(arr);
             }catch(e){
                 console.error(e);
-                console.log(that.url);
-                console.log('body:', body);
+                console.info(that.url);
+                console.info('body:', body);
                 that.toggle();
                 that.callback('解析错误，查看控制台。');
             }
@@ -154,6 +154,9 @@ Rts.prototype = {
     },
     createUrl: function () {
         let codes = this.codes;
+        if(!codes.length){
+            return console.log('无股票代码.');
+        }
         codes = codes.map(this._prefix);
         codes = codes.join(',');
         this.url = this.stock_api.replace('*', codes);
