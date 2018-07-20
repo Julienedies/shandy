@@ -18,7 +18,6 @@ var $items =  $elm.find(s_item);
 
     if(!$items.size()){
         $elm.find('>*').each(function(){
-            console.log(this);
             $(this).attr('ic-select-item', +new Date);
         });
     }
