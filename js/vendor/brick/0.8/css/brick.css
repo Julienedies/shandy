@@ -1,8 +1,22 @@
 /*
-==========================================
  * {{timestamp}}
- * {{timestamp2}}
  */
+
+[ic-dropdown] {
+  position: relative;
+}
+
+[ic-dropdown-menu] {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+}
+
+[ic-dropdown-con] {
+  overflow: hidden;
+}
+
+
 html,body{
     height: 100%;
 }
@@ -53,6 +67,16 @@ html,body{
     left:0;
     top:0;
 }
+
+[ic-tab]{
+    cursor: pointer;
+}
+[ic-tab-con]{
+    display: none;
+}
+
+
+
 [ic-accordion] [ic-accordion-con]{
     display: none;
 }
@@ -73,6 +97,9 @@ html,body{
 [ic-tpl]{
     display: none;
 }
+[ic-tpl] [ic-tpl]{
+    display:auto;
+}
 [ic-drag-view]{
     position: relative;
     overflow: hidden;
@@ -91,25 +118,9 @@ html,body{
 [ic-role-slider-pagination]{
     cursor: pointer;
 }
-[ic-role-tab]{
-    cursor: pointer;
-}
-[ic-role-con]{
-    display: none;
-}
 
-[ic-dropdown]{
-    position: relative;
-}
-[ic-role-dropdown-menu]{
-    position: absolute;
-    left:0;
-    z-index: 10;
-    display: none;
-}
-[ic-role-dropdown-con]{
-    overflow: hidden;
-}
+
+
 
 [ic-scene]{
     display: none;

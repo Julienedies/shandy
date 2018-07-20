@@ -1,19 +1,18 @@
 /*!
- * js framework brick by Julien.
  * https://github.com/julienedies/brick.git
  * https://github.com/Julienedies/brick/wiki
- * "Mon Jul 02 2018 12:22:36 GMT+0800 (CST) "
- * "2018-07-02T04:22:36.838Z"
+ * "7/18/2018, 5:59:15 PM"
+ * "V 0.8"
  */
 ;
 (function (root, undefined) {
 
-    // __inline是fis语法，用于嵌入代码片段，经过编译后会替换成对应的js文件内容；
-    //core
-    /**
+// __inline是fis语法，用于嵌入代码片段，经过编译后会替换成对应的js文件内容；
+
+// core架构 必选
+/**
  * Created by julien.zhang on 2014/9/16.
- *
- * 框架配置
+ * 用于管理配置
  */
 
 var config = (function () {
@@ -76,87 +75,14 @@ var config = (function () {
     };
 
 
-})();;
-    /**
- * Created by julien.zhang on 2014/12/9.
- */
-
-function compile(node){
-
-    var $elm = $(node);
-
-    __compile(node);
-
-    var children = $elm.children();
-    var child;
-    var i = 0;
-    while (child = children.eq(i)[0]) {
-        i++;
-        compile(child);
-    }
-}
-
-
-function __compile(node){
-
-    if(node.nodeType != 1) return console.info('compile exit', node);
-
-    var $elm = $(node);
-    var attrs = node.attributes;
-
-    var _directives = [];
-
-    var priority = {
-        'ic-ctrl': -1000
-    };
-
-    var j = 0;
-    _.each(directives.get(), function(v, i, list){
-
-        if(typeof v === 'object' && v.priority){
-            priority[i] = v.priority;
-            return;
-        }
-        priority[i] = j++;
-
-    });
-
-
-    var name;
-
-    for (var i = 0, l = attrs.length; i < l; i++) {
-
-        name = attrs[i].name;
-
-        if (directives.get(name)) {
-            _directives.push(name);
-            continue;
-        }
-
-    }
-
-    //对指令按优先级排序
-    _directives.sort(function(a, b){
-        return priority[a] - priority[b];
-    });
-
-    //处理每一个指令
-    while (name = _directives.shift()) {
-        //console.log(name, $elm, attrs);
-        directives.exec(name, $elm, attrs);
-    }
-
-}
-
-;
-    /**
+})();
+/**
  * Created by julien.zhang on 2014/9/15.
- *
  * 事件管理器
  */
 
 
-var eventManager = (function() {
+var eventManager = (function () {
 
     var _events = {};
 
@@ -168,13 +94,13 @@ var eventManager = (function() {
          * @param f {Function} 回调函数
          * @param context {Object} 调用watch方法的scope
          */
-        bind: function (e, f, context) {
+        on: function (e, f, context) {
             e = e.split(/[,\s]+/g);
-            for(var i in e){
+            for (var i in e) {
                 this._bind(e[i], f, context);
             }
         },
-        _bind: function(e, f, context){
+        _bind: function (e, f, context) {
 
             var handle = {f: f};
 
@@ -194,13 +120,13 @@ var eventManager = (function() {
          * @param e {String} 事件名
          * @param f {Function} 回调函数，可选，如果没有传递，则取消该事件下的所有监听
          */
-        unbind: function (e, f) {
+        off: function (e, f) {
             e = e.split(/[,\s]+/g);
-            for(var i in e){
+            for (var i in e) {
                 this._unbind(e[i], f);
             }
         },
-        _unbind: function(e, f){
+        _unbind: function (e, f) {
             var event = this._getNamespace(e);
             var callback = event && event._callback;
             var handle;
@@ -232,7 +158,7 @@ var eventManager = (function() {
          * @example
          * e = 'a.b.c';   会触发 ["a.b.c", "a.*.c", "a.*", "a.b.*"]
          */
-        fire: function (e, msg, that) {
+        emit: function (e, msg, that) {
 
             var namespace = e.split(/\.|\:/);
 
@@ -279,8 +205,6 @@ var eventManager = (function() {
             var f;
 
             if (callback) {
-
-                // _cc('fire=> ', e, msg);
 
                 for (var i = 0, len = callback.length; i < len; i++) {
 
@@ -329,86 +253,40 @@ var eventManager = (function() {
 
     };
 
-})();;
-    /**
+})();
+/**
  * Created by julien.zhang on 2014/9/15.
  *
  * 控制器管理器
  */
 
 
-var controllers = (function (){
+var controllers = (function () {
 
     // 存储控制器
     var _ctrls = {};
     var _bind = {};
 
-    function extend(dist, o){
-        for(var i in o){
+    function extend(dist, o) {
+        for (var i in o) {
             dist[i] = o[i];
         }
         return dist;
     }
 
     // scope原型对象
-    function _F(){}
+    function _F() {
+    }
 
     extend(_F.prototype, {
 
-        set: function(key, val){
+        set: function (key, val) {
             this[key] = val;
             this.render();
         },
 
-        get: function(key){
+        get: function (key) {
             return this[key];
-        },
-
-        _bind: function(name){
-            if(typeof name === 'string'){
-                name = [name];
-            }
-
-            for(var arr, i = 0, l = name.length; i < l; i++){
-                arr = _bind[name[i]] = _bind[name[i]] || [];
-                arr.push(this._name);
-            }
-        },
-        _cancel: function(name){
-            if(!name) {
-                delete _bind[this._name];
-                return;
-            }
-            if(typeof name === 'string'){
-                name = [name];
-            }
-
-            var arr = _bind[this._name];
-
-            if(arr && arr.shift){
-
-                for(var v; v = name.shift(); ){
-                    for(var i = 0, l = arr.length; i < l; i++){
-                        if(arr[i] === v){
-                            arr.splice(i, 1);
-                        }
-                    }
-                }
-
-            }
-        },
-        _fire: function(e){
-            var selfName = this._name;
-            var arr = ( _bind[selfName] || [] ).slice();
-
-            for(var i; i = arr.shift(); ){
-
-                _ctrls[i].scope._watch( extend( {source:this}, e || {} ) );
-
-            }
-        },
-        _watch: function(e){
-
         },
 
         /**
@@ -416,89 +294,72 @@ var controllers = (function (){
          * @param e {String} 事件名
          * @param msg {*}    任意要传递的数据
          */
-        fire: function(e, msg){
+        fire: function (e, msg) {
             var that = this;
             eventManager.fire(e, msg, that);
         },
-
         /**
          * 用于订阅事件
          * @param e  {String}   事件名
          * @param f  {Function} 回调函数，接受两个参数e(事件对象，由框架封装提供），msg(用户自定义数据)
          */
-        watch: function(e, f){
+        on: function (e, f) {
             var that = this;
             eventManager.bind(e, f, that);
         },
-
         /**
          * 取消事件监听
          * @param e {String}   事件名
          * @param f {Function} 回调函数
          */
-        unbind: function(e, f){
+        off: function (e, f) {
             eventManager.unbind(e, f);
         },
-
-        tmplFn: function(){
-
-        },
-        /**
-         * 比较htmlList，生成dom补丁对象，用于更新dom
-         */
-        diff: function(){
-
-        },
-
-        htmlList: null,
-
-        updateDom: function(patch){
-
-        },
-        render: function(tplName, model, call){
+        render: function (tplName, model, call) {
             var that = this;
-            setTimeout(function(){
-                var tple = that._render_(tplName, model);
-                call && tple && call.apply(tple, []);
-            },30);
+            if (typeof tplName == 'function') {
+                call = tplName;
+                tplName = that._name;
+                model = that;
+            }
+            if (typeof tplName == 'object') {
+                model = tplName;
+                tplName = that._name;
+                call = model;
+            }
+            setTimeout(function () {
+                var $tpl_dom = that._render(tplName, model);
+                if($tpl_dom){
+                    brick.compile($tpl_dom);
+                    call && call.apply($tpl_dom, []);
+                }
+            }, 30);
         },
-        _render_: function(tplName, model){
+        _render: function (tplName, model) {
             var $elm = this.$elm;
-            var tplf = brick.getTpl(tplName);  //模板函数
-            var tple; //dom元素
+            var tpl_fn = brick.getTpl(tplName);  //模板函数
+            var $tpl_dom; //dom元素
             var html;
-            if($elm && tplf){
-                tple = $elm.filter('[ic-tpl=?]'.replace('?', tplName));
-                tple = tple.length ? tple : $elm.find('[ic-tpl=?]'.replace('?', tplName));
-                html = tplf(model ? {model:model} : this);
-                //console.log(html)
-                if(tple.length){
-                    tple.show();
-                    tple.removeAttr('ic-tpl');
-                    return tple.html(html);
+            if ($elm && tpl_fn) {
+                $tpl_dom = $elm.filter('[ic-tpl=?]'.replace('?', tplName));
+                $tpl_dom = $tpl_dom.length ? $tpl_dom : $elm.find('[ic-tpl=?]'.replace('?', tplName));
+                html = tpl_fn(model ? {model: model} : this);
+                if ($tpl_dom.length) {
+                    $tpl_dom.show();
+                    $tpl_dom.removeAttr('ic-tpl');
+                    return $tpl_dom.html(html);
                 }
             }
-        },
-
-        _render: function(){
-            var html = this.tmplFn({data: this});
-
-            if(this.htmlList){
-                var patch = this.diff(html);
-                if(!patch) return;
-                this.htmlList = html;
-                return this.updateDom(patch);
-            }
-
-            //this.htmlList = html;
-            this.domNode && this.domNode.html(html);
         }
 
     });
 
 
-    function f(name, o){
-        function F(){ this._name = name;}
+    function f(name, o) {
+        function F() {
+            this._name = name;
+        }
+
         F.prototype = new _F();
         extend(F.prototype, o || {});
         return new F;
@@ -506,17 +367,11 @@ var controllers = (function (){
 
 
     return {
-
-        /**
-         * 旧的事件接口，废弃
-         */
-        bind: _bind,
-
         /**
          * 获取一个控制器的对外接口对象
          * @param name {String} 控制器ID
          */
-        get: function(name){
+        get: function (name) {
             return _ctrls[name] && _ctrls[name].scope;
         },
 
@@ -526,16 +381,16 @@ var controllers = (function (){
          * @param ctrl {Function} 控制器的工厂函数
          * @param conf {Object}   可选，控制器config (可以定义依赖，是否注册为global变量，是否做为service)
          */
-        add: function(name, ctrl, conf){
+        add: function (name, ctrl, conf) {
             conf = conf || {};
             var parent = conf.parent;
             var depend = conf.depend || [];
             var scope;
             scope = parent ? f(name, _ctrls[parent]) : f(name);
-            if(conf.global){
+            if (conf.global) {
                 window[name] = scope;
             }
-            _ctrls[name] = {fn:ctrl, scope:scope, depend:depend, service:conf.service, conf:conf};
+            _ctrls[name] = {fn: ctrl, scope: scope, depend: depend, service: conf.service, conf: conf};
         },
 
         /**
@@ -544,17 +399,17 @@ var controllers = (function (){
          * @param ctrl {Function} 控制器的工厂函数
          * @param conf {Object}   可选，控制器config (可以定义依赖，是否注册为global变量，是否做为service)
          */
-        reg: function(name, ctrl, conf){
+        reg: function (name, ctrl, conf) {
             conf = conf || {};
             var depend = conf.depend || [];
-            _ctrls[name] = {fn:ctrl, conf: conf, depend:depend, service:conf.service, scope:[]};
+            _ctrls[name] = {fn: ctrl, conf: conf, depend: depend, service: conf.service, scope: []};
         },
 
         /**
          * 运行控制器
          * @param name
          */
-        exec: function(name, parent, $elm){
+        exec: function (name, parent, $elm) {
             var ctrl = _ctrls[name];
 
             if (!ctrl) return console.log('not find controller ' + name);
@@ -574,7 +429,6 @@ var controllers = (function (){
             depend.unshift(scope);
 
             ctrl.fn.apply(scope, depend);
-            //ctrl.fn = function(){};
             ctrl.exec = (ctrl.exec || 0) + 1;
 
             //if(conf.global) window[name] = scope;
@@ -584,36 +438,37 @@ var controllers = (function (){
         /**
          * 初始化控制器
          */
-        init: function(name){
+        init: function (name) {
             var ctrls = _ctrls;
             var ctrl;
             var depend;
             var service;
-            for(var i in ctrls){
+            for (var i in ctrls) {
                 ctrl = ctrls[i];
-                if(ctrl.exec) continue;
+                if (ctrl.exec) continue;
                 depend = services.get(ctrl.depend) || [];
-                if(depend.constructor !== Array){
+                if (depend.constructor !== Array) {
                     depend = [depend];
                 }
                 depend.unshift(ctrl.scope);
                 service = ctrl.fn.apply(ctrl.scope, depend);
-                ctrl.fn = function(){};
+                ctrl.fn = function () {
+                };
 
-                if(ctrl.service){
+                if (ctrl.service) {
                     services.fill(i, service);
                 }
 
             }
         },
 
-        _look: function(){
+        _look: function () {
             return _ctrls;
         }
     };
 
-})();;
-    /**
+})();
+/**
  * Created by julien.zhang on 2014/9/15.
  *
  * 服务管理器 （任意类型的数据，模型对象，UI组件都可以做为服务存在；通常是单例对象）
@@ -697,8 +552,8 @@ var services = (function() {
         }
     };
 
-})();;
-    /**
+})();
+/**
  * Created by julien.zhang on 2014/9/17.
  */
 
@@ -707,17 +562,20 @@ var directives = {
     _pool: {},
 
     add: function (name, definition, conf) {
-        if(conf){
-            conf.fn = definition;
-        }
-        this._pool[name] = definition;
+        this.reg(name, definition, conf);
     },
 
-    reg: function(name, definition, conf){
-        if(conf){
+    reg: function (name, definition, conf) {
+        if(typeof name == 'object'){
+            conf = name;
+            name = conf.name;
+        }else if(typeof definition == 'object') {
+            conf = definition;
+        }else{
+            conf = conf || {};
             conf.fn = definition;
         }
-        this._pool[name] = conf || definition;
+        this._pool[name] = conf;
     },
 
     get: function (name) {
@@ -732,52 +590,34 @@ var directives = {
             definition.apply(null, [$elm, attrs]);
         } else if (definition.fn) {
             definition.fn.apply(null, [$elm, attrs]);
-            if(definition.once){
+            if (definition.once) {
                 delete _pool[i];
             }
         }
     },
 
-    init: function(){
-        var _pool = this._pool;
-        for(var i in _pool){
-
-            var definition = _pool[i];
-
-            if(definition.selfExec){
-                definition.fn && definition.fn();
-                if(definition.once){
-                    delete _pool[i];
-                }
-            }
-
-        }
-    },
-
-    _init: function (name) {
+    init: function () {
         var _pool = this._pool;
         for (var i in _pool) {
             var definition = _pool[i];
-            if (typeof definition === 'function') {
-                definition();
-            } else if (definition.fn) {
-                definition.fn();
+            if (definition.selfExec) {
+                definition.fn && definition.fn();
+                if (definition.once) {
+                    delete _pool[i];
+                }
             }
         }
     }
 
 };
 
-;
-    /**
+
+/**
  * Created by julien.zhang on 2014/9/12.
- *
- * 主要用于解析一个dom节点上绑定的操作
- *
+ * 主要用于解析一个dom节点上绑定的tpl指令
  */
 
 function parser(node) {
-
 
     if (node.nodeType == 1) {
 
@@ -790,16 +630,16 @@ function parser(node) {
             'skip': -100,
             'init': -10,
             'for': 0,
-            'for-start':1,
+            'for-start': 1,
             'for-init': 10,
             'if': 100,
-            'else-if':99,
+            'else-if': 99,
             'if-start': 100,
             'if-init': 110,
             'else': 100,
             'bind': 1000,
-            'if-end':10000,
-            'for-end':10000
+            'if-end': 10000,
+            'for-end': 10000
         };
 
 
@@ -818,8 +658,8 @@ function parser(node) {
         }
 
         //对指令按优先级排序
-        directives.sort(function(a, b){
-            return priority[a[0].replace(/^ic-/,'')] - priority[b[0].replace(/^ic-/,'')];
+        directives.sort(function (a, b) {
+            return priority[a[0].replace(/^ic-/, '')] - priority[b[0].replace(/^ic-/, '')];
         });
 
 
@@ -842,8 +682,8 @@ function parser(node) {
 
             if (/-for$/.test(name)) {
                 //elm.before('<% for( var ' + value + '){ %>\r\n');
-                elm.before(value.replace(/^\s*(?:(\w+?)\s*\,\s*)?(\w+?)\s*in\s*([\w.]+)/,function(m,$1,$2,$3,t){
-                    if ($1 && $2) return '<% for( var ' + $1 + ' in ' + $3 + '){ var ' + $2 + ' = ' + $3+'[' +$1 + ']; %>\r\n';
+                elm.before(value.replace(/^\s*(?:(\w+?)\s*\,\s*)?(\w+?)\s*in\s*((?:[\w.]+)|(?:\[[^\[\]]+\]))\s*$/, function (m, $1, $2, $3, t) {
+                    if ($1 && $2) return '<% for( var ' + $1 + ' in ' + $3 + '){ var ' + $2 + ' = ' + $3 + '[' + $1 + ']; %>\r\n';
                     return '<% for( var ' + m + '){ %>\r\n';
                 }));
                 elm.after('\r\n<% } %>');
@@ -852,8 +692,8 @@ function parser(node) {
             }
 
             if (/-for-start$/.test(name)) {
-                elm.before(value.replace(/^\s*(?:(\w+?)\s*\,\s*)?(\w+?)\s*in\s*([\w.]+)/,function(m,$1,$2,$3,t){
-                    if ($1 && $2) return '<% for( var ' + $1 + ' in ' + $3 + '){ var ' + $2 + ' = ' + $3+'[' +$1 + ']; %>\r\n';
+                elm.before(value.replace(/^\s*(?:(\w+?)\s*\,\s*)?(\w+?)\s*in\s*([\w.]+)/, function (m, $1, $2, $3, t) {
+                    if ($1 && $2) return '<% for( var ' + $1 + ' in ' + $3 + '){ var ' + $2 + ' = ' + $3 + '[' + $1 + ']; %>\r\n';
                     return '<% for( var ' + m + '){ %>\r\n';
                 }));
                 elm.removeAttr(name);
@@ -868,13 +708,13 @@ function parser(node) {
 
 
             if (/-else-if$/.test(name)) {
-                elm.before('<% } else if(' + (value===''?void(0):value) + '){ %>\r\n');
+                elm.before('<% } else if(' + (value === '' ? void(0) : value) + '){ %>\r\n');
                 elm.removeAttr(name);
                 continue;
             }
 
             if (/-if$/.test(name)) {
-                elm.before('<% if(' + (value===''?void(0):value) + '){ %>\r\n');
+                elm.before('<% if(' + (value === '' ? void(0) : value) + '){ %>\r\n');
                 elm.after('\r\n<% } %>');
                 elm.removeAttr(name);
                 continue;
@@ -882,7 +722,7 @@ function parser(node) {
 
 
             if (/-if-start$/.test(name)) {
-                elm.before('<% if(' + (value===''?void(0):value) + '){ %>\r\n');
+                elm.before('<% if(' + (value === '' ? void(0) : value) + '){ %>\r\n');
                 elm.removeAttr(name);
                 continue;
             }
@@ -895,12 +735,12 @@ function parser(node) {
             }
 
             if (/-bind$/.test(name)) {
-                elm.html('\r\n<%= ' + (value===''?'\"\"':value) + ' %>\r\n');
+                elm.html('\r\n<%= ' + (value === '' ? '\"\"' : value) + ' %>\r\n');
                 elm.removeAttr(name);
                 continue;
             }
 
-            if(/^ic-(?:href|src|style|class|data|value)$/.test(name)){
+            if (/^ic-(?:href|src|style|class|data|value)$/.test(name)) {
                 elm.removeAttr(name);
                 elm.attr(name, value.replace(/{{(.+?)}}/g, '<%= $1 %>'));
                 continue;
@@ -923,12 +763,10 @@ function parser(node) {
     }
 
 
-};
-    /**
+}
+/**
  * Created by julien.zhang on 2014/9/15.
- *
  * 遍历dom节点，根据指令生成一个编译过的模板渲染函数
- *
  */
 
 function createRender(root) {
@@ -958,28 +796,96 @@ function createRender(root) {
         .replace(/\bic-(\w+-)?(checked|disabled|selected|enabled)\s*=\s*"\s*((?:[^"]|\\")+)["]/g,function(m, $1, $2, $3){
             if($1 == 'has-') return m;
             $1 = $1 ? 'ic-'+ $1 : '';
-            $3 = $3.replace(/^(?:"|')|(?:"|')$/g,'');
+            //$3 = $3.replace(/^(?:"|')|(?:"|')$/g,'');
             return ' <% if(?3){ %> ?2 <% } %> '.replace('?3',$3).replace('?2',$1 + $2);
         })
         //实现ic-has-[prop]指令
-        .replace(/\bic-has-+([-_\w]+)\s*=\s*(['"]?)((?:[^\2]|\\\2)+)\2/img, function(m, $1, $2, $3){
+        .replace(/\bic-has-([-_\w]+)\s*=\s*(['"]?)((?:[^\2]|\\\2)+)\2/img, function(m, $1, $2, $3){
             return ' <% if(?3){ %> ?2 <% } %> '.replace('?3',$3).replace('?2',$1 + '=' + ('"<%= ? %>"'.replace('?', $3)));
         })
         .replace(/&amp;&amp;/g,'&&');
 
-    brick.get('debug') && console.info(_tpl);
+    var tpl_fn = _.template(_tpl);
+    tpl_fn._tpl_ = _tpl;
+    return tpl_fn;
 
-    var tpl = _.template(_tpl);
-    tpl._tpl_ = _tpl;
-    return tpl;
-
-};
-    /**
- * Created by julien.zhang on 2014/9/15.
+}
+/**
+ * Created by julien.zhang on 2014/12/9.
  */
 
-//内置服务
-services.fill('eventManager', eventManager);
+function compile(node){
+
+    var $elm = $(node);
+
+    __compile(node);
+
+    var children = $elm.children();
+    var child;
+    var i = 0;
+    while (child = children.eq(i)[0]) {
+        i++;
+        compile(child);
+    }
+}
+
+
+function __compile(node){
+
+    node = node[0] || node;  //jquery对象
+    if(node.nodeType != 1) return console.info('compile exit', node);
+
+    var $elm = $(node);
+    var attrs = node.attributes;
+
+    var _directives = [];
+
+    var priority = {
+        'ic-ctrl': -1000
+    };
+
+    var j = 0;
+    _.each(directives.get(), function(v, i, list){
+
+        if(typeof v === 'object' && v.priority){
+            priority[i] = v.priority;
+            return;
+        }
+        priority[i] = j++;
+
+    });
+
+
+    var name;
+
+    for (var i = 0, l = attrs.length; i < l; i++) {
+
+        name = attrs[i].name;
+
+        if (directives.get(name)) {
+            _directives.push(name);
+            continue;
+        }
+
+    }
+
+    //对指令按优先级排序
+    _directives.sort(function(a, b){
+        return priority[a] - priority[b];
+    });
+
+    //处理每一个指令
+    while (name = _directives.shift()) {
+        //console.log(name, $elm, attrs);
+        directives.exec(name, $elm, attrs);
+    }
+
+}
+
+
+/**
+ * Created by julien.zhang on 2014/9/15.
+ */
 
 //对外接口
 var brick = root.brick = {
@@ -997,24 +903,27 @@ var brick = root.brick = {
     get: function(k){
       return this.config.get(k);
     },
-    broadcast: function (e, msg) {
-        this.eventManager.fire(e, msg);
-        return this;
-    },
     on: function (e, fn) {
-        this.eventManager.bind(e, fn);
+        this.eventManager.on(e, fn);
         return this;
     },
     off: function (e, fn) {
-        this.eventManager.unbind(e, fn);
+        this.eventManager.off(e, fn);
         return this;
     },
-    fire: function (e, msg) {
-        this.eventManager.fire(e, msg);
+    emit: function (e, msg) {
+        this.eventManager.emit(e, msg);
         return this;
     },
     getTpl: function (name) {
         return this.__tpl[name];
+    },
+    reg: function(name, factory, conf){
+        if(/ctrl$/i.test(name)){
+            controllers.reg(name, factory, conf);
+        }else{
+            services.reg(name, factory, conf);
+        }
     },
     bootstrap: function (node) {
         console.info('brick start');
@@ -1031,12 +940,14 @@ var brick = root.brick = {
 
 
 
-;
-    /**
+
+
+// core指令 必选
+/**
  * Created by julien.zhang on 2014/12/9.
  */
 
-directives.add('ic-ctrl', function ($elm, attrs) {
+directives.reg('ic-ctrl', function ($elm, attrs) {
 
     var ctrlName = $elm.attr('ic-ctrl');
 
@@ -1047,12 +958,12 @@ directives.add('ic-ctrl', function ($elm, attrs) {
         //controllers.exec(ctrlName, controllers.get(parentName), $elm);
     }
 
-});;
-    /**
+});
+/**
  * Created by julien.zhang on 2014/10/11.
  */
 
-directives.add('ic-event', {
+directives.reg('ic-event', {
     selfExec: true,
     once: true,
     fn: function () {
@@ -1089,25 +1000,77 @@ directives.add('ic-event', {
 
     }
 });
-;
-    /**
+
+/**
+ * Created by julien.zhang on 2014/10/11.
+ */
+
+directives.reg('ic-tpl', {
+    selfExec: true,
+    //once: true,
+    fn: function ($elm) {
+
+        var __tpl = brick.__tpl = brick.__tpl || {};
+
+        ($elm || $('[ic-tpl]')).each(function () {
+
+            var $th = $(this);
+            var name = $th.attr('ic-tpl');
+
+            var $parent;
+
+            if(!name){
+                $parent = $th.closest('[ic-ctrl]');
+                name = $parent.attr('ic-ctrl');
+            }
+
+            $th.attr('ic-tpl-name', name);
+            __tpl[name] = createRender(this);
+
+        });
+
+    }
+
+});
+
+
+// jQuery扩展 必选
+/**
  * Created by julien.zhang on 2014/10/30.
  * 扩展 jquery
  */
+
+;
 (function ($) {
 
-    $.fn.icCompile = function(){
-
-        if(!this.length) return;
-
-        return this.each(function(i){
-
-            brick.compile(this);
-
+    $.fn.icRender = function (tpl, model, callback) {
+        if (typeof tpl == 'object') {
+            callback = model;
+            model = tpl;
+            tpl = this.attr('ic-tpl-name');
+        }
+        var tplFn = brick.getTpl(tpl);
+        if (!tplFn) return console.info('not find tpl: ' + tpl);
+        var html = tplFn({model: model});
+        return this.each(function () {
+            var $th = $(this);
+            $th.removeAttr('ic-tpl');
+            $th.html(html);
+            $th.icCompile();
+            callback && callback.apply(this, [$th.children()]);
         });
     };
 
-    $.fn.icParseProperty = function (name) {
+    $.fn.icCompile = function () {
+
+        if (!this.length) return this;
+
+        return this.each(function (i) {
+            brick.compile(this);
+        });
+    };
+
+    $.fn.icParseProperty = function (name, debug) {
 
         if (name === void(0)) return void(0);
         var $ctrl = this.closest('[ic-ctrl]');
@@ -1120,7 +1083,7 @@ directives.add('ic-event', {
         return (function (root, chain) {
 
             var k = chain.shift();
-            var v = root[k];
+            var v = root && root[k];
 
             if (!v) return;
 
@@ -1134,19 +1097,19 @@ directives.add('ic-event', {
 
     };
 
-    $.fn.icParseProperty2 = function(name){
+    $.fn.icParseProperty2 = function (name) {
         name = this.attr(name);
         return this.icParseProperty(name);
     };
 
-    $.fn.icTabActive = $.fn.icTabs = function(options){
+    $.fn.icTabs = function (options) {
         var active = options.active;
         active && this.attr('ic-tab-active', active);
         return this;
     };
 
     $.fn.icAjax = function (options) {
-        if(options === void(0)) return this.trigger('ic-ajax');
+        if (options === void(0)) return this.trigger('ic-ajax');
         options.data && this.data('ic-submit-data', options.data);
 
         options.disabled !== void(0) && this.attr('ic-ajax-disabled', !!options.disabled);
@@ -1154,107 +1117,107 @@ directives.add('ic-event', {
         return this;
     };
 
-    $.fn.icDialog = function (options) {
+    $.fn.icForm = function (call, options) {
+        return this.trigger('ic-form.' + call, options);
+    };
 
-        this.show();
+    $.fn.icDialog = function (options, callback) {
+
+        options = _.isObject(options) ? _.extend({desc: '', title: ''}, options) : {desc: options, title: ''};
+
+        if (!(this[0] && this[0].hasAttribute('ic-dialog'))) {
+            console.error('not is ic-dialog');
+            return this;
+        }
+
         var that = this;
+        var tpl = that.attr('ic-tpl-name');
+
+        callback && this.one('ic-dialog.close', callback);
+
         setTimeout(function () {
-            var id = that.attr('ic-dialog');
-            if (id !== void(0)) {
-                that.trigger('ic-dialog.call', options);
+
+            if (options === void(0)) {
+                options = true;
             }
+
+            if (!options) {
+                that.icAniOut(21);
+            }
+
+            if (tpl && _.isObject(options)) {
+                that.icRender(tpl, options.vm || options);
+            }
+
+            that.icAniIn(21, function () {
+                that.trigger('ic-dialog.show');
+            });
+
         }, 30);
 
         return this;
     };
 
-//定时器
-    $.fn.icTimer = function () {
-        var th = this;
-        var count = th.attr('ic-timer-count') * 1;
-
-        var timer = setInterval(function () {
-            if (count--) {
-                th.text(count);
-            } else {
-                clearInterval(timer);
-                th.trigger('ic-timer.' + 'end');
-            }
-        }, 1000);
-
-        return this;
-    };
-    //切换场景
-    $.icNextScene = function () {
-        var current = $('[ic-scene]').filter('[ic-scene-active=1]');
-
-        if (current.size) current.nextScene();
+    $.icDialog = function (msg, callback) {
+        var options = _.isObject(msg) ? _.extend({desc: '', title: ''}, msg) : {desc: msg, title: ''};
+        $('[ic-dialog]:first').icDialog(options, callback);
     };
 
-    $.fn.nextScene = function () {
-        var next = this.attr('ic-scene-next');
-        if (next) {
-            this.hide().removeAttr('ic-scene-active');
-            $('[ic-scene=?]'.replace('?', next)).show().attr('ic-scene-active', 1);
+    $.fn.icPrompt = function (options) {
+
+        if (!(this[0] && this[0].hasAttribute('ic-prompt'))) {
+            console.error('not is ic-prompt');
+            return this;
         }
 
-        return this;
-    };
+        var that = this;
+        var tpl = that.attr('ic-tpl-name');
 
-// 操作提示
-    var tipSize=0;
-    $.fn.tips = function (parent) {
-        ++tipSize;
-        var $parent = $(parent || 'body');
-        var w = $parent.innerWidth() * 0.4 + 'px';
-        var h;
-        var top;
-        var left;
-        var wraper = $('<div class="tipsBox"></div>');
-
-        this.addClass('tips1').css({
-            'width': w
-        });
-        this.appendTo(wraper);
-        wraper.appendTo($parent);
-
-        w = this.width()
-        h = this.height();
-        top = '-' + h / 2 + 'px';
-        left = '-' + w / 2 + 'px';
-        this.css({
-            'top': 40 * tipSize,
-            'left': left
-        });
-
-        wraper.animate({
-            top: 0,
-            'opacity': '1'
-        }, 500, function () {
-            $(this).addClass('animated wobble');
-        });
+        clearTimeout(that.data('ic-prompt-timer'));
 
         setTimeout(function () {
-            wraper.animate({
-                'top': -300,
-                'opacity': '0'
-            }, 500, function () {
-                --tipSize;
-                wraper.remove();
+
+            if (options === void(0)) {
+                options = true;
+            }
+
+            if (!options) {
+                that.icAniOut();
+            }
+
+            if (tpl && _.isObject(options)) {
+                that.icRender(tpl, options.vm || options);
+            }
+
+            that.icAniIn(21, function () {
+                that.trigger('ic-prompt.show');
+
+                var timer = setTimeout(function () {
+                    that.icAniOut();
+                }, 2400);
+
+                that.data('ic-prompt-timer', timer);
+
             });
-        }, 2000 * tipSize);
+
+        }, 30);
 
         return this;
     };
 
-    $.tips = function (massge) {
-        $('<div>' + massge + '</div>').tips();
+    $.icPrompt = function (msg) {
+        var options = _.isObject(msg) ? msg : {desc: msg};
+        $('[ic-prompt]:first').icPrompt(options);
     };
 
-//监听enter键
+    $.fn.icDatePicker = function (call, options) {
+        return this.trigger('ic-date-picker.' + call, options);
+    };
+
+    //监听enter键
     $.fn.icEnterPress = function (call) {
 
-        return this.each(function(i){
+        return this.each(function (i) {
 
             call = $.proxy(call, this);
 
@@ -1266,26 +1229,19 @@ directives.add('ic-event', {
 
             $(this)
                 .on('focus', function () {
-                    $(this).keypress(fn);
+                    $(this).on('input keypress', fn);
                 })
                 .on('blur', function () {
-                    $(this).unbind('keypress', fn);
+                    $(this).off('input keypress', fn);
                 });
         });
 
     };
 
-//设置loading
+    //设置loading
     (function ($) {
 
-        var loading = '<span style="margin:0.2em auto;display:inline-block;text-align:center;" role="_loading_"><svg width="16" height="16" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M 150,0 a 150,150 0 0,1 106.066,256.066 l -35.355,-35.355 a -100,-100 0 0,0 -70.711,-170.711 z" fill="#3d7fe6"><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 150 150" to="360 150 150" begin="0s" dur="1s" fill="freeze" repeatCount="indefinite" /></path></svg></span>';
-
-        if (window.ActiveXObject) {
-
-            loading = 'data:image/gif;base64,R0lGODlhEAAQAMQAAP///+7u7t3d3bu7u6qqqpmZmYiIiHd3d2ZmZlVVVURERDMzMyIiIhEREQARAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFBwAQACwAAAAAEAAQAAAFdyAkQgGJJOWoQgIjBM8jkKsoPEzgyMGsCjPDw7ADpkQBxRDmSCRetpRA6Rj4kFBkgLC4IlUGhbNQIwXOYYWCXDufzYPDMaoKGBoKb886OjAKdgZAAgQkfCwzAgsDBAUCgl8jAQkHEAVkAoA1AgczlyIDczUDA2UhACH5BAUHABAALAAAAAAPABAAAAVjICSO0IGIATkqIiMKDaGKC8Q49jPMYsE0hQdrlABCGgvT45FKiRKQhWA0mPKGPAgBcTjsspBCAoH4gl+FmXNEUEBVAYHToJAVZK/XWoQQDAgBZioHaX8igigFKYYQVlkCjiMhACH5BAUHABAALAAAAAAQAA8AAAVgICSOUGGQqIiIChMESyo6CdQGdRqUENESI8FAdFgAFwqDISYwPB4CVSMnEhSej+FogNhtHyfRQFmIol5owmEta/fcKITB6y4choMBmk7yGgSAEAJ8JAVDgQFmKUCCZnwhACH5BAUHABAALAAAAAAQABAAAAViICSOYkGe4hFAiSImAwotB+si6Co2QxvjAYHIgBAqDoWCK2Bq6A40iA4yYMggNZKwGFgVCAQZotFwwJIF4QnxaC9IsZNgLtAJDKbraJCGzPVSIgEDXVNXA0JdgH6ChoCKKCEAIfkEBQcAEAAsAAAAABAADgAABUkgJI7QcZComIjPw6bs2kINLB5uW9Bo0gyQx8LkKgVHiccKVdyRlqjFSAApOKOtR810StVeU9RAmLqOxi0qRG3LptikAVQEh4UAACH5BAUHABAALAAAAAAQABAAAAVxICSO0DCQKBQQonGIh5AGB2sYkMHIqYAIN0EDRxoQZIaC6bAoMRSiwMAwCIwCggRkwRMJWKSAomBVCc5lUiGRUBjO6FSBwWggwijBooDCdiFfIlBRAlYBZQ0PWRANaSkED1oQYHgjDA8nM3kPfCmejiEAIfkEBQcAEAAsAAAAABAAEAAABWAgJI6QIJCoOIhFwabsSbiFAotGMEMKgZoB3cBUQIgURpFgmEI0EqjACYXwiYJBGAGBgGIDWsVicbiNEgSsGbKCIMCwA4IBCRgXt8bDACkvYQF6U1OADg8mDlaACQtwJCEAIfkEBQcAEAAsAAABABAADwAABV4gJEKCOAwiMa4Q2qIDwq4wiriBmItCCREHUsIwCgh2q8MiyEKODK7ZbHCoqqSjWGKI1d2kRp+RAWGyHg+DQUEmKliGx4HBKECIMwG61AgssAQPKA19EAxRKz4QCVIhACH5BAUHABAALAAAAAAQABAAAAVjICSOUBCQqHhCgiAOKyqcLVvEZOC2geGiK5NpQBAZCilgAYFMogo/J0lgqEpHgoO2+GIMUL6p4vFojhQNg8rxWLgYBQJCASkwEKLC17hYFJtRIwwBfRAJDk4ObwsidEkrWkkhACH5BAUHABAALAAAAQAQAA8AAAVcICSOUGAGAqmKpjis6vmuqSrUxQyPhDEEtpUOgmgYETCCcrB4OBWwQsGHEhQatVFhB/mNAojFVsQgBhgKpSHRTRxEhGwhoRg0CCXYAkKHHPZCZRAKUERZMAYGMCEAIfkEBQcAEAAsAAABABAADwAABV0gJI4kFJToGAilwKLCST6PUcrB8A70844CXenwILRkIoYyBRk4BQlHo3FIOQmvAEGBMpYSop/IgPBCFpCqIuEsIESHgkgoJxwQAjSzwb1DClwwgQhgAVVMIgVyKCEAIfkECQcAEAAsAAAAABAAEAAABWQgJI5kSQ6NYK7Dw6xr8hCw+ELC85hCIAq3Am0U6JUKjkHJNzIsFAqDqShQHRhY6bKqgvgGCZOSFDhAUiWCYQwJSxGHKqGAE/5EqIHBjOgyRQELCBB7EAQHfySDhGYQdDWGQyUhADtBnuIRQIkiJgMKLQfrIugqNkMb4wGByIAQKg6FgitgaugONIgOMmDIIDWSsBhYFQgEGaLRcMCSBeEJ8WgvSLGTYC7QCQym62iQhsz1UiIBA11TVwNCXYB+goaAiighACH5BAUHABAALAAAAAAQAA4AAAVJICSO0HGQqJiIz8Om7NpCDSweblvQaNIMkMfC5CoFR4nHClXckZaoxUgAKTijrUfNdErVXlPUQJi6jsYtKkRty6bYpAFUBIeFAAAh+QQFBwAQACwAAAAAEAAQAAAFcSAkjtAwkCgUEKJxiIeQBgdrGJDByKmACDdBA0caEGSGgumwKDEUosDAMAiMAoIEZMETCVikgKJgVQnOZVIhkVAYzuhUgcFoIMIowaKAwnYhXyJQUQJWAWUND1kQDWkpBA9aEGB4IwwPJzN5D3wpno4hACH5BAUHABAALAAAAAAQABAAAAVgICSOkCCQqDiIRcGm7Em4hQKLRjBDCoGaAd3AVECIFEaRYJhCNBKowAmF8ImCQRgBgYBiA1rFYnG4jRIErBmygiDAsAOCAQkYF7fGwwApL2EBelNTgA4PJg5WgAkLcCQhACH5BAUHABAALAAAAQAQAA8AAAVeICRCgjgMIjGuENqiA8KuMIq4gZiLQgkRB1LCMAoIdqvDIsg=';
-            loading = '<span style="margin:0.2em; auto;display:inline-block;text-align:center;" role="_loading_"><img src="?"></span>'.replace('?', loading);
-
-        }
+        var loading = '<span ic-loader role="_loading_"><svg width="16" height="16" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M 150,0 a 150,150 0 0,1 106.066,256.066 l -35.355,-35.355 a -100,-100 0 0,0 -70.711,-170.711 z" fill="#3d7fe6"><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 150 150" to="360 150 150" begin="0s" dur="1s" fill="freeze" repeatCount="indefinite" /></path></svg></span>';
 
         $.fn.icSetLoading = $.fn.setLoading = function (option) {
 
@@ -1293,7 +1249,7 @@ directives.add('ic-event', {
 
             this.icClearLoading();
 
-            return this.each(function(){
+            return this.each(function () {
                 //this.parent().css({position:'relative'});
                 var $th = $(this);
                 var w = $th.outerWidth();
@@ -1301,7 +1257,14 @@ directives.add('ic-event', {
                 var offset = $th.offset();
                 var top = offset.top;
                 var left = offset.left;
-                var $loading = $(_loading || loading).css({width: w, height: h, position: 'absolute', top:top, left:left,'z-index':999}).appendTo('body');
+                var $loading = $(_loading || loading).css({
+                    width: w,
+                    height: h,
+                    position: 'absolute',
+                    top: top,
+                    left: left,
+                    'z-index': 1999
+                }).appendTo('body');
 
                 //$loading.find('svg').css({'margin-top':($th.height()-16)/2});
 
@@ -1312,13 +1275,13 @@ directives.add('ic-event', {
 
         };
 
-    })(jQuery);
+    })($);
 
 
-//清除loading
+    //清除loading
     $.fn.icClearLoading = $.fn.clearLoading = function () {
 
-        return this.each(function(){
+        return this.each(function () {
             var $th = $(this);
             var $loading = $th.data('_ic-role-loading');
             $loading && $loading.remove();
@@ -1332,10 +1295,10 @@ directives.add('ic-event', {
 })(jQuery);
 
 
-;
 
-    //以下是可选的内置的services、directives、brick扩展
-    /**
+
+// 内置services 可选
+/**
  * Created by Julien on 2014/8/13.
  *
  *
@@ -1705,41 +1668,624 @@ function recordManager() {
 
 
 //内置服务
-services.reg('recordManager', recordManager);;
-
-    /**
- * Created by julien.zhang on 2014/10/11.
+services.reg('recordManager', recordManager);
+/**
+ * Created by Julien on 2015/9/1.
  */
 
-directives.reg('ic-tpl', {
-    selfExec: true,
-    once: true,
-    fn: function ($elm) {
+/**
+ * 获取一个动画类
+ * @param animation {Number} 1-67
+ * @returns {{inClass: string, outClass: string}}
+ */
+brick.getAniMap = function (animation) {
 
-        ($elm || $('[ic-tpl]')).each(function (i) {
+    animation = animation*1 > 67 ? 0 : animation*1;
+    animation = animation || Math.round(Math.random() * 66 + 1);
 
-            var th = $(this);
+    console.info('animation id is ' + animation);
 
-            var name = th.attr('ic-tpl');
-            th.attr('ic-tpl-name', name);
+    var outClass = '', inClass = '';
 
-            var compiled = createRender(this);
+    switch (animation) {
 
-            var __tpl = brick.__tpl = brick.__tpl || {};
-            __tpl[name] = compiled;
-
-        });
+        case 1:
+            outClass = 'pt-page-moveToLeft';
+            inClass = 'pt-page-moveFromRight';
+            break;
+        case 2:
+            outClass = 'pt-page-moveToRight';
+            inClass = 'pt-page-moveFromLeft';
+            break;
+        case 3:
+            outClass = 'pt-page-moveToTop';
+            inClass = 'pt-page-moveFromBottom';
+            break;
+        case 4:
+            outClass = 'pt-page-moveToBottom';
+            inClass = 'pt-page-moveFromTop';
+            break;
+        case 5:
+            outClass = 'pt-page-fade';
+            inClass = 'pt-page-moveFromRight pt-page-ontop';
+            break;
+        case 6:
+            outClass = 'pt-page-fade';
+            inClass = 'pt-page-moveFromLeft pt-page-ontop';
+            break;
+        case 7:
+            outClass = 'pt-page-fade';
+            inClass = 'pt-page-moveFromBottom pt-page-ontop';
+            break;
+        case 8:
+            outClass = 'pt-page-fade';
+            inClass = 'pt-page-moveFromTop pt-page-ontop';
+            break;
+        case 9:
+            outClass = 'pt-page-moveToLeftFade';
+            inClass = 'pt-page-moveFromRightFade';
+            break;
+        case 10:
+            outClass = 'pt-page-moveToRightFade';
+            inClass = 'pt-page-moveFromLeftFade';
+            break;
+        case 11:
+            outClass = 'pt-page-moveToTopFade';
+            inClass = 'pt-page-moveFromBottomFade';
+            break;
+        case 12:
+            outClass = 'pt-page-moveToBottomFade';
+            inClass = 'pt-page-moveFromTopFade';
+            break;
+        case 13:
+            outClass = 'pt-page-moveToLeftEasing pt-page-ontop';
+            inClass = 'pt-page-moveFromRight';
+            break;
+        case 14:
+            outClass = 'pt-page-moveToRightEasing pt-page-ontop';
+            inClass = 'pt-page-moveFromLeft';
+            break;
+        case 15:
+            outClass = 'pt-page-moveToTopEasing pt-page-ontop';
+            inClass = 'pt-page-moveFromBottom';
+            break;
+        case 16:
+            outClass = 'pt-page-moveToBottomEasing pt-page-ontop';
+            inClass = 'pt-page-moveFromTop';
+            break;
+        case 17:
+            outClass = 'pt-page-scaleDown';
+            inClass = 'pt-page-moveFromRight pt-page-ontop';
+            break;
+        case 18:
+            outClass = 'pt-page-scaleDown';
+            inClass = 'pt-page-moveFromLeft pt-page-ontop';
+            break;
+        case 19:
+            outClass = 'pt-page-scaleDown';
+            inClass = 'pt-page-moveFromBottom pt-page-ontop';
+            break;
+        case 20:
+            outClass = 'pt-page-scaleDown';
+            inClass = 'pt-page-moveFromTop pt-page-ontop';
+            break;
+        case 21:
+            outClass = 'pt-page-scaleDown';
+            inClass = 'pt-page-scaleUpDown pt-page-delay300';
+            break;
+        case 22:
+            outClass = 'pt-page-scaleDownUp';
+            inClass = 'pt-page-scaleUp pt-page-delay300';
+            break;
+        case 23:
+            outClass = 'pt-page-moveToLeft pt-page-ontop';
+            inClass = 'pt-page-scaleUp';
+            break;
+        case 24:
+            outClass = 'pt-page-moveToRight pt-page-ontop';
+            inClass = 'pt-page-scaleUp';
+            break;
+        case 25:
+            outClass = 'pt-page-moveToTop pt-page-ontop';
+            inClass = 'pt-page-scaleUp';
+            break;
+        case 26:
+            outClass = 'pt-page-moveToBottom pt-page-ontop';
+            inClass = 'pt-page-scaleUp';
+            break;
+        case 27:
+            outClass = 'pt-page-scaleDownCenter';
+            inClass = 'pt-page-scaleUpCenter pt-page-delay400';
+            break;
+        case 28:
+            outClass = 'pt-page-rotateRightSideFirst';
+            inClass = 'pt-page-moveFromRight pt-page-delay200 pt-page-ontop';
+            break;
+        case 29:
+            outClass = 'pt-page-rotateLeftSideFirst';
+            inClass = 'pt-page-moveFromLeft pt-page-delay200 pt-page-ontop';
+            break;
+        case 30:
+            outClass = 'pt-page-rotateTopSideFirst';
+            inClass = 'pt-page-moveFromTop pt-page-delay200 pt-page-ontop';
+            break;
+        case 31:
+            outClass = 'pt-page-rotateBottomSideFirst';
+            inClass = 'pt-page-moveFromBottom pt-page-delay200 pt-page-ontop';
+            break;
+        case 32:
+            outClass = 'pt-page-flipOutRight';
+            inClass = 'pt-page-flipInLeft pt-page-delay500';
+            break;
+        case 33:
+            outClass = 'pt-page-flipOutLeft';
+            inClass = 'pt-page-flipInRight pt-page-delay500';
+            break;
+        case 34:
+            outClass = 'pt-page-flipOutTop';
+            inClass = 'pt-page-flipInBottom pt-page-delay500';
+            break;
+        case 35:
+            outClass = 'pt-page-flipOutBottom';
+            inClass = 'pt-page-flipInTop pt-page-delay500';
+            break;
+        case 36:
+            outClass = 'pt-page-rotateFall pt-page-ontop';
+            inClass = 'pt-page-scaleUp';
+            break;
+        case 37:
+            outClass = 'pt-page-rotateOutNewspaper';
+            inClass = 'pt-page-rotateInNewspaper pt-page-delay500';
+            break;
+        case 38:
+            outClass = 'pt-page-rotatePushLeft';
+            inClass = 'pt-page-moveFromRight';
+            break;
+        case 39:
+            outClass = 'pt-page-rotatePushRight';
+            inClass = 'pt-page-moveFromLeft';
+            break;
+        case 40:
+            outClass = 'pt-page-rotatePushTop';
+            inClass = 'pt-page-moveFromBottom';
+            break;
+        case 41:
+            outClass = 'pt-page-rotatePushBottom';
+            inClass = 'pt-page-moveFromTop';
+            break;
+        case 42:
+            outClass = 'pt-page-rotatePushLeft';
+            inClass = 'pt-page-rotatePullRight pt-page-delay180';
+            break;
+        case 43:
+            outClass = 'pt-page-rotatePushRight';
+            inClass = 'pt-page-rotatePullLeft pt-page-delay180';
+            break;
+        case 44:
+            outClass = 'pt-page-rotatePushTop';
+            inClass = 'pt-page-rotatePullBottom pt-page-delay180';
+            break;
+        case 45:
+            outClass = 'pt-page-rotatePushBottom';
+            inClass = 'pt-page-rotatePullTop pt-page-delay180';
+            break;
+        case 46:
+            outClass = 'pt-page-rotateFoldLeft';
+            inClass = 'pt-page-moveFromRightFade';
+            break;
+        case 47:
+            outClass = 'pt-page-rotateFoldRight';
+            inClass = 'pt-page-moveFromLeftFade';
+            break;
+        case 48:
+            outClass = 'pt-page-rotateFoldTop';
+            inClass = 'pt-page-moveFromBottomFade';
+            break;
+        case 49:
+            outClass = 'pt-page-rotateFoldBottom';
+            inClass = 'pt-page-moveFromTopFade';
+            break;
+        case 50:
+            outClass = 'pt-page-moveToRightFade';
+            inClass = 'pt-page-rotateUnfoldLeft';
+            break;
+        case 51:
+            outClass = 'pt-page-moveToLeftFade';
+            inClass = 'pt-page-rotateUnfoldRight';
+            break;
+        case 52:
+            outClass = 'pt-page-moveToBottomFade';
+            inClass = 'pt-page-rotateUnfoldTop';
+            break;
+        case 53:
+            outClass = 'pt-page-moveToTopFade';
+            inClass = 'pt-page-rotateUnfoldBottom';
+            break;
+        case 54:
+            outClass = 'pt-page-rotateRoomLeftOut pt-page-ontop';
+            inClass = 'pt-page-rotateRoomLeftIn';
+            break;
+        case 55:
+            outClass = 'pt-page-rotateRoomRightOut pt-page-ontop';
+            inClass = 'pt-page-rotateRoomRightIn';
+            break;
+        case 56:
+            outClass = 'pt-page-rotateRoomTopOut pt-page-ontop';
+            inClass = 'pt-page-rotateRoomTopIn';
+            break;
+        case 57:
+            outClass = 'pt-page-rotateRoomBottomOut pt-page-ontop';
+            inClass = 'pt-page-rotateRoomBottomIn';
+            break;
+        case 58:
+            outClass = 'pt-page-rotateCubeLeftOut pt-page-ontop';
+            inClass = 'pt-page-rotateCubeLeftIn';
+            break;
+        case 59:
+            outClass = 'pt-page-rotateCubeRightOut pt-page-ontop';
+            inClass = 'pt-page-rotateCubeRightIn';
+            break;
+        case 60:
+            outClass = 'pt-page-rotateCubeTopOut pt-page-ontop';
+            inClass = 'pt-page-rotateCubeTopIn';
+            break;
+        case 61:
+            outClass = 'pt-page-rotateCubeBottomOut pt-page-ontop';
+            inClass = 'pt-page-rotateCubeBottomIn';
+            break;
+        case 62:
+            outClass = 'pt-page-rotateCarouselLeftOut pt-page-ontop';
+            inClass = 'pt-page-rotateCarouselLeftIn';
+            break;
+        case 63:
+            outClass = 'pt-page-rotateCarouselRightOut pt-page-ontop';
+            inClass = 'pt-page-rotateCarouselRightIn';
+            break;
+        case 64:
+            outClass = 'pt-page-rotateCarouselTopOut pt-page-ontop';
+            inClass = 'pt-page-rotateCarouselTopIn';
+            break;
+        case 65:
+            outClass = 'pt-page-rotateCarouselBottomOut pt-page-ontop';
+            inClass = 'pt-page-rotateCarouselBottomIn';
+            break;
+        case 66:
+            outClass = 'pt-page-rotateSidesOut';
+            inClass = 'pt-page-rotateSidesIn pt-page-delay200';
+            break;
+        case 67:
+            outClass = 'pt-page-rotateSlideOut';
+            inClass = 'pt-page-rotateSlideIn';
+            break;
 
     }
 
-});
+    return {inClass: inClass, outClass: outClass};
+};
+
+/**
+ * 扩展jquery，添加转场动画支持
+ * example: $('#view1').icAniOut($('#view2')); //#view1 in，#view2 out.
+ * 一个元素css display:none  不能做css3动画
+ */
 ;
-    /**
+(function () {
+
+    var $doc = $('body');
+    var animEndEventName = 'webkitAnimationEnd';
+
+    function initStatus($elm) {
+        $elm.attr('ic-isAnimating', false);
+        $elm.addClass('ic-animating');
+        $elm.attr('ic-aniEnd', false);
+        $elm.removeAttr('ic-aniIn');
+    }
+
+    function onEndAnimation($elm, call) {
+        $elm.removeClass('ic-animating');
+        $elm.off(animEndEventName).attr('ic-aniEnd', true).trigger('ic-aniEnd');
+        call && call.call($elm[0]);
+    }
+
+    //out
+    $.fn.icAniOut = function (aniId, $next, call) {
+
+        var args = [].slice.call(arguments);
+
+        aniId = $next = call = void(0);
+
+        args.forEach(function (v) {
+            if (_.isFunction(v)) {
+                call = v;
+            } else if (_.isObject(v)) {
+                $next = v;
+            } else if (_.isNumber(v)) {
+                aniId = v;
+            }
+        });
+
+        $next = $($next);
+
+        var $current = this;
+
+        $current = $current[0] && $current[0].hasAttribute ? $current : false;
+        $next = $next[0] && $next[0].hasAttribute ? $next : false;
+
+        if(!$next){
+
+            if(!aniId){
+                aniId = aniId || this.attr('ic-aniId');
+                aniId = aniId && aniId * 1;
+                aniId = aniId && aniId % 2 ? aniId + 1 : aniId - 1;
+            }
+
+        }
+
+        var cla = brick.getAniMap(aniId);
+        var inClass = cla.inClass;
+        var outClass = cla.outClass;
+
+        // $doc.animate({scrollTop: 0}, 150);
+        //$doc.scrollTop(0);
+
+        if ($current && !$current.hasClass('ic-animating')) {
+
+            initStatus($current);
+
+            $current.addClass(outClass).on(animEndEventName, function () {
+
+                $current.removeClass(outClass);
+                $current.removeAttr('ic-active');
+                $current.removeAttr('ic-aniIn');
+                $current.attr('ic-aniOut', true);
+                onEndAnimation($current, call);
+
+                if (!$next || $next && $next.attr('ic-aniEnd')) {
+                    //_onEndAnimation($current);
+                }
+
+            });
+
+        }
+
+
+        if ($next && !$next.hasClass('ic-animating')) {
+
+            initStatus($next);
+
+            $next.attr('ic-aniId', aniId);
+            $next.attr('ic-active', true);
+            $next.attr('ic-aniIn', true);
+            $next.removeAttr('ic-aniOut').addClass(inClass).on(animEndEventName, function () {
+
+                $next.removeClass(inClass);
+                onEndAnimation($next, call);
+
+                if (!$current || $current && $current.attr('ic-aniEnd')) {
+                    //_onEndAnimation($next);
+                }
+
+            });
+
+        }
+
+        return this;
+
+    };
+
+    //in
+    $.fn.icAniIn = function (aniId, $next, call) {
+
+        var args = [].slice.call(arguments);
+
+        aniId = $next = call = void(0);
+
+        args.forEach(function (v) {
+            if (_.isFunction(v)) {
+                call = v;
+            } else if (_.isObject(v)) {
+                $next = v;
+            } else if (_.isNumber(v)) {
+                aniId = v;
+            }
+        });
+
+        $next = $next || $({});
+
+        return $next.icAniOut(aniId, this, call);
+    }
+
+})();
+
+
+;
+(function () {
+
+    function Transition(conf) {
+        _.extend(this, conf || {});
+        this.history = [];
+        this.pool = {};
+        this.conf = {};
+        this.currentView = '';
+        this.$current = $({});
+        //this.current();
+    }
+
+    var proto = {
+        cache: function (name, $view) {
+            var viewProp = this.pool[name] = this.pool[name] || {};
+            if ($view) {
+                viewProp.$view = $view;
+                viewProp.aniId = $view.attr('ic-view-ani-id')*1 || brick.get('view.aniId') || 13 || Math.round(Math.random() * 66 + 1);
+            }
+            $view = viewProp.$view;
+            if (!$view) {
+                $view = $('[ic-view=?]'.replace('?', name));
+                return this.cache(name, $view);
+            }
+            return viewProp;
+        },
+        current: function () {
+            var currentView = this.currentView;
+            if (!currentView) {
+                var $view = $('[ic-view][ic-active]');
+                currentView = $view.attr('ic-view');
+                this.currentView = currentView;
+                this.$current = $view;
+                this.cache(currentView, $view);
+            }
+            return currentView;
+        },
+        to: function (name, reverse) {
+            if(!name) throw 'must to provide name of view.';
+            var that = this;
+            var currentView = this.current();
+            if(currentView == name) return;
+            var nextViewProp = this.cache(name);
+            var currentViewProp = this.cache(currentView);
+            var aniId = currentViewProp.aniId;
+            aniId = reverse ? aniId % 2 ? aniId + 1 : aniId - 1 : aniId;
+            nextViewProp.$view.trigger('ic-view.active', nextViewProp);
+            currentViewProp.$view.icAniOut(aniId, nextViewProp.$view, function(){
+                !reverse && that.history.push(currentView);
+                that.currentView = name;
+                that.$current = nextViewProp.$view;
+            });
+        },
+        back: function () {
+            var prev = this.history.pop();
+            prev && this.to(prev, true);
+        }
+    };
+
+    for (var i in proto) {
+        Transition.prototype[i] = proto[i];
+    }
+
+
+    var transition = brick.view = new Transition;
+    var eventAction = brick.get('event.action');
+
+    $(document.body).on(eventAction, '[ic-view-to]', function (e) {
+        var name = $(this).attr('ic-view-to');
+        transition.to(name);
+    }).on('click', '[ic-view-back]', function (e) {
+        transition.back();
+    });
+
+})();
+
+/**
+ * Created by Julien on 2015/8/10.
+ */
+
+;
+!function(){
+
+    brick.cache = function(_conf){
+
+        _conf = _.extend({
+            expire : brick.config.get('cache.expire') ||  1 * 24 * 60 * 60 * 1000,
+            namespace : brick.config.get('cache.namespace') || '__ic__'
+        }, _conf || {});
+
+        return function _cache(k, v, conf){
+
+            if(_.isUndefined(k)) return console.log('return for undefined k.');
+
+            var base = JSON.parse(JSON.stringify(_conf));
+
+            if(_.isNumber(conf)){
+                base.expire = conf;
+            }
+
+            conf = _.isObject(conf) ? _.extend(base, conf) : base;
+
+            var namespace = conf.namespace ? conf.namespace + '.' : '';
+            var key = namespace + k;
+
+            var expire = conf.expire;
+
+            var data;
+
+            //清空localStorage
+            if(k === false){
+                localStorage.clear();
+                return;
+            }
+
+            //返回所有的key
+            if(k === true){
+
+                for(var i = 0, keys = []; i < localStorage.length; i++){
+                    keys.push(localStorage.key(i));
+                }
+
+                return keys;
+            }
+
+            //清空localStorage对应的key
+            if(v === false){
+                localStorage.removeItem(key);
+                return;
+            }
+
+            //从localStorage获取对应的key或者设置对应的键值对
+            if(_.isUndefined(v)) {
+
+                data = JSON.parse(localStorage.getItem(key));
+
+                if(!data) return void(0);
+
+                if(+new Date - data.__ic_start > data.__ic_expire){
+
+                    localStorage.removeItem(key);
+                    return void(0);
+
+                }else{
+                    return data.__ic_data;
+                }
+
+            }else{
+
+                data = {};
+                data.__ic_start = + new Date;
+                data.__ic_data = v;
+                data.__ic_expire = expire;
+
+                try{
+
+                    localStorage.setItem(key, JSON.stringify(data));
+
+                }catch(e){
+
+                    if(e.name == 'QuotaExceededError'){
+
+                        console.error('存储溢出.');
+                        localStorage.clear();
+                        localStorage.setItem(key, JSON.stringify(data));
+
+                    }
+
+                }
+
+            }
+
+        };
+    };
+
+}();
+
+
+
+
+// 内置directives 可选
+/**
  * Created by julien.zhang on 2014/10/31.
  */
 
 
-directives.add('ic-ajax', function () {
+directives.reg('ic-ajax', function () {
 
         var eventAction = brick.get('event.action');
 
@@ -1748,7 +2294,6 @@ directives.add('ic-ajax', function () {
         $doc.on('ic-ajax', '[ic-ajax]', _call);
 
         function _call(e) {
-
             var that = this;
 
             if (this.hasAttribute('ic-ajax-disabled')) return;
@@ -1759,7 +2304,7 @@ directives.add('ic-ajax', function () {
             var $loading = $('[ic-role-loading=?]'.replace('?', namespace || +(new Date)));
 
             var defaultCall = function () {
-                console.log(arguments)
+                //console.log(arguments)
             };
 
             var before = $elm.icParseProperty2('ic-submit-before') || defaultCall;
@@ -1808,8 +2353,8 @@ directives.add('ic-ajax', function () {
     }
 );
 
-;
-    /**
+
+/**
  * Created by julien.zhang on 2014/10/11.
  */
 
@@ -1878,13 +2423,13 @@ directives.reg('ic-tabs', function ($elm, attrs) {
 
 });
 
-;
-    /**
+
+/**
  * Created by julien.zhang on 2014/10/29.
  */
 
 
-directives.add('ic-form', function ($elm, attrs) {
+directives.reg('ic-form', function ($elm, attrs) {
 
     /**
      * 要验证的字段 ic-form-field
@@ -1894,8 +2439,8 @@ directives.add('ic-form', function ($elm, attrs) {
      * ic-submit-disabled
      */
 
-    var debug =  brick.get('debug');
-    var eventAction =  brick.get('event.action');
+    var debug = brick.get('debug');
+    var eventAction = brick.get('event.action');
     var customRule = brick.get('ic-form.rule');
 
     var presetRule = {
@@ -1914,7 +2459,7 @@ directives.add('ic-form', function ($elm, attrs) {
 
     var keys = _.keys(presetRule);
 
-    keys.sort(function(a, b){
+    keys.sort(function (a, b) {
         return b.length - a.length;
     });
 
@@ -1938,8 +2483,8 @@ directives.add('ic-form', function ($elm, attrs) {
         for (var i in keys) {
             i = keys[i];
             v = presetRule[i];
-            rule = rule.replace(new RegExp(i+'(?![^|&])','g'), function(m){
-                return _.isFunction(v) ? m+'()' : _.isRegExp(v) ? v : m;
+            rule = rule.replace(new RegExp(i + '(?![^|&])', 'g'), function (m) {
+                return _.isFunction(v) ? m + '()' : _.isRegExp(v) ? v : m;
             });
         }
 
@@ -1977,13 +2522,13 @@ directives.add('ic-form', function ($elm, attrs) {
         try {
             result = eval(_script);
             //如果result是一个字符串，表示一个错误提示
-            if(typeof result === 'string'){
+            if (typeof result === 'string') {
                 return result;
             }
             //如果为result===true,表示验证通过
             if (result === true) {
                 return false;
-            } else if(result){
+            } else if (result) {
                 return result;
             } else {
                 return tips;
@@ -1994,9 +2539,9 @@ directives.add('ic-form', function ($elm, attrs) {
 
     }
 
-   /* $.fn.icForm = $.fn.icForm || function (call, msg) {
-        $submit.trigger('mousedown');
-    };*/
+    /* $.fn.icForm = $.fn.icForm || function (call, msg) {
+     $submit.trigger('mousedown');
+     };*/
 
     $.fn.icFormVerify = $.fn.icFormVerify || function () {
 
@@ -2017,7 +2562,8 @@ directives.add('ic-form', function ($elm, attrs) {
         return false;
     };
 
-    function defaultCall () {}
+    function defaultCall() {
+    }
 
     var fields = {};
 
@@ -2111,14 +2657,16 @@ directives.add('ic-form', function ($elm, attrs) {
                 val = $th.attr('ic-val');
             }
 
-            var prev = fields[submitName];
+            fields[submitName] = val;
+
+            /*var prev = fields[submitName];
             if (prev) {
-                prev = _.isArray(prev) ? prev : [prev];
+                prev =  ? prev : [prev];
                 prev.push(val);
                 fields[submitName] = prev;
             } else {
                 fields[submitName] = val;
-            }
+            }*/
 
         });
 
@@ -2144,18 +2692,18 @@ directives.add('ic-form', function ($elm, attrs) {
     });
 
     //
-    $submit.on('ic-form.submit', function(e){
+    $submit.on('ic-form.submit', function (e) {
         toSubmit(e);
     });
 
     // 提交触发
     $submit.on(eventAction, toSubmit);
-   // 回车提交触发
+    // 回车提交触发
     $fields.icEnterPress(function () {
         $submit.trigger(eventAction);
     });
 
-    function toSubmit(e){
+    function toSubmit(e) {
 
         if ($submit[0].hasAttribute('ic-submit-disabled')) return;
 
@@ -2223,39 +2771,217 @@ directives.add('ic-form', function ($elm, attrs) {
 
 });
 
-;
 
-    /**
- * 回车键按下监听指令
- * Created by julien.zhang on 2015/3/23.
+/**
+ * Created by j on 18/7/18.
+ * ic-select  实现checkbox or radio 类似的功能
+ * ic-select-cla  选中项的添加的样式类,默认 selected
+ * [ic-select][ic-select-item]  定义子项选择符 jQuery选择符
+ * [ic-select-item] 定义子项
+ * [ic-select-type] 定义select类型,多选or单选 checkbox : radio 默认 radio
  */
 
-directives.reg('ic-enter-press', function ($elm, attrs) {
+brick.directives.reg('ic-select', function($elm){
 
-    $(document.body).on('focus', '[ic-enter-press]', function(e){
+var cla = $elm.attr('ic-select-cla') || brick.get('ic-select-cla') || 'selected';
+var name = $elm.attr('ic-select');
+var s_item = $elm.attr('ic-select-item') || '[ic-select-item]';
+var type = $elm.attr('ic-select-type') || 'radio';
 
-        var $elm = $(this);
-        var call = $elm.attr('ic-enter-press');
-        call = $elm.icParseProperty(call);
-        call = $.proxy(call, this);
-        var fn = function(e){
-            e.which == 13  && call(e);
-        };
+var $items =  $elm.find(s_item);
 
-        $elm.on('keypress', fn);
+    if(!$items.size()){
+        $elm.find('>*').each(function(){
+            console.log(this);
+            $(this).attr('ic-select-item', +new Date);
+        });
+    }
 
-        $elm.on('blur', function(e){
-            $elm.off('keypress', fn);
+var callback = type == 'checkbox' ?
+    function(){
+        $(this).toggleClass(cla);
+        $elm.trigger('ic-select.change', {name:name});
+    }
+    :
+    function(){
+        var $th = $(this).addClass(cla);
+        $(this).siblings().removeClass(cla);
+        $elm.trigger('ic-select.change', {name:name});
+    };
+
+    $elm.on('click', s_item, callback);
+
+});
+/**
+ * Created by julien.zhang on 2015/3/23.
+ * 回车键按下监听指令
+ */
+
+directives.reg({
+    name: 'ic-enter-press',
+    selfExec: true,
+    once: true,
+    fn: function ($elm, attrs) {
+
+        $(document.body).on('focus', '[ic-enter-press]', function (e) {
+
+            var $elm = $(this);
+            var call = $elm.attr('ic-enter-press');
+            call = $elm.icParseProperty(call);
+            call = $.proxy(call, this);
+            var fn = function (e) {
+                e.which == 13 && call(e);
+            };
+
+            $elm.on('keypress', fn);
+
+            $elm.on('blur', function (e) {
+                $elm.off('keypress', fn);
+            });
+
+        });
+
+    }
+});
+/**
+ * Created by julien on 2015/11/30.
+ */
+
+brick.directives.reg('ic-scroll', function ($elm) {
+
+    var $th = $elm || $(this);
+
+    var onScroll = $elm.icParseProperty2('ic-scroll');
+
+    var prevScrollTop = 0;
+    var scrollDirection = 'down';
+
+    onScroll && $th.on('ic-scroll', onScroll);
+
+    $th.on('scroll', _.throttle(function (e) {
+        var scrollTop = $th.scrollTop();
+        var end;
+        scrollDirection = (scrollTop - prevScrollTop > 1) ? 'down' : 'up';
+        prevScrollTop = scrollTop;
+        if (scrollDirection == 'down' && $th[0].scrollHeight <= $th[0].clientHeight + scrollTop) {
+            console.log('trigger ic-scroll.end');
+            $th.trigger('ic-scroll-end');
+            end = true;
+        }
+        $th.trigger('ic-scroll', {direction: scrollDirection, end: end});
+    }, 300));
+
+});
+/**
+ * Created by julien.zhang on 2014/10/29.
+ */
+
+//ic-dialog
+directives.reg('ic-dialog', function ($elm, attrs) {
+
+    var eventAction = brick.get('event.action');
+
+    $(document.body).on(eventAction, '[ic-dialog-cancel], [ic-dialog-close], [ic-dialog-confirm]', function(e){
+
+        var $th = $(this);
+        var type = this.hasAttribute('ic-dialog-confirm');
+
+        var $dialog = $th.closest('[ic-dialog]');
+
+        $dialog.icAniOut(21, function(){
+            $dialog.trigger('ic-dialog.close', type);
+            $dialog.trigger('ic-dialog.hide', type);
+        });
+
+    }).on(eventAction, '[ic-dialog-href]', function (e) {
+        var target = $(this).attr('ic-dialog-href');
+        $('[ic-dialog=?]'.replace('?', target)).icDialog();
+        return false;
+    });
+
+}, {selfExec: true, once: true });
+
+
+//ic-prompt
+directives.reg('ic-prompt', function ($elm, attrs) {
+
+    var eventAction = brick.get('event.action');
+
+    $(document.body).on(eventAction, '[ic-prompt-cancel], [ic-prompt-close], [ic-prompt-confirm]', function(e){
+
+        var $th = $(this);
+        var type = this.hasAttribute('ic-prompt-confirm');
+
+        var $dialog = $th.closest('[ic-prompt]');
+
+        $dialog.icAniOut(21, function(){
+            $dialog.trigger('ic-prompt.hide', type);
         });
 
     });
 
-}, {selfExec: true, once: true });;
-    /**
+}, {selfExec: true, once: true });
+/**
+ * Created by julien.zhang on 2014/10/15.
+ */
+
+directives.add('ic-dropdown', function ($elm, attrs) {
+
+
+    var th = $elm;
+
+    th.css({position: 'relative'});
+
+    var h = th.height();
+
+    var menu = th.find('[ic-dropdown-menu]').css({position: 'absolute', top: h + 'px', display:'none!important'});
+
+    var timer;
+    if (menu.size()) {
+        th.hover(function (e) {
+            timer = setTimeout(function () {
+                menu.show(300);
+            }, 200);
+        }, function () {
+            clearTimeout(timer);
+            menu.slideUp(200);
+        });
+    }
+
+    var con = th.find('[ic-dropdown-con]').css({position: 'absolute', overflow: 'hidden'});
+
+    if (con.size()) {
+
+        var ch = con.height();
+
+        //th.css({overflow:'hidden',height:h+'px'});
+
+        var flag = 1;
+
+        th.find('[ic-dropdown-toggle]').click(function (e) {
+            if (flag) {
+                //con.slideDown();
+                con.css({height: 'auto'});
+                flag = 0;
+            } else {
+                con.css({height: ch + 'px'});
+                flag = 1;
+            }
+        });
+
+
+    }
+
+
+});
+
+
+//
+/**
  * Created by julien.zhang on 2014/10/11.
  */
 
-directives.add('ic-slider', function ($elm, attr) {
+directives.reg('ic-slider', function ($elm, attr) {
 
     var th = $elm;
 
@@ -2284,7 +3010,7 @@ directives.add('ic-slider', function ($elm, attr) {
 
     var broadcast = function () {
         th.trigger('ic-slider.change', items.eq(current - 1));
-    }
+    };
 
     broadcast();
 
@@ -2375,7 +3101,7 @@ directives.add('ic-slider', function ($elm, attr) {
             }
 
             return false;
-        }
+        };
 
     var interval = th.attr('ic-slider-interval');
     var timer;
@@ -2406,66 +3132,12 @@ directives.add('ic-slider', function ($elm, attr) {
 
 
 });
-;
-    /**
- * Created by julien.zhang on 2014/10/15.
- */
 
-directives.add('ic-dropdown', function ($elm, attrs) {
-
-
-    var th = $elm;
-
-    th.css({position: 'relative'});
-
-    var h = th.height();
-
-    var menu = th.find('[ic-role-dropdown-menu]').css({position: 'absolute', top: h + 'px'});
-
-    var timer;
-    if (menu.size()) {
-        th.hover(function (e) {
-            timer = setTimeout(function () {
-                menu.show(300);
-            }, 200);
-        }, function () {
-            clearTimeout(timer);
-            menu.slideUp(200);
-        });
-    }
-
-    var con = th.find('[ic-role-dropdown-con]').css({position: 'absolute', overflow: 'hidden'});
-
-    if (con.size()) {
-
-        var ch = con.height();
-
-        //th.css({overflow:'hidden',height:h+'px'});
-
-        var flag = 1;
-
-        th.find('[ic-role-dropdown-toggle]').click(function (e) {
-            if (flag) {
-                //con.slideDown();
-                con.css({height: 'auto'});
-                flag = 0;
-            } else {
-                con.css({height: ch + 'px'});
-                flag = 1;
-            }
-        });
-
-
-    }
-
-
-});
-;
-    /**
+/**
  * Created by julien.zhang on 2014/10/20.
  */
 
-directives.add('ic-pagination', function ($elm, attrs) {
+directives.reg('ic-pagination', function ($elm, attrs) {
 
     var th = $elm;
     var namespace = th.attr('ic-pagination');
@@ -2508,9 +3180,9 @@ directives.add('ic-pagination', function ($elm, attrs) {
                 var html = brick.getTpl(namespace)({model: list});
                 $tpl.html(html).show();
             };
-        }else{
+        } else {
             pool = $('[ic-role-pagination-page=?]'.replace('?', namespace)).children();
-            if(pool.length){
+            if (pool.length) {
                 total = Math.ceil(pool.length / rows);
                 onchange = function (page) {
                     --page;
@@ -2587,184 +3259,13 @@ directives.add('ic-pagination', function ($elm, attrs) {
     });
 
 
-});;
-    /**
- * Created by julien.zhang on 2014/10/29.
- */
-
-
-directives.add('ic-dialog', function ($elm, attrs) {
-
-    var html = "<div class=\"t\" style=\"position:fixed; z-index: 100000; left:0; top:0; width:100%; height: 100%; overflow: auto; background: rgba(0,34,89,0.2);\"></div>";
-
-    //只执行一次绑定
-    if (!arguments.callee._run) {
-
-        arguments.callee._run = 1;
-
-        $(document).on('click', '[ic-dialog-href]', function (e) {
-            var target = $(this).attr('ic-dialog-href');
-            $('[ic-dialog=?]'.replace('?', target)).icDialog();
-            return false;
-        });
-
-    }
-
-
-    var $dialogContainer = $(html).appendTo('body').hide();
-
-    var id = $elm.attr('ic-dialog');
-
-    $elm.appendTo($dialogContainer);
-
-    //处理js调用
-    $elm.on('ic-dialog.call', function (e, param) {
-
-        if(param === void(0)) return onShow(e);
-        if (param === 'hide' || param == false) return onClose(e);
-        onShow(e);
-    });
-
-    $elm.on('click', '[ic-role-dialog-confirm]', function (e) {
-        onClose(e, 1);
-    });
-
-
-    $elm.on('click', '[ic-role-dialog-cancel], [ic-role-dialog-close]', function (e) {
-        onClose(e, 0);
-    });
-
-
-    function onShow(e) {
-        $dialogContainer.show();
-        var width = $elm.width();
-        $elm.css('margin-left', -width / 2);
-        $elm.show();
-        $elm.trigger('ic-dialog.show');
-    }
-
-    function onClose(e, type) {
-        $dialogContainer.hide();
-        $elm.hide();
-        $elm.trigger('ic-dialog.close', type);
-    }
-
-
-
-
 });
-
-;
-    /**
- * Created by julien.zhang on 2014/11/5.
- */
-
-directives.add('ic-drag-view', function ($elm, attrs) {
-
-    var $document = $(document);
-
-    var startX = 0, startY = 0, x = 0, y = 0;
-    var vw, vh;
-    var w, h;
-
-    $document.on('click', '[ic-role-drag-key]', function (e) {
-
-        var th = $(this);
-        var drag = th.attr('ic-role-drag-key');
-        var d = th.attr('ic-drag-direction');
-        var m = 140;
-        $elm = $('[ic-role-drag-handle=?]'.replace('?', drag)).css({position: 'relative'});
-        w = $elm.width();
-        h = $elm.height();
-        vw = $elm.closest('[ic-drag-view]').css({position: 'relative'}).width();
-        vh = $elm.closest('[ic-drag-view]').width();
-        var position = $elm.position();
-        x = position.left;
-        y = position.top;
-
-        if (d === 'left') {
-            x -= m;
-            x = x < -(w - vw) ? -(w - vw) : x;
-            $elm.animate({left: x}, 500);
-        }
-
-        if (d === 'right') {
-            x += m;
-            x = x >= 0 ? 0 : x;
-            $elm.animate({left: x}, 500);
-        }
-
-    });
-
-
-    $document.on('mousedown', '[ic-role-drag-handle]', function (e) {
-
-        e.preventDefault();
-
-        startX = e.pageX;
-        startY = e.pageY;
-
-        $elm = $(this).css({position: 'relative'});
-
-        vw = $elm.closest('[ic-drag-view]').width();
-        vh = $elm.closest('[ic-drag-view]').height();
-
-        var position = $elm.position();
-        x = position.left;
-        y = position.top;
-
-        w = $elm.width();
-        h = $elm.height();
-
-        $document.on('mousemove', mousemove);
-        $document.on('mouseup', mouseup);
-
-        return false;
-
-    });
-
-
-    function mousemove(e) {
-
-        var moveX = e.pageX - startX;
-        var moveY = e.pageY - startY;
-
-        startX = e.pageX;
-        startY = e.pageY;
-
-        x += moveX;
-        y += moveY;
-
-        x = x < -(w - vw) ? -(w - vw) : x;
-        x = x >= 0 ? 0 : x;
-
-        y = y < -(h - vh) ? -(h - vh) : y;
-        y = y >= 0 ? 0 : y;
-
-        $elm.css({
-            top: y + 'px',
-            left: x + 'px'
-        });
-
-        return false;
-    }
-
-    function mouseup() {
-        $document.unbind('mousemove', mousemove);
-        $document.unbind('mouseup', mouseup);
-    }
-
-
-});;
-    /**
- *
+/**
  * Created by julien.zhang on 2014/11/13.
- *
  * 定义输入提示指令
- *
  */
 
-directives.add('ic-type-ahead', function ($elm, attrs) {
+directives.reg('ic-type-ahead', function ($elm, attrs) {
 
     var $doc = $('body');
 
@@ -2900,14 +3401,115 @@ directives.add('ic-type-ahead', function ($elm, attrs) {
     });
 
 
-});;
+});
+/**
+ * Created by julien.zhang on 2014/11/5.
+ */
 
-    //bootstrap
-    $(function () {
-        setTimeout(function () {
-            if(brick.get('bootstrap.auto') === false) return;
-            brick.bootstrap(document.body);
-        }, 10);
+directives.add('ic-drag-view', function ($elm, attrs) {
+
+    var $document = $(document);
+
+    var startX = 0, startY = 0, x = 0, y = 0;
+    var vw, vh;
+    var w, h;
+
+    $document.on('click', '[ic-role-drag-key]', function (e) {
+
+        var th = $(this);
+        var drag = th.attr('ic-role-drag-key');
+        var d = th.attr('ic-drag-direction');
+        var m = 140;
+        $elm = $('[ic-role-drag-handle=?]'.replace('?', drag)).css({position: 'relative'});
+        w = $elm.width();
+        h = $elm.height();
+        vw = $elm.closest('[ic-drag-view]').css({position: 'relative'}).width();
+        vh = $elm.closest('[ic-drag-view]').width();
+        var position = $elm.position();
+        x = position.left;
+        y = position.top;
+
+        if (d === 'left') {
+            x -= m;
+            x = x < -(w - vw) ? -(w - vw) : x;
+            $elm.animate({left: x}, 500);
+        }
+
+        if (d === 'right') {
+            x += m;
+            x = x >= 0 ? 0 : x;
+            $elm.animate({left: x}, 500);
+        }
+
     });
+
+
+    $document.on('mousedown', '[ic-role-drag-handle]', function (e) {
+
+        e.preventDefault();
+
+        startX = e.pageX;
+        startY = e.pageY;
+
+        $elm = $(this).css({position: 'relative'});
+
+        vw = $elm.closest('[ic-drag-view]').width();
+        vh = $elm.closest('[ic-drag-view]').height();
+
+        var position = $elm.position();
+        x = position.left;
+        y = position.top;
+
+        w = $elm.width();
+        h = $elm.height();
+
+        $document.on('mousemove', mousemove);
+        $document.on('mouseup', mouseup);
+
+        return false;
+
+    });
+
+
+    function mousemove(e) {
+
+        var moveX = e.pageX - startX;
+        var moveY = e.pageY - startY;
+
+        startX = e.pageX;
+        startY = e.pageY;
+
+        x += moveX;
+        y += moveY;
+
+        x = x < -(w - vw) ? -(w - vw) : x;
+        x = x >= 0 ? 0 : x;
+
+        y = y < -(h - vh) ? -(h - vh) : y;
+        y = y >= 0 ? 0 : y;
+
+        $elm.css({
+            top: y + 'px',
+            left: x + 'px'
+        });
+
+        return false;
+    }
+
+    function mouseup() {
+        $document.unbind('mousemove', mousemove);
+        $document.unbind('mouseup', mouseup);
+    }
+
+
+});
+
+// bootstrap
+$(function () {
+    setTimeout(function () {
+        if(brick.get('bootstrap.auto') === false) return;
+        brick.bootstrap(document.body);
+    }, 30);
+});
 
 })(window);
