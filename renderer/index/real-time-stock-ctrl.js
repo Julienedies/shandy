@@ -82,7 +82,7 @@ function _f(stock) {
         let least = 9000;  // 最低封单量 9000手
         let d = new Date();
         d = d.getHours();
-        console.log(name, '预警：封单-',Math.floor(b1_reduce_base/1000) + 'k', '成交量+', Math.floor(v_plus_base/1000) + 'k');
+        //console.log(name, '预警：封单-',Math.floor(b1_reduce_base/1000) + 'k', '成交量+', Math.floor(v_plus_base/1000) + 'k');
         /*
          * 如果（这里的计算是累计一段时间的，并不是以相邻两次请求计算）
          * 1. 封单减少量超过阈值,     （ 当前封单 - 上次封单 = 减少封单量 ）
