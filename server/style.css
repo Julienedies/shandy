@@ -1,6 +1,6 @@
 html, body {
     font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.8;
 }
 .warning{
@@ -36,7 +36,7 @@ ul{
 #rts_list span.b1_reduce{
     width:4em;
 }
-#rts_list span.code, #rts_list span.time, #rts_list span.increase{
+#rts_list span.code, #rts_list span.time, #rts_list span.increase, #rts_list span.price {
     font-size:0.6em;
     color:#ccc;
     padding:0 5px;
