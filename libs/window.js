@@ -11,8 +11,7 @@ const BrowserWindow = electron.remote.BrowserWindow;
 const config = require('../config.json');
 
 let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
-
-
+console.info(sw, sh);
 
 module.exports = function win(opt){
     return new Win(opt);
@@ -21,7 +20,8 @@ module.exports = function win(opt){
 function Win(opt){
 
     this.opt = {
-        whxy: {width: 1240, height: 820, x: 200, y: 0}
+        //whxy: {width: 1240, height: 820, x: 200, y: 0}
+            whxy: {width: sw, height: sh, x: 0, y: 0}
     };
 
     this.create(opt);

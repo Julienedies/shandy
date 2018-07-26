@@ -39,7 +39,7 @@ function createWindow() {
     // Launch fullscreen with DevTools open, usage: npm run debug
     if (true) {
         mainWindow.webContents.openDevTools();
-        //mainWindow.maximize();
+        mainWindow.maximize();
         //require('devtron').install();
     }
 
