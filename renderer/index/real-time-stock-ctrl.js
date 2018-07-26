@@ -34,11 +34,12 @@ function f(stocks) {
     let arr2 = [];
     let stock;
     while (stock = stocks.shift()) {
-        if(stock.increase * 1 > 9 || first_objm.get(stock.code)){
+        arr2.push(_f(stock));
+        /*if(stock.increase * 1 > 9 || first_objm.get(stock.code)){
             arr2.push(_f(stock));
         }else{
             q_rtso.remove(stock.code);
-        }
+        }*/
     }
 
     ipcRenderer.send('rts-push', arr2);
