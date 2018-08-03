@@ -1,5 +1,6 @@
 /**
  * Created by j on 18/5/21.
+ * electron 主进程
  */
 
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
@@ -53,9 +54,12 @@ function ready() {
     createWindow();
 
     electron.powerMonitor.on('resume', () => {
-        //console.log(`System resume, relaunch at ${(new Date).toLocaleString()}`);
-        app.relaunch();
-        app.exit();
+        let d = new Date();
+        let h = d.getHours();
+        if(h > 5 && h < 9){ // 只在早上重启
+            app.relaunch();
+            app.exit();
+        }
     });
 
     // 鼠标手势  => 快捷键 =>  apple script获取通达信个股代码  => 在浏览器打开同花顺个股资料页面

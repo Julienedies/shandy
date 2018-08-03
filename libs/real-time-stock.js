@@ -5,12 +5,7 @@
 const request = require('request');
 const schedule = require('node-schedule');
 const iconv = require('iconv-lite');
-
 const _ = require('underscore');
-
-module.exports = function (code, callback) {
-    return new Rts(code, callback);
-};
 
 function Rts(code, callback) {
     let _opt = {};
@@ -179,7 +174,7 @@ Rts.prototype = {
     config: function (conf) {
     },
     callback: function (data) {
-        console.log(data);
+        console.info(data);
     }
 };
 
@@ -190,3 +185,8 @@ Rts.prototype = {
  console.log(i, '  ', v);
  });
  });*/
+
+
+module.exports = function (code, callback) {
+    return new Rts(code, callback);
+};

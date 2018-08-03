@@ -20,8 +20,8 @@ module.exports = function win(opt){
 function Win(opt){
 
     this.opt = {
-        //whxy: {width: 1240, height: 820, x: 200, y: 0}
-            whxy: {width: sw, height: sh, x: 0, y: 0}
+        //whxy: {width: sw, height: sh, x: 0, y: 0}
+        whxy: {width: 1240, height: 820, x: 200, y: 0}
     };
 
     this.create(opt);
@@ -45,6 +45,7 @@ Win.prototype = {
         });
         win.loadURL(url);
         win.webContents.openDevTools();
+        win.maximize();
         win.show();
         this.win = win;
     },

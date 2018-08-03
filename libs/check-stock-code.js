@@ -11,33 +11,30 @@ const _ = require('underscore');
  * @returns {undefined|string}  没有找到股票代码或股票代码字符串
  */
 module.exports = function (words) {
-    let matchs = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]+[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
-    console.log( matchs);
-    let name = matchs[1];
+    let matchs = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
+    console.log(matchs);
+    let name = matchs[1] || words;
     let code = matchs[2];
     let _code;
 
-    if (name) {
-
-        let _stocks = [];
-        let _stocks_2 = [];
-        for(let i in stocks){
-            let stock = stocks[i];
-            let _name = stock[1];
-            if(name == _name){
-                _stocks.push(stock);
-                break;
-            }else{
-                let r = new RegExp(name);
-                //r.test(_name) && console.log(r,_name, r.test(_name))
-                r.test(_name) && _stocks_2.push(stock);
-            }
+    let r_name = new RegExp(name);
+    let _stocks = [];
+    let _stocks_2 = [];
+    for (let i in stocks) {
+        let stock = stocks[i];
+        let _name = stock[1];
+        if (name == _name || words == _name) {  // 股票名称完全匹配  或者   股票名称部分匹配
+            _stocks.push(stock);
         }
-
-        let stock = _stocks[0] || _stocks_2[0] || [''];
-        _code = stock[0];
-
+        else
+        {
+            r_name.test(_name) && _stocks_2.push(stock);
+        }
     }
+
+    let stock = _stocks[0] || _stocks_2[0] || [''];
+    _code = stock[0];
+
     //console.log(name, _code, code);
     return _code || code;
 

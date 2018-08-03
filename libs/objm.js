@@ -1,9 +1,5 @@
 /**
  * Created by j on 18/6/16.
- */
-
-/**
- * Created by j on 18/6/16.
  * 对象管理器  object manager
  */
 
