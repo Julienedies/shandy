@@ -6,9 +6,9 @@ const bw = require('../../libs/window.js');
 const schedule = require('../../libs/schedule.js');
 
 
-schedule.voiceWarning(function createVoiceWarningWindow(){
+schedule(function createVoiceWarningWindow(){
     bw('/voice-warning/index.html');
-});
+}, 19, 24);
 
 brick.controllers.reg('voice_warning_ctrl', function(scope){
 

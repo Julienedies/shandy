@@ -10,6 +10,7 @@ const rts = require('../../libs/real-time-stock.js');
 const voice = require('../../js/libs/voice.js');
 const _objm = require('../../libs/objm.js');
 const tdx = require('../../libs/tdx.js');
+const schedule = require('../../libs/schedule.js');
 
 window.tdx = tdx;
 window.voice = voice;
@@ -201,6 +202,10 @@ brick.controllers.reg('rts_ctrl', function (scope) {
 
 });
 
+// 下午3点15分后取消行情请求
+schedule(function(){
+    q_rtso.pause();
+}, 15, 15);
 
 //
 module.exports = {
