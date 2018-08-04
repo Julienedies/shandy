@@ -1,7 +1,7 @@
 /*!
  * https://github.com/julienedies/brick.git
  * https://github.com/Julienedies/brick/wiki
- * "2018-7-21 10:50:36"
+ * "8/4/2018, 3:37:59 PM"
  * "V 0.8"
  */
 ;
@@ -10,6 +10,69 @@
 // __inline是fis语法，用于嵌入代码片段，经过编译后会替换成对应的js文件内容；
 
 // core架构 必选
+ /**
+ * Created by Juien on 2015/8/10.
+ * 工具函数集合
+ */
+var utils = (function () {
+
+    return {
+        /**
+         * @todo 恢复被转义的html
+         * @param text {string} <必须> html类型字符串
+         * @returns {*}
+         */
+        toHtml: function (text) {
+            var c = $('<div></div>');
+            c.html(text);
+            return c.text();
+        },
+        /**
+         * @todo 封装location.search为一个对象，如果不存在，返回undefined
+         * @param str {string}  [可选]  location.search 格式字符串,
+         * @returns {*}
+         * @example brick.utils.get_query('a=1&b=2');  // {a:1, b:2}
+         */
+        get_query: function (str) {
+            var result;
+            var k;
+            if (str && /^[-_\w]+$/i.test(str)) {
+                k = str;
+                str = '';
+            }
+            str = str && str.split('?').length > 1 ? str.split('?')[1] : str;
+            //var query = location.search.replace(/^\?/i, '').replace(/\&/img, ',').replace(/^\,+/img,'').replace(/([^=,\s]+)\=([^=,\s]*)/img, '"$1":"$2"');
+            var query = (str || location.search).replace(/^\?/i, '').replace(/\&/img, ',').replace(/^\,+/img, '');
+            query.replace(/([^=,\s]+)\=([^=,\s]*)/img, function ($, $1, $2) {
+                result = result || {};
+                var k;
+                var arr;
+                $2 = decodeURIComponent($2);
+                if (/\[\]$/i.test($1)) {
+                    k = $1.replace(/\[\]$/i, '');
+                    arr = result[k] = result[k] || [];
+                    arr.push($2);
+                } else {
+                    result[$1] = $2;
+                }
+            });
+            //    if(!query) return result;
+            //    try {
+            //        result = JSON.parse('{' + query + '}');
+            //    } catch (e) {
+            //        console.error(e);
+            //        return;
+            //    }
+
+            //    for(var i in result){
+            //        result[i] = decodeURIComponent(result[i]);
+            //    }
+
+            return k ? (result && result[k]) : result;
+        }
+    };
+
+})();
 /**
  * Created by julien.zhang on 2014/9/16.
  * 用于管理配置
@@ -295,9 +358,9 @@ var controllers = (function () {
          * @param e {String} 事件名
          * @param msg {*}    任意要传递的数据
          */
-        fire: function (e, msg) {
+        emit: function (e, msg) {
             var that = this;
-            eventManager.fire(e, msg, that);
+            eventManager.emit(e, msg, that);
         },
         /**
          * 用于订阅事件
@@ -306,7 +369,7 @@ var controllers = (function () {
          */
         on: function (e, f) {
             var that = this;
-            eventManager.bind(e, f, that);
+            eventManager.on(e, f, that);
         },
         /**
          * 取消事件监听
@@ -314,19 +377,25 @@ var controllers = (function () {
          * @param f {Function} 回调函数
          */
         off: function (e, f) {
-            eventManager.unbind(e, f);
+            eventManager.off(e, f);
         },
         render: function (tplName, model, call) {
             var that = this;
+            if(tplName == undefined){
+                tplName = this._name;
+                model = this._model;
+            }
+            else
             if (typeof tplName == 'function') {
                 call = tplName;
                 tplName = that._name;
                 model = that;
             }
+            else
             if (typeof tplName == 'object') {
+                call = model;
                 model = tplName;
                 tplName = that._name;
-                call = model;
             }
             setTimeout(function () {
                 var $tpl_dom = that._render(tplName, model);
@@ -337,9 +406,10 @@ var controllers = (function () {
             }, 30);
         },
         _render: function (tplName, model) {
+            console.log('render => ', tplName, model);
             var $elm = this.$elm;
             var tpl_fn = brick.getTpl(tplName);  //模板函数
-            var selector = '[ic-tpl=?]'.replace('?', tplName);
+            var selector = '[ic-tpl=?],[ic-tpl-name=?]'.replace(/[?]/img, tplName);
             var $tpl_dom; // 有ic-tpl属性的dom元素
             var html;
             // 如果数据模型不是对象类型,则对其包装
@@ -349,7 +419,7 @@ var controllers = (function () {
             $tpl_dom = $elm.filter(selector);  // <div ic-ctrl="a" ic-tpl="a"></div>
             $tpl_dom = $tpl_dom.length ? $tpl_dom : $elm.find(selector);
             html = tpl_fn({model : model});
-            $tpl_dom.show();
+            $tpl_dom.show(); // 渲染模板后进行编译
             $tpl_dom.removeAttr('ic-tpl');
             return $tpl_dom.html(html);
         }
@@ -396,7 +466,7 @@ var controllers = (function () {
         exec: function (name, parent, $elm) {
 
             var ctrl = _ctrls[name];
-            if (!ctrl) return console.log('not find controller ' + name);
+            if (!ctrl) return console.info('not find controller ' + name);
 
             var conf = ctrl.conf;
             var scope;
@@ -750,21 +820,35 @@ function createRender(root) {
     var _tpl = $(root).html()
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
-        .replace(/\b(ic-)(?=href|src|style|class|data|value)/g,'')
+        .replace(/\b(ic-)(?=href|src|style|class|data|value)/g, '')
         //早期判断是否输出属性的实现，建议使用ic-has-[prop]指令取代
-        .replace(/\bic-(\w+-)?(checked|disabled|selected|enabled)\s*=\s*"\s*((?:[^"]|\\")+)["]/g,function(m, $1, $2, $3){
-            if($1 == 'has-') return m;
-            $1 = $1 ? 'ic-'+ $1 : '';
+        .replace(/\bic-(\w+-)?(checked|disabled|selected|enabled)\s*=\s*"\s*((?:[^"]|\\")+)["]/g, function (m, $1, $2, $3) {
+            if ($1 == 'has-') return m;
+            $1 = $1 ? 'ic-' + $1 : '';  //处理自定义指令  ic-tab-checked
             //$3 = $3.replace(/^(?:"|')|(?:"|')$/g,'');
-            return ' <% if(?3){ %> ?2 <% } %> '.replace('?3',$3).replace('?2',$1 + $2);
+            return ' <% if(?3){ %> ?2 <% } %> '.replace('?3', $3).replace('?2', $1 + $2);
         })
-        //实现ic-has-[prop]指令
-        .replace(/\bic-has-([-_\w]+)\s*=\s*(['"]?)((?:[^\2]|\\\2)+)\2/img, function(m, $1, $2, $3){
-            return ' <% if(?3){ %> ?2 <% } %> '.replace('?3',$3).replace('?2',$1 + '=' + ('"<%= ? %>"'.replace('?', $3)));
+        //实现ic-has-[prop]指令   处理两种情况=>  1: ic-has-checked  2: ic-has-tab-checked
+        .replace(/\bic-has-([-_\w]+)\s*=\s*(["])((?:[^"]|\\["])+)\2/img, function (m, $1, $2, $3) {
+            //$1 => 属性名   $3 => 表达式值
+            console.log($1);
+            console.log($3);
+            $1 = /^checked|disabled|selected|enabled$/.test($1) ? $1 : 'ic-'+$1; //处理两种情况=>  1: ic-has-checked  2: ic-has-tab-checked
+            return ' <% if(?3){ %> ?1 <% } %> '
+                .replace('?3', $3)
+                .replace('?1', $1);
+            //.replace('?1',$1 + '=' + ('"<%= ? %>"'.replace('?', $3)));
         })
-        .replace(/&amp;&amp;/g,'&&');
+        .replace(/&amp;&amp;/g, '&&');
 
-    var tpl_fn = _.template(_tpl);
+    console.log(_tpl);
+
+    try{
+        var tpl_fn = _.template(_tpl);
+    }catch(e){
+       return console.error(e, _tpl);
+    }
+
     tpl_fn._tpl_ = _tpl;
     return tpl_fn;
 
@@ -791,7 +875,7 @@ function compile(node){
 
 function __compile(node){
 
-    node = node[0] || node;  //jquery对象
+    node = node[0] || node;  //jquery对象转为dom对象
     if(node.nodeType != 1) return console.info('compile exit', node);
 
     var $elm = $(node);
@@ -902,20 +986,21 @@ var cc = (function () {
 
 //对外接口
 var brick = root.brick = {
+    utils: utils,
     config: config,
     controllers: controllers,
     services: services,
     directives: directives,
     compile: compile,
-    createRender:createRender,
+    createRender: createRender,
     eventManager: eventManager,
     __tpl: {},
     debug: cc,
-    set: function(k, v){
+    set: function (k, v) {
         return this.config.set(k, v);
     },
-    get: function(k){
-      return this.config.get(k);
+    get: function (k) {
+        return this.config.get(k);
     },
     on: function (e, fn) {
         this.eventManager.on(e, fn);
@@ -932,10 +1017,10 @@ var brick = root.brick = {
     getTpl: function (name) {
         return this.__tpl[name];
     },
-    reg: function(name, factory, conf){
-        if(/ctrl$/i.test(name)){
+    reg: function (name, factory, conf) {
+        if (/ctrl$/i.test(name)) {
             controllers.reg(name, factory, conf);
-        }else{
+        } else {
             services.reg(name, factory, conf);
         }
     },
@@ -943,7 +1028,9 @@ var brick = root.brick = {
         console.info('brick start');
         this.directives.init();
         this.compile(node || document.body);
-        this.bootstrap = function(){console.info('only bootstrap once.')};
+        this.bootstrap = function () {
+            console.info('only bootstrap once.')
+        };
     }
 };
 
@@ -1020,7 +1107,7 @@ directives.reg('ic-event', {
 
 directives.reg('ic-tpl', {
     selfExec: true,
-    //once: true,
+    //once: true,  // 要考虑异步加载进来的模板, 所以不能只允许调用一次
     fn: function ($elm) {
 
         var __tpl = brick.__tpl = brick.__tpl || {};
@@ -1029,15 +1116,26 @@ directives.reg('ic-tpl', {
 
             var $th = $(this);
             var name = $th.attr('ic-tpl');
-
             var $parent;
+
+            // 只处理一次
+            if($th.attr('ic-tpl-name')) return;
 
             if(!name){
                 $parent = $th.closest('[ic-ctrl]');
                 name = $parent.attr('ic-ctrl');
             }
 
+            //自动初始化渲染数据对象
+            setTimeout(function(){
+                var dob = $th.icParseProperty2('ic-tpl-init');
+                //console.info(dob, name);
+                dob && $th.icRender(name, dob);
+            }, 300);
+
+            $th.attr('ic-tpl', name);
             $th.attr('ic-tpl-name', name);
+
             __tpl[name] = createRender(this);
 
         });
@@ -1066,13 +1164,13 @@ directives.reg('ic-tpl', {
         if (!tplFn) return console.info('not find tpl: ' + tpl);
         // 如果数据模型不是对象类型,则对其包装
         /*if(typeof model != 'object' || Array.isArray(model)){
-            model = {model : model};
-        }*/
-        var html = tplFn({model : model});
+         model = {model : model};
+         }*/
+        var html = tplFn({model: model});
         return this.each(function () {
             var $th = $(this);
-            $th.removeAttr('ic-tpl');
             $th.html(html);
+            $th.removeAttr('ic-tpl');
             $th.icCompile();
             callback && callback.apply(this, [$th.children()]);
         });
@@ -1087,36 +1185,73 @@ directives.reg('ic-tpl', {
         });
     };
 
-    $.fn.icParseProperty = function (name, debug) {
+    $.fn.icParseProperty = function (name, isLiteral) {
+        //console.info('icParseProperty => ', name);
+        var match;
+        // js直接量  <div ic-tpl-init="{}">  object {}
+        if (match = name.match(/^\s*(([{\[])([^{\[]*)[}\]])\s*$/)) {
+            try {
+                return match[3] ? JSON.stringify(match[1]) : match[2] == '{' ? {} : [];
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        else  // 字符串
+        if (match = name.match(/^\s*((['"])[^'"]*\2)\s*$/)) {
+            return match[1];
+        }
+        else  // 数字
+        if (match = name.match(/^\s(\d+)\s*$/)) {
+            return match[1];
+        }
 
-        if (name === void(0)) return void(0);
+        if(isLiteral) return name;  //按直接量解析
+
+        var params = name.split(':');
+        name = params.shift();
+
+        // 从控制器scope里获取或者全局window
         var $ctrl = this.closest('[ic-ctrl]');
         var ctrl = $ctrl.attr('ic-ctrl');
-        //var namespace = ctrl ? $ctrl.data('ic-ctrl-scope') : window;
-        var namespace = ctrl ? brick.controllers.get(ctrl) : window;
+        //var namespace = ctrl ? $ctrl.data('ic-ctrl-scope') : {};
+        var namespace = ctrl ? brick.controllers.get(ctrl) : {};
 
-        var chain = name.split('.');
-
-        return (function (root, chain) {
-
+        function f(root, chain) {
             var k = chain.shift();
             var v = root && root[k];
-
-            if (!v) return;
-
+            if (v === undefined) return;
             if (chain.length) {
                 return arguments.callee(v, chain);
             }
-
             return v;
+        }
 
-        })(namespace, chain);
+        var v = f(namespace, name.split('.'));
+
+        v = v || f(window, name.split('.'));
+
+        //console.info('icParseProperty => ' + name + ' => ', v);
+
+        if(typeof v == 'function' && params.length){
+            return function(){
+                var that = this;
+                var args = [].slice.call(arguments);
+                var p;
+                while(p = params.shift()){
+                    args.push(p);
+                }
+                return v.apply(that, args);   //window.confirm通过apply方式调用会出错,暂时不处理
+            };
+        }
+
+        return v;
 
     };
 
-    $.fn.icParseProperty2 = function (name) {
+    $.fn.icParseProperty2 = function (name, isLiteral) {
         name = this.attr(name);
-        return this.icParseProperty(name);
+        if (name === undefined || name == '') return name;
+        return this.icParseProperty(name, isLiteral);
     };
 
     $.fn.icTabs = function (options) {
@@ -1126,7 +1261,7 @@ directives.reg('ic-tpl', {
     };
 
     $.fn.icAjax = function (options) {
-        if (options === void(0)) return this.trigger('ic-ajax');
+        if (options === undefined) return this.trigger('ic-ajax');
         options.data && this.data('ic-submit-data', options.data);
 
         options.disabled !== void(0) && this.attr('ic-ajax-disabled', !!options.disabled);
@@ -1236,10 +1371,14 @@ directives.reg('ic-tpl', {
 
         return this.each(function (i) {
 
+            if (/^textarea$/img.test(this.tagName)) return this;
+
             call = $.proxy(call, this);
 
             var fn = function (e) {
+
                 if (e.which == 13) {
+                    //console.info('ic-enter-press emit.');
                     call(e);
                 }
             };
@@ -1255,10 +1394,84 @@ directives.reg('ic-tpl', {
 
     };
 
+    //定时器
+    $.fn.icTimer = function () {
+        var th = this;
+        var count = th.attr('ic-timer-count') * 1;
+
+        var timer = setInterval(function () {
+            if (count--) {
+                th.text(count);
+            } else {
+                clearInterval(timer);
+                th.trigger('ic-timer.' + 'end');
+            }
+        }, 1000);
+
+        return this;
+    };
+
+// 操作提示
+    var tipSize = 0;
+    $.fn.tips = function (parent) {
+        ++tipSize;
+        var $parent = $(parent || 'body');
+        var w = $parent.innerWidth() * 0.4 + 'px';
+        var h;
+        var top;
+        var left;
+        var wraper = $('<div class="tipsBox"></div>');
+
+        this.addClass('tips1').css({
+            'width': w
+        });
+        this.appendTo(wraper);
+        wraper.appendTo($parent);
+
+        w = this.width();
+        h = this.height();
+        top = '-' + h / 2 + 'px';
+        left = '-' + w / 2 + 'px';
+        this.css({
+            'top': 40 * tipSize,
+            'left': left
+        });
+
+        wraper.animate({
+            top: 0,
+            'opacity': '1'
+        }, 500, function () {
+            $(this).addClass('animated wobble');
+        });
+
+        setTimeout(function () {
+            wraper.animate({
+                'top': -300,
+                'opacity': '0'
+            }, 500, function () {
+                --tipSize;
+                wraper.remove();
+            });
+        }, 2000 * tipSize);
+
+        return this;
+    };
+
+    $.tips = function (massge) {
+        $('<div>' + massge + '</div>').tips();
+    };
+
     //设置loading
     (function ($) {
 
         var loading = '<span ic-loader role="_loading_"><svg width="16" height="16" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M 150,0 a 150,150 0 0,1 106.066,256.066 l -35.355,-35.355 a -100,-100 0 0,0 -70.711,-170.711 z" fill="#3d7fe6"><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 150 150" to="360 150 150" begin="0s" dur="1s" fill="freeze" repeatCount="indefinite" /></path></svg></span>';
+
+        if (window.ActiveXObject) {
+
+            loading = 'data:image/gif;base64,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';
+            loading = '<span style="margin:0.2em; auto;display:inline-block;text-align:center;" role="_loading_"><img src="?"></span>'.replace('?', loading);
+
+        }
 
         $.fn.icSetLoading = $.fn.setLoading = function (option) {
 
@@ -1294,7 +1507,6 @@ directives.reg('ic-tpl', {
 
     })($);
 
-
     //清除loading
     $.fn.icClearLoading = $.fn.clearLoading = function () {
 
@@ -1317,11 +1529,9 @@ directives.reg('ic-tpl', {
 // 内置services 可选
 /**
  * Created by Julien on 2014/8/13.
- *
- *
  * 记录管理器
- *
- * var serv = new recordManager(
+ * var recordManager = brick.services.get('recordManager');
+ * var serv = recordManager(
  *                              {
  *                                  scope:scope,
  *                                  broadcast:true, //是否广播事件
@@ -1330,13 +1540,11 @@ directives.reg('ic-tpl', {
  *                                  beforeSave:function(record,index){}
  *                              }
  *                              );
- *
- *
  */
 
 function recordManager() {
 
-    function fn(conf) {
+    function RecordManager(conf) {
 
         if (conf && conf.constructor === Object) {
 
@@ -1671,15 +1879,18 @@ function recordManager() {
 
     };
 
-
     for (var i in proto) {
 
-        fn.prototype[i] = proto[i];
+        RecordManager.prototype[i] = proto[i];
 
     }
 
 
-    return fn;
+    function f(conf){
+        return new RecordManager(conf);
+    }
+
+    return f;
 
 }
 
@@ -2302,75 +2513,95 @@ brick.getAniMap = function (animation) {
  */
 
 
-directives.reg('ic-ajax', function () {
-
-        var eventAction = brick.get('event.action');
-
-        var $doc = $(document.body);
-        $doc.on(eventAction, '[ic-ajax]', _call);
-        $doc.on('ic-ajax', '[ic-ajax]', _call);
-
-        function _call(e) {
-            var that = this;
-
-            if (this.hasAttribute('ic-ajax-disabled')) return;
-
-            var $elm = $(this);
-            var namespace = $elm.attr('ic-ajax');
-
-            var $loading = $('[ic-role-loading=?]'.replace('?', namespace || +(new Date)));
-
-            var defaultCall = function () {
-                //console.log(arguments)
-            };
-
-            var before = $elm.icParseProperty2('ic-submit-before') || defaultCall;
-            var failed = $elm.icParseProperty2('ic-submit-on-fail') || defaultCall;
-            var done = $elm.icParseProperty2('ic-submit-on-done') || defaultCall;
-            var always = $elm.icParseProperty2('ic-submit-on-always') || defaultCall;
-
-            if (before.apply(that) === false) return;
-
-            var domain = brick.get('ajax.domain') || '';
-            var url = domain + $elm.attr('ic-submit-action');
-            var dataType = $elm.attr('ic-submit-data-type') || 'json';
-            var method = $elm.attr('ic-submit-method') || 'post';
-
-            var data = $elm.data('ic-submit-data') || $elm.attr('ic-submit-data');
-
-            $loading.size() ? $loading.show() && $elm.hide() : $elm.setLoading();
-
-            $elm.attr('ic-ajax-disabled', true);
-
-            $.ajax({
-                url: url,
-                type: method,
-                dataType: dataType,
-                data: data
-            }).done(function (data) {
-                    $elm.clearLoading() && $loading.hide() && $elm.show();
-                    done.apply(that, [data]);
-                }
-            ).fail(function (msg) {
-                    $elm.clearLoading() && $loading.hide() && $elm.show();
-                    failed.apply(that, [msg]);
-                }
-            ).always(function () {
-                    $elm.clearLoading() && $loading.hide() && $elm.show();
-                    always.apply(that);
-                    $elm.removeData('ic-submit-data');
-                    $elm.removeAttr('ic-ajax-disabled');
-                });
-        }
-
-    },
+directives.reg('ic-ajax',
     {
         selfExec: true,
-        once: true
+        once: true,
+        fn: function () {
+
+            var eventAction = brick.get('event.action');
+
+            function call(e) {
+
+                var that = this;
+
+                if (this.hasAttribute('ic-ajax-disabled')) return;
+
+                var $elm = $(this);
+                var name = $elm.attr('ic-ajax');
+
+                var defaultCall = function () {
+                    //console.log(arguments)
+                };
+
+                var before = $elm.icParseProperty2('ic-submit-before') || defaultCall;
+
+                var data = $elm.data('ic-submit-data') || $elm.attr('ic-submit-data');
+                var _data = before.call(that, data);
+                if (_data === false) return;
+                data = _data || data;
+
+                var domain = brick.get('ajax.domain') || '';
+                var url = domain + $elm.attr('ic-submit-action');
+                var dataType = $elm.attr('ic-submit-data-type') || 'json';
+                var method = $elm.attr('ic-submit-method') || 'post';
+
+                var failed = $elm.icParseProperty2('ic-submit-on-fail') || defaultCall;
+                var done = $elm.icParseProperty2('ic-submit-on-done') || defaultCall;
+                var always = $elm.icParseProperty2('ic-submit-on-always') || defaultCall;
+
+                var $loading = $('[ic-role-loading=?]'.replace('?', name || +(new Date)));
+                $loading.size() ? $loading.show() && $elm.hide() : $elm.setLoading();
+
+                $elm.attr('ic-ajax-disabled', true);
+
+                $.ajax({
+                    url: url,
+                    type: method,
+                    dataType: dataType,
+                    data: data
+                }).done(function (data) {
+                        console.log('ic-ajax => ', done);
+                        $elm.clearLoading() && $loading.hide() && $elm.show();
+                        done.apply(that, [data]);
+                    }
+                ).fail(function (msg) {
+                        $elm.clearLoading() && $loading.hide() && $elm.show();
+                        failed.apply(that, [msg]);
+                    }
+                ).always(function () {
+                        $elm.clearLoading() && $loading.hide() && $elm.show();
+                        always.apply(that);
+                        $elm.removeData('ic-submit-data');
+                        $elm.removeAttr('ic-ajax-disabled');
+                    });
+            }
+
+            var $doc = $(document.body);
+            $doc.on(eventAction, '[ic-ajax]:not([ic-ajax-enter])', call);
+            $doc.on('ic-ajax', '[ic-ajax]', call);
+
+        }
     }
 );
 
+directives.reg('ic-ajax-auto',
+    {
+        fn: function ($elm){
+            $elm.icAjax();
+        }
+    }
+);
 
+directives.reg('ic-ajax-enter',
+    {
+        fn: function ($elm){
+            $elm.icEnterPress(function(){
+                $elm.icAjax();
+            });
+        }
+    }
+);
 /**
  * Created by julien.zhang on 2014/10/11.
  */
@@ -2462,7 +2693,7 @@ directives.reg('ic-form', function ($elm, attrs) {
 
     var presetRule = {
         id: /[\w_]{4,18}/,
-        required: /.+/,
+        required: /.+/img,
         phone: /^\d[\d-]{5,16}$/,
         email: /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/,
         password: /(?:[\w]|[!@#$%^&*]){6,16}/,
@@ -2590,6 +2821,8 @@ directives.reg('ic-form', function ($elm, attrs) {
     var $submit = $elm.find('[ic-form-submit]').not($elm.find('[ic-form] [ic-form-submit]'));
     var $loading = $elm.find('[ic-role-loading]');
 
+    var err_cla = brick.get('cla.error') || 'error';
+
     // 对每个字段dom绑定事件监听
     $fields.each(function (i) {
 
@@ -2617,15 +2850,17 @@ directives.reg('ic-form', function ($elm, attrs) {
 
             if (tip = _verify(val, rules, errTips, $th)) {
                 //验证失败
-                $fieldBox.addClass('error');
-                $errTip.addClass('error').text(tip);
+                $th.addClass(err_cla);
+                $fieldBox.addClass(err_cla);
+                $errTip.addClass(err_cla).text(tip);
                 $th.removeAttr('ic-verification');
                 fields[name] = false;
                 $th.trigger('ic-form-field.error', tip);
             } else {
                 //验证通过
-                $fieldBox.removeClass('error');
-                $errTip.removeClass('error');
+                $th.removeClass(err_cla);
+                $fieldBox.removeClass(err_cla);
+                $errTip.removeClass(err_cla);
                 $th.attr('ic-verification', 1);
                 if ($th[0].hasAttribute('ic-field-placeholder')) {
 
@@ -2637,10 +2872,9 @@ directives.reg('ic-form', function ($elm, attrs) {
 
         });
 
-
         $th.on('focus', function () {
-            $fieldBox.removeClass('error');
-            $errTip.removeClass('error').text(foucsTip);
+            $fieldBox.removeClass(err_cla);
+            $errTip.removeClass(err_cla).text(foucsTip);
         });
 
     });
@@ -2671,12 +2905,13 @@ directives.reg('ic-form', function ($elm, attrs) {
                 }
 
             } else {
-                val = $th.attr('ic-val');
+                //val = $th.icParseProperty2('ic-val', true);
+                val = $th.data('ic-val') || $th.attr('ic-val');
             }
 
             fields[submitName] = val;
 
-            /*var prev = fields[submitName];
+            /*var prev = fields[submitName];true
             if (prev) {
                 prev =  ? prev : [prev];
                 prev.push(val);
@@ -2716,7 +2951,7 @@ directives.reg('ic-form', function ($elm, attrs) {
     // 提交触发
     $submit.on(eventAction, toSubmit);
     // 回车提交触发
-    $fields.icEnterPress(function () {
+    $fields.not('textarea').icEnterPress(function () {
         $submit.trigger(eventAction);
     });
 
@@ -2724,7 +2959,7 @@ directives.reg('ic-form', function ($elm, attrs) {
 
         if ($submit[0].hasAttribute('ic-submit-disabled')) return;
 
-        if (!$submit.icFormVerify()) return $elm.trigger('ic-form.error');
+        if (!$submit.icFormVerify()) return $elm.trigger('ic-form.error', fields);
 
         //函数调用
         if (submitType === 1) {
@@ -2804,28 +3039,39 @@ var cla = $elm.attr('ic-select-cla') || brick.get('ic-select-cla') || 'selected'
 var name = $elm.attr('ic-select');
 var s_item = $elm.attr('ic-select-item') || '[ic-select-item]';
 var type = $elm.attr('ic-select-type') || 'radio';
-
 var $items =  $elm.find(s_item);
 
-    if(!$items.size()){
-        $elm.find('>*').each(function(){
-            $(this).attr('ic-select-item', +new Date);
-        });
-    }
+if(!$items.size()){
+    $items = $elm.find('>*').each(function(){
+        $(this).attr('ic-select-item', +new Date);
+    });
+}
+
+var $selected = $items.filter('[selected]');
 
 var callback = type == 'checkbox' ?
     function(){
         $(this).toggleClass(cla);
-        $elm.trigger('ic-select.change', {name:name});
+        var values = [];
+        $items.filter('.'+cla).each(function(){
+            values.push($(this).attr('ic-val'));
+        });
+        $elm.attr('ic-val', JSON.stringify(values));
+        $elm.data('ic-val', values);
+        $elm.trigger('ic-select.change', {name:name, value: values});
     }
     :
     function(){
+        $items.removeClass(cla);
         var $th = $(this).addClass(cla);
-        $(this).siblings().removeClass(cla);
-        $elm.trigger('ic-select.change', {name:name});
+        var val = $th.attr('ic-val');
+        $elm.attr('ic-val', val);
+        $elm.trigger('ic-select.change', {name:name, value: val});
     };
 
     $elm.on('click', s_item, callback);
+
+    $selected.click();
 
 });
 /**
@@ -3043,7 +3289,8 @@ brick.directives.reg('ic-show-img', function ($elm) {
         return false;
     });
 
-    $imgBox.on('click','#ic-show-img-box-close', function (e) {
+    //'#ic-show-img-box-close',
+    $imgBox.on('click', function (e) {
         $imgBox.fadeToggle();
         $elm.trigger('ic-show-img.hide');
         $(document.body).off('mousewheel', callback);

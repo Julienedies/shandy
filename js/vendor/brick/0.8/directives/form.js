@@ -19,7 +19,7 @@ directives.reg('ic-form', function ($elm, attrs) {
 
     var presetRule = {
         id: /[\w_]{4,18}/,
-        required: /.+/,
+        required: /.+/img,
         phone: /^\d[\d-]{5,16}$/,
         email: /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/,
         password: /(?:[\w]|[!@#$%^&*]){6,16}/,
@@ -147,6 +147,8 @@ directives.reg('ic-form', function ($elm, attrs) {
     var $submit = $elm.find('[ic-form-submit]').not($elm.find('[ic-form] [ic-form-submit]'));
     var $loading = $elm.find('[ic-role-loading]');
 
+    var err_cla = brick.get('cla.error') || 'error';
+
     // 对每个字段dom绑定事件监听
     $fields.each(function (i) {
 
@@ -174,15 +176,17 @@ directives.reg('ic-form', function ($elm, attrs) {
 
             if (tip = _verify(val, rules, errTips, $th)) {
                 //验证失败
-                $fieldBox.addClass('error');
-                $errTip.addClass('error').text(tip);
+                $th.addClass(err_cla);
+                $fieldBox.addClass(err_cla);
+                $errTip.addClass(err_cla).text(tip);
                 $th.removeAttr('ic-verification');
                 fields[name] = false;
                 $th.trigger('ic-form-field.error', tip);
             } else {
                 //验证通过
-                $fieldBox.removeClass('error');
-                $errTip.removeClass('error');
+                $th.removeClass(err_cla);
+                $fieldBox.removeClass(err_cla);
+                $errTip.removeClass(err_cla);
                 $th.attr('ic-verification', 1);
                 if ($th[0].hasAttribute('ic-field-placeholder')) {
 
@@ -194,10 +198,9 @@ directives.reg('ic-form', function ($elm, attrs) {
 
         });
 
-
         $th.on('focus', function () {
-            $fieldBox.removeClass('error');
-            $errTip.removeClass('error').text(foucsTip);
+            $fieldBox.removeClass(err_cla);
+            $errTip.removeClass(err_cla).text(foucsTip);
         });
 
     });
@@ -228,12 +231,13 @@ directives.reg('ic-form', function ($elm, attrs) {
                 }
 
             } else {
-                val = $th.attr('ic-val');
+                //val = $th.icParseProperty2('ic-val', true);
+                val = $th.data('ic-val') || $th.attr('ic-val');
             }
 
             fields[submitName] = val;
 
-            /*var prev = fields[submitName];
+            /*var prev = fields[submitName];true
             if (prev) {
                 prev =  ? prev : [prev];
                 prev.push(val);
@@ -273,7 +277,7 @@ directives.reg('ic-form', function ($elm, attrs) {
     // 提交触发
     $submit.on(eventAction, toSubmit);
     // 回车提交触发
-    $fields.icEnterPress(function () {
+    $fields.not('textarea').icEnterPress(function () {
         $submit.trigger(eventAction);
     });
 
@@ -281,7 +285,7 @@ directives.reg('ic-form', function ($elm, attrs) {
 
         if ($submit[0].hasAttribute('ic-submit-disabled')) return;
 
-        if (!$submit.icFormVerify()) return $elm.trigger('ic-form.error');
+        if (!$submit.icFormVerify()) return $elm.trigger('ic-form.error', fields);
 
         //函数调用
         if (submitType === 1) {
