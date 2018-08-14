@@ -15,6 +15,7 @@ node_modules/
 config.json
 scripts.js
 applescript/
+/data/
 
 !.gitkeep
 
