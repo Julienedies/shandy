@@ -16,6 +16,7 @@ config.json
 scripts.js
 applescript/
 /data/
+tdx.txt
 
 !.gitkeep
 
