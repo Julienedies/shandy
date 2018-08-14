@@ -3,7 +3,7 @@
  * @todo 根据股票名称，查找股票代码
  */
 
-const stocks = require('../stocks.json');
+const stocks = require('../data/stocks.json');
 const _ = require('underscore');
 
 /**

@@ -13,6 +13,8 @@ module.exports = function(code, flag){
     let url;
 
     switch (flag){
+        case 0 :
+            return `http://localhost:2018/public/static/html/stock/c/index.html?code=${code}`;
         case 1 :
             return 'http://basic.10jqka.com.cn/*/company.html'.replace('*', code);
         case 2 :

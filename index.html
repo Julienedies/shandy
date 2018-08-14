@@ -53,18 +53,23 @@
     </style>
 </head>
 <body>
-
-<div class="" ic-ctrl="main_ctrl">
-    <div class="">
+<div ic-ctrl="main_ctrl">
+    <div>
         
-        <section style="height: 140px;">
+        <section style="min-height: 140px;">
             <button class="button" ic-click="test">test</button>
             <br/>
             <input type="checkbox" ic-click="debug"> debug</input>
+            <div ic-tpl="ls">
+                <ul>
+                    <li ic-for="i,v in model" ic-class="{{v.xt && 'up'}}" ic-click="view:{{v.t[0]}}">{{v.t[1]}} {{v.xt}}</li>
+                </ul>
+            </div>
         </section>
 
         <section ic-ctrl="voice_warning_ctrl">
-            <input type="checkbox" id="voiceWarning">&nbsp;交易错误语音警醒</input>
+            <button class="button" ic-click="open_voice_warning">交易错误语音警醒</button>
+            <button class="button" ic-click="ls">临时用</button>
         </section>
 
         <section class="" ic-ctrl="view_stock_ctrl">
@@ -72,10 +77,13 @@
             <button class="button" id="company">个股资料</button>
             <button class="button">官网</button>
             <br/>
-            <input type="checkbox" id="open" checked>&nbsp;打开</input>
+            <!--<input type="checkbox" ic-change="on_mousewheel">&nbsp;滚轮监控</input>-->
             <br/>
-            <input type="checkbox" id="open_external" checked>&nbsp;总是外部浏览器打开</input>
+            <input type="checkbox" name="is_open" ic-click="set_setting" checked> 打开</input>
             <br/>
+            <input type="checkbox" name="is_open_external" ic-click="set_setting" checked> 总是外部浏览器打开</input>
+            <br/>
+            <input type="checkbox" name="is_mashup" ic-click="set_setting"> 使用自定义聚合</input>
         </section>
 
         <section ic-ctrl="rts_ctrl">

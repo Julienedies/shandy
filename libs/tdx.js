@@ -56,9 +56,9 @@ module.exports = {
     view: function (code ){
        this.show(code);
     },
-    show: function (code) {
+    show: function (code, datum) {
         //需要做调用限制
-        if(this._call_limit('show', 15)){
+        if(this._call_limit('show', datum || 15)){
             this.active();
             let keys = code.split('');
             keys.push('enter');

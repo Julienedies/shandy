@@ -11,11 +11,8 @@ const BrowserWindow = electron.remote.BrowserWindow;
 const config = require('../config.json');
 
 let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
-console.info(sw, sh);
+//console.info(sw, sh);
 
-module.exports = function win(opt){
-    return new Win(opt);
-};
 
 function Win(opt){
 
@@ -24,32 +21,44 @@ function Win(opt){
         whxy: {width: 1240, height: 820, x: 200, y: 0}
     };
 
-    this.create(opt);
+    if(typeof opt == 'string'){
+        opt = {url: opt};
+    }
+
+    Object.assign(this.opt, opt);
+
+    this.create();
 
 }
 
 Win.prototype = {
-    create: function createWindow(opt) {
+    create: function createWindow() {
 
         let that = this;
         let _opt = this.opt;
-        let url;
-
-        if (typeof opt == 'string') {
-            url = this.url(opt);
-        }
+        let url = _opt.url;
 
         let win = new BrowserWindow(_opt.whxy);
+        this.win = win;
+
         win.on('close', function () {
             win = that.win = null;
         });
-        win.loadURL(url);
+
         win.webContents.openDevTools();
         win.maximize();
         win.show();
-        this.win = win;
+
+        url && this.load(url);
     },
-    url: function (url) {
+    load: function(url){
+        url = this._url(url);
+        this.win.loadURL(url);
+    },
+    _url: function (url) {
+        if(/^\//.test(url)){
+            return url;
+        }
         if(/^(https?)|(file):\/\//.test(url)){
             return url;
         }
@@ -57,3 +66,7 @@ Win.prototype = {
     }
 };
 
+
+module.exports = function win(opt){
+    return new Win(opt);
+};

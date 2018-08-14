@@ -51,7 +51,7 @@ brick.directives.reg('ic-upload', function ($elm, attrs) {
         $elm.setLoading();
 
         $.ajax({
-            url: uploadUrl,
+            _url: uploadUrl,
             type: 'POST',
             data: data,
             cache: false,
