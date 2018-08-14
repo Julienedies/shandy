@@ -11,20 +11,21 @@ applescript.execFile('./applescript/get_stock_name.scpt', function (err, result)
     console.log(result)
 });*/
 
-/*const ioHook = require('iohook');
+const ioHook = require('iohook');
 
 ioHook.on('keydown', event => {
     console.log(event); // { type: 'mousemove', x: 700, y: 400 }
 });
 
-ioHook.on('mousemove', event => {
+ioHook.on('mousewheel', event => {
     console.log(event); // { type: 'mousemove', x: 700, y: 400 }
 });
 
 // Register and start hook
-ioHook.start();*/
+ioHook.start();
 
 
+/*
 const schedule = require('node-schedule');
 
 var rule = new schedule.RecurrenceRule();
@@ -34,4 +35,4 @@ rule.minute = 15;
 
 var j = schedule.scheduleJob(rule, function(){
     console.log('Today is recognized by Rebecca Black!');
-});
+});*/
