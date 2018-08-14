@@ -20,10 +20,12 @@ let stockWin;
 
 function createWin() {
     //实际是 1480 * 820
-    let win = new BrowserWindow({width: 1340, height: 820, x: 100, y: 0});
+    let win = new BrowserWindow({width: 1340, height: 820, x: 0, y: 0});
     win.on('close', function () {
         win = null;
     });
+    win.webContents.openDevTools();
+    win.maximize();
     win.show();
     return win;
 }
@@ -35,14 +37,16 @@ function view_stock(code){
         objm.set('code', code);
         clipboard.writeText(code);
 
-        if(!objm.get('open')){
+        let flag = objm.get('is_mashup') ? 0 : 1;
+
+        if(!objm.get('is_open')){
             return ac.activeTdx();
         }
-        if(objm.get('open_external')){
-            shell.openExternal( stockUrl(code, 1) + '?self=1' );
+        if(objm.get('is_open_external')){
+            shell.openExternal( stockUrl(code, flag) + (flag == 1 ? '?self=1':'') );
         }else{
             stockWin = stockWin || createWin();
-            stockWin.loadURL(stockUrl(code, 2));
+            stockWin.loadURL(stockUrl(code, 0));
             stockWin.focus();
         }
 
@@ -59,23 +63,39 @@ function view_stock(code){
 // 查看个股资料
 brick.controllers.reg('view_stock_ctrl', function(scope){
 
-    let $open = $('#open');
-    let $open_external = $('#open_external');
-
-    objm.set('open_external', $open_external.prop('checked'));
-    objm.set('open', $open.prop('checked'));
-
-    $open_external.on('click', function(){
-        objm.set('open_external', $(this).prop('checked'));
+    $(':checkbox').each(function(){
+        let name = this.name;
+        objm.set(name, $(this).prop('checked'));
     });
-    $open.on('click', function(){
-        objm.set('open', $(this).prop('checked'));
-    });
+
+    scope.set_setting = function(e){
+        objm.set(this.name, $(this).prop('checked'));
+    };
 
     scope.go_ycj = function(){
         ac.getStockName(function(code){
             shell.openExternal(stockUrl(code, 7));
         });
+    };
+
+    scope.on_mousewheel = function(){
+
+/*        const ioHook = require('iohook');
+
+        console.info(ioHook);
+
+        function callback(event){
+            console.info(event);
+        }
+
+        if($(this).prop('checked')){
+            ioHook.on('mousewheel', callback);
+            ioHook.start();
+        }else{
+            ioHook.off('mousewheel', callback);
+
+        }*/
+
     };
 
 });

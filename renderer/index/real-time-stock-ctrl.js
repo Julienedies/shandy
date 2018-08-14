@@ -97,7 +97,7 @@ function _f(stock) {
         if (b1 < least || -b1_reduce > b1_reduce_base || v_plus > v_plus_base) {
 
             // 早盘封单小于阈值
-            if(b1 < least && d < 14 ){
+            if(b1 < least && d < 14 && price < 50){
                 voice(code, `${name}有破板风险`);
                 //tdx.show(code);
             }
@@ -152,6 +152,13 @@ function _add(code) {
     //s_rtso.add(code);
 }
 
+function _remove(code){
+    voice.remove(code);
+    q_rtso.remove(code);
+    prev_objm.remove(code);
+    first_objm.remove(code);
+}
+
 brick.controllers.reg('rts_ctrl', function (scope) {
 
     let $elm = scope.$elm;
@@ -186,12 +193,8 @@ brick.controllers.reg('rts_ctrl', function (scope) {
         q_rtso.pause();
         //s_rtso.pause();
     };
-    scope.remove = function () {
-        let code = $stock_code.val();
-        voice.remove(code);
-        q_rtso.remove(code);
-        prev_objm.remove(code);
-        first_objm.remove(code);
+    scope.remove = function(e){
+        _remove($stock_code.val());
     };
     scope.fill = function (e) {
         $stock_code.val($(this).attr('code'));
@@ -202,10 +205,10 @@ brick.controllers.reg('rts_ctrl', function (scope) {
 
 });
 
-// 下午3点15分后取消行情请求
+// 下午3点后取消行情请求
 schedule(function(){
     q_rtso.pause();
-}, 15, 15);
+}, 15, 1);
 
 //
 module.exports = {
@@ -222,11 +225,7 @@ module.exports = {
         }
         tdx.active();
     },
-    on_rts_cancel: function(code){
-        q_rtso.remove(code);
-        prev_objm.remove(code);
-        first_objm.remove(code);
-    }
+    on_rts_cancel: _remove
 };
 
 

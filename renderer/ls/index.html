@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        .up{
+            color:red!important;
+        }
+    </style>
 </head>
 <body>
-
+<div ic-ctrl="main_ctrl">
+    <div ic-tpl="ls">
+        <ul>
+            <li ic-for="i,v in model" ic-class="{{v.xt && 'up'}}" ic-click="view:{{v.t[0]}}">{{v.t[1]}} {{v.xt}}</li>
+        </ul>
+    </div>
+</div>
 
 <script src="../../js/vendor/underscore.js"></script>
 <script src="../../js/vendor/jquery.min.js"></script>
 <script src="../../js/vendor/brick/0.8/brick.js"></script>
-<script>
-
-</script>
+<script src="main.js"></script>
 </body>
 </html>
