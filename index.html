@@ -54,18 +54,6 @@
 </head>
 <body>
 <div ic-ctrl="main_ctrl">
-    <div>
-        
-        <section style="min-height: 140px;">
-            <button class="button" ic-click="test">test</button>
-            <br/>
-            <input type="checkbox" ic-click="debug"> debug</input>
-            <div ic-tpl="ls">
-                <ul>
-                    <li ic-for="i,v in model" ic-class="{{v.xt && 'up'}}" ic-click="view:{{v.t[0]}}">{{v.t[1]}} {{v.xt}}</li>
-                </ul>
-            </div>
-        </section>
 
         <section ic-ctrl="voice_warning_ctrl">
             <button class="button" ic-click="open_voice_warning">交易错误语音警醒</button>
@@ -100,8 +88,7 @@
                 </ul>
             </div>
             <div>
-                <input type="text" id="stock_code" value="">
-
+                <input type="text" id="stock_code">
                 <div class="buttons has-addons">
                     <button class="button" ic-click="add">添加</button>
                     <button class="button" ic-click="remove">删除</button>
@@ -113,11 +100,19 @@
             </div>
         </section>
 
-        <section>
+        <section ic-ctrl="help_ctrl">
             <div class="buttons has-addons">
                 <button class="button" ic-click="relaunch">relaunch</button>
                 <button class="button" ic-click="open" data-id="gushenwei">gushenwei</button>
                 <button class="button" ic-click="open" data-id="jhandy">jhandy</button>
+                <button class="button" ic-click="show_ip">查看IP</button>
+                <button class="button" ic-click="test">test</button>
+            </div>
+            <input type="checkbox" ic-click="debug"> debug</input>
+            <div ic-tpl="ls">
+                <ul>
+                    <li ic-for="i,v in model" ic-class="{{v.xt && 'up'}}" ic-click="view:{{v.t[0]}}">{{v.t[1]}} {{v.xt}}</li>
+                </ul>
             </div>
         </section>
 
@@ -137,7 +132,6 @@
             .
         </footer>
 
-    </div>
 
 </div>
 

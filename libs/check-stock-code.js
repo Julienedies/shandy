@@ -12,7 +12,7 @@ const _ = require('underscore');
  */
 module.exports = function (words) {
     let matchs = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
-    console.log(matchs);
+    console.log(words, matchs);
     let name = matchs[1] || words;
     let code = matchs[2];
     let _code;

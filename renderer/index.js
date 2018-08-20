@@ -24,7 +24,7 @@ debugMenu.install();
 console.log(`mainWindow start at ${(new Date).toLocaleString()}`);
 voice('初始化.');
 
-const main_ctrl = require('./index/main-ctrl.js');
+require('./index/main-ctrl.js');
 
 const view_stock = require('./index/view-stock-ctrl.js');
 

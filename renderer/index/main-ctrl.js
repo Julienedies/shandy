@@ -12,20 +12,25 @@ const tdx = require('../../libs/tdx.js');
 const cm = require('../../libs/console.js');
 cm('log');
 
-let ip;
-
-try {
-    let networkInterfaces = os.networkInterfaces();
-    ip = networkInterfaces.en0[0].address;
-} catch (e) {
-    console.info('ip address 获取失败. =>');
-    console.error(e);
+function get_ip(){
+    let ip;
+    try {
+        let networkInterfaces = os.networkInterfaces();
+        ip = networkInterfaces.en0[0].address;
+    } catch (e) {
+        console.info('ip address 获取失败. =>');
+        console.error(e);
+    }
+    return ip;
 }
-
 
 brick.controllers.reg('main_ctrl', function (scope) {
 
-    $('#ip').text(ip);
+});
+
+brick.controllers.reg('help_ctrl', function (scope) {
+
+    $('#ip').text(get_ip());
 
     this.relaunch = function () {
         remote.app.relaunch();
@@ -41,8 +46,16 @@ brick.controllers.reg('main_ctrl', function (scope) {
         shell.openExternal(map[id]);
     };
 
+    this.show_ip = function(){
+        $('#ip').text(get_ip());
+    };
+
     this.debug = function (){
         cm($(this).prop('checked'), 'log');
+    };
+
+    this.view = function(e, code){
+        tdx.show(code, 4);
     };
 
     this.test = function (){
@@ -92,10 +105,6 @@ brick.controllers.reg('main_ctrl', function (scope) {
 
         scope.render('ls', model);
 
-    };
-
-    this.view = function(e, code){
-        tdx.show(code, 4);
     };
 
 });

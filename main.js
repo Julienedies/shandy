@@ -87,7 +87,7 @@ function ready() {
     });
 
     // 淘股吧页面 => chrome扩展 => socket.io => 在通达信显示个股
-    server.on('rts_view', function(msg){
+    server.on('view_in_tdx', function(msg){
         tdx.show(msg.code);
     });
 
