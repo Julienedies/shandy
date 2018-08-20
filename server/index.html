@@ -22,8 +22,8 @@
                     <span class="name"> {{v.name}} </span>
                     <span class="b1">{{v.b1/1000}} <i>k</i></span>
                     <span ic-class="b1_reduce {{v.b1_reduce > 0 ? 'up':'down'}}">{{v.b1_reduce}} </span>
-                    <span class="price">{{v.price}} </span>
                     <span class="increase">{{v.increase}}% </span>
+                    <span class="price">{{v.price}} </span>
                     <span class="time"> {{v.time}}</span>
                 </div>
                 <div class="flex flex-mj">
@@ -54,7 +54,7 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
 
-    var channel = 'j_handy';
+    var channel = 'jhandy';
     var socket = io();
     var $rts = $('#rts');
 

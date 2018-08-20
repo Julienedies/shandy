@@ -3,12 +3,12 @@
  * @todo 根据股票名称，查找股票代码
  */
 
-const stocks = require('../data/stocks.json');
+const stocks = require('../../stock-data/stocks.json');
 const _ = require('underscore');
 
 /**
  * @param words {String} words = '天首发展000611' or '天首发展'
- * @returns {undefined|string}  没有找到股票代码或股票代码字符串
+ * @returns {Object|undefined|String}  没有找到股票代码或股票代码字符串 或者 {code:'000002', name:'万科'}
  */
 module.exports = function (words) {
     let matchs = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
@@ -25,10 +25,12 @@ module.exports = function (words) {
         let _name = stock[1];
         if (name == _name || words == _name) {  // 股票名称完全匹配  或者   股票名称部分匹配
             _stocks.push(stock);
+            break;
         }
-        else
+        else if(r_name.test(_name))
         {
-            r_name.test(_name) && _stocks_2.push(stock);
+             _stocks_2.push(stock);
+            break;
         }
     }
 
@@ -36,6 +38,7 @@ module.exports = function (words) {
     _code = stock[0];
 
     //console.log(name, _code, code);
-    return _code || code;
+    //return _code || code;
+    return {code:stock[0], name:stock[1]};
 
 };

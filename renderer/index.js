@@ -33,15 +33,13 @@ const rtsc = require('./index/real-time-stock-ctrl.js');
 require('./index/voice-warning-ctrl.js');
 
 
-// 接收主进程发来的按下快捷键消息
-ipc.on('stock_code', function (event, arg) {
-    const message = `异步消息回复: ${arg}`;
-    view_stock(arg);
-    rtsc.on_view_stock(arg);
+// 接收主进程发来的消息
+ipc.on('view_stock_info', function (event, code) {
+    view_stock(code);
 });
 
-ipc.on('real-time-stock', function (event, arg) {
-    rtsc.on_real_time_stock(arg);
+ipc.on('rts_db_monitor', function (event, stock) {
+    rtsc.on_rts_db_monitor(stock);
 });
 
 ipc.on('rts_cancel', function (event, arg) {

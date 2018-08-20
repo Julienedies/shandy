@@ -4,13 +4,12 @@
 
 const electron = require('electron');
 const ipcRenderer = electron.ipcRenderer;
-const _ = require('underscore');
 
 const rts = require('../../libs/real-time-stock.js');
-const voice = require('../../js/libs/voice.js');
 const _objm = require('../../libs/objm.js');
-const tdx = require('../../libs/tdx.js');
 const schedule = require('../../libs/schedule.js');
+const tdx = require('../../libs/tdx.js');
+const voice = require('../../js/libs/voice.js');
 
 window.tdx = tdx;
 window.voice = voice;
@@ -20,11 +19,10 @@ let first_objm = window.first_objm = _objm();
 
 let rtsc_threshold = window.rtsc_threshold = 15;
 
-let $stock_code = $('#stock_code');
 let $rts_list = $('#rts_list');
 
 let q_rtso = rts('qq', f);
-let s_rtso = rts('sina', f);
+//let s_rtso = rts('sina', f);
 
 function f(stocks) {
     if (!Array.isArray(stocks)) {
@@ -43,7 +41,7 @@ function f(stocks) {
         }*/
     }
 
-    ipcRenderer.send('rts-push', arr2);
+    ipcRenderer.send('rts_push', arr2);
     $rts_list.icRender(arr2);
 }
 
@@ -99,6 +97,7 @@ function _f(stock) {
             // 早盘封单小于阈值
             if(b1 < least && d < 14 && price < 50){
                 voice(code, `${name}有破板风险`);
+                console.info(`${name}有破板风险`, stock.time);
                 //tdx.show(code);
             }
 
@@ -106,17 +105,17 @@ function _f(stock) {
             if (-b1_reduce > b1_reduce_base) {
                 //短时间大量减少（小于60秒）
                 if(time_reduce < 60){
-                    console.info(`间隔${time_reduce}秒封单减少`);
                     voice(code, `${name}封单急速减少`);
+                    console.info(`${name}: 间隔${time_reduce}秒封单减少`, stock.time);
                     //tdx.show(code);
                 }
                 // 撤单量超过阈值,（ 封单减少，成交量没有对应增加, 则说明是撤单）
                 if (-b1_reduce - v_plus > b1_reduce_base) {
-                    console.info(name, `大量撤单${-b1_reduce - v_plus}手`);
                     voice(code, `${name}大量撤单`);
+                    console.info(`${name}: 大量撤单${-b1_reduce - v_plus}手`, stock.time);
                 }else{
-                    console.info(`${stock.name}封单减少 ${-b1_reduce}手，余${b1}手`);
                     voice(code, `${stock.name}封单减少`);
+                    console.info(`${name}: 封单累计减少 ${-b1_reduce}手，余${b1}手`, stock.time);
                 }
             }
 
@@ -138,7 +137,7 @@ function _f(stock) {
         stock.v_plus = v_plus;
         return stock;
 
-    } else{
+    } else {
         first_objm.set(code, stock);
         prev_objm.set(code, stock);
         return stock;
@@ -149,7 +148,6 @@ function _add(code) {
     prev_objm.remove(code);
     first_objm.remove(code);
     q_rtso.add(code);
-    //s_rtso.add(code);
 }
 
 function _remove(code){
@@ -169,29 +167,25 @@ brick.controllers.reg('rts_ctrl', function (scope) {
     };
     scope.query = function clear() {
         q_rtso.query();
-        //s_rtso.query();
     };
     scope.clear = function clear() {
         voice.clear();
         q_rtso.clear();
-        //s_rtso.clear();
         prev_objm.clear();
         first_objm.clear();
-        $rts_list.icRender({model: []});
-        ipcRenderer.send('rts-push', []);
+        $rts_list.icRender([]);
+        ipcRenderer.send('rts_push', []);
         $stock_code.val('');
     };
     scope.change = function change() {
         let code = $stock_code.val();
         q_rtso.change(code);
-        //s_rtso.change(code);
         prev_objm.clear();
         first_objm.clear();
     };
     scope.pause = function pause() {
         voice.clear();
         q_rtso.pause();
-        //s_rtso.pause();
     };
     scope.remove = function(e){
         _remove($stock_code.val());
@@ -200,7 +194,6 @@ brick.controllers.reg('rts_ctrl', function (scope) {
         $stock_code.val($(this).attr('code'));
     };
     scope.reset = function () {
-
     };
 
 });
@@ -212,17 +205,16 @@ schedule(function(){
 
 //
 module.exports = {
-    on_view_stock: function (code) {
-        $stock_code.val(code);
-    },
-    on_real_time_stock: function (code) {
+    on_rts_db_monitor: function (stock) {
+        let code = stock.code;
+
         if (/^\d{6}$/.test(code)) {
             _add(code);
-            $stock_code.val(code);
-            voice('开始监控:' + code.replace(/\B/img, ' '));
+            voice(`打板监控 ${stock.name}`);
         } else {
-            voice('监控失败，无效股票代码！');
+            voice('打板监控失败，无效代码！');
         }
+
         tdx.active();
     },
     on_rts_cancel: _remove

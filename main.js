@@ -56,7 +56,7 @@ function ready() {
     electron.powerMonitor.on('resume', () => {
         let d = new Date();
         let h = d.getHours();
-        if(h > 5 && h < 9){ // 只在早上重启
+        if(h > 5 && h < 10){ // 只在早上重启
             app.relaunch();
             app.exit();
         }
@@ -64,21 +64,21 @@ function ready() {
 
     // 鼠标手势  => 快捷键 =>  apple script获取通达信个股代码  => 在浏览器打开同花顺个股资料页面
     globalShortcut.register('CommandOrControl+Alt+x', function () {
-        ac.getStockName(function(code){
-            mainWindow.webContents.send('stock_code', code);
+        ac.getStockName(function(stock){
+            mainWindow.webContents.send('view_stock_info', stock.code);
         });
     });
 
     // 鼠标手势 => 快捷键 =>  apple script获取通达信个股代码  => 打板封单监控
     globalShortcut.register('CommandOrControl+Alt+z', function () {
-        ac.getStockName(function(code){
-            mainWindow.webContents.send('real-time-stock', code);
+        ac.getStockName(function(stock){
+            mainWindow.webContents.send('rts_db_monitor', stock);
         });
     });
 
     // 打板封单监控数据 => socket.io => 浏览器页面 http://192.168.3.20:3000/
-    ipcMain.on('rts-push', (event, arg) => {
-        server.push(arg);
+    ipcMain.on('rts_push', (event, stocks) => {
+        server.push(stocks);
     });
 
     // 浏览器页面 http://192.168.3.20:3000/  => socket.io => 取消个股打板封单监控

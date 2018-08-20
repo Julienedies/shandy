@@ -13,7 +13,7 @@ const events = new EventEmitter();
 
 const config = require('../config.json');
 
-const channel = 'j_handy';
+const channel = 'jhandy';
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');

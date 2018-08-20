@@ -122,8 +122,10 @@ Rts.prototype = {
         });
     },
     add: function (code) {
+        var that = this;
         let codes = this._codes(code);
-        this.codes = this.codes.concat(codes);
+        //this.codes = this.codes.concat(codes);
+        codes.map(code => { that.codes.unshift(code)});
         this.codes = _.uniq(this.codes);
         this.update();
     },
