@@ -26,4 +26,4 @@ tdx.txt
 .tmp_*~
 
 out
-npm-debug.log
+*.log
