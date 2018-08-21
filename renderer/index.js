@@ -26,6 +26,8 @@ voice('初始化.');
 
 require('./index/main-ctrl.js');
 
+require('./index/help-ctrl.js');
+
 const view_stock = require('./index/view-stock-ctrl.js');
 
 const rtsc = require('./index/real-time-stock-ctrl.js');

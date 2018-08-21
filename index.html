@@ -57,7 +57,7 @@
 
         <section ic-ctrl="voice_warning_ctrl">
             <button class="button" ic-click="open_voice_warning">交易错误语音警醒</button>
-            <button class="button" ic-click="ls">临时用</button>
+            <button class="button" ic-click="ls">监控精灵统计</button>
         </section>
 
         <section class="" ic-ctrl="view_stock_ctrl">
@@ -109,11 +109,6 @@
                 <button class="button" ic-click="test">test</button>
             </div>
             <input type="checkbox" ic-click="debug"> debug</input>
-            <div ic-tpl="ls">
-                <ul>
-                    <li ic-for="i,v in model" ic-class="{{v.xt && 'up'}}" ic-click="view:{{v.t[0]}}">{{v.t[1]}} {{v.xt}}</li>
-                </ul>
-            </div>
         </section>
 
         <footer>

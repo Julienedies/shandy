@@ -8,7 +8,7 @@ const robot = require("robotjs");
 const ac = require('./ac.js');
 
 function _keyTap(keys) {
-    var delay = 150;
+    var delay = 100;
     var key = keys.shift();
     if (key) {
         //if (key == 'enter') delay = 300;
@@ -23,7 +23,7 @@ function keyTap(keys) {
     // 需要稍微延迟，确保通达信窗口获得焦点
     setTimeout(function () {
         _keyTap(keys);
-    }, 300);
+    }, 350);
 }
 
 module.exports = {

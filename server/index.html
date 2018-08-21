@@ -11,9 +11,9 @@
 </head>
 <body>
 
-<div ic-ctrl="rts_ctrl">
+<div>
 
-    <div id="rts" ic-tpl="list">
+    <section id="rts" ic-ctrl="rts_ctrl" ic-tpl="list">
         <ul id="rts_list">
             <li ic-for="i,v in model" code="{{v.code}}"
                 ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
@@ -32,19 +32,19 @@
                 </div>
             </li>
         </ul>
-    </div>
+
+        <div style="position:absolute;top:-100px;left:0;">
+            <button id="tdx_view" class="button" code="" ic-click="view">查看股票</button>
+            <button id="active_ftnn" ic-click="active_ftnn">激活富途和通达信</button>
+        </div>
+
+    </section>
 
     <footer ic-ctrl="links_ctrl" style="position: fixed;bottom:0; left:0; right:0;" ic-tpl>
         <a class="button is-info" ic-href="http://{{model.ip}}:2018/public/static/html/stock/plan/sell/" target="_blank">平仓预案</a>
         <a class="button is-info" ic-href="http://{{model.ip}}:2018/public/static/html/stock/plan/buy/" target="_blank">建仓条件</a>
         <a class="button is-info" ic-href="http://{{model.ip}}:2018/public/static/html/stock/plan/index/" target="_blank">当前计划</a>
     </footer>
-
-
-    <div style="position:absolute;top:-100px;left:0;">
-        <button id="tdx_view" class="button" code="" ic-click="view">查看股票</button>
-        <button id="active_ftnn" ic-click="active_ftnn">激活富途和通达信</button>
-    </div>
 
 </div>
 
@@ -90,16 +90,8 @@
     });
 
     brick.controllers.reg('links_ctrl', function () {
-
         var ip = location.hostname;
-
         this.$elm.icRender({ip: ip});
-
-        /*this.$elm.find('a').each(function(){
-         console.log(this.href, this.href.replace('*', ip))
-         this.href = this.href.replace('*', ip);
-         })
-         */
     });
 
 </script>
