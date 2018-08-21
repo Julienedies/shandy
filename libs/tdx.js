@@ -1,12 +1,11 @@
 /**
  * Created by j on 18/5/27.
- * @todo 通达信快捷键自动执行
+ * @todo 通达信软件快捷键脚本化接口
  */
 
 const robot = require("robotjs");
 
 const ac = require('./ac.js');
-
 
 function _keyTap(keys) {
     var delay = 100;
@@ -18,33 +17,32 @@ function _keyTap(keys) {
             _keyTap(keys);
         }, delay);
     }
-
 }
 
 function keyTap(keys) {
-    // 需要稍微延迟，确保通达信获得焦点
+    // 需要稍微延迟，确保通达信窗口获得焦点
     setTimeout(function () {
         _keyTap(keys);
-    }, 300);
+    }, 400);
 }
 
-
 module.exports = {
-    datum: 30, //默认调用间隔限制为30秒
-    _obj_limit:{},
-    _call_limit: function(f_id, datum ){
-        datum = datum || this.datum;
+    _datum_limit: 30, // 方法默认调用间隔限制为30秒
+    _obj_limit: {},
+    _call_limit: function (f_id, limit) {
+        limit = limit || this._datum_limit;
         let o = this._obj_limit;
         let f_o = o[f_id];
-        let now = + new Date();
-        if(!f_o){
-            o[f_id] = {datum: datum, last: now};
+        let now = +new Date();
+        // 首次调用
+        if (!f_o) {
+            o[f_id] = {limit: limit, last: now};
             return true;
-        }else{
-            let reduce = now - f_o.last;
-            let not_limit = reduce > 1000 * datum;
-            this._limit_reduce = datum - Math.floor(reduce/1000);
-            if(not_limit){
+        } else {
+            let reduce = Math.floor( (now - f_o.last) / 1000 );
+            let not_limit = reduce > limit;
+            this._limit_reduce = limit - reduce;
+            if (not_limit) {
                 f_o.last = now;
             }
             return not_limit;
@@ -53,32 +51,29 @@ module.exports = {
     active: function () {
         ac.activeTdx();
     },
-    view: function (code ){
-       this.show(code);
+    view: function (code, datum) {
+        this.show(code, datum);
     },
     show: function (code, datum) {
         //需要做调用限制
-        if(this._call_limit('show', datum || 15)){
-            this.active();
-            let keys = code.split('');
-            keys.push('enter');
-            keyTap(keys);
-        }else{
-            //console.log(`tdx.show 调用限制,余${this._limit_reduce}秒`);
+        if (this._call_limit('show', datum || 10)) {
+            this.keystroke(code, true);
+        } else {
+            console.log(`tdx.show 调用限制,余${this._limit_reduce}秒`);
         }
     },
-    cancel_order: function(){
+    cancel_order: function () {
         //需要做调用限制
-        if(this._call_limit('cancel_order', 30)){
+        if (this._call_limit('cancel_order', 30)) {
             this.active();
-            keyTap(['2','2','enter']);
-        }else{
+            keyTap(['2', '2', 'enter']);
+        } else {
             //console.log(`tdx.cancel_order 调用限制,余${this._limit_reduce}秒`);
         }
     },
     keystroke: function (str, enter) {
-        str = str + '';
         this.active();
+        str += '';
         let keys = str.split('');
         enter && keys.push('enter');
         keyTap(keys);
