@@ -8,7 +8,7 @@ const robot = require("robotjs");
 const ac = require('./ac.js');
 
 function _keyTap(keys) {
-    var delay = 100;
+    var delay = 150;
     var key = keys.shift();
     if (key) {
         //if (key == 'enter') delay = 300;
@@ -23,7 +23,7 @@ function keyTap(keys) {
     // 需要稍微延迟，确保通达信窗口获得焦点
     setTimeout(function () {
         _keyTap(keys);
-    }, 400);
+    }, 300);
 }
 
 module.exports = {
@@ -56,7 +56,7 @@ module.exports = {
     },
     show: function (code, datum) {
         //需要做调用限制
-        if (this._call_limit('show', datum || 10)) {
+        if (this._call_limit('show', datum || 15)) {
             this.keystroke(code, true);
         } else {
             console.log(`tdx.show 调用限制,余${this._limit_reduce}秒`);
