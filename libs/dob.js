@@ -10,7 +10,7 @@ String.prototype.j_format = function(){
 };
 
 function F(name){
-    let file_path = path.join(__dirname, '../data/s/', `${name}.json`);
+    let file_path = path.join(__dirname, '../../stock-data/s/', `${name}.json`);
     this.file_path = file_path;
     //
     if(!fs.existsSync(file_path) ){

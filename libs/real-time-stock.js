@@ -134,8 +134,8 @@ Rts.prototype = {
         this.update();
     },
     remove: function (code){
-        this.codes = _.without(this.codes, code);
         clearInterval(this.timer);
+        this.codes = _.without(this.codes, code);
         this.update();
     },
     pause: function () {

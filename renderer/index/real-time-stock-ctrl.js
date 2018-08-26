@@ -57,6 +57,7 @@ function _f(stock) {
     let b1 = stock.b1;
     let v = stock.v;
     let price = stock.price;
+    let time = stock.time;
     let p_stock = prev_objm.get(code);
     let f_stock = first_objm.get(code);
     if (p_stock) {
@@ -97,25 +98,23 @@ function _f(stock) {
             // 早盘封单小于阈值
             if(b1 < least && d < 14 && price < 50){
                 voice(code, `${name}有破板风险`);
-                console.info(`${name}有破板风险`, stock.time);
-                //tdx.show(code);
+                console.info(time, `${name}有破板风险`);
             }
 
             // 封单减少量超过阈值,（ 当前封单 - 上次记录的封单 = 封单减少量 ）
             if (-b1_reduce > b1_reduce_base) {
-                //短时间大量减少（小于60秒）
-                if(time_reduce < 60){
+                //短时间大量减少（小于30秒）
+                if(time_reduce < 30){
                     voice(code, `${name}封单急速减少`);
-                    console.info(`${name}: 间隔${time_reduce}秒封单减少`, stock.time);
-                    //tdx.show(code);
+                    console.info(time, `${name}: 间隔${time_reduce}秒封单减少`);
                 }
                 // 撤单量超过阈值,（ 封单减少，成交量没有对应增加, 则说明是撤单）
                 if (-b1_reduce - v_plus > b1_reduce_base) {
                     voice(code, `${name}大量撤单`);
-                    console.info(`${name}: 大量撤单${-b1_reduce - v_plus}手`, stock.time);
+                    console.info(time, `${name}: 大量撤单${-b1_reduce - v_plus}手`);
                 }else{
                     voice(code, `${stock.name}封单减少`);
-                    console.info(`${name}: 封单累计减少 ${-b1_reduce}手，余${b1}手`, stock.time);
+                    console.info(time, `${name}: 封单累计减少 ${-b1_reduce}手，余${b1}手`);
                 }
             }
 
@@ -145,14 +144,15 @@ function _f(stock) {
 }
 
 function _add(code) {
+    voice.remove(code);
     prev_objm.remove(code);
     first_objm.remove(code);
     q_rtso.add(code);
 }
 
 function _remove(code){
-    voice.remove(code);
     q_rtso.remove(code);
+    voice.remove(code);
     prev_objm.remove(code);
     first_objm.remove(code);
 }

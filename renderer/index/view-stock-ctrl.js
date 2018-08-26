@@ -9,9 +9,9 @@ const BrowserWindow = electron.remote.BrowserWindow;
 const ipc = electron.ipcRenderer;
 const clipboard = electron.clipboard;
 
+const stocksManager = require('../../libs/stocks-manager.js');
 const stockUrl = require('../../libs/stockUrl.js');
 const ac = require('../../libs/ac.js');
-const schedule = require('../../libs/schedule.js');
 
 const objm = require('../../libs/objm.js')('view_stock_info');
 const voice = require('../../js/libs/voice.js');
@@ -30,71 +30,68 @@ function createWin() {
     return win;
 }
 
-function view_stock(code){
+function view_stock(code) {
 
-    if(code){
+    if (!code) return voice('不能查看个股资料，无效股票代码！');
 
-        objm.set('code', code);
-        clipboard.writeText(code);
+    objm.set('code', code);
+    clipboard.writeText(code);
 
-        let flag = objm.get('is_mashup') ? 0 : 1;
+    let flag = objm.get('is_mashup') ? 0 : 1;
 
-        if(!objm.get('is_open')){
-            return ac.activeTdx();
-        }
-        if(objm.get('is_open_external')){
-            shell.openExternal( stockUrl(code, flag) + (flag == 1 ? '?self=1':'') );
-        }else{
-            stockWin = stockWin || createWin();
-            stockWin.loadURL(stockUrl(code, 0));
-            stockWin.focus();
-        }
-
-        ac.activeTdx();
-
-    }else{
-        let msg = '不能查看个股资料，无效股票代码！';
-        voice(msg);
-        return console.error(msg);
+    if (!objm.get('is_open')) {
+        return ac.activeTdx();
     }
+    if (objm.get('is_open_external')) {
+        shell.openExternal(stockUrl(code, flag) + (flag == 1 ? '?self=1' : ''));
+    } else {
+        stockWin = stockWin || createWin();
+        stockWin.loadURL(stockUrl(code, 0));
+        stockWin.focus();
+    }
+
+    ac.activeTdx();
+
 }
 
-
 // 查看个股资料
-brick.controllers.reg('view_stock_ctrl', function(scope){
+brick.controllers.reg('view_stock_ctrl', function (scope) {
 
-    $(':checkbox').each(function(){
-        let name = this.name;
-        objm.set(name, $(this).prop('checked'));
+    this.$elm.find(':checkbox').each(function () {
+        objm.set(this.name, $(this).prop('checked'));
     });
 
-    scope.set_setting = function(e){
+    scope.set_setting = function (e) {
         objm.set(this.name, $(this).prop('checked'));
     };
 
-    scope.go_ycj = function(){
-        ac.getStockName(function(code){
-            shell.openExternal(stockUrl(code, 7));
+    scope.go_ycj = function () {
+        ac.getStockName(function (stock) {
+            shell.openExternal(stockUrl(stock.code, 7));
         });
     };
 
-    scope.on_mousewheel = function(){
+    scope.add_stock = function (stock){
+        stock.name && stocksManager.add(stock);
+    };
 
-/*        const ioHook = require('iohook');
+    scope.on_mousewheel = function () {
 
-        console.info(ioHook);
+        /*        const ioHook = require('iohook');
 
-        function callback(event){
-            console.info(event);
-        }
+         console.info(ioHook);
 
-        if($(this).prop('checked')){
-            ioHook.on('mousewheel', callback);
-            ioHook.start();
-        }else{
-            ioHook.off('mousewheel', callback);
+         function callback(event){
+         console.info(event);
+         }
 
-        }*/
+         if($(this).prop('checked')){
+         ioHook.on('mousewheel', callback);
+         ioHook.start();
+         }else{
+         ioHook.off('mousewheel', callback);
+
+         }*/
 
     };
 

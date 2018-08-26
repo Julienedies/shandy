@@ -61,12 +61,31 @@
         </section>
 
         <section class="" ic-ctrl="view_stock_ctrl">
-            <button class="button" ic-click="go_ycj">云财经</button>
-            <button class="button" id="company">个股资料</button>
-            <button class="button">官网</button>
-            <br/>
+            <div class="buttons has-addons">
+                <button class="button" ic-click="go_ycj">云财经</button>
+                <button class="button" id="company">个股资料</button>
+                <button class="button">官网</button>
+                <button class="button" ic-popup-target="add_stock">添加股票</button>
+            </div>
+            <div ic-form="add_stock" ic-popup="add_stock">
+                <div class="column is-10">
+                    <div>
+                        <input class="input" type="text" ic-form-field="name" placeholder="股票名称">
+                    </div>
+                    <div>
+                        <input class="input" type="text" ic-form-field="code" placeholder="股票代码">
+                    </div>
+                    <div class="buttons">
+                        <button class="button is-primary"
+                                ic-form-submit
+                                ic-submit-action="add_stock()"
+                                ic-popup-close
+                                >保存</button>
+                        <button class="button" ic-popup-close>关闭</button>
+                    </div>
+                </div>
+            </div>
             <!--<input type="checkbox" ic-change="on_mousewheel">&nbsp;滚轮监控</input>-->
-            <br/>
             <input type="checkbox" name="is_open" ic-click="set_setting" checked> 打开</input>
             <br/>
             <input type="checkbox" name="is_open_external" ic-click="set_setting" checked> 总是外部浏览器打开</input>

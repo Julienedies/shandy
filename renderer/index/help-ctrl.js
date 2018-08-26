@@ -23,10 +23,11 @@ function get_ip(){
     return ip;
 }
 
+var ip = get_ip();
 
 brick.controllers.reg('help_ctrl', function (scope) {
 
-    $('#ip').text(get_ip());
+    $('#ip').text(ip);
 
     this.relaunch = function () {
         remote.app.relaunch();
@@ -43,7 +44,9 @@ brick.controllers.reg('help_ctrl', function (scope) {
     };
 
     this.show_ip = function(){
-        $('#ip').text(get_ip());
+        ip = get_ip();
+        console.info(ip);
+        $('#ip').text(ip);
     };
 
     this.debug = function (){

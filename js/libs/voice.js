@@ -4,13 +4,12 @@
 ;
 (function () {
 
-    let q = [];
     let speechSU = new SpeechSynthesisUtterance();
+    let q = [];
     let is_end = true;
 
-    function s() {
+    function speak() {
         if (is_end) {
-            //console.info('s', q.length, +new Date);
             let o = q.shift();
             if (o) {
                 is_end = false;
@@ -22,17 +21,16 @@
 
     speechSU.onend = function () {
         is_end = true;
-        s();
+        speak();
     };
 
     function voice(sign, text) {
         if (!text) {
             text = sign;
-            sign = 's' + new Date;
+            sign = null;
         }
         q.push({sign: sign, text: text});
-        //console.log('push', q.length, +new Date);
-        s();
+        speak();
     }
 
     voice.remove = function (sign) {
@@ -62,7 +60,7 @@
         module.exports = voice;
     } else {
         if (window.voice) {
-            return console.err('window.voice already exist!');
+            return console.error('window.voice already exist!');
         } else {
             window.voice = voice;
         }
