@@ -15,6 +15,7 @@ const globalShortcut = electron.globalShortcut;
 
 const ac = require('./libs/ac.js');
 const tdx = require('./libs/tdx.js');
+const stockQuery = require('./libs/stock-query.js');
 
 const server = require('./server/server.js');
 
@@ -88,7 +89,12 @@ function ready() {
 
     // 淘股吧页面 => chrome扩展 => socket.io => 在通达信显示个股
     server.on('view_in_tdx', function(msg){
-        tdx.show(msg.code);
+        let code = msg.code;
+        if(!/^\d{6}$/.test(code)){
+            let stock = stockQuery(code);
+            code = stock.code;
+        }
+        code && tdx.view(code);
     });
 
     // 同花顺个股资料页面 => chrome扩展 => socket.io => 激活富途牛牛

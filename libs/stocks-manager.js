@@ -7,11 +7,12 @@ const fs = require('fs');
 const path = require('path');
 
 const json_file = '../../stock-data/stocks.json';
-const stocks = require(json_file);
+var stocks = require(json_file);
 
 module.exports = {
 
     get: function(){
+        console.info(stocks[0]);
         return stocks;
     },
     add: function(stock){

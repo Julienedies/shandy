@@ -12,7 +12,7 @@ const iconv = require('iconv-lite');
 
 const config = require('../config.json');
 
-const checkStockCode = require('./check-stock-code.js');
+const checkStockCode = require('./stock-query.js');
 
 function _exec(fileName, args, callback){
 

@@ -1,7 +1,7 @@
 /*!
  * https://github.com/julienedies/brick.git
  * https://github.com/Julienedies/brick/wiki
- * "8/24/2018, 12:18:12 PM"
+ * "8/29/2018, 9:14:55 PM"
  * "V 0.8"
  */
 ;
@@ -476,7 +476,7 @@ var controllers = (function () {
             scope._parent = parent && parent._name;
             scope.$elm = $elm;
             ctrl.scope = scope; // 如果有多个控制器实例，则该名下控制器的作用域对象引用的会是最后一个实例化控制器的作用域对象
-            //$elm.data('ic-ctrl-scope', scope);
+            $elm.data('ic-ctrl-scope', scope);  // 用于区别多个同名控制器下的正确继承
 
             depend = services.get(depend) || [];
             depend = depend.constructor !== Array ? [depend] : depend;
@@ -1051,13 +1051,15 @@ var brick = root.brick = {
 
 directives.reg('ic-ctrl', function ($elm, attrs) {
 
+    if($elm.data('ic-ctrl-scope')) return; // 每个dom对象只执行一次 controller factory
+
     var ctrlName = $elm.attr('ic-ctrl');
 
     if(ctrlName){
         var $parent = $elm.parent().closest('[ic-ctrl]');
         var parentName = $parent.size() ? $parent.attr('ic-ctrl') : '';
-        controllers.exec(ctrlName, controllers.get(parentName), $elm);
-        //controllers.exec(ctrlName, $parent.data('ic-ctrl-scope'), $elm);
+        //controllers.exec(ctrlName, controllers.get(parentName), $elm);  // 在多个同名控制器的情况下,不能正确的按照dom结构进行继承
+        controllers.exec(ctrlName, $parent.data('ic-ctrl-scope'), $elm);
     }
 
 });
@@ -1186,7 +1188,7 @@ directives.reg('ic-tpl', {
         });
     };
 
-    $.fn.icParseProperty = function (name, isLiteral) {
+    $.fn.icParseProperty = $.fn.icPp = function (name, isLiteral) {
         //console.info('icParseProperty => ', name);
         var match;
         // js直接量  <div ic-tpl-init="{}">  object {}
@@ -1207,7 +1209,7 @@ directives.reg('ic-tpl', {
             return match[1];
         }
 
-        if(isLiteral) return name;  //按直接量解析
+        if(isLiteral) return name;  //按直接量解析, 不通过scope链进行查找
 
         var params = name.split(':');
         name = params.shift();
@@ -1250,7 +1252,7 @@ directives.reg('ic-tpl', {
 
     };
 
-    $.fn.icParseProperty2 = function (name, isLiteral) {
+    $.fn.icParseProperty2 = $.fn.icPp2 = function (name, isLiteral) {
         name = this.attr(name);
         if (name === undefined || name == '') return name;
         return this.icParseProperty(name, isLiteral);
@@ -3036,6 +3038,7 @@ directives.reg('ic-form', function ($elm, attrs) {
 
 brick.directives.reg('ic-select', function($elm){
 
+var on_change = $elm.icPp2('ic-select-on-change');
 var cla = $elm.attr('ic-select-cla') || brick.get('ic-select-cla') || 'selected';
 var name = $elm.attr('ic-select');
 var s_item = $elm.attr('ic-select-item') || '[ic-select-item]';
@@ -3059,7 +3062,9 @@ var callback = type == 'checkbox' ?
         });
         $elm.attr('ic-val', JSON.stringify(values));
         $elm.data('ic-val', values);
-        $elm.trigger('ic-select.change', {name:name, value: values});
+        var msg = {name:name, value: values};
+        $elm.trigger('ic-select.change', msg);
+        on_change && on_change.apply($elm, [msg]);
     }
     :
     function(){
@@ -3067,7 +3072,9 @@ var callback = type == 'checkbox' ?
         var $th = $(this).addClass(cla);
         var val = $th.attr('ic-val');
         $elm.attr('ic-val', val);
-        $elm.trigger('ic-select.change', {name:name, value: val});
+        var msg = {name:name, value: val};
+        $elm.trigger('ic-select.change', msg);
+        on_change && on_change.apply($elm, [msg]);
     };
 
     $elm.on('click', s_item, callback);

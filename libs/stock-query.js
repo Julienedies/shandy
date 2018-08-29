@@ -11,6 +11,7 @@ const _ = require('underscore');
  * @returns {Object|undefined|String}  没有找到股票代码或股票代码字符串 或者 {code:'000002', name:'万科'}
  */
 module.exports = function (words) {
+    if(/^\d{6}$/.test(words)) return words;
     let stocks = stocks_manager.get();
     let matchs = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
     console.log(words, matchs);
