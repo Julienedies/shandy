@@ -34,6 +34,7 @@
     }
 
     voice.remove = function (sign) {
+        speechSynthesis.cancel();
         q.forEach(function (v, i) {
             if (v.sign == sign) {
                 console.log('删除', sign, v.text);

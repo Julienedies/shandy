@@ -81,8 +81,7 @@ function _f(stock) {
         let b1_reduce_base = Math.floor(p_b1/rtsc_threshold) || 3000;   // 封单减少量预警基准
         let v_plus_base = Math.floor(p_v/rtsc_threshold) || 5000;       // 成交增加量预警基准
         let least = 9000;  // 最低封单量 9000手
-        let d = new Date();
-        d = d.getHours();
+
         //console.log(name, '预警：封单-',Math.floor(b1_reduce_base/1000) + 'k', '成交量+', Math.floor(v_plus_base/1000) + 'k');
         /*
          * 如果（这里的计算是累计一段时间的，并不是以相邻两次请求计算）
@@ -95,32 +94,35 @@ function _f(stock) {
          */
         if (b1 < least || -b1_reduce > b1_reduce_base || v_plus > v_plus_base) {
 
+            let d = new Date();
+            d = d.getHours();
             // 早盘封单小于阈值
             if(b1 < least && d < 14 && price < 50){
-                voice(code, `${name}有破板风险`);
                 console.info(time, `${name}有破板风险`);
+                voice(code, `${name}有破板风险`);
             }
-
+            else
             // 封单减少量超过阈值,（ 当前封单 - 上次记录的封单 = 封单减少量 ）
             if (-b1_reduce > b1_reduce_base) {
-                //短时间大量减少（小于30秒）
-                if(time_reduce < 30){
-                    voice(code, `${name}封单急速减少`);
+                // 短时间大量减少（小于60秒）
+                if(time_reduce < 60){
                     console.info(time, `${name}: 间隔${time_reduce}秒封单减少`);
+                    voice(code, `${name}封单急速减少`);
                 }
+                else
                 // 撤单量超过阈值,（ 封单减少，成交量没有对应增加, 则说明是撤单）
                 if (-b1_reduce - v_plus > b1_reduce_base) {
-                    voice(code, `${name}大量撤单`);
                     console.info(time, `${name}: 大量撤单${-b1_reduce - v_plus}手`);
+                    voice(code, `${name}大量撤单`);
                 }else{
-                    voice(code, `${stock.name}封单减少`);
                     console.info(time, `${name}: 封单累计减少 ${-b1_reduce}手，余${b1}手`);
+                    voice(code, `${stock.name}封单减少`);
                 }
             }
-
+            else
             // 成交量增加量超过阈值,（ 当前成交量 - 上次记录的成交量 = 增加成交量 ）
             if (v_plus > v_plus_base) {
-                voice(code, `${name} 增加成交 ${v_plus}手`);
+                voice(code, `${name}增加成交${v_plus}手`);
             }
 
             stock.warning = 1;
@@ -210,9 +212,9 @@ module.exports = {
 
         if (/^\d{6}$/.test(code)) {
             _add(code);
-            voice(`打板监控 ${stock.name}`);
+            voice(`封单监控 ${stock.name}`);
         } else {
-            voice('打板监控失败，无效代码！');
+            voice('封单监控失败，无效代码！');
         }
 
         tdx.active();
