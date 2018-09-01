@@ -12,7 +12,6 @@ var stocks = require(json_file);
 module.exports = {
 
     get: function(){
-        console.info(stocks[0]);
         return stocks;
     },
     add: function(stock){

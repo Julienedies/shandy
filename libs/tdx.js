@@ -4,14 +4,14 @@
  */
 
 const robot = require("robotjs");
-
 const ac = require('./ac.js');
+
 
 function _keyTap(keys) {
     var delay = 100;
     var key = keys.shift();
     if (key) {
-        //if (key == 'enter') delay = 300;
+        // if (key == 'enter') delay = 300;
         setTimeout(function () {
             robot.keyTap(key);
             _keyTap(keys);
@@ -23,7 +23,7 @@ function keyTap(keys) {
     // 需要稍微延迟，确保通达信窗口获得焦点
     setTimeout(function () {
         _keyTap(keys);
-    }, 350);
+    }, 200);
 }
 
 module.exports = {
@@ -39,7 +39,7 @@ module.exports = {
             o[f_id] = {limit: limit, last: now};
             return true;
         } else {
-            let reduce = Math.floor( (now - f_o.last) / 1000 );
+            let reduce = Math.floor((now - f_o.last) / 1000);
             let not_limit = reduce > limit;
             this._limit_reduce = limit - reduce;
             if (not_limit) {
@@ -48,9 +48,17 @@ module.exports = {
             return not_limit;
         }
     },
+    /**
+     * @todo 在mac系统中使通达信程序获得当前焦点
+     */
     active: function () {
         ac.activeTdx();
     },
+    /**
+     * @todo 激活通达信,键盘键入股票代码,显示个股K线界面
+     * @param code {String}  股票code
+     * @param datum {Number}  调用限制间隔秒数
+     */
     view: function (code, datum) {
         this.show(code, datum);
     },
@@ -59,16 +67,16 @@ module.exports = {
         if (this._call_limit('show', datum || 15)) {
             this.keystroke(code, true);
         } else {
-            console.log(`tdx.show 调用限制,余${this._limit_reduce}秒`);
+            console.info(`tdx.show 调用限制,余${this._limit_reduce}秒`);
         }
     },
     cancel_order: function () {
         //需要做调用限制
-        if (this._call_limit('cancel_order', 30)) {
-            this.active();
-            keyTap(['2', '2', 'enter']);
+        if (this._call_limit('cancel_order', 10)) {
+            //this.active();
+            //keyTap(['2', '2', 'enter']);
         } else {
-            //console.log(`tdx.cancel_order 调用限制,余${this._limit_reduce}秒`);
+            console.info(`tdx.cancel_order 调用限制,余${this._limit_reduce}秒`);
         }
     },
     keystroke: function (str, enter) {

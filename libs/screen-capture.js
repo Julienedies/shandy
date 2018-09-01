@@ -22,7 +22,7 @@ function determineScreenShotSize() {
 }
 
 /*
- * @param args Object  {return_type: String, crop: Object, callback: Function}
+ * @param args Object  {returnType: String, crop: Object, callback: Function}
  * @param returnType  String   接受截图数据类型   'file' || '' 'dataUrl';  图片file地址  or  base64
  * @param crop  Object  对截图剪切  {x: 2372,y: 88, width: 200,height: 42}
  * @param callback  Function  处理截屏图片数据回调函数
@@ -35,7 +35,7 @@ module.exports = function(args) {
     desktopCapturer.getSources(options, function (error, sources) {
 
         if (error) {
-            return console.log(error);
+            return console.error(error);
         }
 
         sources.forEach(function (source) {
@@ -50,12 +50,12 @@ module.exports = function(args) {
                 }
 
                 if(args.returnType === 'file'){
-                    let screenshotPath = path.join(os.tmpdir(), source.name + '.png');
-                    fs.writeFile(screenshotPath, img.toPNG(), function (error) {
+                    let img_path = path.join(os.tmpdir(), source.name + '.png');
+                    fs.writeFile(img_path, img.toPNG(), function (error) {
                         if (error) {
-                            return console.log(error);
+                            return console.error(error);
                         }
-                        args.callback(screenshotPath);
+                        args.callback(img_path);
                     })
                 }
 

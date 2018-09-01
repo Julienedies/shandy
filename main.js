@@ -66,7 +66,7 @@ function ready() {
     // 鼠标手势  => 快捷键 =>  apple script获取通达信个股代码  => 在浏览器打开同花顺个股资料页面
     globalShortcut.register('CommandOrControl+Alt+x', function () {
         ac.getStockName(function(stock){
-            mainWindow.webContents.send('view_stock_info', stock.code);
+            mainWindow.webContents.send('view_stock_info', stock);
         });
     });
 
@@ -89,12 +89,14 @@ function ready() {
 
     // 淘股吧页面 => chrome扩展 => socket.io => 在通达信显示个股
     server.on('view_in_tdx', function(msg){
-        let code = msg.code;
+        // 在render进程中执行tdx.view(), 貌似不会因为事件tick迟滞;
+        mainWindow.webContents.send('view_in_tdx', msg);
+/*        let code = msg.code;
         if(!/^\d{6}$/.test(code)){
             let stock = stockQuery(code);
             code = stock.code;
         }
-        code && tdx.view(code);
+        code && tdx.view(code);*/
     });
 
     // 同花顺个股资料页面 => chrome扩展 => socket.io => 激活富途牛牛

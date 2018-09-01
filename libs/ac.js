@@ -1,4 +1,4 @@
-/**
+/*!
  * Created by j on 18/6/4.
  * applescript 调用包装
  * ac : apple script
@@ -6,17 +6,17 @@
 
 const fs = require('fs');
 const path = require('path');
-const applescript = require('applescript');
 
 const iconv = require('iconv-lite');
+const applescript = require('applescript');
 
 const config = require('../config.json');
 
-const checkStockCode = require('./stock-query.js');
+const stockQuery = require('./stock-query.js');
 
 function _exec(fileName, args, callback){
 
-    let filePath = path.join(config.dir.ac_dir, '*.scpt'.replace('*', fileName));
+    let filePath = path.join(config.dir.ac_dir, `${fileName}.scpt`);
 
     if(!Array.isArray(args)){
         callback = args;
@@ -35,14 +35,16 @@ function _exec(fileName, args, callback){
 module.exports = {
     /*
      * @todo 从dock的程序图标里获取通达信当前显示个股名称
-     * @param callback Function 通过appleceScript获取股票名称后的回调函数，传入股票代码
+     * @param callback {Function} 通过apple Script获取股票名称后的回调函数，传入股票代码
      */
     getStockName: function(callback){
         _exec('get-stock-name', function(result){
             console.log(result);
-            // result = '通达信金融终端V7.38 - [组合图-天首发展]';
-            result = result.replace('通达信金融终端V7.38 - [组合图-', '').replace(']','');
-            result =  checkStockCode(result);
+            // result = '通达信金融终端V7.38 - [组合图-天首发展]'; 从dock通达信图标右键菜单获取的字符串
+            // result = result.replace('通达信金融终端V7.38 - [组合图-', '').replace(']','');
+            let arr = result.match(/\[组合图-(.+)\]$/) || [];
+            let name = arr[1];
+            result =  stockQuery(name);
             callback && callback(result);
         });
     },

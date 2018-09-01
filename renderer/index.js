@@ -8,13 +8,13 @@ const shell = electron.shell;
 const BrowserWindow = electron.remote.BrowserWindow;
 const ipc = electron.ipcRenderer;
 
-const screenshot = require('../libs/screenshot.js');
-const baiduOcr = require('../libs/baidu-ocr.js');
+const capture_ocr = require('../libs/capture-ocr.js');
+
 const stockUrl = require('../libs/stockUrl.js');
 const bw = require('../libs/window.js');
 const ac = require('../libs/ac.js');
 const tdx = require('../libs/tdx.js');
-
+const stockQuery = require('../libs/stock-query.js');
 const voice = require('../js/libs/voice.js');
 
 // activate context menu
@@ -36,12 +36,38 @@ require('./index/voice-warning-ctrl.js');
 
 
 // 接收主进程发来的消息
-ipc.on('view_stock_info', function (event, code) {
-    view_stock(code);
+ipc.on('view_in_tdx', function (event, msg) {
+    let code = msg.code;
+    if(!/^\d{6}$/.test(code)){
+        let stock = stockQuery(code);
+        code = stock.code;
+    }
+    code && tdx.view(code);
+});
+
+
+ipc.on('view_stock_info', function (event, stock) {
+    if(stock.code){
+        view_stock(stock.code);
+    }
+    else
+    {
+        capture_ocr( stock => {
+            view_stock(stock.code);
+        });
+    }
 });
 
 ipc.on('rts_db_monitor', function (event, stock) {
-    rtsc.on_rts_db_monitor(stock);
+    if(stock.code){
+        rtsc.on_rts_db_monitor(stock);
+    }
+    else
+    {
+        capture_ocr( stock => {
+            rtsc.on_rts_db_monitor(stock);
+        });
+    }
 });
 
 ipc.on('rts_cancel', function (event, arg) {
