@@ -10,9 +10,6 @@ const ipc = electron.ipcRenderer;
 
 const capture_ocr = require('../libs/capture-ocr.js');
 
-const stockUrl = require('../libs/stockUrl.js');
-const bw = require('../libs/window.js');
-const ac = require('../libs/ac.js');
 const tdx = require('../libs/tdx.js');
 const stockQuery = require('../libs/stock-query.js');
 const voice = require('../js/libs/voice.js');
@@ -28,11 +25,13 @@ require('./index/main-ctrl.js');
 
 require('./index/help-ctrl.js');
 
+require('./index/voice-warning-ctrl.js');
+
+//require('./index/news-ctrl.js');
+
 const view_stock = require('./index/view-stock-ctrl.js');
 
 const rtsc = require('./index/real-time-stock-ctrl.js');
-
-require('./index/voice-warning-ctrl.js');
 
 
 // 接收主进程发来的消息

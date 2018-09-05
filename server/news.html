@@ -2,11 +2,43 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>jhandy news</title>
+    <style>
+        body{
+            border:solid 1px blue;
+            border-top:none;
+            border-bottom: none;
+        }
+        html, body{
+            overflow: hidden;
+            font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+        }
+    </style>
 </head>
 <body>
 <div id="msg">
-    xxxxxxxxxxxx
+
 </div>
+<script src="/js/vendor/underscore.js"></script>
+<script src="/js/vendor/jquery.min.js"></script>
+<!--<script src="/js/vendor/brick/0.8/brick.mobile.js"></script>-->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+    var channel = 'jhandy';
+    var socket = io();
+
+    var $msg = $('#msg');
+
+    function emit(msg) {
+        socket.emit(channel, msg);
+    }
+
+    socket.on(channel, function (msg) {
+        console.log(msg);
+        $msg.text(msg);
+    });
+
+</script>
 </body>
 </html>

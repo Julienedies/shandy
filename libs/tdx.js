@@ -23,7 +23,7 @@ function keyTap(keys) {
     // 需要稍微延迟，确保通达信窗口获得焦点
     setTimeout(function () {
         _keyTap(keys);
-    }, 200);
+    }, 300);
 }
 
 module.exports = {

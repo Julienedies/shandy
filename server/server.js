@@ -19,6 +19,10 @@ app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/news', function(req, res){
+    res.sendFile(__dirname + '/news.html');
+});
+
 app.use('/', express.static(__dirname));
 app.use('/js', express.static(path.join(config.dir.root, '/js')));
 app.use('/css', express.static(path.join(config.dir.root, '/css')));
@@ -33,7 +37,11 @@ io.on('connection', function(socket){
     socket.on(channel, function(msg){
         console.log('server:', msg);
         let event = msg.event || 'msg';
+        if(event = 'cls_news'){
+            return socket.broadcast.emit(channel, msg.news);
+        }
         events.emit(event, msg);
+
     });
 
 });

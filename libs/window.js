@@ -16,10 +16,7 @@ let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
 
 function Win(opt){
 
-    this.opt = {
-        //whxy: {width: sw, height: sh, x: 0, y: 0}
-        whxy: {width: 1240, height: 820, x: 200, y: 0}
-    };
+    this.opt = {width: 1240, height: 820, x: 200, y: 0};
 
     if(typeof opt == 'string'){
         opt = {url: opt};
@@ -38,15 +35,15 @@ Win.prototype = {
         let _opt = this.opt;
         let url = _opt.url;
 
-        let win = new BrowserWindow(_opt.whxy);
+        let win = new BrowserWindow(_opt);
         this.win = win;
 
         win.on('close', function () {
             win = that.win = null;
         });
 
-        win.webContents.openDevTools();
-        win.maximize();
+        //win.webContents.openDevTools();
+        //win.maximize()
         win.show();
 
         url && this.load(url);
@@ -63,6 +60,15 @@ Win.prototype = {
             return url;
         }
         return path.join('file://', config.dir.html_dir, url);
+    },
+    close: function(){
+        this.win.close();
+    },
+    maximize: function(){
+        this.win.maximize();
+    },
+    dev: function(){
+        this.win.openDevTools();
     }
 };
 

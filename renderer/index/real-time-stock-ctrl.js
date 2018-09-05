@@ -33,7 +33,6 @@ function f(stocks) {
     let arr2 = [];
     let stock;
     while (stock = stocks.shift()) {
-        //arr2.push(_f(stock));
         if(stock.increase * 1 > 9 || first_objm.get(stock.code)){
             arr2.push(_f(stock));
         }else{
@@ -48,10 +47,6 @@ function f(stocks) {
 function _f(stock) {
     // stock => {code: code, name: name, b1: 买一量, v:成交量, p: price}
     console.log(stock);
-    if(stock.increase < 9){
-        return stock;
-    }
-
     let code = stock.code;
     let name = stock.name;
     let b1 = stock.b1;
@@ -60,13 +55,15 @@ function _f(stock) {
     let time = stock.time;
     let p_stock = prev_objm.get(code);
     let f_stock = first_objm.get(code);
-    if (p_stock) {
 
-        if(price != f_stock.price){
-            voice.remove(code);
-            stock.rout = 1; // 破板
-            return stock;
-        }
+    if(f_stock && price != f_stock.price){
+        voice.remove(code);
+        prev_objm.remove(code);
+        stock.rout = 1; // 破板
+        return stock;
+    }
+
+    if (p_stock) {
 
         let f_b1 = f_stock.b1;  // 买一
         let f_v = f_stock.v;    // 成交量
