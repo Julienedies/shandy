@@ -59,15 +59,15 @@
 
     var channel = 'jhandy';
     var socket = io();
-    var $rts = $('#rts');
+    var $rts_list = $('#rts_list');
 
     function emit(msg) {
         socket.emit(channel, msg);
     }
 
-    socket.on(channel, function (arr) {
+    socket.on('rts_push', function (arr) {
         console.log(arr, +new Date);
-        $rts.icRender(arr);
+        $rts_list.icRender(arr);
     });
 
     //
@@ -92,9 +92,7 @@
 
         scope.notify_news = function(){
             let msg = $(this).text();
-            let d = $(this).data('news');
-            console.log(msg, d);
-            emit({event:'cls_news', 'news': msg});
+            socket.emit('cls_news', msg);
         };
 
     });

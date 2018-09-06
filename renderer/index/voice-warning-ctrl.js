@@ -23,19 +23,22 @@ brick.reg('voice_warning_ctrl', function (scope) {
 
     scope.prompt = function () {
         if (news_win_ctrl && news_win_ctrl.win) {
-            news_win_ctrl.win.close();
+            news_win_ctrl.close();
         } else {
             let opt = {
                 width: 1600,
                 height: 32,
                 x: 1530,
-                y: 0,
+                y: 3,
+                //transparent: true,
+                opacity: 0.6,
                 frame: false,
                 hasShadow: false,
                 alwaysOnTop:true,
                 url: 'http://localhost:3000/news'
             };
             news_win_ctrl = bw(opt);
+            news_win_ctrl.win.setIgnoreMouseEvents(true);
         }
     };
 
@@ -43,5 +46,5 @@ brick.reg('voice_warning_ctrl', function (scope) {
         bw('ls/index.html');
     };
 
-
+    scope.prompt();
 });

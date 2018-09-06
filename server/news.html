@@ -5,11 +5,13 @@
     <title>jhandy news</title>
     <style>
         body{
-            border:solid 1px blue;
+            border:solid 0px blue;
             border-top:none;
             border-bottom: none;
         }
         html, body{
+            background: #000000;
+            color:#fff;
             overflow: hidden;
             font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
         }
@@ -17,28 +19,20 @@
 </head>
 <body>
 <div id="msg">
-
+jhandy cls_news.
 </div>
 <script src="/js/vendor/underscore.js"></script>
 <script src="/js/vendor/jquery.min.js"></script>
 <!--<script src="/js/vendor/brick/0.8/brick.mobile.js"></script>-->
 <script src="/socket.io/socket.io.js"></script>
 <script>
-
-    var channel = 'jhandy';
     var socket = io();
-
     var $msg = $('#msg');
 
-    function emit(msg) {
-        socket.emit(channel, msg);
-    }
-
-    socket.on(channel, function (msg) {
+    socket.on('cls_news', function (msg) {
         console.log(msg);
         $msg.text(msg);
     });
-
 </script>
 </body>
 </html>

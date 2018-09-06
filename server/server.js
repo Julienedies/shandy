@@ -15,11 +15,12 @@ const config = require('../config.json');
 
 const channel = 'jhandy';
 
-app.get('/', function(req, res){
+//////////////////////////////////////////////////////////////////////////////////////////////
+app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/news', function(req, res){
+app.get('/news', function (req, res) {
     res.sendFile(__dirname + '/news.html');
 });
 
@@ -27,42 +28,45 @@ app.use('/', express.static(__dirname));
 app.use('/js', express.static(path.join(config.dir.root, '/js')));
 app.use('/css', express.static(path.join(config.dir.root, '/css')));
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 
+io.on('connection', function (socket) {
 
-io.on('connection', function(socket){
-    socket.on('disconnect', function(){
+    socket.on('disconnect', function () {
 
     });
 
-    socket.on(channel, function(msg){
-        console.log('server:', msg);
-        let event = msg.event || 'msg';
-        if(event = 'cls_news'){
-            return socket.broadcast.emit(channel, msg.news);
-        }
-        events.emit(event, msg);
+    socket.on('cls_news', function (msg) {
+        socket.broadcast.emit('cls_news', msg);
+    });
 
+    socket.on(channel, function (msg) {
+        console.log('socket:', msg);
+        let event = msg.event || 'msg';
+        events.emit(event, msg);
     });
 
 });
 
-//
-http.listen(3000, function(){
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+http.listen(3000, function () {
     console.log('listening on *:3000');
 });
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 
-function F(){
+function F() {
     this.http = http;
     this.io = io;
-    this.close = function(){
+    this.close = function () {
         http.close();
     };
-    this.push = function(msg){
-        try{
-            io.emit(channel, msg);
-        }catch(err){
-            console.log(err);
+    this.push = function (msg) {
+        try {
+            io.emit('rts_push', msg);
+        } catch (err) {
+            console.error(err);
         }
     };
 }

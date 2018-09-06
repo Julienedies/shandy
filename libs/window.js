@@ -16,7 +16,7 @@ let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
 
 function Win(opt){
 
-    this.opt = {width: 1240, height: 820, x: 200, y: 0};
+    this.opt = {width: 1240, height: 820, x: 0, y: 0};
 
     if(typeof opt == 'string'){
         opt = {url: opt};
