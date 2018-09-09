@@ -21,23 +21,20 @@ module.exports = function (words) {
     let _code;
 
     let r_name = new RegExp(name);
-    let _stocks = [];
-    let _stocks_2 = [];
-    for (let i in stocks) {
-        let stock = stocks[i];
-        let _name = stock[1];
-        if (name == _name || words == _name) {  // 股票名称完全匹配  或者   股票名称部分匹配
-            _stocks.push(stock);
-            break;
-        }
-        else if(r_name.test(_name))
-        {
-             _stocks_2.push(stock);
-            break;
-        }
-    }
 
-    let stock = _stocks[0] || _stocks_2[0] || [''];
+    let result = stocks.filter(stock => {
+        return words == stock[1];
+    });
+
+    result = result.length ? result : stocks.filter(stock => {
+        return name == stock[1];
+    });
+
+    result = result.length ? result : stocks.filter(stock => {
+        return r_name.test(stock[1]);
+    });
+
+    let stock = result[0] || [''];
     _code = stock[0];
 
     //console.log(name, _code, code);

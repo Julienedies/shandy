@@ -91,12 +91,6 @@ function ready() {
     server.on('view_in_tdx', function(msg){
         // 在render进程中执行tdx.view(), 貌似不会因为事件tick迟滞;
         mainWindow.webContents.send('view_in_tdx', msg);
-/*        let code = msg.code;
-        if(!/^\d{6}$/.test(code)){
-            let stock = stockQuery(code);
-            code = stock.code;
-        }
-        code && tdx.view(code);*/
     });
 
     // 同花顺个股资料页面 => chrome扩展 => socket.io => 激活富途牛牛

@@ -46,5 +46,4 @@ brick.reg('voice_warning_ctrl', function (scope) {
         bw('ls/index.html');
     };
 
-    scope.prompt();
 });
