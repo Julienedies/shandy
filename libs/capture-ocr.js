@@ -11,9 +11,9 @@ module.exports = function ( f ){
     var start = + new Date();
     capture({
         returnType: 'dataUrl',
-        crop: {x: 2530,y: 122, width: 280,height: 42},
+        crop: {x: 2530,y: 120, width: 280,height: 42},
         callback: function(dataUrl){
-            // console.info(dataUrl);
+            console.info("%c\n ", `padding:50px 240px;background:url(${dataUrl}) no-repeat 0 0`);
             ocr({
                 image: dataUrl,
                 callback: function(words){

@@ -11,11 +11,21 @@ const _ = require('underscore');
  * @returns {Object|undefined|String}  没有找到股票代码或股票代码字符串 或者 {code:'000002', name:'万科'}
  */
 module.exports = function (words) {
-    console.log(words);
+    console.info(words);
     if(!words) return {};
+
     let stocks = stocksManager.get();
+
+    if(/^\d{6}$/img.test(words)){
+        let result = stocks.filter(stock => {
+            return words == stock[0];
+        });
+        result = result[0] || [];
+        return {code: result[0], name: result[1]};
+    }
+
     let arr = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
-    console.log(arr);
+    console.info(arr);
     let name = arr[1] || words;
     let code = arr[2];
     let _code;

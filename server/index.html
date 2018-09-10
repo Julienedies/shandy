@@ -36,7 +36,7 @@
         <div>
             <button id="tdx_view" code="" ic-click="view">查看股票</button>
             <button id="active_ftnn" ic-click="active_ftnn">激活富途和通达信</button>
-            <span id="notify_news" ic-click="notify_news"></span>
+            <div id="notify_news" ic-click="notify_news"></div>
         </div>
 
     </section>
@@ -60,6 +60,7 @@
     var channel = 'jhandy';
     var socket = io();
     var $rts_list = $('#rts_list');
+    var $notify_news = $('#notify_news');
 
     function emit(msg) {
         socket.emit(channel, msg);
@@ -68,6 +69,10 @@
     socket.on('rts_push', function (arr) {
         console.log(arr, +new Date);
         $rts_list.icRender(arr);
+    });
+
+    socket.on('cls_news', function(msg){
+        $notify_news.text(msg);
     });
 
     //

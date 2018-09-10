@@ -37,7 +37,8 @@ io.on('connection', function (socket) {
     });
 
     socket.on('cls_news', function (msg) {
-        socket.broadcast.emit('cls_news', msg);
+        //socket.broadcast.emit('cls_news', msg);
+        io.emit('cls_news', msg);
     });
 
     socket.on(channel, function (msg) {

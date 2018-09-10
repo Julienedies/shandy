@@ -127,6 +127,11 @@ function _f(stock) {
             prev_objm.set(code, stock);
         }
 
+        // 如果封单增加, 则以新封单量进行初始计算
+        if(b1_reduce > 100){
+            prev_objm.set(code, stock);
+        }
+
         stock.b1_reduce_base = b1_reduce_base;
         stock.v_plus_base = v_plus_base;
         stock.total_b1_reduce = total_b1_reduce;
