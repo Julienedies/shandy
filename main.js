@@ -15,7 +15,6 @@ const globalShortcut = electron.globalShortcut;
 
 const ac = require('./libs/ac.js');
 const tdx = require('./libs/tdx.js');
-const stockQuery = require('./libs/stock-query.js');
 
 const server = require('./server/server.js');
 
@@ -51,6 +50,9 @@ function createWindow() {
 }
 
 function ready() {
+
+    let {sw, sh} = electron.screen.getPrimaryDisplay().workAreaSize;
+    console.info(sw, sh);
 
     createWindow();
 

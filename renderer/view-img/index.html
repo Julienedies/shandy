@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>view-img</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        img {
+            margin-top: -37px;
+        }
+    </style>
+</head>
+<body ic-ctrl="mainCtrl">
+<div id="box" ic-tpl="list" ic-show-img-item="li" ic-show-img-url="url">
+    <ul>
+        <li ic-for="i,v in model" url="{{v}}">{{v}}</li>
+    </ul>
+</div>
+<script>
+    var _ = require('../../js/vendor/underscore.js');
+    require('../../js/vendor/jquery.min.js');
+    require('../../js/vendor/brick/0.8/brick.mobile.js');
+
+    //const walk = require('../../libs/walk.js');
+    const fs = require('fs');
+    const path = require('path');
+    let dir = brick.utils.get_query('dir');
+    var arr = fs.readdirSync(dir);
+    arr = arr.filter(function (f) {
+        return /\.(png|jpg|gif)$/img.test(f);
+    });
+    arr = arr.map(function (f) {
+        f = path.join(dir, f);
+        let stat = fs.statSync(f);
+        //console.log(stat);
+        return {f: f, c: stat.ctimeMs};
+    });
+    arr = arr.sort(function (a, b) {
+        return a.c - b.c;
+    });
+    var urls = arr.map(function (v) {
+        return v.f;
+    });
+
+    brick.reg('mainCtrl', function () {
+        $('#box').icRender('list', urls).icShowImg({item: 'li', url: 'url', urls: urls, start: true, interval: 5});
+    });
+</script>
+</body>
+</html>

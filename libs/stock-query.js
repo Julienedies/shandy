@@ -6,17 +6,22 @@
 const stocksManager = require('./stocks-manager.js');
 const _ = require('underscore');
 
+function trim(str){
+    return str.replace(/\s+/img, '');
+}
+
 /**
  * @param words {String} words = '天首发展000611' or '天首发展'
  * @returns {Object|undefined|String}  没有找到股票代码或股票代码字符串 或者 {code:'000002', name:'万科'}
  */
-module.exports = function (words) {
+module.exports = function fn(words) {
     console.info(words);
     if(!words) return {};
 
-    let stocks = stocksManager.get();
+    var stocks = stocksManager.get();
+    var code_reg = /^\d{6}$/img;
 
-    if(/^\d{6}$/img.test(words)){
+    if(code_reg.test(words)){
         let result = stocks.filter(stock => {
             return words == stock[0];
         });
@@ -28,8 +33,8 @@ module.exports = function (words) {
     console.info(arr);
     let name = arr[1] || words;
     let code = arr[2];
-    let _code;
 
+    name = trim(name);
     let r_name = new RegExp(name);
 
     let result = stocks.filter(stock => {
@@ -41,14 +46,13 @@ module.exports = function (words) {
     });
 
     result = result.length ? result : stocks.filter(stock => {
-        return r_name.test(stock[1]);
+        return r_name.test( stock[1] );
     });
 
-    let stock = result[0] || [''];
-    _code = stock[0];
+    let stock = result[0] || [];
 
-    //console.log(name, _code, code);
-    //return _code || code;
+    if(stock.length == 0 && code_reg.test(code)) return fn(code);
+
     return {code:stock[0], name:stock[1]};
 
 };

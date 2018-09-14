@@ -2,6 +2,8 @@
  * Created by j on 18/6/16.
  */
 const {BrowserWindow} = require('electron');
+const {dialog} = require('electron').remote;
+
 
 const bw = require('../../libs/window.js');
 const schedule = require('../../libs/schedule.js');
@@ -19,11 +21,13 @@ brick.reg('voice_warning_ctrl', function (scope) {
         winCtrl.dev();
     };
 
-    var news_win_ctrl;
+    var news_win;
 
-    scope.prompt = function () {
-        if (news_win_ctrl && news_win_ctrl.win) {
-            news_win_ctrl.close();
+    scope.news = function () {
+        console.info(news_win);
+        if (news_win) {
+            news_win.close();
+            news_win = null;
         } else {
             let opt = {
                 width: 1600,
@@ -37,13 +41,19 @@ brick.reg('voice_warning_ctrl', function (scope) {
                 alwaysOnTop:true,
                 url: 'http://localhost:3000/news'
             };
-            news_win_ctrl = bw(opt);
-            news_win_ctrl.win.setIgnoreMouseEvents(true);
+            news_win = bw(opt);
+            news_win.win.setIgnoreMouseEvents(true);
         }
     };
 
-    scope.ls = function () {
-        bw('ls/index.html');
-    };
+    scope.view_img = function() {
+        let dist = dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']}, function(filePaths){
+            console.info(filePaths);
+            let dir = encodeURIComponent(filePaths[0]);
+            let winCtrl = bw({x:1440, url:`view-img/index.html?dir=${dir}`});
+            winCtrl.maximize();
+            winCtrl.dev();
+        });
+    }
 
 });

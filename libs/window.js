@@ -10,11 +10,12 @@ const BrowserWindow = electron.remote.BrowserWindow;
 
 const config = require('../config.json');
 
-let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
-//console.info(sw, sh);
 
 
 function Win(opt){
+
+    let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
+    console.log(sw, sh);
 
     this.opt = {width: 1240, height: 820, x: 0, y: 0};
 
