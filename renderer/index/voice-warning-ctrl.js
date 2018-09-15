@@ -50,9 +50,16 @@ brick.reg('voice_warning_ctrl', function (scope) {
         let dist = dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']}, function(filePaths){
             console.info(filePaths);
             let dir = encodeURIComponent(filePaths[0]);
-            let winCtrl = bw({x:1440, url:`view-img/index.html?dir=${dir}`});
-            winCtrl.maximize();
-            winCtrl.dev();
+            let url = `view-img/index.html?dir=${dir}`;
+            let win = scope.view_img_win;
+            if(win && win.win){
+                win.load(url);
+            }else{
+                win = scope.view_img_win = bw({x:1440, url:url});
+                win.maximize();
+                //win.dev();
+            }
+
         });
     }
 
