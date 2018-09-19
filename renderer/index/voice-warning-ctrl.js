@@ -24,25 +24,31 @@ brick.reg('voice_warning_ctrl', function (scope) {
     var news_win;
 
     scope.news = function () {
-        console.info(news_win);
         if (news_win) {
             news_win.close();
             news_win = null;
         } else {
             let opt = {
-                width: 1600,
-                height: 32,
-                x: 1530,
-                y: 3,
-                //transparent: true,
+                //width: 1600,
+                //height: 132,
+                //x: 1530,
+                //y: 3,
+                width:500,
+                height:200,
+                y:300,
                 opacity: 0.6,
                 frame: false,
                 hasShadow: false,
                 alwaysOnTop:true,
+                center:true,
                 url: 'http://localhost:3000/news'
             };
             news_win = bw(opt);
-            news_win.win.setIgnoreMouseEvents(true);
+            news_win.dev();
+            //news_win.win.setIgnoreMouseEvents(true);
+            news_win.win.webContents.on('did-finish-load', function () {
+                news_win.win.webContents.send('id', news_win.win.id);
+            })
         }
     };
 

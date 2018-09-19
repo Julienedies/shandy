@@ -36,13 +36,8 @@ function createWindow() {
 
     mainWindow = new BrowserWindow(windowOptions);
     mainWindow.loadURL(path.join('file://', __dirname, '/index.html'));
-
-    // Launch fullscreen with DevTools open, usage: npm run debug
-    if (true) {
-        mainWindow.webContents.openDevTools();
-        mainWindow.maximize();
-        //require('devtron').install();
-    }
+    mainWindow.webContents.openDevTools();
+    mainWindow.maximize();
 
     mainWindow.on('closed', function () {
         mainWindow = null;
@@ -59,7 +54,7 @@ function ready() {
     electron.powerMonitor.on('resume', () => {
         let d = new Date();
         let h = d.getHours();
-        if(h > 5 && h < 10){ // 只在早上重启
+        if (h > 5 && h < 10) { // 只在早上重启
             app.relaunch();
             app.exit();
         }
@@ -67,14 +62,14 @@ function ready() {
 
     // 鼠标手势  => 快捷键 =>  apple script获取通达信个股代码  => 在浏览器打开同花顺个股资料页面
     globalShortcut.register('CommandOrControl+Alt+x', function () {
-        ac.getStockName(function(stock){
+        ac.getStockName(function (stock) {
             mainWindow.webContents.send('view_stock_info', stock);
         });
     });
 
     // 鼠标手势 => 快捷键 =>  apple script获取通达信个股代码  => 打板封单监控
     globalShortcut.register('CommandOrControl+Alt+z', function () {
-        ac.getStockName(function(stock){
+        ac.getStockName(function (stock) {
             mainWindow.webContents.send('rts_db_monitor', stock);
         });
     });
@@ -85,18 +80,18 @@ function ready() {
     });
 
     // 浏览器页面 http://192.168.3.20:3000/  => socket.io => 取消个股打板封单监控
-    server.on('rts_cancel', function(msg){
+    server.on('rts_cancel', function (msg) {
         mainWindow.webContents.send('rts_cancel', msg.code);
     });
 
     // 淘股吧页面 => chrome扩展 => socket.io => 在通达信显示个股
-    server.on('view_in_tdx', function(msg){
+    server.on('view_in_tdx', function (msg) {
         // 在render进程中执行tdx.view(), 貌似不会因为事件tick迟滞;
         mainWindow.webContents.send('view_in_tdx', msg);
     });
 
     // 同花顺个股资料页面 => chrome扩展 => socket.io => 激活富途牛牛
-    server.on('active_ftnn', function(msg){
+    server.on('active_ftnn', function (msg) {
         ac.activeFtnn();
         ac.activeTdx();
     });
