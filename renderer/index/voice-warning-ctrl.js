@@ -29,13 +29,14 @@ brick.reg('voice_warning_ctrl', function (scope) {
             news_win = null;
         } else {
             let opt = {
-                //width: 1600,
-                //height: 132,
-                //x: 1530,
-                //y: 3,
-                width:500,
-                height:200,
-                y:300,
+                width: 1400,
+                height: 32,
+                x: 1600,
+                y: 3,
+                //width:700,
+                //height:200,
+                //x:300,
+                //y:400,
                 opacity: 0.6,
                 frame: false,
                 hasShadow: false,
@@ -44,8 +45,8 @@ brick.reg('voice_warning_ctrl', function (scope) {
                 url: 'http://localhost:3000/news'
             };
             news_win = bw(opt);
-            news_win.dev();
-            //news_win.win.setIgnoreMouseEvents(true);
+            //news_win.dev();
+            news_win.win.setIgnoreMouseEvents(true);
             news_win.win.webContents.on('did-finish-load', function () {
                 news_win.win.webContents.send('id', news_win.win.id);
             })
@@ -65,8 +66,8 @@ brick.reg('voice_warning_ctrl', function (scope) {
                 win.maximize();
                 //win.dev();
             }
-
         });
-    }
+    };
+
 
 });

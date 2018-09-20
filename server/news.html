@@ -18,9 +18,7 @@
     </style>
 </head>
 <body>
-<div style="white-space: pre;"> 控制 计划 等待   |   风口板   大势板   龙头板   人气合力板   超预期板   补涨板  消息板
-
-</div>
+<div style="white-space: pre;"> 控制 计划 等待   |   风口板   大势板   龙头板   人气合力板   超预期板   补涨板  消息板</div>
 <div id="msg">
 jhandy cls_news.
 </div>
@@ -34,17 +32,18 @@ jhandy cls_news.
     var $msg = $('#msg');
 
     socket.on('cls_news', function (msg) {
-        console.log(msg);
         $msg.text(msg);
         if(win){
             win.showInactive();
+            win.setSize(1400, 102, true);
             setTimeout(function(){
-                win.hide();
-            }, 5000);
+                //win.setPosition(1600, 3);
+                win.setSize(1400, 32, true);
+            }, 12 * 1000);
         }
     });
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     const ipc = require('electron').ipcRenderer;
     const BrowserWindow = require('electron').remote.BrowserWindow;
     var win;
@@ -52,7 +51,6 @@ jhandy cls_news.
     ipc.on('id', function (event, windowID) {
         console.log(event, windowID);
         win = BrowserWindow.fromId(windowID);
-        win.hide();
     });
 
 
