@@ -9,7 +9,7 @@ const BrowserWindow = electron.remote.BrowserWindow;
 const ipc = electron.ipcRenderer;
 
 const capture_ocr = require('../libs/capture-ocr.js');
-
+const bw = require('../libs/window.js');
 const tdx = require('../libs/tdx.js');
 const stockQuery = require('../libs/stock-query.js');
 const voice = require('../js/libs/voice.js');
@@ -48,11 +48,28 @@ ipc.on('view_in_tdx', function (event, msg) {
 ipc.on('view_stock_info', function (event, stock) {
     if(stock.code){
         view_stock(stock.code);
-    }
-    else
-    {
+    } else {
         capture_ocr( stock => {
             view_stock(stock.code);
+        });
+    }
+});
+
+ipc.on('set_stock_c', function (event, stock) {
+    if(stock.code){
+        bw({
+            width:1200,
+            height:700,
+            x:1700,
+            y:300,
+            webPreferences:{
+                nodeIntegration:false
+            },
+            url:`http://localhost:2018/public/static/html/stock/c/index.html?code=${stock.code}&edit=1`
+        })
+    }else{
+        capture_ocr( stock => {
+
         });
     }
 });
@@ -61,9 +78,7 @@ ipc.on('view_stock_info', function (event, stock) {
 ipc.on('rts_db_monitor', function (event, stock) {
     if(stock.code){
         rtsc.on_rts_db_monitor(stock);
-    }
-    else
-    {
+    }else{
         capture_ocr( stock => {
             rtsc.on_rts_db_monitor(stock);
         });

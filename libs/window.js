@@ -43,7 +43,7 @@ Win.prototype = {
             win = that.win = null;
         });
 
-        //win.webContents.openDevTools();
+        _opt.dev && win.webContents.openDevTools();
         //win.maximize()
         win.show();
 
