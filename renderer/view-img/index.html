@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>view-img</title>
+    <link rel="import" href="../../css/vendor/bulma/bulma.css">
     <style>
         html, body {
             width: 100%;
@@ -20,11 +21,17 @@
     </style>
 </head>
 <body ic-ctrl="mainCtrl">
-<div id="box" ic-tpl="list" ic-show-img-item="li" ic-show-img-url="url">
-    <ul>
-        <li ic-for="i,v in model" url="{{v}}">{{v}}</li>
-    </ul>
+
+<div>
+    <button class="button">自动播放</button>
 </div>
+
+    <div id="box" ic-tpl="list" ic-show-img-item="li" ic-show-img-url="url">
+        <ul>
+            <li ic-for="i,v in model" url="{{v}}">{{v}}</li>
+        </ul>
+    </div>
+
 <script>
     var _ = require('../../js/vendor/underscore.js');
     require('../../js/vendor/jquery.min.js');

@@ -60,7 +60,7 @@ ipc.on('set_stock_c', function (event, stock) {
         bw({
             width:1200,
             height:700,
-            x:1700,
+            x:1800,
             y:300,
             webPreferences:{
                 nodeIntegration:false

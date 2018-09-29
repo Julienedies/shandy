@@ -11,6 +11,7 @@ const clipboard = electron.clipboard;
 
 const stocksManager = require('../../libs/stocks-manager.js');
 const stockUrl = require('../../libs/stockUrl.js');
+const tdx = require('../../libs/tdx.js');
 const ac = require('../../libs/ac.js');
 
 const objm = require('../../libs/objm.js')('view_stock_info');
@@ -44,13 +45,17 @@ function view_stock(code) {
     }
     if (objm.get('is_open_external')) {
         shell.openExternal(stockUrl(code, flag) + (flag == 1 ? '?self=1' : ''));
+        ac.activeTdx();
     } else {
         stockWin = stockWin || createWin();
         stockWin.loadURL(stockUrl(code, 0));
         stockWin.focus();
     }
 
-    ac.activeTdx();
+    setTimeout(function(){
+        ac.activeTdx();
+    }, 1000);
+
 
 }
 
@@ -73,6 +78,10 @@ brick.controllers.reg('view_stock_ctrl', function (scope) {
 
     scope.add_stock = function (stock){
         stock.name && stocksManager.add(stock);
+    };
+
+    scope.view_403 = function(){
+        tdx.keystroke('.403', true);
     };
 
     scope.on_mousewheel = function () {
