@@ -1,7 +1,7 @@
 /*!
  * https://github.com/julienedies/brick.git
  * https://github.com/Julienedies/brick/wiki
- * "9/19/2018, 6:21:31 PM"
+ * "10/4/2018, 12:43:25 PM"
  * "V 0.8"
  */
 ;
@@ -921,9 +921,10 @@ function createRender(root) {
 /**
  *
  * @param node  dom or jquery object
- * @param is_start_form_children  bool 可选,  true 表示直接从子元素开始编译
+ * @param is_start_form_children  {Bool} 可选,  true 表示直接从子元素开始编译;  考虑: ic-tpl指令下, 从ic-tpl属性dom开始编译还是从子元素开始编译好?
  */
 function compile(node, is_start_form_children){
+
 
     var $elm = $(node);
 
@@ -1007,7 +1008,7 @@ var brick = window.brick = {
     createRender: createRender,
     eventManager: eventManager,
     __tpl: {},
-    debug: cc,
+    debug: function(){},
     set: function (k, v) {
         return this.config.set(k, v);
     },
@@ -1128,6 +1129,8 @@ directives.reg('ic-tpl', {
 
         ($elm || $('[ic-tpl]')).each(function () {
 
+            console.info('exec directive ic-tpl.', this);
+
             var $th = $(this);
             var name = $th.attr('ic-tpl');
             var $parent;
@@ -1147,10 +1150,11 @@ directives.reg('ic-tpl', {
                 dob && $th.icRender(name, dob);
             }, 300);
 
-            $th.attr('ic-tpl', name);
-            $th.attr('ic-tpl-name', name);
-
             __tpl[name] = createRender(this);
+
+            $th.attr('ic-tpl-name', name);
+            $th.removeAttr('ic-tpl');
+            $th.empty();
 
         });
 
@@ -1172,7 +1176,7 @@ directives.reg('ic-tpl', {
         if (typeof tpl == 'object') {
             callback = model;
             model = tpl;
-            tpl = this.attr('ic-tpl-name');
+            tpl = this.attr('ic-tpl') || this.attr('ic-tpl-name');
         }
         var tplFn = brick.getTpl(tpl);
         if (!tplFn) return console.info('not find tpl: ' + tpl);
@@ -1183,10 +1187,11 @@ directives.reg('ic-tpl', {
         var html = tplFn({model: model});
         return this.each(function () {
             var $th = $(this);
-            $th.html(html);
-            $th.removeAttr('ic-tpl');
-            $th.icCompile();
-            callback && callback.apply(this, [$th.children()]);
+            setTimeout(function () {
+                $th.html(html);
+                $th.icCompile();
+                callback && callback.apply(this, [$th.children()]);
+            }, 30);
         });
     };
 
@@ -1203,7 +1208,7 @@ directives.reg('ic-tpl', {
         if (match = name.match(/^\s*(([{\[])(.+)[}\]])\s*$/)) {
             //console.info(match);
             try {
-                return (match[3] && match[2]) == '{' ? eval('('+match[1]+')') : match[2] == '{' ? {} : [];
+                return (match[3] && match[2]) == '{' ? eval('(' + match[1] + ')') : match[2] == '{' ? {} : [];
             } catch (e) {
                 console.error(e);
             }
@@ -1217,7 +1222,7 @@ directives.reg('ic-tpl', {
             return match[1];
         }
 
-        if(isLiteral) return name;  //按直接量解析, 不通过scope链进行查找
+        if (isLiteral) return name;  //按直接量解析, 不通过scope链进行查找
 
         var params = name.split(':');
         name = params.shift();
@@ -1244,12 +1249,12 @@ directives.reg('ic-tpl', {
 
         //console.info('icParseProperty => ' + name + ' => ', v);
 
-        if(typeof v == 'function' && params.length){
-            return function(){
+        if (typeof v == 'function' && params.length) {
+            return function () {
                 var that = this;
                 var args = [].slice.call(arguments);
                 var p;
-                while(p = params.shift()){
+                while (p = params.shift()) {
                     args.push(p);
                 }
                 return v.apply(that, args);   //window.confirm通过apply方式调用会出错,暂时不处理
@@ -1282,8 +1287,8 @@ directives.reg('ic-tpl', {
     };
 
     /*$.fn.icForm = function (call, options) {
-        return this.trigger('ic-form.' + call, options);
-    };*/
+     return this.trigger('ic-form.' + call, options);
+     };*/
 
 
     $.fn.icDialog = function (options, callback) {
@@ -3927,7 +3932,7 @@ brick.directives.reg('ic-dom-remove', {
 // bootstrap
 $(function () {
     setTimeout(function () {
-        if(!brick.get('debug')) cc(false, 'log');
+        //if(!brick.get('debug')) cc(false, 'log');
         if(brick.get('bootstrap.auto') === false) return;
         brick.bootstrap(document.body);
     }, 30);
