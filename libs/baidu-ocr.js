@@ -42,7 +42,7 @@ module.exports = function (args) {
             res.on('end', function () {
                 console.log(data);
                 let obj = JSON.parse(data);
-                args.callback(obj.words_result[0].words);
+                args.callback(obj.words_result_num && obj.words_result[0].words);
             });
 
         }

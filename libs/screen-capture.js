@@ -8,9 +8,8 @@ const desktopCapturer = electron.desktopCapturer;
 const electronScreen = electron.screen;
 
 const fs = require('fs');
-const os = require('os');
 const path = require('path');
-
+const os = require('os');
 
 function determineScreenShotSize() {
     const screenSize = electronScreen.getPrimaryDisplay().workAreaSize;

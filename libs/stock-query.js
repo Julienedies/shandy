@@ -19,14 +19,14 @@ module.exports = function fn(words) {
     if(!words) return {};
 
     var stocks = stocksManager.get();
-    var code_reg = /^\d{6}$/img;
 
-    if(code_reg.test(words)){
+    var code_arr;
+    if(code_arr = words.match(/\b\d{6}(?!\d)/)){
         let result = stocks.filter(stock => {
-            return words == stock[0];
+            return code_arr[0] == stock[0];
         });
         result = result[0] || [];
-        return {code: result[0], name: result[1]};
+        return {code: code_arr[0], name: result[1]};
     }
 
     let arr = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
@@ -50,8 +50,6 @@ module.exports = function fn(words) {
     });
 
     let stock = result[0] || [];
-
-    if(stock.length == 0 && code_reg.test(code)) return fn(code);
 
     return {code:stock[0], name:stock[1]};
 
