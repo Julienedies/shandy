@@ -63,7 +63,7 @@ ipc.on('set_stock_c', function (event, stock) {
             x:1800,
             y:300,
             webPreferences:{
-                nodeIntegration:false
+                nodeIntegration:false  // 远程页面不整合node
             },
             url:`http://localhost:2018/public/static/html/stock/c/index.html?code=${stock.code}&edit=1`
         })

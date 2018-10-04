@@ -1,9 +1,10 @@
 /**
  * Created by j on 18/6/16.
  */
-const {BrowserWindow} = require('electron');
-const {dialog} = require('electron').remote;
 
+const electron = require('electron');
+const {BrowserWindow} = electron;
+const {dialog} = electron.remote;
 
 const bw = require('../../libs/window.js');
 const schedule = require('../../libs/schedule.js');
@@ -62,7 +63,7 @@ brick.reg('voice_warning_ctrl', function (scope) {
             if(win && win.win){
                 win.load(url);
             }else{
-                win = scope.view_img_win = bw({x:1440, url:url});
+                win = scope.view_img_win = bw({x:1440, url:url, dev:true});
                 win.maximize();
                 //win.dev();
             }
