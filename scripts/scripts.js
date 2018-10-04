@@ -6,7 +6,7 @@
 var https = require('https');
 var qs = require('querystring');
 
-const config = require('config.json');
+const config = require('../config.json');
 
 const param = qs.stringify(config.api.baidu.ocr.param);
 
