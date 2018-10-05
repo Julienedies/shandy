@@ -63,7 +63,7 @@ brick.reg('voice_warning_ctrl', function (scope) {
             if(win && win.win){
                 win.load(url);
             }else{
-                win = scope.view_img_win = bw({x:1440, url:url, dev:true});
+                win = scope.view_img_win = bw({x:1440, url:url});
                 win.maximize();
                 //win.dev();
             }

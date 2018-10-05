@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>view-img</title>
     <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
+    <link rel="stylesheet" href="../../js/vendor/brick/0.8/css/brick.mobile.css">
     <style>
         html, body {
             width: 100%;
@@ -12,20 +13,14 @@
             margin: 0;
             overflow: hidden;
         }
-        img {
+        #ic-show-img-box-wrap img {
             margin-top: -37px;
         }
         #ic-show-img-box-wrap{
-            background:#000!important;
+            background:black!important;
         }
         #ic-show-img-close{
-            left:0;
-            right:auto!important;
-            padding:0!important;
-            width:49px;
-            height:49px;
-            line-height: 49px!important;
-            text-align:center;
+
         }
         .wrap{
             height:100%;
@@ -43,8 +38,8 @@
     </div>
 
     <div id="box" ic-tpl="list">
-        <ul ic-show-img ic-show-img-sources="urls" ic-show-img-item="li" ic-show-img-url="url" ic-show-img-interval="7">
-            <li ic-for="i,v in model" url="{{v}}">{{v}}</li>
+        <ul ic-show-img ic-show-img-item="li" ic-show-img-url="url" ic-show-img-interval="5">
+            <li ic-for="i,v in model" url="{{v.f}}">{{v.f}}</li>
         </ul>
     </div>
 </div>

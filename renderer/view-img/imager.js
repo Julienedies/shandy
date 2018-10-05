@@ -15,46 +15,59 @@ const ocr = require('../../libs/baidu-ocr.js');
 
 
 module.exports = {
-    get_images: function get_images(dir) {
+    /**
+     * @param images   {Array} 图片对象数组
+     * @returns {Array}
+     */
+    sort: function(images){
 
-        var arr = fs.readdirSync(dir);
-
-        arr = arr.filter(function (f) {
-            return /\.(png|jpg|gif)$/img.test(f);
+        var map = _.groupBy(images, function(o){
+            return o.code;
         });
 
-        arr = arr.map(function (f) {
-            let arr = f.match(/\d{6}(?=\.png$)/);
-            let code = arr[0];
-            f = path.join(dir, f);
-            let stat = fs.statSync(f);
-            return {f: f, c: stat.ctimeMs, code: code};
-        });
+        var arr = _.values(map);
 
-        var map = _.groupBy(arr, function(item){
-            return item.code;
-        });
-
-        var arr2 = _.values(map);
-
-        arr2.forEach(arr => {
+        arr.forEach(arr => {
             arr.sort(function (a, b) {
                 return a.c - b.c;
             });
         });
 
-        arr = _.flatten(arr2, true);
+        return _.flatten(arr, true);
+    },
 
-        return arr.map(function (v) {
-            return v.f;
+    get_images: function get_images(dir, is_only_path) {
+
+        var arr = fs.readdirSync(dir);
+
+        arr = arr.filter( f => {
+            return /\.png$/img.test(f);
         });
 
+        arr = arr.map( f => {
+            let full_path = path.join(dir, f);
+            let arr = f.match(/\d{6}(?=\.png$)/) || [];
+            let code = arr[0];
+            let stat = fs.statSync(full_path);
+            arr = f.match(/\d{4}-\d{2}-\d{2}/) || [];
+            return {f: full_path, c: stat.ctimeMs, d: arr[0], code: code};
+        });
+
+        arr = this.sort(arr);
+
+        return !is_only_path ? arr : arr.map( o => {
+            return o.f;
+        });
     },
 
     crop_ocr: function (img_path, callback) {
+
         console.info('crop_ocr => ', img_path);
+
         let img = nativeImage.createFromPath(img_path);
         img = img.crop({x: 3140,y: 95, width: 310, height: 40});
+        let dataUrl = img.toDataURL();
+        console.info("%c", `border:solid 1px blue;padding:20px 150px; line-height:60px;background:url(${dataUrl}) no-repeat 0 0`);
 
 /*        let file_name = img_path.split('/').pop();
         let file_path = path.join(os.tmpdir(), file_name.replace(/\.png$/,'___x.png'));
@@ -65,10 +78,7 @@ module.exports = {
             }
         });*/
 
-        let dataUrl = img.toDataURL();
-        console.info("%c", `border:solid 1px blue;padding:20px 150px; line-height:60px;background:url(${dataUrl}) no-repeat 0 0`);
-
-        ocr({
+        dataUrl && ocr({
             image: dataUrl,
             callback: callback || function(data){
                 console.log(data);
