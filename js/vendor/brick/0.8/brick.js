@@ -1,7 +1,7 @@
 /*!
  * https://github.com/julienedies/brick.git
  * https://github.com/Julienedies/brick/wiki
- * "10/4/2018, 12:43:25 PM"
+ * "10/5/2018, 10:58:27 AM"
  * "V 0.8"
  */
 ;
@@ -13,6 +13,7 @@
 /**
  * Created by j on 18/6/19.
  * @todo 在brick闭包内重写console,对原生console进行包装, 控制debug输出.
+ * issue: 覆盖原生console, 会导致控制台debug定位不到console输出语句.  无法解决, 不能覆盖!
  */
 
 var native_console = window.console;
@@ -77,6 +78,9 @@ function cc(bool, methods) {
 var utils = (function () {
 
     return {
+        cid: function(){
+            return Math.random().toFixed(7).replace('0.', '');
+        },
         /**
          * @todo 恢复被转义的html
          * @param text {string} <必须> html类型字符串
@@ -2579,7 +2583,6 @@ directives.reg('ic-ajax',
                     dataType: dataType,
                     data: data
                 }).done(function (data) {
-                        console.log('ic-ajax => ', done);
                         $elm.clearLoading() && $loading.hide() && $elm.show();
                         done.apply(that, [data]);
                     }
