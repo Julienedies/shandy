@@ -30,6 +30,10 @@ module.exports = {
             });
         });
 
+        arr.sort(function (a, b) {
+            return a[0].c - b[0].c;
+        });
+
         return _.flatten(arr, true);
     },
 
