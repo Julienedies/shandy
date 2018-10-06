@@ -23,9 +23,15 @@
 
         }
         .wrap{
+            padding-top:10px;
             height:100%;
             min-height:100%;
             overflow-y: scroll;
+        }
+        input{
+            line-height: 1.6;
+            font-size:1.2em;
+            margin-left:5px;
         }
     </style>
 </head>
@@ -35,7 +41,16 @@
     <div class="buttons">
         <button class="button">自动播放</button>
         <button class="button" ic-click="ocr_rename">ocr重命名</button>
+        <div ic-form>
+            <label class="">x:<input type="number" value="3140" ic-form-field="x"></label>
+            <label class="">y:<input type="number" value="140" ic-form-field="y"></label>
+            <label class="">width:<input type="number" value="310" ic-form-field="width"></label>
+            <label class="">height:<input type="number" value="40" ic-form-field="height"></label>
+            <button class="button" ic-form-submit ic-submit-action="crop_test()">剪切测试</button>
+            <img style="border:solid 1px blue;"/>
+        </div>
     </div>
+
 
     <div id="box" ic-tpl="list">
         <ul ic-show-img ic-show-img-item="li" ic-show-img-url="url" ic-show-img-interval="5">

@@ -11,9 +11,6 @@ const nativeImage = electron.nativeImage;
 
 const _ = require('underscore');
 
-const ocr = require('../../libs/baidu-ocr.js');
-
-
 module.exports = {
     /**
      * @param images   {Array} 图片对象数组
@@ -60,14 +57,14 @@ module.exports = {
         });
     },
 
-    crop_ocr: function (img_path, callback) {
-
-        console.info('crop_ocr => ', img_path);
+    crop: function(img_path, crop){
+        console.info('crop => ', img_path);
 
         let img = nativeImage.createFromPath(img_path);
-        img = img.crop({x: 3140,y: 95, width: 310, height: 40});
+        img = img.crop(crop);
         let dataUrl = img.toDataURL();
         console.info("%c", `border:solid 1px blue;padding:20px 150px; line-height:60px;background:url(${dataUrl}) no-repeat 0 0`);
+        return dataUrl;
 
 /*        let file_name = img_path.split('/').pop();
         let file_path = path.join(os.tmpdir(), file_name.replace(/\.png$/,'___x.png'));
@@ -78,12 +75,6 @@ module.exports = {
             }
         });*/
 
-        dataUrl && ocr({
-            image: dataUrl,
-            callback: callback || function(data){
-                console.log(data);
-            }
-        });
-
     }
+
 };
