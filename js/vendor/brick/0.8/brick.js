@@ -1,7 +1,7 @@
 /*!
  * https://github.com/julienedies/brick.git
  * https://github.com/Julienedies/brick/wiki
- * "10/5/2018, 10:58:27 AM"
+ * "10/6/2018, 7:22:16 PM"
  * "V 0.8"
  */
 ;
@@ -2918,7 +2918,7 @@ directives.reg('ic-form', function ($elm, attrs) {
                     val = $th.val() || '';
 
                 } else {
-                    val = $th.val();
+                    val = /^number$/i.test(type) ? $th.val() * 1 : $th.val();
                 }
 
             } else {
