@@ -23,5 +23,5 @@ node_modules/
 #私有配置文件
 config.json
 test.js
-
+wt.json
 
