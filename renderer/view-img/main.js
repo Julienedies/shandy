@@ -14,6 +14,8 @@ const stock_query = require('../../libs/stock-query.js');
 
 const imager = require('./imager.js');
 
+const wt = require('../../wt.json');
+
 brick.reg('mainCtrl', function () {
 
     var scope = this;
@@ -23,10 +25,24 @@ brick.reg('mainCtrl', function () {
     scope.init = function(){
         let dir = brick.utils.get_query('dir');
         let urls = imager.get_images(dir);
+        urls.map(o => {
+            o.info = wt.filter(arr => {
+                return o.code == arr[3] && o.d.replace(/-/g, '') == arr[0];
+            });
+        });
+        console.info(urls);
         scope.urls = urls;
         $('#box').icRender('list', urls);
-        //$('#box').icShowImg({item: 'li', url: 'url', urls: urls, start: true, interval: 7});
-        //imager.crop(urls[0].f);
+    };
+
+    scope.on_show = function(index, src, $info){
+        var arr = scope.urls[index].info;
+        arr = arr.map(a => {
+            return [a[1], a[5], a[7], a[6]];
+        });
+        var text = arr.join('\r\n').replace(/,/g, '    ');
+        console.info(text);
+        $info.text(text);
     };
 
     scope.crop_test = function(fields){
@@ -46,17 +62,10 @@ brick.reg('mainCtrl', function () {
         (function fn(arr){
             var img_path = arr.shift();
             if(!img_path) return scope.init();
-            /*var code_arr = img_path.match(/\d{6}(?=\.png$)/);
-            if (code_arr) {
-                let stock = stock_query(code_arr[0]);
-                fs.renameSync(img_path, img_path.replace('(2)', `-${stock.name}`));
-                return fn(arr);
-            }*/
-
-            let dataUrl = imager.crop(img_path, crop);
+            if (img_path.match(/\d{6}(?=\.png$)/)) return fn(arr);
 
             ocr({
-                image: dataUrl,
+                image: imager.crop(img_path, crop),
                 callback: function (words) {
                     let stock = stock_query(words);
                     if(stock.code){

@@ -19,8 +19,12 @@
         #ic-show-img-box-wrap{
             background:black!important;
         }
-        #ic-show-img-close{
-
+        #ic-show-img-info{
+            bottom:50px!important;
+            white-space: pre;
+            font-size:1.4em;
+            line-height: 2;
+            padding:10px 0 140px 0;
         }
         .wrap{
             padding-top:10px;
@@ -32,6 +36,9 @@
             line-height: 1.6;
             font-size:1.2em;
             margin-left:5px;
+        }
+        #box li{
+            margin:0 0 10px 30px;
         }
     </style>
 </head>
@@ -51,11 +58,12 @@
         </div>
     </div>
 
-
     <div id="box" ic-tpl="list">
-        <ul ic-show-img ic-show-img-item="li" ic-show-img-url="url" ic-show-img-interval="5">
-            <li ic-for="i,v in model" url="{{v.f}}">{{v.f}}</li>
-        </ul>
+        <ol ic-show-img ic-show-img-item="li" ic-show-img-url="url" ic-show-img-interval="5" ic-show-img-on-show="on_show">
+            <li ic-for="i,v in model" url="{{v.f}}">
+                <h5>{{v.f}}</h5>
+            </li>
+        </ol>
     </div>
 </div>
 
