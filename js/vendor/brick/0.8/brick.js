@@ -1,7 +1,7 @@
 /*!
  * https://github.com/julienedies/brick.git
  * https://github.com/Julienedies/brick/wiki
- * "10/6/2018, 7:22:16 PM"
+ * "10/11/2018, 12:45:54 PM"
  * "V 0.8"
  */
 ;
@@ -1133,8 +1133,6 @@ directives.reg('ic-tpl', {
 
         ($elm || $('[ic-tpl]')).each(function () {
 
-            console.info('exec directive ic-tpl.', this);
-
             var $th = $(this);
             var name = $th.attr('ic-tpl');
             var $parent;
@@ -1150,7 +1148,6 @@ directives.reg('ic-tpl', {
             //自动初始化渲染数据对象
             setTimeout(function(){
                 var dob = $th.icParseProperty2('ic-tpl-init');
-                //console.info(dob, name);
                 dob && $th.icRender(name, dob);
             }, 300);
 

@@ -33,6 +33,10 @@
   background: #fff;
 }
 
+[ic-show-img-item] {
+  cursor: pointer;
+}
+
 #ic-show-img-box-wrap {
   position: fixed;
   width: 100%;
