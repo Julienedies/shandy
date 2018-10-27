@@ -40,7 +40,8 @@ Win.prototype = {
         this.win = win;
 
         win.on('close', function () {
-            win = that.win = null;
+            that.win = null;
+            that.on_close && that.on_close();
         });
 
         _opt.dev && win.webContents.openDevTools();

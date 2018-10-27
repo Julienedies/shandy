@@ -63,9 +63,13 @@ ipc.on('set_stock_c', function (event, stock) {
             x:1800,
             y:300,
             webPreferences:{
-                nodeIntegration:false  // 远程页面不整合node
+                nodeIntegration:false  // 远程页面窗口不整合node
             },
-            url:`http://localhost:2018/public/static/html/stock/c/index.html?code=${stock.code}&edit=1`
+            url:`http://localhost:2018/public/static/html/stock/c/index.html?code=${stock.code}&edit=1`,
+            on_close: function(){
+                console.info('on close!');
+                tdx.active();
+            }
         })
     }else{
         capture_ocr( stock => {

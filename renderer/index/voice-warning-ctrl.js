@@ -57,6 +57,7 @@ brick.reg('voice_warning_ctrl', function (scope) {
     scope.view_img = function() {
         let dist = dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']}, function(filePaths){
             console.info(filePaths);
+            if(!filePaths) return;
             let dir = encodeURIComponent(filePaths[0]);
             let url = `view-img/index.html?dir=${dir}`;
             let win = scope.view_img_win;

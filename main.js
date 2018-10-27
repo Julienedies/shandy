@@ -68,7 +68,7 @@ function ready() {
     });
 
     // 鼠标手势 => 快捷键 =>  apple script获取通达信个股代码  => 个股资料编辑
-    globalShortcut.register('CommandOrControl+Alt+c', function () {
+    globalShortcut.register('CommandOrControl+Alt+b', function () {
         ac.getStockName(function (stock) {
             mainWindow.webContents.send('set_stock_c', stock);
         });
