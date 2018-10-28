@@ -63,7 +63,7 @@ ipc.on('set_stock_c', function (event, stock) {
             x:1800,
             y:300,
             webPreferences:{
-                nodeIntegration:false  // 远程页面窗口不整合node
+                nodeIntegration:false  // 远程页面窗口不整合node,  避免jquery等外部类库因为require变量错判执行环境,导致加载错误.
             },
             url:`http://localhost:2018/public/static/html/stock/c/index.html?code=${stock.code}&edit=1`,
             on_close: function(){

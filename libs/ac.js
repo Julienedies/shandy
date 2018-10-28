@@ -7,6 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 
+const chardet = require('chardet');
 const iconv = require('iconv-lite');
 const applescript = require('applescript');
 
@@ -58,7 +59,7 @@ module.exports = {
 
         return _exec('keystroke');
 
-        const chardet = require('chardet');
+
         //let encode = chardet.detectFileSync(file); //windows-1252
         let encode = chardet.detectFileSync(path.join(config.dir.ac_dir, 'xx.scpt')); //windows-1252
         return console.log(encode);

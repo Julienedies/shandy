@@ -5,14 +5,15 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * @param filePath 需要遍历的文件路径
+ * 递归遍历目录
+ * @param filePath
+ * @param callback
  */
-function fileDisplay(filePath) {
-    fs.readdirSync();
-    //根据文件路径读取文件，返回文件列表
+function recurve(filePath, callback) {
+
     fs.readdir(filePath, function (err, files) {
         if (err) {
-            console.warn(err)
+            console.error(err);
         } else {
             //遍历读取到的文件列表
             files.forEach(function (filename) {
@@ -21,21 +22,36 @@ function fileDisplay(filePath) {
                 //根据文件路径获取文件信息，返回一个fs.Stats对象
                 fs.stat(filedir, function (eror, stats) {
                     if (eror) {
-                        console.warn('获取文件stats失败');
+                        console.error('获取文件stats失败');
                     } else {
                         var isFile = stats.isFile();//是文件
                         var isDir = stats.isDirectory();//是文件夹
                         if (isFile) {
-                            console.log(filedir);
+                            callback(filedir);
                         }
                         if (isDir) {
-                            fileDisplay(filedir);//递归，如果是文件夹，就继续遍历该文件夹下面的文件
+                            recurve(filedir, callback);//递归，如果是文件夹，就继续遍历该文件夹下面的文件
                         }
                     }
                 })
             });
         }
     });
+
 }
 
-module.exports = fileDisplay;
+module.exports = function (filePath, callback) {
+
+    let stat = fs.statSync(filePath);
+
+    if (stat.isFile()) {
+
+        callback(filePath);
+
+    } else if (stat.isDirectory()) {
+
+        recurve(filePath, callback);
+
+    }
+
+};
