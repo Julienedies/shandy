@@ -2,28 +2,28 @@
  * Created by j on 18/6/3.
  */
 
+var speechSU = new window.SpeechSynthesisUtterance();
+speechSU.volume = 0.1;
+
 function voiceWarning() {
     var list = [];
 
-    $('#mistake li').each(function () {
+    $('#point li').each(function () {
         let text = $(this).text();
         text && list.push(text);
     });
 
     var l = list.length;
 
-    var speechSU = new window.SpeechSynthesisUtterance();
-
     function xsp(e) {
         l += 1;
-        console.log();
         let random = Math.random() * l * 1000;
         let first = list.shift();
         speechSU.text = first;
         list.push(first);
         setTimeout(function () {
             window.speechSynthesis.speak(speechSU);
-        }, random);
+        }, 4000);
     }
 
     speechSU.onend = xsp;
@@ -32,3 +32,10 @@ function voiceWarning() {
 }
 
 voiceWarning();
+
+
+$('#voice_btn').toggle(function(){
+    speechSynthesis.pause();
+}, function(){
+    speechSynthesis.resume();
+});

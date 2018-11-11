@@ -70,7 +70,7 @@ Win.prototype = {
         this.win.maximize();
     },
     dev: function(){
-        this.win.openDevTools();
+        this.win.webContents.openDevTools();
     }
 };
 

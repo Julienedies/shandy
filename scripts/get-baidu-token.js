@@ -3,10 +3,13 @@
  * 获取百度ocr api 访问key
  */
 
-var https = require('https');
-var qs = require('querystring');
+const https = require('https');
+const qs = require('querystring');
+
 
 const config = require('../config.json');
+
+const crud = require('../libs/json-crud.js')('../config.json');
 
 const param = qs.stringify(config.api.baidu.ocr.param);
 

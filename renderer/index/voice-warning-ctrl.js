@@ -22,6 +22,10 @@ brick.reg('voice_warning_ctrl', function (scope) {
         winCtrl.dev();
     };
 
+    scope.get_token = function(){
+        require('../../scripts/get-baidu-token.js');
+    };
+
     var news_win;
 
     scope.news = function () {

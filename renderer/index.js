@@ -44,7 +44,7 @@ ipc.on('view_in_tdx', function (event, msg) {
     code && tdx.view(code);
 });
 
-
+//
 ipc.on('view_stock_info', function (event, stock) {
     if(stock.code){
         view_stock(stock.code);
@@ -55,6 +55,7 @@ ipc.on('view_stock_info', function (event, stock) {
     }
 });
 
+//
 ipc.on('set_stock_c', function (event, stock) {
     if(stock.code){
         bw({
@@ -78,7 +79,7 @@ ipc.on('set_stock_c', function (event, stock) {
     }
 });
 
-
+//
 ipc.on('rts_db_monitor', function (event, stock) {
     if(stock.code){
         rtsc.on_rts_db_monitor(stock);
@@ -89,7 +90,7 @@ ipc.on('rts_db_monitor', function (event, stock) {
     }
 });
 
-
+//
 ipc.on('rts_cancel', function (event, arg) {
     rtsc.on_rts_cancel(arg);
 });

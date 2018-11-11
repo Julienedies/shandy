@@ -3,9 +3,11 @@
  * @todo 调用百度ocr api 图片识别文字
  */
 
-const config = require('../config.json');
 const https = require('https');
 const qs = require('querystring');
+
+
+const config = require('../config.json');
 
 /*
  * args => { image: dataUrl, callback: Function  }
@@ -40,7 +42,7 @@ module.exports = function (args) {
             });
 
             res.on('end', function () {
-                console.log(data);
+                console.info(data);
                 let obj = JSON.parse(data);
                 args.callback(obj.words_result_num && obj.words_result[0].words);
             });

@@ -62,12 +62,12 @@ module.exports = {
     },
 
     crop: function(img_path, crop){
-        console.info('crop => ', img_path);
+        console.info('crop => ', img_path, crop);
 
         let img = nativeImage.createFromPath(img_path);
         img = img.crop(crop);
         let dataUrl = img.toDataURL();
-        console.info("%c", `border:solid 1px blue;padding:20px 150px; line-height:60px;background:url(${dataUrl}) no-repeat 0 0`);
+        console.info("%c", `border:solid 1px blue;padding:20px 240px; line-height:60px;background:url(${dataUrl}) no-repeat 0 0`);
         return dataUrl;
 
 /*        let file_name = img_path.split('/').pop();

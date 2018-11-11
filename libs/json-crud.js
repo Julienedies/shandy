@@ -42,6 +42,6 @@ F.prototype.get = function(key){
 };
 
 
-module.exports = function(name){
-    return new F(name);
+module.exports = function(json_file){
+    return new F(json_file);
 };

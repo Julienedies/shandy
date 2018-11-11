@@ -38,7 +38,7 @@
             margin-left:5px;
         }
         #box li{
-            margin:0 0 10px 30px;
+            margin:0 0 10px 40px;
         }
     </style>
 </head>
@@ -49,12 +49,16 @@
         <button class="button">自动播放</button>
         <button class="button" ic-click="ocr_rename">ocr重命名</button>
         <div ic-form>
-            <label class="">x:<input type="number" value="3140" ic-form-field="x"></label>
+            <label class="">x:<input type="number" value="3200" ic-form-field="x"></label>
             <label class="">y:<input type="number" value="140" ic-form-field="y"></label>
-            <label class="">width:<input type="number" value="310" ic-form-field="width"></label>
-            <label class="">height:<input type="number" value="40" ic-form-field="height"></label>
+            <label class="">width:<input type="number" value="380" ic-form-field="width"></label>
+            <label class="">height:<input type="number" value="50" ic-form-field="height"></label>
+            <label class="">图片序号:<input type="number" value="0" id="sn"></label>
             <button class="button" ic-form-submit ic-submit-action="crop_test()">剪切测试</button>
-            <img style="border:solid 1px blue;"/>
+            <div>
+                <img id="view_crop" style="border:solid 1px blue;"/>
+                <span id="ocr_text"></span>
+            </div>
         </div>
     </div>
 
