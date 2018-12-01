@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const json_file = '../../stock-data/stocks.json';
+const json_file = '../../csd/stocks.json';
 var stocks = require(json_file);
 
 module.exports = {

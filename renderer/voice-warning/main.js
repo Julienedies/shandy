@@ -3,7 +3,7 @@
  */
 
 var speechSU = new window.SpeechSynthesisUtterance();
-speechSU.volume = 0.1;
+speechSU.volume = 0.3;
 
 function voiceWarning() {
     var list = [];

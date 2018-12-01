@@ -14,7 +14,7 @@
             overflow: hidden;
         }
         #ic-show-img-box-wrap img {
-            margin-top: -60px;
+            margin-top: -35px;
         }
         #ic-show-img-box-wrap{
             background:black!important;
@@ -49,8 +49,8 @@
         <button class="button">自动播放</button>
         <button class="button" ic-click="ocr_rename">ocr重命名</button>
         <div ic-form>
-            <label class="">x:<input type="number" value="3200" ic-form-field="x"></label>
-            <label class="">y:<input type="number" value="140" ic-form-field="y"></label>
+            <label class="">x:<input type="number" value="3100" ic-form-field="x"></label>
+            <label class="">y:<input type="number" value="115" ic-form-field="y"></label>
             <label class="">width:<input type="number" value="380" ic-form-field="width"></label>
             <label class="">height:<input type="number" value="50" ic-form-field="height"></label>
             <label class="">图片序号:<input type="number" value="0" id="sn"></label>
@@ -63,7 +63,7 @@
     </div>
 
     <div id="box" ic-tpl="list">
-        <ol ic-show-img ic-show-img-item="li" ic-show-img-url="url" ic-show-img-interval="5" ic-show-img-on-show="on_show">
+        <ol ic-show-img ic-show-img-item="li" ic-show-img-url="url" ic-show-img-interval="10" ic-show-img-on-show="on_show">
             <li ic-for="i,v in model" url="{{v.f}}">
                 <h5>{{v.f}}</h5>
             </li>
