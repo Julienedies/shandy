@@ -80,10 +80,6 @@ brick.controllers.reg('view_stock_ctrl', function (scope) {
         stock.name && stocksManager.add(stock);
     };
 
-    scope.view_403 = function(){
-        tdx.keystroke('.403', true);
-    };
-
     scope.on_mousewheel = function () {
 
         /*        const ioHook = require('iohook');

@@ -7,6 +7,12 @@ const schedule = require('node-schedule');
 const iconv = require('iconv-lite');
 const _ = require('underscore');
 
+/**
+ *
+ * @param code  行情服务代码, 目前只有 'qq' 和  'sina' 两个选项
+ * @param callback  行情数据接收处理回调函数
+ * @constructor
+ */
 function Rts(code, callback) {
     let _opt = {};
     if (typeof code == 'object') {
@@ -116,8 +122,8 @@ Rts.prototype = {
                 let price = arr[11];
                 let yesterday_price = arr[2];
                 let increase = (price - yesterday_price)/yesterday_price * 100;
-                increase = increase.toFixed(2);
-                return {code: code, name: arr[0], v: Math.floor(arr[8]/100), b1: Math.floor(arr[10]/100), price: arr[11], time: arr[31], increase: increase * 1, timestamp: +new Date};
+                increase = Math.round(increase * 100) / 100;   // increase.toFixed(2);  toFixed不是四舍五入计算, 不精确.
+                return {code: code, name: arr[0], v: Math.floor(arr[8]/100), b1: Math.floor(arr[10]/100), price: arr[11], time: arr[31], increase: increase, timestamp: +new Date};
             }
         });
     },

@@ -64,11 +64,15 @@
             </div>
         </section>
 
+        <section ic-ctrl="count_ctrl">
+            <button class="button" ic-click="view_403">阶段涨幅</button>
+            <button class="button" ic-click="swing_10">涨跌停价计算</button>
+        </section>
+
         <section ic-ctrl="view_stock_ctrl">
             <div class="buttons has-addons">
                 <button class="button" ic-click="go_ycj">云财经</button>
                 <button class="button" id="company">个股资料</button>
-                <button class="button" ic-click="view_403">阶段涨幅</button>
                 <button class="button" ic-popup-target="add_stock">添加股票</button>
             </div>
             <div ic-form="add_stock" ic-popup="add_stock">
@@ -136,10 +140,11 @@
 
         <footer>
             <ul id="point">
-                <li>回头好好看看所有的交易记录,大部分都是相同的鸡肋操作.太过谨小慎微,只在尾盘安稳处建仓,不承担风险的同时也放弃了收益,只是浪费了时间和机会.</li>
-                <li>好的位置稍纵即逝,或者需要承担风险, 封板意味着行情,摈弃风险也就摈弃了行情.虽然打板很艰难,但行情和机会只能从中寻找.</li>
-                <li><h1>我要捕捉的目标行情是什么?</h1><h1>支撑我的交易逻辑是什么?</h1><h2>明确的写出来!!!</h2></li>
-                <li><h2>这是目前最主要的事: 建立交易逻辑,交易计划,交易模式,交易系统. 两年了,还是在随意交易.</h2></li>
+                <li><h4>这是目前最主要的事: 建立交易逻辑,交易模式,交易系统. 两年了,还是在随意交易.虽然没有大的金钱上的亏损.但是也从来没有像样的收益.只是在耗时间而已. 必须做出改变.</h4></li>
+                <li><h4>回头好好看看所有的交易记录,两年多,大部分都是相同的鸡肋操作.太过谨小慎微,只在尾盘安稳处建仓,不承担风险的同时也放弃了收益,只是浪费了时间和机会.</h4></li>
+                <li><h4>好的位置稍纵即逝,或者需要承担风险, 封板意味着行情,摈弃风险也就摈弃了行情.虽然打板很艰难,但行情和机会只能从中寻找.</h4></li>
+                <li><h4>行情必然要在涨的高涨的猛处寻找.没有风险又有大收益,市场不会保留此种机会. 除非是消息人士.</h4></li>
+                <li><h4>我要捕捉的目标行情是什么?哪里是好的买点.</h4><h4>支撑我的交易逻辑是什么?</h4><h4>明确的写出来!!!</h4></li>
             </ul>
             <h4>Hello jHandy!</h4>
             <p>IP is <span id="ip"></span></p>
@@ -163,7 +168,7 @@
     var _ = require('underscore');
     require('./js/vendor/jquery.min.js');
     require('./js/vendor/brick/0.8/brick.mobile.js');
-    require('./renderer/index.js');
+    require('./renderer/index/main.js');
 </script>
 </body>
 </html>
