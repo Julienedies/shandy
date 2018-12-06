@@ -6,19 +6,19 @@
 const https = require('https');
 const qs = require('querystring');
 
-
 const config = require('../config.json');
 
+var access_token = config.api.baidu.ocr.access_token;
+
 /*
- * args => { image: dataUrl, callback: Function  }
- * @param args Object 参数选项
+ * @param args Object 参数选项 args => { image: dataUrl, callback: Function  }
  * @param image  String   图片base64编码  or 图片file地址
  * @param callback Function  ocr回调函数，接受一个从图片识别出来的字符串参数
  */
-module.exports = function (args) {
+module.exports = function ocr(args) {
 
     let param = qs.stringify({
-        'access_token': config.api.baidu.ocr.access_token
+        'access_token': access_token
     });
 
     let postData = qs.stringify({
@@ -34,17 +34,34 @@ module.exports = function (args) {
     };
 
     let req = https.request(options, function (res) {
-            //res.pipe(process.stdout);
+
             var data = '';
 
             res.on('data', function (chunk) {
-                data += chunk
+                data += chunk;
             });
 
             res.on('end', function () {
+
                 console.info(data);
+
                 let obj = JSON.parse(data);
+
+                if(obj.error_code == 111){ // 如果 access_token 过期
+
+                    console.error(obj.error_msg);
+
+                    require('./get-baidu-token.js')(function(token){
+                        access_token = token;
+                        ocr(args);
+                    });
+
+                    return;
+
+                }
+
                 args.callback(obj.words_result_num && obj.words_result[0].words);
+
             });
 
         }

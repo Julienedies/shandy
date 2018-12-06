@@ -1,47 +1,47 @@
 /*!
  * Created by j on 18/11/9.
+ * 把json文件包装成对象进行增删改查
  */
-
 
 const fs = require('fs');
 const path = require('path');
 
-String.prototype.j_format = function(){
-    return this.replace(/([{,])(?=".+"\s*[:]\s*)/img, '$1\r\n');
-};
 
-
-function F(json_file){
+function F(json_file) {
     let file_path = path.join(__dirname, `${json_file}`);
     this.file_path = file_path;
     //
-    if(!fs.existsSync(file_path) ){
+    if (!fs.existsSync(file_path)) {
         fs.createWriteStream(file_path);
         //fs.writeFileSync(file_path, '{}');
-        this._pool = {};
-    }else{
-        try{
+        this._json = {};
+    } else {
+        try {
             let str = fs.readFileSync(this.file_path, 'utf8');
-            this._pool = JSON.parse(str);
-        }catch(e){
+            this._json = JSON.parse(str);
+        } catch (e) {
             console.info(json_file);
             console.error(e);
-            this._pool = {};
+            this._json = {};
         }
     }
 }
 
-F.prototype.save = function(obj){
-    Object.assign(this._pool, obj);
-    let json = JSON.stringify(this._pool).j_format();
+F.prototype.save = function () {
+    let json = JSON.stringify(this._json, null, '\t');
     fs.writeFileSync(this.file_path, json);
 };
 
-F.prototype.get = function(key){
-    return key ? (this._pool[key]||'' ): this._pool;
+F.prototype.merge = function (obj) {
+    Object.assign(this._json, obj);
+    this.save();
+};
+
+F.prototype.get = function (key) {
+    return key ? (this._json[key] || '' ) : this._json;
 };
 
 
-module.exports = function(json_file){
+module.exports = function (json_file) {
     return new F(json_file);
 };
