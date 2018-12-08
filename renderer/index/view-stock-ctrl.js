@@ -76,6 +76,12 @@ brick.controllers.reg('view_stock_ctrl', function (scope) {
         });
     };
 
+    scope.view_in_ftnn = function () {
+        ac.getStockName(function (stock) {
+            tdx.view_in_ftnn(stock.code);
+        });
+    };
+
     scope.add_stock = function (stock){
         stock.name && stocksManager.add(stock);
     };

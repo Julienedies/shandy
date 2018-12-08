@@ -34,7 +34,7 @@
         </ul>
 
         <div>
-            <button id="tdx_view" code="" ic-click="view">查看股票</button>
+            <button id="tdx_view" code="" event="" ic-click="view">查看股票</button>
             <button id="active_ftnn" ic-click="active_ftnn">激活富途和通达信</button>
             <div id="notify_news" ic-click="notify_news"></div>
         </div>
@@ -88,7 +88,8 @@
         scope.view = function () {
             let $th = $(this);
             let code = $th.attr('code');
-            emit({event: 'view_in_tdx', code: code});
+            let event = $th.attr('event');
+            emit({event: event, code: code});
         };
 
         scope.active_ftnn = function () {
@@ -102,6 +103,7 @@
 
     });
 
+    //
     brick.controllers.reg('help_ctrl', function (scope) {
         var ip = location.hostname;
         scope.render('links', {ip: ip});

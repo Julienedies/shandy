@@ -44,6 +44,15 @@ ipc.on('view_in_tdx', function (event, msg) {
     code && tdx.view(code);
 });
 
+ipc.on('view_in_ftnn', function (event, msg) {
+    let code = msg.code;
+    if(!/^\d{6}$/.test(code)){
+        let stock = stockQuery(code);
+        code = stock.code;
+    }
+    code && tdx.view_in_ftnn(code);
+});
+
 //
 ipc.on('view_stock_info', function (event, stock) {
     if(stock.code){

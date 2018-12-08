@@ -70,6 +70,13 @@ module.exports = {
             console.info(`tdx.show 调用限制,余${this._limit_reduce}秒`);
         }
     },
+    view_in_ftnn: function (code) {
+        ac.activeFtnn();
+        code += '';
+        let keys = code.split('');
+        keys.push('enter');
+        keyTap(keys);
+    },
     cancel_order: function () {
         //需要做调用限制
         if (this._call_limit('cancel_order', 10)) {

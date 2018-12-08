@@ -97,6 +97,12 @@ function ready() {
         mainWindow.webContents.send('view_in_tdx', msg);
     });
 
+    // 淘股吧页面 => chrome扩展 => socket.io => 在通达信显示个股
+    server.on('view_in_ftnn', function (msg) {
+        // 在render进程中执行tdx.view(), 貌似不会因为事件tick迟滞;
+        mainWindow.webContents.send('view_in_ftnn', msg);
+    });
+
     // 同花顺个股资料页面 => chrome扩展 => socket.io => 激活富途牛牛
     server.on('active_ftnn', function (msg) {
         ac.activeFtnn();
