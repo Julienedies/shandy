@@ -11,7 +11,7 @@ const schedule = require('../../libs/schedule.js');
 
 schedule(function createVoiceWarningWindow() {
     bw('voice-warning/index.html');
-}, 9, 5);
+}, 8, 55);
 
 brick.reg('voice_warning_ctrl', function (scope) {
 

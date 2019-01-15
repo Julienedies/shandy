@@ -3,6 +3,9 @@ html, body {
     font-size: 20px;
     line-height: 1.8;
 }
+.pre{
+    white-space: pre-wrap;;
+}
 .warning{
     animation: ani 0.5s infinite ease-in-out;
 }

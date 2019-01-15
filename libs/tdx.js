@@ -64,7 +64,7 @@ module.exports = {
     },
     show: function (code, datum) {
         //需要做调用限制
-        if (this._call_limit('show', datum || 15)) {
+        if (this._call_limit('show', datum || 10)) {
             this.keystroke(code, true);
         } else {
             console.info(`tdx.show 调用限制,余${this._limit_reduce}秒`);

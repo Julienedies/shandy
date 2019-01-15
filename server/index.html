@@ -41,6 +41,23 @@
 
     </section>
 
+    <section ic-ctrl="plans_ctrl">
+
+        <div ic-tpl="plans">
+            <ul style="margin-top:15px; padding:5px; font-size:14px;border:solid 1px red;font-size:1.2em;">
+                <li ic-for="j,plan in model">
+                    <h6 style="font-weight: bold;">{{plan['股票名称']}} : </h6>
+                    <div class="table_3">
+                        <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
+                            <div class="pre">{{plan[k]}}</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
     <footer style="position: fixed;bottom:0; left:0; right:0;" ic-ctrl="help_ctrl">
         <div ic-tpl="links">
             <a class="button is-info" ic-href="http://{{model.ip}}:2018/public/static/html/stock/plan/sell/" target="_blank">平仓预案</a>
@@ -107,6 +124,50 @@
     brick.controllers.reg('help_ctrl', function (scope) {
         var ip = location.hostname;
         scope.render('links', {ip: ip});
+    });
+
+    //
+    brick.controllers.reg('plans_ctrl', function () {
+
+        var scope = this;
+        var $elm = scope.$elm;
+        var list = brick.services.get('recordManager')();
+
+        scope.replay_get_done = function(data){
+            console.info(data);
+            scope.render('replay', data.replay);
+        };
+
+        scope.plan_get_done = function(data){
+            console.info(data);
+            list.init(data.plans);
+            data.plans && data.plans.length && scope.render('plans', data.plans);
+        };
+
+  /*      $.ajax({
+            url:'http://localhost:3000/stock/plan',
+            dataType:'json',
+            processData: false,
+            type:'get',
+            success:function(data){
+                console.log(data);
+            },
+            error:function(XMLHttpRequest, textStatus, errorThrown) {
+                console.log(XMLHttpRequest);
+            }});*/
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                let data = JSON.parse(this.responseText);
+                scope.plan_get_done(data);
+            }
+        };
+        xhttp.open("GET", `http:\/\/${location.hostname}:2018/stock/plan`, true);
+        xhttp.send();
+
+
+
     });
 
 </script>

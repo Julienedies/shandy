@@ -34,7 +34,6 @@ F.prototype.save = function () {
 
 F.prototype.merge = function (obj) {
     Object.assign(this._json, obj);
-    this.save();
 };
 
 F.prototype.get = function (key) {

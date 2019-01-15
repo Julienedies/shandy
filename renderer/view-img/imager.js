@@ -18,11 +18,11 @@ module.exports = {
      */
     sort: function(images){
 
-        var map = _.groupBy(images, function(o){
+        let map = _.groupBy(images, function(o){
             return o.code;
         });
 
-        var arr = _.values(map);
+        let arr = _.values(map);
 
         arr.forEach(arr => {
             arr.sort(function (a, b) {
@@ -39,7 +39,7 @@ module.exports = {
 
     get_images: function get_images(dir, is_only_path) {
 
-        var arr = fs.readdirSync(dir);
+        let arr = fs.readdirSync(dir);
 
         arr = arr.filter( f => {
             return /\.png$/img.test(f);
@@ -51,7 +51,7 @@ module.exports = {
             let code = arr[0];
             let stat = fs.statSync(full_path);
             arr = f.match(/\d{4}-\d{2}-\d{2}/) || [];
-            return {f: full_path, c: stat.ctimeMs, d: arr[0], code: code};
+            return {f: full_path, c: stat.birthtimeMs, d: arr[0], code: code};
         });
 
         arr = this.sort(arr);
