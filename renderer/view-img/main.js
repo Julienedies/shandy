@@ -90,8 +90,8 @@ brick.reg('mainCtrl', function () {
                         fs.renameSync(img_path, img_path.replace('(2)', `-${stock.name}`).replace(/\.png$/, `-${stock.code}.png`));
                     }else{
                         console.error('ocr fail: ', img_path, stock);
-                        $(that).icClearLoading();
-                        return;
+                        //$(that).icClearLoading();
+                        return fn(arr);
                     }
                     setTimeout(function(){
                         fn(arr);
