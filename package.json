@@ -1,6 +1,6 @@
 {
-  "name": "jhandy",
-  "version": "0.7.1",
+  "name": "shandy",
+  "version": "0.1.1",
   "description": "self use",
   "main": "main.js",
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Julienedies/jHandy.git"
+    "url": "git+https://github.com/Julienedies/shandy.git"
   },
   "author": "julienedies",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Julienedies/jHandy/issues"
+    "url": "https://github.com/Julienedies/shandy/issues"
   },
-  "homepage": "https://github.com/Julienedies/jHandy#readme",
+  "homepage": "https://github.com/Julienedies/shandy#readme",
   "devDependencies": {
     "debug-menu": "^0.6.1",
     "electron": "^2.0.1",
