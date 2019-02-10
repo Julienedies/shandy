@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>jHandy-股票实时行情监控</title>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="../../css/basic/0.7/basic.base.css"/>
+</head>
+<body>
+
+<div>
+
+    <section id="rts" ic-ctrl="rts_ctrl">
+        <ul id="rts_list" ic-tpl="list">
+            <li ic-for="i,v in model" code="{{v.code}}"
+                ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
+                <div class="flex flex-mc">
+                    <span class="code">{{v.code}} </span>
+                    <span class="name"> {{v.name}} </span>
+                    <span class="b1">{{v.b1/1000}} <i>k</i></span>
+                    <span ic-class="b1_reduce {{v.b1_reduce > 0 ? 'up':'down'}}">{{v.b1_reduce}} </span>
+                    <span class="increase">{{v.increase}}% </span>
+                    <span class="price">{{v.price}} </span>
+                    <span class="time"> {{v.time}}</span>
+                </div>
+                <div class="flex flex-mj">
+                    <button class="button" code="{{v.code}}" ic-click="view">查看股票</button>
+                    <button class="button" code="{{v.code}}" ic-click="cancel">取消监控</button>
+                </div>
+            </li>
+        </ul>
+
+        <div>
+            <button id="tdx_view" code="" event="" ic-click="view">查看股票</button>
+            <button id="active_ftnn" ic-click="active_ftnn">激活富途和通达信</button>
+            <div id="notify_news" ic-click="notify_news"></div>
+        </div>
+
+    </section>
+
+    <section ic-ctrl="plans_ctrl">
+
+        <div ic-tpl="plans">
+            <ul style="margin-top:15px; padding:5px; font-size:14px;border:solid 1px red;font-size:1.2em;">
+                <li ic-for="j,plan in model">
+                    <h6 style="font-weight: bold;">{{plan['股票名称']}} : </h6>
+                    <div class="table_3">
+                        <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
+                            <div class="pre">{{plan[k]}}</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <footer style="position: fixed;bottom:0; left:0; right:0;" ic-ctrl="help_ctrl">
+        <div ic-tpl="links">
+            <a class="button is-info" ic-href="http://{{model.ip}}:2018/public/static/html/stock/plan/sell/" target="_blank">平仓预案</a>
+            <a class="button is-info" ic-href="http://{{model.ip}}:2018/public/static/html/stock/plan/buy/" target="_blank">建仓条件</a>
+            <a class="button is-info" ic-href="http://{{model.ip}}:2018/public/static/html/stock/plan/index/" target="_blank">当前计划</a>
+        </div>
+    </footer>
+
+</div>
+
+<!--<script src="/socket.io/socket.io.js"></script>
+<script>
+
+    var channel = 'jhandy';
+    var socket = io();
+    var $rts_list = $('#rts_list');
+    var $notify_news = $('#notify_news');
+
+    function emit(msg) {
+        socket.emit(channel, msg);
+    }
+
+    socket.on('rts_push', function (arr) {
+        console.log(arr, +new Date);
+        $rts_list.icRender(arr);
+    });
+
+    socket.on('cls_news', function(msg){
+        $notify_news.text(msg);
+    });
+
+    //
+    brick.controllers.reg('rts_ctrl', function (scope) {
+
+        scope.cancel = function () {
+            let $th = $(this);
+            let code = $th.attr('code');
+            $th.closest('li').remove();
+            emit({event: 'rts_cancel', code: code});
+        };
+
+        scope.view = function () {
+            let $th = $(this);
+            let code = $th.attr('code');
+            let event = $th.attr('event');
+            emit({event: event, code: code});
+        };
+
+        scope.active_ftnn = function () {
+            emit({event: 'active_ftnn'});
+        };
+
+        scope.notify_news = function(){
+            let msg = $(this).text();
+            socket.emit('cls_news', msg);
+        };
+
+    });
+
+    //
+    brick.controllers.reg('help_ctrl', function (scope) {
+        var ip = location.hostname;
+        scope.render('links', {ip: ip});
+    });
+
+    //
+    brick.controllers.reg('plans_ctrl', function () {
+
+        var scope = this;
+        var $elm = scope.$elm;
+        var list = brick.services.get('recordManager')();
+
+        scope.replay_get_done = function(data){
+            console.info(data);
+            scope.render('replay', data.replay);
+        };
+
+        scope.plan_get_done = function(data){
+            console.info(data);
+            list.init(data.plans);
+            data.plans && data.plans.length && scope.render('plans', data.plans);
+        };
+
+  /*      $.ajax({
+            url:'http://localhost:3000/stock/plan',
+            dataType:'json',
+            processData: false,
+            type:'get',
+            success:function(data){
+                console.log(data);
+            },
+            error:function(XMLHttpRequest, textStatus, errorThrown) {
+                console.log(XMLHttpRequest);
+            }});*/
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                let data = JSON.parse(this.responseText);
+                scope.plan_get_done(data);
+            }
+        };
+        xhttp.open("GET", `http:\/\/${location.hostname}:2018/stock/plan`, true);
+        xhttp.send();
+
+
+
+    });
+
+</script>-->
+</body>
+</html>

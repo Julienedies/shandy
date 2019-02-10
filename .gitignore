@@ -13,15 +13,15 @@ Thumbs.db
 .rvmrc
 .tmp_*~
 *.log
-out
 
 #外部类库
 bower_components/
 node_modules/
 
+#
+dist/
 
 #私有配置文件
 config.json
-test.js
 wt.json
 

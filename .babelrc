@@ -1,0 +1,18 @@
+{
+  "env": {
+    "main": {
+      "presets": [
+        ["@babel/preset-env", {
+        }]
+      ]
+    },
+    "renderer": {
+      "presets": [
+        ["@babel/preset-env", {
+          "modules": false
+        }]
+      ]
+    }
+  },
+  "comments": false
+}

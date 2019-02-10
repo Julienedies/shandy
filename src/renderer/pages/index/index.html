@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>shandy</title>
+    <link rel="stylesheet" href="../../css/basic/0.7/basic.base.css" />
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="../../css/photon/css/photon.min.css"/>
+    <script></script>
+    <script>require('module').globalPaths.push('/Users/j/dev/shandy/node_modules')</script>
+</head>
+<body>
+<div ic-ctrl="main_ctrl">
+
+        <section ic-ctrl="voice_warning_ctrl">
+            <div class="buttons has-addons">
+                <button class="button" ic-click="open_voice_warning">交易错误语音警醒</button>
+                <button class="button" ic-click="news">财经资讯提示</button>
+                <button class="button" ic-click="get_token">获取token</button>
+                <button class="button" ic-click="view_img">图片浏览</button>
+            </div>
+        </section>
+
+        <section ic-ctrl="count_ctrl">
+            <button class="button" ic-click="view_403">阶段涨幅</button>
+            <button class="button" ic-click="swing_10">涨跌停价计算</button>
+        </section>
+
+        <section ic-ctrl="view_stock_ctrl">
+            <div class="buttons has-addons">
+                <button class="button"  ic-click="view_in_ftnn">富途查看</button>
+                <button class="button" ic-click="go_ycj">云财经</button>
+                <button class="button" id="company">个股资料</button>
+                <button class="button" ic-popup-target="add_stock">添加股票</button>
+            </div>
+            <div ic-form="add_stock" ic-popup="add_stock">
+                <div class="column is-10">
+                    <div>
+                        <input class="input" type="text" ic-form-field="name" placeholder="股票名称">
+                    </div>
+                    <div>
+                        <input class="input" type="text" ic-form-field="code" placeholder="股票代码">
+                    </div>
+                    <div class="buttons">
+                        <button class="button is-primary"
+                                ic-form-submit
+                                ic-submit-action="add_stock()"
+                                ic-popup-close
+                                >保存</button>
+                        <button class="button" ic-popup-close>关闭</button>
+                    </div>
+                </div>
+            </div>
+            <!--<input type="checkbox" ic-change="on_mousewheel">&nbsp;滚轮监控</input>-->
+            <input type="checkbox" name="is_open" ic-click="set_setting" checked> 打开</input>
+            <br/>
+            <input type="checkbox" name="is_open_external" ic-click="set_setting" checked> 总是外部浏览器打开</input>
+            <br/>
+            <input type="checkbox" name="is_mashup" ic-click="set_setting"> 使用自定义聚合</input>
+        </section>
+
+        <section ic-ctrl="rts_ctrl">
+            <div id="rts_list" ic-tpl="list">
+                <ul>
+                    <li ic-for="i,v in model" code="{{v.code}}" ic-click="fill" ic-class="flex-mc {{v.warning ? 'yellow':''}}">
+                        <span>{{v.code}}</span>
+                        <span>{{v.name}}</span>
+                        <span style="color:red;">{{v.b1/1000}} <i>k</i></span>
+                        <span>{{v.b1_reduce}} </span>
+                        <span>-{{v.b1_reduce_base/1000}}k</span>
+                        <span>+{{v.v_plus_base/1000}}k</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <input type="text" id="stock_code" ic-enter-press="add">
+                <div class="buttons has-addons">
+                    <button class="button" ic-click="add">添加</button>
+                    <button class="button" ic-click="remove">删除</button>
+                    <button class="button" ic-click="change">改变</button>
+                    <button class="button" ic-click="pause">暂停</button>
+                    <button class="button" ic-click="query">继续</button>
+                    <button class="button" ic-click="clear">清除</button>
+                </div>
+            </div>
+        </section>
+
+        <section ic-ctrl="help_ctrl">
+            <div class="buttons has-addons">
+                <button class="button" ic-click="relaunch">relaunch</button>
+                <button class="button" ic-click="open" data-id="gushenwei">gushenwei</button>
+                <button class="button" ic-click="open" data-id="jhandy">jhandy</button>
+                <button class="button" ic-click="show_ip">查看IP</button>
+                <button class="button" ic-click="test">test</button>
+            </div>
+            <input type="checkbox" ic-click="debug"> debug</input>
+        </section>
+
+        <footer>
+            <ul id="point">
+                <li>行业板块看流入; 概念板块看涨停数</li>
+                <li><h4>我必须做出改变, 3年来已经证明我的交易手法是错误的!</h4></li>
+                <li><h4>支撑我的交易逻辑: 反身性(赚钱效应). 历史会重复.  波动周期.  趋势. 要有大局观, 不能只看到眼前的一小块. 你要捕捉的是几十个点的波动, 却为了两个点斤斤计较.</h4></li>
+                <li><h4>人很容易陷入习以为常和麻木. 永远不要忘记那些恐惧和痛苦. 35,时不我待.</h4></li>
+                <li><h4>我的性格弱点:缺乏耐心;  优柔寡断,不够果断; </h4></li>
+                <li><h4>继续查看自己的交易记录, 会发现自己没有明确的选股,止盈,止损,预期收益,行情性质,行情高度,交易周期等各方面的准备和认识. 没有交易系统, 都是随感觉操作. 没有收益预期,  要捕捉的目标行情也不明确. 所以一直都是浑浑噩噩, 操作也是无意识的.</h4></li>
+                <li><h4>这是目前最主要的事: 建立交易逻辑,交易模式,交易系统. 两年了,还是在随意交易.虽然没有大的金钱上的亏损.但是也从来没有像样的收益.只是在耗时间而已. 必须做出改变.</h4></li>
+                <li><h4>回头好好看看所有的交易记录,两年多,大部分都是相同的鸡肋操作.太过谨小慎微,只在尾盘安稳处建仓,不承担风险的同时也放弃了收益,只是浪费了时间和机会.</h4></li>
+                <li><h4>好的位置稍纵即逝,或者需要承担风险, 封板意味着行情,摈弃风险也就摈弃了行情.虽然打板很艰难,但行情和机会只能从中寻找.</h4></li>
+                <li><h4>行情必然要在涨的高涨的猛处寻找.没有风险又有大收益,市场不会保留此种机会. 除非是消息人士.</h4></li>
+                <li><h4>我要捕捉的目标行情是什么?哪里是好的买点.</h4><h4>支撑我的交易逻辑是什么?</h4><h4>明确的写出来!!!</h4></li>
+            </ul>
+            <h4>Hello jHandy!</h4>
+            <p>IP is <span id="ip"></span></p>
+            We are using node
+            <script>document.write(process.versions.node)</script>
+            ,
+            <br/>
+            Chrome
+            <script>document.write(process.versions.chrome)</script>
+            ,
+            <br/>
+            and Electron
+            <script>document.write(process.versions.electron)</script>
+            .
+        </footer>
+
+
+</div>
+
+</body>
+</html>

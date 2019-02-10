@@ -1,0 +1,19 @@
+{
+	"dir": {
+		"root": "/Users/j/dev/shandy/",
+		"ac_dir": "/Users/j/dev/shandy/applescript/",
+		"html_dir": "/Users/j/dev/shandy/renderer/"
+	},
+	"api": {
+		"baidu": {
+			"ocr": {
+				"param": {
+					"grant_type": "client_credentials",
+					"client_id": "1nOufcFz0xGdEfLLsjFG6mlh",
+					"client_secret": "8YDLA0SPQh1kKn3VG6tmeSsAKkTPbv46"
+				},
+				"access_token": "24.0b49535da730b51b18819acc89c66024.2592000.1549283597.282335-11281996"
+			}
+		}
+	}
+}
