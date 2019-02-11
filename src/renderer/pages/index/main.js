@@ -8,10 +8,14 @@ const {remote, shell, ipcRenderer} = electron
 const {BrowserWindow} = remote
 
 import voice from '../../../libs/voice'
-import bw from '../../../libs/window'
+import bw from '../../../util/window'
 import tdx from '../../../libs/tdx'
 import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
+
+//const config = remote.getGlobal('config')
+//const config = remote.app.config
+//console.log(config)
 
 import debugMenu from 'debug-menu'
 debugMenu.install();

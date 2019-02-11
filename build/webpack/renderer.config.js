@@ -8,10 +8,10 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const shellPlugin = require('webpack-shell-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const shellPlugin = require('webpack-shell-plugin')
 const nodeExternals = require('webpack-node-externals');
 
 const {dependencies} = require('../../package.json')
@@ -57,18 +57,18 @@ if (isPro) {  // 产品环境
 
 let pages = [
     new HtmlPlugin({
-        template: path.resolve(__dirname,'../../src/renderer/pages/index/index.html'),
+        template: path.resolve(__dirname, '../../src/renderer/pages/index/index.html'),
         filename: 'index.html',
         chunks: ['index'],
         nodeModules: path.resolve(__dirname, '../../node_modules')
     }),
     new HtmlPlugin({
-        template: path.resolve(__dirname,'../../src/renderer/pages/viewer/index.html'),
+        template: path.resolve(__dirname, '../../src/renderer/pages/viewer/index.html'),
         filename: 'viewer.html',
         chunks: ['viewer']
     }),
     new HtmlPlugin({
-        template: path.resolve(__dirname,'../../src/renderer/pages/warn/index.html'),
+        template: path.resolve(__dirname, '../../src/renderer/pages/warn/index.html'),
         filename: 'warn.html',
         chunks: ['warn']
     }),
@@ -84,6 +84,7 @@ const plugins = [
     new webpack.DefinePlugin({}),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new ManifestPlugin(),
     new MiniCssExtractPlugin({
         filename: '[name].css',
         chunkFilename: '[name].css'
@@ -93,7 +94,7 @@ const plugins = [
     })
 ]
 
-const config  = {
+const config = {
     mode: 'development',  // 会设置打包文件环境下的 process.env.NODE_ENV
     //devtool: '#cheap-module-eval-source-map',
     devtool: 'cheap-module-source-map',
@@ -101,9 +102,9 @@ const config  = {
     //context: context,  // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和 loader
     entry: {
         index: [path.resolve(__dirname, '../../src/renderer/pages/index/main.js')],
-        viewer: [path.resolve(__dirname,'../../src/renderer/pages/viewer/main.js')],
-        warn: [path.resolve(__dirname,'../../src/renderer/pages/warn/main.js')],
-        monitor: [path.resolve(__dirname,'../../src/renderer/pages/monitor/main.js')]
+        viewer: [path.resolve(__dirname, '../../src/renderer/pages/viewer/main.js')],
+        warn: [path.resolve(__dirname, '../../src/renderer/pages/warn/main.js')],
+        monitor: [path.resolve(__dirname, '../../src/renderer/pages/monitor/main.js')]
     },
     output: {
         path: outputPath,

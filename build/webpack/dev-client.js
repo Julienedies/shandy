@@ -2,7 +2,7 @@
  * Created by j on 2019-02-09.
  */
 
-const hotClient = require('webpack-hot-middleware/client?noInfo=true&reload=true')
+const hotClient = require('webpack-hot-middleware/client?noInfo=true&reload=true&path=http://localhost:9080/__webpack_hmr')
 
 hotClient.subscribe(event => {
 

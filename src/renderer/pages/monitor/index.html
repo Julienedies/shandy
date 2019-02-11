@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>jHandy-股票实时行情监控</title>
+    <title>shandy-股票实时行情监控</title>
     <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
     <link rel="stylesheet" href="../../css/basic/0.7/basic.base.css"/>
+    <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
 
@@ -65,106 +66,6 @@
     </footer>
 
 </div>
-
-<!--<script src="/socket.io/socket.io.js"></script>
-<script>
-
-    var channel = 'jhandy';
-    var socket = io();
-    var $rts_list = $('#rts_list');
-    var $notify_news = $('#notify_news');
-
-    function emit(msg) {
-        socket.emit(channel, msg);
-    }
-
-    socket.on('rts_push', function (arr) {
-        console.log(arr, +new Date);
-        $rts_list.icRender(arr);
-    });
-
-    socket.on('cls_news', function(msg){
-        $notify_news.text(msg);
-    });
-
-    //
-    brick.controllers.reg('rts_ctrl', function (scope) {
-
-        scope.cancel = function () {
-            let $th = $(this);
-            let code = $th.attr('code');
-            $th.closest('li').remove();
-            emit({event: 'rts_cancel', code: code});
-        };
-
-        scope.view = function () {
-            let $th = $(this);
-            let code = $th.attr('code');
-            let event = $th.attr('event');
-            emit({event: event, code: code});
-        };
-
-        scope.active_ftnn = function () {
-            emit({event: 'active_ftnn'});
-        };
-
-        scope.notify_news = function(){
-            let msg = $(this).text();
-            socket.emit('cls_news', msg);
-        };
-
-    });
-
-    //
-    brick.controllers.reg('help_ctrl', function (scope) {
-        var ip = location.hostname;
-        scope.render('links', {ip: ip});
-    });
-
-    //
-    brick.controllers.reg('plans_ctrl', function () {
-
-        var scope = this;
-        var $elm = scope.$elm;
-        var list = brick.services.get('recordManager')();
-
-        scope.replay_get_done = function(data){
-            console.info(data);
-            scope.render('replay', data.replay);
-        };
-
-        scope.plan_get_done = function(data){
-            console.info(data);
-            list.init(data.plans);
-            data.plans && data.plans.length && scope.render('plans', data.plans);
-        };
-
-  /*      $.ajax({
-            url:'http://localhost:3000/stock/plan',
-            dataType:'json',
-            processData: false,
-            type:'get',
-            success:function(data){
-                console.log(data);
-            },
-            error:function(XMLHttpRequest, textStatus, errorThrown) {
-                console.log(XMLHttpRequest);
-            }});*/
-
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                let data = JSON.parse(this.responseText);
-                scope.plan_get_done(data);
-            }
-        };
-        xhttp.open("GET", `http:\/\/${location.hostname}:2018/stock/plan`, true);
-        xhttp.send();
-
-
-
-    });
-
-</script>-->
+<script src="/socket.io/socket.io.js"></script>
 </body>
 </html>

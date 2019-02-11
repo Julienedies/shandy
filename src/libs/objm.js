@@ -3,11 +3,7 @@
  * 对象管理器  object manager
  */
 
-const _ = require('lodash');
-
-module.exports = function(namespace){
-    return new F(namespace);
-};
+import _ from 'lodash'
 
 function F(namespace){
     this.namespace = namespace || +new Date + '';
@@ -80,3 +76,8 @@ F.prototype = {
     }
 
 };
+
+
+export default function(namespace){
+    return new F(namespace);
+}

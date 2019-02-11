@@ -3,9 +3,7 @@
  */
 
 import fs from 'fs'
-
 import $ from 'jquery'
-
 import debugMenu from 'debug-menu'
 
 import ocr from '../../../libs/baidu-ocr.js'
@@ -95,7 +93,6 @@ brick.reg('mainCtrl', function () {
                         fs.renameSync(img_path, img_path.replace('(2)', `-${ stock.name }`).replace(/\.png$/, `-${ stock.code }.png`));
                     } else {
                         console.error('ocr fail: ', img_path, stock);
-                        //$(that).icClearLoading();
                         return fn(arr);
                     }
                     setTimeout(function () {

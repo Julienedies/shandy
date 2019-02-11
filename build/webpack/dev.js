@@ -9,10 +9,14 @@ const {say} = require('cfonts')
 const {spawn} = require('child_process')
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
+const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
+const express = require('express')
 
 const mainConfig = require('./main.config')
 const rendererConfig = require('./renderer.config')
+
+
 
 let electronProcess = null
 let manualRestart = false
@@ -106,6 +110,12 @@ function startRenderer () {
 
         const compiler = webpack(rendererConfig)
 
+/*        const app = express()
+        const devMiddleware = webpackDevMiddleware(compiler, {
+            writeToDisk: true,
+            publicPath: 'http://localhost:9080'
+        })*/
+
         hotMiddleware = webpackHotMiddleware(compiler, {
             log: false,
             heartbeat: 2500
@@ -121,6 +131,15 @@ function startRenderer () {
         compiler.hooks.done.tap('done', stats => {
             logStats('Renderer', stats)
         })
+
+/*        app.use(devMiddleware);
+        app.use(hotMiddleware)
+        devMiddleware.waitUntilValid(() => {
+            resolve()
+        })
+        app.listen(9080, function () {
+            console.log('webpack-hot-middleware listening on port 9080!\n');
+        });*/
 
         const server = new WebpackDevServer(
             compiler,

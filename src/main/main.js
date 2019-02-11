@@ -9,6 +9,9 @@ import path from 'path'
 import electron from 'electron'
 const { app, ipcMain, BrowserWindow, globalShortcut } = electron
 
+import config from './config'
+app.shared_config = config
+
 import ac from '../libs/ac'
 import server from '../server/index'
 
@@ -26,13 +29,20 @@ function createWindow () {
         height: 820,
         x: 0,
         y: 0,
-        title: app.getName()
+        title: app.getName(),
+        webPreferences: {
+            webSecurity: false
+        }
     };
 
-    //let url =
     mainWindow = new BrowserWindow(windowOptions);
-    mainWindow.loadURL(`http://localhost:9080/index.html`);
-    //mainWindow.loadURL(`file:///${path.resolve(__dirname, '../')}/renderer/monitor.html`);
+
+    if(/^file:\/\//.test(config.LOAD_PROTOCOL)){
+        console.log(`file://${path.resolve(__dirname, '../renderer/index.html')}`)
+        mainWindow.loadURL(`file://${path.resolve(__dirname, '../renderer/index.html')}`);
+    }else{
+        mainWindow.loadURL(`${config.LOAD_PROTOCOL}/index.html`);
+    }
     mainWindow.webContents.openDevTools();
     mainWindow.maximize();
     mainWindow.on('closed', function () {
@@ -44,7 +54,7 @@ function ready () {
 
     createWindow();
 
-/*    electron.powerMonitor.on('resume', () => {
+    electron.powerMonitor.on('resume', () => {
         let d = new Date();
         let h = d.getHours();
         if (h > 5 && h < 10) { // 只在早上重启
@@ -107,7 +117,7 @@ function ready () {
     server.on('active_ftnn', function (msg) {
         ac.activeFtnn();
         ac.activeTdx();
-    });*/
+    });
 }
 
 app.on('ready', ready);

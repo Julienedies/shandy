@@ -2,25 +2,25 @@
  * Created by j on 18/6/16.
  */
 
-const electron = require('electron');
+import electron from 'electron'
 const {BrowserWindow} = electron;
 const {dialog} = electron.remote;
 
+import Win from '../../../util/window.js'
+import schedule from '../../../libs/schedule.js'
 
-const bw = require('../../../libs/window.js');
-const schedule = require('../../../libs/schedule.js');
+import brick from '@julienedies/brick'
 
 schedule(function createVoiceWarningWindow() {
-    bw('voice-warning/index.html');
+    new Win('warn.html');
 }, 8, 55);
-
-const brick = require('@julienedies/brick')
 
 brick.reg('voice_warning_ctrl', function (scope) {
 
     scope.open_voice_warning = function () {
         //bw('http://localhost:2018/public/static/html/stock/plan/index/');
-        let winCtrl = bw('voice-warning/index.html');
+        console.log(333,Win.resolve('warn.html'))
+        let winCtrl = new Win('warn.html');
         winCtrl.maximize();
         winCtrl.dev();
     };
@@ -52,7 +52,7 @@ brick.reg('voice_warning_ctrl', function (scope) {
                 center:true,
                 url: 'http://localhost:3000/news'
             };
-            news_win = bw(opt);
+            news_win = new Win(opt);
             //news_win.dev();
             news_win.win.setIgnoreMouseEvents(true);
             news_win.win.webContents.on('did-finish-load', function () {
@@ -66,14 +66,14 @@ brick.reg('voice_warning_ctrl', function (scope) {
             console.info(filePaths);
             if(!filePaths) return;
             let dir = encodeURIComponent(filePaths[0]);
-            let url = `view-img/index.html?dir=${dir}`;
+            let url = `viewer.html?dir=${dir}`;
             let win = scope.view_img_win;
             if(win && win.win){
                 win.load(url);
             }else{
-                win = scope.view_img_win = bw({x:1440, url:url});
+                win = scope.view_img_win = new Win({x:1440, url:url});
                 win.maximize();
-                //win.dev();
+                win.dev();
             }
         });
     };

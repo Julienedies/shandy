@@ -27,6 +27,7 @@ let q_rtso = rts('qq', f);
 //let s_rtso = rts('sina', f);
 
 function f(stocks) {
+    console.log('stocks =>', stocks)
     if (!Array.isArray(stocks)) {
         console.info(stocks);
         return voice(stocks);
@@ -35,7 +36,8 @@ function f(stocks) {
     let arr2 = [];
     let stock;
     while (stock = stocks.shift()) {
-        if(stock.increase * 1 > 9 || first_objm.get(stock.code)){
+        // 只有涨幅大于9才监控
+        if(stock.increase > 9 || first_objm.get(stock.code)){
             arr2.push(_f(stock));
         }else{
             q_rtso.remove(stock.code);

@@ -20,13 +20,18 @@ const io = socket(httpServer, {
 const EventEmitter = require('events').EventEmitter;
 const events = new EventEmitter();
 
-const channel = 'jhandy';
 const static_dir = path.resolve(__dirname, '../renderer')
 //////////////////////////////////////////////////////////////////////////////////////////////
 //app.get('/', function (req, res) {
     //res.send('hello world')
     //res.sendFile(__dirname + '/index.html');
 //});
+
+app.get('/set_node_modules_path.js', function (req, res) {
+    res.send(`
+    require('module').globalPaths.push('${path.resolve(__dirname, '../../node_modules')}')
+    `)
+})
 
 app.get('/news', function (req, res) {
     res.sendFile(__dirname + '/news.html');
@@ -48,15 +53,13 @@ io.on('connection', function (socket) {
         io.emit('cls_news', msg);
     });
 
-    socket.on(channel, function (msg) {
+    socket.on('jhandy', function (msg) {
         console.log('socket:', msg);
         let event = msg.event || 'msg';
         events.emit(event, msg);
     });
 
 });
-
-//////////////////////////////////////////////////////////////////////////////////////////////
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////

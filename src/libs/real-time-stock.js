@@ -156,6 +156,7 @@ Rts.prototype = {
         this.query();
     },
     createUrl: function () {
+        console.log(11,this.codes)
         let codes = this.codes;
         if(!codes.length){
             return console.log('无股票代码.');

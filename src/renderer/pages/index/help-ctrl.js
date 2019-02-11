@@ -4,18 +4,18 @@
 
 import os from "os"
 import electron from 'electron'
-const {remote,shell} = electron
+
+const {remote, shell} = electron
 
 import tdx from '../../../libs/tdx.js'
-
 import cm from '../../../libs/console.js'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 
-cm('log');
+//cm('log');
 
-function get_ip(){
+function get_ip () {
     let ip;
     try {
         let networkInterfaces = os.networkInterfaces();
@@ -39,28 +39,28 @@ brick.reg('help_ctrl', function (scope) {
 
     this.open = function () {
         let map = {
-            gushenwei: `http://${ip}:2018/`,
-            jhandy: `http://${ip}:3000/`
+            gushenwei: `http://${ ip }:2018/`,
+            jhandy: `http://${ ip }:3000/`
         };
         let id = $(this).data('id');
         shell.openExternal(map[id]);
     };
 
-    this.show_ip = function(){
+    this.show_ip = function () {
         ip = get_ip();
         console.info(ip);
         $('#ip').text(ip);
     };
 
-    this.debug = function (){
+    this.debug = function () {
         cm($(this).prop('checked'), 'log');
     };
 
-    this.view = function(e, code){
+    this.view = function (e, code) {
         tdx.show(code, 4);
     };
 
-    this.test = function (){
+    this.test = function () {
         //import shelljs from 'shelljs'
         //console.info(shelljs.which('jhandy'));
     };

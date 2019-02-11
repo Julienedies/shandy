@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="../../css/basic/0.7/basic.base.css" />
     <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
     <link rel="stylesheet" href="../../css/photon/css/photon.min.css"/>
-    <script></script>
-    <script>require('module').globalPaths.push('/Users/j/dev/shandy/node_modules')</script>
+    <!--<script>require('module').globalPaths.push('/Users/j/dev/shandy/node_modules')</script>-->
+    <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
 <div ic-ctrl="main_ctrl">
@@ -73,7 +73,7 @@
                 </ul>
             </div>
             <div>
-                <input type="text" id="stock_code" ic-enter-press="add">
+                <input type="text" value="000858" id="stock_code" ic-enter-press="add">
                 <div class="buttons has-addons">
                     <button class="button" ic-click="add">添加</button>
                     <button class="button" ic-click="remove">删除</button>
@@ -93,13 +93,12 @@
                 <button class="button" ic-click="show_ip">查看IP</button>
                 <button class="button" ic-click="test">test</button>
             </div>
-            <input type="checkbox" ic-click="debug"> debug</input>
+            <label><input type="checkbox" checked ic-click="debug" /> debug/ verbose</label>
         </section>
 
         <footer>
             <ul id="point">
-                <li>行业板块看流入; 概念板块看涨停数</li>
-                <li><h4>我必须做出改变, 3年来已经证明我的交易手法是错误的!</h4></li>
+                <li>行业板块看流入; 概念板块看涨停数-----</li>
                 <li><h4>支撑我的交易逻辑: 反身性(赚钱效应). 历史会重复.  波动周期.  趋势. 要有大局观, 不能只看到眼前的一小块. 你要捕捉的是几十个点的波动, 却为了两个点斤斤计较.</h4></li>
                 <li><h4>人很容易陷入习以为常和麻木. 永远不要忘记那些恐惧和痛苦. 35,时不我待.</h4></li>
                 <li><h4>我的性格弱点:缺乏耐心;  优柔寡断,不够果断; </h4></li>
