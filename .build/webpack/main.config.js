@@ -10,8 +10,10 @@ const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals');
 const { dependencies } = require('../../package.json')
 
+const isPro = process.env.NODE_ENV === 'production'
+
 let mainConfig = {
-    mode: 'development',
+    mode: isPro? 'production' : 'development',
     devtool: 'cheap-module-source-map',
     target: 'electron-main',
     entry: {
@@ -23,7 +25,6 @@ let mainConfig = {
         path: path.join(__dirname, '../../dist/main')
     },
     externals: [
-        //nodeExternals()
         ...Object.keys(dependencies || {})
     ],
     plugins: [

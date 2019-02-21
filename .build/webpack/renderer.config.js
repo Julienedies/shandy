@@ -4,7 +4,10 @@
 
 process.env.BABEL_ENV = 'renderer'
 
+const inlineHtmlLoader = require('./inline-html-loader')
+
 const path = require('path')
+const glob = require('glob')
 const webpack = require('webpack')
 const HtmlPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
@@ -25,64 +28,37 @@ const context = path.resolve(__dirname, '../../src')
 
 const nodeSassIncludePaths = [path.resolve(__dirname, '../../')]
 
-let devServer = {}
-let cssLoader = {
-    loader: MiniCssExtractPlugin.loader,
-    options: {
-        publicPath: publicPath
-    }
-}
+const entryHtml = glob.sync(path.join(context, 'renderer/pages/+(Xnote)/**index.html')) || []
+const entryJsHtml = glob.sync(path.join(context, 'renderer/pages/!(stock|note)/**index.html')) || []
+const entryJs = glob.sync(path.join(context, 'renderer/pages/!(stock)/**main.js')) || []
 
-if (isPro) {
+const entry = {}
 
-} else {
+let pages = entryJs.map((entryJsPath) => {
+    let arr = entryJsPath.match(/pages\/(.+)\/main\.js$/i)
+    let name = arr[1].replace('/', '_')
+    let htmlPath = entryJsPath.replace(/main\.js$/i, 'index.html')
 
-    // 添加热模块替换client端脚本
-    /*    for (let i in entry) {
-            let arr = entry[i]
-            arr = Array.isArray(arr) ? arr : [arr]
-            arr.push('webpack-hot-middleware/client')
-            entry[i] = arr
-        }
+    entry[name] = [entryJsPath]
 
-        plugins.push(new webpack.HotModuleReplacementPlugin())*/
-
-    devServer = {
-        publicPath: publicPath,
-        contentBase: outputPath,
-        hot: true
-    }
-
-}
-
-let pages = [
-    new HtmlPlugin({
-        template: path.resolve(__dirname, '../../src/renderer/pages/index/index.html'),
-        filename: 'index.html',
-        chunks: ['index'],
-        nodeModules: path.resolve(__dirname, '../../node_modules')
-    }),
-    new HtmlPlugin({
-        template: path.resolve(__dirname, '../../src/renderer/pages/viewer/index.html'),
-        filename: 'viewer.html',
-        chunks: ['viewer']
-    }),
-    new HtmlPlugin({
-        template: path.resolve(__dirname, '../../src/renderer/pages/warn/index.html'),
-        filename: 'warn.html',
-        chunks: ['warn']
-    }),
-    new HtmlPlugin({
-        template: path.resolve(__dirname, '../../src/renderer/pages/monitor/index.html'),
-        filename: 'monitor.html',
-        chunks: ['monitor']
+    return new HtmlPlugin({
+        template: htmlPath,
+        filename: `${ name }.html`,
+        chunks: [name],
     })
-]
+})
+entryHtml.forEach((htmlPath) => {
+    let arr = htmlPath.match(/renderer\/pages\/((.+)\/index\.html)$/)
+    let name = arr[1]
+    //entry[name] = htmlPath
+})
+
+console.log(entryHtml)
+//console.log(pages)
 
 const plugins = [
     ...pages,
     new webpack.DefinePlugin({}),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new ManifestPlugin(),
     new MiniCssExtractPlugin({
@@ -94,18 +70,37 @@ const plugins = [
     })
 ]
 
+
+let cssLoader = {
+    loader: MiniCssExtractPlugin.loader,
+    options: {
+        publicPath: publicPath
+    }
+}
+
+if (isPro) {
+
+
+} else {
+    // hmr
+    Object.entries(entry).forEach(([k, v]) => {
+        v = Array.isArray(v) ? v : [v]
+        v.push('webpack-hot-middleware/client?noInfo=true&reload=true&path=http://localhost:9080/__webpack_hmr')
+        entry[k] = v
+    })
+    plugins.push(new webpack.HotModuleReplacementPlugin())
+}
+
+
+console.log(entry)
+
 const config = {
-    mode: 'development',  // 会设置打包文件环境下的 process.env.NODE_ENV
+    //context,  // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和 loader
+    mode: isPro ? 'production' : 'development',  // 会设置打包文件环境下的 process.env.NODE_ENV
     //devtool: '#cheap-module-eval-source-map',
     devtool: 'cheap-module-source-map',
     target: 'electron-renderer',
-    //context: context,  // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和 loader
-    entry: {
-        index: [path.resolve(__dirname, '../../src/renderer/pages/index/main.js')],
-        viewer: [path.resolve(__dirname, '../../src/renderer/pages/viewer/main.js')],
-        warn: [path.resolve(__dirname, '../../src/renderer/pages/warn/main.js')],
-        monitor: [path.resolve(__dirname, '../../src/renderer/pages/monitor/main.js')]
-    },
+    entry,
     output: {
         path: outputPath,
         publicPath: publicPath,
@@ -114,11 +109,12 @@ const config = {
         sourceMapFilename: '[file].map',
         libraryTarget: 'commonjs2',
     },
+    node: false,
+    plugins,
     resolve: {
         alias: {},
         extensions: ['.js', '.json', '.node', '.scss', '.css']
     },
-    node: false,
     externals: [
         ...Object.keys(dependencies || {})
     ],
@@ -135,29 +131,43 @@ const config = {
             },
             {
                 test: /\.html$/,
-                use: {
+                use: [{
                     loader: 'html-loader',
                     options: {
+                        interpolate: true,
                         attrs: ['img:src', 'img:data-src', 'audio:src', 'link:href']
                     }
-                }
+                },
+                    //inlineHtmlLoader
+                ]
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: entryHtml,
                 use: [
                     {
                         loader: "file-loader",
                         options: {
-                            name: '[hash].[ext]',
-                            outputPath: './img',
-                            publicPath: publicPath + 'img/'
+                            name: '[path][name].[ext]',
+                            //outputPath: './html',
+                            //publicPath: publicPath + 'html/'
                         }
-                    }
+                    },
+                    {loader: "extract-loader"},
+                    {
+                        loader: "html-loader",
+                        options: {
+                            interpolate: true,
+                            attrs: ["img:src", "link:href", "script:src"]
+                        }
+                    },
+                    //inlineHtmlLoader
                 ]
             },
             {
                 test: /\.css$/,
+                exclude: /node_modules/,
                 use: [
+                    //cssLoader,
                     {
                         loader: "file-loader",
                         options: {
@@ -165,7 +175,14 @@ const config = {
                             outputPath: './css',
                             publicPath: publicPath + 'css/'
                         }
-                    }
+                    },
+                    {loader: "extract-loader"},
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            url: true,
+                        }
+                    },
                 ]
             },
             {
@@ -183,10 +200,36 @@ const config = {
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: '[hash].[ext]',
+                            outputPath: './img',
+                            publicPath: publicPath + 'img/'
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(svg|woff2?|eot|ttf)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 1024,
+                            name: '[name].[ext]',
+                            outputPath: './fonts',
+                            publicPath: publicPath + '/fonts/'
+                        }
+                    }
+                ]
+            },
         ]
     },
-    plugins: plugins
     /*optimization: {
         splitChunks: {
             chunks: 'all',  // async initial all

@@ -26,7 +26,7 @@ else if (process.env.BUILD_TARGET === 'web') web()
 else build()
 
 function clean () {
-    del.sync(['packager/*', '!packager/icons', '!packager/icons/icon.*'])
+    del.sync(['build/*', '!build/icons', '!build/icons/icon.*'])
     console.log(`\n${doneLog}\n`)
     process.exit()
 }

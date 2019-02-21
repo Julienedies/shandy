@@ -16,8 +16,6 @@ const express = require('express')
 const mainConfig = require('./main.config')
 const rendererConfig = require('./renderer.config')
 
-
-
 let electronProcess = null
 let manualRestart = false
 let hotMiddleware
@@ -64,8 +62,6 @@ function electronLog (data, color) {
 function startMain () {
     return new Promise((resolve, reject) => {
 
-        mainConfig.mode = 'development'
-
         const compiler = webpack(mainConfig)
 
         compiler.hooks.watchRun.tapAsync('watch-run', (compilation, done) => {
@@ -101,20 +97,19 @@ function startMain () {
 function startRenderer () {
     return new Promise((resolve, reject) => {
 
-        let script = path.join(__dirname, './dev-client')
+        /*let script = path.join(__dirname, './dev-client')
         Object.values(rendererConfig.entry).forEach((entry) => {
-            entry.unshift(script)
-        })
-
-        rendererConfig.mode = 'development'
+                entry.unshift && entry.unshift(script)
+            }
+        )*/
 
         const compiler = webpack(rendererConfig)
 
-/*        const app = express()
-        const devMiddleware = webpackDevMiddleware(compiler, {
-            writeToDisk: true,
-            publicPath: 'http://localhost:9080'
-        })*/
+        /*        const app = express()
+                const devMiddleware = webpackDevMiddleware(compiler, {
+                    writeToDisk: true,
+                    publicPath: 'http://localhost:9080'
+                })*/
 
         hotMiddleware = webpackHotMiddleware(compiler, {
             log: false,
@@ -132,14 +127,14 @@ function startRenderer () {
             logStats('Renderer', stats)
         })
 
-/*        app.use(devMiddleware);
-        app.use(hotMiddleware)
-        devMiddleware.waitUntilValid(() => {
-            resolve()
-        })
-        app.listen(9080, function () {
-            console.log('webpack-hot-middleware listening on port 9080!\n');
-        });*/
+        /*        app.use(devMiddleware);
+                app.use(hotMiddleware)
+                devMiddleware.waitUntilValid(() => {
+                    resolve()
+                })
+                app.listen(9080, function () {
+                    console.log('webpack-hot-middleware listening on port 9080!\n');
+                });*/
 
         const server = new WebpackDevServer(
             compiler,
@@ -157,13 +152,13 @@ function startRenderer () {
         )
         server.listen(9080)
 
-/*        compiler.watch({}, (err, stats) => {
-            if (err) {
-                console.log(err)
-                return
-            }
-            resolve()
-        })*/
+        /*        compiler.watch({}, (err, stats) => {
+                    if (err) {
+                        console.log(err)
+                        return
+                    }
+                    resolve()
+                })*/
 
     })
 }

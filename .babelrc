@@ -1,4 +1,7 @@
 {
+  "presets": ["@babel/preset-env"],
+  "plugins": ["@babel/plugin-syntax-dynamic-import"],
+  "comments": false,
   "env": {
     "main": {
       "presets": [
@@ -9,10 +12,8 @@
     "renderer": {
       "presets": [
         ["@babel/preset-env", {
-          "modules": false
         }]
       ]
     }
-  },
-  "comments": false
+  }
 }
