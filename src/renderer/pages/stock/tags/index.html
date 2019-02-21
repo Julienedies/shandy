@@ -3,15 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <title>标签管理</title>
-    <link rel="import" href="../include/head.html?__inline" />
-    <link rel="stylesheet" href="style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
+    <script src="/set_node_modules_path.js"></script>
 </head>
 <body ic-ctrl="main_ctrl">
 
 <link rel="import" href="../include/tabs.html?__inline" />
 
-<link rel="import" href="tags-ctrl.html?__inline" />
-<link rel="import" href="set-tag-ctrl.html?__inline" />
+<section class="column is-10 is-offset-1" ic-ctrl="tags_ctrl">
+
+    <div class="buttons">
+        <button class="button"
+                ic-ajax
+                ic-ajax-auto
+                ic-submit-method="get"
+                ic-submit-action="/stock/tags"
+                ic-submit-on-done="on_get_done">标签列表</button>
+        <button class="button" ic-click="add">新标签</button>
+    </div>
+
+    <div class="table_0"  ic-tpl>
+        <div ic-for="k,arr in model">
+            <h6>{{k}}</h6>
+            <div class="field is-grouped is-grouped-multiline">
+                <div class="control"  ic-for="i,v in arr">
+                    <div class="tags has-addons is-medium">
+                        <span class="tag is-medium pointer">{{v.text}}</span>
+                        <a class="tag is-medium" ic-click="edit:{{v.id}}">
+                            <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                        </a>
+                        <a class="tag is-medium is-delete"
+                           ic-ajax
+                           ic-submit-method="delete"
+                           ic-submit-action="/stock/tags/{{v.id}}"
+                           ic-submit-before
+                           ic-submit-on-done="remove"></a>
+                    </div>
+                </div>
+                <div class="control">
+                    <a class="tag is-medium" ic-click="add:{{k}}">
+                        <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<div class="popup" ic-ctrl="set_tag_ctrl" ic-popup="set_tag">
+
+    <div class="column is-10" ic-tpl ic-tpl-init="{}" ic-init="model=model[0]||model">
+
+        <div class="table_0" ic-form="set_tag">
+
+            <div>
+                <h6>标签类型</h6>
+                <div class="field">
+                    <input class="input is-medium" type="text" name="type" value="{{model.type}}" ic-form-field ic-field-rule="required">
+                    <input type="hidden" name="id" ic-form-field  value="{{model.id}}" />
+                </div>
+            </div>
+
+            <div>
+                <h6>标签内容</h6>
+                <div>
+                    <input class="input is-medium" type="text" name="text" value="{{model.text}}" ic-form-field ic-field-rule="required">
+                </div>
+            </div>
+
+            <div>
+                <h6>备注</h6>
+                <div>
+                    <textarea rows="3" class="textarea is-medium" ic-form-field="note">{{model.note}}</textarea>
+                </div>
+            </div>
+
+            <div>
+                <div></div>
+                <div class="buttons">
+                    <button class="button is-primary"
+                            ic-form-submit
+                            ic-submit-action="/stock/tags"
+                            ic-submit-before="before"
+                            ic-submit-on-done="done"
+                    >保存</button>
+                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置 </button>
+                    <button class="button" ic-popup-close style="margin-left:4em;"> 关闭 </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
 
 <link rel="import" href="../include/scripts.html?__inline" />
 <script src="main.js"></script>

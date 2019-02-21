@@ -15,7 +15,7 @@ const base_path = path.join(config.DATA_DIR, './csd/s/');
 
 class Sdob {
     constructor (code) {
-        let file_path = path.join(base_path, `${ code }.json`);
+        let file_path = path.join(base_path, `./${ code }.json`);
         this.file_path = file_path;
 
         if (!fs.existsSync(file_path)) {
@@ -48,7 +48,7 @@ class Sdob {
         return key ? (this._pool[key] || '') : this._pool;
     }
 
-    find (key) {
+    match (key) {
         if (!key) return this._pool;
 
         let keys = key.split('.');

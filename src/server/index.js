@@ -4,11 +4,12 @@
 
 import path from 'path'
 import http from 'http'
-
 import express from 'express'
 import socket from 'socket.io'
+import _events from 'events'
+import bodyParser from 'body-parser'
 
-import config from '../../config.json'
+import route from './routes/route'
 
 const app = express();
 const httpServer = http.Server(app);
@@ -17,19 +18,24 @@ const io = socket(httpServer, {
     pingTimeout: 1500 * 1000
 });
 
-const EventEmitter = require('events').EventEmitter;
+const EventEmitter = _events.EventEmitter;
 const events = new EventEmitter();
 
 const static_dir = path.resolve(__dirname, '../renderer')
+
+// 上行请求体解析
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+
 //////////////////////////////////////////////////////////////////////////////////////////////
-//app.get('/', function (req, res) {
-    //res.send('hello world')
-    //res.sendFile(__dirname + '/index.html');
-//});
 
 app.get('/set_node_modules_path.js', function (req, res) {
     res.send(`
-    require('module').globalPaths.push('${path.resolve(__dirname, '../../node_modules')}')
+        try{
+            require('module').globalPaths.push('${path.resolve(__dirname, '../../node_modules')}')
+        }catch(err){
+            console.log(err)
+        }
     `)
 })
 
@@ -38,8 +44,8 @@ app.get('/news', function (req, res) {
 });
 
 app.use(express.static(static_dir))
-app.use('/', express.static(static_dir));
 
+route(app)
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 io.on('connection', function (socket) {

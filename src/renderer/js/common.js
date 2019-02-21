@@ -56,13 +56,6 @@ brick.reg('main_ctrl', function(){
 
 });
 
-$('#nav-tabs ul li').each(function(){
-    var cla = 'is-active';
-    var $th = $(this).removeClass(cla);
-    if($th.find('a').attr('href').indexOf(location.pathname) > -1){
-        $th.addClass(cla);
-    }
-});
 
 setTimeout(function () {
     brick.bootstrap()

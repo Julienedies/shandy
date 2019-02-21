@@ -2,32 +2,40 @@
  * Created by j on 18/7/28.
  */
 
-const fs = require('fs');
-const path = require('path');
+import _dob from '../../../util/dob.js'
 
-const dob = require('../../libs/dob.js')('logic');
+let dob
 
-module.exports = {
+function initDb(){
+    dob = dob || _dob('logic')
+    return dob
+}
+
+export default {
 
     get: function (req, res) {
+        initDb()
         res.json(dob.get());
     },
 
     post: function (req, res) {
-        var data = req.body;
+        initDb()
+        let data = req.body;
         dob.set(data);
         res.json(dob.get());
     },
 
     del: function (req, res) {
-        var id = req.params.id;
+        initDb()
+        let id = req.params.id;
         dob.remove(id);
         res.json(dob.get());
     },
 
     focus: function(req, res){
-        var id = req.params.id;
+        initDb()
+        let id = req.params.id;
         dob.insert(id);
         res.json(dob.get());
     }
-};
+}

@@ -11,11 +11,9 @@
 <body>
 
 <div>
-
     <section id="rts" ic-ctrl="rts_ctrl">
         <ul id="rts_list" ic-tpl="list">
-            <li ic-for="i,v in model" code="{{v.code}}"
-                ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
+            <li ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
                 <div class="flex flex-mc">
                     <span class="code">{{v.code}} </span>
                     <span class="name"> {{v.name}} </span>

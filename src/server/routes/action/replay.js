@@ -2,27 +2,35 @@
  * Created by j on 18/7/22.
  */
 
-const dob = require('../../libs/dob.js');
+import dob from '../../../util/dob.js'
+import _tags from './tags.js'
 
-const replay = dob('replay');
+const tags = _tags.tags;
 
-const tags = require('./tags.js').tags;
+let replay
 
-function data(){
-    return {replay:replay.get(), tags: tags.convert()};
+function initDb () {
+    replay = replay || dob('replay')
+    return replay
 }
 
-module.exports = {
+function data () {
+    return {replay: replay.get(), tags: tags.convert()};
+}
+
+export default {
 
     get: function (req, res) {
+        initDb()
         res.json(data());
     },
 
     // 复盘
     post: function (req, res) {
-        var obj = req.body;
+        initDb()
+        let obj = req.body;
         replay.set(obj);
         res.json(data());
     }
 
-};
+}

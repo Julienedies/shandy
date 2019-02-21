@@ -8,7 +8,7 @@ const qs = require('querystring');
 
 const config = require('../../config.json');
 
-var access_token = config.api.baidu.ocr.access_token;
+const access_token = config.api.baidu.ocr.access_token;
 
 /*
  * @param args Object 参数选项 args => { image: dataUrl, callback: Function  }

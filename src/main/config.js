@@ -4,11 +4,23 @@
 
 import path from 'path'
 
-const port = 3000
+const SERVER_PORT = 3000
+//const LOAD_PROTOCOL =  'file:///'
+const LOAD_PROTOCOL = `http://localhost:${SERVER_PORT}`
+
+const ROOT_DIR = path.resolve(__dirname, '../../')
+const DATA_DIR = path.join(ROOT_DIR, './data/')
+const CSD_DIR = path.join(DATA_DIR, './csd/')
+const STATIC_DIR = path.join(ROOT_DIR, './web/')
+
+const HTML_DIR = path.resolve(__dirname, '../renderer/')
 
 export default {
-    HTML_DIR: path.resolve(__dirname, '../renderer/'),
-    //LOAD_PROTOCOL: 'file:///',
-    LOAD_PROTOCOL: `http://localhost:3000`,
-    SERVER_PORT: port
+    ROOT_DIR,
+    DATA_DIR,
+    CSD_DIR,
+    STATIC_DIR,
+    HTML_DIR,
+    LOAD_PROTOCOL,
+    SERVER_PORT
 }

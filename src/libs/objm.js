@@ -5,46 +5,49 @@
 
 import _ from 'lodash'
 
-function F(namespace){
-    this.namespace = namespace || +new Date + '';
-    this._pool = {};
-    this._listeners = [];
-}
+class Objm {
+    constructor (namespace){
+        this.namespace = namespace || +new Date + '';
+        this._pool = {};
+        this._listeners = [];
+    }
 
-F.prototype = {
+    init (data) {
+        this._pool = data;
+    }
 
-    get: function (key) {
+    get (key) {
         if (!key) return this._pool;
 
-        var keys = key.split('.');
+        let keys = key.split('.');
 
         return (function x(namespace, keys) {
-            var k = keys.shift();
-            var o = namespace[k];
+            let k = keys.shift();
+            let o = namespace[k];
             if (o && keys.length) return x(namespace[k], keys);
             return o;
         })(this._pool, keys);
 
-    },
+    }
 
-    set: function (key, val) {
+    set (key, val) {
 
-        var old = this.get(key);
+        let old = this.get(key);
 
         if (old && _.isObject(old) && _.isObject(val)) return _.extend(old, val);
 
         this._set(key, val);
 
         this._fire('change');
-    },
+    }
 
-    _set: function (key, val) {
+    _set (key, val) {
 
-        var keys = key.split('.');
+        let keys = key.split('.');
 
         (function x(namespace, keys) {
-            var k = keys.shift();
-            var o = namespace[k];
+            let k = keys.shift();
+            let o = namespace[k];
             if (keys.length) {
                 if (!o) o = namespace[k] = {};
                 x(o, keys);
@@ -54,30 +57,30 @@ F.prototype = {
             }
         })(this._pool, keys);
 
-    },
-    remove: function (key) {
+    }
+    remove (key) {
         this.set(key);
         this._fire('remove', key);
-    },
-    clear: function () {
+    }
+    clear () {
         this._pool = {};
         this._fire('clear');
-    },
-    on: function(e, f){
+    }
+    on(e, f){
         this._listeners.push(f);
-    },
-    off: function(e, f){
+    }
+    off(e, f){
 
-    },
-    _fire: function(e, msg){
+    }
+    _fire(e, msg){
         this._listeners.forEach(function(f){
             f(e, msg);
         });
     }
-
-};
+    
+}
 
 
 export default function(namespace){
-    return new F(namespace);
+    return new Objm(namespace);
 }

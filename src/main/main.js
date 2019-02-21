@@ -7,15 +7,16 @@ process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
 
 import path from 'path'
 import electron from 'electron'
-const { app, ipcMain, BrowserWindow, globalShortcut } = electron
+
+const {app, ipcMain, BrowserWindow, globalShortcut} = electron
 
 import config from './config'
+
 app.shared_config = config
+const port = config.SERVER_PORT
 
 import ac from '../libs/ac'
 import server from '../server/index'
-
-const port = 3000
 server.start(port)
 
 let mainWindow;
@@ -37,11 +38,11 @@ function createWindow () {
 
     mainWindow = new BrowserWindow(windowOptions);
 
-    if(/^file:\/\//.test(config.LOAD_PROTOCOL)){
-        console.log(`file://${path.resolve(__dirname, '../renderer/index.html')}`)
-        mainWindow.loadURL(`file://${path.resolve(__dirname, '../renderer/index.html')}`);
-    }else{
-        mainWindow.loadURL(`${config.LOAD_PROTOCOL}/index.html`);
+    if (/^file:\/\//.test(config.LOAD_PROTOCOL)) {
+        console.log(`file://${ path.resolve(__dirname, '../renderer/index.html') }`)
+        mainWindow.loadURL(`file://${ path.resolve(__dirname, '../renderer/index.html') }`);
+    } else {
+        mainWindow.loadURL(`${ config.LOAD_PROTOCOL }/index.html`);
     }
     mainWindow.webContents.openDevTools();
     mainWindow.maximize();

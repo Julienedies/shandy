@@ -1,4 +1,4 @@
-var app = require('src/renderer/css/photon/template-app/app');  // Module to control application life.
+var app = require('src/renderer/css/vendor/photon/template-app/app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
 
 // Keep a global reference of the window object, if you don't, the window will

@@ -3,22 +3,22 @@
  * 股票市场概念列表
  */
 
-const sdob = require('../../libs/sdob.js');
+import sdob from '../../../util/sdob.js'
+import stocksManager from '../../../libs/stocks-manager'
 
-const stocks = require(global.CSD_DIR + 'stocks.json');
-
-module.exports = {
+export default {
 
     get: function (req, res) {
-        var concept = req.params.name;
-        var result = [];
-        stocks.forEach(function(v, i){
+        let stocks = stocksManager.get()
+        let concept = req.params.name;
+        let result = [];
+        stocks.forEach(function (v, i) {
             let code = v[0];
             let dob = sdob(code);
-            let data = dob.match(`概念详情.${concept}`);
-            if(data){
+            let data = dob.match(`概念详情.${ concept }`);
+            if (data) {
                 result.push({
-                    code:code,
+                    code: code,
                     name: v[1],
                     text: data
                 });
@@ -28,4 +28,4 @@ module.exports = {
         res.json(result);
     }
 
-};
+}

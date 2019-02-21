@@ -14,6 +14,8 @@ import imager from './imager.js'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
+import './style.scss'
+
 // 交易记录json
 import wt from '../../../../wt.json'
 

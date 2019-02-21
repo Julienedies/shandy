@@ -2,21 +2,26 @@
  * Created by j on 2019-02-09.
  */
 
+import './style.scss'
+
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-var channel = 'jhandy';
-var socket = io();
-var $rts_list = $('#rts_list');
-var $notify_news = $('#notify_news');
+brick.set('debug', false)
+brick.set('render.wrapModel', true)
+
+const channel = 'jhandy';
+const socket = io();
+const $rts_list = $('#rts_list');
+const $notify_news = $('#notify_news');
 
 function emit (msg) {
     socket.emit(channel, msg);
 }
 
 socket.on('rts_push', function (arr) {
-    console.log(arr, +new Date);
+    //console.log(arr, +new Date);
     $rts_list.icRender(arr);
 });
 
@@ -95,8 +100,10 @@ brick.reg('plans_ctrl', function () {
             scope.plan_get_done(data);
         }
     };
-    xhr.open("GET", `http:\/\/${ location.hostname }:2018/stock/plan`, true);
+    xhr.open("GET", `http:\/\/${ location.hostname }:3000/stock/plan`, true);
     xhr.send();
 
 });
 
+
+brick.bootstrap()

@@ -34,7 +34,7 @@ var proto = {
      */
     init: function (arr) {
         if (!Array.isArray(arr)) throw 'must be Array on init';
-        var that = this;
+        let that = this;
         arr.forEach(function (record, i) {
             that.beforeSave(record, i);
         });
@@ -67,7 +67,7 @@ var proto = {
 
         for (let i in pool) {
             let record = pool[i];
-            if (value == this._queryKeyValue(record, query)) {
+            if (value === this._queryKeyValue(record, query)) {
                 r.push(record);
             }
         }
@@ -77,7 +77,7 @@ var proto = {
      * 对查询结果记录进行修改
      * @param data      {Object}            要更新的数据
      * @param query     {String}            对key进行限定，只有对应的key变化，才修改
-     * @returns         {Array or false}    返回修改过的记录数组，如果没有修改任何记录，返回false
+     * @returns         {Array | false}    返回修改过的记录数组，如果没有修改任何记录，返回false
      * @example
      * new recoredManager().init([{x:1,y:2},{x:1,y:5}]).find(1,'x').set({y:3});     // result [{x:1,y:3},{x:1,y:3}]
      * new recoredManager().init([{x:1,y:2}]).find(2,'x').set({y:3});               // result false
@@ -176,7 +176,7 @@ var proto = {
     },
     /**
      * 获取查询结果记录集合
-     * @returns {Array or undefined}
+     * @returns {Array | undefined}
      * @example
      * new recoredManager().init([{x:1,y:2},{x:1,y:5}]).find(1,'x')  // return [{x:1,y:2},{x:1,y:5}];
      */
@@ -197,7 +197,7 @@ var proto = {
     beforeSave: function (record, index) {
         let id = record.id;
         // 如果没有主键,生成一个随机主键
-        if (typeof id == 'undefined' || id == '') {
+        if (typeof id == 'undefined' || id === '') {
             record.id = Math.random().toFixed(7).replace('0.', '');
         }
         return record;
@@ -223,13 +223,13 @@ var proto = {
 
         var chain = (k || this.key).split('.');
 
-        var value = (function (chain, record) {
+        var value = (function fx(chain, record) {
 
             var k = chain.shift();
             var v = record[k];
 
             if (chain.length) {
-                return arguments.callee(chain, v);
+                return fx(chain, v);
             }
 
             return v;
@@ -283,6 +283,6 @@ RecordManager.prototype = Object.create(EventEmitter.prototype);
 Object.assign(RecordManager.prototype, proto);
 
 // export
-module.exports = function (conf) {
+export default function (conf) {
     return new RecordManager(conf);
-};
+}

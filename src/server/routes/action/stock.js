@@ -3,22 +3,22 @@
  * 个股资料查看编辑
  */
 
-const sdob = require('../../libs/sdob.js');
+import sdob from '../../../util/sdob.js'
 
-module.exports = {
+export default {
 
     get: function (req, res) {
-        var code = req.params.code;
-        var dob = sdob(code);
+        let code = req.params.code;
+        let dob = sdob(code);
         res.json(dob.get());
     },
 
     post: function (req, res) {
-        var code = req.params.code;
-        var data = req.body;
-        var dob = sdob(code);
+        let code = req.params.code;
+        let data = req.body;
+        let dob = sdob(code);
         dob.set(data);
         res.json(dob.get());
     }
 
-};
+}

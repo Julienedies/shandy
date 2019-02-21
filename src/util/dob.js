@@ -3,17 +3,19 @@
  * 数据层对象,用于管理数据的增删改查,序列化
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs'
+import path from 'path'
 
-const recordManager = require('./recordManager.js');
-const objm = require('./objm.js');
+import recordManager from '../libs/recordManager.js'
+import objm from '../libs/objm.js'
 
-module.exports = function (name, conf) {
+import config from '../main/config'
 
-    let json_path = path.join(DATA_DIR, `${name}.json`);
+export default function (name, conf) {
 
-    let data = require(json_path);
+    let json_path = path.join(config.DATA_DIR, `./${ name }.json`);
+    let data = fs.readFileSync(json_path, 'utf8');
+    data = JSON.parse(data);
 
     let dob = Array.isArray(data) ? recordManager(conf) : objm();
 
@@ -25,4 +27,4 @@ module.exports = function (name, conf) {
     dob.init(data);
     return dob;
 
-};
+}

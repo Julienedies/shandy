@@ -21,6 +21,7 @@ import note from './action/note'
 import txt from './action/txt'
 
 export default function(app){
+
     app.use(crossDomain)
 
     app.get('/stock/concept/:name', concept.get)
@@ -55,7 +56,7 @@ export default function(app){
     app.post('/txt', txt.post)
     app.delete('/txt/:id', txt.del)
 
-
     app.use($404)
     app.use($500)
+
 }

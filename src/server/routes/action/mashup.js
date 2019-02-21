@@ -2,15 +2,15 @@
  * Created by j on 18/8/13.
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs'
+import path from 'path'
 
-const request = require('request');
+import request from 'request'
 
-const fetch = require('../../libs/fetch/fetch.js');
+import fetch from '../../../util/fetch/fetch.js'
 
 
-module.exports = {
+export default {
 
     news: function(req, res){
 
@@ -37,7 +37,7 @@ module.exports = {
             //Object.assign(data, result);
             data[id] = result;
             sources.j_remove(id);
-            if(sources.length == 0){
+            if(sources.length === 0){
                 res.json(data);
             }
         };
@@ -52,4 +52,4 @@ module.exports = {
         var obj = req.body;
     }
 
-};
+}

@@ -2,6 +2,8 @@
  * Created by j on 18/5/22.
  */
 
+//import '../../css/vendor/photon/css/photon.css'
+
 import electron from 'electron'
 
 const {remote, shell, ipcRenderer} = electron
@@ -13,6 +15,7 @@ import tdx from '../../../libs/tdx'
 import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
 
+console.log(remote)
 //const config = remote.getGlobal('config')
 //const config = remote.app.config
 //console.log(config)
@@ -32,6 +35,16 @@ import view_stock from './view-stock-ctrl'
 import rtsc from './real-time-stock-ctrl'
 
 voice('初始化.')
+
+console.log(`
+We are using node ${process.versions.node}
+chrome ${process.versions.chrome}
+electron ${process.versions.electron}
+`)
+
+
+
+brick.bootstrap();
 
 // 接收主进程发来的消息
 ipcRenderer.on('view_in_tdx', function (event, msg) {
@@ -104,4 +117,3 @@ ipcRenderer.on('rts_cancel', function (event, arg) {
 });
 
 
-brick.bootstrap();

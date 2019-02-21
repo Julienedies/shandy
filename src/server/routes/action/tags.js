@@ -2,15 +2,11 @@
  * Created by j on 18/7/22.
  */
 
-const fs = require('fs');
-const path = require('path');
-const _ = require('underscore');
-
-const dob = require('../../libs/dob.js');
+import dob from '../../../util/dob.js'
 
 const tags = dob('tags', {convert: function(){
-    var result = {};
-    var list = this.get();
+    let result = {};
+    let list = this.get();
     list.map(function(item){
         let type = item.type;
         let arr = result[type] = result[type] || [];
@@ -19,26 +15,26 @@ const tags = dob('tags', {convert: function(){
     return result;
 }});
 
-module.exports = {
+export default {
 
     tags: tags,
 
     get: function (req, res) {
-        var type = req.params.type;
-        var data = type ? tags.get(type, 'type') : tags.convert();
+        let type = req.params.type;
+        let data = type ? tags.get(type, 'type') : tags.convert();
         res.json(data);
     },
 
     post: function (req, res) {
-        var data = req.body;
-        var type = data.type;
+        let data = req.body;
+        let type = data.type;
         tags.set(data);
         res.send(tags.convert());
     },
 
     del: function (req, res) {
-        var id = req.params.id;
+        let id = req.params.id;
         tags.find(id, 'id').remove();
         res.send(tags.convert());
     }
-};
+}
