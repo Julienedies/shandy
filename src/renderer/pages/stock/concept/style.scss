@@ -1,0 +1,25 @@
+table{
+  border:solid 1px #ccc;
+  tr{
+    &:nth-child(odd){
+      background: #fbf7ce;
+    }
+    &:nth-child(even){
+      background: #ecf5e2;
+    }
+  }
+  td{
+    padding:15px 20px;
+    border:solid 1px #ccc;
+    &:first-child{
+      padding:15px 30px;
+      //font-weight: bold;
+      white-space: nowrap;
+      vertical-align: middle;
+      a{
+        color:inherit;
+      }
+    }
+
+  }
+}

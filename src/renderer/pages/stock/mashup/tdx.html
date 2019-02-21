@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>聚合-嵌入通达信</title>
+    <link rel="import" href="../include/head.html?__inline" />
+    <link rel="stylesheet" href="tdx.scss" />
+</head>
+<body>
+
+<div  ic-ctrl="main_ctrl">
+
+    <div ic-tpl="ajax">
+            <button class="button"
+                    ic-ajax
+                    ic-submit-method="get"
+                    ic-submit-action="/stock/mashup/{{model.code}}"
+                    ic-submit-on-done="done">ajax初始化</button>
+    </div>
+
+    <section ic-tpl="base">
+        <table id="stock" class="table is-bordered">
+            <tr style="white-space: nowrap;">
+                <td> {{model['地域']}}</td>
+                <td>{{model['行业']}} </td>
+                <td>{{model['分类']}} {{model['财务']}}</td>
+                <td>{{model['全名']}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div style="white-space: pre-wrap;">{{model['概念']}}</div>
+                    <div style="white-space: pre-wrap;">{{model['概念y']}}</div>
+                </td>
+                <td colspan="2" style="white-space: pre-wrap;">{{model['产品']}}</td>
+            </tr>
+            <tr>
+                <td colspan="4">{{model['业务']}}</td>
+            </tr>
+        </table>
+    </section>
+
+</div>
+
+<link rel="import" href="../include/scripts.html?__inline" />
+<script src="tdx.js"></script>
+</body>
+</html>

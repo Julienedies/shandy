@@ -1,0 +1,19 @@
+a.no{
+  text-decoration: none!important;
+}
+#logic_list{
+  [ic-ctrl="set_logic_ctrl"]{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:100;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    h6{
+      color:#fff;
+      font-weight: bold;
+    }
+  }
+}

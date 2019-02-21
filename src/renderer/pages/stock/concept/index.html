@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="import" href="../include/head.html?__inline" />
+    <link rel="stylesheet" href="style.scss" />
+</head>
+<body class="column is-10 is-offset-1">
+<div ic-ctrl="main_ctrl">
+    <table class="" ic-tpl="list">
+        <caption>{{model.length}}</caption>
+        <tr ic-for="i,v in model">
+            <td>
+                <i style="opacity: 0.2;">{{i}} . </i>
+                <a href="/public/static/html/stock/c/index.html?code={{v.code}}&edit=1" target="_blank">{{v.name}}</a>
+            </td>
+            <td>{{v.text}}</td>
+        </tr>
+    </table>
+</div>
+
+
+<link rel="import" href="../include/scripts.html?__inline" />
+<script src="main.js"></script>
+</body>
+</html>

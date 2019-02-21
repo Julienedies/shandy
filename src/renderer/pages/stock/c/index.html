@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>code</title>
+    <link rel="import" href="../include/head.html?__inline" />
+    <link rel="stylesheet" href="style.scss" />
+</head>
+<body class="column is-10 is-offset-1">
+
+    <section ic-ctrl="c_ctrl">
+        <ul class="table_0" ic-tpl="c">
+            <li ic-for="i,v in model">
+                <h4>{{i}} :</h4>
+                <div ic-if-start="i=='链接'">
+                    <a ic-href="{{v}}" target="_blank">{{v}}</a>
+                </div>
+                <div ic-else>{{v}}</div>
+            </li>
+        </ul>
+        <div class="buttons is-right">
+            <button class="button is-primary" ic-click="set_c">修改</button>
+        </div>
+    </section>
+
+
+    <section ic-ctrl="set_c_ctrl" ic-tpl="set_c">
+
+            <div class="table_0" ic-form="set_c">
+
+                <div ic-for="i,k in ['行业', '业务', '产品', '概念', '概念y', '概念z', '备注', '链接']">
+                    <h6>{{k}}</h6>
+                    <div class="field" ic-init="v=model[k]">
+                        <textarea rows="{{Math.ceil((v && v.length/40) || 2)}}" class="textarea" ic-form-field="{{k}}">{{v}}</textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <div></div>
+                    <div class="buttons">
+                        <button class="button is-primary"
+                                ic-form-submit
+                                ic-submit-action="/stock/c/{{model.code}}"
+                                ic-submit-on-done="done"
+                                >保存</button>
+
+                        <button class="button is-primary"
+                                ic-click="close"
+                                >关闭</button>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+<link rel="import" href="../include/scripts.html?__inline" />
+<script src="main.js"></script>
+</body>
+</html>

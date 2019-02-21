@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>news</title>
+    <link rel="import" href="../include/head.html?__inline" />
+    <link rel="stylesheet" href="style.scss" />
+</head>
+<body ic-ctrl="main_ctrl">
+<link rel="import" href="../include/tabs.html?__inline" />
+
+<section  class="column is-10 is-offset-1" ic-ctrl="news_ctrl">
+
+    <div class="buttons tags">
+        <button class="button"
+                ic-ajax="news"
+                ic-ajax-auto
+                ic-submit-method="get"
+                ic-submit-action="/stock/news"
+                ic-submit-on-done="done">news</button>
+    </div>
+
+    <ul ic-tpl="news">
+        <li ic-for="i, v in model" class="notification">
+            <div>{{v.text}} - {{v.date}}</div>
+            <button class="delete is-medium"
+                    ic-ajax
+                    ic-submit-method="delete"
+                    ic-submit-action="/stock/news/{{v.id}}"
+                    ic-submit-on-done="removed"></button>
+        </li>
+    </ul>
+
+</section>
+
+<link rel="import" href="../include/scripts.html?__inline" />
+<script src="main.js"></script>
+</body>
+</html>

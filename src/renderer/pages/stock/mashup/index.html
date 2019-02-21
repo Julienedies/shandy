@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>聚合xx</title>
+    <link rel="import" href="../include/head.html?__inline" />
+    <link rel="stylesheet" href="style.scss" />
+</head>
+<body>
+
+<div class="column is-12"  ic-ctrl="main_ctrl">
+
+    <div ic-tpl="ajax">
+            <button class="button"
+                    ic-ajax
+                    ic-submit-method="get"
+                    ic-submit-action="/stock/mashup/{{model.code}}"
+                    ic-submit-on-done="done">ajax初始化</button>
+    </div>
+
+    <section ic-tpl="base">
+        <ul>
+            <li ic-for="i,v in model">
+                <span class="title is-6">{{i}} : </span>
+                <span>{{v}}</span>
+            </li>
+        </ul>
+    </section>
+
+</div>
+
+<link rel="import" href="../include/scripts.html?__inline" />
+<script src="main.js"></script>
+</body>
+</html>

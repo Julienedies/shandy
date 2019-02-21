@@ -1,0 +1,39 @@
+@import "../../../css/basic/0.7/basic.base";
+
+.table_1 {
+  > dd.is-table {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.table_1.is-td {
+  margin: 0;
+  border-top: none;
+  dt, dd {
+    border-left: none;
+  }
+  dd {
+    border-right: none;
+  }
+}
+
+.table_1.a {
+  > dt {
+    color: #fff;
+    background: #446ca1;
+    padding-right: 1em;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    > dd {
+      padding: 0;
+      border: none;
+    }
+  }
+
+}
+
+.table_1.in-td {
+
+}
