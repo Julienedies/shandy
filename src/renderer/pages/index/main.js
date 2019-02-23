@@ -34,8 +34,6 @@ import './count-ctrl.js'
 import view_stock from './view-stock-ctrl'
 import rtsc from './real-time-stock-ctrl'
 
-voice('初始化.')
-
 console.log(`
 We are using node ${process.versions.node}
 chrome ${process.versions.chrome}

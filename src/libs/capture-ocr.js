@@ -3,11 +3,11 @@
  * 截屏, 通过图片ocr识别通达信界面当前股票
  */
 
-const capture = require('./screen-capture.js');
-const ocr = require('./baidu-ocr.js');
-const query = require('./stock-query.js');
+import capture from './screen-capture.js'
+import ocr from './baidu-ocr.js'
+import query from './stock-query.js'
 
-module.exports = function (f) {
+export default function (f) {
 
     var start = +new Date();
     console.time('截图ocr');

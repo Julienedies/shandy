@@ -16,13 +16,15 @@ brick.debug('log');
 
 //brick.set('debug', true);
 
+brick.set('render.wrapModel', true)
+
 brick.reg('main_ctrl', function(){
 
-    var scope = this;
-    var $elm = scope.$elm;
+    let scope = this;
+    let $elm = scope.$elm;
 
     scope.tags_convert = function (data) {
-        var arr = [];
+        let arr = [];
         for (let i in data) {
             arr = arr.concat(data[i]);
         }

@@ -1,0 +1,21 @@
+/*   define mixin
+==========================================================*/
+
+@mixin flex(){
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-radio($radio: auto) {
+  -webkit-box-flex: $radio;
+  -webkit-flex: $radio;
+  flex: $radio;
+}
+
+
+@mixin fz($fz:16rem){
+  font-size:$fz/$fzBase;
+}

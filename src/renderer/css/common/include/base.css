@@ -1,0 +1,130 @@
+/*
+站点基本样式定义
+======================================================
+ */
+html, body {
+    background: #fff;
+    line-height: 1.6;
+    font-size: 14px;
+    #font-family: "Microsoft Yahei", FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+    padding-bottom: 15%!important;
+}
+
+a {
+    color: #4a7cbc;
+    text-decoration: none;
+}
+
+
+
+table {
+    width: 100%;
+}
+
+@media screen and (min-width:360px) {
+
+    body{
+        font-size: 16px;
+    }
+
+}
+
+/*
+交互样式定义
+========================================================
+ */
+
+/*
+通用基本类定义
+=========================================================
+ */
+.ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.none {
+    display: none !important;
+}
+
+.inline {
+    vertical-align: top;
+}
+
+.inline, .inline-list, .inline-list > li, .inline-list-1, .inline-list-1 > li {
+    display: inline-block;
+}
+
+.inline-list {
+    vertical-align: top;
+}
+
+.inline-list li {
+    float: left;
+}
+
+/*垂直对齐，水平对齐 */
+.f-left, .fl {
+    float: left;
+}
+
+.f-right, .fr {
+    float: right;
+}
+
+.v-top, .vt {
+    vertical-align: top;
+}
+
+.v-middle, .vm {
+    vertical-align: middle;
+}
+
+.vb {
+    vertical-align: bottom;
+}
+
+.hl {
+    text-align: left;
+}
+
+.h-center, .hc {
+    text-align: center;
+}
+
+.h-right, .hr {
+    text-align: right;
+}
+
+.clear{
+    clear: both;
+}
+.clear:after{
+    content: '';
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    clear: both;
+}
+/* 强制一行显示 */
+.line {
+    white-space: nowrap;
+}
+
+.t-r {
+    text-align: right !important;
+    direction: rtl;
+}
+/*border background样式定义 */
+.br-1 {
+    border-right: solid 1px #e6e9ed;
+}
+
+.bg-1 {
+    background: #e7edf7;
+}
+
+
+body{
+    padding-bottom:4em;
+}

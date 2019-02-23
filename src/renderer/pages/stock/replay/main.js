@@ -2,13 +2,28 @@
  * Created by j on 18/7/28.
  */
 
+import '../../../css/common/common.scss'
+import './style.scss'
+
+import brick from '@julienedies/brick'
+import '@julienedies/brick/dist/brick.css'
+
+import '../../../js/common.js'
+
+import setTagCtrl from '../tags/set-tag-ctrl'
+import tagsCtrl from '../tags/tags-ctrl'
+
+brick.reg('tags_ctrl', tagsCtrl);
+
+brick.reg('set_tag_ctrl', setTagCtrl);
+
 brick.reg('replay_ctrl', function () {
 
-    var scope = this;
-    var $elm = this.$elm;
+    let scope = this;
+    let $elm = this.$elm;
 
-    var list = brick.services.get('recordManager')();
-    var model;
+    let list = brick.services.get('recordManager')();
+    let model;
 
     scope.get_replay_done = function (data) {
         console.info(data);
@@ -16,7 +31,6 @@ brick.reg('replay_ctrl', function () {
         model = data;
         scope.render('replay', data);
     };
-
 
     scope.replay = {
         before: function (fields){

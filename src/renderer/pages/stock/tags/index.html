@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <title>标签管理</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css" />
     <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body ic-ctrl="main_ctrl">
 
-<link rel="import" href="../include/tabs.html?__inline" />
-
-<section class="column is-10 is-offset-1" ic-ctrl="tags_ctrl">
+    <section class="column is-10 is-offset-1" ic-ctrl="tags_ctrl">
 
     <div class="buttons">
         <button class="button"
@@ -52,57 +51,7 @@
 
 </section>
 
+    ${ require('./set-tag.html')}
 
-<div class="popup" ic-ctrl="set_tag_ctrl" ic-popup="set_tag">
-
-    <div class="column is-10" ic-tpl ic-tpl-init="{}" ic-init="model=model[0]||model">
-
-        <div class="table_0" ic-form="set_tag">
-
-            <div>
-                <h6>标签类型</h6>
-                <div class="field">
-                    <input class="input is-medium" type="text" name="type" value="{{model.type}}" ic-form-field ic-field-rule="required">
-                    <input type="hidden" name="id" ic-form-field  value="{{model.id}}" />
-                </div>
-            </div>
-
-            <div>
-                <h6>标签内容</h6>
-                <div>
-                    <input class="input is-medium" type="text" name="text" value="{{model.text}}" ic-form-field ic-field-rule="required">
-                </div>
-            </div>
-
-            <div>
-                <h6>备注</h6>
-                <div>
-                    <textarea rows="3" class="textarea is-medium" ic-form-field="note">{{model.note}}</textarea>
-                </div>
-            </div>
-
-            <div>
-                <div></div>
-                <div class="buttons">
-                    <button class="button is-primary"
-                            ic-form-submit
-                            ic-submit-action="/stock/tags"
-                            ic-submit-before="before"
-                            ic-submit-on-done="done"
-                    >保存</button>
-                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置 </button>
-                    <button class="button" ic-popup-close style="margin-left:4em;"> 关闭 </button>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<link rel="import" href="../include/scripts.html?__inline" />
-<script src="main.js"></script>
 </body>
 </html>

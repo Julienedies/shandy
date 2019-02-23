@@ -1,0 +1,18 @@
+
+%arrow-btn {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+%icon-img{
+  display: inline-block;
+  width:21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}

@@ -1,0 +1,83 @@
+html,body{
+    font-family:Tahoma,Arial,Roboto,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;
+    line-height: 1.6;
+    font-size:12px;
+    height: 100%;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   -webkit-user-select: none;
+}
+body{
+    font-family: "Helvetica Neue","Verdana","Arial","Hiragino Sans GB","WenQuanYi Micro Hei","Heiti SC",STHeiti,"Microsoft Yahei",SimSun,sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow-x: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+}
+input[type=text],input[type=search],input[type=number],input[type=date],button,textarea{
+    -webkit-appearance: none; /*去除浏览器默认样式*/
+}
+
+label [type=radio], label [type=checkbox]{
+  display: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+  font:inherit;
+}
+
+*{
+  box-sizing: border-box;
+  //-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/**:focus{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-user-modify:read-write-plaintext-only;
+}*/
+
+/*
+常用属性简写定义
+=========================================================
+ */
+
+/*
+常用属性简写定义规则：
+d 属性名display首字母
+-
+f  属性值flex首字母
+example：d-f{display:flex}
+*/
+
+/*
+*/
+.clearfix:after{
+    content: '';
+    display: block;
+    clear:both;
+    height: 0;
+}
+/*
+*/
+.clearfix:after{
+    content: '';
+    display: block;
+    clear:both;
+    height: 0;
+}
+
+/**/
+.line{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.children-pointer-none >* {
+  pointer-events: none;
+}

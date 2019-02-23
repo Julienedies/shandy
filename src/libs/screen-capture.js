@@ -3,15 +3,16 @@
  * @todo 截屏
  */
 
-const electron = require('electron');
+import fs from 'fs'
+import path from 'path'
+import os from 'os'
+
+import electron from 'electron'
+
 const desktopCapturer = electron.desktopCapturer;
 const electronScreen = electron.screen;
 
-const fs = require('fs');
-const path = require('path');
-const os = require('os');
-
-function determineScreenShotSize() {
+function determineScreenShotSize () {
     const screenSize = electronScreen.getPrimaryDisplay().workAreaSize;
     const maxDimension = Math.max(screenSize.width, screenSize.height);
     return {
@@ -26,7 +27,7 @@ function determineScreenShotSize() {
  * @param crop  Object  对截图剪切  {x: 2372,y: 88, width: 200,height: 42}
  * @param callback  Function  处理截屏图片数据回调函数
  */
-module.exports = function(args) {
+export default function (args) {
 
     let thumbSize = determineScreenShotSize();
     let options = {types: ['screen'], thumbnailSize: thumbSize};
@@ -44,11 +45,11 @@ module.exports = function(args) {
 
             if (source.name === 'Entire screen' || source.name === 'Screen 2') {
 
-                if(args.crop){
+                if (args.crop) {
                     img = img.crop(args.crop);
                 }
 
-                if(args.returnType === 'file'){
+                if (args.returnType === 'file') {
                     let img_path = path.join(os.tmpdir(), source.name + '.png');
                     fs.writeFile(img_path, img.toPNG(), function (error) {
                         if (error) {
@@ -58,7 +59,7 @@ module.exports = function(args) {
                     })
                 }
 
-                if(args.returnType === 'dataUrl'){
+                if (args.returnType === 'dataUrl') {
                     let dataUrl = img.toDataURL();
                     args.callback(dataUrl);
                 }
@@ -67,5 +68,5 @@ module.exports = function(args) {
         });
     });
 
-};
+}
 

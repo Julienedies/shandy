@@ -18,18 +18,16 @@ schedule(function createVoiceWarningWindow() {
 brick.reg('voice_warning_ctrl', function (scope) {
 
     scope.open_voice_warning = function () {
-        //bw('http://localhost:2018/public/static/html/stock/plan/index/');
-        console.log(333,Win.resolve('warn.html'))
         let winCtrl = new Win('warn.html');
         winCtrl.maximize();
         winCtrl.dev();
     };
 
     scope.get_token = function(){
-        require('../../../libs/get-baidu-token.js');
+
     };
 
-    var news_win;
+    let news_win;
 
     scope.news = function () {
         if (news_win) {

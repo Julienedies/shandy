@@ -1,0 +1,60 @@
+@import "include/layout";
+@import "include/components";
+
+body {
+  padding: 10px 15px 15px 15px;
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #202020;
+  font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
+  &::-webkit-scrollbar {
+    //width: 0 !important;
+    //display: none;
+  }
+}
+
+.textarea{
+  min-height:1rem;
+  overflow-y: visible;
+}
+
+.icon > .far {
+  opacity: 0.1;
+}
+
+.tag.is-medium.is-delete{
+  opacity: 0.3;
+}
+
+label.radio {
+  font-size: 1.2em;
+  vertical-align: -0.5em;
+}
+
+.none {
+  display: none !important;
+}
+
+.pre {
+  white-space: pre-wrap;
+}
+
+.tar {
+  text-align: right;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// bulma 重写
+
+.notification {
+  margin-bottom: 0.8rem!important;
+  padding-bottom:0.5rem;
+  background: #f5edd0; //fff1e5
+}

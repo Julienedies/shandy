@@ -1,6 +1,14 @@
 /*!
  * Created by j on 18/9/20.
  */
+import '../../../css/common/common.scss'
+import './style.scss'
+
+import $ from 'jquery'
+import brick from '@julienedies/brick'
+import '@julienedies/brick/dist/brick.css'
+
+import '../../../js/common.js'
 
 brick.reg('c_ctrl', function(){
 
@@ -40,7 +48,7 @@ brick.reg('set_c_ctrl', function(){
 
     var scope = this;
 
-    if(window.screen.screenLeft >= 1700 || window.innerWidth == 1200) {
+    if(window.screen.screenLeft >= 1700 || window.innerWidth === 1200) {
 
         scope.done = function(data){
             window.close();

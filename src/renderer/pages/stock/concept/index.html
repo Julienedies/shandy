@@ -2,10 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="import" href="../include/head.html?__inline" />
-    <link rel="stylesheet" href="style.scss" />
+    <title>概念</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
+    <script src="/set_node_modules_path.js"></script>
 </head>
+
 <body class="column is-10 is-offset-1">
 <div ic-ctrl="main_ctrl">
     <table class="" ic-tpl="list">
@@ -13,15 +16,12 @@
         <tr ic-for="i,v in model">
             <td>
                 <i style="opacity: 0.2;">{{i}} . </i>
-                <a href="/public/static/html/stock/c/index.html?code={{v.code}}&edit=1" target="_blank">{{v.name}}</a>
+                <a href="/stock_c.html?code={{v.code}}&edit=1" target="_blank">{{v.name}}</a>
             </td>
             <td>{{v.text}}</td>
         </tr>
     </table>
 </div>
 
-
-<link rel="import" href="../include/scripts.html?__inline" />
-<script src="main.js"></script>
 </body>
 </html>

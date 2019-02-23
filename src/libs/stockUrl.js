@@ -8,17 +8,17 @@
  * @param code String 股票代码
  * @param flag Number url映射
  */
-module.exports = function(code, flag){
+export default function (code, flag) {
     let prefix_code = (/^6/.test(code) ? 'sh' : 'sz') + code;
     let url;
 
-    switch (flag){
+    switch (flag) {
         case 0 :
-            return `http://localhost:2018/public/static/html/stock/c/index.html?code=${code}`;
+            return `http://localhost:2018/public/static/html/stock/c/index.html?code=${ code }`;
         case 1 :
             return 'http://basic.10jqka.com.cn/*/company.html'.replace('*', code);
         case 2 :
-            return 'http://basic.10jqka.com.cn/*/'.replace('*', code );
+            return 'http://basic.10jqka.com.cn/*/'.replace('*', code);
         case 3 :
             return 'http://www.yuncaijing.com/quote/*.html'.replace('*', prefix_code);
         case 4 :
@@ -30,6 +30,6 @@ module.exports = function(code, flag){
         case 7 :
             return 'http://www.yuncaijing.com/quote/*.html'.replace('*', prefix_code);
         default :
-            return 'http://basic.10jqka.com.cn/*/'.replace('*', code );
+            return 'http://basic.10jqka.com.cn/*/'.replace('*', code);
     }
-};
+}

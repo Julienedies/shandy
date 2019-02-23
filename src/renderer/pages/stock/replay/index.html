@@ -3,18 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <title>复盘</title>
-    <link rel="import" href="../include/head.html?__inline" />
-    <link rel="stylesheet" href="style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
+    <script src="/set_node_modules_path.js"></script>
 </head>
 <body id="logic_list" ic-ctrl="main_ctrl">
-<link rel="import" href="../include/tabs.html?__inline" />
 
-<link rel="import" href="replay-ctrl.html?__inline" />
-<link rel="import" href="../tags/set-tag-ctrl.html?__inline" />
+    <section class="column is-10 is-offset-1" ic-ctrl="replay_ctrl">
 
-<link rel="import" href="../include/scripts.html?__inline" />
-<script src="main.js"></script>
-<script src="../tags/tags-ctrl.js"></script>
-<script src="../tags/set-tag-ctrl.js"></script>
+    <button class="button none"
+            id="get_replay"
+            ic-ajax="get_replay"
+            ic-ajax-auto
+            ic-submit-method="get"
+            ic-submit-action="/stock/replay"
+            ic-submit-on-done="get_replay_done">大盘复盘</button>
+
+    <div ic-tpl="replay">
+
+        <div class="table_0" ic-form="replay" ic-init="replay=model.replay;tags=model.tags">
+
+            <div>
+                <h6>思考</h6>
+                <div class="tags">
+                    <span class="tag is-medium is-black">明确具体的复盘</span>
+                    <span class="tag is-medium is-black">哪些在涨?</span>
+                    <span class="tag is-medium is-black">哪些在跌?</span>
+                    <span class="tag is-medium is-black">交易逻辑</span>
+                    <span class="tag is-medium is-black">交易系统</span>
+                </div>
+            </div>
+
+            <div>
+                <h6>大盘状态</h6>
+                <div class="field is-grouped is-grouped-multiline" ic-select="大盘状态" ic-form-field="大盘状态">
+                    <div class="control" ic-for="i,v in tags['大盘状态']">
+                        <div class="tags has-addons">
+                            <span ic-select-item ic-class="tag is-medium {{replay['大盘状态'] == v.text ? 'is-warning':''}}" ic-val="{{v.text}}">{{v.text}}</span>
+                            <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
+                                <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                            </a>
+                            <a class="tag is-delete is-medium"
+                               ic-ajax
+                               ic-submit-data="{{v.text}}"
+                               ic-submit-method="delete"
+                               ic-submit-action="/stock/tags/{{v.id}}"
+                               ic-submit-on-done="tag_remove_done"
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <a class="tag is-medium" ic-click="tag_add:大盘状态">
+                            <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h6>主线风口</h6>
+                <div class="field is-grouped is-grouped-multiline" ic-select="主线风口" ic-select-type="checkbox" ic-form-field="主线风口">
+                    <div class="control" ic-for="i,v in tags['主线风口']">
+                        <div class="tags has-addons">
+                            <span ic-select-item ic-class="tag is-medium" ic-val="{{v.text}}" ic-has-selected="replay['主线风口'].indexOf(v.text)>-1">{{v.text}}</span>
+                            <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
+                                <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                            </a>
+                            <a class="tag is-delete is-medium"
+                               ic-ajax
+                               ic-submit-method="delete"
+                               ic-submit-action="/stock/tags/{{v.id}}"
+                               ic-submit-on-done="tag_remove_done"
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <a class="tag is-medium" ic-click="tag_add:主线风口">
+                            <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h6>市场情绪</h6>
+                <div class="field is-grouped is-grouped-multiline" ic-select="市场情绪" ic-form-field="市场情绪">
+                    <div class="control" ic-for="i,v in tags['市场情绪']">
+                        <div class="tags has-addons">
+                            <span ic-select-item ic-class="tag is-medium {{replay['市场情绪'] == v.text ? 'is-warning':''}}" ic-val="{{v.text}}">{{v.text}}</span>
+                            <a class="tag is-delete is-medium"
+                               ic-ajax
+                               ic-submit-data="{{v.text}}"
+                               ic-submit-method="delete"
+                               ic-submit-action="/stock/tags/{{v.id}}"
+                               ic-submit-on-done="tag_remove_done"
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <a class="tag is-medium" ic-click="tag_add:市场情绪">
+                            <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h6>K线预判</h6>
+                <div>
+                    <div class="field is-grouped is-grouped-multiline" ic-select="K线预判" ic-form-field="K线预判">
+                        <div class="control" ic-for="i,v in tags['K线']">
+                            <div class="tags has-addons">
+                                <span ic-select-item ic-class="tag is-medium {{replay['K线预判'] == v.text ? 'is-warning':''}}" ic-val="{{v.text}}">{{v.text}}</span>
+                                <a class="tag is-delete is-medium"
+                                   ic-ajax
+                                   ic-submit-data="{{v.text}}"
+                                   ic-submit-method="delete"
+                                   ic-submit-action="/stock/tags/{{v.id}}"
+                                   ic-submit-on-done="tag_remove_done"
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <a class="tag is-medium" ic-click="tag_add:K线">
+                                <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h6>多空博弈</h6>
+                <div class="field">
+                    <div class="control">
+                        <textarea class="textarea is-medium" ic-form-field="多空博弈" rows="2">{{replay['多空博弈']}}</textarea>
+                    </div>
+                    <p class="help is-danger">持币者的买入意愿? 持股者的卖出意愿? 谁的力量更大?</p>
+                </div>
+            </div>
+
+            <div>
+                <h6>热钱方向</h6>
+                <div class="field">
+                    <div class="control">
+                        <input class="input is-medium" type="text" name="热钱方向" value="{{replay['热钱方向']}}" ic-form-field>
+                    </div>
+                    <p class="help is-danger"></p>
+                </div>
+            </div>
+
+            <div>
+                <h6>复盘汇总</h6>
+                <div>
+                    <div class="control">
+                        <textarea class="textarea is-medium" ic-form-field="复盘汇总" rows="7">{{replay['复盘汇总']}}</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h6>预判</h6>
+                <div>
+                    <div class="control">
+                        <textarea class="textarea is-medium" ic-form-field="预判" rows="4">{{replay['预判']}}</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h6></h6>
+                <div>
+                    <div class="buttons">
+                        <button class="button is-primary"
+                                ic-form-submit="replay"
+                                ic-submit-action="/stock/replay"
+                                ic-submit-before="replay.before"
+                                ic-submit-on-done="replay.done"
+                        >
+                            保存
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    ${ require('../tags/set-tag.html') }
+
 </body>
 </html>

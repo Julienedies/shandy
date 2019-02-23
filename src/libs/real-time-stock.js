@@ -3,7 +3,6 @@
  */
 
 import request from 'request'
-import schedule from 'node-schedule'
 import iconv from 'iconv-lite'
 import _ from 'lodash'
 
@@ -13,36 +12,40 @@ import _ from 'lodash'
  * @param callback  行情数据接收处理回调函数
  * @constructor
  */
-function Rts(code, callback) {
-    let _opt = {};
-    if (typeof code == 'object') {
 
-        let opt = code;
-        Object.assign(this, _opt, opt);
-        code = opt.code;
-        callback = this.callback;
-        let api = this.stock_api;
-        if (api === 'qq' || api === 'sina') {
-            this.stock_api = this[api];
+class Rts {
+    constructor (code, callback){
+        let _opt = {};
+        if (typeof code == 'object') {
+
+            let opt = code;
+            Object.assign(this, _opt, opt);
+            code = opt.code;
+            callback = this.callback;
+            let api = this.stock_api;
+            if (api === 'qq' || api === 'sina') {
+                this.stock_api = this[api];
+            }
+
+            this.codes = this._codes(code);
+            this.update();
+
+        } else if (code === 'qq' || code === 'sina') {
+
+            this.stock_api = this[code];
+            this.callback = callback;
+
+        } else {
+
+            this.codes = this._codes(code);
+            this.callback = callback;
+            this.update();
+
         }
-
-        this.codes = this._codes(code);
-        this.update();
-
-    } else if (code === 'qq' || code === 'sina') {
-
-        this.stock_api = this[code];
-        this.callback = callback;
-
-    } else {
-
-        this.codes = this._codes(code);
-        this.callback = callback;
-        this.update();
-
     }
 
 }
+
 
 Rts.prototype = {
     codes: [],

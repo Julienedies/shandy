@@ -2,12 +2,21 @@
  * Created by j on 18/11/25.
  */
 
-brick.reg('main_ctrl', function(){
-    var scope = this;
-    var $elm = this.$elm;
+import '../../../css/common/common.scss'
+import './style.scss'
 
-    var query = brick.utils.get_query() || {};
-    var name = query.name;
+import $ from 'jquery'
+import brick from '@julienedies/brick'
+import '@julienedies/brick/dist/brick.css'
+
+import '../../../js/common.js'
+
+brick.reg('main_ctrl', function(){
+    let scope = this;
+    let $elm = this.$elm;
+
+    let query = brick.utils.get_query() || {};
+    let name = query.name;
 
     $('title').text(name);
 

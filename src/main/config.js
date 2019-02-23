@@ -11,9 +11,9 @@ const LOAD_PROTOCOL = `http://localhost:${SERVER_PORT}`
 const ROOT_DIR = path.resolve(__dirname, '../../')
 const DATA_DIR = path.join(ROOT_DIR, './data/')
 const CSD_DIR = path.join(DATA_DIR, './csd/')
-const STATIC_DIR = path.join(ROOT_DIR, './web/')
+const STATIC_DIR = path.join(ROOT_DIR, './static/')
 
-const HTML_DIR = path.resolve(__dirname, '../renderer/')
+const HTML_DIR = path.resolve(__dirname, './')
 
 export default {
     ROOT_DIR,

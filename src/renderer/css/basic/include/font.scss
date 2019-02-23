@@ -1,0 +1,135 @@
+/*
+字体样式定义
+=========================================================
+ */
+
+
+/*
+定义字体颜色
+字体颜色   r: red; b: blue; y: yellow; g: green; w: white; k: black & gray;
+fc -> color
+w - > 颜色前缀
+1 - > 同颜色区分，值越大，颜色越深
+*/
+.fc-w{
+    color: #FFFFFF;
+}
+
+.fc-r1{
+    color: #fc6e51;
+}
+.fc-b1{
+    color: #549efd;
+}
+/* b 蓝色 */
+.fc-b4{
+    color: #0daed4;
+}
+
+/* y 黄色 */
+.fc-y4{
+    color:#f6ad01;
+}
+.fc-y5{
+    color: #f6ad00;
+}
+
+/* k 各种灰色 数字越大，颜色越深 */
+
+.fc-k3{
+    color:#cccccc;
+}
+.fc-k4{
+    color: #969090;
+}
+.fc-k41{
+    color:#7a7a7a
+}
+.fc-k5{
+    color:#696969;
+}
+
+
+.fc-k7 {
+    color: #696969;
+}
+/*
+定义字体大小,相对于父元素
+fz -> font-size
+x - > 区分 em rem
+8 -> 8/10 em
+*/
+
+.fz-x6 {
+    font-size: 0.6em;
+}
+.fz-x8 {
+    font-size: 0.8em;
+}
+.fz-x12 {
+    font-size: 1.2em;
+}
+.fz-x14 {
+    font-size: 1.4em;
+}
+/*
+定义字体大小比例，相对于根元素字体设置
+fz -> font-size
+6  -> 6/10rem
+
+*/
+.fz-6{
+    font-size:0.6rem;
+}
+.fz-8{
+    font-size:0.8rem;
+}
+.fz-12{
+    font-size: 1.2rem;
+}
+.fz-14{
+    font-size: 1.4rem;
+}
+.fz-15{
+    font-size: 1.5rem;
+}
+.fz-16{
+    font-size: 1.6rem;
+}
+.fz-20{
+    font-size:2rem;
+}
+.fz-22{
+    font-size:2.2rem;
+}
+.fz-24{
+    font-size: 2.4rem;
+}
+.fz-26{
+    font-size:2.6rem;
+}
+.fz-28{
+    font-size:2.8rem;
+}
+.fz-30{
+    font-size:3rem;
+}
+.fz-32{
+    font-size:3.2rem;
+}
+.fz-36{
+    font-size:3.6rem;
+}
+.fz-40{
+    font-size:4rem;
+}
+/*
+t    为前缀；
+-18  字体大小
+-0   字体样式   0 ： normal； 1： bold;
+-r1  字体颜色   r: red; b: blue; y: yellow; g: green; w: white; k: black; a: gray;
+*/
+
+.fz-s{
+    font-size:0.8em;
+}

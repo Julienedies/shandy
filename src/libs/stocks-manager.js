@@ -3,13 +3,13 @@
  * 股票管理器
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs'
+import path from 'path'
 
 const json_file = '../../data/csd/stocks.json';
 let stocks = require('../../data/csd/stocks.json');
 
-module.exports = {
+export default {
 
     /**
      * @return {Array}

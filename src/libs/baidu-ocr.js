@@ -3,19 +3,19 @@
  * 调用百度ocr api 图片识别文字
  */
 
-const https = require('https');
-const qs = require('querystring');
+import https from 'https'
+import qs from 'querystring'
 
-const config = require('../../config.json');
+import config from '../../config.json'
 
-const access_token = config.api.baidu.ocr.access_token;
+let access_token = config.api.baidu.ocr.access_token;
 
 /*
  * @param args Object 参数选项 args => { image: dataUrl, callback: Function  }
  * @param image  String   图片base64编码  or 图片file地址
  * @param callback Function  ocr回调函数，接受一个从图片识别出来的字符串参数
  */
-module.exports = function ocr(args) {
+export default function ocr(args) {
 
     let param = qs.stringify({
         'access_token': access_token

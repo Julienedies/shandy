@@ -3,14 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>logic</title>
-    <link rel="import" href="../include/head.html?__inline" />
 </head>
 <body>
-<link rel="import" href="../include/tabs.html?__inline" />
 
-<link rel="import" href="set-logic-ctrl.html?__inline" />
+<div ic-ctrl="set_logic_ctrl" ic-popup="set_logic">
 
-<link rel="import" href="../include/scripts.html?__inline" />
-<script src="main.js"></script>
+    <div class="column is-10" ic-tpl ic-tpl-init="{}">
+
+        <div class="table_0" ic-form="set_logic">
+
+            <!-- tr -->
+            <div>
+                <h6>逻辑</h6>
+                <div>
+                    <textarea rows="12" class="textarea is-medium" ic-form-field="text" ic-field-rule="required">{{model.text}}</textarea>
+                    <input type="hidden" name="id" ic-form-field  value="{{model.id}}" />
+                </div>
+            </div>
+
+            <!-- tr -->
+            <div>
+                <h6>类型</h6>
+                <div class="control">
+                    <input type="text" class="input is-medium" ic-form-field="type" ic-field-rule="required" value="{{model.type}}" />
+                </div>
+            </div>
+
+            <!-- tr -->
+            <div>
+                <h6>类型</h6>
+                <div>
+                    <div class="tags" ic-select="logic_type" ic-select-on-change="on_select_change">
+                        <span ic-for="i,v in ['市场', '控制', '操作']" ic-class="tag is-large" ic-val="{{v}}">
+                            {{v}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- tr -->
+            <div>
+                <div></div>
+                <div class="buttons">
+                    <button class="button is-primary"
+                            ic-form-submit
+                            ic-submit-action="/stock/logic"
+                            ic-submit-before
+                            ic-submit-on-done="done"
+                    >保存</button>
+                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置 </button>
+                    <button class="button" ic-popup-close style="margin-left:4em;"> 关闭 </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
 </body>
 </html>

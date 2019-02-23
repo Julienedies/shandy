@@ -1,8 +1,8 @@
 /*!
  * Created by j on 18/9/14.
  */
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs'
+import path from 'path'
 
 /**
  * 递归遍历目录
@@ -40,7 +40,7 @@ function recurve(filePath, callback) {
 
 }
 
-module.exports = function (filePath, callback) {
+export default function (filePath, callback) {
 
     let stat = fs.statSync(filePath);
 
@@ -54,4 +54,4 @@ module.exports = function (filePath, callback) {
 
     }
 
-};
+}

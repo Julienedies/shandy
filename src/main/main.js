@@ -39,8 +39,8 @@ function createWindow () {
     mainWindow = new BrowserWindow(windowOptions);
 
     if (/^file:\/\//.test(config.LOAD_PROTOCOL)) {
-        console.log(`file://${ path.resolve(__dirname, '../renderer/index.html') }`)
-        mainWindow.loadURL(`file://${ path.resolve(__dirname, '../renderer/index.html') }`);
+        console.log(`file://${ path.resolve(__dirname, './index.html') }`)
+        mainWindow.loadURL(`file://${ path.resolve(__dirname, './index.html') }`);
     } else {
         mainWindow.loadURL(`${ config.LOAD_PROTOCOL }/index.html`);
     }

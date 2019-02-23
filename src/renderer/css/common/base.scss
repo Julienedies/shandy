@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/*
+body {
+    line-height: 2;
+    font-size: 1em;
+    font-family: 'Segoe UI', Arial, 'Microsoft Yahei', 'Simsun', 'sans-serif';
+}*/
+
+html,body{
+    min-height: 100%;
+    background: url(img/bg3.png) repeat 0 0;
+}
+body{
+    color:#000;
+}
+.disabled {
+    opacity: 0.4;
+    background: rgb(170,170,170);
+}
+
+.f-red {
+    color: red;
+}
+
+.t-r {
+    text-align: right !important;
+    direction: rtl;
+}
+
+.wraper-4 {
+    padding: 0 0 40em 0;
+}
+
+.wraper-4:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.bg-4 {
+    background: url(img/bg3.png) repeat 0 0;
+}
+
+.bg-3 {
+    background: url(img/bg31.png) repeat 0 0;
+}
+
+.list-4 {
+    display: inline-block;
+    margin-right: 41px;
+    float: left;
+}
+
+.list-4 li {
+    list-style: none;
+    height: 21px;
+    overflow: hidden;
+}
+
+.list-4 em, .as-tr > * {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    line-height: 22px;
+    text-align: center;
+    font-style: normal;
+    overflow: hidden;
+}
+
+.list-3 {
+
+}
+
+.list-3 li {
+    display: inline-block;
+    height: auto;
+    width: 36px;
+    vertical-align : top;
+}
+.list-3.v-bottom li{
+    vertical-align : bottom;
+}
+
+.list-3 i {
+    position: fixed;
+    top: 0;
+    background: #54971e;
+    color: #fff;
+    width: 35px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.list-3 em {
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-style: normal;
+    margin: 1px 0 0 1px;
+    float: left;
+}
+
+
+#menuBox{
+    position:fixed;
+    left:0;
+    bottom:0;
+    min-width:4em;
+    min-height:2em;
+    padding:0.5em;
+    background: rgba(160,160,160,0.4);
+}
+
+
+.input-x{
+    position:absolute;
+    width:40px;
+    height:20px;
+    border:none;
+    background:transparent;
+    margin:1px 0 0 1px;
+    text-align: center;
+    line-height: 20px;
+    transition: all 0.3s ease-in;
+}
+
+.input-x:focus, .input-x:hover{
+    background: blue!important;
+    color: #fff;
+}
+
+.highlight, .highlight em{
+    color:#fff;
+    background: rgb(192, 0, 0);
+    font-weight: bold;
+}

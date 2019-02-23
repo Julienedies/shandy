@@ -21,7 +21,8 @@ const io = socket(httpServer, {
 const EventEmitter = _events.EventEmitter;
 const events = new EventEmitter();
 
-const static_dir = path.resolve(__dirname, '../renderer')
+const staticDir = path.resolve(__dirname, './')
+const webStaticDir = path.resolve(__dirname, '../web')
 
 // 上行请求体解析
 app.use(bodyParser.json({limit: '50mb'}));
@@ -39,11 +40,8 @@ app.get('/set_node_modules_path.js', function (req, res) {
     `)
 })
 
-app.get('/news', function (req, res) {
-    res.sendFile(__dirname + '/news.html');
-});
-
-app.use(express.static(static_dir))
+app.use('/web/', express.static(webStaticDir))
+app.use(express.static(staticDir))
 
 route(app)
 //////////////////////////////////////////////////////////////////////////////////////////////

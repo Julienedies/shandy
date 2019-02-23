@@ -3,16 +3,18 @@
  * 获取百度ocr api access_token
  */
 
-const https = require('https');
-const qs = require('querystring');
+import https from 'https'
+import qs from 'querystring'
 
-const config = require('../../config.json');
+import config from '../../config.json'
 
-const co = require('./json-crud.js')('../config.json');
+import jsonCrud from './json-crud'
+
+const co = jsonCrud('../config.json');
 
 const param = qs.stringify(config.api.baidu.ocr.param);
 
-module.exports = function(callback){
+export default function (callback) {
 
     https.get(
         {
@@ -44,4 +46,4 @@ module.exports = function(callback){
         }
     );
 
-};
+}

@@ -1,0 +1,106 @@
+//list view
+.list-a {
+  background: #fff;
+  >li{
+    border-bottom: solid 1px #cecece;
+  }
+  > li.msg {
+    padding: 15px;
+    text-align: center;
+    >a{
+      display: block;
+      border:none;
+    }
+  }
+  > li >a {
+    @include flex();
+    width:100%;
+    padding: 10px;
+    color: #333;
+    > div:nth-child(1) {
+      padding-right: 10px;
+      img {
+        width: 90px;
+        max-height:90px;
+      }
+    }
+    > div:nth-child(2) {
+      @include flex-1();
+      > .title {
+        @include fz-rem(28);
+        @include line-clamp(2);
+        color: #333;
+      }
+      .tags {
+        min-height: 1.2em;
+        margin:5px 0;
+        color: #2AA3CE;
+        .tag {
+          display: inline-block;
+          margin: 3px 1px;
+          padding: 1px 3px;
+          border: solid #2AA3CE 1px;
+          border-radius: 0.2em;
+          font-size: 0.8em;
+        }
+      }
+      .price {
+        margin:5px 0 0 0;
+        font-family: STHeiti,Helvetica Neue,Heiti SC,"Microsoft YaHei","微软雅黑",Arial,Helvetica,sans-serif;
+        font-size: 0.8em;
+        > span >span {
+          @include fz-rem(32);
+          color: #fc6e51;
+        }
+        del{
+          color: #9F9F9F!important;
+          font-size:1.4em;
+        }
+      }
+    }
+  }
+}
+
+.list-a.list-handle{
+  >li {
+    position: relative;
+    >a{
+      position: relative;
+      z-index: 2;
+      background: #fff;
+      transition:left 0.3s ease-in-out;
+      .price *{
+        color:#f6ad00!important;
+      }
+      .title+.price{
+        padding-top:1.6em;
+      }
+    }
+    >.handle{
+      @extend .flex-middle;
+      position: absolute;
+      top:0;
+      bottom:0;
+      right:0;
+      background:#ECEBEB;
+      z-index: 0;
+    }
+  }
+
+}
+
+.list-select-a{
+  >li, >.select-list-item{
+    @extend .flex-middle;
+    padding:$page-padding-left;
+    border-bottom:solid 1px #cfcfcf;
+
+    >*:first-child{
+      @include flex-1();
+    }
+    >*:nth-child(2){
+      @include flex-radio(0 0 50px);
+      text-align: right;
+    }
+  }
+}

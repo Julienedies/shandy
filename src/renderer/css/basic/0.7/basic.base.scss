@@ -1,0 +1,190 @@
+/*!
+ * scss scaffold basic by Julien.
+ * https://github.com/julienedies/basic.git
+ * https://github.com/Julienedies/basic/wiki
+ */
+
+/*    scss变量定义
+==========================================================*/
+$y5: #ff9900;
+$b5: #00acd5;
+$k5: #d7d7d7;
+
+$k4: #f0f0f0;
+$k6: #818181;
+$k7: #656565;
+//
+$fzBase: 14;
+
+$countRemBase : 22;
+
+$xem: 0.0625rem;
+
+/*   define mixin
+==========================================================*/
+
+@mixin css3flex(){
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex(){
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex-radio($radio: none) {
+  -webkit-box-flex: $radio;
+  -webkit-flex: $radio;
+  flex: $radio;
+}
+
+@mixin flex-auto() {
+  -webkit-box-flex: 1 auto;
+  -webkit-flex: 1 auto;
+  flex: 1 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+}
+
+//处理android兼容
+@mixin flex-1() {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+
+@mixin fz($fz:16rem){
+  font-size:$fz/$fzBase;
+}
+
+@mixin fz-rem($fz:12){
+  font-size:$fz/$countRemBase * 1rem;
+}
+
+@mixin width-rem($size){
+  width:$size/$countRemBase * 1rem;
+}
+
+
+@mixin linear-gradient($from, $to) {
+  /* Fallback for sad browsers */
+  background-color: $to;
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient($from, $to);
+  /* Opera */
+  background-image: -o-linear-gradient($from, $to);
+  /* WebKit (Chrome 11+) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+  /* WebKit (Safari 5.1+, Chrome 10+) */
+  background-image: -webkit-linear-gradient($from, $to);
+  /* IE10 */
+  background-image: -ms-linear-gradient($from, $to);
+  /* W3C */
+  background-image: linear-gradient($from, $to);
+}
+
+
+@mixin overflow-scroll(){
+  overflow-x: hidden;
+  overflow-y: scroll;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin line-clamp($line:2){
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  //-webkit-flex-direction:column;
+  //flex-direction:column;
+  overflow : hidden;
+  text-overflow: ellipsis;
+}
+/*    define extend
+==========================================================*/
+
+.select-none{
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+}
+
+.__flex, .flex{
+  @include css3flex;
+}
+
+.flex-1{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.flex-middle{
+  @extend .__flex;
+  -webkit-box-align:center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.flex-center{
+  @extend .__flex;
+  -webkit-box-pack:center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flex-justify{
+  @extend .__flex;
+  -webkit-box-pack:justify;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+}
+
+.flex-right{
+  @extend .__flex;
+  -webkit-box-pack:end;
+  -webkit-justify-content:flex-end;
+  justify-content:flex-end;
+}
+
+.flex-end{
+   @extend .__flex;
+   -webkit-box-align:end;
+   -webkit-align-items:flex-end;
+   align-items:flex-end;
+ }
+.flex-start{
+  @extend .__flex;
+  -webkit-box-align:start;
+  -webkit-align-items:flex-start;
+  align-items:flex-start;
+}
+
+.flex-mc{
+  @extend .__flex;
+  @extend .flex-middle;
+  @extend .flex-center;
+}
+
+.flex-mj{
+  @extend .__flex;
+  @extend .flex-middle;
+  @extend .flex-justify;
+}
+
+.flex-mr{
+  @extend .__flex;
+  @extend .flex-middle;
+  @extend .flex-right;
+}
+
+

@@ -3,8 +3,8 @@
  * 把json文件包装成对象进行增删改查
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs'
+import path from 'path'
 
 
 function F(json_file) {
@@ -41,6 +41,6 @@ F.prototype.get = function (key) {
 };
 
 
-module.exports = function (json_file) {
+export default function (json_file) {
     return new F(json_file);
-};
+}
