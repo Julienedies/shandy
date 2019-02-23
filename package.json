@@ -10,9 +10,11 @@
     "pro:main": "cross-env NODE_ENV=production webpack --config .build/webpack/main.config.js",
     "pro:renderer": "cross-env NODE_ENV=production webpack --config .build/webpack/renderer.config.js",
     "pro": "npm run pro:main && npm run pro:renderer && npm run start",
-    "web:dev": "cross-env NODE_ENV=develoment webpack --config .build/webpack/renderer.config.js --watch",
-    "web:pro": "cross-env NODE_ENV=production webpack --config .build/webpack/renderer.config.js",
-    "start": "electron ./dist/main/main.js",
+    "web": "npm run web:dev && npm run start:web",
+    "web:dev": "cross-env NODE_ENV=develoment webpack --config .build/webpack/web.config.js --watch",
+    "web:pro": "cross-env NODE_ENV=production webpack --config .build/webpack/web.config.js",
+    "start": "electron ./dist/electron/main.js",
+    "start:web": "node ./dist/web/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

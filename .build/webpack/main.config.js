@@ -22,7 +22,7 @@ let mainConfig = {
     output: {
         filename: '[name].js',
         libraryTarget: 'commonjs2',
-        path: path.join(__dirname, '../../dist/main')
+        path: path.join(__dirname, '../../dist/electron')
     },
     externals: [
         ...Object.keys(dependencies || {})
@@ -59,7 +59,6 @@ let mainConfig = {
         extensions: ['.js', '.json', '.node']
     }
 }
-
 
 if (process.env.NODE_ENV !== 'production') {
     mainConfig.plugins.push(

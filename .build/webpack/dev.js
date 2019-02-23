@@ -166,7 +166,7 @@ function startRenderer () {
 function startElectron () {
     let args = [
         '--inspect=5858',
-        path.join(__dirname, '../../dist/main/main.js')
+        path.join(__dirname, '../../dist/electron/main.js')
     ]
 
     if (process.env.npm_execpath.endsWith('yarn.js')) {

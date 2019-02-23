@@ -23,38 +23,29 @@ const isPro = process.env.NODE_ENV === 'production'
 
 const publicPath = ''
 const projectRoot = path.resolve(__dirname, '../../')
-const outputPath = path.resolve(__dirname, '../../dist/renderer')
+const outputPath = path.resolve(__dirname, '../../dist/electron')
 const context = path.resolve(__dirname, '../../src')
 
 const nodeSassIncludePaths = [path.resolve(__dirname, '../../')]
 
-const entryHtml = glob.sync(path.join(context, 'renderer/pages/+(Xnote)/**index.html')) || []
-const entryJsHtml = glob.sync(path.join(context, 'renderer/pages/!(stock|note)/**index.html')) || []
-const entryJs = glob.sync(path.join(context, 'renderer/pages/!(stock)/**main.js')) || []
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 const entry = {}
+
+const entryJs = glob.sync(path.join(context, 'renderer/pages/**/main.js')) || []
 
 let pages = entryJs.map((entryJsPath) => {
     let arr = entryJsPath.match(/pages\/(.+)\/main\.js$/i)
     let name = arr[1].replace('/', '_')
     let htmlPath = entryJsPath.replace(/main\.js$/i, 'index.html')
-
     entry[name] = [entryJsPath]
-
     return new HtmlPlugin({
         template: htmlPath,
         filename: `${ name }.html`,
         chunks: [name],
     })
 })
-entryHtml.forEach((htmlPath) => {
-    let arr = htmlPath.match(/renderer\/pages\/((.+)\/index\.html)$/)
-    let name = arr[1]
-    //entry[name] = htmlPath
-})
 
-console.log(entryHtml)
-//console.log(pages)
 
 const plugins = [
     ...pages,
@@ -65,7 +56,7 @@ const plugins = [
         filename: '[name].css',
         chunkFilename: '[name].css'
     }),
-    new CleanPlugin([`dist/renderer`], {
+    new CleanPlugin([`dist/electron`], {
         root: projectRoot
     })
 ]
@@ -77,6 +68,7 @@ let cssLoader = {
         publicPath: publicPath
     }
 }
+
 
 if (isPro) {
 
@@ -91,8 +83,9 @@ if (isPro) {
     plugins.push(new webpack.HotModuleReplacementPlugin())
 }
 
-
 console.log(entry)
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 const config = {
     //context,  // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和 loader
@@ -142,7 +135,7 @@ const config = {
                 ]
             },
             {
-                test: entryHtml,
+                test: /entry-html-test.html$/,
                 use: [
                     {
                         loader: "file-loader",
@@ -191,7 +184,9 @@ const config = {
                     cssLoader,
                     {
                         loader: 'css-loader',
-                        options: {}
+                        options: {
+                            url: true,
+                        }
                     },
                     {
                         loader: 'sass-loader',
