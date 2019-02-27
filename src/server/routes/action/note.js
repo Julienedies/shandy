@@ -2,7 +2,7 @@
  * Created by j on 18/8/26.
  */
 
-import _dob from '../../../util/dob.js'
+import _dob from '../../../libs/dob.js'
 
 let dob
 

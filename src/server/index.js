@@ -57,7 +57,7 @@ io.on('connection', function (socket) {
         io.emit('cls_news', msg);
     });
 
-    socket.on('jhandy', function (msg) {
+    socket.on('shandy', function (msg) {
         console.log('socket:', msg);
         let event = msg.event || 'msg';
         events.emit(event, msg);

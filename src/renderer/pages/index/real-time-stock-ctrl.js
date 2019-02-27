@@ -163,6 +163,7 @@ function _remove(code){
     voice.remove(code);
     prev_objm.remove(code);
     first_objm.remove(code);
+    $rts_list.icRender([]);
 }
 
 brick.reg('rts_ctrl', function (scope) {

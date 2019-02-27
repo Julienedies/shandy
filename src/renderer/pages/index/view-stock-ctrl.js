@@ -45,9 +45,14 @@ function view_stock(code) {
     objm.set('code', code);
     clipboard.writeText(code);
 
+
     let flag = objm.get('is_mashup') ? 0 : 1;
 
-    if (!objm.get('is_open')) {
+
+    shell.openExternal(stockUrl(code, flag) + (flag === 1 ? '?self=1' : ''));
+    //ac.activeTdx();
+
+/*    if (!objm.get('is_open')) {
         return ac.activeTdx();
     }
     if (objm.get('is_open_external')) {
@@ -57,17 +62,16 @@ function view_stock(code) {
         stockWin = stockWin || createWin();
         stockWin.loadURL(stockUrl(code, 0));
         stockWin.focus();
-    }
+    }*/
 
     setTimeout(function(){
         ac.activeTdx();
     }, 1000);
 
-
 }
 
 // 查看个股资料
-brick.controllers.reg('view_stock_ctrl', function (scope) {
+brick.reg('view_stock_ctrl', function (scope) {
 
     this.$elm.find(':checkbox').each(function () {
         objm.set(this.name, $(this).prop('checked'));
@@ -91,26 +95,6 @@ brick.controllers.reg('view_stock_ctrl', function (scope) {
 
     scope.add_stock = function (stock){
         stock.name && stocksManager.add(stock);
-    };
-
-    scope.on_mousewheel = function () {
-
-        /*        import ioHook from 'iohook'
-
-         console.info(ioHook);
-
-         function callback(event){
-         console.info(event);
-         }
-
-         if($(this).prop('checked')){
-         ioHook.on('mousewheel', callback);
-         ioHook.start();
-         }else{
-         ioHook.off('mousewheel', callback);
-
-         }*/
-
     };
 
 });

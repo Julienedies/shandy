@@ -8,32 +8,28 @@
 </head>
 <body>
 <div class="window" ic-ctrl="main_ctrl">
-    <header class="toolbar toolbar-header">
+    <header class="toolbar toolbar-header" ic-ctrl="tool_bar_ctrl">
         <div class="toolbar-actions">
 
-            <div class="btn-group" ic-ctrl="voice_warning_ctrl">
+            <div class="btn-group">
                 <button class="btn btn-default active">
                     <span class="icon icon-home"></span>
                 </button>
-                <button class="btn btn-default" ic-click="open_voice_warning">
+                <button class="btn btn-default" ic-click="warn">
                     <span class="icon icon-bell"></span>
-                    交易错误语音警醒
+                    交易提醒
                 </button>
                 <button class="btn btn-default" ic-click="news">
                     <span class="icon icon-credit-card"></span>
                     财经资讯提示
                 </button>
-                <button class="btn btn-default" ic-click="get_token">
-                    <span class="icon icon-shuffle"></span>
-                    获取token
-                </button>
-                <button class="btn btn-default" ic-click="view_img">
+                <button class="btn btn-default" ic-click="viewImg">
                     <span class="icon icon-picture"></span>
                     图片浏览
                 </button>
             </div>
 
-            <div class="btn-group" ic-ctrl="count_ctrl">
+            <div class="btn-group">
                 <button class="btn btn-default" ic-click="view_403">
                     <span class="icon icon-up"></span>
                     阶段涨幅
@@ -63,27 +59,30 @@
                 </button>
             </div>
 
-            <div class="btn-group" ic-ctrl="help_ctrl">
+            <div class="btn-group">
                 <button class="btn btn-default" ic-click="relaunch">
                     <span class="icon icon-arrows-ccw"></span>
                     重启
                 </button>
-                <button class="btn btn-default" ic-click="relaunch">
+                <button class="btn btn-default" ic-click="refresh">
                     <span class="icon icon-cw"></span>
                     刷新
                 </button>
-                <button class="btn btn-default" ic-click="show_ip">
+                <button class="btn btn-default" ic-click="showIp">
                     <span class="icon icon-flow-line"></span>
                     查看IP
                 </button>
-                <button class="btn btn-default" ic-click="open" data-id="gushenwei">
+                <button class="btn btn-default" ic-click="openInWeb">
                     <span class="icon icon-globe"></span>
                     web版本
                 </button>
-
+                <button class="btn btn-default" ic-click="updateToken">
+                    <span class="icon icon-shuffle"></span>
+                    更新token
+                </button>
             </div>
 
-            <button class="btn btn-default">
+            <button class="btn btn-default" ic-click="openSetting">
                 <span class="icon icon-cog"></span>
                 setting
             </button>
@@ -97,53 +96,25 @@
                 ${require('../include/tabs.html')}
                 <nav class="nav-group">
                     <h5 class="nav-group-title">C1</h5>
-                    <a class="nav-group-item active">
+                    <span class="nav-group-item active">
                         <i class="icon icon-chart-line"></i>
                         K线
-                    </a>
-                    <span class="nav-group-item">
-                        <i class="icon icon-download"></i>
-                            Downloads
-                        </span>
+                    </span>
                     <span class="nav-group-item">
                         <i class="icon icon-folder"></i>
-                        Documents
-                    </span>
-                    <span class="nav-group-item">
-                        <input type="checkbox" name="is_open" ic-click="set_setting" checked> 打开</input>
-                    </span>
-                    <span class="nav-group-item">
-                        <input type="checkbox" name="is_open_external" ic-click="set_setting" checked> 总是外部浏览器打开</input>
-                    </span>
-                    <span class="nav-group-item">
-                        <input type="checkbox" name="is_mashup" ic-click="set_setting"> 使用自定义聚合</input>
-                    </span>
-                    <span class="nav-group-item">
-                        <label><input type="checkbox" ic-click="debug" checked/> debug</label>
-                    </span>
-                    <span class="nav-group-item">
-                        <p>IP: <span id="ip"></span></p>
+                        csd
                     </span>
                 </nav>
             </div>
 
             <div class="pane">
                 <div id="indexView">
-                    <section>
-                        <ul id="point">
-                            <di>交易逻辑:@做人气股, 有波动, 有行情. @大盘行情, 普涨非顶, 做补涨. @该弱不弱.</di>
-                            <li>行业板块看流入; 概念板块看涨停数-----</li>
-                            <li><h4>支撑我的交易逻辑: 反身性(赚钱效应). 历史会重复. 波动周期. 趋势. 要有大局观, 不能只看到眼前的一小块. 你要捕捉的是几十个点的波动, 却为了两个点斤斤计较.</h4></li>
-                            <li><h4>人很容易陷入习以为常和麻木. 永远不要忘记那些恐惧和痛苦. 35,时不我待.</h4></li>
-                            <li><h4>我的性格弱点:缺乏耐心; 优柔寡断,不够果断; </h4></li>
-                            <li><h4>继续查看自己的交易记录, 会发现自己没有明确的选股,止盈,止损,预期收益,行情性质,行情高度,交易周期等各方面的准备和认识. 没有交易系统, 都是随感觉操作. 没有收益预期, 要捕捉的目标行情也不明确. 所以一直都是浑浑噩噩,
-                                操作也是无意识的.</h4></li>
-                            <li><h4>这是目前最主要的事: 建立交易逻辑,交易模式,交易系统. 两年了,还是在随意交易.虽然没有大的金钱上的亏损.但是也从来没有像样的收益.只是在耗时间而已. 必须做出改变.</h4></li>
-                            <li><h4>回头好好看看所有的交易记录,两年多,大部分都是相同的鸡肋操作.太过谨小慎微,只在尾盘安稳处建仓,不承担风险的同时也放弃了收益,只是浪费了时间和机会.</h4></li>
-                            <li><h4>好的位置稍纵即逝,或者需要承担风险, 封板意味着行情,摈弃风险也就摈弃了行情.虽然打板很艰难,但行情和机会只能从中寻找.</h4></li>
-                            <li><h4>行情必然要在涨的高涨的猛处寻找.没有风险又有大收益,市场不会保留此种机会. 除非是消息人士.</h4></li>
-                            <li><h4>我要捕捉的目标行情是什么?哪里是好的买点.</h4><h4>支撑我的交易逻辑是什么?</h4><h4>明确的写出来!!!</h4></li>
-                        </ul>
+                    <section id="memo_box" ic-ctrl="memoCtrl">
+                        <div id="memo_plc">
+                        </div>
+                        <textarea id="memo" readonly>
+                        </textarea>
+                        <button class="btn btn-primary" ic-click="saveMemo">保存</button>
                     </section>
                     <section ic-ctrl="rts_ctrl">
                         <div id="rts_list" ic-tpl="list">

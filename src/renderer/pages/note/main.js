@@ -3,6 +3,8 @@
  */
 
 import './style.scss'
+import '../../css/common/common.scss'
+
 import './index.html'
 import $ from 'jquery'
 import brick from '@julienedies/brick'

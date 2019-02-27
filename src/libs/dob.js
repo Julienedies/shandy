@@ -6,10 +6,10 @@
 import fs from 'fs'
 import path from 'path'
 
-import recordManager from '../libs/recordManager.js'
-import objm from '../libs/objm.js'
+import recordManager from './recordManager.js'
+import objm from './objm.js'
 
-import config from '../main/config'
+import config from './config'
 
 export default function (name, conf) {
 

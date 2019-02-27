@@ -7,7 +7,7 @@ import path from 'path'
 
 import request from 'request'
 
-import fetch from '../../../util/fetch/fetch.js'
+import fetch from '../../../libs/fetch/fetch.js'
 
 
 export default {

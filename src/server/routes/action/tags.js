@@ -2,7 +2,7 @@
  * Created by j on 18/7/22.
  */
 
-import dob from '../../../util/dob.js'
+import dob from '../../../libs/dob.js'
 
 const tags = dob('tags', {convert: function(){
     let result = {};

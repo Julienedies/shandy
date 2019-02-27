@@ -3,11 +3,14 @@
  * 股票管理器
  */
 
-import fs from 'fs'
 import path from 'path'
 
-const json_file = '../../data/csd/stocks.json';
-let stocks = require('../../data/csd/stocks.json');
+import jo from './jsono'
+import config from './config'
+
+const jsonPath = path.resolve(config.CSD_DIR, './stocks.json')
+
+let stocksJo
 
 export default {
 
@@ -15,13 +18,13 @@ export default {
      * @return {Array}
      */
     get: function(){
-        return stocks;
+        stocksJo = stocksJo || jo(jsonPath)
+        return stocksJo.json
     },
     add: function(stock){
-        let arr = [stock.code, stock.name];
-        stocks.unshift(arr);
-        let json_str = JSON.stringify(stocks);
-        fs.writeFileSync(path.join(__dirname, json_file), json_str);
+        stocksJo = stocksJo || jo(jsonPath)
+        stocksJo.json.unshift([stock.code, stock.name])
+        stocksJo.save()
     }
 
-};
+}

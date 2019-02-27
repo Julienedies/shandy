@@ -5,14 +5,12 @@
 
 import https from 'https'
 import qs from 'querystring'
+import path from 'path'
 
-import config from '../../config.json'
+import jo from './jsono'
+import config from './config'
 
-import jsonCrud from './json-crud'
-
-const co = jsonCrud('../config.json');
-
-const param = qs.stringify(config.api.baidu.ocr.param);
+const param = qs.stringify(config.api.baidu.ocr.param)
 
 export default function (callback) {
 
@@ -23,27 +21,32 @@ export default function (callback) {
             agent: false
         },
         function (res) {
-            res.pipe(process.stdout);
+            res.pipe(process.stdout)
 
-            var data = '';
+            let data = ''
 
             res.on('data', function (chunk) {
-                data += chunk;
+                data += chunk
             });
 
             res.on('end', function () {
-                console.info(data);
-                let obj = JSON.parse(data);
-                let access_token = obj.access_token;
+                let obj = JSON.parse(data)
+                let access_token = obj.access_token
 
-                callback(access_token);
+                callback && callback(access_token)
 
                 // 更新config
-                co._json.api.baidu.ocr.access_token = access_token;
-                co.save();
-            });
+                try {
+                    let co = jo(path.resolve(config.ROOT_DIR, './config.json'))
+                    co.json.api.baidu.ocr.access_token = access_token
+                    co.save()
+                } catch (e) {
+                    console.log(e)
+                    throw new Error('更新api.baidu.ocr.access_token出错!请手动更新!')
+                }
+            })
 
         }
-    );
+    )
 
 }

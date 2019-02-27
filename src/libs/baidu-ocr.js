@@ -6,7 +6,9 @@
 import https from 'https'
 import qs from 'querystring'
 
-import config from '../../config.json'
+import getToken from './get-baidu-token.js'
+
+import config from './config'
 
 let access_token = config.api.baidu.ocr.access_token;
 
@@ -15,15 +17,15 @@ let access_token = config.api.baidu.ocr.access_token;
  * @param image  String   图片base64编码  or 图片file地址
  * @param callback Function  ocr回调函数，接受一个从图片识别出来的字符串参数
  */
-export default function ocr(args) {
+export default function ocr (args) {
 
     let param = qs.stringify({
         'access_token': access_token
-    });
+    })
 
     let postData = qs.stringify({
-        image: args.image.replace('data:image/png;base64,','')
-    });
+        image: args.image.replace('data:image/png;base64,', '')
+    })
 
     let options = {
         hostname: 'aip.baidubce.com',
@@ -31,44 +33,44 @@ export default function ocr(args) {
         path: '/rest/2.0/ocr/v1/webimage?' + param,
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
-    };
+    }
 
     let req = https.request(options, function (res) {
 
-            var data = '';
+            let data = ''
 
             res.on('data', function (chunk) {
-                data += chunk;
+                data += chunk
             });
 
             res.on('end', function () {
 
-                console.info(data);
+                console.info(data)
 
-                let obj = JSON.parse(data);
+                let obj = JSON.parse(data)
 
-                if(obj.error_code === 111){ // 如果 access_token 过期
+                if (obj.error_code === 111) { // 如果 access_token 过期
 
-                    console.error(obj.error_msg);
+                    console.error(obj.error_msg)
 
-                    require('./get-baidu-token.js')(function(token){
-                        access_token = token;
-                        ocr(args);
-                    });
+                    getToken(function (token) {
+                        access_token = token
+                        ocr(args)
+                    })
 
-                    return;
+                    return
 
                 }
 
-                args.callback(obj.words_result_num && obj.words_result[0].words);
+                args.callback(obj.words_result_num && obj.words_result[0].words)
 
-            });
+            })
 
         }
-    );
+    )
 
     // 携带数据发送https请求
-    req.write(postData);
-    req.end();
+    req.write(postData)
+    req.end()
 
-};
+}

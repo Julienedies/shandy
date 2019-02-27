@@ -4,9 +4,8 @@
  */
 
 /**
- *
- * @param code String 股票代码
- * @param flag Number url映射
+ * @param code {String} 股票代码
+ * @param flag {Number} url映射
  */
 export default function (code, flag) {
     let prefix_code = (/^6/.test(code) ? 'sh' : 'sz') + code;
@@ -14,7 +13,7 @@ export default function (code, flag) {
 
     switch (flag) {
         case 0 :
-            return `http://localhost:2018/public/static/html/stock/c/index.html?code=${ code }`;
+            return `http://localhost:3000/web/stock_c.html?code=${ code }`;
         case 1 :
             return 'http://basic.10jqka.com.cn/*/company.html'.replace('*', code);
         case 2 :

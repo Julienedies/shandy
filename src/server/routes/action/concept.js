@@ -3,7 +3,7 @@
  * 股票市场概念列表
  */
 
-import sdob from '../../../util/sdob.js'
+import sdob from '../../../libs/sjo.js'
 import stocksManager from '../../../libs/stocks-manager'
 
 export default {

@@ -2,15 +2,13 @@
  * Created by j on 18/5/22.
  */
 
-//import '../../css/vendor/photon/css/photon.css'
-
 import electron from 'electron'
 
 const {remote, shell, ipcRenderer} = electron
 const {BrowserWindow} = remote
 
 import voice from '../../../libs/voice'
-import bw from '../../../util/window'
+import bw from '../../../libs/window'
 import tdx from '../../../libs/tdx'
 import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
@@ -28,9 +26,7 @@ import '@julienedies/brick/dist/brick.css'
 import './style.scss'
 
 import './main-ctrl.js'
-import './help-ctrl.js'
-import './voice-warning-ctrl.js'
-import './count-ctrl.js'
+import './tool-bar-ctrl.js'
 import view_stock from './view-stock-ctrl'
 import rtsc from './real-time-stock-ctrl'
 

@@ -9,11 +9,10 @@ const glob = require('glob')
 const webpack = require('webpack')
 const HtmlPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const CleanPlugin = require('clean-webpack-plugin')
 const ManifestPlugin = require('webpack-manifest-plugin')
-const FileManagerPlugin = require('filemanager-webpack-plugin');
+const CleanPlugin = require('clean-webpack-plugin')
+const FileManagerPlugin = require('filemanager-webpack-plugin')
 const shellPlugin = require('webpack-shell-plugin')
-const nodeExternals = require('webpack-node-externals');
 
 const {dependencies} = require('../../package.json')
 
@@ -30,7 +29,7 @@ const publicPath = ''
 
 const entry = {}
 
-const entryJs = glob.sync(path.join(context, 'renderer/pages/+(stock|note)/**/main.js')) || []
+const entryJs = glob.sync(path.join(context, 'renderer/pages/+(stock|monitor|note)/**/main.js')) || []
 
 let pages = entryJs.map((entryJsPath) => {
     let arr = entryJsPath.match(/pages\/(.+)\/main\.js$/i)
@@ -42,7 +41,7 @@ let pages = entryJs.map((entryJsPath) => {
     return new HtmlPlugin({
         template: htmlPath,
         filename: `${ name }.html`,
-        chunks: [name],
+        chunks: ['runtime', 'vendors', 'common', name],
     })
 })
 
@@ -61,6 +60,8 @@ const plugins = [
     })
 ]
 
+const devServerPort = 8080
+let devServer = {}
 
 let cssLoader = {
     loader: MiniCssExtractPlugin.loader,
@@ -77,15 +78,28 @@ if (isPro) {
     // hmr
     Object.entries(entry).forEach(([k, v]) => {
         v = Array.isArray(v) ? v : [v]
-        v.push('webpack-hot-middleware/client?noInfo=true&reload=true&path=http://localhost:9080/__webpack_hmr')
+        v.push(`webpack-hot-middleware/client?noInfo=true&reload=false&path=http://localhost:${ devServerPort }/__webpack_hmr`)
         entry[k] = v
     })
     plugins.push(new webpack.HotModuleReplacementPlugin())
+
+/*    devServer = {
+        publicPath: publicPath,
+        contentBase: outputPath,
+        writeToDisk: true,
+        port: devServerPort,
+        hot: true,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+          "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+        }
+    }*/
+
 }
 
-console.log(entry)
-
 ///////////////////////////////////////////////////////////////////////////////////////////////
+let whiteListedModules = ['lodash', 'jquery', '@julienedies/brick']
 
 const FrontConfig = {
     //context,  // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和 loader
@@ -102,11 +116,13 @@ const FrontConfig = {
         sourceMapFilename: '[file].map',
     },
     plugins,
+    devServer,
     resolve: {
         alias: {},
         extensions: ['.js', '.json', '.node', '.scss', '.css']
     },
     externals: [
+        ...Object.keys(dependencies || {}).filter(d => !whiteListedModules.includes(d))
     ],
     module: {
         rules: [
@@ -127,8 +143,7 @@ const FrontConfig = {
                         interpolate: true,
                         attrs: ['img:src', 'img:data-src', 'audio:src', 'link:href']
                     }
-                },
-                    //inlineHtmlLoader
+                }
                 ]
             },
             {
@@ -149,15 +164,13 @@ const FrontConfig = {
                             interpolate: true,
                             attrs: ["img:src", "link:href", "script:src"]
                         }
-                    },
-                    //inlineHtmlLoader
+                    }
                 ]
             },
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: [
-                    //cssLoader,
                     {
                         loader: "file-loader",
                         options: {
@@ -222,22 +235,31 @@ const FrontConfig = {
             },
         ]
     },
-    /*optimization: {
+    optimization: {
+        runtimeChunk: 'single',
         splitChunks: {
             chunks: 'all',  // async initial all
-            minSize: 30,  // 3k  chunk最小30k以上, 才会分离提取
+            minSize: 3000,  // 3k  chunk最小30k以上, 才会分离提取
             minChunks: 1,    // 最少有两次重复引用, 才会分离提取
-            maxAsyncRequests: 25,
-            maxInitialRequests: 25,
+            maxAsyncRequests: 15,
+            maxInitialRequests: 15,
             automaticNameDelimiter: '~',
-            name: '',
+            name: 'common',
             cacheGroups: {
-                styles: {
-                    name: 'brick',
-                    test: /\.css$/,
+                /*                styles: {
+                                    name: 'styles',
+                                    test: /\.css$/,
+                                    chunks: 'all',
+                                    enforce: true,
+                                    priority: 20,
+                                },*/
+                vendors: {
+                    name: 'vendors',
+                    test: /[\\/]node_modules[\\/]/,
                     chunks: 'all',
-                    enforce: true,
-                    priority: 20,
+                    minChunks: 1,
+                    minSize: 3000,
+                    priority: 100
                 },
                 common: {
                     name: 'all',
@@ -250,11 +272,11 @@ const FrontConfig = {
                 }
             }
         }
-    },*/
+    },
 }
 
 const serverConfig = {
-    mode: isPro? 'production' : 'development',
+    mode: isPro ? 'production' : 'development',
     devtool: 'cheap-module-source-map',
     target: 'node',
     entry: {
@@ -303,6 +325,5 @@ const serverConfig = {
 
 
 module.exports = [
-    FrontConfig,
-    serverConfig
+    FrontConfig
 ]

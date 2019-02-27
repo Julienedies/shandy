@@ -3,51 +3,62 @@
  * 对象管理器  object manager
  */
 
+import events from 'events'
 import _ from 'lodash'
 
-class Objm {
-    constructor (namespace){
-        this.namespace = namespace || +new Date + '';
-        this._pool = {};
-        this._listeners = [];
-    }
+const EventEmitter = events.EventEmitter;
 
-    init (data) {
+function Objm(){
+    this._pool = {};
+}
+
+const proto = {
+
+    init: function(data){
         this._pool = data;
-    }
+        return this;
+    },
 
-    get (key) {
+    get: function (key) {
         if (!key) return this._pool;
 
-        let keys = key.split('.');
+        var keys = key.split('.');
 
         return (function x(namespace, keys) {
-            let k = keys.shift();
-            let o = namespace[k];
+            var k = keys.shift();
+            var o = namespace[k];
             if (o && keys.length) return x(namespace[k], keys);
             return o;
         })(this._pool, keys);
 
-    }
+    },
 
-    set (key, val) {
+    set: function (key, val) {
 
-        let old = this.get(key);
+        if(typeof key == 'object'){
 
-        if (old && _.isObject(old) && _.isObject(val)) return _.extend(old, val);
+            Object.assign(this._pool, key);
 
-        this._set(key, val);
+        }
+        else
+        if(typeof key == 'string'){
 
-        this._fire('change');
-    }
+            let old = this.get(key);
+            if (old && _.isObject(old) && _.isObject(val)) return Object.assign(old, val);
+            this._set(key, val);
 
-    _set (key, val) {
+        }
 
-        let keys = key.split('.');
+        this.emit('change');
+    },
+
+    _set: function (key, val) {
+
+        var keys = key.split('.');
 
         (function x(namespace, keys) {
-            let k = keys.shift();
-            let o = namespace[k];
+            var k = keys.shift();
+            var o = namespace[k];
             if (keys.length) {
                 if (!o) o = namespace[k] = {};
                 x(o, keys);
@@ -57,30 +68,26 @@ class Objm {
             }
         })(this._pool, keys);
 
-    }
-    remove (key) {
+    },
+    remove: function (key) {
         this.set(key);
-        this._fire('remove', key);
-    }
-    clear () {
+        this.emit('change');
+    },
+    clear: function () {
         this._pool = {};
-        this._fire('clear');
+        this.emit('change');
     }
-    on(e, f){
-        this._listeners.push(f);
-    }
-    off(e, f){
+};
 
-    }
-    _fire(e, msg){
-        this._listeners.forEach(function(f){
-            f(e, msg);
-        });
-    }
-    
-}
+// 继承事件管理接口: on  emit
+Objm.prototype = Object.create(EventEmitter.prototype);
+
+// 扩展原型对象
+Object.assign(Objm.prototype, proto);
 
 
-export default function(namespace){
-    return new Objm(namespace);
+
+
+export default function(){
+    return new Objm();
 }

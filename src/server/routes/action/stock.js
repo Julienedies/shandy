@@ -3,7 +3,7 @@
  * 个股资料查看编辑
  */
 
-import sdob from '../../../util/sdob.js'
+import sdob from '../../../libs/sjo.js'
 
 export default {
 

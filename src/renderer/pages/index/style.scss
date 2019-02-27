@@ -44,3 +44,23 @@ ul li span{
 .btn .icon{
   margin-right:4px;
 }
+
+#memo_box{
+  position: relative;
+}
+#memo_plc, #memo{
+  width:100%;
+  min-height: 10em;
+  padding: 1em 1em 2em 1em;
+  border: none;
+  white-space: pre-wrap;
+}
+
+#memo{
+  position: absolute;
+  top:0;
+  left:0;
+  height:90%;
+  padding-bottom:0;
+  z-index: 3;
+}
