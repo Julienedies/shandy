@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
+    <script src="/set_node_modules_path.js"></script>
+    <title>csd</title>
+</head>
+<body ic-ctrl="mainCtrl">
+    <div class="column is-10">
+
+        <section ic-form="csd">
+            <h2>csd数据获取</h2>
+            <div class="field has-addons">
+                <div class="control is-expanded">
+                    <input class="input" type="text" name="jsonFile" ic-form-field ic-field-rule="required">
+                </div>
+                <div class="control">
+                    <a class="button is-primary" ic-click="selectStockJsonFile">
+                        选择json文件
+                    </a>
+                </div>
+            </div>
+
+            <div class="field is-grouped is-grouped-multiline" ic-select="sources" ic-select-type="checkbox" ic-form-field="sources">
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-medium" ic-select-item="" ic-val="确定性">确定性</span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-medium" ic-select-item="" ic-val="主线风口">主线风口</span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-medium" ic-select-item="" ic-val="龙头">龙头</span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-medium" ic-select-item="" ic-val="强势">强势</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <p class="control">
+                    <a class="button is-primary" ic-click="fetchStart">
+                        csd fetch 开始
+                    </a>
+                </p>
+                <p class="control">
+                    <a class="button is-light" ic-click="fetchStop">
+                        csd fetch 停止
+                    </a>
+                </p>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>创建通达信自定义数据</h2>
+
+        </section>
+
+    </div>
+</body>
+</html>

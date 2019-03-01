@@ -67,7 +67,7 @@ brick.reg('tool_bar_ctrl', function (scope) {
     }
 
     scope.viewImg = function () {
-        let dist = dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']}, function (filePaths) {
+        dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']}, function (filePaths) {
             console.info(filePaths)
             if (!filePaths) return
             let dir = encodeURIComponent(filePaths[0])
@@ -80,7 +80,7 @@ brick.reg('tool_bar_ctrl', function (scope) {
                 win.maximize()
                 win.dev()
             }
-        });
+        })
     }
 
     this.view_403 = function () {

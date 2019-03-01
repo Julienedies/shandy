@@ -22,6 +22,7 @@ node_modules/
 dist/
 
 #私有配置文件
+temp/
 config.json
 wt.json
 

@@ -21,10 +21,10 @@ const {dependencies} = require('../../package.json')
 
 const isPro = process.env.NODE_ENV === 'production'
 
-const publicPath = ''
 const projectRoot = path.resolve(__dirname, '../../')
-const outputPath = path.resolve(__dirname, '../../dist/electron')
 const context = path.resolve(__dirname, '../../src')
+const outputPath = path.resolve(__dirname, '../../dist/electron')
+const publicPath = ''
 
 const nodeSassIncludePaths = [path.resolve(__dirname, '../../')]
 
@@ -197,7 +197,7 @@ const config = {
                 ]
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|ico)$/,
                 use: [
                     {
                         loader: "file-loader",

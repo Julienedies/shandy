@@ -12,6 +12,9 @@ const { dependencies } = require('../../package.json')
 
 const isPro = process.env.NODE_ENV === 'production'
 
+const outputPath = path.resolve(__dirname, '../../dist/electron')
+const publicPath = ''
+
 let mainConfig = {
     mode: isPro? 'production' : 'development',
     devtool: 'cheap-module-source-map',
@@ -51,7 +54,20 @@ let mainConfig = {
             {
                 test: /\.node$/,
                 use: 'node-loader'
-            }
+            },
+            {
+                test: /\.(ico)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: './',
+                            publicPath: publicPath + ''
+                        }
+                    }
+                ]
+            },
         ]
     },
     node: false,

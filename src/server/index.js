@@ -11,6 +11,8 @@ import bodyParser from 'body-parser'
 
 import route from './routes/route'
 
+import favicon from '../renderer/img/favicon.ico'
+
 const app = express();
 const httpServer = http.Server(app);
 const io = socket(httpServer, {
@@ -34,6 +36,7 @@ app.get('/set_node_modules_path.js', function (req, res) {
     res.send(`
         try{
             require('module').globalPaths.push('${path.resolve(__dirname, '../../node_modules')}')
+            require('debug-menu').install()
         }catch(err){
             console.log(err)
         }

@@ -207,7 +207,7 @@ const FrontConfig = {
                 ]
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|gif|ico)$/,
                 use: [
                     {
                         loader: "file-loader",
@@ -314,7 +314,20 @@ const serverConfig = {
             {
                 test: /\.node$/,
                 use: 'node-loader'
-            }
+            },
+            {
+                test: /\.(ico)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: './',
+                            publicPath: publicPath + ''
+                        }
+                    }
+                ]
+            },
         ]
     },
     node: false,

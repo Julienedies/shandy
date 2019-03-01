@@ -5,6 +5,8 @@
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 
+import utils from '../../../libs/utils'
+
 brick.reg('main_ctrl', function () {
 
     let $elm = this.$elm
@@ -13,7 +15,7 @@ brick.reg('main_ctrl', function () {
     let $indexView = $('#indexView')
     let $webView = $('#web_view')
 
-    this.open = function (e, url) {
+    this.show = function (e, url) {
         if (url === 'index.html') {
             $webview.fadeOut()
             $indexView.fadeIn()
@@ -22,6 +24,10 @@ brick.reg('main_ctrl', function () {
             $webview.fadeIn()
             $webView.attr('src', url)
         }
+    }
+
+    this.open = function(e, url){
+        utils.open(url)
     }
 
 })
