@@ -20,6 +20,7 @@ const DATA_DIR = path.join(ROOT_DIR, './data/')
 const CSD_DIR = path.join(DATA_DIR, './csd/')
 const STATIC_DIR = path.join(ROOT_DIR, './static/')
 const AC_DIR = path.join(ROOT_DIR, './applescript/')
+const TEMP_DIR = path.join(ROOT_DIR, './temp/')
 
 const HTML_DIR = path.resolve(ROOT_DIR, './dist/electron/')
 
@@ -30,6 +31,7 @@ let cfg = {
     CSD_DIR,
     STATIC_DIR,
     AC_DIR,
+    TEMP_DIR,
     HTML_DIR,
     LOAD_PROTOCOL,
     SERVER_PORT
@@ -38,7 +40,6 @@ let cfg = {
 // main process or render process
 if(electron.remote){
     cfg = electron.remote.app.SHARED_CONFIG
-    console.log(222222, cfg)
 }
 
 

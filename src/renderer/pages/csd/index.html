@@ -7,68 +7,225 @@
     <title>csd</title>
 </head>
 <body ic-ctrl="mainCtrl">
-    <div class="column is-10">
+<div class="column is-10" ic-tpl="csd">
 
-        <section ic-form="csd">
-            <h2>csd数据获取</h2>
-            <div class="field has-addons">
-                <div class="control is-expanded">
-                    <input class="input" type="text" name="jsonFile" ic-form-field ic-field-rule="required">
-                </div>
-                <div class="control">
-                    <a class="button is-primary" ic-click="selectStockJsonFile">
-                        选择json文件
-                    </a>
-                </div>
+    <section class="box" ic-form="createStocksJson">
+        <h2 class="title is-4">创建stocks.json</h2>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">csv文件</label>
             </div>
-
-            <div class="field is-grouped is-grouped-multiline" ic-select="sources" ic-select-type="checkbox" ic-form-field="sources">
-
-                <div class="control">
-                    <div class="tags has-addons">
-                        <span class="tag is-medium" ic-select-item="" ic-val="确定性">确定性</span>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" value="{{ model.stocksCsvFile }}"
+                               name="stocksCsvFile" ic-form-field ic-field-rule="required">
                     </div>
-                </div>
-
-                <div class="control">
-                    <div class="tags has-addons">
-                        <span class="tag is-medium" ic-select-item="" ic-val="主线风口">主线风口</span>
-                    </div>
-                </div>
-
-                <div class="control">
-                    <div class="tags has-addons">
-                        <span class="tag is-medium" ic-select-item="" ic-val="龙头">龙头</span>
-                    </div>
-                </div>
-
-                <div class="control">
-                    <div class="tags has-addons">
-                        <span class="tag is-medium" ic-select-item="" ic-val="强势">强势</span>
+                    <div class="control">
+                        <a class="button is-primary" ic-select-path="stocksCsvFile">
+                            选择stocks csv文件
+                        </a>
                     </div>
                 </div>
             </div>
-
-            <div class="field is-grouped">
-                <p class="control">
-                    <a class="button is-primary" ic-click="fetchStart">
-                        csd fetch 开始
-                    </a>
-                </p>
-                <p class="control">
-                    <a class="button is-light" ic-click="fetchStop">
-                        csd fetch 停止
-                    </a>
-                </p>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">json文件</label>
             </div>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" value="{{ model.stocksJsonFile }}"
+                               name="stocksJsonFile" ic-form-field ic-field-rule="required">
+                    </div>
+                    <div class="control">
+                        <a class="button is-primary" ic-select-path="stocksJsonFile">
+                            选择json存储路径
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label">
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control">
+                        <button class="button is-primary" ic-form-submit="createStocksJson" ic-submit-action="createStocksJson()">
+                            创建stocks.json
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </section>
+    <section class="box" ic-form="fetchCsd">
+        <h2 class="title is-4">csd数据获取</h2>
 
-        <section>
-            <h2>创建通达信自定义数据</h2>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">csd路径</label>
+            </div>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" placeholder="csd路径"
+                               name="csdPath" value="{{ model.csdPath }}"
+                               ic-form-field ic-field-rule="required"/>
+                    </div>
+                    <div class="control">
+                        <a class="button is-primary" ic-select-path="csdPath">
+                            选择csd路径
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">stocks json</label>
+            </div>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" value="{{ model.fetchByStocks }}" name="fetchByStocks"
+                               ic-form-field ic-field-rule="required"/>
+                    </div>
+                    <div class="control">
+                        <a class="button is-primary" ic-select-path="fetchByStocks">
+                            选择json文件
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        </section>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">fetch sources</label>
+            </div>
+            <div class="field-body">
+                <div class="field is-grouped is-grouped-multiline" ic-select="sources" ic-select-type="checkbox" ic-form-field="fetchSources">
 
-    </div>
+                    <div class="control" ic-for="i,v in model.SOURCES" ic-init="fetchSources = model.fetchSources || model.SOURCES">
+                        <div class="tags has-addons">
+                            <span class="tag is-medium" ic-select-item="{{ i }}" ic-val="{{v}}"
+                                  ic-has-selected="fetchSources.includes(v)">
+                                {{v}}
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">fetch index</label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <div class="control">
+                        <input class="input" type="number" placeholder="默认从0开始fetch" name="fetchFromIndex" id="fetchFromIndex"
+                               ic-value="{{model.fetchFromIndex || 0}}"
+                               ic-form-field ic-field-rule="required">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label"></label>
+            </div>
+            <div class="field-body">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a class="button is-primary" id="fetchStartBtn" ic-form-submit="fetchCsd" ic-submit-action="fetchStart()">
+                            fetch 开始
+                        </a>
+                    </p>
+                    <p class="control">
+                        <a class="button is-light" ic-click="fetchStop">
+                            fetch 停止
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label"></label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <div id="log" class="control">log output</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="box" ic-form="createTdxFile">
+        <h2 class="title is-4">创建通达信自定义数据</h2>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">csd路径</label>
+            </div>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" value="{{ model.csdPath }}" name="csdPath" placeholder="csd路径"
+                               ic-form-field ic-field-rule="required"/>
+                    </div>
+                    <div class="control">
+                        <a class="button is-primary" ic-select-path="csdPath">
+                            选择csd路径
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">自定义数据文件路径</label>
+            </div>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" placeholder="通达信自定义数据文件路径" name="tdx_extern_user_file"
+                               value="{{ model.tdx_extern_user_file || '/Volumes/C/new_jyplug/T0002/signals/extern_user.txt' }}"
+                               ic-form-field ic-field-rule="required"/>
+                    </div>
+                    <div class="control">
+                        <a class="button is-primary" ic-select-path="tdx_extern_user_file">
+                            选择自定义数据文件路径
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label"></label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control">
+                        <a class="button is-primary" ic-form-submit="createTdxFile" ic-submit-action="createTdxFile()">
+                            创建通达信自定义数据
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
 </body>
 </html>

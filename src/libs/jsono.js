@@ -31,12 +31,17 @@ class Jo {
         }
     }
 
-    merge (obj) {
-        Object.assign(this.json, obj)
+    merge (key, obj) {
+        let args = [].slice.call(arguments)
+        obj = args[1] || args[0]
+        key = args[1] && args[0]
+        Object.assign(this.get(key), obj)
+        return this
     }
 
     save () {
         fs.writeFileSync(this.jsonPath, JSON.stringify(this.json, null, '\t'))
+        return this
     }
 
     get (key) {

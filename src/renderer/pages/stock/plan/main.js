@@ -16,10 +16,10 @@ brick.reg('set_tag_ctrl', setTagCtrl)
 
 brick.reg('plans_ctrl', function () {
 
-    var scope = this;
-    var $elm = scope.$elm;
-    var list = brick.services.get('recordManager')();
-    var model = {};
+    let scope = this;
+    let $elm = scope.$elm;
+    let list = brick.services.get('recordManager')();
+    let model = {};
 
     scope.replay_get_done = function(data){
         console.info(data);
@@ -60,11 +60,11 @@ brick.reg('plans_ctrl', function () {
 
 brick.reg('set_plan_ctrl', function () {
 
-    var scope = this;
-    var $elm = this.$elm;
-    var _model = {plan:{}, tags:{}};
-    var model = _model;
-    var tags = brick.services.get('recordManager')();
+    let scope = this;
+    let $elm = this.$elm;
+    let _model = {plan:{}, tags:{}};
+    let model = _model;
+    let tags = brick.services.get('recordManager')();
 
     function update(data){
         tags.init(scope.tags_convert(data));
