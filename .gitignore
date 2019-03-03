@@ -20,9 +20,10 @@ node_modules/
 
 #
 dist/
+data/csd/
+temp/
 
 #私有配置文件
-temp/
 config.json
 wt.json
 
