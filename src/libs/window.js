@@ -82,6 +82,10 @@ class Win {
         this.win.maximize();
     }
 
+    show (){
+        this.win.show()
+    }
+
     dev () {
         this.win.webContents.openDevTools();
     }

@@ -35,10 +35,10 @@ brick.reg('tool_bar_ctrl', function (scope) {
     }
 
     scope.news = function () {
-        let news_win = scope.news_win
-        if (news_win) {
-            news_win.close()
-            news_win = null
+        let newsWin = scope.newsWin
+        if (newsWin) {
+            newsWin.close()
+            scope.newsWin = newsWin = null
         } else {
             let opt = {
                 width: 1400,
@@ -56,12 +56,12 @@ brick.reg('tool_bar_ctrl', function (scope) {
                 center: true,
                 url: 'news.html'
             }
-            scope.news_win = news_win = new Win(opt);
-            news_win.maximize()
-            news_win.dev()
-            news_win.win.setIgnoreMouseEvents(true)
-            news_win.win.webContents.on('did-finish-load', function () {
-                news_win.win.webContents.send('id', news_win.win.id)
+            scope.newsWin = newsWin = new Win(opt);
+            newsWin.maximize()
+            newsWin.dev()
+            newsWin.win.setIgnoreMouseEvents(true)
+            newsWin.win.webContents.on('did-finish-load', function () {
+                newsWin.win.webContents.send('id', newsWin.win.id)
             })
         }
     }

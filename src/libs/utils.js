@@ -16,8 +16,8 @@ export default {
     open (url) {
         return new Win(url)
     },
-    open2 (uri) {
-        shell.openExternal(uri)
+    openItem (file) {
+        shell.openItem(file)
     },
     fetch (csdPath, index, watcher) {
         return jhandy.fetch(csdPath, null, index, null, watcher)

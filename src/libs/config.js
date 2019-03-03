@@ -16,8 +16,8 @@ const SERVER_PORT = 3000
 const LOAD_PROTOCOL = `http://localhost:${SERVER_PORT}`
 
 const ROOT_DIR = path.resolve(__dirname, '/Users/j/dev/shandy/')
+const CSD_DIR = path.resolve(ROOT_DIR, '../csd/')
 const DATA_DIR = path.join(ROOT_DIR, './data/')
-const CSD_DIR = path.join(DATA_DIR, './csd/')
 const STATIC_DIR = path.join(ROOT_DIR, './static/')
 const AC_DIR = path.join(ROOT_DIR, './applescript/')
 const TEMP_DIR = path.join(ROOT_DIR, './temp/')

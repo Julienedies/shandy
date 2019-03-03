@@ -7,7 +7,7 @@ import brick from '@julienedies/brick'
 
 import utils from '../../../libs/utils'
 
-brick.reg('main_ctrl', function () {
+brick.reg('main_ctrl', function (scope) {
 
     let $elm = this.$elm
 
@@ -26,8 +26,14 @@ brick.reg('main_ctrl', function () {
         }
     }
 
-    this.open = function(e, url){
-        utils.open(url)
+    scope.csd = function(e){
+        let csdWin = scope.csdWin
+        if(csdWin){
+            csdWin.show()
+        }else{
+            scope.csdWin = utils.open({x:160, y: 80, url: 'csd.html'})
+        }
+
     }
 
 })
