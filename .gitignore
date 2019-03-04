@@ -22,8 +22,10 @@ node_modules/
 dist/
 data/csd/
 temp/
+.user/
 
 #私有配置文件
 config.json
 wt.json
 
+ls.js
