@@ -8,10 +8,10 @@ process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true
 import path from 'path'
 import electron from 'electron'
 
+import config from '../libs/config'
+
 import ac from '../libs/ac'
 import server from '../server/index'
-
-import config from '../libs/config'
 
 const {app, ipcMain, BrowserWindow, globalShortcut} = electron
 
@@ -46,7 +46,7 @@ function createWindow () {
     } else {
         mainWindow.loadURL(`${ config.LOAD_PROTOCOL }/index.html`)
     }
-    mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools()
     mainWindow.maximize()
     mainWindow.on('closed', function () {
         mainWindow = null

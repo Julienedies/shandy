@@ -8,5 +8,5 @@ import config from './config'
 import jo from './jsono'
 
 export default function () {
-    return jo(path.resolve(config.TEMP_DIR, './setting.json'))
+    return jo(path.resolve(config.USER_DIR, './setting.json'))
 }

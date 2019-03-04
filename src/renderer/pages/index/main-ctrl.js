@@ -26,9 +26,19 @@ brick.reg('main_ctrl', function (scope) {
         }
     }
 
+    scope.reviewTrading = function(){
+        let win = scope.reviewTradingWindow
+        if(win && win.win){
+            win.show()
+        }else{
+            scope.reviewTradingWindow = utils.open({x:160, y: 80, url: 'review-trading.html'})
+        }
+    }
+
+
     scope.csd = function(e){
         let csdWin = scope.csdWin
-        if(csdWin){
+        if(csdWin && csdWin.win){
             csdWin.show()
         }else{
             scope.csdWin = utils.open({x:160, y: 80, url: 'csd.html'})

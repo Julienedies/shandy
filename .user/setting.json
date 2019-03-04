@@ -1,0 +1,15 @@
+{
+	"csd": {
+		"stocksCsvFile": "/Users/j/tdx/stocks.txt",
+		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
+		"fetchSources": [
+			"ths_new",
+			"ths_p",
+			"ths_c"
+		],
+		"csdPath": "/Users/j/dev/csd",
+		"fetchByStocks": "/Users/j/dev/csd/stocks.json",
+		"tdx_extern_user_file": "/Volumes/C/new_jyplug/T0002/signals/extern_user.txt",
+		"fetchFromIndex": 19
+	}
+}

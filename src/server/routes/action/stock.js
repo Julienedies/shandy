@@ -3,22 +3,22 @@
  * 个股资料查看编辑
  */
 
-import sdob from '../../../libs/sjo.js'
+import sjo from '../../../libs/sjo.js'
 
 export default {
 
     get: function (req, res) {
-        let code = req.params.code;
-        let dob = sdob(code);
-        res.json(dob.get());
+        let code = req.params.code
+        let dob = sjo(code)
+        res.json(dob.get())
     },
 
     post: function (req, res) {
-        let code = req.params.code;
-        let data = req.body;
-        let dob = sdob(code);
-        dob.set(data);
-        res.json(dob.get());
+        let code = req.params.code
+        let data = req.body
+        let dob = sjo(code)
+        dob.merge(data).save()
+        res.json(dob.get())
     }
 
 }

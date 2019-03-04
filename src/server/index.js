@@ -45,6 +45,7 @@ app.get('/set_node_modules_path.js', function (req, res) {
 
 app.use('/web/', express.static(webStaticDir))
 app.use(express.static(staticDir))
+app.use(express.static(path.resolve(__dirname, '../z')))
 
 route(app)
 //////////////////////////////////////////////////////////////////////////////////////////////

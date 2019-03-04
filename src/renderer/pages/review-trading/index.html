@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>查看交易记录</title>
+    <script src="/set_node_modules_path.js"></script>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
+</head>
+<body ic-ctrl="mainCtrl">
+<div class="column">
+
+    <div class="box" ic-ctrl="uploadTradingCtrl">
+        <h3 class="title is-5">添加交易记录</h3>
+        <section ic-form="uploadTrading">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">交易记录</label>
+                </div>
+                <div class="field-body">
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" value="" name="tradingFile" ic-form-field ic-field-rule="required">
+                        </div>
+                        <div class="control">
+                            <a class="button is-primary" ic-select-path="tradingFile">
+                                选择交易记录文件
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label">
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-primary" ic-form-submit="uploadTrading" ic-submit-action="uploadTrading()">
+                                添加交易记录
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div ic-ctrl="reviewCtrl">
+        <h3 class="title is-4">现有交易记录</h3>
+        <div ic-tpl="trading">
+            <table class="table is-fullwidth is-striped">
+                <tr ic-for="i,o in model" ic-click="viewKline:{{i}}" ic-popup-target="kLine">
+                    <td ic-for="k,v in o">{{ v }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div ic-popup="kLine">
+        <div class="column">
+            <div class="column">
+                <button class="button" ic-popup-close>关闭</button>&nbsp;&nbsp;
+                <span id="info"></span>
+            </div>
+
+            <div class="box" id="chart" style="min-height:600px;">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,64 +1,21 @@
-/**
- * Created by j on 18/6/28.
+/*!
+ * Created by j on 2019-03-04.
  */
+
+import utils from '../../libs/utils'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 
-brick.set('ic-show-img-item', 'a[href$=png]');
-brick.set('ic-show-img-url', 'href');
-
-brick.set('ic-select-cla', 'is-warning');
-
-brick.set('cla.error', 'is-danger');
-
-brick.debug('log');
-
-//brick.set('debug', true);
-
-brick.set('render.wrapModel', true)
-
-brick.reg('main_ctrl', function(){
-
-    let scope = this;
-    let $elm = scope.$elm;
-
-    scope.tags_convert = function (data) {
-        let arr = [];
-        for (let i in data) {
-            arr = arr.concat(data[i]);
-        }
-        return arr;
-    };
-
-    scope.tag_add = function(e, type){
-        scope.emit('tag.add', {type: type});
-    };
-
-    scope.tag_edit = function(e, id){
-        scope.emit('tag.edit', id);
-    };
-
-    scope.tag_remove_done = function(res){
-        $(this).closest('li').remove();
-    };
-
-    scope.before = function(f){
-        console.info('ic-form-submit-before => ', f);
-    };
-
-    this.ajax_before_confirm = function(data, msg){
-        //console.info([].slice.call(arguments));
-        return confirm(msg);
-    };
-
-    $elm.on('ic-form.error', function(e, msg){
-        console.info(msg);
-    });
-
-});
-
-
-setTimeout(function () {
-    brick.bootstrap()
-}, 30)
+brick.directives.reg('ic-select-path', {
+    selfExec: true,
+    once: true,
+    fn: function ($elm) {
+        $(document.body).on('click', '[ic-select-path]', function (e) {
+            let $th = $(this)
+            let filePaths = utils.select()
+            let file = filePaths ? filePaths[0] : ( $th.attr('ic-select-path-default') || '')
+            $(`input[name="${ $th.attr('ic-select-path') }"]`).val(file)
+        })
+    }
+})

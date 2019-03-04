@@ -10,7 +10,7 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import '../../js/common.js'
+import '../../js/common-stock.js'
 
 brick.set('render.wrapModel', true)
 

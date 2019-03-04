@@ -8,6 +8,7 @@ import debugMenu from 'debug-menu'
 
 import ocr from '../../../libs/baidu-ocr.js'
 import stockQuery from '../../../libs/stock-query.js'
+import userDb from '../../../libs/user-db'
 
 import imager from './imager.js'
 
@@ -17,7 +18,7 @@ import '@julienedies/brick/dist/brick.css'
 import './style.scss'
 
 // 交易记录json
-import wt from '../../../../wt.json'
+const tradeArr = userDb('trading', []).get()
 
 // activate context menu
 debugMenu.install();
@@ -33,7 +34,7 @@ brick.reg('mainCtrl', function () {
         let dir = brick.utils.get_query('dir');
         let urls = imager.get_images(dir);
         urls.map(o => {
-            o.info = wt.filter(arr => {
+            o.info = tradeArr.filter(arr => {
                 return o.code === arr[3] && o.d.replace(/-/g, '') === arr[0];
             });
         });

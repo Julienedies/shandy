@@ -59,7 +59,7 @@ class Win {
 
         win.on('close', function () {
             that.win = null;
-            that.on_close && that.on_close();
+            that.opt.onClose && that.opt.onClose();
         });
 
         _opt.dev && win.webContents.openDevTools();

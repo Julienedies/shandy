@@ -20,6 +20,7 @@ const CSD_DIR = path.resolve(ROOT_DIR, '../csd/')
 const DATA_DIR = path.join(ROOT_DIR, './data/')
 const STATIC_DIR = path.join(ROOT_DIR, './static/')
 const AC_DIR = path.join(ROOT_DIR, './applescript/')
+const USER_DIR = path.join(ROOT_DIR, './.user/')
 const TEMP_DIR = path.join(ROOT_DIR, './temp/')
 
 const HTML_DIR = path.resolve(ROOT_DIR, './dist/electron/')
@@ -31,6 +32,7 @@ let cfg = {
     CSD_DIR,
     STATIC_DIR,
     AC_DIR,
+    USER_DIR,
     TEMP_DIR,
     HTML_DIR,
     LOAD_PROTOCOL,

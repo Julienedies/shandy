@@ -13,8 +13,8 @@ import Win from './window'
 import setting from './setting'
 
 export default {
-    open (url) {
-        return new Win(url)
+    open (option) {
+        return new Win(option)
     },
     openItem (file) {
         shell.openItem(file)

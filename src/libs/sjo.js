@@ -8,7 +8,7 @@ import path from 'path'
 import jo from './jsono'
 import config from './config'
 
-const basePath = path.resolve(config.DATA_DIR, './csd/s/');
+const basePath = path.resolve(config.CSD_DIR, './s/');
 
 export default function (code) {
     let jsonPath = path.join(basePath, `./${ code }.json`);

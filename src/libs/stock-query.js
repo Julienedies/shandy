@@ -39,12 +39,13 @@ export default function (words) {
     let r_name = new RegExp(name);
 
     let result = stocks.filter(stock => {
-        return words === stock[1];
+        return words === stock[1] || code === stock[0];
     });
 
     result = result.length ? result : stocks.filter(stock => {
-        return name === stock[1];
+        return name === stock[1] || stock[0] === code;
     });
+
 
     result = result.length ? result : stocks.filter(stock => {
         return r_name.test(stock[1]);

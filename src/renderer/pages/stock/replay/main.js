@@ -8,7 +8,7 @@ import './style.scss'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import '../../../js/common.js'
+import '../../../js/common-stock.js'
 
 import setTagCtrl from '../tags/set-tag-ctrl'
 import tagsCtrl from '../tags/tags-ctrl'

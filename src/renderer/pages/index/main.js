@@ -8,7 +8,7 @@ const {remote, shell, ipcRenderer} = electron
 const {BrowserWindow} = remote
 
 import voice from '../../../libs/voice'
-import bw from '../../../libs/window'
+import Win from '../../../libs/window'
 import tdx from '../../../libs/tdx'
 import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
@@ -35,7 +35,6 @@ We are using node ${process.versions.node}
 chrome ${process.versions.chrome}
 electron ${process.versions.electron}
 `)
-
 
 
 brick.bootstrap();
@@ -73,16 +72,16 @@ ipcRenderer.on('view_stock_info', function (event, stock) {
 //
 ipcRenderer.on('set_stock_c', function (event, stock) {
     if (stock.code) {
-        bw({
+        new Win({
             width: 1200,
             height: 700,
             x: 1800,
             y: 300,
             webPreferences: {
-                nodeIntegration: false  // 远程页面窗口不整合node,  避免jquery等外部类库因为require变量错判执行环境,导致加载错误.
+                // nodeIntegration: false  // 远程页面窗口不整合node,  避免jquery等外部类库因为require变量错判执行环境,导致加载错误.
             },
-            url: `http://localhost:2018/public/static/html/stock/c/index.html?code=${ stock.code }&edit=1`,
-            on_close: function () {
+            url: `stock_c.html?code=${ stock.code }&edit=1`,
+            onClose: function () {
                 console.info('on close!');
                 tdx.active();
             }

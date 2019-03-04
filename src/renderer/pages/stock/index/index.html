@@ -2,15 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>错误</title>
+    <title>shandy-web-index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css" />
     <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
     <script src="/set_node_modules_path.js"></script>
 </head>
-<body ic-ctrl="mainCtrl">
-
-    ${ require('../../include/mistake.html') }
-
+<body>
+    <div class="column is-10 is-offset-1" ic-ctrl="mainCtrl">
+        <ul ic-tpl="nav" class="menu-list">
+            <li ic-for="i,v in model" ic-if="/.html$/.test(v)">
+                <a ic-href="{{ '/web/'+v }}" target="_blank">{{ v }}</a>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
