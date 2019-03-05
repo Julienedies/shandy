@@ -8,13 +8,11 @@ import '@julienedies/brick/dist/brick.css'
 
 brick.set('render.wrapModel', true)
 
-brick.reg('mainCtrl', function () {
-    let scope = this;
-    let $elm = this.$elm;
+brick.reg('mainCtrl', function (scope) {
 
     $.getJSON({url: `/web/manifest.json`, dataType: 'json'}).done(function (data) {
         scope.render('nav', data)
-    });
+    })
 
 })
 

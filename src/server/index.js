@@ -35,10 +35,10 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.get('/set_node_modules_path.js', function (req, res) {
     res.send(`
         try{
-            require('module').globalPaths.push('${path.resolve(__dirname, '../../node_modules')}')
-            require('debug-menu').install()
+            require('module').globalPaths.push('${ path.resolve(__dirname, '../../node_modules') }');
+            require('debug-menu').install();
         }catch(err){
-            console.log(err)
+            console.log(err);
         }
     `)
 })

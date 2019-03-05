@@ -3,82 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <base target=”_blank”>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <title>交易</title>
-    <link rel="stylesheet" href="../../../css/basic/0.7/basic.scss">
-    <link rel="stylesheet" href="../../../css/vendor/effeckt/animations.css"/>
-    <link rel="stylesheet" href="../../../js/vendor/brick/0.8/css/brick.mobile.css">
-    <link rel="stylesheet" href="style.scss"/>
+    <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-<aside>
-    <ul ic-tabs="nav" ic-tab-select="li" ic-tab-active="2" ic-tabc-select=">div">
-        <li aic-view-to="market">市场</li>
-        <li aic-view-to="think">思考</li>
-        <li aic-view-to="logic">逻辑</li>
-        <li aic-view-to="discipline">纪律</li>
-        <li aic-view-to="pattern">模式</li>
-        <li aic-view-to="stock_pick">选股</li>
-        <li aic-view-to="trade">操作</li>
-        <li aic-view-to="plan">预案</li>
-        <li aic-view-to="mistake">错误</li>
-        <li aic-view-to="links">链接</li>
-    </ul>
-</aside>
+    <aside>
+        <ul ic-tabs="nav" ic-tab-$="li" ic-tab-active="2" ic-tabc-$=">div">
+            <li aic-view-to="market">市场</li>
+            <li aic-view-to="think">思考</li>
+            <li aic-view-to="logic">逻辑</li>
+            <li aic-view-to="discipline">纪律</li>
+            <li aic-view-to="pattern">模式</li>
+            <li aic-view-to="stock_pick">选股</li>
+            <li aic-view-to="trade">操作</li>
+            <li aic-view-to="plan">预案</li>
+            <li aic-view-to="mistake">错误</li>
+            <li aic-view-to="links">链接</li>
+        </ul>
+    </aside>
 
-<div aic-view-stage ic-tabc="nav" ic-ctrl="mainCtrl">
+    <div aic-view-stage ic-tabc="nav" ic-ctrl="mainCtrl">
 
-    <link rel="import" href="../include/market.html?__inline">
+        ${ require('../../include/market.html') }
 
-    <link rel="import" href="../include/think.html?__inline">
+        ${ require('../../include/think.html') }
 
-    <link rel="import" href="../include/logic.html?__inline">
+        ${ require('../../include/logic.html') }
 
-    <link rel="import" href="../include/discipline.html?__inline">
+        ${ require('../../include/discipline.html') }
 
-    <link rel="import" href="../include/pattern.html?__inline">
+        ${ require('../../include/pattern.html') }
 
-    <link rel="import" href="../include/stock_pick.html?__inline">
+        ${ require('../../include/stock_pick.html') }
 
-    <link rel="import" href="../include/trade.html?__inline">
+        ${ require('../../include/trade.html') }
 
-    <link rel="import" href="../include/plan.html?__inline">
+        ${ require('../../include/plan.html') }
 
 
-    <div aic-view="mistake">
-        <header>
-            <h2>不要重复错误</h2>
-        </header>
-        <section>
-            <link rel="import" href="../include/mistake.html?__inline">
-        </section>
+        <div aic-view="mistake">
+            <header>
+                <h2>不要重复错误</h2>
+            </header>
+            <section>
+                ${ require('../../include/mistake.html') }
+            </section>
+        </div>
+
+        <div aic-view="mistake">
+            <header>
+                <h2>链接</h2>
+            </header>
+            <section>
+                <ul>
+                    <li><a href="<<<uri: system/index.html >>>">交易系统建立</a></li>
+                    <li><a href="<<<uri: record/logic.html >>>">逻辑记录</a> </li>
+                    <li><a href="<<<uri: check/index.html >>>">check</a> </li>
+                    <li><a href="<<<uri: plan/index.html >>>">计划</a></li>
+                </ul>
+                <h2>复盘与交易计划</h2>
+                <ol>
+                    <li><a href="<<<uri: record/17-12-25-1.html >>>">17-12-25-周一</a> </li>
+                    <li><a href="<<<uri: plan/18-01-12.html >>>">18-01-12-周五</a> </li>
+                </ol>
+            </section>
+        </div>
+
     </div>
-
-    <div aic-view="mistake">
-        <header>
-            <h2>链接</h2>
-        </header>
-        <section>
-            <ul>
-                <li><a href="<<<uri: system/index.html >>>">交易系统建立</a></li>
-                <li><a href="<<<uri: record/logic.html >>>">逻辑记录</a> </li>
-                <li><a href="<<<uri: check/index.html >>>">check</a> </li>
-                <li><a href="<<<uri: plan/index.html >>>">计划</a></li>
-            </ul>
-            <h2>复盘与交易计划</h2>
-            <ol>
-                <li><a href="<<<uri: record/17-12-25-1.html >>>">17-12-25-周一</a> </li>
-                <li><a href="<<<uri: plan/18-01-12.html >>>">18-01-12-周五</a> </li>
-            </ol>
-        </section>
-    </div>
-
-</div>
-
-<script src="../../../js/vendor/underscore-1.8.2.js"></script>
-<script src="../../../js/vendor/jquery-2.1.3.js"></script>
-<script src="../../../js/vendor/brick/0.8/brick.mobile.js"></script>
-<script src="main.js"></script>
-
 </body>
 </html>

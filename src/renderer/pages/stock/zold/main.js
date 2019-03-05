@@ -2,31 +2,42 @@
  * Created by j on 17/7/23.
  */
 
+import '../../../css/basic/0.7/basic.scss'
+
+import './style.scss'
+
+import './trade.html'
+
+import $ from 'jquery'
+import brick from '@julienedies/brick'
+import '@julienedies/brick/dist/brick.css'
+
+
 brick.set('bootstrap.auto', 1);
 brick.set('view.aniId', 26);
 
-brick.controllers.reg('mainCtrl', function (scope) {
-    var $body = $(document.body);
-    var $elm = scope.$elm;
-    var $nav = $('[ic-tabs="nav"] > li');
-    var $views = $elm.find('>div[aic-view]');
+brick.reg('mainCtrl', function (scope) {
+    let $body = $(document.body);
+    let $elm = scope.$elm;
+    let $nav = $('[ic-tabs="nav"] > li');
+    let $views = $elm.find('>div[aic-view]');
 
-    var views = $nav.map(function () {
+    let views = $nav.map(function () {
         return $(this).attr('aic-view-to');
     }).get();
 
-    var bounce = 0;
-    var index = 0;
-    var max = views.length - 1;
+    let bounce = 0;
+    let index = 0;
+    let max = views.length - 1;
 
-    var clientHeight = $elm.height();
-    var oldIsUp;
+    let clientHeight = $elm.height();
+    let oldIsUp;
 
-    var callback = _.debounce(function (e) {
+    let callback = _.debounce(function (e) {
         console.log($elm.scrollTop(), clientHeight, $elm[0].scrollHeight, bounce);
         //正负值表示滚动方向
-        var isUp = e.originalEvent.deltaY < 0;
-        var viewElem = $views.get(index);
+        let isUp = e.originalEvent.deltaY < 0;
+        let viewElem = $views.get(index);
 
         if(isUp !== oldIsUp) {
             bounce = 0;
@@ -73,3 +84,6 @@ brick.controllers.reg('mainCtrl', function (scope) {
     });
 
 });
+
+
+brick.bootstrap()

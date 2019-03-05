@@ -2,35 +2,38 @@
  * Created by j on 17/12/17.
  */
 
+import '../../../../css/basic/0.7/basic.scss'
 
-//$('dt, li').click(function (e) {
-//    $(this).toggleClass('focus');
-//});
+import './style.scss'
+
+import $ from 'jquery'
+import brick from '@julienedies/brick'
+import '@julienedies/brick/dist/brick.css'
 
 brick.set('ic-show-img-item', 'a[href$=png]');
 brick.set('ic-show-img-url', 'href');
 
-brick.controllers.reg('mainCtrl', function (scope) {
-    var $body = $(document.body);
-    var $elm = scope.$elm;
-    var $nav = $('[ic-tabs="nav"] > li');
-    var $views = $elm.find('section');
+brick.reg('mainCtrl', function (scope) {
+    let $body = $(document.body);
+    let $elm = scope.$elm;
+    let $nav = $('[ic-tabs="nav"] > li');
+    let $views = $elm.find('section');
 
-    var views = $nav.map(function () {
+    let views = $nav.map(function () {
         return $(this).attr('aic-view-to');
     }).get();
 
-    var bounce = 0;
-    var index = 0;
-    var max = views.length - 1;
+    let bounce = 0;
+    let index = 0;
+    let max = views.length - 1;
 
-    var clientHeight = $elm.height();
-    var oldIsUp;
+    let clientHeight = $elm.height();
+    let oldIsUp;
 
-    var callback = _.debounce(function (e) {
+    let callback = _.debounce(function (e) {
         console.log(e.originalEvent.deltaY);
         //正负值表示滚动方向
-        var isUp = e.originalEvent.deltaY < 0;
+        let isUp = e.originalEvent.deltaY < 0;
 
         //if (isUp !== oldIsUp) {
         //    bounce = 0;
@@ -85,3 +88,5 @@ brick.controllers.reg('mainCtrl', function (scope) {
     });
 
 });
+
+brick.bootstrap()
