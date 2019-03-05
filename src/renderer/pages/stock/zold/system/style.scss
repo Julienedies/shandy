@@ -1,0 +1,88 @@
+@import "../../../../css/base/include/import";
+
+body{
+  padding: 10px 25px;
+  font-size:1.4em;
+  line-height: 1.8;
+  font: 18px/1.7 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
+a{
+  padding:0 5px;
+  color:blue;
+  text-decoration: underline;
+}
+
+aside{
+  position: fixed;
+  right:0;
+  top:15px;
+  background-color: rgba(0,0,0,0.1);
+  ul{
+    display: flex;
+  }
+  li{
+    padding:3px 15px;
+    &.active{
+      color:#fff;
+      background-color: rgba(0,0,0,0.7);
+    }
+  }
+}
+
+h2{
+  font-size:1.4em;
+  padding-bottom: 5px;
+}
+
+section {
+   margin-bottom: 20px;
+}
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: solid 1px #bdbdbe;
+  margin: 15px 0 0 0;
+}
+
+dt, dd {
+  flex: 1 1 15%;
+  border: solid 1px #bdbdbe;
+  border-top: none;
+  padding:10px;
+}
+
+dt{
+  @extend .flex-mr;
+  font-weight: bold!important;
+  *{
+    font-weight: bold;
+  }
+ /* color:#fff;
+  background:#0a3ebe;*/
+}
+
+dd {
+  flex: 1 1 85%;
+  border-left: none;
+}
+
+.focus{
+  background-color: #2c45d7;
+  color:#fff;
+}
+
+/*
+dl dl{
+  border:none;
+}
+
+dl dl dt, dl dl dd{
+  border:none;
+  border-bottom: solid 1px #bdbdbe;
+}
+
+dl dl dt{
+  border-right: solid 1px #bdbdbe;
+}*/

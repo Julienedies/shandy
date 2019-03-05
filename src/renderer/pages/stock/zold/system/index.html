@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>交易系统</title>
+    <link rel="stylesheet" href="../../../../css/basic/0.7/basic.scss">
+    <link rel="stylesheet" href="../../../../js/vendor/brick/0.8/css/brick.mobile.css">
+    <link rel="stylesheet" href="style.scss">
+</head>
+<body>
+
+<aside>
+    <ul ic-tabs="nav" ic-tab-select="li" ic-tab-active="10" ic-tabc-select=">section">
+        <li aic-view-to="market">市场</li>
+        <li aic-view-to="logic">逻辑</li>
+        <li aic-view-to="trade">操作</li>
+        <li aic-view-to="quotation">行情</li>
+        <li aic-view-to="node">建仓</li>
+        <li aic-view-to="pick">选股</li><!-- 5 -->
+        <li aic-view-to="discipline">纪律</li>
+        <li aic-view-to="mistake">错误</li>
+        <li aic-view-to="workflow">流程</li>
+        <li aic-view-to="other">其它</li>
+        <li aic-view-to="da_ban">打板</li><!-- 10 -->
+    </ul>
+</aside>
+
+<div ic-tabc="nav" ic-ctrl="mainCtrl">
+
+    <!-- 市场 -->
+    <link rel="import" href="include/market.html?__inline">
+
+    <!-- 逻辑 -->
+    <link rel="import" href="include/logic.html?__inline">
+
+    <!-- -->
+    <link rel="import" href="include/trade.html?__inline">
+
+    <!-- 行情性质 -->
+    <link rel="import" href="include/quotation.html?__inline">
+
+    <!-- 建仓节点 -->
+    <link rel="import" href="include/node.html?__inline">
+
+    <!-- 选股 -->
+    <link rel="import" href="include/pick.html?__inline">
+
+    <!-- 纪律 -->
+    <link rel="import" href="include/discipline.html?__inline">
+
+    <!-- 错误 -->
+    <link rel="import" href="include/mistake.html?__inline">
+
+    <!-- 工作流   节奏   流程 -->
+    <link rel="import" href="include/work_flow.html?__inline">
+
+    <!-- 其它总结 -->
+    <link rel="import" href="include/other.html?__inline">
+
+    <!-- 打板相关 -->
+    <link rel="import" href="include/da_ban.html?__inline">
+
+</div>
+
+
+</body>
+
+<link rel="import" href="../../include/scripts.html?__inline" />
+<script src="main.js"></script>
+</html>

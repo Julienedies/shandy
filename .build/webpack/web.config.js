@@ -33,7 +33,7 @@ const entryJs = glob.sync(path.join(context, 'renderer/pages/+(stock|monitor|not
 
 let pages = entryJs.map((entryJsPath) => {
     let arr = entryJsPath.match(/pages\/(.+)\/main\.js$/i)
-    let name = arr[1].replace('/', '_')
+    let name = arr[1].replace(/\//g, '_')
     let htmlPath = entryJsPath.replace(/main\.js$/i, 'index.html')
 
     entry[name] = [entryJsPath]
@@ -55,12 +55,12 @@ const plugins = [
         filename: '[name].css',
         chunkFilename: '[name].css'
     }),
-    new CleanPlugin([`dist/web`], {
+/*    new CleanPlugin([`dist/web`], {
         root: projectRoot
-    })
+    })*/
 ]
 
-const devServerPort = 8080
+const devServerPort = 8090
 let devServer = {}
 
 let cssLoader = {
@@ -78,7 +78,7 @@ if (isPro) {
     // hmr
     Object.entries(entry).forEach(([k, v]) => {
         v = Array.isArray(v) ? v : [v]
-        v.push(`webpack-hot-middleware/client?noInfo=true&reload=false&path=http://localhost:${ devServerPort }/__webpack_hmr`)
+        v.push(`webpack-hot-middleware/client?noInfo=true&reload=true&path=http://localhost:${ devServerPort }/__webpack_hmr`)
         entry[k] = v
     })
     plugins.push(new webpack.HotModuleReplacementPlugin())
@@ -89,11 +89,6 @@ if (isPro) {
         writeToDisk: true,
         port: devServerPort,
         hot: true,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-          "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-        }
     }*/
 
 }
@@ -239,8 +234,8 @@ const FrontConfig = {
         runtimeChunk: 'single',
         splitChunks: {
             chunks: 'all',  // async initial all
-            minSize: 3000,  // 3k  chunk最小30k以上, 才会分离提取
-            minChunks: 1,    // 最少有两次重复引用, 才会分离提取
+            minSize: 30000,  // 3k  chunk最小30k以上, 才会分离提取
+            minChunks: 3,    // 最少有两次重复引用, 才会分离提取
             maxAsyncRequests: 15,
             maxInitialRequests: 15,
             automaticNameDelimiter: '~',
@@ -338,5 +333,6 @@ const serverConfig = {
 
 
 module.exports = [
-    FrontConfig
+    FrontConfig,
+    //serverConfig
 ]

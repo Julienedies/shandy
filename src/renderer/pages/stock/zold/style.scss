@@ -1,0 +1,132 @@
+@import "../../../css/base/include/import";
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Verdana", "Arial", "Hiragino Sans GB", "WenQuanYi Micro Hei", "Heiti SC", STHeiti, "Microsoft Yahei", SimSun, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+a {
+  color: inherit;
+  color:blue;
+  text-decoration: underline;
+}
+
+p, blockquote {
+  margin: 0;
+}
+
+h2, h3, h4, dt, .key{
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 2;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+h4{
+  font-size: 1.1em;
+}
+
+dt {
+  margin: 5px 0 0 0;
+  font-size: 1.2em;
+  background: rgba(0,0,0,0.05);
+  padding:0 1em;
+}
+dd{
+  padding:5px 1em;
+  font-size:0.95em;
+  color:#444;
+  &:empty{
+    display: none;
+  }
+}
+
+
+@-webkit-keyframes twinkling{	/*透明度由0到1*/
+  0%{
+    opacity:0;				/*透明度为0*/
+  }
+  50%{
+    opacity:0.5;				/*透明度为0*/
+  }
+  100%{
+    opacity:1;				/*透明度为1*/
+  }
+}
+
+.twinkling{
+  -webkit-animation: twinkling 1.5s infinite ease-in-out;
+}
+
+.focus{
+  background:#1865bb;
+  color:#fff;
+}
+.small{
+  font-size:0.8em;
+  font-weight: 400;
+}
+h2 .small{
+  vertical-align: 10%;
+  margin:0 7px;
+}
+
+body > aside {
+  position: fixed;
+  width: 12%;
+  top: 0;
+  bottom: 0;
+  z-index: 10000000;
+  background: rgba(0, 0, 0, 0.2);
+  ul {
+    @include css3flex;
+    flex-direction: column;
+    li {
+      @include flex-1;
+      padding: 15px 0;
+      text-align: center;
+      &.active {
+        background: #fff;
+        font-weight:800;
+        font-size:1.5em;
+      }
+    }
+  }
+}
+
+[aic-view-stage]{
+  height: 100%;
+  overflow-y: scroll;
+}
+
+[aic-view] {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 10px 25px 10px 14%;
+  > header {
+    padding: 10px 0;
+    margin: 0 0 15px 0;
+    border-bottom: solid 1px #e2e2e2;
+  }
+  > section {
+    ol, ul{
+      list-style-type: disc;
+      padding-left: 1.5em;
+    }
+    ol {
+      list-style: decimal;
+    }
+  }
+}
