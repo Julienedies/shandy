@@ -34,7 +34,7 @@ class Win {
             width: 1240,
             height: 820,
             x: 0,
-            y: 0,
+            y: 80,
             webPreferences: {
                 webSecurity: false
             }

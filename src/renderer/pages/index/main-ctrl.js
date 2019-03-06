@@ -61,7 +61,7 @@ brick.reg('memoCtrl', function(){
 
     this.saveMemo = function (e) {
         $.post('/stock/memo', {text: $memo.val()}).done((o) => {
-            $memo.attr('readonly', true)
+            //$memo.attr('readonly', true)
         })
     }
 
@@ -69,7 +69,6 @@ brick.reg('memoCtrl', function(){
     $memo.on('dblclick', function (e) {
         $memo.removeAttr('readonly')
     }).on('mouseup', function (e) {
-        console.log($memo.val())
         $memo_plc.text($memo.val())
     })
 

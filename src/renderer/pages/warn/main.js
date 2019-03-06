@@ -7,10 +7,14 @@ import $ from 'jquery'
 const speechSU = new window.SpeechSynthesisUtterance();
 speechSU.volume = 0.3;
 
-$('#voice_btn').toggle(function () {
-    speechSynthesis.pause();
-}, function () {
-    speechSynthesis.resume();
+let isPause = false
+$('#voice_btn').click(function () {
+    if(isPause){
+        speechSynthesis.resume();
+    }else{
+        speechSynthesis.pause();
+    }
+    isPause = !isPause
 });
 
 function voiceWarning () {
