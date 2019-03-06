@@ -5,6 +5,15 @@
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 
+import '@fortawesome/fontawesome-free/css/all.css'
+import 'froala-editor/css/froala_editor.pkgd.css'
+import 'froala-editor/css/froala_style.min.css'
+import froala from 'froala-editor/js/froala_editor.pkgd.min.js'
+
+//froala()
+
+console.log(1111, froala)
+
 import utils from '../../../libs/utils'
 
 brick.reg('main_ctrl', function (scope) {
@@ -26,22 +35,22 @@ brick.reg('main_ctrl', function (scope) {
         }
     }
 
-    scope.reviewTrading = function(){
+    scope.reviewTrading = function () {
         let win = scope.reviewTradingWindow
-        if(win && win.win){
+        if (win && win.win) {
             win.show()
-        }else{
-            scope.reviewTradingWindow = utils.open({x:160, y: 80, url: 'review-trading.html'})
+        } else {
+            scope.reviewTradingWindow = utils.open({x: 160, y: 80, url: 'review-trading.html'})
         }
     }
 
 
-    scope.csd = function(e){
+    scope.csd = function (e) {
         let csdWin = scope.csdWin
-        if(csdWin && csdWin.win){
+        if (csdWin && csdWin.win) {
             csdWin.show()
-        }else{
-            scope.csdWin = utils.open({x:160, y: 80, url: 'csd.html'})
+        } else {
+            scope.csdWin = utils.open({x: 160, y: 80, url: 'csd.html'})
         }
 
     }
@@ -49,27 +58,39 @@ brick.reg('main_ctrl', function (scope) {
 })
 
 
-brick.reg('memoCtrl', function(){
+brick.reg('memoCtrl', function () {
 
-    let $memo_plc = $('#memo_plc')
     let $memo = $('#memo')
 
     $.get('/stock/memo').done(function (o) {
         let text = o.text
-        text && $memo.val(text) && $memo_plc.text(text)
+
+        $memo.froalaEditor({
+            toolbarInline: true,
+            toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],
+            // Change save interval (time in miliseconds).
+            saveInterval: 2500,
+
+            // Set the save param.
+            saveParam: 'text',
+
+            // Set the save URL.
+            saveURL: '/stock/memo',
+
+            // HTTP request type.
+            saveMethod: 'POST',
+
+            // Additional save params.
+            saveParams: {time: +new Date}
+        }).froalaEditor('html.set', text || '')
+
     })
 
     this.saveMemo = function (e) {
-        $.post('/stock/memo', {text: $memo.val()}).done((o) => {
-            //$memo.attr('readonly', true)
+        let text = $memo.froalaEditor('html.get', true)
+        console.log(text)
+        $.post('/stock/memo', {text}).done((o) => {
         })
     }
-
-
-    $memo.on('dblclick', function (e) {
-        $memo.removeAttr('readonly')
-    }).on('mouseup', function (e) {
-        $memo_plc.text($memo.val())
-    })
 
 })

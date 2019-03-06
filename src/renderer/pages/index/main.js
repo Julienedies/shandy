@@ -13,7 +13,7 @@ import tdx from '../../../libs/tdx'
 import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
 
-console.log(remote)
+console.log('remote is =>', remote)
 //const config = remote.getGlobal('config')
 //const config = remote.app.config
 //console.log(config)
