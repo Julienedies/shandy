@@ -10,10 +10,6 @@ import 'froala-editor/css/froala_editor.pkgd.css'
 import 'froala-editor/css/froala_style.min.css'
 import froala from 'froala-editor/js/froala_editor.pkgd.min.js'
 
-//froala()
-
-console.log(1111, froala)
-
 import utils from '../../../libs/utils'
 
 brick.reg('main_ctrl', function (scope) {
@@ -67,19 +63,15 @@ brick.reg('memoCtrl', function () {
 
         $memo.froalaEditor({
             toolbarInline: true,
-            toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],
+            /*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*/
             // Change save interval (time in miliseconds).
             saveInterval: 2500,
-
             // Set the save param.
             saveParam: 'text',
-
             // Set the save URL.
             saveURL: '/stock/memo',
-
             // HTTP request type.
             saveMethod: 'POST',
-
             // Additional save params.
             saveParams: {time: +new Date}
         }).froalaEditor('html.set', text || '')

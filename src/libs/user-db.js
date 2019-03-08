@@ -7,8 +7,8 @@ import path from 'path'
 import config from './config'
 import jo from './jsono'
 
-export default function (name) {
+export default function (name, initData) {
 
-    return jo(path.resolve(config.USER_DIR, `./${ name }.json`))
+    return jo(path.resolve(config.USER_DIR, `./${ name }.json`), initData)
 
 }

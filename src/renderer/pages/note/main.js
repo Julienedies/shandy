@@ -12,6 +12,7 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../js/common-stock.js'
 
+brick.set('debug', true)
 brick.set('render.wrapModel', true)
 
 brick.reg('notes_ctrl', function(){

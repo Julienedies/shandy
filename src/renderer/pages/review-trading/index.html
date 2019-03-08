@@ -49,11 +49,18 @@
     <div ic-ctrl="reviewCtrl">
         <h3 class="title is-4">现有交易记录</h3>
         <div ic-tpl="trading">
-            <table class="table is-fullwidth is-striped">
-                <tr ic-for="i,o in model" ic-click="viewKline:{{i}}" ic-popup-target="kLine">
-                    <td ic-for="k,v in o">{{ v }}</td>
-                </tr>
-            </table>
+            <div class="column" ic-drag-view>
+                <table class="table is-fullwidth is-striped" ic-drag-handle>
+                    <caption>共有交易记录 {{ model.data.length }} 条</caption>
+                    <tr ic-for="i,o in model.index">
+                        <th ic-for="k,v in o">{{ v }}</th>
+                    </tr>
+                    <tr ic-for="i,o in model.data" ic-click="viewKline:{{i}}">
+                        <td ic-popup-target="kLine">查看K线-{{ i }} </td>
+                        <td ic-for="k,v in o">{{ v }}</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 

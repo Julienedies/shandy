@@ -11,7 +11,7 @@ import config from '/Users/j/dev/shandy/config.json'
 
 const co = jo('/Users/j/dev/shandy/config.json')
 
-const SERVER_PORT = 3000
+const SERVER_PORT = 3300
 //const LOAD_PROTOCOL =  'file:///'
 const LOAD_PROTOCOL = `http://localhost:${SERVER_PORT}`
 

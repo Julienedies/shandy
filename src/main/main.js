@@ -46,7 +46,7 @@ function createWindow () {
     } else {
         mainWindow.loadURL(`${ config.LOAD_PROTOCOL }/index.html`)
     }
-    // mainWindow.webContents.openDevTools()
+    //mainWindow.webContents.openDevTools()
     mainWindow.maximize()
     mainWindow.on('closed', function () {
         mainWindow = null
