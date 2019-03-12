@@ -4,10 +4,10 @@
 
 process.env.NODE_ENV = 'production'
 
-const { say } = require('cfonts')
+const {say} = require('cfonts')
 const chalk = require('chalk')
 const del = require('del')
-const { spawn } = require('child_process')
+const {spawn} = require('child_process')
 const webpack = require('webpack')
 const Multispinner = require('multispinner')
 
@@ -27,14 +27,14 @@ else build()
 
 function clean () {
     del.sync(['build/*', '!build/icons', '!build/icons/icon.*'])
-    console.log(`\n${doneLog}\n`)
+    console.log(`\n${ doneLog }\n`)
     process.exit()
 }
 
 function build () {
     greeting()
 
-    del.sync(['dist/*', '!.gitkeep'])
+    del.sync(['dist/electron/*', '!.gitkeep'])
 
     const tasks = ['main', 'renderer']
     const m = new Multispinner(tasks, {
@@ -46,8 +46,8 @@ function build () {
 
     m.on('success', () => {
         process.stdout.write('\x1B[2J\x1B[0f')
-        console.log(`\n\n${results}`)
-        console.log(`${okayLog}take it away ${chalk.yellow('`electron-builder`')}\n`)
+        console.log(`\n\n${ results }`)
+        console.log(`${ okayLog }take it away ${ chalk.yellow('`electron-builder`') }\n`)
         process.exit()
     })
 
@@ -56,8 +56,8 @@ function build () {
         m.success('main')
     }).catch(err => {
         m.error('main')
-        console.log(`\n  ${errorLog}failed to build main process`)
-        console.error(`\n${err}\n`)
+        console.log(`\n  ${ errorLog }failed to build main process`)
+        console.error(`\n${ err }\n`)
         process.exit(1)
     })
 
@@ -66,8 +66,8 @@ function build () {
         m.success('renderer')
     }).catch(err => {
         m.error('renderer')
-        console.log(`\n  ${errorLog}failed to build renderer process`)
-        console.error(`\n${err}\n`)
+        console.log(`\n  ${ errorLog }failed to build renderer process`)
+        console.error(`\n${ err }\n`)
         process.exit(1)
     })
 }
@@ -86,7 +86,7 @@ function pack (config) {
                 })
                     .split(/\r?\n/)
                     .forEach(line => {
-                        err += `    ${line}\n`
+                        err += `    ${ line }\n`
                     })
 
                 reject(err)
