@@ -1,17 +1,18 @@
 ::selection {
-  background:rgba(255, 255, 125, 0.99);
-  color:#032764;}
+  background: rgba(255, 255, 125, 0.99);
+  color: #032764;
+}
 
-html,body {
+html, body {
   font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
-  font-size:18px;
+  font-size: 18px;
   overflow: auto;
 }
 
-input{
+input {
   font-size: 20px;
   display: inline-block;
-  margin:5px;
+  margin: 5px;
   padding: 3px 5px;
 }
 
@@ -19,48 +20,120 @@ div[ic-ctrl="rtsCtrl"] button {
   margin-right: 20px;
 }
 
-section, footer {
-  padding: 20px 20px;
-  border-bottom: solid 1px #ccc;
-}
-ul{
-  list-style: none;
-  margin:0;
-  padding:0;
-}
-ul li span{
-  display:inline-block;
-  min-width:4em;
-  padding:0 3px;
-  flex:1;
-}
-.up{
-  color:red!important;
-}
-.down{
-  color:green!important;
+
+#rtsCtrl {
+
+  section {
+    padding: 20px 20px;
+    border-bottom: solid 1px #ccc;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li span {
+    display: inline-block;
+    min-width: 4em;
+    padding: 0 3px;
+    flex: 1;
+  }
+
+  .up {
+    color: red !important;
+  }
+
+  .down {
+    color: green !important;
+  }
 }
 
-.btn .icon{
-  margin-right:4px;
+.btn .icon {
+  margin-right: 4px;
 }
 
-#memo_box{
+////////////////////////////////////////////////////////////////////////////
+.toolbar-actions {
+  font-size: 12px;
+  color: #757474 !important;
+
+  .btn-group {
+    margin: 0 1rem;
+
+    * {
+      color: inherit !important;
+    }
+
+    a {
+      display: inline-block;
+      padding: 0 0.3em;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
+#memo_box {
   position: relative;
+  padding: 10px 20px;
 }
-#memo_plc, #memo{
-  width:100%;
+
+#memo_plc, #memo {
+  width: 100%;
   min-height: 10em;
   padding: 1em 1em 2em 1em;
   border: none;
   white-space: pre-wrap;
 }
 
-#memo{
+#memo {
   position: absolute;
-  top:0;
-  left:0;
-  height:90%;
-  padding-bottom:0;
+  top: 0;
+  left: 0;
+  height: 90%;
+  padding-bottom: 0;
   z-index: 3;
+}
+
+////////////////////////////////////////////////////
+#viewsWrapper {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+
+  #tabs {
+
+    > ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        background: rgb(220, 220, 220);
+        padding: 0.2rem;
+
+        &.active {
+          background: #fff;
+          color: blue;
+        }
+
+        .icon {
+          cursor: pointer;
+
+          &:hover {
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+
+  #views {
+    flex: 1;
+  }
 }

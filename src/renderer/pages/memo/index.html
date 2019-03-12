@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>备忘录</title>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
+    <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-
+<div class="column">
+    <section ic-ctrl="memoCtrl">
+        <textarea class="textarea" id="memo"></textarea>
+        <button class="button is-primary" ic-click="saveMemo">保存</button>
+    </section>
+</div>
 </body>
 </html>

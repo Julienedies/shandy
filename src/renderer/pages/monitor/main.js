@@ -83,7 +83,7 @@ brick.reg('plans_ctrl', function () {
     };
 
     /*      $.ajax({
-              url:'http://localhost:3000/stock/plan',
+              url: `http://${ location.host }/stock/plan`,
               dataType:'json',
               processData: false,
               type:'get',
@@ -101,7 +101,7 @@ brick.reg('plans_ctrl', function () {
             scope.plan_get_done(data)
         }
     }
-    xhr.open("GET", `http:\/\/${ location.hostname }:3000/stock/plan`, true)
+    xhr.open("GET", `http:\/\/${ location.host }/stock/plan`, true)
     xhr.send()
 
 })

@@ -8,27 +8,115 @@ import brick from '@julienedies/brick'
 import '@fortawesome/fontawesome-free/css/all.css'
 import 'froala-editor/css/froala_editor.pkgd.css'
 import 'froala-editor/css/froala_style.min.css'
-import froala from 'froala-editor/js/froala_editor.pkgd.min.js'
+import 'froala-editor/js/froala_editor.pkgd.min.js'
 
 import utils from '../../../libs/utils'
+import Win from '../../../libs/window'
 
-brick.reg('main_ctrl', function (scope) {
+brick.services.reg('viewsModel', () => {
+    const list = []
+    let activeItem
+    return {
+        get (isActiveItem) {
+            return isActiveItem ? activeItem : list;
+        },
+        add (item) {
+            if (!this.has(item)) {
+                list.push(item)
+                this.active(item)
+            }
+        },
+        remove (item) {
+            let index = this.getIndex(item)
+            item = this.find(item)
+            if (item) {
+                if (activeItem === item) {
+                    let nextItem = list[index + 1] || list[0]
+                    nextItem && this.active(nextItem)
+                }
+                item.$webView.remove()
+                list.splice(index, 1)
+            }
+        },
+        has (item) {
+            return this.getIndex(item) !== -1
+        },
+        active (item) {
+            item = this.find(item)
+            if (activeItem) {
+                activeItem.active = false
+                activeItem.$webView.hide()
+            }
+            item.active = true
+            item.$webView.show()
+            activeItem = item
+        },
+        getIndex (item) {
+            return list.findIndex((v) => {
+                return v.url === item.url
+            })
+        },
+        /**
+         * 参数里的item只有url属性, 并不等于list里存储的item
+         * @param item
+         * @returns {null}
+         */
+        find (item) {
+            let index = this.getIndex(item)
+            return index !== -1 ? list[index] : null
+        }
+    }
+})
+
+brick.reg('mainCtrl', function (scope) {
 
     let $elm = this.$elm
 
-    let $webview = $('#webviewWrapper')
+    let $viewsWrapper = $('#viewsWrapper')
     let $indexView = $('#indexView')
-    let $webView = $('#web_view')
+    let $viewTabs = $('#viewTabs')
+    let $views = $('#views')
+
+    const viewsModel = brick.services.get('viewsModel')
+    //window.vm = viewsModel
+
+    let render = () => {
+        let list = viewsModel.get()
+        $viewTabs.icRender({model: list})
+        if(!list.length){
+            scope.showIndex()
+        }
+    }
 
     this.show = function (e, url) {
-        if (url === 'index.html') {
-            $webview.fadeOut()
-            $indexView.fadeIn()
+        $viewsWrapper.show()
+        $indexView.hide()
+        let $th = $(this)
+        let title = $th.text()
+        let item = {title, url}
+        if (viewsModel.has(item)) {
+            viewsModel.active(item)
         } else {
-            $indexView.fadeOut()
-            $webview.fadeIn()
-            $webView.attr('src', url)
+            item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%;"></webview>`).appendTo($views)
+            viewsModel.add(item)
         }
+        render()
+    }
+
+    this.closeTab = function (e, url) {
+        viewsModel.remove({url})
+        render()
+        return false
+    }
+
+    this.activeTab = (e, url) => {
+        viewsModel.active({url})
+        render()
+    }
+
+    this.showIndex = function (e, url) {
+        $indexView.show()
+        $viewsWrapper.hide()
     }
 
     scope.reviewTrading = function () {
@@ -40,7 +128,6 @@ brick.reg('main_ctrl', function (scope) {
         }
     }
 
-
     scope.csd = function (e) {
         let csdWin = scope.csdWin
         if (csdWin && csdWin.win) {
@@ -48,7 +135,6 @@ brick.reg('main_ctrl', function (scope) {
         } else {
             scope.csdWin = utils.open({x: 160, y: 80, url: 'csd.html'})
         }
-
     }
 
 })
