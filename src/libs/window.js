@@ -21,7 +21,7 @@ class Win {
         if (/^file:\/\//.test(config.LOAD_PROTOCOL)) {
             return path.join(config.LOAD_PROTOCOL, config.HTML_DIR, url);
         }
-        return path.join(config.LOAD_PROTOCOL, url);
+        return `${config.LOAD_PROTOCOL}/${url}`
     }
 
     constructor (opt) {
