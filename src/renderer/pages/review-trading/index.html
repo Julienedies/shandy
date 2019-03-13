@@ -47,7 +47,10 @@
     </div>
 
     <div ic-ctrl="reviewCtrl">
-        <h3 class="title is-4">现有交易记录</h3>
+        <h3 class="title is-4 level">
+            <span class="level-left">现有交易记录</span>
+            <button class="button is-primary level-right" ic-click="reverse">反转</button>
+        </h3>
         <div ic-tpl="trading">
             <div class="column" ic-drag-view>
                 <table class="table is-fullwidth is-striped" ic-drag-handle>

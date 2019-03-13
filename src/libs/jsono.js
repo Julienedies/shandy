@@ -5,6 +5,7 @@
 
 import fs from 'fs'
 import path from 'path'
+import fse from 'fs-extra'
 
 class Jo {
 
@@ -21,6 +22,7 @@ class Jo {
         if (!fs.existsSync(jsonPath)) {
             // fs.createWriteStream(jsonPath)
             // fs.writeFileSync(jsonPath, '{}')
+            fse.outputFileSync(jsonPath)
             this.json = initData
         } else {
             try {
@@ -36,7 +38,13 @@ class Jo {
         let args = [].slice.call(arguments)
         obj = args[1] || args[0]
         key = args[1] && args[0]
-        Object.assign(this.get(key), obj)
+        console.log(key, this.get(key))
+        let oldVal = this.get(key)
+        if(!oldVal){
+            oldVal = {}
+            this.set(key, oldVal)
+        }
+        Object.assign(oldVal, obj)
         return this
     }
 
@@ -45,8 +53,25 @@ class Jo {
         return this
     }
 
-    set (key, val) {
+    set (key, val = {}) {
+        if (!key) return this;
 
+        let keys = key.split('.')
+
+        return (function fx (namespace, keys) {
+            let k = keys.shift()
+            let o = namespace[k]
+
+            if(keys.length){
+
+                o = namespace[k] = o || {}
+                fx(o, keys)
+
+            }else{
+                namespace[k] = val
+            }
+
+        })(this.json, keys);
     }
 
     get (key) {
