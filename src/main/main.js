@@ -61,8 +61,8 @@ function ready () {
         let d = new Date()
         let h = d.getHours()
         if (h > 6 && h < 9) { // 只在早上重启
-            app.relaunch()
-            app.exit()
+            // app.relaunch()
+            // app.exit()
         }
     })
 

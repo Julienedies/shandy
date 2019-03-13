@@ -83,7 +83,7 @@ class Win {
     }
 
     show (){
-        this.win.show()
+        this.win && this.win.show()
     }
 
     dev () {

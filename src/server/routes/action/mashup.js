@@ -3,53 +3,30 @@
  */
 
 import fs from 'fs'
-import path from 'path'
-
-import request from 'request'
-
-import fetch from '../../../libs/fetch/fetch.js'
-
+import sjo from '../../../libs/sjo'
 
 export default {
 
-    news: function(req, res){
-
-
+    news: function (req, res) {
 
     },
 
-    basic: function(req, res){
+    basic: function (req, res) {
 
     },
 
-    get: function(req, res){
-        var code = req.params.code;
-        let str = fs.readFileSync(`/Users/j/dev/csd/s/${code}.json`, 'utf-8');
-        let data = JSON.parse(str);
+    get: function (req, res) {
+        let code = req.params.code;
+        let data = sjo(code).json
         res.json(data);
     },
 
     _get: function (req, res) {
-        var code = req.params.code;
-        var sources = ['ths_new', 'ths_p', 'ycj'];
-        var data = {};
-        var callback = function (result, id, code){
-            //Object.assign(data, result);
-            data[id] = result;
-            sources.j_remove(id);
-            if(sources.length === 0){
-                res.json(data);
-            }
-        };
-
-        sources.map(id => {
-            fetch(code, id, callback);
-        });
-
+        let code = req.params.code;
     },
 
     post: function (req, res) {
-        var obj = req.body;
+        let obj = req.body;
     }
 
 }

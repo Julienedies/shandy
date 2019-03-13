@@ -78,12 +78,11 @@ brick.reg('mainCtrl', function (scope) {
     let $views = $('#views')
 
     const viewsModel = brick.services.get('viewsModel')
-    //window.vm = viewsModel
 
     let render = () => {
         let list = viewsModel.get()
         $viewTabs.icRender({model: list})
-        if(!list.length){
+        if (!list.length) {
             scope.showIndex()
         }
     }
@@ -119,21 +118,92 @@ brick.reg('mainCtrl', function (scope) {
         $viewsWrapper.hide()
     }
 
-    scope.reviewTrading = function () {
-        let win = scope.reviewTradingWindow
-        if (win && win.win) {
-            win.show()
+    this.warn = function () {
+        let winCtrl = new Win('warn.html')
+        winCtrl.maximize()
+    }
+
+    scope.news = function () {
+        let newsWin = scope.newsWin
+        if (newsWin) {
+            newsWin.close()
+            delete scope.newsWin;
         } else {
-            scope.reviewTradingWindow = utils.open({x: 160, y: 80, url: 'review-trading.html'})
+            let opt = {
+                width: 1400,
+                height: 32,
+                x: 1600,
+                y: 3,
+                opacity: 0.8,
+                frame: false,
+                hasShadow: false,
+                alwaysOnTop: true,
+                center: true,
+                url: 'news.html'
+            }
+            newsWin = scope.newsWin = new Win(opt);
+            newsWin.win.setIgnoreMouseEvents(true)
+            newsWin.win.webContents.on('did-finish-load', function () {
+                newsWin.win.webContents.send('id', newsWin.win.id)
+            })
         }
     }
 
-    scope.csd = function (e) {
-        let csdWin = scope.csdWin
-        if (csdWin && csdWin.win) {
-            csdWin.show()
+    scope.reviewTrading = function () {
+        let win = scope.reviewTradingWindow
+        if (win) {
+            win.show()
         } else {
-            scope.csdWin = utils.open({x: 160, y: 80, url: 'csd.html'})
+            scope.reviewTradingWindow = utils.open({
+                x: 160, y: 80, url: 'review-trading.html', onClose: () => {
+                    delete scope.reviewTradingWindow;
+                }
+            })
+        }
+    }
+
+    scope.viewImg = function () {
+        let filePaths = utils.select()
+        console.info(filePaths)
+        if (!filePaths) return;
+        let dir = encodeURIComponent(filePaths[0])
+        let url = `viewer.html?dir=${ dir }`
+        let viewImgWindow = scope.viewImgWindow
+        if (viewImgWindow) {
+            viewImgWindow.load(url)
+        } else {
+            viewImgWindow = scope.viewImgWindow = new Win({
+                x: 1440, url: url, onClose: () => {
+                    delete scope.viewImgWindow
+                }
+            });
+            viewImgWindow.maximize()
+        }
+    }
+
+    scope.openCsd = function (e) {
+        let csdWindow = scope.csdWindow
+        if (csdWindow) {
+            csdWindow.show()
+        } else {
+            scope.csdWindow = utils.open({
+                x: 160, y: 80, url: 'csd.html', onClose: () => {
+                    delete scope.csdWindow
+                }
+            })
+        }
+    }
+
+    this.openSetting = function () {
+        let settingWindow = scope.settingWindow
+        if (settingWindow) {
+            settingWindow.show()
+        } else {
+            scope.settingWindow = new Win({
+                url: 'setting.html', onClose: () => {
+                    delete scope.settingWindow
+                }
+            })
         }
     }
 

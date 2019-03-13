@@ -11,6 +11,7 @@ import jhandy from 'jhandy'
 
 import Win from './window'
 import setting from './setting'
+import os from "os"
 
 export default {
     open (option) {
@@ -35,5 +36,16 @@ export default {
     },
     err(msg, title = ''){
         dialog.showErrorBox(title, msg)
+    },
+    getIp(){
+        let ip
+        try {
+            let networkInterfaces = os.networkInterfaces()
+            ip = networkInterfaces.en0[0].address
+        } catch (e) {
+            console.log('ip address 获取失败. =>', e)
+        }
+        return ip
     }
 }
+

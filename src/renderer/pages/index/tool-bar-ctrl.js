@@ -1,7 +1,7 @@
 /**
  * Created by j on 18/6/16.
  */
-import os from 'os'
+
 import electron from 'electron'
 
 import $ from 'jquery'
@@ -14,74 +14,19 @@ import ac from '../../../libs/ac'
 import rts from '../../../libs/real-time-stock'
 
 import cm from '../../../libs/console'
-import schedule from '../../../libs/schedule.js'
 import config from '../../../libs/config'
 import getToken from '../../../libs/get-baidu-token'
+import utils from '../../../libs/utils'
 
-const {remote, BrowserWindow, shell} = electron
+const {remote, shell} = electron
 const {dialog} = electron.remote
 
-schedule(function createVoiceWarningWindow () {
-    new Win('warn.html');
-}, 8, 55);
+
+brick.reg('toolBarCtrl', function (scope) {
+
+    scope.$elm.find('#ip').text(utils.getIp())
 
 
-brick.reg('tool_bar_ctrl', function (scope) {
-
-    this.warn = function () {
-        let winCtrl = new Win('warn.html')
-        winCtrl.maximize()
-        winCtrl.dev()
-    }
-
-    scope.news = function () {
-        let newsWin = scope.newsWin
-        if (newsWin) {
-            newsWin.close()
-            scope.newsWin = newsWin = null
-        } else {
-            let opt = {
-                width: 1400,
-                height: 32,
-                x: 1600,
-                y: 3,
-                //width:700,
-                //height:200,
-                //x:300,
-                //y:400,
-                opacity: 0.8,
-                frame: false,
-                hasShadow: false,
-                alwaysOnTop: true,
-                center: true,
-                url: 'news.html'
-            }
-            scope.newsWin = newsWin = new Win(opt);
-            newsWin.maximize()
-            newsWin.dev()
-            newsWin.win.setIgnoreMouseEvents(true)
-            newsWin.win.webContents.on('did-finish-load', function () {
-                newsWin.win.webContents.send('id', newsWin.win.id)
-            })
-        }
-    }
-
-    scope.viewImg = function () {
-        dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']}, function (filePaths) {
-            console.info(filePaths)
-            if (!filePaths) return
-            let dir = encodeURIComponent(filePaths[0])
-            let url = `viewer.html?dir=${ dir }`
-            let win = scope.view_img_win
-            if (win && win.win) {
-                win.load(url)
-            } else {
-                win = scope.view_img_win = new Win({x: 1440, url: url})
-                win.maximize()
-                win.dev()
-            }
-        })
-    }
 
     this.view_403 = function () {
         tdx.keystroke('.403', true)
@@ -108,8 +53,7 @@ brick.reg('tool_bar_ctrl', function (scope) {
                     b = Math.round(b * 100) / 100
                     console.info(b)
 
-                    let result = `${ stock.name } => 涨停价: ${ a }; 跌停价: ${ b }`
-                    console.log(result)
+                    let result = `${ stock.name } : 当前价: ${ p }; 涨停价: ${ a }; 跌停价: ${ b }`
                     dialog.showMessageBox(null, {type: 'info', message: `${ result }`})
 
                 }
@@ -127,32 +71,11 @@ brick.reg('tool_bar_ctrl', function (scope) {
     }
 
     this.openInWeb = function () {
-        shell.openExternal(`http://${ scope.getIp() }:${config.SERVER_PORT}`)
+        shell.openExternal(`http://127.0.0.1:${ config.SERVER_PORT }/web/stock_index.html`)
     }
-
-    this.showIp = function () {
-        let ip = scope.getIp()
-        dialog.showMessageBox(null, {type: 'info', message:`${ip}`})
-    }
-
 
     this.updateToken = function () {
         getToken()
-    }
-
-    this.openSetting = function () {
-        new Win('setting.html')
-    }
-
-    this.getIp = function () {
-        let ip
-        try {
-            let networkInterfaces = os.networkInterfaces()
-            ip = networkInterfaces.en0[0].address
-        } catch (e) {
-            console.log('ip address 获取失败. =>', e)
-        }
-        return ip
     }
 
 })

@@ -8,116 +8,77 @@
 </head>
 <body>
 <div class="window" ic-ctrl="mainCtrl">
-    <header class="toolbar toolbar-header" ic-ctrl="tool_bar_ctrl">
+    <header class="toolbar toolbar-header" ic-ctrl="toolBarCtrl" style="display: none;">
         <div class="toolbar-actions">
 
             <div class="btn-group">
-                <a class="btn-btn-default" ic-click="warn">
-                    <span class="icon icon-bell"></span>
-                    交易提醒
-                </a>
                 <a class="btn-btn-default" ic-click="news">
-                    <span class="icon icon-credit-card"></span>
-                    财经资讯提示
-                </a>
-                <a class="btn-btn-default" ic-click="viewImg">
-                    <span class="icon icon-picture"></span>
-                    图片浏览
+                    <i class="icon icon-credit-card"></i>
+                    资讯提示
                 </a>
             </div>
 
             <div class="btn-group">
-                <a class="btn-btn-default" ic-click="view_403">
-                    <span class="icon icon-up"></span>
-                    阶段涨幅
-                </a>
-                <a class="btn-btn-default" ic-click="swing_10">
-                    <span class="icon icon-publish"></span>
-                    涨跌停价计算
-                </a>
-            </div>
-
-            <div class="btn-group" ic-ctrl="view_stock_ctrl">
-                <a class="btn-btn-default" ic-click="view_in_ftnn">
-                    <span class="icon icon-search"></span>
-                    富途查看
-                </a>
-                <a class="btn-btn-default" ic-click="go_ycj">
-                    <span class="icon icon-cloud"></span>
-                    云财经
-                </a>
-                <a class="btn-btn-default" id="company">
-                    <span class="icon icon-book-open"></span>
-                    个股资料
-                </a>
-                <a class="btn-btn-default" ic-popup-target="add_stock">
-                    <span class="icon icon-plus-circled"></span>
-                    添加股票
-                </a>
-            </div>
-
-            <div class="btn-group">
-                <a class="btn-btn-default" ic-click="relaunch">
-                    <span class="icon icon-arrows-ccw"></span>
-                    重启
-                </a>
                 <a class="btn-btn-default" ic-click="refresh">
-                    <span class="icon icon-cw"></span>
+                    <i class="icon icon-cw"></i>
                     刷新
                 </a>
-                <a class="btn-btn-default" ic-click="showIp">
-                    <span class="icon icon-flow-line"></span>
-                    查看IP
-                </a>
-                <a class="btn-btn-default" ic-click="openInWeb">
-                    <span class="icon icon-globe"></span>
-                    web版本
-                </a>
-                <a class="btn-btn-default" ic-click="updateToken">
-                    <span class="icon icon-shuffle"></span>
-                    更新token
+                <a class="btn-btn-default" ic-click="relaunch">
+                    <i class="icon icon-arrows-ccw"></i>
+                    重启
                 </a>
             </div>
-
-            <a class="btn-btn-default" ic-click="openSetting">
-                <span class="icon icon-cog"></span>
-                setting
-            </a>
 
         </div>
     </header>
 
     <div class="window-content">
-        <div class="pane-group">
-            <div class="pane-sm sidebar" ic-tabs2="a" ic-tab-$=".nav-group-item">
-                <nav class="nav-group" id="nav-tabs">
-                    <h5 class="nav-group-title">C</h5>
-                    <a class="nav-group-item" ic-click="showIndex"><i class="icon icon-home"></i> 首页 </a>
+        <div class="pane-group" style="overflow: hidden;">
+            <aside class="pane-sm sidebar" ic-tabs2="a" ic-tab-$=".nav-group-item" style="height: 100%;overflow-y: auto;">
+                <nav class="nav-group">
+                    <a class="nav-group-item active" ic-click="showIndex"><i class="icon icon-home"></i> 首页 </a>
+                </nav>
+                <nav class="nav-group">
+                    <h5 class="nav-group-title">N</h5>
+                    <a class="nav-group-item" ic-click="warn"> <i class="icon icon-bell"></i>交易提醒</a>
+                    <a class="nav-group-item" ic-click="news"><i class="icon icon-credit-card"></i> 资讯提示 </a>
+                </nav>
+                <nav class="nav-group">
+                    <h5 class="nav-group-title">T</h5>
+                    <a class="nav-group-item" ic-click="show:memo.html"><i class="icon icon-calendar"></i> 备忘</a>
                     <a class="nav-group-item" ic-click="show:stock_logic.html"><i class="icon icon-help"></i>逻辑</a>
                     <a class="nav-group-item" ic-click="show:stock_system.html"><i class="icon icon-shareable"></i> 系统</a>
                     <a class="nav-group-item" ic-click="show:stock_plan.html"><i class="icon icon-doc-text"></i> 计划</a>
                     <a class="nav-group-item" ic-click="show:stock_sell.html"><i class="icon icon-doc-text"></i> 平仓</a>
                     <a class="nav-group-item" ic-click="show:stock_buy.html"><i class="icon icon-doc-text"></i> 建仓</a>
                     <a class="nav-group-item" ic-click="show:stock_replay.html"><i class="icon icon-eye"></i> 复盘</a>
+                    <a class="nav-group-item" ic-click="show:stock_mistake.html"><i class="icon icon-cancel-circled"></i> 错误</a>
                     <a class="nav-group-item" ic-click="show:stock_news.html"><i class="icon icon-newspaper"></i> 资讯</a>
                     <a class="nav-group-item" ic-click="show:stock_tags.html"><i class="icon icon-erase"></i> 标签</a>
-                    <a class="nav-group-item" ic-click="show:stock_mistake.html"><i class="icon icon-cancel-circled"></i> 错误</a>
-                    <a class="nav-group-item" ic-click="show:memo.html"><i class="icon icon-calendar"></i> 备忘</a>
                     <a class="nav-group-item" ic-click="show:note.html"><i class="icon icon-pencil"></i> 笔记</a>
                 </nav>
                 <nav class="nav-group">
-                    <h5 class="nav-group-title">C1</h5>
+                    <h5 class="nav-group-title">N</h5>
                     <span class="nav-group-item" ic-click="reviewTrading">
                         <i class="icon icon-chart-line"></i>
                         交易记录
                     </span>
-                    <span class="nav-group-item" ic-click="csd">
+                    <span class="nav-group-item" ic-click="viewImg">
+                        <i class="icon icon-picture"></i>
+                        图片浏览
+                    </span>
+                    <span class="nav-group-item" ic-click="openCsd">
                         <i class="icon icon-folder"></i>
                         csd
                     </span>
+                    <span class="nav-group-item" ic-click="openSetting">
+                        <i class="icon icon-cog"></i>
+                        设置
+                    </span>
                 </nav>
-            </div>
-            <div class="pane">
+            </aside>
+
+            <main class="pane" style="height: 100%; overflow-y: auto;">
 
                 <div id="viewsWrapper">
                     <div id="viewTabs" ic-tpl="viewTabs">
@@ -137,7 +98,7 @@
                     <section id="memo_box" ic-ctrl="memoCtrl">
                         <textarea id="memo">
                         </textarea>
-                        <button class="button" ic-click="saveMemo">保存</button>
+                        <button class="none" ic-click="saveMemo">保存</button>
                     </section>
                     <section id="rtsCtrl" ic-ctrl="rts_ctrl">
                         <div id="rts_list" ic-tpl="list">
@@ -153,7 +114,7 @@
                             </ul>
                         </div>
                         <div>
-                            <div class="">
+                            <div>
                                 <input class="form-control" type="text" value="000858" id="stock_code" ic-enter-press="add">
                             </div>
                             <div class="btn-group">
@@ -187,35 +148,20 @@
                     </div>
                 </div>
 
-            </div>
+            </main>
         </div>
     </div>
 
-<!--    <footer class="toolbar toolbar-footer">
+    <footer class="toolbar toolbar-footer" ic-ctrl="toolBarCtrl">
         <div class="toolbar-actions">
 
             <div class="btn-group">
-                <a class="btn-btn-default" ic-click="warn">
-                    <span class="icon icon-bell"></span>
-                    交易提醒
-                </a>
-                <a class="btn-btn-default" ic-click="news">
-                    <span class="icon icon-credit-card"></span>
-                    财经资讯提示
-                </a>
-                <a class="btn-btn-default" ic-click="viewImg">
-                    <span class="icon icon-picture"></span>
-                    图片浏览
-                </a>
-            </div>
-
-            <div class="btn-group">
                 <a class="btn-btn-default" ic-click="view_403">
-                    <span class="icon icon-up"></span>
+                    <i class="icon icon-up"></i>
                     阶段涨幅
                 </a>
                 <a class="btn-btn-default" ic-click="swing_10">
-                    <span class="icon icon-publish"></span>
+                    <i class="icon icon-publish"></i>
                     涨跌停价计算
                 </a>
             </div>
@@ -229,7 +175,7 @@
                     <span class="icon icon-cloud"></span>
                     云财经
                 </a>
-                <a class="btn-btn-default" id="company">
+                <a class="btn-btn-default">
                     <span class="icon icon-book-open"></span>
                     个股资料
                 </a>
@@ -240,35 +186,32 @@
             </div>
 
             <div class="btn-group">
-                <a class="btn-btn-default" ic-click="relaunch">
-                    <span class="icon icon-arrows-ccw"></span>
-                    重启
-                </a>
-                <a class="btn-btn-default" ic-click="refresh">
-                    <span class="icon icon-cw"></span>
-                    刷新
-                </a>
-                <a class="btn-btn-default" ic-click="showIp">
-                    <span class="icon icon-flow-line"></span>
-                    查看IP
+                <a class="btn-btn-default" ic-click="updateToken">
+                    <i class="icon icon-shuffle"></i>
+                    更新token
                 </a>
                 <a class="btn-btn-default" ic-click="openInWeb">
-                    <span class="icon icon-globe"></span>
+                    <i class="icon icon-globe"></i>
                     web版本
                 </a>
-                <a class="btn-btn-default" ic-click="updateToken">
-                    <span class="icon icon-shuffle"></span>
-                    更新token
+                <span class="btn-btn-default" id="ip">
+                    <i class="icon icon-flow-line"></i>
+                </span>
+            </div>
+
+            <div class="btn-group">
+                <a class="btn-btn-default" ic-click="refresh">
+                    <i class="icon icon-cw"></i>
+                    刷新
+                </a>
+                <a class="btn-btn-default" ic-click="relaunch">
+                    <i class="icon icon-arrows-ccw"></i>
+                    重启
                 </a>
             </div>
 
-            <a class="btn-btn-default" ic-click="openSetting">
-                <span class="icon icon-cog"></span>
-                setting
-            </a>
-
         </div>
-    </footer>-->
+    </footer>
 </div>
 </body>
 </html>

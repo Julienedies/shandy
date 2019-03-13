@@ -19,17 +19,33 @@ html, body {
     50%  {background: rgba(255,255,0,0.5);}*/
     100% {background: rgba(255,255,0,1);}
 }
-ul{
+#rts_list{
     list-style: none;
     margin: 0;
     padding: 0;
     font-size: 1.5em;
+
+    .up{
+        color:red!important;
+    }
+    .down{
+        color:green!important;
+    }
+    li div{
+        margin:0;
+        padding: 0 0;
+    }
+    button{
+        display: inline-block;
+        flex:1;
+    }
+
 }
 #rts_list li{
     padding: 5px 10px;
 }
 #rts_list li span{
-    border:solid 0px blue;
+    border:solid 0 blue;
 }
 #rts_list span.b1, #rts_list span.name{
     width:6em;
@@ -54,20 +70,6 @@ ul{
 #rts_list span.time{
 }
 
-.up{
-    color:red!important;
-}
-.down{
-    color:green!important;
-}
-li div{
-    margin:0;
-    padding: 0 0;
-}
-button{
-    display: inline-block;
-    /*width:45%;*/
-    /*font-size: 16px;
-    line-height: 1.6;*/
-    flex:1;
+.box{
+    padding:0.3rem 0.5rem;
 }

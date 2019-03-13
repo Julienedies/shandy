@@ -9,8 +9,7 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-
-<div>
+<div class="column">
     <section id="rts" ic-ctrl="rts_ctrl">
         <ul id="rts_list" ic-tpl="list">
             <li ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
@@ -30,7 +29,7 @@
             </li>
         </ul>
 
-        <div>
+        <div style="position:absolute;bottom:0;right:0;padding:10px;">
             <button id="tdx_view" code="" event="" ic-click="view">查看股票</button>
             <button id="active_ftnn" ic-click="active_ftnn">激活富途和通达信</button>
             <div id="notify_news" ic-click="notify_news"></div>
@@ -39,20 +38,21 @@
     </section>
 
     <section ic-ctrl="plans_ctrl">
-
-        <div ic-tpl="plans">
-            <ul style="margin-top:15px; padding:5px; font-size:14px;border:solid 1px red;font-size:1.2em;">
-                <li ic-for="j,plan in model">
-                    <h6 style="font-weight: bold;">{{plan['股票名称']}} : </h6>
-                    <div class="table_3">
-                        <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
-                            <div class="pre">{{plan[k]}}</div>
-                        </div>
+        <ul ic-tpl="plans" class="box">
+            <li ic-for="j,plan in model">
+                <h6 style="font-weight: bold;">{{plan['股票名称']}} : </h6>
+                <div class="table_3">
+                    <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
+                        <div class="pre">{{plan[k]}}</div>
                     </div>
-                </li>
-            </ul>
-        </div>
-
+                </div>
+            </li>
+        </ul>
+        <ul ic-tpl="replay" class="box">
+            <li class="table_3" ic-for="i, v in model" ic-if="v">
+                <div class="pre">{{i}} :{{v}}</div>
+            </li>
+        </ul>
     </section>
 
     <footer style="position: fixed;bottom:0; left:0; right:0;" ic-ctrl="help_ctrl">

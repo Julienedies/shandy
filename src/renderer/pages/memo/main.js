@@ -1,7 +1,10 @@
 /*!
  * Created by j on 2019-03-10.
  */
+
+import '../../css/common/common.scss'
 import './style.scss'
+
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 

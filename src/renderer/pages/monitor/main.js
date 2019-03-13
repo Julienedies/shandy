@@ -71,38 +71,20 @@ brick.reg('plans_ctrl', function () {
     let $elm = scope.$elm
     let list = brick.services.get('recordManager')()
 
-    scope.replay_get_done = function (data) {
+    $.get({
+        url: '/stock/replay'
+    }).done((data) => {
         console.info(data)
         scope.render('replay', data.replay)
-    };
+    })
 
-    scope.plan_get_done = function (data) {
+    $.get({
+        url: '/stock/plan'
+    }).done((data) => {
         console.info(data)
         list.init(data.plans)
         data.plans && data.plans.length && scope.render('plans', data.plans)
-    };
-
-    /*      $.ajax({
-              url: `http://${ location.host }/stock/plan`,
-              dataType:'json',
-              processData: false,
-              type:'get',
-              success:function(data){
-                  console.log(data);
-              },
-              error:function(XMLHttpRequest, textStatus, errorThrown) {
-                  console.log(XMLHttpRequest);
-              }});*/
-
-    let xhr = new XMLHttpRequest()
-    xhr.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            let data = JSON.parse(this.responseText)
-            scope.plan_get_done(data)
-        }
-    }
-    xhr.open("GET", `http:\/\/${ location.host }/stock/plan`, true)
-    xhr.send()
+    })
 
 })
 

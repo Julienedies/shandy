@@ -12,6 +12,13 @@ import Win from '../../../libs/window'
 import tdx from '../../../libs/tdx'
 import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
+import schedule from '../../../libs/schedule'
+
+console.log(`
+We are using node ${process.versions.node}
+chrome ${process.versions.chrome}
+electron ${process.versions.electron}
+`)
 
 console.log('remote is =>', remote)
 //const config = remote.getGlobal('config')
@@ -30,14 +37,13 @@ import './tool-bar-ctrl.js'
 import view_stock from './view-stock-ctrl'
 import rtsc from './real-time-stock-ctrl'
 
-console.log(`
-We are using node ${process.versions.node}
-chrome ${process.versions.chrome}
-electron ${process.versions.electron}
-`)
-
-
 brick.bootstrap();
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+schedule( () => {
+    new Win('warn.html');
+}, 8, 55);
 
 // 接收主进程发来的消息
 ipcRenderer.on('view_in_tdx', function (event, msg) {
