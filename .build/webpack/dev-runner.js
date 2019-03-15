@@ -97,19 +97,7 @@ function startMain () {
 function startRenderer () {
     return new Promise((resolve, reject) => {
 
-        /*let script = path.join(__dirname, './dev-client')
-        Object.values(rendererConfig.entry).forEach((entry) => {
-                entry.unshift && entry.unshift(script)
-            }
-        )*/
-
         const compiler = webpack(rendererConfig)
-
-        /*        const app = express()
-                const devMiddleware = webpackDevMiddleware(compiler, {
-                    writeToDisk: true,
-                    publicPath: 'http://localhost:9080'
-                })*/
 
         hotMiddleware = webpackHotMiddleware(compiler, {
             log: false,
@@ -127,19 +115,11 @@ function startRenderer () {
             logStats('Renderer', stats)
         })
 
-        /*        app.use(devMiddleware);
-                app.use(hotMiddleware)
-                devMiddleware.waitUntilValid(() => {
-                    resolve()
-                })
-                app.listen(9080, function () {
-                    console.log('webpack-hot-middleware listening on port 9080!\n');
-                });*/
 
         const server = new WebpackDevServer(
             compiler,
             {
-                contentBase: path.join(__dirname, '../../'),
+                contentBase: path.resolve(__dirname, '../../dist/electron/'),
                 quiet: true,
                 writeToDisk: true,
                 before (app, ctx) {
@@ -151,14 +131,6 @@ function startRenderer () {
             }
         )
         server.listen(9080)
-
-        /*        compiler.watch({}, (err, stats) => {
-                    if (err) {
-                        console.log(err)
-                        return
-                    }
-                    resolve()
-                })*/
 
     })
 }

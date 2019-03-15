@@ -97,6 +97,7 @@ if (isPro) {
 let whiteListedModules = ['lodash', 'jquery', '@julienedies/brick']
 
 const FrontConfig = {
+    name: 'frontend',
     //context,  // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和 loader
     mode: isPro ? 'production' : 'development',  // 会设置打包文件环境下的 process.env.NODE_ENV
     //devtool: '#cheap-module-eval-source-map',
@@ -271,6 +272,7 @@ const FrontConfig = {
 }
 
 const serverConfig = {
+    name: 'server',
     mode: isPro ? 'production' : 'development',
     devtool: 'cheap-module-source-map',
     target: 'node',
