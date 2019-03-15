@@ -44,7 +44,7 @@ brick.reg('rts_ctrl', function (scope) {
     scope.view = function () {
         let $th = $(this)
         let code = $th.attr('code')
-        let event = $th.attr('event')
+        let event = $th.attr('event') || 'view_in_tdx'
         emit({event: event, code: code})
     };
 

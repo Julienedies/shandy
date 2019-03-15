@@ -23,9 +23,7 @@ const tradeArr = userDb('trading', []).get()
 // activate context menu
 debugMenu.install();
 
-brick.reg('mainCtrl', function () {
-
-    let scope = this;
+brick.reg('mainCtrl', function (scope) {
 
     scope.crop = {x: 3140, y: 115, width: 310, height: 50};
 
@@ -34,7 +32,7 @@ brick.reg('mainCtrl', function () {
         let dir = brick.utils.get_query('dir');
         let urls = imager.get_images(dir);
         urls.map(o => {
-            o.info = tradeArr.filter(arr => {
+            o.tradeInfo = tradeArr.filter(arr => {
                 return o.code === arr[3] && o.d.replace(/-/g, '') === arr[0];
             });
         });
@@ -44,13 +42,14 @@ brick.reg('mainCtrl', function () {
     };
 
     // ic-viewer  回调函数
-    scope.on_show = function (index, src, $info) {
-        let arr = scope.urls[index].info;
+    scope.onShow = function (index, src, $info) {
+        let imgObj = scope.urls[index]
+        let arr = imgObj.tradeInfo;
         arr = arr.map(a => {
             return [a[1], a[5], a[7], a[6]];
         });
         let text = arr.join('\r\n').replace(/,/g, '    ');
-        $info.text(text);
+        $info.text(text + '\r\n' + imgObj.f);
     };
 
     // 图片剪切测试  fields => {x: 3140, y: 115, width: 310, height: 50}

@@ -5,6 +5,7 @@
 import '../../../css/common/common.scss'
 import './style.scss'
 
+import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
@@ -33,29 +34,36 @@ brick.reg('replay_ctrl', function () {
     };
 
     scope.replay = {
-        before: function (fields){
+        before: function (fields) {
             console.info(fields);
             return fields;
         },
-        done: function(msg){
+        done: function (msg) {
             scope.get_replay_done(msg);
         }
     };
 
 
-    scope.tag_edit = function(e, id){
+    scope.tag_edit = function (e, id) {
         scope.emit('tag.edit', list.get(id));
     };
 
-    scope.tag_remove_done = function(data){
+    scope.tag_remove_done = function (data) {
         model.tags = data;
         scope.get_replay_done(model);
     };
 
 
-    scope.on('tag.edit.done', function(e, msg){
+    scope.on('tag.edit.done', function (e, msg) {
         console.info(e, msg);
         scope.tag_remove_done(msg);
     });
+
+
+    $elm.on('ic-select.change', '[ic-select][ic-form-field]', function (e) {
+        let $th = $(this)
+        let name = $th.attr('ic-form-field')
+        model.replay[name] = $th.attr('ic-val')
+    })
 
 });

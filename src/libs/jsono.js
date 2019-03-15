@@ -56,6 +56,11 @@ class Jo {
     set (key, val = {}) {
         if (!key) return this;
 
+        if(typeof key === 'object') {
+            this.json = key
+            return this
+        }
+
         let keys = key.split('.')
 
         return (function fx (namespace, keys) {

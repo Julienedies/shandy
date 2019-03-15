@@ -154,11 +154,15 @@ brick.reg('mainCtrl', function (scope) {
         if (win) {
             win.show()
         } else {
-            scope.reviewTradingWindow = utils.open({
-                x: 160, y: 80, url: 'review-trading.html', onClose: () => {
+            scope.sreviewTradingWindow = utils.open({
+                x: 1440,
+                y: 0,
+                url: 'review-trading.html',
+                onClose: () => {
                     delete scope.reviewTradingWindow;
                 }
-            })
+            });
+            scope.sreviewTradingWindow.maximize()
         }
     }
 
@@ -173,7 +177,9 @@ brick.reg('mainCtrl', function (scope) {
             viewImgWindow.load(url)
         } else {
             viewImgWindow = scope.viewImgWindow = new Win({
-                x: 1440, url: url, onClose: () => {
+                x: 1440,
+                url,
+                onClose: () => {
                     delete scope.viewImgWindow
                 }
             });

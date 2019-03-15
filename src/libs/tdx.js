@@ -69,6 +69,9 @@ export default {
             console.info(`tdx.show 调用限制,余${this._limit_reduce}秒`);
         }
     },
+    viewInFtnn(code){
+        this.view_in_ftnn(code)
+    },
     view_in_ftnn: function (code) {
         ac.activeFtnn();
         code += '';

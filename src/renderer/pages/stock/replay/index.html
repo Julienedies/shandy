@@ -40,7 +40,9 @@
                 <div class="field is-grouped is-grouped-multiline" ic-select="大盘状态" ic-form-field="大盘状态">
                     <div class="control" ic-for="i,v in tags['大盘状态']">
                         <div class="tags has-addons">
-                            <span ic-select-item ic-class="tag is-medium {{replay['大盘状态'] == v.text ? 'is-warning':''}}" ic-val="{{v.text}}">{{v.text}}</span>
+                            <span ic-select-item ic-class="tag is-medium {{replay['大盘状态'] == v.text ? 'is-warning':''}}" ic-val="{{v.text}}">
+                                {{v.text}}
+                            </span>
                             <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
                                 <span class="icon is-medium"><i class="far fa-edit"></i></span>
                             </a>

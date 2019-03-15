@@ -1,0 +1,26 @@
+
+#chartWrapper{
+  display: flex;
+  flex-flow: column;
+  width:100%;
+  height:100%;
+  padding:10px 20px 20px 20px;
+  >:first-child{
+
+  }
+  #chartBox{
+    flex:1;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    #dayChart{
+      flex:1;
+    }
+    #tickChart{
+      flex:1;
+      margin-left:60%;
+      width:40%;
+    }
+  }
+
+}

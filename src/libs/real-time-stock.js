@@ -70,7 +70,7 @@ Rts.prototype = {
         }
     },
     _query: function () {
-        var that = this;
+        let that = this;
         let options = {
             url: this.url,
             encoding: null

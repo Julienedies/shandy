@@ -52,8 +52,8 @@
             <button class="button is-primary level-right" ic-click="reverse">反转</button>
         </h3>
         <div ic-tpl="trading">
-            <div class="column" ic-drag-view>
-                <table class="table is-fullwidth is-striped" ic-drag-handle>
+            <div class="column">
+                <table class="table is-fullwidth is-striped">
                     <caption>共有交易记录 {{ model.data.length }} 条</caption>
                     <tr ic-for="i,o in model.index">
                         <th ic-for="k,v in o">{{ v }}</th>
@@ -65,16 +65,19 @@
                 </table>
             </div>
         </div>
-    </div>
 
-    <div ic-popup="kLine">
-        <div class="column">
-            <div class="column">
-                <button class="button" ic-popup-close>关闭</button>&nbsp;&nbsp;
-                <span id="info"></span>
-            </div>
+        <div ic-popup="kLine">
+            <div id="chartWrapper">
+                <div class="box">
+                    <button class="button" ic-popup-close>返回</button>&nbsp;&nbsp;
+                    <span id="info"></span>
+                    <button class="button is-primary" ic-click="viewInFtnn">富途查看</button>
+                </div>
 
-            <div class="box" id="chart" style="min-height:600px;">
+                <div id="chartBox">
+                    <div class="" id="tickChart"></div>
+                    <div class="" id="dayChart"></div>
+                </div>
             </div>
         </div>
 

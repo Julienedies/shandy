@@ -1,7 +1,7 @@
 /*!
  * Created by j on 2019-02-28.
  */
-
+import os from 'os'
 import electron from 'electron'
 
 const {remote, shell} = electron
@@ -11,7 +11,8 @@ import jhandy from 'jhandy'
 
 import Win from './window'
 import setting from './setting'
-import os from "os"
+import tdx from './tdx'
+
 
 export default {
     open (option) {
@@ -46,6 +47,9 @@ export default {
             console.log('ip address 获取失败. =>', e)
         }
         return ip
+    },
+    viewInFtnn(code){
+        tdx.viewInFtnn(code)
     }
 }
 

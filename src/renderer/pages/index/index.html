@@ -4,28 +4,60 @@
     <meta charset="UTF-8">
     <title>shandy</title>
     <link rel="stylesheet" href="../../css/vendor/photon/css/photon.css"/>
+    <link rel="stylesheet" href="../../css/vendor/hint.css">
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
 <div class="window" ic-ctrl="mainCtrl">
-    <header class="toolbar toolbar-header" ic-ctrl="toolBarCtrl" style="display: none;">
+    <header class="toolbar toolbar-header" ic-ctrl="toolBarCtrl">
         <div class="toolbar-actions">
 
             <div class="btn-group">
-                <a class="btn-btn-default" ic-click="news">
-                    <i class="icon icon-credit-card"></i>
-                    资讯提示
+                <a class="btn-btn-default hint--bottom" aria-label="阶段涨幅" ic-click="view_403">
+                    <i class="icon icon-up"></i>
+                </a>
+                <a class="btn-btn-default hint--bottom" aria-label="涨跌停价计算" ic-click="swing_10">
+                    <i class="icon icon-publish"></i>
+                </a>
+            </div>
+
+            <div class="btn-group" ic-ctrl="view_stock_ctrl">
+                <a class="btn-btn-default hint--bottom" aria-label="富途查看" ic-click="view_in_ftnn">
+                    <span class="icon icon-search"></span>
+                </a>
+                <a class="btn-btn-default hint--bottom" aria-label="云财经" ic-click="go_ycj">
+                    <span class="icon icon-cloud"></span>
+                </a>
+                <a class="btn-btn-default hint--bottom" aria-label="个股资料" >
+                    <span class="icon icon-book-open"></span>
+                </a>
+                <a class="btn-btn-default hint--bottom" aria-label="添加股票" ic-popup-target="add_stock">
+                    <span class="icon icon-plus-circled"></span>
                 </a>
             </div>
 
             <div class="btn-group">
-                <a class="btn-btn-default" ic-click="refresh">
-                    <i class="icon icon-cw"></i>
-                    刷新
+                <a class="btn-btn-default hint--bottom" aria-label="更新token" ic-click="updateToken">
+                    <i class="icon icon-shuffle"></i>
                 </a>
-                <a class="btn-btn-default" ic-click="relaunch">
+                <a class="btn-btn-default hint--bottom" aria-label="web版本" ic-click="openInWeb">
+                    <i class="icon icon-globe"></i>
+                </a>
+            </div>
+
+            <div class="btn-group">
+                <a class="btn-btn-default hint--bottom" aria-label="刷新" ic-click="refresh">
+                    <i class="icon icon-cw"></i>
+                </a>
+                <a class="btn-btn-default hint--bottom" aria-label="重启" ic-click="relaunch">
                     <i class="icon icon-arrows-ccw"></i>
-                    重启
+                </a>
+            </div>
+
+            <div class="btn-group">
+               <a class="btn-btn-default hint--bottom" aria-label="当前IP">
+                    <i class="icon icon-flow-line"></i>
+                    <span id="ip"></span>
                 </a>
             </div>
 
@@ -152,8 +184,8 @@
         </div>
     </div>
 
-    <footer class="toolbar toolbar-footer" ic-ctrl="toolBarCtrl">
-        <div class="toolbar-actions">
+    <footer class="toolbar toolbar-footer none" ic-ctrl="toolBarCtrl">
+        <!--<div class="toolbar-actions">
 
             <div class="btn-group">
                 <a class="btn-btn-default" ic-click="view_403">
@@ -210,7 +242,7 @@
                 </a>
             </div>
 
-        </div>
+        </div>-->
     </footer>
 </div>
 </body>
