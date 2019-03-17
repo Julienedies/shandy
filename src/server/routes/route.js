@@ -8,6 +8,7 @@ import $404 from './filter/404'
 import $500 from './filter/500'
 
 // action
+import csd from './action/csd'
 import stock from './action/stock'
 import concept from './action/concept'
 import logic from './action/logic'
@@ -25,6 +26,8 @@ export default function(app){
 
     app.use(crossDomain)
 
+    app.get('/csd/days', csd.getDays)
+    app.get('/csd/tick', csd.getTick)
     app.get('/stock/concept/:name', concept.get)
     app.get('/stock/c/:code', stock.get)
     app.post('/stock/c/:code', stock.post)

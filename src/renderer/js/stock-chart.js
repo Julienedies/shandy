@@ -4,9 +4,9 @@
 
 import echarts from 'echarts'
 
-let bgColor = "#1f212d";//背景
-let upColor = "#F9293E";//涨颜色
-let downColor = "#00aa3b";//跌颜色
+let bgColor = "#fff"; //背景
+let upColor = "#F9293E"; //涨颜色
+let downColor = "#00aa3b"; //跌颜色
 
 // ma  颜色
 let ma5Color = "#39afe6";
@@ -280,19 +280,21 @@ function initKOption (cdata) {
     let data = splitData(cdata);
     let macd = calcMACD(12, 26, 9, data.datas, 1);
     return {
-        tooltip: { //弹框指示器
+        // 弹框指示器
+        tooltip: {
             trigger: 'axis',
             axisPointer: {
                 type: 'cross'
             }
         },
-        legend: { //图例控件,点击图例控制哪些系列不显示
+        // 图例控件,点击图例控制哪些系列不显示
+        legend: {
             icon: 'rect',
             type: 'scroll',
             itemWidth: 14,
             itemHeight: 2,
             left: 0,
-            top: '-1%',
+            top: 0,
             animation: true,
             textStyle: {
                 fontSize: 12,
@@ -304,78 +306,100 @@ function initKOption (cdata) {
             show: true
         },
         color: [ma5Color, ma10Color, ma20Color, ma30Color],
-        grid: [{
-            id: 'gd1',
-            left: '0%',
-            right: '1%',
-            height: '60%', //主K线的高度,
-            top: '5%'
-        }, {
-            left: '0%',
-            right: '1%',
-            top: '66.5%',
-            height: '10%' //交易量图的高度
-        }, {
-            left: '0%',
-            right: '1%',
-            top: '80%', //MACD 指标
-            height: '0'
-        }],
-        xAxis: [ //==== x轴
-            { //主图
+        grid: [
+            {
+                id: 'gd1',
+                show: true,
+                borderColor: 'blue',
+                top: 40,
+                left: 10,
+                right: 50,
+                height: '60%', //主K线的高度,
+            },
+            {
+                left: 10,
+                right: 30,
+                top: '74%',
+                height: '20%' //交易量图的高度
+            },
+            {
+                left: '0%',
+                right: '1%',
+                top: '80%', //MACD 指标
+                height: '0'
+            }],
+        //  x轴
+        xAxis: [
+            //主图
+            {
                 type: 'category',
                 data: data.times,
                 scale: true,
-                boundaryGap: false,
+                boundaryGap: 60,
                 axisLine: {
                     onZero: false
                 },
-                axisLabel: { //label文字设置
+                //label文字设置
+                axisLabel: {
                     show: false
                 },
                 splitLine: {
-                    show: false,
+                    show: true,
                     lineStyle: {
-                        color: '#3a3a3e'
+                        color: '#efefef'
                     }
                 },
-                splitNumber: 20,
+                splitNumber: 80,
                 min: 'dataMin',
                 max: 'dataMax'
-            }, { //交易量图
+            },
+            //交易量图
+            {
                 type: 'category',
-                gridIndex: 1,
                 data: data.times,
-                axisLabel: { //label文字设置
+                gridIndex: 1,
+                boundaryGap: 60,
+                axisLabel: {
                     color: '#9b9da9',
                     fontSize: 10
                 },
-            }, { //幅图
+            },
+            // 指标副图
+            {
                 type: 'category',
                 gridIndex: 2,
+                show: false,
                 data: data.times,
                 axisLabel: {
                     show: false
                 }
             }
         ],
-        yAxis: [ //y轴
-            { //==主图
-                name:'price',
-                position:'right',
+        // y轴
+        yAxis: [
+            // 主图
+            {
+                name: 'price',
+                position: 'right',
+                offset: 20,
                 scale: true,
                 z: 4,
-                axisLabel: { //label文字设置
+                //label文字设置
+                axisLabel: {
                     color: '#c7c7c7',
-                    inside: true, //label文字朝内对齐
+                    //label文字朝内对齐
+                    //inside: true,
                 },
-                splitLine: { //分割线设置
-                    show: false,
+                // 分割线设置
+                splitLine: {
+                    show: true,
                     lineStyle: {
-                        color: '#181a23'
+                        color: 'rgba(150,150,150,0.2)'
                     }
                 },
-            }, { //交易图
+            },
+            // 交易图
+            {
                 gridIndex: 1,
                 splitNumber: 3,
                 z: 4,
@@ -388,13 +412,17 @@ function initKOption (cdata) {
                 splitLine: {
                     show: false
                 },
-                axisLabel: { //label文字设置
+                axisLabel: {
                     color: '#c7c7c7',
-                    inside: true, //label文字朝内对齐
+                    inside: true,
                     fontSize: 8
                 },
-            }, { //幅图
-                z: 4, gridIndex: 2, splitNumber: 4,
+            },
+            // 副图
+            {
+                z: 4,
+                gridIndex: 2,
+                splitNumber: 4,
                 axisLine: {
                     onZero: false
                 },
@@ -404,21 +432,24 @@ function initKOption (cdata) {
                 splitLine: {
                     show: false
                 },
-                axisLabel: { //label文字设置
+                //label文字设置
+                axisLabel: {
                     color: '#c7c7c7',
-                    inside: true, //label文字朝内对齐
+                    //label文字朝内对齐
+                    inside: true,
                     fontSize: 8
                 },
             }
         ],
         dataZoom: [{
             type: 'slider',
-            xAxisIndex: [0, 1, 2], //控件联动
+            //控件联动
+            xAxisIndex: [0, 1, 2],
             start: 0,
             end: 100,
             throttle: 10,
-            top: '94%',
-            height: '6%',
+            top: '96%',
+            height: '4%',
             borderColor: '#696969',
             textStyle: {
                 color: '#dcdcdc'
@@ -426,54 +457,47 @@ function initKOption (cdata) {
             handleSize: '90%', //滑块图标
             handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
             dataBackground: {
+                //数据边界线样式
                 lineStyle: {
                     color: '#fff'
-                }, //数据边界线样式
+                },
+                //数据域填充样式
                 areaStyle: {
                     color: '#696969'
-                } //数据域填充样式
+                }
             }
-        },
-            // 		{
-            // 			type: 'inside',
-            // 			xAxisIndex: [0,1,2],//控件联动
-            // 		},
+        }
         ],
-        animation: false, //禁止动画效果
+        animation: false,
         backgroundColor: bgColor,
-        blendMode: 'source-over',
-        series: [{
-            name: 'K线周期图表',
-            type: 'candlestick',
-            data: data.datas,
-            barWidth: '55%',
-            large: true,
-            largeThreshold: 100,
-            itemStyle: {
-                normal: {
-                    color: upColor, //fd2e2e  ff4242
-                    color0: downColor,
-                    borderColor: upColor,
-                    borderColor0: downColor,
-
-                    //opacity:0.8
-                }
+        series: [
+            {
+                name: '日K',
+                type: 'candlestick',
+                data: data.datas,
+                itemStyle: {
+                    normal: {
+                        color: upColor,
+                        color0: downColor,
+                        borderColor: upColor,
+                        borderColor0: downColor,
+                    }
+                },
             },
-
-        }, {
-            name: 'MA5',
-            type: 'line',
-            data: calculateMA(5, data),
-            smooth: true,
-            symbol: "none", //隐藏选中时有小圆点
-            lineStyle: {
-                normal: {
-                    opacity: 0.8,
-                    color: '#39afe6',
-                    width: 1
-                }
+            {
+                name: 'MA5',
+                type: 'line',
+                data: calculateMA(5, data),
+                smooth: true,
+                symbol: "none", //隐藏选中时有小圆点
+                lineStyle: {
+                    normal: {
+                        opacity: 0.8,
+                        color: '#39afe6',
+                        width: 1
+                    }
+                },
             },
-        },
             {
                 name: 'MA10',
                 type: 'line',
@@ -513,13 +537,15 @@ function initKOption (cdata) {
                         color: ma30Color
                     }
                 }
-            }, {
+            },
+            {
                 name: 'Volumn',
                 type: 'bar',
                 xAxisIndex: 1,
                 yAxisIndex: 1,
                 data: data.vols,
-                barWidth: '60%',
+                min: 'dataMin',
+                max: 'dataMax',
                 itemStyle: {
                     normal: {
                         color: function (params) {
@@ -533,7 +559,8 @@ function initKOption (cdata) {
                         },
                     }
                 }
-            }, {
+            },
+            {
                 name: 'MACD',
                 type: 'bar',
                 xAxisIndex: 2,
@@ -553,7 +580,8 @@ function initKOption (cdata) {
                         },
                     }
                 }
-            }, {
+            },
+            {
                 name: 'DIF',
                 type: 'line',
                 symbol: "none",
@@ -566,7 +594,8 @@ function initKOption (cdata) {
                         width: 1
                     }
                 }
-            }, {
+            },
+            {
                 name: 'DEA',
                 type: 'line',
                 symbol: "none",
@@ -724,7 +753,7 @@ function calculateMA (dayCount, data) {
  * @param {array} data 输入数据
  * @param {string} field 计算字段配置
  */
-function calcEMA(n, data, field) {
+function calcEMA (n, data, field) {
     let i, l, ema, a;
     a = 2 / (n + 1);
     if (field) {
@@ -750,7 +779,7 @@ function calcEMA(n, data, field) {
  * @param {array} data 输入数据
  * @param {string} field 计算字段配置
  */
-function calcDIF(short, long, data, field) {
+function calcDIF (short, long, data, field) {
     let i, l, dif, emaShort, emaLong;
     dif = [];
     emaShort = calcEMA(short, data, field);
@@ -766,7 +795,7 @@ function calcDIF(short, long, data, field) {
  * @param {number} mid 对dif的时间窗口
  * @param {array} dif 输入数据
  */
-function calcDEA(mid, dif) {
+function calcDEA (mid, dif) {
     return calcEMA(mid, dif);
 }
 
@@ -778,7 +807,7 @@ function calcDEA(mid, dif) {
  * @param {array} data 输入数据
  * @param {string} field 计算字段配置
  */
-function calcMACD(short, long, mid, data, field) {
+function calcMACD (short, long, mid, data, field) {
     let i, l, dif, dea, macd, result;
     result = {};
     macd = [];
@@ -799,3 +828,6 @@ export default {
     initMOption,
     initKOption
 }
+
+export { initKOption, initMOption };
+

@@ -1,0 +1,16 @@
+#chartBox{
+  position: fixed;
+  width:100%;
+  height: 100%;
+  padding:20px;
+  display: flex;
+  flex-flow: column;
+
+  #dayChart{
+    flex:1;
+  }
+
+  #tickChart{
+    height:30%;
+  }
+}

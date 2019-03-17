@@ -31,6 +31,8 @@ debugMenu.install();
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 import './style.scss'
+import html from './index.html'
+console.log(44444, html)
 
 import './main-ctrl.js'
 import './tool-bar-ctrl.js'

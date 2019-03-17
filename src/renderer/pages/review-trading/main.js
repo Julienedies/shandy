@@ -16,7 +16,7 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../js/common.js'
 
-import createOpt from './stock-chart'
+import createOpt from '../../js/stock-chart'
 import { a, b } from './ls'
 
 import userDb from '../../../libs/user-db'
@@ -29,36 +29,35 @@ const tradingDb = userDb('trading', [])
 let tradingJson = JSON.parse(JSON.stringify(tradingDb.json))
 sort(tradingJson)
 
-function add (data) {
-    console.log(data)
-    tradingJson = tradingDb.json.concat(data)
-    console.log(11, tradingJson.length)
-    tradingJson = clean(tradingJson)
-    sort(tradingJson)
-    console.log(22, tradingJson.length)
-    tradingDb.json = tradingJson
-    tradingDb.save()
-}
-
-function sort (arr) {
-    arr.sort((a, b) => {
-        let t1 = `${ a[0].replace(/^(\d{4})(\d{2})(\d{2})$/img, '$1/$2/$3') } ${ a[1] }`
-        let t2 = `${ b[0].replace(/^(\d{4})(\d{2})(\d{2})$/img, '$1/$2/$3') } ${ b[1] }`
-        return (new Date(t2)) - (new Date(t1))
-    })
-}
-
-function clean (arr) {
-    return _.uniqBy(arr, (item) => {
-        return item[14]
-    })
-}
-
-
-brick.reg('mainCtrl', function (scope) {
-})
+brick.reg('mainCtrl', function (scope) {})
 
 brick.reg('uploadTradingCtrl', function (scope) {
+
+    function add (data) {
+        console.log(data)
+        tradingJson = tradingDb.json.concat(data)
+        console.log(11, tradingJson.length)
+        tradingJson = clean(tradingJson)
+        sort(tradingJson)
+        console.log(22, tradingJson.length)
+        tradingDb.json = tradingJson
+        tradingDb.save()
+    }
+
+    function sort (arr) {
+        arr.sort((a, b) => {
+            let t1 = `${ a[0].replace(/^(\d{4})(\d{2})(\d{2})$/img, '$1/$2/$3') } ${ a[1] }`
+            let t2 = `${ b[0].replace(/^(\d{4})(\d{2})(\d{2})$/img, '$1/$2/$3') } ${ b[1] }`
+            return (new Date(t2)) - (new Date(t1))
+        })
+    }
+
+    function clean (arr) {
+        return _.uniqBy(arr, (item) => {
+            return item[14]
+        })
+    }
+
 
     scope.uploadTrading = function (fields) {
         let $th = $(this).icSetLoading()

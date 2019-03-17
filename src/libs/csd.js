@@ -35,7 +35,6 @@ for example 600149, it will be 0600149
 000002, it will be 1000002
  */
 
-
 /**
  *
  * @param opt
