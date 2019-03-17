@@ -319,7 +319,7 @@ function initKOption (cdata) {
             left: '0%',
             right: '1%',
             top: '80%', //MACD 指标
-            height: '14%'
+            height: '0'
         }],
         xAxis: [ //==== x轴
             { //主图
@@ -361,6 +361,8 @@ function initKOption (cdata) {
         ],
         yAxis: [ //y轴
             { //==主图
+                name:'price',
+                position:'right',
                 scale: true,
                 z: 4,
                 axisLabel: { //label文字设置
@@ -412,8 +414,8 @@ function initKOption (cdata) {
         dataZoom: [{
             type: 'slider',
             xAxisIndex: [0, 1, 2], //控件联动
-            start: 100,
-            end: 80,
+            start: 0,
+            end: 100,
             throttle: 10,
             top: '94%',
             height: '6%',

@@ -52,28 +52,34 @@ const plugins = [
     new webpack.DefinePlugin({}),
     new webpack.NoEmitOnErrorsPlugin(),
     new ManifestPlugin(),
-    new MiniCssExtractPlugin({
-        filename: '[name].css',
-        chunkFilename: '[name].css'
-    }),
     new CleanPlugin([`dist/electron`], {
         root: projectRoot
     })
 ]
 
 
-let cssLoader = {
-    loader: MiniCssExtractPlugin.loader,
-    options: {
-        publicPath: publicPath
-    }
-}
-
+let cssLoader
 
 if (isPro) {
 
+    cssLoader = {
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+            publicPath: publicPath
+        }
+    }
+
+    plugins.push(new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[name].css'
+    }))
 
 } else {
+
+    cssLoader = {
+        loader: 'style-loader'
+    }
+
     // hmr
     Object.entries(entry).forEach(([k, v]) => {
         v = Array.isArray(v) ? v : [v]

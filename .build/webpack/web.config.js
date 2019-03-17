@@ -51,34 +51,42 @@ const plugins = [
     new webpack.DefinePlugin({}),
     new webpack.NoEmitOnErrorsPlugin(),
     new ManifestPlugin(),
-    new MiniCssExtractPlugin({
-        filename: '[name].css',
-        chunkFilename: '[name].css'
-    }),
-/*    new CleanPlugin([`dist/web`], {
+    new CleanPlugin([`dist/web`], {
         root: projectRoot
-    })*/
+    })
 ]
 
 const devServerPort = 8090
 let devServer = {}
 
-let cssLoader = {
-    loader: MiniCssExtractPlugin.loader,
-    options: {
-        publicPath: publicPath
-    }
-}
+let cssLoader
 
 
 if (isPro) {
 
+    cssLoader = {
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+            publicPath: publicPath
+        }
+    }
+
+    plugins.push(new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[name].css'
+    }))
 
 } else {
+
+    cssLoader = {
+        loader: 'style-loader'
+    }
+
     // hmr
     Object.entries(entry).forEach(([k, v]) => {
         v = Array.isArray(v) ? v : [v]
         v.push(`webpack-hot-middleware/client?noInfo=true&reload=true&path=http://localhost:${ devServerPort }/__webpack_hmr`)
+        // v.unshift(`webpack-dev-server/client?http://localhost:${ devServerPort }/`)
         entry[k] = v
     })
     plugins.push(new webpack.HotModuleReplacementPlugin())
@@ -86,17 +94,19 @@ if (isPro) {
 /*    devServer = {
         publicPath: publicPath,
         contentBase: outputPath,
-        writeToDisk: true,
         port: devServerPort,
+        writeToDisk: true,
+        quiet: false,
         hot: true,
+        disableHostCheck: true
     }*/
 
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-let whiteListedModules = ['lodash', 'jquery', '@julienedies/brick']
+let whiteListedModules = ['lodash', 'jquery', '@julienedies/brick', 'echarts']
 
-const FrontConfig = {
+const frontConfig = {
     name: 'frontend',
     //context,  // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和 loader
     mode: isPro ? 'production' : 'development',  // 会设置打包文件环境下的 process.env.NODE_ENV
@@ -334,7 +344,7 @@ const serverConfig = {
 }
 
 
-module.exports = [
-    FrontConfig,
-    //serverConfig
-]
+module.exports ={
+    frontConfig,
+    serverConfig
+}
