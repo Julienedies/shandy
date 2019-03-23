@@ -55,7 +55,7 @@
             </div>
 
             <div class="btn-group">
-               <a class="btn-btn-default hint--bottom" aria-label="当前IP">
+               <a class="btn-btn-default hint--bottom" aria-label="点击刷新当前IP" ic-click="showIp">
                     <i class="icon icon-flow-line"></i>
                     <span id="ip"></span>
                 </a>
@@ -127,11 +127,6 @@
                 </div>
 
                 <div id="indexView">
-                    <section id="memo_box" ic-ctrl="memoCtrl">
-                        <textarea id="memo">
-                        </textarea>
-                        <button class="none" ic-click="saveMemo">保存</button>
-                    </section>
                     <section id="rtsCtrl" ic-ctrl="rts_ctrl">
                         <div id="rts_list" ic-tpl="list">
                             <ul>
@@ -159,6 +154,13 @@
                             </div>
                         </div>
                     </section>
+
+                    <section id="memo_box" ic-ctrl="memoCtrl">
+                        <textarea id="memo">
+                        </textarea>
+                        <button class="none" ic-click="saveMemo">保存</button>
+                    </section>
+
                     <div ic-form="add_stock" ic-popup="add_stock">
                         <div class="column is-10">
                             <div>

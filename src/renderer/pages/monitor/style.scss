@@ -9,6 +9,9 @@ html, body {
 .warning{
     animation: ani 0.5s infinite ease-in-out;
 }
+.warn{
+    animation: ani 0.5s 3 ease-in-out;
+}
 .rout{
     opacity: 0.5;
 }
@@ -70,6 +73,15 @@ html, body {
 #rts_list span.time{
 }
 
+#notify_news{
+    padding: 0.2rem 0.7rem;
+}
+
 .box{
+    margin: 15px 0 0 0;
     padding:0.3rem 0.5rem;
+}
+
+section{
+    margin:0 0 10px 0;
 }

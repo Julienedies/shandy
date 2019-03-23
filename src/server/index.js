@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
-app.get('/set_node_modules_path.js', function (req, res) {
+app.get('/set_node_modules_path.js', (req, res) => {
     res.send(`
         try{
             require('module').globalPaths.push('${ path.resolve(__dirname, '../../node_modules') }');
@@ -41,6 +41,13 @@ app.get('/set_node_modules_path.js', function (req, res) {
             console.log(err);
         }
     `)
+})
+
+app.get('/msg', (req, res) =>{
+    let info = req.query.info
+    console.log('@___________________-____________________@', req.query)
+    res.send(`info: ${info}`)
+    io.emit('cls_news', info)
 })
 
 app.use('/web/', express.static(webStaticDir))

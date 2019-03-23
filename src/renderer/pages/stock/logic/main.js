@@ -9,6 +9,8 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
+import Reader from '../../../../libs/reader'
+
 import '../../../js/common-stock.js'
 
 brick.reg('logics_ctrl', function(){
@@ -20,6 +22,7 @@ brick.reg('logics_ctrl', function(){
     this.get_logic_on_done = function(data){
         list.init(data);
         scope.render('logics', data);
+        new Reader()
     };
 
     this.logic = {
@@ -39,6 +42,7 @@ brick.reg('logics_ctrl', function(){
     });
 
 });
+
 
 brick.reg('set_logic_ctrl', function(){
 

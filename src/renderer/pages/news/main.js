@@ -17,7 +17,7 @@ socket.on('cls_news', function (msg) {
     $msg.text(msg)
     if (win) {
         win.showInactive()
-        win.setSize(1400, 102, true)
+        win.setSize(1400, 72, true)
         setTimeout(function () {
             //win.setPosition(1600, 3)
             win.setSize(1400, 32, true)

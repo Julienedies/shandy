@@ -24,9 +24,11 @@ const {dialog} = electron.remote
 
 brick.reg('toolBarCtrl', function (scope) {
 
-    scope.$elm.find('#ip').text(utils.getIp())
+    this.showIp = function() {
+        scope.$elm.find('#ip').text(utils.getIp())
+    }
 
-
+    this.showIp()
 
     this.view_403 = function () {
         tdx.keystroke('.403', true)

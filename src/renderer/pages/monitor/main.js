@@ -28,7 +28,7 @@ socket.on('rts_push', function (arr) {
 });
 
 socket.on('cls_news', function (msg) {
-    $notify_news.text(msg)
+    $notify_news.text(msg).toggleClass('warn')
 });
 
 //
