@@ -9,19 +9,21 @@ const ipc = electron.ipcRenderer
 const BrowserWindow = electron.remote.BrowserWindow
 let win
 
-
 let socket = io()
+let $place = $('#place')
 let $msg = $('#msg')
 
-socket.on('cls_news', function (msg) {
+socket.on('msg', function (msg) {
     $msg.text(msg)
     if (win) {
         win.showInactive()
-        win.setSize(1400, 72, true)
+        $place.hide()
+        win.setSize(1400, 58, true)
         setTimeout(function () {
             //win.setPosition(1600, 3)
+            $place.show()
             win.setSize(1400, 32, true)
-        }, 12 * 1000)
+        }, 13 * 1000)
     }
 })
 

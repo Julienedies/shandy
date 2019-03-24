@@ -21,8 +21,9 @@ brick.reg('logics_ctrl', function(){
 
     this.get_logic_on_done = function(data){
         list.init(data);
-        scope.render('logics', data);
-        new Reader()
+        scope.render('logics', data, () => {
+            new Reader().init()
+        });
     };
 
     this.logic = {

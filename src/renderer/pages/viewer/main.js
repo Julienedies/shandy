@@ -33,6 +33,7 @@ brick.reg('mainCtrl', function (scope) {
         let urls = imager.get_images(dir);
         urls.map(o => {
             o.tradeInfo = tradeArr.filter(arr => {
+                // 交易信息 对应 code 和 时间
                 return o.code === arr[3] && o.d.replace(/-/g, '') === arr[0];
             });
         });
@@ -48,6 +49,7 @@ brick.reg('mainCtrl', function (scope) {
         arr = arr.map(a => {
             return [a[1], a[5], a[7], a[6]];
         });
+        arr.reverse(); // 当日多个交易记录按照时间先后显示
         let text = arr.join('\r\n').replace(/,/g, '    ');
         $info.text(text + '\r\n' + imgObj.f);
     };

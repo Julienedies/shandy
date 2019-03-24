@@ -2,19 +2,14 @@
  * Created by j on 2019-02-28.
  */
 
-import './style.scss'
-
-import electron from 'electron'
-
-const {dialog} = electron.remote
-
 import jhandy from 'jhandy'
+import utils from '../../../libs/utils'
+
+import './style.scss'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
-
-import utils from '../../../libs/utils'
 
 import '../../js/common.js'
 

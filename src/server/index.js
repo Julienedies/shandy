@@ -47,7 +47,16 @@ app.get('/msg', (req, res) =>{
     let info = req.query.info
     console.log('@___________________-____________________@', req.query)
     res.send(`info: ${info}`)
-    io.emit('cls_news', info)
+    let msg = ``
+    if(info === 'daban'){
+        msg = `打板: ${msg} 龙头板吗?  计划内吗?  契合大盘吗? 支撑你的交易逻辑是什么? 打板风险最大, 标的要有最高的确定性! 龙头, 行情阶段, 风险收益比!`
+    }
+    else if(info === 'buy'){
+        msg = `建仓: ${msg} 支撑你的交易逻辑是什么? 你要捕捉的行情是什么? 不要做无计划的交易!`
+    }else if( info === 'sell'){
+        msg = `平仓: ${msg} 错误的头寸止损越快越好! 正确的头寸不要轻易丧失!`
+    }
+    io.emit('msg', msg)
 })
 
 app.use('/web/', express.static(webStaticDir))
@@ -65,7 +74,7 @@ io.on('connection', function (socket) {
 
     socket.on('cls_news', function (msg) {
         //socket.broadcast.emit('cls_news', msg);
-        io.emit('cls_news', msg);
+        io.emit('msg', msg);
     });
 
     socket.on('shandy', function (msg) {

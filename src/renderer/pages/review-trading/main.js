@@ -5,14 +5,16 @@
 import 'babel-polyfill'
 
 import './style.scss'
-
-import echarts from 'echarts'
-import jhandy from 'jhandy'
+import '../../css/custom-font/icon.scss'
+import './index.html'
 
 import _ from 'lodash'
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
+
+import echarts from 'echarts'
+import jhandy from 'jhandy'
 
 import '../../js/common.js'
 
@@ -29,6 +31,14 @@ const tradingDb = userDb('trading', [])
 let tradingJson = JSON.parse(JSON.stringify(tradingDb.json))
 sort(tradingJson)
 
+function sort (arr) {
+    arr.sort((a, b) => {
+        let t1 = `${ a[0].replace(/^(\d{4})(\d{2})(\d{2})$/img, '$1/$2/$3') } ${ a[1] }`
+        let t2 = `${ b[0].replace(/^(\d{4})(\d{2})(\d{2})$/img, '$1/$2/$3') } ${ b[1] }`
+        return (new Date(t2)) - (new Date(t1))
+    })
+}
+
 brick.reg('mainCtrl', function (scope) {})
 
 brick.reg('uploadTradingCtrl', function (scope) {
@@ -42,14 +52,6 @@ brick.reg('uploadTradingCtrl', function (scope) {
         console.log(22, tradingJson.length)
         tradingDb.json = tradingJson
         tradingDb.save()
-    }
-
-    function sort (arr) {
-        arr.sort((a, b) => {
-            let t1 = `${ a[0].replace(/^(\d{4})(\d{2})(\d{2})$/img, '$1/$2/$3') } ${ a[1] }`
-            let t2 = `${ b[0].replace(/^(\d{4})(\d{2})(\d{2})$/img, '$1/$2/$3') } ${ b[1] }`
-            return (new Date(t2)) - (new Date(t1))
-        })
     }
 
     function clean (arr) {

@@ -1,4 +1,3 @@
-
 #chartWrapper{
   display: flex;
   flex-flow: column;
@@ -15,12 +14,18 @@
     justify-content: flex-end;
     #dayChart{
       flex:1;
+      border:solid 1px greenyellow;
     }
     #tickChart{
-      flex:1;
+      height: 30vh;
       margin-left:60%;
       width:40%;
     }
   }
 
+}
+
+
+[ic-popup-target]{
+  cursor: pointer;
 }

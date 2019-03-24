@@ -39,6 +39,7 @@ import './tool-bar-ctrl.js'
 import view_stock from './view-stock-ctrl'
 import rtsc from './real-time-stock-ctrl'
 
+
 brick.bootstrap();
 
 /////////////////////////////////////////////////////////////////////////////////////

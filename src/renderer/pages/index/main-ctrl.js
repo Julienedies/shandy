@@ -134,7 +134,7 @@ brick.reg('mainCtrl', function (scope) {
                 height: 32,
                 x: 1600,
                 y: 3,
-                opacity: 0.8,
+                opacity: 0.9,
                 frame: false,
                 hasShadow: false,
                 alwaysOnTop: true,
@@ -214,7 +214,6 @@ brick.reg('mainCtrl', function (scope) {
     }
 
 })
-
 
 brick.reg('memoCtrl', function () {
 
