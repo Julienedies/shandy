@@ -51,5 +51,6 @@ export default {
     viewInFtnn(code){
         tdx.viewInFtnn(code)
     }
+
 }
 

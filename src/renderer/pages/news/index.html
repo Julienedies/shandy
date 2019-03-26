@@ -6,40 +6,41 @@
     <script src="/set_node_modules_path.js"></script>
     <style>
         body {
-            border: solid 0 blue;
-            border-top: none;
-            border-bottom: none;
-        }
-
-        html, body {
             margin:0;
-            padding: 2px 10px 5px 10px;
-            background: #000000;
+            /*padding: 2px 10px 2px 10px;*/
+            background: rgba(0,0,0, 0.6);
             color: #fff;
             overflow: hidden;
             font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
         }
 
         .warn {
-            animation: ani 0.5s infinite ease-in-out;;
+            animation: warn 0.7s 2 ease-in-out;
         }
 
-        @keyframes ani {
-            10% {
-                background: rgba(255, 255, 0, 0);
-                color: #fff;
-            }
-            100% {
+        @keyframes warn {
+            1% {
                 background: rgba(255, 255, 0, 1);
                 color: #000;
             }
+            100% {
+                background: rgba(255, 255, 0, 0);
+                color: #fff;
+            }
+        }
+
+        #msg{
+            padding:3px 10px;
+            color: #fff;
         }
     </style>
 </head>
 <body>
-<div id="place" style="white-space: pre;padding-bottom:3px;">交易逻辑 交易计划 交易模式 交易系统 | 控制 计划 等待 | 风口板 大势板 龙头板 人气合力板 二浪板 超预期板 补涨板 消息板</div>
-<div id="msg" class="warn" style="margin-top:4px; color: greenyellow; padding-left:10px;">
-    jhandy cls_news.
+<!--<div id="place" style="white-space: pre;padding-bottom:3px;">
+交易逻辑 交易计划 交易模式 交易系统 | 控制 计划 等待 | 风口板 大势板 龙头板 人气合力板 二浪板 超预期板 补涨板 消息板
+</div>-->
+<div id="msg">
+    交易逻辑 交易计划 交易模式 交易系统 | 控制 计划 等待 | 风口板 大势板 龙头板 人气合力板 二浪板 超预期板 补涨板 消息板
 </div>
 
 <script src="/socket.io/socket.io.js"></script>

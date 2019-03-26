@@ -4,20 +4,25 @@
 
 import electron from 'electron'
 
-const {remote, shell, ipcRenderer} = electron
-const {BrowserWindow} = remote
-
-import voice from '../../../libs/voice'
 import Win from '../../../libs/window'
 import tdx from '../../../libs/tdx'
 import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
 import schedule from '../../../libs/schedule'
+import voice from '../../../libs/voice'
+import warnText from '../../js/warn-text'
+
+import debugMenu from 'debug-menu'
+
+const {remote, shell, ipcRenderer} = electron
+const {BrowserWindow} = remote
+
+debugMenu.install();
 
 console.log(`
-We are using node ${process.versions.node}
-chrome ${process.versions.chrome}
-electron ${process.versions.electron}
+We are using node ${ process.versions.node }
+chrome ${ process.versions.chrome }
+electron ${ process.versions.electron }
 `)
 
 console.log('remote is =>', remote)
@@ -25,30 +30,34 @@ console.log('remote is =>', remote)
 //const config = remote.app.config
 //console.log(config)
 
-import debugMenu from 'debug-menu'
-debugMenu.install();
-
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 import './style.scss'
 import html from './index.html'
-console.log(44444, html)
+
+//console.log('import html =>', html)
 
 import './main-ctrl.js'
 import './tool-bar-ctrl.js'
 import view_stock from './view-stock-ctrl'
 import rtsc from './real-time-stock-ctrl'
 
-
 brick.bootstrap();
 
 /////////////////////////////////////////////////////////////////////////////////////
 
-schedule( () => {
-    new Win('warn.html');
+schedule(() => {
+    new Win('reminder.html');
 }, 8, 55);
 
-// 接收主进程发来的消息
+
+// --------------------------------接收主进程发来的消息 ------------------------
+// 交易语音警告
+ipcRenderer.on('voice_warn', (event, info) => {
+    //voice(warnText.voice[info] || '')
+})
+
+// 通达信中查看该股票
 ipcRenderer.on('view_in_tdx', function (event, msg) {
     let code = msg.code;
     if (!/^\d{6}$/.test(code)) {
@@ -58,6 +67,7 @@ ipcRenderer.on('view_in_tdx', function (event, msg) {
     code && tdx.view(code);
 });
 
+// 富途牛牛中查看该股票
 ipcRenderer.on('view_in_ftnn', function (event, msg) {
     let code = msg.code;
     if (!/^\d{6}$/.test(code)) {
@@ -67,7 +77,7 @@ ipcRenderer.on('view_in_ftnn', function (event, msg) {
     code && tdx.view_in_ftnn(code);
 });
 
-//
+// 浏览器中查看该股资料
 ipcRenderer.on('view_stock_info', function (event, stock) {
     if (stock.code) {
         view_stock(stock.code);
@@ -78,7 +88,7 @@ ipcRenderer.on('view_stock_info', function (event, stock) {
     }
 });
 
-//
+// 打开股票内容修改窗口
 ipcRenderer.on('set_stock_c', function (event, stock) {
     if (stock.code) {
         new Win({
@@ -102,7 +112,7 @@ ipcRenderer.on('set_stock_c', function (event, stock) {
     }
 });
 
-//
+// 打板监控
 ipcRenderer.on('rts_db_monitor', function (event, stock) {
     if (stock.code) {
         rtsc.on_rts_db_monitor(stock);
@@ -113,7 +123,7 @@ ipcRenderer.on('rts_db_monitor', function (event, stock) {
     }
 });
 
-//
+// 取消监控
 ipcRenderer.on('rts_cancel', function (event, arg) {
     rtsc.on_rts_cancel(arg);
 });

@@ -32,6 +32,7 @@ function createWindow () {
         height: 820,
         x: 0,
         y: 0,
+        titleBarStyle: 'hidden',
         title: app.getName(),
         webPreferences: {
             webSecurity: false
@@ -97,6 +98,12 @@ function ready () {
     // 打板封单监控数据 => socket.io => 浏览器页面 http://192.168.3.20:3000/
     ipcMain.on('rts_push', (event, stocks) => {
         server.push(stocks)
+    })
+
+
+    // server会通过http 或socket 接收client端发来的消息, 广播一些事件, 通过server.on订阅
+    server.on('voice_warn', function (msg) {
+        mainWindow.webContents.send('voice_warn', msg)
     })
 
     // 浏览器页面 http://192.168.3.20:3000/  => socket.io => 取消个股打板封单监控
