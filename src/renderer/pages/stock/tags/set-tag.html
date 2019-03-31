@@ -6,7 +6,11 @@
             <div>
                 <h6>标签类型</h6>
                 <div class="field">
-                    <input class="input is-medium" type="text" name="type" value="{{model.type}}" ic-form-field ic-field-rule="required">
+                    <input class="input is-medium" type="text" name="type"
+                           value="{{model.type}}"
+                           ic-has-readonly="model.type"
+                           ic-form-field
+                           ic-field-rule="required">
                     <input type="hidden" name="id" ic-form-field  value="{{model.id}}" />
                 </div>
             </div>
@@ -21,7 +25,7 @@
             <div>
                 <h6>备注</h6>
                 <div>
-                    <textarea rows="3" class="textarea is-medium" ic-form-field="note">{{model.note}}</textarea>
+                    <textarea rows="3" class="textarea is-medium" ic-form-field="desc">{{model.desc}}</textarea>
                 </div>
             </div>
 

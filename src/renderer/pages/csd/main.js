@@ -2,6 +2,8 @@
  * Created by j on 2019-02-28.
  */
 
+import 'babel-polyfill'
+
 import jhandy from 'jhandy'
 import utils from '../../../libs/utils'
 
@@ -47,12 +49,17 @@ brick.reg('mainCtrl', function (scope) {
 
     }
 
-    this.fetchStart = function (fields) {
+    this.fetchStart = async function (fields) {
         console.log(fields)
         let $th = $(this).icSetLoading()
         setting.merge('csd', fields).save()
 
-        jhandy.fetch(fields.csdPath, fields.fetchByStocks, fields.fetchFromIndex, fields.fetchSources, (stat) => {
+        let stockArr
+        if(/\.txt$/.test(fields.fetchByStocks)){
+            stockArr = await jhandy.csv(fields.fetchByStocks, null , [0, 1], true)
+        }
+
+        jhandy.fetch(fields.csdPath, stockArr || fields.fetchByStocks, fields.fetchFromIndex, fields.fetchSources, (stat) => {
             $log.text(JSON.stringify(stat))
         })
             .then(stats => {

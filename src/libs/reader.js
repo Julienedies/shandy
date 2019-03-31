@@ -50,7 +50,7 @@ class Reader {
                         //console.log('#', node.parentNode, node.nodeValue)
                         that.list.push(node.parentNode)
                         let index = that.list.length - 1
-                        $parent.prepend(`<a class="reader-readable-node" data-index="${ index }" title="点击播放本段:${ index }"> </a>`)
+                        $parent.prepend(`<a class="reader-readable-node" data-index="${ index }" title="点击播放本段:${ index }"></a>`)
                     }
                 }
             }
@@ -179,15 +179,12 @@ class Reader {
             }
             .reader-readable-node{
                 background:#64c116!important;
-                display: inline-block!important;
-                width: 1em!important;
-                height: 1em!important;
-                padding: 0!important;
+                padding: 0 0.6em!important;
                 margin-right: 0.5em!important;
                 border-radius: 50%!important;
             }
             .reader-reading{
-                color:#64c116;
+                color:#4da702;
             }
         </style>`).appendTo(document.head)
     }

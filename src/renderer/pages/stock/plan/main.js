@@ -3,6 +3,7 @@
  */
 import '../../../css/common/common.scss'
 import './style.scss'
+import './index.html'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
@@ -11,6 +12,8 @@ import '@julienedies/brick/dist/brick.css'
 import '../../../js/common-stock.js'
 
 import setTagCtrl from '../tags/set-tag-ctrl'
+
+brick.set('debug', true)
 
 brick.reg('set_tag_ctrl', setTagCtrl)
 
@@ -58,6 +61,7 @@ brick.reg('plans_ctrl', function () {
 
 });
 
+
 brick.reg('set_plan_ctrl', function () {
 
     let scope = this;
@@ -92,7 +96,6 @@ brick.reg('set_plan_ctrl', function () {
         model = msg || _model;
         tags.init(scope.tags_convert(model.tags));
         scope.render(model);
-        $elm.icPopup(true);
     });
 
     scope.on('tag.edit.done', function(e, data){

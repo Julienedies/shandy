@@ -4,54 +4,53 @@
     <meta charset="UTF-8">
     <title>标签管理</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css" />
-    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
+    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/hint.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body ic-ctrl="main_ctrl">
-
     <section class="column" ic-ctrl="tags_ctrl">
 
-    <div class="buttons">
-        <button class="button"
-                ic-ajax
-                ic-ajax-auto
-                ic-submit-method="get"
-                ic-submit-action="/stock/tags"
-                ic-submit-on-done="on_get_done">标签列表</button>
-        <button class="button" ic-click="add">新标签</button>
-    </div>
+        <div class="buttons">
+            <button class="button"
+                    ic-ajax
+                    ic-ajax-auto
+                    ic-submit-method="get"
+                    ic-submit-action="/stock/tags"
+                    ic-submit-on-done="on_get_done">标签列表
+            </button>
+            <button class="button" ic-click="add">新标签</button>
+        </div>
 
-    <div class="table_0"  ic-tpl>
-        <div ic-for="k,arr in model">
-            <h6>{{k}}</h6>
-            <div class="field is-grouped is-grouped-multiline">
-                <div class="control"  ic-for="i,v in arr">
-                    <div class="tags has-addons is-medium">
-                        <span class="tag is-medium pointer">{{v.text}}</span>
-                        <a class="tag is-medium" ic-click="edit:{{v.id}}">
-                            <span class="icon is-medium"><i class="far fa-edit"></i></span>
-                        </a>
-                        <a class="tag is-medium is-delete"
-                           ic-ajax
-                           ic-submit-method="delete"
-                           ic-submit-action="/stock/tags/{{v.id}}"
-                           ic-submit-before
-                           ic-submit-on-done="remove"></a>
+        <div ic-tpl>
+            <div class="box" ic-for="k,arr in model">
+                <h6 class="title is-6">{{k}}</h6>
+                <div class="field is-grouped is-grouped-multiline">
+                    <div class="control" ic-for="i,v in arr">
+                        <div class="tags has-addons is-medium">
+                            <span class="tag is-medium pointer hint--top" aria-label="{{ v.desc }}">{{v.text}}</span>
+                            <a class="tag is-medium" ic-click="edit:{{v.id}}">
+                                <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                            </a>
+                            <a class="tag is-medium is-delete"
+                               ic-ajax
+                               ic-submit-method="delete"
+                               ic-submit-action="/stock/tags/{{v.id}}"
+                               ic-submit-before
+                               ic-submit-on-done="remove"></a>
+                        </div>
                     </div>
-                </div>
-                <div class="control">
-                    <a class="tag is-medium" ic-click="add:{{k}}">
-                        <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
-                    </a>
+                    <div class="control">
+                        <a class="tag is-medium" ic-click="add:{{k}}">
+                            <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</section>
-
+    </section>
     ${ require('./set-tag.html')}
-
 </body>
 </html>

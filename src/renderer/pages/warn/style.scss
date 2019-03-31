@@ -1,0 +1,121 @@
+html {
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  // background: rgba(0,0,0,0);
+  background: url('./a.jpg') no-repeat 50% 50% rgba(0, 0, 0, 0);
+  background-size: cover;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0;
+  /*padding: 20px 10px 10px 10px;*/
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2); //  rgba(0,0,0, 1)
+  border: solid 1px yellowgreen;
+  font: 16px/2 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.warn {
+  animation: warn 0.7s 1 ease-in-out;
+}
+
+@keyframes warn {
+  1% {
+    background: rgba(255, 255, 0, 1);
+    color: #000;
+  }
+  100% {
+    background: rgba(255, 255, 0, 0);
+    color: #fff;
+  }
+}
+
+#msg {
+  padding: 3px 5px;
+  color: #fff;
+  white-space: pre-wrap;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input[type="checkbox"] {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+    z-index: 21;
+    width: 0.8rem;
+    height: 2rem;
+    border-right: 3px solid #bdbfbf;
+    border-bottom: 3px solid #bdbfbf;
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+
+  &:checked:after {
+    border-color: #2aa3ce;
+  }
+
+}
+
+//----------------------------------------------------
+[ic-step] > * {
+  height: 0;
+  opacity: 0;
+  font-size: 1.6em;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 0.6s;
+
+  &.active {
+    height: auto;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+//----------------------------------------------------
+.box, .title {
+  //background: transparent!important;
+  color: inherit;
+}
+
+.box {
+  min-width:40%;
+  border: solid 1px yellowgreen;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  margin-bottom: 0;
+}

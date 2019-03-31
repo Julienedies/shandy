@@ -9,24 +9,17 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body ic-ctrl="main_ctrl">
-
-    <div id="plans" class="column is-10 is-offset-1">
-
-        ${ require('./set-plan-ctrl.html') }
-
+    <div class="column">
         <section ic-ctrl="plans_ctrl">
 
-            <div class="buttons tags">
-                <span class="tag is-medium is-black">明确具体的计划</span>
-                <span class="tag is-medium is-black">交易逻辑</span>
-                <span class="tag is-medium is-black">交易系统</span>
-
+            <div class="buttons has-addons">
                 <button class="button"
                         ic-ajax="get_replay"
                         ic-ajax-auto
                         ic-submit-method="get"
                         ic-submit-action="/stock/replay"
                         ic-submit-on-done="replay_get_done">大盘复盘</button>
+
                 <button class="button"
                         id="get_plans"
                         ic-ajax="plans"
@@ -34,7 +27,8 @@
                         ic-submit-method="get"
                         ic-submit-action="/stock/plan"
                         ic-submit-on-done="plan_get_done">当前计划</button>
-                <button class="button" ic-click="plan_add">新计划</button>
+
+                <button class="button" ic-click="plan_add" ic-popup-target="set_plan">新计划</button>
             </div>
 
             <ul ic-tpl="replay" class="notification">
@@ -68,10 +62,8 @@
             </ul>
 
         </section>
-
+        ${ require('./set-plan-ctrl.html') }
         ${ require('../tags/set-tag.html') }
-
     </div>
-
 </body>
 </html>

@@ -1,21 +1,10 @@
-#plans{
-  [ic-ctrl="set_plan_ctrl"], [ic-ctrl="set_tag_ctrl"]{
-    padding-top:15px;
-    position: fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index:100;
-    background: #fff;
-    overflow-y: scroll;
-    display: none;
-    h6{
-      font-weight: bold;
-    }
+[ic-ctrl="set_plan_ctrl"], [ic-ctrl="set_tag_ctrl"]{
+  padding-top:15px;
+  h6{
+    font-weight: bold;
   }
+}
 
-  [ic-ctrl="set_tag_ctrl"]{
-      background: rgba(0,0,0,0.8);
-  }
+[ic-ctrl="set_tag_ctrl"]{
+  background: rgba(0,0,0,0.8);
 }

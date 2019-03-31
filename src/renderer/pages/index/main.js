@@ -8,7 +8,6 @@ import Win from '../../../libs/window'
 import tdx from '../../../libs/tdx'
 import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
-import schedule from '../../../libs/schedule'
 import voice from '../../../libs/voice'
 import warnText from '../../js/warn-text'
 
@@ -44,17 +43,23 @@ import rtsc from './real-time-stock-ctrl'
 
 brick.bootstrap();
 
-/////////////////////////////////////////////////////////////////////////////////////
-
-schedule(() => {
-    new Win('reminder.html');
-}, 8, 55);
-
 
 // --------------------------------接收主进程发来的消息 ------------------------
 // 交易语音警告
-ipcRenderer.on('voice_warn', (event, info) => {
+ipcRenderer.on('warn', (event, info) => {
     //voice(warnText.voice[info] || '')
+/*    new Win({
+        url: 'warn.html',
+        width: 480,
+        height: 320,
+        x: 1940,
+        y: 640,
+        show: false,
+        transparent: true,
+        frame: false,
+        hasShadow: false,
+        alwaysOnTop: true,
+    })*/
 })
 
 // 通达信中查看该股票

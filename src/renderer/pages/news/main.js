@@ -6,6 +6,7 @@ import electron from 'electron'
 import $ from 'jquery'
 
 import voiceWarnText from '../../js/warn-text'
+
 import './index.html'
 
 const ipc = electron.ipcRenderer
@@ -24,18 +25,18 @@ function cb(msg){
     if (win) {
         $msg.addClass('warn')
         win.showInactive()
-        win.setSize(1600, 58, true)
+        win.setSize(1600, 84, true)
         timer = setTimeout( () => {
             $msg.removeClass('warn')
             win.hide()
             //win.setSize(1400, 32, true)
             //win.setPosition(1600, 3)
-        }, 14 * 1000);
+        }, 23 * 1000);
     }
 }
 
 // 交易警告文字版
-socket.on('voice_warn',  (info) => {
+socket.on('warn',  (info) => {
     //cb(voiceWarnText.text[info])
 })
 

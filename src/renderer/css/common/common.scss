@@ -3,12 +3,10 @@
 
 body {
   padding: 10px 15px 15px 15px;
-  font-size: 1.2em;
-  line-height: 1.8;
   color: #202020;
-  font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif!important;
   @media screen and (max-width: 800px) {
-    font-size: 18px;
+    font-size: 16px;
   }
   &::-webkit-scrollbar {
     //width: 0 !important;
@@ -58,6 +56,19 @@ label.radio {
   margin-bottom: 0.8rem!important;
   padding-bottom:0.5rem;
   background: #fff7e5; //#f5edd0; //fff1e5
+}
+
+.box{
+  padding: 1rem;
+}
+
+.title{
+  margin-bottom: 1rem!important;
+}
+
+.tag, .button{
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 ///////////////////

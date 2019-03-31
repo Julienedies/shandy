@@ -6,12 +6,13 @@ import electron from 'electron'
 
 const {remote, shell} = electron
 const dialog = remote.dialog
-
+import schedule from 'node-schedule'
 import jhandy from 'jhandy'
 
 import Win from './window'
 import setting from './setting'
 import tdx from './tdx'
+import ac from './ac'
 
 
 export default {
@@ -38,6 +39,17 @@ export default {
     err(msg, title = ''){
         dialog.showErrorBox(title, msg)
     },
+    timer(time = '8:55', f){
+        let [h, m] = time.split(/\D/g).map((v) => v * 1)
+        let rule = new schedule.RecurrenceRule()
+        rule.dayOfWeek = [0, new schedule.Range(1, 6)]
+        rule.hour = h
+        rule.minute = m
+        return schedule.scheduleJob(rule, function () {
+            console.log('timer ', (new Date).toLocaleString())
+            f()
+        })
+    },
     getIp(){
         let ip
         try {
@@ -47,6 +59,12 @@ export default {
             console.log('ip address 获取失败. =>', e)
         }
         return ip
+    },
+    activeTdx(){
+        tdx.active()
+    },
+    activeFtnn(){
+      ac.activeFtnn()
     },
     viewInFtnn(code){
         tdx.viewInFtnn(code)

@@ -1,48 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <title>warn</title>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
     <script src="/set_node_modules_path.js"></script>
-    <style>
-        body {
-            margin:0;
-            padding: 20px 10px 10px 10px;
-            background: rgba(0,0,0, 0.6);
-            color: #fff;
-            overflow: hidden;
-            font: 14px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-        }
-
-        .warn {
-            animation: warn 0.7s 1 ease-in-out;
-        }
-
-        @keyframes warn {
-            1% {
-                background: rgba(255, 255, 0, 1);
-                color: #000;
-            }
-            100% {
-                background: rgba(255, 255, 0, 0);
-                color: #fff;
-            }
-        }
-
-        #msg{
-            padding:3px 5px;
-            color: #fff;
-            white-space: pre-wrap;
-        }
-    </style>
 </head>
 <body>
-<!--<div id="place" style="white-space: pre;padding-bottom:3px;">
-交易逻辑 交易计划 交易模式 交易系统 | 控制 计划 等待 | 风口板 大势板 龙头板 人气合力板 二浪板 超预期板 补涨板 消息板
-</div>-->
-<div id="msg">
-    交易逻辑 交易系统
+<div class="wrapper">
+
+    <div class="box" ic-ctrl="mistakeCtrl">
+        <h4 class="title is-5">不要重复错误!</h4>
+        <div>
+            <ul>
+                <li>囿于小利, 斤斤计较</li>
+                <li>无计划, 无逻辑, 无系统</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="box" ic-ctrl="plansCtrl">
+        <h4 class="title is-5">计划</h4>
+        <div class="level">
+            <div class="level-left" ic-tpl="plans">
+                <ul>
+                    <li ic-for="j,plan in model">
+                        <h6 style="font-weight: bold;">{{plan['股票名称']}} </h6>
+                        <div class="table_3">
+                            <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
+                                <div class="pre">{{plan[k]}}</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="level-right" ic-tpl="replay">
+                <ul>
+                    <li class="table_3" ic-for="i, v in model" ic-if="v">
+                        <div class="pre">{{i}} :{{v}}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="box" ic-ctrl="warnCtrl">
+        <div id="msg"></div>
+        <div>
+            <ul id="step" ic-step>
+                <li class="active">
+                    <span>把事情做对,不要再重复以前的操作手法或错误了!</span>
+                </li>
+                <li>
+                    <span>支撑你的交易逻辑是什么?</span>
+                </li>
+                <li>
+                    <span>你要捕捉的目标行情是什么?</span>
+                </li>
+                <li>
+                    <span>计划内吗?</span>
+                </li>
+                <li>
+                    <span>买点正确吗?</span>
+                </li>
+                <li>
+                    <span>确定性多高?</span>
+                </li>
+                <li>
+                    <span>收益多少, 风险多少?</span>
+                </li>
+            </ul>
+        </div>
+
+        <div style="margin-top:10px; position: fixed; left:0; bottom: 0;">
+            <button class="button" ic-click="hide">确定</button>
+        </div>
+    </div>
+
 </div>
+
 
 <script src="/socket.io/socket.io.js"></script>
 </body>

@@ -66,193 +66,201 @@ brick.services.reg('viewsModel', () => {
             return index !== -1 ? list[index] : null
         }
     }
-})
+});
 
 brick.reg('mainCtrl', function (scope) {
 
-        let $elm = this.$elm
+    let $elm = this.$elm
 
-        let $viewsWrapper = $('#viewsWrapper')
-        let $indexView = $('#indexView')
-        let $viewTabs = $('#viewTabs')
-        let $views = $('#views')
+    let $viewsWrapper = $('#viewsWrapper')
+    let $indexView = $('#indexView')
+    let $viewTabs = $('#viewTabs')
+    let $views = $('#views')
 
-        const viewsModel = brick.services.get('viewsModel')
+    const viewsModel = brick.services.get('viewsModel')
 
-        let render = () => {
-            let list = viewsModel.get()
-            $viewTabs.icRender({model: list})
-            if (!list.length) {
-                scope.showIndex()
-            }
+    let render = () => {
+        let list = viewsModel.get()
+        $viewTabs.icRender({model: list})
+        if (!list.length) {
+            scope.showIndex()
         }
+    }
 
-        this.show = function (e, url) {
-            $viewsWrapper.show()
-            $indexView.hide()
-            let $th = $(this)
-            let title = $th.text()
-            let item = {title, url}
-            if (viewsModel.has(item)) {
-                viewsModel.active(item)
-            } else {
-                item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%;"></webview>`).appendTo($views)
-                viewsModel.add(item)
-            }
-            render()
+    this.show = function (e, url) {
+        $viewsWrapper.show()
+        $indexView.hide()
+        let $th = $(this)
+        let title = $th.text()
+        let item = {title, url}
+        if (viewsModel.has(item)) {
+            viewsModel.active(item)
+        } else {
+            item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%;"></webview>`).appendTo($views)
+            viewsModel.add(item)
         }
+        render()
+    }
 
-        this.closeTab = function (e, url) {
-            viewsModel.remove({url})
-            render()
-            return false
-        }
+    this.closeTab = function (e, url) {
+        viewsModel.remove({url})
+        render()
+        return false
+    }
 
-        this.activeTab = (e, url) => {
-            viewsModel.active({url})
-            render()
-        }
+    this.activeTab = (e, url) => {
+        viewsModel.active({url})
+        render()
+    }
 
-        this.showIndex = function (e, url) {
-            $indexView.show()
-            $viewsWrapper.hide()
-        }
+    this.showIndex = function (e, url) {
+        $indexView.show()
+        $viewsWrapper.hide()
+    }
 
-        this.reminder = function () {
-            let winCtrl = new Win('reminder.html')
-            winCtrl.maximize()
-        }
+    this.reminder = function () {
+        let winCtrl = new Win('reminder.html')
+        winCtrl.maximize()
+    }
 
-        scope.review = function () {
-            let win = scope.reviewTradingWindow
-            if (win) {
-                win.show()
-            } else {
-                scope.sreviewTradingWindow = utils.open({
-                    x: 1440,
-                    y: 0,
-                    url: 'review.html',
-                    onClose: () => {
-                        delete scope.reviewTradingWindow;
-                    }
-                });
-                scope.sreviewTradingWindow.maximize()
-            }
-        }
-
-        scope.viewImg = function () {
-            let filePaths = utils.select()
-            console.info(filePaths)
-            if (!filePaths) return;
-            let dir = encodeURIComponent(filePaths[0])
-            let url = `viewer.html?dir=${ dir }`
-            let viewImgWindow = scope.viewImgWindow
-            if (viewImgWindow) {
-                viewImgWindow.load(url)
-            } else {
-                viewImgWindow = scope.viewImgWindow = new Win({
-                    x: 1440,
-                    url,
-                    onClose: () => {
-                        delete scope.viewImgWindow
-                    }
-                });
-                viewImgWindow.maximize()
-            }
-        }
-
-        scope.openCsd = function (e) {
-            let csdWindow = scope.csdWindow
-            if (csdWindow) {
-                csdWindow.show()
-            } else {
-                scope.csdWindow = utils.open({
-                    x: 160, y: 80, url: 'csd.html', onClose: () => {
-                        delete scope.csdWindow
-                    }
-                })
-            }
-        }
-
-        this.openSetting = function () {
-            let settingWindow = scope.settingWindow
-            if (settingWindow) {
-                settingWindow.show()
-            } else {
-                scope.settingWindow = new Win({
-                    url: 'setting.html', onClose: () => {
-                        delete scope.settingWindow
-                    }
-                })
-            }
-        }
-
-        scope.news = function () {
-            let newsWin = scope.newsWin
-            if (newsWin) {
-                newsWin.close()
-                delete scope.newsWin;
-            } else {
-                let opt = {
-                    width: 10,
-                    height: 10,
-                    x: 1600,
-                    y: 0,
-                    //opacity: 0.8,
-                    transparent: true,
-                    frame: false,
-                    hasShadow: false,
-                    alwaysOnTop: true,
-                    center: true,
-                    url: 'news.html'
+    scope.review = function () {
+        let win = scope.reviewTradingWindow
+        if (win) {
+            win.show()
+        } else {
+            scope.sreviewTradingWindow = utils.open({
+                x: 1440,
+                y: 0,
+                url: 'review.html',
+                onClose: () => {
+                    delete scope.reviewTradingWindow;
                 }
-                newsWin = scope.newsWin = new Win(opt);
-                newsWin.win.setIgnoreMouseEvents(true)
-                newsWin.win.webContents.on('did-finish-load', function () {
-                    newsWin.win.webContents.send('id', newsWin.win.id)
-                })
-            }
+            });
+            scope.sreviewTradingWindow.maximize()
         }
+    }
 
-        scope.warn = function () {
-            let warnWindow = scope.warnWindow
-            if (warnWindow && warnWindow.win) {
-                warnWindow.close()
-                scope.warnWindow = null
-            } else {
-                let opt = {
-                    width: 480,
-                    height: 320,
-                    x: 1940,
-                    y: 640,
-                    show:false,
-                    //opacity: 0.9,
-                    transparent: true,
-                    //titleBarStyle: 'hidden',
-                    frame: false,
-                    hasShadow: false,
-                    alwaysOnTop: true,
-                    center: true,
-                    url: 'warn.html'
+    scope.viewImg = function () {
+        let filePaths = utils.select()
+        console.info(filePaths)
+        if (!filePaths) return;
+        let dir = encodeURIComponent(filePaths[0])
+        let url = `viewer.html?dir=${ dir }`
+        let viewImgWindow = scope.viewImgWindow
+        if (viewImgWindow) {
+            viewImgWindow.load(url)
+        } else {
+            viewImgWindow = scope.viewImgWindow = new Win({
+                x: 1440,
+                url,
+                onClose: () => {
+                    delete scope.viewImgWindow
                 }
-                warnWindow = scope.warnWindow = new Win(opt);
-                warnWindow.win.hide()
-                warnWindow.win.setIgnoreMouseEvents(true)
-                warnWindow.win.webContents.on('did-finish-load', function () {
-                    warnWindow.win.webContents.send('id', warnWindow.win.id)
-                })
-            }
+            });
+            viewImgWindow.maximize()
         }
+    }
+
+    scope.openCsd = function (e) {
+        let csdWindow = scope.csdWindow
+        if (csdWindow) {
+            csdWindow.show()
+        } else {
+            scope.csdWindow = utils.open({
+                x: 160, y: 80, url: 'csd.html', onClose: () => {
+                    delete scope.csdWindow
+                }
+            })
+        }
+    }
+
+    scope.openSetting = function () {
+        let settingWindow = scope.settingWindow
+        if (settingWindow) {
+            settingWindow.show()
+        } else {
+            scope.settingWindow = new Win({
+                url: 'setting.html', onClose: () => {
+                    delete scope.settingWindow
+                }
+            })
+        }
+    }
+
+    scope.news = function () {
+        let newsWin = scope.newsWin
+        if (newsWin && newsWin.win) {
+            newsWin.close()
+            delete scope.newsWin;
+        } else {
+            let opt = {
+                width: 10,
+                height: 10,
+                x: 1600,
+                y: 2,
+                transparent: true,
+                frame: false,
+                hasShadow: false,
+                alwaysOnTop: true,
+                center: true,
+                url: 'news.html'
+            }
+            newsWin = scope.newsWin = new Win(opt);
+            newsWin.win.setIgnoreMouseEvents(true)
+            newsWin.win.webContents.on('did-finish-load', function () {
+                newsWin.win.webContents.send('id', newsWin.win.id)
+            })
+        }
+    }
+
+    scope.warn = function () {
+        let warnWindow = scope.warnWindow
+        if (warnWindow && warnWindow.win) {
+            warnWindow.close()
+            scope.warnWindow = null
+        } else {
+            let opt = {
+                // width: 480,
+                // height: 320,
+                // x: 1940,
+                // y: 640,
+                x: 1440,
+                show: false,
+                transparent: true,
+                //titleBarStyle: 'hidden',
+                frame: false,
+                hasShadow: false,
+                alwaysOnTop: true,
+                url: 'warn.html'
+            }
+            warnWindow = scope.warnWindow = new Win(opt);
+            warnWindow.maximize()
+            //warnWindow.win.setIgnoreMouseEvents(true)
+            warnWindow.win.webContents.on('did-finish-load', function () {
+                warnWindow.win.webContents.send('id', warnWindow.win.id)
+            })
+        }
+    }
 
     window.addEventListener('beforeunload', function (e) {
         scope.warnWindow && scope.warnWindow.close()
         scope.newsWin && scope.newsWin.close()
     })
-        //---------------------------------
-        scope.news()
-        scope.warn()
-    }
-)
+
+    //----------------------------------------------------------------------
+    scope.news()
+    scope.warn()
+    utils.timer('9:00', () => {
+        scope.warnWindow && scope.warnWindow.show()
+    });
+    utils.timer('13:00', () => {
+        scope.warnWindow && scope.warnWindow.show()
+    });
+    utils.timer('8:55', () => {
+        new Win('reminder.html');
+    });
+
+});
 
 brick.reg('memoCtrl', function () {
 
@@ -283,6 +291,6 @@ brick.reg('memoCtrl', function () {
         console.log(text)
         $.post('/stock/memo', {text}).done((o) => {
         })
-    }
+    };
 
-})
+});

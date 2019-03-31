@@ -46,8 +46,8 @@ app.get('/set_node_modules_path.js', (req, res) => {
 app.get('/msg', (req, res) => {
     let info = req.query.info
     console.log('/msg', info)
-    io.emit('voice_warn', info)
-    events.emit('voice_warn', info)
+    io.emit('warn', info)
+    events.emit('warn', info)
     res.send(`info: ${ info }`)
 })
 
