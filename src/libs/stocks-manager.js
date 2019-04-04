@@ -19,6 +19,7 @@ export default {
      */
     get: function(){
         stocksJo = stocksJo || jo(jsonPath)
+        console.log(stocksJo.json[0])
         return stocksJo.json
     },
     add: function(stock){

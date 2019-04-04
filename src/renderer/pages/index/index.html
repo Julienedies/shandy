@@ -31,7 +31,7 @@
                 <a class="btn-btn-default hint--bottom" aria-label="个股资料" >
                     <span class="icon icon-book-open"></span>
                 </a>
-                <a class="btn-btn-default hint--bottom" aria-label="添加股票" ic-popup-target="add_stock">
+                <a class="btn-btn-default hint--bottom" aria-label="添加股票" ic-popup-target="addStock">
                     <span class="icon icon-plus-circled"></span>
                 </a>
             </div>
@@ -162,23 +162,25 @@
                         <button class="none" ic-click="saveMemo">保存</button>
                     </section>
 
-                    <div ic-form="add_stock" ic-popup="add_stock">
-                        <div class="column is-10">
-                            <div>
-                                <input class="input" type="text" ic-form-field="name" placeholder="股票名称">
-                            </div>
-                            <div>
-                                <input class="input" type="text" ic-form-field="code" placeholder="股票代码">
-                            </div>
-                            <div class="buttons">
-                                <button class="button is-primary"
-                                        ic-form-submit
-                                        ic-submit-action="add_stock()"
-                                        ic-popup-close>
-                                    保存
-                                </button>
-                                <button class="button" ic-popup-close>关闭</button>
-                            </div>
+                    <div ic-ctrl="setStockCtrl" ic-popup="addStock" style="top:30px;">
+                        <div class="column is-10" ic-form="addStock" style="padding:20px;">
+                                <div class="form-group">
+                                    <label>股票名称</label>
+                                    <input class="form-control" type="text" ic-form-field="name" placeholder="股票名称">
+                                </div>
+                                <div class="form-group">
+                                    <label>股票代码</label>
+                                    <input class="form-control" type="text" ic-form-field="code" placeholder="股票代码">
+                                </div>
+                                <div class="buttons">
+                                    <button class="btn btn-primary"
+                                            ic-form-submit
+                                            ic-submit-action="addStock()"
+                                            ic-popup-close>
+                                        保存
+                                    </button>
+                                    <button class="btn btn-default" ic-popup-close>关闭</button>
+                                </div>
                         </div>
                     </div>
                 </div>

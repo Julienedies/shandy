@@ -294,3 +294,10 @@ brick.reg('memoCtrl', function () {
     };
 
 });
+
+brick.reg('setStockCtrl', function(){
+    this.addStock = function(fields){
+        console.log(fields)
+        utils.addStock(fields)
+    }
+})

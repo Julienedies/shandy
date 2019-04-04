@@ -20,6 +20,10 @@ body {
   font: 16px/2 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
 
+.pre{
+  white-space: pre-wrap;
+}
+
 .warn {
   animation: warn 0.7s 1 ease-in-out;
 }

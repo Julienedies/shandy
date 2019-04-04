@@ -1,8 +1,6 @@
 <section ic-ctrl="set_plan_ctrl" ic-popup="set_plan">
-
     <div ic-tpl ic-tpl-init="{plan:{}, tags:{}}">
-
-        <div class="table_0" ic-form="plan" ic-init="plan=model.plan; tags=model.tags; console.log(111,model, model.plan, plan);">
+        <div class="table_0" ic-form="plan" ic-init="plan=model.plan; tags=model.tags;">
             <!-- tr -->
             <div>
                 <h6>股票名称</h6>
@@ -19,7 +17,8 @@
                 <div class="field is-grouped is-grouped-multiline" ic-select="选股条件" ic-select-type="checkbox" ic-form-field="选股条件">
                     <div class="control" ic-for="i,v in tags['选股条件']">
                         <div class="tags has-addons">
-                            <span class="tag is-medium" ic-select-item ic-has-selected="plan['选股条件']&&plan['选股条件'].indexOf(v.text)>-1" ic-val="{{v.text}}">{{v.text}}</span>
+                            <span class="tag is-medium" ic-select-item ic-has-selected="plan['选股条件']&&plan['选股条件'].indexOf(v.text)>-1"
+                                  ic-val="{{v.text}}">{{v.text}}</span>
                             <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
                                 <span class="icon is-medium"><i class="far fa-edit"></i></span>
                             </a>
@@ -29,7 +28,7 @@
                                ic-submit-method="delete"
                                ic-submit-action="/stock/tags/{{v.id}}"
                                ic-submit-on-done="tag_remove_done"
-                                    ></a>
+                            ></a>
                         </div>
                     </div>
                     <div class="control">
@@ -55,7 +54,7 @@
                                ic-submit-method="delete"
                                ic-submit-action="/stock/tags/{{v.id}}"
                                ic-submit-on-done="tag_remove_done"
-                                    ></a>
+                            ></a>
                         </div>
                     </div>
                     <div class="control">
@@ -81,7 +80,7 @@
                                ic-submit-method="delete"
                                ic-submit-action="/stock/tags/{{v.id}}"
                                ic-submit-on-done="tag_remove_done"
-                                    ></a>
+                            ></a>
                         </div>
                     </div>
                     <div class="control">
@@ -107,7 +106,7 @@
                                ic-submit-method="delete"
                                ic-submit-action="/stock/tags/{{v.id}}"
                                ic-submit-on-done="tag_remove_done"
-                                    ></a>
+                            ></a>
                         </div>
                     </div>
                     <div class="control">
@@ -133,7 +132,7 @@
                                ic-submit-method="delete"
                                ic-submit-action="/stock/tags/{{v.id}}"
                                ic-submit-on-done="tag_remove_done"
-                                    ></a>
+                            ></a>
                         </div>
                     </div>
                     <div class="control">
@@ -163,7 +162,36 @@
                     </div>
                 </div>
             </div>
-
+            <!-- tr -->
+            <div>
+                <h6>持股周期</h6>
+                <div class="field is-narrow">
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select ic-form-field="持股周期">
+                                <option ic-for="i, v in [1,2,3,4,5,6,7]" value="{{ v }}" ic-has-selected="plan['持股周期']==v">{{ v }}天</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- tr -->
+            <div>
+                <h6></h6>
+                <div>
+                    <div class="buttons">
+                        <button class="button is-primary"
+                                ic-form-submit="plan"
+                                ic-submit-action="/stock/plan"
+                                ic-submit-before="submit"
+                                ic-submit-on-done="done"
+                        >保存
+                        </button>
+                        <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
+                        <button class="button" ic-popup-close="set_plan" style="margin-left:4em;"> 关闭</button>
+                    </div>
+                </div>
+            </div>
             <!-- tr -->
             <div>
                 <h6>多空博弈</h6>
@@ -178,27 +206,9 @@
             <div>
                 <h6>计划预案</h6>
                 <div>
-                    <textarea rows="7" class="textarea is-medium" ic-form-field="计划预案" rows="7">{{plan['计划预案']}}</textarea>
-                </div>
-            </div>
-            <!-- tr -->
-            <div>
-                <h6></h6>
-                <div>
-                    <div class="buttons">
-                        <button class="button is-primary"
-                                ic-form-submit="plan"
-                                ic-submit-action="/stock/plan"
-                                ic-submit-before="submit"
-                                ic-submit-on-done="done"
-                                >保存</button>
-                        <button class="button" ic-click="reset" style="margin-left:4em;"> 重置 </button>
-                        <button class="button" ic-popup-close="set_plan" style="margin-left:4em;"> 关闭 </button>
-                    </div>
+                    <textarea class="textarea is-medium" ic-form-field="计划预案" rows="4">{{plan['计划预案']}}</textarea>
                 </div>
             </div>
         </div>
-
     </div>
-
 </section>

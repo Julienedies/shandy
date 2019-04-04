@@ -96,6 +96,7 @@ brick.reg('set_plan_ctrl', function () {
         model = msg || _model;
         tags.init(scope.tags_convert(model.tags));
         scope.render(model);
+        $elm.icPopup(true);
     });
 
     scope.on('tag.edit.done', function(e, data){

@@ -131,10 +131,10 @@ brick.reg('reviewCtrl', function (scope) {
         scope.code = code
         scope.index = index
         $info.text(JSON.stringify(arr))
-
-        dayChart({code, day})
-        tickChart({code, day})
-
+        setTimeout( () => {
+            dayChart({code, day})
+            tickChart({code, day})
+        }, 1000);
     }
 
     scope.viewInFtnn = function (e) {

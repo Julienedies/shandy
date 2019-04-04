@@ -13,6 +13,7 @@ import Win from './window'
 import setting from './setting'
 import tdx from './tdx'
 import ac from './ac'
+import stocksManager from './stocks-manager'
 
 
 export default {
@@ -68,6 +69,9 @@ export default {
     },
     viewInFtnn(code){
         tdx.viewInFtnn(code)
+    },
+    addStock(stock){
+        stocksManager.add(stock)
     }
 
 }

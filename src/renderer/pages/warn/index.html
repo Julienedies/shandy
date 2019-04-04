@@ -15,11 +15,17 @@
             <ul>
                 <li>囿于小利, 斤斤计较</li>
                 <li>无计划, 无逻辑, 无系统</li>
+                <li>无止损，低开后停止止损，调低止损。</li>
+                <li>看手册执行预案</li>
+                <li>平仓时不要盯盘,必须克服本能.</li>
+                <li>下跌不舍得平仓.上涨急于平仓.本质是斤斤计较的本能.必须控制这种本能.</li>
+                <li>止损的意义：止损优先！跌破两点，无条件止损。不要犹疑止损原则，执行就可以了。</li>
+                <li>被动，混沌，无计划，无预案。</li>
             </ul>
         </div>
     </div>
 
-    <div class="box" ic-ctrl="plansCtrl">
+    <div class="box" ic-ctrl="plansCtrl" style="position:absolute;left:0;bottom:0;min-width:24%;">
         <h4 class="title is-5">计划</h4>
         <div class="level">
             <div class="level-left" ic-tpl="plans">
@@ -45,9 +51,12 @@
     </div>
 
     <div class="box" ic-ctrl="warnCtrl">
-        <div id="msg"></div>
+        <div id="msg" ic-click="hide"></div>
         <div>
             <ul id="step" ic-step>
+                <li class="active">
+                    <span>不要忘记那些恐惧和痛苦!</span>
+                </li>
                 <li class="active">
                     <span>把事情做对,不要再重复以前的操作手法或错误了!</span>
                 </li>
@@ -72,8 +81,8 @@
             </ul>
         </div>
 
-        <div style="margin-top:10px; position: fixed; left:0; bottom: 0;">
-            <button class="button" ic-click="hide">确定</button>
+        <div style="margin-top:10px; position: fixed; left:0; bottom: 0; display: none;">
+            <button class="button">确定</button>
         </div>
     </div>
 

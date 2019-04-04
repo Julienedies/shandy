@@ -56,10 +56,8 @@ brick.reg('warnCtrl', function (scope) {
         setTimeout(() => {
             utils.activeFtnn()
             utils.activeTdx()
-        }, 400)
+        }, 200)
     }
-
-
 
 })
 
