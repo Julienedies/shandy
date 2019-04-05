@@ -10,4 +10,14 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../../js/common-stock.js'
 
-console.log('hello world')
+brick.reg('systemCtrl', function(scope){
+
+})
+
+brick.reg('setSystemCtrl', function (scope) {
+
+    scope.setSystem = (fields) => {
+        console.log(fields)
+    }
+
+})

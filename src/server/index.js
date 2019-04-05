@@ -11,6 +11,8 @@ import bodyParser from 'body-parser'
 
 import route from './routes/route'
 
+import config from '../libs/config'
+
 import favicon from '../renderer/img/favicon.ico'
 
 const app = express();
@@ -29,7 +31,6 @@ const webStaticDir = path.resolve(__dirname, '../web')
 // 上行请求体解析
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
-
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 app.get('/set_node_modules_path.js', (req, res) => {
@@ -52,6 +53,7 @@ app.get('/msg', (req, res) => {
 })
 
 app.use('/web/', express.static(webStaticDir))
+app.use('/upload/', express.static(config.UPLOAD_DIR))
 app.use(express.static(staticDir))
 app.use(express.static(path.resolve(__dirname, '../z')))
 

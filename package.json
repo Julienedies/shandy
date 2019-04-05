@@ -11,8 +11,8 @@
     "pro:main": "cross-env NODE_ENV=production webpack --config .build/webpack/main.config.js",
     "pro:renderer": "cross-env NODE_ENV=production webpack --config .build/webpack/renderer.config.js",
     "web": "nodemon .build/webpack/web-dev-runner.js --watch .build/webpack/web-dev-runner.js .build/webpack/web.config.js",
-    "web:dev": "cross-env NODE_ENV=develoment node .build/webpack/web-dev-runner.js",
-    "web:pro": "cross-env NODE_ENV=production node .build/webpack/web-dev-runner.js",
+    "dev:web": "cross-env NODE_ENV=develoment node .build/webpack/web-dev-runner.js",
+    "pro:web": "cross-env NODE_ENV=production node .build/webpack/web-dev-runner.js",
     "start": "electron ./dist/electron/main.js",
     "start:web": "node ./dist/web/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -78,6 +78,7 @@
     "electron-debug": "^2.0.0",
     "events": "^3.0.0",
     "express": "^4.16.3",
+    "formidable": "^1.2.1",
     "froala-editor": "^2.9.3",
     "fs-extra": "^7.0.1",
     "iconv-lite": "^0.4.23",

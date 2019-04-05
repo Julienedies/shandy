@@ -22,7 +22,7 @@ const STATIC_DIR = path.join(ROOT_DIR, './static/')
 const AC_DIR = path.join(ROOT_DIR, './applescript/')
 const USER_DIR = path.join(ROOT_DIR, './.user/')
 const TEMP_DIR = path.join(ROOT_DIR, './temp/')
-
+const UPLOAD_DIR = path.join(DATA_DIR, './upload/')
 const HTML_DIR = path.resolve(ROOT_DIR, './dist/electron/')
 
 let cfg = {
@@ -34,6 +34,7 @@ let cfg = {
     AC_DIR,
     USER_DIR,
     TEMP_DIR,
+    UPLOAD_DIR,
     HTML_DIR,
     LOAD_PROTOCOL,
     SERVER_PORT

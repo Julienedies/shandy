@@ -16,6 +16,17 @@ export default function () {
         scope.render({});
     };
 
+    scope.onUploadDone = function (data){
+        console.info(333, data)
+        let model = $elm.find('[ic-form="set_tag"]').icForm();
+        model['示例图片'] = model['示例图片'] || []
+        console.log(111, model)
+        data.forEach((v, i) => [
+            model['示例图片'].push(v.url)
+        ])
+        scope.render(model)
+    }
+
     scope.on('tag.add, tag.edit', function (e, msg) {
         console.info(e, msg);
         let model = msg || {};

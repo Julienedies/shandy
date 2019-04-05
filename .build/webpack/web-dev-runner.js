@@ -129,7 +129,13 @@ function startServer () {
                 if (event.type === 'start') {
                     console.log('nodemon started');
                 } else if (event.type === 'crash') {
+                    console.error(event)
                     console.log('script crashed for some reason');
+                    setTimeout(() => {
+                        spawnNodemonProcess = spawn('nodemon', [serverJs, '--watch', serverJs], {
+                            stdio: ['pipe', 'pipe', 'pipe', 'ipc']
+                        }, 4000);
+                    })
                 }
             });
         }

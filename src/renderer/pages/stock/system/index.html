@@ -8,12 +8,250 @@
     <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
     <script src="/set_node_modules_path.js"></script>
 </head>
-<body ic-ctrl="main_ctrl">
+<body>
+    <div class="column" ic-ctrl="systemCtrl">
+        <div class="buttons has-addons">
+            <button class="button" ic-click="addSystem">新系统</button>
+        </div>
+        <div class="box">
+            <h2 class="title is-5">系统</h2>
+        </div>
+        <div ic-popup>
+            <div class="column" ic-ctrl="setSystemCtrl">
+                <div ic-tpl ic-tpl-init="{}">
+                    <div class="table_0" ic-form="system" ic-init="">
+                        <!-- field -->
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">系统名称</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input is-danger" type="text" placeholder="e.g. Partnership opportunity">
+                                    </div>
+                                    <p class="help is-danger">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-<div>
 
+                        <!-- tr -->
+                        <div class="field">
+                            <h6>系统名称</h6>
+                            <div>
+                                <div class="control">
+                                    <input class="input is-medium" type="text" name="股票名称" value="{{plan['股票名称']}}" ic-form-field ic-field-rule="required">
+                                    <input type="hidden" name="id" value="{{plan.id}}" ic-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tr -->
+                        <div>
+                            <h6>选股条件</h6>
+                            <div class="field is-grouped is-grouped-multiline" ic-select="选股条件" ic-select-type="checkbox" ic-form-field="选股条件">
+                                <div class="control" ic-for="i,v in tags['选股条件']">
+                                    <div class="tags has-addons">
+                            <span class="tag is-medium" ic-select-item ic-has-selected="plan['选股条件']&&plan['选股条件'].indexOf(v.text)>-1"
+                                  ic-val="{{v.text}}">{{v.text}}</span>
+                                        <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
+                                            <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                                        </a>
+                                        <a class="tag is-delete is-medium"
+                                           ic-ajax
+                                           ic-submit-data="{{v.text}}"
+                                           ic-submit-method="delete"
+                                           ic-submit-action="/stock/tags/{{v.id}}"
+                                           ic-submit-on-done="tag_remove_done"
+                                        ></a>
+                                    </div>
+                                </div>
+                                <div class="control">
+                                    <a class="tag is-medium" ic-click="tag_add:选股条件">
+                                        <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tr -->
+                        <div>
+                            <h6>主线风口</h6>
+                            <div class="field is-grouped is-grouped-multiline" ic-select="主线风口" ic-form-field="主线风口">
+                                <div class="control" ic-for="i,v in tags['主线风口']">
+                                    <div class="tags has-addons">
+                                        <span class="tag is-medium" ic-select-item ic-has-selected="plan['主线风口']==v.text ? 'is-warning':''" ic-val="{{v.text}}">{{v.text}}</span>
+                                        <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
+                                            <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                                        </a>
+                                        <a class="tag is-delete is-medium"
+                                           ic-ajax
+                                           ic-submit-data="{{v.text}}"
+                                           ic-submit-method="delete"
+                                           ic-submit-action="/stock/tags/{{v.id}}"
+                                           ic-submit-on-done="tag_remove_done"
+                                        ></a>
+                                    </div>
+                                </div>
+                                <div class="control">
+                                    <a class="tag is-medium" ic-click="tag_add:主线风口">
+                                        <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tr -->
+                        <div>
+                            <h6>行情性质</h6>
+                            <div class="field is-grouped is-grouped-multiline" ic-select="行情性质" ic-form-field="行情性质">
+                                <div class="control" ic-for="i,v in tags['行情性质']">
+                                    <div class="tags has-addons">
+                                        <span class="tag is-medium" ic-select-item ic-has-selected="plan['行情性质']==v.text?'is-warning':''" ic-val="{{v.text}}">{{v.text}}</span>
+                                        <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
+                                            <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                                        </a>
+                                        <a class="tag is-delete is-medium"
+                                           ic-ajax
+                                           ic-submit-data="{{v.text}}"
+                                           ic-submit-method="delete"
+                                           ic-submit-action="/stock/tags/{{v.id}}"
+                                           ic-submit-on-done="tag_remove_done"
+                                        ></a>
+                                    </div>
+                                </div>
+                                <div class="control">
+                                    <a class="tag is-medium" ic-click="tag_add:行情性质">
+                                        <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tr -->
+                        <div>
+                            <h6>建仓节点</h6>
+                            <div class="field is-grouped is-grouped-multiline" ic-select="建仓节点" ic-form-field="建仓节点">
+                                <div class="control" ic-for="i,v in tags['建仓节点']">
+                                    <div class="tags has-addons">
+                                        <span class="tag is-medium" ic-select-item ic-has-selected="plan['建仓节点']==v.text ? 'is-warning':''" ic-val="{{v.text}}">{{v.text}}</span>
+                                        <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
+                                            <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                                        </a>
+                                        <a class="tag is-delete is-medium"
+                                           ic-ajax
+                                           ic-submit-data="{{v.text}}"
+                                           ic-submit-method="delete"
+                                           ic-submit-action="/stock/tags/{{v.id}}"
+                                           ic-submit-on-done="tag_remove_done"
+                                        ></a>
+                                    </div>
+                                </div>
+                                <div class="control">
+                                    <a class="tag is-medium" ic-click="tag_add:建仓节点">
+                                        <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tr -->
+                        <div>
+                            <h6>风险</h6>
+                            <div class="field is-grouped is-grouped-multiline" ic-select="风险" ic-form-field="风险">
+                                <div class="control" ic-for="i,v in tags['风险']">
+                                    <div class="tags has-addons">
+                                        <span class="tag is-medium" ic-select-item ic-has-selected="plan['风险']==v.text ? 'is-warning':''" ic-val="{{v.text}}">{{v.text}}</span>
+                                        <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
+                                            <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                                        </a>
+                                        <a class="tag is-delete is-medium"
+                                           ic-ajax
+                                           ic-submit-data="{{v.text}}"
+                                           ic-submit-method="delete"
+                                           ic-submit-action="/stock/tags/{{v.id}}"
+                                           ic-submit-on-done="tag_remove_done"
+                                        ></a>
+                                    </div>
+                                </div>
+                                <div class="control">
+                                    <a class="tag is-medium" ic-click="tag_add:风险">
+                                        <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tr -->
+                        <div>
+                            <h6>预期收益</h6>
+                            <div class="field is-narrow">
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select ic-form-field="预期收益">
+                                            <option></option>
+                                            <option value="1%" ic-has-selected="plan['预期收益']=='1%'">1%</option>
+                                            <option value="3%" ic-has-selected="plan['预期收益']=='3%'">3%</option>
+                                            <option value="5%" ic-has-selected="plan['预期收益']=='5%'">5%</option>
+                                            <option value="7%" ic-has-selected="plan['预期收益']=='7%'">7%</option>
+                                            <option value="9%" ic-has-selected="plan['预期收益']=='9%'">9%</option>
+                                            <option value="13%" ic-has-selected="plan['预期收益']=='13%'">13%</option>
+                                            <option value="15%" ic-has-selected="plan['预期收益']=='15%'">15%</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tr -->
+                        <div>
+                            <h6>持股周期</h6>
+                            <div class="field is-narrow">
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select ic-form-field="持股周期">
+                                            <option ic-for="i, v in [1,2,3,4,5,6,7]" value="{{ v }}" ic-has-selected="plan['持股周期']==v">{{ v }}天</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tr -->
+                        <div>
+                            <h6></h6>
+                            <div>
+                                <div class="buttons">
+                                    <button class="button is-primary"
+                                            ic-form-submit="plan"
+                                            ic-submit-action="/stock/plan"
+                                            ic-submit-before="submit"
+                                            ic-submit-on-done="done"
+                                    >保存
+                                    </button>
+                                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
+                                    <button class="button" ic-popup-close="set_plan" style="margin-left:4em;"> 关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tr -->
+                        <div>
+                            <h6>多空博弈</h6>
+                            <div class="field">
+                                <div class="control">
+                                    <textarea class="textarea is-medium" rows="2" ic-form-field="多空博弈">{{plan['多空博弈']}}</textarea>
+                                </div>
+                                <p class="help is-danger">持币者的买入意愿? 持股者的卖出意愿? 谁的力量更大?</p>
+                            </div>
+                        </div>
+                        <!-- tr -->
+                        <div>
+                            <h6>计划预案</h6>
+                            <div>
+                                <textarea class="textarea is-medium" ic-form-field="计划预案" rows="4">{{plan['计划预案']}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
     <section>
-
         <dl class="table_1 a">
             <dt>支撑我的交易逻辑</dt>
             <dd class="is-table">
@@ -43,7 +281,6 @@
                     </dd>
                 </dl>
             </dd>
-
 
             <dt>我要捕捉的目标行情</dt>
             <dd class="is-table">
@@ -91,7 +328,6 @@
 
             </dd>
 
-
             <dt>有哪些行情?</dt>
             <dd class="is-table">
 
@@ -126,12 +362,8 @@
 
             </dd>
 
-
-
             <dt>具体怎么捕捉?</dt>
             <dd>
-
-
 
             </dd>
         </dl>
@@ -218,7 +450,6 @@
                 </dl>
             </dd>
 
-
         </dl>
 
     </section>
@@ -246,8 +477,6 @@
             </dd>
         </dl>
     </section>
-
 </div>
-
 </body>
 </html>
