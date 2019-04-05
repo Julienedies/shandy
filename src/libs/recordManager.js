@@ -1,21 +1,20 @@
 /**
- * Created by Julien on 2014/8/13.
  * 列表数据管理,增删改查
+ * Created by Julien on 2014/8/13.
  */
 
 const EventEmitter = require('events').EventEmitter;
 
 /**
- *
- * @param conf
  * @constructor
+ * @param conf
  * @example
- * var conf = { broadcast:true, //是否广播事件
+ * let conf = { broadcast:true, //是否广播事件
  *              eventPrefix:'holdModel', //广播事件前缀
  *              key:'hold.id',  //记录id
  *              beforeSave:function(record,index){}
  *             };
- * var list = new recordManager(conf);
+ * let list = new recordManager(conf);
  */
 function RecordManager(conf) {
     // 配置
@@ -23,7 +22,7 @@ function RecordManager(conf) {
     this._pool = [];
 }
 
-var proto = {
+let proto = {
     /**
      * 默认每条记录的主键为id；
      */
@@ -54,8 +53,8 @@ var proto = {
      * new recordManager().init([{id:1,y:2}]).get(2);                    // return [];
      */
     get: function (value, query) {
-        var pool = this._pool;
-        var r = [];
+        let pool = this._pool;
+        let r = [];
         if (value === void(0)) {
             return pool;
         }
@@ -83,11 +82,11 @@ var proto = {
      * new recoredManager().init([{x:1,y:2}]).find(2,'x').set({y:3});               // result false
      */
     set: function (data, query) {
-        var that = this;
-        var pool = this._pool;
-        var id = data[this.key];
-        var find = this._find || id && this.get(id);
-        var result = [];
+        let that = this;
+        let pool = this._pool;
+        let id = data[this.key];
+        let find = this._find || id && this.get(id);
+        let result = [];
         if (!id || !find.length) {
             return this.add(data);
         }
@@ -96,9 +95,9 @@ var proto = {
 
             if (query && that._queryKeyValue(record, query) === that._queryKeyValue(data, query))  return;
 
-            var id = that._queryKeyValue(record);
+            let id = that._queryKeyValue(record);
 
-            var index = that._getIndex(id);
+            let index = that._getIndex(id);
 
             record = pool[index];
 
@@ -119,8 +118,8 @@ var proto = {
      */
     add: function (record) {
         this.beforeSave(record);
-        var pool = this._pool;
-        var id = this._queryKeyValue(record);
+        let pool = this._pool;
+        let id = this._queryKeyValue(record);
         pool.unshift(record);
         this.emit('change');
         return this;
@@ -135,15 +134,15 @@ var proto = {
      * new recoredManager().init([{x:1,y:2},{x:1,y:5}]).remove(1,'x');  // result this._pool == {}; return [{x:1,y:2},{x:1,y:5}];
      */
     remove: function (value, key) {
-        var that = this;
-        var pool = this._pool;
-        var find = this._find || this.get(value, key);
+        let that = this;
+        let pool = this._pool;
+        let find = this._find || this.get(value, key);
         console.info('pool => ', pool.length);
         console.log('find => ', find.length);
         if (find.length) {
             find.forEach(function (record) {
                 console.info('remove => ', record);
-                var index = that._getIndex(record);
+                let index = that._getIndex(record);
                 index !== undefined && pool.splice(index, 1);
             });
             this.emit('change');
@@ -212,7 +211,7 @@ var proto = {
      * @returns {*}  返回k对应的属性值
      * @private
      * @example
-     * var record = {x:1, y:{z:2}};
+     * let record = {x:1, y:{z:2}};
      * new RecordManager().init([record])._queryKeyValue(record, 'y.z');  //return 2;
      * new RecordManager().init()._queryKeyValue(record, 'y.z');  //return 2;
      */
@@ -221,12 +220,12 @@ var proto = {
     },
     _get: function (record, k) {
 
-        var chain = (k || this.key).split('.');
+        let chain = (k || this.key).split('.');
 
-        var value = (function fx(chain, record) {
+        let value = (function fx(chain, record) {
 
-            var k = chain.shift();
-            var v = record[k];
+            let k = chain.shift();
+            let v = record[k];
 
             if (chain.length) {
                 return fx(chain, v);
@@ -241,11 +240,11 @@ var proto = {
     },
 
     _getIndex: function (record, query) {
-        var pool = this._pool;
+        let pool = this._pool;
 
-        var v = typeof record === 'object' ? this._queryKeyValue(record, query) : record;
+        let v = typeof record === 'object' ? this._queryKeyValue(record, query) : record;
 
-        for (var i in pool) {
+        for (let i in pool) {
 
             if (this._queryKeyValue(pool[i], query) === v) return i;
 
@@ -259,14 +258,14 @@ var proto = {
      */
     insert: function(id, before_id){
 
-        var pool = this._pool;
+        let pool = this._pool;
 
-        var index = this._getIndex(id);
+        let index = this._getIndex(id);
 
-        var arr = pool.splice(index, 1);  // 从数组中删除
-        var record = arr[0];
+        let arr = pool.splice(index, 1);  // 从数组中删除
+        let record = arr[0];
 
-        var before_index = before_id ? this._getIndex(before_id) : 0;
+        let before_index = before_id ? this._getIndex(before_id) : 0;
 
         pool.splice(before_index, 0, record);  // 重新插入
 

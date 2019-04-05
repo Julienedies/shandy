@@ -4,7 +4,9 @@
 
 import '../../../css/common/common.scss'
 import './style.scss'
+
 import './index.html'
+
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 

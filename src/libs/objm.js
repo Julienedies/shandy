@@ -1,6 +1,6 @@
 /**
+ * 对象数据管理 object manager
  * Created by j on 18/6/16.
- * 对象管理器  object manager
  */
 
 import events from 'events'
@@ -22,11 +22,11 @@ const proto = {
     get: function (key) {
         if (!key) return this._pool;
 
-        var keys = key.split('.');
+        let keys = key.split('.');
 
         return (function x(namespace, keys) {
-            var k = keys.shift();
-            var o = namespace[k];
+            let k = keys.shift();
+            let o = namespace[k];
             if (o && keys.length) return x(namespace[k], keys);
             return o;
         })(this._pool, keys);
@@ -54,11 +54,11 @@ const proto = {
 
     _set: function (key, val) {
 
-        var keys = key.split('.');
+        let keys = key.split('.');
 
         (function x(namespace, keys) {
-            var k = keys.shift();
-            var o = namespace[k];
+            let k = keys.shift();
+            let o = namespace[k];
             if (keys.length) {
                 if (!o) o = namespace[k] = {};
                 x(o, keys);
@@ -84,9 +84,6 @@ Objm.prototype = Object.create(EventEmitter.prototype);
 
 // 扩展原型对象
 Object.assign(Objm.prototype, proto);
-
-
-
 
 export default function(){
     return new Objm();

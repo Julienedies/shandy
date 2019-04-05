@@ -10,7 +10,7 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body ic-ctrl="main_ctrl">
-    <section class="column" ic-ctrl="tags_ctrl">
+    <div class="column" ic-ctrl="tags_ctrl">
 
         <div class="buttons">
             <button class="button"
@@ -18,9 +18,9 @@
                     ic-ajax-auto
                     ic-submit-method="get"
                     ic-submit-action="/stock/tags"
-                    ic-submit-on-done="on_get_done">标签列表
+                    ic-submit-on-done="onGetTagsDone">标签列表
             </button>
-            <button class="button" ic-click="add">新标签</button>
+            <button class="button" ic-click="add">添加标签</button>
         </div>
 
         <div ic-tpl>
@@ -29,7 +29,9 @@
                 <div class="field is-grouped is-grouped-multiline">
                     <div class="control" ic-for="i,v in arr">
                         <div class="tags has-addons is-medium">
-                            <span class="tag is-medium pointer hint--top" aria-label="{{ v.desc }}">{{v.text}}</span>
+                            <span class="tag is-medium is-info hint--top-right" aria-label="{{ v.desc }}" ic-click="edit:{{v.id}}">
+                                {{v.text}}
+                            </span>
                             <a class="tag is-medium" ic-click="edit:{{v.id}}">
                                 <span class="icon is-medium"><i class="far fa-edit"></i></span>
                             </a>
@@ -37,7 +39,7 @@
                                ic-ajax
                                ic-submit-method="delete"
                                ic-submit-action="/stock/tags/{{v.id}}"
-                               ic-submit-before
+                               ic-submit-before="confirm:确认删除?不可撤销!"
                                ic-submit-on-done="remove"></a>
                         </div>
                     </div>
@@ -49,8 +51,9 @@
                 </div>
             </div>
         </div>
+    </div>
 
-    </section>
     ${ require('./set-tag.html')}
+
 </body>
 </html>

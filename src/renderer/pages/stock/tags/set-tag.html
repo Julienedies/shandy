@@ -1,6 +1,5 @@
 <div ic-ctrl="set_tag_ctrl" ic-popup="set_tag">
-    <div class="column is-10" ic-tpl ic-tpl-init="{}" ic-init="model=model[0]||model">
-
+    <div class="column is-10" ic-tpl ic-tpl-init="{}" ic-init="model=model[0] || model">
         <div class="table_0" ic-form="set_tag">
 
             <div>
@@ -11,7 +10,7 @@
                            ic-has-readonly="model.type"
                            ic-form-field
                            ic-field-rule="required">
-                    <input type="hidden" name="id" ic-form-field  value="{{model.id}}" />
+                    <input type="hidden" name="id" ic-form-field value="{{model.id}}"/>
                 </div>
             </div>
 
@@ -28,6 +27,7 @@
                     <textarea rows="3" class="textarea is-medium" ic-form-field="desc">{{model.desc}}</textarea>
                 </div>
             </div>
+
             <!-- 上传图片 -->
             <div>
                 <h6>示例图片</h6>
@@ -35,7 +35,7 @@
                     <div class="control" ic-for="i,v in (model['示例图片']||[])">
                         <div class="tags has-addons">
                             <span class="tag is-medium" ic-select-item ic-has-selected="true" ic-val="{{v}}">{{v}}</span>
-                            <a class="tag is-medium hint--top" aria-label="图片预览"ic-href="{{ v }}" target="_blank">
+                            <a class="tag is-medium hint--top" aria-label="图片预览" ic-href="{{ v }}" target="_blank">
                                 <span class="icon is-medium"><i class="far fa-eye"></i></span>
                             </a>
                             <a class="tag is-delete is-medium"
@@ -66,12 +66,20 @@
                             ic-submit-action="/stock/tags"
                             ic-submit-before="before"
                             ic-submit-on-done="done"
-                    >保存</button>
-                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置 </button>
-                    <button class="button" ic-popup-close style="margin-left:4em;"> 关闭 </button>
+                    >保存
+                    </button>
+                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
+                    <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
                 </div>
             </div>
-        </div>
 
+<!--            <div>
+                <h6>级别</h6>
+                <div>
+                    <input class="input is-medium" type="number" min="1" max="100" step="1" name="level" value="{{model.level}}" ic-form-field>
+                </div>
+            </div>-->
+
+        </div>
     </div>
 </div>

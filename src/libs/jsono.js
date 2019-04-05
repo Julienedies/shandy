@@ -1,6 +1,6 @@
 /*!
+ * 把json文件包装成对象进行增删改查 json object
  * Created by j on 18/11/9.
- * 把json文件包装成对象进行增删改查
  */
 
 import fs from 'fs'
@@ -38,7 +38,6 @@ class Jo {
         let args = [].slice.call(arguments)
         obj = args[1] || args[0]
         key = args[1] && args[0]
-        console.log(key, this.get(key))
         let oldVal = this.get(key)
         if(!oldVal){
             oldVal = {}

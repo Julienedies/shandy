@@ -61,7 +61,6 @@ brick.reg('plans_ctrl', function () {
 
 });
 
-
 brick.reg('set_plan_ctrl', function () {
 
     let scope = this;

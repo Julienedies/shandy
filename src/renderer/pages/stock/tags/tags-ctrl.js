@@ -5,11 +5,12 @@
 import brick from '@julienedies/brick'
 
 export default function () {
+
     let scope = this;
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
 
-    scope.on_get_done = function (data) {
+    scope.onGetTagsDone = function (data) {
         let arr = scope.tags_convert(data);
         list.init(arr);
         scope.render(data);
@@ -25,11 +26,11 @@ export default function () {
     };
 
     scope.remove = function (data) {
-        scope.on_get_done(data);
-        //$(this).closest('.control').remove();
+        scope.onGetTagsDone(data);
     };
 
     scope.on('tag.edit.done', function (e, msg) {
-        scope.on_get_done(msg);
+        scope.onGetTagsDone(msg);
     });
+
 }

@@ -1,19 +1,22 @@
 /**
+ * 标签数据管理
  * Created by j on 18/7/22.
  */
 
 import dob from '../../../libs/dob.js'
 
-const tags = dob('tags', {convert: function(){
-    let result = {};
-    let list = this.get();
-    list.map(function(item){
-        let type = item.type;
-        let arr = result[type] = result[type] || [];
-        arr.push(item);
-    });
-    return result;
-}});
+const tags = dob('tags', {
+    convert: function () {
+        let result = {};
+        let list = this.get();
+        list.map(function (item) {
+            let type = item.type;
+            let arr = result[type] = result[type] || [];
+            arr.push(item);
+        });
+        return result;
+    }
+});
 
 export default {
 
