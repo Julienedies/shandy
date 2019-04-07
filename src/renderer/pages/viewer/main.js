@@ -78,25 +78,40 @@ brick.reg('mainCtrl', function (scope) {
         });
 
         (function fn (arr) {
-            let img_path = arr.shift();
-            if (!img_path) { // 图片数组重命名结束
+            let imgPath = arr.shift();
+            // 图片数组重命名结束
+            if (!imgPath) {
                 $(that).icClearLoading();
                 return scope.init();
             }
-            if (img_path.match(/\d{6}(?=\.png$)/)) return fn(arr);  // 已经ocr 重命名过的跳过
+            // 已经ocr 重命名过的跳过
+            if (imgPath.match(/\d{6}(?=\.png$)/)) {
+                // '屏幕快照 2019-03-22 下午9.08.59 -九阳股份-002242.png' 重命名到: '九阳股份 2019-03-22 下午9.08.59 -九阳股份-002242.png'
+                let rename = imgPath.replace(/^(.+)\/(屏幕快照)(\s+.+\s+)-(.+)-(\d{6}\.png)$/img,'$1/$4$3-$4-$5')
+                if(imgPath !== rename){
+                    fs.renameSync(imgPath, rename)
+                }
+                return fn(arr);
+            }
 
-            let dataUrl = imager.crop(img_path, crop);
+            // 裁剪预览
+            let dataUrl = imager.crop(imgPath, crop);
             $view_crop.attr('src', dataUrl);
 
+            // ocr 命名
             ocr({
                 image: dataUrl,
                 callback: function (words) {
                     $ocr_text.text(words);
                     let stock = stockQuery(words);
                     if (stock.code) {
-                        fs.renameSync(img_path, img_path.replace('(2)', `-${ stock.name }`).replace(/\.png$/, `-${ stock.code }.png`));
+                        let rename = imgPath
+                            .replace('屏幕快照', stock.name)
+                            .replace('(2)', `-${ stock.name }`)
+                            .replace(/\.png$/, `-${ stock.code }.png`);
+                        fs.renameSync(imgPath, rename);
                     } else {
-                        console.error('ocr fail: ', img_path, stock);
+                        console.error('ocr fail: ', imgPath, stock);
                         return fn(arr);
                     }
                     setTimeout(function () {
