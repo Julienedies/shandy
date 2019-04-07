@@ -9,10 +9,12 @@ export default function () {
     let scope = this;
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
+    let types = []
 
     scope.onGetTagsDone = function (data) {
         let arr = scope.tags_convert(data);
         list.init(arr);
+        types = Object.keys(data)
         scope.render(data);
     };
 
@@ -22,7 +24,11 @@ export default function () {
     };
 
     scope.add = function (e, type) {
-        scope.emit('tag.edit', {type: type});
+        let vm = {type}
+        if (!type) {
+            vm.types = types;
+        }
+        scope.emit('tag.edit', vm);
     };
 
     scope.remove = function (data) {

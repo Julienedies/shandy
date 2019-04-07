@@ -17,15 +17,33 @@ export default function () {
         scope.render({});
     };
 
-    scope.onUploadDone = function (data){
+    /**
+     *
+     * @param data {Array} 图片路径数组, 可以是绝对路径或者url
+     * @returns {boolean}
+     */
+    scope.onSelectPathDone = function (data) {
+        // 获取表单数据model
+        let model = $elm.find('[ic-form="set_tag"]').icForm();
+        model['示例图片'] = model['示例图片'] || [];
+        data.forEach((path, i) => {
+            let url = `/file/?path=${ encodeURIComponent(path) }`
+            model['示例图片'].push(url)
+        });
+
+        scope.render(model);
+        return false;
+    };
+
+    scope.onUploadDone = function (data) {
         // 获取表单数据model
         let model = $elm.find('[ic-form="set_tag"]').icForm();
 
         model['示例图片'] = model['示例图片'] || [];
 
-        data.forEach((v, i) => [
+        data.forEach((v, i) => {
             model['示例图片'].push(v.url)
-        ]);
+        });
 
         scope.render(model);
     };

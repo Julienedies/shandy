@@ -9,6 +9,7 @@ import $500 from './filter/500'
 
 // action
 import upload from './action/upload'
+import file from './action/file'
 
 import csd from './action/csd'
 import stock from './action/stock'
@@ -30,20 +31,29 @@ export default function(app){
     app.use(crossDomain)
 
     app.post('/upload', upload)
+
+    app.get('/file/', file.get)
+    app.get('/file/random/', file.random)
+
     app.get('/csd/days', csd.getDays)
     app.get('/csd/tick', csd.getTick)
+
     app.get('/stock/concept/:name', concept.get)
     app.get('/stock/c/:code', stock.get)
     app.post('/stock/c/:code', stock.post)
+
     app.get('/mashup/:code', mashup.get)
     app.get('/mashup/basic/:code', mashup.basic)
     app.get('/mashup/news/:code', mashup.news)
+
     app.get('/stock/plan', plan.get)
     app.post('/stock/plan', plan.post)
     app.delete('/stock/plan/:id', plan.del)
+
     app.get('/stock/tags/:type?', tags.get)
     app.post('/stock/tags', tags.post)
     app.delete('/stock/tags/:id', tags.del)
+
     app.get('/stock/replay', replay.get)
     app.post('/stock/replay', replay.post)
 

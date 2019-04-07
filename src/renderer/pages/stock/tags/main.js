@@ -10,6 +10,7 @@ import './index.html'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
+import '../../../js/common.js'
 import '../../../js/common-stock.js'
 
 import setTagCtrl from './set-tag-ctrl'

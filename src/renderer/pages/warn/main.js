@@ -5,17 +5,31 @@
 import './index.html'
 import './style.scss'
 
-import electron from 'electron'
 import $ from 'jquery'
+import brick from '@julienedies/brick'
+import '@julienedies/brick/dist/brick.css'
+import '@julienedies/brick/dist/brick.transition.js'
+
+import electron from 'electron'
 import utils from '../../../libs/utils'
 import warnText from '../../js/warn-text'
-import brick from '@julienedies/brick'
 
 const ipc = electron.ipcRenderer
 const BrowserWindow = electron.remote.BrowserWindow
-let win
 
+
+let win
+let $html = $('html')
 let socket = io()
+
+
+
+// 显示随机背景图片
+function randomBgImg(){
+    $html.css('background-image', `url("/file/random/?time=${ +new Date }")`)
+}
+
+randomBgImg()
 
 ipc.on('id', function (event, windowID) {
     console.log(event, windowID)
@@ -24,8 +38,8 @@ ipc.on('id', function (event, windowID) {
 
 brick.directives.reg('ic-step', function($elm){
     let cla = 'active'
-    $elm.on('click', 'li', function(){
-        console.log(this)
+    $elm.children().eq(0).addClass(cla)
+    $elm.on('click', '>li', function(){
         let $th = $(this).removeClass(cla)
         let $next = $th.next()
         if($next.length){
@@ -36,32 +50,35 @@ brick.directives.reg('ic-step', function($elm){
     })
 })
 
-brick.reg('warnCtrl', function (scope) {
-    let $msg = $('#msg')
+
+brick.reg('mainCtrl', function (scope) {
 
     socket.on('warn', (info) => {
         if (info === 'esc') {
-            return;
+            return scope.hideWindow();
         }
-        $msg.text(info).addClass('warn')
         win.showInactive()
+        randomBgImg()
+        brick.view.to(info)
     })
 
-    $('#step').on('ic-step.over', () => {
-        win.hide()
-    })
-
-    scope.hide = () => {
+    scope.hideWindow = () => {
         win.hide()
         setTimeout(() => {
             utils.activeFtnn()
             utils.activeTdx()
-        }, 200)
+        }, 300)
     }
 
 })
 
-brick.reg('plansCtrl', function () {
+
+brick.reg('warnCtrl', function (scope) {
+
+
+})
+
+brick.reg('planCtrl', function () {
 
     let scope = this
     let $elm = scope.$elm
@@ -83,7 +100,12 @@ brick.reg('plansCtrl', function () {
 })
 
 brick.reg('mistakeCtrl', function (scope) {
-
+    $.get('/stock/tags')
+        .done((data) => {
+            console.log(data)
+            let vm = data['交易错误']
+            scope.render('mistake', vm)
+        })
 })
 
 brick.bootstrap()

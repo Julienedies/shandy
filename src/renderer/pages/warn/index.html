@@ -4,88 +4,185 @@
     <meta charset="UTF-8">
     <title>warn</title>
     <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
+    <link rel="stylesheet" href="../../css/vendor/effeckt/animations.css">
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-<div class="wrapper">
+<div class="x-wrapper" ic-view-stage ic-ctrl="mainCtrl">
 
-    <div class="box" ic-ctrl="mistakeCtrl">
-        <h4 class="title is-5">不要重复错误!</h4>
-        <div>
-            <ul>
-                <li>囿于小利, 斤斤计较</li>
-                <li>无计划, 无逻辑, 无系统</li>
-                <li>无止损，低开后停止止损，调低止损。</li>
-                <li>看手册执行预案</li>
-                <li>平仓时不要盯盘,必须克服本能.</li>
-                <li>下跌不舍得平仓.上涨急于平仓.本质是斤斤计较的本能.必须控制这种本能.</li>
-                <li>止损的意义：止损优先！跌破两点，无条件止损。不要犹疑止损原则，执行就可以了。</li>
-                <li>被动，混沌，无计划，无预案。</li>
-            </ul>
+    <div ic-view="plan" ic-active>
+        <div class="box" ic-ctrl="planCtrl" x-style="position:absolute;left:0;bottom:0;min-width:24%;">
+            <h4 class="title is-5">计划</h4>
+            <div class="level">
+                <div class="level-left" ic-tpl="plans">
+                    <ul>
+                        <li ic-for="j,plan in model">
+                            <h6 style="font-weight: bold;">{{plan['股票名称']}} </h6>
+                            <div class="table_3">
+                                <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
+                                    <div class="pre">{{plan[k]}}</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="level-right" ic-tpl="replay">
+                    <ul>
+                        <li class="table_3" ic-for="i, v in model" ic-if="v">
+                            <div class="pre">{{i}} :{{v}}</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="button is-primary" ic-view-to="mistake">next</button>
+            </div>
         </div>
     </div>
 
-    <div class="box" ic-ctrl="plansCtrl" style="position:absolute;left:0;bottom:0;min-width:24%;">
-        <h4 class="title is-5">计划</h4>
-        <div class="level">
-            <div class="level-left" ic-tpl="plans">
-                <ul>
-                    <li ic-for="j,plan in model">
-                        <h6 style="font-weight: bold;">{{plan['股票名称']}} </h6>
-                        <div class="table_3">
-                            <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
-                                <div class="pre">{{plan[k]}}</div>
+    <div ic-view="mistake">
+        <div class="box" ic-ctrl="mistakeCtrl">
+            <h4 class="title is-4">错误</h4>
+            <div>
+                <div ic-tpl="mistake">
+                    <ul ic-viewer ic-viewer-url="src">
+                        <li style="display: none;"></li>
+                        <li ic-for="i,v in model">
+                            <h6 class="title is-5">{{ v.text }}</h6>
+                            <p>{{ v.desc }}</p>
+                            <div class="tags">
+                                <a ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{ o }}">{{ o }}</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="button" ic-view-back>返回</button>
+                <button class="button" ic-view-to="daban">next</button>
+                <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
+            </div>
+        </div>
+    </div>
+
+    <div ic-view="daban">
+        <div class="box" ic-ctrl="warnCtrl">
+            <h4 class="title is-5">打板</h4>
+            <div class="content">
+                <ul ic-step>
+                    <li>
+                        <span>是龙头吗?</span>
+                    </li>
+                    <li>
+                        <span>把事情做对,不要再重复以前的操作手法或错误了!</span>
+                    </li>
+                    <li>
+                        <span>支撑你的交易逻辑是什么?</span>
+                    </li>
+                    <li>
+                        <span>你要捕捉的目标行情是什么?</span>
+                    </li>
+                    <li>
+                        <span>计划内吗?</span>
+                    </li>
+                    <li>
+                        <span>买点正确吗?</span>
+                    </li>
+                    <li>
+                        <span>确定性多高?</span>
+                    </li>
+                    <li>
+                        <span>收益多少, 风险多少?</span>
+                    </li>
+                    <li>
+                        <div class="level">
+                            <div class="level-left">
+                                <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
+                            </div>
+                            <div class="level-right">
+                                <button class="button" ic-view-back>返回</button>
+                                <button class="button" ic-view-to="buy">next</button>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="level-right" ic-tpl="replay">
-                <ul>
-                    <li class="table_3" ic-for="i, v in model" ic-if="v">
-                        <div class="pre">{{i}} :{{v}}</div>
+        </div>
+    </div>
+
+    <div ic-view="buy">
+        <div class="box" ic-ctrl="warnCtrl">
+            <h4 class="title is-5">建仓</h4>
+            <div class="content">
+                <ul ic-step>
+                    <li>
+                        买点正确吗?
+                    </li>
+                    <li>
+                        <span>支撑你的交易逻辑是什么?</span>
+                    </li>
+                    <li>
+                        <span>你要捕捉的目标行情是什么?</span>
+                    </li>
+                    <li>
+                        <span>计划内吗?</span>
+                    </li>
+                    <li>
+                        <span>确定性多高?</span>
+                    </li>
+                    <li>
+                        <span>收益多少, 风险多少?</span>
+                    </li>
+                    <li>
+                        <span>把事情做对,不要再重复以前的操作手法或错误了!</span>
+                    </li>
+                    <li>
+                        <div class="level">
+                            <div class="level-left">
+                                <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
+                            </div>
+                            <div class="level-right">
+                                <button class="button" ic-view-back>返回</button>
+                                <button class="button" ic-view-to="sell">next</button>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="box" ic-ctrl="warnCtrl">
-        <div id="msg" ic-click="hide"></div>
-        <div>
-            <ul id="step" ic-step>
-                <li class="active">
-                    <span>不要忘记那些恐惧和痛苦!</span>
-                </li>
-                <li class="active">
-                    <span>把事情做对,不要再重复以前的操作手法或错误了!</span>
-                </li>
-                <li>
-                    <span>支撑你的交易逻辑是什么?</span>
-                </li>
-                <li>
-                    <span>你要捕捉的目标行情是什么?</span>
-                </li>
-                <li>
-                    <span>计划内吗?</span>
-                </li>
-                <li>
-                    <span>买点正确吗?</span>
-                </li>
-                <li>
-                    <span>确定性多高?</span>
-                </li>
-                <li>
-                    <span>收益多少, 风险多少?</span>
-                </li>
-            </ul>
-        </div>
-
-        <div style="margin-top:10px; position: fixed; left:0; bottom: 0; display: none;">
-            <button class="button">确定</button>
+    <div ic-view="sell">
+        <div class="box" ic-ctrl="warnCtrl">
+            <h4 class="title is-5">平仓</h4>
+            <div class="content">
+                <ul ic-step>
+                    <li>
+                        <span>不要丧失正确的头寸!</span>
+                    </li>
+                    <li>
+                        <span>支撑你的交易逻辑是什么?</span>
+                    </li>
+                    <li>
+                        <span>你要捕捉的目标行情是什么?</span>
+                    </li>
+                    <li>
+                        <span>计划内吗?</span>
+                    </li>
+                    <li>
+                        <div class="level">
+                            <div class="level-left">
+                                <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
+                            </div>
+                            <div class="level-right">
+                                <button class="button" ic-view-back>返回</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-
 </div>
 
 

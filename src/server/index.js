@@ -44,7 +44,7 @@ app.get('/set_node_modules_path.js', (req, res) => {
     `)
 })
 
-app.get('/msg', (req, res) => {
+app.get('/msg/', (req, res) => {
     let info = req.query.info
     console.log('/msg', info)
     io.emit('warn', info)

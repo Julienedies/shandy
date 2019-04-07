@@ -21,6 +21,7 @@ node_modules/
 #
 dist/
 data/csd/
+data/upload/
 temp/
 .user/
 

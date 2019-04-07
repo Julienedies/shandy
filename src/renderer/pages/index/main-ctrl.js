@@ -216,6 +216,9 @@ brick.reg('mainCtrl', function (scope) {
     scope.warn = function () {
         let warnWindow = scope.warnWindow
         if (warnWindow && warnWindow.win) {
+            if(!warnWindow.win.isVisible()){
+                return warnWindow.win.showInactive()
+            }
             let msg = `
 增加这么多步骤, 只是为了让你少犯错;
 控制本能, 把事情做对, 而不是被本能控制;

@@ -3,8 +3,8 @@ html {
   height: 100%;
   overflow: hidden;
   // background: rgba(0,0,0,0);
-  background: url('./a.jpg') no-repeat 50% 50% rgba(0, 0, 0, 0);
-  background-size: cover;
+  background: url('./a.jpg') repeat 50% 50% rgba(0, 0, 0, 0);
+  background-size: contain;
 }
 
 body {
@@ -15,12 +15,14 @@ body {
   padding: 0;
   overflow: hidden;
   color: #fff;
-  background: rgba(0, 0, 0, 0.2); //  rgba(0,0,0, 1)
+  background: rgba(0, 0, 0, 0.3); //  rgba(0,0,0, 1)
   border: solid 1px yellowgreen;
   font: 16px/2 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.pre{
+.pre {
   white-space: pre-wrap;
 }
 
@@ -94,12 +96,13 @@ body {
 
 //----------------------------------------------------
 [ic-step] > * {
+  margin-top: 0!important;
   height: 0;
   opacity: 0;
   font-size: 1.6em;
   cursor: pointer;
   pointer-events: none;
-  transition: all 0.6s;
+  transition: all 0.5s;
 
   &.active {
     height: auto;
@@ -108,18 +111,52 @@ body {
   }
 }
 
+// ---------------------------------------------- brick
+
+[ic-view] {
+  background: transparent !important;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  &[ic-active] {
+    .box {
+      .btn-box {
+      }
+    }
+  }
+
+  .box {
+    width: 48%;
+    margin-bottom: 10%;
+    min-width: 40%;
+    border: solid 1px yellowgreen;
+    background: rgba(0, 0, 0, 0.5);
+    .title{
+      margin:3px 0 10px 0!important;
+    }
+    .buttons{
+      margin-top:15px;
+    }
+  }
+}
+
 //----------------------------------------------------
 .box, .title {
-  //background: transparent!important;
   color: inherit;
 }
 
-.box {
-  min-width:40%;
-  border: solid 1px yellowgreen;
-  background: rgba(0, 0, 0, 0.5);
+a{
+  color: yellowgreen; // #3273dc
+  &:hover{
+    color:#fff;
+  }
 }
 
-.title {
-  margin-bottom: 0;
+[ic-ctrl="mistakeCtrl"]{
+   li{
+     padding: 10px 12px 13px 1px;
+     margin-top:5px;
+     background: rgba(0,0,0,0);
+   }
 }
