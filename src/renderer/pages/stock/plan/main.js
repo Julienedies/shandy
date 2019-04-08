@@ -15,9 +15,9 @@ import setTagCtrl from '../tags/set-tag-ctrl'
 
 brick.set('debug', true)
 
-brick.reg('set_tag_ctrl', setTagCtrl)
+brick.reg('setTagCtrl', setTagCtrl)
 
-brick.reg('plans_ctrl', function () {
+brick.reg('planCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;

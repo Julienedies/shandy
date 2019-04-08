@@ -10,6 +10,8 @@ import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 import '@julienedies/brick/dist/brick.transition.js'
 
+import '../../js/utils.js'
+
 import electron from 'electron'
 import utils from '../../../libs/utils'
 import warnText from '../../js/warn-text'
@@ -17,15 +19,12 @@ import warnText from '../../js/warn-text'
 const ipc = electron.ipcRenderer
 const BrowserWindow = electron.remote.BrowserWindow
 
-
 let win
 let $html = $('html')
 let socket = io()
 
-
-
 // 显示随机背景图片
-function randomBgImg(){
+function randomBgImg () {
     $html.css('background-image', `url("/file/random/?time=${ +new Date }")`)
 }
 
@@ -36,17 +35,27 @@ ipc.on('id', function (event, windowID) {
     win = BrowserWindow.fromId(windowID)
 })
 
-brick.directives.reg('ic-step', function($elm){
+ipc.on('view', (e, view) => {
+    brick.view.to(view)
+})
+
+
+brick.directives.reg('ic-step', function ($elm) {
     let cla = 'active'
     $elm.children().eq(0).addClass(cla)
-    $elm.on('click', '>li', function(){
+
+    $elm.on('click', '>li', function () {
         let $th = $(this).removeClass(cla)
         let $next = $th.next()
-        if($next.length){
+        if ($next.length) {
             return $next.addClass(cla)
         }
-        $elm.find(':first-child').addClass(cla)
+
         $elm.trigger('ic-step.over')
+
+        setTimeout(() => {
+            $elm.find(':first-child').addClass(cla)
+        }, 2000)
     })
 })
 
@@ -61,6 +70,8 @@ brick.reg('mainCtrl', function (scope) {
         randomBgImg()
         brick.view.to(info)
     })
+
+    $('[ic-view]').on('ic-view.active', randomBgImg)
 
     scope.hideWindow = () => {
         win.hide()

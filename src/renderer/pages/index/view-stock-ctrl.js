@@ -3,7 +3,6 @@
  */
 
 import electron from 'electron'
-const electronScreen = electron.screen;
 const shell = electron.shell;
 const BrowserWindow = electron.remote.BrowserWindow;
 const ipc = electron.ipcRenderer;

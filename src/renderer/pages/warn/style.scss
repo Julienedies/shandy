@@ -2,8 +2,7 @@ html {
   padding: 0;
   height: 100%;
   overflow: hidden;
-  // background: rgba(0,0,0,0);
-  background: url('./a.jpg') repeat 50% 50% rgba(0, 0, 0, 0);
+  background: repeat 50% 50% rgba(0, 0, 0, 1);
   background-size: contain;
 }
 
@@ -11,11 +10,10 @@ body {
   box-sizing: border-box;
   min-height: 100%;
   margin: 0;
-  /*padding: 20px 10px 10px 10px;*/
   padding: 0;
   overflow: hidden;
   color: #fff;
-  background: rgba(0, 0, 0, 0.3); //  rgba(0,0,0, 1)
+  background: rgba(0, 0, 0, 0.3);
   border: solid 1px yellowgreen;
   font: 16px/2 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
   -webkit-user-select: none;
@@ -99,7 +97,7 @@ body {
   margin-top: 0!important;
   height: 0;
   opacity: 0;
-  font-size: 1.6em;
+  font-size: 1.4em;
   cursor: pointer;
   pointer-events: none;
   transition: all 0.5s;
@@ -155,8 +153,9 @@ a{
 
 [ic-ctrl="mistakeCtrl"]{
    li{
-     padding: 10px 12px 13px 1px;
+     // padding: 10px 12px 13px 1px;
      margin-top:5px;
      background: rgba(0,0,0,0);
+     font-size: inherit!important;
    }
 }

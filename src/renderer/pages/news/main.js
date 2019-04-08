@@ -31,7 +31,7 @@ function cb(msg){
             win.hide()
             //win.setSize(1400, 32, true)
             //win.setPosition(1600, 3)
-        }, 17 * 1000);
+        }, 14 * 1000);
     }
 }
 

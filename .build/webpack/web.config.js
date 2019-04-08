@@ -48,7 +48,9 @@ let pages = entryJs.map((entryJsPath) => {
 
 const plugins = [
     ...pages,
-    new webpack.DefinePlugin({}),
+    new webpack.DefinePlugin({
+        'process.env.DEV': JSON.stringify(!isPro),
+    }),
     new webpack.NoEmitOnErrorsPlugin(),
     new ManifestPlugin(),
     new CleanPlugin([`dist/web`], {
@@ -91,15 +93,15 @@ if (isPro) {
     })
     plugins.push(new webpack.HotModuleReplacementPlugin())
 
-/*    devServer = {
-        publicPath: publicPath,
-        contentBase: outputPath,
-        port: devServerPort,
-        writeToDisk: true,
-        quiet: false,
-        hot: true,
-        disableHostCheck: true
-    }*/
+    /*    devServer = {
+            publicPath: publicPath,
+            contentBase: outputPath,
+            port: devServerPort,
+            writeToDisk: true,
+            quiet: false,
+            hot: true,
+            disableHostCheck: true
+        }*/
 
 }
 
@@ -109,9 +111,8 @@ let whiteListedModules = ['lodash', 'jquery', '@julienedies/brick', 'echarts']
 const frontConfig = {
     name: 'frontend',
     //context,  // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和 loader
-    mode: isPro ? 'production' : 'development',  // 会设置打包文件环境下的 process.env.NODE_ENV
-    //devtool: '#cheap-module-eval-source-map',
-    devtool: 'cheap-module-source-map',
+    mode: isPro ? 'production' : 'development',
+    devtool: isPro ? 'cheap-module-source-map' : 'cheap-module-eval-source-map',
     target: 'web',
     entry,
     output: {
@@ -128,7 +129,13 @@ const frontConfig = {
         extensions: ['.js', '.json', '.node', '.scss', '.css']
     },
     externals: [
-        ...Object.keys(dependencies || {}).filter(d => !whiteListedModules.includes(d))
+        ...Object.keys(dependencies || {}).filter(d => !whiteListedModules.includes(d)),
+        // 主要是为了解决web环境和renderer环境构建兼容性问题
+        {
+            'e-bridge': {
+                root: 'electronBridge'
+            }
+        }
     ],
     module: {
         rules: [
@@ -290,9 +297,9 @@ const serverConfig = {
         server: [path.join(__dirname, '../../src/server/server.js')]
     },
     output: {
+        path: outputPath,
         filename: '[name].js',
         libraryTarget: 'commonjs2',
-        path: outputPath
     },
     externals: [
         ...Object.keys(dependencies || {})
@@ -344,7 +351,7 @@ const serverConfig = {
 }
 
 
-module.exports ={
+module.exports = {
     frontConfig,
     serverConfig
 }

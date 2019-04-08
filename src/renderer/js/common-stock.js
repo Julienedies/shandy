@@ -49,7 +49,7 @@ brick.reg('main_ctrl', function(){
 
     this.ajax_before_confirm = function(data, msg){
         //console.info([].slice.call(arguments));
-        return confirm(msg);
+        return confirm(data || msg);
     };
 
     $elm.on('ic-form.error', function(e, msg){

@@ -4,22 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>setting</title>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-<div>
+<div class="column" ic-ctrl="mainCtrl" ic-tpl="setting">
+
+    <section class="box">
+        <h3 class="title is-4">warn page</h3>
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">随机背景图片目录</label>
+            </div>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" name="randomBgImgDir" value="{{ model.warn.randomBgImgDir }}">
+                    </div>
+                    <div class="control">
+                        <a class="button is-primary" ic-select-path="randomBgImgDir" ic-select-path-on-done="onSelectRandomBgImgDirDone">
+                            选择目录
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="box">
                         <span class="nav-group-item">
                         <input type="checkbox" name="is_open" ic-click="set_setting" checked> 打开</input>
                     </span>
-    <span class="nav-group-item">
+        <span class="nav-group-item">
                         <input type="checkbox" name="is_open_external" ic-click="set_setting" checked> 总是外部浏览器打开</input>
                     </span>
-    <span class="nav-group-item">
+        <span class="nav-group-item">
                         <input type="checkbox" name="is_mashup" ic-click="set_setting"> 使用自定义聚合</input>
                     </span>
-    <span class="nav-group-item">
+        <span class="nav-group-item">
                         <label><input type="checkbox" ic-click="debug" checked/> debug</label>
                     </span>
+    </div>
+
 </div>
 </body>
 </html>

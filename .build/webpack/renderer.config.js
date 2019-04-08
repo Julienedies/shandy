@@ -49,7 +49,9 @@ let pages = entryJs.map((entryJsPath) => {
 
 const plugins = [
     ...pages,
-    new webpack.DefinePlugin({}),
+    new webpack.DefinePlugin({
+        'process.env.DEV': JSON.stringify(!isPro),
+    }),
     new webpack.NoEmitOnErrorsPlugin(),
     new ManifestPlugin(),
     new CleanPlugin([`dist/electron`], {
@@ -111,7 +113,10 @@ const config = {
     node: false,
     plugins,
     resolve: {
-        alias: {},
+        alias: {
+            // 主要是为了解决web环境和renderer环境构建兼容性问题
+            'e-bridge': path.resolve(projectRoot, './src/libs/e-bridge.js')
+        },
         extensions: ['.js', '.json', '.node', '.scss', '.css']
     },
     externals: [

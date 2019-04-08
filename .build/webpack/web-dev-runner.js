@@ -36,7 +36,7 @@ function logStats (proc, data) {
         log += `  ${ data }\n`
     }
 
-    log += '\n' + chalk.yellow.bold(` ${ new Array(28 + 1).join('-') }`) + '\n'
+    log += '\n' + chalk.yellow.bold(` ${ new Array(28 + 1).join('-') } ${ (new Date).toLocaleString() }`) + '\n'
 
     console.log(log)
 }
@@ -52,7 +52,7 @@ function serverLog (data, color) {
             chalk[color].bold('{ Server -------------------') +
             '\n\n' +
             log +
-            chalk[color].bold('---------------------------- }') +
+            chalk[color].bold(`---------------------------- }`) +
             '\n'
         )
     }
@@ -63,6 +63,26 @@ function startFront () {
     const devServerPort = 8090
 
     const compiler = webpack(frontConfig)
+
+    compiler.hooks.done.tap('done', stats => {
+        logStats('Front', stats)
+    })
+
+    if (frontConfig.mode === 'production') {
+
+        compiler.watch({
+            aggregateTimeout: 300,
+            poll: undefined
+        }, (err, stats) => {
+            if (err) {
+                console.log(err)
+                return
+            }
+            logStats('front', stats)
+        });
+
+        return;
+    }
 
     const hotMiddleware = webpackHotMiddleware(compiler, {
         log: false,
@@ -76,9 +96,6 @@ function startFront () {
         })
     })*/
 
-    compiler.hooks.done.tap('done', stats => {
-        logStats('Renderer', stats)
-    })
 
     const server = new WebpackDevServer(compiler,
         {
@@ -119,7 +136,7 @@ function startServer () {
             });
 
             spawnNodemonProcess.stdout.on('data', data => {
-                serverLog( data, 'blue')
+                serverLog(data, 'blue')
             })
             spawnNodemonProcess.stderr.on('data', data => {
                 serverLog(data, 'red')

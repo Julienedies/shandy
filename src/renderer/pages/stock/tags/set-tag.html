@@ -1,4 +1,4 @@
-<div ic-ctrl="set_tag_ctrl" ic-popup="set_tag">
+<div ic-ctrl="setTagCtrl" ic-popup="set_tag">
     <div class="column is-10" ic-tpl ic-init="model=model[0] || model">
         <div class="table_0" ic-form="set_tag">
 
@@ -44,8 +44,8 @@
                     <div class="field is-grouped is-grouped-multiline" ic-select="示例图片" ic-select-type="checkbox" ic-form-field="示例图片">
                         <div class="control" ic-for="i,v in (model['示例图片']||[])">
                             <div class="tags has-addons">
-                                <span class="tag is-medium" ic-select-item ic-has-selected="true" ic-val="{{v}}">{{ decodeURIComponent(v) }}</span>
-                                <a class="tag is-medium hint--top" aria-label="图片预览" ic-href="v" ic-viewer-item>
+                                <span class="tag is-medium" ic-select-item ic-has-selected="true" ic-val="{{ v }}">{{ parseImgName(v) }}</span>
+                                <a class="tag is-medium hint--top" aria-label="图片预览" ic-href="{{ v }}" ic-viewer-item>
                                     <span class="icon is-medium"><i class="far fa-eye"></i></span>
                                 </a>
                                 <a class="tag is-delete is-medium"

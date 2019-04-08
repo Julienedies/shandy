@@ -5,7 +5,7 @@
 import path from 'path'
 import electron from 'electron'
 
-const electronScreen = electron.screen;
+//const electronScreen = electron.screen;
 const BrowserWindow = electron.remote.BrowserWindow;
 
 import config from './config.js'
@@ -27,8 +27,8 @@ class Win {
     constructor (opt) {
         if (!this instanceof Win) return new Win(opt)
 
-        let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
-        console.log(sw, sh);
+        //let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
+        //console.log(sw, sh);
 
         this.opt = {
             width: 1240,

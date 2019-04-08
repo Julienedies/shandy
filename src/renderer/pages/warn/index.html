@@ -10,8 +10,29 @@
 <body>
 <div class="x-wrapper" ic-view-stage ic-ctrl="mainCtrl">
 
-    <div ic-view="plan" ic-active>
-        <div class="box" ic-ctrl="planCtrl" x-style="position:absolute;left:0;bottom:0;min-width:24%;">
+    <div ic-view="reminder" ic-active>
+        <div class="box">
+            <h4 class="title is-4">提醒</h4>
+            <div class="content">
+                <ul ic-step>
+                    <li>
+                        <div>错误头寸, 鸡肋头寸, 竞价平仓, 或者最小止损;</div>
+                        <div>不要停止止损, 这个错误一直重复. </div>
+                        <div>正确的头寸不需要大的止损!</div>
+                    </li>
+                    <li>自动执行条件单, 不要停止止损; </li>
+                    <li>登录华宝证券</li>
+                    <li>注意撤单</li>
+                    <li>
+                        <button class="button is-primary" ic-view-to="plan">next</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div ic-view="plan">
+        <div class="box" ic-ctrl="planCtrl">
             <h4 class="title is-5">计划</h4>
             <div class="level">
                 <div class="level-left" ic-tpl="plans">
@@ -35,6 +56,8 @@
                 </div>
             </div>
             <div class="buttons">
+                <button class="button" ic-view-back>返回</button>
+                &nbsp;&nbsp;
                 <button class="button is-primary" ic-view-to="mistake">next</button>
             </div>
         </div>
@@ -45,26 +68,27 @@
             <h4 class="title is-4">错误</h4>
             <div>
                 <div ic-tpl="mistake">
-                    <ul ic-viewer ic-viewer-url="src">
-                        <li style="display: none;"></li>
+                    <ul ic-viewer ic-viewer-url="src" ic-step>
                         <li ic-for="i,v in model">
-                            <h6 class="title is-5">{{ v.text }}</h6>
+                            <h6 class="title is-4">{{ v.text }}</h6>
                             <p>{{ v.desc }}</p>
                             <div class="tags">
-                                <a ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{ o }}">{{ o }}</a>
+                                <a ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">{{parseImgName(o)}}</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="level">
+                                <div class="level-left">
+                                    <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
+                                </div>
+                                <div class="level-right">
+                                    <button class="button" ic-view-back>返回</button>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button class="button" ic-view-to="daban">next</button>
+                                </div>
                             </div>
                         </li>
                     </ul>
-                </div>
-            </div>
-            <div class="level">
-                <div class="level-left">
-                    <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
-                </div>
-                <div class="level-right">
-                    <button class="button" ic-view-back>返回</button>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <button class="button" ic-view-to="daban">next</button>
                 </div>
             </div>
         </div>
@@ -76,28 +100,17 @@
             <div class="content">
                 <ul ic-step>
                     <li>
-                        <span>是龙头吗?</span>
+                        <div>是龙头吗? 抢筹? 市场转折点?</div>
+                        <div>买点正确吗? 系统内吗?</div>
+                        <div>计划内吗?</div>
                     </li>
                     <li>
-                        <span>把事情做对,不要再重复以前的操作手法或错误了!</span>
+                        <div>支撑你的交易逻辑是什么?</div>
+                        <div>你要捕捉的目标行情是什么?</div>
                     </li>
                     <li>
-                        <span>支撑你的交易逻辑是什么?</span>
-                    </li>
-                    <li>
-                        <span>你要捕捉的目标行情是什么?</span>
-                    </li>
-                    <li>
-                        <span>计划内吗?</span>
-                    </li>
-                    <li>
-                        <span>买点正确吗?</span>
-                    </li>
-                    <li>
-                        <span>确定性多高?</span>
-                    </li>
-                    <li>
-                        <span>收益多少, 风险多少?</span>
+                        <div>确定性?</div>
+                        <div>盈亏比?</div>
                     </li>
                     <li>
                         <div class="level">
@@ -106,7 +119,7 @@
                             </div>
                             <div class="level-right">
                                 <button class="button" ic-view-back>返回</button>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <button class="button" ic-view-to="buy">next</button>
                             </div>
                         </div>
@@ -122,25 +135,19 @@
             <div class="content">
                 <ul ic-step>
                     <li>
-                        买点正确吗?
+                        <div>买点正确吗? 系统内吗?</div>
+                        <div>计划内吗?</div>
                     </li>
                     <li>
-                        <span>支撑你的交易逻辑是什么?</span>
+                        <div>支撑你的交易逻辑是什么?</div>
+                        <div>你要捕捉的目标行情是什么?</div>
                     </li>
                     <li>
-                        <span>你要捕捉的目标行情是什么?</span>
+                        <div>确定性?</div>
+                        <div>盈亏比?</div>
                     </li>
                     <li>
-                        <span>计划内吗?</span>
-                    </li>
-                    <li>
-                        <span>确定性多高?</span>
-                    </li>
-                    <li>
-                        <span>收益多少, 风险多少?</span>
-                    </li>
-                    <li>
-                        <span>把事情做对,不要再重复以前的操作手法或错误了!</span>
+                        <div>把事情做对,不要再重复以前的操作手法或错误了!</div>
                     </li>
                     <li>
                         <div class="level">
@@ -149,7 +156,7 @@
                             </div>
                             <div class="level-right">
                                 <button class="button" ic-view-back>返回</button>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <button class="button" ic-view-to="sell">next</button>
                             </div>
                         </div>
@@ -165,16 +172,8 @@
             <div class="content">
                 <ul ic-step>
                     <li>
-                        <span>不要丧失正确的头寸!</span>
-                    </li>
-                    <li>
-                        <span>支撑你的交易逻辑是什么?</span>
-                    </li>
-                    <li>
-                        <span>你要捕捉的目标行情是什么?</span>
-                    </li>
-                    <li>
-                        <span>计划内吗?</span>
+                        <div>错误头寸, 鸡肋头寸, 尽快平仓; 不要囿于小利, 仅仅计较.</div>
+                        <div>不要丧失正确的头寸!</div>
                     </li>
                     <li>
                         <div class="level">

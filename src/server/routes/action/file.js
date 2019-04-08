@@ -5,9 +5,11 @@
 import path from 'path'
 import glob from 'glob'
 import config from '../../../libs/config'
+import _setting from '../../../libs/setting'
 
-const randomBgImgDir = config.dir.randomBgImg
-let imgDir = path.join(randomBgImgDir, '**/*.+(jpg|png)')
+const setting = _setting()
+const randomBgImgDir = setting.get('warn.randomBgImgDir') || config.dir.randomBgImg
+let imgDir = path.join(randomBgImgDir, './**/*.+(jpg|png)')
 let imgArr = []
 
 glob(imgDir, {}, (err, files) => {

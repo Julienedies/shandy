@@ -30,11 +30,11 @@ export default function () {
             let url = `/file/?path=${ encodeURIComponent(path) }`
             model['示例图片'].push(url)
         });
-
         scope.render(model);
         return false;
     };
 
+    // 图片上传
     scope.onUploadDone = function (data) {
         // 获取表单数据model
         let model = $elm.find('[ic-form="set_tag"]').icForm();

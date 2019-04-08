@@ -37,7 +37,7 @@ function logStats (proc, data) {
         log += `  ${ data }\n`
     }
 
-    log += '\n' + chalk.yellow.bold(` ${ new Array(28 + 1).join('-') }`) + '\n'
+    log += '\n' + chalk.yellow.bold(` ${ new Array(28 + 1).join('-') } ${ (new Date).toLocaleString() }`) + '\n'
 
     console.log(log)
 }

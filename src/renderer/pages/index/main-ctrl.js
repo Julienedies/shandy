@@ -12,6 +12,7 @@ import 'froala-editor/js/froala_editor.pkgd.min.js'
 
 import utils from '../../../libs/utils'
 import Win from '../../../libs/window'
+import voice from '../../../libs/voice'
 
 brick.services.reg('viewsModel', () => {
     const list = []
@@ -180,7 +181,9 @@ brick.reg('mainCtrl', function (scope) {
             settingWindow.show()
         } else {
             scope.settingWindow = new Win({
-                url: 'setting.html', onClose: () => {
+                x: 160,
+                url: 'setting.html',
+                onClose: () => {
                     delete scope.settingWindow
                 }
             })
@@ -216,7 +219,7 @@ brick.reg('mainCtrl', function (scope) {
     scope.warn = function () {
         let warnWindow = scope.warnWindow
         if (warnWindow && warnWindow.win) {
-            if(!warnWindow.win.isVisible()){
+            if (!warnWindow.win.isVisible()) {
                 return warnWindow.win.showInactive()
             }
             let msg = `
@@ -226,7 +229,7 @@ brick.reg('mainCtrl', function (scope) {
 不围绕主线; 随意操作; 无计划操作; 无逻辑操作; 不要再犯错了;
 想想那些恐惧和痛苦吧!`
             utils.msg(msg)
-            if(window.confirm(msg)){
+            if (window.confirm(msg)) {
                 warnWindow.close()
                 scope.warnWindow = null
             }
@@ -259,18 +262,35 @@ brick.reg('mainCtrl', function (scope) {
         scope.newsWin && scope.newsWin.close()
     })
 
-    //----------------------------------------------------------------------
+    // ----------------------------------------------------------------
+
     scope.news()
     scope.warn()
-    utils.timer('9:00', () => {
-        scope.warnWindow && scope.warnWindow.show()
-    });
-    utils.timer('13:00', () => {
-        scope.warnWindow && scope.warnWindow.show()
-    });
+
+    // ----------------------------------------------------------------
+
+    let mistakeText =
+        `鸡肋头寸, 错误头寸, 竞价即刻平仓; 或者最小止损;
+            不要停止止损, 这个错误一直重复. 本质上是囿于小利, 斤斤计较!
+            正确的头寸不需要大的止损!`;
+
     utils.timer('8:55', () => {
         new Win('reminder.html');
     });
+    utils.timer('9:10', () => {
+        scope.warnWindow.show()
+        voice(mistakeText)
+    });
+    utils.timer('9:26', () => {
+        scope.warnWindow.show()
+        scope.warnWindow.win.webContents.send('view', 'reminder')
+        voice(mistakeText)
+    });
+    utils.timer('12:57', () => {
+        scope.warnWindow.show()
+        scope.warnWindow.win.webContents.send('view', 'reminder')
+    });
+
 
 });
 
@@ -307,8 +327,8 @@ brick.reg('memoCtrl', function () {
 
 });
 
-brick.reg('setStockCtrl', function(){
-    this.addStock = function(fields){
+brick.reg('setStockCtrl', function () {
+    this.addStock = function (fields) {
         console.log(fields)
         utils.addStock(fields)
     }
