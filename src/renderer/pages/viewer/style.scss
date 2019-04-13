@@ -1,34 +1,52 @@
-html, body {
+/*html, body {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
-  overflow: hidden;
-}
+}*/
+
 #ic-viewer-box-wrap img {
   margin-top: -35px;
 }
-#ic-viewer-box-wrap{
-  background:black!important;
+
+#ic-viewer-box-wrap {
+  background: black !important;
 }
-#ic-viewer-info{
-  bottom:50px!important;
+
+#ic-viewer-info {
+  bottom: 10px !important;
   white-space: pre;
-  font-size:1.4em;
+  font-size: 1.4em;
   line-height: 2;
-  padding:10px 0 140px 0;
+  padding: 10px 0 40px 0;
 }
-.wrap{
-  padding-top:10px;
-  height:100%;
-  min-height:100%;
+
+.wrap {
+  padding-top: 10px;
+  height: 100%;
+  min-height: 100%;
   overflow-y: scroll;
 }
-input{
+
+input {
   line-height: 1.6;
-  font-size:1.2em;
-  margin-left:5px;
+  font-size: 1.2em;
+  margin-left: 5px;
 }
-#box li{
-  margin:0 0 10px 40px;
+
+#box li {
+  margin: 0 0 10px 40px;
+}
+
+#viewerAttach {
+  position: absolute;
+  z-index: 200001;
+  color: #fff;
+  top: 95px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  text-align: center;
+  font-size: 1.2em;
+  white-space: pre;
 }

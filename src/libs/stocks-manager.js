@@ -12,18 +12,27 @@ const jsonPath = path.resolve(config.CSD_DIR, './stocks.json')
 
 let stocksJo
 
+function getStocksJo () {
+    stocksJo = stocksJo || jo(jsonPath)
+/*    stocksJo.json.forEach((arr, i) => {
+        arr[1] = arr[1].replace('Ａ', 'A')
+    })
+    stocksJo.save()*/
+    return stocksJo
+}
+
 export default {
 
     /**
      * @return {Array}
      */
     get: function(){
-        stocksJo = stocksJo || jo(jsonPath)
+        stocksJo = getStocksJo ()
         console.log(stocksJo.json[0])
         return stocksJo.json
     },
     add: function(stock){
-        stocksJo = stocksJo || jo(jsonPath)
+        stocksJo = getStocksJo ()
         stocksJo.json.unshift([stock.code, stock.name])
         stocksJo.save()
     }

@@ -6,6 +6,8 @@ import fs from 'fs'
 import path from 'path'
 import os from 'os'
 
+import glob from 'glob'
+
 import electron from 'electron'
 
 import _ from 'lodash'
@@ -39,6 +41,14 @@ export default {
     },
 
     get_images: function get_images (dir, is_only_path) {
+
+        // 测试是否是交易记录图片
+        if (dir.indexOf('截图') === -1) {
+            let files = glob.sync(path.join(dir, './*.+(jpg|png)')) || []
+            return files.map((path) => {
+                return {f: path}
+            })
+        }
 
         let arr = fs.readdirSync(dir);
 

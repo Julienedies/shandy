@@ -7,33 +7,53 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body ic-ctrl="mainCtrl">
+<div class="column">
 
-<div class="wrap">
-    <div class="buttons">
-        <button class="button">自动播放</button>
-        <button class="button" ic-click="ocr_rename">ocr重命名</button>
-        <div ic-form>
-            <label class="">x:<input type="number" value="3100" ic-form-field="x"></label>
-            <label class="">y:<input type="number" value="115" ic-form-field="y"></label>
-            <label class="">width:<input type="number" value="380" ic-form-field="width"></label>
-            <label class="">height:<input type="number" value="50" ic-form-field="height"></label>
-            <label class="">图片序号:<input type="number" value="0" id="sn"></label>
-            <button class="button" ic-form-submit ic-submit-action="crop_test()">剪切测试</button>
-            <div>
-                <img id="view_crop" style="border:solid 1px blue;"/>
-                <span id="ocr_text"></span>
+    <div class="box">
+
+        <div class="field has-addons">
+            <div class="control">
+                <a class="button is-primary" ic-select-path="viewerDir" ic-select-path-on-done="onSelectViewerDirDone">
+                    选择图片文件夹
+                </a>
+            </div>
+            <div class="control is-expanded">
+                <input class="input" type="text" value="" name="viewerDir">
             </div>
         </div>
+
+        <div class="column" ic-form>
+            <div class="level">
+                <label class="">x:<input type="number" value="3100" ic-form-field="x"></label>
+                <label class="">y:<input type="number" value="115" ic-form-field="y"></label>
+                <label class="">width:<input type="number" value="380" ic-form-field="width"></label>
+                <label class="">height:<input type="number" value="50" ic-form-field="height"></label>
+                <label class="">图片序号:<input type="number" value="0" id="sn"></label>
+            </div>
+
+            <div class="field">
+                <button class="button" ic-click="ocr_rename">ocr重命名</button>
+                <button class="button" ic-form-submit ic-submit-action="crop_test()">剪切测试</button>
+                <span>
+                    <img id="view_crop" style="border:solid 1px blue;"/>
+                    <span id="ocr_text"></span>
+                </span>
+            </div>
+        </div>
+
+
     </div>
 
     <div id="box" ic-tpl="list">
-        <ol ic-viewer ic-viewer-item="li" ic-viewer-url="url" ic-viewer-interval="10" ic-viewer-on-show="onShow">
+        <ol ic-viewer ic-viewer-item="li" ic-viewer-url="url" ic-viewer-interval="10" ic-viewer-on-show="onViewerShow">
             <li ic-for="i,v in model" url="file://{{v.f}}">
                 <h5>{{v.f}}</h5>
             </li>
         </ol>
     </div>
+
 </div>
 
+<div id="viewerAttach"></div>
 </body>
 </html>

@@ -2,6 +2,7 @@
  * Created by j on 18/7/28.
  */
 
+import './index.html'
 import '../../../css/common/common.scss'
 import './style.scss'
 
@@ -16,9 +17,9 @@ import tagsCtrl from '../tags/tags-ctrl'
 
 brick.reg('tags_ctrl', tagsCtrl);
 
-brick.reg('set_tag_ctrl', setTagCtrl);
+brick.reg('setTagCtrl', setTagCtrl);
 
-brick.reg('replay_ctrl', function () {
+brick.reg('replayCtrl', function () {
 
     let scope = this;
     let $elm = this.$elm;
@@ -49,6 +50,7 @@ brick.reg('replay_ctrl', function () {
     };
 
     scope.tag_remove_done = function (data) {
+        model.replay = $elm.find('[ic-form="replay"]').icForm();
         model.tags = data;
         scope.get_replay_done(model);
     };

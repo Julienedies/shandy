@@ -25,7 +25,7 @@ let socket = io()
 
 // 显示随机背景图片
 function randomBgImg () {
-    $html.css('background-image', `url("/file/random/?time=${ +new Date }")`)
+    $html.css('background-image', `url("x/file/random/?time=${ +new Date }")`)
 }
 
 randomBgImg()
@@ -50,31 +50,48 @@ brick.directives.reg('ic-step', function ($elm) {
         if ($next.length) {
             return $next.addClass(cla)
         }
-
         $elm.trigger('ic-step.over')
-
-        setTimeout(() => {
-            $elm.find(':first-child').addClass(cla)
-        }, 2000)
+        $elm.find(':first-child').addClass(cla)
     })
 })
 
 
 brick.reg('mainCtrl', function (scope) {
 
-    socket.on('warn', (info) => {
-        if (info === 'esc') {
-            return scope.hideWindow();
-        }
-        win.showInactive()
-        randomBgImg()
-        brick.view.to(info)
+    $('[ic-view]').on('ic-view.active', () => {
+
     })
 
-    $('[ic-view]').on('ic-view.active', randomBgImg)
+    socket.on('warn', (info) => {
+        let d = new Date()
+        let h = d.getHours()
+        let m = d.getMinutes()
+        if (h === 9 && m > 15 && m < 45) {
+            return;
+        }
+
+        if (info === 'esc' || info === 'daban') {
+            return //scope.hideWindow();
+        }
+
+        win.showInactive()
+        brick.view.to(info)
+
+        let map = {
+            daban: 1,
+            sell: 4,
+            buy: 13
+        }
+
+        setTimeout(() => {
+            scope.hideWindow()
+        }, map[info] * 1000);
+
+    })
 
     scope.hideWindow = () => {
         win.hide()
+        randomBgImg()
         setTimeout(() => {
             utils.activeFtnn()
             utils.activeTdx()

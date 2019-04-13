@@ -134,7 +134,7 @@ brick.reg('reviewCtrl', function (scope) {
         setTimeout( () => {
             dayChart({code, day})
             tickChart({code, day})
-        }, 1000);
+        }, 3000);
     }
 
     scope.viewInFtnn = function (e) {

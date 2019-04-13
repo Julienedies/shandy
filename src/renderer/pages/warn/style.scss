@@ -20,6 +20,9 @@ body {
   user-select: none;
 }
 
+.none{
+  display: none!important;
+}
 .pre {
   white-space: pre-wrap;
 }
@@ -93,36 +96,42 @@ body {
 }
 
 //----------------------------------------------------
-[ic-step] > * {
-  margin-top: 0!important;
-  height: 0;
-  opacity: 0;
-  font-size: 1.4em;
-  cursor: pointer;
-  pointer-events: none;
+[ic-step] {
+  position: relative;
   transition: all 0.5s;
+  > * {
+    margin-top: 0 !important;
+    width:100%;
+    min-height: 130px;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    //align-items: center;
+    justify-content: center;
+    opacity: 0;
+    font-size: 1.4em;
+    cursor: pointer;
+    transform: translate(0, 100%);
+    pointer-events: none;
+    transition: all 0.5s;
 
-  &.active {
-    height: auto;
-    opacity: 1;
-    pointer-events: auto;
+    &.active {
+      transform: translate(0, 0);
+      position: relative;
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
+
 }
 
 // ---------------------------------------------- brick
 
 [ic-view] {
-  background: transparent !important;
+  background: rgba(0, 0, 0, 1) !important;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
-  &[ic-active] {
-    .box {
-      .btn-box {
-      }
-    }
-  }
 
   .box {
     width: 48%;
@@ -130,11 +139,13 @@ body {
     min-width: 40%;
     border: solid 1px yellowgreen;
     background: rgba(0, 0, 0, 0.5);
-    .title{
-      margin:3px 0 10px 0!important;
+
+    .title {
+      margin: 3px 0 10px 0 !important;
     }
-    .buttons{
-      margin-top:15px;
+
+    .buttons {
+      margin-top: 15px;
     }
   }
 }
@@ -144,18 +155,18 @@ body {
   color: inherit;
 }
 
-a{
+a {
   color: yellowgreen; // #3273dc
-  &:hover{
-    color:#fff;
+  &:hover {
+    color: #fff;
   }
 }
 
-[ic-ctrl="mistakeCtrl"]{
-   li{
-     // padding: 10px 12px 13px 1px;
-     margin-top:5px;
-     background: rgba(0,0,0,0);
-     font-size: inherit!important;
-   }
+[ic-ctrl="mistakeCtrl"] {
+  li {
+    // padding: 10px 12px 13px 1px;
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0);
+    font-size: inherit !important;
+  }
 }

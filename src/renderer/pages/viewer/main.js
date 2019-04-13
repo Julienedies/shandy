@@ -2,6 +2,14 @@
  * Created by j on 18/9/14.
  */
 
+import './index.html'
+import './style.scss'
+
+import brick from '@julienedies/brick'
+import '@julienedies/brick/dist/brick.css'
+
+import '../../js/common.js'
+
 import fs from 'fs'
 import $ from 'jquery'
 import debugMenu from 'debug-menu'
@@ -12,26 +20,28 @@ import userDb from '../../../libs/user-db'
 
 import imager from './imager.js'
 
-import brick from '@julienedies/brick'
-import '@julienedies/brick/dist/brick.css'
-
-import './style.scss'
+// activate context menu
+debugMenu.install();
 
 // 交易记录json
 const tradeArr = userDb('trading', []).get()
-
-// activate context menu
-debugMenu.install();
 
 brick.reg('mainCtrl', function (scope) {
 
     scope.crop = {x: 3140, y: 115, width: 310, height: 50};
 
+    scope.onSelectViewerDirDone = (paths) => {
+        if (!paths) return;
+        let dir = paths[0]
+        scope.init(dir)
+    }
+
     // 获取目录下所有图片
-    scope.init = function () {
-        let dir = brick.utils.get_query('dir');
+    scope.init = function (dir) {
+        //let dir = brick.utils.get_query('dir');
         let urls = imager.get_images(dir);
-        urls.map(o => {
+        if(!urls.length) return;
+        urls[0].code && urls.forEach(o => {
             o.tradeInfo = tradeArr.filter(arr => {
                 // 交易信息 对应 code 和 时间
                 return o.code === arr[3] && o.d.replace(/-/g, '') === arr[0];
@@ -43,15 +53,24 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     // ic-viewer  回调函数
-    scope.onShow = function (index, src, $info) {
+    let $viewerAttach = $('#viewerAttach');
+    scope.onViewerOpen = () => {
+        $viewerAttach.show()
+    };
+    scope.onViewerClose = () => {
+        $viewerAttach.hide()
+    };
+    scope.onViewerShow = function (index, src, $info) {
         let imgObj = scope.urls[index]
         let arr = imgObj.tradeInfo;
+        if(!arr) return;
         arr = arr.map(a => {
             return [a[1], a[5], a[7], a[6]];
         });
         arr.reverse(); // 当日多个交易记录按照时间先后显示
         let text = arr.join('\r\n').replace(/,/g, '    ');
-        $info.text(text + '\r\n' + imgObj.f);
+        $viewerAttach.text(text)
+        $info.text('\r\n' + imgObj.f);
     };
 
     // 图片剪切测试  fields => {x: 3140, y: 115, width: 310, height: 50}
@@ -87,8 +106,8 @@ brick.reg('mainCtrl', function (scope) {
             // 已经ocr 重命名过的跳过
             if (imgPath.match(/\d{6}(?=\.png$)/)) {
                 // '屏幕快照 2019-03-22 下午9.08.59 -九阳股份-002242.png' 重命名到: '九阳股份 2019-03-22 下午9.08.59 -九阳股份-002242.png'
-                let rename = imgPath.replace(/^(.+)\/(屏幕快照)(\s+.+\s+)-(.+)-(\d{6}\.png)$/img,'$1/$4$3-$4-$5')
-                if(imgPath !== rename){
+                let rename = imgPath.replace(/^(.+)\/(屏幕快照)(\s+.+\s+)-(.+)-(\d{6}\.png)$/img, '$1/$4$3-$4-$5')
+                if (imgPath !== rename) {
                     fs.renameSync(imgPath, rename)
                 }
                 return fn(arr);
@@ -124,7 +143,7 @@ brick.reg('mainCtrl', function (scope) {
 
     };
 
-    scope.init();
+    // ---------------------------------------------------------------------------------------
 
 });
 

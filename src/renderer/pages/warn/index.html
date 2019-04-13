@@ -13,13 +13,13 @@
     <div ic-view="reminder" ic-active>
         <div class="box">
             <h4 class="title is-4">提醒</h4>
-            <div class="content">
+            <div>
                 <ul ic-step>
-                    <li>
-                        <div>错误头寸, 鸡肋头寸, 竞价平仓, 或者最小止损;</div>
-                        <div>不要停止止损, 这个错误一直重复. </div>
-                        <div>正确的头寸不需要大的止损!</div>
-                    </li>
+                    <li>控制 逻辑  计划  等待 耐心 专注</li>
+                    <li>止损错误; 本质是囿于小利, 斤斤计较;</li>
+                    <li>错误头寸, 鸡肋头寸, 竞价平仓;</li>
+                    <li>不要停止止损, 这个错误一直重复. </li>
+                    <li>正确的头寸不需要大的止损!</li>
                     <li>自动执行条件单, 不要停止止损; </li>
                     <li>登录华宝证券</li>
                     <li>注意撤单</li>
@@ -35,7 +35,14 @@
         <div class="box" ic-ctrl="planCtrl">
             <h4 class="title is-5">计划</h4>
             <div class="level">
-                <div class="level-left" ic-tpl="plans">
+                <div class="level-left" ic-tpl="replay">
+                    <ul>
+                        <li class="table_3" ic-for="i, v in model" ic-if="v">
+                            <div class="pre"><span style="color:yellowgreen; font-size:0.8em;">{{i}} : </span><span>{{v}}</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="level-right" ic-tpl="plans">
                     <ul>
                         <li ic-for="j,plan in model">
                             <h6 style="font-weight: bold;">{{plan['股票名称']}} </h6>
@@ -44,13 +51,6 @@
                                     <div class="pre">{{plan[k]}}</div>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="level-right" ic-tpl="replay">
-                    <ul>
-                        <li class="table_3" ic-for="i, v in model" ic-if="v">
-                            <div class="pre">{{i}} :{{v}}</div>
                         </li>
                     </ul>
                 </div>
@@ -71,9 +71,11 @@
                     <ul ic-viewer ic-viewer-url="src" ic-step>
                         <li ic-for="i,v in model">
                             <h6 class="title is-4">{{ v.text }}</h6>
-                            <p>{{ v.desc }}</p>
-                            <div class="tags">
-                                <a ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">{{parseImgName(o)}}</a>
+                            <p class="pre">{{ v.desc }}</p>
+                            <div class="control">
+                                <a class="" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
+                                    {{parseImgName(o)}} &nbsp;&nbsp;
+                                </a>
                             </div>
                         </li>
                         <li>
@@ -97,8 +99,8 @@
     <div ic-view="daban">
         <div class="box" ic-ctrl="warnCtrl">
             <h4 class="title is-5">打板</h4>
-            <div class="content">
-                <ul ic-step>
+            <div class="">
+                <ul>
                     <li>
                         <div>是龙头吗? 抢筹? 市场转折点?</div>
                         <div>买点正确吗? 系统内吗?</div>
@@ -112,7 +114,7 @@
                         <div>确定性?</div>
                         <div>盈亏比?</div>
                     </li>
-                    <li>
+                    <li class="none">
                         <div class="level">
                             <div class="level-left">
                                 <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
@@ -132,7 +134,7 @@
     <div ic-view="buy">
         <div class="box" ic-ctrl="warnCtrl">
             <h4 class="title is-5">建仓</h4>
-            <div class="content">
+            <div class="">
                 <ul ic-step>
                     <li>
                         <div>买点正确吗? 系统内吗?</div>
@@ -169,7 +171,7 @@
     <div ic-view="sell">
         <div class="box" ic-ctrl="warnCtrl">
             <h4 class="title is-5">平仓</h4>
-            <div class="content">
+            <div class="">
                 <ul ic-step>
                     <li>
                         <div>错误头寸, 鸡肋头寸, 尽快平仓; 不要囿于小利, 仅仅计较.</div>

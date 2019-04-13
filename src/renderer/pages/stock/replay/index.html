@@ -10,7 +10,7 @@
 </head>
 <body id="logic_list" ic-ctrl="main_ctrl">
 
-    <section class="column" ic-ctrl="replay_ctrl">
+    <section class="column" ic-ctrl="replayCtrl">
 
     <button class="button none"
             id="get_replay"
@@ -22,18 +22,7 @@
 
     <div ic-tpl="replay">
 
-        <div class="table_0" ic-form="replay" ic-init="replay=model.replay;tags=model.tags">
-
-            <div>
-                <h6>思考</h6>
-                <div class="tags">
-                    <span class="tag is-medium is-black">明确具体的复盘</span>
-                    <span class="tag is-medium is-black">哪些在涨?</span>
-                    <span class="tag is-medium is-black">哪些在跌?</span>
-                    <span class="tag is-medium is-black">交易逻辑</span>
-                    <span class="tag is-medium is-black">交易系统</span>
-                </div>
-            </div>
+        <div ic-form="replay" ic-init="replay=model.replay;tags=model.tags">
 
             <div>
                 <h6>大盘状态</h6>
@@ -68,7 +57,9 @@
                 <div class="field is-grouped is-grouped-multiline" ic-select="主线风口" ic-select-type="checkbox" ic-form-field="主线风口">
                     <div class="control" ic-for="i,v in tags['主线风口']">
                         <div class="tags has-addons">
-                            <span ic-select-item ic-class="tag is-medium" ic-val="{{v.text}}" ic-has-selected="replay['主线风口'].indexOf(v.text)>-1">{{v.text}}</span>
+                            <span ic-select-item ic-class="tag is-medium" ic-val="{{v.text}}" ic-has-selected="replay['主线风口'].indexOf(v.text)>-1">
+                                {{v.text}}
+                            </span>
                             <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
                                 <span class="icon is-medium"><i class="far fa-edit"></i></span>
                             </a>
@@ -93,7 +84,9 @@
                 <div class="field is-grouped is-grouped-multiline" ic-select="市场情绪" ic-form-field="市场情绪">
                     <div class="control" ic-for="i,v in tags['市场情绪']">
                         <div class="tags has-addons">
-                            <span ic-select-item ic-class="tag is-medium {{replay['市场情绪'] == v.text ? 'is-warning':''}}" ic-val="{{v.text}}">{{v.text}}</span>
+                            <span ic-select-item ic-class="tag is-medium {{replay['市场情绪'] == v.text ? 'is-warning':''}}" ic-val="{{v.text}}">
+                                {{v.text}}
+                            </span>
                             <a class="tag is-delete is-medium"
                                ic-ajax
                                ic-submit-data="{{v.text}}"
@@ -117,7 +110,9 @@
                     <div class="field is-grouped is-grouped-multiline" ic-select="K线预判" ic-form-field="K线预判">
                         <div class="control" ic-for="i,v in tags['K线']">
                             <div class="tags has-addons">
-                                <span ic-select-item ic-class="tag is-medium {{replay['K线预判'] == v.text ? 'is-warning':''}}" ic-val="{{v.text}}">{{v.text}}</span>
+                                <span ic-select-item ic-class="tag is-medium {{replay['K线预判'] == v.text ? 'is-warning':''}}" ic-val="{{v.text}}">
+                                    {{v.text}}
+                                </span>
                                 <a class="tag is-delete is-medium"
                                    ic-ajax
                                    ic-submit-data="{{v.text}}"

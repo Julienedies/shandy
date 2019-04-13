@@ -291,10 +291,10 @@ brick.reg('mainCtrl', function (scope) {
         scope.warnWindow.win.webContents.send('view', 'reminder')
     });
 
-
 });
 
-brick.reg('memoCtrl', function () {
+
+/*brick.reg('memoCtrl', function () {
 
     let $memo = $('#memo')
 
@@ -303,7 +303,7 @@ brick.reg('memoCtrl', function () {
 
         $memo.froalaEditor({
             toolbarInline: true,
-            /*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*/
+            /!*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*!/
             // Change save interval (time in miliseconds).
             saveInterval: 2500,
             // Set the save param.
@@ -325,7 +325,9 @@ brick.reg('memoCtrl', function () {
         })
     };
 
-});
+});*/
+
+
 
 brick.reg('setStockCtrl', function () {
     this.addStock = function (fields) {
