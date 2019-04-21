@@ -13,7 +13,7 @@ export default function (code, flag) {
 
     switch (flag) {
         case 0 :
-            return `http://localhost:3000/web/stock_c.html?code=${ code }`;
+            return `http://localhost:3300/web/stock_c.html?code=${ code }`;
         case 1 :
             return 'http://basic.10jqka.com.cn/*/company.html'.replace('*', code);
         case 2 :

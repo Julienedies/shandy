@@ -17,12 +17,14 @@ import debugMenu from 'debug-menu'
 import ocr from '../../../libs/baidu-ocr.js'
 import stockQuery from '../../../libs/stock-query.js'
 import userDb from '../../../libs/user-db'
+import bridge  from 'e-bridge'
 
 import imager from './imager.js'
 
 // activate context menu
 debugMenu.install();
 
+const setting = bridge.setting()
 // 交易记录json
 const tradeArr = userDb('trading', []).get()
 
@@ -30,17 +32,21 @@ brick.reg('mainCtrl', function (scope) {
 
     scope.crop = {x: 3140, y: 115, width: 310, height: 50};
 
-    scope.onSelectViewerDirDone = (paths) => {
+
+    scope.onSelectImgDirDone = (paths) => {
         if (!paths) return;
         let dir = paths[0]
+        setting.set('viewer.imgDir', dir).save()
+        console.log(setting)
+        scope.imgDir = dir
         scope.init(dir)
     }
 
     // 获取目录下所有图片
     scope.init = function (dir) {
-        //let dir = brick.utils.get_query('dir');
-        let urls = imager.get_images(dir);
-        if(!urls.length) return;
+        dir = dir || scope.imgDir;
+        let urls = imager.getImages(dir);
+        if(!urls.length) return console.log('no images.');
         urls[0].code && urls.forEach(o => {
             o.tradeInfo = tradeArr.filter(arr => {
                 // 交易信息 对应 code 和 时间
@@ -51,6 +57,13 @@ brick.reg('mainCtrl', function (scope) {
         scope.urls = urls;
         $('#box').icRender('list', urls);
     };
+
+
+    let imgDir = scope.imgDir = setting.get('viewer.imgDir');
+    if(imgDir){
+        $('input[name=imgDir]').val(imgDir)
+        scope.init(imgDir)
+    }
 
     // ic-viewer  回调函数
     let $viewerAttach = $('#viewerAttach');
@@ -83,7 +96,7 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     // 图片列表重命名
-    scope.ocr_rename = function (e) {
+    scope.ocrRename = function (e) {
 
         let $view_crop = $('#view_crop');
         let $ocr_text = $('#ocr_text');

@@ -28,7 +28,6 @@ export default {
      */
     get: function(){
         stocksJo = getStocksJo ()
-        console.log(stocksJo.json[0])
         return stocksJo.json
     },
     add: function(stock){

@@ -40,8 +40,8 @@ export default {
         return _.flatten(arr, true);
     },
 
-    get_images: function get_images (dir, is_only_path) {
-
+    getImages: function get_images (dir, is_only_path) {
+        console.log('getImages => ', dir)
         // 测试是否是交易记录图片
         if (dir.indexOf('截图') === -1) {
             let files = glob.sync(path.join(dir, './*.+(jpg|png)')) || []

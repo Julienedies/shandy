@@ -60,9 +60,9 @@ class Jo {
             return this
         }
 
-        let keys = key.split('.')
+        let keys = key.split('.');
 
-        return (function fx (namespace, keys) {
+        (function fx (namespace, keys) {
             let k = keys.shift()
             let o = namespace[k]
 
@@ -76,6 +76,8 @@ class Jo {
             }
 
         })(this.json, keys);
+
+        return this;
     }
 
     get (key) {

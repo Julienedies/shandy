@@ -80,7 +80,7 @@ brick.reg('mainCtrl', function (scope) {
         let map = {
             daban: 1,
             sell: 4,
-            buy: 13
+            buy: 9
         }
 
         setTimeout(() => {

@@ -26,7 +26,7 @@ import note from './action/note'
 import txt from './action/txt'
 
 
-export default function(app){
+export default function (app) {
 
     app.use(crossDomain)
 
@@ -38,7 +38,7 @@ export default function(app){
     app.get('/csd/days', csd.getDays)
     app.get('/csd/tick', csd.getTick)
 
-    app.get('/stock/concept/:name', concept.get)
+    app.get('/stock/concept/(:name)?', concept.get)
     app.get('/stock/c/:code', stock.get)
     app.post('/stock/c/:code', stock.post)
 

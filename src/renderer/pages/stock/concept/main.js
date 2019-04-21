@@ -11,17 +11,17 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../../js/common-stock.js'
 
-brick.reg('main_ctrl', function(){
+brick.reg('conceptCtrl', function () {
     let scope = this;
     let $elm = this.$elm;
 
     let query = brick.utils.get_query() || {};
-    let name = query.name;
+    let name = query.name || '';
 
     $('title').text(name);
 
-    $.ajax({url:`/stock/concept/${name}`, dataType:'json'}).done(function(data){
-        scope.render('list', data);
+    $.ajax({url: `/stock/concept/${ name }`, dataType: 'json'}).done(function (data) {
+        name ? scope.render('list', {name: name, list: data}) : scope.render('allConcept', data);
     });
 
 });

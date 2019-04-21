@@ -4,24 +4,38 @@
     <meta charset="UTF-8">
     <title>概念</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css" />
-    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
+    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
+<body>
+    <div class="column is-10 is-offset-1">
 
-<body class="column is-10 is-offset-1">
-<div ic-ctrl="main_ctrl">
-    <table class="" ic-tpl="list">
-        <caption>{{model.length}}</caption>
-        <tr ic-for="i,v in model">
-            <td>
-                <i style="opacity: 0.2;">{{i}} . </i>
-                <a href="/stock_c.html?code={{v.code}}&edit=1" target="_blank">{{v.name}}</a>
-            </td>
-            <td>{{v.text}}</td>
-        </tr>
-    </table>
-</div>
+        <div ic-ctrl="conceptCtrl">
 
+            <div ic-tpl="list">
+                <h2 class="title is-3">{{ model.name }} - {{model.list.length}}</h2>
+                <table class="table is-bordered">
+                    <tr ic-for="i,v in model.list">
+                        <td>
+                            <i style="opacity: 0.2;">{{i}} . </i>
+                            <a href="stock_c.html?code={{v.code}}&edit=1" target="_blank">{{v.name}}</a>
+                        </td>
+                        <td>{{v.text}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div ic-tpl="allConcept">
+                <div class="tags">
+                    <span class="tag is-medium" ic-for="i,v in model">
+                        <a ic-href="{{ 'stock_concept.html?name='+ i }}">{{ i }}</a>
+                    </span>
+                </div>
+            </div>
+
+    </div>
+
+    </div>
 </body>
 </html>

@@ -142,18 +142,13 @@ brick.reg('mainCtrl', function (scope) {
     }
 
     scope.viewImg = function () {
-        let filePaths = utils.select()
-        console.info(filePaths)
-        if (!filePaths) return;
-        let dir = encodeURIComponent(filePaths[0])
-        let url = `viewer.html?dir=${ dir }`
         let viewImgWindow = scope.viewImgWindow
         if (viewImgWindow) {
-            viewImgWindow.load(url)
+            viewImgWindow.show()
         } else {
             viewImgWindow = scope.viewImgWindow = new Win({
                 x: 1440,
-                url,
+                url: 'viewer.html',
                 onClose: () => {
                     delete scope.viewImgWindow
                 }

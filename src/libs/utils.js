@@ -23,6 +23,9 @@ export default {
     openItem (file) {
         shell.openItem(file)
     },
+    openExternal (url) {
+        shell.openExternal(url)
+    },
     fetch (csdPath, index, watcher) {
         return jhandy.fetch(csdPath, null, index, null, watcher)
     },
@@ -37,10 +40,10 @@ export default {
             console.log(res)
         })
     },
-    err(msg, title = ''){
+    err (msg, title = '') {
         dialog.showErrorBox(title, msg)
     },
-    timer(time = '8:55', f){
+    timer (time = '8:55', f) {
         let [h, m] = time.split(/\D/g).map((v) => v * 1)
         let rule = new schedule.RecurrenceRule()
         rule.dayOfWeek = [0, new schedule.Range(1, 6)]
@@ -51,7 +54,7 @@ export default {
             f()
         })
     },
-    getIp(){
+    getIp () {
         let ip
         try {
             let networkInterfaces = os.networkInterfaces()
@@ -61,16 +64,23 @@ export default {
         }
         return ip
     },
-    activeTdx(){
+    getStockNameFromScreen () {
+        return new Promise( (resolve, reject) => {
+            ac.getStockName((stock) => {
+                    stock.code ? resolve(stock) : reject(stock)
+            })
+        });
+    },
+    activeTdx () {
         tdx.active()
     },
-    activeFtnn(){
-      ac.activeFtnn()
+    activeFtnn () {
+        ac.activeFtnn()
     },
-    viewInFtnn(code){
+    viewInFtnn (code) {
         tdx.viewInFtnn(code)
     },
-    addStock(stock){
+    addStock (stock) {
         stocksManager.add(stock)
     }
 

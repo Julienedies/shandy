@@ -3,25 +3,25 @@
  */
 
 
-let speechSU = new SpeechSynthesisUtterance();
 let q = [];
-let is_end = true;
+let isEnd = true;
+const speechSU = new SpeechSynthesisUtterance();
+
+speechSU.onend = function () {
+    isEnd = true;
+    speak();
+};
 
 function speak () {
-    if (is_end) {
+    if (isEnd) {
         let o = q.shift();
         if (o) {
-            is_end = false;
+            isEnd = false;
             speechSU.text = o.text;
             speechSynthesis.speak(speechSU);
         }
     }
 }
-
-speechSU.onend = function () {
-    is_end = true;
-    speak();
-};
 
 function voice (sign, text) {
     if (!text) {
@@ -44,7 +44,8 @@ voice.remove = function (sign) {
 
 voice.clear = function () {
     speechSynthesis.cancel();
-    q.length = 0;  //清空数组
+    isEnd = true;
+    q = [];
 };
 
 voice.pause = function () {

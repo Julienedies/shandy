@@ -13,12 +13,12 @@
 
         <div class="field has-addons">
             <div class="control">
-                <a class="button is-primary" ic-select-path="viewerDir" ic-select-path-on-done="onSelectViewerDirDone">
+                <a class="button is-primary" ic-select-path="imgDir" ic-select-path-on-done="onSelectImgDirDone">
                     选择图片文件夹
                 </a>
             </div>
             <div class="control is-expanded">
-                <input class="input" type="text" value="" name="viewerDir">
+                <input class="input" type="text" value="" name="imgDir">
             </div>
         </div>
 
@@ -32,7 +32,7 @@
             </div>
 
             <div class="field">
-                <button class="button" ic-click="ocr_rename">ocr重命名</button>
+                <button class="button" ic-click="ocrRename">ocr重命名</button>
                 <button class="button" ic-form-submit ic-submit-action="crop_test()">剪切测试</button>
                 <span>
                     <img id="view_crop" style="border:solid 1px blue;"/>
