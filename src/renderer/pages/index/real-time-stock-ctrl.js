@@ -9,9 +9,12 @@ import _objm from '../../../libs/objm.js'
 import tdx from '../../../libs/tdx.js'
 import voice from '../../../libs/voice.js'
 import bridge from '../../../libs/e-bridge.js'
+import userDb from '../../../libs/user-db.js'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
+
+const rtsJo = userDb('rts')
 
 let prev_objm = window.prev_objm = _objm();
 let first_objm = window.first_objm = _objm();
@@ -25,7 +28,6 @@ let q_rtso = rts('qq', f);
 //let s_rtso = rts('sina', f);
 
 function f (stocks) {
-    console.log('stocks =>', stocks)
     if (!Array.isArray(stocks)) {
         console.info(stocks);
         return voice(stocks);
@@ -96,7 +98,7 @@ function _f (stock) {
             let d = new Date();
             d = d.getHours();
             // 早盘封单小于阈值
-            if (b1 < least && d < 14 && price < 50) {
+            if (b1 < least && d < 16 && price < 50) {
                 console.info(time, `${ name }有破板风险`);
                 voice(code, `${ name }有破板风险`);
             } else
@@ -200,11 +202,22 @@ brick.reg('rts_ctrl', function (scope) {
     scope.reset = function () {
     };
 
+    // --------------------------------------------
+    let codes = rtsJo.get('stocks') || [];
+    codes.length && q_rtso.add(codes);
+});
+
+
+window.addEventListener('beforeunload', function (e) {
+    let obj = prev_objm.get();
+    let codes = Object.keys(obj);
+    rtsJo.set('stocks', codes);
 });
 
 // 下午3点后取消行情请求
 bridge.timer('15:01', () => {
     q_rtso.pause();
+    rtsJo.set('stocks', []);
 })
 
 //

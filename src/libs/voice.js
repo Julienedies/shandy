@@ -2,10 +2,19 @@
  * Created by j on 18/6/15.
  */
 
+window.onerror = function (e) {
+    console.log('======', e)
+}
+
 
 let q = [];
 let isEnd = true;
 const speechSU = new SpeechSynthesisUtterance();
+
+speechSU.onerror = function (err) {
+    isEnd = true;
+    console.error('speechSU onerror =>', err)
+}
 
 speechSU.onend = function () {
     isEnd = true;
@@ -18,6 +27,7 @@ function speak () {
         if (o) {
             isEnd = false;
             speechSU.text = o.text;
+            console.log('---------------', speechSU, speechSynthesis)
             speechSynthesis.speak(speechSU);
         }
     }

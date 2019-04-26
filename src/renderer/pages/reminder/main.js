@@ -2,6 +2,10 @@
  * Created by j on 18/6/3.
  */
 
+import './index.html'
+import './style.scss'
+
+
 import $ from 'jquery'
 
 const speechSU = new window.SpeechSynthesisUtterance();

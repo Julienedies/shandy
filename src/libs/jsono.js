@@ -17,12 +17,13 @@ class Jo {
     constructor (jsonPath, initData = {}) {
 
         jsonPath = path.resolve(__dirname, `${ jsonPath }`)
+        initData = initData || {}
         this.jsonPath = jsonPath
 
         if (!fs.existsSync(jsonPath)) {
             // fs.createWriteStream(jsonPath)
             // fs.writeFileSync(jsonPath, '{}')
-            fse.outputFileSync(jsonPath)
+            fse.outputFileSync(jsonPath, JSON.stringify(initData))
             this.json = initData
         } else {
             try {
@@ -39,7 +40,7 @@ class Jo {
         obj = args[1] || args[0]
         key = args[1] && args[0]
         let oldVal = this.get(key)
-        if(!oldVal){
+        if (!oldVal) {
             oldVal = {}
             this.set(key, oldVal)
         }
@@ -55,9 +56,9 @@ class Jo {
     set (key, val = {}) {
         if (!key) return this;
 
-        if(typeof key === 'object') {
+        if (typeof key === 'object') {
             this.json = key
-            return this
+            return this;
         }
 
         let keys = key.split('.');
@@ -66,18 +67,18 @@ class Jo {
             let k = keys.shift()
             let o = namespace[k]
 
-            if(keys.length){
+            if (keys.length) {
 
                 o = namespace[k] = o || {}
                 fx(o, keys)
 
-            }else{
+            } else {
                 namespace[k] = val
             }
 
         })(this.json, keys);
 
-        return this;
+        return this.save();
     }
 
     get (key) {

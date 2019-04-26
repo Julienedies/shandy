@@ -2,19 +2,20 @@
  * Created by j on 2019-02-25.
  */
 
+import './index.html'
+
+
 import electron from 'electron'
 import $ from 'jquery'
 
 import voiceWarnText from '../../js/warn-text'
-
-import './index.html'
 
 const ipc = electron.ipcRenderer
 const BrowserWindow = electron.remote.BrowserWindow
 let win
 let timer
 
-let socket = io()
+const socket = io()
 let $place = $('#place')
 let $msg = $('#msg')
 
@@ -31,7 +32,7 @@ function cb(msg){
             win.hide()
             //win.setSize(1400, 32, true)
             //win.setPosition(1600, 3)
-        }, 14 * 1000);
+        }, 17 * 1000);
     }
 }
 

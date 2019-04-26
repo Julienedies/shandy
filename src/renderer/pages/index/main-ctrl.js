@@ -260,7 +260,7 @@ brick.reg('mainCtrl', function (scope) {
     // ----------------------------------------------------------------
 
     scope.news()
-    scope.warn()
+    // scope.warn()
 
     // ----------------------------------------------------------------
 
@@ -284,6 +284,10 @@ brick.reg('mainCtrl', function (scope) {
     utils.timer('12:57', () => {
         scope.warnWindow.show()
         scope.warnWindow.win.webContents.send('view', 'reminder')
+    });
+
+    utils.timer('15:00', () => {
+        scope.newsWin.close()
     });
 
 });
