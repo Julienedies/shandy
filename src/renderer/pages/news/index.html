@@ -4,45 +4,12 @@
     <meta charset="UTF-8">
     <title>news</title>
     <script src="/set_node_modules_path.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            color: #fff;
-            background: rgba(0, 0, 0, 0);
-            font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-        }
-
-        .warn {
-            animation: warn 0.5s 3 ease-in-out;
-        }
-
-        @keyframes warn {
-            1% {
-                background: rgba(0, 0, 0, 0.6);
-                color: #fff;
-            }
-            100% {
-                background: rgba(255, 255, 0, 1);
-                color: #000;
-            }
-        }
-
-        #msg {
-            padding: 4px 10px;
-            color: yellowgreen;
-            background: rgba(0, 0, 0, 0.6);
-        }
-    </style>
 </head>
-<body>
-<!--<div id="place" style="white-space: pre;padding-bottom:3px;">
-交易逻辑 交易计划 交易模式 交易系统 | 控制 计划 等待 | 风口板 大势板 龙头板 人气合力板 二浪板 超预期板 补涨板 消息板
-</div>-->
-<div id="msg">
-    交易逻辑 交易计划 交易模式 交易系统 | 控制 计划 等待 | 风口板 大势板 龙头板 人气合力板 二浪板 超预期板 补涨板 消息板
-</div>
+<body class="disable-select">
+
+    <div id="msg">
+        控制 计划 等待 |  大盘  风口  龙头
+    </div>
 
 <script src="/socket.io/socket.io.js"></script>
 </body>

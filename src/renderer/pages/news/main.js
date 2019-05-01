@@ -3,7 +3,8 @@
  */
 
 import './index.html'
-
+import '../../css/common/common.scss'
+import './style.scss'
 
 import electron from 'electron'
 import $ from 'jquery'
@@ -16,36 +17,39 @@ let win
 let timer
 
 const socket = io()
-let $place = $('#place')
 let $msg = $('#msg')
 
 // 有新消息显示窗口,  稍后隐藏窗口
-function cb(msg){
+function cb (msg) {
+
     clearTimeout(timer)
+
     $msg.text(msg)
+
     if (win) {
-        $msg.addClass('warn')
+
         win.showInactive()
-        win.setSize(1600, 84, true)
-        timer = setTimeout( () => {
-            $msg.removeClass('warn')
+        $msg.addClass('warn')
+
+        timer = setTimeout(() => {
             win.hide()
-            //win.setSize(1400, 32, true)
-            //win.setPosition(1600, 3)
+            $msg.removeClass('warn')
         }, 17 * 1000);
     }
 }
 
+
+// 财经消息
+socket.on('cls_news', cb);
+
 // 交易警告文字版
-socket.on('warn',  (info) => {
+socket.on('warn', (info) => {
     //cb(voiceWarnText.text[info])
 })
 
-// 财经消息
-socket.on('cls_news', cb)
-
-
 ipc.on('id', function (event, windowID) {
-    console.log(event, windowID)
-    win = BrowserWindow.fromId(windowID)
-})
+    win = BrowserWindow.fromId(windowID);
+    setTimeout(() => {
+        win.hide();
+    }, 14 * 1000);
+});

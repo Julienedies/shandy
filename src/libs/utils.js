@@ -7,7 +7,9 @@ import electron from 'electron'
 const {remote, shell} = electron
 const dialog = remote.dialog
 import schedule from 'node-schedule'
+import fse from 'fs-extra'
 import jhandy from 'jhandy'
+import shellJs from 'shelljs'
 
 import Win from './window'
 import setting from './setting'
@@ -15,8 +17,18 @@ import tdx from './tdx'
 import ac from './ac'
 import stocksManager from './stocks-manager'
 
+// https://github.com/shelljs/shelljs/issues/480
+let nodePath = (shellJs.which('node').toString());
+shellJs.config.execPath = nodePath;
+// https://github.com/shelljs/shelljs/issues/480
 
 export default {
+    preview (file) {
+        shellJs.exec(`open -a Preview "${ file }"`)
+    },
+    showItemInFolder (filePath) {
+        shell.showItemInFolder(filePath)
+    },
     open (option) {
         return new Win(option)
     },
@@ -30,7 +42,7 @@ export default {
         return jhandy.fetch(csdPath, null, index, null, watcher)
     },
     setting () {
-        return setting()
+        return setting;
     },
     select () {
         return dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']})
@@ -65,9 +77,9 @@ export default {
         return ip
     },
     getStockNameFromScreen () {
-        return new Promise( (resolve, reject) => {
+        return new Promise((resolve, reject) => {
             ac.getStockName((stock) => {
-                    stock.code ? resolve(stock) : reject(stock)
+                stock.code ? resolve(stock) : reject(stock)
             })
         });
     },
@@ -82,7 +94,9 @@ export default {
     },
     addStock (stock) {
         stocksManager.add(stock)
+    },
+    copy (file, dist) {
+        return fse.copy(file, dist)
     }
-
 }
 

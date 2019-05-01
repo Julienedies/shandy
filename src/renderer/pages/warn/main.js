@@ -20,12 +20,12 @@ const ipc = electron.ipcRenderer
 const BrowserWindow = electron.remote.BrowserWindow
 
 let win
-let $html = $('html')
+let $body = $('body')
 let socket = io()
 
 // 显示随机背景图片
 function randomBgImg () {
-    $html.css('background-image', `url("x/file/random/?time=${ +new Date }")`)
+    $body.css('background-image', `url("/file/random/?time=${ +new Date }")`)
 }
 
 randomBgImg()
@@ -40,7 +40,7 @@ ipc.on('view', (e, view) => {
 })
 
 
-brick.directives.reg('ic-step', function ($elm) {
+brick.directives.reg('x-ic-step', function ($elm) {
     let cla = 'active'
     $elm.children().eq(0).addClass(cla)
 
@@ -67,10 +67,10 @@ brick.reg('mainCtrl', function (scope) {
         let h = d.getHours()
         let m = d.getMinutes()
         if (h === 9 && m > 15 && m < 45) {
-            return;
+            // return;
         }
 
-        if (info === 'esc' || info === 'daban') {
+        if (info === 'esc') {
             return //scope.hideWindow();
         }
 
@@ -78,8 +78,8 @@ brick.reg('mainCtrl', function (scope) {
         brick.view.to(info)
 
         let map = {
-            daban: 1,
-            sell: 4,
+            daban: 7,
+            sell: 7,
             buy: 9
         }
 

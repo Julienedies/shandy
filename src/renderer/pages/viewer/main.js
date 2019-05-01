@@ -17,7 +17,7 @@ import debugMenu from 'debug-menu'
 import ocr from '../../../libs/baidu-ocr.js'
 import stockQuery from '../../../libs/stock-query.js'
 import userDb from '../../../libs/user-db'
-import bridge  from 'e-bridge'
+import bridge from 'e-bridge'
 
 import imager from './imager.js'
 
@@ -32,7 +32,6 @@ brick.reg('mainCtrl', function (scope) {
 
     scope.crop = {x: 3140, y: 115, width: 310, height: 50};
 
-
     scope.onSelectImgDirDone = (paths) => {
         if (!paths) return;
         let dir = paths[0]
@@ -46,7 +45,7 @@ brick.reg('mainCtrl', function (scope) {
     scope.init = function (dir) {
         dir = dir || scope.imgDir;
         let urls = imager.getImages(dir);
-        if(!urls.length) return console.log('no images.');
+        if (!urls.length) return console.log('no images.');
         urls[0].code && urls.forEach(o => {
             o.tradeInfo = tradeArr.filter(arr => {
                 // 交易信息 对应 code 和 时间
@@ -60,13 +59,16 @@ brick.reg('mainCtrl', function (scope) {
 
 
     let imgDir = scope.imgDir = setting.get('viewer.imgDir');
-    if(imgDir){
+    if (imgDir) {
         $('input[name=imgDir]').val(imgDir)
         scope.init(imgDir)
     }
 
+    // ------------------------------------------------------------------------
+
     // ic-viewer  回调函数
     let $viewerAttach = $('#viewerAttach');
+
     scope.onViewerOpen = () => {
         $viewerAttach.show()
     };
@@ -74,17 +76,44 @@ brick.reg('mainCtrl', function (scope) {
         $viewerAttach.hide()
     };
     scope.onViewerShow = function (index, src, $info) {
-        let imgObj = scope.urls[index]
+        let imgObj = scope.currentImg = scope.urls[index]
         let arr = imgObj.tradeInfo;
-        if(!arr) return;
-        arr = arr.map(a => {
-            return [a[1], a[5], a[7], a[6]];
-        });
-        arr.reverse(); // 当日多个交易记录按照时间先后显示
-        let text = arr.join('\r\n').replace(/,/g, '    ');
-        $viewerAttach.text(text)
+        if (arr) {
+            arr = arr.map(a => {
+                return [a[1], a[5], a[7], a[6]];
+            });
+            arr.reverse(); // 当日多个交易记录按照时间先后显示
+            let text = arr.join('\r\n').replace(/,/g, '    ');
+            $viewerAttach.find('p').text(text);
+        }
+
         $info.text('\r\n' + imgObj.f);
     };
+
+    scope.editImg = () => {
+        let imgObj = scope.currentImg;
+        bridge.preview(imgObj.f);
+    }
+
+    scope.viewItemInFolder = () => {
+        bridge.showItemInFolder(scope.currentImg.f);
+    }
+
+    scope.markMistake = () => {
+        let imgObj = scope.currentImg;
+        let fileName = imgObj.f.split('/').pop();
+        bridge.copy(imgObj.f, `/Users/j/截图/交易错误/${ fileName }`)
+            .then(() => {
+                $.icPrompt('ok!')
+            })
+            .catch(err => {
+                bridge.err('error, 查看控制台.')
+                console.error(err)
+            })
+    }
+
+
+    // -----------------------------------------------------------------------------------------------
 
     // 图片剪切测试  fields => {x: 3140, y: 115, width: 310, height: 50}
     scope.crop_test = function (fields) {

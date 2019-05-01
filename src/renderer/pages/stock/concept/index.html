@@ -9,33 +9,36 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-    <div class="column is-10 is-offset-1">
+<div class="column is-10 is-offset-1">
 
-        <div ic-ctrl="conceptCtrl">
+    <div ic-ctrl="conceptCtrl">
 
-            <div ic-tpl="list">
-                <h2 class="title is-3">{{ model.name }} - {{model.list.length}}</h2>
-                <table class="table is-bordered">
-                    <tr ic-for="i,v in model.list">
-                        <td>
-                            <i style="opacity: 0.1;">{{i}} . </i>
-                            <a href="stock_c.html?code={{v.code}}&edit=1" target="_blank">{{v.name}}</a>
-                        </td>
-                        <td>{{v.text}}</td>
-                    </tr>
-                </table>
-            </div>
+        <div ic-tpl="list">
+            <h2 class="title is-5">{{ model.name }} - {{model.list.length}}</h2>
+            <table class="table is-bordered">
+                <tr ic-for="i,v in model.list">
+                    <td>
+                        <i style="opacity: 0.1;">{{i}} . </i>
+                        <a href="stock_c.html?code={{v.code}}&edit=1" target="_blank">{{v.name}}</a>
+                    </td>
+                    <td>{{v.text}}</td>
+                </tr>
+            </table>
+        </div>
 
-            <div ic-tpl="allConcept">
-                <div class="tags">
-                    <span class="tag is-medium" ic-for="i,v in model">
-                        <a ic-href="{{ 'stock_concept.html?name='+ i }}">{{ i }}</a>
+        <div ic-tpl="allConcept">
+            <div class="tags">
+                <a class="tag is-medium is-danger" ic-for="i,v in model" ic-href="{{ 'stock_concept.html?name='+ v.name }}">
+                    <span>
+                    {{ v.name }}
+                    <sup>{{ v.key }}</sup>
                     </span>
-                </div>
+                </a>
             </div>
-
         </div>
 
     </div>
+
+</div>
 </body>
 </html>

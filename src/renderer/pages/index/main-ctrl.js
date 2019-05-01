@@ -11,8 +11,10 @@ import 'froala-editor/css/froala_style.min.css'
 import 'froala-editor/js/froala_editor.pkgd.min.js'
 
 import utils from '../../../libs/utils'
+import setting from '../../../libs/setting'
 import Win from '../../../libs/window'
 import voice from '../../../libs/voice'
+
 
 brick.services.reg('viewsModel', () => {
     const list = []
@@ -119,129 +121,177 @@ brick.reg('mainCtrl', function (scope) {
         $viewsWrapper.hide()
     }
 
-    this.reminder = function () {
-        let winCtrl = new Win('reminder.html')
-        winCtrl.maximize()
+    // -------------------------------------------------------------------------------------------
+
+    function getBounds (name) {
+        return setting.get(`${ name }.bounds`) || {};
     }
 
-    scope.review = function () {
+    scope.openReview = function () {
         let win = scope.reviewTradingWindow
         if (win) {
             win.show()
         } else {
-            scope.sreviewTradingWindow = utils.open({
-                x: 1440,
-                y: 0,
-                url: 'review.html',
+            let name = 'review';
+            let url = 'review.html';
+            scope.reviewTradingWindow = new Win({
+                name,
+                url,
+                ...getBounds(name),
                 onClose: () => {
                     delete scope.reviewTradingWindow;
                 }
             });
-            scope.sreviewTradingWindow.maximize()
+            scope.reviewTradingWindow.maximize()
         }
-    }
+    };
 
-    scope.viewImg = function () {
-        let viewImgWindow = scope.viewImgWindow
-        if (viewImgWindow) {
-            viewImgWindow.show()
+    scope.openViewer = function () {
+        let viewerWindow = scope.viewerWindow;
+        if (viewerWindow) {
+            viewerWindow.show();
         } else {
-            viewImgWindow = scope.viewImgWindow = new Win({
-                x: 1440,
-                url: 'viewer.html',
+            let name = 'viewer';
+            let url = 'viewer.html';
+            scope.viewerWindow = new Win({
+                name,
+                url,
+                ...getBounds(name),
                 onClose: () => {
-                    delete scope.viewImgWindow
+                    delete scope.viewerWindow;
                 }
             });
-            viewImgWindow.maximize()
+            scope.viewerWindow.maximize();
         }
-    }
+    };
 
     scope.openCsd = function (e) {
         let csdWindow = scope.csdWindow
         if (csdWindow) {
-            csdWindow.show()
+            csdWindow.show();
         } else {
-            scope.csdWindow = utils.open({
-                x: 160, y: 80, url: 'csd.html', onClose: () => {
-                    delete scope.csdWindow
+            let name = 'csd';
+            let url = 'csd.html';
+            scope.csdWindow = new Win({
+                name,
+                url,
+                x: 160,
+                y: 80,
+                ...getBounds(name),
+                onClose: () => {
+                    delete scope.csdWindow;
                 }
-            })
+            });
         }
-    }
+    };
 
     scope.openSetting = function () {
-        let settingWindow = scope.settingWindow
+        let settingWindow = scope.settingWindow;
         if (settingWindow) {
             settingWindow.show()
         } else {
+            let name = 'setting';
+            let url = 'setting.html';
             scope.settingWindow = new Win({
+                name,
+                url,
                 x: 160,
-                url: 'setting.html',
+                y: 80,
+                ...getBounds(name),
                 onClose: () => {
-                    delete scope.settingWindow
+                    delete scope.settingWindow;
                 }
-            })
+            });
         }
-    }
+    };
+
+    // -------------------------------------------------------------------------------------------
 
     scope.news = function () {
-        let newsWin = scope.newsWin
-        if (newsWin && newsWin.win) {
-            newsWin.close()
-            delete scope.newsWin;
+        let newsWin = scope.newsWin;
+        if (newsWin) {
+            newsWin.show();
         } else {
+            let name = 'news';
+            let url = 'news.html';
             let opt = {
-                width: 10,
-                height: 10,
-                x: 1600,
-                y: 2,
-                transparent: true,
-                frame: false,
+                name,
+                url,
+                width: 600,
+                height: 64,
+                x: 60,
+                ...getBounds(name),
+                //titleBarStyle: 'hidden',
+                // transparent: true,
+                // frame: false,
                 hasShadow: false,
-                alwaysOnTop: true,
-                center: true,
-                url: 'news.html'
+                //alwaysOnTop: true,
+                //center: true,
+                onClose: () => {
+                    delete scope.newsWin;
+                }
             }
             newsWin = scope.newsWin = new Win(opt);
-            newsWin.win.setIgnoreMouseEvents(true)
+            // newsWin.win.setIgnoreMouseEvents(true);
             newsWin.win.webContents.on('did-finish-load', function () {
                 newsWin.win.webContents.send('id', newsWin.win.id)
             })
         }
-    }
+    };
+
+    this.reminder = function () {
+        let reminderWin = scope.reminderWin;
+        if (reminderWin) {
+            reminderWin.show()
+        } else {
+            let name = 'reminder';
+            let url = 'reminder.html';
+            scope.reminderWin = new Win({
+                name,
+                url,
+                ...getBounds(name),
+                onClose: () => {
+                    delete scope.reminderWin;
+                },
+            });
+            scope.reminderWin.maximize();
+        }
+    };
 
     scope.warn = function () {
         let warnWindow = scope.warnWindow
-        if (warnWindow && warnWindow.win) {
-            if (!warnWindow.win.isVisible()) {
-                return warnWindow.win.showInactive()
-            }
-            let msg = `
-增加这么多步骤, 只是为了让你少犯错;
-控制本能, 把事情做对, 而不是被本能控制;
-想想你重复犯了多少错?
-不围绕主线; 随意操作; 无计划操作; 无逻辑操作; 不要再犯错了;
-想想那些恐惧和痛苦吧!`
-            utils.msg(msg)
-            if (window.confirm(msg)) {
-                warnWindow.close()
-                scope.warnWindow = null
-            }
+        if (warnWindow) {
+            return warnWindow.show();
+            /* let msg = `
+ 增加这么多步骤, 只是为了让你少犯错;
+ 控制本能, 把事情做对, 而不是被本能控制;
+ 想想你重复犯了多少错?
+ 不围绕主线; 随意操作; 无计划操作; 无逻辑操作; 不要再犯错了;
+ 想想那些恐惧和痛苦吧!`
+             utils.msg(msg)
+             if (window.confirm(msg)) {
+                 warnWindow.close()
+             }*/
         } else {
+            let name = 'warn';
+            let url = 'warn.html';
             let opt = {
+                name,
+                url,
+                ...getBounds(name),
                 // width: 480,
                 // height: 320,
-                // x: 1940,
+                // x: 1440,
                 // y: 640,
-                x: 1440,
-                show: false,
-                transparent: true,
+                //show: false,
+                //transparent: true,
                 //titleBarStyle: 'hidden',
-                frame: false,
-                hasShadow: false,
-                alwaysOnTop: true,
-                url: 'warn.html'
+                //frame: false,
+                //hasShadow: false,
+                //alwaysOnTop: true,
+                onClose () {
+                    delete scope.warnWindow;
+                }
             }
             warnWindow = scope.warnWindow = new Win(opt);
             warnWindow.maximize()
@@ -259,7 +309,7 @@ brick.reg('mainCtrl', function (scope) {
 
     // ----------------------------------------------------------------
 
-    scope.news()
+    // scope.news()
     // scope.warn()
 
     // ----------------------------------------------------------------
@@ -269,7 +319,7 @@ brick.reg('mainCtrl', function (scope) {
             不要停止止损, 这个错误一直重复. 本质上是囿于小利, 斤斤计较!
             正确的头寸不需要大的止损!`;
 
-    utils.timer('8:55', () => {
+    utils.timer('9:05', () => {
         new Win('reminder.html');
     });
     utils.timer('9:10', () => {
@@ -277,9 +327,11 @@ brick.reg('mainCtrl', function (scope) {
         voice(mistakeText)
     });
     utils.timer('9:26', () => {
-        scope.warnWindow.show()
-        scope.warnWindow.win.webContents.send('view', 'reminder')
-        voice(mistakeText)
+        voice(mistakeText);
+        if (scope.warnWindow) {
+            scope.warnWindow.show()
+            scope.warnWindow.win.webContents.send('view', 'reminder')
+        }
     });
     utils.timer('12:57', () => {
         scope.warnWindow.show()
@@ -325,7 +377,6 @@ brick.reg('mainCtrl', function (scope) {
     };
 
 });*/
-
 
 
 brick.reg('setStockCtrl', function () {

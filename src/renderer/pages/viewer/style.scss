@@ -19,6 +19,7 @@
   font-size: 1.4em;
   line-height: 2;
   padding: 10px 0 40px 0;
+  background: rgba(0, 0, 0, 0.2)!important;
 }
 
 .wrap {
@@ -39,7 +40,8 @@ input {
 }
 
 #viewerAttach {
-  position: absolute;
+  display: none;
+  position: fixed;
   z-index: 200001;
   color: #fff;
   top: 95px;
@@ -47,6 +49,23 @@ input {
   width: 100%;
   pointer-events: none;
   text-align: center;
-  font-size: 1.2em;
-  white-space: pre;
+
+  > p {
+    white-space: pre;
+  }
+
+  > div {
+    position: fixed;
+    width: 100%;
+    bottom: 10%;
+
+    a {
+      color: greenyellow;
+      pointer-events: auto;
+      padding: 5px 15px;
+      background: rgba(0, 0, 0, 0.7);
+      border:solid 1px greenyellow;
+    }
+  }
+
 }

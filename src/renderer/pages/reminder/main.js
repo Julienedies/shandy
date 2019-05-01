@@ -3,10 +3,14 @@
  */
 
 import './index.html'
+import '../../css/common/common.scss'
 import './style.scss'
 
-
 import $ from 'jquery'
+import brick from '@julienedies/brick'
+import '@julienedies/brick/dist/brick.css'
+
+
 
 const speechSU = new window.SpeechSynthesisUtterance();
 speechSU.volume = 0.3;
@@ -47,5 +51,5 @@ function voiceWarning () {
     xsp();
 }
 
-voiceWarning();
+//voiceWarning();
 

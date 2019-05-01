@@ -2,8 +2,7 @@ html {
   padding: 0;
   height: 100%;
   overflow: hidden;
-  background: repeat 50% 50% rgba(0, 0, 0, 1);
-  background-size: contain;
+  background: rgba(0, 0, 0, 1);
 }
 
 body {
@@ -13,16 +12,18 @@ body {
   padding: 0;
   overflow: hidden;
   color: #fff;
-  background: rgba(0, 0, 0, 0.3);
+  background: repeat 50% 50% rgba(0, 0, 0, 1);
+  background-size: contain;
   border: solid 1px yellowgreen;
-  font: 16px/2 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  font: 14px/2 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
   -webkit-user-select: none;
   user-select: none;
 }
 
-.none{
-  display: none!important;
+.none {
+  display: none !important;
 }
+
 .pre {
   white-space: pre-wrap;
 }
@@ -96,12 +97,13 @@ body {
 }
 
 //----------------------------------------------------
-[ic-step] {
+[x-ic-step] {
   position: relative;
   transition: all 0.5s;
+
   > * {
     margin-top: 0 !important;
-    width:100%;
+    width: 100%;
     min-height: 130px;
     position: absolute;
     display: flex;
@@ -128,7 +130,7 @@ body {
 // ---------------------------------------------- brick
 
 [ic-view] {
-  background: rgba(0, 0, 0, 1) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
   display: flex;
   align-items: flex-end;
   justify-content: center;

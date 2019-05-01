@@ -2,6 +2,7 @@
  * Created by j on 18/11/25.
  */
 
+import './index.html'
 import '../../../css/common/common.scss'
 import './style.scss'
 

@@ -5,10 +5,11 @@
 import path from 'path'
 import electron from 'electron'
 
-//const electronScreen = electron.screen;
+import setting from './setting.js'
+import config from './config.js'
+
 const BrowserWindow = electron.remote.BrowserWindow;
 
-import config from './config.js'
 
 class Win {
     static resolve (url) {
@@ -21,20 +22,18 @@ class Win {
         if (/^file:\/\//.test(config.LOAD_PROTOCOL)) {
             return path.join(config.LOAD_PROTOCOL, config.HTML_DIR, url);
         }
-        return `${config.LOAD_PROTOCOL}/${url}`
+        return `${ config.LOAD_PROTOCOL }/${ url }`
     }
 
-    constructor (opt) {
-        if (!this instanceof Win) return new Win(opt)
 
-        //let {sw, sh} = electronScreen.getPrimaryDisplay().workAreaSize;
-        //console.log(sw, sh);
+    constructor (opt) {
+        if (!this instanceof Win) return new Win(opt);
+
+        this.win = null;
 
         this.opt = {
-            width: 1240,
-            height: 820,
             x: 0,
-            y: 80,
+            y: 0,
             webPreferences: {
                 webSecurity: false
             }
@@ -51,22 +50,34 @@ class Win {
 
     create () {
         let that = this;
-        let _opt = this.opt;
-        let url = _opt.url;
+        let url = this.opt.url;
 
-        let win = new BrowserWindow(_opt);
+        let win = new BrowserWindow(this.opt);
+
         this.win = win;
 
         win.on('close', function () {
-            that.win = null;
+            that.onClose();
             that.opt.onClose && that.opt.onClose();
+            that.win = null;
         });
 
-        _opt.dev && win.webContents.openDevTools();
-        //win.maximize()
-        win.show();
+        // 如果窗口有name, 则保存window bounds信息
+        if(this.opt.name) {
+            win.on('resize', () => {
+                this.saveBounds();
+            });
+
+            win.on('move', () => {
+                this.saveBounds();
+            });
+        }
+
+        this.opt.dev && win.webContents.openDevTools();
 
         url && this.load(url);
+
+        win.show();
     }
 
     load (url) {
@@ -82,12 +93,26 @@ class Win {
         this.win.maximize();
     }
 
-    show (){
+    show () {
         this.win && this.win.show()
     }
 
     dev () {
         this.win.webContents.openDevTools();
+    }
+
+    onClose ( ){
+
+    }
+
+    getWindowName () {
+        return this.opt.name;
+    }
+
+    saveBounds () {
+        let name = this.getWindowName();
+        let bounds = this.win.getBounds();
+        name && setting.set(`${ name }.bounds`, bounds);
     }
 }
 

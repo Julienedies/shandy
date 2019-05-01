@@ -2,7 +2,7 @@
  * Created by j on 18/11/25.
  * 股票市场概念列表
  */
-
+import pinyin from 'pinyin'
 import sjo from '../../../libs/sjo.js'
 import stocksManager from '../../../libs/stocks-manager'
 
@@ -37,6 +37,16 @@ function getAllConcept () {
             })
         }
     });
+    result = Object.keys(result).map((name) => {
+        let key = pinyin(name, {
+            style: pinyin.STYLE_FIRST_LETTER
+        });
+        key = key[0][0];
+        return {name, key};
+    });
+    result.sort((a, b) => {
+        return a.key.localeCompare(b.key)
+    })
     getAllConcept.result = result;
     return result;
 }

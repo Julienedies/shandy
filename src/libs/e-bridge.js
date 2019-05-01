@@ -5,8 +5,8 @@
  * Created by j on 2019-04-04.
  */
 
-import utils from './utils'
+import utils from './utils.js'
 
 export default {
-    ...utils
+    ...utils,
 }

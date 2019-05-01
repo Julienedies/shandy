@@ -98,8 +98,8 @@ console.log(entry)
 const config = {
     //context,  // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和 loader
     mode: isPro ? 'production' : 'development',  // 会设置打包文件环境下的 process.env.NODE_ENV
-    //devtool: '#cheap-module-eval-source-map',
-    devtool: 'cheap-module-source-map',
+    devtool: 'cheap-module-eval-source-map',
+    // devtool: 'cheap-module-source-map',
     target: 'electron-renderer',
     entry,
     output: {

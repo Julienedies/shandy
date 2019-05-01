@@ -37,7 +37,7 @@ function f (stocks) {
     let stock;
     while (stock = stocks.shift()) {
         // 只有涨幅大于9才监控
-        if (stock.increase > 9 || first_objm.get(stock.code)) {
+        if (stock.increase > 1 || first_objm.get(stock.code)) {
             arr2.push(_f(stock));
         } else {
             q_rtso.remove(stock.code);

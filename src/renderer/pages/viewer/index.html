@@ -35,25 +35,41 @@
                 <button class="button" ic-click="ocrRename">ocr重命名</button>
                 <button class="button" ic-form-submit ic-submit-action="crop_test()">剪切测试</button>
                 <span>
-                    <img id="view_crop" style="border:solid 1px blue;"/>
-                    <span id="ocr_text"></span>
-                </span>
+                        <img id="view_crop" style="border:solid 1px blue;"/>
+                        <span id="ocr_text"></span>
+                    </span>
             </div>
         </div>
-
 
     </div>
 
     <div id="box" ic-tpl="list">
-        <ol ic-viewer ic-viewer-item="li" ic-viewer-url="url" ic-viewer-interval="10" ic-viewer-on-show="onViewerShow">
+        <ol ic-viewer
+            ic-viewer-item="li"
+            ic-viewer-url="url"
+            ic-viewer-interval="10"
+            ic-viewer-on-show="onViewerShow"
+            ic-viewer-on-open="onViewerOpen"
+            ic-viewer-on-close="onViewerClose">
+
             <li ic-for="i,v in model" url="file://{{v.f}}">
                 <h5>{{v.f}}</h5>
             </li>
+
         </ol>
     </div>
 
 </div>
 
-<div id="viewerAttach"></div>
+<div id="viewerAttach">
+    <p></p>
+    <div>
+        <a ic-click="editImg">编辑</a>
+        <a ic-click="markMistake">标记错误</a>
+        <a ic-click="viewItemInFolder">查看</a>
+    </div>
+</div>
+
+<div ic-prompt></div>
 </body>
 </html>

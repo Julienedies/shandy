@@ -39,7 +39,7 @@ function createWindow () {
         }
     }
 
-    mainWindow = new BrowserWindow(windowOptions)
+    mainWindow = new BrowserWindow(windowOptions);
 
     if (/^file:\/\//.test(config.LOAD_PROTOCOL)) {
         console.log(`file://${ path.resolve(__dirname, './index.html') }`)

@@ -49,6 +49,16 @@ label.radio {
   cursor: pointer;
 }
 
+.full-screen{
+  width:100%;
+  height:100%;
+}
+
+.disable-select{
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // bulma 重写
 
@@ -93,3 +103,8 @@ label.radio {
   .fa-file-o:before{
   }
 }*/
+
+[class*="hint--"][aria-label]:after{
+  white-space: pre;
+  line-height: 1.6;
+}
