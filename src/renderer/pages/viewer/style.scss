@@ -19,7 +19,7 @@
   font-size: 1.4em;
   line-height: 2;
   padding: 10px 0 40px 0;
-  background: rgba(0, 0, 0, 0.2)!important;
+  background: rgba(0, 0, 0, 0.2) !important;
 }
 
 .wrap {
@@ -50,8 +50,12 @@ input {
   pointer-events: none;
   text-align: center;
 
+
   > p {
     white-space: pre;
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 0 1em;
   }
 
   > div {
@@ -64,7 +68,7 @@ input {
       pointer-events: auto;
       padding: 5px 15px;
       background: rgba(0, 0, 0, 0.7);
-      border:solid 1px greenyellow;
+      border: solid 1px greenyellow;
     }
   }
 
