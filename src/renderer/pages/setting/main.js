@@ -18,7 +18,7 @@ const setting = bridge.setting()
 brick.reg('mainCtrl', function(scope){
 
     if(!setting.json.warn){
-        setting.json.warn = {}
+        setting.json.warn = {};
     }
 
     let model = setting.json

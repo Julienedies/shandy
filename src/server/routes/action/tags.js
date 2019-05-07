@@ -14,6 +14,13 @@ const tags = dob('tags', {
             let arr = result[type] = result[type] || [];
             arr.push(item);
         });
+        Object.entries(result).forEach(([name, items]) => {
+            items.sort((a, b) => {
+                a = a.level || 0;
+                b = b.level || 0;
+                return b - a;
+            })
+        });
         return result;
     }
 });

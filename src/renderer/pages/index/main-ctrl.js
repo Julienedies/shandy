@@ -207,7 +207,7 @@ brick.reg('mainCtrl', function (scope) {
 
     // -------------------------------------------------------------------------------------------
 
-    scope.news = function () {
+    scope.openNews = function () {
         let newsWin = scope.newsWin;
         if (newsWin) {
             newsWin.show();
@@ -239,7 +239,7 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    this.reminder = function () {
+    scope.openReminder = function () {
         let reminderWin = scope.reminderWin;
         if (reminderWin) {
             reminderWin.show()
@@ -258,7 +258,7 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    scope.warn = function () {
+    scope.openWarnWindow = function () {
         let warnWindow = scope.warnWindow
         if (warnWindow) {
             return warnWindow.show();
@@ -314,38 +314,41 @@ brick.reg('mainCtrl', function (scope) {
 
     // ----------------------------------------------------------------
 
+    let activeWarnWindow = () => {
+        if (scope.warnWindow) {
+            scope.warnWindow.show()
+            scope.warnWindow.win.webContents.send('view', 'reminder')
+        }
+    };
+
     let mistakeText =
         `鸡肋头寸, 错误头寸, 竞价即刻平仓; 或者最小止损;
             不要停止止损, 这个错误一直重复. 本质上是囿于小利, 斤斤计较!
             正确的头寸不需要大的止损!`;
 
     utils.timer('9:05', () => {
-        new Win('reminder.html');
+        scope.openReminder()
     });
     utils.timer('9:10', () => {
-        scope.warnWindow.show()
-        voice(mistakeText)
+        scope.openNews();
+        scope.openWarnWindow();
     });
     utils.timer('9:26', () => {
         voice(mistakeText);
-        if (scope.warnWindow) {
-            scope.warnWindow.show()
-            scope.warnWindow.win.webContents.send('view', 'reminder')
-        }
+        activeWarnWindow();
     });
     utils.timer('12:57', () => {
-        scope.warnWindow.show()
-        scope.warnWindow.win.webContents.send('view', 'reminder')
+        activeWarnWindow();
     });
 
     utils.timer('15:00', () => {
-        scope.newsWin.close()
+        scope.newsWin && scope.newsWin.close()
     });
 
 });
 
 
-/*brick.reg('memoCtrl', function () {
+brick.reg('memoCtrl', function () {
 
     let $memo = $('#memo')
 
@@ -354,7 +357,7 @@ brick.reg('mainCtrl', function (scope) {
 
         $memo.froalaEditor({
             toolbarInline: true,
-            /!*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*!/
+            /*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*/
             // Change save interval (time in miliseconds).
             saveInterval: 2500,
             // Set the save param.
@@ -376,7 +379,7 @@ brick.reg('mainCtrl', function (scope) {
         })
     };
 
-});*/
+});
 
 
 brick.reg('setStockCtrl', function () {
@@ -384,4 +387,4 @@ brick.reg('setStockCtrl', function () {
         console.log(fields)
         utils.addStock(fields)
     }
-})
+});

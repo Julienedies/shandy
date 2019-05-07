@@ -132,12 +132,13 @@
                         <div id="rts_list" ic-tpl="list">
                             <ul>
                                 <li ic-for="i,v in model" code="{{v.code}}" ic-click="fill" ic-class="flex-mc {{v.warning ? 'yellow':''}}">
-                                    <span>{{v.code}}</span>
-                                    <span>{{v.name}}</span>
-                                    <span style="color:red;">{{v.b1/1000}} <i>k</i></span>
-                                    <span>{{v.b1_reduce}} </span>
-                                    <span>-{{v.b1_reduce_base/1000}}k</span>
-                                    <span>+{{v.v_plus_base/1000}}k</span>
+                                    <span class="code">{{v.code}} </span>
+                                    <span class="name"> {{v.name}} </span>
+                                    <span class="b1">{{v.b1/1000}} <i>k</i></span>
+                                    <span ic-class="b1_reduce {{v.b1_reduce > 0 ? 'up':'down'}}">{{v.b1_reduce}} </span>
+                                    <span class="increase">{{v.increase}}% </span>
+                                    <span class="price">{{v.price}} </span>
+                                    <span class="time"> {{v.time}}</span>
                                 </li>
                             </ul>
                         </div>
@@ -156,11 +157,11 @@
                         </div>
                     </section>
 
-<!--                    <section id="memo_box" ic-ctrl="memoCtrl">
+                    <section id="memo_box" ic-ctrl="memoCtrl">
                         <textarea id="memo">
                         </textarea>
                         <button class="none" ic-click="saveMemo">保存</button>
-                    </section>-->
+                    </section>
 
                     <div ic-ctrl="setStockCtrl" ic-popup="addStock" style="top:30px;">
                         <div class="column is-10" ic-form="addStock" style="padding:20px;">

@@ -132,12 +132,11 @@ body {
 [ic-view] {
   background: rgba(0, 0, 0, 0.3) !important;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 
   .box {
     width: 48%;
-    margin-bottom: 10%;
     min-width: 40%;
     border: solid 1px yellowgreen;
     background: rgba(0, 0, 0, 0.5);

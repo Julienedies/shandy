@@ -2,40 +2,53 @@
  * Created by j on 18/7/28.
  */
 
-import _dob from '../../../libs/dob.js'
+import dob from '../../../libs/dob.js'
 
-let dob
-
-function initDb(){
-    dob = dob || _dob('logic')
-    return dob
+function getDb () {
+    getDb.dob = getDb.dob || dob('logic');
+    return getDb.dob;
 }
+
+function getData () {
+    let dob = getDb();
+    let arr = dob.get();
+
+    arr.sort((a, b) => {
+        a = a.level || 0;
+        b = b.level || 0;
+        return b - a;
+    });
+    return arr;
+}
+
 
 export default {
 
-    get: function (req, res) {
-        initDb()
-        res.json(dob.get());
+    get (req, res) {
+        res.json(getData());
     },
 
-    post: function (req, res) {
-        initDb()
+    post (req, res) {
+        let dob = getDb();
         let data = req.body;
         dob.set(data);
-        res.json(dob.get());
+        res.json(getData());
     },
 
-    del: function (req, res) {
-        initDb()
+    del (req, res) {
+        let dob = getDb();
         let id = req.params.id;
         dob.remove(id);
-        res.json(dob.get());
+        res.json(getData());
     },
 
-    focus: function(req, res){
-        initDb()
+    // 提高level级别;
+    focus (req, res) {
+        let dob = getDb();
         let id = req.params.id;
-        dob.insert(id);
-        res.json(dob.get());
+        let record = dob.get(id);
+        record.level = (record.level || 1) + 1;
+        dob.set(record);
+        res.json(getData());
     }
 }

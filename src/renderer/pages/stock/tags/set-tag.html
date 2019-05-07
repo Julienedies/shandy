@@ -34,7 +34,14 @@
             <div>
                 <h6>备注</h6>
                 <div>
-                    <textarea rows="3" class="textarea is-medium" ic-form-field="desc">{{model.desc}}</textarea>
+                    <textarea rows="4" class="textarea is-medium" ic-form-field="desc">{{model.desc}}</textarea>
+                </div>
+            </div>
+
+            <div>
+                <h6>优先级</h6>
+                <div>
+                    <input class="input is-medium" type="number" name="level" value="{{model.level}}" ic-form-field>
                 </div>
             </div>
 

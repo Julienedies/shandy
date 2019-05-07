@@ -50,7 +50,7 @@ function f (stocks) {
 
 function _f (stock) {
     // stock => {code: code, name: name, b1: 买一量, v:成交量, p: price}
-    console.log(stock);
+    // console.log(stock);
     let code = stock.code;
     let name = stock.name;
     let b1 = stock.b1;
@@ -60,7 +60,7 @@ function _f (stock) {
     let p_stock = prev_objm.get(code);
     let f_stock = first_objm.get(code);
 
-    if (f_stock && price !== f_stock.price) {
+    if (stock.increase < 9.5 || (f_stock && f_stock.price !== price)) {
         voice.remove(code);
         prev_objm.remove(code);
         stock.rout = 1; // 破板

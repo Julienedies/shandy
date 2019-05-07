@@ -196,8 +196,14 @@ let proto = {
     beforeSave: function (record, index) {
         let id = record.id;
         // 如果没有主键,生成一个随机主键
-        if (typeof id == 'undefined' || id === '') {
+        if (typeof id === 'undefined' || id === '') {
             record.id = Math.random().toFixed(7).replace('0.', '');
+        }
+        // 如果没有level属性, 添加level属性
+        let level = record.level;
+        if(typeof level === 'undefined' || level === ''){
+            level = 1 + '.' + (+ new Date());
+            record.level = level * 1;
         }
         return record;
     },

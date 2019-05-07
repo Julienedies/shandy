@@ -21,6 +21,15 @@ export default function (words) {
 
     const stocks = stocksManager.get();
 
+    // 简写code, 譬如002714的简写: 2714
+    if(/^\d{3,}$/img.test(words)){
+        let result = stocks.filter((arr) => {
+            return arr[0].endsWith(words);
+        });
+        result = result[0] || [];
+        return {code: result[0], name: result[1]};
+    }
+
     let code_arr;
     if (code_arr = words.match(/\b\d{6}(?!\d)/)) {
         let result = stocks.filter(stock => {
