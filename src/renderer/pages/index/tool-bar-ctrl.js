@@ -24,7 +24,7 @@ const {dialog} = electron.remote
 
 brick.reg('toolBarCtrl', function (scope) {
 
-    this.showIp = function() {
+    this.showIp = function () {
         scope.$elm.find('#ip').text(utils.getIp())
     }
 
@@ -55,7 +55,12 @@ brick.reg('toolBarCtrl', function (scope) {
                     b = Math.round(b * 100) / 100
                     console.info(b)
 
-                    let result = `${ stock.name } : 当前价: ${ p }; 涨停价: ${ a }; 跌停价: ${ b }`
+                    let text = '';
+                    for (let i = 0.005; i <= 0.105; i += 0.005) {
+                        text += `${ Math.round(p * (1 + i) * 100) / 100 }  :  ${ Math.round(i * 1000) / 10 }% \r\n`;
+                    }
+
+                    let result = ` ${ stock.name } : 现价: ${ p } \r\n 涨停价: ${ a } \r\n 跌停价: ${ b } \r\n ------------- \r\n${ text }`;
                     dialog.showMessageBox(null, {type: 'info', message: `${ result }`})
 
                 }

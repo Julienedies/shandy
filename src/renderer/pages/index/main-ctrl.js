@@ -225,8 +225,7 @@ brick.reg('mainCtrl', function (scope) {
                 // transparent: true,
                 // frame: false,
                 hasShadow: false,
-                //alwaysOnTop: true,
-                //center: true,
+                alwaysOnTop: true,
                 onClose: () => {
                     delete scope.newsWin;
                 }
@@ -258,7 +257,7 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    scope.openWarnWindow = function () {
+    scope.openWarn = function () {
         let warnWindow = scope.warnWindow
         if (warnWindow) {
             return warnWindow.show();
@@ -331,7 +330,7 @@ brick.reg('mainCtrl', function (scope) {
     });
     utils.timer('9:10', () => {
         scope.openNews();
-        scope.openWarnWindow();
+        scope.openWarn();
     });
     utils.timer('9:26', () => {
         voice(mistakeText);
