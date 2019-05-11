@@ -349,7 +349,7 @@ brick.reg('mainCtrl', function (scope) {
 
 brick.reg('memoCtrl', function () {
 
-    let $memo = $('#memo')
+    let $memo = $('#memo');
 
     $.get('/stock/memo').done(function (o) {
         let text = o.text

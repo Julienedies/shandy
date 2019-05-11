@@ -17,6 +17,7 @@ import debugMenu from 'debug-menu'
 import ocr from '../../../libs/baidu-ocr.js'
 import stockQuery from '../../../libs/stock-query.js'
 import userDb from '../../../libs/user-db'
+import setting from '../../../libs/setting'
 import bridge from 'e-bridge'
 
 import imager from './imager.js'
@@ -24,21 +25,17 @@ import imager from './imager.js'
 // activate context menu
 debugMenu.install();
 
-const setting = bridge.setting()
 // 交易记录json
-const tradeArr = userDb('trading', []).get()
+const tradeArr = userDb('trading', []).get();
 
 brick.reg('mainCtrl', function (scope) {
-
-    scope.crop = {x: 3140, y: 115, width: 310, height: 50};
 
     scope.onSelectImgDirDone = (paths) => {
         if (!paths) return;
         let dir = paths[0]
-        setting.set('viewer.imgDir', dir).save()
-        console.log(setting)
         scope.imgDir = dir
         scope.init(dir)
+        setting.set('viewer.imgDir', dir);
     }
 
     // 获取目录下所有图片
@@ -63,6 +60,8 @@ brick.reg('mainCtrl', function (scope) {
         $('input[name=imgDir]').val(imgDir)
         scope.init(imgDir)
     }
+
+    scope.render('crop', {model: setting.get('viewer.crop') || {}});
 
     // ------------------------------------------------------------------------
 
@@ -115,13 +114,16 @@ brick.reg('mainCtrl', function (scope) {
 
     // -----------------------------------------------------------------------------------------------
 
+
     // 图片剪切测试  fields => {x: 3140, y: 115, width: 310, height: 50}
-    scope.crop_test = function (fields) {
+    // scope.crop = {x: 3140, y: 115, width: 310, height: 50};
+    scope.cropTest = function (fields) {
         console.info(fields);
-        scope.crop = fields || scope.crop;
+        let crop = scope.crop = fields || scope.crop;
         let sn = $('#sn').val();
         let dataUrl = imager.crop(scope.urls[sn].f, fields);
         $('#view_crop').attr('src', dataUrl);
+        setting.set('viewer.crop', crop);
     };
 
     // 图片列表重命名
@@ -131,15 +133,28 @@ brick.reg('mainCtrl', function (scope) {
         let $ocr_text = $('#ocr_text');
 
         let that = this;
-        $(this).icSetLoading();
 
-        let crop = scope.crop;
+
         let arr = scope.urls.map(o => {
             return o.f;
         });
 
+        let crop = scope.crop;
+
+        if (!crop) {
+            return alert('请先进行剪切测试!');
+        }
+
+        $(this).icSetLoading();
+
         (function fn (arr) {
             let imgPath = arr.shift();
+
+            // 忽略富途大盘指数截图
+            if (/\d{2}\.\d{2}\.png$/img.test(imgPath)) {
+                return fn(arr);
+            }
+
             // 图片数组重命名结束
             if (!imgPath) {
                 $(that).icClearLoading();
@@ -189,4 +204,3 @@ brick.reg('mainCtrl', function (scope) {
 
 });
 
-brick.bootstrap()

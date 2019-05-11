@@ -10,7 +10,6 @@
 <div class="column">
 
     <div class="box">
-
         <div class="field has-addons">
             <div class="control">
                 <a class="button is-primary" ic-select-path="imgDir" ic-select-path-on-done="onSelectImgDirDone">
@@ -22,25 +21,26 @@
             </div>
         </div>
 
-        <div class="column" ic-form>
-            <div class="level">
-                <label class="">x:<input type="number" value="3100" ic-form-field="x"></label>
-                <label class="">y:<input type="number" value="115" ic-form-field="y"></label>
-                <label class="">width:<input type="number" value="380" ic-form-field="width"></label>
-                <label class="">height:<input type="number" value="50" ic-form-field="height"></label>
-                <label class="">图片序号:<input type="number" value="0" id="sn"></label>
-            </div>
+        <div class="column" ic-tpl="crop">
+            <div ic-form>
+                <div class="level">
+                    <label class="">x:<input type="number" ic-value="{{ model.x || 3100 }}" ic-form-field="x"></label>
+                    <label class="">y:<input type="number" ic-value="{{ model.y || 115 }}" ic-form-field="y"></label>
+                    <label class="">width:<input type="number" ic-value="{{ model.width || 380 }}" ic-form-field="width"></label>
+                    <label class="">height:<input type="number" ic-value="{{ model.height || 50 }}" ic-form-field="height"></label>
+                    <label class="">图片序号:<input type="number" value="0" id="sn"></label>
+                </div>
 
-            <div class="field">
-                <button class="button" ic-click="ocrRename">ocr重命名</button>
-                <button class="button" ic-form-submit ic-submit-action="crop_test()">剪切测试</button>
-                <span>
+                <div class="field">
+                    <button class="button" ic-click="ocrRename">ocr重命名</button>
+                    <button class="button" ic-form-submit ic-submit-action="cropTest()">剪切测试</button>
+                    <span>
                         <img id="view_crop" style="border:solid 1px blue;"/>
                         <span id="ocr_text"></span>
-                    </span>
+                </span>
+                </div>
             </div>
         </div>
-
     </div>
 
     <div id="box" ic-tpl="list">

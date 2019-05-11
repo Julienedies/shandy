@@ -19,9 +19,9 @@ import warnText from '../../js/warn-text'
 const ipc = electron.ipcRenderer
 const BrowserWindow = electron.remote.BrowserWindow
 
-let win
-let $body = $('body')
-let socket = io()
+let win;
+let $body = $('body');
+let socket = io();
 
 // 显示随机背景图片
 function randomBgImg () {
@@ -58,10 +58,6 @@ brick.directives.reg('x-ic-step', function ($elm) {
 
 brick.reg('mainCtrl', function (scope) {
 
-    $('[ic-view]').on('ic-view.active', () => {
-
-    })
-
     socket.on('warn', (info) => {
         let d = new Date()
         let h = d.getHours()
@@ -87,7 +83,7 @@ brick.reg('mainCtrl', function (scope) {
             scope.hideWindow()
         }, map[info] * 1000);
 
-    })
+    });
 
     scope.hideWindow = () => {
         win.hide()
@@ -96,15 +92,19 @@ brick.reg('mainCtrl', function (scope) {
             utils.activeFtnn()
             utils.activeTdx()
         }, 300)
-    }
+    };
 
-})
+
+    $('[ic-view]').on('ic-view.active', () => {
+
+    });
+
+});
 
 
 brick.reg('warnCtrl', function (scope) {
 
-
-})
+});
 
 brick.reg('planCtrl', function () {
 
@@ -125,7 +125,7 @@ brick.reg('planCtrl', function () {
         data.plans && data.plans.length && scope.render('plans', {model: data.plans})
     })
 
-})
+});
 
 brick.reg('mistakeCtrl', function (scope) {
     $.get('/stock/tags')
@@ -134,6 +134,5 @@ brick.reg('mistakeCtrl', function (scope) {
             let vm = data['交易错误']
             scope.render('mistake', vm)
         })
-})
+});
 
-brick.bootstrap()

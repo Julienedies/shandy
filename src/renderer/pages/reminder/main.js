@@ -10,6 +10,24 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
+import '../../js/utils.js'
+
+brick.set('render.wrapModel', true)
+
+brick.reg('mainCtrl', function (scope) {
+
+    $.get('/stock/tags/').done((data) => {
+        console.log(data);
+        scope.render('prepare', data);
+        scope.render('mistake', data);
+        scope.render('logic', data);
+        scope.render('principle', data);
+    });
+
+});
+
+
+// -------------------------------------------------------------------------
 
 
 const speechSU = new window.SpeechSynthesisUtterance();
@@ -17,9 +35,9 @@ speechSU.volume = 0.3;
 
 let isPause = false
 $('#voice_btn').click(function () {
-    if(isPause){
+    if (isPause) {
         speechSynthesis.resume();
-    }else{
+    } else {
         speechSynthesis.pause();
     }
     isPause = !isPause

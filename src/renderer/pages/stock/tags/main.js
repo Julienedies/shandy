@@ -20,6 +20,8 @@ import '../../../js/utils.js'
 import setTagCtrl from './set-tag-ctrl'
 import tagsCtrl from './tags-ctrl'
 
+
+
 brick.reg('tagsCtrl', tagsCtrl);
 
 brick.reg('setTagCtrl', setTagCtrl);

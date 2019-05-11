@@ -16,12 +16,12 @@
             <div>
                 <ul ic-step>
                     <li>弱水三千, 只取一瓢</li>
-                    <li>控制 逻辑  计划  等待 耐心 专注</li>
+                    <li>控制 逻辑 计划 等待 耐心 专注</li>
                     <li>止损错误; 本质是囿于小利, 斤斤计较;</li>
                     <li>错误头寸, 鸡肋头寸, 竞价平仓;</li>
-                    <li>不要停止止损, 这个错误一直重复. </li>
+                    <li>不要停止止损, 这个错误一直重复.</li>
                     <li>正确的头寸不需要大的止损!</li>
-                    <li>自动执行条件单, 不要停止止损; </li>
+                    <li>自动执行条件单, 不要停止止损;</li>
                     <li>登录华宝证券</li>
                     <li>注意撤单</li>
                     <li>
@@ -71,13 +71,13 @@
                 <div ic-tpl="mistake">
                     <ul ic-viewer ic-viewer-url="src" ic-step>
                         <li ic-for="i,v in model">
-                            <h6 class="title is-4">{{ v.text }}</h6>
-                            <p class="pre">{{ v.desc }}</p>
-                            <div class="control">
-                                <a class="" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
-                                    {{parseImgName(o)}} &nbsp;&nbsp;
+                            <h6 class="title is-6">
+                                <span style="padding-right:4em;">{{ v.text }}</span>
+                                <a style="font-size:0.8em;" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
+                                    {{ parseImgName(o) }} &nbsp;&nbsp;
                                 </a>
-                            </div>
+                            </h6>
+                            <p class="pre none">{{ v.desc }}</p>
                         </li>
                         <li>
                             <div class="level">
