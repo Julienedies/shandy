@@ -6,6 +6,7 @@ import './index.html'
 import '../../../css/common/common.scss'
 import './style.scss'
 
+import _ from 'lodash'
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
@@ -24,7 +25,9 @@ brick.reg('conceptCtrl', function (scope) {
 
     $.ajax({url: `/stock/concept/${ name }`, dataType: 'json'})
         .done(function (data) {
-            name ? scope.render('list', {name: name, list: data}) : scope.render('allConcept', data);
+            name ? scope.render('list', {name: name, list: data}) : scope.render('allConcept', _.groupBy(data, (item) => {
+                return item.key;
+            }));
         })
         .always(() => {
             $elm.icClearLoading();

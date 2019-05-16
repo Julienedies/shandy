@@ -25,8 +25,8 @@
                 <ul ic-viewer ic-viewer-url="src">
                     <li ic-for="i,v in model['交易错误']">
                         <h6 class="title is-6">
-                            <span style="padding-right:4em;">{{ v.text }}</span>
-                            <a class="" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
+                            <span style="padding-right:1em;">{{ v.text }}</span>
+                            <a style="font-size:0.8em;" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
                                 {{ parseImgName(o) }} &nbsp;&nbsp;
                             </a>
                         </h6>

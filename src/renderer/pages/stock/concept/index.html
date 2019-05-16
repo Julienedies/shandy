@@ -27,14 +27,18 @@
         </div>
 
         <div ic-tpl="allConcept">
-            <div class="tags">
-                <a class="tag is-medium is-danger" ic-for="i,v in model" ic-href="{{ 'stock_concept.html?name='+ v.name }}">
+            <section ic-for="k,o in model">
+                <h6>{{ k }}</h6>
+                <div class="tags">
+                    <a class="tag is-medium is-danger" target="_blank" ic-for="i,v in o" ic-href="{{ 'stock_concept.html?name='+ v.name }}">
                     <span>
                     {{ v.name }}
-                    <sup>{{ v.key }}</sup>
+                    <!--<sup>{{ v.key }}</sup>-->
                     </span>
-                </a>
-            </div>
+                    </a>
+                </div>
+            </section>
+
         </div>
 
     </div>

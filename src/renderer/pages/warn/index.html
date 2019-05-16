@@ -72,7 +72,7 @@
                     <ul ic-viewer ic-viewer-url="src" ic-step>
                         <li ic-for="i,v in model">
                             <h6 class="title is-6">
-                                <span style="padding-right:4em;">{{ v.text }}</span>
+                                <span style="padding-right:2em;">{{ v.text }}</span>
                                 <a style="font-size:0.8em;" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
                                     {{ parseImgName(o) }} &nbsp;&nbsp;
                                 </a>

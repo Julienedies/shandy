@@ -287,7 +287,7 @@ brick.reg('mainCtrl', function (scope) {
                 //titleBarStyle: 'hidden',
                 //frame: false,
                 //hasShadow: false,
-                //alwaysOnTop: true,
+                alwaysOnTop: true,
                 onClose () {
                     delete scope.warnWindow;
                 }
@@ -308,8 +308,7 @@ brick.reg('mainCtrl', function (scope) {
 
     // ----------------------------------------------------------------
 
-    // scope.news()
-    // scope.warn()
+    scope.openNews();
 
     // ----------------------------------------------------------------
 
@@ -326,10 +325,9 @@ brick.reg('mainCtrl', function (scope) {
             正确的头寸不需要大的止损!`;
 
     utils.timer('9:05', () => {
-        scope.openReminder()
+        scope.openReminder();
     });
     utils.timer('9:10', () => {
-        scope.openNews();
         scope.openWarn();
     });
     utils.timer('9:26', () => {
