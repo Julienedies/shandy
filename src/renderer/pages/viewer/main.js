@@ -61,7 +61,8 @@ brick.reg('mainCtrl', function (scope) {
         scope.init(imgDir)
     }
 
-    scope.render('crop', {model: setting.get('viewer.crop') || {}});
+    scope.crop =  setting.get('viewer.crop');
+    scope.render('crop', {model: scope.crop || {}});
 
     // ------------------------------------------------------------------------
 

@@ -18,6 +18,13 @@ html, body {
       flex: 1;
       padding: 0.8rem;
       border-left: solid 1px #ccc;
+
+      li{
+        padding:0.3rem;
+        .title{
+          margin-bottom: 0!important;
+        }
+      }
     }
   }
 

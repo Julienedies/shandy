@@ -8,9 +8,9 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-<div class="column" ic-ctrl="mainCtrl" ic-tpl="setting">
+<div class="column" ic-ctrl="mainCtrl">
 
-    <section class="box">
+    <section class="box" ic-tpl="setting">
         <h3 class="title is-4">warn page</h3>
         <div class="field is-horizontal">
             <div class="field-label is-normal">
@@ -44,6 +44,39 @@
         <span class="nav-group-item">
                         <label><input type="checkbox" ic-click="debug" checked/> debug</label>
                     </span>
+    </div>
+
+    <div class="box" ic-ctrl="setVoiceWarnTextCtrl">
+        <h3 class="title is-5">设置语音警告</h3>
+        <div ic-form>
+            <div class="field">
+                <div class="control">
+                    <input class="input" type="text" placeholder="name" ic-form-field="name">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <input class="input" type="text" placeholder="警告文本" ic-form-field="text">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary" ic-form-submit ic-submit-action="save()">
+                        保存
+                    </button>
+                </div>
+            </div>
+        </div>
+        <table class="table is-striped" ic-tpl="voiceWarnTextList">
+            <tr ic-for="i,v in model">
+                <td>{{ i }}:</td>
+                <td>{{ v }}</td>
+                <td>
+                    <button class="button is-primary" ic-click="edit:{{ i }}">修改</button>
+                    <button class="button is-primary" ic-click="rm:{{ i }}">删除</button>
+                </td>
+            </tr>
+        </table>
     </div>
 
 </div>

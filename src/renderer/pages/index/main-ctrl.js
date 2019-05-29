@@ -218,11 +218,12 @@ brick.reg('mainCtrl', function (scope) {
                 name,
                 url,
                 width: 600,
-                height: 64,
+                height: 34,
                 x: 60,
                 ...getBounds(name),
-                //titleBarStyle: 'hidden',
-                // transparent: true,
+                titleBarStyle: 'hiddenInset',
+                useContentSize: true,
+                transparent: true,
                 // frame: false,
                 hasShadow: false,
                 alwaysOnTop: true,
@@ -319,10 +320,8 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    let mistakeText =
-        `鸡肋头寸, 错误头寸, 竞价即刻平仓; 或者最小止损;
-            不要停止止损, 这个错误一直重复. 本质上是囿于小利, 斤斤计较!
-            正确的头寸不需要大的止损!`;
+    let mistakeText = `止损错误`;
+
 
     utils.timer('9:05', () => {
         scope.openReminder();

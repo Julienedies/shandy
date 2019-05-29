@@ -13,11 +13,11 @@ import '../../js/common.js'
 
 import bridge from 'e-bridge'
 
-const setting = bridge.setting()
+const setting = bridge.setting();
 
-brick.reg('mainCtrl', function(scope){
+brick.reg('mainCtrl', function (scope) {
 
-    if(!setting.json.warn){
+    if (!setting.json.warn) {
         setting.json.warn = {};
     }
 
@@ -26,11 +26,41 @@ brick.reg('mainCtrl', function(scope){
     this.render('setting', {model})
 
     this.onSelectRandomBgImgDirDone = (paths) => {
-        console.log(paths)
         let randomBgImgDir = paths[0]
         randomBgImgDir && setting.merge('warn', {randomBgImgDir}).save()
     }
 
-})
+});
 
-brick.bootstrap()
+brick.reg('setVoiceWarnTextCtrl', function (scope) {
+
+    let $input = scope.$elm.find('[ic-form] input');
+
+    let render = () => {
+        let model = setting.json.voiceWarnText || {};
+        scope.render('voiceWarnTextList', {model});
+    };
+
+    scope.save = function ({name, text}) {
+        let o = {};
+        o[name] = text;
+        setting.merge('voiceWarnText', o).save();
+        $input.val('');
+        render();
+    };
+
+    scope.edit = function (e, name) {
+        $input.filter('[ic-form-field="name"]').val(name);
+        $input.filter('[ic-form-field="text"]').val(setting.json.voiceWarnText[name]);
+        render();
+    };
+
+    scope.rm = function (e, name) {
+        delete setting.json.voiceWarnText[name];
+        setting.save();
+        render();
+    };
+
+    render();
+});
+

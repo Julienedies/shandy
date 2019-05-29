@@ -9,32 +9,40 @@ import './style.scss'
 import electron from 'electron'
 import $ from 'jquery'
 
-import voiceWarnText from '../../js/warn-text'
+import voice from '../../../libs/voice'
 
-const ipc = electron.ipcRenderer
-const BrowserWindow = electron.remote.BrowserWindow
-let win
-let timer
+import setting from '../../../libs/setting'
 
-const socket = io()
-let $msg = $('#msg')
+const voiceWarnText = setting.get('voiceWarnText') || {};
+
+const ipc = electron.ipcRenderer;
+const BrowserWindow = electron.remote.BrowserWindow;
+let win;
+let timer;
+
+const socket = io();
+let $msg = $('#msg');
+
+ipc.on('id', function (event, windowID) {
+    win = BrowserWindow.fromId(windowID);
+    setTimeout(() => {
+        win.hide();
+    }, 32 * 1000);
+});
 
 // 有新消息显示窗口,  稍后隐藏窗口
 function cb (msg) {
-
     clearTimeout(timer)
-
     $msg.text(msg)
 
     if (win) {
-
-        win.showInactive()
-        $msg.addClass('warn')
+        win.showInactive();
+        $msg.addClass('warn');
 
         timer = setTimeout(() => {
-            win.hide()
-            $msg.removeClass('warn')
-        }, 17 * 1000);
+            win.hide();
+            $msg.removeClass('warn');
+        }, 19 * 1000);
     }
 }
 
@@ -45,11 +53,10 @@ socket.on('cls_news', cb);
 // 交易警告文字版
 socket.on('warn', (info) => {
     //cb(voiceWarnText.text[info])
-})
-
-ipc.on('id', function (event, windowID) {
-    win = BrowserWindow.fromId(windowID);
-    setTimeout(() => {
-        win.hide();
-    }, 14 * 1000);
+    if (info === 'daban') {
+        //voice('控制本能！ 宁缺毋滥！只做风口龙头热门最强势! 绝不要做跟风杂毛趁势弱势!');
+        voice(voiceWarnText[info]);
+    }
 });
+
+

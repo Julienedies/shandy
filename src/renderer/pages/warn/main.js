@@ -53,7 +53,7 @@ brick.directives.reg('x-ic-step', function ($elm) {
         $elm.trigger('ic-step.over')
         $elm.find(':first-child').addClass(cla)
     })
-})
+});
 
 
 brick.reg('mainCtrl', function (scope) {

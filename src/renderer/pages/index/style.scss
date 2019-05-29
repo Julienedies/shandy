@@ -12,7 +12,7 @@ html, body {
 input {
   font-size: 20px;
   display: inline-block;
-  margin: 5px;
+  margin: 7px 0;
   padding: 3px 5px;
 }
 
@@ -20,10 +20,10 @@ div[ic-ctrl="rtsCtrl"] button {
   margin-right: 20px;
 }
 
-
 #rtsCtrl {
-
-  padding: 20px;
+  margin: 10px 10px;
+  padding: 15px 10px;
+  background: #f7f6f6;
 
   section {
     padding: 20px 20px;

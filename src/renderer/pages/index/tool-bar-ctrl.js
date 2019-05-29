@@ -56,7 +56,7 @@ brick.reg('toolBarCtrl', function (scope) {
                     console.info(b)
 
                     let text = '';
-                    for (let i = 0.005; i <= 0.105; i += 0.005) {
+                    for (let i = -0.025; i <= 0.105; i += 0.005) {
                         text += `${ Math.round(p * (1 + i) * 100) / 100 }  :  ${ Math.round(i * 1000) / 10 }% \r\n`;
                     }
 
