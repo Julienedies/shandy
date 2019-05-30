@@ -14,6 +14,8 @@ import utils from '../../../libs/utils'
 import setting from '../../../libs/setting'
 import Win from '../../../libs/window'
 import voice from '../../../libs/voice'
+import ac from '../../../libs/ac'
+import rts from '../../../libs/real-time-stock'
 
 
 brick.services.reg('viewsModel', () => {
@@ -323,7 +325,7 @@ brick.reg('mainCtrl', function (scope) {
     let mistakeText = `止损错误`;
 
 
-    utils.timer('9:05', () => {
+    utils.timer('9:00', () => {
         scope.openReminder();
     });
     utils.timer('9:10', () => {
@@ -383,4 +385,61 @@ brick.reg('setStockCtrl', function () {
         console.log(fields)
         utils.addStock(fields)
     }
+});
+
+brick.reg('countSwingCtrl', function (scope) {
+
+    let $countSwingResult = scope.$elm.find('#countSwingResult');
+
+    function calculate (p) {
+
+        console.info(p)
+        let a = p + p * 0.1
+        console.info(a)
+        a = Math.round(a * 100) / 100
+        console.info(a)
+        let b = p - p * 0.1
+        console.info(b)
+        b = Math.round(b * 100) / 100
+        console.info(b)
+
+        let text = '';
+        for (let i = -0.025; i <= 0.105; i += 0.005) {
+            text += `${ Math.round(p * (1 + i) * 100) / 100 }  :  ${ Math.round(i * 1000) / 10 }% \r\n`;
+        }
+
+        return ` 现价: ${ p } \r\n 涨停价: ${ a } \r\n 跌停价: ${ b } \r\n ------------- \r\n${ text }`;
+    }
+
+    // 涨跌停价计算
+    this.countSwing = function (fields) {
+
+        let cb = (price) => {
+            $countSwingResult.text(calculate(price));
+        }
+
+        let price = fields.price * 1;
+        if (price) {
+            cb(price);
+        } else {
+
+            ac.getStockName(function (stock) {
+
+                rts({
+                    interval: false,
+                    code: stock.code,
+                    callback: function (data) {
+
+                        scope.$elm.find('[ic-form-field="code"]').val(stock.name);
+                        console.info(data[0])
+                        let p = data[0].price * 1;
+                        cb(p);
+                    }
+                })
+            });
+
+        }
+
+    }
+
 });

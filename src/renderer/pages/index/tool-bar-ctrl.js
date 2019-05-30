@@ -34,40 +34,6 @@ brick.reg('toolBarCtrl', function (scope) {
         tdx.keystroke('.403', true)
     }
 
-    // 涨跌停价计算
-    this.swing_10 = function () {
-        ac.getStockName(function (stock) {
-
-            rts({
-                interval: false,
-                code: stock.code,
-                callback: function (data) {
-
-                    console.info(data[0])
-                    let p = data[0].price * 1
-                    console.info(p)
-                    let a = p + p * 0.1
-                    console.info(a)
-                    a = Math.round(a * 100) / 100
-                    console.info(a)
-                    let b = p - p * 0.1
-                    console.info(b)
-                    b = Math.round(b * 100) / 100
-                    console.info(b)
-
-                    let text = '';
-                    for (let i = -0.025; i <= 0.105; i += 0.005) {
-                        text += `${ Math.round(p * (1 + i) * 100) / 100 }  :  ${ Math.round(i * 1000) / 10 }% \r\n`;
-                    }
-
-                    let result = ` ${ stock.name } : 现价: ${ p } \r\n 涨停价: ${ a } \r\n 跌停价: ${ b } \r\n ------------- \r\n${ text }`;
-                    dialog.showMessageBox(null, {type: 'info', message: `${ result }`})
-
-                }
-            })
-        })
-    }
-
     this.relaunch = function () {
         remote.app.relaunch()
         remote.app.exit()

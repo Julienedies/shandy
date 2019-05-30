@@ -16,7 +16,7 @@
                 <a class="btn-btn-default hint--bottom" aria-label="阶段涨幅" ic-click="view_403">
                     <i class="icon icon-up"></i>
                 </a>
-                <a class="btn-btn-default hint--bottom" aria-label="涨跌停价计算" ic-click="swing_10">
+                <a class="btn-btn-default hint--bottom" aria-label="涨跌停价计算" ic-popup-target="countSwing">
                     <i class="icon icon-publish"></i>
                 </a>
             </div>
@@ -163,7 +163,7 @@
                         <button class="none" ic-click="saveMemo">保存</button>
                     </section>
 
-                    <div ic-ctrl="setStockCtrl" ic-popup="addStock" style="top:30px;">
+                    <div ic-ctrl="setStockCtrl" ic-popup="addStock">
                         <div class="column is-10" ic-form="addStock" style="padding:20px;">
                                 <div class="form-group">
                                     <label>股票名称</label>
@@ -184,6 +184,30 @@
                                 </div>
                         </div>
                     </div>
+
+                    <div ic-ctrl="countSwingCtrl" ic-popup="countSwing">
+                        <div class="column is-10" ic-form="sw" style="padding:20px;">
+                            <div class="form-group">
+                                <input class="form-control" type="text" ic-form-field="code" placeholder="股票code">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" ic-form-field="price" placeholder="现价">
+                            </div>
+                            <div class="buttons">
+                                <button class="btn btn-primary"
+                                        ic-form-submit
+                                        ic-submit-action="countSwing()">
+                                    计算涨跌幅
+                                </button>
+                                <button class="btn btn-default" ic-popup-close>关闭</button>
+                            </div>
+
+                            <div id="countSwingResult" style="white-space: pre;">
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </main>
@@ -191,64 +215,6 @@
     </div>
 
     <footer class="toolbar toolbar-footer none" ic-ctrl="toolBarCtrl">
-        <!--<div class="toolbar-actions">
-
-            <div class="btn-group">
-                <a class="btn-btn-default" ic-click="view_403">
-                    <i class="icon icon-up"></i>
-                    阶段涨幅
-                </a>
-                <a class="btn-btn-default" ic-click="swing_10">
-                    <i class="icon icon-publish"></i>
-                    涨跌停价计算
-                </a>
-            </div>
-
-            <div class="btn-group" ic-ctrl="view_stock_ctrl">
-                <a class="btn-btn-default" ic-click="view_in_ftnn">
-                    <span class="icon icon-search"></span>
-                    富途查看
-                </a>
-                <a class="btn-btn-default" ic-click="go_ycj">
-                    <span class="icon icon-cloud"></span>
-                    云财经
-                </a>
-                <a class="btn-btn-default">
-                    <span class="icon icon-book-open"></span>
-                    个股资料
-                </a>
-                <a class="btn-btn-default" ic-popup-target="add_stock">
-                    <span class="icon icon-plus-circled"></span>
-                    添加股票
-                </a>
-            </div>
-
-            <div class="btn-group">
-                <a class="btn-btn-default" ic-click="updateToken">
-                    <i class="icon icon-shuffle"></i>
-                    更新token
-                </a>
-                <a class="btn-btn-default" ic-click="openInWeb">
-                    <i class="icon icon-globe"></i>
-                    web版本
-                </a>
-                <span class="btn-btn-default" id="ip">
-                    <i class="icon icon-flow-line"></i>
-                </span>
-            </div>
-
-            <div class="btn-group">
-                <a class="btn-btn-default" ic-click="refresh">
-                    <i class="icon icon-cw"></i>
-                    刷新
-                </a>
-                <a class="btn-btn-default" ic-click="relaunch">
-                    <i class="icon icon-arrows-ccw"></i>
-                    重启
-                </a>
-            </div>
-
-        </div>-->
     </footer>
 </div>
 </body>

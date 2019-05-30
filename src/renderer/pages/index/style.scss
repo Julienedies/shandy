@@ -16,6 +16,10 @@ input {
   padding: 3px 5px;
 }
 
+[ic-popup]{
+  top: 30px !important;
+}
+
 div[ic-ctrl="rtsCtrl"] button {
   margin-right: 20px;
 }
