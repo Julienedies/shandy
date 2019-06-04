@@ -214,11 +214,13 @@ window.addEventListener('beforeunload', function (e) {
     rtsJo.set('stocks', codes);
 });
 
+
 // 下午3点后取消行情请求
-bridge.timer('15:01', () => {
+bridge.timer('14:54', () => {
     q_rtso.pause();
+    prev_objm.clear();
     rtsJo.set('stocks', []);
-})
+});
 
 //
 export default {
