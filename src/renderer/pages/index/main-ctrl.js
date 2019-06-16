@@ -389,7 +389,8 @@ brick.reg('setStockCtrl', function () {
 
 brick.reg('countSwingCtrl', function (scope) {
 
-    let $countSwingResult = scope.$elm.find('#countSwingResult');
+    let $elm = scope.$elm;
+    let $countSwingResult = $elm.find('#countSwingResult');
 
     function calculate (p) {
 
@@ -412,11 +413,11 @@ brick.reg('countSwingCtrl', function (scope) {
     }
 
     // 涨跌停价计算
-    this.countSwing = function (fields) {
-
+    scope.countSwing = function (fields) {
+        fields = fields || {};
         let cb = (price) => {
             $countSwingResult.text(calculate(price));
-        }
+        };
 
         let price = fields.price * 1;
         if (price) {
@@ -430,16 +431,19 @@ brick.reg('countSwingCtrl', function (scope) {
                     code: stock.code,
                     callback: function (data) {
 
-                        scope.$elm.find('[ic-form-field="code"]').val(stock.name);
+                        $elm.find('[ic-form-field="code"]').val(stock.name);
                         console.info(data[0])
                         let p = data[0].price * 1;
+                        $elm.find('[ic-form-field="price"]').val(p);
                         cb(p);
                     }
                 })
             });
-
         }
+    };
 
-    }
+    $elm.on('ic-popup.show', function() {
+        scope.countSwing();
+    });
 
 });

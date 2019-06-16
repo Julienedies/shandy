@@ -32,10 +32,10 @@ brick.reg('mainCtrl', function (scope) {
 
     scope.onSelectImgDirDone = (paths) => {
         if (!paths) return;
-        let dir = paths[0]
-        scope.imgDir = dir
-        scope.init(dir)
+        let dir = paths[0];
+        scope.imgDir = dir;
         setting.set('viewer.imgDir', dir);
+        scope.init(dir);
     }
 
     // 获取目录下所有图片
