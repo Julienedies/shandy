@@ -1,0 +1,113 @@
+html {
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0);
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0.4;
+  overflow: hidden;
+  color: #fff;
+  background: repeat 50% 50% rgba(0, 0, 0, 0.3);
+  background-size: contain;
+  border: solid 1px yellowgreen;
+  font: 14px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.warn {
+  animation: warn 4s 10 ease-in-out;
+}
+
+@keyframes warn {
+  1% {
+    opacity: 0.25;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.75;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+// ---------------------------------------------- brick
+#b-plan {
+  padding-right: 60px;
+
+  p {
+    padding: 0 10px;
+  }
+}
+
+[ic-view] {
+  //opacity: 0.2;
+  //animation: warn 4s infinite ease-in-out;
+  background: rgba(0, 0, 0, 0) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .box {
+    //width: 48%;
+    min-width: 40%;
+    // border: solid 1px yellowgreen;
+    background: rgba(0, 0, 0, 0);
+
+    .title {
+      margin: 3px 0 10px 0 !important;
+    }
+
+    .buttons {
+      margin-top: 15px;
+    }
+  }
+}
+
+//----------------------------------------------------
+.box, .title {
+  color: inherit;
+}
+
+a {
+  color: yellowgreen; // #3273dc
+  &:hover {
+    color: #fff;
+  }
+}
+
+[ic-ctrl="mistakeCtrl"] {
+  li {
+    // padding: 10px 12px 13px 1px;
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0);
+    font-size: inherit !important;
+  }
+}

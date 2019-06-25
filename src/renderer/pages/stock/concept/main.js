@@ -13,6 +13,8 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../../js/common-stock.js'
 
+const socket = io();
+
 brick.reg('conceptCtrl', function (scope) {
     let $elm = this.$elm;
 
@@ -33,4 +35,7 @@ brick.reg('conceptCtrl', function (scope) {
             $elm.icClearLoading();
         });
 
+    scope.viewInTdx = function (e, code) {
+        socket.emit('shandy', {event: 'view_in_tdx', code});
+    };
 });

@@ -27,7 +27,7 @@ ipc.on('id', function (event, windowID) {
     win = BrowserWindow.fromId(windowID);
     setTimeout(() => {
         win.hide();
-    }, 32 * 1000);
+    }, 40 * 1000);
 });
 
 // 有新消息显示窗口,  稍后隐藏窗口
@@ -42,7 +42,7 @@ function cb (msg) {
         timer = setTimeout(() => {
             win.hide();
             $msg.removeClass('warn');
-        }, 19 * 1000);
+        }, 60 * 1000);
     }
 }
 
@@ -55,7 +55,7 @@ socket.on('warn', (info) => {
     //cb(voiceWarnText.text[info])
     if (info === 'daban') {
         //voice('控制本能！ 宁缺毋滥！只做风口龙头热门最强势! 绝不要做跟风杂毛趁势弱势!');
-        voice(voiceWarnText[info]);
+        //voice(voiceWarnText[info]);
     }
 });
 

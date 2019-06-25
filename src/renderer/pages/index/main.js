@@ -2,6 +2,9 @@
  * Created by j on 18/5/22.
  */
 
+import './index.html'
+import './style.scss'
+
 import electron from 'electron'
 
 import Win from '../../../libs/window'
@@ -33,10 +36,6 @@ console.log('remote is =>', remote)
 
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
-import './style.scss'
-import html from './index.html'
-
-//console.log('import html =>', html)
 
 import './main-ctrl.js'
 import './tool-bar-ctrl.js'

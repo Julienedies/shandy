@@ -3,6 +3,7 @@
  */
 
 import './index.html'
+import '../../css/common/common.scss'
 import './style.scss'
 
 import $ from 'jquery'
@@ -25,7 +26,7 @@ let socket = io();
 
 // 显示随机背景图片
 function randomBgImg () {
-    $body.css('background-image', `url("/file/random/?time=${ +new Date }")`)
+   // $body.css('background-image', `url("/file/random/?time=${ +new Date }")`);
 }
 
 randomBgImg()
@@ -86,14 +87,15 @@ brick.reg('mainCtrl', function (scope) {
     });
 
     scope.hideWindow = () => {
-        win.hide()
-        randomBgImg()
-        setTimeout(() => {
-            utils.activeFtnn()
-            utils.activeTdx()
-        }, 300)
+        setTimeout( () => {
+            win.hide();
+            randomBgImg()
+            setTimeout(() => {
+                utils.activeFtnn()
+                utils.activeTdx()
+            }, 300);
+        }, 1000 * 60 * 1);
     };
-
 
     $('[ic-view]').on('ic-view.active', () => {
 

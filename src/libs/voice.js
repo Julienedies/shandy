@@ -14,6 +14,7 @@ function speak () {
             let speechSU = new SpeechSynthesisUtterance(o.text);
             speechSU.onend = function () {
                 isEnd = true;
+                o.cb && o.cb();
                 speak();
             };
             console.log('voice', o.text, q, speechSU);
@@ -22,12 +23,18 @@ function speak () {
     }
 }
 
-function voice (sign, text) {
+function voice (sign, text, cb) {
     if (!text) {
         text = sign;
         sign = null;
+        cb = null;
     }
-    q.push({sign, text});
+    if(typeof text === 'function'){
+        cb = text;
+        text = sign;
+        sign = null;
+    }
+    q.push({sign, text, cb});
     speak();
 }
 

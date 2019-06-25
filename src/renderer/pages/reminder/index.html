@@ -48,13 +48,13 @@
         </section>
 
         <section ic-ctrl="mistake">
-            <h3 class="title is-5">交易原则</h3>
+            <h3 class="title is-5"></h3>
             <ul ic-tpl="principle">
                 <li ic-for="i,v in model['交易原则']" ic-class="{{ v.level*1 > 20 ? 'ani-warn':'' }}">
                     {{ v.text }}
                 </li>
             </ul>
-            <ul>
+            <ul class="none">
                 <li>不要斤斤计较，囿于小利。</li>
                 <li>无止损，低开后停止止损，调低止损。
                     <div>

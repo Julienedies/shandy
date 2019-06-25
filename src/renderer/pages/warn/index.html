@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
     <link rel="stylesheet" href="../../css/vendor/effeckt/animations.css">
     <script src="/set_node_modules_path.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
 <div class="x-wrapper" ic-view-stage ic-ctrl="mainCtrl">
 
-    <div ic-view="reminder" ic-active>
+    <div ic-view="reminder">
         <div class="box">
             <h4 class="title is-4">提醒</h4>
             <div>
@@ -28,6 +29,65 @@
                         <button class="button is-primary" ic-view-to="plan">next</button>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div ic-view="mistake" ic-active>
+        <div class="box" ic-ctrl="mistakeCtrl">
+            <h4 class="title is-4">预案 & 错误</h4>
+            <div class="level">
+                <div class="level-left">
+                    <ul id="b-plan">
+                        <li>
+                            <p>早盘市场合力出结果：龙头？ 强势？弱势？所以9:45前要平仓。超短唯快唯强。 </p>
+                            <p>一切以盘面为主，不要心存臆想，先入为主，陷入思维定式。</p>
+                            <p>平仓要果断，不要囿于小利，斤斤计较。</p>
+                        </li>
+
+                        <li>
+                            <p class="ani-warn">低开： 弱，意味着风险，止损优先。最多1个点止损。</p>
+                            <p>低开要把握首次反弹的止损机会。</p>
+                            <p>如果低开太多, 根据预期最低价和最高价进行衡量；仓位大先减仓位。</p>
+                        </li>
+
+                        <li>
+                            <p>高开： 冲不破压力线，平仓优先。</p>
+                            <p>小心高开回落, 除非超预期高开，比如大于7%。允许回落2%。</p>
+                            <p>尤其要小心高开回落，第一波下杀反弹不上去，止盈优先。</p>
+                        </li>
+
+                        <li>
+                            <p>必须设定止盈止损预案条件单。 遵守交易原则。</p>
+                            <p>根据阻力价，支撑价， 预期最高价，预期最低价，止盈价，止损价进行衡量设定。</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="level-right" ic-tpl="mistake">
+                    <ul ic-viewer ic-viewer-url="src" ic-step>
+                        <li ic-for="i,v in model">
+                            <h6 class="title is-6">
+                                <span style="padding-right:2em;">{{ v.text }}</span>
+                                <a style="font-size:0.8em;" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
+                                    {{ parseImgName(o) }} &nbsp;&nbsp;
+                                </a>
+                            </h6>
+                            <p class="pre none">{{ v.desc }}</p>
+                        </li>
+                        <li class="none">
+                            <div class="level">
+                                <div class="level-left">
+                                    <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
+                                </div>
+                                <div class="level-right">
+                                    <button class="button" ic-view-back>返回</button>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button class="button" ic-view-to="daban">next</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -60,39 +120,6 @@
                 <button class="button" ic-view-back>返回</button>
                 &nbsp;&nbsp;
                 <button class="button is-primary" ic-view-to="mistake">next</button>
-            </div>
-        </div>
-    </div>
-
-    <div ic-view="mistake">
-        <div class="box" ic-ctrl="mistakeCtrl">
-            <h4 class="title is-4">错误</h4>
-            <div>
-                <div ic-tpl="mistake">
-                    <ul ic-viewer ic-viewer-url="src" ic-step>
-                        <li ic-for="i,v in model">
-                            <h6 class="title is-6">
-                                <span style="padding-right:2em;">{{ v.text }}</span>
-                                <a style="font-size:0.8em;" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
-                                    {{ parseImgName(o) }} &nbsp;&nbsp;
-                                </a>
-                            </h6>
-                            <p class="pre none">{{ v.desc }}</p>
-                        </li>
-                        <li>
-                            <div class="level">
-                                <div class="level-left">
-                                    <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
-                                </div>
-                                <div class="level-right">
-                                    <button class="button" ic-view-back>返回</button>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button class="button" ic-view-to="daban">next</button>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
@@ -195,6 +222,6 @@
 </div>
 
 
-<script src="/socket.io/socket.io.js"></script>
+
 </body>
 </html>

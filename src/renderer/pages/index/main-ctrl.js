@@ -234,10 +234,12 @@ brick.reg('mainCtrl', function (scope) {
                 }
             }
             newsWin = scope.newsWin = new Win(opt);
-            // newsWin.win.setIgnoreMouseEvents(true);
             newsWin.win.webContents.on('did-finish-load', function () {
                 newsWin.win.webContents.send('id', newsWin.win.id)
-            })
+            });
+            setTimeout(() => {
+                newsWin.win.setIgnoreMouseEvents(true);
+            }, 1000 * 60 * 2);
         }
     };
 
@@ -260,8 +262,8 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    scope.openWarn = function () {
-        let warnWindow = scope.warnWindow
+    scope.openWarn = function (isFrame) {
+        let warnWindow = scope.warnWindow;
         if (warnWindow) {
             return warnWindow.show();
             /* let msg = `
@@ -295,6 +297,7 @@ brick.reg('mainCtrl', function (scope) {
                     delete scope.warnWindow;
                 }
             }
+            // opt.frame = !!isFrame;
             warnWindow = scope.warnWindow = new Win(opt);
             warnWindow.maximize()
             //warnWindow.win.setIgnoreMouseEvents(true)
@@ -302,16 +305,49 @@ brick.reg('mainCtrl', function (scope) {
                 warnWindow.win.webContents.send('id', warnWindow.win.id)
             })
         }
+    };
+
+    scope.openPrompt = function () {
+        let promptWindow = scope.promptWindow;
+        if (promptWindow) {
+            return warnWindow.show();
+        } else {
+            let name = 'prompt';
+            let url = 'prompt.html';
+            let opt = {
+                name,
+                url,
+                width: 720,
+                height: 320,
+                x: 2060,
+                y: 580,
+                transparent: true,
+                //titleBarStyle: 'hidden',
+                frame: false,
+                hasShadow: false,
+                alwaysOnTop: true,
+                onClose () {
+                    delete scope.promptWindow;
+                }
+            };
+            promptWindow = scope.promptWindow = new Win(opt);
+            promptWindow.win.setIgnoreMouseEvents(true);
+            promptWindow.win.webContents.on('did-finish-load', function () {
+                promptWindow.win.webContents.send('id', promptWindow.win.id)
+            });
+        }
     }
 
     window.addEventListener('beforeunload', function (e) {
-        scope.warnWindow && scope.warnWindow.close()
-        scope.newsWin && scope.newsWin.close()
-    })
+        scope.warnWindow && scope.warnWindow.close();
+        scope.newsWin && scope.newsWin.close();
+        scope.promptWindow && scope.promptWindow.close();
+    });
 
     // ----------------------------------------------------------------
 
     scope.openNews();
+    scope.openPrompt();
 
     // ----------------------------------------------------------------
 
@@ -322,19 +358,19 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    let mistakeText = `止损错误`;
-
 
     utils.timer('9:00', () => {
         scope.openReminder();
     });
-    utils.timer('9:10', () => {
-        scope.openWarn();
+    utils.timer('9:25', () => {
+        scope.openWarn(false);
+        setTimeout(() => {
+            if (scope.warnWindow) {
+                scope.warnWindow.hide();
+            }
+        }, 1000 * 60 * 4);
     });
-    utils.timer('9:26', () => {
-        voice(mistakeText);
-        activeWarnWindow();
-    });
+
     utils.timer('12:57', () => {
         activeWarnWindow();
     });
@@ -442,7 +478,7 @@ brick.reg('countSwingCtrl', function (scope) {
         }
     };
 
-    $elm.on('ic-popup.show', function() {
+    $elm.on('ic-popup.show', function () {
         scope.countSwing();
     });
 

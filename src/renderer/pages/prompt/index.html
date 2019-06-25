@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>prompt</title>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
+    <link rel="stylesheet" href="../../css/vendor/effeckt/animations.css">
+    <script src="/set_node_modules_path.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<div class="x-wrapper" ic-view-stage ic-ctrl="mainCtrl">
+
+    <div ic-view="test" ic-active>
+        <div class="box">
+            <h4 class="title is-5"></h4>
+            <ul>
+                <li>时不我待。</li>
+                <li>不要忘记那些恐惧和痛苦。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div ic-view="交易准备">
+        <div class="box">
+            <h4 class="title is-5">交易准备</h4>
+            <ul>
+                <li>遵守交易逻辑和交易原则。</li>
+                <li>不要重复错误。</li>
+                <li>不要忘记那些恐惧和痛苦。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div ic-view="竞价研判">
+        <div class="box">
+            <h4 class="title is-5">竞价研判</h4>
+            <ul>
+                <li>根据竞价判断市场强弱。偏弱要小心谨慎。同时小心周期高潮。</li>
+                <li>不要重复止损错误。止损越快越好。正确的头寸不需要止损。国脉科技。</li>
+                <li>
+                    <p>低开： 弱，意味着风险，止损优先。最多1个点止损。</p>
+                    <p>低开要把握首次反弹的止损机会。</p>
+                    <p>如果低开太多, 根据预期最低价和最高价进行衡量；仓位大先减仓位。</p>
+                </li>
+                <li>
+                    <p>高开： 冲不破压力线，平仓优先。</p>
+                    <p>小心高开回落, 除非超预期高开，比如大于7%。允许回落2%。</p>
+                    <p>尤其要小心高开回落，第一波下杀反弹不上去，止盈优先。</p>
+                </li>
+                <li>
+                    <p>必须设定止盈止损预案条件单。 遵守交易原则。</p>
+                    <p>根据阻力价，支撑价， 预期最高价，预期最低价，止盈价，止损价进行衡量设定。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div ic-view="早盘">
+        <div class="box">
+            <h4 class="title is-5">早盘</h4>
+            <ul>
+                <li>早盘市场合力出结果。9点45分钟前完成平仓。必须设定止盈止损预案条件单。 不要混混沌沌，陷入被动。</li>
+                <li>早盘市场合力出结果：龙头？ 强势？弱势？所以9:45前要平仓。超短唯快唯强。</li>
+                <li>一切以盘面为主，不要心存臆想，先入为主，陷入思维定式。</li>
+                <li>平仓要果断，不要囿于小利，斤斤计较。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div ic-view="daban">
+        <div class="box">
+            <h4 class="title is-5">打板</h4>
+            <ul>
+                <li>
+                    <p>控制本能！ 宁缺毋滥！只做风口龙头热门最强势! 绝不要做跟风杂毛趁势弱势!</p>
+                    <div>是龙头吗? 抢筹? 市场转折点?</div>
+                    <div>买点正确吗? 系统内吗?</div>
+                    <div>计划内吗?</div>
+                </li>
+                <li>
+                    <div>支撑你的交易逻辑是什么?</div>
+                    <div>你要捕捉的目标行情是什么?</div>
+                </li>
+                <li>
+                    <div>确定性?</div>
+                    <div>盈亏比?</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div ic-view="buy">
+        <div class="box">
+            <h4 class="title is-5">建仓</h4>
+            <ul ic-step>
+                <li>
+                    <div>买点正确吗? 系统内吗?</div>
+                    <div>计划内吗?</div>
+                </li>
+                <li>
+                    <div>支撑你的交易逻辑是什么?</div>
+                    <div>你要捕捉的目标行情是什么?</div>
+                </li>
+                <li>
+                    <div>确定性?</div>
+                    <div>盈亏比?</div>
+                </li>
+                <li>
+                    <div>把事情做对,不要再重复以前的操作手法或错误了!</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div ic-view="sell">
+        <div class="box">
+            <h4 class="title is-5">平仓</h4>
+            <ul ic-step>
+                <li>
+                    <div>错误头寸, 鸡肋头寸, 尽快平仓; 不要囿于小利, 仅仅计较.</div>
+                    <div>不要丧失正确的头寸!</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

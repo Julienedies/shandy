@@ -38,6 +38,10 @@ div[ic-ctrl="rtsCtrl"] button {
     list-style: none;
     margin: 0;
     padding: 0;
+    li{
+      display: flex;
+      align-items: center;
+    }
   }
 
   ul li span {

@@ -128,6 +128,13 @@ body {
 }
 
 // ---------------------------------------------- brick
+#b-plan {
+  padding-right: 60px;
+
+  p {
+    padding: 0 10px;
+  }
+}
 
 [ic-view] {
   background: rgba(0, 0, 0, 0.3) !important;
@@ -136,7 +143,7 @@ body {
   justify-content: center;
 
   .box {
-    width: 48%;
+    //width: 48%;
     min-width: 40%;
     border: solid 1px yellowgreen;
     background: rgba(0, 0, 0, 0.5);
