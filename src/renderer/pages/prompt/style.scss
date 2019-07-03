@@ -10,13 +10,13 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  opacity: 0.4;
+  opacity: 1;
   overflow: hidden;
-  color: #fff;
-  background: repeat 50% 50% rgba(0, 0, 0, 0.3);
+  color: greenyellow;
+  background: repeat 50% 50% rgba(0, 0, 0, 0);
   background-size: contain;
   border: solid 1px yellowgreen;
-  font: 14px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -39,22 +39,21 @@ body {
 
 @keyframes warn {
   1% {
-    opacity: 0.25;
+    opacity: 0;
   }
-  20% {
+/*  20% {
     opacity: 0.5;
   }
   40% {
     opacity: 0.75;
   }
   60% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.75;
+  }*/
+  50% {
+    opacity: 0.95;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
 
@@ -69,8 +68,8 @@ body {
 
 [ic-view] {
   //opacity: 0.2;
-  //animation: warn 4s infinite ease-in-out;
-  background: rgba(0, 0, 0, 0) !important;
+
+  background: rgba(0, 0, 0, 0.95) !important;
   display: flex;
   align-items: center;
   justify-content: center;

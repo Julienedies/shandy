@@ -317,26 +317,43 @@ brick.reg('mainCtrl', function (scope) {
             let opt = {
                 name,
                 url,
-                width: 720,
+                width: 530,
                 height: 320,
-                x: 2060,
-                y: 580,
-                transparent: true,
+                x: 2150,
+                y: 220,
+                ...getBounds(name),
+                //transparent: true,
                 //titleBarStyle: 'hidden',
-                frame: false,
+                //frame: false,
                 hasShadow: false,
                 alwaysOnTop: true,
                 onClose () {
                     delete scope.promptWindow;
+                    fn2();
                 }
             };
-            promptWindow = scope.promptWindow = new Win(opt);
-            promptWindow.win.setIgnoreMouseEvents(true);
-            promptWindow.win.webContents.on('did-finish-load', function () {
-                promptWindow.win.webContents.send('id', promptWindow.win.id)
-            });
+
+            let fn = (flag) => {
+                promptWindow = scope.promptWindow = new Win(opt);
+                flag && promptWindow.win.setIgnoreMouseEvents(true);
+                promptWindow.win.webContents.on('did-finish-load', function () {
+                    promptWindow.win.webContents.send('id', promptWindow.win.id, flag)
+                });
+            };
+
+            let fn2 = () => {
+                    opt.frame = false;
+                    opt.transparent = true;
+                    opt.onClose = function() {
+                        delete scope.promptWindow;
+                    }
+                    fn(true);
+            };
+
+            fn();
+
         }
-    }
+    };
 
     window.addEventListener('beforeunload', function (e) {
         scope.warnWindow && scope.warnWindow.close();
@@ -353,8 +370,8 @@ brick.reg('mainCtrl', function (scope) {
 
     let activeWarnWindow = () => {
         if (scope.warnWindow) {
-            scope.warnWindow.show()
-            scope.warnWindow.win.webContents.send('view', 'reminder')
+            scope.warnWindow.show();
+            scope.warnWindow.win.webContents.send('view', 'reminder');
         }
     };
 
@@ -362,6 +379,7 @@ brick.reg('mainCtrl', function (scope) {
     utils.timer('9:00', () => {
         scope.openReminder();
     });
+
     utils.timer('9:25', () => {
         scope.openWarn(false);
         setTimeout(() => {
@@ -418,8 +436,8 @@ brick.reg('memoCtrl', function () {
 
 brick.reg('setStockCtrl', function () {
     this.addStock = function (fields) {
-        console.log(fields)
-        utils.addStock(fields)
+        console.log(fields);
+        utils.addStock(fields);
     }
 });
 

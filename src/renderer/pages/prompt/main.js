@@ -26,17 +26,17 @@ const socket = io();
 const $body = $('body');
 
 const hide = () => {
-    $body.css('opacity', 0);
+    $body.css('opacity', 0).hide();
 };
 const show = () => {
-    $body.css('opacity', 0.4);
+    $body.css('opacity', 1).show();
 }
 
-ipc.on('id', function (event, windowID) {
+ipc.on('id', function (event, windowID, isFrameMode) {
     win = BrowserWindow.fromId(windowID);
     setTimeout(() => {
-        hide();
-    }, 1000 * 90);
+        isFrameMode && hide();
+    }, 1000 * 4);
 });
 
 ipc.on('view', (e, view) => {
@@ -44,7 +44,7 @@ ipc.on('view', (e, view) => {
 });
 
 const arr = [
-    ['23:17', '交易准备'],
+    ['9:05', '交易准备'],
     ['9:25', '竞价研判'],
     ['9:40', '早盘'],
 ];
@@ -85,17 +85,19 @@ brick.reg('mainCtrl', function (scope) {
         //win.show();
         show();
         brick.view.to(info);
+        setTimeout(() => {
+            hide();
+        }, 1000 * 4);
     });
 
     $('[ic-view]').on('ic-view.active', function (e) {
-        /* let str = $(this).find('ul').text();
-         voice(str, () => {
-             //win.hide();
-             hide();
-         });*/
+        let str = $(this).find('li:first-child').text();
+        voice(str, () => {
+        });
         setTimeout(() => {
             hide();
-        }, 1000 * 60);
+        }, 1000 * 14);
+
     });
 
 });
