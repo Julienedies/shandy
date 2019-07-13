@@ -57,7 +57,7 @@ brick.reg('uploadTradingCtrl', function (scope) {
     function clean (arr) {
         return _.uniqBy(arr, (item) => {
             return item[14]
-        })
+        });
     }
 
 

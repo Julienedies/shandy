@@ -342,6 +342,10 @@ brick.reg('mainCtrl', function (scope) {
             };
 
             let fn2 = () => {
+                    opt = {
+                        ...opt,
+                        ...getBounds(name),
+                    };
                     opt.frame = false;
                     opt.transparent = true;
                     opt.onClose = function() {
@@ -380,13 +384,19 @@ brick.reg('mainCtrl', function (scope) {
         scope.openReminder();
     });
 
-    utils.timer('9:25', () => {
+    utils.timer('9:19', () => {
+        voice('竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！');
+    });
+
+    utils.timer('9:26', () => {
+        voice('低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！');
+        voice('开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！');
         scope.openWarn(false);
         setTimeout(() => {
             if (scope.warnWindow) {
                 scope.warnWindow.hide();
             }
-        }, 1000 * 60 * 4);
+        }, 1000 * 60 * 3);
     });
 
     utils.timer('12:57', () => {
@@ -499,5 +509,11 @@ brick.reg('countSwingCtrl', function (scope) {
     $elm.on('ic-popup.show', function () {
         scope.countSwing();
     });
+
+});
+
+brick.reg('warnAudioCtrl', function (scope) {
+
+    //let audio = document.getElementById('warnAudio');
 
 });

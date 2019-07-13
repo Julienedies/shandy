@@ -41,7 +41,7 @@ export default {
             console.log(result);
             // result = '通达信金融终端V7.38 - [组合图-天首发展]'; 从dock通达信图标右键菜单获取的字符串
             // result = result.replace('通达信金融终端V7.38 - [组合图-', '').replace(']','');
-            let arr = result.match(/\[组合图-(.+)[\]]$/) || [];
+            let arr = result.match(/\[分析图表-(.+)[\]]$/) || [];
             let name = arr[1];
             result = stockQuery(name);
             callback && callback(result);

@@ -221,6 +221,19 @@ const config = {
                 ]
             },
             {
+                test: /\.(m4a|mp3)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: './media',
+                            publicPath: publicPath + 'media/'
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.(svg|woff2?|eot|ttf)$/,
                 use: [
                     {

@@ -49,19 +49,8 @@ brick.bootstrap();
 // 交易语音警告
 ipcRenderer.on('warn', (event, info) => {
     //voice(warnText.voice[info] || '')
-    /*    new Win({
-            url: 'warn.html',
-            width: 480,
-            height: 320,
-            x: 1940,
-            y: 640,
-            show: false,
-            transparent: true,
-            frame: false,
-            hasShadow: false,
-            alwaysOnTop: true,
-        })*/
-})
+
+});
 
 // 通达信中查看该股票
 ipcRenderer.on('view_in_tdx', function (event, msg) {

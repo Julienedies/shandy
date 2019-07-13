@@ -51,4 +51,33 @@ brick.reg('toolBarCtrl', function (scope) {
         getToken()
     }
 
+    this.playWarnAudio = function () {
+        let audio = new Audio(require('./warn.m4a'));
+        let $playWarnAudioBtn = scope.$elm.find('#playWarnAudioBtn i');
+        let cla = 'icon-sound';
+
+        clearInterval(scope.audioTimer);
+        audio.volume = 1;
+
+        if(scope.isPlayWarnAudio){
+            audio.pause();
+            audio.currentTime = 0;
+            $playWarnAudioBtn.removeClass(cla);
+        }else{
+            audio.play();
+            $playWarnAudioBtn.addClass(cla);
+            scope.audioTimer = setInterval( () => {
+                audio.play();
+            }, 1000 * 60 * 7);
+        }
+
+        scope.isPlayWarnAudio = !scope.isPlayWarnAudio;
+
+    };
+
+    utils.timer('9:00', () => {
+        // 自动开启语音提醒
+        scope.playWarnAudio();
+    });
+
 })

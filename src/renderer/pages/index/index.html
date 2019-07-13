@@ -37,6 +37,9 @@
             </div>
 
             <div class="btn-group">
+                <a class="btn-btn-default hint--bottom" aria-label="语音提醒" ic-click="playWarnAudio" id="playWarnAudioBtn">
+                    <i class="icon icon-mute"></i><!-- icon-sound -->
+                </a>
                 <a class="btn-btn-default hint--bottom" aria-label="更新token" ic-click="updateToken">
                     <i class="icon icon-shuffle"></i>
                 </a>
@@ -216,7 +219,13 @@
         </div>
     </div>
 
-    <footer class="toolbar toolbar-footer none" ic-ctrl="toolBarCtrl">
+    <footer class="toolbar toolbar-footer none">
+        <div class="none" ic-ctrl="warnAudioCtrl">
+            <audio id="warnAudio">
+                <source src="warn.mp3" type="audio/mp3">
+                <source src="warn.m4a" type="audio/ogg">
+            </audio>
+        </div>
     </footer>
 </div>
 </body>
