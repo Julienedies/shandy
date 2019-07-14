@@ -342,16 +342,16 @@ brick.reg('mainCtrl', function (scope) {
             };
 
             let fn2 = () => {
-                    opt = {
-                        ...opt,
-                        ...getBounds(name),
-                    };
-                    opt.frame = false;
-                    opt.transparent = true;
-                    opt.onClose = function() {
-                        delete scope.promptWindow;
-                    }
-                    fn(true);
+                opt = {
+                    ...opt,
+                    ...getBounds(name),
+                };
+                opt.frame = false;
+                opt.transparent = true;
+                opt.onClose = function () {
+                    delete scope.promptWindow;
+                }
+                fn(true);
             };
 
             fn();
@@ -404,8 +404,11 @@ brick.reg('mainCtrl', function (scope) {
     });
 
     utils.timer('15:00', () => {
-        scope.newsWin && scope.newsWin.close()
+        scope.newsWin && scope.newsWin.close();
     });
+
+
+
 
 });
 

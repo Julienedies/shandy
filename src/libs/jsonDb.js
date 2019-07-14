@@ -6,6 +6,11 @@ import path from 'path'
 import config from './config'
 import jo from './jsono'
 
+/**
+ *
+ * @param name {String}  json文件名称
+ * @returns {Function}
+ */
 export default function (name) {
 
     switch (name) {

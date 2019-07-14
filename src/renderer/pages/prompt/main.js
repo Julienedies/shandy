@@ -64,7 +64,7 @@ utils.timer('9:40', () => {
         show();
         brick.view.to(item[1]);
     });
-})
+});
 
 
 brick.reg('mainCtrl', function (scope) {

@@ -11,14 +11,7 @@ function getDb () {
 
 function getData () {
     let dob = getDb();
-    let arr = dob.get();
-
-    arr.sort((a, b) => {
-        a = a.level || 0;
-        b = b.level || 0;
-        return b - a;
-    });
-    return arr;
+    return dob.get();
 }
 
 
@@ -46,8 +39,8 @@ export default {
     focus (req, res) {
         let dob = getDb();
         let id = req.params.id;
-        let record = dob.get(id);
-        record.level = (record.level || 1) + 1;
+        let record = dob.get(id)[0];
+        record.level = (record.level || 1) + 20;
         dob.set(record);
         res.json(getData());
     }

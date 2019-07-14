@@ -46,34 +46,49 @@
                     </span>
     </div>
 
-    <div class="box" ic-ctrl="setVoiceWarnTextCtrl">
+    <!-- 交易警告系统设置 -->
+    <div class="box" ic-ctrl="setWarnSystemCtrl">
         <h3 class="title is-5">设置语音警告</h3>
-        <div ic-form>
-            <div class="field">
-                <div class="control">
-                    <input class="input" type="text" placeholder="name" ic-form-field="name">
+        <div ic-tpl="setWarnItem" ic-tpl-init="{}">
+            <div ic-form>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="name,可选"  value="{{ model.name }}" ic-form-field="name">
+                        <input type="hidden" value="{{ model.id }}" ic-form-field="id">
+                    </div>
                 </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <input class="input" type="text" placeholder="警告文本" ic-form-field="text">
+                <div class="field">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="动作触发:daban | 定时触发: 9:00 | 重复触发:10(单位分钟)" value="{{ model.trigger }}" ic-form-field="trigger">
+                    </div>
                 </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <button class="button is-primary" ic-form-submit ic-submit-action="save()">
-                        保存
-                    </button>
+                <div class="field">
+                    <div class="control">
+                        <textarea rows="2" class="textarea" placeholder="警告内容" ic-form-field="content">{{ model.content }}</textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary" ic-form-submit ic-submit-action="save()">
+                            保存
+                        </button>
+                        <button class="button" ic-click="reset">
+                            重置
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <table class="table is-striped" ic-tpl="voiceWarnTextList">
+
+        <table class="table is-striped" style="margin-top:15px;" ic-tpl="warnList">
             <tr ic-for="i,v in model">
-                <td>{{ i }}:</td>
-                <td>{{ v }}</td>
+                <td>{{ v.name }}</td>
+                <td>{{ v.trigger }}</td>
+                <td class="pre">{{ v.content }}</td>
                 <td>
-                    <button class="button is-primary" ic-click="edit:{{ i }}">修改</button>
-                    <button class="button is-primary" ic-click="rm:{{ i }}">删除</button>
+                    <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
+                    <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                    <button class="button is-primary is-small" ic-click="up:{{ v.id }}">上移</button>
                 </td>
             </tr>
         </table>

@@ -61,11 +61,12 @@ function ready () {
     electron.powerMonitor.on('resume', () => {
         let d = new Date()
         let h = d.getHours()
-        if (h > 6 && h < 10) { // 只在早上重启
+        // 只在早上重启
+        if (h > 6 && h < 9) {
             app.relaunch()
             app.exit()
         }
-    })
+    });
 
     // 鼠标手势  => 快捷键 =>  apple script获取通达信个股代码  => 在浏览器打开同花顺个股资料页面
     globalShortcut.register('CommandOrControl+Alt+x', function () {
@@ -102,8 +103,8 @@ function ready () {
 
 
     // server会通过http 或socket 接收client端发来的消息, 广播一些事件, 通过server.on订阅
-    server.on('voice_warn', function (msg) {
-        mainWindow.webContents.send('voice_warn', msg)
+    server.on('warn', function (msg) {
+        mainWindow.webContents.send('warn', msg)
     })
 
     // 浏览器页面 http://192.168.3.20:3000/  => socket.io => 取消个股打板封单监控

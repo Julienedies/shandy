@@ -4,13 +4,54 @@
     <meta charset="UTF-8">
     <title>logic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css"/>
     <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body id="logic_list" ic-ctrl="main_ctrl">
 
-    <div ic-ctrl="set_logic_ctrl" ic-popup="set_logic">
+<section class="column is-8 is-offset-2" ic-ctrl="logic_ctrl">
+
+    <div class="buttons">
+        <button class="button"
+                id="get_logic"
+                ic-ajax="logic"
+                ic-ajax-auto
+                ic-submit-method="get"
+                ic-submit-action="/stock/logic"
+                ic-submit-on-done="get_logic_on_done">逻辑列表
+        </button>
+
+        <button class="button" ic-click="logic.add">新逻辑</button>
+        <button class="button" ic-click="logic.sortByLevel">level排序</button>
+        <button class="button" ic-click="logic.sortByTime">时间排序</button>
+        <button class="button" ic-click="logic.reverse">排序反转</button>
+    </div>
+
+    <ul ic-tpl="logic">
+        <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
+            <div class="pre">{{v.text}}</div>
+            <div class="tar">
+                <!--<span class="tag">{{v.type}}</span>-->
+                <a class="no" ic-click="logic.edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
+                <a class="no"
+                   ic-ajax
+                   ic-submit-method="get"
+                   ic-submit-action="/stock/logic/focus/{{v.id}}"
+                   ic-submit-on-done="get_logic_on_done"> <span class="icon is-medium" titie="关注"><i class="far fa-heart"></i></span> </a>
+            </div>
+            <button class="delete is-medium"
+                    ic-ajax
+                    ic-submit-method="delete"
+                    ic-submit-action="/stock/logic/{{v.id}}"
+                    ic-submit-before="ajax_before_confirm:确认删除?"
+                    ic-submit-on-done="logic.remove"></button>
+        </li>
+    </ul>
+
+</section>
+
+<div ic-ctrl="set_logic_ctrl" ic-popup="set_logic">
 
     <div class="column is-10" ic-tpl ic-tpl-init="{}">
 
@@ -61,7 +102,8 @@
                             ic-form-submit
                             ic-submit-action="/stock/logic"
                             ic-submit-before
-                            ic-submit-on-done="done">保存</button>
+                            ic-submit-on-done="done">保存
+                    </button>
                     <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
                     <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
                 </div>
@@ -72,43 +114,6 @@
     </div>
 
 </div>
-
-    <section class="column is-8 is-offset-2" ic-ctrl="logics_ctrl">
-
-    <div class="buttons">
-        <button class="button"
-                id="get_logic"
-                ic-ajax="logic"
-                ic-ajax-auto
-                ic-submit-method="get"
-                ic-submit-action="/stock/logic"
-                ic-submit-on-done="get_logic_on_done">逻辑列表</button>
-
-        <button class="button" ic-click="logic.add">新逻辑</button>
-    </div>
-
-    <ul ic-tpl="logics">
-        <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
-            <div class="pre">{{v.text}}</div>
-            <div class="tar">
-                <!--<span class="tag">{{v.type}}</span>-->
-                <a class="no" ic-click="logic.edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
-                <a class="no"
-                   ic-ajax
-                   ic-submit-method="get"
-                   ic-submit-action="/stock/logic/focus/{{v.id}}"
-                   ic-submit-on-done="get_logic_on_done"> <span class="icon is-medium" titie="关注"><i class="far fa-heart"></i></span> </a>
-            </div>
-            <button class="delete is-medium"
-                    ic-ajax
-                    ic-submit-method="delete"
-                    ic-submit-action="/stock/logic/{{v.id}}"
-                    ic-submit-before="ajax_before_confirm:确认删除?"
-                    ic-submit-on-done="logic.remove"></button>
-        </li>
-    </ul>
-
-</section>
 
 </body>
 </html>

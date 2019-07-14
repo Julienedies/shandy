@@ -1,5 +1,5 @@
 /*!
- * 把json文件包装成对象进行增删改查 json object
+ * 把json文件包装成对象进行增删改查及序列化 json object
  * Created by j on 18/11/9.
  */
 
@@ -91,7 +91,7 @@ class Jo {
             let o = namespace[k]
             if (o && keys.length) return fx(namespace[k], keys)
             return o
-        })(this.json, keys)
+        })(this.json, keys);
     }
 
     match (key) {

@@ -46,7 +46,7 @@ class Reader {
                 else if (node.nodeType === 3) {
                     let $parent = $(node.parentNode)
                     let t = node.nodeValue.trim()
-                    if (t.length > 5 && $parent.is(':visible')) {
+                    if (t.length > 10 && $parent.is(':visible')) {
                         //console.log('#', node.parentNode, node.nodeValue)
                         that.list.push(node.parentNode)
                         let index = that.list.length - 1

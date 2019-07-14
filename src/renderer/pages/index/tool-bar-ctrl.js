@@ -52,7 +52,7 @@ brick.reg('toolBarCtrl', function (scope) {
     }
 
     this.playWarnAudio = function () {
-        let audio = new Audio(require('./warn.m4a'));
+        let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
         let $playWarnAudioBtn = scope.$elm.find('#playWarnAudioBtn i');
         let cla = 'icon-sound';
 

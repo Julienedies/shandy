@@ -12,12 +12,17 @@ import tdx from '../../../libs/tdx'
 import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
 import voice from '../../../libs/voice'
-import warnText from '../../js/warn-text'
+import userJodb from '../../../libs/user-jodb'
 
 import debugMenu from 'debug-menu'
 
 const {remote, shell, ipcRenderer} = electron
 const {BrowserWindow} = remote
+
+const warnJodb = userJodb('warn', []);
+const warnJsonArray = warnJodb.get();
+const warnContentMap = {};
+
 
 window.voice = voice
 
@@ -41,8 +46,40 @@ import './main-ctrl.js'
 import './tool-bar-ctrl.js'
 import view_stock from './view-stock-ctrl'
 import rtsc from './real-time-stock-ctrl'
+import utils from '../../../libs/utils'
 
 brick.bootstrap();
+
+// ---------------------------------------------------- 语音警告系统 start
+
+
+warnJsonArray.forEach((item, index) => {
+    let content = item.content;
+    let trigger = item.trigger;
+    // trigger => 10 : 间隔执行
+    if (/^\d+$/.test(trigger)) {
+        setInterval(() => {
+            voice(content);
+        }, 1000 * 60 * trigger);
+    }
+    // trigger => 9:00: 定时执行
+    else if (/^\d+[:]\d+$/.test(trigger)) {
+        utils.timer(trigger, () => {
+            voice(content);
+        });
+    }
+    // trigger => 'daban': 打板动作触发
+    else{
+        warnContentMap[trigger] = content;
+    }
+});
+
+ipcRenderer.on('warn', (event, info) => {
+    let text = warnContentMap[info];
+    text && voice(text);
+});
+
+// ---------------------------------------------------- 语音警告系统 end
 
 
 // --------------------------------接收主进程发来的消息 ------------------------

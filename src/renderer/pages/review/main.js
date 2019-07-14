@@ -26,20 +26,22 @@ import jo from '../../../libs/jsono'
 import csd from '../../../libs/csd'
 import utils from '../../../libs/utils'
 
-
-const tradingDb = userDb('trading', [])
-let tradingJson = JSON.parse(JSON.stringify(tradingDb.json))
-sort(tradingJson)
-
 function sort (arr) {
+    // 按交易时间进行排序
     arr.sort((a, b) => {
         let t1 = `${ a[0].replace(/^(\d{4})(\d{2})(\d{2})$/img, '$1/$2/$3') } ${ a[1] }`
         let t2 = `${ b[0].replace(/^(\d{4})(\d{2})(\d{2})$/img, '$1/$2/$3') } ${ b[1] }`
         return (new Date(t2)) - (new Date(t1))
-    })
+    });
 }
 
-brick.reg('mainCtrl', function (scope) {})
+const tradingDb = userDb('trading', []);
+let tradingJson = JSON.parse(JSON.stringify(tradingDb.json))
+sort(tradingJson)
+
+
+
+brick.reg('mainCtrl', function (scope) {});
 
 brick.reg('uploadTradingCtrl', function (scope) {
 
@@ -77,7 +79,7 @@ brick.reg('uploadTradingCtrl', function (scope) {
             cb(json)
         }
     }
-})
+});
 
 brick.reg('reviewCtrl', function (scope) {
     let $elm = scope.$elm

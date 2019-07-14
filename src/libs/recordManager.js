@@ -12,6 +12,7 @@ const EventEmitter = require('events').EventEmitter;
  * let conf = { broadcast:true, //是否广播事件
  *              eventPrefix:'holdModel', //广播事件前缀
  *              key:'hold.id',  //记录id
+ *              joinType:''， // 添加记录方式，push or unshift
  *              beforeSave:function(record,index){}
  *             };
  * let list = new recordManager(conf);
@@ -27,6 +28,7 @@ let proto = {
      * 默认每条记录的主键为id；
      */
     key: 'id',
+    joinType:'unshift',
     /**
      * @param arr {Array}  要管理的数据对象
      * @return {this}
@@ -120,7 +122,8 @@ let proto = {
         this.beforeSave(record);
         let pool = this._pool;
         let id = this._queryKeyValue(record);
-        pool.unshift(record);
+        // push or unshift
+        pool[this.joinType](record);
         this.emit('change');
         return this;
     },
@@ -199,12 +202,19 @@ let proto = {
         if (typeof id === 'undefined' || id === '') {
             record.id = Math.random().toFixed(7).replace('0.', '');
         }
-        // 如果没有level属性, 添加level属性
+        // 如果有level属性, 但level为空, 设默认为1;
         let level = record.level;
-        if(typeof level === 'undefined' || level === ''){
-            level = 1 + '.' + (+ new Date());
-            record.level = level * 1;
+        if(level === ''){
+            // level = 1 + '.' + (+ new Date());
+            record.level = 1;
         }
+
+        // 添加时间戳
+        let timestamp = record.timestamp;
+        if(typeof timestamp === 'undefined' || timestamp === ''){
+            record.timestamp = + new Date();
+        }
+
         return record;
     },
     create_id: function(){

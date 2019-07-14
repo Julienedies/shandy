@@ -72,12 +72,23 @@ brick.reg('mainCtrl', function (scope) {
 
     this.fetchStart = async function (fields) {
         console.log(fields)
+
+
         let $th = $(this).icSetLoading()
         setting.merge('csd', fields).save()
 
         let stockArr
         if (/\.txt$/.test(fields.fetchByStocks)) {
             stockArr = await jhandy.csv(fields.fetchByStocks, null, [0, 1], true)
+        }
+
+        // 如果提供的是code，先获取code的索引
+        if(/^\d{6}$/.test(fields.fetchFromIndex)){
+            stockArr.forEach( (v, i) => {
+                if(v[0]*1 === fields.fetchFromIndex*1){
+                    fields.fetchFromIndex = i;
+                }
+            });
         }
 
         jhandy.fetch(fields.csdPath, stockArr || fields.fetchByStocks, fields.fetchFromIndex, fields.fetchSources, (stat) => {
