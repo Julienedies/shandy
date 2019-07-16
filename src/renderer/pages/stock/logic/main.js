@@ -3,6 +3,7 @@
  */
 
 import '../../../css/common/common.scss'
+import './index.html'
 import './style.scss'
 
 import $ from 'jquery'
@@ -19,6 +20,8 @@ brick.reg('logic_ctrl', function () {
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
     let logicArr = [];
+    let isReverse = false;
+    let isSortByTime = false;
 
     let render = () => {
         scope.render('logic', logicArr, () => {
@@ -28,7 +31,13 @@ brick.reg('logic_ctrl', function () {
 
     this.get_logic_on_done = function (data) {
         list.init(data);
-        scope.logic.sortByLevel();
+        isSortByTime ? scope.logic.sortByTime() : scope.logic.sortByLevel();
+    };
+
+    scope.onSortChange = function (arg) {
+        console.log(arg)
+        isSortByTime = arg.value === 'time';
+        isSortByTime ? scope.logic.sortByTime() : scope.logic.sortByLevel();
     };
 
     this.logic = {
@@ -38,15 +47,18 @@ brick.reg('logic_ctrl', function () {
         edit: function (e, id) {
             scope.emit('logic.edit', list.get(id));
         },
-        remove: function () {
-            $(this).closest('li').remove();
+        remove: function (data) {
+            // $(this).closest('li').remove();
+            scope.get_logic_on_done(data);
         },
         reverse: function () {
+            isReverse = !isReverse;
             logicArr.reverse();
             render();
         },
         sortByTime: function () {
             logicArr = list.get();
+            isReverse && logicArr.reverse();
             render();
         },
         sortByLevel: function () {
@@ -56,6 +68,7 @@ brick.reg('logic_ctrl', function () {
                 b = b.level || 0;
                 return b - a;
             });
+            isReverse && logicArr.reverse();
             render();
         }
     };

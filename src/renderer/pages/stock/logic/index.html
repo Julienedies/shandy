@@ -12,21 +12,35 @@
 
 <section class="column is-8 is-offset-2" ic-ctrl="logic_ctrl">
 
-    <div class="buttons">
-        <button class="button"
-                id="get_logic"
-                ic-ajax="logic"
-                ic-ajax-auto
-                ic-submit-method="get"
-                ic-submit-action="/stock/logic"
-                ic-submit-on-done="get_logic_on_done">逻辑列表
-        </button>
+    <div class="level">
 
-        <button class="button" ic-click="logic.add">新逻辑</button>
+        <div class="level-left">
+            <button class="button"
+                    id="get_logic"
+                    ic-ajax="logic"
+                    ic-ajax-auto
+                    ic-submit-method="get"
+                    ic-submit-action="/stock/logic"
+                    ic-submit-on-done="get_logic_on_done">逻辑列表
+            </button>
+            <button class="button" ic-click="logic.add">新逻辑</button>
+            <button class="button" ic-val="reverse" ic-click="logic.reverse">排序反转</button>
+        </div>
+
+        <div class="level-right">
+            <div class="buttons has-addons" ic-select="a" ic-select-cla="is-primary" ic-select-on-change="onSortChange">
+                <button class="button" ic-val="level" selected>level排序</button>
+                <button class="button" ic-val="time">时间排序</button>
+            </div>
+        </div>
+
+    </div>
+
+<!--    <div class="buttons">
         <button class="button" ic-click="logic.sortByLevel">level排序</button>
         <button class="button" ic-click="logic.sortByTime">时间排序</button>
         <button class="button" ic-click="logic.reverse">排序反转</button>
-    </div>
+    </div>-->
 
     <ul ic-tpl="logic">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
@@ -70,7 +84,7 @@
             <div>
                 <h6>类型</h6>
                 <div class="control">
-                    <input type="text" class="input is-medium" ic-form-field="type" ic-field-rule="required" value="{{model.type}}"/>
+                    <input type="text" class="input is-medium" ic-form-field="type" value="{{model.type}}"/>
                 </div>
             </div>
 
