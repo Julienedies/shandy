@@ -2,8 +2,8 @@
  * Created by j on 18/7/28.
  */
 
-import '../../../css/common/common.scss'
 import './index.html'
+import '../../../css/common/common.scss'
 import './style.scss'
 
 import $ from 'jquery'
@@ -14,7 +14,7 @@ import Reader from '../../../../libs/reader'
 
 import '../../../js/common-stock.js'
 
-brick.reg('logic_ctrl', function () {
+brick.reg('logicCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;
@@ -80,7 +80,7 @@ brick.reg('logic_ctrl', function () {
 });
 
 
-brick.reg('set_logic_ctrl', function () {
+brick.reg('setLogicCtrl', function () {
 
     let scope = this;
     let $elm = this.$elm;
@@ -100,10 +100,8 @@ brick.reg('set_logic_ctrl', function () {
         $elm.icPopup(true);
     });
 
-
     scope.on_select_change = function (msg) {
         $elm.find('[ic-form-field="type"]').val(msg.value);
     };
-
 
 });

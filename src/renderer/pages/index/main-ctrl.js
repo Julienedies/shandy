@@ -2,6 +2,9 @@
  * Created by j on 18/8/21.
  */
 
+import electron from 'electron'
+
+
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 
@@ -16,6 +19,9 @@ import Win from '../../../libs/window'
 import voice from '../../../libs/voice'
 import ac from '../../../libs/ac'
 import rts from '../../../libs/real-time-stock'
+import userJodb from '../../../libs/user-jodb'
+
+const {ipcRenderer} = electron
 
 
 brick.services.reg('viewsModel', () => {
@@ -310,7 +316,7 @@ brick.reg('mainCtrl', function (scope) {
     scope.openPrompt = function () {
         let promptWindow = scope.promptWindow;
         if (promptWindow) {
-            return warnWindow.show();
+            return promptWindow.close();
         } else {
             let name = 'prompt';
             let url = 'prompt.html';
@@ -367,8 +373,14 @@ brick.reg('mainCtrl', function (scope) {
 
     // ----------------------------------------------------------------
 
-    scope.openNews();
-    scope.openPrompt();
+    let d = new Date()
+    let h = d.getHours()
+    let m = d.getMinutes()
+    if (h < 15) {
+        scope.openNews();
+        scope.openPrompt();
+    }
+
 
     // ----------------------------------------------------------------
 
@@ -380,17 +392,17 @@ brick.reg('mainCtrl', function (scope) {
     };
 
 
-    utils.timer('9:00', () => {
+    utils.timer('9:07', () => {
         scope.openReminder();
     });
 
     utils.timer('9:19', () => {
-        voice('竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！');
+        //voice('竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！');
     });
 
     utils.timer('9:26', () => {
-        voice('低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！');
-        voice('开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！');
+        //voice('低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！');
+        //voice('开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！');
         scope.openWarn(false);
         setTimeout(() => {
             if (scope.warnWindow) {
@@ -408,10 +420,7 @@ brick.reg('mainCtrl', function (scope) {
     });
 
 
-
-
 });
-
 
 brick.reg('memoCtrl', function () {
 
@@ -445,7 +454,6 @@ brick.reg('memoCtrl', function () {
     };
 
 });
-
 
 brick.reg('setStockCtrl', function () {
     this.addStock = function (fields) {
@@ -515,8 +523,104 @@ brick.reg('countSwingCtrl', function (scope) {
 
 });
 
-brick.reg('warnAudioCtrl', function (scope) {
+brick.reg('setVoiceWarnCtrl', function (scope) {
 
-    //let audio = document.getElementById('warnAudio');
+    const warnJodb = userJodb('warn', [], {joinType: 'push'});
+    // 存储定时器句柄，用以取消
+    const warnHandleMap = {};
+
+    ipcRenderer.on('warn', (event, info) => {
+        console.log(11, info, warnHandleMap[info])
+        voice(warnHandleMap[info] || '');
+    });
+
+    let render = () => {
+        let model = warnJodb.get();
+        scope.render('warnList', {model});
+    };
+
+    warnJodb.on('change', render);
+
+    scope.save = function (fields) {
+        warnJodb.set(fields);
+        scope.reset();
+    };
+
+    scope.reset = (model = {}) => {
+        scope.render('setWarnItem', {model});
+    };
+
+    scope.edit = function (e, id) {
+        let model = warnJodb.get(id)[0];
+        scope.render('setWarnItem', {model});
+    };
+
+    scope.rm = function (e, id) {
+        warnJodb.remove(id);
+    };
+
+    scope.up = function (e, id) {
+        warnJodb.insert(id);
+    };
+
+    scope.disable = function (e, id, isDisable) {
+        let item = warnJodb.get(id)[0];
+        item.disable = !item.disable;
+        warnJodb.set(item);
+        $(this).text(isDisable ? '启用' : '禁用');
+    }
+
+    render();
+
+    function setVoiceWarnForItem (item) {
+        let id = item.id;
+        let content = item.content;
+        let trigger = item.trigger;
+        let disable = item.disable;
+        let old = warnHandleMap[id];
+        // trigger => 10 : 间隔执行
+        if (/^\d+$/.test(trigger)) {
+            old && clearInterval(old.handle);
+            if (disable) {
+                return;
+            }
+            let handle = setInterval(() => {
+                voice(content);
+            }, 1000 * 60 * trigger);
+            warnHandleMap[id] = {handle};
+        }
+        // trigger => 9:00: 定时执行
+        else if (/^\d+[:]\d+$/.test(trigger)) {
+            old && old.handle.cancel();
+            if (disable) {
+                return;
+            }
+            let handle = utils.timer(trigger, () => {
+                voice(content);
+            });
+            warnHandleMap[id] = {handle};
+        }
+        // trigger => 'daban': 打板动作触发
+        else {
+            old && delete warnHandleMap[old.handle];
+            if (disable) {
+                return;
+            }
+            warnHandleMap[trigger] = content;
+            warnHandleMap[id] = {handle: trigger};
+        }
+    }
+
+    function updateVoiceWarn () {
+        warnJodb.get().forEach(setVoiceWarnForItem);
+    }
+
+    warnJodb.on('change', function () {
+        updateVoiceWarn();
+        console.log('##### updateVoiceWarn on change', warnHandleMap);
+    });
+
+    updateVoiceWarn();
+
 
 });

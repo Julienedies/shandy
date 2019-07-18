@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title># shandy</title>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
     <link rel="stylesheet" href="../../css/vendor/photon/css/photon.css"/>
     <link rel="stylesheet" href="../../css/vendor/hint.css">
     <script src="/set_node_modules_path.js"></script>
@@ -37,8 +38,8 @@
             </div>
 
             <div class="btn-group">
-                <a class="btn-btn-default hint--bottom" aria-label="语音提醒" ic-click="playWarnAudio" id="playWarnAudioBtn">
-                    <i class="icon icon-mute"></i><!-- icon-sound -->
+                <a class="btn-btn-default hint--bottom" aria-label="语音提醒" ic-popup-target="setVoiceWarn">
+                    <i class="icon icon-mute"></i><!-- icon-sound  ic-click="playWarnAudio" id="playWarnAudioBtn" -->
                 </a>
                 <a class="btn-btn-default hint--bottom" aria-label="更新token" ic-click="updateToken">
                     <i class="icon icon-shuffle"></i>
@@ -168,6 +169,7 @@
                         <button class="none" ic-click="saveMemo">保存</button>
                     </section>
 
+                    <!-- 添加股票 -->
                     <div ic-ctrl="setStockCtrl" ic-popup="addStock">
                         <div class="column is-10" ic-form="addStock" style="padding:20px;">
                             <div class="form-group">
@@ -189,7 +191,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- 股票价格涨跌幅计算 -->
                     <div ic-ctrl="countSwingCtrl" ic-popup="countSwing">
                         <div class="column is-10" ic-form="sw" style="padding:20px;">
                             <div class="form-group">
@@ -212,6 +214,63 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 语音提醒 -->
+                    <div ic-ctrl="setVoiceWarnCtrl" ic-popup="setVoiceWarn">
+                        <div class="column is-10" style="padding:20px;">
+                            <h3 class="title is-5">设置语音警告
+                                <button class="btn btn-default" ic-popup-close>关闭</button>
+                            </h3>
+                            <table class="table is-striped" style="margin-top:15px;font-size:14px;" ic-tpl="warnList">
+                                <tr ic-for="i,v in model">
+                                    <td>{{ v.name }}</td>
+                                    <td>{{ v.trigger }}</td>
+                                    <td class="pre">{{ v.content }}</td>
+                                    <td>
+                                        <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
+                                        <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                                        <button class="button is-primary is-small" ic-click="up:{{ v.id }}">上移</button>
+                                        <button class="button is-primary is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
+                                            {{ v.disable ? '启用':'禁用' }}
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <div ic-tpl="setWarnItem" ic-tpl-init="{}">
+                                <div ic-form>
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
+                                            <input type="hidden" value="{{ model.id }}" ic-form-field="id">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" type="text" placeholder="动作触发:daban | 定时触发: 9:00 | 重复触发:10(单位分钟)"
+                                                   value="{{ model.trigger }}" ic-form-field="trigger">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <textarea rows="2" class="textarea" placeholder="警告内容"
+                                                      ic-form-field="content">{{ model.content }}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <button class="button is-primary" ic-form-submit ic-submit-action="save()">
+                                                保存
+                                            </button>
+                                            <button class="button" ic-click="reset">
+                                                重置
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
 
                 </div>
 
@@ -220,12 +279,6 @@
     </div>
 
     <footer class="toolbar toolbar-footer none">
-        <div class="none" ic-ctrl="warnAudioCtrl">
-            <audio id="warnAudio">
-               <!-- <source src="warn.mp3" type="audio/mp3">
-                <source src="warn.m4a" type="audio/ogg">-->
-            </audio>
-        </div>
     </footer>
 </div>
 </body>

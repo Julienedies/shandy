@@ -51,7 +51,7 @@ brick.reg('toolBarCtrl', function (scope) {
         getToken()
     }
 
-    this.playWarnAudio = function () {
+/*    this.playWarnAudio = function () {
         let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
         let $playWarnAudioBtn = scope.$elm.find('#playWarnAudioBtn i');
         let cla = 'icon-sound';
@@ -78,6 +78,6 @@ brick.reg('toolBarCtrl', function (scope) {
     utils.timer('9:00', () => {
         // 自动开启语音提醒
         scope.playWarnAudio();
-    });
+    });*/
 
 })

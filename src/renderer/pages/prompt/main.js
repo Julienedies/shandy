@@ -89,9 +89,9 @@ brick.reg('mainCtrl', function (scope) {
         show();
         brick.view.to(info);
 
-        let audio = new Audio(audioMap[info]);
+/*        let audio = new Audio(audioMap[info]);
         audio.volume = 1;
-        audio.play();
+        audio.play();*/
 
         setTimeout(() => {
             hide();
