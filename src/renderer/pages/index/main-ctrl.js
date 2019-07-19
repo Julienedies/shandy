@@ -553,6 +553,7 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
     scope.edit = function (e, id) {
         let model = warnJodb.get(id)[0];
         scope.render('setWarnItem', {model});
+        scope.$elm.animate({scrollTop:scope.$elm.height()}, 400);
     };
 
     scope.rm = function (e, id) {

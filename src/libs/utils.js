@@ -92,6 +92,9 @@ export default {
     viewInFtnn (code) {
         tdx.viewInFtnn(code)
     },
+    viewInTdx (code) {
+        tdx.view(code);
+    },
     addStock (stock) {
         stocksManager.add(stock)
     },

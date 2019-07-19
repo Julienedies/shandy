@@ -17,7 +17,7 @@ const EventEmitter = require('events').EventEmitter;
  *             };
  * let list = new recordManager(conf);
  */
-function RecordManager(conf) {
+function RecordManager (conf) {
     // 配置
     conf && conf.constructor === Object && Object.assign(this, conf);
     this._pool = [];
@@ -28,7 +28,7 @@ let proto = {
      * 默认每条记录的主键为id；
      */
     key: 'id',
-    joinType:'unshift',
+    joinType: 'unshift',
     /**
      * @param arr {Array}  要管理的数据对象
      * @return {this}
@@ -57,7 +57,7 @@ let proto = {
     get: function (value, query) {
         let pool = this._pool;
         let r = [];
-        if (value === void(0)) {
+        if (value === void (0)) {
             return pool;
         }
 
@@ -95,7 +95,7 @@ let proto = {
 
         find.forEach(function (record) {
 
-            if (query && that._queryKeyValue(record, query) === that._queryKeyValue(data, query))  return;
+            if (query && that._queryKeyValue(record, query) === that._queryKeyValue(data, query)) return;
 
             let id = that._queryKeyValue(record);
 
@@ -189,7 +189,7 @@ let proto = {
      * @todo 清空上次链式调用的结果
      */
     end: function () {
-        this._find = void(0);
+        this._find = void (0);
     },
     /**
      * 插入或修改一条记录时的回调函数
@@ -204,20 +204,20 @@ let proto = {
         }
         // 如果有level属性, 但level为空, 设默认为1;
         let level = record.level;
-        if(level === ''){
+        if (level === '') {
             // level = 1 + '.' + (+ new Date());
             record.level = 1;
         }
 
         // 添加时间戳
         let timestamp = record.timestamp;
-        if(typeof timestamp === 'undefined' || timestamp === ''){
-            record.timestamp = + new Date();
+        if (typeof timestamp === 'undefined' || timestamp === '') {
+            record.timestamp = +new Date();
         }
 
         return record;
     },
-    create_id: function(){
+    _createId: function () {
 
     },
     /**
@@ -238,7 +238,7 @@ let proto = {
 
         let chain = (k || this.key).split('.');
 
-        let value = (function fx(chain, record) {
+        let value = (function fx (chain, record) {
 
             let k = chain.shift();
             let v = record[k];
@@ -272,7 +272,7 @@ let proto = {
      * @param id   {Object | uid},  要移动的记录
      * @param before_id {Object | uid}, 目标记录, 可选, 如果没有提供, 则默认是首条记录
      */
-    insert: function(id, before_id){
+    insert: function (id, before_id) {
 
         let pool = this._pool;
 

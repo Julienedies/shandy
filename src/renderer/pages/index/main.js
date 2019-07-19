@@ -47,7 +47,9 @@ import utils from '../../../libs/utils'
 brick.bootstrap();
 
 let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
-audio.play();
+setInterval( () => {
+    audio.play();
+}, 1000 * 60 * 45);
 
 // --------------------------------接收主进程发来的消息 ------------------------
 // 交易语音警告

@@ -34,9 +34,9 @@ brick.reg('mainCtrl', function (scope) {
         if (!paths) return;
         let dir = paths[0];
         scope.imgDir = dir;
-        setting.set('viewer.imgDir', dir);
         scope.init(dir);
-    }
+        setting.set('viewer.imgDir', dir);
+    };
 
     // 获取目录下所有图片
     scope.init = function (dir) {
@@ -61,7 +61,7 @@ brick.reg('mainCtrl', function (scope) {
         scope.init(imgDir)
     }
 
-    scope.crop =  setting.get('viewer.crop');
+    scope.crop = setting.get('viewer.crop');
     scope.render('crop', {model: scope.crop || {}});
 
     // ------------------------------------------------------------------------
@@ -70,10 +70,10 @@ brick.reg('mainCtrl', function (scope) {
     let $viewerAttach = $('#viewerAttach');
 
     scope.onViewerOpen = () => {
-        $viewerAttach.show()
+        $viewerAttach.show();
     };
     scope.onViewerClose = () => {
-        $viewerAttach.hide()
+        $viewerAttach.hide();
     };
     scope.onViewerShow = function (index, src, $info) {
         let imgObj = scope.currentImg = scope.urls[index]
@@ -93,24 +93,37 @@ brick.reg('mainCtrl', function (scope) {
     scope.editImg = () => {
         let imgObj = scope.currentImg;
         bridge.preview(imgObj.f);
-    }
+    };
 
     scope.viewItemInFolder = () => {
         bridge.showItemInFolder(scope.currentImg.f);
-    }
+    };
 
-    scope.markMistake = () => {
+    scope.viewInTdx = () => {
+        console.log(scope.currentImg);
+        bridge.viewInTdx(scope.currentImg.code);
+    };
+
+    function copyImageToDist (dirPath) {
         let imgObj = scope.currentImg;
         let fileName = imgObj.f.split('/').pop();
-        bridge.copy(imgObj.f, `/Users/j/截图/交易错误/${ fileName }`)
+        bridge.copy(imgObj.f, `${dirPath}${ fileName }`)
             .then(() => {
-                $.icPrompt('ok!')
+                $.icMessage('ok!')
             })
             .catch(err => {
                 bridge.err('error, 查看控制台.')
                 console.error(err)
             })
     }
+
+    scope.markMistake = () => {
+        copyImageToDist('/Users/j/截图/交易错误/');
+    };
+
+    scope.markQuotation = () => {
+        copyImageToDist('/Users/j/截图/目标行情/');
+    };
 
 
     // -----------------------------------------------------------------------------------------------
@@ -134,7 +147,6 @@ brick.reg('mainCtrl', function (scope) {
         let $ocr_text = $('#ocr_text');
 
         let that = this;
-
 
         let arr = scope.urls.map(o => {
             return o.f;

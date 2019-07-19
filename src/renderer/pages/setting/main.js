@@ -13,7 +13,6 @@ import '@julienedies/brick/dist/brick.css'
 import '../../js/common.js'
 
 import userJodb from '../../../libs/user-jodb'
-import recordManager from '../../../libs/recordManager'
 
 import bridge from 'e-bridge'
 
