@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css"/>
     <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/hint.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body id="logic_list" ic-ctrl="main_ctrl">
@@ -52,7 +53,9 @@
                    ic-ajax
                    ic-submit-method="get"
                    ic-submit-action="/stock/logic/focus/{{v.id}}"
-                   ic-submit-on-done="get_logic_on_done"> <span class="icon is-medium" titie="关注"><i class="far fa-heart"></i></span> </a>
+                   ic-submit-on-done="get_logic_on_done">
+                    <span class="icon is-medium hint--top-right" aria-label="{{ v.level + ' 点击提升级别，每次+100' }}" titie="提升级别"><i class="far fa-heart"></i></span>
+                </a>
             </div>
             <button class="delete is-medium"
                     ic-ajax

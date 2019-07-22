@@ -57,72 +57,9 @@ class Reader {
         }
     }
 
-    speak () {
-        let index = this.index
-        let $item = $(this.list[index])
-        speechSU.text = $item.text()
-        speechSynthesis.speak(speechSU)
-        setTimeout(() => {
-            speechSU.onend = () => this.next()
-        }, 3000)
-        this.setState('speak')
-    }
-
-    cancel () {
-        speechSU.onend = null
-        speechSynthesis.cancel()
-        this.setState('cancel')
-    }
-
-    pause () {
-        speechSynthesis.pause();
-        this.setState('pause')
-    }
-
-    resume () {
-        speechSynthesis.resume();
-        this.setState('resume')
-    }
-
-    volume (n) {
-        speechSU.volume = n // 0.3;
-    }
-
-    position (index) {
-        this.cancel()
-        this.index = index
-        this.speak()
-    }
-
-    next () {
-        let index = this.index + 1;
-        if (index >= this.list.length) {
-            index = 0
-        }
-        this.position(index)
-    }
-
-    setState (state) {
-        console.log('state: ', state, speechSU)
-        this.state = state
-        if (state === 'speak' || state === 'resume') {
-            this.$speakBtn.hide()
-            this.$pauseBtn.show()
-            let $item = $(this.list[this.index]).addClass('reader-reading')
-            $(document).scrollTop($item.offset().top - 15)
-        }
-        if (state === 'pause' || state === 'cancel') {
-            this.$speakBtn.show()
-            this.$pauseBtn.hide()
-            if (state === 'cancel') {
-                $(this.list[this.index]).removeClass('reader-reading')
-            }
-        }
-    }
-
     _gui (that) {
         this._style()
-        let $reader = $(`<div id="reader-wrapper" style=""></div>`).appendTo(document.body)
+        let $reader = $(`<div id="reader-wrapper"></div>`).appendTo(document.body)
 
         let $speakBtn = $(`<a>播放</a>`).on('click', function (e) {
             let $th = $(this)
@@ -187,6 +124,71 @@ class Reader {
                 color:#4da702;
             }
         </style>`).appendTo(document.head)
+    }
+
+    speak () {
+        let index = this.index
+        let $item = $(this.list[index])
+        speechSU.text = $item.text()
+        speechSynthesis.speak(speechSU)
+        setTimeout(() => {
+            speechSU.onend = () => this.next()
+        }, 3000);
+
+        this.setState('speak')
+    }
+
+    cancel () {
+        speechSU.onend = null
+        speechSynthesis.cancel()
+        this.setState('cancel')
+    }
+
+    pause () {
+        speechSynthesis.pause();
+        this.setState('pause')
+    }
+
+    resume () {
+        speechSynthesis.resume();
+        this.setState('resume')
+    }
+
+    volume (n) {
+        speechSU.volume = n // 0.3;
+    }
+
+    position (index) {
+        this.cancel()
+        this.index = index
+        this.speak()
+    }
+
+    next () {
+        let index = this.index + 1;
+        if (index >= this.list.length) {
+            index = 0
+        }
+        this.position(index)
+    }
+
+    setState (state) {
+        console.log('Reader实例： ', this)
+        this.state = state
+        if (state === 'speak' || state === 'resume') {
+            this.$speakBtn.hide()
+            this.$pauseBtn.show()
+            let $item = $(this.list[this.index]).addClass('reader-reading')
+            console.log(this.list, this.index)
+            $(document).scrollTop($item.offset().top - 15)
+        }
+        if (state === 'pause' || state === 'cancel') {
+            this.$speakBtn.show()
+            this.$pauseBtn.hide()
+            if (state === 'cancel') {
+                $(this.list[this.index]).removeClass('reader-reading')
+            }
+        }
     }
 
 }

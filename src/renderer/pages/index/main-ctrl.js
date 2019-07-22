@@ -373,14 +373,10 @@ brick.reg('mainCtrl', function (scope) {
 
     // ----------------------------------------------------------------
 
-    let d = new Date()
-    let h = d.getHours()
-    let m = d.getMinutes()
-    if (h < 15) {
+    if (utils.isTradingHours(true)) {
         scope.openNews();
         scope.openPrompt();
     }
-
 
     // ----------------------------------------------------------------
 
@@ -569,7 +565,7 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
         item.disable = !item.disable;
         warnJodb.set(item);
         $(this).text(isDisable ? '启用' : '禁用');
-    }
+    };
 
     render();
 
@@ -613,7 +609,9 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
     }
 
     function updateVoiceWarn () {
-        warnJodb.get().forEach(setVoiceWarnForItem);
+        if(utils.isTradingHours()){
+            warnJodb.get().forEach(setVoiceWarnForItem);
+        }
     }
 
     warnJodb.on('change', function () {

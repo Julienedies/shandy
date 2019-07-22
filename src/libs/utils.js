@@ -4,18 +4,21 @@
 import os from 'os'
 import electron from 'electron'
 
-const {remote, shell} = electron
-const dialog = remote.dialog
 import schedule from 'node-schedule'
 import fse from 'fs-extra'
-import jhandy from 'jhandy'
+import moment from 'moment'
 import shellJs from 'shelljs'
+import jhandy from 'jhandy'
 
 import Win from './window'
 import setting from './setting'
 import tdx from './tdx'
 import ac from './ac'
 import stocksManager from './stocks-manager'
+
+
+const {remote, shell} = electron
+const dialog = remote.dialog
 
 // https://github.com/shelljs/shelljs/issues/480
 let nodePath = (shellJs.which('node').toString());
@@ -100,6 +103,21 @@ export default {
     },
     copy (file, dist) {
         return fse.copy(file, dist)
+    },
+    /**
+     * 是否是A股交易时间
+     * @param isInHour 是否精确到小时，默认是天
+     * @returns {boolean}
+     */
+    isTradingHours (isInHour) {
+        let mo = moment();
+        let day = mo.day(); // 礼拜几: 0 - 6
+        let h = mo.hour(); // 0 - 23
+        if (isInHour) {
+            return day > 0 && day < 6 && h > 6 && h < 15;
+        } else {
+            return day > 0 && day < 6;
+        }
     }
 }
 
