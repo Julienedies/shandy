@@ -217,8 +217,11 @@
                     <!-- 语音提醒 -->
                     <div ic-ctrl="setVoiceWarnCtrl" ic-popup="setVoiceWarn">
                         <div class="column is-12" style="padding:20px;">
-                            <h3 class="title is-5">设置语音警告
-                                <button class="btn btn-default" ic-popup-close>关闭</button>
+
+                            <h3 class="title is-5">
+                                <button class="button is-small is-primary" ic-click="toggle">关闭语音</button>
+                                <span style="padding:0 9px 0 9px; vertical-align: -4px;">设置语音警告</span>
+                                <button class="button is-small" ic-popup-close>关闭窗口</button>
                             </h3>
                             <table class="table is-striped" style="margin-top:15px;font-size:14px;" ic-tpl="warnList">
                                 <tr ic-for="i,v in model">

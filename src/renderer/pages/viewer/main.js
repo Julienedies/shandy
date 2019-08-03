@@ -104,6 +104,10 @@ brick.reg('mainCtrl', function (scope) {
         bridge.viewInTdx(scope.currentImg.code);
     };
 
+    scope.viewInFtnn = () => {
+        bridge.viewInFtnn(scope.currentImg.code);
+    };
+
     function copyImageToDist (dirPath) {
         let imgObj = scope.currentImg;
         let fileName = imgObj.f.split('/').pop();

@@ -74,6 +74,10 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     socket.on('warn', (info) => {
+
+        return;
+
+
         let d = new Date()
         let h = d.getHours()
         let m = d.getMinutes()

@@ -124,3 +124,10 @@ label.radio {
   white-space: pre;
   line-height: 1.6;
 }
+
+// brick 样式覆盖
+#ic-message-box{
+  background: rgb(117,190,35)!important;
+  color:#fff!important;
+  border:none!important;
+}

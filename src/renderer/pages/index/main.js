@@ -35,6 +35,7 @@ console.log('remote is =>', remote)
 //const config = remote.app.config
 //console.log(config)
 
+import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
@@ -46,16 +47,19 @@ import utils from '../../../libs/utils'
 
 brick.bootstrap();
 
-let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
+voice('voice test.', () => {
+    $.icMsg('voice test Ok.');
+});
+
+/*let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
 setInterval( () => {
-    audio.play();
-}, 1000 * 60 * 130);
+     audio.play();
+}, 1000 * 60 * 130);*/
 
 // --------------------------------接收主进程发来的消息 ------------------------
 // 交易语音警告
 ipcRenderer.on('warn', (event, info) => {
     //voice(warnText.voice[info] || '')
-
 });
 
 // 通达信中查看该股票

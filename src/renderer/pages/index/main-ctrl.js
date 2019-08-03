@@ -375,7 +375,7 @@ brick.reg('mainCtrl', function (scope) {
 
     if (utils.isTradingHours(true)) {
         scope.openNews();
-        scope.openPrompt();
+        //scope.openPrompt();
     }
 
     // ----------------------------------------------------------------
@@ -414,7 +414,6 @@ brick.reg('mainCtrl', function (scope) {
     utils.timer('15:00', () => {
         scope.newsWin && scope.newsWin.close();
     });
-
 
 });
 
@@ -549,7 +548,7 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
     scope.edit = function (e, id) {
         let model = warnJodb.get(id)[0];
         scope.render('setWarnItem', {model});
-        scope.$elm.animate({scrollTop:scope.$elm.height()}, 400);
+        scope.$elm.animate({scrollTop: scope.$elm.height()}, 400);
     };
 
     scope.rm = function (e, id) {
@@ -567,17 +566,35 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
         $(this).text(isDisable ? '启用' : '禁用');
     };
 
-    render();
+    // 开启语音警告或关闭
+    scope.toggle = function (e) {
+        let $th = $(this);
+        let open = '开启语音';
+        let close = '关闭语音';
+        let cla = 'is-primary';
+        let str = $th.text();
+        if(str === open){
+            $th.addClass(cla).text(close);
+            updateVoiceWarn(true);
+        }else{
+            $th.removeClass(cla).text(open);
+            updateVoiceWarn();
+        }
+    };
 
-    function setVoiceWarnForItem (item) {
+    function setVoiceWarnForItem (item, cancel) {
         let id = item.id;
         let content = item.content;
         let trigger = item.trigger;
-        let disable = item.disable;
+        let disable = item.disable || cancel;
         let old = warnHandleMap[id];
+
         // trigger => 10 : 间隔执行
         if (/^\d+$/.test(trigger)) {
-            old && clearInterval(old.handle);
+            if (old) {
+                clearInterval(old.handle);
+                delete old.handle;
+            }
             if (disable) {
                 return;
             }
@@ -588,7 +605,10 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
         }
         // trigger => 9:00: 定时执行
         else if (/^\d+[:]\d+$/.test(trigger)) {
-            old && old.handle.cancel();
+            if (old) {
+                old.handle.cancel();
+                delete old.handle;
+            }
             if (disable) {
                 return;
             }
@@ -608,9 +628,11 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
         }
     }
 
-    function updateVoiceWarn () {
-        if(utils.isTradingHours()){
-            warnJodb.get().forEach(setVoiceWarnForItem);
+    function updateVoiceWarn (cancel) {
+        if (utils.isTradingHours(true) || cancel) {
+            warnJodb.get().forEach((item, index) => {
+                setVoiceWarnForItem(item, cancel);
+            });
         }
     }
 
@@ -619,7 +641,21 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
         console.log('##### updateVoiceWarn on change', warnHandleMap);
     });
 
-    updateVoiceWarn();
+    utils.timer('11:30', () => {
+        updateVoiceWarn(true);
+    });
 
+    utils.timer('12:45', () => {
+        updateVoiceWarn();
+    });
+
+    utils.timer('15:00', () => {
+        updateVoiceWarn(true);
+    });
+
+    // -------------------------------------------------------------------
+
+    render();
+    updateVoiceWarn();
 
 });

@@ -287,6 +287,26 @@ let proto = {
 
         this.emit('change');
 
+    },
+    /**
+     * 调整记录位置,在队列里向前移动
+     * @return
+     * @example
+     *
+     * new recoredManager().init([{x:1,y:2},{x:1,y:5}]).find(1,'x').prev();
+     */
+    prev: function (record) {
+        let pool = this._pool;
+        let id = this._queryKeyValue(record);
+        let index = this._getIndex(id);
+
+        if (pool.splice) {
+            pool.splice(index, 1);
+            pool.splice(--index, 0, record);
+        }
+
+        this.emit('change', {target: record});
+
     }
 
 };
