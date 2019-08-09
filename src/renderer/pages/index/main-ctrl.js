@@ -575,10 +575,10 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
         let str = $th.text();
         if(str === open){
             $th.addClass(cla).text(close);
-            updateVoiceWarn(true);
+            updateVoiceWarn();
         }else{
             $th.removeClass(cla).text(open);
-            updateVoiceWarn();
+            updateVoiceWarn(true);
         }
     };
 

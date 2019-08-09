@@ -6,7 +6,23 @@ import request from 'request'
 import iconv from 'iconv-lite'
 import _ from 'lodash'
 
+const READY = 'ready';
+const STOP = 'stop';
+
 class Rts {
+
+    static _codes (code) {
+        let codes;
+        if (Array.isArray(code)) {
+            return code;
+        } else {
+            return code.split(',');
+        }
+    }
+
+    static _prefix (code) {
+        return (/^6/.test(code) ? 'sh' : 'sz') + code;
+    }
 
     /**
      * @param option  {Object|String}
@@ -16,6 +32,7 @@ class Rts {
     constructor (option, callback) {
         this.codes = [];
         this.url = '';
+        this.state = READY;
         this.timer = null;
         this.interval = 2;
         this.qq = 'http://qt.gtimg.cn/q=*';
@@ -45,14 +62,15 @@ class Rts {
         }
     }
 
-    query () {
+    query (readyState) {
         let that = this;
         let interval = this.interval;
-        clearInterval(this.timer);
-        if (this.codes.length === 0) {
-            return;
-        }
+
+        readyState && this._setState(READY);
+
+        this._clearTimer();
         this._query();
+
         if (interval) {
             this.timer = setInterval(function () {
                 that._query();
@@ -66,10 +84,17 @@ class Rts {
             url: this.url,
             encoding: null
         };
+
+        if (this.codes.length === 0 || this.state === STOP) {
+            console.log('rts state is STOP.');
+            return this._clearTimer();
+        }
+
         request(options, function (error, response, body) {
+            console.log(error, response, body, +new Date);
             if (error) {
                 console.error('error:', error);
-                that.toggle();
+                //that.toggle();
                 return that.callback('请求实时行情数据出现错误！');
             }
             //console.log('statusCode:', response && response.statusCode);
@@ -142,35 +167,39 @@ class Rts {
 
     add (code) {
         let that = this;
-        let codes = this._codes(code);
+        let codes = Rts._codes(code);
         codes.map(code => {
-            that.codes.unshift(code)
+            that.codes.unshift(code);
         });
         this.codes = _.uniq(this.codes);
         this.update();
     }
 
     change (code) {
-        this.codes = this._codes(code);
+        this.codes = Rts._codes(code);
         this.update();
     }
 
     remove (code) {
-        clearInterval(this.timer);
+        this._clearTimer();
         this.codes = _.without(this.codes, code);
-        this.update();
+        if (this.state !== STOP) {
+            this.update();
+        }
     }
 
     pause () {
-        clearInterval(this.timer);
+        this._clearTimer();
+        this._setState(STOP);
     }
 
     clear () {
         this.codes = [];
-        clearInterval(this.timer);
+        this.pause();
     }
 
     update () {
+        this._setState(READY);
         this.createUrl();
         this.query();
     }
@@ -180,7 +209,7 @@ class Rts {
         if (!codes.length) {
             return console.log('无股票代码.');
         }
-        codes = codes.map(this._prefix);
+        codes = codes.map(Rts._prefix);
         codes = codes.join(',');
         this.url = this.stock_api.replace('*', codes);
     }
@@ -190,18 +219,14 @@ class Rts {
         //this.update();
     }
 
-    _codes (code) {
-        let codes;
-        if (Array.isArray(code)) {
-            return code;
-        } else {
-            return code.split(',');
-        }
+    _setState (state) {
+        this.state = state;
     }
 
-    _prefix (code) {
-        return (/^6/.test(code) ? 'sh' : 'sz') + code;
+    _clearTimer () {
+        clearInterval(this.timer);
     }
+
 
 }
 

@@ -172,7 +172,7 @@ brick.reg('rts_ctrl', function (scope) {
         _add($stock_code.val());
     };
     scope.query = function clear () {
-        q_rtso.query();
+        q_rtso.query(true);
     };
     scope.clear = function clear () {
         voice.clear();
@@ -216,7 +216,7 @@ window.addEventListener('beforeunload', function (e) {
 
 
 // 下午3点后取消行情请求
-bridge.timer('14:54', () => {
+bridge.timer('14:55', () => {
     q_rtso.pause();
     // prev_objm.clear();
     // rtsJo.set('stocks', []);
