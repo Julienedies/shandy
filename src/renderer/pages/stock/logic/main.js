@@ -23,9 +23,11 @@ brick.reg('logicCtrl', function () {
     let isReverse = false;
     let isSortByTime = false;
 
+    const reader = new Reader();
+
     let render = () => {
         scope.render('logic', logicArr, () => {
-            new Reader().init();
+            reader.init();
         });
     };
 

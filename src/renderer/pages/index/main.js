@@ -64,6 +64,7 @@ ipcRenderer.on('warn', (event, info) => {
 
 // 通达信中查看该股票
 ipcRenderer.on('view_in_tdx', function (event, msg) {
+    console.log('view in tdx =>', msg);
     let code = msg.code;
     if (!/^\d{6}$/.test(code)) {
         let stock = stockQuery(code);

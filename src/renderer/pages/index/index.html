@@ -191,29 +191,35 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- 股票价格涨跌幅计算 -->
                     <div ic-ctrl="countSwingCtrl" ic-popup="countSwing">
-                        <div class="column is-10" ic-form="sw" style="padding:20px;">
-                            <div class="form-group">
-                                <input class="form-control" type="text" ic-form-field="code" placeholder="股票code">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="number" ic-form-field="price" placeholder="现价">
-                            </div>
-                            <div class="buttons">
-                                <button class="btn btn-primary"
-                                        ic-form-submit
-                                        ic-submit-action="countSwing()">
-                                    计算涨跌幅
-                                </button>
-                                <button class="btn btn-default" ic-popup-close>关闭</button>
+                        <div class="column is-10" ic-form="sw" style="padding:10px 20px 0 20px;">
+
+                            <div class="field is-grouped is-grouped-right">
+                                <p class="control is-expanded">
+                                    <input class="input is-small" type="text" ic-form-field="code" placeholder="股票code">
+                                </p>
+                                <p class="control is-expanded">
+                                    <input class="input is-small" type="number" ic-form-field="price" placeholder="现价">
+                                </p>
+                                <p class="control">
+                                    <button class="button is-small is-primary"
+                                            ic-form-submit
+                                            ic-submit-action="countSwing()">
+                                        计算涨跌幅
+                                    </button>
+                                </p>
+                                <p class="control">
+                                    <button class="button is-small" ic-popup-close>关闭</button>
+                                </p>
                             </div>
 
-                            <div id="countSwingResult" style="white-space: pre;">
-
+                            <div id="countSwingResult" style="white-space: pre;  line-height: 1.6;">
                             </div>
                         </div>
                     </div>
+
                     <!-- 语音提醒 -->
                     <div ic-ctrl="setVoiceWarnCtrl" ic-popup="setVoiceWarn">
                         <div class="column is-12" style="padding:20px;">

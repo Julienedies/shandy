@@ -18,8 +18,10 @@ import setting from '../../../libs/setting'
 import Win from '../../../libs/window'
 import voice from '../../../libs/voice'
 import ac from '../../../libs/ac'
+import captureOcr from '../../../libs/capture-ocr'
 import rts from '../../../libs/real-time-stock'
 import userJodb from '../../../libs/user-jodb'
+import view_stock from './view-stock-ctrl'
 
 const {ipcRenderer} = electron
 
@@ -479,7 +481,7 @@ brick.reg('countSwingCtrl', function (scope) {
             text += `${ Math.round(p * (1 + i) * 100) / 100 }  :  ${ Math.round(i * 1000) / 10 }% \r\n`;
         }
 
-        return ` 现价: ${ p } \r\n 涨停价: ${ a } \r\n 跌停价: ${ b } \r\n ------------- \r\n${ text }`;
+        return ` 现价: ${ p } -------- 涨停价: ${ a } --------- 跌停价: ${ b }\r\n ------------------ \r\n${ text }`;
     }
 
     // 涨跌停价计算
@@ -494,8 +496,8 @@ brick.reg('countSwingCtrl', function (scope) {
             cb(price);
         } else {
 
-            ac.getStockName(function (stock) {
-
+            utils.getStock().then((stock) => {
+                // $.icMsg(stock.code)
                 rts({
                     interval: false,
                     code: stock.code,
@@ -507,8 +509,18 @@ brick.reg('countSwingCtrl', function (scope) {
                         $elm.find('[ic-form-field="price"]').val(p);
                         cb(p);
                     }
-                })
-            });
+                });
+            })
+
+            /*            ac.getStockName(function (stock) {
+                            if(stock.code){
+                                fn(stock)
+                            }else{
+                                captureOcr(stock => {
+                                    fn(stock);
+                                });
+                            }
+                        });*/
         }
     };
 
@@ -517,6 +529,7 @@ brick.reg('countSwingCtrl', function (scope) {
     });
 
 });
+
 
 brick.reg('setVoiceWarnCtrl', function (scope) {
 
@@ -573,10 +586,10 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
         let close = '关闭语音';
         let cla = 'is-primary';
         let str = $th.text();
-        if(str === open){
+        if (str === open) {
             $th.addClass(cla).text(close);
             updateVoiceWarn();
-        }else{
+        } else {
             $th.removeClass(cla).text(open);
             updateVoiceWarn(true);
         }

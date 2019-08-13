@@ -14,6 +14,7 @@ import Win from './window'
 import setting from './setting'
 import tdx from './tdx'
 import ac from './ac'
+import captureOcr from './capture-ocr'
 import stocksManager from './stocks-manager'
 
 
@@ -79,13 +80,6 @@ export default {
         }
         return ip
     },
-    getStockNameFromScreen () {
-        return new Promise((resolve, reject) => {
-            ac.getStockName((stock) => {
-                stock.code ? resolve(stock) : reject(stock)
-            })
-        });
-    },
     activeTdx () {
         tdx.active()
     },
@@ -118,6 +112,26 @@ export default {
         } else {
             return day > 0 && day < 6;
         }
-    }
+    },
+    getStockNameFromScreen () {
+        return new Promise((resolve, reject) => {
+            ac.getStockName((stock) => {
+                stock.code ? resolve(stock) : reject(stock)
+            })
+        });
+    },
+    getStock () {
+        return new Promise((resolve, reject) => {
+            ac.getStockName((stock) => {
+                if (stock.code) {
+                    resolve(stock);
+                } else {
+                    captureOcr(stock => {
+                        stock.code ? resolve(stock) : reject(stock);
+                    });
+                }
+            });
+        });
+    },
 }
 

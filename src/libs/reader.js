@@ -2,7 +2,7 @@
  * Created by j on 2019-03-23.
  */
 
-import $ from 'jquery'
+import $ from 'jquery';
 
 let speechSU = new SpeechSynthesisUtterance();
 
@@ -10,6 +10,7 @@ class Reader {
     constructor (elm = 'body') {
         let that = this
 
+        this.id = +new Date();
         this.state = null
         this.elm = elm
         this.list = []
@@ -33,6 +34,7 @@ class Reader {
         this.elm = elm || this.elm
         let dom = $(this.elm)[0]
         walk(dom, this)
+        console.log('init', this)
 
         // 遍历dom节点, 如果一个元素节点有文本类型的直接子节点, 添加到list
         function walk (dom, that) {
@@ -58,6 +60,7 @@ class Reader {
     }
 
     _gui (that) {
+
         this._style()
         let $reader = $(`<div id="reader-wrapper"></div>`).appendTo(document.body)
 
@@ -85,6 +88,7 @@ class Reader {
 
         $(document).on('click', 'a.reader-readable-node', function (e) {
             let index = $(this).data('index')
+            console.log('开始朗读：', index, that)
             that.position(index)
         })
 
@@ -121,9 +125,16 @@ class Reader {
                 border-radius: 50%!important;
             }
             .reader-reading{
-                color:#4da702;
+                color:#3e8602;
             }
         </style>`).appendTo(document.head)
+    }
+
+
+    position (index) {
+        this.cancel()
+        this.index = index
+        this.speak()
     }
 
     speak () {
@@ -136,6 +147,23 @@ class Reader {
         }, 3000);
 
         this.setState('speak')
+    }
+
+    setState (state) {
+        this.state = state
+        if (state === 'speak' || state === 'resume') {
+            this.$speakBtn.hide()
+            this.$pauseBtn.show()
+            let $item = $(this.list[this.index]).addClass('reader-reading')
+            $(document).scrollTop($item.offset().top - 15)
+        }
+        if (state === 'pause' || state === 'cancel') {
+            this.$speakBtn.show()
+            this.$pauseBtn.hide()
+            if (state === 'cancel') {
+                $(this.list[this.index]).removeClass('reader-reading')
+            }
+        }
     }
 
     cancel () {
@@ -158,11 +186,6 @@ class Reader {
         speechSU.volume = n // 0.3;
     }
 
-    position (index) {
-        this.cancel()
-        this.index = index
-        this.speak()
-    }
 
     next () {
         let index = this.index + 1;
@@ -172,24 +195,6 @@ class Reader {
         this.position(index)
     }
 
-    setState (state) {
-        console.log('Reader实例： ', this)
-        this.state = state
-        if (state === 'speak' || state === 'resume') {
-            this.$speakBtn.hide()
-            this.$pauseBtn.show()
-            let $item = $(this.list[this.index]).addClass('reader-reading')
-            console.log(this.list, this.index)
-            $(document).scrollTop($item.offset().top - 15)
-        }
-        if (state === 'pause' || state === 'cancel') {
-            this.$speakBtn.show()
-            this.$pauseBtn.hide()
-            if (state === 'cancel') {
-                $(this.list[this.index]).removeClass('reader-reading')
-            }
-        }
-    }
 
 }
 
