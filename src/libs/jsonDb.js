@@ -18,6 +18,10 @@ export default function (name) {
             return (name, initData) => {
                 return jo(path.resolve(config.USER_DIR, `./temp/${ name }.json`), initData)
             }
+        case 'reader':
+            return (name, initData) => {
+                return jo(path.resolve(config.USER_DIR, `./reader/${ name }.json`), initData)
+            }
         case 'setting':
             return (name, initData) => {
                 return jo(path.resolve(config.USER_DIR, './setting.json'))

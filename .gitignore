@@ -24,7 +24,7 @@ dist/
 data/csd/
 data/upload/
 temp/
-.user/
+!.user/temp
 
 #私有配置文件
 config.json

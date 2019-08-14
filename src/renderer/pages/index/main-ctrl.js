@@ -195,6 +195,26 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
+    scope.openReader = function (e) {
+        let readerWindow = scope.readerWindow;
+        if (readerWindow) {
+            readerWindow.show();
+        } else {
+            let name = 'reader';
+            let url = 'reader.html';
+            scope.csdWindow = new Win({
+                name,
+                url,
+                x: 160,
+                y: 80,
+                ...getBounds(name),
+                onClose: () => {
+                    delete scope.readerWindow;
+                }
+            });
+        }
+    };
+
     scope.openSetting = function () {
         let settingWindow = scope.settingWindow;
         if (settingWindow) {
@@ -371,6 +391,7 @@ brick.reg('mainCtrl', function (scope) {
         scope.warnWindow && scope.warnWindow.close();
         scope.newsWin && scope.newsWin.close();
         scope.promptWindow && scope.promptWindow.close();
+        scope.readerWindow && scope.readerWindow.close();
     });
 
     // ----------------------------------------------------------------

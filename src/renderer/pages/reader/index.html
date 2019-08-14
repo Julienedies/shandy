@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>reader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
+    <script src="/set_node_modules_path.js"></script>
+</head>
+<body>
+<div class="column">
+    <div class="box" ic-ctrl="uploadTextFileCtrl">
+        <section ic-form="uploadTextFile">
+            <div class="field has-addons">
+                <div class="control">
+                    <a class="button is-primary" ic-select-path="textFile" ic-select-path-on-done="onSelectFileDone">
+                        添加要朗读的文本文件
+                    </a>
+                </div>
+                <div class="control is-expanded">
+                    <input class="input" type="text" value="" name="textFile" ic-form-field ic-field-rule="required">
+                </div>
+            </div>
+            <div ic-tpl="textList">
+                <span class="tag" ic-for="i,v in model" ic-click="speak:{{name}}">{{ v.name }}</span>
+            </div>
+        </section>
+    </div>
+
+    <div class="box">
+        <div id="readerBox"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -12,6 +12,7 @@ import jodb from './jodb'
  *
  * @param name {String} json file name
  * @param initData {Object|Array} json文件初始数据类型
+ * @param [conf] {Object}, options对象
  */
 export default function (name, initData = [], conf = {}) {
 

@@ -18,6 +18,7 @@ class Reader {
 
         speechSU.onend = () => {
             console.log('speechSU.onend')
+            this.next();
         }
 
         window.addEventListener('beforeunload', function (e) {
@@ -48,11 +49,12 @@ class Reader {
                 else if (node.nodeType === 3) {
                     let $parent = $(node.parentNode)
                     let t = node.nodeValue.trim()
-                    if (t.length > 10 && $parent.is(':visible')) {
+                    if (t.length > 1 && $parent.is(':visible')) {
                         //console.log('#', node.parentNode, node.nodeValue)
                         that.list.push(node.parentNode)
-                        let index = that.list.length - 1
-                        $parent.prepend(`<a class="reader-readable-node" data-index="${ index }" title="点击播放本段:${ index }"></a>`)
+                        let index = that.list.length - 1;
+                        $parent.prepend(`<a class="reader-readable-node-mark" data-index="${ index }" title="点击播放本段:${ index }"></a>`)
+                        $parent.addClass('reader-readable-node');
                     }
                 }
             }
@@ -86,9 +88,15 @@ class Reader {
             that.volume(val / 10)
         }).appendTo($reader)
 
-        $(document).on('click', 'a.reader-readable-node', function (e) {
-            let index = $(this).data('index')
-            console.log('开始朗读：', index, that)
+        $(document).on('click', '.reader-readable-node', function (e) {
+            let $th = $(this);
+            let index;
+            if($th.hasClass('reader-readable-node-mark')){
+                index = $th.data('index')
+            }else{
+                index = $th.find('.reader-readable-node-mark').data('index');
+            }
+            console.log('开始朗读：', index, that, this)
             that.position(index)
         })
 
@@ -107,7 +115,7 @@ class Reader {
                 background:rgba(0,0,0,0.7);
                 padding:3px 7px;
             }
-            #reader-wrapper a, #reader-wrapper label, .reader-readable-node{
+            #reader-wrapper a, #reader-wrapper label{
                 text-decoration: none!important;
                 color:#fff!important;
                 padding:0 4px!important;
@@ -118,7 +126,7 @@ class Reader {
             #reader-wrapper label:hover input{
                 display: inline-block;
             }
-            .reader-readable-node{
+            .reader-readable-node-mark{
                 background:#64c116!important;
                 padding: 0 0.6em!important;
                 margin-right: 0.5em!important;
@@ -138,13 +146,17 @@ class Reader {
     }
 
     speak () {
+        let that = this;
         let index = this.index
         let $item = $(this.list[index])
         speechSU.text = $item.text()
         speechSynthesis.speak(speechSU)
-        setTimeout(() => {
-            speechSU.onend = () => this.next()
-        }, 3000);
+        //setTimeout(() => {
+            speechSU.onend = function() {
+                 console.log('end', index);
+                 that.next();
+            };
+        //}, 2000);
 
         this.setState('speak')
     }
@@ -155,7 +167,7 @@ class Reader {
             this.$speakBtn.hide()
             this.$pauseBtn.show()
             let $item = $(this.list[this.index]).addClass('reader-reading')
-            $(document).scrollTop($item.offset().top - 15)
+            $(document).scrollTop($item.offset().top - 300)
         }
         if (state === 'pause' || state === 'cancel') {
             this.$speakBtn.show()

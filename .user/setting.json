@@ -1,0 +1,94 @@
+{
+	"csd": {
+		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190811.txt",
+		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
+		"fetchSources": [
+			"ths_new",
+			"ths_p",
+			"ths_c",
+			"ycj"
+		],
+		"csdPath": "/Users/j/dev/csd",
+		"fetchByStocks": "/Users/j/截图/临时条件股20190814.txt",
+		"tdx_extern_user_file": "/Volumes/C/new_jyplug/T0002/signals/extern_user.txt",
+		"fetchFromIndex": 0,
+		"bounds": {
+			"x": 157,
+			"y": 55,
+			"width": 1279,
+			"height": 775
+		}
+	},
+	"warn": {
+		"randomBgImgDir": "/Users/j/pim/img/人物",
+		"bounds": {
+			"x": 0,
+			"y": 23,
+			"width": 1440,
+			"height": 808
+		}
+	},
+	"viewer": {
+		"imgDir": "/Users/j/截图/目标行情",
+		"bounds": {
+			"x": 0,
+			"y": 23,
+			"width": 1440,
+			"height": 808
+		},
+		"crop": {
+			"x": 3100,
+			"y": 115,
+			"width": 380,
+			"height": 50
+		}
+	},
+	"review": {
+		"bounds": {
+			"x": 1440,
+			"y": 41,
+			"width": 1920,
+			"height": 1080
+		}
+	},
+	"news": {
+		"bounds": {
+			"x": 1528,
+			"y": 41,
+			"width": 1772,
+			"height": 57
+		}
+	},
+	"reminder": {
+		"bounds": {
+			"x": 0,
+			"y": 23,
+			"width": 1440,
+			"height": 808
+		}
+	},
+	"setting": {
+		"bounds": {
+			"x": 1707,
+			"y": 220,
+			"width": 1360,
+			"height": 832
+		}
+	},
+	"prompt": {
+		"bounds": {
+			"x": 0,
+			"y": 23,
+			"width": 1440,
+			"height": 808
+		}
+	},
+	"reader": {
+		"bounds": {
+			"x": 1568,
+			"y": 231,
+			"width": 1377,
+			"height": 768
+		}
+	}
+}
