@@ -22,39 +22,41 @@ import createReaderHtml from './createReaderHtml'
 
 brick.set('render.wrapModel', true)
 
-const readerDb = jsonDb('reader');
-
 
 brick.reg('uploadTextFileCtrl', function (scope) {
 
-    const readerJoDb = userJodb('reader', []);
+    const readerDb = jsonDb('reader');
+    const readerJoDb = userJodb('reader', [], {joinType: 'push'});
 
     const reader = new Reader('#readerBox');
 
     let $readerBox = $('#readerBox');
 
-    let render = () => {
-        scope.render('textList', readerJoDb.get())
-    };
+    let init = (htmlStr) => {
+        $readerBox.html(htmlStr);
+        reader.init();
+    }
 
-    let init = (name, filePath) => {
-        let cb = (htmlStr) => {
-            $readerBox.html(htmlStr);
-            reader.init();
-        }
+    this.onSelectFileDone = (paths) => {
+        if (!paths) return;
+        let filePath = paths[0];
+
+        let name = filePath.split('/').pop().replace('.txt', '');
+
         let jo = readerDb(name);
 
-        let record = readerJoDb.get(name, 'name')[0];
-        if (record) {
-            cb(jo.get('text'))
-        } else {
-            readerJoDb.add({name})
-            createReaderHtml(filePath).then((htmlStr) => {
-                cb(htmlStr);
-                jo.set({text: htmlStr});
-                jo.save();
-            });
-        }
+        readerJoDb.set({name})
+
+        createReaderHtml(filePath).then((htmlStr) => {
+            init(htmlStr);
+            jo.set({text: htmlStr});
+            jo.save();
+        });
+
+    }
+
+    let render = () => {
+        scope.render('textList', readerJoDb.get())
     };
 
     readerJoDb.on('change', render);
@@ -62,19 +64,13 @@ brick.reg('uploadTextFileCtrl', function (scope) {
     render();
 
     this.speak = function (e, name) {
-        console.log(name)
-        init(name);
+        let jo = readerDb(name);
+        init(jo.get('text'));
     };
 
-    this.onSelectFileDone = (paths) => {
-        if (!paths) return;
-        let filePath = paths[0];
-
-        let name = filePath.split('/').pop().replace('.txt', '');
-        init(name, filePath);
-
+    this.remove = function (e, id) {
+        readerJoDb.remove(id);
     }
-
 
 });
 

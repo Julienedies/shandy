@@ -183,7 +183,7 @@ class Reader {
             this.$speakBtn.hide()
             this.$pauseBtn.show()
             let $item = $(this.list[this.index]).addClass('reader-reading')
-            $(document).scrollTop($item.offset().top - 300)
+            $(document).scrollTop($item.offset().top - 200)
         }
         if (state === 'pause' || state === 'cancel') {
             this.$speakBtn.show()
