@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div ic-tpl="textList">
-                <span class="tag" ic-for="i,v in model" ic-click="speak:{{name}}">{{ v.name }}</span>
+                <button class="button is-primary is-small" ic-for="i,v in model" ic-click="speak:{{v.name}}">{{ v.name }}</button>
             </div>
         </section>
     </div>

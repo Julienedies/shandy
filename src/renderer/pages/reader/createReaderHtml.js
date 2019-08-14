@@ -24,7 +24,7 @@ function createReaderHtml (textFile) {
             // 以标点符号分割文本
             //let resultArr = str.split(/(?=(?:[,.;!:]|[，。；！：]|[\r]))/img);
 
-            let resultArr = str.match(/[^\r,.;!:，。；！：]+(?:[,.;!:]|[，。；！：]|[\r])/img);
+            let resultArr = str.match(/[^\r.;!。；！]+(?:[.;!]|[。；！]|[\r])/img);
 
             //console.log(resultArr);
             let htmlStr = '';

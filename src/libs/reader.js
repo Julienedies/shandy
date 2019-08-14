@@ -3,8 +3,18 @@
  */
 
 import $ from 'jquery';
-
+/*
+text – 要合成的文字内容，字符串。
+lang – 使用的语言，字符串， 例如："zh-cn"
+voiceURI – 指定希望使用的声音和服务，字符串。
+volume – 声音的音量，区间范围是0到1，默认是1。
+rate – 语速，数值，默认值是1，范围是0.1到10，表示语速的倍数，例如2表示正常语速的两倍。
+pitch – 表示说话的音高，数值，范围从0（最小）到2（最大）。默认值为1。
+ */
 let speechSU = new SpeechSynthesisUtterance();
+speechSU.volume = 0.7;
+speechSU.rate = 1.1;
+speechSU.pitch = 1.1;
 
 class Reader {
     constructor (elm = 'body') {
@@ -126,6 +136,10 @@ class Reader {
             #reader-wrapper label:hover input{
                 display: inline-block;
             }
+            .reader-readable-node{
+                display: inline-block;
+                padding:0px 2px;
+            }
             .reader-readable-node-mark{
                 background:#64c116!important;
                 padding: 0 0.6em!important;
@@ -133,7 +147,9 @@ class Reader {
                 border-radius: 50%!important;
             }
             .reader-reading{
-                color:#3e8602;
+                color:#5ecc03;
+/*                background:#95b750;
+                color:#fff;*/
             }
         </style>`).appendTo(document.head)
     }

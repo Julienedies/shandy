@@ -35,23 +35,13 @@ brick.reg('uploadTextFileCtrl', function (scope) {
 
     let render = () => {
         scope.render('textList', readerJoDb.get())
-    }
+    };
 
-    readerJoDb.on('change', render);
-
-    render();
-
-    this.onSelectFileDone = (paths) => {
-        if (!paths) return;
-        let file = paths[0];
-
+    let init = (name, filePath) => {
         let cb = (htmlStr) => {
             $readerBox.html(htmlStr);
             reader.init();
         }
-
-        let name = file.split('/').pop().replace('.txt', '');
-        console.log(name);
         let jo = readerDb(name);
 
         let record = readerJoDb.get(name, 'name')[0];
@@ -59,12 +49,29 @@ brick.reg('uploadTextFileCtrl', function (scope) {
             cb(jo.get('text'))
         } else {
             readerJoDb.add({name})
-            createReaderHtml(file).then((htmlStr) => {
+            createReaderHtml(filePath).then((htmlStr) => {
                 cb(htmlStr);
                 jo.set({text: htmlStr});
                 jo.save();
             });
         }
+    };
+
+    readerJoDb.on('change', render);
+
+    render();
+
+    this.speak = function (e, name) {
+        console.log(name)
+        init(name);
+    };
+
+    this.onSelectFileDone = (paths) => {
+        if (!paths) return;
+        let filePath = paths[0];
+
+        let name = filePath.split('/').pop().replace('.txt', '');
+        init(name, filePath);
 
     }
 
