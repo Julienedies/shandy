@@ -16,6 +16,8 @@ speechSU.volume = 0.7;
 speechSU.rate = 1.1;
 speechSU.pitch = 1.1;
 
+const speechSU_props = {};
+
 class Reader {
 
     static style () {
@@ -23,10 +25,11 @@ class Reader {
             #reader-control-wrapper{
                 position:fixed;
                 z-index:10000;
-                bottom:0;
-                left:20px;
+                top:0;
+                left:0;
+                right:0;
                 background:rgba(0,0,0,0.7);
-                padding:1px 7px;
+                padding:1px 10px;
                 opacity:0.5;
             }
             #reader-control-wrapper:hover{
@@ -65,6 +68,10 @@ class Reader {
         speechSU.volume = n;
     }
 
+    static setSpeechSU (prop, value) {
+        speechSU_props[prop] = value;
+    }
+
     constructor (elm = 'body') {
         let that = this
 
@@ -92,6 +99,7 @@ class Reader {
     }
 
     init (elm) {
+        this.cancel();
         this.state = 'init'
         this.list = []
         this.index = 0
@@ -146,9 +154,25 @@ class Reader {
             that.pause()
         }).appendTo($reader)
 
+        /*
+            volume – 声音的音量，区间范围是0到1，默认是1。
+            rate – 语速，数值，默认值是1，范围是0.1到10，表示语速的倍数，例如2表示正常语速的两倍。
+            pitch – 表示说话的音高，数值，范围从0（最小）到2（最大）。默认值为1。
+          setSpeechSU
+         */
         let $volumeBtn = $(`<label>音量 <input type="range" value="7" min="0" max="10"></label>`).on('change', function (e) {
             let val = $(this).find('input').val()
-            Reader.volume(val / 10)
+            Reader.setSpeechSU('volume',val / 10)
+        }).appendTo($reader)
+
+        let $rateBtn = $(`<label>语速 <input type="range" value="12" min="1" max="100"></label>`).on('change', function (e) {
+            let val = $(this).find('input').val()
+            Reader.setSpeechSU('rate', val / 10)
+        }).appendTo($reader)
+
+        let $pitchBtn = $(`<label>音高 <input type="range" value="10" min="0" max="20"></label>`).on('change', function (e) {
+            let val = $(this).find('input').val()
+            Reader.setSpeechSU('pitch', val / 10)
         }).appendTo($reader)
 
         $(document).on('click', '.reader-readable-node', function (e) {
@@ -180,11 +204,15 @@ class Reader {
         let index = this.index
         let $item = $(this.list[index])
         let text = $item.text();
-        if (/^\s+$/.test(text)) {
+/*        if (/^\s+$/.test(text)) {
             return that.next();
-        }
+        }*/
 
-        let speechSU = new SpeechSynthesisUtterance();
+        speechSU = new SpeechSynthesisUtterance();
+        for(let i in speechSU_props){
+            console.log(i, speechSU_props[i]);
+            speechSU[i] = speechSU_props[i];
+        }
         this.speechSU = speechSU;
         speechSU.onend = function () {
             console.log('onend', index);
