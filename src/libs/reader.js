@@ -17,19 +17,72 @@ speechSU.rate = 1.1;
 speechSU.pitch = 1.1;
 
 class Reader {
+
+    static style () {
+        $(`<style>
+            #reader-control-wrapper{
+                position:fixed;
+                z-index:10000;
+                bottom:0;
+                left:20px;
+                background:rgba(0,0,0,0.7);
+                padding:1px 7px;
+                opacity:0.5;
+            }
+            #reader-control-wrapper:hover{
+                opacity:1;
+            }
+            #reader-control-wrapper a, #reader-control-wrapper label{
+                text-decoration: none!important;
+                color:#fff!important;
+                padding:0 4px!important;
+            }
+            #reader-control-wrapper label input{
+                display: none;
+            }
+            #reader-control-wrapper label:hover input{
+                display: inline-block;
+            }
+            .reader-readable-node{
+                display: inline-block;
+                padding:0 2px;
+            }
+            .reader-readable-node-mark{
+                background:#64c116!important;
+                padding: 0 0.6em!important;
+                margin-right: 0.5em!important;
+                border-radius: 50%!important;
+            }
+            .reader-reading{
+                color:#5ecc03;
+/*                background:#95b750;
+                color:#fff;*/
+            }
+        </style>`).appendTo(document.head)
+    }
+
+    static volume (n) {
+        speechSU.volume = n;
+    }
+
     constructor (elm = 'body') {
         let that = this
 
+        this.speechSU = speechSU;
         this.id = +new Date();
         this.state = null
         this.elm = elm
         this.list = []
         this.index = 0
+        this.$elm = null
+        this.$reader = null
+        this.$speakBtn = null
+        this.$pauseBtn = null
+        this.clicentHeight = $(window).height()
 
-        speechSU.onend = () => {
-            console.log('speechSU.onend')
-            this.next();
-        }
+        $(window).on('resize', function () {
+            that.clicentHeight = $(window).height()
+        });
 
         window.addEventListener('beforeunload', function (e) {
             that.cancel()
@@ -43,7 +96,8 @@ class Reader {
         this.list = []
         this.index = 0
         this.elm = elm || this.elm
-        let dom = $(this.elm)[0]
+        this.$elm = $(this.elm)
+        let dom = this.$elm[0]
         walk(dom, this)
         console.log('init', this)
 
@@ -73,8 +127,8 @@ class Reader {
 
     _gui (that) {
 
-        this._style()
-        let $reader = $(`<div id="reader-wrapper"></div>`).appendTo(document.body)
+        Reader.style()
+        let $reader = $(`<div id="reader-control-wrapper"></div>`).appendTo(document.body)
 
         let $speakBtn = $(`<a>播放</a>`).on('click', function (e) {
             let $th = $(this)
@@ -94,19 +148,18 @@ class Reader {
 
         let $volumeBtn = $(`<label>音量 <input type="range" value="7" min="0" max="10"></label>`).on('change', function (e) {
             let val = $(this).find('input').val()
-            console.log(val)
-            that.volume(val / 10)
+            Reader.volume(val / 10)
         }).appendTo($reader)
 
         $(document).on('click', '.reader-readable-node', function (e) {
             let $th = $(this);
             let index;
-            if($th.hasClass('reader-readable-node-mark')){
+            if ($th.hasClass('reader-readable-node-mark')) {
                 index = $th.data('index')
-            }else{
+            } else {
                 index = $th.find('.reader-readable-node-mark').data('index');
             }
-            console.log('开始朗读：', index, that, this)
+            console.log('开始朗读：', index, that)
             that.position(index)
         })
 
@@ -115,46 +168,6 @@ class Reader {
         that.$pauseBtn = $pauseBtn
     }
 
-    _style () {
-        $(`<style>
-            #reader-wrapper{
-                position:fixed;
-                z-index:10000;
-                bottom:0;
-                left:20px;
-                background:rgba(0,0,0,0.7);
-                padding:3px 7px;
-            }
-            #reader-wrapper a, #reader-wrapper label{
-                text-decoration: none!important;
-                color:#fff!important;
-                padding:0 4px!important;
-            }
-            #reader-wrapper label input{
-                display: none;
-            }
-            #reader-wrapper label:hover input{
-                display: inline-block;
-            }
-            .reader-readable-node{
-                display: inline-block;
-                padding:0px 2px;
-            }
-            .reader-readable-node-mark{
-                background:#64c116!important;
-                padding: 0 0.6em!important;
-                margin-right: 0.5em!important;
-                border-radius: 50%!important;
-            }
-            .reader-reading{
-                color:#5ecc03;
-/*                background:#95b750;
-                color:#fff;*/
-            }
-        </style>`).appendTo(document.head)
-    }
-
-
     position (index) {
         this.cancel()
         this.index = index
@@ -162,28 +175,51 @@ class Reader {
     }
 
     speak () {
+        this.setState('speak')
         let that = this;
         let index = this.index
         let $item = $(this.list[index])
-        speechSU.text = $item.text()
-        speechSynthesis.speak(speechSU)
-        //setTimeout(() => {
-            speechSU.onend = function() {
-                 console.log('end', index);
-                 that.next();
-            };
-        //}, 2000);
+        let text = $item.text();
+        if (/^\s+$/.test(text)) {
+            return that.next();
+        }
 
-        this.setState('speak')
+        let speechSU = new SpeechSynthesisUtterance();
+        this.speechSU = speechSU;
+        speechSU.onend = function () {
+            console.log('onend', index);
+            that.next();
+        };
+        speechSU.text = text;
+        speechSynthesis.speak(speechSU)
+    }
+
+    next () {
+        $(this.list[this.index]).removeClass('reader-reading');
+        let index = this.index + 1;
+        if (index >= this.list.length) {
+            this.index = 0;
+            return this.cancel();
+        }
+        this.index = index;
+        this.speak();
     }
 
     setState (state) {
+        console.log('setState:', state, this.index);
         this.state = state
         if (state === 'speak' || state === 'resume') {
             this.$speakBtn.hide()
             this.$pauseBtn.show()
-            let $item = $(this.list[this.index]).addClass('reader-reading')
-            $(document).scrollTop($item.offset().top - 200)
+            let $item = $(this.list[this.index]).addClass('reader-reading');
+            let clientTop = $item[0].getBoundingClientRect().top;
+            console.log(clientTop, this.clicentHeight)
+            if (clientTop < 10 || clientTop > this.clicentHeight - 70) {
+                //$(document).scrollTop($item.offset().top - 100)
+                $('html, body').animate({
+                    scrollTop: $item.offset().top - 70
+                }, 4000);
+            }
         }
         if (state === 'pause' || state === 'cancel') {
             this.$speakBtn.show()
@@ -195,7 +231,7 @@ class Reader {
     }
 
     cancel () {
-        speechSU.onend = null
+        this.speechSU.onend = null;
         speechSynthesis.cancel()
         this.setState('cancel')
     }
@@ -209,20 +245,6 @@ class Reader {
         speechSynthesis.resume();
         this.setState('resume')
     }
-
-    volume (n) {
-        speechSU.volume = n // 0.3;
-    }
-
-
-    next () {
-        let index = this.index + 1;
-        if (index >= this.list.length) {
-            index = 0
-        }
-        this.position(index)
-    }
-
 
 }
 

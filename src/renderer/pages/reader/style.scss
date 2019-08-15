@@ -9,3 +9,9 @@
     display: none !important;
   }
 }
+
+[ic-ctrl=uploadTextFileCtrl] {
+  .tag {
+    cursor: pointer;
+  }
+}
