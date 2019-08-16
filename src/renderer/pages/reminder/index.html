@@ -19,11 +19,20 @@
             </ul>
         </section>
 
+        <section>
+            <h3 class="title is-5">交易系统</h3>
+            <ul ic-tpl="logic">
+                <li ic-for="i,v in model['交易逻辑']" ic-class="{{ v.level*1 > 20 ? 'ani-warn':'' }}">
+                    {{ v.text }}
+                </li>
+            </ul>
+        </section>
+
         <section ic-ctrl="mistakeCtrl">
             <h3 class="title is-5">交易错误</h3>
             <div ic-tpl="mistake">
                 <ul ic-viewer ic-viewer-url="src">
-                    <li ic-for="i,v in model['交易错误']" ic-class="{{ v.level*1 > 20 ? 'ani-warn':'' }}">
+                    <li ic-for="i,v in model['交易错误']" ic-class="{{ v.level*1 > 20 ? 'X-ani-warn':'' }}">
                         <h6 class="title is-6">
                             <span style="padding-right:1em;">{{ v.text }}</span>
                             <a style="font-size:0.8em;" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
@@ -33,25 +42,15 @@
                     </li>
                 </ul>
             </div>
-
         </section>
     </div>
 
-    <div class="h-wrapper">
-        <section ic-ctrl="mistake">
-            <h3 class="title is-5">交易逻辑</h3>
-            <ul ic-tpl="logic">
-                <li ic-for="i,v in model['交易逻辑']" ic-class="{{ v.level*1 > 20 ? 'ani-warn':'' }}">
-                    {{ v.text }}
-                </li>
-            </ul>
-        </section>
+    <!--<div class="h-wrapper">
 
         <section ic-ctrl="mistake">
             <h3 class="title is-5"></h3>
             <ul ic-tpl="principle">
                 <li ic-for="i,v in model['交易原则']" ic-class="{{ v.level*1 > 20 ? 'ani-warn':'' }}">
-                    {{ v.text }}
                 </li>
             </ul>
             <ul class="none">
@@ -74,7 +73,7 @@
                 <li>被动，混沌，无计划，无预案。</li>
             </ul>
         </section>
-    </div>
+    </div>-->
 
 </div>
 

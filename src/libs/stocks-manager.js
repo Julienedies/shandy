@@ -1,6 +1,6 @@
 /**
+ *  股票列表管理器
  * Created by j on 18/8/24.
- * 股票管理器
  */
 
 import path from 'path'
@@ -14,10 +14,10 @@ let stocksJo
 
 function getStocksJo () {
     stocksJo = stocksJo || jo(jsonPath)
-/*    stocksJo.json.forEach((arr, i) => {
-        arr[1] = arr[1].replace('Ａ', 'A')
-    })
-    stocksJo.save()*/
+    /*    stocksJo.json.forEach((arr, i) => {
+            arr[1] = arr[1].replace('Ａ', 'A')
+        })
+        stocksJo.save()*/
     return stocksJo
 }
 
@@ -26,14 +26,17 @@ export default {
     /**
      * @return {Array}
      */
-    get: function(){
-        stocksJo = getStocksJo ()
+    get: function () {
+        stocksJo = getStocksJo()
         return stocksJo.json
     },
-    add: function(stock){
-        stocksJo = getStocksJo ()
+    add: function (stock) {
+        stocksJo = getStocksJo()
         stocksJo.json.unshift([stock.code, stock.name])
         stocksJo.save()
+    },
+    refresh: function () {
+        stocksJo = jo(jsonPath);
     }
 
 }

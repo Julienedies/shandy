@@ -6,6 +6,7 @@ import 'babel-polyfill'
 
 import _ from 'lodash'
 import jhandy from 'jhandy'
+import stocksManager from '../../../libs/stocks-manager'
 import utils from '../../../libs/utils'
 import jo from '../../../libs/jsono'
 
@@ -33,41 +34,44 @@ brick.reg('mainCtrl', function (scope) {
         $log = $('#log')
     })
 
-    this.createStocksJson = async function (fields, isAddMode) {
+    // 数组合并去重， 主要用于处理stocks.json数据
+    function merge (oldArr, newArr) {
+        let map = {};
+        let result = [];
+        let f = (item, index) => {
+            let code = item[0];
+            map[code] = item[1];
+        };
+        oldArr.forEach(f);
+        newArr.forEach(f);
+
+        for (let i in map) {
+            result.push([i, map[i]]);
+        }
+        return result;
+    }
+
+    this.createStocksJson = async function (fields) {
         console.log(fields)
         let $th = $(this).icSetLoading();
         setting.merge('csd', fields).save();
 
-        if (1) {
-            let stockArr = await jhandy.csv(fields.stocksCsvFile, null, [0, 1], true);
-            let stocksJo = jo(fields.stocksJsonFile, []);
-            let oldSize = stocksJo.json.length;
-            // 对合并的stock数组去重
-            stocksJo.json = _.uniqBy([...stocksJo.json, ...stockArr], (item) => {
-                return item[0];
-            });
-            stocksJo.save();
-            $th.icClearLoading();
-            utils.msg(`共有股票 ${ stocksJo.json.length } 支. 新添加股票 ${ stocksJo.json.length - oldSize }`, 'OK');
-
-        } else {
-            jhandy.csv(fields.stocksCsvFile, fields.stocksJsonFile, [0, 1], true)
-                .then((stocks) => {
-                    console.log(stocks)
-                    $th.icClearLoading()
-                    utils.msg(`共创建股票 ${ stocks.length } 支.`, '创建成功')
-                })
-                .catch((err) => {
-                    console.error(err)
-                    $th.icClearLoading()
-                    utils.err('创建stocks.json失败,请重新尝试.')
-                });
+        let stockArr = await jhandy.csv(fields.stocksCsvFile, null, [0, 1], true);
+        let stocksJo = jo(fields.stocksJsonFile, []);
+        let oldSize = stocksJo.json.length;
+        $th.icClearLoading();
+        // 如果解析stockArr失败
+        if (!Array.isArray(stockArr)) {
+            console.err(stockArr);
+            return utils.err('创建stocks.json失败,请重新尝试.')
         }
 
-    };
-
-    scope.addToStocksJson = function (fields) {
-
+        // 合并stock
+        stocksJo.json = merge(stocksJo.json, stockArr);
+        stocksJo.save();
+        // 更新股票列表管理器
+        stocksManager.refresh();
+        utils.msg(`共有股票 ${ stocksJo.json.length } 支. 新添加股票 ${ stocksJo.json.length - oldSize }`, 'OK');
     };
 
     this.fetchStart = async function (fields) {
@@ -121,10 +125,9 @@ brick.reg('mainCtrl', function (scope) {
                 utils.err('自定义数据文件创建失败.')
                 console.error(err)
             })
+    };
 
-    }
-
-})
+});
 
 
 brick.bootstrap()

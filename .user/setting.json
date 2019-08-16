@@ -1,6 +1,6 @@
 {
 	"csd": {
-		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190811.txt",
+		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190816.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
 		"fetchSources": [
 			"ths_new",
@@ -9,7 +9,7 @@
 			"ycj"
 		],
 		"csdPath": "/Users/j/dev/csd",
-		"fetchByStocks": "/Users/j/截图/临时条件股20190814.txt",
+		"fetchByStocks": "/Users/j/截图/临时条件股20190815.txt",
 		"tdx_extern_user_file": "/Volumes/C/new_jyplug/T0002/signals/extern_user.txt",
 		"fetchFromIndex": 0,
 		"bounds": {
@@ -85,10 +85,10 @@
 	},
 	"reader": {
 		"bounds": {
-			"x": 1582,
-			"y": 181,
-			"width": 1122,
-			"height": 857
+			"x": 106,
+			"y": 71,
+			"width": 1158,
+			"height": 722
 		}
 	}
 }

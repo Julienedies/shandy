@@ -242,7 +242,7 @@
                                         <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
                                         <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
                                         <button class="button is-primary is-small" ic-click="up:{{ v.id }}">上移</button>
-                                        <button class="button is-primary is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
+                                        <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
                                             {{ v.disable ? '启用':'禁用' }}
                                         </button>
                                     </td>

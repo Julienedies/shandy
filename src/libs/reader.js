@@ -208,6 +208,7 @@ class Reader {
             return that.next();
         }*/
 
+        // 重复使用同一个语音合成实例，似乎会导致很多问题，避免重复使用同一个tts实例
         speechSU = new SpeechSynthesisUtterance();
         for(let i in speechSU_props){
             console.log(i, speechSU_props[i]);
