@@ -18,7 +18,7 @@ export default function () {
     };
 
     /**
-     *
+     * 上传图片：只在electron端使用
      * @param data {Array} 图片路径数组, 可以是绝对路径或者url
      * @returns {boolean}
      */
@@ -34,7 +34,7 @@ export default function () {
         return false;
     };
 
-    // 图片上传
+    // 图片上传 web端使用，暂时无用，
     scope.onUploadDone = function (data) {
         // 获取表单数据model
         let model = $elm.find('[ic-form="set_tag"]').icForm();

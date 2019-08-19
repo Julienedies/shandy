@@ -11,6 +11,8 @@ import objm from './objm.js'
 
 import config from './config'
 
+// 需要先创建一个json文件(类似先创建数据库) ，初始数据可以是object 或 数组
+// 方法会根据name读取对应的json文件
 export default function (name, conf) {
 
     let jsonPath = path.join(config.DATA_DIR, `./${ name }.json`);

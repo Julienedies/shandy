@@ -93,7 +93,7 @@ class Reader {
 
         window.addEventListener('beforeunload', function (e) {
             that.cancel()
-        })
+        });
 
         this._gui(this)
     }

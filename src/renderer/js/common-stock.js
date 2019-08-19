@@ -16,9 +16,9 @@ brick.debug('log');
 
 //brick.set('debug', true);
 
-brick.set('render.wrapModel', true)
+brick.set('render.wrapModel', true);
 
-brick.reg('main_ctrl', function(){
+function mainCtrl () {
 
     let scope = this;
     let $elm = scope.$elm;
@@ -31,32 +31,36 @@ brick.reg('main_ctrl', function(){
         return arr;
     };
 
-    scope.tag_add = function(e, type){
+    scope.tag_add = function (e, type) {
         scope.emit('tag.add', {type: type});
     };
 
-    scope.tag_edit = function(e, id){
+    scope.tag_edit = function (e, id) {
         scope.emit('tag.edit', id);
     };
 
-    scope.tag_remove_done = function(res){
+    scope.tag_remove_done = function (res) {
         $(this).closest('li').remove();
     };
 
-    scope.before = function(f){
+    scope.before = function (f) {
         console.info('ic-form-submit-before => ', f);
     };
 
-    this.ajax_before_confirm = function(data, msg){
+    this.ajax_before_confirm = function (data, msg) {
         //console.info([].slice.call(arguments));
         return confirm(data || msg);
     };
 
-    $elm.on('ic-form.error', function(e, msg){
+    $elm.on('ic-form.error', function (e, msg) {
         console.info(msg);
     });
 
-});
+}
+
+
+brick.reg('main_ctrl', mainCtrl);
+brick.reg('mainCtrl', mainCtrl)
 
 
 setTimeout(function () {

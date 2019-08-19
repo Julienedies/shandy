@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../../css/vendor/hint.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
-<body id="logic_list" ic-ctrl="main_ctrl">
+<body ic-ctrl="main_ctrl">
 
 <section class="column is-8 is-offset-2" ic-ctrl="logicCtrl">
 
@@ -43,7 +43,7 @@
         <button class="button" ic-click="logic.reverse">排序反转</button>
     </div>-->
 
-    <ul ic-tpl="logic">
+    <ul ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre">{{v.text}}</div>
             <div class="tar">
