@@ -109,7 +109,7 @@ brick.reg('mainCtrl', function (scope) {
         if (viewsModel.has(item)) {
             viewsModel.active(item)
         } else {
-            item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%;"></webview>`).appendTo($views)
+            item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%; padding:0; margin:0;border:solid 1px rgba(0,255,0,0);"></webview>`).appendTo($views)
             viewsModel.add(item)
         }
         render()

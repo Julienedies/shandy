@@ -30,6 +30,7 @@ brick.reg('systemCtrl', function () {
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
     let model = {};  // 存储ajax数据： stock/system
+    let viewId = null;
 
     scope.onGetSystemDone = function (data) {
         console.info(data);
@@ -48,8 +49,9 @@ brick.reg('systemCtrl', function () {
     };
 
     scope.view = function (e, id) {
+        viewId = id;
         let system = list.get(id)[0];
-        scope.render('details', {model: system})
+        scope.render('details', {model: system});
     };
 
     scope.onDeleteDone = function () {
@@ -60,6 +62,9 @@ brick.reg('systemCtrl', function () {
         //$elm.find('#getSystem').click();
         console.info('ON_SET_SYSTEM_DONE =>', msg);
         scope.onGetSystemDone(msg);
+        if (viewId) {
+            scope.view({}, viewId);
+        }
     });
 
     scope.on('tag.edit.done', function (e, data) {
@@ -133,7 +138,6 @@ brick.reg('setSystemCtrl', function () {
         scope.render('setSystem', model);
         return false;
     };
-
 
 
 });

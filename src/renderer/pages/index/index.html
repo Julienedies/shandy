@@ -122,20 +122,6 @@
 
             <main class="pane" style="height: 100%; overflow-y: auto;">
 
-                <div id="viewsWrapper">
-                    <div id="viewTabs" ic-tpl="viewTabs">
-                        <div class="tab-group">
-                            <div ic-for="i,v in model" ic-class="tab-item {{ v.active ? 'active':'' }}" ic-click="activeTab:{{ v.url }}">
-                                <span class="icon icon-cancel icon-close-tab" ic-click="closeTab:{{ v.url }}"></span>
-                                {{ v.title }}
-                            </div>
-                        </div>
-                    </div>
-                    <div id="views">
-                        <!--<webview id="web_view" src="" nodeintegration style="height: 100%;"></webview>-->
-                    </div>
-                </div>
-
                 <div id="indexView">
                     <section id="rtsCtrl" ic-ctrl="rts_ctrl">
                         <div id="rts_list" ic-tpl="list">
@@ -285,6 +271,21 @@
                         </div>
                     </div>
 
+                </div>
+
+                <!--  webview -->
+                <div id="viewsWrapper">
+                    <div id="viewTabs" ic-tpl="viewTabs">
+                        <div class="tab-group">
+                            <div ic-for="i,v in model" ic-class="tab-item {{ v.active ? 'active':'' }}" ic-click="activeTab:{{ v.url }}">
+                                <span class="icon icon-cancel icon-close-tab" ic-click="closeTab:{{ v.url }}"></span>
+                                {{ v.title }}
+                            </div>
+                        </div>
+                    </div>
+                    <div id="views">
+                        <!--<webview id="web_view" src="" nodeintegration style="height: 100%;"></webview>-->
+                    </div>
                 </div>
 
             </main>

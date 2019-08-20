@@ -16,11 +16,11 @@ input {
   padding: 3px 5px;
 }
 
-.nav-group-item .icon{
-  float:none;
+.nav-group-item .icon {
+  float: none;
 }
 
-[ic-popup]{
+[ic-popup] {
   top: 30px !important;
 }
 
@@ -42,7 +42,8 @@ div[ic-ctrl="rtsCtrl"] button {
     list-style: none;
     margin: 0;
     padding: 0;
-    li{
+
+    li {
       display: flex;
       align-items: center;
     }
@@ -67,14 +68,16 @@ div[ic-ctrl="rtsCtrl"] button {
 .btn .icon {
   margin-right: 4px;
 }
-.none{
+
+.none {
   display: none;
 }
 
 ////////////////////////////////////////////////////////////////////////////
-.toolbar{
-  background-image: linear-gradient(to bottom, #d1cfd1 0%,  #e8e6e8 100%);
+.toolbar {
+  background-image: linear-gradient(to bottom, #d1cfd1 0%, #e8e6e8 100%);
 }
+
 .toolbar-actions {
   display: flex;
   justify-content: flex-end;
@@ -85,9 +88,10 @@ div[ic-ctrl="rtsCtrl"] button {
     padding: 0 0.6rem;
     text-align: center;
     white-space: nowrap;
-    border-left:solid 1px #bbbaba;
+    border-left: solid 1px #bbbaba;
+
     &:first-child {
-      border-left:none;
+      border-left: none;
     }
 
     &:last-child {
@@ -102,12 +106,14 @@ div[ic-ctrl="rtsCtrl"] button {
       display: inline-block;
       padding: 0 0.7em;
       cursor: pointer;
-      border-radius:0.2em;
-      &:hover{
-        background:rgba(0,0,0,0.1)
+      border-radius: 0.2em;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.1)
       }
-      .icon{
-        &:hover{
+
+      .icon {
+        &:hover {
           cursor: pointer;
         }
       }
@@ -180,5 +186,6 @@ div[ic-ctrl="rtsCtrl"] button {
 
   #views {
     flex: 1;
+    border: solid 2px rgba(0,0,0,0);
   }
 }
