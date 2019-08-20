@@ -29,11 +29,12 @@
                 <div class="box">
                     <header class="level">
                         <h3 class="level-left">
-                            <span class=" title is-5">{{ v.name }}</span>
+                            <span class="title is-5" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }}</span>
                         </h3>
                         <div class="level-right buttons">
-                            <button class="button" ic-click="edit:{{v.id}}">编辑</button>
-                            <button class="button"
+                            <button class="button is-small" ic-click="view:{{ v.id }}" ic-popup-target="details">详情</button>
+                            <button class="button is-small" ic-click="edit:{{v.id}}">编辑</button>
+                            <button class="button is-small"
                                     ic-ajax
                                     ic-submit-method="delete"
                                     ic-submit-action="/stock/system/{{v.id}}"
@@ -42,23 +43,40 @@
                             </button>
                         </div>
                     </header>
+
+                </div>
+            </li>
+        </ul>
+
+        <div class="column" ic-popup="details">
+            <div ic-tpl="details">
+                <div ic-init="v=model;">
+                    <h5 class="title is-6"> {{ v.name }}</h5>
                     <table class="table is-striped  is-bordered is-fullwidth">
                         <tr>
                             <th>示例图片</th>
                             <td ic-viewer ic-viewer-url="href">
-                                <span class="tag is-primary"  ic-for="i,o in v['示例图片']" ic-href="{{ o }}" ic-viewer-item>
+                                <span class="tag is-primary" ic-for="i,o in v['示例图片']" ic-href="{{ o }}" ic-viewer-item>
                                     {{ parseImgName(o) }}
                                 </span>
                             </td>
                         </tr>
                         <tr ic-for="j,k in ['目标行情','行情性质','大盘条件','买点','仓位管理','止盈条件','止损条件','终止条件','持续时间']">
-                            <th style="width:8em;">{{ k }} </th>
+                            <th style="width:8em;">{{ k }}</th>
                             <td class="pre">{{ v[k] }}</td>
                         </tr>
                     </table>
+
+                    <div class="column">
+                        <div class="buttons">
+                            <button class="button is-primary" ic-click="edit:{{v.id}}">编辑</button>
+                            <button class="button is-primary" ic-popup-close="details">返回</button>
+                        </div>
+                    </div>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
+
     </div>
 
     ${ require('./set-system.html')}

@@ -4,7 +4,6 @@
 
 import 'babel-polyfill'
 
-import _ from 'lodash'
 import jhandy from 'jhandy'
 import stocksManager from '../../../libs/stocks-manager'
 import utils from '../../../libs/utils'
@@ -32,7 +31,7 @@ brick.reg('mainCtrl', function (scope) {
 
     scope.render('csd', {model}, () => {
         $log = $('#log')
-    })
+    });
 
     // 数组合并去重， 主要用于处理stocks.json数据
     function merge (oldArr, newArr) {
@@ -76,28 +75,27 @@ brick.reg('mainCtrl', function (scope) {
 
     this.fetchStart = async function (fields) {
         console.log(fields)
-
         let $th = $(this).icSetLoading()
         setting.merge('csd', fields).save()
 
         let stockArr
         if (/\.txt$/.test(fields.fetchByStocks)) {
-            stockArr = await jhandy.csv(fields.fetchByStocks, null, [0, 1], true)
+            stockArr = await jhandy.csv(fields.fetchByStocks, null, [0, 1], true);
         }
 
         jhandy.fetch(fields.csdPath, stockArr || fields.fetchByStocks, fields.fetchFromIndex, fields.fetchSources, (stat) => {
-            $log.text(JSON.stringify(stat))
+            $log.text(JSON.stringify(stat));
         })
-            .then(stats => {
-                $th.icClearLoading()
-                setting.json.csd.fetchFromIndex = 0
-                setting.save()
-            })
-            .catch(err => {
-                console.error(typeof err, err)
-                scope.fetchStop()
-                utils.err('fetch出现错误, 请重新尝试.')
-            })
+        .then(stats => {
+            $th.icClearLoading()
+            setting.json.csd.fetchFromIndex = 0
+            setting.save()
+        })
+        .catch(err => {
+            console.error(typeof err, err)
+            scope.fetchStop()
+            utils.err('fetch出现错误, 请重新尝试.')
+        });
 
     };
 
@@ -115,16 +113,16 @@ brick.reg('mainCtrl', function (scope) {
         setting.merge('csd', fields).save()
 
         jhandy.tdx(fields.csdPath, fields.tdx_extern_user_file)
-            .then(tdxFilePath => {
-                $th.icClearLoading()
-                utils.msg(`创建成功, 自定义数据文件预览: ${ tdxFilePath }.`)
-                // utils.openItem(tdxFilePath)
-            })
-            .catch(err => {
-                $th.icClearLoading()
-                utils.err('自定义数据文件创建失败.')
-                console.error(err)
-            })
+        .then(tdxFilePath => {
+            $th.icClearLoading()
+            utils.msg(`创建成功, 自定义数据文件预览: ${ tdxFilePath }.`)
+            // utils.openItem(tdxFilePath)
+        })
+        .catch(err => {
+            $th.icClearLoading()
+            utils.err('自定义数据文件创建失败.')
+            console.error(err)
+        })
     };
 
 });

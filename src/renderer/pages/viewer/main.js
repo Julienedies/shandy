@@ -30,6 +30,8 @@ const tradeArr = userDb('trading', []).get();
 
 brick.reg('mainCtrl', function (scope) {
 
+    let $list = $('#list');
+
     scope.onSelectImgDirDone = (paths) => {
         if (!paths) return;
         let dir = paths[0];
@@ -51,7 +53,7 @@ brick.reg('mainCtrl', function (scope) {
         });
         console.info(urls);
         scope.urls = urls;
-        $('#box').icRender('list', urls);
+        $list.icRender('list', urls);
     };
 
 
@@ -111,7 +113,7 @@ brick.reg('mainCtrl', function (scope) {
     function copyImageToDist (dirPath) {
         let imgObj = scope.currentImg;
         let fileName = imgObj.f.split('/').pop();
-        bridge.copy(imgObj.f, `${dirPath}${ fileName }`)
+        bridge.copy(imgObj.f, `${ dirPath }${ fileName }`)
             .then(() => {
                 $.icMessage('ok!')
             })
@@ -131,6 +133,15 @@ brick.reg('mainCtrl', function (scope) {
 
 
     // -----------------------------------------------------------------------------------------------
+
+    scope.reload = function () {
+        location.reload();
+    };
+
+    scope.reverse = function () {
+        scope.urls.reverse();
+        $list.icRender('list', scope.urls);
+    };
 
 
     // 图片剪切测试  fields => {x: 3140, y: 115, width: 310, height: 50}

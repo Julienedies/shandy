@@ -16,14 +16,13 @@ import '../../../js/utils.js'
 
 import setTagCtrl from '../tags/set-tag-ctrl'
 
-brick.set('debug', true)
-
-brick.reg('setTagCtrl', setTagCtrl)
-
-
 const ADD_SYSTEM = 'ADD_SYSTEM';
 const ON_SET_SYSTEM_DONE = 'ON_SET_SYSTEM_DONE';
 const EDIT_SYSTEM = 'EDIT_SYSTEM';
+
+//brick.set('debug', true)
+
+brick.reg('setTagCtrl', setTagCtrl)
 
 brick.reg('systemCtrl', function () {
 
@@ -46,6 +45,11 @@ brick.reg('systemCtrl', function () {
     scope.edit = function (e, id) {
         let arr = list.get(id);
         scope.emit(EDIT_SYSTEM, {system: arr[0], tags: model.tags});
+    };
+
+    scope.view = function (e, id) {
+        let system = list.get(id)[0];
+        scope.render('details', {model: system})
     };
 
     scope.onDeleteDone = function () {

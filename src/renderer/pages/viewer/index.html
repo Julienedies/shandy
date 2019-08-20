@@ -32,8 +32,10 @@
                 </div>
 
                 <div class="field">
-                    <button class="button" ic-click="ocrRename">ocr重命名</button>
-                    <button class="button" ic-form-submit ic-submit-action="cropTest()">剪切测试</button>
+                    <button class="button is-primary" ic-click="reload">刷新页面</button>
+                    <button class="button is-primary" ic-click="reverse">反转排序</button>
+                    <button class="button is-primary" ic-click="ocrRename">ocr重命名</button>
+                    <button class="button is-primary" ic-form-submit ic-submit-action="cropTest()">剪切测试</button>
                     <span>
                         <img id="view_crop" style="border:solid 1px blue;"/>
                         <span id="ocr_text"></span>
@@ -43,7 +45,7 @@
         </div>
     </div>
 
-    <div id="box" ic-tpl="list">
+    <div id="list" ic-tpl="list">
         <ol ic-viewer
             ic-viewer-item="li"
             ic-viewer-url="url"
