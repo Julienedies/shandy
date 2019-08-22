@@ -109,7 +109,7 @@ brick.reg('mainCtrl', function (scope) {
         if (viewsModel.has(item)) {
             viewsModel.active(item)
         } else {
-            item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%; padding:0; margin:0;border:solid 1px rgba(0,255,0,0);"></webview>`).appendTo($views)
+            item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%; "></webview>`).appendTo($views)
             viewsModel.add(item)
         }
         render()
@@ -240,7 +240,7 @@ brick.reg('mainCtrl', function (scope) {
     scope.openNews = function () {
         let newsWin = scope.newsWin;
         if (newsWin) {
-            newsWin.show();
+            newsWin.close();
         } else {
             let name = 'news';
             let url = 'news.html';
@@ -396,7 +396,7 @@ brick.reg('mainCtrl', function (scope) {
 
     // ----------------------------------------------------------------
 
-    if (utils.isTradingHours()) {
+    if (utils.isTradingHours(true)) {
         scope.openNews();
         //scope.openPrompt();
     }
@@ -465,7 +465,7 @@ brick.reg('memoCtrl', function () {
             saveParams: {time: +new Date}
         }).froalaEditor('html.set', text || '')
 
-    })
+    });
 
     this.saveMemo = function (e) {
         let text = $memo.froalaEditor('html.get', true)

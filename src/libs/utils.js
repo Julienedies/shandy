@@ -95,8 +95,11 @@ export default {
     addStock (stock) {
         stocksManager.add(stock)
     },
-    copy (file, dist) {
-        return fse.copy(file, dist)
+    copy (src, dist) {
+        return fse.copy(src, dist)
+    },
+    move (src, dist) {
+        return fse.move(src, dist);
     },
     /**
      * 是否是A股交易时间

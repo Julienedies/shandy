@@ -39,5 +39,11 @@ export default {
         res.json(getData());
     },
 
-
+    move (req, res) {
+        let dob = getDb();
+        let id = req.params.id;
+        let dest = req.params.dest;
+        dob.move(id, dest);
+        res.json(getData());
+    }
 }

@@ -46,6 +46,7 @@ brick.reg('systemCtrl', function () {
     scope.edit = function (e, id) {
         let arr = list.get(id);
         scope.emit(EDIT_SYSTEM, {system: arr[0], tags: model.tags});
+        return false;
     };
 
     scope.view = function (e, id) {
@@ -95,6 +96,14 @@ brick.reg('setSystemCtrl', function () {
         $elm.icPopup(true);
     }
 
+    scope.submitBefore = function (data) {
+        console.log(222,data);
+    };
+
+    scope.reset = function () {
+        scope.render(_model);
+    };
+
     // 添加或修改完成
     scope.done = function (data) {
         console.log(data);
@@ -102,9 +111,6 @@ brick.reg('setSystemCtrl', function () {
         scope.emit(ON_SET_SYSTEM_DONE, data);
     };
 
-    scope.reset = function () {
-        scope.render(_model);
-    };
 
     scope.tag_edit = function (e, id) {
         scope.emit('tag.edit', tags.get(id));

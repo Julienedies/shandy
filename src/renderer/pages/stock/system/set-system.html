@@ -24,20 +24,19 @@
                 </div>
                 <!-- tr -->
                 <div>
-                    <h6>行情性质</h6>
+                    <h6>行情逻辑</h6>
                     <div class="field">
                         <div class="control">
-                            <textarea class="textarea is-medium" rows="2" ic-form-field="行情性质">{{system['行情性质']}}</textarea>
+                            <textarea class="textarea is-medium" rows="2" ic-form-field="行情逻辑">{{system['行情逻辑']}}</textarea>
                         </div>
-                        <p class="help">行情逻辑，强度，广度，持续时间</p>
                     </div>
                 </div>
                 <!-- tr -->
                 <div>
-                    <h6>大盘条件</h6>
+                    <h6>系统条件</h6>
                     <div>
                         <div class="control">
-                            <input class="input" type="text" name="大盘条件" value="{{system['大盘条件']}}" ic-form-field>
+                            <textarea class="textarea is-medium" rows="2" ic-form-field="系统条件">{{system['系统条件']}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -81,7 +80,7 @@
                             <button class="button is-primary"
                                     ic-form-submit="setSystem"
                                     ic-submit-action="/stock/system"
-                                    ic-submit-before="submit"
+                                    ic-submit-before="submitBefore"
                                     ic-submit-on-done="done"
                             >保存
                             </button>

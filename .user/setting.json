@@ -9,9 +9,9 @@
 			"ycj"
 		],
 		"csdPath": "/Users/j/dev/csd",
-		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190819.txt",
+		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"tdx_extern_user_file": "/Volumes/C/new_jyplug/T0002/signals/extern_user.txt",
-		"fetchFromIndex": 737,
+		"fetchFromIndex": 305,
 		"bounds": {
 			"x": 157,
 			"y": 55,
@@ -29,6 +29,7 @@
 		}
 	},
 	"viewer": {
+		"MQ_DIR": "/Users/j/截图/目标行情",
 		"imgDir": "/Users/j/截图/目标行情",
 		"bounds": {
 			"x": 1440,

@@ -27,13 +27,28 @@
         <ul ic-tpl="systemList">
             <li ic-for="i,v in model">
                 <div class="box">
-                    <header class="level">
-                        <h3 class="level-left">
-                            <span class="title is-5" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }}</span>
-                        </h3>
-                        <div class="level-right buttons">
-                            <button class="button is-small" ic-click="view:{{ v.id }}" ic-popup-target="details">详情</button>
+                    <div class="columns">
+                        <div class="column is-10">
+                            <header>
+                                <a class="title is-5" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }}</a>
+                                <span style="padding-left:1em; vertical-align: 4px;" ic-viewer ic-viewer-url="href">
+                                    <span class="tag is-danger" ic-for="i,o in v['示例图片']" ic-href="{{ o }}" ic-viewer-item>
+                                        {{ parseImgName(o) }}
+                                    </span>
+                                </span>
+                            </header>
+                            <p>{{ v['行情逻辑'] }}</p>
+                        </div>
+
+                        <div class="column is-2 buttons">
                             <button class="button is-small" ic-click="edit:{{v.id}}">编辑</button>
+                            <!--<button class="button is-small" ic-click="view:{{ v.id }}" ic-popup-target="details">详情</button>-->
+                            <button class="button is-small"
+                                    ic-ajax
+                                    ic-submit-method="get"
+                                    ic-submit-action="/stock/system/move/{{v.id}}/"
+                                    ic-submit-on-done="onGetSystemDone">置顶
+                            </button>
                             <button class="button is-small"
                                     ic-ajax
                                     ic-submit-method="delete"
@@ -42,7 +57,7 @@
                                     ic-submit-on-done="onDeleteDone">删除
                             </button>
                         </div>
-                    </header>
+                    </div>
 
                 </div>
             </li>
@@ -61,7 +76,7 @@
                                 </span>
                             </td>
                         </tr>
-                        <tr ic-for="j,k in ['目标行情','行情性质','大盘条件','买点','仓位管理','止盈条件','止损条件','终止条件','持续时间']">
+                        <tr ic-for="j,k in ['目标行情','行情逻辑','大盘条件','买点','仓位管理','止盈条件','止损条件','终止条件','持续时间']">
                             <th style="width:8em;">{{ k }}</th>
                             <td class="pre">{{ v[k] }}</td>
                         </tr>

@@ -39,7 +39,10 @@
 
             <div class="btn-group">
                 <a class="btn-btn-default hint--bottom" aria-label="语音提醒" ic-popup-target="setVoiceWarn">
-                    <i class="icon icon-mute"></i><!-- icon-sound  ic-click="playWarnAudio" id="playWarnAudioBtn" -->
+                    <i class="icon icon-sound"></i><!-- icon-sound icon-mute ic-click="playWarnAudio" id="playWarnAudioBtn" -->
+                </a>
+                <a class="btn-btn-default hint--bottom" aria-label="OCR重命名" ic-click="renameByOcr">
+                    <i class="icon icon-folder"></i>
                 </a>
                 <a class="btn-btn-default hint--bottom" aria-label="更新token" ic-click="updateToken">
                     <i class="icon icon-shuffle"></i>
@@ -83,9 +86,8 @@
                 </nav>
                 <nav class="nav-group">
                     <h5 class="nav-group-title">T</h5>
-                    <a class="nav-group-item" ic-click="show:memo.html"><i class="icon icon-calendar"></i> 备忘</a>
-                    <a class="nav-group-item" ic-click="show:stock_logic.html"><i class="icon icon-help"></i>逻辑</a>
                     <a class="nav-group-item" ic-click="show:stock_system.html"><i class="icon icon-shareable"></i> 系统</a>
+                    <a class="nav-group-item" ic-click="show:stock_logic.html"><i class="icon icon-help"></i>逻辑</a>
                     <a class="nav-group-item" ic-click="show:stock_plan.html"><i class="icon icon-doc-text"></i> 计划</a>
                     <a class="nav-group-item" ic-click="show:stock_sell.html"><i class="icon icon-doc-text"></i> 平仓</a>
                     <a class="nav-group-item" ic-click="show:stock_buy.html"><i class="icon icon-doc-text"></i> 建仓</a>
@@ -94,6 +96,7 @@
                     <a class="nav-group-item" ic-click="show:stock_news.html"><i class="icon icon-newspaper"></i> 资讯</a>
                     <a class="nav-group-item" ic-click="show:stock_tags.html"><i class="icon icon-erase"></i> 标签</a>
                     <a class="nav-group-item" ic-click="show:note.html"><i class="icon icon-pencil"></i> 笔记</a>
+                    <a class="nav-group-item" ic-click="show:memo.html"><i class="icon icon-calendar"></i> 备忘</a>
                 </nav>
                 <nav class="nav-group">
                     <h5 class="nav-group-title">N</h5>
@@ -106,7 +109,7 @@
                         图片浏览
                     </span>
                     <span class="nav-group-item" ic-click="openCsd">
-                        <i class="icon icon-folder"></i>
+                        <i class="icon icon-database"></i>
                         csd
                     </span>
                     <span class="nav-group-item" ic-click="openReader">

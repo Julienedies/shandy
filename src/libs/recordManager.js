@@ -270,9 +270,9 @@ let proto = {
     /**
      * @todo  把一条记录位置移动到目标记录前
      * @param id   {Object | uid},  要移动的记录
-     * @param before_id {Object | uid}, 目标记录, 可选, 如果没有提供, 则默认是首条记录
+     * @param dest {Object | uid}, 目标记录, 可选, 如果没有提供, 则默认是首条记录
      */
-    insert: function (id, before_id) {
+    insert: function (id, dest) {
 
         let pool = this._pool;
 
@@ -281,12 +281,15 @@ let proto = {
         let arr = pool.splice(index, 1);  // 从数组中删除
         let record = arr[0];
 
-        let before_index = before_id ? this._getIndex(before_id) : 0;
+        let before_index = dest ? this._getIndex(dest) : 0;
 
         pool.splice(before_index, 0, record);  // 重新插入
 
         this.emit('change');
 
+    },
+    move: function(id, destID){
+        this.insert(id, destID);
     },
     /**
      * 调整记录位置,在队列里向前移动

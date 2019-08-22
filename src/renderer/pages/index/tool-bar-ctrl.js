@@ -17,6 +17,8 @@ import cm from '../../../libs/console'
 import config from '../../../libs/config'
 import getToken from '../../../libs/get-baidu-token'
 import utils from '../../../libs/utils'
+import setting from '../../../libs/setting'
+import helper from '../viewer/helper'
 
 const {remote, shell} = electron
 const {dialog} = electron.remote
@@ -50,6 +52,15 @@ brick.reg('toolBarCtrl', function (scope) {
     this.updateToken = function () {
         getToken()
     }
+
+    this.renameByOcr = function (e) {
+        let dir = setting.get('viewer.MQ_DIR');
+        let crop = setting.get('viewer.crop');
+        let arr = helper.getImages(dir, true);
+        helper.renameByOcr(arr, crop, (info) => {
+            console.log(info);
+        });
+    };
 
 /*    this.playWarnAudio = function () {
         let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));

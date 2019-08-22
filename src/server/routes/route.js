@@ -70,6 +70,7 @@ export default function (app) {
     app.get('/stock/system', system.get)
     app.post('/stock/system', system.post)
     app.delete('/stock/system/:id', system.del)
+    app.get('/stock/system/move/:id/(:dest)?', system.move)
 
     app.get('/stock/memo', memo.get)
     app.post('/stock/memo', memo.post)

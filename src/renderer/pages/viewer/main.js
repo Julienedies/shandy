@@ -18,9 +18,9 @@ import ocr from '../../../libs/baidu-ocr.js'
 import stockQuery from '../../../libs/stock-query.js'
 import userDb from '../../../libs/user-db'
 import setting from '../../../libs/setting'
-import bridge from 'e-bridge'
+import utils from '../../../libs/utils'
 
-import imager from './imager.js'
+import helper from './helper'
 
 // activate context menu
 debugMenu.install();
@@ -43,7 +43,7 @@ brick.reg('mainCtrl', function (scope) {
     // 获取目录下所有图片
     scope.init = function (dir) {
         dir = dir || scope.imgDir;
-        let urls = imager.getImages(dir);
+        let urls = helper.getImages(dir);
         if (!urls.length) return console.log('no images.');
         urls[0].code && urls.forEach(o => {
             o.tradeInfo = tradeArr.filter(arr => {
@@ -94,33 +94,33 @@ brick.reg('mainCtrl', function (scope) {
 
     scope.editImg = () => {
         let imgObj = scope.currentImg;
-        bridge.preview(imgObj.f);
+        utils.preview(imgObj.f);
     };
 
     scope.viewItemInFolder = () => {
-        bridge.showItemInFolder(scope.currentImg.f);
+        utils.showItemInFolder(scope.currentImg.f);
     };
 
     scope.viewInTdx = () => {
         console.log(scope.currentImg);
-        bridge.viewInTdx(scope.currentImg.code);
+        utils.viewInTdx(scope.currentImg.code);
     };
 
     scope.viewInFtnn = () => {
-        bridge.viewInFtnn(scope.currentImg.code);
+        utils.viewInFtnn(scope.currentImg.code);
     };
 
     function copyImageToDist (dirPath) {
         let imgObj = scope.currentImg;
         let fileName = imgObj.f.split('/').pop();
-        bridge.copy(imgObj.f, `${ dirPath }${ fileName }`)
+        utils.copy(imgObj.f, `${ dirPath }${ fileName }`)
             .then(() => {
                 $.icMessage('ok!')
             })
             .catch(err => {
-                bridge.err('error, 查看控制台.')
+                utils.err('error, 查看控制台.')
                 console.error(err)
-            })
+            });
     }
 
     scope.markMistake = () => {
@@ -131,6 +131,18 @@ brick.reg('mainCtrl', function (scope) {
         copyImageToDist('/Users/j/截图/目标行情/');
     };
 
+    scope.moveToTrash = () => {
+        let imgObj = scope.currentImg;
+        let fileName = imgObj.f.split('/').pop();
+        utils.move(imgObj.f, `/Users/j/截图/目标行情/C/${ fileName }`)
+            .then(() => {
+                $.icMessage('ok!')
+            })
+            .catch(err => {
+                utils.err('error, 查看控制台.')
+                console.error(err)
+            });
+    };
 
     // -----------------------------------------------------------------------------------------------
 
@@ -150,7 +162,7 @@ brick.reg('mainCtrl', function (scope) {
         console.info(fields);
         let crop = scope.crop = fields || scope.crop;
         let sn = $('#sn').val();
-        let dataUrl = imager.crop(scope.urls[sn].f, fields);
+        let dataUrl = helper.crop(scope.urls[sn].f, fields);
         $('#view_crop').attr('src', dataUrl);
         setting.set('viewer.crop', crop);
     };
@@ -158,6 +170,7 @@ brick.reg('mainCtrl', function (scope) {
     // 图片列表重命名
     scope.ocrRename = function (e) {
 
+        let $th = $(this);
         let $view_crop = $('#view_crop');
         let $ocr_text = $('#ocr_text');
 
@@ -175,7 +188,17 @@ brick.reg('mainCtrl', function (scope) {
 
         $(this).icSetLoading();
 
-        (function fn (arr) {
+        helper.renameByOcr(arr, crop, (info) => {
+            if (info) {
+                $view_crop.attr('src', info.dataUrl);
+                $ocr_text.text(info.words);
+            } else {
+                $th.icClearLoading();
+                scope.init();
+            }
+        });
+
+        /*(function fn (arr) {
             let imgPath = arr.shift();
 
             // 忽略富途大盘指数截图
@@ -185,7 +208,7 @@ brick.reg('mainCtrl', function (scope) {
 
             // 图片数组重命名结束
             if (!imgPath) {
-                $(that).icClearLoading();
+                $th.icClearLoading();
                 return scope.init();
             }
             // 已经ocr 重命名过的跳过
@@ -199,7 +222,7 @@ brick.reg('mainCtrl', function (scope) {
             }
 
             // 裁剪预览
-            let dataUrl = imager.crop(imgPath, crop);
+            let dataUrl = helper.crop(imgPath, crop);
             $view_crop.attr('src', dataUrl);
 
             // ocr 命名
@@ -224,7 +247,7 @@ brick.reg('mainCtrl', function (scope) {
                 }
             });
 
-        })(arr);
+        })(arr);*/
 
     };
 
