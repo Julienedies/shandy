@@ -91,7 +91,7 @@ class Rts {
         }
 
         request(options, function (error, response, body) {
-            console.log(error, response, body, +new Date);
+            //console.log(error, response, body, +new Date);
             if (error) {
                 console.error('error:', error);
                 //that.toggle();

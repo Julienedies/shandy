@@ -50,7 +50,7 @@ function f (stocks) {
 
 function _f (stock) {
     // stock => {code: code, name: name, b1: 买一量, v:成交量, p: price}
-    // console.log(stock);
+    console.log(stock);
     let code = stock.code;
     let name = stock.name;
     let b1 = stock.b1;

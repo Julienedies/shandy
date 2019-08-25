@@ -21,60 +21,77 @@
             </div>
         </div>
 
-        <div class="column" ic-tpl="crop">
-            <div ic-form>
-                <div class="level">
-                    <label class="">x:<input type="number" ic-value="{{ model.x || 3100 }}" ic-form-field="x"></label>
-                    <label class="">y:<input type="number" ic-value="{{ model.y || 115 }}" ic-form-field="y"></label>
-                    <label class="">width:<input type="number" ic-value="{{ model.width || 380 }}" ic-form-field="width"></label>
-                    <label class="">height:<input type="number" ic-value="{{ model.height || 50 }}" ic-form-field="height"></label>
-                    <label class="">图片序号:<input type="number" value="0" id="sn"></label>
-                </div>
+        <div class="columns">
+            <div id="crop" class="column is-6" ic-tpl="crop">
+                <div ic-form>
+                    <div class="column">
+                        <label>x:<input type="number" class="input" ic-value="{{ model.x || 3100 }}" ic-form-field="x"></label>
+                        <label class="">y:<input type="number" class="input" ic-value="{{ model.y || 115 }}" ic-form-field="y"></label>
+                        <label class="">width:<input type="number" class="input" ic-value="{{ model.width || 380 }}" ic-form-field="width"></label>
+                        <label class="">height:<input type="number" class="input" ic-value="{{ model.height || 50 }}" ic-form-field="height"></label>
+                        <label class="">图片序号:<input type="number" class="input" value="0" id="sn"></label>
+                    </div>
 
-                <div class="field">
-                    <button class="button is-primary" ic-click="reload">刷新页面</button>
-                    <button class="button is-primary" ic-click="reverse">反转排序</button>
-                    <button class="button is-primary" ic-click="ocrRename">ocr重命名</button>
-                    <button class="button is-primary" ic-form-submit ic-submit-action="cropTest()">剪切测试</button>
-                    <span>
-                        <img id="view_crop" style="border:solid 1px blue;"/>
-                        <span id="ocr_text"></span>
-                </span>
+                    <div class="field">
+                        <button class="button is-primary" ic-click="reload">刷新页面</button>
+                        <button class="button is-primary" ic-click="reverse">反转排序</button>
+                        <button class="button is-primary" ic-click="ocrRename">ocr重命名</button>
+                        <button class="button is-primary" ic-form-submit ic-submit-action="cropTest()">剪切测试</button>
+                        <span>
+                            <img id="view_crop" style="border:solid 1px blue;"/>
+                            <span id="ocr_text"></span>
+                    </span>
+                    </div>
                 </div>
+            </div>
+            <div id="history" class="column is-6" ic-tpl="history">
+                <div class="field is-grouped is-grouped-multiline">
+                    <div class="control" ic-for="i,v in model">
+                        <div class="tags has-addons">
+                            <a class="tag is-info" ic-click="show:{{ v }}">{{v}}</a>
+                            <a class="tag is-delete" ic-click="remove:{{ v }}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div ic-ctrl="listCtrl">
+
+        <div id="list" ic-tpl="list">
+            <ol ic-viewer
+                ic-viewer-item="li"
+                ic-viewer-url="url"
+                ic-viewer-interval="10"
+                ic-viewer-on-show="onViewerShow"
+                ic-viewer-on-open="onViewerOpen"
+                ic-viewer-on-close="onViewerClose">
+
+                <li ic-for="i,v in model" url="file://{{v.f}}">
+                    <h5>{{v.f}}</h5>
+                </li>
+
+            </ol>
+        </div>
+
+        <div id="viewerAttach">
+            <p></p>
+            <div>
+                <a ic-click="moveToTrash">回收站</a>
+                <a ic-click="editImg">编辑</a>
+                <a ic-click="viewItemInFolder">查看</a>
+                <a ic-click="markMistake">标记错误</a>
+                <a ic-click="markQuotation">标记行情</a>
+                <a ic-click="viewInTdx">通达信查看</a>
+                <a ic-click="viewInFtnn">富途查看</a>
             </div>
         </div>
     </div>
 
-    <div id="list" ic-tpl="list">
-        <ol ic-viewer
-            ic-viewer-item="li"
-            ic-viewer-url="url"
-            ic-viewer-interval="10"
-            ic-viewer-on-show="onViewerShow"
-            ic-viewer-on-open="onViewerOpen"
-            ic-viewer-on-close="onViewerClose">
-
-            <li ic-for="i,v in model" url="file://{{v.f}}">
-                <h5>{{v.f}}</h5>
-            </li>
-
-        </ol>
-    </div>
-
 </div>
 
-<div id="viewerAttach">
-    <p></p>
-    <div>
-        <a ic-click="moveToTrash">回收站</a>
-        <a ic-click="editImg">编辑</a>
-        <a ic-click="viewItemInFolder">查看</a>
-        <a ic-click="markMistake">标记错误</a>
-        <a ic-click="markQuotation">标记行情</a>
-        <a ic-click="viewInTdx">通达信查看</a>
-        <a ic-click="viewInFtnn">富途查看</a>
-    </div>
-</div>
 
 <div ic-prompt></div>
 </body>

@@ -14,8 +14,6 @@ import fs from 'fs'
 import $ from 'jquery'
 import debugMenu from 'debug-menu'
 
-import ocr from '../../../libs/baidu-ocr.js'
-import stockQuery from '../../../libs/stock-query.js'
 import userDb from '../../../libs/user-db'
 import setting from '../../../libs/setting'
 import utils from '../../../libs/utils'
@@ -28,23 +26,61 @@ debugMenu.install();
 // 交易记录json
 const tradeArr = userDb('trading', []).get();
 
+brick.services.reg('historyModel', function () {
+    return {
+        _pool: [],
+        cb: () => {
+        },
+        init: function (arr) {
+            this._pool = arr;
+            this.cb();
+        },
+        get: function () {
+            return this._pool;
+        },
+        add: function (item) {
+            if (!this._pool.includes(item)) {
+                this._pool.unshift(item);
+                this.cb();
+            }
+        },
+        remove: function (item) {
+            let index = this._pool.indexOf(item);
+            this._pool.splice(index, 1);
+            this.cb();
+        },
+        on: function (event, cb) {
+            this.cb = cb;
+        }
+    }
+});
+
 brick.reg('mainCtrl', function (scope) {
 
-    let $list = $('#list');
+    const historyModel = brick.services.get('historyModel');
 
-    scope.onSelectImgDirDone = (paths) => {
-        if (!paths) return;
-        let dir = paths[0];
-        scope.imgDir = dir;
-        scope.init(dir);
-        setting.set('viewer.imgDir', dir);
+    let $list = $('#list');
+    let $imgDir = $('input[name=imgDir]');
+
+    scope.reload = function () {
+        location.reload();
+    };
+    // 反转图片列表
+    scope.reverse = function () {
+        scope.urls.reverse();
+        $list.icRender('list', scope.urls);
     };
 
-    // 获取目录下所有图片
+    // 显示目录下图片列表
     scope.init = function (dir) {
         dir = dir || scope.imgDir;
+        if (!fs.existsSync(dir)) {
+            return $.icMsg(`${ dir }\r不存在!`);
+        }
         let urls = helper.getImages(dir);
-        if (!urls.length) return console.log('no images.');
+        if (!urls.length) {
+            return $.icMsg('no images.');
+        }
         urls[0].code && urls.forEach(o => {
             o.tradeInfo = tradeArr.filter(arr => {
                 // 交易信息 对应 code 和 时间
@@ -53,108 +89,19 @@ brick.reg('mainCtrl', function (scope) {
         });
         console.info(urls);
         scope.urls = urls;
+        $imgDir.val(dir);
         $list.icRender('list', urls);
+        setting.set('viewer.imgDir', dir);
     };
 
-
-    let imgDir = scope.imgDir = setting.get('viewer.imgDir');
-    if (imgDir) {
-        $('input[name=imgDir]').val(imgDir)
-        scope.init(imgDir)
-    }
-
-    scope.crop = setting.get('viewer.crop');
-    scope.render('crop', {model: scope.crop || {}});
-
-    // ------------------------------------------------------------------------
-
-    // ic-viewer  回调函数
-    let $viewerAttach = $('#viewerAttach');
-
-    scope.onViewerOpen = () => {
-        $viewerAttach.show();
+    // 图片目录路径选中后回调
+    scope.onSelectImgDirDone = (paths) => {
+        if (!paths) return;
+        let dir = paths[0];
+        historyModel.add(dir);
+        scope.imgDir = dir;
+        scope.init(dir);
     };
-    scope.onViewerClose = () => {
-        $viewerAttach.hide();
-    };
-    scope.onViewerShow = function (index, src, $info) {
-        let imgObj = scope.currentImg = scope.urls[index]
-        let arr = imgObj.tradeInfo;
-        if (arr) {
-            arr = arr.map(a => {
-                return [a[1], a[5], a[7], a[6]];
-            });
-            arr.reverse(); // 当日多个交易记录按照时间先后显示
-            let text = arr.join('\r\n').replace(/,/g, '    ');
-            $viewerAttach.find('p').text(text);
-        }
-
-        $info.text('\r\n' + imgObj.f);
-    };
-
-    scope.editImg = () => {
-        let imgObj = scope.currentImg;
-        utils.preview(imgObj.f);
-    };
-
-    scope.viewItemInFolder = () => {
-        utils.showItemInFolder(scope.currentImg.f);
-    };
-
-    scope.viewInTdx = () => {
-        console.log(scope.currentImg);
-        utils.viewInTdx(scope.currentImg.code);
-    };
-
-    scope.viewInFtnn = () => {
-        utils.viewInFtnn(scope.currentImg.code);
-    };
-
-    function copyImageToDist (dirPath) {
-        let imgObj = scope.currentImg;
-        let fileName = imgObj.f.split('/').pop();
-        utils.copy(imgObj.f, `${ dirPath }${ fileName }`)
-            .then(() => {
-                $.icMessage('ok!')
-            })
-            .catch(err => {
-                utils.err('error, 查看控制台.')
-                console.error(err)
-            });
-    }
-
-    scope.markMistake = () => {
-        copyImageToDist('/Users/j/截图/交易错误/');
-    };
-
-    scope.markQuotation = () => {
-        copyImageToDist('/Users/j/截图/目标行情/');
-    };
-
-    scope.moveToTrash = () => {
-        let imgObj = scope.currentImg;
-        let fileName = imgObj.f.split('/').pop();
-        utils.move(imgObj.f, `/Users/j/截图/目标行情/C/${ fileName }`)
-            .then(() => {
-                $.icMessage('ok!')
-            })
-            .catch(err => {
-                utils.err('error, 查看控制台.')
-                console.error(err)
-            });
-    };
-
-    // -----------------------------------------------------------------------------------------------
-
-    scope.reload = function () {
-        location.reload();
-    };
-
-    scope.reverse = function () {
-        scope.urls.reverse();
-        $list.icRender('list', scope.urls);
-    };
-
 
     // 图片剪切测试  fields => {x: 3140, y: 115, width: 310, height: 50}
     // scope.crop = {x: 3140, y: 115, width: 310, height: 50};
@@ -198,60 +145,121 @@ brick.reg('mainCtrl', function (scope) {
             }
         });
 
-        /*(function fn (arr) {
-            let imgPath = arr.shift();
-
-            // 忽略富途大盘指数截图
-            if (/\d{2}\.\d{2}\.png$/img.test(imgPath)) {
-                return fn(arr);
-            }
-
-            // 图片数组重命名结束
-            if (!imgPath) {
-                $th.icClearLoading();
-                return scope.init();
-            }
-            // 已经ocr 重命名过的跳过
-            if (imgPath.match(/\d{6}(?=\.png$)/)) {
-                // '屏幕快照 2019-03-22 下午9.08.59 -九阳股份-002242.png' 重命名到: '九阳股份 2019-03-22 下午9.08.59 -九阳股份-002242.png'
-                let rename = imgPath.replace(/^(.+)\/(屏幕快照)(\s+.+\s+)-(.+)-(\d{6}\.png)$/img, '$1/$4$3-$4-$5')
-                if (imgPath !== rename) {
-                    fs.renameSync(imgPath, rename)
-                }
-                return fn(arr);
-            }
-
-            // 裁剪预览
-            let dataUrl = helper.crop(imgPath, crop);
-            $view_crop.attr('src', dataUrl);
-
-            // ocr 命名
-            ocr({
-                image: dataUrl,
-                callback: function (words) {
-                    $ocr_text.text(words);
-                    let stock = stockQuery(words);
-                    if (stock.code) {
-                        let rename = imgPath
-                            .replace('屏幕快照', stock.name)
-                            .replace('(2)', `-${ stock.name }`)
-                            .replace(/\.png$/, `-${ stock.code }.png`);
-                        fs.renameSync(imgPath, rename);
-                    } else {
-                        console.error('ocr fail: ', imgPath, stock);
-                        return fn(arr);
-                    }
-                    setTimeout(function () {
-                        fn(arr);
-                    }, 1000);
-                }
-            });
-
-        })(arr);*/
-
     };
 
-    // ---------------------------------------------------------------------------------------
+    // 显示某个历史目录
+    scope.show = function (e, dir) {
+        scope.init(dir);
+    };
+
+    // 删除历史目录
+    scope.remove = function (e, dir) {
+        historyModel.remove(dir);
+    };
+
+    // ------------------------------------------------------------------------------------------------
+
+    historyModel.on('change', () => {
+        let arr = historyModel.get();
+        scope.render('history', {model: arr});
+        setting.set('viewer.history', arr);
+    });
+
+
+    historyModel.init(setting.get('viewer.history') || []);
+
+    let imgDir = setting.get('viewer.imgDir');
+    scope.imgDir = imgDir;
+    if (imgDir) {
+        scope.init(imgDir)
+    }
+
+    scope.crop = setting.get('viewer.crop');
+    scope.render('crop', {model: scope.crop || {}});
+
+});
+
+
+brick.reg('listCtrl', function (scope) {
+
+    // ic-viewer  回调函数
+    let $viewerAttach = $('#viewerAttach');
+
+    scope.onViewerOpen = () => {
+        $viewerAttach.show();
+    };
+    scope.onViewerClose = () => {
+        $viewerAttach.hide();
+    };
+
+    scope.onViewerShow = function (index, src, $info) {
+        let imgObj = scope.currentImg = scope.urls[index]; // scope.urls 继承自mainCtrl
+        let arr = imgObj.tradeInfo;
+        if (arr) {
+            arr = arr.map(a => {
+                return [a[1], a[5], a[7], a[6]];
+            });
+            arr.reverse(); // 当日多个交易记录按照时间先后显示
+            let text = arr.join('\r\n').replace(/,/g, '    ');
+            $viewerAttach.find('p').text(text);
+        }
+
+        $info.text('\r\n' + imgObj.f);
+    };
+
+    scope.editImg = () => {
+        let imgObj = scope.currentImg;
+        utils.preview(imgObj.f);
+    };
+
+    scope.viewItemInFolder = () => {
+        utils.showItemInFolder(scope.currentImg.f);
+    };
+
+    scope.viewInTdx = () => {
+        console.log(scope.currentImg);
+        utils.viewInTdx(scope.currentImg.code);
+    };
+
+    scope.viewInFtnn = () => {
+        utils.viewInFtnn(scope.currentImg.code);
+    };
+
+
+    scope.markMistake = () => {
+        copyImageToDist('/Users/j/截图/交易错误/');
+    };
+
+    scope.markQuotation = () => {
+        copyImageToDist('/Users/j/截图/目标行情/');
+    };
+
+    scope.moveToTrash = () => {
+        let imgObj = scope.currentImg;
+        let fileName = imgObj.f.split('/').pop();
+        utils.move(imgObj.f, `/Users/j/截图/目标行情/C/${ fileName }`)
+            .then(() => {
+                $.icMessage('ok!');
+            })
+            .catch(err => {
+                utils.err('error, 查看控制台.');
+                console.error(err);
+            });
+    };
+
+    function copyImageToDist (dirPath) {
+        let imgObj = scope.currentImg;
+        let fileName = imgObj.f.split('/').pop();
+        utils.copy(imgObj.f, `${ dirPath }${ fileName }`)
+            .then(() => {
+                $.icMessage('ok!')
+            })
+            .catch(err => {
+                utils.err('error, 查看控制台.')
+                console.error(err)
+            });
+    }
+
 
 });
 

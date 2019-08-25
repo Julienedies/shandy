@@ -54,41 +54,49 @@ brick.reg('toolBarCtrl', function (scope) {
     }
 
     this.renameByOcr = function (e) {
+        let $th = $(this).icSetLoading();
         let dir = setting.get('viewer.MQ_DIR');
         let crop = setting.get('viewer.crop');
         let arr = helper.getImages(dir, true);
+        let str = '';
         helper.renameByOcr(arr, crop, (info) => {
             console.log(info);
+            if (info !== null) {
+                str += info.words;
+            } else {
+                $th.icClearLoading();
+                $.icMsg(`OK! \r\n ${ str }`);
+            }
         });
     };
 
-/*    this.playWarnAudio = function () {
-        let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
-        let $playWarnAudioBtn = scope.$elm.find('#playWarnAudioBtn i');
-        let cla = 'icon-sound';
+    /*    this.playWarnAudio = function () {
+            let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
+            let $playWarnAudioBtn = scope.$elm.find('#playWarnAudioBtn i');
+            let cla = 'icon-sound';
 
-        clearInterval(scope.audioTimer);
-        audio.volume = 1;
+            clearInterval(scope.audioTimer);
+            audio.volume = 1;
 
-        if(scope.isPlayWarnAudio){
-            audio.pause();
-            audio.currentTime = 0;
-            $playWarnAudioBtn.removeClass(cla);
-        }else{
-            audio.play();
-            $playWarnAudioBtn.addClass(cla);
-            scope.audioTimer = setInterval( () => {
+            if(scope.isPlayWarnAudio){
+                audio.pause();
+                audio.currentTime = 0;
+                $playWarnAudioBtn.removeClass(cla);
+            }else{
                 audio.play();
-            }, 1000 * 60 * 7);
-        }
+                $playWarnAudioBtn.addClass(cla);
+                scope.audioTimer = setInterval( () => {
+                    audio.play();
+                }, 1000 * 60 * 7);
+            }
 
-        scope.isPlayWarnAudio = !scope.isPlayWarnAudio;
+            scope.isPlayWarnAudio = !scope.isPlayWarnAudio;
 
-    };
+        };
 
-    utils.timer('9:00', () => {
-        // 自动开启语音提醒
-        scope.playWarnAudio();
-    });*/
+        utils.timer('9:00', () => {
+            // 自动开启语音提醒
+            scope.playWarnAudio();
+        });*/
 
-})
+});

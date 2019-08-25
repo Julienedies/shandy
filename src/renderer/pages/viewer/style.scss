@@ -29,10 +29,22 @@
   overflow-y: scroll;
 }
 
-input {
-  line-height: 1.6;
-  font-size: 1.2em;
-  margin-left: 5px;
+
+#crop {
+  label {
+    padding-right: 1em;
+  }
+
+/*  input {
+    line-height: 1.4;
+    font-size: 1.2em;
+    margin-left: 5px;
+  }*/
+
+  .input {
+    width: 5em;
+    margin-left:5px;
+  }
 }
 
 #list li {
