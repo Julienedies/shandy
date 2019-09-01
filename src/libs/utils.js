@@ -111,7 +111,7 @@ export default {
         let day = mo.day(); // 礼拜几: 0 - 6
         let h = mo.hour(); // 0 - 23
         if (isInHour) {
-            return day > 0 && day < 6 && h > 6 && h < 15;
+            return day > 0 && day < 6 && h > 5 && h < 15;
         } else {
             return day > 0 && day < 6;
         }

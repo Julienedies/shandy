@@ -6,21 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css"/>
     <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/hint.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body ic-ctrl="mainCtrl">
 <div class="column" ic-ctrl="systemCtrl">
 
-    <div class="buttons has-addons">
-        <button class="button is-small"
-                id="getSystem"
-                ic-ajax="system"
-                ic-ajax-auto
-                ic-submit-method="get"
-                ic-submit-action="/stock/system"
-                ic-submit-on-done="onGetSystemDone">交易系统列表
-        </button>
-        <button class="button is-small" ic-click="addSystem" ic-popup-target="setSystem">新交易系统</button>
+    <div class="columns">
+        <div class="column is-3">
+            <div class="buttons has-addons">
+                <button class="button is-small"
+                        id="getSystem"
+                        ic-ajax="system"
+                        ic-ajax-auto
+                        ic-submit-method="get"
+                        ic-submit-action="/stock/system"
+                        ic-submit-on-done="onGetSystemDone">交易系统列表
+                </button>
+                <button class="button is-small" ic-click="addSystem" ic-popup-target="setSystem">新交易系统</button>
+            </div>
+        </div>
+        <div class="column is-9" ic-tpl="mqElement">
+            <span class="tag is-primary is-medium hint--bottom" aria-label="{{ v.desc }}" ic-for="i,v in model">
+                {{v.text}}
+            </span>
+        </div>
     </div>
 
     <div>
@@ -30,9 +40,9 @@
                     <div class="columns">
                         <div class="column is-10">
                             <header>
-                                <a class="title is-6" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }}</a>
+                                <a class="title is-5" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }}</a>
                                 <span style="padding-left:1em; vertical-align: 4px;" ic-viewer ic-viewer-url="href">
-                                    <span class="tag is-danger" ic-for="i,o in v['示例图片']" ic-href="{{ o }}" ic-viewer-item>
+                                    <span class="tag is-info is-medium" ic-for="i,o in v['示例图片']" ic-href="{{ o }}" ic-viewer-item>
                                         {{ parseImgName(o) }}
                                     </span>
                                 </span>

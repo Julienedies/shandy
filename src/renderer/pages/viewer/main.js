@@ -33,6 +33,14 @@ brick.services.reg('historyModel', function () {
         },
         init: function (arr) {
             this._pool = arr;
+            this._pool.sort((a, b) => {
+                let f = (s) => {
+                    let d = s.split('/').pop();
+                    d = d.split('-').shift();
+                    return d * 1 || 3000;
+                };
+                return f(b) - f(a);
+            });
             this.cb();
         },
         get: function () {
@@ -193,6 +201,7 @@ brick.reg('listCtrl', function (scope) {
     };
 
     scope.onViewerShow = function (index, src, $info) {
+        console.log(333, scope);
         let imgObj = scope.currentImg = scope.urls[index]; // scope.urls 继承自mainCtrl
         let arr = imgObj.tradeInfo;
         if (arr) {

@@ -387,19 +387,15 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
+
+    // ----------------------------------------------------------------
+
     window.addEventListener('beforeunload', function (e) {
         scope.warnWindow && scope.warnWindow.close();
         scope.newsWin && scope.newsWin.close();
         scope.promptWindow && scope.promptWindow.close();
         scope.readerWindow && scope.readerWindow.close();
     });
-
-    // ----------------------------------------------------------------
-
-    if (utils.isTradingHours(true)) {
-        scope.openNews();
-        //scope.openPrompt();
-    }
 
     // ----------------------------------------------------------------
 
@@ -410,36 +406,45 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    utils.timer('8:30', () => {
-        scope.openReminder();
-    });
 
-    utils.timer('9:07', () => {
-        scope.openReminder();
-    });
+    if (utils.isTradingHours(true)) {
+        scope.openNews();
+        //scope.openPrompt();
+    }
 
-    utils.timer('9:19', () => {
-        //voice('竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！');
-    });
+    if (utils.isTradingHours()) {
+        utils.timer('8:30', () => {
+            scope.openReminder();
+        });
 
-    utils.timer('9:26', () => {
-        //voice('低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！');
-        //voice('开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！');
-        scope.openWarn(false);
-        setTimeout(() => {
-            if (scope.warnWindow) {
-                scope.warnWindow.hide();
-            }
-        }, 1000 * 60 * 3);
-    });
+        utils.timer('9:07', () => {
+            scope.openReminder();
+        });
 
-    utils.timer('12:57', () => {
-        activeWarnWindow();
-    });
+        utils.timer('9:19', () => {
+            //voice('竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！');
+        });
 
-    utils.timer('15:00', () => {
-        scope.newsWin && scope.newsWin.close();
-    });
+        utils.timer('9:26', () => {
+            //voice('低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！');
+            //voice('开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！');
+            scope.openWarn(false);
+            setTimeout(() => {
+                if (scope.warnWindow) {
+                    scope.warnWindow.hide();
+                }
+            }, 1000 * 60 * 3);
+        });
+
+        utils.timer('12:57', () => {
+            activeWarnWindow();
+        });
+
+        utils.timer('15:00', () => {
+            scope.newsWin && scope.newsWin.close();
+        });
+    }
+
 
 });
 
@@ -553,7 +558,6 @@ brick.reg('countSwingCtrl', function (scope) {
     });
 
 });
-
 
 brick.reg('setVoiceWarnCtrl', function (scope) {
 

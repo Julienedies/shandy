@@ -19,13 +19,13 @@ html, body {
       border-left: solid 1px #ccc;
 
       &:nth-child(0){
-        flex:1 1 auto;
+        flex:1 1 30%;
       }
       &:nth-child(1){
-        flex: 1 0.8 auto;
+        flex: 1 1 30%;
       }
       &:last-child {
-        flex: 1.2 1 auto;
+        flex: 1 1 40%;
       }
 
       li {

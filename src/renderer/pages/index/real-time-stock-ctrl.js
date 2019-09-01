@@ -189,7 +189,7 @@ brick.reg('rts_ctrl', function (scope) {
         prev_objm.clear();
         first_objm.clear();
     };
-    scope.pause = function pause () {
+    scope.pause = function (e) { console.log('pause');
         voice.clear();
         q_rtso.pause();
     };

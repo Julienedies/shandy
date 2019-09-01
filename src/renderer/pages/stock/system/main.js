@@ -37,6 +37,7 @@ brick.reg('systemCtrl', function () {
         model = data;
         list.init(data.system);
         scope.render('systemList', data.system);
+        scope.render('mqElement', data.tags['行情要素']);
     };
 
     scope.addSystem = function () {
@@ -73,6 +74,7 @@ brick.reg('systemCtrl', function () {
     });
 
 });
+
 
 brick.reg('setSystemCtrl', function () {
 

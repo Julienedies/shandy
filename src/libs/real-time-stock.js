@@ -85,6 +85,8 @@ class Rts {
             encoding: null
         };
 
+        console.log('rts', this.state);
+
         if (this.codes.length === 0 || this.state === STOP) {
             console.log('rts state is STOP.');
             return this._clearTimer();
