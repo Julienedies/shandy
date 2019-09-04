@@ -646,7 +646,7 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
         }
         // trigger => 9:00: 定时执行
         else if (/^\d+[:]\d+$/.test(trigger)) {
-            if (old) {
+            if (old && old.handle) {
                 old.handle.cancel();
                 delete old.handle;
             }

@@ -35,7 +35,7 @@
 
     <div>
         <ul ic-tpl="systemList">
-            <li ic-for="i,v in model">
+            <li ic-for="i,v in model" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" data-id="{{ v.id }}" id="{{ 'k'+v.id }}">
                 <div class="box">
                     <div class="columns">
                         <div class="column is-10">

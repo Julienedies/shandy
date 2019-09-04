@@ -38,12 +38,12 @@
 		"timestamp": 1563489618160
 	},
 	{
-		"name": "timer",
+		"name": "",
 		"id": "3447629",
 		"trigger": "17",
 		"content": "控制不住自己的情绪是投机者真正的死敌。\n保持反省、冷静、明确的状态。\n",
 		"timestamp": 1563149273925,
-		"disable": false
+		"disable": true
 	},
 	{
 		"name": "",

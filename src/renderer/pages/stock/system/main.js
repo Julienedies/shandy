@@ -21,6 +21,11 @@ const ON_SET_SYSTEM_DONE = 'ON_SET_SYSTEM_DONE';
 const EDIT_SYSTEM = 'EDIT_SYSTEM';
 
 //brick.set('debug', true)
+//brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
+
+brick.directives.reg('X-ic-drag', function () {
+
+});
 
 brick.reg('setTagCtrl', setTagCtrl)
 
@@ -32,12 +37,48 @@ brick.reg('systemCtrl', function () {
     let model = {};  // 存储ajax数据： stock/system
     let viewId = null;
 
+    scope.dragstart = function (e) {
+        console.log(1111, e, this)
+        let id = $(this).data('id');
+        e.originalEvent.dataTransfer.setData("Text", id);
+    };
+
+    scope.dragover = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        //e.originalEvent.dataTransfer.dropEffect = 'move';
+        //console.log(4444, e.target)
+        let $target = $(e.target);
+        //$target.css('border', 'solid 1px blue');
+        return false;
+    };
+
+    scope.drop = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log(333, e.target)
+        let $target = $(e.target);
+        let id = e.originalEvent.dataTransfer.getData("Text");
+        let distId = $target.data('id') || $target.closest('li[data-id]').data('id');
+        if (!distId || distId === id) {
+            return console.log('not dist');
+        }
+        $elm.find(`#k${ id }`).insertBefore(`#k${ distId }`);
+        $.ajax(`/stock/system/move/${ id }/${ distId }`).done((data) => {
+            //brick.controllers.get('systemCtrl').onGetSystemDone(data);
+        });
+        return false;
+    };
+
     scope.onGetSystemDone = function (data) {
         console.info(data);
         model = data;
         list.init(data.system);
-        scope.render('systemList', data.system);
         scope.render('mqElement', data.tags['行情要素']);
+        scope.render('systemList', data.system, function () {
+            console.log(this);
+            $(this).find('>li').on('dragstart', scope.dragstart).on('dragover', scope.dragover).on('drop', scope.drop);
+        });
     };
 
     scope.addSystem = function () {
@@ -99,7 +140,7 @@ brick.reg('setSystemCtrl', function () {
     }
 
     scope.submitBefore = function (data) {
-        console.log(222,data);
+        console.log(222, data);
     };
 
     scope.reset = function () {
