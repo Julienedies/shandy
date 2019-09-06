@@ -98,6 +98,7 @@
     "robotjs": "^0.5.1",
     "shelljs": "^0.8.2",
     "socket.io": "^2.1.1",
+    "sortablejs": "^1.10.0-rc3",
     "tushare": "^0.3.1"
   },
   "devDependencies": {

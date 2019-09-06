@@ -33,6 +33,7 @@ brick.reg('systemCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;
+    let $details = $elm.find('[ic-popup="details"]')
     let list = brick.services.get('recordManager')();
     let model = {};  // 存储ajax数据： stock/system
     let viewId = null;
@@ -95,6 +96,17 @@ brick.reg('systemCtrl', function () {
         viewId = id;
         let system = list.get(id)[0];
         scope.render('details', {model: system});
+    };
+
+    scope.view2 = function (e, id) {
+        console.log(e.target.tagName)
+/*        if(!/li/img.test(e.target.tagName)){
+            return;
+        }*/
+        viewId = id;
+        let system = list.get(id)[0];
+        scope.render('details', {model: system});
+        $details.icPopup(true);
     };
 
     scope.onDeleteDone = function () {

@@ -13,9 +13,9 @@
 <div class="column" ic-ctrl="systemCtrl">
 
     <div class="columns">
-        <div class="column is-3">
-            <div class="buttons has-addons">
-                <button class="button is-small"
+        <div class="column is-4">
+            <div class="buttons">
+                <button class="button is-primary"
                         id="getSystem"
                         ic-ajax="system"
                         ic-ajax-auto
@@ -23,11 +23,11 @@
                         ic-submit-action="/stock/system"
                         ic-submit-on-done="onGetSystemDone">交易系统列表
                 </button>
-                <button class="button is-small" ic-click="addSystem" ic-popup-target="setSystem">新交易系统</button>
+                <button class="button is-primary" ic-click="addSystem" ic-popup-target="setSystem">新交易系统</button>
             </div>
         </div>
-        <div class="column is-9" ic-tpl="mqElement">
-            <span class="tag is-primary is-medium hint--bottom" aria-label="{{ v.desc }}" ic-for="i,v in model">
+        <div class="column is-8" style="text-align: right;" ic-tpl="mqElement">
+            <span class="tag is-black is-medium hint--bottom" aria-label="{{ v.desc }}" ic-for="i,v in model">
                 {{v.text}}
             </span>
         </div>
@@ -35,7 +35,7 @@
 
     <div>
         <ul ic-tpl="systemList">
-            <li ic-for="i,v in model" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" data-id="{{ v.id }}" id="{{ 'k'+v.id }}">
+            <li ic-for="i,v in model" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" ic-click="view2:{{ v.id }}">
                 <div class="box">
                     <div class="columns">
                         <div class="column is-10">
@@ -77,11 +77,11 @@
             <div ic-tpl="details">
                 <div ic-init="v=model;">
                     <h5 class="title is-6"> {{ v.name }}</h5>
-                    <table class="table is-striped  is-bordered is-fullwidth">
+                    <table class="table is-striped is-bordered is-fullwidth">
                         <tr>
                             <th>示例图片</th>
                             <td ic-viewer ic-viewer-url="href">
-                                <span class="tag is-primary" ic-for="i,o in v['示例图片']" ic-href="{{ o }}" ic-viewer-item>
+                                <span class="tag is-medium is-info" ic-for="i,o in v['示例图片']" ic-href="{{ o }}" ic-viewer-item>
                                     {{ parseImgName(o) }}
                                 </span>
                             </td>
