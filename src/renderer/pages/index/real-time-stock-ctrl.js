@@ -9,7 +9,7 @@ import _objm from '../../../libs/objm.js'
 import tdx from '../../../libs/tdx.js'
 import voice from '../../../libs/voice.js'
 import bridge from '../../../libs/e-bridge.js'
-import userDb from '../../../libs/user-db.js'
+import userDb from '../../../libs/user-jo.js'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'

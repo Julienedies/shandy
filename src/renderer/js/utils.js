@@ -11,9 +11,11 @@
  * @return {String}
  */
 function parseImgName (filePath) {
-    filePath = decodeURIComponent(filePath)
-    let arr = filePath.match(/^.+-(.+)-\d{6}\.png$/)
-    return arr && arr[1] || filePath
+    if(/^\/file/.test(filePath)) {
+        filePath = decodeURIComponent(filePath);
+    }
+    let arr = filePath.match(/^.+-(.+)-\d{6}\.png$/);
+    return arr && arr[1] || filePath;
 }
 
 try {

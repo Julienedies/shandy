@@ -86,31 +86,32 @@
                 </nav>
                 <nav class="nav-group">
                     <h5 class="nav-group-title">T</h5>
-                    <a class="nav-group-item" ic-click="show:stock_system.html"><i class="icon icon-shareable"></i> 系统</a>
-                    <a class="nav-group-item" ic-click="show:stock_logic.html"><i class="icon icon-help"></i>逻辑</a>
-                    <a class="nav-group-item" ic-click="show:stock_plan.html"><i class="icon icon-doc-text"></i> 计划</a>
-                    <a class="nav-group-item" ic-click="show:stock_sell.html"><i class="icon icon-doc-text"></i> 平仓</a>
-                    <a class="nav-group-item" ic-click="show:stock_buy.html"><i class="icon icon-doc-text"></i> 建仓</a>
-                    <a class="nav-group-item" ic-click="show:stock_replay.html"><i class="icon icon-eye"></i> 复盘</a>
-                    <a class="nav-group-item" ic-click="show:stock_mistake.html"><i class="icon icon-cancel-circled"></i> 错误</a>
-                    <a class="nav-group-item" ic-click="show:stock_news.html"><i class="icon icon-newspaper"></i> 资讯</a>
-                    <a class="nav-group-item" ic-click="show:stock_tags.html"><i class="icon icon-erase"></i> 标签</a>
-                    <a class="nav-group-item" ic-click="show:note.html"><i class="icon icon-pencil"></i> 笔记</a>
                     <a class="nav-group-item" ic-click="show:memo.html"><i class="icon icon-calendar"></i> 备忘</a>
+                    <a class="nav-group-item" ic-click="show:stock_system.html"><i class="icon icon-shareable"></i> 系统</a>
+                    <a class="nav-group-item" ic-click="show:stock_tags.html"><i class="icon icon-erase"></i> 标签</a>
+                    <a class="nav-group-item" ic-click="show:stock_point.html"><i class="icon  icon-doc-text"></i> 要素</a>
+                    <a class="nav-group-item" ic-click="show:stock_mistake.html"><i class="icon icon-cancel-circled"></i> 错误</a>
+                    <a class="nav-group-item" ic-click="show:stock_replay.html"><i class="icon icon-eye"></i> 复盘</a>
+                    <a class="nav-group-item" ic-click="show:stock_plan.html"><i class="icon icon-doc-text"></i> 计划</a>
+                    <a class="nav-group-item" ic-click="show:stock_buy.html"><i class="icon icon-doc-text"></i> 建仓</a>
+                    <a class="nav-group-item" ic-click="show:stock_sell.html"><i class="icon icon-doc-text"></i> 平仓</a>
+                    <a class="nav-group-item" ic-click="show:stock_logic.html"><i class="icon icon-help"></i>逻辑</a>
+                    <a class="nav-group-item" ic-click="show:stock_news.html"><i class="icon icon-newspaper"></i> 资讯</a>
+                    <a class="nav-group-item" ic-click="show:note.html"><i class="icon icon-pencil"></i> 笔记</a>
                 </nav>
                 <nav class="nav-group">
                     <h5 class="nav-group-title">N</h5>
-                    <span class="nav-group-item" ic-click="openReview">
-                        <i class="icon icon-chart-line"></i>
-                        交易记录
+                    <span class="nav-group-item" ic-click="openCsd">
+                        <i class="icon icon-database"></i>
+                        csd
                     </span>
                     <span class="nav-group-item" ic-click="openViewer">
                         <i class="icon icon-picture"></i>
                         图片浏览
                     </span>
-                    <span class="nav-group-item" ic-click="openCsd">
-                        <i class="icon icon-database"></i>
-                        csd
+                    <span class="nav-group-item" ic-click="openReview">
+                        <i class="icon icon-chart-line"></i>
+                        交易记录
                     </span>
                     <span class="nav-group-item" ic-click="openReader">
                         <i class="icon icon-sound"></i>
@@ -174,119 +175,118 @@
                         </textarea>
                         <button class="none" ic-click="saveMemo">保存</button>
                     </section>
+                </div>
 
-                    <!-- 添加股票 -->
-                    <div ic-ctrl="setStockCtrl" ic-popup="addStock">
-                        <div class="column is-10" ic-form="addStock" style="padding:20px;">
-                            <div class="form-group">
-                                <label>股票名称</label>
-                                <input class="form-control" type="text" ic-form-field="name" placeholder="股票名称">
-                            </div>
-                            <div class="form-group">
-                                <label>股票代码</label>
-                                <input class="form-control" type="text" ic-form-field="code" placeholder="股票代码">
-                            </div>
-                            <div class="buttons">
-                                <button class="btn btn-primary"
+                <!-- 添加股票 -->
+                <div ic-ctrl="setStockCtrl" ic-popup="addStock">
+                    <div class="column is-10" ic-form="addStock" style="padding:20px;">
+                        <div class="form-group">
+                            <label>股票名称</label>
+                            <input class="form-control" type="text" ic-form-field="name" placeholder="股票名称">
+                        </div>
+                        <div class="form-group">
+                            <label>股票代码</label>
+                            <input class="form-control" type="text" ic-form-field="code" placeholder="股票代码">
+                        </div>
+                        <div class="buttons">
+                            <button class="btn btn-primary"
+                                    ic-form-submit
+                                    ic-submit-action="addStock()"
+                                    ic-popup-close>
+                                保存
+                            </button>
+                            <button class="btn btn-default" ic-popup-close>关闭</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 股票价格涨跌幅计算 -->
+                <div ic-ctrl="countSwingCtrl" ic-popup="countSwing">
+                    <div class="column is-10" ic-form="sw" style="padding:10px 20px 0 20px;">
+
+                        <div class="field is-grouped is-grouped-right">
+                            <p class="control is-expanded">
+                                <input class="input is-small" type="text" ic-form-field="code" placeholder="股票code">
+                            </p>
+                            <p class="control is-expanded">
+                                <input class="input is-small" type="number" ic-form-field="price" placeholder="现价">
+                            </p>
+                            <p class="control">
+                                <button class="button is-small is-primary"
                                         ic-form-submit
-                                        ic-submit-action="addStock()"
-                                        ic-popup-close>
-                                    保存
+                                        ic-submit-action="countSwing()">
+                                    计算涨跌幅
                                 </button>
-                                <button class="btn btn-default" ic-popup-close>关闭</button>
-                            </div>
+                            </p>
+                            <p class="control">
+                                <button class="button is-small" ic-popup-close>关闭</button>
+                            </p>
+                        </div>
+
+                        <div id="countSwingResult" style="white-space: pre;  line-height: 1.6;">
                         </div>
                     </div>
+                </div>
 
-                    <!-- 股票价格涨跌幅计算 -->
-                    <div ic-ctrl="countSwingCtrl" ic-popup="countSwing">
-                        <div class="column is-10" ic-form="sw" style="padding:10px 20px 0 20px;">
+                <!-- 语音提醒 -->
+                <div ic-ctrl="setVoiceWarnCtrl" ic-popup="setVoiceWarn">
+                    <div class="column is-12" style="padding:20px;">
 
-                            <div class="field is-grouped is-grouped-right">
-                                <p class="control is-expanded">
-                                    <input class="input is-small" type="text" ic-form-field="code" placeholder="股票code">
-                                </p>
-                                <p class="control is-expanded">
-                                    <input class="input is-small" type="number" ic-form-field="price" placeholder="现价">
-                                </p>
-                                <p class="control">
-                                    <button class="button is-small is-primary"
-                                            ic-form-submit
-                                            ic-submit-action="countSwing()">
-                                        计算涨跌幅
+                        <h3 class="title is-5">
+                            <button class="button is-small is-primary" ic-click="toggle">关闭语音</button>
+                            <span style="padding:0 9px 0 9px; vertical-align: -4px;">设置语音警告</span>
+                            <button class="button is-small" ic-popup-close>关闭窗口</button>
+                        </h3>
+                        <table class="table is-striped" style="margin-top:15px;font-size:14px;" ic-tpl="warnList">
+                            <tr ic-for="i,v in model">
+                                <td>{{ v.name }}</td>
+                                <td>{{ v.trigger }}</td>
+                                <td class="pre">{{ v.content }}</td>
+                                <td>
+                                    <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
+                                    <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                                    <button class="button is-primary is-small" ic-click="up:{{ v.id }}">上移</button>
+                                    <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
+                                        {{ v.disable ? '启用':'禁用' }}
                                     </button>
-                                </p>
-                                <p class="control">
-                                    <button class="button is-small" ic-popup-close>关闭</button>
-                                </p>
-                            </div>
+                                </td>
+                            </tr>
+                        </table>
 
-                            <div id="countSwingResult" style="white-space: pre;  line-height: 1.6;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 语音提醒 -->
-                    <div ic-ctrl="setVoiceWarnCtrl" ic-popup="setVoiceWarn">
-                        <div class="column is-12" style="padding:20px;">
-
-                            <h3 class="title is-5">
-                                <button class="button is-small is-primary" ic-click="toggle">关闭语音</button>
-                                <span style="padding:0 9px 0 9px; vertical-align: -4px;">设置语音警告</span>
-                                <button class="button is-small" ic-popup-close>关闭窗口</button>
-                            </h3>
-                            <table class="table is-striped" style="margin-top:15px;font-size:14px;" ic-tpl="warnList">
-                                <tr ic-for="i,v in model">
-                                    <td>{{ v.name }}</td>
-                                    <td>{{ v.trigger }}</td>
-                                    <td class="pre">{{ v.content }}</td>
-                                    <td>
-                                        <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
-                                        <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
-                                        <button class="button is-primary is-small" ic-click="up:{{ v.id }}">上移</button>
-                                        <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
-                                            {{ v.disable ? '启用':'禁用' }}
-                                        </button>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <div ic-tpl="setWarnItem" ic-tpl-init="{}">
-                                <div ic-form>
-                                    <div class="field">
-                                        <div class="control">
-                                            <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
-                                            <input type="hidden" value="{{ model.id }}" ic-form-field="id">
-                                        </div>
+                        <div ic-tpl="setWarnItem" ic-tpl-init="{}">
+                            <div ic-form>
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
+                                        <input type="hidden" value="{{ model.id }}" ic-form-field="id">
                                     </div>
-                                    <div class="field">
-                                        <div class="control">
-                                            <input class="input" type="text" placeholder="动作触发:daban | 定时触发: 9:00 | 重复触发:10(单位分钟)"
-                                                   value="{{ model.trigger }}" ic-form-field="trigger">
-                                        </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="动作触发:daban | 定时触发: 9:00 | 重复触发:10(单位分钟)"
+                                               value="{{ model.trigger }}" ic-form-field="trigger">
                                     </div>
-                                    <div class="field">
-                                        <div class="control">
+                                </div>
+                                <div class="field">
+                                    <div class="control">
                                             <textarea rows="2" class="textarea" placeholder="警告内容"
                                                       ic-form-field="content">{{ model.content }}</textarea>
-                                        </div>
                                     </div>
-                                    <div class="field">
-                                        <div class="control">
-                                            <button class="button is-primary" ic-form-submit ic-submit-action="save()">
-                                                保存
-                                            </button>
-                                            <button class="button" ic-click="reset">
-                                                重置
-                                            </button>
-                                        </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-primary" ic-form-submit ic-submit-action="save()">
+                                            保存
+                                        </button>
+                                        <button class="button" ic-click="reset">
+                                            重置
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </main>
         </div>

@@ -5,7 +5,7 @@
 export default function () {
 
     let scope = this;
-    let $elm = this.$elm;
+    let $elm = scope.$elm;
 
     // 更新tag on-done
     scope.done = function (data) {
@@ -27,15 +27,15 @@ export default function () {
         let model = $elm.find('[ic-form="set_tag"]').icForm();
         model['示例图片'] = model['示例图片'] || [];
         data.forEach((path, i) => {
-            let url = `/file/?path=${ encodeURIComponent(path) }`
-            model['示例图片'].push(url)
+            //let url = `/file/?path=${ encodeURIComponent(path) }`
+            model['示例图片'].unshift(path)
         });
         scope.render(model);
         return false;
     };
 
     // 图片上传 web端使用，暂时无用，
-    scope.onUploadDone = function (data) {
+    /*scope.onUploadDone = function (data) {
         // 获取表单数据model
         let model = $elm.find('[ic-form="set_tag"]').icForm();
 
@@ -46,7 +46,7 @@ export default function () {
         });
 
         scope.render(model);
-    };
+    };*/
 
     // 编辑标签或添加标签
     scope.on('tag.add, tag.edit', function (e, msg) {

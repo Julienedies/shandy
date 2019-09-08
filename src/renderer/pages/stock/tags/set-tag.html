@@ -1,6 +1,6 @@
-<div ic-ctrl="setTagCtrl" ic-popup="set_tag">
-    <div class="column is-10" ic-tpl ic-init="model=model[0] || model">
-        <div class="table_0" ic-form="set_tag">
+<div ic-ctrl="setTagCtrl" ic-popup="setTag">
+    <div class="column is-10" ic-tpl="setTagCtrl">
+        <div class="table_0" ic-form="setTag">
 
             <div>
                 <h6>标签类型</h6>
@@ -25,9 +25,28 @@
             </div>
 
             <div>
-                <h6>标签内容</h6>
+                <h6>标签</h6>
                 <div>
                     <input class="input is-medium" type="text" name="text" value="{{model.text}}" ic-form-field ic-field-rule="required">
+                </div>
+            </div>
+
+            <div ic-if="!model.types">
+                <h6>父标签</h6>
+                <div>
+                    <div>
+                        <div ic-select="parentId" ic-form-field="parentId">
+                            <div class="tags">
+                                <span class="tag is-small"
+                                      ic-for="i,v in model.parents"
+                                      ic-select-item
+                                      ic-has-selected="model.parentId===v.id"
+                                      ic-val="{{ v.id }}">
+                                    {{ v.text }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

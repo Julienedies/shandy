@@ -35,15 +35,15 @@
     padding-right: 1em;
   }
 
-/*  input {
-    line-height: 1.4;
-    font-size: 1.2em;
-    margin-left: 5px;
-  }*/
+  /*  input {
+      line-height: 1.4;
+      font-size: 1.2em;
+      margin-left: 5px;
+    }*/
 
   .input {
     width: 5em;
-    margin-left:5px;
+    margin-left: 5px;
   }
 }
 
@@ -54,7 +54,7 @@
 #viewerAttach {
   display: none;
   position: fixed;
-  z-index: 200001;
+  z-index: 20001;
   color: #fff;
   top: 95px;
   left: 0;
@@ -84,4 +84,19 @@
     }
   }
 
+}
+
+[ic-popup="markTag"] {
+  z-index: 300000 !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  overflow-y: hidden !important;
+}
+
+.ic-select {
+  margin: -10px 0 15px 0;
+
+  > .tags {
+    display: inline-block;
+    margin-bottom:0;
+  }
 }

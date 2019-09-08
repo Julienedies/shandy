@@ -14,7 +14,8 @@ import fs from 'fs'
 import $ from 'jquery'
 import debugMenu from 'debug-menu'
 
-import userDb from '../../../libs/user-db'
+import userDb from '../../../libs/user-jo'
+import userJodb from '../../../libs/user-jodb'
 import setting from '../../../libs/setting'
 import utils from '../../../libs/utils'
 
@@ -25,6 +26,8 @@ debugMenu.install();
 
 // 交易记录json
 const tradeArr = userDb('trading', []).get();
+
+let viewerJodb = userJodb('viewer');
 
 brick.services.reg('historyModel', function () {
     return {
@@ -201,8 +204,8 @@ brick.reg('listCtrl', function (scope) {
     };
 
     scope.onViewerShow = function (index, src, $info) {
-        console.log(333, scope);
         let imgObj = scope.currentImg = scope.urls[index]; // scope.urls 继承自mainCtrl
+        scope.markTag();
         let arr = imgObj.tradeInfo;
         if (arr) {
             arr = arr.map(a => {
@@ -234,6 +237,9 @@ brick.reg('listCtrl', function (scope) {
         utils.viewInFtnn(scope.currentImg.code);
     };
 
+    scope.markTag = () => {
+        brick.emit('markTag', scope.currentImg);
+    };
 
     scope.markMistake = () => {
         copyImageToDist('/Users/j/截图/交易错误/');
@@ -269,6 +275,40 @@ brick.reg('listCtrl', function (scope) {
             });
     }
 
-
 });
 
+
+brick.reg('markTagCtrl', function (scope) {
+
+    let currentImg = {};
+    let model = null;
+    let imgObj = {};
+
+    let render = () => {
+        imgObj = viewerJodb.get(currentImg.f, 'img')[0] || {img: currentImg.f};
+        console.log(imgObj);
+        let f = (imgObj) => {
+            return imgObj;
+        };
+        model.img = f(imgObj);
+        scope.render('tags', {model});
+    };
+
+    scope.onGetSystemDone = function (data) {
+        console.info(data);
+        model = data;
+        render();
+    };
+
+    scope.onChange = function (val) {
+        console.log(val);
+        imgObj[val.name] = val.value;
+        viewerJodb.set(imgObj);
+    };
+
+    scope.on('markTag', function (e, msg) {
+        currentImg = msg;
+        render();
+    });
+
+});

@@ -1,4 +1,49 @@
-.tag:not(body).is-default{
-  color:#fff;
+.tag:not(body).is-default {
+  color: #fff;
   background: #c7c8d3;
+}
+
+[ic-click] {
+  cursor: pointer;
+}
+
+.table th{
+  vertical-align: middle;
+}
+.table td {
+  > div {
+    padding: 0.8rem 1rem;
+
+    &.nest {
+      padding: 0;
+    }
+  }
+
+  padding: 0;
+
+  .table {
+    border: none;
+
+    &.is-bordered {
+      tr:first-child {
+        th, td {
+          border-top: none;
+        }
+      }
+
+      tr:last-child {
+        th, td {
+          border-bottom: none;
+        }
+      }
+
+      th {
+        border-left: 0;
+      }
+
+      td:last-child {
+        border-right: none;
+      }
+    }
+  }
 }

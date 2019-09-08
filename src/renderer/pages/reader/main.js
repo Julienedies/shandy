@@ -14,7 +14,7 @@ import '../../js/common.js'
 
 import Reader from '../../../libs/reader'
 
-import jsonDb from '../../../libs/jsonDb'
+import jsonDb from '../../../libs/json-jo'
 import setting from '../../../libs/setting'
 import userJodb from '../../../libs/user-jodb'
 
