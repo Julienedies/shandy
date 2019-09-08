@@ -3,9 +3,28 @@
  * Created by j on 18/7/22.
  */
 
+
 import dob from '../../../libs/dob.js'
 
-const tags = dob('tags', {
+import viewerMap from '../../helper/viewerMap'
+import _ from 'lodash'
+
+let VIEWER_MAP = {};
+
+const tagsJodb = dob('tags', {
+    beforeGet: function (record, index) {
+        let example = VIEWER_MAP[record.id];
+        let oldExample = record['示例图片'];
+        if (example) {
+            if (oldExample) {
+                let arr = _.concat(oldExample, example);
+                record['示例图片'] = _.uniq(arr);
+            } else {
+                record['示例图片'] = example;
+            }
+        }
+        return record;
+    },
     convert: function () {
         let result = {};
         let list = this.get();
@@ -27,24 +46,25 @@ const tags = dob('tags', {
 
 export default {
 
-    tags: tags,
+    tags: tagsJodb,
 
     get: function (req, res) {
+        VIEWER_MAP = viewerMap.get();
         let type = req.params.type;
-        let data = type ? tags.get(type, 'type') : tags.convert();
+        let data = type ? tagsJodb.get(type, 'type') : tagsJodb.convert();
         res.json(data);
     },
 
     post: function (req, res) {
         let data = req.body;
         let type = data.type;
-        tags.set(data);
-        res.send(tags.convert());
+        tagsJodb.set(data);
+        res.send(tagsJodb.convert());
     },
 
     del: function (req, res) {
         let id = req.params.id;
-        tags.find(id, 'id').remove();
-        res.send(tags.convert());
+        tagsJodb.find(id, 'id').remove();
+        res.send(tagsJodb.convert());
     }
 }

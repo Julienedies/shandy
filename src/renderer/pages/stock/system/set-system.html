@@ -57,7 +57,7 @@
                             <div class="control" ic-for="i,v in (system['示例图片']||[])">
                                 <div class="tags has-addons">
                                     <span class="tag is-medium" ic-select-item ic-has-selected="true" ic-val="{{ v }}">{{ parseImgName(v) }}</span>
-                                    <a class="tag is-medium hint--top" aria-label="图片预览" ic-href="{{ v }}" ic-viewer-item>
+                                    <a class="tag is-medium hint--top" aria-label="图片预览" ic-href="{{ parseImgPath(v) }}" ic-viewer-item>
                                         <span class="icon is-medium"><i class="far fa-eye"></i></span>
                                     </a>
                                 </div>

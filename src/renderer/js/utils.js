@@ -11,16 +11,21 @@
  * @return {String}
  */
 function parseImgName (filePath) {
-    if(/^\/file/.test(filePath)) {
+    if (/^\/file/.test(filePath)) {
         filePath = decodeURIComponent(filePath);
     }
     let arr = filePath.match(/^.+-(.+)-\d{6}\.png$/);
     return arr && arr[1] || filePath;
 }
 
+function parseImgPath (path) {
+    return path.indexOf('/file') > -1 ? path : '/file/?path=' + path;
+}
+
 try {
 
-    window.parseImgName = parseImgName
+    window.parseImgName = parseImgName;
+    window.parseImgPath = parseImgPath;
 
 } catch (e) {
     console.error(e)
@@ -29,4 +34,5 @@ try {
 
 export default {
     parseImgName,
+    parseImgPath
 }

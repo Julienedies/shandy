@@ -1,0 +1,25 @@
+import _ from 'lodash'
+
+/**
+ *
+ * Created by j on 2019-09-08.
+ */
+
+import { VIEWER_AMP } from './viewerMap'
+
+function beforeGet (record, index) {
+    let example = VIEWER_AMP[record.id];
+    let oldExample = record['示例图片'];
+    example && console.log('beforeGet => ', example);
+    if (example) {
+        if (oldExample) {
+            let arr = _.concat(oldExample, example);
+            record['示例图片'] = _.uniq(arr);
+        } else {
+            record['示例图片'] = example;
+        }
+    }
+    return record;
+}
+
+export { beforeGet }

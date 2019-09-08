@@ -13,6 +13,7 @@ const EventEmitter = require('events').EventEmitter;
  *              eventPrefix:'holdModel', //广播事件前缀
  *              key:'hold.id',  //记录id
  *              joinType:''， // 添加记录方式，push or unshift
+ *              beforeGet: function(record, index){},
  *              beforeSave:function(record,index){}
  *             };
  * let list = new recordManager(conf);
@@ -29,6 +30,9 @@ let proto = {
      */
     key: 'id',
     joinType: 'unshift',
+    beforeGet: function (record, index) {
+        return record;
+    },
     /**
      * @param arr {Array}  要管理的数据对象
      * @return {this}
@@ -56,9 +60,15 @@ let proto = {
      */
     get: function (value, query) {
         let pool = this._pool;
-        let r = [];
+        let beforeGet = this.beforeGet;
+        let result = [];
+        let cb = (recored, index) => {
+            recored = JSON.parse(JSON.stringify(recored));
+            return beforeGet(recored, index);
+        };
+
         if (value === void (0)) {
-            return pool;
+            return pool.map(cb);
         }
 
         if (typeof value === 'object') {
@@ -69,10 +79,10 @@ let proto = {
         for (let i in pool) {
             let record = pool[i];
             if (value === this._queryKeyValue(record, query)) {
-                r.push(record);
+                result.push(record);
             }
         }
-        return r;
+        return result.map(cb);
     },
     /**
      * 对查询结果记录进行修改
@@ -288,7 +298,7 @@ let proto = {
         this.emit('change');
 
     },
-    move: function(id, destID){
+    move: function (id, destID) {
         this.insert(id, destID);
     },
     /**

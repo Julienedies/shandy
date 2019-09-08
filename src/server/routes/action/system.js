@@ -4,19 +4,40 @@
  */
 
 import dob from '../../../libs/dob.js'
+import viewerMap from '../../helper/viewerMap'
 import _tags from './tags'
+import _ from 'lodash'
 
 const tags = _tags.tags;
 
-let system;
+let systemJodb;
+
+let VIEWER_MAP = {};
 
 function getDb () {
-    return system || dob('system');
+    return systemJodb || dob('system', {
+        beforeGet: function (record, index) {
+            record.id === '6053312' && console.log(+new Date(), VIEWER_MAP, +new Date());
+            let example = VIEWER_MAP[record.id];
+            let oldExample = record['示例图片'];
+            record.id === '6053312' && example && console.log('beforeGet => ', example, oldExample);
+            if (example) {
+                if (oldExample) {
+                    let arr = _.concat(oldExample, example);
+                    record['示例图片'] = _.uniq(arr);
+                } else {
+                    record['示例图片'] = example;
+                }
+            }
+            return record;
+        },
+    });
 }
 
 function getData () {
-    system = getDb();
-    return {system: system.get(), tags: tags.convert()};
+    VIEWER_MAP = viewerMap.get();
+    systemJodb = getDb();
+    return {system: systemJodb.get(), tags: tags.convert()};
 }
 
 export default {
@@ -28,7 +49,7 @@ export default {
     post (req, res) {
         let obj = req.body;
         console.log(obj)
-        system.set(obj);
+        systemJodb.set(obj);
         res.json(getData());
     },
 
