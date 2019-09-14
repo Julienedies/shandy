@@ -14,18 +14,14 @@ import '../../../js/common.js'
 import '../../../js/common-stock.js'
 import '../../../js/utils.js'
 
-import setTagCtrl from '../tags/set-tag-ctrl'
+import C from '../../../js/constants.js'
 
-const ADD_SYSTEM = 'ADD_SYSTEM';
-const ON_SET_SYSTEM_DONE = 'ON_SET_SYSTEM_DONE';
-const EDIT_SYSTEM = 'EDIT_SYSTEM';
+import setTagCtrl from '../tags/set-tag-ctrl'
 
 //brick.set('debug', true)
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
 
-brick.directives.reg('X-ic-drag', function () {
-
-});
+brick.set('ic-select-cla', 'is-info');
 
 brick.reg('setTagCtrl', setTagCtrl)
 
@@ -83,12 +79,12 @@ brick.reg('systemCtrl', function () {
     };
 
     scope.addSystem = function () {
-        scope.emit(ADD_SYSTEM, {system: {}, tags: model.tags});
+        scope.emit(C.ADD_SYSTEM, {system: {}, tags: model.tags});
     };
 
     scope.edit = function (e, id) {
         let arr = list.get(id);
-        scope.emit(EDIT_SYSTEM, {system: arr[0], tags: model.tags});
+        scope.emit(C.EDIT_SYSTEM, {system: arr[0], tags: model.tags});
         return false;
     };
 
@@ -100,9 +96,9 @@ brick.reg('systemCtrl', function () {
 
     scope.view2 = function (e, id) {
         console.log(e.target.tagName)
-/*        if(!/li/img.test(e.target.tagName)){
-            return;
-        }*/
+        /*        if(!/li/img.test(e.target.tagName)){
+                    return;
+                }*/
         viewId = id;
         let system = list.get(id)[0];
         scope.render('details', {model: system});
@@ -113,8 +109,7 @@ brick.reg('systemCtrl', function () {
         $(this).closest('li').remove();
     };
 
-    scope.on(ON_SET_SYSTEM_DONE, function (e, msg) {
-        //$elm.find('#getSystem').click();
+    scope.on(C.ON_SET_SYSTEM_DONE, function (e, msg) {
         console.info('ON_SET_SYSTEM_DONE =>', msg);
         scope.onGetSystemDone(msg);
         if (viewId) {
@@ -128,31 +123,35 @@ brick.reg('systemCtrl', function () {
 
 });
 
-
 brick.reg('setSystemCtrl', function () {
 
     let scope = this;
     let $elm = this.$elm;
     let _model = {system: {}, tags: {}};
     let model = _model;
-    let tags = brick.services.get('recordManager')();
+    let tagsManager = brick.services.get('recordManager')();
+
+    // 获取表单数据model
+    function getFormVm () {
+        return $elm.find('[ic-form="setSystem"]').icForm();
+    }
 
     function render (data) {
-        tags.init(scope.tags_convert(data));
+        tagsManager.init(scope.tagsMap2Arr(data));
         model.tags = data;
-        model.system = $elm.find('[ic-form="system"]').icForm();
+        model.system = getFormVm();
         scope.render(model);
     }
 
     function edit (e, msg) {
         model = msg || _model;
-        tags.init(scope.tags_convert(model.tags));
-        scope.render('setSystem', model);
+        tagsManager.init(scope.tagsMap2Arr(model.tags));
+        scope.render(model);
         $elm.icPopup(true);
     }
 
     scope.submitBefore = function (data) {
-        console.log(222, data);
+        console.log('submitBefore =>', data);
     };
 
     scope.reset = function () {
@@ -163,40 +162,35 @@ brick.reg('setSystemCtrl', function () {
     scope.done = function (data) {
         console.log(data);
         $elm.icPopup(false);
-        scope.emit(ON_SET_SYSTEM_DONE, data);
+        scope.emit(C.ON_SET_SYSTEM_DONE, data);
     };
 
-
-    scope.tag_edit = function (e, id) {
-        scope.emit('tag.edit', tags.get(id));
+    scope.editTag = function (e, id) {
+        scope.emit('tag.edit', tagsManager.get(id));
     };
 
     scope.tag_remove_done = render;
 
-    scope.on(ADD_SYSTEM, edit);
-    scope.on(EDIT_SYSTEM, edit);
+    scope.on(C.ADD_SYSTEM, edit);
+    scope.on(C.EDIT_SYSTEM, edit);
 
     scope.on('tag.edit.done', function (e, data) {
         render(data);
     });
 
-
     /**
-     *
-     * @param data {Array} 图片路径数组, 可以是绝对路径或者url
+     * @param paths {Array} 图片路径数组, 可以是绝对路径或者url
      * @returns {boolean}
      */
-    scope.onSelectPathDone = function (data) {
-        // 获取表单数据model
-        let systemVm = $elm.find('[ic-form="setSystem"]').icForm();
-        systemVm['示例图片'] = systemVm['示例图片'] || [];
-        data.forEach((path, i) => {
-            let url = `/file/?path=${ encodeURIComponent(path) }`;
-            systemVm['示例图片'].push(url);
+    scope.onSelectPathDone = function (paths) {
+        if (!paths) return false;
+        let obj = getFormVm();
+        obj['示例图片'] = obj['示例图片'] || [];
+        paths.forEach((path, i) => {
+            obj['示例图片'].push(path);
         });
-        Object.assign(model.system, systemVm);
-        console.log(model);
-        scope.render('setSystem', model);
+        Object.assign(model.system, obj);
+        scope.render(model);
         return false;
     };
 

@@ -12,10 +12,10 @@
 <body ic-ctrl="mainCtrl">
 <div class="column" ic-ctrl="systemCtrl">
 
-    <div class="columns">
+    <header class="columns">
         <div class="column is-3">
             <div class="buttons">
-                <button class="button is-primary"
+                <button class="button is-primary is-small"
                         id="getSystem"
                         ic-ajax="system"
                         ic-ajax-auto
@@ -23,15 +23,15 @@
                         ic-submit-action="/stock/system"
                         ic-submit-on-done="onGetSystemDone">交易系统列表
                 </button>
-                <button class="button is-primary" ic-click="addSystem" ic-popup-target="setSystem">新交易系统</button>
+                <button class="button is-primary is-small" ic-click="addSystem" ic-popup-target="setSystem">新交易系统</button>
             </div>
         </div>
         <div class="column is-9" style="text-align: right;" ic-tpl="mqElement">
-            <span class="tag is-black is-medium hint--bottom" aria-label="{{ v.desc }}" ic-for="i,v in model">
+            <span class="tag is-black hint--bottom" aria-label="{{ v.desc }}" ic-for="i,v in model">
                 {{v.text}}
             </span>
         </div>
-    </div>
+    </header>
 
     <div>
         <ul ic-tpl="systemList">

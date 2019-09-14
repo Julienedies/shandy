@@ -7,10 +7,10 @@ export default function () {
     let scope = this;
     let $elm = scope.$elm;
 
-    // 更新tag on-done
+    // tag ajax post one done
     scope.done = function (data) {
-        scope.emit('tag.edit.done', data);
         $elm.icPopup(false);
+        scope.emit('tag.edit.done', data);
     };
 
     scope.reset = function () {
@@ -24,7 +24,7 @@ export default function () {
      */
     scope.onSelectPathDone = function (data) {
         // 获取表单数据model
-        let model = $elm.find('[ic-form="set_tag"]').icForm();
+        let model = $elm.find('[ic-form="setTag"]').icForm();
         model['示例图片'] = model['示例图片'] || [];
         data.forEach((path, i) => {
             //let url = `/file/?path=${ encodeURIComponent(path) }`
@@ -51,8 +51,8 @@ export default function () {
     // 编辑标签或添加标签
     scope.on('tag.add, tag.edit', function (e, msg) {
         console.info(e, msg);
-        let model = msg || {};
-        scope.render(model[0] || model);
+        let vm = msg || {};  // vm是标签对象
+        scope.render(vm[0] || vm);
         $elm.icPopup(true);
     });
 

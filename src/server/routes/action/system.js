@@ -4,7 +4,7 @@
  */
 
 import dob from '../../../libs/dob.js'
-import viewerMap from '../../helper/viewerMap'
+import viewerMap, { beforeGet } from '../../helper/viewerMap'
 import _tags from './tags'
 import _ from 'lodash'
 
@@ -16,21 +16,7 @@ let VIEWER_MAP = {};
 
 function getDb () {
     return systemJodb || dob('system', {
-        beforeGet: function (record, index) {
-            record.id === '6053312' && console.log(+new Date(), VIEWER_MAP, +new Date());
-            let example = VIEWER_MAP[record.id];
-            let oldExample = record['示例图片'];
-            record.id === '6053312' && example && console.log('beforeGet => ', example, oldExample);
-            if (example) {
-                if (oldExample) {
-                    let arr = _.concat(oldExample, example);
-                    record['示例图片'] = _.uniq(arr);
-                } else {
-                    record['示例图片'] = example;
-                }
-            }
-            return record;
-        },
+        beforeGet
     });
 }
 

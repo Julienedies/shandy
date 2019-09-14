@@ -1,16 +1,15 @@
-import _ from 'lodash'
-
 /**
  *
  * Created by j on 2019-09-08.
  */
+import pinyin from 'pinyin'
+import _ from 'lodash'
 
 import { VIEWER_AMP } from './viewerMap'
 
 function beforeGet (record, index) {
     let example = VIEWER_AMP[record.id];
     let oldExample = record['示例图片'];
-    example && console.log('beforeGet => ', example);
     if (example) {
         if (oldExample) {
             let arr = _.concat(oldExample, example);
@@ -20,6 +19,11 @@ function beforeGet (record, index) {
         }
     }
     return record;
+}
+
+
+function sortByPinYin(arr){
+
 }
 
 export { beforeGet }

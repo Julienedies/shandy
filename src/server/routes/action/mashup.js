@@ -3,7 +3,7 @@
  */
 
 import fs from 'fs'
-import sjo from '../../../libs/sjo'
+import sjo from '../../../libs/stock-jo'
 
 export default {
 

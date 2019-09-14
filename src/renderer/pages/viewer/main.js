@@ -14,7 +14,7 @@ import fs from 'fs'
 import $ from 'jquery'
 import debugMenu from 'debug-menu'
 
-import userDb from '../../../libs/user-jo'
+import userJo from '../../../libs/user-jo'
 import userJodb from '../../../libs/user-jodb'
 import setting from '../../../libs/setting'
 import utils from '../../../libs/utils'
@@ -25,7 +25,7 @@ import helper from './helper'
 debugMenu.install();
 
 // 交易记录json
-const tradeArr = userDb('trading', []).get();
+const tradeArr = userJo('trading', []).get();
 
 let viewerJodb = userJodb('viewer');
 
@@ -85,6 +85,7 @@ brick.reg('mainCtrl', function (scope) {
     // 显示目录下图片列表
     scope.init = function (dir) {
         dir = dir || scope.imgDir;
+        scope.imgDir = dir;
         if (!fs.existsSync(dir)) {
             return $.icMsg(`${ dir }\r不存在!`);
         }
@@ -298,6 +299,11 @@ brick.reg('markTagCtrl', function (scope) {
         console.info(data);
         model = data;
         render();
+    };
+
+    scope.hide = function(e) {
+        // $.icMsg(e.target.tagName);
+        scope.$elm.icPopup(false);
     };
 
     scope.onChange = function (val) {

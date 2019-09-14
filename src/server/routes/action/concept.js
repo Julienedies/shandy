@@ -3,7 +3,7 @@
  * 股票市场概念列表
  */
 import pinyin from 'pinyin'
-import sjo from '../../../libs/sjo.js'
+import sjo from '../../../libs/stock-jo.js'
 import stocksManager from '../../../libs/stocks-manager'
 
 function getStocksForConcept (concept) {
@@ -46,7 +46,7 @@ function getAllConcept () {
     });
     result.sort((a, b) => {
         return a.key.localeCompare(b.key)
-    })
+    });
     getAllConcept.result = result;
     return result;
 }

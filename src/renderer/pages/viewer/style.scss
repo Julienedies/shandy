@@ -54,7 +54,7 @@
 #viewerAttach {
   display: none;
   position: fixed;
-  z-index: 20001;
+  z-index: 1001;
   color: #fff;
   top: 95px;
   left: 0;
@@ -86,8 +86,9 @@
 
 }
 
+
+
 [ic-popup="markTag"] {
-  z-index: 300000 !important;
   background: rgba(0, 0, 0, 0.3) !important;
   overflow-y: hidden !important;
 }

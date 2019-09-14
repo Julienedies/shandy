@@ -23,7 +23,7 @@ function mainCtrl () {
     let scope = this;
     let $elm = scope.$elm;
 
-    scope.tags_convert = function (data) {
+    scope.tagsMap2Arr = scope.tags_convert = function (data) {
         let arr = [];
         for (let i in data) {
             arr = arr.concat(data[i]);
@@ -31,11 +31,11 @@ function mainCtrl () {
         return arr;
     };
 
-    scope.tag_add = function (e, type) {
-        scope.emit('tag.add', {type: type});
+    scope.addTag = scope.tag_add = function (e, type) {
+        scope.emit('tag.add', {type});
     };
 
-    scope.tag_edit = function (e, id) {
+    scope.editTag = scope.tag_edit = function (e, id) {
         scope.emit('tag.edit', id);
     };
 

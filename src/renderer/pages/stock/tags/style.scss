@@ -7,6 +7,10 @@
   cursor: pointer;
 }
 
+[ic-viewer-popup]{
+  z-index:3000!important;
+}
+
 .table th {
   vertical-align: middle;
 }

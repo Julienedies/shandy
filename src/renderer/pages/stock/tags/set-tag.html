@@ -1,5 +1,5 @@
 <div ic-ctrl="setTagCtrl" ic-popup="setTag">
-    <div class="column is-10" ic-tpl="setTagCtrl">
+    <div class="column is-12" ic-tpl="setTagCtrl">
         <div class="table_0" ic-form="setTag">
 
             <div>
@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <div ic-if="!model.types">
+            <div ic-if="!model.types && model.parents">
                 <h6>父标签</h6>
                 <div>
                     <div>
@@ -86,7 +86,7 @@
                     </div>
                     <div class="control">
                         <div ic-select-path ic-select-path-on-done="onSelectPathDone">
-                            <button class="button is-info">
+                            <button class="button is-primary">
                                 添加示例图片
                             </button>
                         </div>
@@ -99,11 +99,11 @@
                 <div></div>
                 <div class="buttons">
                     <button class="button is-primary"
-                            ic-form-submit
+                            ic-form-submit="setTag"
                             ic-submit-action="/stock/tags"
                             ic-submit-before="before"
-                            ic-submit-on-done="done"
-                    >保存
+                            ic-submit-on-done="done">
+                        保存
                     </button>
                     <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
                     <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
@@ -140,13 +140,6 @@
                 </div>
             </div>-->
             <!-- 上传图片 end -->
-
-            <!--            <div>
-                            <h6>级别</h6>
-                            <div>
-                                <input class="input is-medium" type="number" min="1" max="100" step="1" name="level" value="{{model.level}}" ic-form-field>
-                            </div>
-                        </div>-->
 
         </div>
     </div>

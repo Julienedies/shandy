@@ -13,14 +13,14 @@
 <div class="column" ic-ctrl="tagsCtrl">
 
     <div class="buttons">
-        <button class="button"
+        <button class="button is-primary"
                 ic-ajax
                 ic-ajax-auto
                 ic-submit-method="get"
                 ic-submit-action="/stock/tags"
                 ic-submit-on-done="onGetTagsDone">标签列表
         </button>
-        <button class="button" ic-click="add">添加标签</button>
+        <button class="button is-primary" ic-click="add">添加标签</button>
     </div>
 
     <div ic-tpl="tags">
@@ -29,7 +29,7 @@
             <div class="field is-grouped is-grouped-multiline">
                 <div class="control" ic-for="i,v in arr">
                     <div class="tags has-addons is-medium">
-                            <span class="tag is-medium is-info hint--top-right" aria-label="{{ v.desc }}" ic-click="edit:{{v.id}}">
+                            <span ic-class="tag is-medium is-info hint--top-right" aria-label="{{ v.desc }}" ic-click="edit:{{v.id}}">
                                 {{v.text}}
                             </span>
                         <a class="tag is-medium" ic-click="edit:{{v.id}}">

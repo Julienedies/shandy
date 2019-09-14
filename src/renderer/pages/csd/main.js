@@ -73,28 +73,39 @@ brick.reg('mainCtrl', function (scope) {
         utils.msg(`共有股票 ${ stocksJo.json.length } 支. 新添加股票 ${ stocksJo.json.length - oldSize }`, 'OK');
     };
 
+    this.fetchErrorCount = 0;
     this.fetchStart = async function (fields) {
         console.log(fields)
         let $th = $(this).icSetLoading()
         setting.merge('csd', fields).save()
 
-        let stockArr
+        let stockArr;
         if (/\.txt$/.test(fields.fetchByStocks)) {
             stockArr = await jhandy.csv(fields.fetchByStocks, null, [0, 1], true);
         }
 
-        jhandy.fetch(fields.csdPath, stockArr || fields.fetchByStocks, fields.fetchFromIndex, fields.fetchSources, (stat) => {
+        jhandy.fetch(fields.csdPath, stockArr || fields.fetchByStocks, fields.fetchFromIndex, fields.fetchSources, (stat, err) => {
+            if (err) {
+                console.error(err)
+                $th.icClearLoading();
+                scope.fetchStop();
+                scope.fetchErrorCount += 1;
+                // 重新尝试
+                if (scope.fetchErrorCount < 4) {
+                    setTimeout(() => {
+                        console.log('fetchStart again =>', scope.fetchErrorCount);
+                        $th.click();
+                    }, 9000);
+                }
+                return;
+            }
+            if (stat.over) {
+                $th.icClearLoading();
+                setting.json.csd.fetchFromIndex = 0;
+                setting.save();
+            }
+            console.log('fetch => ', stat.name, stat.index);
             $log.text(JSON.stringify(stat));
-        })
-        .then(stats => {
-            $th.icClearLoading()
-            setting.json.csd.fetchFromIndex = 0
-            setting.save()
-        })
-        .catch(err => {
-            console.error(typeof err, err)
-            scope.fetchStop()
-            utils.err('fetch出现错误, 请重新尝试.')
         });
 
     };
@@ -113,16 +124,16 @@ brick.reg('mainCtrl', function (scope) {
         setting.merge('csd', fields).save()
 
         jhandy.tdx(fields.csdPath, fields.tdx_extern_user_file)
-        .then(tdxFilePath => {
-            $th.icClearLoading()
-            utils.msg(`创建成功, 自定义数据文件预览: ${ tdxFilePath }.`)
-            // utils.openItem(tdxFilePath)
-        })
-        .catch(err => {
-            $th.icClearLoading()
-            utils.err('自定义数据文件创建失败.')
-            console.error(err)
-        })
+            .then(tdxFilePath => {
+                $th.icClearLoading()
+                utils.msg(`创建成功, 自定义数据文件预览: ${ tdxFilePath }.`)
+                // utils.openItem(tdxFilePath)
+            })
+            .catch(err => {
+                $th.icClearLoading()
+                utils.err('自定义数据文件创建失败.')
+                console.error(err)
+            })
     };
 
 });

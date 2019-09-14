@@ -10,8 +10,8 @@ function trim (str) {
 }
 
 /**
- * @param words {String} words = '天首发展000611' or '天首发展'
- * @returns {Object|undefined|String}  没有找到股票代码或股票代码字符串 或者 {code:'000002', name:'万科'}
+ * @param words {String} words = '天首发展000611' or '天首发展' or 'TCL 集团'
+ * @returns {Object}  {code:'000002', name:'万科'} or {name:undefined, code:undefined} or {}
  */
 export default function (words) {
 
@@ -22,7 +22,7 @@ export default function (words) {
     const stocks = stocksManager.get();
 
     // 简写code, 譬如002714的简写: 2714
-    if(/^\d{3,}$/img.test(words)){
+    if (/^\d{3,}$/img.test(words)) {
         let result = stocks.filter((arr) => {
             return arr[0].endsWith(words);
         });
@@ -39,7 +39,7 @@ export default function (words) {
         return {code: code_arr[0], name: result[1]};
     }
 
-    let arr = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
+    let arr = words.match(/((?:.+)?[\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
     console.info(arr);
     let name = arr[1] || words;
     let code = arr[2];

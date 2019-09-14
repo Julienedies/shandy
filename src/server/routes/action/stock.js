@@ -3,7 +3,7 @@
  * 个股资料查看编辑
  */
 
-import sjo from '../../../libs/sjo.js'
+import sjo from '../../../libs/stock-jo.js'
 
 export default {
 
