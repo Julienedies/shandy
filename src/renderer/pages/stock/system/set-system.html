@@ -13,18 +13,21 @@
                         </div>
                     </div>
                 </div>
-                <!-- tr 目标行情 -->
+                <!-- tr 交易系统条件 -->
                 <div>
-                    <h6>目标行情</h6>
-                    <div class="field is-grouped is-grouped-multiline" ic-select="目标行情" ic-form-field="目标行情">
-                        <div class="control" ic-for="i,v in tags['目标行情']">
+                    <h6>交易系统条件</h6>
+                    <div class="field is-grouped is-grouped-multiline" ic-select="交易系统条件" ic-select-type="checkbox" ic-form-field="交易系统条件">
+                        <div class="control" ic-for="i,v in tags['交易系统条件']">
                             <div class="tags has-addons">
-                                <span class="tag is-medium" ic-select-item ic-has-selected="system['目标行情']==v.text ? 'is-warning':''"
-                                      ic-val="{{v.text}}">{{v.text}}</span>
-                                <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
-                                    <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                                <span class="tag is-small"
+                                      ic-select-item
+                                      ic-has-selected="system['交易系统条件'] && system['交易系统条件'].includes(v.text) ? 'is-warning':''"
+                                      ic-val="{{v.text}}">{{v.text}}
+                                </span>
+                                <a class="tag is-small" ic-click="editTag:{{v.id}}">
+                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
                                 </a>
-                                <a class="tag is-delete is-medium"
+                                <a class="tag is-delete is-small"
                                    ic-ajax
                                    ic-submit-data="{{v.text}}"
                                    ic-submit-method="delete"
@@ -34,25 +37,78 @@
                             </div>
                         </div>
                         <div class="control">
-                            <a class="tag is-medium" ic-click="tag_add:目标行情">
-                                <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
-                            </a>
+                            <div class="tags has-addons">
+                                <a class="tag is-small" ic-click="tag_add:交易系统条件">
+                                    <span class="icon is-small"><i class="fas fa-file-medical"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tr 交易系统逻辑 -->
+                <div>
+                    <h6>交易系统逻辑</h6>
+                    <div class="field is-grouped is-grouped-multiline" ic-select="交易系统逻辑" ic-form-field="交易系统逻辑">
+                        <div class="control" ic-for="i,v in tags['交易系统逻辑']">
+                            <div class="tags has-addons">
+                                <span class="tag is-small"
+                                      ic-select-item
+                                      ic-has-selected="system['交易系统逻辑'] && system['交易系统逻辑'].includes(v.text) ? 'is-warning':''"
+                                      ic-val="{{v.text}}">{{v.text}}
+                                </span>
+                                <a class="tag is-small" ic-click="editTag:{{v.id}}">
+                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
+                                </a>
+                                <a class="tag is-delete is-small"
+                                   ic-ajax
+                                   ic-submit-data="{{v.text}}"
+                                   ic-submit-method="delete"
+                                   ic-submit-action="/stock/tags/{{v.id}}"
+                                   ic-submit-on-done="tag_remove_done"
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-small" ic-click="tag_add:交易系统逻辑">
+                                    <span class="icon is-small"><i class="fas fa-file-medical"></i></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- tr -->
+<!--                <div>
+                    <h6>行情逻辑</h6>
+                    <div class="field">
+                        <div class="control">
+                            <textarea class="textarea is-small" rows="4" ic-form-field="行情逻辑">{{system['行情逻辑']}}</textarea>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- tr -->
+<!--                <div>
+                    <h6>系统条件</h6>
+                    <div>
+                        <div class="control">
+                            <textarea class="textarea is-small" rows="4" ic-form-field="系统条件">{{system['系统条件']}}</textarea>
+                        </div>
+                    </div>
+                </div>-->
+
                 <!-- tr 选股条件 -->
-                <div>
+               <!-- <div>
                     <h6>选股条件</h6>
                     <div class="field is-grouped is-grouped-multiline" ic-select="选股条件" ic-select-type="checkbox" ic-form-field="选股条件">
                         <div class="control" ic-for="i,v in tags['选股条件']">
                             <div class="tags has-addons">
-                            <span class="tag is-medium" ic-select-item ic-has-selected="system['选股条件']&&system['选股条件'].indexOf(v.text)>-1"
+                            <span class="tag is-small" ic-select-item ic-has-selected="system['选股条件']&&system['选股条件'].indexOf(v.text)>-1"
                                   ic-val="{{v.text}}">{{v.text}}</span>
-                                <a class="tag is-medium" ic-click="editTag:{{v.id}}">
-                                    <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                                <a class="tag is-small" ic-click="editTag:{{v.id}}">
+                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
                                 </a>
-                                <a class="tag is-delete is-medium"
+                                <a class="tag is-delete is-small"
                                    ic-ajax
                                    ic-submit-data="{{v.text}}"
                                    ic-submit-method="delete"
@@ -62,12 +118,14 @@
                             </div>
                         </div>
                         <div class="control">
-                            <a class="tag is-medium" ic-click="tag_add:选股条件">
-                                <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
-                            </a>
+                            <div class="tags has-addons">
+                                <a class="tag is-small" ic-click="tag_add:选股条件">
+                                    <span class="icon is-small"><i class="fas fa-file-medical"></i></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
                 <!-- tr 买点 -->
                 <div>
@@ -75,12 +133,12 @@
                     <div class="field is-grouped is-grouped-multiline" ic-select="买点" ic-form-field="买点">
                         <div class="control" ic-for="i,v in tags['买点']">
                             <div class="tags has-addons">
-                                <span class="tag is-medium" ic-select-item ic-has-selected="system['买点']==v.text ? 'is-warning':''"
+                                <span class="tag is-small" ic-select-item ic-has-selected="system['买点']==v.text ? 'is-warning':''"
                                       ic-val="{{v.text}}">{{v.text}}</span>
-                                <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
-                                    <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                                <a class="tag is-small" ic-click="tag_edit:{{v.id}}">
+                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
                                 </a>
-                                <a class="tag is-delete is-medium"
+                                <a class="tag is-delete is-small"
                                    ic-ajax
                                    ic-submit-data="{{v.text}}"
                                    ic-submit-method="delete"
@@ -90,27 +148,11 @@
                             </div>
                         </div>
                         <div class="control">
-                            <a class="tag is-medium" ic-click="tag_add:买点">
-                                <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- tr -->
-                <div>
-                    <h6>行情逻辑</h6>
-                    <div class="field">
-                        <div class="control">
-                            <textarea class="textarea is-medium" rows="2" ic-form-field="行情逻辑">{{system['行情逻辑']}}</textarea>
-                        </div>
-                    </div>
-                </div>
-                <!-- tr -->
-                <div>
-                    <h6>系统条件</h6>
-                    <div>
-                        <div class="control">
-                            <textarea class="textarea is-medium" rows="2" ic-form-field="系统条件">{{system['系统条件']}}</textarea>
+                            <div class="tags has-addons">
+                                <a class="tag is-small" ic-click="tag_add:买点">
+                                    <span class="icon"><i class="fas fa-file-medical"></i></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -122,16 +164,16 @@
                         <div class="field is-grouped is-grouped-multiline" ic-select="示例图片" ic-select-type="checkbox" ic-form-field="示例图片">
                             <div class="control" ic-for="i,v in (system['示例图片']||[])">
                                 <div class="tags has-addons">
-                                    <span class="tag is-medium" ic-select-item ic-has-selected="true" ic-val="{{ v }}">{{ parseImgName(v) }}</span>
-                                    <a class="tag is-medium hint--top" aria-label="图片预览" ic-viewer-item ic-href="{{ parseImgPath(v) }}">
-                                        <span class="icon is-medium"><i class="far fa-eye"></i></span>
+                                    <span class="tag is-small" ic-select-item ic-has-selected="true" ic-val="{{ v }}">{{ parseImgName(v) }}</span>
+                                    <a class="tag is-small hint--top" aria-label="图片预览" ic-viewer-item ic-href="{{ parseImgPath(v) }}">
+                                        <span class="icon is-small"><i class="far fa-eye"></i></span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="control">
                             <div ic-select-path ic-select-path-on-done="onSelectPathDone">
-                                <button class="button is-primary">
+                                <button class="button is-primary is-small">
                                     添加示例图片
                                 </button>
                             </div>
@@ -150,12 +192,11 @@
                                     ic-submit-on-done="done"
                             >保存
                             </button>
-                            <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
-                            <button class="button" ic-popup-close="setSystem" style="margin-left:4em;"> 关闭</button>
+                            <button class="button" ic-click="reset"> 重置</button>
+                            <button class="button" ic-popup-close="setSystem"> 关闭</button>
                         </div>
                     </div>
                 </div>
-
 
             </div>
         </div>

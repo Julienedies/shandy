@@ -22,7 +22,7 @@ brick.directives.reg('ic-select-path', {
             $(`input[name="${ $th.attr('ic-select-path') }"]`).val(file)
         })
     }
-})
+});
 
 
 

@@ -5,15 +5,14 @@
 
 import dob from '../../../libs/dob.js'; // 功能类似jodb
 
-import viewerMap, {beforeGet} from '../../helper/viewerMap'
-import _ from 'lodash'
+import viewerMap, { beforeGet } from '../../helper/viewerMap'
 
 const tagsJodb = dob('tags', {
     beforeGet,
     convert: function () {
         let tagsByTypeMap = {};
         let list = this.get();
-        list.map(function (item) {
+        list.forEach(function (item) {
             let type = item.type;
             let arr = tagsByTypeMap[type] = tagsByTypeMap[type] || [];
             arr.push(item);
@@ -41,9 +40,9 @@ export default {
     },
 
     post: function (req, res) {
-        let data = req.body;
-        let type = data.type;
-        tagsJodb.set(data);
+        let obj = req.body;
+        obj['示例图片'] = obj['示例图片'] || '';
+        tagsJodb.set(obj);
         res.send(tagsJodb.convert());
     },
 

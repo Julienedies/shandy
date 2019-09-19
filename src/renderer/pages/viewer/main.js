@@ -27,7 +27,7 @@ debugMenu.install();
 // 交易记录json
 const tradeArr = userJo('trading', []).get();
 
-let viewerJodb = userJodb('viewer');
+const viewerJodb = userJodb('viewer');
 
 brick.services.reg('historyModel', function () {
     return {

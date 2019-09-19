@@ -33,25 +33,31 @@
         </div>
     </header>
 
-    <div>
+    <div id="systemList">
         <ul ic-tpl="systemList">
             <li ic-for="i,v in model" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" data-id="{{ v.id }}"
                 id="{{ 'k'+v.id }}" ic-click="view2:{{ v.id }}">
                 <div class="box">
                     <div class="columns">
                         <div class="column is-10">
-                            <header>
+                            <header style="padding-bottom: 0.5rem;">
                                 <a class="title is-5" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }}</a>
                                 <span style="padding-left:1em; vertical-align: 4px;" ic-viewer ic-viewer-url="href">
                                     <span class="tag is-info is-small"
-                                          ic-for="i,o in v['示例图片']"
+                                          ic-for="i,o in (v['示例图片']||[])"
                                           ic-viewer-item
                                           ic-href="{{ parseImgPath(o) }}">
                                         {{ parseImgName(o) }}
                                     </span>
                                 </span>
                             </header>
-                            <p>{{ v['行情逻辑'] }}</p>
+                            <div>{{ v['行情逻辑'] }}</div>
+                            <div class="tags">
+                                <span class="tag is-info is-small" ic-for="k,s in v['交易系统条件']">
+                                    {{ s }}
+                                </span>
+                                <span class="tag is-danger is-small" ic-if="v['买点']">{{ v['买点'] }}</span>
+                            </div>
                         </div>
 
                         <div class="column is-2 buttons">
@@ -72,7 +78,6 @@
                             </button>
                         </div>
                     </div>
-
                 </div>
             </li>
         </ul>
@@ -85,10 +90,10 @@
                         <tr>
                             <th>示例图片</th>
                             <td ic-viewer ic-viewer-url="href">
-                                <span class="tag is-medium is-info"
+                                <span class="tag is-info"
                                       ic-for="i,o in v['示例图片']"
                                       ic-viewer-item
-                                      ic-href="{{o.indexOf('/file')>-1 ? o : '/file/?path='+o }}">
+                                      ic-href="{{ parseImgPath(o) }}">
                                     {{ parseImgName(o) }}
                                 </span>
                             </td>

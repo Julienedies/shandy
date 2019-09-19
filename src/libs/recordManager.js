@@ -13,7 +13,7 @@ const EventEmitter = require('events').EventEmitter;
  *              eventPrefix:'holdModel', //广播事件前缀
  *              key:'hold.id',  //记录id
  *              joinType:''， // 添加记录方式，push or unshift
- *              beforeGet: function(record, index){},
+ *              beforeGet: function(record, index){return record;},
  *              beforeSave:function(record,index){}
  *             };
  * let list = new recordManager(conf);
@@ -30,9 +30,7 @@ let proto = {
      */
     key: 'id',
     joinType: 'unshift',
-    beforeGet: function (record, index) {
-        return record;
-    },
+    beforeGet: null,
     /**
      * @param arr {Array}  要管理的数据对象
      * @return {this}
@@ -62,9 +60,11 @@ let proto = {
         let pool = this._pool;
         let beforeGet = this.beforeGet;
         let result = [];
-        let cb = (recored, index) => {
+        let cb = beforeGet ? (recored, index) => {
             recored = JSON.parse(JSON.stringify(recored));
             return beforeGet(recored, index);
+        } : (recored, index) => {
+            return recored;
         };
 
         if (value === void (0)) {
@@ -116,6 +116,8 @@ let proto = {
             result.push(Object.assign(record, data));
 
             that.beforeSave(record);
+
+            //console.log(that.get(), record);
 
         });
 

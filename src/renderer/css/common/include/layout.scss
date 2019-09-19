@@ -40,7 +40,7 @@
     >*{
         @extend .tr;
         >*{
-            padding:15px 10px;
+            padding:10px 10px;
             &:first-child{
                 @extend .flex-right;
                 flex: 1 1 20%;

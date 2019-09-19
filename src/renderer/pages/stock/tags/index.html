@@ -66,7 +66,7 @@
                             <div class="tags" ic-viewer ic-viewer-url="href">
                             <a class="tag is-small is-warning"
                                style="padding-right:1rem;"
-                                  ic-for="i,o in v['示例图片']"
+                                  ic-for="i,o in (v['示例图片']||[])"
                                   ic-viewer-item
                                   ic-href="{{ parseImgPath(o) }}">
                                 {{ parseImgName(o) }}

@@ -10,19 +10,13 @@ import _ from 'lodash'
 
 const tags = _tags.tags;
 
-let systemJodb;
+let systemJodb = dob('system', {
+    beforeGet
+});
 
-let VIEWER_MAP = {};
-
-function getDb () {
-    return systemJodb || dob('system', {
-        beforeGet
-    });
-}
 
 function getData () {
-    VIEWER_MAP = viewerMap.get();
-    systemJodb = getDb();
+    viewerMap.get();
     return {system: systemJodb.get(), tags: tags.convert()};
 }
 
@@ -34,7 +28,7 @@ export default {
 
     post (req, res) {
         let obj = req.body;
-        console.log(obj)
+        obj['示例图片'] = obj['示例图片'] || '';
         systemJodb.set(obj);
         res.json(getData());
     },

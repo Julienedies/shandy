@@ -85,6 +85,8 @@ brick.reg('mainCtrl', function (scope) {
         }
 
         jhandy.fetch(fields.csdPath, stockArr || fields.fetchByStocks, fields.fetchFromIndex, fields.fetchSources, (stat, err) => {
+            console.log('fetch => ', stat.name, stat.index);
+            $log.text(JSON.stringify(stat));
             if (err) {
                 console.error(err)
                 $th.icClearLoading();
@@ -104,8 +106,6 @@ brick.reg('mainCtrl', function (scope) {
                 setting.json.csd.fetchFromIndex = 0;
                 setting.save();
             }
-            console.log('fetch => ', stat.name, stat.index);
-            $log.text(JSON.stringify(stat));
         });
 
     };
@@ -139,4 +139,4 @@ brick.reg('mainCtrl', function (scope) {
 });
 
 
-brick.bootstrap()
+brick.bootstrap();
