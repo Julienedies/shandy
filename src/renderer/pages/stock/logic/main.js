@@ -10,18 +10,18 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import Reader from '../../../../libs/reader'
-
 import '../../../js/common-stock.js'
+import Reader from '../../../../libs/reader'
 
 brick.reg('logicCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
+    let sortType = brick.utils.get_query('sort');
     let logicArr = [];
     let isReverse = false;
-    let isSortByTime = false;
+    let isSortByTime = sortType === 'time';
 
     const reader = new Reader('#logicList');
 
@@ -31,7 +31,7 @@ brick.reg('logicCtrl', function () {
         });
     };
 
-    this.get_logic_on_done = function (data) {
+    this.onGetLogicDone = function (data) {
         list.init(data);
         isSortByTime ? scope.logic.sortByTime() : scope.logic.sortByLevel();
     };
@@ -39,7 +39,14 @@ brick.reg('logicCtrl', function () {
     scope.onSortChange = function (arg) {
         console.log(arg)
         isSortByTime = arg.value === 'time';
-        isSortByTime ? scope.logic.sortByTime() : scope.logic.sortByLevel();
+        let url = location.href.split('?')[0];
+        if (isSortByTime) {
+            scope.logic.sortByTime();
+            history.pushState(null, null, `${ url }?sort=time`);
+        } else {
+            scope.logic.sortByLevel();
+            history.pushState(null, null, `${ url }?sort=level`);
+        }
     };
 
     this.logic = {
@@ -50,8 +57,7 @@ brick.reg('logicCtrl', function () {
             scope.emit('logic.edit', list.get(id));
         },
         remove: function (data) {
-            // $(this).closest('li').remove();
-            scope.get_logic_on_done(data);
+            scope.onGetLogicDone(data);
         },
         reverse: function () {
             isReverse = !isReverse;
@@ -59,6 +65,7 @@ brick.reg('logicCtrl', function () {
             render();
         },
         sortByTime: function () {
+            // 原始数据是sort排序，list.get是拷贝数据，所以会始终保留原始排序数据
             logicArr = list.get();
             isReverse && logicArr.reverse();
             render();

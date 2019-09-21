@@ -17,7 +17,7 @@ export default function () {
         scope.model = data;
         let arr = scope.tags_convert(data);
         list.init(arr);
-        types = Object.keys(data)
+        types = Object.keys(data);
         scope.render('tags', data);
     };
 

@@ -24,8 +24,8 @@ class Reader {
         $(`<style>
             #reader-control-wrapper{
                 position:fixed;
-                z-index:10000;
-                top:0;
+                z-index:1000;
+                bottom:0;
                 left:0;
                 right:0;
                 background:rgba(0,0,0,0.7);
@@ -261,18 +261,18 @@ class Reader {
 
     cancel () {
         this.speechSU.onend = null;
-        speechSynthesis.cancel()
-        this.setState('cancel')
+        speechSynthesis.cancel();
+        this.setState('cancel');
     }
 
     pause () {
         speechSynthesis.pause();
-        this.setState('pause')
+        this.setState('pause');
     }
 
     resume () {
         speechSynthesis.resume();
-        this.setState('resume')
+        this.setState('resume');
     }
 
 }

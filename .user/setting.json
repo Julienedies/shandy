@@ -30,12 +30,12 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/交易记录/1902-03",
+		"imgDir": "/Users/j/截图/目标行情",
 		"bounds": {
-			"x": 1440,
-			"y": 41,
-			"width": 1920,
-			"height": 1080
+			"x": 0,
+			"y": 23,
+			"width": 1440,
+			"height": 808
 		},
 		"crop": {
 			"x": 3100,

@@ -17,67 +17,14 @@ import '../../../js/common.js'
 import '../../../js/common-stock.js'
 import '../../../js/utils.js'
 
-import setTagCtrl from './set-tag-ctrl'
 import tagsCtrl from './tags-ctrl'
+import detailsCtrl from './details-ctrl'
+import setTagCtrl from './set-tag-ctrl'
 
-// 数组转tree
-function arr2tree (list = []) {
-    const data = JSON.parse(JSON.stringify(list)) // 浅拷贝不改变源数据
-    const result = []
-    if (!Array.isArray(data)) {
-        return result
-    }
-    data.forEach(item => {
-        delete item.children
-    })
-    const map = {}
-    data.forEach(item => {
-        map[item.id] = item
-    })
-    data.forEach(item => {
-        const parent = map[item.parentId]
-        if (parent) {
-            (parent.children || (parent.children = [])).push(item)
-        } else {
-            result.push(item)
-        }
-    })
-    return result
-}
-
-window.brick = brick;
-
+window.brick = brick; // 不是测试用；模板里需要全局获取
 
 brick.reg('tagsCtrl', tagsCtrl);
 
 brick.reg('setTagCtrl', setTagCtrl);
 
-brick.reg('detailsCtrl', function (scope) {
-
-    let $elm = scope.$elm;
-    let $typeTitle = $elm.find('#typeTitle');
-    let type;
-
-    let render = () => {
-        let vm = arr2tree(scope.model[type]);
-        console.log(55, vm);
-        $typeTitle.text(type);
-        scope.render('details', vm);
-    };
-
-    scope.close = function (e) {
-        $elm.icPopup();
-    };
-
-    scope.on('view-details', function (e, _type) {
-        console.log(_type);
-        type = _type;
-        render();
-        $elm.icPopup(true);
-    });
-
-    scope.on('tag.edit.done', function (e, msg) {
-        render();
-    });
-
-});
+brick.reg('detailsCtrl', detailsCtrl);

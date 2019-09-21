@@ -1,0 +1,30 @@
+<div class="column" id="details" ic-popup="details" ic-ctrl="detailsCtrl">
+    <h5 class="title is-6">&nbsp;&nbsp;<span id="typeTitle"></span></h5>
+    <div ic-tpl="details">
+        <table class="table is-bordered is-fullwidth" ic-click="close">
+            <tr ic-for="i,v in model">
+                <th style="white-space: nowrap; width:9em;" ic-click="edit:{{ v.id }}">{{ v.text }}</th>
+                <td>
+                    <div class="nest" ic-if-start="v.children">
+                        {{ brick.getTpl('details')({model:v.children}) }}
+                    </div>
+                    <div ic-else>
+                        <div class="tags" ic-viewer ic-viewer-url="href">
+                            <a class="tag is-small is-warning"
+                               style="padding-right:1rem;"
+                               ic-for="i,o in (v['示例图片']||[])"
+                               ic-viewer-item
+                               ic-href="{{ parseImgPath(o) }}">
+                                {{ parseImgName(o) }}
+                            </a>
+                        </div>
+                        <div class="pre">{{ v.desc }}</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="column">
+        <button class="button is-primary" ic-popup-close="details">返回</button>
+    </div>
+</div>
