@@ -34,17 +34,15 @@ export default {
     },
 
     del (req, res) {
-        let dob = getDb();
         let id = req.params.id;
-        dob.remove(id);
+        systemJodb.remove(id);
         res.json(getData());
     },
 
     move (req, res) {
-        let dob = getDb();
         let id = req.params.id;
         let dest = req.params.dest;
-        dob.move(id, dest);
+        systemJodb.move(id, dest);
         res.json(getData());
     }
 }

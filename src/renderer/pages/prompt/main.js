@@ -17,42 +17,78 @@ import electron from 'electron'
 import utils from '../../../libs/utils'
 import voice from '../../../libs/voice'
 import warnText from '../../js/warn-text'
+import userJodb from '../../../libs/user-jodb'
 
 const ipc = electron.ipcRenderer
 const BrowserWindow = electron.remote.BrowserWindow
 
+const warnJodb = userJodb('warn');
+const warnArr = warnJodb.get() || [];
+
 let win;
 const socket = io();
 const $body = $('body');
+const $place = $('#place');
+
+const warnMap = {};
 
 const show = () => {
     $body.css('opacity', 1).show();
 };
 
 const hide = () => {
-    $body.css('opacity', 0).hide();
+    //$body.css('opacity', 0).hide();
+    brick.view.to('hide');
+};
+
+const show2 = (content) => {
+    $place.text(content);
+    brick.view.to('place');
 };
 
 ipc.on('id', function (event, windowID, isFrameMode) {
     win = BrowserWindow.fromId(windowID);
     setTimeout(() => {
-        isFrameMode && hide();
-    }, 1000 * 4);
+        if (isFrameMode) {
+            // hide();  // 设置透明，鼠标忽略，保持始终窗口显示;
+        } else {
+            $body.css('backgroundColor', 'black');
+        }
+    }, 1000 * 1);
 });
 
 ipc.on('view', (e, view) => {
     brick.view.to(view);
 });
 
-/*utils.timer('9:26', () => {
-    voice('早盘市场合力出结果。9点45分钟前完成平仓。必须设定止盈止损预案条件单。 遵守交易原则。');
+
+warnArr.forEach((item, index) => {
+    let id = item.id;
+    let content = item.content;
+    let trigger = item.trigger;
+    let disable = item.disable;
+/*
+    if (disable) {
+        return;
+    }*/
+
+    // trigger => 10 : 间隔执行
+    if (/^\d+$/.test(trigger)) {
+        let handle = setInterval(() => {
+            show2(content);
+        }, 1000 * 60 * trigger);
+    }
+/*    // trigger => 9:00: 定时执行
+    else if (/^\d+[:]\d+$/.test(trigger)) {
+        let handle = utils.timer(trigger, () => {
+            show2(content);
+        });
+    }
+    // trigger => 'daban': 打板动作触发
+    else {
+        warnMap[trigger] = content;
+    }*/
 });
-utils.timer('9:35', () => {
-    voice('9点45分钟前完成平仓！必须设定止盈止损预案条件单。 遵守交易原则。');
-});
-utils.timer('9:40', () => {
-    voice('早盘市场合力出结果。除非涨停，否则9点45分钟前完成平仓。必须设定止盈止损预案条件单。 遵守交易原则。');
-});*/
 
 [
     ['9:05', '交易准备'],
@@ -60,56 +96,50 @@ utils.timer('9:40', () => {
     ['9:45', '早盘'],
 ].forEach((item) => {
     utils.timer(item[0], () => {
-        //win.show();
         show();
         brick.view.to(item[1]);
     });
 });
 
 
-brick.reg('mainCtrl', function (scope) {
-
-    const audioMap = {
-        'daban': require(`./audio/daban-10.mp3`)
-    };
-
-    socket.on('warn', (info) => {
-
-        return;
-
-
-        let d = new Date()
-        let h = d.getHours()
-        let m = d.getMinutes()
-        if (h === 9 && m > 15 && m < 45) {
-            // return;
-        }
-
-        if (info === 'esc') {
-            return hide();
-        }
-
-        //win.show();
-        show();
-        brick.view.to(info);
-
-/*        let audio = new Audio(audioMap[info]);
-        audio.volume = 1;
-        audio.play();*/
-
-        setTimeout(() => {
-            hide();
-        }, 1000 * 1);
-    });
-
-    $('[ic-view]').on('ic-view.active', function (e) {
-        let str = $(this).find('li:first-child').text();
-        //voice(str, () => {});
-
-        setTimeout(() => {
-            hide();
-        }, 1000 * 7);
-
-    });
-
+$('[ic-view]').on('ic-view.active', function (e) {
+    setTimeout(() => {
+        hide();
+    }, 1000 * 7);
 });
+
+const audioMap = {
+    'daban': require(`./audio/daban-10.mp3`)
+};
+
+socket.on('warn', (info) => {
+
+    let d = new Date()
+    let h = d.getHours()
+    let m = d.getMinutes()
+    if (h === 9 && m > 15 && m < 45) {
+        // return;
+    }
+
+    if (info === 'esc') {
+        return hide();
+    }
+
+    //win.show();
+    show();
+    brick.view.to(info);
+
+    /*        let audio = new Audio(audioMap[info]);
+            audio.volume = 1;
+            audio.play();*/
+
+    /*setTimeout(() => {
+        //hide();
+        brick.view.to('hide');
+    }, 1000 * 5);*/
+});
+
+brick.reg('mainCtrl', function (scope) {
+});
+
+brick.bootstrap();

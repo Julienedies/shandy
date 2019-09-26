@@ -11,7 +11,7 @@
 		"csdPath": "/Users/j/dev/csd",
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"tdx_extern_user_file": "/Volumes/C/new_jyplug/T0002/signals/extern_user.txt",
-		"fetchFromIndex": 672,
+		"fetchFromIndex": 287,
 		"bounds": {
 			"x": 157,
 			"y": 55,
@@ -22,7 +22,7 @@
 	"warn": {
 		"randomBgImgDir": "/Users/j/pim/img/人物",
 		"bounds": {
-			"x": 0,
+			"x": -2,
 			"y": 23,
 			"width": 1440,
 			"height": 808
@@ -30,7 +30,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/目标行情",
+		"imgDir": "/Users/j/截图/交易记录/1902-03",
 		"bounds": {
 			"x": 0,
 			"y": 23,
@@ -96,10 +96,10 @@
 	},
 	"prompt": {
 		"bounds": {
-			"x": 0,
-			"y": 23,
-			"width": 1440,
-			"height": 808
+			"x": 1440,
+			"y": 41,
+			"width": 1920,
+			"height": 1080
 		}
 	},
 	"reader": {

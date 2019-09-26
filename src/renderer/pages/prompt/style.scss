@@ -16,7 +16,7 @@ body {
   background: repeat 50% 50% rgba(0, 0, 0, 0);
   background-size: contain;
   border: solid 1px yellowgreen;
-  font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  font: 18px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -41,14 +41,14 @@ body {
   1% {
     opacity: 0;
   }
-/*  20% {
-    opacity: 0.5;
-  }
-  40% {
-    opacity: 0.75;
-  }
-  60% {
-  }*/
+  /*  20% {
+      opacity: 0.5;
+    }
+    40% {
+      opacity: 0.75;
+    }
+    60% {
+    }*/
   50% {
     opacity: 0.95;
   }
@@ -67,17 +67,17 @@ body {
 }
 
 [ic-view] {
-  //opacity: 0.2;
-
-  background: rgba(0, 0, 0, 0.95) !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.5;
+  background: rgba(0, 0, 0, 0) !important;
 
   .box {
     //width: 48%;
-    min-width: 40%;
     // border: solid 1px yellowgreen;
+    margin-top:-10%;
+    min-width: 40%;
     background: rgba(0, 0, 0, 0);
 
     .title {

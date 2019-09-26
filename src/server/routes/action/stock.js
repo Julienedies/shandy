@@ -3,6 +3,7 @@
  * 个股资料查看编辑
  */
 
+import stocksManager from '../../../libs/stocks-manager'
 import sjo from '../../../libs/stock-jo.js'
 
 export default {
@@ -19,6 +20,16 @@ export default {
         let dob = sjo(code)
         dob.merge(data).save()
         res.json(dob.get())
+    },
+
+    list: function (req, res) {
+        res.json(stocksManager.get())
+    },
+
+    map: function (req, res) {
+        res.json(stocksManager.get())
     }
+
+
 
 }

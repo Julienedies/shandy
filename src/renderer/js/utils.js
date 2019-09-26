@@ -6,22 +6,25 @@
 const FILE_PATH = '/file/?path';
 
 function _isUrlPath (path) {
+    //console.log(typeof path, path);
     return path.indexOf(FILE_PATH) > -1;
 }
 
 /**
  * 提取股票名称
  * 预期: '屏幕快照 2018-09-10 下午3.19.55 -华鹏飞-300350.png' => '华鹏飞'
- * @param path {String}
- * @return {String}
+ * @param [path] {String}
+ * @return {String|void}
  */
 function parseImgName (path) {
+    if(!path) return console.log(path);
     path = _isUrlPath(path) ? decodeURIComponent(path) : path;
     let arr = path.match(/^.+-(.+)-\d{6}\.png$/);
     return arr && arr[1] || path;
 }
 
 function parseImgPath (path) {
+    if(!path) return console.log(path);
     return _isUrlPath(path) ? path : `${ FILE_PATH }=${ path }`;
 }
 

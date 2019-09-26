@@ -8,16 +8,21 @@
                     <input class="input is-medium"
                            type="text"
                            name="type"
+                           ic-if="!model.types"
                            value="{{model.type}}"
                            ic-select-input="tagType"
                            ic-has-readonly="model.type"
                            ic-form-field
                            ic-field-rule="required">
                     <input type="hidden" name="id" ic-form-field value="{{model.id}}"/>
-                    <div style="padding-top:0.5rem;" ic-if="model.types">
-                        <div ic-select="tagType" ic-select-type="radio">
+                    <div ic-if="model.types">
+                        <div ic-select="tagType" ic-select-type="radio" ic-form-field="type">
                             <div class="tags">
-                                <span class="tag is-medium" ic-for="i,v in model.types" ic-select-item ic-val="{{ v }}">{{ v }}</span>
+                                <span class="tag is-medium"
+                                      ic-for="i,v in model.types"
+                                      ic-select-item
+                                      ic-has-selected="model.type===v.text || model.type===v.id"
+                                      ic-val="{{ v.text }}">{{ v.text }}</span>
                             </div>
                         </div>
                     </div>
@@ -25,13 +30,13 @@
             </div>
 
             <div>
-                <h6>标签</h6>
+                <h6>标签名称</h6>
                 <div>
                     <input class="input is-medium" type="text" name="text" value="{{model.text}}" ic-form-field ic-field-rule="required">
                 </div>
             </div>
 
-            <div ic-if="!model.types && model.parents">
+            <div ic-if="model.parents">
                 <h6>父标签</h6>
                 <div>
                     <div>

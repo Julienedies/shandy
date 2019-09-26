@@ -9,110 +9,21 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-    <div class="column" ic-ctrl="mistakeCtrl">
+    <div class="column" ic-ctrl="pointCtrl">
         <div class="buttons has-addons">
-            <button class="button" ic-click="mistake.add" ic-popup-target="setMistake">添加错误记录</button>
         </div>
-        <div ic-tpl="mistakes">
-            <div class="box">
-                {{ model }}
-            </div>
-        </div>
-    </div>
 
-    <div ic-ctrl="setMistakeCtrl" ic-popup="setMistake">
-        <div class="column">
-            <button class="button" ic-popup-close> 返回 </button>
-            <div ic-tpl ic-tpl-init="{mistake:{}, tags:{}}">
-                <div ic-form="setMistake" ic-init="mistake=model.mistake; tags=model.tags">
-
-                    <div class="field is-horizontal">
-                        <div class="field-label is-normal">
-                            <label class="label">错误类型</label>
-                        </div>
-                        <div class="field-body">
-                            <div class="field is-grouped is-grouped-multiline" ic-select="错误类型" ic-select-type="checkbox" ic-form-field="错误类型">
-                                <div class="control" ic-for="i,v in tags['错误类型']">
-                                    <div class="tags has-addons">
-                                        <span class="tag is-medium"
-                                              ic-select-item
-                                              ic-has-selected="mistake['错误类型'] && mistake['错误类型'].indexOf(v.text)>-1"
-                                              ic-val="{{v.text}}">{{v.text}}</span>
-                                        <a class="tag is-medium" ic-click="tag_edit:{{v.id}}">
-                                            <span class="icon is-medium"><i class="far fa-edit"></i></span>
-                                        </a>
-                                        <a class="tag is-delete is-medium"
-                                           ic-ajax
-                                           ic-submit-data="{{v.text}}"
-                                           ic-submit-method="delete"
-                                           ic-submit-action="/stock/tags/{{v.id}}"
-                                           ic-submit-on-done="tag_remove_done"
-                                        ></a>
-                                    </div>
-                                </div>
-                                <div class="control">
-                                    <a class="tag is-medium" ic-click="tag_add:错误类型">
-                                        <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field is-horizontal">
-                        <div class="field-label is-normal">
-                            <label class="label">股票名称</label>
-                        </div>
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-medium" type="text" name="type"
-                                           value="{{model.type}}"
-                                           ic-has-readonly="model.type"
-                                           ic-form-field
-                                           ic-field-rule="required">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field is-horizontal">
-                        <div class="field-label is-normal">
-                            <label class="label">图片</label>
-                        </div>
-                        <div class="field-body">
-                            <div class="field has-addons">
-                                <div class="control is-expanded">
-                                    <input class="input" type="text">
-                                </div>
-                                <div class="control">
-                                    <a class="button is-info">
-                                        选择图片
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field is-horizontal">
-                        <div class="field-label">
-                        </div>
-                        <div class="field-body">
-                            <div class="field">
-                                <div class="control">
-                                    <button class="button is-primary"
-                                            ic-form-submit
-                                            ic-submit-action="/mistake"
-                                            ic-submit-before="before"
-                                            ic-submit-on-done="done"
-                                    >保存</button>
-                                    <button class="button" ic-popup-close style="margin-left:3em;"> 关闭 </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <table>
+                <tr>
+                    <th>
+                        要考虑的目标行情要素：
+                    </th>
+                    <td>
+                        确定性； 风险； 收益； 效率；
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 

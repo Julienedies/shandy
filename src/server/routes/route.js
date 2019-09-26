@@ -42,6 +42,8 @@ export default function (app) {
     app.get('/stock/concept/(:name)?', concept.get)
     app.get('/stock/c/:code', stock.get)
     app.post('/stock/c/:code', stock.post)
+    app.get('/stock/list', stock.list)
+    app.get('/stock/map', stock.map)
 
     app.get('/mashup/:code', mashup.get)
     app.get('/mashup/basic/:code', mashup.basic)

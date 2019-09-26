@@ -1,8 +1,12 @@
+html {
+  font-size: 18px;
+}
+
 [ic-form="replay"] {
   > div {
     display: flex;
     align-items: flex-start;
-    padding: 0.5em 0;
+    padding: 0.2em 0;
 
     h6 {
       min-width: 7em;
@@ -17,5 +21,10 @@
       padding: 0.5em;
       border: solid 0 green;
     }
+
+    .tag{
+       vertical-align: text-bottom;
+    }
+
   }
 }

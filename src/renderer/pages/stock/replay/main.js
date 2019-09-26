@@ -39,8 +39,9 @@ brick.reg('replayCtrl', function () {
             console.info(fields);
             return fields;
         },
-        done: function (msg) {
-            scope.get_replay_done(msg);
+        done: function (data) {
+            scope.get_replay_done(data);
+            $.icMsg(JSON.stringify(data.replay));
         }
     };
 

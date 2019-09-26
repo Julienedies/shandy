@@ -85,10 +85,10 @@ brick.reg('mainCtrl', function (scope) {
         }
 
         jhandy.fetch(fields.csdPath, stockArr || fields.fetchByStocks, fields.fetchFromIndex, fields.fetchSources, (stat, err) => {
-            console.log('fetch => ', stat.name, stat.index);
+            console.log('fetch => ', stat.name, stat.index, err);
             $log.text(JSON.stringify(stat));
             if (err) {
-                console.error(err)
+                console.error(err);
                 $th.icClearLoading();
                 scope.fetchStop();
                 scope.fetchErrorCount += 1;

@@ -119,8 +119,8 @@
             </div>
             <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
                 <div class="tags">
-                    <span class="tag is-primary is-medium" ic-for-start="k,arr in model.tags">{{k}}</span>
-                    <span class="tag is-small" ic-for-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
+                    <span class="tag is-primary is-medium" ic-for-start="k,arr in model.tags" ic-if-start="k!=='type'">{{k}}</span>
+                    <span class="tag is-small" ic-for-end ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
                           ic-has-selected="model.img.tags && model.img.tags.includes(v.id)">
                         {{v.text}}
                     </span>

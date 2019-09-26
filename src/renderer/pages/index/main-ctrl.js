@@ -409,7 +409,7 @@ brick.reg('mainCtrl', function (scope) {
 
     if (utils.isTradingHours(true)) {
         scope.openNews();
-        //scope.openPrompt();
+        scope.openPrompt();
     }
 
     if (utils.isTradingHours()) {

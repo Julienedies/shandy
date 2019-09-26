@@ -89,4 +89,4 @@ brick.reg('plans_ctrl', function () {
 })
 
 
-brick.bootstrap()
+brick.bootstrap();

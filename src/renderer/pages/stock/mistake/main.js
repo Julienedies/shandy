@@ -19,7 +19,7 @@ import setTagCtrl from '../tags/set-tag-ctrl'
 
 window.brick = brick; // 不是测试用；模板里需要全局获取
 
-brick.reg('set_tag_ctrl', setTagCtrl);
+brick.reg('setTagCtrl', setTagCtrl);
 brick.reg('detailsCtrl', detailsCtrl);
 
 brick.reg('mistakeCtrl', function (scope) {

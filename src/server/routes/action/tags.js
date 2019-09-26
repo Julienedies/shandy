@@ -11,6 +11,7 @@ const tagsJodb = dob('tags', {
     beforeGet,
     convert: function () {
         let tagsByTypeMap = {};
+        let tagsByTypeMap2 = {};
         let list = this.get();
         list.forEach(function (item) {
             let type = item.type;
@@ -24,7 +25,13 @@ const tagsJodb = dob('tags', {
                 return b - a;
             })
         });
-        return tagsByTypeMap;
+
+        tagsByTypeMap.type.forEach((item, index) => {
+            let tagType = item.text;
+            tagsByTypeMap2[tagType] = tagsByTypeMap[tagType];
+        });
+
+        return tagsByTypeMap2;
     }
 });
 

@@ -169,7 +169,7 @@ brick.reg('setSystemCtrl', function () {
         scope.emit('tag.edit', tagsManager.get(id));
     };
 
-    scope.tag_remove_done = render;
+    scope.onTagDeleteDone = render;
 
     scope.on(C.ADD_SYSTEM, edit);
     scope.on(C.EDIT_SYSTEM, edit);
