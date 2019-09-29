@@ -12,7 +12,7 @@ const tagsJodb = dob('tags', {
     convert: function () {
         let tagsByTypeMap = {};
         let tagsByTypeMap2 = {};
-        let list = this.get();
+        let list = this.get2();
         list.forEach(function (item) {
             let type = item.type;
             let arr = tagsByTypeMap[type] = tagsByTypeMap[type] || [];
@@ -42,7 +42,7 @@ export default {
     get: function (req, res) {
         viewerMap.get();
         let type = req.params.type;
-        let data = type ? tagsJodb.get(type, 'type') : tagsJodb.convert();
+        let data = type ? tagsJodb.get2(type, 'type') : tagsJodb.convert();
         res.json(data);
     },
 

@@ -68,7 +68,7 @@ let proto = {
         };
 
         if (value === void (0)) {
-            return pool.map(cb);
+            return pool;
         }
 
         if (typeof value === 'object') {
@@ -82,7 +82,18 @@ let proto = {
                 result.push(record);
             }
         }
-        return result.map(cb);
+        return result;
+    },
+    /**
+     * get的包装，返回的是this.get()的copy
+     * @param value
+     * @param query
+     */
+    get2: function(value, query){
+        let beforeGet = this.beforeGet;
+        let result = this.get(value, query);
+        result = JSON.parse(JSON.stringify(result));
+        return beforeGet ? result.map(beforeGet): result;
     },
     /**
      * 对查询结果记录进行修改
@@ -114,6 +125,8 @@ let proto = {
             record = pool[index];
 
             result.push(Object.assign(record, data));
+
+            if(record.id == '1178690') console.log(333, record, data);
 
             that.beforeSave(record);
 

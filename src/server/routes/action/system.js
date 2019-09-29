@@ -17,7 +17,7 @@ let systemJodb = dob('system', {
 
 function getData () {
     viewerMap.get();
-    return {system: systemJodb.get(), tags: tags.convert()};
+    return {system: systemJodb.get2(), tags: tags.convert()};
 }
 
 export default {

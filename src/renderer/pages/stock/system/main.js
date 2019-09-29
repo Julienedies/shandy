@@ -151,6 +151,13 @@ brick.reg('setSystemCtrl', function () {
     }
 
     scope.submitBefore = function (data) {
+        // note: 如果上传数据的值是空数组[]，则被jquery忽略，所以把[]替换为''，才能覆盖旧值;
+        for(let i in data){
+            let v = data[i];
+            if(Array.isArray(v) && v.length===0){
+                data[i] = '';
+            }
+        }
         console.log('submitBefore =>', data);
     };
 

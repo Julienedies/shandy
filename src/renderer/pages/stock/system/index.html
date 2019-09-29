@@ -56,7 +56,7 @@
                                 <span class="tag is-warning" ic-if="v['交易系统逻辑']">
                                     {{ v['交易系统逻辑'] }}
                                 </span>
-                                <span class="tag is-primary is-small" ic-for="k,s in v['交易系统条件']">
+                                <span class="tag is-primary is-small" ic-for="k,s in v['交易系统条件']||[]">
                                     {{ s }}
                                 </span>
                                 <span class="tag is-danger is-small" ic-if="v['买点']">{{ v['买点'] }}</span>
