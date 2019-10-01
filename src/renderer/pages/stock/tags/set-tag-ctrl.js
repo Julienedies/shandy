@@ -50,14 +50,11 @@ export default function () {
     // 图片上传 web端使用，暂时无用，
     /*scope.onUploadDone = function (data) {
         // 获取表单数据model
-        let model = $elm.find('[ic-form="set_tag"]').icForm();
-
+        let model = $elm.find('[ic-form="setTag"]').icForm();
         model['示例图片'] = model['示例图片'] || [];
-
         data.forEach((v, i) => {
             model['示例图片'].push(v.url)
         });
-
         scope.render(model);
     };*/
 

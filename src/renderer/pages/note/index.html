@@ -4,12 +4,65 @@
     <meta charset="UTF-8">
     <title>note</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css" />
+    <link rel="stylesheet" href="../../css/vendor/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="../../css/vendor/hint.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
-<body id="notes" ic-ctrl="main_ctrl">
+<body ic-ctrl="main_ctrl">
 
-<div ic-ctrl="set_note_ctrl" ic-popup="set_note">
+<div class="column is-10 is-offset-1" ic-ctrl="notesCtrl">
+
+    <header class="columns">
+        <div class="column is-3">
+            <div class="buttons">
+                <button class="button"
+                        ic-ajax
+                        ic-ajax-auto
+                        ic-submit-method="get"
+                        ic-submit-action="/note"
+                        ic-submit-on-done="onGetNoteDone">笔记列表
+                </button>
+                <button class="button" ic-click="note.edit">新笔记</button>
+            </div>
+        </div>
+        <div class="column is-9">
+            <div ic-tpl="tags">
+                <div class="tags" ic-select="tags" ic-select-on-change="onTagFilterChange">
+                    <span class="tag" ic-for="i,v in model" ic-val="{{ i }}">{{ i }}</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <ul ic-tpl="notes">
+        <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
+            <div class="pre">{{v.text}}</div>
+            <div class="tar">
+                <span class="tag">{{v.type}}</span>
+                <a class="no" ic-click="note.edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span></a>
+                <a class="no"
+                   ic-ajax
+                   ic-submit-method="get"
+                   ic-submit-action="/stock/note/focus/{{v.id}}"
+                   ic-submit-on-done="onGetNoteDone">
+                    <span class="icon is-medium hint--top-left" aria-label="{{ v.level + ' 点击提升级别，每次+10' }}" titie="提升级别">
+                        <i class="far fa-heart"></i>
+                    </span>
+                </a>
+            </div>
+            <button class="delete is-medium"
+                    ic-ajax
+                    ic-submit-method="delete"
+                    ic-submit-action="/note/{{v.id}}"
+                    ic-submit-before="ajax_before_confirm:确认删除?"
+                    ic-submit-on-done="note.removed"></button>
+        </li>
+    </ul>
+
+</div>
+
+<div ic-ctrl="setNoteCtrl" ic-popup="set_note">
 
     <div class="column is-10" ic-tpl ic-tpl-init="{}">
 
@@ -19,8 +72,8 @@
             <div>
                 <h6>笔记</h6>
                 <div>
-                    <textarea rows="7" class="textarea is-medium" ic-form-field="text" ic-field-rule="required">{{model.text}}</textarea>
-                    <input type="hidden" name="id" ic-form-field  value="{{model.id}}" />
+                    <textarea rows="14" class="textarea" ic-form-field="text" ic-field-rule="required">{{model.text}}</textarea>
+                    <input type="hidden" name="id" ic-form-field value="{{model.id}}"/>
                 </div>
             </div>
 
@@ -28,7 +81,7 @@
             <div>
                 <h6>类型</h6>
                 <div class="control">
-                    <input type="text" class="input is-medium" ic-form-field="type" value="{{model.type}}" />
+                    <input type="text" class="input" ic-form-field="type" value="{{model.type}}"/>
                 </div>
             </div>
 
@@ -36,11 +89,19 @@
             <div>
                 <h6>类型</h6>
                 <div>
-                    <div class="tags" ic-select="type" ic-select-on-change="on_select_change">
-                        <span ic-for="i,v in ['git', 'unix']" class="tag is-medium" ic-val="{{v}}">
-                            {{v}}
+                    <div class="tags" ic-select="type" ic-select-type="checkbox" ic-select-on-change="onSelectChange">
+                        <span ic-for="i,v in model.tags" class="tag is-medium" ic-val="{{i}}">
+                            {{i}}
                         </span>
                     </div>
+                </div>
+            </div>
+
+            <!-- tr -->
+            <div>
+                <h6>优先级</h6>
+                <div>
+                    <input class="input is-small" type="number" name="level" ic-value="{{model.level||0}}" ic-form-field>
                 </div>
             </div>
 
@@ -53,9 +114,10 @@
                             ic-submit-action="/note"
                             ic-submit-before
                             ic-submit-on-done="done"
-                    >保存</button>
-                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置 </button>
-                    <button class="button" ic-popup-close style="margin-left:4em;"> 关闭 </button>
+                    >保存
+                    </button>
+                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
+                    <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
                 </div>
             </div>
 
@@ -64,36 +126,6 @@
     </div>
 
 </div>
-
-<section class="column is-8 is-offset-2" ic-ctrl="notes_ctrl">
-
-    <div class="buttons">
-        <button class="button"
-                ic-ajax
-                ic-ajax-auto
-                ic-submit-method="get"
-                ic-submit-action="/note"
-                ic-submit-on-done="get_notes_on_done">笔记列表</button>
-        <button class="button" ic-click="note.add">新笔记</button>
-    </div>
-
-    <ul ic-tpl="notes">
-        <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
-            <div class="pre">{{v.text}}</div>
-            <div class="tar">
-                <span class="tag">{{v.type}}</span>
-                <a ic-click="note.edit:{{v.id}}">编辑</a>
-            </div>
-            <button class="delete is-medium"
-                    ic-ajax
-                    ic-submit-method="delete"
-                    ic-submit-action="/note/{{v.id}}"
-                    ic-submit-before="ajax_before_confirm:确认删除?"
-                    ic-submit-on-done="note.removed"></button>
-        </li>
-    </ul>
-
-</section>
 
 </body>
 </html>

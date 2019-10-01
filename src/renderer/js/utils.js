@@ -28,6 +28,20 @@ function parseImgPath (path) {
     return _isUrlPath(path) ? path : `${ FILE_PATH }=${ path }`;
 }
 
+/**
+ * 统计每个标签数量
+ * @param arr {Array} 标签数组
+ * @return {Object}
+ * @example:  countTag(['a','b','a']) => {a:2: b:1}
+ */
+function countTag (arr) {
+    let result = {};
+    arr.forEach( (v, i) => {
+        result[v] = (result[v] || 0) + 1;
+    });
+    return result;
+}
+
 try {
 
     window.parseImgName = parseImgName;

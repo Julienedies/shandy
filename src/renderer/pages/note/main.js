@@ -2,70 +2,89 @@
  * Created by j on 18/7/28.
  */
 
-import './style.scss'
-import '../../css/common/common.scss'
-
 import './index.html'
+import '../../css/common/common.scss'
+import './style.scss'
+
+import _ from 'lodash'
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
 import '../../js/common-stock.js'
 
-brick.set('debug', true)
-brick.set('render.wrapModel', true)
+brick.set('debug', false);
+brick.set('ic-select-cla', 'is-info');
+brick.set('render.wrapModel', true);
 
-brick.reg('notes_ctrl', function(){
+brick.reg('notesCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
 
-    scope.get_notes_on_done = function(data){
+    scope.tagMap = {}
+
+    scope.onGetNoteDone = function (data) {
         list.init(data);
+        let tags = data.map((item, index) => {
+            return item.tag || item.type;
+        });
+        let tagMap = _.countBy(tags);
+        scope.tagMap = tagMap;
+        console.log(tagMap)
+        scope.render('tags', tagMap);
         scope.render('notes', data);
     };
 
+    scope.onTagFilterChange = function (msg) {
+        let tag = msg.value;
+        let vm = tag ? list.get(tag, 'type') : list.get();
+        scope.render('notes', vm);
+    };
+
     this.note = {
-        add : function(){
-            scope.emit('note.edit');
+        edit: function (e, id) {
+            let vm = id ? list.get(id) : {};
+            vm.tags = scope.tagMap;
+            scope.emit('note.edit', vm);
         },
-        edit : function(e, id){
-            scope.emit('note.edit', list.get(id));
+        removed: function (data) {
+            scope.onGetNoteDone(data);
         },
-        removed : function(data){
-            scope.get_notes_on_done(data);
+        filter: function (e, tag) {
+
         }
     };
 
-    scope.on('note.edit.done', function(e, data){
-        scope.get_notes_on_done(data);
+    scope.on('note.edit.done', function (e, data) {
+        scope.onGetNoteDone(data);
     });
 
 });
 
-brick.reg('set_note_ctrl', function(){
+
+brick.reg('setNoteCtrl', function () {
 
     let scope = this;
     let $elm = this.$elm;
 
-    scope.done = function(data){
+    scope.done = function (data) {
         scope.emit('note.edit.done', data);
         $elm.icPopup(false);
     };
 
-    scope.reset = function(){
+    scope.reset = function () {
         scope.render({});
     };
 
-    scope.on('note.edit', function(e, msg){
-        let note = msg || {};
-        scope.render(note[0] || note);
+    scope.on('note.edit', function (e, note) {
+        scope.render(note);
         $elm.icPopup(true);
     });
 
 
-    scope.on_select_change = function(msg){
+    scope.onSelectChange = function (msg) {
         $elm.find('[ic-form-field="type"]').val(msg.value);
     };
 

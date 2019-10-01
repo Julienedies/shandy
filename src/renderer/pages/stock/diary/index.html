@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>交易日记</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/hint.css"/>
+    <script src="/set_node_modules_path.js"></script>
+</head>
+<body ic-ctrl="main_ctrl">
+
+<div class="column is-10 is-offset-1" ic-ctrl="diaryCtrl">
+
+    <div class="level">
+
+        <div class="level-left">
+            <button class="button"
+                    ic-ajax
+                    ic-ajax-auto
+                    ic-submit-method="get"
+                    ic-submit-action="/stock/diary"
+                    ic-submit-on-done="onGetDiaryDone">日记列表
+            </button>
+            <button class="button" ic-click="edit">新日记</button>
+            <button class="button" ic-click="reverse">排序反转</button>
+        </div>
+    </div>
+
+    <ul id="diaryList" ic-tpl="diaryList">
+        <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
+            <div class="pre">{{v.text}} <br><span style="opacity:0.3;">{{ v.date }}</span></div>
+            <div class="tar">
+                <a class="no" ic-click="edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
+            </div>
+            <button class="delete is-medium"
+                    ic-ajax
+                    ic-submit-method="delete"
+                    ic-submit-action="/stock/diary/{{v.id}}"
+                    ic-submit-before="ajax_before_confirm:确认删除?"
+                    ic-submit-on-done="onDelDone"></button>
+        </li>
+    </ul>
+
+</div>
+
+<div ic-ctrl="setDiaryCtrl" ic-popup="setDiary">
+
+    <div class="column is-10" ic-tpl ic-tpl-init="{}">
+
+        <div class="table_0" ic-form="setDiary">
+
+            <!-- tr -->
+            <div>
+                <h6>内容</h6>
+                <div>
+                    <textarea rows="16" class="textarea is-medium" ic-form-field="text" ic-field-rule="required">{{model.text}}</textarea>
+                    <input type="hidden" name="id" ic-form-field value="{{model.id}}"/>
+                </div>
+            </div>
+
+            <!-- tr -->
+            <div>
+                <h6>日期</h6>
+                <div>
+                    <input class="input is-small" type="date" name="date" ic-value="{{model.date || jFormatDate() }}" ic-form-field>
+                </div>
+            </div>
+
+            <!-- tr -->
+            <div>
+                <div></div>
+                <div class="buttons">
+                    <button class="button is-primary"
+                            ic-form-submit
+                            ic-submit-action="/stock/diary"
+                            ic-submit-before
+                            ic-submit-on-done="done">保存
+                    </button>
+                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
+                    <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

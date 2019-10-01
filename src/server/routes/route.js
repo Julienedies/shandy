@@ -22,6 +22,7 @@ import replay from './action/replay'
 import tags from './action/tags'
 import system from './action/system'
 import memo from './action/memo'
+import diary from './action/diary'
 
 import note from './action/note'
 import txt from './action/txt'
@@ -53,6 +54,10 @@ export default function (app) {
     app.post('/stock/logic', logic.post)
     app.delete('/stock/logic/:id', logic.del)
     app.get('/stock/logic/focus/:id', logic.focus)
+
+    app.get('/stock/diary', diary.get)
+    app.post('/stock/diary', diary.post)
+    app.delete('/stock/diary/:id', diary.del)
 
     app.get('/stock/news', news.get)
     app.post('/stock/news', news.post)
