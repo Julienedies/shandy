@@ -23,7 +23,14 @@ brick.reg('notesCtrl', function () {
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
 
-    scope.tagMap = {}
+    scope.tagMap = {};
+    scope.tag = '';
+
+    let render = () => {
+        let tag = scope.tag;
+        let vm = tag ? list.get(tag, 'type') : list.get();
+        scope.render('notes', vm);
+    };
 
     scope.onGetNoteDone = function (data) {
         list.init(data);
@@ -32,15 +39,14 @@ brick.reg('notesCtrl', function () {
         });
         let tagMap = _.countBy(tags);
         scope.tagMap = tagMap;
-        console.log(tagMap)
-        scope.render('tags', tagMap);
-        scope.render('notes', data);
+        console.log(tagMap);
+        scope.render('tags', scope);
+        render();
     };
 
     scope.onTagFilterChange = function (msg) {
-        let tag = msg.value;
-        let vm = tag ? list.get(tag, 'type') : list.get();
-        scope.render('notes', vm);
+        scope.tag = msg.value;
+        render();
     };
 
     this.note = {
@@ -52,9 +58,6 @@ brick.reg('notesCtrl', function () {
         removed: function (data) {
             scope.onGetNoteDone(data);
         },
-        filter: function (e, tag) {
-
-        }
     };
 
     scope.on('note.edit.done', function (e, data) {

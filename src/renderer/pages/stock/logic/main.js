@@ -12,6 +12,7 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../../js/common-stock.js'
 import Reader from '../../../../libs/reader'
+import _ from 'lodash'
 
 brick.reg('logicCtrl', function () {
 
@@ -23,16 +24,27 @@ brick.reg('logicCtrl', function () {
     let isReverse = false;
     let isSortByTime = sortType === 'time';
 
-    const reader = new Reader('#logicList');
+    scope.tagMap = {};
+    scope.tag = undefined;
+
+    let reader;
 
     let render = () => {
-        scope.render('logic', logicArr, () => {
-            reader.init();
-        });
+        scope.render('logic', logicArr);
+    };
+
+    this.createReader = () => {
+        reader = new Reader('#logicList');
+        reader.init();
     };
 
     this.onGetLogicDone = function (data) {
         list.init(data);
+        let tags = data.map((item, index) => {
+            return item.tag || item.type;
+        });
+        scope.tagMap = _.countBy(tags);
+        scope.render('tags', scope);
         isSortByTime ? scope.logic.sortByTime() : scope.logic.sortByLevel();
     };
 
@@ -49,12 +61,19 @@ brick.reg('logicCtrl', function () {
         }
     };
 
+    this.onTagFilterChange = function (msg) {
+        let tag = scope.tag = msg.value;
+        logicArr = tag !==undefined ? list.get((record, index) => {
+            return record.tag === tag;
+        }) : list.get();
+        render();
+    };
+
     this.logic = {
-        add: function () {
-            scope.emit('logic.edit');
-        },
         edit: function (e, id) {
-            scope.emit('logic.edit', list.get(id));
+            let vm = id ? list.get(id) : {};
+            vm.tagMap = scope.tagMap;
+            scope.emit('logic.edit', vm);
         },
         remove: function (data) {
             scope.onGetLogicDone(data);
@@ -82,8 +101,8 @@ brick.reg('logicCtrl', function () {
         }
     };
 
-    scope.on('logic.edit.done', function () {
-        $elm.find('#get_logic').click();
+    scope.on('logic.edit.done', function (e, data) {
+        scope.onGetLogicDone(data);
     });
 
 });
@@ -94,8 +113,8 @@ brick.reg('setLogicCtrl', function () {
     let scope = this;
     let $elm = this.$elm;
 
-    scope.done = function () {
-        scope.emit('logic.edit.done');
+    scope.done = function (data) {
+        scope.emit('logic.edit.done', data);
         $elm.icPopup(false);
     };
 
@@ -103,14 +122,13 @@ brick.reg('setLogicCtrl', function () {
         scope.render({});
     };
 
-    scope.on('logic.edit', function (e, msg) {
-        let logic = msg || {};
-        scope.render(logic[0] || logic);
+    scope.on('logic.edit', function (e, logic) {
+        scope.render(logic);
         $elm.icPopup(true);
     });
 
     scope.on_select_change = function (msg) {
-        $elm.find('[ic-form-field="type"]').val(msg.value);
+        $elm.find('[ic-form-field="tag"]').val(msg.value);
     };
 
 });

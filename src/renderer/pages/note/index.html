@@ -29,7 +29,7 @@
         <div class="column is-9">
             <div ic-tpl="tags">
                 <div class="tags" ic-select="tags" ic-select-on-change="onTagFilterChange">
-                    <span class="tag" ic-for="i,v in model" ic-val="{{ i }}">{{ i }}</span>
+                    <span class="tag" ic-for="i,v in model.tagMap" ic-val="{{ i }}" ic-has-selected="i===model.tag">{{ i }}</span>
                 </div>
             </div>
         </div>
@@ -39,14 +39,14 @@
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre">{{v.text}}</div>
             <div class="tar">
-                <span class="tag">{{v.type}}</span>
-                <a class="no" ic-click="note.edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span></a>
+                <!--<span>{{v.type}}</span>-->
+                <a class="no" ic-click="note.edit:{{v.id}}"><span class="icon" title="编辑"><i class="far fa-edit"></i></span></a>
                 <a class="no"
                    ic-ajax
                    ic-submit-method="get"
                    ic-submit-action="/stock/note/focus/{{v.id}}"
                    ic-submit-on-done="onGetNoteDone">
-                    <span class="icon is-medium hint--top-left" aria-label="{{ v.level + ' 点击提升级别，每次+10' }}" titie="提升级别">
+                    <span class="icon hint--top-left" aria-label="{{ v.level + ' 点击提升级别，每次+10' }}" titie="提升级别">
                         <i class="far fa-heart"></i>
                     </span>
                 </a>
@@ -90,7 +90,7 @@
                 <h6>类型</h6>
                 <div>
                     <div class="tags" ic-select="type" ic-select-type="checkbox" ic-select-on-change="onSelectChange">
-                        <span ic-for="i,v in model.tags" class="tag is-medium" ic-val="{{i}}">
+                        <span ic-for="i,v in model.tagMap" class="tag is-medium" ic-val="{{i}}" ic-has-selected="i===model.tag">
                             {{i}}
                         </span>
                     </div>

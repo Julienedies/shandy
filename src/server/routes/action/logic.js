@@ -2,10 +2,10 @@
  * Created by j on 18/7/28.
  */
 
-import dob from '../../../libs/dob.js'
+import dobFactory from '../../../libs/dob.js'
 
 function getDb () {
-    getDb.dob = getDb.dob || dob('logic');
+    getDb.dob = getDb.dob || dobFactory('logic');
     return getDb.dob;
 }
 
@@ -39,7 +39,7 @@ export default {
     focus (req, res) {
         let dob = getDb();
         let id = req.params.id;
-        let record = dob.get(id)[0];
+        let record = dob.get2(id);
         record.level = (record.level || 1) * 1 + 100;
         dob.set(record);
         res.json(getData());

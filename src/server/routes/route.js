@@ -84,10 +84,10 @@ export default function (app) {
     app.delete('/stock/memo/:id', memo.del)
     app.get('/stock/memo/focus/:id', memo.focus)
 
-
     app.get('/note', note.get)
     app.post('/note', note.post)
     app.delete('/note/:id', note.del)
+    app.get('/stock/note/focus/:id', note.focus)
 
     app.get('/txt', txt.get)
     app.post('/txt', txt.post)

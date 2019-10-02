@@ -2,33 +2,45 @@
  * Created by j on 18/8/26.
  */
 
-import _dob from '../../../libs/dob.js'
+import dobFactory from '../../../libs/dob.js'
 
-let dob
+function getDb () {
+    getDb.dob = getDb.dob || dobFactory('note');
+    return getDb.dob;
+}
 
-function initDb(){
-    dob = dob || _dob('note')
-    return dob
+function getData () {
+    let dob = getDb();
+    return dob.get();
 }
 
 export default {
 
     get: function (req, res) {
-        initDb()
-        res.json(dob.get());
+        res.json(getData());
     },
 
     post: function (req, res) {
-        initDb()
+        let dob = getDb()
         let data = req.body;
         dob.set(data);
-        res.json(dob.get());
+        res.json(getData());
     },
 
     del: function (req, res) {
-        initDb()
+        let dob = getDb()
         let id = req.params.id;
         let result = dob.remove(id);
-        res.json(dob.get());
+        res.json(getData());
+    },
+
+    // 提高level级别;
+    focus (req, res) {
+        let dob = getDb();
+        let id = req.params.id;
+        let record = dob.get2(id);
+        record.level = (record.level || 1) * 1 + 10;
+        dob.set(record);
+        res.json(getData());
     }
 }

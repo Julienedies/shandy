@@ -46,8 +46,8 @@ let proto = {
     },
     /**
      * 获取查询结果
-     * @param value  {*}            要查询的key值
-     * @param query  {String}       要查询的key
+     * @param [value]  {*}            要查询的key值
+     * @param [query]  {String}       要查询的key
      * @returns      {Array}        根据查询结果返回数组
      * @example
      * new recordManager().init([{id:1,y:2},{id:2,x:3}]).get();          // return [{id:1,y:2},{id:2,x:3}];
@@ -60,17 +60,26 @@ let proto = {
         let pool = this._pool;
         let beforeGet = this.beforeGet;
         let result = [];
-        let cb = beforeGet ? (recored, index) => {
-            recored = JSON.parse(JSON.stringify(recored));
-            return beforeGet(recored, index);
-        } : (recored, index) => {
-            return recored;
-        };
 
+        let isFilterCb = typeof value === 'function';
+
+        //
+        if (isFilterCb) {
+            for (let i in pool) {
+                let record = pool[i];
+                if (value(record, i)) {
+                    result.push(record);
+                }
+            }
+            return result;
+        }
+
+        //
         if (value === void (0)) {
             return pool;
         }
 
+        //
         if (typeof value === 'object') {
             query = this.key;
             value = value[query];
@@ -85,15 +94,24 @@ let proto = {
         return result;
     },
     /**
-     * get的包装，返回的是this.get()的copy
-     * @param value
-     * @param query
+     * get的包装，返回的是this.get()的copy, 如果是get(id), 返回单个对象而不是数组
+     * @param [value] {*}
+     * @param [query] {String}
+     * @return {Array|Object}
      */
-    get2: function(value, query){
+    get2: function (value, query) {
+        let isFilterCb = typeof value === 'function';
         let beforeGet = this.beforeGet;
         let result = this.get(value, query);
         result = JSON.parse(JSON.stringify(result));
-        return beforeGet ? result.map(beforeGet): result;
+
+        if (result.length === 1 && !isFilterCb && (query === this.key || (value && query === undefined))) {
+            result = result[0];
+            return beforeGet ? beforeGet(result, 0) : result;
+        } else {
+            return beforeGet ? result.map(beforeGet) : result;
+        }
+
     },
     /**
      * 对查询结果记录进行修改
@@ -126,7 +144,7 @@ let proto = {
 
             result.push(Object.assign(record, data));
 
-            if(record.id == '1178690') console.log(333, record, data);
+            if (record.id == '1178690') console.log(333, record, data);
 
             that.beforeSave(record);
 

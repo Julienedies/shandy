@@ -11,21 +11,21 @@
 </head>
 <body ic-ctrl="main_ctrl">
 
-<section class="column is-8 is-offset-2" ic-ctrl="logicCtrl">
+<div class="column is-10 is-offset-1" ic-ctrl="logicCtrl">
 
     <div class="level">
 
         <div class="level-left">
             <button class="button"
-                    id="get_logic"
-                    ic-ajax="logic"
+                    ic-ajax
                     ic-ajax-auto
                     ic-submit-method="get"
                     ic-submit-action="/stock/logic"
                     ic-submit-on-done="onGetLogicDone">逻辑列表
             </button>
-            <button class="button" ic-click="logic.add">新逻辑</button>
-            <button class="button" ic-val="reverse" ic-click="logic.reverse">排序反转</button>
+            <button class="button" ic-click="logic.edit">新逻辑</button>
+            <button class="button" ic-click="logic.reverse">排序反转</button>
+            <button class="button" ic-click="createReader">Reader</button>
         </div>
 
         <div class="level-right">
@@ -37,11 +37,13 @@
 
     </div>
 
-<!--    <div class="buttons">
-        <button class="button" ic-click="logic.sortByLevel">level排序</button>
-        <button class="button" ic-click="logic.sortByTime">时间排序</button>
-        <button class="button" ic-click="logic.reverse">排序反转</button>
-    </div>-->
+
+    <div class="columns" ic-tpl="tags">
+        <div class="tags" ic-select="tags" ic-select-on-change="onTagFilterChange">
+            <span class="tag" ic-for="i,v in model.tagMap" ic-val="{{ i }}" ic-has-selected="i===model.tag">{{ i }}</span>
+        </div>
+    </div>
+
 
     <ul ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
@@ -68,7 +70,7 @@
         </li>
     </ul>
 
-</section>
+</div>
 
 <div ic-ctrl="setLogicCtrl" ic-popup="set_logic">
 
@@ -89,7 +91,7 @@
             <div>
                 <h6>类型</h6>
                 <div class="control">
-                    <input type="text" class="input is-small" ic-form-field="type" value="{{model.type}}"/>
+                    <input type="text" class="input is-small" value="{{model.tag}}" ic-form-field="tag"/>
                 </div>
             </div>
 
@@ -98,8 +100,8 @@
                 <h6>类型</h6>
                 <div>
                     <div class="tags" ic-select="logic_type" ic-select-on-change="on_select_change">
-                        <span ic-for="i,v in ['市场', '控制', '操作']" ic-class="tag is-small" ic-val="{{v}}">
-                            {{v}}
+                        <span ic-for="i,v in model.tagMap" ic-class="tag is-small" ic-val="{{ i }}">
+                            {{ i }}
                         </span>
                     </div>
                 </div>
