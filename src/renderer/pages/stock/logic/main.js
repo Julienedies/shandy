@@ -64,7 +64,7 @@ brick.reg('logicCtrl', function () {
     this.onTagFilterChange = function (msg) {
         let tag = scope.tag = msg.value;
         logicArr = tag !==undefined ? list.get((record, index) => {
-            return record.tag === tag;
+            return record.tag === tag || String(record.tag) === tag;
         }) : list.get();
         render();
     };

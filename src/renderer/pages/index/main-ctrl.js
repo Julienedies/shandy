@@ -580,6 +580,7 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
     scope.save = function (fields) {
         warnJodb.set(fields);
         scope.reset();
+        scope.$elm.find('[ic-popup="setWarnItem"]').icPopup(false);
     };
 
     scope.reset = (model = {}) => {
@@ -587,9 +588,9 @@ brick.reg('setVoiceWarnCtrl', function (scope) {
     };
 
     scope.edit = function (e, id) {
-        let model = warnJodb.get(id)[0];
+        let model = warnJodb.get2(id);
         scope.render('setWarnItem', {model});
-        scope.$elm.animate({scrollTop: scope.$elm.height()}, 400);
+        //scope.$elm.animate({scrollTop: scope.$elm.height()}, 400);
     };
 
     scope.rm = function (e, id) {
