@@ -51,6 +51,7 @@ ipc.on('id', function (event, windowID, isFrameMode) {
     setTimeout(() => {
         if (isFrameMode) {
             // hide();  // 设置透明，鼠标忽略，保持始终窗口显示;
+            setTimeout(hide, 1000 * 9);
         } else {
             $body.css('backgroundColor', 'black');
         }
@@ -67,10 +68,10 @@ warnArr.forEach((item, index) => {
     let content = item.content;
     let trigger = item.trigger;
     let disable = item.disable;
-/*
-    if (disable) {
-        return;
-    }*/
+    /*
+        if (disable) {
+            return;
+        }*/
 
     // trigger => 10 : 间隔执行
     if (/^\d+$/.test(trigger)) {
@@ -78,16 +79,16 @@ warnArr.forEach((item, index) => {
             show2(content);
         }, 1000 * 60 * trigger);
     }
-/*    // trigger => 9:00: 定时执行
-    else if (/^\d+[:]\d+$/.test(trigger)) {
-        let handle = utils.timer(trigger, () => {
-            show2(content);
-        });
-    }
-    // trigger => 'daban': 打板动作触发
-    else {
-        warnMap[trigger] = content;
-    }*/
+    /*    // trigger => 9:00: 定时执行
+        else if (/^\d+[:]\d+$/.test(trigger)) {
+            let handle = utils.timer(trigger, () => {
+                show2(content);
+            });
+
+        // trigger => 'daban': 打板动作触发
+        else {
+            warnMap[trigger] = content;
+        }*/
 });
 
 [

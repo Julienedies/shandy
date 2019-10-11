@@ -42,24 +42,28 @@
                         <div class="column is-10">
                             <header style="padding-bottom: 0.5rem;">
                                 <a class="title is-5" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }}</a>
-                                <span style="padding-left:1em; vertical-align: 4px;" ic-viewer ic-viewer-url="href">
+                                <span style="padding-left:1em;">{{ v['note'] }}</span>
+                            </header>
+                            <div class="tags" style="margin-bottom:0.1rem;">
+                                <span class="tag is-black" ic-if="v['目标行情']">
+                                    {{ v['目标行情'] }}
+                                </span>
+                                <span class="tag is-primary" ic-if="v['交易系统逻辑']">
+                                    {{ v['交易系统逻辑'] }}
+                                </span>
+                                <span class="tag is-primary is-small" ic-for="k,s in (v['交易系统条件']||[])">
+                                    {{ s }}
+                                </span>
+                                <span class="tag is-danger is-small" ic-if="v['买点']">{{ v['买点'] }}</span>
+                            </div>
+
+                            <div class="tags" ic-viewer ic-viewer-url="href">
                                     <span class="tag is-info is-small"
                                           ic-for="i,o in (v['示例图片']||[])"
                                           ic-viewer-item
                                           ic-href="{{ parseImgPath(o) }}">
                                         {{ parseImgName(o) }}
                                     </span>
-                                </span>
-                            </header>
-                            <div>{{ v['行情逻辑'] }}</div>
-                            <div class="tags">
-                                <span class="tag is-warning" ic-if="v['交易系统逻辑']">
-                                    {{ v['交易系统逻辑'] }}
-                                </span>
-                                <span class="tag is-primary is-small" ic-for="k,s in v['交易系统条件']||[]">
-                                    {{ s }}
-                                </span>
-                                <span class="tag is-danger is-small" ic-if="v['买点']">{{ v['买点'] }}</span>
                             </div>
                         </div>
 

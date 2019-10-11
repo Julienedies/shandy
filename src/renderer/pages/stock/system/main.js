@@ -83,14 +83,13 @@ brick.reg('systemCtrl', function () {
     };
 
     scope.edit = function (e, id) {
-        let arr = list.get(id);
-        scope.emit(C.EDIT_SYSTEM, {system: arr[0], tags: model.tags});
+        scope.emit(C.EDIT_SYSTEM, {system: list.get(id), tags: model.tags});
         return false;
     };
 
     scope.view = function (e, id) {
         viewId = id;
-        let system = list.get(id)[0];
+        let system = list.get(id);
         scope.render('details', {model: system});
     };
 
@@ -100,7 +99,7 @@ brick.reg('systemCtrl', function () {
                     return;
                 }*/
         viewId = id;
-        let system = list.get(id)[0];
+        let system = list.get(id);
         scope.render('details', {model: system});
         $details.icPopup(true);
     };

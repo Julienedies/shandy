@@ -13,6 +13,40 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- tr 目标行情 -->
+                <div>
+                    <h6>目标行情</h6>
+                    <div class="field is-grouped is-grouped-multiline" ic-select="目标行情" ic-form-field="目标行情">
+                        <div class="control" ic-for="i,v in tags['目标行情']">
+                            <div class="tags has-addons">
+                                <span class="tag is-small"
+                                      ic-select-item
+                                      ic-has-selected="system['目标行情']===v.text ? 'is-warning':''"
+                                      ic-val="{{v.text}}">{{v.text}}
+                                </span>
+                                <a class="tag is-small" ic-click="editTag:{{v.id}}">
+                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
+                                </a>
+                                <a class="tag is-delete is-small"
+                                   ic-ajax
+                                   ic-submit-data="{{v.text}}"
+                                   ic-submit-method="delete"
+                                   ic-submit-action="/stock/tags/{{v.id}}"
+                                   ic-submit-on-done="tag_remove_done"
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-small" ic-click="tag_add:目标行情">
+                                    <span class="icon is-small"><i class="fas fa-file-medical"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- tr 交易系统条件 -->
                 <div>
                     <h6>交易系统条件</h6>
@@ -45,6 +79,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- tr 交易系统逻辑 -->
                 <div>
                     <h6>交易系统逻辑</h6>
@@ -108,6 +143,16 @@
                                     <span class="icon"><i class="fas fa-file-medical"></i></span>
                                 </a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr 备注 -->
+                <div>
+                    <h6>备注</h6>
+                    <div>
+                        <div class="control">
+                            <textarea rows="3" class="textarea" ic-form-field="note">{{system.note}}</textarea>
                         </div>
                     </div>
                 </div>

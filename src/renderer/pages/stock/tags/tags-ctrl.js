@@ -32,7 +32,7 @@ export default function () {
 
     scope.onGetTagsDone = function (data) {
         scope.model = data;
-        console.log(111, data);
+        console.log('onGetTagsDone =>', data);
         //fx(data);
         let arr = scope.tags_convert(data);
         list.init(arr);
@@ -45,7 +45,7 @@ export default function () {
     };
 
     scope.edit = function (e, id) {
-        let vm = list.get(id)[0];
+        let vm = list.get(id);
         vm.parents = scope.model[vm.type];
         vm.types = types;
         scope.emit('tag.edit', vm);
