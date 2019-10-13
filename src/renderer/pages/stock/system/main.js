@@ -35,7 +35,6 @@ brick.reg('systemCtrl', function () {
     let viewId = null;
 
     scope.dragstart = function (e) {
-        console.log(1111, e, this)
         let id = $(this).data('id');
         e.originalEvent.dataTransfer.setData("Text", id);
     };
@@ -53,7 +52,6 @@ brick.reg('systemCtrl', function () {
     scope.drop = function (e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log(333, e.target)
         let $target = $(e.target);
         let id = e.originalEvent.dataTransfer.getData("Text");
         let distId = $target.data('id') || $target.closest('li[data-id]').data('id');

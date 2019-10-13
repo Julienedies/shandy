@@ -57,7 +57,8 @@ class Reader {
                 border-radius: 50%!important;
             }
             .reader-reading{
-                color:#5ecc03;
+                color:#0359cc;
+                font-weight: bold;
 /*                background:#95b750;
                 color:#fff;*/
             }

@@ -54,7 +54,9 @@
                                 <span class="tag is-primary is-small" ic-for="k,s in (v['交易系统条件']||[])">
                                     {{ s }}
                                 </span>
-                                <span class="tag is-danger is-small" ic-if="v['买点']">{{ v['买点'] }}</span>
+                                <span class="tag is-danger is-small" ic-if="v['买点']">
+                                    {{ v['买点'] }}
+                                </span>
                             </div>
 
                             <div class="tags" ic-viewer ic-viewer-url="href">
@@ -98,7 +100,7 @@
                             <th>示例图片</th>
                             <td ic-viewer ic-viewer-url="href">
                                 <span class="tag is-info"
-                                      ic-for="i,o in v['示例图片']||[]"
+                                      ic-for="i,o in (v['示例图片']||[])"
                                       ic-viewer-item
                                       ic-href="{{ parseImgPath(o) }}">
                                     {{ parseImgName(o) }}
@@ -114,11 +116,12 @@
                     <div class="column">
                         <div class="buttons">
                             <button class="button is-primary" ic-click="edit:{{v.id}}">编辑</button>
-                            <button class="button is-primary" ic-popup-close="details">返回</button>
+
                         </div>
                     </div>
                 </div>
             </div>
+            <button class="button is-primary" ic-popup-close="details">返回</button>
         </div>
 
     </div>
