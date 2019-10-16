@@ -36,12 +36,7 @@ function f (stocks) {
     let arr2 = [];
     let stock;
     while (stock = stocks.shift()) {
-        // 只有涨幅大于9才监控
-        if (stock.increase > 1 || first_objm.get(stock.code)) {
-            arr2.push(_f(stock));
-        } else {
-            q_rtso.remove(stock.code);
-        }
+        arr2.push(_f(stock));
     }
 
     ipcRenderer.send('rts_push', arr2);
@@ -60,7 +55,7 @@ function _f (stock) {
     let p_stock = prev_objm.get(code);
     let f_stock = first_objm.get(code);
 
-    if (stock.increase < 9.5 || (f_stock && f_stock.price !== price)) {
+    if (stock.price < stock.maxPrice) {
         voice.remove(code);
         prev_objm.remove(code);
         stock.rout = 1; // 破板
@@ -189,7 +184,8 @@ brick.reg('rts_ctrl', function (scope) {
         prev_objm.clear();
         first_objm.clear();
     };
-    scope.pause = function (e) { console.log('pause');
+    scope.pause = function (e) {
+        console.log('pause');
         voice.clear();
         q_rtso.pause();
     };
