@@ -101,20 +101,24 @@ export default {
     move (src, dist) {
         return fse.move(src, dist);
     },
-    /**
-     * 是否是A股交易时间
-     * @param isInHour 是否精确到小时，默认是天
-     * @returns {boolean}
-     */
-    isTradingHours (isInHour) {
+    isTradingDate () {
         let mo = moment();
         let day = mo.day(); // 礼拜几: 0 - 6
+        return day > 0 && day < 6;
+    },
+    isTradingTime () {
+        let mo = moment();
         let h = mo.hour(); // 0 - 23
-        if (isInHour) {
-            return day > 0 && day < 6 && h > 5 && h < 15;
-        } else {
-            return day > 0 && day < 6;
-        }
+        return h > 8 && h < 15;
+    },
+    /**
+     * 是否是A股交易时间
+     * @returns {boolean}
+     */
+    isTrading () {
+        let a = this.isTradingTime();
+        let b = this.isTradingDate();
+        return a && b;
     },
     getStockNameFromScreen () {
         return new Promise((resolve, reject) => {

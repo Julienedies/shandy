@@ -27,8 +27,6 @@ import setVoiceWarnCtrl from './set-voice-warn-ctrl'
 const {ipcRenderer} = electron;
 
 
-
-
 brick.services.reg('viewsModel', () => {
     const list = []
     let activeItem
@@ -410,12 +408,12 @@ brick.reg('mainCtrl', function (scope) {
     };
 
 
-    if (utils.isTradingHours(true)) {
-        scope.openNews();
-        scope.openPrompt();
+    if (utils.isTrading()) {
+        !scope.newsWin && scope.openNews();
+        !scope.promptWindow && scope.openPrompt();
     }
 
-    if (utils.isTradingHours()) {
+    if (utils.isTradingDate()) {
         utils.timer('8:30', () => {
             scope.openReminder();
         });
@@ -424,13 +422,7 @@ brick.reg('mainCtrl', function (scope) {
             scope.openReminder();
         });
 
-        utils.timer('9:19', () => {
-            //voice('竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！竞价撤单！');
-        });
-
         utils.timer('9:26', () => {
-            //voice('低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！低开不要停止止损！');
-            //voice('开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！开盘价最低2点止损！');
             scope.openWarn(false);
             setTimeout(() => {
                 if (scope.warnWindow) {
@@ -439,15 +431,11 @@ brick.reg('mainCtrl', function (scope) {
             }, 1000 * 60 * 3);
         });
 
-        utils.timer('12:57', () => {
-            activeWarnWindow();
-        });
-
         utils.timer('15:00', () => {
             scope.newsWin && scope.newsWin.close();
+            scope.promptWindow && scope.promptWindow.close();
         });
     }
-
 
 });
 
