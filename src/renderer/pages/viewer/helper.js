@@ -7,6 +7,7 @@ import path from 'path'
 import os from 'os'
 
 import glob from 'glob'
+import moment from 'moment'
 
 import electron from 'electron'
 
@@ -23,6 +24,49 @@ export default {
      */
     sort: function (images) {
 
+        // 先按时间排序
+        images.sort((a, b) => {
+            let a1 = +moment(a.d);
+            let b1 = +moment(b.d);
+            return a1 - b1;
+        });
+
+        // 按照日期分组
+        let dateMap = _.groupBy(images, function (o) {
+            return o.d;
+        });
+
+        // 获取日期key数组，按照3个3个截取分组
+        let dateKeyArr = _.keys(dateMap);
+        // 对日期key数组，按照4个4个截取分组
+        let dateKeyChunkArr = _.chunk(dateKeyArr, 4);
+
+        let dateMap2 = {};
+
+        dateKeyChunkArr.forEach((chunks, index) => {
+            chunks.forEach((dateKey) => {
+                let arr = dateMap[dateKey];
+                let arr2 = dateMap2[index] = dateMap2[index] || [];
+                dateMap2[index] = arr2.concat(arr);
+            });
+        });
+
+        let resultArr = [];
+        let dateMapArr = _.values(dateMap2);
+
+        for (let i = 0; i < dateMapArr.length; i++) {
+            let imgArr = dateMapArr[i];
+            imgArr = this._sortByCodeAndDate(imgArr);
+            //console.log(imgArr);
+            resultArr.push(imgArr);
+        }
+
+        //console.log(11, _.flatten(resultArr, true));
+        return _.flatten(resultArr, true);
+
+    },
+
+    _sortByCodeAndDate: function (images) {
         let map = _.groupBy(images, function (o) {
             return o.code;
         });
