@@ -124,7 +124,7 @@ export default function (scope) {
     }
 
     function updateVoiceWarn (cancel) {
-        if (utils.isTradingHours(true) || cancel) {
+        if (utils.isTrading() || cancel) {
             warnJodb.get().forEach((item, index) => {
                 setVoiceWarnForItem(item, cancel);
             });
