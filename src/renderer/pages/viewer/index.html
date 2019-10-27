@@ -111,7 +111,7 @@
             <div class="ic-select" ic-select="system" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
                 <div class="tags">
                     <span class="tag is-medium is-primary">交易系统</span>
-                    <span class="tag is-small" ic-for="i, v in model.system" ic-select-item ic-val="{{ v.id }}"
+                    <span class="tag is-small is-black" ic-for="i, v in model.system" ic-select-item ic-val="{{ v.id }}"
                           ic-has-selected="model.img.system && model.img.system.includes(v.id)">
                         {{v.name}}
                     </span>
@@ -120,7 +120,7 @@
             <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
                 <div class="tags">
                     <span class="tag is-primary is-medium" ic-for-start="k,arr in model.tags" ic-if-start="k!=='type'">{{k}}</span>
-                    <span class="tag is-small" ic-for-end ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
+                    <span class="tag is-small is-black" ic-for-end ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
                           ic-has-selected="model.img.tags && model.img.tags.includes(v.id)">
                         {{v.text}}
                     </span>

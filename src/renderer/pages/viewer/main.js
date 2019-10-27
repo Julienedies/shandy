@@ -317,4 +317,10 @@ brick.reg('markTagCtrl', function (scope) {
         render();
     });
 
+    scope.$elm.hover(function() {
+        scope.$elm.css('opacity', 1);
+    }, function() {
+        scope.$elm.css('opacity', 0);
+    });
+
 });

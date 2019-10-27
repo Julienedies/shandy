@@ -62,7 +62,6 @@
   pointer-events: none;
   text-align: center;
 
-
   > p {
     white-space: pre;
     background: rgba(0, 0, 0, 0.3);
@@ -74,6 +73,8 @@
     position: fixed;
     width: 100%;
     bottom: 10%;
+    padding-right:10%;
+    text-align:right;
 
     a {
       color: greenyellow;
