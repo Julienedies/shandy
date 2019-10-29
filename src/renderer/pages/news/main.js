@@ -23,11 +23,24 @@ let timer;
 const socket = io();
 let $msg = $('#msg');
 
+function hideWin () {
+    //win.hide();
+    win && win.minimize();
+    $msg.addClass('warn');
+}
+
+function showWin () {
+    // win.showInactive();
+    win && win.restore();
+    $msg.removeClass('warn');
+}
+
+
 ipc.on('id', function (event, windowID) {
     win = BrowserWindow.fromId(windowID);
     setTimeout(() => {
-        win.hide();
-    }, 40 * 1000);
+        hideWin();
+    }, 60 * 1000);
 });
 
 // 有新消息显示窗口,  稍后隐藏窗口
@@ -36,13 +49,10 @@ function cb (msg) {
     $msg.text(msg)
 
     if (win) {
-        win.showInactive();
-        $msg.addClass('warn');
-
+        showWin();
         timer = setTimeout(() => {
-            win.hide();
-            $msg.removeClass('warn');
-        }, 60 * 1000);
+            hideWin();
+        }, 40 * 1000);
     }
 }
 

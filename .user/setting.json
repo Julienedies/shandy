@@ -74,10 +74,10 @@
 	},
 	"news": {
 		"bounds": {
-			"x": 1528,
+			"x": 1516,
 			"y": 41,
-			"width": 1772,
-			"height": 57
+			"width": 1779,
+			"height": 74
 		}
 	},
 	"reminder": {
@@ -98,10 +98,10 @@
 	},
 	"prompt": {
 		"bounds": {
-			"x": 0,
-			"y": 23,
-			"width": 1440,
-			"height": 808
+			"x": 1440,
+			"y": 41,
+			"width": 1920,
+			"height": 1080
 		}
 	},
 	"reader": {

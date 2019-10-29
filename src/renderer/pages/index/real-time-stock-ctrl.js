@@ -55,6 +55,15 @@ function _f (stock) {
     let p_stock = prev_objm.get(code);
     let f_stock = first_objm.get(code);
 
+    let now = new Date();
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    // 竞价阶段或尾盘阶段
+    if ((hour === 9 && minute < 30) || (hour === 14 && minute > 53)) {
+        return stock;
+    }
+
     if (stock.price < stock.maxPrice) {
         voice.remove(code);
         prev_objm.remove(code);
@@ -90,10 +99,9 @@ function _f (stock) {
          */
         if (b1 < least || -b1_reduce > b1_reduce_base || v_plus > v_plus_base) {
 
-            let d = new Date();
-            d = d.getHours();
+
             // 早盘封单小于阈值
-            if (b1 < least && d < 16 && price < 50) {
+            if (b1 < least && hour < 16 && price < 50) {
                 console.info(time, `${ name }有破板风险`);
                 voice(code, `${ name }有破板风险`);
             } else

@@ -109,15 +109,15 @@ export default {
     isTradingTime () {
         let mo = moment();
         let h = mo.hour(); // 0 - 23
-        return h > 8 && h < 15;
+        return h > 5 && h < 15;
     },
     /**
      * 是否是A股交易时间
      * @returns {boolean}
      */
     isTrading () {
-        let a = this.isTradingTime();
-        let b = this.isTradingDate();
+        let a = this.isTradingDate();
+        let b = this.isTradingTime();
         return a && b;
     },
     getStockNameFromScreen () {

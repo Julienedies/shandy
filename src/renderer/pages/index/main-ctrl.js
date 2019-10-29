@@ -253,7 +253,6 @@ brick.reg('mainCtrl', function (scope) {
                 x: 60,
                 ...getBounds(name),
                 titleBarStyle: 'hiddenInset',
-                useContentSize: true,
                 transparent: true,
                 // frame: false,
                 hasShadow: false,
@@ -264,11 +263,11 @@ brick.reg('mainCtrl', function (scope) {
             }
             newsWin = scope.newsWin = new Win(opt);
             newsWin.win.webContents.on('did-finish-load', function () {
-                newsWin.win.webContents.send('id', newsWin.win.id)
+                newsWin.win.webContents.send('id', newsWin.win.id);
             });
             setTimeout(() => {
                 newsWin.win.setIgnoreMouseEvents(true);
-            }, 1000 * 60 * 2);
+            }, 1000 * 60 * 1);
         }
     };
 
