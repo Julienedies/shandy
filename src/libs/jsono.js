@@ -35,6 +35,13 @@ class Jo {
         }
     }
 
+    // 获取文件最新内容，避免多个对象实例写入操作被覆盖
+    refresh () {
+        let str = fs.readFileSync(this.jsonPath, 'utf8');
+        let nowJson = JSON.parse(str);
+        this.json = Object.assign(this.json, nowJson);
+    }
+
     merge (key, obj) {
         let args = [].slice.call(arguments)
         obj = args[1] || args[0]
@@ -49,6 +56,9 @@ class Jo {
     }
 
     save () {
+        let str = fs.readFileSync(this.jsonPath, 'utf8');
+        let nowJson = JSON.parse(str);
+        //this.json = Object.assign(this.json, nowJson);
         fs.writeFileSync(this.jsonPath, JSON.stringify(this.json, null, '\t'))
         return this
     }
