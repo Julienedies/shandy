@@ -39,7 +39,19 @@ export default {
         // 获取日期key数组，按照3个3个截取分组
         let dateKeyArr = _.keys(dateMap);
         // 对日期key数组，按照4个4个截取分组
-        let dateKeyChunkArr = _.chunk(dateKeyArr, 4);
+        let dateKeyChunkArr = _.chunk(dateKeyArr, 2);
+
+        _.reduce(dateKeyChunkArr, function (prevArr, currentArr) {
+             prevArr.forEach((imgObj, index) => {
+                for(let i = currentArr.length - 1; i>=0; i--){
+                        let imgObj2 = currentArr[i];
+                        if(imgObj2.code === imgObj.code){
+                            prevArr.push(currentArr.splice(i, 1));
+                        }
+                }
+            });
+            return currentArr;
+        },[]);
 
         let dateMap2 = {};
 
