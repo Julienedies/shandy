@@ -3,6 +3,7 @@
  * Created by j on 18/11/9.
  */
 
+import _ from 'lodash'
 import fs from 'fs'
 import path from 'path'
 import fse from 'fs-extra'
@@ -39,7 +40,7 @@ class Jo {
     refresh () {
         let str = fs.readFileSync(this.jsonPath, 'utf8');
         let nowJson = JSON.parse(str);
-        this.json = Object.assign(this.json, nowJson);
+        this.json = _.merge(nowJson, this.json);
     }
 
     merge (key, obj) {
@@ -56,11 +57,9 @@ class Jo {
     }
 
     save () {
-        let str = fs.readFileSync(this.jsonPath, 'utf8');
-        let nowJson = JSON.parse(str);
-        //this.json = Object.assign(this.json, nowJson);
-        fs.writeFileSync(this.jsonPath, JSON.stringify(this.json, null, '\t'))
-        return this
+        this.refresh();
+        fs.writeFileSync(this.jsonPath, JSON.stringify(this.json, null, '\t'));
+        return this;
     }
 
     set (key, val = {}) {
