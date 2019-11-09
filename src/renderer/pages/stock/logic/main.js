@@ -18,19 +18,37 @@ brick.reg('logicCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;
-    let list = brick.services.get('recordManager')();
+    let recordManager = brick.services.get('recordManager')();
     let sortType = brick.utils.get_query('sort');
-    let logicArr = [];
-    let isReverse = false;
     let isSortByTime = sortType === 'time';
+    let isReverse = false;
+    let logicArr = [];  // 当前显示的logic数组
 
     scope.tagMap = {};
     scope.tag = undefined;
 
-    let reader;
+    let reader;  // 语音阅读器
 
     let render = () => {
+        updateLogic();
+        if(isSortByTime){
+            // 原始数据是sort排序，list.get是拷贝数据，所以会始终保留原始排序数据
+        }else{
+            logicArr.sort((a, b) => {
+                a = a.level || 0;
+                b = b.level || 0;
+                return b - a;
+            });
+        }
+        isReverse && logicArr.reverse();
         scope.render('logic', logicArr);
+    };
+
+    let updateLogic = () => {
+        let tag = scope.tag;
+        logicArr = tag !== undefined ? recordManager.get((record, index) => {
+            return record.tag === tag || String(record.tag) === tag;
+        }) : recordManager.get();
     };
 
     this.createReader = () => {
@@ -39,39 +57,32 @@ brick.reg('logicCtrl', function () {
     };
 
     this.onGetLogicDone = function (data) {
-        list.init(data);
+        recordManager.init(data);
         let tags = data.map((item, index) => {
             return item.tag || item.type;
         });
         scope.tagMap = _.countBy(tags);
         scope.render('tags', scope);
-        isSortByTime ? scope.logic.sortByTime() : scope.logic.sortByLevel();
+        render();
     };
 
     scope.onSortChange = function (arg) {
         console.log(arg)
-        isSortByTime = arg.value === 'time';
+        sortType = arg.value;
+        isSortByTime = sortType === 'time';
         let url = location.href.split('?')[0];
-        if (isSortByTime) {
-            scope.logic.sortByTime();
-            history.pushState(null, null, `${ url }?sort=time`);
-        } else {
-            scope.logic.sortByLevel();
-            history.pushState(null, null, `${ url }?sort=level`);
-        }
+        history.pushState(null, null, `${ url }?sort=${ sortType }`);
+        render();
     };
 
     this.onTagFilterChange = function (msg) {
-        let tag = scope.tag = msg.value;
-        logicArr = tag !==undefined ? list.get((record, index) => {
-            return record.tag === tag || String(record.tag) === tag;
-        }) : list.get();
+        scope.tag = msg.value;
         render();
     };
 
     this.logic = {
         edit: function (e, id) {
-            let vm = id ? list.get(id) : {};
+            let vm = id ? recordManager.get(id) : {};
             vm.tagMap = scope.tagMap;
             scope.emit('logic.edit', vm);
         },
@@ -81,23 +92,7 @@ brick.reg('logicCtrl', function () {
         reverse: function () {
             isReverse = !isReverse;
             logicArr.reverse();
-            render();
-        },
-        sortByTime: function () {
-            // 原始数据是sort排序，list.get是拷贝数据，所以会始终保留原始排序数据
-            logicArr = list.get();
-            isReverse && logicArr.reverse();
-            render();
-        },
-        sortByLevel: function () {
-            logicArr = list.get();
-            logicArr.sort((a, b) => {
-                a = a.level || 0;
-                b = b.level || 0;
-                return b - a;
-            });
-            isReverse && logicArr.reverse();
-            render();
+            scope.render('logic', logicArr);
         }
     };
 

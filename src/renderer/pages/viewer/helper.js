@@ -1,4 +1,5 @@
 /*!
+ * 图片浏览辅助工具函数
  * Created by j on 18/10/4.
  */
 
@@ -19,8 +20,46 @@ const nativeImage = electron.nativeImage;
 
 export default {
     /**
-     * @param images   {Array} 图片对象数组
-     * @returns {Array}
+     * 获取文件夹里的图片对象数组: imgObjArr
+     * @param dir {String} 文件夹路径
+     * @param isOnlyPath {Boolean} 图片对象是否只包含路径
+     * @returns {Array} [{f:图片路径，c:图片创建时间戳，d:图片创建日期, code: 股票code}]
+     */
+    getImages: function (dir, isOnlyPath) {
+        console.log('getImages => ', dir);
+        // 测试是否是交易记录图片, 因为主要功能是浏览k线截图
+        if (dir.indexOf('截图') === -1) {
+            let files = glob.sync(path.join(dir, './*.+(jpg|png)')) || [];
+            return files.map((path) => {
+                return {f: path};
+            })
+        }
+
+        let arr = fs.readdirSync(dir);
+
+        arr = arr.filter(f => {
+            return /\.png$/img.test(f);
+        });
+
+        arr = arr.map(f => {
+            let fullPath = path.join(dir, f);
+            let arr = f.match(/\d{6}(?=\.png$)/) || [];
+            let code = arr[0];
+            let stat = fs.statSync(fullPath);
+            arr = f.match(/\d{4}-\d{2}-\d{2}/) || [];
+            return {f: fullPath, c: stat.birthtimeMs, d: arr[0], code};
+        });
+
+        arr = this.sort(arr);
+
+        return !isOnlyPath ? arr : arr.map(o => {
+            return o.f;
+        });
+    },
+
+    /**
+     * @param images  {Array} imgObjArr 图片对象数组
+     * @returns {Array} imgObjArr
      */
     sort: function (images) {
 
@@ -36,22 +75,22 @@ export default {
             return o.d;
         });
 
-        // 获取日期key数组，按照3个3个截取分组
+        // 获取日期key数组，按照4个4个截取分组, 等于先按时间大致排序
+        // [[{d:'2018-09-04'}, {d:'2018-09-05'},{d:'2018-09-06'} ,{d:'2018-09-07'}]]
         let dateKeyArr = _.keys(dateMap);
-        // 对日期key数组，按照4个4个截取分组
-        let dateKeyChunkArr = _.chunk(dateKeyArr, 2);
-
+        let dateKeyChunkArr = _.chunk(dateKeyArr, 4);
+        // 处理相邻日期chunk数组里相同code被分割在两个chunk数组里的情况，移动相同code的imgObj到同一个chunk数组
         _.reduce(dateKeyChunkArr, function (prevArr, currentArr) {
-             prevArr.forEach((imgObj, index) => {
-                for(let i = currentArr.length - 1; i>=0; i--){
-                        let imgObj2 = currentArr[i];
-                        if(imgObj2.code === imgObj.code){
-                            prevArr.push(currentArr.splice(i, 1));
-                        }
+            prevArr.forEach((imgObj, index) => {
+                for (let i = currentArr.length - 1; i >= 0; i--) {
+                    let imgObj2 = currentArr[i];
+                    if (imgObj2.code === imgObj.code) {
+                        prevArr.push(currentArr.splice(i, 1));
+                    }
                 }
             });
             return currentArr;
-        },[]);
+        }, []);
 
         let dateMap2 = {};
 
@@ -73,24 +112,31 @@ export default {
             resultArr.push(imgArr);
         }
 
-        //console.log(11, _.flatten(resultArr, true));
         return _.flatten(resultArr, true);
-
     },
 
+    /**
+     * 对imgObj数组按照相同code分组，在按日期排序;
+     * @param images {Array} imgObjArr
+     * @returns {Array} imgObjArr
+     * @private
+     */
     _sortByCodeAndDate: function (images) {
+        // @step1: 按照code分组
         let map = _.groupBy(images, function (o) {
             return o.code;
         });
-
+        // [[{code:'300012', d:'2018-09-07'}, {code:'300012', d:'2018-09-10'}], [{code:'600001', , d:'2018-04-10'}, {code:'600001', , d:'2018-04-11'}]]
         let arr = _.values(map);
 
+        // @step2: 对code数组内部按日期排序
         arr.forEach(arr => {
             arr.sort(function (a, b) {
                 return a.c - b.c;
             });
         });
 
+        // @step3: 对code数组排序
         arr.sort(function (a, b) {
             return a[0].c - b[0].c;
         });
@@ -98,38 +144,12 @@ export default {
         return _.flatten(arr, true);
     },
 
-    getImages: function (dir, is_only_path) {
-        console.log('getImages => ', dir)
-        // 测试是否是交易记录图片
-        if (dir.indexOf('截图') === -1) {
-            let files = glob.sync(path.join(dir, './*.+(jpg|png)')) || []
-            return files.map((path) => {
-                return {f: path}
-            })
-        }
-
-        let arr = fs.readdirSync(dir);
-
-        arr = arr.filter(f => {
-            return /\.png$/img.test(f);
-        });
-
-        arr = arr.map(f => {
-            let full_path = path.join(dir, f);
-            let arr = f.match(/\d{6}(?=\.png$)/) || [];
-            let code = arr[0];
-            let stat = fs.statSync(full_path);
-            arr = f.match(/\d{4}-\d{2}-\d{2}/) || [];
-            return {f: full_path, c: stat.birthtimeMs, d: arr[0], code: code};
-        });
-
-        arr = this.sort(arr);
-
-        return !is_only_path ? arr : arr.map(o => {
-            return o.f;
-        });
-    },
-
+    /**
+     * 对图片进行剪切
+     * @param imgPath {String} 图片路径
+     * @param crop {Object} 剪切区域定义  => {x: 3140, y: 115, width: 310, height: 50}
+     * @returns {string} 图片dataUrl
+     */
     crop: function (imgPath, crop) {
         console.info('crop => ', imgPath, crop);
 
@@ -151,7 +171,7 @@ export default {
     },
 
     /**
-     * 根据ocr对图片重命名; // '屏幕快照 2019-03-22 下午9.08.59 -九阳股份-002242.png' 重命名到: '九阳股份 2019-03-22 下午9.08.59 -九阳股份-002242.png'
+     * 根据ocr结果对图片重命名; // '屏幕快照 2019-03-22 下午9.08.59 -九阳股份-002242.png' 重命名到: '九阳股份 2019-03-22 下午9.08.59 -九阳股份-002242.png'
      * @param images  {Array|String} 图片文件绝对路径
      * @param crop   {Object}  {x: 3140, y: 115, width: 310, height: 50}
      * @param cb  {Function} 处理每一个图片crop的回调
@@ -219,6 +239,5 @@ export default {
 
 
     }
-
 
 };
