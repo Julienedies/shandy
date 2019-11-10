@@ -6,6 +6,7 @@ import './index.html'
 import '../../../css/common/common.scss'
 import './style.scss'
 
+import _ from 'lodash'
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
@@ -34,35 +35,20 @@ brick.reg('systemCtrl', function () {
     let model = {};  // 存储ajax数据： stock/system
     let viewId = null;
 
-    scope.dragstart = function (e) {
-        let id = $(this).data('id');
-        e.originalEvent.dataTransfer.setData("Text", id);
-    };
+    scope.vm = {};
 
-    scope.dragover = function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        //e.originalEvent.dataTransfer.dropEffect = 'move';
-        //console.log(4444, e.target)
-        let $target = $(e.target);
-        //$target.css('border', 'solid 1px blue');
-        return false;
-    };
-
-    scope.drop = function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        let $target = $(e.target);
-        let id = e.originalEvent.dataTransfer.getData("Text");
-        let distId = $target.data('id') || $target.closest('li[data-id]').data('id');
-        if (!distId || distId === id) {
-            return console.log('not dist');
-        }
-        $elm.find(`#k${ id }`).insertBefore(`#k${ distId }`);
-        $.ajax(`/stock/system/move/${ id }/${ distId }`).done((data) => {
-            //brick.controllers.get('systemCtrl').onGetSystemDone(data);
+    // 根据条件筛选交易系统
+    scope.onConditionChange = function (e) {
+        console.log(e);
+        let filterArr = e.value;
+        model.system.sort((a, b) => {
+            let condArrA = a['交易系统条件'] || [null];
+            let interArrA = _.intersection(filterArr, condArrA);
+            let condArrB = b['交易系统条件'] || [null];
+            let interArrB = _.intersection(filterArr, condArrB);
+            return interArrB.length/condArrB.length - interArrA.length/condArrA.length;
         });
-        return false;
+        scope.render('systemList', model.system);
     };
 
     scope.onGetSystemDone = function (data) {
@@ -70,6 +56,7 @@ brick.reg('systemCtrl', function () {
         model = data;
         list.init(data.system);
         scope.render('mqElement', data.tags['行情要素']);
+        scope.render('condition', data.tags['交易系统条件']);
         scope.render('systemList', data.system, function () {
             console.log(this);
             $(this).find('>li').on('dragstart', scope.dragstart).on('dragover', scope.dragover).on('drop', scope.drop);
@@ -118,6 +105,38 @@ brick.reg('systemCtrl', function () {
         model.tags = data;
     });
 
+
+    scope.dragstart = function (e) {
+        let id = $(this).data('id');
+        e.originalEvent.dataTransfer.setData("Text", id);
+    };
+
+    scope.dragover = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        //e.originalEvent.dataTransfer.dropEffect = 'move';
+        //console.log(4444, e.target)
+        let $target = $(e.target);
+        //$target.css('border', 'solid 1px blue');
+        return false;
+    };
+
+    scope.drop = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        let $target = $(e.target);
+        let id = e.originalEvent.dataTransfer.getData("Text");
+        let distId = $target.data('id') || $target.closest('li[data-id]').data('id');
+        if (!distId || distId === id) {
+            return console.log('not dist');
+        }
+        $elm.find(`#k${ id }`).insertBefore(`#k${ distId }`);
+        $.ajax(`/stock/system/move/${ id }/${ distId }`).done((data) => {
+            //brick.controllers.get('systemCtrl').onGetSystemDone(data);
+        });
+        return false;
+    };
+
 });
 
 brick.reg('setSystemCtrl', function () {
@@ -149,9 +168,9 @@ brick.reg('setSystemCtrl', function () {
 
     scope.submitBefore = function (data) {
         // note: 如果上传数据的值是空数组[]，则被jquery忽略，所以把[]替换为''，才能覆盖旧值;
-        for(let i in data){
+        for (let i in data) {
             let v = data[i];
-            if(Array.isArray(v) && v.length===0){
+            if (Array.isArray(v) && v.length === 0) {
                 data[i] = '';
             }
         }

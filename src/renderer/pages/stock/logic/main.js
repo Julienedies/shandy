@@ -19,7 +19,7 @@ brick.reg('logicCtrl', function () {
     let scope = this;
     let $elm = scope.$elm;
     let recordManager = brick.services.get('recordManager')();
-    let sortType = brick.utils.get_query('sort');
+    let sortType = brick.utils.get_query('sort') || 'time';
     let isSortByTime = sortType === 'time';
     let isReverse = false;
     let logicArr = [];  // 当前显示的logic数组
@@ -69,7 +69,7 @@ brick.reg('logicCtrl', function () {
     scope.onSortChange = function (arg) {
         console.log(arg)
         sortType = arg.value;
-        isSortByTime = sortType === 'time';
+        isSortByTime = sortType !== 'time';
         let url = location.href.split('?')[0];
         history.pushState(null, null, `${ url }?sort=${ sortType }`);
         render();

@@ -23,6 +23,7 @@ brick.set('ic-select-cla', 'is-info')
 
 brick.reg('mainCtrl', function (scope) {
 
+    let $elm = scope.$elm;
     let setting = utils.setting()
     let model = {...setting.json.csd, SOURCES: jhandy.fetch.SOURCES}
     let $log = $('#log')
@@ -30,7 +31,7 @@ brick.reg('mainCtrl', function (scope) {
     console.log(model)
 
     scope.render('csd', {model}, () => {
-        $log = $('#log')
+        $log = $('#log');
     });
 
     // 数组合并去重， 主要用于处理stocks.json数据
@@ -116,6 +117,10 @@ brick.reg('mainCtrl', function (scope) {
         setting.save()
         $('#fetchStartBtn').icClearLoading()
         $('#fetchFromIndex').val(stat.index)
+    };
+
+    this.resetIndex = () => {
+        $elm.find('#fetchFromIndex').val(0);
     };
 
     this.createTdxFile = function (fields) {

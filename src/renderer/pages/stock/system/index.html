@@ -33,10 +33,16 @@
         </div>
     </header>
 
+    <div class="column" ic-tpl="condition">
+        <div class="tags" ic-select="condition" ic-select-type="checkbox" ic-select-on-change="onConditionChange">
+            <span class="tag" ic-for="i,v in model" ic-val="{{ v.text }}">{{ v.text }}</span>
+        </div>
+    </div>
+
     <div id="systemList">
         <ul ic-tpl="systemList">
             <li ic-for="i,v in model" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" data-id="{{ v.id }}"
-                id="{{ 'k'+v.id }}" X-ic-click="view2:{{ v.id }}">
+                id="{{ 'k'+v.id }}" ic-click="view2:{{ v.id }}">
                 <div class="box">
                     <div class="columns">
                         <div class="column is-10">
@@ -45,7 +51,7 @@
                                 <span style="padding-left:1em;">{{ v['note'] }}</span>
                             </header>
                             <div class="tags" style="margin-bottom:0.1rem;">
-                                <span class="tag is-black" ic-if="v['目标行情']">
+<!--                                <span class="tag is-black" ic-if="v['目标行情']">
                                     {{ v['目标行情'] }}
                                 </span>
                                 <span class="tag is-primary" ic-if="v['交易系统逻辑']">
@@ -53,7 +59,7 @@
                                 </span>
                                 <span class="tag is-primary is-small" ic-for="k,s in (v['交易系统条件']||[])">
                                     {{ s }}
-                                </span>
+                                </span>-->
                                 <span class="tag is-danger is-small" ic-if="v['买点']">
                                     {{ v['买点'] }}
                                 </span>
