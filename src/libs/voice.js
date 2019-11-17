@@ -9,6 +9,7 @@ let q = [];
 let isEnd = true;
 
 function speak () {
+    console.log(JSON.stringify(q));
     if (isEnd) {
         let o = q.shift();
         if (o) {
@@ -17,7 +18,9 @@ function speak () {
             speechSU.onend = function (event) {
                 isEnd = true;
                 o.cb && o.cb();
-                speak();
+                setTimeout(() => {
+                    speak();
+                },30);
                 console.log('speak onend', q.length, event);
             };
             console.log('exec:speak =>', q.length);

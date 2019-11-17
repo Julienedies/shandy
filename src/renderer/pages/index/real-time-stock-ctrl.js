@@ -64,7 +64,7 @@ function _f (stock) {
         return stock;
     }
 
-    if (stock.price < stock.maxPrice) {
+    if (stock.price < stock.maxPrice || b1 < 1000) {
         voice.remove(code);
         prev_objm.remove(code);
         stock.rout = 1; // 破板
@@ -98,7 +98,6 @@ function _f (stock) {
          * 封单减少，成交单没有对应增加，则说明是撤单
          */
         if (b1 < least || -b1_reduce > b1_reduce_base || v_plus > v_plus_base) {
-
 
             // 早盘封单小于阈值
             if (b1 < least && hour < 16 && price < 50) {

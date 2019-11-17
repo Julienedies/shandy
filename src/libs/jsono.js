@@ -43,6 +43,16 @@ class Jo {
         this.json = _.merge(nowJson, this.json);
     }
 
+    save () {
+        this.refresh();
+        return this._save();
+    }
+
+    _save () {
+        fs.writeFileSync(this.jsonPath, JSON.stringify(this.json, null, '\t'));
+        return this;
+    }
+
     merge (key, obj) {
         let args = [].slice.call(arguments)
         obj = args[1] || args[0]
@@ -54,12 +64,6 @@ class Jo {
         }
         Object.assign(oldVal, obj)
         return this
-    }
-
-    save () {
-        this.refresh();
-        fs.writeFileSync(this.jsonPath, JSON.stringify(this.json, null, '\t'));
-        return this;
     }
 
     set (key, val = {}) {
@@ -87,7 +91,7 @@ class Jo {
 
         })(this.json, keys);
 
-        return this.save();
+        return this._save();
     }
 
     get (key) {

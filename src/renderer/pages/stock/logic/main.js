@@ -31,13 +31,14 @@ brick.reg('logicCtrl', function () {
 
     let render = () => {
         updateLogic();
-        if(isSortByTime){
+        console.log('isSortByTime =>', isSortByTime);
+        if (isSortByTime) {
             // 原始数据是sort排序，list.get是拷贝数据，所以会始终保留原始排序数据
-        }else{
+        } else {
             logicArr.sort((a, b) => {
                 a = a.level || 0;
                 b = b.level || 0;
-                return b - a;
+                return b*1 - a*1;
             });
         }
         isReverse && logicArr.reverse();
@@ -69,14 +70,17 @@ brick.reg('logicCtrl', function () {
     scope.onSortChange = function (arg) {
         console.log(arg)
         sortType = arg.value;
-        isSortByTime = sortType !== 'time';
+        isSortByTime = sortType === 'time';
         let url = location.href.split('?')[0];
         history.pushState(null, null, `${ url }?sort=${ sortType }`);
         render();
     };
 
     this.onTagFilterChange = function (msg) {
-        scope.tag = msg.value;
+        let tag = scope.tag = msg.value;
+        let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
+        tag = tag ? tag : '';
+        $('title').text(`logic_${ tag }_${ date }`);
         render();
     };
 

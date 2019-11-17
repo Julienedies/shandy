@@ -252,8 +252,10 @@ brick.reg('listCtrl', function (scope) {
 
     scope.moveToTrash = () => {
         let imgObj = scope.currentImg;
-        let fileName = imgObj.f.split('/').pop();
-        utils.move(imgObj.f, `/Users/j/截图/目标行情/C/${ fileName }`)
+        let pathArr = imgObj.f.split('/');
+        let fileName = pathArr.pop();
+        let dirOfImg = pathArr.join('/')
+        utils.move(imgObj.f, `${ dirOfImg }/C/${ fileName }`)
             .then(() => {
                 $.icMessage('ok!');
             })
@@ -301,7 +303,7 @@ brick.reg('markTagCtrl', function (scope) {
         render();
     };
 
-    scope.hide = function(e) {
+    scope.hide = function (e) {
         // $.icMsg(e.target.tagName);
         scope.$elm.icPopup(false);
     };
@@ -317,9 +319,9 @@ brick.reg('markTagCtrl', function (scope) {
         render();
     });
 
-    scope.$elm.hover(function() {
+    scope.$elm.hover(function () {
         scope.$elm.css('opacity', 1);
-    }, function() {
+    }, function () {
         scope.$elm.css('opacity', 0);
     });
 
