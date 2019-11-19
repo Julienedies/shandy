@@ -289,7 +289,6 @@ brick.reg('markTagCtrl', function (scope) {
 
     let render = () => {
         imgObj = viewerJodb.get(currentImg.f, 'img')[0] || {img: currentImg.f};
-        console.log(imgObj);
         let f = (imgObj) => {
             return imgObj;
         };
@@ -309,7 +308,6 @@ brick.reg('markTagCtrl', function (scope) {
     };
 
     scope.onChange = function (val) {
-        console.log(val);
         imgObj[val.name] = val.value;
         viewerJodb.set(imgObj);
     };

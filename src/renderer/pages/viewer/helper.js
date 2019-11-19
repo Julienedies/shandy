@@ -62,7 +62,6 @@ export default {
      * @returns {Array} imgObjArr
      */
     sort: function (images) {
-
         // 先按时间排序
         images.sort((a, b) => {
             let a1 = +moment(a.d);
@@ -74,26 +73,16 @@ export default {
         let dateMap = _.groupBy(images, function (o) {
             return o.d;
         });
-
+        console.log('dateMap', dateMap);
         // 获取日期key数组，按照4个4个截取分组, 等于先按时间大致排序
         // [[{d:'2018-09-04'}, {d:'2018-09-05'},{d:'2018-09-06'} ,{d:'2018-09-07'}]]
         let dateKeyArr = _.keys(dateMap);
+        console.log('dateKeyArr', dateKeyArr);
+
         let dateKeyChunkArr = _.chunk(dateKeyArr, 4);
-        // 处理相邻日期chunk数组里相同code被分割在两个chunk数组里的情况，移动相同code的imgObj到同一个chunk数组
-        _.reduce(dateKeyChunkArr, function (prevArr, currentArr) {
-            prevArr.forEach((imgObj, index) => {
-                for (let i = currentArr.length - 1; i >= 0; i--) {
-                    let imgObj2 = currentArr[i];
-                    if (imgObj2.code === imgObj.code) {
-                        prevArr.push(currentArr.splice(i, 1));
-                    }
-                }
-            });
-            return currentArr;
-        }, []);
+        console.log('dateKeyChunkArr', dateKeyChunkArr);
 
         let dateMap2 = {};
-
         dateKeyChunkArr.forEach((chunks, index) => {
             chunks.forEach((dateKey) => {
                 let arr = dateMap[dateKey];
@@ -101,9 +90,25 @@ export default {
                 dateMap2[index] = arr2.concat(arr);
             });
         });
+        console.log('dateMap2', dateMap2);
+
+        let dateMapArr = _.values(dateMap2);
+        console.log('dateMapArr', dateMapArr);
+        // 处理相邻日期chunk数组里相同code被分割在两个chunk数组里的情况，移动相同code的imgObj到同一个chunk数组
+        _.reduce(dateMapArr, function (prevArr, currentArr) {
+            prevArr.forEach((imgObj, index) => {
+                for (let i = currentArr.length - 1; i >= 0; i--) {
+                    let imgObj2 = currentArr[i];
+                    if (imgObj2.code === imgObj.code) {
+                        let arr = currentArr.splice(i, 1);
+                        prevArr.push(arr[0]);
+                    }
+                }
+            });
+            return currentArr;
+        }, []);
 
         let resultArr = [];
-        let dateMapArr = _.values(dateMap2);
 
         for (let i = 0; i < dateMapArr.length; i++) {
             let imgArr = dateMapArr[i];
