@@ -112,7 +112,7 @@ class Win {
     saveBounds () {
         let name = this.getWindowName();
         let bounds = this.win.getBounds();
-        name && setting.set(`${ name }.bounds`, bounds);
+        name && setting.refresh().set(`${ name }.bounds`, bounds);
     }
 }
 

@@ -2,7 +2,7 @@
  * Created by j on 2019-02-28.
  */
 
-// async 需要
+// async await 需要
 import 'babel-polyfill'
 
 import jhandy from 'jhandy'
@@ -20,7 +20,7 @@ import '@julienedies/brick/dist/brick.css'
 import '../../js/common.js'
 
 brick.set('cla.error', 'is-danger');
-brick.set('ic-select-cla', 'is-info')
+brick.set('ic-select-cla', 'is-info');
 
 brick.reg('mainCtrl', function (scope) {
 
@@ -55,7 +55,7 @@ brick.reg('mainCtrl', function (scope) {
     this.createStocksJson = async function (fields) {
         console.log(fields)
         let $th = $(this).icSetLoading();
-        setting.refresh().set('csd', fields);
+        setting.refresh().merge('csd', fields);
 
         let stockArr = await jhandy.csv(fields.stocksCsvFile, null, [0, 1], true);
         let stocksJo = jo(fields.stocksJsonFile, []);
@@ -79,7 +79,7 @@ brick.reg('mainCtrl', function (scope) {
     this.fetchStart = async function (fields) {
         console.log(fields)
         let $th = $(this).icSetLoading()
-        setting.refresh().merge('csd', fields).save()
+        setting.refresh().merge('csd', fields);
 
         let stockArr;
         if (/\.txt$/.test(fields.fetchByStocks)) {
@@ -105,7 +105,6 @@ brick.reg('mainCtrl', function (scope) {
             }
             if (stat.over) {
                 $th.icClearLoading();
-                //setting.json.csd.fetchFromIndex = 0;
                 setting.refresh().set('csd.fetchFromIndex', 0);
             }
         });
@@ -115,8 +114,8 @@ brick.reg('mainCtrl', function (scope) {
     this.fetchStop = function () {
         let stat = jhandy.fetch.stop();
         setting.refresh().set('csd.fetchFromIndex', stat.index);
-        $('#fetchStartBtn').icClearLoading()
-        $('#fetchFromIndex').val(stat.index)
+        $('#fetchStartBtn').icClearLoading();
+        $('#fetchFromIndex').val(stat.index);
     };
 
     this.resetIndex = () => {
@@ -124,9 +123,9 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     this.createTdxFile = function (fields) {
-        console.log(fields)
-        let $th = $(this).icSetLoading()
-        setting.refresh().set('csd', fields);
+        console.log(fields);
+        let $th = $(this).icSetLoading();
+        setting.refresh().merge('csd', fields);
 
         jhandy.tdx(fields.csdPath, fields.tdx_extern_user_file)
             .then(tdxFilePath => {

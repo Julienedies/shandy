@@ -65,7 +65,7 @@ class Jo {
             this.set(key, oldVal)
         }
         Object.assign(oldVal, obj)
-        return this
+        return this.save();
     }
 
     set (key, val = {}) {
