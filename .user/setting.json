@@ -10,14 +10,7 @@
 		],
 		"csdPath": "/Users/j/dev/csd",
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"tdx_extern_user_file": "/Volumes/C/new_jyplug/T0002/signals/extern_user.txt",
-		"fetchFromIndex": 232,
-		"bounds": {
-			"x": 157,
-			"y": 55,
-			"width": 1279,
-			"height": 775
-		}
+		"fetchFromIndex": 473
 	},
 	"warn": {
 		"randomBgImgDir": "/Users/j/pim/img/人物",
@@ -30,7 +23,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/交易记录/1909-10",
+		"imgDir": "/Users/j/截图/交易记录/1905",
 		"bounds": {
 			"x": 1440,
 			"y": 41,
@@ -44,9 +37,11 @@
 			"height": 50
 		},
 		"history": [
-			"/Users/j/截图/目标行情",
 			"/Users/j/截图/竞价系统",
 			"/Users/j/截图/X交割单学习/X退学炒股",
+			"/Users/j/截图/目标行情",
+			"/Users/j/截图/竞价系统/2019-11",
+			"/Users/j/截图/目标行情/2019-11",
 			"/Users/j/截图/交易记录/1911",
 			"/Users/j/截图/交易记录/1909-10",
 			"/Users/j/截图/交易记录/1907-08",

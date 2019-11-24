@@ -30,7 +30,7 @@ brick.reg('mainCtrl', function (scope) {
 
     this.onSelectRandomBgImgDirDone = (paths) => {
         let randomBgImgDir = paths[0]
-        randomBgImgDir && setting.merge('warn', {randomBgImgDir}).save();
+        randomBgImgDir && setting.refresh().merge('warn', {randomBgImgDir}).save();
     }
 
 });

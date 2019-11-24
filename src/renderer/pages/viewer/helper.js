@@ -79,7 +79,7 @@ export default {
         let dateKeyArr = _.keys(dateMap);
         console.log('dateKeyArr', dateKeyArr);
 
-        let dateKeyChunkArr = _.chunk(dateKeyArr, 4);
+        let dateKeyChunkArr = _.chunk(dateKeyArr, 2);
         console.log('dateKeyChunkArr', dateKeyChunkArr);
 
         let dateMap2 = {};

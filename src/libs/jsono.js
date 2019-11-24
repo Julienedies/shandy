@@ -40,11 +40,13 @@ class Jo {
     refresh () {
         let str = fs.readFileSync(this.jsonPath, 'utf8');
         let nowJson = JSON.parse(str);
-        this.json = _.merge(nowJson, this.json);
+        //this.json = _.merge(nowJson, this.json);
+        this.json = nowJson;
+        return this;
     }
 
     save () {
-        this.refresh();
+        //this.refresh();
         return this._save();
     }
 
@@ -54,7 +56,7 @@ class Jo {
     }
 
     merge (key, obj) {
-        let args = [].slice.call(arguments)
+        let args = [].slice.call(arguments);
         obj = args[1] || args[0]
         key = args[1] && args[0]
         let oldVal = this.get(key)
@@ -91,7 +93,7 @@ class Jo {
 
         })(this.json, keys);
 
-        return this._save();
+        return this.save();
     }
 
     get (key) {

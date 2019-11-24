@@ -103,7 +103,7 @@ brick.reg('mainCtrl', function (scope) {
         scope.urls = urls;
         $imgDir.val(dir);
         $list.icRender('list', urls);
-        setting.set('viewer.imgDir', dir);
+        setting.refresh().set('viewer.imgDir', dir);
     };
 
     // 图片目录路径选中后回调
@@ -123,7 +123,7 @@ brick.reg('mainCtrl', function (scope) {
         let sn = $('#sn').val();
         let dataUrl = helper.crop(scope.urls[sn].f, fields);
         $('#view_crop').attr('src', dataUrl);
-        setting.set('viewer.crop', crop);
+        setting.refresh().set('viewer.crop', crop);
     };
 
     // 图片列表重命名
@@ -174,7 +174,7 @@ brick.reg('mainCtrl', function (scope) {
     historyModel.on('change', () => {
         let arr = historyModel.get();
         scope.render('history', {model: arr});
-        setting.set('viewer.history', arr);
+        setting.refresh().set('viewer.history', arr);
     });
 
 

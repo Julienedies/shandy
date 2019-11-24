@@ -2,6 +2,7 @@
  * Created by j on 2019-02-28.
  */
 
+// async 需要
 import 'babel-polyfill'
 
 import jhandy from 'jhandy'
@@ -24,11 +25,11 @@ brick.set('ic-select-cla', 'is-info')
 brick.reg('mainCtrl', function (scope) {
 
     let $elm = scope.$elm;
-    let setting = utils.setting()
-    let model = {...setting.json.csd, SOURCES: jhandy.fetch.SOURCES}
-    let $log = $('#log')
+    let setting = utils.setting();
+    let model = {...setting.json.csd, SOURCES: jhandy.fetch.SOURCES};
+    let $log = $('#log');
 
-    console.log(model)
+    console.log(model);
 
     scope.render('csd', {model}, () => {
         $log = $('#log');
@@ -54,7 +55,7 @@ brick.reg('mainCtrl', function (scope) {
     this.createStocksJson = async function (fields) {
         console.log(fields)
         let $th = $(this).icSetLoading();
-        setting.merge('csd', fields).save();
+        setting.refresh().set('csd', fields);
 
         let stockArr = await jhandy.csv(fields.stocksCsvFile, null, [0, 1], true);
         let stocksJo = jo(fields.stocksJsonFile, []);
@@ -63,7 +64,7 @@ brick.reg('mainCtrl', function (scope) {
         // 如果解析stockArr失败
         if (!Array.isArray(stockArr)) {
             console.err(stockArr);
-            return utils.err('创建stocks.json失败,请重新尝试.')
+            return utils.err('创建stocks.json失败,请重新尝试.');
         }
 
         // 合并stock
@@ -78,7 +79,7 @@ brick.reg('mainCtrl', function (scope) {
     this.fetchStart = async function (fields) {
         console.log(fields)
         let $th = $(this).icSetLoading()
-        setting.merge('csd', fields).save()
+        setting.refresh().merge('csd', fields).save()
 
         let stockArr;
         if (/\.txt$/.test(fields.fetchByStocks)) {
@@ -104,17 +105,16 @@ brick.reg('mainCtrl', function (scope) {
             }
             if (stat.over) {
                 $th.icClearLoading();
-                setting.json.csd.fetchFromIndex = 0;
-                setting.save();
+                //setting.json.csd.fetchFromIndex = 0;
+                setting.refresh().set('csd.fetchFromIndex', 0);
             }
         });
 
     };
 
     this.fetchStop = function () {
-        let stat = jhandy.fetch.stop()
-        setting.json.csd.fetchFromIndex = stat.index
-        setting.save()
+        let stat = jhandy.fetch.stop();
+        setting.refresh().set('csd.fetchFromIndex', stat.index);
         $('#fetchStartBtn').icClearLoading()
         $('#fetchFromIndex').val(stat.index)
     };
@@ -126,7 +126,7 @@ brick.reg('mainCtrl', function (scope) {
     this.createTdxFile = function (fields) {
         console.log(fields)
         let $th = $(this).icSetLoading()
-        setting.merge('csd', fields).save()
+        setting.refresh().set('csd', fields);
 
         jhandy.tdx(fields.csdPath, fields.tdx_extern_user_file)
             .then(tdxFilePath => {
