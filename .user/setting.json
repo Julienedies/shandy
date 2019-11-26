@@ -15,7 +15,7 @@
 			"ycj"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 1,
+		"fetchFromIndex": 913,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json"
 	},
@@ -30,10 +30,10 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/目标行情/2019-09",
+		"imgDir": "/Users/j/截图/交易记录/1911",
 		"bounds": {
 			"x": 1440,
-			"y": 41,
+			"y": 0,
 			"width": 1920,
 			"height": 1080
 		},
@@ -44,12 +44,12 @@
 			"height": 50
 		},
 		"history": [
-			"/Users/j/截图/目标行情/2019-09",
-			"/Users/j/截图/竞价系统",
 			"/Users/j/截图/X交割单学习/X退学炒股",
+			"/Users/j/截图/竞价系统/2019-10",
+			"/Users/j/截图/目标行情/2019-10",
+			"/Users/j/截图/目标行情/2019-09",
 			"/Users/j/截图/目标行情/2019-11",
 			"/Users/j/截图/竞价系统/2019-11",
-			"/Users/j/截图/目标行情/2019-10",
 			"/Users/j/截图/交易记录/1911",
 			"/Users/j/截图/交易记录/1909-10",
 			"/Users/j/截图/交易记录/1907-08",
@@ -79,8 +79,8 @@
 	},
 	"news": {
 		"bounds": {
-			"x": 1516,
-			"y": 41,
+			"x": 1515,
+			"y": 0,
 			"width": 1779,
 			"height": 74
 		}
