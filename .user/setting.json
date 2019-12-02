@@ -15,7 +15,7 @@
 			"ycj"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 261,
+		"fetchFromIndex": 676,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json"
 	},
@@ -45,9 +45,10 @@
 		},
 		"history": [
 			"/Users/j/截图/X交割单学习/X退学炒股",
-			"/Users/j/截图/竞价系统/2019-10",
+			"/Users/j/截图/目标行情/2019-08",
 			"/Users/j/截图/目标行情/2019-11",
 			"/Users/j/截图/竞价系统/2019-11",
+			"/Users/j/截图/竞价系统/2019-10",
 			"/Users/j/截图/目标行情/2019-10",
 			"/Users/j/截图/目标行情/2019-09",
 			"/Users/j/截图/交易记录/1911",

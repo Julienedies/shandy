@@ -421,14 +421,14 @@ brick.reg('mainCtrl', function (scope) {
             scope.openReminder();
         });
 
-        utils.timer('9:26', () => {
+/*        utils.timer('9:26', () => {
             scope.openWarn(false);
             setTimeout(() => {
                 if (scope.warnWindow) {
                     scope.warnWindow.hide();
                 }
             }, 1000 * 60 * 3);
-        });
+        });*/
 
         utils.timer('15:00', () => {
             scope.newsWin && scope.newsWin.close();
