@@ -34,13 +34,15 @@ function createDateStr () {
  * @param crop  {Object}  对截图剪切  {x: 2372,y: 88, width: 200,height: 42}
  * @param dir {String}  图片保存路径
  * @param callback {Function}   处理截屏图片数据回调函数
+ * @param [options] {Object} 截屏选项
  */
-export default function (args) {
+export default function (args, options = {}) {
 
     let thumbSize = determineScreenShotSize();
-    let options = {types: ['screen'], thumbnailSize: {width: 3840, height: 2160}};
+    options = Object.assign({types: ['screen'], thumbnailSize: thumbSize}, options);
 
     args = Object.assign({
+        returnType: 'file',
         callback: (arg) => {
             console.log('screenCapture => ', arg);
         }
@@ -70,7 +72,7 @@ export default function (args) {
                     let imgPath = path.join(dirPath, imgName);
                     fs.writeFile(imgPath, img.toPNG(), function (error) {
                         if (error) {
-                            return console.log(error);
+                            return console.error(error);
                         }
                         args.callback(imgPath);
                     });

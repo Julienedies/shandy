@@ -18,6 +18,7 @@ brick.reg('logicCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;
+    let $title = $('title');
     let recordManager = brick.services.get('recordManager')();
     let sortType = brick.utils.get_query('sort') || 'time';
     let isSortByTime = sortType === 'time';
@@ -38,9 +39,12 @@ brick.reg('logicCtrl', function () {
             logicArr.sort((a, b) => {
                 a = a.level || 0;
                 b = b.level || 0;
-                return b*1 - a*1;
+                return b * 1 - a * 1;
             });
         }
+
+        let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
+        $title.text(`logic_${ scope.tag || sortType }_${ date }`);
         isReverse && logicArr.reverse();
         scope.render('logic', logicArr);
     };
@@ -78,9 +82,7 @@ brick.reg('logicCtrl', function () {
 
     this.onTagFilterChange = function (msg) {
         let tag = scope.tag = msg.value;
-        let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
         tag = tag ? tag : '';
-        $('title').text(`logic_${ tag }_${ date }`);
         render();
     };
 

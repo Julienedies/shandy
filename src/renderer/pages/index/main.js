@@ -52,6 +52,7 @@ voice('voice test.', () => {
     $.icMsg('voice test Ok.');
 });
 
+let kcAudio = new Audio(require('./audio/kc.mp3'));
 /*let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
 setInterval( () => {
      audio.play();
@@ -137,9 +138,9 @@ ipcRenderer.on('rts_cancel', function (event, arg) {
 
 // 截屏
 ipcRenderer.on('screenCapture', function (event, arg) {
-
-    screenCapture({returnType: 'file', dir: '/Users/j/截图/'});
-
+    screenCapture({returnType: 'file', dir: '/Users/j/截图/', callback: (arg) => {
+            kcAudio.play();
+    }}, {thumbnailSize: {width: 3840, height: 2160}});
 });
 
 
