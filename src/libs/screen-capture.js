@@ -21,16 +21,30 @@ function determineScreenShotSize () {
     };
 }
 
+function createDateStr () {
+    let now = new Date();
+    let str = now.toLocaleString().replace(/\//img, '-').replace(/[:]/img, '.');
+    str = str.replace(/(\D)(\d)(\D)/img, '$10$2$3');
+    return str;
+}
+
 /*
  * @param args {Object}  {returnType: String, crop: Object, callback: Function}
  * @param returnType  {String}   接受截图数据类型   'file' || '' 'dataUrl';  图片file地址  or  base64
  * @param crop  {Object}  对截图剪切  {x: 2372,y: 88, width: 200,height: 42}
+ * @param dir {String}  图片保存路径
  * @param callback {Function}   处理截屏图片数据回调函数
  */
 export default function (args) {
 
     let thumbSize = determineScreenShotSize();
-    let options = {types: ['screen'], thumbnailSize: thumbSize};
+    let options = {types: ['screen'], thumbnailSize: {width: 3840, height: 2160}};
+
+    args = Object.assign({
+        callback: (arg) => {
+            console.log('screenCapture => ', arg);
+        }
+    }, args);
 
     desktopCapturer.getSources(options, function (error, sources) {
 
@@ -40,7 +54,7 @@ export default function (args) {
 
         sources.forEach(function (source) {
 
-            console.log(source);
+            //console.log(source);
             let img = source.thumbnail;
 
             if (source.name === 'Entire screen' || source.name === 'Screen 2') {
@@ -50,13 +64,16 @@ export default function (args) {
                 }
 
                 if (args.returnType === 'file') {
-                    let imgPath = path.join(os.tmpdir(), source.name + '.png');
+                    let dirPath = args.dir || os.tmpdir();
+                    let dateStr = createDateStr();
+                    let imgName = `屏幕快照 ${ dateStr } (2).png`;
+                    let imgPath = path.join(dirPath, imgName);
                     fs.writeFile(imgPath, img.toPNG(), function (error) {
                         if (error) {
                             return console.log(error);
                         }
                         args.callback(imgPath);
-                    })
+                    });
                 }
 
                 if (args.returnType === 'dataUrl') {

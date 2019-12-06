@@ -10,6 +10,7 @@ import electron from 'electron'
 
 import Win from '../../../libs/window'
 import tdx from '../../../libs/tdx'
+import screenCapture from '../../../libs/screen-capture'
 import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
 import voice from '../../../libs/voice'
@@ -132,6 +133,13 @@ ipcRenderer.on('rts_db_monitor', function (event, stock) {
 // 取消监控
 ipcRenderer.on('rts_cancel', function (event, arg) {
     rtsc.on_rts_cancel(arg);
+});
+
+// 截屏
+ipcRenderer.on('screenCapture', function (event, arg) {
+
+    screenCapture({returnType: 'file', dir: '/Users/j/截图/'});
+
 });
 
 

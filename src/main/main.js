@@ -96,6 +96,11 @@ function ready () {
         })
     })
 
+    // 快捷键 =>  只截大屏幕的图
+    globalShortcut.register('CommandOrControl+shift+2', function () {
+            mainWindow.webContents.send('screenCapture')
+    })
+
     // 打板封单监控数据 => socket.io => 浏览器页面 http://192.168.3.20:3000/
     ipcMain.on('rts_push', (event, stocks) => {
         server.push(stocks)
