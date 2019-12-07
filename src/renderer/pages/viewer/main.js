@@ -21,6 +21,8 @@ import utils from '../../../libs/utils'
 
 import helper from './helper'
 
+import historyModel from './historyModel'
+
 // activate context menu
 debugMenu.install();
 
@@ -29,42 +31,8 @@ const tradeArr = userJo('trading', []).get();
 
 const viewerJodb = userJodb('viewer');
 
-brick.services.reg('historyModel', function () {
-    return {
-        _pool: [],
-        cb: () => {
-        },
-        init: function (arr) {
-            this._pool = arr;
-            this._pool.sort((a, b) => {
-                let f = (s) => {
-                    let d = s.split('/').pop();
-                    d = d.split('-').shift();
-                    return d * 1 || 3000;
-                };
-                return f(b) - f(a);
-            });
-            this.cb();
-        },
-        get: function () {
-            return this._pool;
-        },
-        add: function (item) {
-            if (!this._pool.includes(item)) {
-                this._pool.unshift(item);
-                this.cb();
-            }
-        },
-        remove: function (item) {
-            let index = this._pool.indexOf(item);
-            this._pool.splice(index, 1);
-            this.cb();
-        },
-        on: function (event, cb) {
-            this.cb = cb;
-        }
-    }
-});
+brick.services.reg('historyModel', historyModel);
+
 
 brick.reg('mainCtrl', function (scope) {
 
@@ -172,11 +140,9 @@ brick.reg('mainCtrl', function (scope) {
     // ------------------------------------------------------------------------------------------------
 
     historyModel.on('change', () => {
-        let arr = historyModel.get();
-        scope.render('history', {model: arr});
-        setting.refresh().set('viewer.history', arr);
+        scope.render('history', {model: historyModel.get2()});
+        setting.refresh().set('viewer.history', historyModel.get());
     });
-
 
     historyModel.init(setting.get('viewer.history') || []);
 
