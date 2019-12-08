@@ -8,6 +8,7 @@ import './style.scss'
 
 import electron from 'electron'
 
+import utils from '../../../libs/utils'
 import Win from '../../../libs/window'
 import tdx from '../../../libs/tdx'
 import screenCapture from '../../../libs/screen-capture'
@@ -17,25 +18,6 @@ import voice from '../../../libs/voice'
 
 import debugMenu from 'debug-menu'
 
-const {remote, shell, ipcRenderer} = electron
-const {BrowserWindow} = remote
-
-
-window.voice = voice
-
-debugMenu.install();
-
-console.log(`
-We are using node ${ process.versions.node }
-chrome ${ process.versions.chrome }
-electron ${ process.versions.electron }
-`)
-
-console.log('remote is =>', remote)
-//const config = remote.getGlobal('config')
-//const config = remote.app.config
-//console.log(config)
-
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
@@ -44,7 +26,31 @@ import './main-ctrl.js'
 import './tool-bar-ctrl.js'
 import view_stock from './view-stock-ctrl'
 import rtsc from './real-time-stock-ctrl'
-import utils from '../../../libs/utils'
+
+const {remote, shell, ipcRenderer} = electron;
+const {BrowserWindow} = remote;
+
+debugMenu.install();
+
+window.voice = voice;
+
+console.log(`
+We are using node ${ process.versions.node }
+chrome ${ process.versions.chrome }
+electron ${ process.versions.electron }
+`);
+
+console.log('remote is =>', remote);
+//const config = remote.getGlobal('config')
+//const config = remote.app.config
+//console.log(config)
+
+utils.timer('23:55', function () {
+    if (window.confirm('夜晚了，是否退出？')) {
+        ipcRenderer.send('quit', true);
+    }
+});
+
 
 brick.bootstrap();
 
@@ -138,9 +144,11 @@ ipcRenderer.on('rts_cancel', function (event, arg) {
 
 // 截屏
 ipcRenderer.on('screenCapture', function (event, arg) {
-    screenCapture({returnType: 'file', dir: '/Users/j/截图/', callback: (arg) => {
+    screenCapture({
+        returnType: 'file', dir: '/Users/j/截图/', callback: (arg) => {
             kcAudio.play();
-    }}, {thumbnailSize: {width: 3840, height: 2160}});
+        }
+    }, {thumbnailSize: {width: 3840, height: 2160}});
 });
 
 
