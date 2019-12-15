@@ -110,27 +110,32 @@ brick.reg('mainCtrl', function (scope) {
         if (viewsModel.has(item)) {
             viewsModel.active(item)
         } else {
-            item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%; "></webview>`).appendTo($views)
-            viewsModel.add(item)
+            item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%; "></webview>`).appendTo($views);
+            viewsModel.add(item);
         }
-        render()
-    }
+        render();
+    };
 
     this.closeTab = function (e, url) {
-        viewsModel.remove({url})
-        render()
-        return false
-    }
+        viewsModel.remove({url});
+        render();
+        return false;
+    };
 
     this.activeTab = (e, url) => {
-        viewsModel.active({url})
-        render()
-    }
+        viewsModel.active({url});
+        render();
+    };
 
     this.showIndex = function (e, url) {
-        $indexView.show()
-        $viewsWrapper.hide()
-    }
+        $indexView.show();
+        $viewsWrapper.hide();
+    };
+
+    this.openByWindow = function (e, url) {
+        let name = url.match(/([^/]+)\.html$/)[1];
+        new Win({url, name, ...getBounds(name)});
+    };
 
     // -------------------------------------------------------------------------------------------
 
@@ -139,9 +144,9 @@ brick.reg('mainCtrl', function (scope) {
     }
 
     scope.openReview = function () {
-        let win = scope.reviewTradingWindow
+        let win = scope.reviewTradingWindow;
         if (win) {
-            win.show()
+            win.show();
         } else {
             let name = 'review';
             let url = 'review.html';
@@ -421,14 +426,14 @@ brick.reg('mainCtrl', function (scope) {
             scope.openReminder();
         });
 
-/*        utils.timer('9:26', () => {
-            scope.openWarn(false);
-            setTimeout(() => {
-                if (scope.warnWindow) {
-                    scope.warnWindow.hide();
-                }
-            }, 1000 * 60 * 3);
-        });*/
+        /*        utils.timer('9:26', () => {
+                    scope.openWarn(false);
+                    setTimeout(() => {
+                        if (scope.warnWindow) {
+                            scope.warnWindow.hide();
+                        }
+                    }, 1000 * 60 * 3);
+                });*/
 
         utils.timer('15:00', () => {
             scope.newsWin && scope.newsWin.close();

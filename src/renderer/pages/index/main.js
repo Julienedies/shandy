@@ -51,6 +51,7 @@ utils.timer('23:55', function () {
     }
 });
 
+brick.set('ic-event.extend', 'click,change,dblclick');
 
 brick.bootstrap();
 

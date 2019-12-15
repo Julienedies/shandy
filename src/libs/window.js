@@ -117,4 +117,4 @@ class Win {
 }
 
 
-export default Win
+export default Win;

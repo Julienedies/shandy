@@ -16,7 +16,7 @@ body {
   background: repeat 50% 50% rgba(0, 0, 0, 0);
   background-size: contain;
   border: solid 1px yellowgreen;
-  font: 24px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif!important;
+  font: 36px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif!important;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -70,7 +70,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.4;
+  opacity: 0.3;
   background: rgba(0, 0, 0, 0) !important;
 
   .box {

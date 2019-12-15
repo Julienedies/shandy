@@ -15,7 +15,7 @@
 			"ycj"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 2488,
+		"fetchFromIndex": 1391,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json"
 	},
@@ -30,12 +30,12 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/交易记录/1912",
+		"imgDir": "/Users/j/截图/目标行情/2019-09",
 		"bounds": {
-			"x": 1440,
-			"y": 0,
-			"width": 1920,
-			"height": 1080
+			"x": 0,
+			"y": 23,
+			"width": 1440,
+			"height": 808
 		},
 		"crop": {
 			"x": 3100,
@@ -108,7 +108,7 @@
 	"prompt": {
 		"bounds": {
 			"x": 1440,
-			"y": 41,
+			"y": 0,
 			"width": 1920,
 			"height": 1080
 		}
@@ -119,6 +119,22 @@
 			"y": 71,
 			"width": 889,
 			"height": 722
+		}
+	},
+	"stock_tags": {
+		"bounds": {
+			"x": 1440,
+			"y": 0,
+			"width": 1920,
+			"height": 1080
+		}
+	},
+	"stock_system": {
+		"bounds": {
+			"x": 1440,
+			"y": 0,
+			"width": 1920,
+			"height": 1080
 		}
 	}
 }
