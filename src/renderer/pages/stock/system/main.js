@@ -139,6 +139,7 @@ brick.reg('systemCtrl', function () {
 
 });
 
+
 brick.reg('setSystemCtrl', function () {
 
     let scope = this;

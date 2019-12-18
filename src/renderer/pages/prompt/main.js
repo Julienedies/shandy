@@ -30,7 +30,7 @@ const socket = io();
 const $body = $('body');
 const $place = $('#place');
 
-const warnMap = {};
+const warnHandleMap = {};
 
 const show = () => {
     $body.css('opacity', 1).show();
@@ -79,19 +79,19 @@ warnArr.forEach((item, index) => {
             show2(content);
         }, 1000 * 60 * trigger);
     }
-    /*    // trigger => 9:00: 定时执行
+        // trigger => 9:00: 定时执行
         else if (/^\d+[:]\d+$/.test(trigger)) {
-            let handle = utils.timer(trigger, () => {
-                show2(content);
-            });
-
+        let handle = utils.timer(trigger, () => {
+            show2(content);
+        });
+    }
         // trigger => 'daban': 打板动作触发
         else {
-            warnMap[trigger] = content;
-        }*/
+            warnHandleMap[trigger] = content;
+        }
 });
 
-[
+/*[
     ['9:05', '交易准备'],
     ['9:29', '竞价研判'],
     ['9:45', '早盘'],
@@ -100,13 +100,13 @@ warnArr.forEach((item, index) => {
         show();
         brick.view.to(item[1]);
     });
-});
+});*/
 
 
 $('[ic-view]').on('ic-view.active', function (e) {
     setTimeout(() => {
         hide();
-    }, 1000 * 7);
+    }, 1000 * 9);
 });
 
 const audioMap = {
@@ -127,8 +127,8 @@ socket.on('warn', (info) => {
     }
 
     //win.show();
-    show();
-    brick.view.to(info);
+    show2(warnHandleMap[info]);
+    //brick.view.to(info);
 
     /*        let audio = new Audio(audioMap[info]);
             audio.volume = 1;

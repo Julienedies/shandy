@@ -15,7 +15,7 @@
 			"ycj"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 1391,
+		"fetchFromIndex": 369,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json"
 	},
@@ -30,12 +30,12 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/目标行情/2019-09",
+		"imgDir": "/Users/j/截图/X交割单学习/X退学炒股",
 		"bounds": {
-			"x": 0,
-			"y": 23,
-			"width": 1440,
-			"height": 808
+			"x": 1440,
+			"y": 0,
+			"width": 1920,
+			"height": 1080
 		},
 		"crop": {
 			"x": 3100,

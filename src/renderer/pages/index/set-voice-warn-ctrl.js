@@ -7,28 +7,30 @@ import electron from 'electron'
 
 import userJodb from '../../../libs/user-jodb'
 import voice from '../../../libs/voice'
-import $ from 'jquery'
 import utils from '../../../libs/utils'
 
-const {ipcRenderer} = electron
+import $ from 'jquery'
+
+const {ipcRenderer} = electron;
 
 export default function (scope) {
 
     const warnJodb = userJodb('warn', [], {joinType: 'push'});
     // 存储定时器句柄，用以取消
     const warnHandleMap = {};
+    const dragOverCla = 'onDragOver';
 
     ipcRenderer.on('warn', (event, info) => {
-        console.log(11, info, warnHandleMap[info])
+        console.log(info, warnHandleMap[info])
         voice(warnHandleMap[info] || '');
     });
 
     let render = () => {
         let model = warnJodb.get();
-        scope.render('warnList', {model});
+        scope.render('warnList', {model}, function() {
+            $(this).find('tr').on('dragstart', scope.dragstart).on('dragover', scope.dragover).on('drop', scope.drop).on('dragleave', scope.dragleave);
+        });
     };
-
-    warnJodb.on('change', render);
 
     scope.save = function (fields) {
         warnJodb.set(fields);
@@ -55,7 +57,7 @@ export default function (scope) {
     };
 
     scope.disable = function (e, id, isDisable) {
-        let item = warnJodb.get(id)[0];
+        let item = warnJodb.get2(id);
         item.disable = !item.disable;
         warnJodb.set(item);
         $(this).text(isDisable ? '启用' : '禁用');
@@ -124,16 +126,17 @@ export default function (scope) {
     }
 
     function updateVoiceWarn (cancel) {
-        if (utils.isTrading() || cancel) {
+        //if (utils.isTrading() || cancel) {
             warnJodb.get().forEach((item, index) => {
                 setVoiceWarnForItem(item, cancel);
             });
-        }
+        //}
     }
 
     warnJodb.on('change', function () {
         updateVoiceWarn();
-        console.log('##### updateVoiceWarn on change', warnHandleMap);
+        render();
+        console.log('updateVoiceWarn on change =>', warnHandleMap);
     });
 
     utils.timer('11:30', () => {
@@ -152,5 +155,40 @@ export default function (scope) {
 
     render();
     updateVoiceWarn();
+
+    // --------------------------------------------------------------------
+
+    scope.dragstart = function (e) {
+        let id = $(this).data('id');
+        e.originalEvent.dataTransfer.setData("Text", id);
+        console.log('dragstart', id);
+    };
+
+    scope.dragover = function (e) {
+        e.preventDefault();
+        //e.stopPropagation();
+        //e.originalEvent.dataTransfer.dropEffect = 'move';
+        $(e.target).addClass(dragOverCla);
+        return false;
+    };
+
+    scope.dragleave = function(e) {
+        $(e.target).removeClass(dragOverCla);
+    };
+
+    scope.drop = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        let $target = $(e.target);
+        let id = e.originalEvent.dataTransfer.getData("Text");
+        let distId = $target.data('id') || $target.closest('tr[data-id]').data('id');
+        if (!distId || distId === id) {
+            return console.log('not dist');
+        }
+        console.log('drop', id, distId+'', e.target)
+        warnJodb.insert(id, distId+'');
+        // scope.$elm.find(`#k${ id }`).insertBefore(`#k${ distId }`);
+        return false;
+    };
 
 };

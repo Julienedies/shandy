@@ -130,7 +130,8 @@
                 <div id="viewsWrapper">
                     <div id="viewTabs" ic-tpl="viewTabs">
                         <div class="tab-group">
-                            <div ic-for="i,v in model" ic-class="tab-item {{ v.active ? 'active':'' }}" ic-click="activeTab:{{ v.url }}" ic-dblclick="openByWindow:{{ v.url }}">
+                            <div ic-for="i,v in model" ic-class="tab-item {{ v.active ? 'active':'' }}" ic-click="activeTab:{{ v.url }}"
+                                 ic-dblclick="openByWindow:{{ v.url }}">
                                 <span class="icon icon-cancel icon-close-tab" ic-click="closeTab:{{ v.url }}"></span>
                                 {{ v.title }}
                             </div>
@@ -234,13 +235,14 @@
                     <div class="column is-12" style="padding:20px;">
 
                         <h3 class="title is-5">
-                            <button class="button is-primary is-small" ic-click="toggle">关闭语音</button>
                             <span style="padding:0 9px 0 9px; vertical-align: -4px;">设置语音警告</span>
-                            <button class="button is-small" ic-popup-close>关闭窗口</button>
                             <button class="button is-primary is-small" ic-popup-target="setWarnItem">添加新项</button>
+                            <button class="button is-primary is-small" ic-click="toggle">关闭语音</button>
+                            <button class="button is-small" ic-popup-close>关闭窗口</button>
                         </h3>
                         <table class="table is-striped" style="margin-top:15px;font-size:14px;" ic-tpl="warnList">
-                            <tr ic-for="i,v in model">
+                            <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
+                                ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
                                 <td>{{ v.name }}</td>
                                 <td>{{ v.trigger }}</td>
                                 <td class="pre">{{ v.content }}</td>

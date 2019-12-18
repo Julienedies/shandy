@@ -313,9 +313,11 @@ let proto = {
     /**
      * @todo  把一条记录位置移动到目标记录前
      * @param id   {Object | uid},  要移动的记录
-     * @param dest {Object | uid}, 目标记录, 可选, 如果没有提供, 则默认是首条记录
+     * @param [dest] {Object | uid}, 目标记录, 可选, 如果没有提供, 则默认是首条记录
      */
     insert: function (id, dest) {
+
+        console.log('recordManager.insert', id, dest);
 
         let pool = this._pool;
 
@@ -324,9 +326,9 @@ let proto = {
         let arr = pool.splice(index, 1);  // 从数组中删除
         let record = arr[0];
 
-        let before_index = dest ? this._getIndex(dest) : 0;
+        let destIndex = dest ? this._getIndex(dest) : 0;
 
-        pool.splice(before_index, 0, record);  // 重新插入
+        pool.splice(destIndex, 0, record);  // 重新插入
 
         this.emit('change');
 

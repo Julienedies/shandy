@@ -9,7 +9,6 @@ let q = [];
 let isEnd = true;
 
 function speak () {
-    console.log(JSON.stringify(q));
     if (isEnd) {
         let o = q.shift();
         if (o) {
@@ -21,12 +20,11 @@ function speak () {
                 setTimeout(() => {
                     speak();
                 },30);
-                console.log('speak onend', q.length, event);
             };
-            console.log('exec:speak =>', q.length);
             speechSynthesis.speak(speechSU);
         }
     }
+    console.log('voice 队列 =>', JSON.stringify(q));
 }
 
 /**
@@ -52,6 +50,8 @@ function voice (sign, text, cb) {
     if(text.length <= 0 ) return;
 
     let item = {sign, text, cb};
+
+    // 有sign，表示优先级高，加入队列头部
     if (sign) {
         q.unshift(item)
     } else {
@@ -75,7 +75,7 @@ voice.remove = function (sign) {
 };
 
 voice.clear = voice.cancel = function (sign) {
-    //speechSynthesis.cancel();
+    speechSynthesis.cancel();
     isEnd = true;
     if (sign) {
         voice.remove(sign);
