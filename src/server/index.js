@@ -88,7 +88,7 @@ function F () {
     this.httpServer = httpServer;
     this.io = io;
     this.start = function (port) {
-        port = port || 3300
+        port = port || 3300;
         httpServer.listen(port, function () {
             console.log(`============== server start on port:${ port } ====================`);
         });

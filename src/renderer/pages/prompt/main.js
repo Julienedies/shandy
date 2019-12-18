@@ -6,6 +6,7 @@ import './index.html'
 import '../../css/common/common.scss'
 import './style.scss'
 
+import _ from 'lodash'
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
@@ -63,6 +64,8 @@ ipc.on('view', (e, view) => {
 });
 
 
+let warnIntervalArr = [];
+
 warnArr.forEach((item, index) => {
     let id = item.id;
     let content = item.content;
@@ -75,9 +78,10 @@ warnArr.forEach((item, index) => {
 
     // trigger => 10 : 间隔执行
     if (/^\d+$/.test(trigger)) {
-        let handle = setInterval(() => {
-            show2(content);
-        }, 1000 * 60 * trigger);
+        let count = Math.ceil(240/trigger);
+        let arr = _.fill(Array(count), content);
+        warnIntervalArr = warnIntervalArr.concat(arr);
+        warnIntervalArr = _.shuffle(warnIntervalArr);
     }
         // trigger => 9:00: 定时执行
         else if (/^\d+[:]\d+$/.test(trigger)) {
@@ -90,6 +94,14 @@ warnArr.forEach((item, index) => {
             warnHandleMap[trigger] = content;
         }
 });
+
+console.log(warnIntervalArr);
+
+/*let intervalTimer = setInterval(() => {
+    let warnText = warnIntervalArr.shift();
+    warnIntervalArr.push(warnText);
+    show2(warnText);
+}, 1000 * 60 * 6);*/
 
 /*[
     ['9:05', '交易准备'],
@@ -115,20 +127,15 @@ const audioMap = {
 
 socket.on('warn', (info) => {
 
-    let d = new Date()
-    let h = d.getHours()
-    let m = d.getMinutes()
-    if (h === 9 && m > 15 && m < 45) {
-        // return;
-    }
-
     if (info === 'esc') {
         return hide();
     }
 
-    //win.show();
-    show2(warnHandleMap[info]);
-    //brick.view.to(info);
+    if(info === 'sell' || info ==='buy' || info==='daban'){
+        show2(warnHandleMap[info]);
+    }else{
+        show2(info);
+    }
 
     /*        let audio = new Audio(audioMap[info]);
             audio.volume = 1;

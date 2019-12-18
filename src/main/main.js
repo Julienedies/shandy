@@ -110,6 +110,9 @@ function ready () {
         server.push(stocks);
     });
 
+    ipcMain.on('voice_warn', (event, warnText) => {
+        server.io.emit('warn', warnText)
+    });
 
     // server会通过http 或socket 接收client端发来的消息, 广播一些事件, 通过server.on订阅
     server.on('warn', function (msg) {

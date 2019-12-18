@@ -10,6 +10,7 @@ import voice from '../../../libs/voice'
 import utils from '../../../libs/utils'
 
 import $ from 'jquery'
+import _ from 'lodash'
 
 const {ipcRenderer} = electron;
 
@@ -18,6 +19,8 @@ export default function (scope) {
     const warnJodb = userJodb('warn', [], {joinType: 'push'});
     // 存储定时器句柄，用以取消
     const warnHandleMap = {};
+    let warnIntervalArr = [];
+    let warnIntervalTimer = null;
     const dragOverCla = 'onDragOver';
 
     ipcRenderer.on('warn', (event, info) => {
@@ -76,6 +79,8 @@ export default function (scope) {
         } else {
             $th.removeClass(cla).text(open);
             updateVoiceWarn(true);
+            clearInterval(warnIntervalTimer);
+            warnIntervalTimer = null;
         }
     };
 
@@ -89,16 +94,28 @@ export default function (scope) {
         // trigger => 10 : 间隔执行
         if (/^\d+$/.test(trigger)) {
             if (old) {
-                clearInterval(old.handle);
-                delete old.handle;
+                _.remove(warnIntervalArr, (item) => {
+                    return item === content;
+                });
             }
             if (disable) {
                 return;
             }
-            let handle = setInterval(() => {
-                voice(content);
-            }, 1000 * 60 * trigger);
-            warnHandleMap[id] = {handle};
+
+            let count = Math.ceil(240/trigger);
+            let arr = _.fill(Array(count), content);
+            warnIntervalArr = warnIntervalArr.concat(arr);
+            warnIntervalArr = _.shuffle(warnIntervalArr);
+
+            if(!warnIntervalTimer){
+                warnIntervalTimer = setInterval(() => {
+                    let warnText = warnIntervalArr.shift();
+                    warnIntervalArr.push(warnText);
+                    voice(warnText);
+                    ipcRenderer.send('voice_warn', warnText);
+                }, 1000 * 60 * 6);
+            }
+
         }
         // trigger => 9:00: 定时执行
         else if (/^\d+[:]\d+$/.test(trigger)) {
