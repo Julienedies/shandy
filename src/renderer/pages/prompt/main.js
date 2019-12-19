@@ -32,9 +32,16 @@ const $body = $('body');
 const $place = $('#place');
 
 const warnHandleMap = {};
+let warnIntervalArr = [];
+
 
 const show = () => {
     $body.css('opacity', 1).show();
+};
+
+const show2 = (content) => {
+    $place.text(content);
+    brick.view.to('place');
 };
 
 const hide = () => {
@@ -42,10 +49,6 @@ const hide = () => {
     brick.view.to('hide');
 };
 
-const show2 = (content) => {
-    $place.text(content);
-    brick.view.to('place');
-};
 
 ipc.on('id', function (event, windowID, isFrameMode) {
     win = BrowserWindow.fromId(windowID);
@@ -64,8 +67,6 @@ ipc.on('view', (e, view) => {
 });
 
 
-let warnIntervalArr = [];
-
 warnArr.forEach((item, index) => {
     let id = item.id;
     let content = item.content;
@@ -78,21 +79,21 @@ warnArr.forEach((item, index) => {
 
     // trigger => 10 : 间隔执行
     if (/^\d+$/.test(trigger)) {
-        let count = Math.ceil(240/trigger);
+        let count = Math.ceil(240 / trigger);
         let arr = _.fill(Array(count), content);
         warnIntervalArr = warnIntervalArr.concat(arr);
         warnIntervalArr = _.shuffle(warnIntervalArr);
     }
-        // trigger => 9:00: 定时执行
-        else if (/^\d+[:]\d+$/.test(trigger)) {
+    // trigger => 9:00: 定时执行
+    else if (/^\d+[:]\d+$/.test(trigger)) {
         let handle = utils.timer(trigger, () => {
             show2(content);
         });
     }
-        // trigger => 'daban': 打板动作触发
-        else {
-            warnHandleMap[trigger] = content;
-        }
+    // trigger => 'daban': 打板动作触发
+    else {
+        warnHandleMap[trigger] = content;
+    }
 });
 
 console.log(warnIntervalArr);
@@ -101,7 +102,7 @@ console.log(warnIntervalArr);
     let warnText = warnIntervalArr.shift();
     warnIntervalArr.push(warnText);
     show2(warnText);
-}, 1000 * 60 * 6);*/
+}, 1000 * 60 * 4);*/
 
 /*[
     ['9:05', '交易准备'],
@@ -118,7 +119,7 @@ console.log(warnIntervalArr);
 $('[ic-view]').on('ic-view.active', function (e) {
     setTimeout(() => {
         hide();
-    }, 1000 * 9);
+    }, 1000 * 17);
 });
 
 const audioMap = {
@@ -131,9 +132,9 @@ socket.on('warn', (info) => {
         return hide();
     }
 
-    if(info === 'sell' || info ==='buy' || info==='daban'){
+    if (info === 'sell' || info === 'buy' || info === 'daban') {
         show2(warnHandleMap[info]);
-    }else{
+    } else {
         show2(info);
     }
 

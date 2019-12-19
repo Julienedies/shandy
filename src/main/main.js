@@ -3,7 +3,7 @@
  * Created by j on 18/5/21.
  */
 
-process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true
+process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
 
 import path from 'path'
 import electron from 'electron'
@@ -21,7 +21,7 @@ app.SHARED_CONFIG = config;
 
 server.start(port);
 
-let mainWindow
+let mainWindow;
 
 // 创建主窗口，一个渲染进程
 function createWindow () {
@@ -102,16 +102,17 @@ function ready () {
 
     // 快捷键 =>  只截大屏幕的图
     globalShortcut.register('CommandOrControl+shift+2', function () {
-            mainWindow.webContents.send('screenCapture');
+        mainWindow.webContents.send('screenCapture');
     });
 
-    // 打板封单监控数据 => socket.io => 浏览器页面 http://192.168.3.20:3000/
+    // renderer进程 (打板封单监控数据) => socket.io => socket.client (浏览器页面 http://192.168.3.20:3000/)
     ipcMain.on('rts_push', (event, stocks) => {
         server.push(stocks);
     });
 
+    // renderer进程 => 主进程 => socket.io => socket.client
     ipcMain.on('voice_warn', (event, warnText) => {
-        server.io.emit('warn', warnText)
+        server.io.emit('warn', warnText);
     });
 
     // server会通过http 或socket 接收client端发来的消息, 广播一些事件, 通过server.on订阅
@@ -142,7 +143,6 @@ function ready () {
         ac.activeTdx();
     });
 }
-
 
 
 app.on('ready', ready);

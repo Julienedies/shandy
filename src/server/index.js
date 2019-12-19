@@ -25,8 +25,8 @@ const io = socket(httpServer, {
 const EventEmitter = _events.EventEmitter;
 const events = new EventEmitter();
 
-const staticDir = path.resolve(__dirname, './')
-const webStaticDir = path.resolve(__dirname, '../web')
+const staticDir = path.resolve(__dirname, './');
+const webStaticDir = path.resolve(__dirname, '../web');
 
 // 上行请求体解析
 app.use(bodyParser.json({limit: '50mb'}));
@@ -41,23 +41,23 @@ app.get('/set_node_modules_path.js', (req, res) => {
         }catch(err){
             console.log(err);
         }
-    `)
-})
+    `);
+});
 
 app.get('/msg/', (req, res) => {
-    let info = req.query.info
-    console.log('/msg', info)
-    io.emit('warn', info)
-    events.emit('warn', info)
-    res.send(`info: ${ info }`)
+    let info = req.query.info;
+    console.log('/msg', info);
+    io.emit('warn', info);
+    events.emit('warn', info);
+    res.send(`info: ${ info }`);
 })
 
-app.use('/web/', express.static(webStaticDir))
-app.use('/upload/', express.static(config.UPLOAD_DIR))
-app.use(express.static(staticDir))
-app.use(express.static(path.resolve(__dirname, '../z')))
+app.use('/web/', express.static(webStaticDir));
+app.use('/upload/', express.static(config.UPLOAD_DIR));
+app.use(express.static(staticDir));
+app.use(express.static(path.resolve(__dirname, '../z')));
 
-route(app)
+route(app);
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 io.on('connection', function (socket) {
@@ -107,6 +107,6 @@ function F () {
 
 F.prototype = events;
 
-export default new F()
+export default new F();
 
 

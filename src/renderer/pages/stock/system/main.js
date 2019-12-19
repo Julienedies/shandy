@@ -24,7 +24,7 @@ import setTagCtrl from '../tags/set-tag-ctrl'
 
 brick.set('ic-select-cla', 'is-info');
 
-brick.reg('setTagCtrl', setTagCtrl)
+brick.reg('setTagCtrl', setTagCtrl);
 
 brick.reg('systemCtrl', function () {
 
@@ -46,7 +46,7 @@ brick.reg('systemCtrl', function () {
             let interArrA = _.intersection(filterArr, condArrA);
             let condArrB = b['交易系统条件'] || [null];
             let interArrB = _.intersection(filterArr, condArrB);
-            return interArrB.length/condArrB.length - interArrA.length/condArrA.length;
+            return interArrB.length / condArrB.length - interArrA.length / condArrA.length;
         });
         scope.render('systemList', model.system);
     };
@@ -58,8 +58,11 @@ brick.reg('systemCtrl', function () {
         scope.render('mqElement', data.tags['行情要素']);
         scope.render('condition', data.tags['交易系统条件']);
         scope.render('systemList', data.system, function () {
-            console.log(this);
-            $(this).find('>li').on('dragstart', scope.dragstart).on('dragover', scope.dragover).on('drop', scope.drop);
+            $(this).find('>li')
+                .on('dragstart', scope.dragstart)
+                .on('dragover', scope.dragover)
+                .on('drop', scope.drop)
+                .on('dragleave', scope.dragleave);
         });
     };
 
@@ -113,12 +116,15 @@ brick.reg('systemCtrl', function () {
 
     scope.dragover = function (e) {
         e.preventDefault();
-        e.stopPropagation();
+        //e.stopPropagation();
         //e.originalEvent.dataTransfer.dropEffect = 'move';
         //console.log(4444, e.target)
-        let $target = $(e.target);
-        //$target.css('border', 'solid 1px blue');
+        $(e.target).addClass('onDragOver');
         return false;
+    };
+
+    scope.dragleave = function (e) {
+        $(e.target).removeClass('onDragOver');
     };
 
     scope.drop = function (e) {
@@ -130,9 +136,9 @@ brick.reg('systemCtrl', function () {
         if (!distId || distId === id) {
             return console.log('not dist');
         }
-        $elm.find(`#k${ id }`).insertBefore(`#k${ distId }`);
+        //$elm.find(`#k${ id }`).insertBefore(`#k${ distId }`);
         $.ajax(`/stock/system/move/${ id }/${ distId }`).done((data) => {
-            //brick.controllers.get('systemCtrl').onGetSystemDone(data);
+            scope.onGetSystemDone(data);
         });
         return false;
     };

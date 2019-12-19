@@ -9,29 +9,34 @@ import userJodb from '../../../libs/user-jodb'
 import voice from '../../../libs/voice'
 import utils from '../../../libs/utils'
 
-import $ from 'jquery'
 import _ from 'lodash'
+import $ from 'jquery'
 
 const {ipcRenderer} = electron;
 
 export default function (scope) {
 
-    const warnJodb = userJodb('warn', [], {joinType: 'push'});
+    const warnJodb = userJodb('warn', []);
     // 存储定时器句柄，用以取消
+    let isAbleVoiceWarn = true;
     const warnHandleMap = {};
     let warnIntervalArr = [];
     let warnIntervalTimer = null;
     const dragOverCla = 'onDragOver';
 
     ipcRenderer.on('warn', (event, info) => {
-        console.log(info, warnHandleMap[info])
+        console.log(info, warnHandleMap[info]);
         voice(warnHandleMap[info] || '');
     });
 
     let render = () => {
         let model = warnJodb.get();
-        scope.render('warnList', {model}, function() {
-            $(this).find('tr').on('dragstart', scope.dragstart).on('dragover', scope.dragover).on('drop', scope.drop).on('dragleave', scope.dragleave);
+        scope.render('warnList', {model}, function () {
+            $(this).find('tr')
+                .on('dragstart', scope.dragstart)
+                .on('dragover', scope.dragover)
+                .on('dragleave', scope.dragleave)
+                .on('drop', scope.drop);
         });
     };
 
@@ -73,6 +78,7 @@ export default function (scope) {
         let close = '关闭语音';
         let cla = 'is-primary';
         let str = $th.text();
+        isAbleVoiceWarn = !isAbleVoiceWarn;
         if (str === open) {
             $th.addClass(cla).text(close);
             updateVoiceWarn();
@@ -93,29 +99,16 @@ export default function (scope) {
 
         // trigger => 10 : 间隔执行
         if (/^\d+$/.test(trigger)) {
-            if (old) {
-                _.remove(warnIntervalArr, (item) => {
-                    return item === content;
-                });
-            }
+            _.remove(warnIntervalArr, (item) => {
+                return item === content;
+            });
             if (disable) {
                 return;
             }
-
-            let count = Math.ceil(240/trigger);
+            let count = Math.ceil(60 / trigger);
             let arr = _.fill(Array(count), content);
             warnIntervalArr = warnIntervalArr.concat(arr);
             warnIntervalArr = _.shuffle(warnIntervalArr);
-
-            if(!warnIntervalTimer){
-                warnIntervalTimer = setInterval(() => {
-                    let warnText = warnIntervalArr.shift();
-                    warnIntervalArr.push(warnText);
-                    voice(warnText);
-                    ipcRenderer.send('voice_warn', warnText);
-                }, 1000 * 60 * 6);
-            }
-
         }
         // trigger => 9:00: 定时执行
         else if (/^\d+[:]\d+$/.test(trigger)) {
@@ -143,17 +136,24 @@ export default function (scope) {
     }
 
     function updateVoiceWarn (cancel) {
-        //if (utils.isTrading() || cancel) {
-            warnJodb.get().forEach((item, index) => {
-                setVoiceWarnForItem(item, cancel);
-            });
-        //}
+        warnJodb.get().forEach((item, index) => {
+            setVoiceWarnForItem(item, cancel);
+        });
+
+        if (!warnIntervalTimer && isAbleVoiceWarn) {
+            warnIntervalTimer = setInterval(() => {
+                let warnText = warnIntervalArr.shift();
+                warnIntervalArr.push(warnText);
+                voice(warnText);
+                ipcRenderer.send('voice_warn', warnText);
+            }, 1000 * 60 * 4);
+        }
     }
 
     warnJodb.on('change', function () {
-        updateVoiceWarn();
         render();
-        console.log('updateVoiceWarn on change =>', warnHandleMap);
+        updateVoiceWarn();
+        console.log('updateVoiceWarn on change =>', warnHandleMap, warnIntervalArr);
     });
 
     utils.timer('11:30', () => {
@@ -184,12 +184,12 @@ export default function (scope) {
     scope.dragover = function (e) {
         e.preventDefault();
         //e.stopPropagation();
-        //e.originalEvent.dataTransfer.dropEffect = 'move';
+        e.originalEvent.dataTransfer.dropEffect = 'move';
         $(e.target).addClass(dragOverCla);
         return false;
     };
 
-    scope.dragleave = function(e) {
+    scope.dragleave = function (e) {
         $(e.target).removeClass(dragOverCla);
     };
 
@@ -202,10 +202,9 @@ export default function (scope) {
         if (!distId || distId === id) {
             return console.log('not dist');
         }
-        console.log('drop', id, distId+'', e.target)
-        warnJodb.insert(id, distId+'');
-        // scope.$elm.find(`#k${ id }`).insertBefore(`#k${ distId }`);
+        console.log('drop', id, distId + '', e.target);
+        warnJodb.insert(id, distId + '');
         return false;
     };
 
-};
+}
