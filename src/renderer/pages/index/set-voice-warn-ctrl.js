@@ -99,9 +99,6 @@ export default function (scope) {
 
         // trigger => 10 : 间隔执行
         if (/^\d+$/.test(trigger)) {
-            _.remove(warnIntervalArr, (item) => {
-                return item === content;
-            });
             if (disable) {
                 return;
             }
@@ -136,6 +133,7 @@ export default function (scope) {
     }
 
     function updateVoiceWarn (cancel) {
+        warnIntervalArr = [];
         warnJodb.get().forEach((item, index) => {
             setVoiceWarnForItem(item, cancel);
         });
