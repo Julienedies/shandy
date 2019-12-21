@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>prompt</title>
+    <title>warn</title>
     <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
     <link rel="stylesheet" href="../../css/vendor/effeckt/animations.css">
     <script src="/set_node_modules_path.js"></script>
@@ -11,121 +11,217 @@
 <body>
 <div class="x-wrapper" ic-view-stage ic-ctrl="mainCtrl">
 
-    <div ic-view="hide"></div>
-
-    <div ic-view="place">
-        <div class="box pre" id="place"></div>
-    </div>
-
-    <div ic-view="test" ic-active>
+    <div ic-view="reminder">
         <div class="box">
-            <h4 class="title is-5"></h4>
-            <ul>
-                <li>时不我待。</li>
-                <li>不要忘记那些恐惧和痛苦。</li>
-                <li>不要重复错误. </li>
-            </ul>
+            <h4 class="title is-4">提醒</h4>
+            <div>
+                <ul ic-step>
+                    <li>弱水三千, 只取一瓢</li>
+                    <li>控制 逻辑 计划 等待 耐心 专注</li>
+                    <li>止损错误; 本质是囿于小利, 斤斤计较;</li>
+                    <li>错误头寸, 鸡肋头寸, 竞价平仓;</li>
+                    <li>不要停止止损, 这个错误一直重复.</li>
+                    <li>正确的头寸不需要大的止损!</li>
+                    <li>自动执行条件单, 不要停止止损;</li>
+                    <li>登录华宝证券</li>
+                    <li>注意撤单</li>
+                    <li>
+                        <button class="button is-primary" ic-view-to="plan">next</button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <div ic-view="交易准备">
-        <div class="box">
-            <h4 class="title is-5">交易准备</h4>
-            <ul>
-                <li>
-                    <p>遵守交易逻辑和交易原则。</p>
-                    <p>我是否能以交易为生？我还有其它路可走吗？</p>
-                </li>
-                <li>不要重复错误。</li>
-                <li>计划和预案。</li>
-                <li>不要忘记那些恐惧和痛苦。</li>
-                <li><a>国脉科技</a> <a>梦网集团</a> <a>任子行</a></li>
-            </ul>
+    <div ic-view="mistake" ic-active>
+        <div class="box" ic-ctrl="mistakeCtrl">
+            <h4 class="title is-4">预案 & 错误</h4>
+            <div class="level">
+                <div class="level-left">
+                    <ul id="b-plan">
+                        <li>
+                            <p>早盘市场合力出结果：龙头？ 强势？弱势？所以9:45前要平仓。超短唯快唯强。 </p>
+                            <p>一切以盘面为主，不要心存臆想，先入为主，陷入思维定式。</p>
+                            <p>平仓要果断，不要囿于小利，斤斤计较。</p>
+                        </li>
+
+                        <li>
+                            <p class="ani-warn">低开： 弱，意味着风险，止损优先。最多1个点止损。</p>
+                            <p>低开要把握首次反弹的止损机会。</p>
+                            <p>如果低开太多, 根据预期最低价和最高价进行衡量；仓位大先减仓位。</p>
+                        </li>
+
+                        <li>
+                            <p>高开： 冲不破压力线，平仓优先。</p>
+                            <p>小心高开回落, 除非超预期高开，比如大于7%。允许回落2%。</p>
+                            <p>尤其要小心高开回落，第一波下杀反弹不上去，止盈优先。</p>
+                        </li>
+
+                        <li>
+                            <p>必须设定止盈止损预案条件单。 遵守交易原则。</p>
+                            <p>根据阻力价，支撑价， 预期最高价，预期最低价，止盈价，止损价进行衡量设定。</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="level-right" ic-tpl="mistake">
+                    <ul ic-viewer ic-viewer-url="src" ic-step>
+                        <li ic-for="i,v in model">
+                            <h6 class="title is-6">
+                                <span style="padding-right:2em;">{{ v.text }}</span>
+                                <a style="font-size:0.8em;" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
+                                    {{ parseImgName(o) }} &nbsp;&nbsp;
+                                </a>
+                            </h6>
+                            <p class="pre none">{{ v.desc }}</p>
+                        </li>
+                        <li class="none">
+                            <div class="level">
+                                <div class="level-left">
+                                    <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
+                                </div>
+                                <div class="level-right">
+                                    <button class="button" ic-view-back>返回</button>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button class="button" ic-view-to="daban">next</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div ic-view="竞价研判">
-        <div class="box">
-            <h4 class="title is-6">竞价研判</h4>
-            <ul>
-                <li>根据竞价判断市场强弱。偏弱要小心谨慎。同时小心周期高潮。</li>
-                <li>不要重复止损错误。止损越快越好。正确的头寸不需要止损。国脉科技。</li>
-                <li>
-                    <p>低开： 弱，意味着风险，止损优先。最多1个点止损。</p>
-                    <p>低开要把握首次反弹的止损机会。</p>
-                    <p>如果低开太多, 根据预期最低价和最高价进行衡量；仓位大先减仓位。</p>
-                </li>
-                <li>
-                    <p>高开： 冲不破压力线，平仓优先。</p>
-                    <p>小心高开回落, 除非超预期高开，比如大于7%。允许回落2%。</p>
-                    <p>尤其要小心高开回落，第一波下杀反弹不上去，止盈优先。</p>
-                </li>
-                <li>
-                    <p>必须设定止盈止损预案条件单。 遵守交易原则。</p>
-                    <p>根据阻力价，支撑价， 预期最高价，预期最低价，止盈价，止损价进行衡量设定。</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div ic-view="早盘">
-        <div class="box">
-            <h4 class="title is-6">早盘</h4>
-            <ul>
-                <li>早盘市场合力出结果。9点45分钟前完成平仓。必须设定止盈止损预案条件单。 不要混混沌沌，陷入被动。</li>
-                <li>早盘市场合力出结果：龙头？ 强势？弱势？所以9:45前要平仓。超短唯快唯强。</li>
-                <li>一切以盘面为主，不要心存臆想，先入为主，陷入思维定式。</li>
-                <li>平仓要果断，不要囿于小利，斤斤计较。</li>
-            </ul>
+    <div ic-view="plan">
+        <div class="box" ic-ctrl="planCtrl">
+            <h4 class="title is-5">计划</h4>
+            <div class="level">
+                <div class="level-left" ic-tpl="replay">
+                    <ul>
+                        <li class="table_3" ic-for="i, v in model" ic-if="v">
+                            <div class="pre"><span style="color:yellowgreen; font-size:0.8em;">{{i}} : </span><span>{{v}}</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="level-right" ic-tpl="plans">
+                    <ul>
+                        <li ic-for="j,plan in model">
+                            <h6 style="font-weight: bold;">{{plan['股票名称']}} </h6>
+                            <div class="table_3">
+                                <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
+                                    <div class="pre">{{plan[k]}}</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="button" ic-view-back>返回</button>
+                &nbsp;&nbsp;
+                <button class="button is-primary" ic-view-to="mistake">next</button>
+            </div>
         </div>
     </div>
 
     <div ic-view="daban">
-        <div class="box">
-            <h4 class="title is-6">打板</h4>
-            <ul>
-                <li>
-                    <p>交易系统?</p>
-                </li>
-            </ul>
+        <div class="box" ic-ctrl="warnCtrl">
+            <h4 class="title is-5">打板</h4>
+            <div class="">
+                <ul>
+                    <li>
+                        <div>是龙头吗? 抢筹? 市场转折点?</div>
+                        <div>买点正确吗? 系统内吗?</div>
+                        <div>计划内吗?</div>
+                    </li>
+                    <li>
+                        <div>支撑你的交易逻辑是什么?</div>
+                        <div>你要捕捉的目标行情是什么?</div>
+                    </li>
+                    <li>
+                        <div>确定性?</div>
+                        <div>盈亏比?</div>
+                    </li>
+                    <li>
+                        <div class="level">
+                            <div class="level-left">
+                                <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
+                            </div>
+                            <div class="level-right">
+                                <button class="button" ic-view-back>返回</button>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button class="button" ic-view-to="buy">next</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div ic-view="buy">
-        <div class="box">
+        <div class="box" ic-ctrl="warnCtrl">
             <h4 class="title is-5">建仓</h4>
-            <ul ic-step>
-                <li>
-                    <div>买点正确吗? 系统内吗?</div>
-                    <div>计划内吗?</div>
-                </li>
-                <li>
-                    <div>支撑你的交易逻辑是什么?</div>
-                    <div>你要捕捉的目标行情是什么?</div>
-                </li>
-                <li>
-                    <div>确定性?</div>
-                    <div>盈亏比?</div>
-                </li>
-                <li>
-                    <div>把事情做对,不要再重复以前的操作手法或错误了!</div>
-                </li>
-            </ul>
+            <div class="">
+                <ul ic-step>
+                    <li>
+                        <div>买点正确吗? 系统内吗?</div>
+                        <div>计划内吗?</div>
+                    </li>
+                    <li>
+                        <div>支撑你的交易逻辑是什么?</div>
+                        <div>你要捕捉的目标行情是什么?</div>
+                    </li>
+                    <li>
+                        <div>确定性?</div>
+                        <div>盈亏比?</div>
+                    </li>
+                    <li>
+                        <div>把事情做对,不要再重复以前的操作手法或错误了!</div>
+                    </li>
+                    <li>
+                        <div class="level">
+                            <div class="level-left">
+                                <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
+                            </div>
+                            <div class="level-right">
+                                <button class="button" ic-view-back>返回</button>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button class="button" ic-view-to="sell">next</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div ic-view="sell">
-        <div class="box">
+        <div class="box" ic-ctrl="warnCtrl">
             <h4 class="title is-5">平仓</h4>
-            <ul ic-step>
-                <li>
-                    <div>错误头寸, 鸡肋头寸, 尽快平仓; 不要囿于小利, 仅仅计较.</div>
-                    <div>不要丧失正确的头寸!</div>
-                </li>
-            </ul>
+            <div class="">
+                <ul ic-step>
+                    <li>
+                        <div>错误头寸, 鸡肋头寸, 尽快平仓; 不要囿于小利, 仅仅计较.</div>
+                        <div>不要丧失正确的头寸!</div>
+                    </li>
+                    <li>
+                        <div class="level">
+                            <div class="level-left">
+                                <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
+                            </div>
+                            <div class="level-right">
+                                <button class="button" ic-view-back>返回</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
+
+
 
 </body>
 </html>

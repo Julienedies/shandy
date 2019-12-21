@@ -41,11 +41,23 @@ brick.reg('mainCtrl', function (scope) {
     let $list = $('#list');
     let $imgDir = $('input[name=imgDir]');
 
-    scope.reload = function () {
+    scope.reload = function (e) {
         location.reload();
     };
+
+    scope.clean = function (e) {
+        let imgArr = viewerJodb.get();
+        let resultArr = [];
+        imgArr.forEach(({img}) => {
+            if (!fs.existsSync(img)) {
+                resultArr.push(img);
+            }
+        });
+        $.icMsg(resultArr.length ? resultArr : '没有错误图片');
+        console.log(resultArr);
+    };
     // 反转图片列表
-    scope.reverse = function () {
+    scope.reverse = function (e) {
         scope.urls.reverse();
         $list.icRender('list', scope.urls);
     };

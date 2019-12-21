@@ -53,7 +53,7 @@ function voice (sign, text, cb) {
 
     // 有sign，表示优先级高，加入队列头部
     if (sign) {
-        q.unshift(item)
+        q.unshift(item);
     } else {
         q.push(item);
     }

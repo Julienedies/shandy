@@ -3,10 +3,10 @@
 		"tdx_extern_user_file": "/Volumes/C/new_jyplug/T0002/signals/extern_user.txt",
 		"csdPath": "/Users/j/dev/csd",
 		"bounds": {
-			"x": 158,
-			"y": 73,
+			"x": 150,
+			"y": 61,
 			"width": 1217,
-			"height": 731
+			"height": 769
 		},
 		"fetchSources": [
 			"ths_new",
@@ -15,22 +15,22 @@
 			"ycj"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 162,
+		"fetchFromIndex": 3098,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json"
 	},
 	"warn": {
 		"randomBgImgDir": "/Users/j/pim/img/人物",
 		"bounds": {
-			"x": -2,
-			"y": 23,
-			"width": 1440,
-			"height": 808
+			"x": 1440,
+			"y": 0,
+			"width": 1920,
+			"height": 1080
 		}
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/竞价系统/2019-12",
+		"imgDir": "/Users/j/截图/目标行情/2019-01",
 		"bounds": {
 			"x": 1440,
 			"y": 0,
@@ -44,6 +44,7 @@
 			"height": 50
 		},
 		"history": [
+			"/Users/j/截图/目标行情/2019-01",
 			"/Users/j/截图/X交割单学习/X退学炒股",
 			"/Users/j/截图/竞价系统/2019-12",
 			"/Users/j/截图/竞价系统/2019-11",
@@ -99,25 +100,25 @@
 	},
 	"setting": {
 		"bounds": {
-			"x": 1707,
-			"y": 220,
-			"width": 1360,
-			"height": 832
+			"x": 250,
+			"y": 104,
+			"width": 1028,
+			"height": 607
 		}
 	},
 	"prompt": {
 		"bounds": {
-			"x": 1440,
-			"y": 0,
-			"width": 1920,
-			"height": 1080
+			"x": 0,
+			"y": 23,
+			"width": 1440,
+			"height": 808
 		}
 	},
 	"reader": {
 		"bounds": {
-			"x": 106,
-			"y": 71,
-			"width": 889,
+			"x": 216,
+			"y": 80,
+			"width": 1107,
 			"height": 722
 		}
 	},

@@ -1,4 +1,4 @@
-<div class="column" ic-ctrl="setSystemCtrl" ic-popup="setSystem">
+<div ic-ctrl="setSystemCtrl" ic-popup="setSystem">
 
     <div class="column">
         <div ic-tpl="setSystemCtrl" ic-tpl-init="{system:{}, tags:{}}">
@@ -83,7 +83,7 @@
                 <!-- tr 交易系统逻辑 -->
                 <div>
                     <h6>交易系统逻辑</h6>
-                    <div class="field is-grouped is-grouped-multiline" ic-select="交易系统逻辑" ic-form-field="交易系统逻辑">
+                    <div class="field is-grouped is-grouped-multiline" ic-select="交易系统逻辑" ic-select-type="checkbox" ic-form-field="交易系统逻辑">
                         <div class="control" ic-for="i,v in tags['交易系统逻辑']">
                             <div class="tags has-addons">
                                 <span class="tag is-small"
@@ -147,39 +147,38 @@
                     </div>
                 </div>
 
-                <!-- tr 备注 -->
                 <div>
-                    <h6>备注</h6>
+                    <h6></h6>
                     <div>
-                        <div class="control">
-                            <textarea rows="3" class="textarea" ic-form-field="note">{{system.note}}</textarea>
+                        <div class="columns">
+                            <div class="column is-6">
+                                <div class="field has-addons">
+                                    <p class="control">
+                                        <a class="button is-static">
+                                            预期收益(点)
+                                        </a>
+                                    </p>
+                                    <p class="control">
+                                        <input class="input" type="number" ic-form-field="yield" ic-value="{{ system.yield || 5 }}">
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="column is-6">
+                                <div class="field has-addons">
+                                    <p class="control">
+                                        <a class="button is-static">
+                                            持仓周期(日)
+                                        </a>
+                                    </p>
+                                    <p class="control">
+                                        <input class="input" type="number" ic-form-field="holding" ic-value="{{ system.holding || 1 }}">
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- tr 示例图片 -->
-                <!--<div ic-viewer ic-viewer-url="href">
-                    <h6>示例图片</h6>
-                    <div>
-                        <div class="field is-grouped is-grouped-multiline" ic-select="示例图片" ic-select-type="checkbox" ic-form-field="示例图片">
-                            <div class="control" ic-for="i,v in (system['示例图片']||[])">
-                                <div class="tags has-addons">
-                                    <span class="tag is-small" ic-select-item ic-has-selected="true" ic-val="{{ v }}">{{ parseImgName(v) }}</span>
-                                    <a class="tag is-small hint&#45;&#45;top" aria-label="图片预览" ic-viewer-item ic-href="{{ parseImgPath(v) }}">
-                                        <span class="icon is-small"><i class="far fa-eye"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div ic-select-path ic-select-path-on-done="onSelectPathDone">
-                                <button class="button is-primary is-small">
-                                    添加示例图片
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
                 <!-- tr -->
                 <div>
                     <h6></h6>
@@ -198,10 +197,45 @@
                     </div>
                 </div>
 
+                <!-- tr 备注 -->
+                <div>
+                    <h6>备注</h6>
+                    <div>
+                        <div class="control">
+                            <textarea rows="3" class="textarea" ic-form-field="note">{{system.note}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- tr 示例图片 -->
+<!--<div ic-viewer ic-viewer-url="href">
+    <h6>示例图片</h6>
+    <div>
+        <div class="field is-grouped is-grouped-multiline" ic-select="示例图片" ic-select-type="checkbox" ic-form-field="示例图片">
+            <div class="control" ic-for="i,v in (system['示例图片']||[])">
+                <div class="tags has-addons">
+                    <span class="tag is-small" ic-select-item ic-has-selected="true" ic-val="{{ v }}">{{ parseImgName(v) }}</span>
+                    <a class="tag is-small hint&#45;&#45;top" aria-label="图片预览" ic-viewer-item ic-href="{{ parseImgPath(v) }}">
+                        <span class="icon is-small"><i class="far fa-eye"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="control">
+            <div ic-select-path ic-select-path-on-done="onSelectPathDone">
+                <button class="button is-primary is-small">
+                    添加示例图片
+                </button>
+            </div>
+        </div>
+    </div>
+</div>-->
 
 
 <!-- tr -->

@@ -26,7 +26,6 @@ import setVoiceWarnCtrl from './set-voice-warn-ctrl'
 
 const {ipcRenderer} = electron;
 
-
 brick.services.reg('viewsModel', () => {
     const list = []
     let activeItem
@@ -84,31 +83,31 @@ brick.services.reg('viewsModel', () => {
 
 brick.reg('mainCtrl', function (scope) {
 
-    let $elm = this.$elm
+    let $elm = this.$elm;
 
-    let $viewsWrapper = $('#viewsWrapper')
-    let $indexView = $('#indexView')
-    let $viewTabs = $('#viewTabs')
-    let $views = $('#views')
+    let $viewsWrapper = $('#viewsWrapper');
+    let $indexView = $('#indexView');
+    let $viewTabs = $('#viewTabs');
+    let $views = $('#views');
 
-    const viewsModel = brick.services.get('viewsModel')
+    const viewsModel = brick.services.get('viewsModel');
 
     let render = () => {
-        let list = viewsModel.get()
-        $viewTabs.icRender({model: list})
+        let list = viewsModel.get();
+        $viewTabs.icRender({model: list});
         if (!list.length) {
-            scope.showIndex()
+            scope.showIndex();
         }
-    }
+    };
 
     this.show = function (e, url) {
-        $viewsWrapper.show()
-        $indexView.hide()
+        $viewsWrapper.show();
+        $indexView.hide();
         let $th = $(this)
-        let title = $th.text()
-        let item = {title, url}
+        let title = $th.text();
+        let item = {title, url};
         if (viewsModel.has(item)) {
-            viewsModel.active(item)
+            viewsModel.active(item);
         } else {
             item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%; "></webview>`).appendTo($views);
             viewsModel.add(item);
@@ -132,110 +131,36 @@ brick.reg('mainCtrl', function (scope) {
         $viewsWrapper.hide();
     };
 
-    this.openByWindow = function (e, url) {
-        let name = url.match(/([^/]+)\.html$/)[1];
-        new Win({url, name, ...getBounds(name)});
-    };
-
     // -------------------------------------------------------------------------------------------
 
     function getBounds (name) {
         return setting.get(`${ name }.bounds`) || {};
     }
 
-    scope.openReview = function () {
-        let win = scope.reviewTradingWindow;
+    this.openByWindow = function (e, url) {
+        let name = url.match(/([^/]+)\.html$/)[1];
+        new Win({
+            url,
+            name,
+            ...getBounds(name)
+        });
+    };
+
+    scope.openWindow = function (e, name) {
+        let windowKey = `${ name }Window`;
+        let win = scope[windowKey];
         if (win) {
             win.show();
         } else {
-            let name = 'review';
-            let url = 'review.html';
-            scope.reviewTradingWindow = new Win({
-                name,
-                url,
-                ...getBounds(name),
-                onClose: () => {
-                    delete scope.reviewTradingWindow;
-                }
-            });
-            scope.reviewTradingWindow.maximize()
-        }
-    };
-
-    scope.openViewer = function () {
-        let viewerWindow = scope.viewerWindow;
-        if (viewerWindow) {
-            viewerWindow.show();
-        } else {
-            let name = 'viewer';
-            let url = 'viewer.html';
-            scope.viewerWindow = new Win({
-                name,
-                url,
-                ...getBounds(name),
-                onClose: () => {
-                    delete scope.viewerWindow;
-                }
-            });
-            scope.viewerWindow.maximize();
-        }
-    };
-
-    scope.openCsd = function (e) {
-        let csdWindow = scope.csdWindow
-        if (csdWindow) {
-            csdWindow.show();
-        } else {
-            let name = 'csd';
-            let url = 'csd.html';
-            scope.csdWindow = new Win({
+            let url = `${ name }.html`;
+            scope[windowKey] = new Win({
                 name,
                 url,
                 x: 160,
                 y: 80,
                 ...getBounds(name),
                 onClose: () => {
-                    delete scope.csdWindow;
-                }
-            });
-        }
-    };
-
-    scope.openReader = function (e) {
-        let readerWindow = scope.readerWindow;
-        if (readerWindow) {
-            readerWindow.show();
-        } else {
-            let name = 'reader';
-            let url = 'reader.html';
-            scope.csdWindow = new Win({
-                name,
-                url,
-                x: 160,
-                y: 80,
-                ...getBounds(name),
-                onClose: () => {
-                    delete scope.readerWindow;
-                }
-            });
-        }
-    };
-
-    scope.openSetting = function () {
-        let settingWindow = scope.settingWindow;
-        if (settingWindow) {
-            settingWindow.show()
-        } else {
-            let name = 'setting';
-            let url = 'setting.html';
-            scope.settingWindow = new Win({
-                name,
-                url,
-                x: 160,
-                y: 80,
-                ...getBounds(name),
-                onClose: () => {
-                    delete scope.settingWindow;
+                    delete scope[windowKey];
                 }
             });
         }
@@ -276,6 +201,58 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
+    scope.openWarn = function () {
+        let warnWindow = scope.warnWindow;
+        if (warnWindow) {
+            return warnWindow.close();
+        } else {
+            let name = 'warn';
+            let url = 'warn.html';
+            let opt = {
+                name,
+                url,
+                width: 530,
+                height: 320,
+                x: 2150,
+                y: 220,
+                ...getBounds(name),
+                //transparent: true,
+                //titleBarStyle: 'hidden',
+                //frame: false,
+                hasShadow: false,
+                alwaysOnTop: true,
+                onClose () {
+                    delete scope.warnWindow;
+                    fn2();
+                }
+            };
+
+            let fn = (flag) => {
+                warnWindow = scope.warnWindow = new Win(opt);
+                flag && warnWindow.win.setIgnoreMouseEvents(true);
+                warnWindow.win.webContents.on('did-finish-load', function () {
+                    warnWindow.win.webContents.send('id', warnWindow.win.id, flag)
+                });
+            };
+
+            let fn2 = () => {
+                opt = {
+                    ...opt,
+                    ...getBounds(name),
+                };
+                opt.frame = false;
+                opt.transparent = true;
+                opt.onClose = function () {
+                    delete scope.warnWindow;
+                }
+                fn(true);
+            };
+
+            fn();
+
+        }
+    };
+
     scope.openReminder = function () {
         let reminderWin = scope.reminderWin;
         if (reminderWin) {
@@ -295,10 +272,10 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    scope.openWarn = function (isFrame) {
-        let warnWindow = scope.warnWindow;
-        if (warnWindow) {
-            return warnWindow.show();
+    scope.openPrompt = function (isFrame) {
+        let promptWindow = scope.promptWindow;
+        if (promptWindow) {
+            return promptWindow.show();
             /* let msg = `
  增加这么多步骤, 只是为了让你少犯错;
  控制本能, 把事情做对, 而不是被本能控制;
@@ -310,8 +287,8 @@ brick.reg('mainCtrl', function (scope) {
                  warnWindow.close()
              }*/
         } else {
-            let name = 'warn';
-            let url = 'warn.html';
+            let name = 'prompt';
+            let url = 'prompt.html';
             let opt = {
                 name,
                 url,
@@ -327,117 +304,42 @@ brick.reg('mainCtrl', function (scope) {
                 //hasShadow: false,
                 alwaysOnTop: true,
                 onClose () {
-                    delete scope.warnWindow;
+                    delete scope.promptWindow;
                 }
             }
             // opt.frame = !!isFrame;
-            warnWindow = scope.warnWindow = new Win(opt);
-            warnWindow.maximize()
-            //warnWindow.win.setIgnoreMouseEvents(true)
-            warnWindow.win.webContents.on('did-finish-load', function () {
-                warnWindow.win.webContents.send('id', warnWindow.win.id)
-            })
+            promptWindow = scope.promptWindow = new Win(opt);
+            promptWindow.maximize();
+            //promptWindow.win.setIgnoreMouseEvents(true);
+            promptWindow.win.webContents.on('did-finish-load', function () {
+                promptWindow.win.webContents.send('id', promptWindow.win.id);
+            });
         }
     };
 
-    scope.openPrompt = function () {
-        let promptWindow = scope.promptWindow;
-        if (promptWindow) {
-            return promptWindow.close();
-        } else {
-            let name = 'prompt';
-            let url = 'prompt.html';
-            let opt = {
-                name,
-                url,
-                width: 530,
-                height: 320,
-                x: 2150,
-                y: 220,
-                ...getBounds(name),
-                //transparent: true,
-                //titleBarStyle: 'hidden',
-                //frame: false,
-                hasShadow: false,
-                alwaysOnTop: true,
-                onClose () {
-                    delete scope.promptWindow;
-                    fn2();
-                }
-            };
-
-            let fn = (flag) => {
-                promptWindow = scope.promptWindow = new Win(opt);
-                flag && promptWindow.win.setIgnoreMouseEvents(true);
-                promptWindow.win.webContents.on('did-finish-load', function () {
-                    promptWindow.win.webContents.send('id', promptWindow.win.id, flag)
-                });
-            };
-
-            let fn2 = () => {
-                opt = {
-                    ...opt,
-                    ...getBounds(name),
-                };
-                opt.frame = false;
-                opt.transparent = true;
-                opt.onClose = function () {
-                    delete scope.promptWindow;
-                }
-                fn(true);
-            };
-
-            fn();
-
-        }
-    };
-
-
-    // ----------------------------------------------------------------
+    // --------------------------------------------------------------------------------------------
 
     window.addEventListener('beforeunload', function (e) {
-        scope.warnWindow && scope.warnWindow.close();
         scope.newsWin && scope.newsWin.close();
+        scope.warnWindow && scope.warnWindow.close();
         scope.promptWindow && scope.promptWindow.close();
-        scope.readerWindow && scope.readerWindow.close();
     });
 
-    // ----------------------------------------------------------------
-
-    let activeWarnWindow = () => {
-        if (scope.warnWindow) {
-            scope.warnWindow.show();
-            scope.warnWindow.win.webContents.send('view', 'reminder');
-        }
-    };
-
+    // ---------------------------------------------------------------------------------------------
 
     if (utils.isTrading()) {
         !scope.newsWin && scope.openNews();
-        !scope.promptWindow && scope.openPrompt();
+        !scope.warnWindow && scope.openWarn();
     }
 
     if (utils.isTradingDate()) {
-        utils.timer('8:30', () => {
+        utils.timer('8:55', () => {
             scope.openReminder();
         });
-
-        utils.timer('9:07', () => {
-            scope.openReminder();
-        });
-
-        /*        utils.timer('9:26', () => {
-                    scope.openWarn(false);
-                    setTimeout(() => {
-                        if (scope.warnWindow) {
-                            scope.warnWindow.hide();
-                        }
-                    }, 1000 * 60 * 3);
-                });*/
 
         utils.timer('15:00', () => {
             scope.newsWin && scope.newsWin.close();
-            scope.promptWindow && scope.promptWindow.close();
+            scope.warnWindow && scope.warnWindow.close();
         });
     }
 
@@ -463,25 +365,20 @@ brick.reg('memoCtrl', function () {
             saveMethod: 'POST',
             // Additional save params.
             saveParams: {time: +new Date}
-        }).froalaEditor('html.set', text || '')
+        }).froalaEditor('html.set', text || '');
 
     });
 
     this.saveMemo = function (e) {
-        let text = $memo.froalaEditor('html.get', true)
-        console.log(text)
+        let text = $memo.froalaEditor('html.get', true);
+        console.log(text);
         $.post('/stock/memo', {text}).done((o) => {
-        })
+        });
     };
 
 });
 
-brick.reg('setStockCtrl', function () {
-    this.addStock = function (fields) {
-        console.log(fields);
-        utils.addStock(fields);
-    }
-});
+brick.reg('setVoiceWarnCtrl', setVoiceWarnCtrl);
 
 brick.reg('countSwingCtrl', function (scope) {
 
@@ -519,14 +416,12 @@ brick.reg('countSwingCtrl', function (scope) {
         if (price) {
             cb(price);
         } else {
-
             utils.getStock().then((stock) => {
                 // $.icMsg(stock.code)
                 rts({
                     interval: false,
                     code: stock.code,
                     callback: function (data) {
-
                         $elm.find('[ic-form-field="code"]').val(stock.name);
                         console.info(data[0])
                         let p = data[0].price * 1;
@@ -534,17 +429,7 @@ brick.reg('countSwingCtrl', function (scope) {
                         cb(p);
                     }
                 });
-            })
-
-            /*            ac.getStockName(function (stock) {
-                            if(stock.code){
-                                fn(stock)
-                            }else{
-                                captureOcr(stock => {
-                                    fn(stock);
-                                });
-                            }
-                        });*/
+            });
         }
     };
 
@@ -554,4 +439,9 @@ brick.reg('countSwingCtrl', function (scope) {
 
 });
 
-brick.reg('setVoiceWarnCtrl', setVoiceWarnCtrl);
+brick.reg('setStockCtrl', function () {
+    this.addStock = function (fields) {
+        console.log(fields);
+        utils.addStock(fields);
+    };
+});
