@@ -55,7 +55,7 @@ brick.reg('systemCtrl', function () {
         console.info(data);
         model = data;
         list.init(data.system);
-        scope.render('mqElement', data.tags['行情要素']);
+        //scope.render('mqElement', data.tags['行情要素']);
         scope.render('condition', data.tags['交易系统条件']);
         scope.render('systemList', data.system, function () {
             $(this).find('>li')

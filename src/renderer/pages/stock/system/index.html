@@ -12,8 +12,8 @@
 <body ic-ctrl="mainCtrl">
 <div class="column" ic-ctrl="systemCtrl">
 
-    <header class="columns">
-        <div class="column is-3">
+    <header class="">
+        <div class="">
             <div class="buttons">
                 <button class="button is-primary is-small"
                         id="getSystem"
@@ -26,16 +26,16 @@
                 <button class="button is-primary is-small" ic-click="addSystem" ic-popup-target="setSystem">新交易系统</button>
             </div>
         </div>
-        <div class="column is-9" style="text-align: right;" ic-tpl="mqElement">
-            <span class="tag is-black hint--bottom" aria-label="{{ v.desc }}" ic-for="i,v in model">
+<!--        <div class="column is-9" style="text-align: right;" ic-tpl="mqElement">
+            <span class="tag is-black hint&#45;&#45;bottom" aria-label="{{ v.desc }}" ic-for="i,v in model">
                 {{v.text}}
             </span>
-        </div>
+        </div>-->
     </header>
 
     <div class="column" ic-tpl="condition">
         <div class="tags" ic-select="condition" ic-select-type="checkbox" ic-select-on-change="onConditionChange">
-            <span class="tag" ic-for="i,v in model" ic-val="{{ v.text }}">{{ v.text }}</span>
+            <span class="tag" ic-for="i,v in model" ic-val="{{ v.text }}" style="cursor: pointer;">{{ v.text }}</span>
         </div>
     </div>
 

@@ -117,7 +117,8 @@ export default function (scope) {
                 return;
             }
             let handle = utils.timer(trigger, () => {
-                voice(content);
+                voice('timer', content);
+                ipcRenderer.send('voice_warn', content);
             });
             warnHandleMap[id] = {handle};
         }
