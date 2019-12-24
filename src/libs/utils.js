@@ -1,6 +1,7 @@
 /*!
  * Created by j on 2019-02-28.
  */
+
 import os from 'os'
 import electron from 'electron'
 
@@ -17,9 +18,8 @@ import ac from './ac'
 import captureOcr from './capture-ocr'
 import stocksManager from './stocks-manager'
 
-
-const {remote, shell} = electron
-const dialog = remote.dialog
+const {remote, shell} = electron;
+const dialog = remote.dialog;
 
 // https://github.com/shelljs/shelljs/issues/480
 let nodePath = (shellJs.which('node').toString());
@@ -28,84 +28,108 @@ shellJs.config.execPath = nodePath;
 
 export default {
     preview (file) {
-        shellJs.exec(`open -a Preview "${ file }"`)
+        shellJs.exec(`open -a Preview "${ file }"`);
     },
     showItemInFolder (filePath) {
-        shell.showItemInFolder(filePath)
+        shell.showItemInFolder(filePath);
     },
     open (option) {
-        return new Win(option)
+        return new Win(option);
     },
     openItem (file) {
-        shell.openItem(file)
+        shell.openItem(file);
     },
     openExternal (url) {
-        shell.openExternal(url)
+        shell.openExternal(url);
     },
     fetch (csdPath, index, watcher) {
-        return jhandy.fetch(csdPath, null, index, null, watcher)
+        return jhandy.fetch(csdPath, null, index, null, watcher);
     },
     setting () {
         return setting;
     },
     select () {
-        return dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']})
+        return dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']});
     },
     msg (msg, title = '') {
         dialog.showMessageBox({type: 'info', title, message: msg}, (res) => {
-            console.log(res)
-        })
+            console.log(res);
+        });
     },
     err (msg, title = '') {
-        dialog.showErrorBox(title, msg)
+        dialog.showErrorBox(title, msg);
     },
     timer (time = '8:55', f) {
-        let [h, m] = time.split(/\D/g).map((v) => v * 1)
-        let rule = new schedule.RecurrenceRule()
-        rule.dayOfWeek = [0, new schedule.Range(1, 6)]
-        rule.hour = h
-        rule.minute = m
+        let [h, m] = time.split(/\D/g).map((v) => v * 1);
+        let rule = new schedule.RecurrenceRule();
+        rule.dayOfWeek = [0, new schedule.Range(1, 6)];
+        rule.hour = h;
+        rule.minute = m;
         return schedule.scheduleJob(rule, function () {
-            console.log('timer ', (new Date).toLocaleString())
-            f()
-        })
+            console.log('timer ', (new Date).toLocaleString());
+            f();
+        });
     },
     getIp () {
-        let ip
+        let ip;
         try {
-            let networkInterfaces = os.networkInterfaces()
-            ip = networkInterfaces.en0[0].address
+            let networkInterfaces = os.networkInterfaces();
+            ip = networkInterfaces.en0[0].address;
         } catch (e) {
-            console.log('ip address 获取失败. =>', e)
+            console.log('ip address 获取失败. =>', e);
         }
-        return ip
+        return ip;
     },
     activeTdx () {
-        tdx.active()
+        tdx.active();
     },
     activeFtnn () {
-        ac.activeFtnn()
+        ac.activeFtnn();
     },
     viewInFtnn (code) {
-        tdx.viewInFtnn(code)
+        tdx.viewInFtnn(code);
     },
     viewInTdx (code) {
         tdx.view(code);
     },
+    /**
+     * 添加股票
+     * @param stock {Object} {code:'000001', name:'万科'}
+     */
     addStock (stock) {
-        stocksManager.add(stock)
+        stocksManager.add(stock);
     },
+    /**
+     * 文件拷贝
+     * @param src
+     * @param dist
+     * @returns {*}
+     */
     copy (src, dist) {
-        return fse.copy(src, dist)
+        return fse.copy(src, dist);
     },
+    /**
+     * 移动文件
+     * @param src
+     * @param dist
+     * @returns {*|void}
+     */
     move (src, dist) {
         return fse.move(src, dist);
     },
+    /**
+     * 是否是交易日; 周一至周五返回true
+     * @returns {boolean}
+     */
     isTradingDate () {
         let mo = moment();
         let day = mo.day(); // 礼拜几: 0 - 6
         return day > 0 && day < 6;
     },
+    /**
+     * 是否是交易时段
+     * @returns {boolean}
+     */
     isTradingTime () {
         let mo = moment();
         let h = mo.hour(); // 0 - 23
@@ -127,6 +151,10 @@ export default {
             })
         });
     },
+    /**
+     * 获取当前通达信界面个股名称; 通过apple script获取或截屏识图
+     * @returns {Promise<any>}
+     */
     getStock () {
         return new Promise((resolve, reject) => {
             ac.getStockName((stock) => {
@@ -140,5 +168,6 @@ export default {
             });
         });
     },
+
 }
 

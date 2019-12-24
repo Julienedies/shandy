@@ -18,7 +18,7 @@ export default function (scope) {
 
     const warnJodb = userJodb('warn', []);
     // 存储定时器句柄，用以取消
-    let isAbleVoiceWarn = true;
+    let isAbleVoiceWarn = false;
     const warnHandleMap = {};
     let warnIntervalArr = [];
     let warnIntervalTimer = null;
@@ -29,7 +29,7 @@ export default function (scope) {
         voice(warnHandleMap[info] || '');
     });
 
-    let render = () => {
+    function render () {
         let model = warnJodb.get();
         scope.render('warnList', {model}, function () {
             $(this).find('tr')
@@ -38,57 +38,17 @@ export default function (scope) {
                 .on('dragleave', scope.dragleave)
                 .on('drop', scope.drop);
         });
-    };
+    }
 
-    scope.save = function (fields) {
-        warnJodb.set(fields);
-        scope.reset();
-        scope.$elm.find('[ic-popup="setWarnItem"]').icPopup(false);
-    };
-
-    scope.reset = (model = {}) => {
-        scope.render('setWarnItem', {model});
-    };
-
-    scope.edit = function (e, id) {
-        let model = warnJodb.get2(id);
-        scope.render('setWarnItem', {model});
-        //scope.$elm.animate({scrollTop: scope.$elm.height()}, 400);
-    };
-
-    scope.rm = function (e, id) {
-        warnJodb.remove(id);
-    };
-
-    scope.up = function (e, id) {
-        warnJodb.insert(id);
-    };
-
-    scope.disable = function (e, id, isDisable) {
-        let item = warnJodb.get2(id);
-        item.disable = !item.disable;
-        warnJodb.set(item);
-        $(this).text(isDisable ? '启用' : '禁用');
-    };
-
-    // 开启语音警告或关闭
-    scope.toggle = function (e) {
-        let $th = $(this);
-        let open = '开启语音';
-        let close = '关闭语音';
-        let cla = 'is-primary';
-        let str = $th.text();
-        isAbleVoiceWarn = !isAbleVoiceWarn;
-        if (str === open) {
-            $th.addClass(cla).text(close);
+    function init () {
+        render();
+        // 如果不是交易时段, 则不设置语音警告
+        if(utils.isTrading() || isAbleVoiceWarn){
+            isAbleVoiceWarn = true;
             updateVoiceWarn();
-        } else {
-            $th.removeClass(cla).text(open);
-            updateVoiceWarn(true);
-            clearInterval(warnIntervalTimer);
-            warnIntervalTimer = null;
+            scope.$elm.find('button[role=toggleBtn]').text('关闭语音').addClass('is-primary');
         }
-    };
+    }
 
     function setVoiceWarnForItem (item, cancel) {
         let id = item.id;
@@ -100,6 +60,9 @@ export default function (scope) {
         // trigger => 10 : 间隔执行
         if (/^\d+$/.test(trigger)) {
             if (disable) {
+                _.remove(warnIntervalArr, (text) => {
+                    return text === content;
+                });
                 return;
             }
             let count = Math.ceil(60 / trigger);
@@ -135,25 +98,80 @@ export default function (scope) {
 
     function updateVoiceWarn (cancel) {
         warnIntervalArr = [];
+        if (cancel) {
+            clearInterval(warnIntervalTimer);
+            warnIntervalTimer = null;
+        }
         warnJodb.get().forEach((item, index) => {
             setVoiceWarnForItem(item, cancel);
         });
 
-        if (!warnIntervalTimer && isAbleVoiceWarn) {
+        if (!cancel && !warnIntervalTimer && isAbleVoiceWarn) {
             warnIntervalTimer = setInterval(() => {
                 let warnText = warnIntervalArr.shift();
-                warnIntervalArr.push(warnText);
-                voice(warnText);
-                ipcRenderer.send('voice_warn', warnText);
+                if(warnText){
+                    voice(warnText);
+                    warnIntervalArr.push(warnText);
+                    ipcRenderer.send('voice_warn', warnText);
+                }
             }, 1000 * 60 * 4);
         }
     }
 
-    warnJodb.on('change', function () {
-        render();
-        updateVoiceWarn();
-        console.log('updateVoiceWarn on change =>', warnHandleMap, warnIntervalArr);
-    });
+    warnJodb.on('change', init);
+
+    scope.debug = function (e) {
+        let msg = JSON.stringify(warnIntervalArr, null, '\t');
+        utils.msg(msg);
+    };
+
+    // 开启语音警告或关闭
+    scope.toggle = function (e) {
+        let $th = $(this);
+        let open = '开启语音';
+        let close = '关闭语音';
+        let cla = 'is-primary';
+        let str = $th.text();
+        isAbleVoiceWarn = !isAbleVoiceWarn;
+        if (str === open) {
+            $th.addClass(cla).text(close);
+            updateVoiceWarn();
+        } else {
+            $th.removeClass(cla).text(open);
+            updateVoiceWarn(true);
+        }
+    };
+
+    scope.save = function (fields) {
+        warnJodb.set(fields);
+        scope.reset();
+        scope.$elm.find('[ic-popup="setWarnItem"]').icPopup(false);
+    };
+
+    scope.reset = () => {
+        scope.render('setWarnItem', {model: {}});
+    };
+
+    scope.edit = function (e, id) {
+        let model = warnJodb.get2(id);
+        scope.render('setWarnItem', {model});
+        //scope.$elm.animate({scrollTop: scope.$elm.height()}, 400);
+    };
+
+    scope.rm = function (e, id) {
+        warnJodb.remove(id);
+    };
+
+    scope.up = function (e, id) {
+        warnJodb.insert(id);
+    };
+
+    scope.disable = function (e, id, isDisable) {
+        let item = warnJodb.get2(id);
+        item.disable = !item.disable;
+        warnJodb.set(item);
+        $(this).text(isDisable ? '启用' : '禁用');
+    };
 
     utils.timer('11:30', () => {
         updateVoiceWarn(true);
@@ -169,8 +187,7 @@ export default function (scope) {
 
     // -------------------------------------------------------------------
 
-    render();
-    updateVoiceWarn();
+    init();
 
     // --------------------------------------------------------------------
 
