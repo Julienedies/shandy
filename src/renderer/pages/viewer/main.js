@@ -48,14 +48,22 @@ brick.reg('mainCtrl', function (scope) {
     scope.clean = function (e) {
         let imgArr = viewerJodb.get();
         let resultArr = [];
-        imgArr.forEach(({img}) => {
-            if (!fs.existsSync(img)) {
-                resultArr.push(img);
+        for (let i = 0; i < imgArr.length; i++) {
+            let imgObj = imgArr[i];
+            let imgPath = imgObj.img;
+            if (!fs.existsSync(imgPath)) {
+                resultArr.push(imgObj);
+                if (confirm(`找不到：\r\n ${ imgPath }`)) {
+                    viewerJodb.remove(imgObj.id);
+                } else {
+                    break;
+                }
             }
-        });
-        $.icMsg(resultArr.length ? resultArr : '没有错误图片');
-        console.log(resultArr);
+        }
+        !resultArr.length && $.icMsg('没有错误图片记录.');
+        console.info('scope.clean', resultArr);
     };
+
     // 反转图片列表
     scope.reverse = function (e) {
         scope.urls.reverse();
