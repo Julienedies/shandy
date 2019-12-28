@@ -2,7 +2,7 @@ html {
   padding: 0;
   height: 100%;
   overflow: hidden;
-  background: rgba(0, 0, 0, 1);
+  background: rgba(255, 255, 255, 1);
 }
 
 body {
@@ -11,42 +11,20 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  color: #fff;
-  background: repeat 50% 50% rgba(0, 0, 0, 1);
+  color: #333;
+  background: repeat 50% 50% rgba(255, 255, 255, 1);
   background-size: contain;
-  border: solid 1px yellowgreen;
   font: 16px/2 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
   -webkit-user-select: none;
   user-select: none;
 }
 
-.none {
-  display: none !important;
-}
 
-.pre {
-  white-space: pre-wrap;
-}
 
-.warn {
-  animation: warn 0.7s 1 ease-in-out;
-}
 
-@keyframes warn {
-  1% {
-    background: rgba(255, 255, 0, 1);
-    color: #000;
-  }
-  100% {
-    background: rgba(255, 255, 0, 0);
-    color: #fff;
-  }
-}
+[ic-view] {
+  background: rgba(255, 255, 255, 1) !important;
 
-#msg {
-  padding: 3px 5px;
-  color: #fff;
-  white-space: pre-wrap;
 }
 
 .wrapper {
@@ -136,27 +114,6 @@ body {
   }
 }
 
-[ic-view] {
-  background: rgba(0, 0, 0, 0.3) !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .box {
-    //width: 48%;
-    min-width: 40%;
-    border: solid 1px yellowgreen;
-    background: rgba(0, 0, 0, 0.5);
-
-    .title {
-      margin: 3px 0 10px 0 !important;
-    }
-
-    .buttons {
-      margin-top: 15px;
-    }
-  }
-}
 
 //----------------------------------------------------
 .box, .title {
@@ -176,5 +133,28 @@ a {
     margin-top: 5px;
     background: rgba(0, 0, 0, 0);
     font-size: inherit !important;
+  }
+}
+
+.none {
+  display: none !important;
+}
+
+.pre {
+  white-space: pre-wrap;
+}
+
+.warn {
+  animation: warn 0.7s 100 ease-in-out;
+}
+
+@keyframes warn {
+  1% {
+    background: rgba(255, 255, 0, 1);
+    //color: #000;
+  }
+  100% {
+    background: rgba(255, 255, 0, 0);
+    //color: green;
   }
 }

@@ -15,98 +15,133 @@ import '../../js/utils.js'
 
 import electron from 'electron'
 import utils from '../../../libs/utils'
-import warnText from '../../js/warn-text'
+import userJodb from '../../../libs/user-jodb'
 
 const ipc = electron.ipcRenderer
 const BrowserWindow = electron.remote.BrowserWindow
 
-let win;
+const todoJodb = userJodb('todo');
+
+let currentWindow;
 let $body = $('body');
 let socket = io();
 
 // 显示随机背景图片
 function randomBgImg () {
-   // $body.css('background-image', `url("/file/random/?time=${ +new Date }")`);
+    // $body.css('background-image', `url("/file/random/?time=${ +new Date }")`);
 }
 
-randomBgImg()
 
 ipc.on('id', function (event, windowID) {
-    console.log(event, windowID)
-    win = BrowserWindow.fromId(windowID)
+    console.log(event, windowID);
+    currentWindow = BrowserWindow.fromId(windowID);
 })
 
 ipc.on('view', (e, view) => {
-    brick.view.to(view)
-})
-
-
-brick.directives.reg('x-ic-step', function ($elm) {
-    let cla = 'active'
-    $elm.children().eq(0).addClass(cla)
-
-    $elm.on('click', '>li', function () {
-        let $th = $(this).removeClass(cla)
-        let $next = $th.next()
-        if ($next.length) {
-            return $next.addClass(cla)
-        }
-        $elm.trigger('ic-step.over')
-        $elm.find(':first-child').addClass(cla)
-    })
+    brick.view.to(view);
 });
 
 
 brick.reg('mainCtrl', function (scope) {
 
-    socket.on('warn', (info) => {
-        let d = new Date()
-        let h = d.getHours()
-        let m = d.getMinutes()
-        if (h === 9 && m > 15 && m < 45) {
-            // return;
-        }
-
-        if (info === 'esc') {
-            return //scope.hideWindow();
-        }
-
-        win.showInactive()
-        brick.view.to(info)
-
-        let map = {
-            daban: 7,
-            sell: 7,
-            buy: 9
-        }
-
-        setTimeout(() => {
-            scope.hideWindow()
-        }, map[info] * 1000);
-
-    });
-
-    scope.hideWindow = () => {
-        setTimeout( () => {
-            win.hide();
-            randomBgImg()
-            setTimeout(() => {
-                utils.activeFtnn()
-                utils.activeTdx()
-            }, 300);
-        }, 1000 * 60 * 1);
+    scope.hideWindow = function (e) {
+        currentWindow.hide();
     };
 
-    $('[ic-view]').on('ic-view.active', () => {
+    // 每10分钟执行一次, 检查todo列表里是否有项需要提醒 win.showInactive()
+    setInterval(() => {
+        let todoArr = todoJodb.get();
 
+        todoArr.forEach( (item, index) => {
+
+            if(index ===0) {
+                currentWindow.showInactive();
+                brick.view.to('prompt');
+                scope.emit('prompt', item);
+            }
+
+        });
+
+
+    }, 1000 * 60 * 10);
+
+});
+
+brick.reg('jobsCtrl', function (scope) {
+
+    function render () {
+        let todoArr = todoJodb.get();
+        console.log(todoArr);
+        scope.render('jobs', {model: todoArr});
+    }
+
+    scope.addJob = function (e) {
+        brick.view.to('setJob');
+        scope.emit('setJob', {});
+    };
+
+    scope.edit = function (e, id) {
+        brick.view.to('setJob');
+        scope.emit('setJob', todoJodb.get2(id));
+    };
+
+    scope.rm = function (e, id) {
+        todoJodb.remove(id);
+    };
+
+    scope.complete = function (e, id, isComplete) {
+        let item = todoJodb.get2(id);
+        item.complete = !item.complete;
+        todoJodb.set(item);
+    };
+
+    todoJodb.on('change', render);
+
+    render();
+});
+
+brick.reg('setJobCtrl', function (scope) {
+
+    this.save = function (fields) {
+        console.log(fields);
+        todoJodb.set(fields);
+        brick.view.to('jobs');
+    };
+
+    this.reset = function () {
+        scope.render('setJob', {model: {}});
+    };
+
+    this.cancel = function (e) {
+        brick.view.to('jobs');
+    };
+
+    scope.on('setJob', function (e, msg) {
+        console.log(33, msg, e);
+        scope.render('setJob', {model: msg || {}});
     });
 
 });
 
+brick.reg('promptCtrl', function () {
 
-brick.reg('warnCtrl', function (scope) {
+    const scope = this;
+    let $todoContent = scope.$elm.find('#todoContent');
+    let todoItem = {};
+
+    scope.complete = function (e) {
+        todoItem.complete = true;
+        todoJodb.set(todoItem);
+        scope.hideWindow();
+    };
+
+    scope.on('prompt', function (e, _todoItem) {
+        todoItem = _todoItem;
+        $todoContent.text(todoItem.content);
+    });
 
 });
+
 
 brick.reg('planCtrl', function () {
 
@@ -134,7 +169,7 @@ brick.reg('mistakeCtrl', function (scope) {
         .done((data) => {
             console.log(data)
             let vm = data['交易错误']
-            scope.render('mistake', vm)
-        })
+            //scope.render('mistake', vm)
+        });
 });
 

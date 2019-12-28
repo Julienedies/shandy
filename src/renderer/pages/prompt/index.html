@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>warn</title>
+    <title>任务提醒</title>
     <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
     <link rel="stylesheet" href="../../css/vendor/effeckt/animations.css">
     <script src="/set_node_modules_path.js"></script>
@@ -10,6 +10,128 @@
 </head>
 <body>
 <div class="x-wrapper" ic-view-stage ic-ctrl="mainCtrl">
+
+    <div ic-view="jobs" ic-active ic-ctrl="jobsCtrl" style="padding:20px;">
+        <div class="columns">
+            <div class="column is-10 is-offset-1">
+                <div class="buttons is-right">
+                    <button class="button is-primary" ic-click="addJob">新ToDo</button>
+                    <button class="button is-primary" ic-click="hideWindow">隐藏窗口</button>
+                </div>
+                <table class="table is-striped is-fullwidth" style="margin-top:15px;font-size:14px;" ic-tpl="jobs">
+                    <tr>
+                        <th>name</th>
+                        <th>开始时间</th>
+                        <th>提示间隔时间</th>
+                        <th>重复次数</th>
+                        <th>ToDo</th>
+                        <th></th>
+                    </tr>
+                    <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
+                        ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
+                        <td>{{ v.name }}</td>
+                        <td>{{ v.start }}</td>
+                        <td>{{ v.interval }}</td>
+                        <td>{{ v.repeat }}</td>
+                        <td class="pre">{{ v.content }}</td>
+                        <td>
+                            <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
+                            <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                            <button class="button is-primary is-small" ic-click="up:{{ v.id }}">查看</button>
+                            <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
+                                {{ v.complete ? '完成':'启用' }}
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div ic-view="setJob" ic-ctrl="setJobCtrl">
+        <div class="column">
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary" ic-view-to="jobs">
+                        返回
+                    </button>
+                </div>
+            </div>
+            <div ic-tpl="setJob" ic-tpl-init="{}">
+                <div ic-form>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
+                            <input type="hidden" value="{{ model.id }}" ic-form-field="id">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="任务提示开始时间=> 9:00"
+                                   value="{{ model.start }}" ic-form-field="start">
+                        </div>
+                        <p class="help">可选，比如下午3点之后才能做的任务，就设置为15:00。</p>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="number" placeholder="提醒间隔时间(以分钟计算)"
+                                   ic-value="{{ model.interval }}" ic-form-field="interval">
+                        </div>
+                        <p class="help">半小时提醒一次，还是2小时提醒一次。(以分钟计算)</p>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="number" placeholder="重复次数"
+                                   ic-value="{{ model.repeat }}" ic-form-field="repeat">
+                        </div>
+                        <p class="help">每天重复提醒，还是一次性提醒。</p>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                                            <textarea rows="3" class="textarea" placeholder="任务内容"
+                                                      ic-form-field="content">{{ model.content }}</textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary" ic-form-submit ic-submit-action="save()">
+                                保存
+                            </button>
+                            <button class="button" ic-click="reset">
+                                重置
+                            </button>
+                            <button class="button" ic-click="cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div ic-view="prompt" ic-ctrl="promptCtrl">
+        <div class="column is-8 is-offset-2">
+            <div class="box">
+                <h4 class="title is-4">提醒</h4>
+                <div>
+                    <div id="todoContent" class="pre warn" style="padding:20px; margin:20px 0;">
+                        todo!
+                    </div>
+                    <div class="buttons is-right">
+                        <button class="button is-primary" ic-click="complete">
+                            完成
+                        </button>
+                        <button class="button is-primary" ic-view-to="jobs">
+                            查看todo列表
+                        </button>
+                        <button class="button is-primary" ic-click="hideWindow">
+                            关闭窗口
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div ic-view="reminder">
         <div class="box">
@@ -33,7 +155,7 @@
         </div>
     </div>
 
-    <div ic-view="mistake" ic-active>
+    <div ic-view="mistake">
         <div class="box" ic-ctrl="mistakeCtrl">
             <h4 class="title is-4">预案 & 错误</h4>
             <div class="level">
@@ -61,20 +183,7 @@
                             <p>必须设定止盈止损预案条件单。 遵守交易原则。</p>
                             <p>根据阻力价，支撑价， 预期最高价，预期最低价，止盈价，止损价进行衡量设定。</p>
                         </li>
-                    </ul>
-                </div>
-                <div class="level-right" ic-tpl="mistake">
-                    <ul ic-viewer ic-viewer-url="src" ic-step>
-                        <li ic-for="i,v in model">
-                            <h6 class="title is-6">
-                                <span style="padding-right:2em;">{{ v.text }}</span>
-                                <a style="font-size:0.8em;" ic-for="k,o in v['示例图片']" ic-viewer-item ic-src="{{o}}" title="{{decodeURIComponent(o)}}">
-                                    {{ parseImgName(o) }} &nbsp;&nbsp;
-                                </a>
-                            </h6>
-                            <p class="pre none">{{ v.desc }}</p>
-                        </li>
-                        <li class="none">
+                        <li class="">
                             <div class="level">
                                 <div class="level-left">
                                     <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
@@ -124,104 +233,7 @@
         </div>
     </div>
 
-    <div ic-view="daban">
-        <div class="box" ic-ctrl="warnCtrl">
-            <h4 class="title is-5">打板</h4>
-            <div class="">
-                <ul>
-                    <li>
-                        <div>是龙头吗? 抢筹? 市场转折点?</div>
-                        <div>买点正确吗? 系统内吗?</div>
-                        <div>计划内吗?</div>
-                    </li>
-                    <li>
-                        <div>支撑你的交易逻辑是什么?</div>
-                        <div>你要捕捉的目标行情是什么?</div>
-                    </li>
-                    <li>
-                        <div>确定性?</div>
-                        <div>盈亏比?</div>
-                    </li>
-                    <li>
-                        <div class="level">
-                            <div class="level-left">
-                                <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
-                            </div>
-                            <div class="level-right">
-                                <button class="button" ic-view-back>返回</button>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button class="button" ic-view-to="buy">next</button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div ic-view="buy">
-        <div class="box" ic-ctrl="warnCtrl">
-            <h4 class="title is-5">建仓</h4>
-            <div class="">
-                <ul ic-step>
-                    <li>
-                        <div>买点正确吗? 系统内吗?</div>
-                        <div>计划内吗?</div>
-                    </li>
-                    <li>
-                        <div>支撑你的交易逻辑是什么?</div>
-                        <div>你要捕捉的目标行情是什么?</div>
-                    </li>
-                    <li>
-                        <div>确定性?</div>
-                        <div>盈亏比?</div>
-                    </li>
-                    <li>
-                        <div>把事情做对,不要再重复以前的操作手法或错误了!</div>
-                    </li>
-                    <li>
-                        <div class="level">
-                            <div class="level-left">
-                                <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
-                            </div>
-                            <div class="level-right">
-                                <button class="button" ic-view-back>返回</button>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button class="button" ic-view-to="sell">next</button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div ic-view="sell">
-        <div class="box" ic-ctrl="warnCtrl">
-            <h4 class="title is-5">平仓</h4>
-            <div class="">
-                <ul ic-step>
-                    <li>
-                        <div>错误头寸, 鸡肋头寸, 尽快平仓; 不要囿于小利, 仅仅计较.</div>
-                        <div>不要丧失正确的头寸!</div>
-                    </li>
-                    <li>
-                        <div class="level">
-                            <div class="level-left">
-                                <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
-                            </div>
-                            <div class="level-right">
-                                <button class="button" ic-view-back>返回</button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>
-
-
 
 </body>
 </html>

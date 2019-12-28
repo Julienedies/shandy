@@ -170,7 +170,7 @@ export default function (scope) {
         let item = warnJodb.get2(id);
         item.disable = !item.disable;
         warnJodb.set(item);
-        $(this).text(isDisable ? '启用' : '禁用');
+        //$(this).text(isDisable ? '启用' : '禁用');
     };
 
     utils.timer('11:30', () => {

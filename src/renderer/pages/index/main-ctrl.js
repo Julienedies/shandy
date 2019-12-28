@@ -297,19 +297,19 @@ brick.reg('mainCtrl', function (scope) {
                 // height: 320,
                 // x: 1440,
                 // y: 640,
-                //show: false,
+                show: false,
                 //transparent: true,
                 //titleBarStyle: 'hidden',
-                //frame: false,
+                frame: false,
                 //hasShadow: false,
-                alwaysOnTop: true,
+                //alwaysOnTop: true,
                 onClose () {
                     delete scope.promptWindow;
                 }
             }
             // opt.frame = !!isFrame;
             promptWindow = scope.promptWindow = new Win(opt);
-            promptWindow.maximize();
+            //promptWindow.maximize();
             //promptWindow.win.setIgnoreMouseEvents(true);
             promptWindow.win.webContents.on('did-finish-load', function () {
                 promptWindow.win.webContents.send('id', promptWindow.win.id);
@@ -327,9 +327,12 @@ brick.reg('mainCtrl', function (scope) {
 
     // ---------------------------------------------------------------------------------------------
 
+    scope.openPrompt();
+
     if (utils.isTrading()) {
         !scope.newsWin && scope.openNews();
         !scope.warnWindow && scope.openWarn();
+
     }
 
     if (utils.isTradingDate()) {
