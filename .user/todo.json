@@ -1,13 +1,28 @@
 [
 	{
 		"name": "",
+		"id": "6111044",
+		"type": "",
+		"start": "15:00",
+		"interval": 45,
+		"repeat": 4,
+		"content": "整理交易系统。",
+		"timestamp": 1577596280705,
+		"promptTimes": 4,
+		"prevPromptTime": 1577621133964,
+		"complete": true
+	},
+	{
+		"name": "",
 		"id": "5646886",
 		"type": "prepare",
 		"start": "8:40",
 		"interval": 0,
 		"repeat": 1,
 		"content": "",
-		"timestamp": 1577590792229
+		"timestamp": 1577590792229,
+		"promptTimes": 1,
+		"prevPromptTime": 1577593993454
 	},
 	{
 		"name": "",
@@ -26,8 +41,12 @@
 		"start": "17:00",
 		"interval": 40,
 		"repeat": 5,
-		"content": "导出涨停板和放量上冲股票，分类归纳，\b汇总股票概念最大合集，以辅助确定市场热点。",
-		"timestamp": 1577539844855
+		"content": "导出涨停板和放量上冲股票，分类归纳，\b汇总股票概念最大合集，以辅助确定市场热点。\n通达信自定义数据添加热点项；",
+		"timestamp": 1577539844855,
+		"promptTimes": 2,
+		"prevPromptTime": 1577621734532,
+		"complete": true,
+		"type": ""
 	},
 	{
 		"name": "",
@@ -36,7 +55,10 @@
 		"interval": 60,
 		"repeat": 6,
 		"content": "保存竞价强图片！",
-		"timestamp": 1577539413052
+		"timestamp": 1577539413052,
+		"promptTimes": 3,
+		"prevPromptTime": 1577622933950,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -45,6 +67,9 @@
 		"interval": 30,
 		"repeat": 5,
 		"content": "复盘板块。",
-		"timestamp": 1577530865756
+		"timestamp": 1577530865756,
+		"promptTimes": 1,
+		"prevPromptTime": 1577619935415,
+		"complete": true
 	}
 ]

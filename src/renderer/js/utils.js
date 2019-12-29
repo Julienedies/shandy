@@ -6,8 +6,7 @@
 const FILE_PATH = '/file/?path';
 
 function _isUrlPath (path) {
-    //console.log(typeof path, path);
-    return path.indexOf(FILE_PATH) > -1;
+    return path.indexOf && path.indexOf(FILE_PATH) > -1;
 }
 
 /**
@@ -17,7 +16,7 @@ function _isUrlPath (path) {
  * @return {String|void}
  */
 function parseImgName (path) {
-    if(!path) return console.log(path);
+    if(!path || typeof path !== 'string') return console.log(path);
     path = _isUrlPath(path) ? decodeURIComponent(path) : path;
     let arr = path.match(/^.+-(.+)-\d{6}\.png$/);
     return arr && arr[1] || path;

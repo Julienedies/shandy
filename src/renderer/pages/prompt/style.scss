@@ -19,11 +19,14 @@ body {
   user-select: none;
 }
 
-
-
-
 [ic-view] {
   background: rgba(255, 255, 255, 1) !important;
+
+  >div{
+    height: 100%;
+    overflow-y: scroll;
+    padding:20px 50px;
+  }
 
 }
 

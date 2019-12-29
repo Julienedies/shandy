@@ -18,8 +18,8 @@ import moment from 'moment'
 import utils from '../../../libs/utils'
 import userJodb from '../../../libs/user-jodb'
 
-const ipc = electron.ipcRenderer
-const BrowserWindow = electron.remote.BrowserWindow
+const ipc = electron.ipcRenderer;
+const BrowserWindow = electron.remote.BrowserWindow;
 
 const todoJodb = userJodb('todo');
 
@@ -31,7 +31,6 @@ let socket = io();
 function randomBgImg () {
     // $body.css('background-image', `url("/file/random/?time=${ +new Date }")`);
 }
-
 
 ipc.on('id', function (event, windowID) {
     console.log(event, windowID);
@@ -52,8 +51,10 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     scope.complete = function (e) {
-        scope.currentTodoItem.complete = true;
-        todoJodb.set(scope.currentTodoItem);
+        if (scope.currentTodoItem) {
+            scope.currentTodoItem.complete = true;
+            todoJodb.set(scope.currentTodoItem);
+        }
         scope.hideWindow();
     };
 
@@ -73,6 +74,16 @@ brick.reg('mainCtrl', function (scope) {
         }
     })();
 
+    // 处理只执行一次的定时器
+    todoJodb.each((todoItem) => {
+        if (todoItem.repeat === 1 && todoItem.start) {
+            utils.timer(todoItem.start, () => {
+                currentWindow.showInactive();
+                scope.emit(todoItem.type || 'prompt', todoItem);
+            });
+        }
+    });
+
     // 每10分钟执行一次, 检查todo列表里是否有项需要提醒 win.showInactive()
     scope.timer = setInterval(() => {
         let todoArr = todoJodb.get();
@@ -81,7 +92,7 @@ brick.reg('mainCtrl', function (scope) {
             // 每轮只执行一个提醒
             if (over) return;
             // 先判断任务是否完成，未完成才提醒
-            if (todoItem.complete) {
+            if (todoItem.complete || todoItem.repeat === 1) {
                 return;
             }
             // 计算当前时间和任务开始时间之差
@@ -114,10 +125,11 @@ brick.reg('mainCtrl', function (scope) {
 
     $.get('/stock/tags/').done((data) => {
         console.log(data);
-        scope.render('prepare', data);
-        scope.render('mistake', data['交易错误']);
-        //scope.render('logic', data);
-        //scope.render('principle', data);
+        let model = data;
+        scope.render('prepare', {model});
+        scope.render('mistake', {model});
+        //scope.render('logic', model);
+        //scope.render('principle', model);
     });
 
 });
@@ -205,9 +217,7 @@ brick.reg('mistakeCtrl', function (scope) {
 });
 
 
-brick.reg('planCtrl', function () {
-
-    let scope = this;
+brick.reg('planCtrl', function (scope) {
 
     $.get({
         url: '/stock/replay'
