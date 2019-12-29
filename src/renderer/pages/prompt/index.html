@@ -27,9 +27,10 @@
                 <table class="table is-striped is-fullwidth" style="margin-top:15px;font-size:14px;" ic-tpl="jobs">
                     <tr>
                         <th>name</th>
-                        <th>开始时间</th>
-                        <th>提示间隔时间</th>
-                        <th>重复次数</th>
+                        <th>类型</th>
+                        <th>开始</th>
+                        <th>提醒间隔</th>
+                        <th>重复</th>
                         <th>ToDo</th>
                         <th>已提醒</th>
                         <th></th>
@@ -41,12 +42,11 @@
                         <td>{{ v.start }}</td>
                         <td>{{ v.interval }}</td>
                         <td>{{ v.repeat }}</td>
-                        <td class="pre">{{ v.content }}</td>
-                        <td>{{ v.repeat }}</td>
-                        <td>
+                        <td>{{ v.content }}</td>
+                        <td>{{ v.promptTimes || 0 }}</td>
+                        <td style="white-space: nowrap;">
                             <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
                             <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
-                            <button class="button is-primary is-small" ic-click="up:{{ v.id }}">查看</button>
                             <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
                                 {{ v.complete ? '完成':'启用' }}
                             </button>
@@ -136,7 +136,7 @@
                             完成
                         </button>
                         <button class="button is-primary" ic-view-to="jobs">
-                            查看todo列表
+                            返回
                         </button>
                         <button class="button is-primary" ic-click="hideWindow">
                             关闭窗口
