@@ -77,7 +77,9 @@ class Win {
 
         url && this.load(url);
 
-        win.show();
+        if(this.opt.show !== false) {
+            win.show();
+        }
     }
 
     load (url) {

@@ -45,6 +45,23 @@ let proto = {
         return this;
     },
     /**
+     * 遍历, 会直接修改记录管理器里的数据
+     * @param cb {Function} 遍历回调函数
+     */
+    each: function (cb) {
+        this._pool.forEach((item, index) => {
+            cb(item, index);
+        });
+        return this;
+    },
+    /**
+     * 用于保存整个记录管理器里的数据
+     */
+    save: function () {
+        this.emit('change');
+        return this;
+    },
+    /**
      * 获取查询结果
      * @param [value]  {*}            要查询的key值
      * @param [query]  {String}       要查询的key
@@ -144,7 +161,7 @@ let proto = {
 
             result.push(Object.assign(record, data));
 
-            if (record.id == '1178690') console.log(333, record, data);
+            //if (record.id == '1178690') console.log(333, record, data);
 
             that.beforeSave(record);
 

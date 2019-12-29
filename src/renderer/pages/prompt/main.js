@@ -14,6 +14,7 @@ import '@julienedies/brick/dist/brick.transition.js'
 import '../../js/utils.js'
 
 import electron from 'electron'
+import moment from 'moment'
 import utils from '../../../libs/utils'
 import userJodb from '../../../libs/user-jodb'
 
@@ -44,26 +45,80 @@ ipc.on('view', (e, view) => {
 
 brick.reg('mainCtrl', function (scope) {
 
+    scope.currentTodoItem = null;
+
     scope.hideWindow = function (e) {
         currentWindow.hide();
     };
 
+    scope.complete = function (e) {
+        scope.currentTodoItem.complete = true;
+        todoJodb.set(scope.currentTodoItem);
+        scope.hideWindow();
+    };
+
+    scope.stop = function (e) {
+        clearInterval(scope.timer);
+    };
+
+    // 每天早上开启时，清除昨天的提醒数据,重新开始
+    (function () {
+        let hour = moment().hour();
+        if (hour < 9) {
+            todoJodb.each((todoItem) => {
+                delete todoItem.complete;
+                delete todoItem.promptTimes;
+                delete todoItem.prevPromptTime;
+            }).save();
+        }
+    })();
+
     // 每10分钟执行一次, 检查todo列表里是否有项需要提醒 win.showInactive()
-    setInterval(() => {
+    scope.timer = setInterval(() => {
         let todoArr = todoJodb.get();
-
-        todoArr.forEach( (item, index) => {
-
-            if(index ===0) {
-                currentWindow.showInactive();
-                brick.view.to('prompt');
-                scope.emit('prompt', item);
+        let over = false;
+        todoArr.forEach((todoItem, index) => {
+            // 每轮只执行一个提醒
+            if (over) return;
+            // 先判断任务是否完成，未完成才提醒
+            if (todoItem.complete) {
+                return;
+            }
+            // 计算当前时间和任务开始时间之差
+            // moment().diff(moment('8:00', 'HH:mm'),'minutes');
+            let diffM = moment().diff(moment(todoItem.start, 'HH:mm'), 'minutes');
+            // 如果到达开始时间
+            if (diffM > 0) {
+                let promptTimes = todoItem.promptTimes || 0; // 提醒次数
+                let prevPromptTime = todoItem.prevPromptTime; // 上次提醒时间
+                // 如果还没有达到提醒次数
+                if (promptTimes < todoItem.repeat) {
+                    // 如果还没有提醒过; 或者
+                    // 当前时间和上次提醒时间之差达到间隔时间
+                    if (promptTimes === 0 || moment().diff(moment(prevPromptTime, 'x'), 'minutes') >= todoItem.interval) {
+                        todoItem.promptTimes = promptTimes + 1;
+                        todoItem.prevPromptTime = +new Date();
+                        todoJodb.set(todoItem);
+                        scope.currentTodoItem = todoItem;
+                        currentWindow.showInactive();
+                        scope.emit(todoItem.type || 'prompt', todoItem);
+                        over = true;  // 终止todo数组循环
+                    }
+                }
             }
 
         });
 
-
     }, 1000 * 60 * 10);
+
+
+    $.get('/stock/tags/').done((data) => {
+        console.log(data);
+        scope.render('prepare', data);
+        scope.render('mistake', data['交易错误']);
+        //scope.render('logic', data);
+        //scope.render('principle', data);
+    });
 
 });
 
@@ -127,49 +182,52 @@ brick.reg('promptCtrl', function () {
 
     const scope = this;
     let $todoContent = scope.$elm.find('#todoContent');
-    let todoItem = {};
-
-    scope.complete = function (e) {
-        todoItem.complete = true;
-        todoJodb.set(todoItem);
-        scope.hideWindow();
-    };
 
     scope.on('prompt', function (e, _todoItem) {
-        todoItem = _todoItem;
-        $todoContent.text(todoItem.content);
+        brick.view.to('prompt');
+        $todoContent.text(scope.currentTodoItem.content);
     });
 
 });
 
 
+brick.reg('prepareCtrl', function (scope) {
+    scope.on('prepare', function (e, _todoItem) {
+        brick.view.to('prepare');
+    });
+});
+
+
+brick.reg('mistakeCtrl', function (scope) {
+    scope.on('mistake', function (e, _todoItem) {
+        brick.view.to('mistake');
+    });
+});
+
+
 brick.reg('planCtrl', function () {
 
-    let scope = this
-    let $elm = scope.$elm
+    let scope = this;
 
     $.get({
         url: '/stock/replay'
     }).done((data) => {
-        console.info(data)
-        scope.render('replay', {model: data.replay})
-    })
+        console.info(data);
+        scope.render('replay', {model: data.replay});
+    });
 
     $.get({
         url: '/stock/plan'
     }).done((data) => {
-        console.info(data)
-        data.plans && data.plans.length && scope.render('plans', {model: data.plans})
-    })
+        console.info(data);
+        data.plans && data.plans.length && scope.render('plans', {model: data.plans});
+    });
+
+    scope.on('plan', function (e, _todoItem) {
+        brick.view.to('plan');
+    });
 
 });
 
-brick.reg('mistakeCtrl', function (scope) {
-    $.get('/stock/tags')
-        .done((data) => {
-            console.log(data)
-            let vm = data['交易错误']
-            //scope.render('mistake', vm)
-        });
-});
+
 
