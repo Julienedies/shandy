@@ -276,16 +276,6 @@ brick.reg('mainCtrl', function (scope) {
         let promptWindow = scope.promptWindow;
         if (promptWindow) {
             return promptWindow.show();
-            /* let msg = `
- 增加这么多步骤, 只是为了让你少犯错;
- 控制本能, 把事情做对, 而不是被本能控制;
- 想想你重复犯了多少错?
- 不围绕主线; 随意操作; 无计划操作; 无逻辑操作; 不要再犯错了;
- 想想那些恐惧和痛苦吧!`
-             utils.msg(msg)
-             if (window.confirm(msg)) {
-                 warnWindow.close()
-             }*/
         } else {
             let name = 'prompt';
             let url = 'prompt.html';
@@ -293,14 +283,10 @@ brick.reg('mainCtrl', function (scope) {
                 name,
                 url,
                 ...getBounds(name),
-                // width: 480,
-                // height: 320,
-                // x: 1440,
-                // y: 640,
                 show: false,
+                frame: false,
                 //transparent: true,
                 //titleBarStyle: 'hidden',
-                frame: false,
                 //hasShadow: false,
                 //alwaysOnTop: true,
                 onClose () {

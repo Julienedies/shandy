@@ -136,10 +136,17 @@ brick.reg('mainCtrl', function (scope) {
 
 brick.reg('jobsCtrl', function (scope) {
 
+    const dragOverCla = 'onDragOver';
+
     function render () {
         let todoArr = todoJodb.get();
         console.log(todoArr);
-        scope.render('jobs', {model: todoArr});
+        scope.render('jobs', {model: todoArr}, function () {
+            $(this).find('tr').on('dragstart', scope.dragstart)
+                .on('dragover', scope.dragover)
+                .on('dragleave', scope.dragleave)
+                .on('drop', scope.drop);
+        });
     }
 
     scope.addJob = function (e) {
@@ -165,6 +172,39 @@ brick.reg('jobsCtrl', function (scope) {
     todoJodb.on('change', render);
 
     render();
+
+    // ------------------------------------------------------------
+    scope.dragstart = function (e) {
+        let id = $(this).data('id');
+        e.originalEvent.dataTransfer.setData("Text", id);
+        console.log('dragstart', id);
+    };
+
+    scope.dragover = function (e) {
+        e.preventDefault();
+        //e.stopPropagation();
+        e.originalEvent.dataTransfer.dropEffect = 'move';
+        $(e.target).addClass(dragOverCla);
+        return false;
+    };
+
+    scope.dragleave = function (e) {
+        $(e.target).removeClass(dragOverCla);
+    };
+
+    scope.drop = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        let $target = $(e.target);
+        let id = e.originalEvent.dataTransfer.getData("Text");
+        let distId = $target.data('id') || $target.closest('tr[data-id]').data('id');
+        if (!distId || distId === id) {
+            return console.log('not dist');
+        }
+        console.log('drop', id, distId + '', e.target);
+        todoJodb.insert(id, distId + '');
+        return false;
+    };
 });
 
 brick.reg('setJobCtrl', function (scope) {
@@ -195,9 +235,9 @@ brick.reg('promptCtrl', function () {
     const scope = this;
     let $todoContent = scope.$elm.find('#todoContent');
 
-    scope.on('prompt', function (e, _todoItem) {
+    scope.on('prompt', function (e, todoItem) {
         brick.view.to('prompt');
-        $todoContent.text(scope.currentTodoItem.content);
+        $todoContent.text(todoItem.content);
     });
 
 });
