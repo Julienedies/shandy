@@ -284,13 +284,14 @@ brick.reg('mainCtrl', function (scope) {
                 url,
                 ...getBounds(name),
                 show: false,
-                frame: false,
+                //frame: false,
                 //transparent: true,
                 //titleBarStyle: 'hidden',
                 //hasShadow: false,
                 //alwaysOnTop: true,
                 onClose () {
-                    delete scope.promptWindow;
+                    //delete scope.promptWindow;
+                    scope.openPrompt();
                 }
             }
             // opt.frame = !!isFrame;
