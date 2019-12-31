@@ -22,7 +22,7 @@
                 <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
             </div>
             <table class="table is-striped is-fullwidth" style="margin-top:15px;font-size:14px;" ic-tpl="jobs">
-                <tr>
+                <tr style="white-space: nowrap;">
                     <th>name</th>
                     <th>类型</th>
                     <th>开始</th>
@@ -45,7 +45,10 @@
                         <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
                         <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
                         <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
-                            {{ v.complete ? '完成':'启用' }}
+                            {{ v.complete ? '完成':'进行' }}
+                        </button>
+                        <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
+                            {{ v.disable ? '启用':'禁止' }}
                         </button>
                     </td>
                 </tr>
@@ -124,8 +127,8 @@
             <div class="box">
                 <h4 class="title is-4">提醒</h4>
                 <div>
-                    <div id="todoContent" class="pre warn" style="padding:20px; margin:20px 0;">
-                        todo!
+                    <div class="pre" style="padding:20px; margin:20px 0;">
+                        <div id="todoContent" class="">todo!</div>
                     </div>
                     <div class="buttons is-right">
                         <button class="button is-primary" ic-click="complete">

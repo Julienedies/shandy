@@ -76,6 +76,7 @@ brick.reg('mainCtrl', function (scope) {
 
     // 处理只执行一次的定时器
     todoJodb.each((todoItem) => {
+        if (todoItem.disable) return;
         if (todoItem.repeat === 1 && todoItem.start) {
             utils.timer(todoItem.start, () => {
                 currentWindow.showInactive();
@@ -91,6 +92,7 @@ brick.reg('mainCtrl', function (scope) {
         todoArr.forEach((todoItem, index) => {
             // 每轮只执行一个提醒
             if (over) return;
+            if (todoItem.disable) return;
             // 先判断任务是否完成，未完成才提醒
             if (todoItem.complete || todoItem.repeat === 1) {
                 return;
@@ -166,6 +168,12 @@ brick.reg('jobsCtrl', function (scope) {
     scope.complete = function (e, id, isComplete) {
         let item = todoJodb.get2(id);
         item.complete = !item.complete;
+        todoJodb.set(item);
+    };
+
+    scope.disable = function (e, id, isDisable) {
+        let item = todoJodb.get2(id);
+        item.disable = !item.disable;
         todoJodb.set(item);
     };
 

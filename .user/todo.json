@@ -75,8 +75,8 @@
 		"repeat": 5,
 		"content": "复盘板块。",
 		"timestamp": 1577530865756,
-		"promptTimes": 3,
-		"prevPromptTime": 1577791283312
+		"promptTimes": 5,
+		"prevPromptTime": 1577799780481
 	},
 	{
 		"name": "",
@@ -87,7 +87,7 @@
 		"repeat": 7,
 		"content": "查看当日涨停个股资料，确定热点。",
 		"timestamp": 1577697423900,
-		"promptTimes": 1,
-		"prevPromptTime": 1577791881271
+		"promptTimes": 4,
+		"prevPromptTime": 1577804574262
 	}
 ]

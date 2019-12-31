@@ -16,7 +16,7 @@ body {
   background: repeat 50% 50% rgba(0, 0, 0, 0);
   background-size: contain;
   border: solid 1px yellowgreen;
-  font: 28px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif!important;
+  font: 28px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -53,8 +53,8 @@ body {
   .box {
     //width: 48%;
     // border: solid 1px yellowgreen;
-    margin-top:-16%;
-    margin-left:20%;
+    margin-top: -16%;
+    margin-left: 20%;
     min-width: 50%;
     background: rgba(0, 0, 0, 0);
 
@@ -89,7 +89,7 @@ a {
   }
 }
 
-#place{
+#place {
   text-shadow: 2px 3px 4px #000000;
   -webkit-transform-origin: center center;
   transform-origin: center center;
@@ -260,7 +260,21 @@ a {
   }
 }
 
+@keyframes beat {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.6);
+  }
+  to {
+    transform: none;
+  }
+}
 
+.beat {
+  animation: beat 1s infinite alternate;
+}
 
 
 .warn {
@@ -284,5 +298,17 @@ a {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.rotateBox {
+  transform-style: preserve-3d;
+}
+.rotate {
+  animation: rotate 8s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotateY(360deg);
   }
 }

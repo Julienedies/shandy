@@ -147,6 +147,14 @@ a {
   white-space: pre-wrap;
 }
 
+@keyframes beat {
+  50% { font-size: 1.6em; }
+}
+
+.beat {
+  animation: beat 1s infinite alternate;
+}
+
 .warn {
   animation: warn 0.7s 100 ease-in-out;
 }
@@ -166,4 +174,17 @@ a {
 .onDragOver{
   background:blue;
   color:#fff;
+}
+
+
+.rotateBox {
+  transform-style: preserve-3d;
+}
+.rotate {
+  animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotateY(360deg);
+  }
 }

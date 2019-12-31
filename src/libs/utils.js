@@ -92,6 +92,9 @@ export default {
     viewInTdx (code) {
         tdx.view(code);
     },
+    toggleApp () {
+        ac.toggleApp();
+    },
     /**
      * 添加股票
      * @param stock {Object} {code:'000001', name:'万科'}

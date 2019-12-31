@@ -290,8 +290,10 @@ brick.reg('mainCtrl', function (scope) {
                 //hasShadow: false,
                 //alwaysOnTop: true,
                 onClose () {
-                    //delete scope.promptWindow;
-                    scope.openPrompt();
+                    delete scope.promptWindow;
+                    setTimeout(() => {
+                        scope.openPrompt();
+                    }, 100);
                 }
             }
             // opt.frame = !!isFrame;

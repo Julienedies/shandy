@@ -53,6 +53,9 @@ export default {
     activeFtnn: function () {
         _exec('active-ftnn');
     },
+    toggleApp: function () {
+        _exec('toggle-app');
+    },
     keystroke: function (code) {
         return _exec('keystroke');
 
