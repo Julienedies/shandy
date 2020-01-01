@@ -1,5 +1,6 @@
 @import "include/layout";
 @import "include/components";
+@import "./component";
 
 body {
   padding: 1px;
@@ -74,6 +75,15 @@ label.radio {
     color: #000;
   }
 }
+
+
+.onDragOver{
+  background:blue;
+  color:#fff;
+}
+
+
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // bulma 重写

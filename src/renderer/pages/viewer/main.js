@@ -3,6 +3,7 @@
  */
 
 import './index.html'
+import '../../css/common/common.scss'
 import './style.scss'
 
 import brick from '@julienedies/brick'
@@ -23,6 +24,8 @@ import helper from './helper'
 
 import historyModel from './historyModel'
 
+import markTagCtrl from './markTag-ctrl'
+import listCtrl from './list-ctrl'
 // activate context menu
 debugMenu.install();
 
@@ -178,135 +181,7 @@ brick.reg('mainCtrl', function (scope) {
 });
 
 
-brick.reg('listCtrl', function (scope) {
-
-    // ic-viewer  回调函数
-    let $viewerAttach = $('#viewerAttach');
-
-    scope.onViewerOpen = () => {
-        $viewerAttach.show();
-    };
-    scope.onViewerClose = () => {
-        $viewerAttach.hide();
-    };
-
-    scope.onViewerShow = function (index, src, $info) {
-        let imgObj = scope.currentImg = scope.urls[index]; // scope.urls 继承自mainCtrl
-        scope.markTag();
-        let arr = imgObj.tradeInfo;
-        if (arr) {
-            arr = arr.map(a => {
-                return [a[1], a[5], a[7], a[6]];
-            });
-            arr.reverse(); // 当日多个交易记录按照时间先后显示
-            let text = arr.join('\r\n').replace(/,/g, '    ');
-            $viewerAttach.find('p').text(text);
-        }
-
-        $info.text('\r\n' + imgObj.f);
-    };
-
-    scope.editImg = () => {
-        let imgObj = scope.currentImg;
-        utils.preview(imgObj.f);
-    };
-
-    scope.viewItemInFolder = () => {
-        utils.showItemInFolder(scope.currentImg.f);
-    };
-
-    scope.viewInTdx = () => {
-        console.log(scope.currentImg);
-        utils.viewInTdx(scope.currentImg.code);
-    };
-
-    scope.viewInFtnn = () => {
-        utils.viewInFtnn(scope.currentImg.code);
-    };
-
-    scope.markTag = () => {
-        brick.emit('markTag', scope.currentImg);
-    };
-
-    scope.markMistake = () => {
-        copyImageToDist('/Users/j/截图/交易错误/');
-    };
-
-    scope.markQuotation = () => {
-        copyImageToDist('/Users/j/截图/目标行情/');
-    };
-
-    scope.moveToTrash = () => {
-        let imgObj = scope.currentImg;
-        let pathArr = imgObj.f.split('/');
-        let fileName = pathArr.pop();
-        let dirOfImg = pathArr.join('/')
-        utils.move(imgObj.f, `${ dirOfImg }/C/${ fileName }`)
-            .then(() => {
-                $.icMessage('ok!');
-            })
-            .catch(err => {
-                utils.err('error, 查看控制台.');
-                console.error(err);
-            });
-    };
-
-    function copyImageToDist (dirPath) {
-        let imgObj = scope.currentImg;
-        let fileName = imgObj.f.split('/').pop();
-        utils.copy(imgObj.f, `${ dirPath }${ fileName }`)
-            .then(() => {
-                $.icMessage('ok!')
-            })
-            .catch(err => {
-                utils.err('error, 查看控制台.')
-                console.error(err)
-            });
-    }
-
-});
+brick.reg('viewerListCtrl', listCtrl);
 
 
-brick.reg('markTagCtrl', function (scope) {
-
-    let currentImg = {};
-    let model = null;
-    let imgObj = {};
-
-    let render = () => {
-        imgObj = viewerJodb.get(currentImg.f, 'img')[0] || {img: currentImg.f};
-        let f = (imgObj) => {
-            return imgObj;
-        };
-        model.img = f(imgObj);
-        scope.render('tags', {model});
-    };
-
-    scope.onGetSystemDone = function (data) {
-        console.info(data);
-        model = data;
-        render();
-    };
-
-    scope.hide = function (e) {
-        // $.icMsg(e.target.tagName);
-        scope.$elm.icPopup(false);
-    };
-
-    scope.onChange = function (val) {
-        imgObj[val.name] = val.value;
-        viewerJodb.set(imgObj);
-    };
-
-    scope.on('markTag', function (e, msg) {
-        currentImg = msg;
-        render();
-    });
-
-    scope.$elm.hover(function () {
-        scope.$elm.css('opacity', 1);
-    }, function () {
-        scope.$elm.css('opacity', 0);
-    });
-
-});
+brick.reg('viewerMarkTagCtrl', markTagCtrl);

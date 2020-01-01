@@ -260,21 +260,7 @@ a {
   }
 }
 
-@keyframes beat {
-  from {
-    transform: none;
-  }
-  50% {
-    transform: scale(1.6);
-  }
-  to {
-    transform: none;
-  }
-}
 
-.beat {
-  animation: beat 1s infinite alternate;
-}
 
 
 .warn {
@@ -311,4 +297,19 @@ a {
   to {
     transform: rotateY(360deg);
   }
+}
+@keyframes beat {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.6);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.beat {
+  animation: beat 1s infinite alternate;
 }

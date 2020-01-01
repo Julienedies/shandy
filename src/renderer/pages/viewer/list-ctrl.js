@@ -1,66 +1,17 @@
 /**
- * Created by j on 18/6/28.
+ *
+ * Created by j on 2020-01-01.
  */
 
 import $ from 'jquery'
+import utils from '../../../libs/utils'
 import brick from '@julienedies/brick'
-import utils from '../../libs/utils'
 
-brick.set('ic-show-img-item', 'a[href$=png]');
-brick.set('ic-show-img-url', 'href');
+export default function (scope) {
 
-brick.set('ic-select-cla', 'is-warning');
-
-brick.set('cla.error', 'is-danger');
-
-brick.debug('log');
-
-//brick.set('debug', true);
-
-brick.set('render.wrapModel', true);
-
-function mainCtrl () {
-
-    let scope = this;
-    let $elm = scope.$elm;
-
-    scope.tagsMap2Arr = scope.tags_convert = function (data) {
-        let arr = [];
-        for (let i in data) {
-            arr = arr.concat(data[i]);
-        }
-        return arr;
-    };
-
-    scope.addTag = scope.tag_add = function (e, type) {
-        scope.emit('tag.add', {type});
-    };
-
-    scope.editTag = scope.tag_edit = function (e, id) {
-        scope.emit('tag.edit', id);
-    };
-
-    scope.tag_remove_done = function (res) {
-        $(this).closest('li').remove();
-    };
-
-    scope.before = function (f) {
-        console.info('ic-form-submit-before => ', f);
-    };
-
-    this.ajax_before_confirm = function (data, msg) {
-        //console.info([].slice.call(arguments));
-        return confirm(data || msg);
-    };
-
-    $elm.on('ic-form.error', function (e, msg) {
-        console.info(msg);
-    });
-
-
-    // ic-viewer 功能
-    let $viewerAttach = $('#viewerAttach');
     // ic-viewer  回调函数
+    let $viewerAttach = $('#viewerAttach');
+
     scope.onViewerOpen = () => {
         $viewerAttach.show();
     };
@@ -69,15 +20,24 @@ function mainCtrl () {
     };
 
     scope.onViewerShow = function (index, src, $info) {
-        let arr = src.split('=');
-        src = arr[1] || arr[0];
-        scope.viewerCurrentImg = {f: src};
+        let imgObj = scope.viewerCurrentImg = scope.urls[index]; // scope.urls 继承自mainCtrl
         scope.viewerMarkTag();
-        $info.text(src);
+        let arr = imgObj.tradeInfo;
+        if (arr) {
+            arr = arr.map(a => {
+                return [a[1], a[5], a[7], a[6]];
+            });
+            arr.reverse(); // 当日多个交易记录按照时间先后显示
+            let text = arr.join('\r\n').replace(/,/g, '    ');
+            $viewerAttach.find('p').text(text);
+        }
+
+        $info.text('\r\n' + imgObj.f);
     };
 
     scope.editImg = () => {
-        utils.preview(scope.viewerCurrentImg.f);
+        let imgObj = scope.viewerCurrentImg;
+        utils.preview(imgObj.f);
     };
 
     scope.viewItemInFolder = () => {
@@ -85,6 +45,7 @@ function mainCtrl () {
     };
 
     scope.viewInTdx = () => {
+        console.log(scope.viewerCurrentImg);
         utils.viewInTdx(scope.viewerCurrentImg.code);
     };
 
@@ -133,12 +94,3 @@ function mainCtrl () {
     }
 
 }
-
-
-brick.reg('main_ctrl', mainCtrl);
-brick.reg('mainCtrl', mainCtrl)
-
-
-setTimeout(function () {
-    brick.bootstrap()
-}, 30)

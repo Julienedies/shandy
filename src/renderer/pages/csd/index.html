@@ -10,7 +10,7 @@
 <div class="column is-10" ic-tpl="csd">
 
     <section class="box" ic-form="createStocksJson">
-        <h2 class="title is-4">创建stocks.json</h2>
+        <h2 class="title is-5">创建stocks.json</h2>
         <!-- field -->
         <div class="field is-horizontal">
             <div class="field-label is-normal">
@@ -66,7 +66,7 @@
     </section>
 
     <section class="box" ic-form="fetchCsd">
-        <h2 class="title is-4">csd数据获取</h2>
+        <h2 class="title is-5">csd数据获取</h2>
         <div class="field is-horizontal">
             <div class="field-label is-normal">
                 <label class="label">csd路径</label>
@@ -178,7 +178,7 @@
     </section>
 
     <section class="box" ic-form="createTdxFile">
-        <h2 class="title is-4">创建通达信自定义数据</h2>
+        <h2 class="title is-5">创建通达信自定义数据</h2>
         <div class="field is-horizontal">
             <div class="field-label is-normal">
                 <label class="label">csd路径</label>
@@ -229,6 +229,69 @@
                 </div>
             </div>
         </div>
+
+    </section>
+
+    <section class="box" ic-form="findHot">
+        <h2 class="title is-5">热点分析/定义风口</h2>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">csd路径</label>
+            </div>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" value="{{ model.csdPath }}" name="csdPath" placeholder="csd路径"
+                               ic-form-field ic-field-rule="required"/>
+                    </div>
+                    <div class="control">
+                        <a class="button is-primary" ic-select-path="csdPath">
+                            选择csd路径
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- field -->
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">csv文件</label>
+            </div>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" value="{{ model.hotCsvFile }}"
+                               name="hotCsvFile" ic-form-field ic-field-rule="required">
+                    </div>
+                    <div class="control">
+                        <a class="button is-primary" ic-select-path="hotCsvFile">
+                            选择涨停/上冲csv文件
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label"></label>
+            </div>
+            <div class="field-body">
+                <div class="field">
+                    <p class="control">
+                        <button class="button is-primary" ic-form-submit="findHot" ic-submit-action="findHot()">
+                            热点分析
+                        </button>
+                        <button class="button is-primary" ic-form-submit="findHot" ic-submit-action="setHot()">
+                            定义风口
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="findHotResult"></div>
 
     </section>
 

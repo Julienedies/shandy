@@ -12,7 +12,7 @@
 <body ic-ctrl="mainCtrl">
 <div class="column" ic-ctrl="systemCtrl">
 
-    <header class="">
+    <header>
         <div class="">
             <div class="buttons">
                 <button class="button is-primary is-small"
@@ -48,15 +48,16 @@
                         <div class="column is-10">
                             <header style="padding-bottom: 0.5rem;">
                                 <a class="title is-5" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }}</a>
+                                <span class="tag" ic-if="Array.isArray(v['交易系统逻辑'])" ic-for="j,o in v['交易系统逻辑']">
+                                    {{ o }}
+                                </span>
                                 <span style="padding-left:1em;">{{ v['note'] }}</span>
                             </header>
                             <div class="tags" style="margin-bottom:0.1rem;">
 <!--                                <span class="tag is-black" ic-if="v['目标行情']">
                                     {{ v['目标行情'] }}
-                                </span>
-                                <span class="tag is-primary" ic-if="v['交易系统逻辑']">
-                                    {{ v['交易系统逻辑'] }}
                                 </span>-->
+
                                 <span class="tag is-primary is-small" ic-for="k,s in (v['交易系统条件']||[])">
                                     {{ s }}
                                 </span>
@@ -65,10 +66,15 @@
                                 </span>
                             </div>
 
-                            <div class="tags" ic-viewer ic-viewer-url="href">
+                            <div class="tags"
+                                 ic-viewer
+                                 ic-viewer-item=">span"
+                                 ic-viewer-url="href"
+                                 ic-viewer-on-show="onViewerShow"
+                                 ic-viewer-on-open="onViewerOpen"
+                                 ic-viewer-on-close="onViewerClose">
                                     <span class="tag is-info is-small"
                                           ic-for="i,o in (v['示例图片']||[])"
-                                          ic-viewer-item
                                           ic-href="{{ parseImgPath(o) }}">
                                         {{ parseImgName(o) }}
                                     </span>
@@ -135,6 +141,22 @@
     ${ require('./set-system.html')}
     ${ require('../tags/set-tag.html') }
 </div>
+
+<div id="viewerAttach">
+    <p></p>
+    <div>
+        <a ic-click="editImg">编辑</a>
+        <a ic-click="viewItemInFolder">查看</a>
+        <a ic-click="viewerMarkTag" ic-popup-target="viewerMarkTag">标记</a>
+        <a ic-click="viewInTdx">通达信查看</a>
+        <a ic-click="viewInFtnn">富途查看</a>
+        <a ic-click="markMistake">标记错误</a>
+        <a ic-click="markQuotation">标记行情</a>
+        <a ic-click="moveToTrash">回收站</a>
+    </div>
+</div>
+
+${ require('../../viewer/markTag.html') }
 
 <div>
     <section>

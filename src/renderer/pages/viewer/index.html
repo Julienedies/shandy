@@ -60,7 +60,7 @@
 
     </div>
 
-    <div ic-ctrl="listCtrl">
+    <div ic-ctrl="viewerListCtrl">
 
         <div id="list" ic-tpl="list">
             <ol ic-viewer
@@ -83,7 +83,7 @@
             <div>
                 <a ic-click="editImg">编辑</a>
                 <a ic-click="viewItemInFolder">查看</a>
-                <a ic-click="markTag" ic-popup-target="markTag">标记</a>
+                <a ic-click="viewerMarkTag" ic-popup-target="viewerMarkTag">标记</a>
                 <a ic-click="viewInTdx">通达信查看</a>
                 <a ic-click="viewInFtnn">富途查看</a>
                 <a ic-click="markMistake">标记错误</a>
@@ -96,44 +96,6 @@
 
 </div>
 
-<div class="column is-6" ic-ctrl="markTagCtrl" ic-popup="markTag">
-    <div>
-        <header class="buttons">
-            <button class="button is-primary"
-                    ic-ajax
-                    ic-ajax-auto
-                    ic-submit-method="get"
-                    ic-submit-action="/stock/system"
-                    ic-submit-on-done="onGetSystemDone">交易系统列表
-            </button>
-            <button class="button is-primary" ic-popup-close>关闭</button>
-        </header>
-
-        <div ic-tpl="tags">
-            <div class="ic-select" ic-select="system" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
-                <div class="tags">
-                    <span class="tag is-medium is-primary">交易系统</span>
-                    <span class="tag is-small is-black" ic-for="i, v in model.system" ic-select-item ic-val="{{ v.id }}"
-                          ic-has-selected="model.img.system && model.img.system.includes(v.id)">
-                        {{v.name}}
-                    </span>
-                </div>
-            </div>
-            <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
-                <div class="tags">
-                    <span class="tag is-primary is-medium" ic-for-start="k,arr in model.tags" ic-if-start="k!=='type'">{{k}}</span>
-                    <span class="tag is-small is-black" ic-for-end ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
-                          ic-has-selected="model.img.tags && model.img.tags.includes(v.id)">
-                        {{v.text}}
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="buttons" ic-popup-close>
-            <button class="button is-primary">关闭</button>
-        </div>
-    </div>
-</div>
+${ require('./markTag.html') }
 </body>
 </html>

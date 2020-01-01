@@ -31,6 +31,16 @@
 	},
 	{
 		"name": "",
+		"id": "3858323",
+		"type": "",
+		"start": "11:35",
+		"interval": 30,
+		"repeat": 1,
+		"content": "查看财联社新闻",
+		"timestamp": 1577862766013
+	},
+	{
+		"name": "",
 		"id": "6111044",
 		"type": "",
 		"start": "15:00",
@@ -38,45 +48,34 @@
 		"repeat": 4,
 		"content": "整理交易系统。",
 		"timestamp": 1577596280705,
-		"promptTimes": 3,
-		"prevPromptTime": 1577782175040,
+		"promptTimes": 4,
+		"prevPromptTime": 1577871114016,
 		"complete": true
 	},
 	{
 		"name": "",
-		"id": "3120339",
-		"start": "16:00",
+		"id": "0263661",
+		"type": "",
+		"start": "17:00",
 		"interval": 60,
 		"repeat": 6,
-		"content": "保存竞价强图片！",
-		"timestamp": 1577539413052,
+		"content": "查看财联社新闻",
+		"timestamp": 1577862818798,
 		"promptTimes": 1,
-		"prevPromptTime": 1577779773744,
-		"complete": true
-	},
-	{
-		"name": "",
-		"id": "8047377",
-		"start": "17:00",
-		"interval": 40,
-		"repeat": 5,
-		"content": "导出涨停板和放量上冲股票，分类归纳，\b汇总股票概念最大合集，以辅助确定市场热点。\n通达信自定义数据添加热点项；",
-		"timestamp": 1577539844855,
-		"type": "",
-		"promptTimes": 5,
-		"prevPromptTime": 1577793081232,
+		"prevPromptTime": 1577869313765,
 		"complete": true
 	},
 	{
 		"name": "",
 		"id": "7547618",
 		"start": "18:00",
-		"interval": 30,
-		"repeat": 5,
-		"content": "复盘板块。",
+		"interval": 60,
+		"repeat": 6,
+		"content": "复盘板块。\n复盘要过一遍板块指数；\n要过一遍涨停池；旗形涨停值得关注；",
 		"timestamp": 1577530865756,
-		"promptTimes": 5,
-		"prevPromptTime": 1577799780481
+		"type": "",
+		"promptTimes": 4,
+		"prevPromptTime": 1577885513293
 	},
 	{
 		"name": "",
@@ -88,6 +87,40 @@
 		"content": "查看当日涨停个股资料，确定热点。",
 		"timestamp": 1577697423900,
 		"promptTimes": 4,
-		"prevPromptTime": 1577804574262
+		"prevPromptTime": 1577886112475
+	},
+	{
+		"name": "",
+		"id": "3120339",
+		"start": "20:00",
+		"interval": 60,
+		"repeat": 4,
+		"content": "保存竞价强图片！",
+		"timestamp": 1577539413052,
+		"promptTimes": 3,
+		"prevPromptTime": 1577883713246,
+		"type": ""
+	},
+	{
+		"name": "",
+		"id": "5438627",
+		"type": "",
+		"start": "21:00",
+		"interval": 45,
+		"repeat": 4,
+		"content": "更新csd。",
+		"timestamp": 1577862911294,
+		"promptTimes": 1,
+		"prevPromptTime": 1577884312420
+	},
+	{
+		"name": "",
+		"id": "8047377",
+		"start": "21:30",
+		"interval": 30,
+		"repeat": 5,
+		"content": "导出涨停板和放量上冲股票，分类归纳，\b汇总股票概念最大合集，以辅助确定市场热点。\n通达信自定义数据添加热点项；",
+		"timestamp": 1577539844855,
+		"type": ""
 	}
 ]

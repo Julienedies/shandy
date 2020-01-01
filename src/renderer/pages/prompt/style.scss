@@ -177,14 +177,3 @@ a {
 }
 
 
-.rotateBox {
-  transform-style: preserve-3d;
-}
-.rotate {
-  animation: rotate 4s linear infinite;
-}
-@keyframes rotate {
-  to {
-    transform: rotateY(360deg);
-  }
-}
