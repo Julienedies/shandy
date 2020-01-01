@@ -20,6 +20,7 @@ import '../../../js/utils.js'
 import tagsCtrl from './tags-ctrl'
 import detailsCtrl from './details-ctrl'
 import setTagCtrl from './set-tag-ctrl'
+import viewerMarkTagCtrl from '../../viewer/markTag-ctrl'
 
 window.brick = brick; // 不是测试用；模板里需要全局获取
 
@@ -28,3 +29,5 @@ brick.reg('tagsCtrl', tagsCtrl);
 brick.reg('setTagCtrl', setTagCtrl);
 
 brick.reg('detailsCtrl', detailsCtrl);
+
+brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);

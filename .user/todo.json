@@ -97,8 +97,8 @@
 		"repeat": 4,
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
-		"promptTimes": 3,
-		"prevPromptTime": 1577883713246,
+		"promptTimes": 4,
+		"prevPromptTime": 1577887313310,
 		"type": ""
 	},
 	{
@@ -121,6 +121,9 @@
 		"repeat": 5,
 		"content": "导出涨停板和放量上冲股票，分类归纳，\b汇总股票概念最大合集，以辅助确定市场热点。\n通达信自定义数据添加热点项；",
 		"timestamp": 1577539844855,
-		"type": ""
+		"type": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1577886713690,
+		"complete": true
 	}
 ]

@@ -19,7 +19,6 @@ import C from '../../../js/constants.js'
 
 import setTagCtrl from '../tags/set-tag-ctrl'
 import viewerMarkTagCtrl from '../../viewer/markTag-ctrl'
-import viewerListCtrl from '../../viewer/list-ctrl'
 
 //brick.set('debug', true)
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
@@ -226,7 +225,5 @@ brick.reg('setSystemCtrl', function () {
     };
 
 });
-
-brick.reg('viewerListCtrl', viewerListCtrl);
 
 brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);

@@ -45,6 +45,10 @@ export default function (scope) {
         render();
     });
 
+    scope.on('viewer-close', function () {
+        scope.hide();
+    });
+
     scope.$elm.hover(function () {
         scope.$elm.css('opacity', 1);
     }, function () {

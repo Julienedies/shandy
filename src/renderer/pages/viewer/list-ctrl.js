@@ -17,6 +17,7 @@ export default function (scope) {
     };
     scope.onViewerClose = () => {
         $viewerAttach.hide();
+        scope.emit('viewer-close');
     };
 
     scope.onViewerShow = function (index, src, $info) {

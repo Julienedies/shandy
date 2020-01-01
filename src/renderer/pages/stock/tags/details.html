@@ -9,11 +9,16 @@
                         {{ brick.getTpl('details')({model:v.children}) }}
                     </div>
                     <div ic-else>
-                        <div class="tags" ic-viewer ic-viewer-url="href">
+                        <div class="tags"
+                             ic-viewer
+                             ic-viewer-item=">a"
+                             ic-viewer-url="href"
+                             ic-viewer-on-show="onViewerShow"
+                             ic-viewer-on-open="onViewerOpen"
+                             ic-viewer-on-close="onViewerClose">
                             <a class="tag is-small is-warning"
                                style="padding-right:1rem;"
                                ic-for="i,o in (v['示例图片']||[])"
-                               ic-viewer-item
                                ic-href="{{ parseImgPath(o) }}">
                                 {{ parseImgName(o) }}
                             </a>

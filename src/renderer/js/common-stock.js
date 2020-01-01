@@ -66,6 +66,7 @@ function mainCtrl () {
     };
     scope.onViewerClose = () => {
         $viewerAttach.hide();
+        scope.emit('viewer-close');
     };
 
     scope.onViewerShow = function (index, src, $info) {
