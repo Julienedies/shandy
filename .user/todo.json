@@ -74,8 +74,8 @@
 		"content": "复盘板块。\n复盘要过一遍板块指数；\n要过一遍涨停池；旗形涨停值得关注；",
 		"timestamp": 1577530865756,
 		"type": "",
-		"promptTimes": 4,
-		"prevPromptTime": 1577885513293
+		"promptTimes": 5,
+		"prevPromptTime": 1577889113314
 	},
 	{
 		"name": "",
@@ -86,8 +86,8 @@
 		"repeat": 7,
 		"content": "查看当日涨停个股资料，确定热点。",
 		"timestamp": 1577697423900,
-		"promptTimes": 4,
-		"prevPromptTime": 1577886112475
+		"promptTimes": 5,
+		"prevPromptTime": 1577889712492
 	},
 	{
 		"name": "",
@@ -110,8 +110,8 @@
 		"repeat": 4,
 		"content": "更新csd。",
 		"timestamp": 1577862911294,
-		"promptTimes": 1,
-		"prevPromptTime": 1577884312420
+		"promptTimes": 3,
+		"prevPromptTime": 1577890913334
 	},
 	{
 		"name": "",

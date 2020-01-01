@@ -14,13 +14,10 @@ export default function (scope) {
     let imgObj = {};
 
     let render = () => {
-        // 在viewer页面和其它页面, on viewer-markTag 事件时传递的viewerImgObj不同,有的只有文件路径一个属性
-        imgObj = currentImg.id ? currentImg : viewerJodb.get(currentImg.f, 'img')[0];
-        console.log(JSON.stringify(imgObj, null, '\t'));
-        let f = (imgObj) => {
-            return imgObj;
-        };
-        model.img = f(imgObj);
+        // 在viewer中有记录的img 或者 第一次添加标签记录的img；
+        imgObj = viewerJodb.get(currentImg.f, 'img')[0] || {img: currentImg.f};
+        console.log(imgObj);
+        model.img = imgObj;
         scope.render('viewerTags', {model});
     };
 
