@@ -81,6 +81,7 @@ brick.reg('mainCtrl', function (scope) {
             return $.icMsg(`${ dir }\r不存在!`);
         }
         let urls = helper.getImages(dir);
+        console.log('urls =>', urls);
         if (!urls.length) {
             return $.icMsg('no images.');
         }

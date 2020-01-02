@@ -261,32 +261,6 @@ a {
 }
 
 
-
-
-.warn {
-  animation: warn 4s 10 ease-in-out;
-}
-
-@keyframes warn {
-  1% {
-    opacity: 0;
-  }
-  /*  20% {
-      opacity: 0.5;
-    }
-    40% {
-      opacity: 0.75;
-    }
-    60% {
-    }*/
-  50% {
-    opacity: 0.95;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .rotateBox {
   transform-style: preserve-3d;
 }
@@ -303,7 +277,8 @@ a {
     transform: none;
   }
   50% {
-    transform: scale(1.6);
+    /*transform: scale(1.6);*/
+    font-size:48px;
   }
   to {
     transform: none;
@@ -311,5 +286,5 @@ a {
 }
 
 .beat {
-  animation: beat 1s infinite alternate;
+  animation: beat 2s infinite alternate;
 }

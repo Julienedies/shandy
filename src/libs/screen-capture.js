@@ -8,6 +8,7 @@ import fs from 'fs'
 import path from 'path'
 
 import electron from 'electron'
+import moment from 'moment'
 
 const desktopCapturer = electron.desktopCapturer;
 const electronScreen = electron.screen;
@@ -24,8 +25,11 @@ function determineScreenShotSize () {
 function createDateStr () {
     let now = new Date();
     let str = now.toLocaleString().replace(/\//img, '-').replace(/[:]/img, '.');
-    str = str.replace(/(\D)(\d)(\D)/img, '$10$2$3');
-    return str;
+    console.log(str);
+    // 为单个日期数字添加前缀0
+    let str2 = str.replace(/\d{4}-\d{1,2}-\d{1,2}/, moment(now).format('YYYY-MM-DD'));
+    console.log(str2);
+    return str2;
 }
 
 /*

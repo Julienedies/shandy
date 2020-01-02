@@ -30,7 +30,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/竞价系统/2019-12",
+		"imgDir": "/Users/j/截图/目标行情/2020-01",
 		"bounds": {
 			"x": 1440,
 			"y": 0,
@@ -112,10 +112,10 @@
 	},
 	"prompt": {
 		"bounds": {
-			"x": 165,
-			"y": 167,
-			"width": 1143,
-			"height": 562
+			"x": 0,
+			"y": 23,
+			"width": 1440,
+			"height": 808
 		}
 	},
 	"reader": {

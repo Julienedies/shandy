@@ -22,7 +22,7 @@ export default {
     /**
      * 获取文件夹里的图片对象数组: imgObjArr
      * @param dir {String} 文件夹路径
-     * @param isOnlyPath {Boolean} 图片对象是否只包含路径
+     * @param [isOnlyPath] {Boolean} 图片对象是否只包含路径
      * @returns {Array} [{f:图片路径，c:图片创建时间戳，d:图片创建日期, code: 股票code}]
      */
     getImages: function (dir, isOnlyPath) {

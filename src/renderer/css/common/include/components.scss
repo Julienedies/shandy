@@ -1,5 +1,5 @@
 /*
-组件样式定义
+ * 公用组件样式定义
 =========================================================
  */
 
@@ -14,6 +14,47 @@
   display: none;
 }
 
+#viewerAttach {
+  display: none;
+  position: fixed;
+  z-index: 10001;
+  color: #fff;
+  top: 95px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  text-align: center;
+
+  > p {
+    white-space: pre;
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 0 1em;
+  }
+
+  > div {
+    position: fixed;
+    width: 100%;
+    bottom: 10%;
+    padding-right:10%;
+    text-align:right;
+
+    a {
+      color: greenyellow;
+      pointer-events: auto;
+      padding: 5px 15px;
+      background: rgba(0, 0, 0, 0.7);
+      border: solid 1px greenyellow;
+    }
+  }
+
+}
+
+[ic-popup="viewerMarkTag"] {
+  background: rgba(0, 0, 0, 0.8) !important;
+  overflow-y: hidden !important;
+  z-index:4000!important;
+}
 
 
 

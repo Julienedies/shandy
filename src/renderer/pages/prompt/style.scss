@@ -42,82 +42,6 @@ body {
   align-items: center;
 }
 
-.input[type="checkbox"] {
-  position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    width: 1.6rem;
-    height: 1.6rem;
-    background: #fff;
-    border-radius: 50%;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    display: block;
-    z-index: 21;
-    width: 0.8rem;
-    height: 2rem;
-    border-right: 3px solid #bdbfbf;
-    border-bottom: 3px solid #bdbfbf;
-    transform: rotate(45deg) translate(0px, 0px);
-  }
-
-  &:checked:after {
-    border-color: #2aa3ce;
-  }
-
-}
-
-//----------------------------------------------------
-[x-ic-step] {
-  position: relative;
-  transition: all 0.5s;
-
-  > * {
-    margin-top: 0 !important;
-    width: 100%;
-    min-height: 130px;
-    position: absolute;
-    display: flex;
-    flex-flow: column;
-    //align-items: center;
-    justify-content: center;
-    opacity: 0;
-    font-size: 1.4em;
-    cursor: pointer;
-    transform: translate(0, 100%);
-    pointer-events: none;
-    transition: all 0.5s;
-
-    &.active {
-      transform: translate(0, 0);
-      position: relative;
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
-
-}
-
-// ---------------------------------------------- brick
-#b-plan {
-  padding-right: 60px;
-
-  p {
-    padding: 0 10px;
-  }
-}
-
-
 //----------------------------------------------------
 .box, .title {
   color: inherit;
@@ -139,41 +63,6 @@ a {
   }
 }
 
-.none {
-  display: none !important;
-}
 
-.pre {
-  white-space: pre-wrap;
-}
-
-@keyframes beat {
-  50% { font-size: 1.6em; }
-}
-
-.beat {
-  animation: beat 1s infinite alternate;
-}
-
-.warn {
-  animation: warn 0.7s 100 ease-in-out;
-}
-
-@keyframes warn {
-  1% {
-    background: rgba(255, 255, 0, 1);
-    //color: #000;
-  }
-  100% {
-    background: rgba(255, 255, 0, 0);
-    //color: green;
-  }
-}
-
-
-.onDragOver{
-  background:blue;
-  color:#fff;
-}
 
 
