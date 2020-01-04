@@ -20,38 +20,42 @@ import utils from '../../../libs/utils'
 import setting from '../../../libs/setting'
 import helper from '../viewer/helper'
 
-const {remote, shell} = electron
-const {dialog} = electron.remote
+const {remote, shell} = electron;
+const {dialog} = electron.remote;
 
 
 brick.reg('toolBarCtrl', function (scope) {
 
     this.showIp = function () {
-        scope.$elm.find('#ip').text(utils.getIp())
-    }
+        scope.$elm.find('#ip').text(utils.getIp());
+    };
 
-    this.showIp()
+    this.showIp();
 
     this.view_403 = function () {
-        tdx.keystroke('.403', true)
-    }
+        tdx.keystroke('.403', true);
+    };
 
     this.relaunch = function () {
-        remote.app.relaunch()
-        remote.app.exit()
-    }
+        remote.app.relaunch();
+        remote.app.exit();
+    };
+
+    this.quit = function () {
+        remote.app.exit();
+    };
 
     this.refresh = function (e) {
-        location.reload()
-    }
+        location.reload();
+    };
 
     this.openInWeb = function () {
-        shell.openExternal(`http://127.0.0.1:${ config.SERVER_PORT }/web/stock_index.html`)
-    }
+        shell.openExternal(`http://127.0.0.1:${ config.SERVER_PORT }/web/stock_index.html`);
+    };
 
     this.updateToken = function () {
-        getToken()
-    }
+        getToken();
+    };
 
     this.renameByOcr = function (e) {
         let $th = $(this).icSetLoading();
