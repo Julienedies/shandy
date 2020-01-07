@@ -240,7 +240,6 @@
                 <!-- 语音提醒 -->
                 <div ic-ctrl="setVoiceWarnCtrl" ic-popup="setVoiceWarn">
                     <div class="column is-12" style="padding:20px;">
-
                         <h3 class="title is-5">
                             <span style="padding:0 9px 0 9px; vertical-align: -4px;">设置语音警告</span>
                             <button class="button is-primary is-small" ic-popup-target="setWarnItem">添加新项</button>
@@ -248,6 +247,11 @@
                             <button class="button is-small" ic-popup-close>关闭窗口</button>
                             <button class="button is-small" ic-click="debug">debug</button>
                         </h3>
+                        <div class="tags is-right" ic-select="type" ic-select-cla="is-primary" ic-select-on-change="onTypeChange">
+                            <span class="tag" ic-val="timer">timer</span>
+                            <span class="tag" ic-val="interval">interval</span>
+                            <span class="tag" ic-val="action">action</span>
+                        </div>
                         <table class="table is-striped" style="margin-top:15px;font-size:14px;" ic-tpl="warnList">
                             <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                                 ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
@@ -282,7 +286,7 @@
                                     </div>
                                     <div class="field">
                                         <div class="control">
-                                            <textarea rows="4" class="textarea" placeholder="警告内容"
+                                            <textarea rows="7" class="textarea" placeholder="警告内容"
                                                       ic-form-field="content">{{ model.content }}</textarea>
                                         </div>
                                     </div>

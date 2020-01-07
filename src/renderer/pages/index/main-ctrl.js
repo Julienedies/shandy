@@ -231,7 +231,7 @@ brick.reg('mainCtrl', function (scope) {
                 warnWindow = scope.warnWindow = new Win(opt);
                 flag && warnWindow.win.setIgnoreMouseEvents(true);
                 warnWindow.win.webContents.on('did-finish-load', function () {
-                    warnWindow.win.webContents.send('id', warnWindow.win.id, flag)
+                    warnWindow.win.webContents.send('id', warnWindow.win.id, flag);
                 });
             };
 
@@ -249,7 +249,6 @@ brick.reg('mainCtrl', function (scope) {
             };
 
             fn();
-
         }
     };
 

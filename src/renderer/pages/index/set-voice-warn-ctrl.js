@@ -24,13 +24,20 @@ export default function (scope) {
     let warnIntervalTimer = null;
     const dragOverCla = 'onDragOver';
 
+    let currentType;
+
+/*    warnJodb.each((item) => {
+        item.type = getType(item.trigger);
+    });
+    warnJodb.save();*/
+
     ipcRenderer.on('warn', (event, info) => {
         console.log(info, warnHandleMap[info]);
         voice(warnHandleMap[info] || '');
     });
 
-    function render () {
-        let model = warnJodb.get();
+    function render (model) {
+        model = currentType ?  warnJodb.get(currentType, 'type') : warnJodb.get();
         scope.render('warnList', {model}, function () {
             $(this).find('tr')
                 .on('dragstart', scope.dragstart)
@@ -43,10 +50,20 @@ export default function (scope) {
     function init () {
         render();
         // 如果不是交易时段, 则不设置语音警告
-        if(utils.isTrading() || isAbleVoiceWarn){
+        if (utils.isTrading() || isAbleVoiceWarn) {
             isAbleVoiceWarn = true;
             updateVoiceWarn();
             scope.$elm.find('button[role=toggleBtn]').text('关闭语音').addClass('is-primary');
+        }
+    }
+
+    function getType (trigger) {
+        if (/^\d+$/.test(trigger)) {
+            return 'interval';
+        } else if (/^\d\d?(?:[:]\d\d?)+$/.test(trigger)) {
+            return 'timer';
+        } else {
+            return 'action';
         }
     }
 
@@ -57,8 +74,10 @@ export default function (scope) {
         let disable = item.disable || cancel;
         let old = warnHandleMap[id];
 
+        let type = getType(trigger);
+
         // trigger => 10 : 间隔执行
-        if (/^\d+$/.test(trigger)) {
+        if (type === 'interval') {
             if (disable) {
                 _.remove(warnIntervalArr, (text) => {
                     return text === content;
@@ -71,7 +90,7 @@ export default function (scope) {
             warnIntervalArr = _.shuffle(warnIntervalArr);
         }
         // trigger => 9:00: 定时执行
-        else if (/^\d+[:]\d+$/.test(trigger)) {
+        else if ( type === 'timer') {
             if (old && old.handle) {
                 old.handle.cancel();
                 delete old.handle;
@@ -109,12 +128,12 @@ export default function (scope) {
         if (!cancel && !warnIntervalTimer && isAbleVoiceWarn) {
             warnIntervalTimer = setInterval(() => {
                 let warnText = warnIntervalArr.shift();
-                if(warnText){
+                if (warnText) {
                     voice(warnText);
                     warnIntervalArr.push(warnText);
                     ipcRenderer.send('voice_warn', warnText);
                 }
-            }, 1000 * 60 * 4);
+            }, 1000 * 60 * 3);
         }
     }
 
@@ -123,6 +142,11 @@ export default function (scope) {
     scope.debug = function (e) {
         let msg = JSON.stringify(warnIntervalArr, null, '\t');
         utils.msg(msg);
+    };
+
+    scope.onTypeChange = function (msg) {
+        currentType = msg.value;
+        render();
     };
 
     // 开启语音警告或关闭
@@ -143,6 +167,7 @@ export default function (scope) {
     };
 
     scope.save = function (fields) {
+        fields.type = getType(fields.trigger);
         warnJodb.set(fields);
         scope.reset();
         scope.$elm.find('[ic-popup="setWarnItem"]').icPopup(false);

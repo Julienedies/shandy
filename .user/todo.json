@@ -1,18 +1,6 @@
 [
 	{
 		"name": "",
-		"id": "9581306",
-		"type": "",
-		"start": "15:00",
-		"interval": 30,
-		"repeat": 7,
-		"content": "优化竞价条件\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
-		"timestamp": 1578023594839,
-		"promptTimes": 7,
-		"prevPromptTime": 1578221333569
-	},
-	{
-		"name": "",
 		"id": "5646886",
 		"type": "prepare",
 		"start": "8:35",
@@ -35,11 +23,21 @@
 		"name": "",
 		"id": "3202726",
 		"type": "",
-		"start": "8:55",
-		"interval": 0,
+		"start": "8:50",
+		"interval": 45,
 		"repeat": 1,
 		"content": "风口选股",
 		"timestamp": 1577664169847
+	},
+	{
+		"name": "",
+		"id": "6349074",
+		"type": "",
+		"start": "9:29:15",
+		"interval": 45,
+		"repeat": 1,
+		"content": "不要优柔寡断，开始下单：分仓竞价买入。\n不要优柔寡断，开始下单：分仓竞价买入。\n大盘氛围、板块热点、个股股性、人气地位、技术形态。\n大盘氛围、板块热点、个股股性、人气地位、技术形态",
+		"timestamp": 1578299348386
 	},
 	{
 		"name": "",
@@ -60,8 +58,20 @@
 		"repeat": 4,
 		"content": "整理交易系统。",
 		"timestamp": 1577596280705,
+		"promptTimes": 4,
+		"prevPromptTime": 1578390050969
+	},
+	{
+		"name": "",
+		"id": "9581306",
+		"type": "",
+		"start": "15:00",
+		"interval": 30,
+		"repeat": 7,
+		"content": "优化竞价条件\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
+		"timestamp": 1578023594839,
 		"promptTimes": 3,
-		"prevPromptTime": 1578215335387,
+		"prevPromptTime": 1578386450515,
 		"complete": true
 	},
 	{
@@ -73,8 +83,8 @@
 		"repeat": 6,
 		"content": "查看财联社新闻",
 		"timestamp": 1577862818798,
-		"promptTimes": 1,
-		"prevPromptTime": 1578212934729,
+		"promptTimes": 2,
+		"prevPromptTime": 1578388851961,
 		"complete": true
 	},
 	{
@@ -87,7 +97,7 @@
 		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜",
 		"timestamp": 1577964389066,
 		"promptTimes": 5,
-		"prevPromptTime": 1578234988077
+		"prevPromptTime": 1578404401401
 	},
 	{
 		"name": "",
@@ -98,8 +108,8 @@
 		"content": "复盘板块。\n复盘要过一遍板块指数；\n要过一遍涨停池；旗形涨停值得关注；",
 		"timestamp": 1577530865756,
 		"type": "",
-		"promptTimes": 3,
-		"prevPromptTime": 1578237384485,
+		"promptTimes": 2,
+		"prevPromptTime": 1578403037656,
 		"complete": true
 	},
 	{
@@ -111,8 +121,8 @@
 		"repeat": 5,
 		"content": "查看当日涨停个股资料，确定热点。",
 		"timestamp": 1577697423900,
-		"promptTimes": 4,
-		"prevPromptTime": 1578237988514
+		"promptTimes": 3,
+		"prevPromptTime": 1578405001376
 	},
 	{
 		"name": "",
@@ -123,8 +133,8 @@
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
 		"type": "",
-		"promptTimes": 3,
-		"prevPromptTime": 1578239194026
+		"promptTimes": 2,
+		"prevPromptTime": 1578405789075
 	},
 	{
 		"name": "",
@@ -134,10 +144,7 @@
 		"interval": 60,
 		"repeat": 4,
 		"content": "更新csd。",
-		"timestamp": 1577862911294,
-		"promptTimes": 1,
-		"prevPromptTime": 1578236184530,
-		"complete": true
+		"timestamp": 1577862911294
 	},
 	{
 		"name": "",
@@ -147,9 +154,6 @@
 		"repeat": 5,
 		"content": "导出涨停板和放量上冲股票，分类归纳，\b汇总股票概念最大合集，以辅助确定市场热点。\n通达信自定义数据添加热点项；",
 		"timestamp": 1577539844855,
-		"type": "",
-		"promptTimes": 2,
-		"prevPromptTime": 1578239784110,
-		"complete": true
+		"type": ""
 	}
 ]

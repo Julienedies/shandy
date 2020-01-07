@@ -1,278 +1,69 @@
 [
 	{
-		"name": "",
-		"id": "2959839",
-		"trigger": "daban",
-		"content": "无系统建仓；\n目标行情；\n衡量收益和风险；",
-		"timestamp": 1562998416497,
-		"disable": false
-	},
-	{
-		"name": "",
-		"id": "2234810",
-		"trigger": "buy",
-		"content": "无系统建仓；\n情绪建仓；\n主观臆想建仓；",
-		"timestamp": 1576660953345
-	},
-	{
-		"name": "",
-		"id": "3250183",
-		"trigger": "sell",
-		"content": "无大局观卖飞；无耐心卖飞；\n无大局观卖飞；无耐心卖飞；\n止损要快；止损要快；",
-		"timestamp": 1576661024135,
-		"disable": false
-	},
-	{
-		"name": "",
-		"id": "1968194",
-		"trigger": "2",
-		"content": "没有大局观；总是和市场节奏相反。\n节奏和时机非常重要。\n启动、转折、爆发。",
-		"timestamp": 1576715145044,
-		"disable": false
-	},
-	{
-		"name": "",
-		"id": "6506825",
-		"trigger": "2",
-		"content": "日内风口板块是什么？\n日内风口板块是什么？",
-		"timestamp": 1577700857608
-	},
-	{
-		"name": "",
-		"id": "8521862",
-		"trigger": "3",
-		"content": "大盘氛围、板块热点、个股人气、技术形态、多空博弈",
-		"timestamp": 1578217234006
-	},
-	{
-		"name": "",
-		"id": "8827345",
-		"trigger": "3",
-		"content": "不要先入为主，思维定势。\n摈弃主观喜恶。\n",
-		"timestamp": 1576989589436
-	},
-	{
-		"name": "",
-		"id": "4507049",
-		"trigger": "2",
-		"content": "交易不是每天要做的。\n控制，管住手；空仓等待最佳买点的到来。\n不要因为鸡肋交易，丧失掉最好的交易机会；",
-		"timestamp": 1563849669023,
-		"disable": false
-	},
-	{
-		"name": "",
-		"id": "5264323",
-		"trigger": "5",
-		"content": "在股票这行，\n能够买对了且能安坐不动的人少之又少。",
-		"timestamp": 1578010744222
-	},
-	{
-		"name": "",
-		"id": "0843570",
-		"trigger": "5",
-		"content": "对于我来说，最重要的交易逻辑是周期和博弈；",
-		"timestamp": 1576856488447,
-		"disable": false
-	},
-	{
-		"name": "",
-		"id": "3181899",
-		"trigger": "5",
-		"content": "动态博弈，不要思维定势。\n不要主观臆想，一切以实际盘面为准。",
-		"timestamp": 1576725560319
-	},
-	{
-		"name": "",
-		"id": "0594463",
-		"trigger": "5",
-		"content": "不要想着钱，把事情做对；",
-		"timestamp": 1576759674323,
-		"disable": false
-	},
-	{
-		"name": "",
-		"id": "0443879",
-		"trigger": "5",
-		"content": "竞价只是进攻信号，\n我还要衡量多空博弈，收益风险。\n竞价只是进攻信号，\n我还要衡量多空博弈，收益风险。",
-		"timestamp": 1578010508385
-	},
-	{
-		"name": "",
-		"id": "7912179",
-		"trigger": "5",
-		"content": "交易只有两个动作：建仓，平仓；\n交易系统内建仓；\n不要卖飞；\n止损要快；",
-		"timestamp": 1576717578806,
-		"disable": false
-	},
-	{
-		"name": "",
-		"id": "0139642",
-		"trigger": "5",
-		"content": "主线热点；节奏周期；多空动态博弈；",
-		"timestamp": 1576714959391,
-		"disable": true
-	},
-	{
-		"name": "",
-		"id": "1056992",
-		"trigger": "6",
-		"content": "节奏和时机非常重要。\n指望每天都投机的人，不会获得成功；",
-		"timestamp": 1576717718176
-	},
-	{
-		"name": "",
-		"id": "2720979",
-		"trigger": "15",
-		"content": "大行情不会一蹴而就。要有耐心。",
-		"timestamp": 1576717600114
-	},
-	{
-		"name": "",
-		"id": "7481706",
-		"trigger": "15",
-		"content": "买点：首浪启动，转折，二浪启动，超强势；",
-		"timestamp": 1577029450375
-	},
-	{
-		"name": "",
-		"id": "3447629",
-		"trigger": "15",
-		"content": "操作归操作，情绪归情绪;\n永远不要让情绪来影响你的操作。\n操作只有对错，盈亏交给市场；",
-		"timestamp": 1563149273925,
-		"disable": false
-	},
-	{
-		"name": "",
-		"id": "2084397",
-		"trigger": "15",
-		"content": "控制不住自己的情绪是投机者真正的死敌。\n遵守交易系统和原则；\n执行预案和计划；不要临时起意；",
-		"timestamp": 1564120798112,
-		"disable": false
-	},
-	{
-		"name": "",
-		"id": "8495442",
-		"trigger": "20",
-		"content": "截断亏损，让利润奔跑。",
-		"timestamp": 1576762351774
-	},
-	{
-		"name": "",
-		"id": "8139064",
-		"trigger": "20",
-		"content": "市场合力人气股会在早上抢筹。",
-		"timestamp": 1577772845910
-	},
-	{
-		"name": "",
-		"id": "2039201",
-		"trigger": "20",
-		"content": "多空动态转换：否极泰来；盛极而衰；",
-		"timestamp": 1577186418232
-	},
-	{
-		"name": "",
-		"id": "3544878",
-		"trigger": "\b20",
-		"content": "最多两只票，各50%仓位；\n做好当前每一笔交易；",
-		"timestamp": 1576760111745
-	},
-	{
-		"name": "",
-		"id": "8004817",
-		"trigger": "15",
-		"content": "目标行情； 买点；衡量收益和风险；",
-		"timestamp": 1564028988301,
-		"disable": false
-	},
-	{
-		"name": "",
-		"id": "6378097",
-		"trigger": "30",
-		"content": "短线就是跟着热钱走；热钱所在，行情所在；热钱所在，必然涨停；\n热点确定方向；情绪周期确定节奏;  ",
-		"timestamp": 1563580921913,
-		"disable": true
-	},
-	{
-		"name": "",
-		"id": "4690826",
-		"trigger": "",
-		"content": "大局观  周期； 动态博弈，不要思维定势；\n大盘  板块  股性；热点  趋势  博弈；\n日内风口；人气龙头；风险收益；\n 买点：启动转折",
-		"timestamp": 1576156217243,
-		"disable": true
-	},
-	{
-		"name": "",
-		"id": "5888176",
-		"trigger": "",
-		"content": "情绪导致无效交易错误；人性导致止损错误；\n交易系统的背后是一致性交易的概率优势，同时避免人性错误。",
-		"timestamp": 1564097333965,
-		"disable": true
-	},
-	{
-		"name": "",
-		"id": "0050589",
-		"trigger": "33",
-		"content": "大局观;  大盘状态；行情性质；\n操作只有对错，盈亏交给市场。",
-		"timestamp": 1563489618160,
-		"disable": true
-	},
-	{
-		"name": "timer",
-		"id": "8204819",
-		"trigger": "",
-		"content": "为何一直重复错误！\n克服人性、不要重复错误。不要忘记那些恐惧和痛苦。\n交易逻辑：人性、周期、反身性、概率\n交易原则：控制、计划、等待\n交易系统:  目标行情、行情性质、买点、确定性、盈亏比",
-		"timestamp": 1562995835610
-	},
-	{
 		"id": "5103392",
 		"trigger": "8:59",
 		"content": "做好交易准备! 做好交易准备! 做好交易准备! ",
 		"timestamp": 1562988678222,
-		"name": ""
+		"name": "",
+		"type": "timer"
 	},
 	{
 		"name": "",
 		"id": "0803286",
-		"trigger": "9:05",
+		"trigger": "9:08",
 		"content": "围绕竞价和涨停股构建交易系统。\n竞价指示了市场强弱，合力，方向，时机。\n竞价指示了市场强弱，合力，方向，时机。",
-		"timestamp": 1576855500534
+		"timestamp": 1576855500534,
+		"type": "timer"
 	},
 	{
 		"name": "",
 		"id": "0657640",
-		"trigger": "9:10",
+		"trigger": "9:05",
 		"content": "不要忽略这些语言警告！\n人有惰性，会\b对重复的事情忽略并麻木！\n但这正是我失败的原因所在！\n杰西说：如果一个人能够不重复错误，他会获得全世界。\n我要对抗的正是自己的本性和情绪！\n不要忘记那些\b恐惧和痛苦！\n",
 		"timestamp": 1563971943735,
-		"disable": false
+		"disable": false,
+		"type": "timer"
+	},
+	{
+		"name": "",
+		"id": "0862447",
+		"trigger": "9:10",
+		"content": "竞价指示了市场强弱，合力，方向，时机。\n为了解决自己优柔寡断的问题，\n9:29下单：分仓竞价买入。\n",
+		"timestamp": 1578296600558,
+		"type": "timer"
 	},
 	{
 		"name": "",
 		"id": "7290143",
 		"trigger": "9:13",
-		"content": "竞价指示了市场强弱，合力，方向，时机。\n竞价指示了市场强弱，合力，方向，时机。\n竞价指示了市场强弱，合力，方向，时机。\n相信竞价系统。相信竞价系统。",
-		"timestamp": 1565862781849
+		"content": "我和市场的节奏总是相反：行情启动时犹豫；\n行情结束时终于出手 ；\n上涨嫌高，下跌嫌低；",
+		"timestamp": 1565862781849,
+		"type": "timer"
 	},
 	{
 		"name": "",
 		"id": "2426443",
 		"trigger": "9:18",
 		"content": "竞价撤单！竞价撤单！竞价撤单！",
-		"timestamp": 1562994058321
+		"timestamp": 1562994058321,
+		"type": "timer"
 	},
 	{
 		"name": "",
 		"id": "7472853",
 		"trigger": "9:22",
 		"content": "鸡肋头寸，尽快平仓。错误头寸，尽快平仓。非预期头寸，尽快平仓。\n机会成本；机会成本；机会成本；\n止损犹疑的错误你犯过多少次了；\n正确的头寸不需要大的止损；",
-		"timestamp": 1564121217125
+		"timestamp": 1564121217125,
+		"type": "timer"
 	},
 	{
 		"name": "",
 		"id": "7713651",
 		"trigger": "9:24",
 		"content": "低开不要停止止损！低开不要停止止损！\n弱势平仓优先；强势持仓优先；\n开盘价最低2点止损！开盘价最低3点止损！\n必须设定止盈止损预案条件单! 必须设定止盈止损预案条件单!",
-		"timestamp": 1562994524587
+		"timestamp": 1562994524587,
+		"disable": true,
+		"type": "timer"
 	},
 	{
 		"name": "",
@@ -280,7 +71,8 @@
 		"trigger": "9:25",
 		"content": "市场强弱是第一要素；\n大盘弱，管住手，勿追涨；\n竞价强只是一个建仓条件，必须考虑其它条件；\n市场氛围；板块热点；人气地位；资金类型；技术形态；",
 		"timestamp": 1562998575865,
-		"disable": false
+		"disable": false,
+		"type": "timer"
 	},
 	{
 		"name": "",
@@ -288,14 +80,25 @@
 		"trigger": "9:28",
 		"content": "竞价强只是一个建仓条件，必须考虑其它条件；\n市场氛围；板块热点；人气地位；资金类型；技术形态；\n",
 		"timestamp": 1562995487780,
-		"disable": false
+		"disable": false,
+		"type": "timer"
 	},
 	{
 		"name": "",
 		"id": "8380993",
 		"trigger": "9:29",
 		"content": "市场合力人气股会在早上抢筹。\n市场合力人气股会在早上抢筹。",
-		"timestamp": 1577772912305
+		"timestamp": 1577772912305,
+		"disable": true,
+		"type": "timer"
+	},
+	{
+		"name": "",
+		"id": "3775381",
+		"trigger": "9:29:15",
+		"content": "不要优柔寡断，开始下单：分仓竞价买入。\n不要优柔寡断，开始下单：分仓竞价买入。\n市场氛围、节奏周期、风口热点、股性、人气、形态。\n\n",
+		"timestamp": 1578285800656,
+		"type": "timer"
 	},
 	{
 		"name": "",
@@ -303,7 +106,8 @@
 		"trigger": "9:31",
 		"content": "不要停止止损，设定最低2个点的止损单。\n不要停止止损，设定最低2个点的止损单。",
 		"timestamp": 1564255977192,
-		"disable": false
+		"disable": true,
+		"type": "timer"
 	},
 	{
 		"name": "",
@@ -311,7 +115,8 @@
 		"trigger": "9:32",
 		"content": "不要停止条件止损单！不要停止条件止损单！\n低开表示弱势，意味着风险；低开表示弱势，意味着风险;",
 		"timestamp": 1564112484159,
-		"disable": true
+		"disable": true,
+		"type": "timer"
 	},
 	{
 		"name": "",
@@ -319,13 +124,269 @@
 		"trigger": "9:39",
 		"content": "不要重复止损错误；\n控制不住自己的情绪是投机者的死敌；\n执行预案和计划；不要临时起意；",
 		"timestamp": 1564007841240,
-		"disable": true
+		"disable": true,
+		"type": "timer"
 	},
 	{
 		"name": "",
 		"id": "1950143",
 		"trigger": "9:45",
 		"content": "9点45，早盘市场合力出结果，明确止盈或止损或持仓。",
-		"timestamp": 1564256030181
+		"timestamp": 1564256030181,
+		"type": "timer"
+	},
+	{
+		"name": "",
+		"id": "2234810",
+		"trigger": "buy",
+		"content": "无系统建仓；\n情绪建仓；\n主观臆想建仓；",
+		"timestamp": 1576660953345,
+		"type": "action"
+	},
+	{
+		"name": "",
+		"id": "3250183",
+		"trigger": "sell",
+		"content": "无大局观卖飞；无耐心卖飞；\n无大局观卖飞；无耐心卖飞；\n止损要快；止损要快；",
+		"timestamp": 1576661024135,
+		"disable": false,
+		"type": "action"
+	},
+	{
+		"name": "",
+		"id": "2959839",
+		"trigger": "daban",
+		"content": "无系统建仓；\n目标行情；\n衡量收益和风险；",
+		"timestamp": 1562998416497,
+		"disable": false,
+		"type": "action"
+	},
+	{
+		"name": "",
+		"id": "2258884",
+		"trigger": "2",
+		"content": "优柔寡断，丧失机会。",
+		"timestamp": 1578285675056,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "6506825",
+		"trigger": "2",
+		"content": "日内风口板块是什么？\n日内风口板块是什么？",
+		"timestamp": 1577700857608,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "8521862",
+		"trigger": "5",
+		"content": "市场情绪、板块热点、个股股性、人气地位、技术形态",
+		"timestamp": 1578217234006,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "8827345",
+		"trigger": "4",
+		"content": "不要先入为主，思维定势。\n摈弃主观喜恶。\n",
+		"timestamp": 1576989589436,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "5366922",
+		"trigger": "5",
+		"content": "我和市场的节奏总是相反：\b行情启动时犹豫；\n行情结束时终于出手 ；\n上涨嫌高，下跌嫌低；",
+		"timestamp": 1578369739146,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "1968194",
+		"trigger": "5",
+		"content": "没有大局观；总是和市场节奏相反。\n节奏和时机非常重要。\n启动、转折、爆发。",
+		"timestamp": 1576715145044,
+		"disable": false,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "4507049",
+		"trigger": "5",
+		"content": "交易不是每天要做的。\n控制，管住手；空仓等待最佳买点的到来。\n不要因为鸡肋交易，丧失掉最好的交易机会；",
+		"timestamp": 1563849669023,
+		"disable": false,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "5264323",
+		"trigger": "5",
+		"content": "在股票这行，\n能够买对了且能安坐不动的人少之又少。",
+		"timestamp": 1578010744222,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "0843570",
+		"trigger": "5",
+		"content": "对于我来说，最重要的交易逻辑是周期和博弈；",
+		"timestamp": 1576856488447,
+		"disable": false,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "3181899",
+		"trigger": "5",
+		"content": "动态博弈，不要思维定势。\n不要主观臆想，一切以实际盘面为准。",
+		"timestamp": 1576725560319,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "0594463",
+		"trigger": "5",
+		"content": "不要想着钱，把事情做对；",
+		"timestamp": 1576759674323,
+		"disable": false,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "0443879",
+		"trigger": "5",
+		"content": "竞价只是进攻信号，\n我还要衡量多空博弈，收益风险。\n竞价只是进攻信号，\n我还要衡量多空博弈，收益风险。",
+		"timestamp": 1578010508385,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "7912179",
+		"trigger": "5",
+		"content": "交易只有两个动作：建仓，平仓；\n交易系统内建仓；\n不要卖飞；\n止损要快；",
+		"timestamp": 1576717578806,
+		"disable": false,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "0139642",
+		"trigger": "5",
+		"content": "主线热点；节奏周期；多空动态博弈；",
+		"timestamp": 1576714959391,
+		"disable": true,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "1056992",
+		"trigger": "6",
+		"content": "节奏和时机非常重要。\n指望每天都投机的人，不会获得成功；",
+		"timestamp": 1576717718176,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "2720979",
+		"trigger": "15",
+		"content": "大行情不会一蹴而就。要有耐心。",
+		"timestamp": 1576717600114,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "7481706",
+		"trigger": "15",
+		"content": "买点：首浪启动，转折，二浪启动，超强势；",
+		"timestamp": 1577029450375,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "3447629",
+		"trigger": "15",
+		"content": "操作归操作，情绪归情绪;\n永远不要让情绪来影响你的操作。\n操作只有对错，盈亏交给市场；",
+		"timestamp": 1563149273925,
+		"disable": false,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "2084397",
+		"trigger": "15",
+		"content": "控制不住自己的情绪是投机者真正的死敌。\n遵守交易系统和原则；\n执行预案和计划；不要临时起意；",
+		"timestamp": 1564120798112,
+		"disable": false,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "8495442",
+		"trigger": "20",
+		"content": "截断亏损，让利润奔跑。",
+		"timestamp": 1576762351774,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "8139064",
+		"trigger": "20",
+		"content": "市场合力人气股会在早上抢筹。",
+		"timestamp": 1577772845910,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "2039201",
+		"trigger": "20",
+		"content": "多空动态转换：否极泰来；盛极而衰；",
+		"timestamp": 1577186418232,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "3544878",
+		"trigger": "30",
+		"content": "最多两只票，各50%仓位；\n做好当前每一笔交易；",
+		"timestamp": 1576760111745,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "8004817",
+		"trigger": "15",
+		"content": "目标行情； 买点；衡量收益和风险；",
+		"timestamp": 1564028988301,
+		"disable": false,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "6378097",
+		"trigger": "30",
+		"content": "短线就是跟着热钱走；热钱所在，行情所在；热钱所在，必然涨停；\n热点确定方向；情绪周期确定节奏;  ",
+		"timestamp": 1563580921913,
+		"disable": true,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "5888176",
+		"trigger": "30",
+		"content": "情绪导致无效交易错误；人性导致止损错误；\n交易系统的背后是一致性交易的概率优势，同时避免人性错误。",
+		"timestamp": 1564097333965,
+		"disable": true,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "8204819",
+		"trigger": "30",
+		"content": "为何一直重复错误！\n克服人性、不要重复错误。不要忘记那些恐惧和痛苦。\n交易逻辑：人性、周期、反身性、概率\n交易原则：控制、计划、等待\n交易系统:  目标行情、行情性质、买点、确定性、盈亏比",
+		"timestamp": 1562995835610,
+		"type": "interval",
+		"disable": true
 	}
 ]

@@ -1,0 +1,41 @@
+
+
+.ani-beat {
+  animation: beat 7s linear 0s infinite alternate;
+  display: inline-block;
+}
+
+@keyframes beat {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  1% {
+    transform: translate(0) rotate(0) scale(1.2);
+    opacity: 1;
+  }
+  99% {
+    transform: translate(0) rotate(0) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.ani-warn {
+  animation: warn 0.9s infinite ease-in-out;
+}
+
+@keyframes warn {
+  1% {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+  }
+  100% {
+    background: rgba(255, 255, 0, 1);
+    color: #000;
+  }
+}

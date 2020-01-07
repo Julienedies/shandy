@@ -4,18 +4,6 @@
 
 .pre {
   white-space: pre-wrap;
-}
-
-@keyframes beat {
-  50% { font-size: 1.6em; }
-}
-
-.beat {
-  animation: beat 1s infinite alternate;
-}
-
-.pre {
-  white-space: pre-wrap;
   overflow-x: hidden;
 }
 
@@ -38,20 +26,7 @@
 }
 
 
-.ani-warn {
-  animation: warn 0.9s infinite ease-in-out;
-}
 
-@keyframes warn {
-  1% {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-  }
-  100% {
-    background: rgba(255, 255, 0, 1);
-    color: #000;
-  }
-}
 
 
 .onDragOver{
