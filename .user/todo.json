@@ -121,8 +121,8 @@
 		"repeat": 5,
 		"content": "查看当日涨停个股资料，确定热点。",
 		"timestamp": 1577697423900,
-		"promptTimes": 3,
-		"prevPromptTime": 1578405001376
+		"promptTimes": 4,
+		"prevPromptTime": 1578408780914
 	},
 	{
 		"name": "",
@@ -133,8 +133,8 @@
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
 		"type": "",
-		"promptTimes": 2,
-		"prevPromptTime": 1578405789075
+		"promptTimes": 3,
+		"prevPromptTime": 1578409380893
 	},
 	{
 		"name": "",
@@ -144,7 +144,9 @@
 		"interval": 60,
 		"repeat": 4,
 		"content": "更新csd。",
-		"timestamp": 1577862911294
+		"timestamp": 1577862911294,
+		"promptTimes": 2,
+		"prevPromptTime": 1578410580851
 	},
 	{
 		"name": "",
@@ -154,6 +156,8 @@
 		"repeat": 5,
 		"content": "导出涨停板和放量上冲股票，分类归纳，\b汇总股票概念最大合集，以辅助确定市场热点。\n通达信自定义数据添加热点项；",
 		"timestamp": 1577539844855,
-		"type": ""
+		"type": "",
+		"promptTimes": 3,
+		"prevPromptTime": 1578412380789
 	}
 ]
