@@ -58,8 +58,9 @@
 		"repeat": 4,
 		"content": "整理交易系统。",
 		"timestamp": 1577596280705,
-		"promptTimes": 4,
-		"prevPromptTime": 1578390050969
+		"promptTimes": 3,
+		"prevPromptTime": 1578559732652,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -68,11 +69,10 @@
 		"start": "15:00",
 		"interval": 30,
 		"repeat": 7,
-		"content": "优化竞价条件\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
+		"content": "优化竞价条件，早上时间太紧张，过滤无效标的，错过太多机会。\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
 		"timestamp": 1578023594839,
-		"promptTimes": 3,
-		"prevPromptTime": 1578386450515,
-		"complete": true
+		"promptTimes": 7,
+		"prevPromptTime": 1578568133164
 	},
 	{
 		"name": "",
@@ -83,8 +83,8 @@
 		"repeat": 6,
 		"content": "查看财联社新闻",
 		"timestamp": 1577862818798,
-		"promptTimes": 2,
-		"prevPromptTime": 1578388851961,
+		"promptTimes": 1,
+		"prevPromptTime": 1578557932715,
 		"complete": true
 	},
 	{
@@ -96,8 +96,8 @@
 		"repeat": 5,
 		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜",
 		"timestamp": 1577964389066,
-		"promptTimes": 5,
-		"prevPromptTime": 1578404401401
+		"promptTimes": 1,
+		"prevPromptTime": 1578568732344
 	},
 	{
 		"name": "",
@@ -107,10 +107,7 @@
 		"repeat": 6,
 		"content": "复盘板块。\n复盘要过一遍板块指数；\n要过一遍涨停池；旗形涨停值得关注；",
 		"timestamp": 1577530865756,
-		"type": "",
-		"promptTimes": 2,
-		"prevPromptTime": 1578403037656,
-		"complete": true
+		"type": ""
 	},
 	{
 		"name": "",
@@ -121,8 +118,8 @@
 		"repeat": 5,
 		"content": "查看当日涨停个股资料，确定热点。",
 		"timestamp": 1577697423900,
-		"promptTimes": 4,
-		"prevPromptTime": 1578408780914
+		"promptTimes": 1,
+		"prevPromptTime": 1578569333724
 	},
 	{
 		"name": "",
@@ -132,9 +129,7 @@
 		"repeat": 4,
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
-		"type": "",
-		"promptTimes": 3,
-		"prevPromptTime": 1578409380893
+		"type": ""
 	},
 	{
 		"name": "",
@@ -144,9 +139,7 @@
 		"interval": 60,
 		"repeat": 4,
 		"content": "更新csd。",
-		"timestamp": 1577862911294,
-		"promptTimes": 2,
-		"prevPromptTime": 1578410580851
+		"timestamp": 1577862911294
 	},
 	{
 		"name": "",
@@ -156,8 +149,6 @@
 		"repeat": 5,
 		"content": "导出涨停板和放量上冲股票，分类归纳，\b汇总股票概念最大合集，以辅助确定市场热点。\n通达信自定义数据添加热点项；",
 		"timestamp": 1577539844855,
-		"type": "",
-		"promptTimes": 3,
-		"prevPromptTime": 1578412380789
+		"type": ""
 	}
 ]
