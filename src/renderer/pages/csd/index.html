@@ -65,6 +65,7 @@
         </div>
     </section>
 
+    <!-- fetch csd -->
     <section class="box" ic-form="fetchCsd">
         <h2 class="title is-5">csd数据获取</h2>
         <div class="field is-horizontal">
@@ -157,7 +158,7 @@
                         </a>
                     </p>
                     <p class="control">
-                        <a class="button is-light" ic-click="resetIndex">
+                        <a class="button is-light" ic-click="resetFetchIndex">
                             重置Index
                         </a>
                     </p>
@@ -177,6 +178,7 @@
         </div>
     </section>
 
+    <!-- 创建通达信自定义数据文件 -->
     <section class="box" ic-form="createTdxFile">
         <h2 class="title is-5">创建通达信自定义数据</h2>
         <div class="field is-horizontal">
@@ -205,10 +207,11 @@
                 <div class="field has-addons">
                     <div class="control is-expanded">
                         <input class="input" type="text" placeholder="通达信自定义数据文件路径" name="tdx_extern_user_file"
-                               value="{{ model.tdx_extern_user_file || '/Volumes/C/new_jyplug/T0002/signals/extern_user.txt' }}" ic-form-field />
+                               value="{{ model.tdx_extern_user_file || '/Volumes/C/new_jyplug/T0002/signals/extern_user.txt' }}" ic-form-field/>
                     </div>
                     <div class="control">
-                        <a class="button is-primary" ic-select-path="tdx_extern_user_file" ic-select-path-default="/Volumes/C/new_jyplug/T0002/signals/extern_user.txt">
+                        <a class="button is-primary" ic-select-path="tdx_extern_user_file"
+                           ic-select-path-default="/Volumes/C/new_jyplug/T0002/signals/extern_user.txt">
                             选择自定义数据文件路径
                         </a>
                     </div>
@@ -232,6 +235,7 @@
 
     </section>
 
+    <!-- 热点分析 -->
     <section class="box" ic-form="findHot">
         <h2 class="title is-5">热点分析/定义风口</h2>
 
@@ -291,8 +295,16 @@
             </div>
         </div>
 
-        <div id="findHotResult"></div>
-
+        <div id="findHotResult" ic-tpl="hotResult">
+            <div class="field is-grouped is-grouped-multiline">
+                <div class="control" ic-for="i,v in vm">
+                    <div class="tags has-addons">
+                        <span class="tag">{{ v[0] }}</span>
+                        <span class="tag">{{ v[1] }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 </div>

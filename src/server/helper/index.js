@@ -5,10 +5,10 @@
 import pinyin from 'pinyin'
 import _ from 'lodash'
 
-import { VIEWER_AMP } from './viewerMap'
+import { VIEWER_MAP } from './viewerMap'
 
 function beforeGet (record, index) {
-    let example = VIEWER_AMP[record.id];
+    let example = VIEWER_MAP[record.id];
     let oldExample = record['示例图片'];
     if (example) {
         if (oldExample) {

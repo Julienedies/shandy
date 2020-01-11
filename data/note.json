@@ -1,5 +1,19 @@
 [
 	{
+		"text": "npm inistall  packageName --save-dev\nnpm i xx -D",
+		"type": "npm",
+		"id": "4614163",
+		"timestamp": 1578722763374,
+		"level": "0"
+	},
+	{
+		"text": "npm inistall  packageName --save\nnpm i xx -S",
+		"type": "npm",
+		"id": "4590964",
+		"timestamp": 1578722756278,
+		"level": "0"
+	},
+	{
 		"id": "5663422",
 		"type": "",
 		"level": "0",

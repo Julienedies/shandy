@@ -30,8 +30,8 @@ export default function (words) {
         return {code: result[0], name: result[1]};
     }
 
-    let code_arr;
-    if (code_arr = words.match(/\b\d{6}(?!\d)/)) {
+    let code_arr = words.match(/\b\d{6}(?!\d)/);
+    if (code_arr) {
         let result = stocks.filter(stock => {
             return code_arr[0] === stock[0];
         });
@@ -39,7 +39,8 @@ export default function (words) {
         return {code: code_arr[0], name: result[1]};
     }
 
-    let arr = words.match(/((?:.+)?[\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
+    // (?:.+)?
+    let arr = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
     console.info(arr);
     let name = arr[1] || words;
     let code = arr[2];

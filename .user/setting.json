@@ -3,10 +3,10 @@
 		"tdx_extern_user_file": "/Volumes/C/new_jyplug/T0002/signals/extern_user.txt",
 		"csdPath": "/Users/j/dev/csd",
 		"bounds": {
-			"x": 150,
-			"y": 61,
-			"width": 1217,
-			"height": 769
+			"x": 1440,
+			"y": 0,
+			"width": 1920,
+			"height": 1080
 		},
 		"fetchSources": [
 			"ths_new",
@@ -17,7 +17,8 @@
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"fetchFromIndex": 474,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"stocksJsonFile": "/Users/j/dev/csd/stocks.json"
+		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
+		"hotCsvFile": "/Users/j/截图/JX.txt"
 	},
 	"warn": {
 		"randomBgImgDir": "/Users/j/pim/img/人物",

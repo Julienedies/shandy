@@ -2,13 +2,15 @@
  * Created by j on 2019-02-28.
  */
 
-// async await 需要
+// babel-polyfill for async await 功能
 import 'babel-polyfill'
 
 import jhandy from 'jhandy'
 import stocksManager from '../../../libs/stocks-manager'
 import utils from '../../../libs/utils'
 import jo from '../../../libs/jsono'
+import stockJo from '../../../libs/stock-jo'
+import _ from 'lodash'
 
 import './index.html'
 import './style.scss'
@@ -52,6 +54,8 @@ brick.reg('mainCtrl', function (scope) {
         return result;
     }
 
+    // ------------------------------------------------------------------------------
+    // 创建stocks.json
     this.createStocksJson = async function (fields) {
         console.log(fields)
         let $th = $(this).icSetLoading();
@@ -75,13 +79,16 @@ brick.reg('mainCtrl', function (scope) {
         utils.msg(`共有股票 ${ stocksJo.json.length } 支. 新添加股票 ${ stocksJo.json.length - oldSize }`, 'OK');
     };
 
+    // ------------------------------------------------------------------------------
+    // fetch csd
     this.fetchErrorCount = 0;
     this.fetchStart = async function (fields) {
-        console.log(fields)
-        let $th = $(this).icSetLoading()
+        console.log(fields);
+        let $th = $(this).icSetLoading();
         setting.refresh().merge('csd', fields);
 
         let stockArr;
+        // 如果是csv格式的txt文件, 先解析成json
         if (/\.txt$/.test(fields.fetchByStocks)) {
             stockArr = await jhandy.csv(fields.fetchByStocks, null, [0, 1], true);
         }
@@ -118,10 +125,13 @@ brick.reg('mainCtrl', function (scope) {
         $('#fetchFromIndex').val(stat.index);
     };
 
-    this.resetIndex = () => {
+    // 重置fetch index
+    this.resetFetchIndex = () => {
         $elm.find('#fetchFromIndex').val(0);
     };
 
+    // ------------------------------------------------------------------------------
+    // 创建通达信自定义数据文件
     this.createTdxFile = function (fields) {
         console.log(fields);
         let $th = $(this).icSetLoading();
@@ -139,6 +149,49 @@ brick.reg('mainCtrl', function (scope) {
                 console.error(err)
             })
     };
+
+    // ------------------------------------------------------------------------------
+    // 热点分析; 获取每一个股票的相关概念，统计同概念数量最多的概念即为当前热点
+    this.findHot = async function (fields) {
+        console.log(fields);
+        let $th = $(this).icSetLoading();
+        setting.refresh().merge('csd', fields);
+
+        let keys = []; // 概念关键词
+        let stockArr;
+        // 如果是csv格式的txt文件, 先解析成json
+        if (/\.txt$/.test(fields.hotCsvFile)) {
+            stockArr = await jhandy.csv(fields.hotCsvFile, null, [0, 1], true);
+        }
+        console.log('findHot =>', stockArr.length);
+
+        stockArr.forEach( ([code, name]) => {
+            let sjo = stockJo(code);
+            let c1 = sjo.json['概念'].split(/[，]+\s*/img);
+            //let c2 = sjo.json['概念y'].replace(/-\d+%/img,'').split(/[，]?\s+/img);
+            let c3 = (sjo.json['概念z']||'').split(/[，]?\s+/img);
+
+            let arr = _.flatten([c1, c3]);
+            keys.push(arr);
+        });
+
+        keys = _.flatten(keys);
+        keys = _.compact(keys);
+        console.log(keys);
+
+        let resultArr = Object.entries(_.countBy(keys));
+        resultArr = resultArr.filter(([name, count]) => {
+            return count > 1;
+        });
+        resultArr.sort((a, b) => {
+            return b[1] - a[1];
+        });
+        console.log(JSON.stringify(resultArr, null, '\t'));
+        $th.icClearLoading();
+
+        scope.render('hotResult', {vm: resultArr});
+    };
+
 
 });
 

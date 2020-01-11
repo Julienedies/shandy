@@ -9,7 +9,7 @@
     <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
-<div class="x-wrapper" ic-view-stage ic-ctrl="mainCtrl">
+<div ic-view-stage ic-ctrl="mainCtrl">
 
     <div ic-view="jobs" ic-active ic-ctrl="jobsCtrl">
         <div class="column">
@@ -101,8 +101,7 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                                            <textarea rows="5" class="textarea" placeholder="任务内容"
-                                                      ic-form-field="content">{{ model.content }}</textarea>
+                                <textarea rows="5" class="textarea" placeholder="任务内容" ic-form-field="content">{{ model.content }}</textarea>
                         </div>
                     </div>
                     <div class="field">
@@ -203,9 +202,9 @@
                         </li>
                     </ul>
                     <div class="buttons" style="padding-top:30px;">
+                        <button class="button is-primary" ic-click="complete">完成</button>
                         <button class="button is-primary" ic-view-to="jobs">返回</button>
-                        <button class="button" ic-click="complete">完成</button>
-                        <button class="button" ic-click="hideWindow">关闭</button>
+                        <button class="button is-primary" ic-click="hideWindow">关闭</button>
                     </div>
                 </div>
                 <div style="flex:1;">
@@ -251,9 +250,9 @@
                 </div>
             </div>
             <div class="buttons">
+                <button class="button is-primary" ic-click="complete">完成</button>
                 <button class="button is-primary" ic-view-to="jobs">返回</button>
-                <button class="button" ic-click="complete">完成</button>
-                <button class="button" ic-click="hideWindow">关闭</button>
+                <button class="button is-primary" ic-click="hideWindow">关闭</button>
             </div>
         </div>
     </div>
