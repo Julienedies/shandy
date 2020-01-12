@@ -29,6 +29,7 @@ temp/
 #私有配置文件
 config.json
 wt.json
+.user/trading.json
 *.mp3
 *.m4a
 

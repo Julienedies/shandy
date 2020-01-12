@@ -26,7 +26,7 @@ export default function (scope) {
         let arr = imgObj.tradeInfo;
         if (arr) {
             arr = arr.map(a => {
-                return [a[1], a[5], a[7], a[6]];
+                return [a[1], a[4], a[6], a[5]];  // => 时间, 买入/卖出, 数量, 价格
             });
             arr.reverse(); // 当日多个交易记录按照时间先后显示
             let text = arr.join('\r\n').replace(/,/g, '    ');
