@@ -5,21 +5,26 @@
 // babel-polyfill for async await 功能
 import 'babel-polyfill'
 
+import './index.html'
+import './style.scss'
+
+import fs from "fs"
+import path from "path"
+
+import _ from 'lodash'
+
 import jhandy from 'jhandy'
 import stocksManager from '../../../libs/stocks-manager'
 import utils from '../../../libs/utils'
 import jo from '../../../libs/jsono'
 import stockJo from '../../../libs/stock-jo'
-import _ from 'lodash'
-
-import './index.html'
-import './style.scss'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
 import '../../js/common.js'
+
 
 brick.set('cla.error', 'is-danger');
 brick.set('ic-select-cla', 'is-info');
@@ -30,6 +35,10 @@ brick.reg('mainCtrl', function (scope) {
     let setting = utils.setting();
     let model = {...setting.json.csd, SOURCES: jhandy.fetch.SOURCES};
     let $log = $('#log');
+
+    scope.csdPath = model.csdPath;
+    scope.tdx_extern_user_file = model.tdx_extern_user_file;
+    scope.tdxProps = ['概念', '概念y', '产品', '业务', '全名', '备注', '概念z'];
 
     console.log(model);
 
@@ -139,19 +148,20 @@ brick.reg('mainCtrl', function (scope) {
 
         jhandy.tdx(fields.csdPath, fields.tdx_extern_user_file)
             .then(tdxFilePath => {
-                $th.icClearLoading()
-                utils.msg(`创建成功, 自定义数据文件预览: ${ tdxFilePath }.`)
-                // utils.openItem(tdxFilePath)
+                $th.icClearLoading();
+                utils.msg(`创建成功, 自定义数据文件预览: ${ tdxFilePath }.`);
+                // utils.openItem(tdxFilePath);
             })
             .catch(err => {
-                $th.icClearLoading()
-                utils.err('自定义数据文件创建失败.')
-                console.error(err)
-            })
+                $th.icClearLoading();
+                utils.err('自定义数据文件创建失败.');
+                console.error(err);
+            });
     };
 
     // ------------------------------------------------------------------------------
     // 热点分析; 获取每一个股票的相关概念，统计同概念数量最多的概念即为当前热点
+    let hotPoints;  // 用于创建热点自定义数据
     this.findHot = async function (fields) {
         console.log(fields);
         let $th = $(this).icSetLoading();
@@ -165,11 +175,11 @@ brick.reg('mainCtrl', function (scope) {
         }
         console.log('findHot =>', stockArr.length);
 
-        stockArr.forEach( ([code, name]) => {
+        stockArr.forEach(([code, name]) => {
             let sjo = stockJo(code);
             let c1 = sjo.json['概念'].split(/[，]+\s*/img);
             //let c2 = sjo.json['概念y'].replace(/-\d+%/img,'').split(/[，]?\s+/img);
-            let c3 = (sjo.json['概念z']||'').split(/[，]?\s+/img);
+            let c3 = (sjo.json['概念z'] || '').split(/[，]?\s+/img);
 
             let arr = _.flatten([c1, c3]);
             keys.push(arr);
@@ -192,6 +202,49 @@ brick.reg('mainCtrl', function (scope) {
         scope.render('hotResult', {vm: resultArr});
     };
 
+    scope.onHotChange = function (msg) {
+        $.icMsg(JSON.stringify(msg));
+        hotPoints = msg.value;
+    };
+
+    scope.setHot = function () {
+        let $th = $(this).icSetLoading();
+        if (hotPoints) {
+            jhandy.tdx(scope.csdPath, scope.tdx_extern_user_file, undefined, (tempFile, csdPath, stocks) => {
+                let result = '';
+
+                stocks.forEach(([code, name]) => {
+                    let szh = /^6/.test(code) ? 1 : 0;
+                    let sjo = jo(path.resolve(csdPath, `./s/${ code }.json`));
+                    let concept = `${ sjo.get('概念') } ${ sjo.get('概念y') } ${ sjo.get('概念z') }`;
+                    let hotStr = '';
+                    hotPoints.forEach((point) => {
+                        if(concept.search(point) > -1){
+                            hotStr+= ' * ' + point;
+                        }
+                    });
+                    if(hotStr){
+                        result += [szh, code, 14, hotStr, '0.000'].join('|') + '\r\n';
+                    }
+                });
+
+                console.log(result);
+
+                // 附加热点自定义数据到整体自定义数据文件
+                fs.writeFileSync(tempFile, result, {encoding: 'utf8', flag: 'a'});
+
+            }).then(tdxFilePath => {
+                $th.icClearLoading();
+                utils.msg(`创建成功, 自定义数据文件预览: ${ tdxFilePath }.`);
+                // utils.openItem(tdxFilePath);
+            }).catch(err => {
+                $th.icClearLoading();
+                utils.err('自定义数据文件创建失败.');
+                console.error(err);
+            });
+
+        }
+    };
 
 });
 

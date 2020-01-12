@@ -38,17 +38,7 @@ function sort (arr) {
 
 const tradingDb = userDb('SEL', []);
 let tradingJson = JSON.parse(JSON.stringify(tradingDb.json));
-sort(tradingJson);
-
-/*const selDb = userDb('SEL', []);
-(() => {
-    // [0,1,3,4,5,6,7,8,9,10]
-    let arr = tradingJson.map((arr)=>{
-        return [arr[0],arr[1],arr[3],arr[4],arr[5],arr[6],arr[7],arr[8],arr[9],arr[10]];
-    })
-    selDb.json = arr;
-    selDb.save();
-})();*/
+//sort(tradingJson);
 
 brick.reg('mainCtrl', function (scope) {});
 

@@ -287,22 +287,23 @@
                         <button class="button is-primary" ic-form-submit="findHot" ic-submit-action="findHot()">
                             热点分析
                         </button>
-                        <button class="button is-primary" ic-form-submit="findHot" ic-submit-action="setHot()">
-                            定义风口
-                        </button>
+
                     </p>
                 </div>
             </div>
         </div>
 
         <div id="findHotResult" ic-tpl="hotResult">
-            <div class="field is-grouped is-grouped-multiline">
+            <div class="field is-grouped is-grouped-multiline" ic-select="hot" ic-select-type="checkbox" ic-select-on-change="onHotChange">
                 <div class="control" ic-for="i,v in vm">
                     <div class="tags has-addons">
-                        <span class="tag">{{ v[0] }}</span>
+                        <span class="tag" ic-select-item ic-val="{{ v[0] }}">{{ v[0] }}</span>
                         <span class="tag">{{ v[1] }}</span>
                     </div>
                 </div>
+                <button class="button is-primary" ic-click="setHot">
+                    定义风口
+                </button>
             </div>
         </div>
     </section>
