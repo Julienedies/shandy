@@ -88,7 +88,7 @@ brick.reg('mainCtrl', function (scope) {
         urls[0].code && urls.forEach(o => {
             o.tradeInfo = tradeArr.filter(arr => {
                 // 交易信息 对应 code 和 时间
-                return o.code === arr[3] && o.d.replace(/-/g, '') === arr[0];
+                return o.code === arr[3] && o.d && o.d.replace(/-/g, '') === arr[0];
             });
         });
         console.info(urls);

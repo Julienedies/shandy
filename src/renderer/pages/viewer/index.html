@@ -46,8 +46,8 @@
                 </div>
             </div>
             <div id="history" class="column is-7" ic-tpl="history">
-                <div class="field is-grouped is-grouped-multiline" ic-for="k,arr in model" ic-for-init="k2=k.replace(/_/img,'/')">
-                    <h6 class="tag is-primary" style="margin-right:1em;">{{ k2 }}</h6>
+                <div class="field is-grouped is-grouped-multiline" ic-for="i,k in ['X交割单学习', '目标行情','竞价系统','交易记录']" ic-for-init="arr=model[k]">
+                    <h6 class="tag is-primary" style="margin-right:1em;">{{ k }}</h6>
                     <div class="control" ic-for="i,v in arr">
                         <div class="tags has-addons">
                             <a class="tag is-info" ic-click="show:{{ v }}">{{ v.split('/').pop() }}</a>

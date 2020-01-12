@@ -11,15 +11,16 @@ export default function () {
         _data: {},
         _cb: () => {},
         cb: function() {
-            this.group();
+            this._group();
             this._cb();
         },
-        group: function () {
+        // 按照['X交割单学习', '目标行情','竞价系统','交易记录']进行分组
+        _group: function () {
             let arr = this._pool;
             let nameMap = _.groupBy(arr, (str) => {
                 let arr = str.split('/');
                 arr.pop();
-                return arr.join('_');
+                return arr.pop(); //arr.join('_');
             });
 
             for(let i in nameMap) {
@@ -34,22 +35,8 @@ export default function () {
                 });
             }
             this._data = nameMap;
-/*            let arrByName = _.values(nameMap);
-            arrByName.forEach((arr) => {
-                arr.sort((a, b) => {
-                    let f = (s) => {
-                        let d = s.split('/').pop();
-                        d = d.replace('-','.');
-                        return d * 1 || 0;
-                    };
-                    return f(b) - f(a);
-                });
-            });
-
-            this._pool = _.flatten(arrByName, true);*/
         },
         init: function (arr) {
-            console.log(3333, arr);
             this._pool = arr;
             this.cb();
         },
