@@ -1,0 +1,32 @@
+[
+	{
+		"id": "消费电子",
+		"selected": true,
+		"timestamp": 1578928850827
+	},
+	{
+		"id": "新能源汽车",
+		"selected": true,
+		"timestamp": 1578928807285
+	},
+	{
+		"id": "无线耳机",
+		"selected": false,
+		"timestamp": 1578926338430
+	},
+	{
+		"id": "锂电池",
+		"selected": true,
+		"timestamp": 1578926303654
+	},
+	{
+		"id": "芯片概念",
+		"selected": true,
+		"timestamp": 1578926303653
+	},
+	{
+		"id": "网红经济",
+		"selected": true,
+		"timestamp": 1578926303652
+	}
+]

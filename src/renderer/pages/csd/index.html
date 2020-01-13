@@ -178,63 +178,6 @@
         </div>
     </section>
 
-    <!-- 创建通达信自定义数据文件 -->
-    <section class="box" ic-form="createTdxFile">
-        <h2 class="title is-5">创建通达信自定义数据</h2>
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">csd路径</label>
-            </div>
-            <div class="field-body">
-                <div class="field has-addons">
-                    <div class="control is-expanded">
-                        <input class="input" type="text" value="{{ model.csdPath }}" name="csdPath" placeholder="csd路径"
-                               ic-form-field ic-field-rule="required"/>
-                    </div>
-                    <div class="control">
-                        <a class="button is-primary" ic-select-path="csdPath">
-                            选择csd路径
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label">自定义数据文件路径</label>
-            </div>
-            <div class="field-body">
-                <div class="field has-addons">
-                    <div class="control is-expanded">
-                        <input class="input" type="text" placeholder="通达信自定义数据文件路径" name="tdx_extern_user_file"
-                               value="{{ model.tdx_extern_user_file || '/Volumes/C/new_jyplug/T0002/signals/extern_user.txt' }}" ic-form-field/>
-                    </div>
-                    <div class="control">
-                        <a class="button is-primary" ic-select-path="tdx_extern_user_file"
-                           ic-select-path-default="/Volumes/C/new_jyplug/T0002/signals/extern_user.txt">
-                            选择自定义数据文件路径
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="field is-horizontal">
-            <div class="field-label is-normal">
-                <label class="label"></label>
-            </div>
-            <div class="field-body">
-                <div class="field">
-                    <p class="control">
-                        <a class="button is-primary" ic-form-submit="createTdxFile" ic-submit-action="createTdxFile()">
-                            创建通达信自定义数据
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
     <!-- 热点分析 -->
     <section class="box" ic-form="findHot">
         <h2 class="title is-5">热点分析/定义风口</h2>
@@ -287,25 +230,101 @@
                         <button class="button is-primary" ic-form-submit="findHot" ic-submit-action="findHot()">
                             热点分析
                         </button>
-
                     </p>
                 </div>
             </div>
         </div>
 
         <div id="findHotResult" ic-tpl="hotResult">
-            <div class="field is-grouped is-grouped-multiline" ic-select="hot" ic-select-type="checkbox" ic-select-on-change="onHotChange">
+            <div class="field is-grouped is-grouped-multiline" ic-select="addHot" ic-select-type="checkbox" ic-select-on-change="onAddHotChange">
                 <div class="control" ic-for="i,v in vm">
                     <div class="tags has-addons">
                         <span class="tag" ic-select-item ic-val="{{ v[0] }}">{{ v[0] }}</span>
                         <span class="tag">{{ v[1] }}</span>
                     </div>
                 </div>
-                <button class="button is-primary" ic-click="setHot">
-                    定义风口
+                <button class="button is-primary" ic-click="addHot">
+                    添加热点
                 </button>
             </div>
         </div>
+    </section>
+
+    <!-- 创建通达信自定义数据文件 -->
+    <section class="box">
+        <div ic-form="createTdxFile">
+            <h2 class="title is-5">创建通达信自定义数据</h2>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">csd路径</label>
+                </div>
+                <div class="field-body">
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" value="{{ model.csdPath }}" name="csdPath" placeholder="csd路径"
+                                   ic-form-field ic-field-rule="required"/>
+                        </div>
+                        <div class="control">
+                            <a class="button is-primary" ic-select-path="csdPath">
+                                选择csd路径
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label">自定义数据文件路径</label>
+                </div>
+                <div class="field-body">
+                    <div class="field has-addons">
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="通达信自定义数据文件路径" name="tdx_extern_user_file"
+                                   value="{{ model.tdx_extern_user_file || '/Volumes/C/new_jyplug/T0002/signals/extern_user.txt' }}" ic-form-field/>
+                        </div>
+                        <div class="control">
+                            <a class="button is-primary" ic-select-path="tdx_extern_user_file"
+                               ic-select-path-default="/Volumes/C/new_jyplug/T0002/signals/extern_user.txt">
+                                选择自定义数据文件路径
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label"></label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control">
+                            <a class="button is-primary" ic-form-submit="createTdxFile" ic-submit-action="createTdxFile()">
+                                创建通达信自定义数据
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field is-horizontal" ic-tpl="hotPoints">
+            <div class="field-label is-normal">
+                <label class="label">热点</label>
+            </div>
+            <div class="field-body">
+                <div class="field is-grouped is-grouped-multiline" ic-select="hotPoints" ic-select-type="checkbox"
+                     ic-select-on-change="onHotPointsChange">
+                    <div class="control" ic-for="i,v in vm">
+                        <div class="tags has-addons">
+                            <span class="tag" ic-select-item ic-has-selected="v.selected" ic-val="{{ v.id }}">{{ v.id }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
 </div>

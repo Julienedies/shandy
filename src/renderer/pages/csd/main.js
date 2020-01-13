@@ -18,6 +18,7 @@ import stocksManager from '../../../libs/stocks-manager'
 import utils from '../../../libs/utils'
 import jo from '../../../libs/jsono'
 import stockJo from '../../../libs/stock-jo'
+import userDob from '../../../libs/user-jodb'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
@@ -25,9 +26,10 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../js/common.js'
 
-
 brick.set('cla.error', 'is-danger');
 brick.set('ic-select-cla', 'is-info');
+
+const hotDob = userDob('hot', [], {});
 
 brick.reg('mainCtrl', function (scope) {
 
@@ -42,9 +44,19 @@ brick.reg('mainCtrl', function (scope) {
 
     console.log(model);
 
+    let renderHotPoints = () => {
+        scope.render('hotPoints', {vm: hotDob.get()});
+    };
+
+    // 貌似会引起无限递归，内存溢出
+    //hotDob.on('change', renderHotPoints);
+
+    // 有嵌套模板的情况下，需要先渲染父模板
     scope.render('csd', {model}, () => {
         $log = $('#log');
     });
+
+    renderHotPoints();
 
     // 数组合并去重， 主要用于处理stocks.json数据
     function merge (oldArr, newArr) {
@@ -139,29 +151,10 @@ brick.reg('mainCtrl', function (scope) {
         $elm.find('#fetchFromIndex').val(0);
     };
 
-    // ------------------------------------------------------------------------------
-    // 创建通达信自定义数据文件
-    this.createTdxFile = function (fields) {
-        console.log(fields);
-        let $th = $(this).icSetLoading();
-        setting.refresh().merge('csd', fields);
-
-        jhandy.tdx(fields.csdPath, fields.tdx_extern_user_file)
-            .then(tdxFilePath => {
-                $th.icClearLoading();
-                utils.msg(`创建成功, 自定义数据文件预览: ${ tdxFilePath }.`);
-                // utils.openItem(tdxFilePath);
-            })
-            .catch(err => {
-                $th.icClearLoading();
-                utils.err('自定义数据文件创建失败.');
-                console.error(err);
-            });
-    };
 
     // ------------------------------------------------------------------------------
     // 热点分析; 获取每一个股票的相关概念，统计同概念数量最多的概念即为当前热点
-    let hotPoints;  // 用于创建热点自定义数据
+    let willAddHotPoints;  // 用于创建热点自定义数据
     this.findHot = async function (fields) {
         console.log(fields);
         let $th = $(this).icSetLoading();
@@ -178,7 +171,7 @@ brick.reg('mainCtrl', function (scope) {
         stockArr.forEach(([code, name]) => {
             let sjo = stockJo(code);
             let c1 = sjo.json['概念'].split(/[，]+\s*/img);
-            //let c2 = sjo.json['概念y'].replace(/-\d+%/img,'').split(/[，]?\s+/img);
+            //let c2 = sjo.json['概念y'].replace(/-\d*%/img,'').split(/[，]?\s+/img);
             let c3 = (sjo.json['概念z'] || '').split(/[，]?\s+/img);
 
             let arr = _.flatten([c1, c3]);
@@ -202,48 +195,70 @@ brick.reg('mainCtrl', function (scope) {
         scope.render('hotResult', {vm: resultArr});
     };
 
-    scope.onHotChange = function (msg) {
+    scope.onAddHotChange = function (msg) {
         $.icMsg(JSON.stringify(msg));
-        hotPoints = msg.value;
+        willAddHotPoints = msg.value;
+        hotDob.set({id: msg.change, selected: msg.selected});
+        renderHotPoints();
     };
 
-    scope.setHot = function () {
-        let $th = $(this).icSetLoading();
-        if (hotPoints) {
-            jhandy.tdx(scope.csdPath, scope.tdx_extern_user_file, undefined, (tempFile, csdPath, stocks) => {
-                let result = '';
+    scope.addHot = function () {
+        willAddHotPoints.forEach((val) => {
+            hotDob.set({id: val, selected: true});
+        });
+    };
 
-                stocks.forEach(([code, name]) => {
-                    let szh = /^6/.test(code) ? 1 : 0;
-                    let sjo = jo(path.resolve(csdPath, `./s/${ code }.json`));
-                    let concept = `${ sjo.get('概念') } ${ sjo.get('概念y') } ${ sjo.get('概念z') }`;
-                    let hotStr = '';
-                    hotPoints.forEach((point) => {
-                        if(concept.search(point) > -1){
-                            hotStr+= ' * ' + point;
-                        }
-                    });
-                    if(hotStr){
-                        result += [szh, code, 14, hotStr, '0.000'].join('|') + '\r\n';
+
+    // ------------------------------------------------------------------------------
+    // 创建通达信自定义数据文件
+    this.createTdxFile = function (fields) {
+        console.log(fields);
+        let $th = $(this).icSetLoading();
+        setting.refresh().merge('csd', fields);
+
+        let hotPointArr = hotDob.get().filter((item) => {
+            return item.selected;
+        }).map((item) => {
+            return item.id;
+        });
+
+        function cb (tempFile, csdPath, stocks) {
+            let result = '';
+
+            stocks.forEach(([code, name]) => {
+                let szh = /^6/.test(code) ? 1 : 0;
+                let sjo = jo(path.resolve(csdPath, `./s/${ code }.json`));
+                let concept = `${ sjo.get('概念') } ${ sjo.get('概念y') } ${ sjo.get('概念z') }`;
+                let hotStr = '';
+                hotPointArr.forEach((point) => {
+                    if (concept.search(point) > -1) {
+                        hotStr += ' * ' + point;
                     }
                 });
+                if (hotStr) {
+                    result += [szh, code, 14, hotStr, '0.000'].join('|') + '\r\n';
+                }
+            });
+            console.log(result);
+            // 附加热点自定义数据到整体自定义数据文件
+            fs.writeFileSync(tempFile, result, {encoding: 'utf8', flag: 'a'});
+        }
 
-                console.log(result);
-
-                // 附加热点自定义数据到整体自定义数据文件
-                fs.writeFileSync(tempFile, result, {encoding: 'utf8', flag: 'a'});
-
-            }).then(tdxFilePath => {
+        jhandy.tdx(fields.csdPath, fields.tdx_extern_user_file, scope.tdxProps, hotPointArr.length ? cb : null)
+            .then(tdxFilePath => {
                 $th.icClearLoading();
                 utils.msg(`创建成功, 自定义数据文件预览: ${ tdxFilePath }.`);
                 // utils.openItem(tdxFilePath);
-            }).catch(err => {
+            })
+            .catch(err => {
                 $th.icClearLoading();
                 utils.err('自定义数据文件创建失败.');
                 console.error(err);
             });
+    };
 
-        }
+    this.onHotPointsChange = function (msg) {
+        hotDob.set({id: msg.change, selected: msg.selected});
     };
 
 });

@@ -1,22 +1,5 @@
 [
 	{
-		"name": "",
-		"id": "2569649",
-		"trigger": "10",
-		"content": "我很容易陷入非涨即跌的单一思维；\n多空动态博弈，不要陷入思维定势。",
-		"type": "interval",
-		"timestamp": 1578442742047
-	},
-	{
-		"name": "",
-		"id": "5000145",
-		"trigger": "15",
-		"content": "对热点的反应太慢。",
-		"type": "interval",
-		"timestamp": 1578442678991,
-		"disable": true
-	},
-	{
 		"id": "5103392",
 		"trigger": "8:59",
 		"content": "做好交易准备! 做好交易准备! 做好交易准备! ",
@@ -199,8 +182,8 @@
 	{
 		"name": "",
 		"id": "8521862",
-		"trigger": "2",
-		"content": "氛围、节奏、热点、股性、人气、形态；\n氛围、节奏、热点、股性、人气、形态",
+		"trigger": "1",
+		"content": "氛围、节奏、热点、股性、人气、形态；\n",
 		"timestamp": 1578217234006,
 		"type": "interval"
 	},
@@ -266,7 +249,7 @@
 		"name": "",
 		"id": "0843570",
 		"trigger": "5",
-		"content": "对于我来说，最重要的交易逻辑是：\n超预期强势(该弱不弱，连续上冲)、周期博弈、趋势反身性；热点龙头；",
+		"content": "对于我来说，最重要的交易逻辑是：\n超预期强势、周期、趋势；热点龙头；动态博弈；",
 		"timestamp": 1576856488447,
 		"disable": false,
 		"type": "interval"
@@ -315,11 +298,37 @@
 	},
 	{
 		"name": "",
+		"id": "5000145",
+		"trigger": "10",
+		"content": "对热点的反应太慢。\n交易的本质是群体博弈，追根溯源的话，就是随时衡量，\n场外的潜在买入者的钱的数量和买入倾向，与场内筹码的数量和卖出倾向；",
+		"type": "interval",
+		"timestamp": 1578442678991,
+		"disable": false
+	},
+	{
+		"name": "",
+		"id": "2569649",
+		"trigger": "10",
+		"content": "我很容易陷入非涨即跌的单一思维；\n多空动态博弈，不要陷入思维定势。",
+		"type": "interval",
+		"timestamp": 1578442742047
+	},
+	{
+		"name": "",
 		"id": "3399160",
 		"trigger": "10",
 		"content": "没有大局观，拿不住大行情。\n",
 		"type": "interval",
 		"timestamp": 1578410052511
+	},
+	{
+		"name": "",
+		"id": "8004817",
+		"trigger": "10",
+		"content": "情绪转折是时机，  主线热点是方向。\n目标行情； 买点；衡量收益和风险；",
+		"timestamp": 1564028988301,
+		"disable": true,
+		"type": "interval"
 	},
 	{
 		"name": "",
@@ -360,15 +369,6 @@
 		"trigger": "20",
 		"content": "多空动态转换：否极泰来；盛极而衰；",
 		"timestamp": 1577186418232,
-		"type": "interval"
-	},
-	{
-		"name": "",
-		"id": "8004817",
-		"trigger": "10",
-		"content": "情绪转折是时机，  主线热点是方向。\n目标行情； 买点；衡量收益和风险；",
-		"timestamp": 1564028988301,
-		"disable": false,
 		"type": "interval"
 	},
 	{

@@ -1,6 +1,16 @@
 [
 	{
 		"name": "",
+		"id": "2491640",
+		"type": "",
+		"start": "8:00",
+		"interval": 45,
+		"repeat": 1,
+		"content": "把pc机和大屏平行放置。上下放置不易观看。",
+		"timestamp": 1578917354425
+	},
+	{
+		"name": "",
 		"id": "5646886",
 		"type": "prepare",
 		"start": "8:35",
@@ -58,8 +68,9 @@
 		"repeat": 4,
 		"content": "整理交易系统。",
 		"timestamp": 1577596280705,
-		"promptTimes": 2,
-		"prevPromptTime": 1578815685029
+		"promptTimes": 3,
+		"prevPromptTime": 1578904964749,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -70,18 +81,20 @@
 		"repeat": 7,
 		"content": "优化竞价条件，早上时间太紧张，过滤无效标的，错过太多机会。\n条件要求太过宽松，贪便宜的倾向，起跳表示强势。条件要反映出超强势，或该弱不弱。\n\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
 		"timestamp": 1578023594839,
-		"promptTimes": 2,
-		"prevPromptTime": 1578816285010
+		"promptTimes": 7,
+		"prevPromptTime": 1578912231856
 	},
 	{
 		"name": "",
 		"id": "0263661",
 		"type": "",
-		"start": "16:00",
+		"start": "17:00",
 		"interval": 60,
-		"repeat": 6,
+		"repeat": 2,
 		"content": "查看财联社新闻",
-		"timestamp": 1577862818798
+		"timestamp": 1577862818798,
+		"promptTimes": 2,
+		"prevPromptTime": 1578911019323
 	},
 	{
 		"name": "",
@@ -89,9 +102,11 @@
 		"type": "",
 		"start": "18:00",
 		"interval": 45,
-		"repeat": 6,
+		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
-		"timestamp": 1577697423900
+		"timestamp": 1577697423900,
+		"promptTimes": 4,
+		"prevPromptTime": 1578920629548
 	},
 	{
 		"name": "",
@@ -101,7 +116,9 @@
 		"interval": 30,
 		"repeat": 5,
 		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜\n过滤上冲; 上冲意味着进攻信号；\n过滤破板\n要过一遍涨停池；旗形涨停值得关注；                          ",
-		"timestamp": 1577964389066
+		"timestamp": 1577964389066,
+		"promptTimes": 5,
+		"prevPromptTime": 1578922428178
 	},
 	{
 		"name": "",
@@ -111,7 +128,9 @@
 		"repeat": 4,
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
-		"type": ""
+		"type": "",
+		"promptTimes": 4,
+		"prevPromptTime": 1578929510626
 	},
 	{
 		"name": "",
@@ -121,7 +140,9 @@
 		"interval": 60,
 		"repeat": 4,
 		"content": "更新csd。",
-		"timestamp": 1577862911294
+		"timestamp": 1577862911294,
+		"promptTimes": 3,
+		"prevPromptTime": 1578930110602
 	},
 	{
 		"name": "",
@@ -131,6 +152,7 @@
 		"repeat": 5,
 		"content": "导出涨停板和放量上冲股票，分类归纳，\b汇总股票概念最大合集，以辅助确定市场热点。\n通达信自定义数据添加热点项；",
 		"timestamp": 1577539844855,
-		"type": ""
+		"type": "",
+		"disable": true
 	}
 ]

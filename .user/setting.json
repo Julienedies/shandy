@@ -3,10 +3,10 @@
 		"tdx_extern_user_file": "/Volumes/C/new_jyplug/T0002/signals/extern_user.txt",
 		"csdPath": "/Users/j/dev/csd",
 		"bounds": {
-			"x": 1440,
-			"y": 0,
-			"width": 1920,
-			"height": 1080
+			"x": 140,
+			"y": 60,
+			"width": 1266,
+			"height": 771
 		},
 		"fetchSources": [
 			"ths_new",
@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/交易记录/1911",
+		"imgDir": "/Users/j/截图/竞价系统/2020-01",
 		"bounds": {
 			"x": 1440,
 			"y": 0,
