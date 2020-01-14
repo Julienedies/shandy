@@ -250,6 +250,25 @@
         </div>
     </section>
 
+    <div class="box">
+        <div class="field is-horizontal" ic-tpl="hotPoints">
+            <div class="field-label is-normal">
+                <label class="label title is-6">设置热点</label>
+            </div>
+            <div class="field-body">
+                <div class="field is-grouped is-grouped-multiline" ic-select="hotPoints" ic-select-type="checkbox"
+                     ic-select-on-change="onHotPointsChange">
+                    <div class="control" ic-for="i,v in vm">
+                        <div class="tags has-addons">
+                            <a class="tag" ic-select-item ic-has-selected="v.selected" ic-val="{{ v.id }}">{{ v.id }}</a>
+                            <a class="tag is-delete" ic-click="removeHot:{{ v.id }}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 创建通达信自定义数据文件 -->
     <section class="box">
         <div ic-form="createTdxFile">
@@ -308,21 +327,7 @@
             </div>
         </div>
 
-        <div class="field is-horizontal" ic-tpl="hotPoints">
-            <div class="field-label is-normal">
-                <label class="label">热点</label>
-            </div>
-            <div class="field-body">
-                <div class="field is-grouped is-grouped-multiline" ic-select="hotPoints" ic-select-type="checkbox"
-                     ic-select-on-change="onHotPointsChange">
-                    <div class="control" ic-for="i,v in vm">
-                        <div class="tags has-addons">
-                            <span class="tag" ic-select-item ic-has-selected="v.selected" ic-val="{{ v.id }}">{{ v.id }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
 
 
     </section>

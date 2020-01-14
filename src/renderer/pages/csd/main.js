@@ -184,7 +184,7 @@ brick.reg('mainCtrl', function (scope) {
 
         let resultArr = Object.entries(_.countBy(keys));
         resultArr = resultArr.filter(([name, count]) => {
-            return count > 1;
+            return count >= 1;
         });
         resultArr.sort((a, b) => {
             return b[1] - a[1];
@@ -259,6 +259,11 @@ brick.reg('mainCtrl', function (scope) {
 
     this.onHotPointsChange = function (msg) {
         hotDob.set({id: msg.change, selected: msg.selected});
+    };
+
+    this.removeHot = function (e, id) {
+        hotDob.remove(id);
+        renderHotPoints();
     };
 
 });

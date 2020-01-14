@@ -14,8 +14,8 @@
 			"ths_c",
 			"ycj"
 		],
-		"fetchByStocks": "/Users/j/截图/JX.txt",
-		"fetchFromIndex": 0,
+		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
+		"fetchFromIndex": 269,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
 		"hotCsvFile": "/Users/j/截图/JX.txt"

@@ -164,16 +164,8 @@
 	},
 	{
 		"name": "",
-		"id": "2258884",
-		"trigger": "2",
-		"content": "系统内不敢出手；优柔寡断，丧失机会。",
-		"timestamp": 1578285675056,
-		"type": "interval"
-	},
-	{
-		"name": "",
 		"id": "1968194",
-		"trigger": "2",
+		"trigger": "1",
 		"content": "没有大局观；总是和市场节奏相反，拿不住大行情。\n\b行情启动时犹豫；行情退潮时管不住手；\n",
 		"timestamp": 1576715145044,
 		"disable": false,
@@ -183,9 +175,42 @@
 		"name": "",
 		"id": "8521862",
 		"trigger": "1",
-		"content": "氛围、节奏、热点、股性、人气、形态；\n",
+		"content": "情绪、节奏、热点、股性、人气、形态；\n",
 		"timestamp": 1578217234006,
 		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "4507049",
+		"trigger": "1",
+		"content": "交易不是每天要做的。\n控制，管住手；空仓等待最佳买点的到来。\n不要因为鸡肋交易，丧失掉最好的交易机会；",
+		"timestamp": 1563849669023,
+		"disable": false,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "2258884",
+		"trigger": "2",
+		"content": "系统内不敢出手；优柔寡断，丧失机会。",
+		"timestamp": 1578285675056,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "3298266",
+		"trigger": "2",
+		"content": "支撑我的交易逻辑：超预期，超强势；",
+		"type": "interval",
+		"timestamp": 1578988928007
+	},
+	{
+		"name": "",
+		"id": "9619916",
+		"trigger": "2",
+		"content": "时机就是一切；大局观，节奏周期；\n",
+		"type": "interval",
+		"timestamp": 1578968289874
 	},
 	{
 		"name": "",
@@ -193,14 +218,6 @@
 		"trigger": "2",
 		"content": "节奏和时机非常重要。\n要有大局观，契合周期和节奏。\n大盘共振：启动、转折、爆发。\n",
 		"timestamp": 1578369739146,
-		"type": "interval"
-	},
-	{
-		"name": "",
-		"id": "6506825",
-		"trigger": "3",
-		"content": "日内风口板块是什么？\n日内风口板块是什么？",
-		"timestamp": 1577700857608,
 		"type": "interval"
 	},
 	{
@@ -215,9 +232,18 @@
 		"name": "",
 		"id": "5265192",
 		"trigger": "5",
-		"content": "我有恐高，贪便宜的倾向；\n所以容易选择跟风杂毛个股；",
+		"content": "必须克服人性本能；\n恐高，贪便宜，恐慌；",
 		"type": "interval",
-		"timestamp": 1578538332493
+		"timestamp": 1578538332493,
+		"disable": false
+	},
+	{
+		"name": "",
+		"id": "6506825",
+		"trigger": "5",
+		"content": "日内风口板块是什么？\n日内风口板块是什么？",
+		"timestamp": 1577700857608,
+		"type": "interval"
 	},
 	{
 		"name": "",
@@ -225,15 +251,6 @@
 		"trigger": "5",
 		"content": "不要想着钱，把事情做对；\n不要想着钱，把事情做对；",
 		"timestamp": 1576759674323,
-		"disable": false,
-		"type": "interval"
-	},
-	{
-		"name": "",
-		"id": "4507049",
-		"trigger": "5",
-		"content": "交易不是每天要做的。\n控制，管住手；空仓等待最佳买点的到来。\n不要因为鸡肋交易，丧失掉最好的交易机会；",
-		"timestamp": 1563849669023,
 		"disable": false,
 		"type": "interval"
 	},
@@ -303,7 +320,7 @@
 		"content": "对热点的反应太慢。\n交易的本质是群体博弈，追根溯源的话，就是随时衡量，\n场外的潜在买入者的钱的数量和买入倾向，与场内筹码的数量和卖出倾向；",
 		"type": "interval",
 		"timestamp": 1578442678991,
-		"disable": false
+		"disable": true
 	},
 	{
 		"name": "",
