@@ -40,6 +40,13 @@ const tradingDb = userDb('SEL', []);
 let tradingJson = JSON.parse(JSON.stringify(tradingDb.json));
 //sort(tradingJson);
 
+/*const tjo = userDb('trading', []);
+let tjoArr = JSON.parse(JSON.stringify(tjo.json));
+tradingDb.json = tjoArr.map( (v) => {
+    return [v[0],v[1],v[3],v[4],v[5],v[6],v[7],v[8],v[9],v[10],v[11],v[12],v[13],v[14]];
+});
+tradingDb.save();*/
+
 brick.reg('mainCtrl', function (scope) {});
 
 brick.reg('uploadTradingCtrl', function (scope) {
@@ -57,7 +64,7 @@ brick.reg('uploadTradingCtrl', function (scope) {
 
     function clean (arr) {
         return _.uniqBy(arr, (item) => {
-            return item[14];
+            return item[13];  // 交易id, 用于区分每一次交易
         });
     }
 
@@ -72,7 +79,7 @@ brick.reg('uploadTradingCtrl', function (scope) {
         };
 
         if (/\.txt$/.test(tradingFile)) {
-            jhandy.csv(tradingFile, null, [0,1,3,4,5,6,7,8,9,10], false).then(cb);
+            jhandy.csv(tradingFile, null, [0,1,3,4,5,6,7,8,9,10,11,12,13,14], false).then(cb);
         } else if (/\.json$/.test(tradingFile)) {
             let json = jo(tradingFile).json;
             cb(json);

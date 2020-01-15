@@ -1,5 +1,25 @@
 [
 	{
+		"id": "集成电路概念",
+		"selected": true,
+		"timestamp": 1579098000269
+	},
+	{
+		"id": "国产软件",
+		"selected": true,
+		"timestamp": 1579097957734
+	},
+	{
+		"id": "区块链",
+		"selected": true,
+		"timestamp": 1579097312380
+	},
+	{
+		"id": "华为概念",
+		"selected": true,
+		"timestamp": 1579097304988
+	},
+	{
 		"id": "网络游戏",
 		"selected": true,
 		"timestamp": 1579011379046
@@ -11,17 +31,17 @@
 	},
 	{
 		"id": "特斯拉",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578960735043
 	},
 	{
 		"id": "消费电子",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928850827
 	},
 	{
 		"id": "新能源汽车",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928807285
 	},
 	{
@@ -31,12 +51,12 @@
 	},
 	{
 		"id": "芯片概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303653
 	},
 	{
 		"id": "网红经济",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303652
 	}
 ]
