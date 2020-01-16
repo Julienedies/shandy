@@ -18,7 +18,7 @@ export default function (scope) {
 
     const warnJodb = userJodb('warn', []);
     // 存储定时器句柄，用以取消
-    let isAbleVoiceWarn = false;
+    let isAbleVoiceWarn = false;  // 语音警告是否启用
     const warnHandleMap = {};
     let warnIntervalArr = [];
     let warnIntervalTimer = null;
@@ -26,10 +26,10 @@ export default function (scope) {
 
     let currentType;
 
-/*    warnJodb.each((item) => {
-        item.type = getType(item.trigger);
-    });
-    warnJodb.save();*/
+    /*    warnJodb.each((item) => {
+            item.type = getType(item.trigger);
+        });
+        warnJodb.save();*/
 
     ipcRenderer.on('warn', (event, info) => {
         console.log(info, warnHandleMap[info]);
@@ -37,7 +37,7 @@ export default function (scope) {
     });
 
     function render (model) {
-        model = currentType ?  warnJodb.get(currentType, 'type') : warnJodb.get();
+        model = currentType ? warnJodb.get(currentType, 'type') : warnJodb.get();
         scope.render('warnList', {model}, function () {
             $(this).find('tr')
                 .on('dragstart', scope.dragstart)
@@ -51,7 +51,7 @@ export default function (scope) {
         render();
         // 如果不是交易时段, 则不设置语音警告
         if (utils.isTrading() || isAbleVoiceWarn) {
-            isAbleVoiceWarn = true;
+            isAbleVoiceWarn = true;  // 如果是交易时段, 语音警告可用
             updateVoiceWarn();
             scope.$elm.find('button[role=toggleBtn]').text('关闭语音').addClass('is-primary');
         }
@@ -90,7 +90,7 @@ export default function (scope) {
             warnIntervalArr = _.shuffle(warnIntervalArr);
         }
         // trigger => 9:00: 定时执行
-        else if ( type === 'timer') {
+        else if (type === 'timer') {
             if (old && old.handle) {
                 old.handle.cancel();
                 delete old.handle;

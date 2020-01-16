@@ -115,10 +115,9 @@
 
                     <div class="control" ic-for="i,v in model.SOURCES" ic-init="fetchSources = model.fetchSources || model.SOURCES">
                         <div class="tags has-addons">
-                            <span class="tag is-medium" ic-select-item="{{ i }}" ic-val="{{v}}"
-                                  ic-has-selected="fetchSources.includes(v)">
+                            <a class="tag is-medium" ic-select-item="{{ i }}" ic-val="{{v}}" ic-has-selected="fetchSources.includes(v)">
                                 {{v}}
-                            </span>
+                            </a>
                         </div>
                     </div>
 
@@ -239,13 +238,10 @@
             <div class="field is-grouped is-grouped-multiline" ic-select="addHot" ic-select-type="checkbox" ic-select-on-change="onAddHotChange">
                 <div class="control" ic-for="i,v in vm">
                     <div class="tags has-addons">
-                        <span class="tag" ic-select-item ic-val="{{ v[0] }}">{{ v[0] }}</span>
-                        <span class="tag">{{ v[1] }}</span>
+                        <a class="tag" ic-select-item ic-val="{{ v[0] }}">{{ v[0] }}</a>
+                        <a class="tag">{{ v[1] }}</a>
                     </div>
                 </div>
-                <button class="button is-primary" ic-click="addHot">
-                    添加热点
-                </button>
             </div>
         </div>
     </section>

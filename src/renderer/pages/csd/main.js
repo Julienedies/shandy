@@ -6,10 +6,11 @@
 import 'babel-polyfill'
 
 import './index.html'
+import '../../css/common/common.scss'
 import './style.scss'
 
-import fs from "fs"
-import path from "path"
+import fs from  'fs'
+import path from 'path'
 
 import _ from 'lodash'
 
@@ -151,10 +152,8 @@ brick.reg('mainCtrl', function (scope) {
         $elm.find('#fetchFromIndex').val(0);
     };
 
-
     // ------------------------------------------------------------------------------
     // 热点分析; 获取每一个股票的相关概念，统计同概念数量最多的概念即为当前热点
-    let willAddHotPoints;  // 用于创建热点自定义数据
     this.findHot = async function (fields) {
         console.log(fields);
         let $th = $(this).icSetLoading();
@@ -196,16 +195,9 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     scope.onAddHotChange = function (msg) {
-        $.icMsg(JSON.stringify(msg));
-        willAddHotPoints = msg.value;
+        // $.icMsg(JSON.stringify(msg));
         hotDob.set({id: msg.change, selected: msg.selected});
         renderHotPoints();
-    };
-
-    scope.addHot = function () {
-        willAddHotPoints.forEach((val) => {
-            hotDob.set({id: val, selected: true});
-        });
     };
 
 

@@ -61,6 +61,11 @@ let proto = {
         this.emit('change');
         return this;
     },
+    // 替换save
+    chang: function () {
+        this.emit('change');
+        return this;
+    },
     /**
      * 获取查询结果
      * @param [value]  {*}            要查询的key值
