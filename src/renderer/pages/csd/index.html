@@ -9,7 +9,8 @@
 <body ic-ctrl="mainCtrl">
 <div class="column is-10" ic-tpl="csd">
 
-    <section class="box" ic-form="createStocksJson">
+    <!-- 创建stocks.json -->
+    <div class="box" ic-form="createStocksJson">
         <h2 class="title is-5">创建stocks.json</h2>
         <!-- field -->
         <div class="field is-horizontal">
@@ -63,10 +64,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- fetch csd -->
-    <section class="box" ic-form="fetchCsd">
+    <div class="box" ic-form="fetchCsd">
         <h2 class="title is-5">csd数据获取</h2>
         <div class="field is-horizontal">
             <div class="field-label is-normal">
@@ -175,10 +176,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- 热点分析 -->
-    <section class="box" ic-form="findHot">
+    <div class="box" ic-form="findHot">
         <h2 class="title is-5">热点分析/定义风口</h2>
 
         <div class="field is-horizontal">
@@ -244,7 +245,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <div class="box">
         <div class="field is-horizontal" ic-tpl="hotPoints">
@@ -266,7 +267,7 @@
     </div>
 
     <!-- 创建通达信自定义数据文件 -->
-    <section class="box">
+    <div class="box">
         <div ic-form="createTdxFile">
             <h2 class="title is-5">创建通达信自定义数据</h2>
             <div class="field is-horizontal">
@@ -324,9 +325,7 @@
         </div>
 
 
-
-
-    </section>
+    </div>
 
 </div>
 </body>

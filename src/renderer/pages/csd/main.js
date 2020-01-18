@@ -15,11 +15,11 @@ import path from 'path'
 import _ from 'lodash'
 
 import jhandy from 'jhandy'
-import stocksManager from '../../../libs/stocks-manager'
 import utils from '../../../libs/utils'
 import jo from '../../../libs/jsono'
 import stockJo from '../../../libs/stock-jo'
 import userDob from '../../../libs/user-jodb'
+import stocksManager from '../../../libs/stocks-manager'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
@@ -195,7 +195,6 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     scope.onAddHotChange = function (msg) {
-        // $.icMsg(JSON.stringify(msg));
         hotDob.set({id: msg.change, selected: msg.selected});
         renderHotPoints();
     };
