@@ -191,7 +191,10 @@ brick.reg('mainCtrl', function (scope) {
         console.log(JSON.stringify(resultArr, null, '\t'));
         $th.icClearLoading();
 
-        scope.render('hotResult', {vm: resultArr});
+        let hotPoints = hotDob.get().map((item) => {
+              return item.selected && item.id;
+        });
+        scope.render('hotResult', {arr: resultArr, hotPoints});
     };
 
     scope.onAddHotChange = function (msg) {

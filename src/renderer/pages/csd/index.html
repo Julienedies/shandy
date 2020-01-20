@@ -237,9 +237,9 @@
 
         <div id="findHotResult" ic-tpl="hotResult">
             <div class="field is-grouped is-grouped-multiline" ic-select="addHot" ic-select-type="checkbox" ic-select-on-change="onAddHotChange">
-                <div class="control" ic-for="i,v in vm">
+                <div class="control" ic-for="i,v in arr">
                     <div class="tags has-addons">
-                        <a class="tag" ic-select-item ic-val="{{ v[0] }}">{{ v[0] }}</a>
+                        <a class="tag" ic-select-item ic-has-selected="hotPoints.includes(v[0])" ic-val="{{ v[0] }}">{{ v[0] }}</a>
                         <a class="tag">{{ v[1] }}</a>
                     </div>
                 </div>

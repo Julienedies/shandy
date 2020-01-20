@@ -1,5 +1,25 @@
 [
 	{
+		"id": "卫星导航",
+		"selected": true,
+		"timestamp": 1579526986289
+	},
+	{
+		"id": "流感",
+		"selected": true,
+		"timestamp": 1579526877755
+	},
+	{
+		"id": "生物医药",
+		"selected": true,
+		"timestamp": 1579526862860
+	},
+	{
+		"id": "年报预增",
+		"selected": true,
+		"timestamp": 1579526307015
+	},
+	{
 		"id": "集成电路概念",
 		"selected": true,
 		"timestamp": 1579098000269
@@ -11,7 +31,7 @@
 	},
 	{
 		"id": "区块链",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579097312380
 	},
 	{

@@ -95,7 +95,7 @@ export default {
         let dateMapArr = _.values(dateMap2);
         console.log('dateMapArr', dateMapArr);
         // 处理相邻日期chunk数组里相同code被分割在两个chunk数组里的情况，移动相同code的imgObj到同一个chunk数组
-        _.reduce(dateMapArr, function (prevArr, currentArr) {
+        _.reduceRight(dateMapArr, function (prevArr, currentArr) {
             prevArr.forEach((imgObj, index) => {
                 for (let i = currentArr.length - 1; i >= 0; i--) {
                     let imgObj2 = currentArr[i];
