@@ -330,7 +330,7 @@ brick.reg('mainCtrl', function (scope) {
 
         utils.timer('15:00', () => {
             scope.newsWin && scope.newsWin.close();
-            scope.warnWindow && scope.warnWindow.close();
+            //scope.warnWindow && scope.warnWindow.close();
         });
     }
 

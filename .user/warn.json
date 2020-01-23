@@ -1,5 +1,53 @@
 [
 	{
+		"name": "",
+		"id": "6358746",
+		"trigger": "1",
+		"content": "短视，追逐几个点的小波动，抓不住趋势大行情。\n",
+		"type": "interval",
+		"timestamp": 1579765618186
+	},
+	{
+		"name": "",
+		"id": "1119325",
+		"trigger": "4",
+		"content": "不要将封板作为交易逻辑。",
+		"type": "interval",
+		"timestamp": 1579764218049
+	},
+	{
+		"name": "",
+		"id": "5515121",
+		"trigger": "1",
+		"content": "因为思维定势、先入为主抓不住机会。\n因为犹豫胆怯，系统内不敢出手丧失机会。",
+		"type": "interval",
+		"timestamp": 1579764132838
+	},
+	{
+		"name": "",
+		"id": "8578107",
+		"trigger": "1",
+		"content": "先入为主，思维定式。\n行情处在动态博弈中，多空是会转化的。\n因为这个丧失了多少交易机会。",
+		"type": "interval",
+		"timestamp": 1579763685650
+	},
+	{
+		"name": "",
+		"id": "0354936",
+		"trigger": "1",
+		"content": "控制不住急于赚钱的心态，管不住自己的手。\n然后因为鸡肋交易丧失掉最好的交易机会。\n",
+		"type": "interval",
+		"timestamp": 1579763488346
+	},
+	{
+		"name": "",
+		"id": "5196426",
+		"trigger": "2",
+		"content": "竞价池里每天都有机会；不要觉得没机会，\n如果看不到机会，是我的理解力不行；",
+		"type": "interval",
+		"timestamp": 1579674601465
+	},
+	{
 		"id": "5103392",
 		"trigger": "8:59",
 		"content": "做好交易准备! 做好交易准备! 做好交易准备! ",
@@ -193,10 +241,10 @@
 		"name": "",
 		"id": "6506825",
 		"trigger": "1",
-		"content": "日内热点是什么？\n",
+		"content": "当前主线、热点是什么？\n当前主线、热点是什么？\n",
 		"timestamp": 1577700857608,
 		"type": "interval",
-		"disable": true
+		"disable": false
 	},
 	{
 		"name": "",
@@ -235,10 +283,18 @@
 	{
 		"name": "",
 		"id": "2258884",
-		"trigger": "2",
+		"trigger": "1",
 		"content": "系统内不敢出手；优柔寡断，丧失机会。\n赢钱轻浮；亏钱胆怯；",
 		"timestamp": 1578285675056,
 		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "2569649",
+		"trigger": "2",
+		"content": "我很容易陷入非涨即跌的单一思维；\n多空动态博弈，不要陷入思维定势。\n因为这个丧失了多少交易机会！",
+		"type": "interval",
+		"timestamp": 1578442742047
 	},
 	{
 		"name": "",
@@ -252,11 +308,11 @@
 	{
 		"name": "",
 		"id": "9619916",
-		"trigger": "2",
-		"content": "时机就是一切；大局观，节奏周期；\n",
+		"trigger": "1",
+		"content": "时机就是一切，契合周期和节奏；\n要有大局观；不要丧失启动行情的头寸。\n航锦科技、漫步者。\n\n",
 		"type": "interval",
 		"timestamp": 1578968289874,
-		"disable": true
+		"disable": false
 	},
 	{
 		"name": "",
@@ -286,7 +342,7 @@
 		"name": "",
 		"id": "5265192",
 		"trigger": "5",
-		"content": "必须克服人性本能；\n恐高，贪便宜，恐慌；",
+		"content": "必须克服人性本能；\n急于赚钱；胆怯；贪便宜；恐慌；",
 		"type": "interval",
 		"timestamp": 1578538332493,
 		"disable": false
@@ -294,7 +350,7 @@
 	{
 		"name": "",
 		"id": "0594463",
-		"trigger": "5",
+		"trigger": "2",
 		"content": "不要想着钱，把事情做对；\n不要想着钱，把事情做对；",
 		"timestamp": 1576759674323,
 		"disable": false,
@@ -315,14 +371,6 @@
 		"content": "在股票这行，能够买对了且能安坐不动的人少之又少。\n截断亏损，让利润奔跑。",
 		"timestamp": 1578010744222,
 		"type": "interval"
-	},
-	{
-		"name": "",
-		"id": "2569649",
-		"trigger": "5",
-		"content": "我很容易陷入非涨即跌的单一思维；\n多空动态博弈，不要陷入思维定势。",
-		"type": "interval",
-		"timestamp": 1578442742047
 	},
 	{
 		"name": "",
@@ -364,7 +412,7 @@
 		"content": "对热点的反应太慢。\n交易的本质是群体博弈，追根溯源的话，就是随时衡量，\n场外的潜在买入者的钱的数量和买入倾向，与场内筹码的数量和卖出倾向；",
 		"type": "interval",
 		"timestamp": 1578442678991,
-		"disable": true
+		"disable": false
 	},
 	{
 		"name": "",

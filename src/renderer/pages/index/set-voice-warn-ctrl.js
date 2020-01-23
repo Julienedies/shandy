@@ -133,7 +133,7 @@ export default function (scope) {
                     warnIntervalArr.push(warnText);
                     ipcRenderer.send('voice_warn', warnText);
                 }
-            }, 1000 * 60 * 3);
+            }, 1000 * 60 * 2);
         }
     }
 
