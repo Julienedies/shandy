@@ -3,7 +3,7 @@
  */
 
 import './index.html'
-import '../../../css/common/common.scss'
+import '../../css/common/common.scss'
 import './style.scss'
 
 import _ from 'lodash'
@@ -11,14 +11,14 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import '../../../js/common.js'
-import '../../../js/common-stock.js'
-import '../../../js/utils.js'
+import '../../js/common.js'
+import '../../js/common-stock.js'
+import '../../js/utils.js'
 
-import C from '../../../js/constants.js'
+import C from '../../js/constants.js'
 
 import setTagCtrl from '../tags/set-tag-ctrl'
-import viewerMarkTagCtrl from '../../viewer/markTag-ctrl'
+import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
 
 //brick.set('debug', true)
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
@@ -225,5 +225,7 @@ brick.reg('setSystemCtrl', function () {
     };
 
 });
+
+
 
 brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);

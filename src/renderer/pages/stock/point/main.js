@@ -13,7 +13,7 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../../js/common-stock.js'
 
-import setTagCtrl from '../tags/set-tag-ctrl'
+import setTagCtrl from '../../tags/set-tag-ctrl'
 
 brick.reg('setTagCtrl', setTagCtrl)
 

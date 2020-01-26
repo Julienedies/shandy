@@ -12,6 +12,7 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../../js/common-stock.js'
 import Reader from '../../../../libs/reader'
+
 import _ from 'lodash'
 
 brick.reg('logicCtrl', function () {

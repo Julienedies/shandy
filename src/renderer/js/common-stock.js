@@ -2,9 +2,10 @@
  * Created by j on 18/6/28.
  */
 
+import utils from '../../libs/e-bridge'
+
 import $ from 'jquery'
 import brick from '@julienedies/brick'
-import utils from '../../libs/utils'
 
 brick.set('ic-show-img-item', 'a[href$=png]');
 brick.set('ic-show-img-url', 'href');

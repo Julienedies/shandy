@@ -3,7 +3,7 @@
  */
 
 import './index.html'
-import '../../../css/common/common.scss'
+import '../../css/common/common.scss'
 import './style.scss'
 
 import brick from '@julienedies/brick'
@@ -13,14 +13,14 @@ import '@julienedies/brick/dist/brick.css'
 // 但是构建target=renderer的时候又是必须的, 如何解决?
 // 引入e-bridge 解决;
 // 另外的解决方案,可以考虑: https://www.npmjs.com/package/webpack-conditional-loader
-import '../../../js/common.js'
-import '../../../js/common-stock.js'
-import '../../../js/utils.js'
+import '../../js/common.js'
+import '../../js/common-stock.js'
+import '../../js/utils.js'
 
 import tagsCtrl from './tags-ctrl'
 import detailsCtrl from './details-ctrl'
 import setTagCtrl from './set-tag-ctrl'
-import viewerMarkTagCtrl from '../../viewer/markTag-ctrl'
+import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
 
 window.brick = brick; // 不是测试用；模板里需要全局获取
 

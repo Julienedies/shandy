@@ -3,9 +3,12 @@
  * Created by j on 2020-01-01.
  */
 
-import userJodb from '../../../libs/user-jodb'
+/*import 'babel-polyfill'
+import $ from 'jquery'*/
 
+import userJodb from '../../../libs/user-jodb'
 const viewerJodb = userJodb('viewer');
+
 
 export default function (scope) {
 
@@ -13,13 +16,21 @@ export default function (scope) {
     let model = null;
     let imgObj = {};
 
-    let render = () => {
+    function render () {
         // 在viewer中有记录的img 或者 第一次添加标签记录的img；
-        imgObj = viewerJodb.get(currentImg.f, 'img')[0] || {img: currentImg.f};
+        let imgPath = currentImg.f;
+        // 为了能够同时在浏览器中工作, 改为使用ajax获取数据
+        imgObj = viewerJodb.get(imgPath, 'img')[0] || {img: imgPath};
+/*        imgObj = await $.ajax({
+            url: `/stock/viewer?img=${ imgPath }`
+        });
+        if (!imgObj[0]) {
+            imgObj = {img: imgPath};
+        }*/
         console.log(imgObj);
         model.img = imgObj;
         scope.render('viewerTags', {model});
-    };
+    }
 
     scope.onGetSystemDone = function (data) {
         console.info(data);
@@ -27,12 +38,14 @@ export default function (scope) {
         render();
     };
 
-    scope.hide = function (e) {
-        scope.$elm.icPopup(false);
-    };
 
     scope.onChange = function (val) {
         imgObj[val.name] = val.value;
+/*        $.ajax({
+            type: 'post',
+            url: '/stock/viewer',
+            data: imgObj
+        });*/
         viewerJodb.set(imgObj);
     };
 
@@ -41,6 +54,10 @@ export default function (scope) {
         console.log(msg);
         render();
     });
+
+    scope.hide = function (e) {
+        scope.$elm.icPopup(false);
+    };
 
     scope.on('viewer-close', function () {
         scope.hide();

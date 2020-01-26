@@ -2,6 +2,8 @@
  * Created by j on 18/9/14.
  */
 
+import 'babel-polyfill'
+
 import './index.html'
 import '../../css/common/common.scss'
 import './style.scss'

@@ -3,7 +3,7 @@
  */
 
 import './index.html'
-import '../../../css/common/common.scss'
+import '../../css/common/common.scss'
 import '../tags/style.scss'
 import './style.scss'
 
@@ -11,8 +11,8 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import '../../../js/common-stock.js'
-import '../../../js/utils.js'
+import '../../js/common-stock.js'
+import '../../js/utils.js'
 
 import detailsCtrl from '../tags/details-ctrl'
 import setTagCtrl from '../tags/set-tag-ctrl'

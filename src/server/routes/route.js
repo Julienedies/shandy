@@ -23,6 +23,7 @@ import tags from './action/tags'
 import system from './action/system'
 import memo from './action/memo'
 import diary from './action/diary'
+import viewer from './action/viewer'
 
 import note from './action/note'
 import txt from './action/txt'
@@ -83,6 +84,10 @@ export default function (app) {
     app.post('/stock/memo', memo.post)
     app.delete('/stock/memo/:id', memo.del)
     app.get('/stock/memo/focus/:id', memo.focus)
+
+    app.get('/stock/viewer/:id?', viewer.get)
+    app.post('/stock/viewer', viewer.post)
+    app.delete('/stock/viewer/:id', viewer.del)
 
     app.get('/note', note.get)
     app.post('/note', note.post)

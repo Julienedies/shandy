@@ -40,7 +40,7 @@ export default {
         let dob = getDb();
         let id = req.params.id;
         let record = dob.get2(id);
-        record.level = (record.level || 1) * 1 + 100;
+        record.level = (record.level || 1) + 100;
         dob.set(record);
         res.json(getData());
     }

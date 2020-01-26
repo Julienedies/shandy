@@ -51,7 +51,7 @@ const plugins = [
     new webpack.DefinePlugin({
         'process.env.DEV': JSON.stringify(!isPro),
     }),
-    new webpack.NoEmitOnErrorsPlugin(),
+    //new webpack.NoEmitOnErrorsPlugin(),  // 有错误的话就不输出编译文件
     new ManifestPlugin(),
     new CleanPlugin([`dist/web`], {
         root: projectRoot

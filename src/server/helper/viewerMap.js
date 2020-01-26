@@ -30,11 +30,12 @@ export default {
             system && system.forEach(f);
             tags && tags.forEach(f);
         });
-        for(let i in VIEWER_MAP){
+        for (let i in VIEWER_MAP) {
             let arr = VIEWER_MAP[i];
             arr.sort((a, b) => {
-                let ad = a.match(/\d{4}-\d{2}-\d{2}/)[0];
-                let bd = b.match(/\d{4}-\d{2}-\d{2}/)[0];
+                //console.log(a, b);
+                let ad = (a.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
+                let bd = (b.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
                 return new Date(bd) - new Date(ad);
             });
         }
