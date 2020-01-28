@@ -8,8 +8,9 @@
 		"repeat": 7,
 		"content": "通达信公式 趋势向上",
 		"timestamp": 1579495236987,
-		"promptTimes": 7,
-		"prevPromptTime": 1579780857161
+		"promptTimes": 1,
+		"prevPromptTime": 1580108523888,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -80,8 +81,9 @@
 		"repeat": 4,
 		"content": "优化竞价系统；\n整理交易系统；",
 		"timestamp": 1577596280705,
-		"promptTimes": 4,
-		"prevPromptTime": 1579772457458
+		"promptTimes": 1,
+		"prevPromptTime": 1580109122432,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -92,8 +94,9 @@
 		"repeat": 7,
 		"content": "优化竞价条件，早上时间太紧张，过滤无效标的，错过太多机会。\n条件要求太过宽松，贪便宜的倾向，起跳表示强势。条件要反映出超强势，或该弱不弱。\n\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
 		"timestamp": 1578023594839,
-		"promptTimes": 7,
-		"prevPromptTime": 1579781457140
+		"promptTimes": 2,
+		"prevPromptTime": 1580113935086,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -105,7 +108,8 @@
 		"content": "查看财联社新闻",
 		"timestamp": 1577862818798,
 		"promptTimes": 2,
-		"prevPromptTime": 1579779057225
+		"prevPromptTime": 1580123535593,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -116,8 +120,9 @@
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
 		"timestamp": 1577697423900,
-		"promptTimes": 4,
-		"prevPromptTime": 1579785656996
+		"promptTimes": 2,
+		"prevPromptTime": 1580122934750,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -128,8 +133,9 @@
 		"repeat": 5,
 		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜\n过滤上冲; 上冲意味着进攻信号；\n过滤破板\n要过一遍涨停池；旗形涨停值得关注；                          ",
 		"timestamp": 1577964389066,
-		"promptTimes": 5,
-		"prevPromptTime": 1579791056802
+		"promptTimes": 1,
+		"prevPromptTime": 1580124136203,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -140,8 +146,8 @@
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
 		"type": "",
-		"promptTimes": 4,
-		"prevPromptTime": 1579868419168,
+		"promptTimes": 1,
+		"prevPromptTime": 1580126536420,
 		"complete": true
 	},
 	{
@@ -153,8 +159,8 @@
 		"repeat": 4,
 		"content": "更新csd。",
 		"timestamp": 1577862911294,
-		"promptTimes": 3,
-		"prevPromptTime": 1579871420005,
+		"promptTimes": 1,
+		"prevPromptTime": 1580130135583,
 		"complete": true
 	},
 	{
@@ -166,7 +172,8 @@
 		"repeat": 3,
 		"content": "时不我待，我已经37岁了；\n不要忘记那些恐惧和痛苦；",
 		"timestamp": 1579093820041,
-		"promptTimes": 3,
-		"prevPromptTime": 1579783857056
+		"promptTimes": 1,
+		"prevPromptTime": 1580115736980,
+		"complete": true
 	}
 ]
