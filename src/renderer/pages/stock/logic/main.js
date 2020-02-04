@@ -125,11 +125,12 @@ brick.reg('setLogicCtrl', function () {
     };
 
     scope.on('logic.edit', function (e, logic) {
+        console.log('on logic.edit', logic);
         scope.render(logic);
         $elm.icPopup(true);
     });
 
-    scope.on_select_change = function (msg) {
+    scope.onSelectChange = function (msg) {
         $elm.find('[ic-form-field="tag"]').val(msg.value);
     };
 

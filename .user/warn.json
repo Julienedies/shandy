@@ -1,16 +1,24 @@
 [
 	{
+		"name": "错误",
+		"id": "4827280",
+		"trigger": "1",
+		"content": "我现在最大的问题是：\n主观臆想；临盘犹豫；",
+		"type": "interval",
+		"timestamp": 1580799767631
+	},
+	{
 		"name": "逻辑",
 		"id": "4361279",
-		"trigger": "1",
-		"content": "热点所在，热钱所在，行情所在；\n做龙头股，人气股，强势股；",
+		"trigger": "3",
+		"content": "热点所在，行情所在；\n做龙头股，人气股，强势股；",
 		"type": "interval",
 		"timestamp": 1580744990340
 	},
 	{
 		"name": "错误",
 		"id": "0495317",
-		"trigger": "1",
+		"trigger": "5",
 		"content": "我从来没有做好次日的交易计划和预案。\n即准备不足，所以临盘犹豫。",
 		"type": "interval",
 		"timestamp": 1580742710049
@@ -152,7 +160,7 @@
 	{
 		"name": "理解力",
 		"id": "3181899",
-		"trigger": "3",
+		"trigger": "1",
 		"content": "不要主观臆想，一切以实际盘面为准。",
 		"timestamp": 1576725560319,
 		"type": "interval"

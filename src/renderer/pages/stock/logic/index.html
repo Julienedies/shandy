@@ -82,7 +82,7 @@
             <div>
                 <h6>逻辑</h6>
                 <div>
-                    <textarea rows="12" class="textarea is-medium" ic-form-field="text">{{model.text}}</textarea>
+                    <textarea rows="12" class="textarea" ic-form-field="text">{{model.text}}</textarea>
                     <input type="hidden" name="id" ic-form-field value="{{model.id}}"/>
                 </div>
             </div>
@@ -99,8 +99,8 @@
             <div>
                 <h6>类型</h6>
                 <div>
-                    <div class="tags" ic-select="logic_type" ic-select-on-change="on_select_change">
-                        <span ic-for="i,v in model.tagMap" ic-class="tag is-small" ic-val="{{ i }}">
+                    <div class="tags" ic-select="logic_type" ic-select-on-change="onSelectChange">
+                        <span ic-for="i,v in model.tagMap" ic-class="tag is-small" ic-val="{{ i }}" ic-has-selected="i === model.tag">
                             {{ i }}
                         </span>
                     </div>

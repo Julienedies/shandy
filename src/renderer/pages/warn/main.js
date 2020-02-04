@@ -119,7 +119,7 @@ console.log(warnIntervalArr);
 $('[ic-view]').on('ic-view.active', function (e) {
     setTimeout(() => {
         hide();
-    }, 1000 * 48);
+    }, 1000 * 36);
 });
 
 const audioMap = {
