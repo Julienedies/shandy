@@ -177,6 +177,10 @@ export default function (scope) {
         scope.render('setWarnItem', {model: {}});
     };
 
+    scope.add = function(e) {
+        scope.render('setWarnItem', {model:{}});
+    };
+
     scope.edit = function (e, id) {
         let model = warnJodb.get2(id);
         scope.render('setWarnItem', {model});
