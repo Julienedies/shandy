@@ -1,5 +1,15 @@
 [
 	{
+		"id": "智能医疗",
+		"selected": true,
+		"timestamp": 1580999912034
+	},
+	{
+		"id": "军工",
+		"selected": true,
+		"timestamp": 1580999696210
+	},
+	{
 		"id": "云游戏",
 		"selected": true,
 		"timestamp": 1580915862404
@@ -16,7 +26,7 @@
 	},
 	{
 		"id": "网络直播",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1580910015395
 	},
 	{
@@ -146,7 +156,7 @@
 	},
 	{
 		"id": "网红经济",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303652
 	}
 ]
