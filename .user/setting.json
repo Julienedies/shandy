@@ -15,7 +15,7 @@
 			"ycj"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 298,
+		"fetchFromIndex": 1337,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
 		"hotCsvFile": "/Users/j/截图/JX.txt"
@@ -23,10 +23,10 @@
 	"warn": {
 		"randomBgImgDir": "/Users/j/pim/img/人物",
 		"bounds": {
-			"x": 1440,
-			"y": 0,
-			"width": 1920,
-			"height": 1080
+			"x": 0,
+			"y": 23,
+			"width": 1440,
+			"height": 808
 		}
 	},
 	"viewer": {

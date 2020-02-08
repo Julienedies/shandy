@@ -1,5 +1,21 @@
 [
 	{
+		"name": "逻辑",
+		"id": "6973377",
+		"trigger": "2",
+		"content": "不要主观臆想，临盘犹豫；\n市场反映一切，跟随市场；",
+		"type": "interval",
+		"timestamp": 1581161442882
+	},
+	{
+		"name": "逻辑",
+		"id": "4361279",
+		"trigger": "5",
+		"content": "热点所在，行情所在；\n做龙头股，人气股，强势股；",
+		"type": "interval",
+		"timestamp": 1580744990340
+	},
+	{
 		"name": "大局观",
 		"id": "6506825",
 		"trigger": "1",
@@ -9,21 +25,21 @@
 		"disable": false
 	},
 	{
-		"name": "大局观",
+		"name": "错误",
 		"id": "1968194",
-		"trigger": "1",
+		"trigger": "5",
 		"content": "总是和市场节奏相反：\n\b行情启动时犹豫；行情退潮时管不住手；\n",
 		"timestamp": 1576715145044,
 		"disable": false,
 		"type": "interval"
 	},
 	{
-		"name": "控制力",
-		"id": "0601401",
-		"trigger": "1",
-		"content": "克服贪婪和恐惧；",
+		"name": "理解力",
+		"id": "1611255",
+		"trigger": "5",
+		"content": "资金类型、行情性质、行情生命周期；",
 		"type": "interval",
-		"timestamp": 1580872131240
+		"timestamp": 1580459136311
 	},
 	{
 		"name": "理解力",
@@ -35,84 +51,27 @@
 	},
 	{
 		"name": "错误",
-		"id": "4827280",
-		"trigger": "5",
-		"content": "主观臆想；临盘犹豫；",
-		"type": "interval",
-		"timestamp": 1580799767631
-	},
-	{
-		"name": "逻辑",
-		"id": "4361279",
-		"trigger": "5",
-		"content": "热点所在，行情所在；\n做龙头股，人气股，强势股；",
-		"type": "interval",
-		"timestamp": 1580744990340
-	},
-	{
-		"name": "错误",
-		"id": "0495317",
-		"trigger": "10",
-		"content": "我从来没有做好次日的交易计划和预案。\n譬如每次大盘大涨，总是措手不及。\n即准备不足，所以临盘犹豫。",
-		"type": "interval",
-		"timestamp": 1580742710049
-	},
-	{
-		"name": "",
-		"id": "7596865",
-		"trigger": "20",
-		"content": "一致高潮时卖出。",
-		"type": "interval",
-		"timestamp": 1580690838525
-	},
-	{
-		"name": "理解力",
-		"id": "1611255",
-		"trigger": "5",
-		"content": "资金类型、行情性质、行情生命周期；",
-		"type": "interval",
-		"timestamp": 1580459136311
-	},
-	{
-		"name": "",
-		"id": "1430943",
-		"trigger": "10",
-		"content": "对热点的反应太慢。",
-		"type": "interval",
-		"timestamp": 1580398829841
-	},
-	{
-		"name": "",
-		"id": "0389006",
-		"trigger": "10",
-		"content": "我有选弱势股的倾向；\n",
-		"type": "interval",
-		"timestamp": 1579140991967
-	},
-	{
-		"name": "",
 		"id": "6053294",
-		"trigger": "2",
+		"trigger": "5",
 		"content": "为什么我每天都抓不住竞价池里的机会?",
 		"type": "interval",
 		"timestamp": 1580207798973
 	},
 	{
 		"name": "错误",
-		"id": "5515121",
-		"trigger": "5",
-		"content": "因为先入为主、思维定势 丧失机会。\n因为犹豫胆怯，系统内不敢出手 丧失机会。",
+		"id": "0495317",
+		"trigger": "10",
+		"content": "我从来没有做好次日的交易计划和预案。\n譬如每次大盘大涨，总是措手不及。",
 		"type": "interval",
-		"timestamp": 1579764132838,
-		"disable": false
+		"timestamp": 1580742710049
 	},
 	{
-		"name": "错误",
-		"id": "6870841",
-		"trigger": "20",
-		"content": "提高自己对市场的理解力；知行合一；\n为什么相同的错误一直重复了三年？\n我有多少时间可以浪费？\n",
+		"name": "控制力",
+		"id": "0601401",
+		"trigger": "1",
+		"content": "克服贪婪和恐惧；",
 		"type": "interval",
-		"timestamp": 1580567106132
+		"timestamp": 1580872131240
 	},
 	{
 		"name": "控制力",
@@ -330,19 +289,36 @@
 		"type": "action"
 	},
 	{
+		"name": "错误",
+		"id": "5515121",
+		"trigger": "15",
+		"content": "因为先入为主、思维定势 丧失机会。\n因为犹豫胆怯，系统内不敢出手 丧失机会。",
+		"type": "interval",
+		"timestamp": 1579764132838,
+		"disable": false
+	},
+	{
+		"name": "错误",
+		"id": "1430943",
+		"trigger": "15",
+		"content": "对热点的反应太慢；\n有选弱势股的倾向；",
+		"type": "interval",
+		"timestamp": 1580398829841
+	},
+	{
+		"name": "错误",
+		"id": "6870841",
+		"trigger": "20",
+		"content": "提高自己对市场的理解力；知行合一；\n为什么相同的错误一直重复了三年？\n我有多少时间可以浪费？\n",
+		"type": "interval",
+		"timestamp": 1580567106132
+	},
+	{
 		"name": "",
 		"id": "0443879",
 		"trigger": "5",
 		"content": "竞价只是系统的一个条件，\n还要考虑氛围、节奏、热点、股性、人气、形态；\n多空博弈，衡量收益风险。\n",
 		"timestamp": 1578010508385,
-		"type": "interval"
-	},
-	{
-		"name": "大局观",
-		"id": "8521862",
-		"trigger": "5",
-		"content": "情绪、节奏、热点、股性、人气、形态；\n",
-		"timestamp": 1578217234006,
 		"type": "interval"
 	},
 	{
@@ -370,6 +346,14 @@
 		"type": "interval"
 	},
 	{
+		"name": "大局观",
+		"id": "8521862",
+		"trigger": "5",
+		"content": "情绪、节奏、热点、股性、人气、形态；\n",
+		"timestamp": 1578217234006,
+		"type": "interval"
+	},
+	{
 		"name": "",
 		"id": "7481706",
 		"trigger": "15",
@@ -377,15 +361,6 @@
 		"timestamp": 1577029450375,
 		"type": "interval",
 		"disable": false
-	},
-	{
-		"name": "",
-		"id": "7912179",
-		"trigger": "5",
-		"content": "交易只有两个动作：建仓，平仓；\n交易系统内建仓；\n不要卖飞； \n止损要快；",
-		"timestamp": 1576717578806,
-		"disable": false,
-		"type": "interval"
 	},
 	{
 		"name": "逻辑",
@@ -412,6 +387,15 @@
 		"content": "短视，看不到\b主线趋势；\n管不住手，不契合周期；\n临盘犹豫，系统内不敢出手；\n思维定势，\b跟不上\b多空动态博弈的变化。\n",
 		"type": "interval",
 		"timestamp": 1580028074909
+	},
+	{
+		"name": "",
+		"id": "7912179",
+		"trigger": "15",
+		"content": "交易只有两个动作：建仓，平仓；\n交易系统内建仓；\n不要卖飞； \n止损要快；",
+		"timestamp": 1576717578806,
+		"disable": false,
+		"type": "interval"
 	},
 	{
 		"name": "逻辑",
@@ -495,6 +479,14 @@
 		"content": "市场合力人气股会在早上抢筹。",
 		"timestamp": 1577772845910,
 		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "7596865",
+		"trigger": "20",
+		"content": "一致高潮时卖出。",
+		"type": "interval",
+		"timestamp": 1580690838525
 	},
 	{
 		"name": "",
