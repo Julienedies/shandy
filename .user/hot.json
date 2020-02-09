@@ -1,7 +1,7 @@
 [
 	{
 		"id": "卫星导航",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1581167374245
 	},
 	{
@@ -56,17 +56,17 @@
 	},
 	{
 		"id": "细胞免疫治疗",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1580775264579
 	},
 	{
 		"id": "医药电商",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1580775208826
 	},
 	{
 		"id": "基因测序",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1580614257432
 	},
 	{
@@ -116,7 +116,7 @@
 	},
 	{
 		"id": "年报预增",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579526307015
 	},
 	{
@@ -141,7 +141,7 @@
 	},
 	{
 		"id": "特斯拉",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578960735043
 	},
 	{

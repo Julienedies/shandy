@@ -1,6 +1,16 @@
 [
 	{
 		"name": "",
+		"id": "2139809",
+		"type": "",
+		"start": "15:00",
+		"interval": 45,
+		"repeat": 7,
+		"content": "上冲条件添加：竞价强 和  创新高  条件；",
+		"timestamp": 1581263795840
+	},
+	{
+		"name": "",
 		"id": "7351757",
 		"type": "",
 		"start": "15:00",
@@ -8,8 +18,8 @@
 		"repeat": 7,
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
 		"timestamp": 1581084979181,
-		"promptTimes": 5,
-		"prevPromptTime": 1581157615023,
+		"promptTimes": 4,
+		"prevPromptTime": 1581245588704,
 		"complete": true
 	},
 	{
@@ -21,8 +31,8 @@
 		"repeat": 7,
 		"content": "通达信公式 趋势向上",
 		"timestamp": 1579495236987,
-		"promptTimes": 2,
-		"prevPromptTime": 1581149210812,
+		"promptTimes": 6,
+		"prevPromptTime": 1581252187829,
 		"complete": true
 	},
 	{
@@ -95,9 +105,8 @@
 		"repeat": 4,
 		"content": "优化竞价系统；\n整理交易系统；",
 		"timestamp": 1577596280705,
-		"promptTimes": 1,
-		"prevPromptTime": 1581146811766,
-		"complete": true
+		"promptTimes": 4,
+		"prevPromptTime": 1581246793154
 	},
 	{
 		"name": "",
@@ -108,9 +117,8 @@
 		"repeat": 7,
 		"content": "优化竞价条件，早上时间太紧张，过滤无效标的，错过太多机会。\n条件要求太过宽松，贪便宜的倾向，起跳表示强势。条件要反映出超强势，或该弱不弱。\n\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
 		"timestamp": 1578023594839,
-		"promptTimes": 1,
-		"prevPromptTime": 1581147413719,
-		"complete": true
+		"promptTimes": 7,
+		"prevPromptTime": 1581255188314
 	},
 	{
 		"name": "",
@@ -121,9 +129,8 @@
 		"repeat": 2,
 		"content": "查看财联社新闻",
 		"timestamp": 1577862818798,
-		"promptTimes": 1,
-		"prevPromptTime": 1581156410394,
-		"complete": true
+		"promptTimes": 2,
+		"prevPromptTime": 1581248592854
 	},
 	{
 		"name": "",
@@ -134,8 +141,8 @@
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
 		"timestamp": 1577697423900,
-		"promptTimes": 1,
-		"prevPromptTime": 1581157013336,
+		"promptTimes": 4,
+		"prevPromptTime": 1581256999541,
 		"complete": true
 	},
 	{
@@ -147,8 +154,8 @@
 		"repeat": 5,
 		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜\n过滤上冲; 上冲意味着进攻信号；\n过滤破板\n要过一遍涨停池；旗形涨停值得关注；                          ",
 		"timestamp": 1577964389066,
-		"promptTimes": 3,
-		"prevPromptTime": 1581164214300,
+		"promptTimes": 4,
+		"prevPromptTime": 1581257591423,
 		"complete": true
 	},
 	{
@@ -160,8 +167,8 @@
 		"repeat": 7,
 		"content": "做好次日的交易计划。",
 		"timestamp": 1580821790410,
-		"promptTimes": 1,
-		"prevPromptTime": 1581163609752,
+		"promptTimes": 4,
+		"prevPromptTime": 1581261198571,
 		"complete": true
 	},
 	{
@@ -174,7 +181,7 @@
 		"timestamp": 1577539413052,
 		"type": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1581164812302,
+		"prevPromptTime": 1581256392382,
 		"complete": true
 	},
 	{
@@ -187,7 +194,7 @@
 		"content": "更新csd。",
 		"timestamp": 1577862911294,
 		"promptTimes": 1,
-		"prevPromptTime": 1581167211956,
+		"prevPromptTime": 1581258788176,
 		"complete": true
 	},
 	{
@@ -199,7 +206,8 @@
 		"repeat": 4,
 		"content": "时不我待，我已经37岁了；\n不要忘记那些恐惧和痛苦；",
 		"timestamp": 1579093820041,
-		"promptTimes": 4,
-		"prevPromptTime": 1581166011881
+		"promptTimes": 1,
+		"prevPromptTime": 1581259396174,
+		"complete": true
 	}
 ]
