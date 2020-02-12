@@ -1,13 +1,5 @@
 [
 	{
-		"name": "",
-		"id": "0057772",
-		"trigger": "3",
-		"content": "股性：人气、合力",
-		"type": "interval",
-		"timestamp": 1581263599563
-	},
-	{
 		"name": "逻辑",
 		"id": "6973377",
 		"trigger": "1",
@@ -35,8 +27,8 @@
 	{
 		"name": "错误",
 		"id": "1968194",
-		"trigger": "5",
-		"content": "总是和市场节奏相反：\n\b行情启动时犹豫；行情退潮时管不住手；\n",
+		"trigger": "1",
+		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动时犹豫；行情退潮时管不住手；\n",
 		"timestamp": 1576715145044,
 		"disable": false,
 		"type": "interval"
@@ -60,8 +52,8 @@
 	{
 		"name": "错误",
 		"id": "6053294",
-		"trigger": "5",
-		"content": "为什么我每天都抓不住竞价池里的机会?",
+		"trigger": "2",
+		"content": "每天都有抓不住的竞价池机会；",
 		"type": "interval",
 		"timestamp": 1580207798973
 	},
@@ -76,8 +68,8 @@
 	{
 		"name": "控制力",
 		"id": "0601401",
-		"trigger": "5",
-		"content": "克服贪婪和恐惧；",
+		"trigger": "1",
+		"content": "克服贪婪和恐惧；\n遵守交易系统和原则；",
 		"type": "interval",
 		"timestamp": 1580872131240
 	},
@@ -102,7 +94,7 @@
 	{
 		"name": "控制力",
 		"id": "2084397",
-		"trigger": "2",
+		"trigger": "1",
 		"content": "短视、希望、贪婪、恐惧；\n踏空心理、亏钱扳回、赚钱轻浮、贪便宜、恐高胆怯、\n控制不住自己的情绪是投机者真正的死敌。",
 		"timestamp": 1564120798112,
 		"disable": false,
@@ -291,7 +283,7 @@
 		"name": "",
 		"id": "2959839",
 		"trigger": "daban",
-		"content": "无系统建仓；\n目标行情；\n衡量收益和风险；",
+		"content": "交易系统内建仓；\n衡量收益和风险；",
 		"timestamp": 1562998416497,
 		"disable": false,
 		"type": "action"
@@ -346,30 +338,21 @@
 		"type": "interval"
 	},
 	{
-		"name": "",
-		"id": "7481706",
-		"trigger": "15",
-		"content": "买点：启动，转折，爆发；",
-		"timestamp": 1577029450375,
-		"type": "interval",
-		"disable": false
-	},
-	{
-		"name": "逻辑",
-		"id": "0843570",
-		"trigger": "10",
-		"content": "知行合一，支撑我的交易逻辑：\n博弈周期、热点龙头、趋势反身性、超预期强势；",
-		"timestamp": 1576856488447,
-		"disable": false,
-		"type": "interval"
-	},
-	{
 		"name": "逻辑",
 		"id": "5000145",
 		"trigger": "5",
 		"content": "交易的本质是群体博弈，追根溯源的话，就是随时衡量，\n场外的潜在买入者的钱的数量和买入倾向；\n与场内筹码的数量和卖出倾向；",
 		"type": "interval",
 		"timestamp": 1578442678991,
+		"disable": false
+	},
+	{
+		"name": "",
+		"id": "7481706",
+		"trigger": "15",
+		"content": "买点：启动，转折，爆发；",
+		"timestamp": 1577029450375,
+		"type": "interval",
 		"disable": false
 	},
 	{
@@ -381,20 +364,13 @@
 		"timestamp": 1580028074909
 	},
 	{
-		"name": "",
-		"id": "0443879",
-		"trigger": "10",
-		"content": "竞价只是系统的一个条件，\n还要考虑氛围、节奏、热点、股性、人气、形态；\n多空博弈，衡量收益风险。\n",
-		"timestamp": 1578010508385,
-		"type": "interval"
-	},
-	{
-		"name": "错误",
-		"id": "6870841",
+		"name": "逻辑",
+		"id": "0843570",
 		"trigger": "20",
-		"content": "提高自己对市场的理解力；知行合一；\n为什么相同的错误一直重复了三年？\n我有多少时间可以浪费？\n",
-		"type": "interval",
-		"timestamp": 1580567106132
+		"content": "知行合一，支撑我的交易逻辑：\n博弈周期、热点龙头、趋势反身性、超预期强势；",
+		"timestamp": 1576856488447,
+		"disable": false,
+		"type": "interval"
 	},
 	{
 		"name": "",
@@ -415,6 +391,22 @@
 	},
 	{
 		"name": "",
+		"id": "0443879",
+		"trigger": "20",
+		"content": "竞价只是系统的一个条件，\n还要考虑氛围、节奏、热点、股性、人气、形态；\n多空博弈，衡量收益风险。\n",
+		"timestamp": 1578010508385,
+		"type": "interval"
+	},
+	{
+		"name": "",
+		"id": "3186410",
+		"trigger": "15",
+		"content": "抓大放小，不要捡了芝麻丢了西瓜；",
+		"type": "interval",
+		"timestamp": 1581342990986
+	},
+	{
+		"name": "",
 		"id": "8004817",
 		"trigger": "20",
 		"content": "情绪转折是时机，  主线热点是方向。\n目标行情； 买点；衡量收益和风险；",
@@ -423,9 +415,17 @@
 		"type": "interval"
 	},
 	{
+		"name": "",
+		"id": "0057772",
+		"trigger": "15",
+		"content": "股性：人气、合力",
+		"type": "interval",
+		"timestamp": 1581263599563
+	},
+	{
 		"name": "控制力",
 		"id": "0898885",
-		"trigger": "20",
+		"trigger": "30",
 		"content": "不要忘记那些恐惧和痛苦！\n如果不能克服本能，失败是注定的！",
 		"type": "interval",
 		"timestamp": 1580204659144
@@ -448,10 +448,18 @@
 		"type": "interval"
 	},
 	{
+		"name": "错误",
+		"id": "6870841",
+		"trigger": "20",
+		"content": "提高自己对市场的理解力；知行合一；\n为什么相同的错误一直重复了三年？\n我有多少时间可以浪费？\n",
+		"type": "interval",
+		"timestamp": 1580567106132
+	},
+	{
 		"name": "逻辑",
 		"id": "6378097",
-		"trigger": "20",
-		"content": "短线就是跟着热钱走；热钱所在，行情所在；热钱所在，必然涨停；\n热点确定方向；博弈周期确定节奏;  ",
+		"trigger": "30",
+		"content": "短线就是跟着热钱走；热钱所在，行情所在；\n热钱所在，必然涨停；\n热点确定方向；博弈周期确定节奏;  ",
 		"timestamp": 1563580921913,
 		"disable": false,
 		"type": "interval"
@@ -486,7 +494,8 @@
 		"trigger": "20",
 		"content": "市场合力人气股会在早上抢筹。",
 		"timestamp": 1577772845910,
-		"type": "interval"
+		"type": "interval",
+		"disable": false
 	},
 	{
 		"name": "",
@@ -503,7 +512,7 @@
 		"content": "不要将封板作为交易逻辑。",
 		"type": "interval",
 		"timestamp": 1579764218049,
-		"disable": false
+		"disable": true
 	},
 	{
 		"name": "",

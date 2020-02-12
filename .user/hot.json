@@ -1,17 +1,17 @@
 [
 	{
 		"id": "卫星导航",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1581167374245
 	},
 	{
 		"id": "消毒剂",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1581167313130
 	},
 	{
 		"id": "电子商务",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1581167312373
 	},
 	{
@@ -46,12 +46,12 @@
 	},
 	{
 		"id": "云办公",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1580819392489
 	},
 	{
 		"id": "在线教育",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1580819364731
 	},
 	{
@@ -136,7 +136,7 @@
 	},
 	{
 		"id": "文化传媒",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579010156030
 	},
 	{
@@ -146,7 +146,7 @@
 	},
 	{
 		"id": "消费电子",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928850827
 	},
 	{
