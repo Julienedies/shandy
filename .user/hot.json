@@ -1,18 +1,18 @@
 [
 	{
+		"id": "国产软件",
+		"selected": false,
+		"timestamp": 1581523179748
+	},
+	{
+		"id": "光伏概念",
+		"selected": true,
+		"timestamp": 1581522864794
+	},
+	{
 		"id": "卫星导航",
 		"selected": false,
 		"timestamp": 1581167374245
-	},
-	{
-		"id": "消毒剂",
-		"selected": false,
-		"timestamp": 1581167313130
-	},
-	{
-		"id": "电子商务",
-		"selected": false,
-		"timestamp": 1581167312373
 	},
 	{
 		"id": "智能医疗",
@@ -20,13 +20,8 @@
 		"timestamp": 1580999912034
 	},
 	{
-		"id": "军工",
-		"selected": false,
-		"timestamp": 1580999696210
-	},
-	{
 		"id": "云游戏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1580915862404
 	},
 	{
@@ -35,13 +30,8 @@
 		"timestamp": 1580910052305
 	},
 	{
-		"id": "网络直播",
-		"selected": false,
-		"timestamp": 1580910015395
-	},
-	{
 		"id": "手机游戏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1580819403089
 	},
 	{
@@ -55,18 +45,8 @@
 		"timestamp": 1580819364731
 	},
 	{
-		"id": "细胞免疫治疗",
-		"selected": false,
-		"timestamp": 1580775264579
-	},
-	{
-		"id": "医药电商",
-		"selected": false,
-		"timestamp": 1580775208826
-	},
-	{
 		"id": "基因测序",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1580614257432
 	},
 	{
@@ -86,7 +66,7 @@
 	},
 	{
 		"id": "健康中国",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579613280215
 	},
 	{
@@ -101,7 +81,7 @@
 	},
 	{
 		"id": "口罩",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579565036849
 	},
 	{
@@ -116,7 +96,7 @@
 	},
 	{
 		"id": "年报预增",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579526307015
 	},
 	{
@@ -131,13 +111,8 @@
 	},
 	{
 		"id": "网络游戏",
-		"selected": true,
-		"timestamp": 1579011379046
-	},
-	{
-		"id": "文化传媒",
 		"selected": false,
-		"timestamp": 1579010156030
+		"timestamp": 1579011379046
 	},
 	{
 		"id": "特斯拉",
@@ -146,7 +121,7 @@
 	},
 	{
 		"id": "消费电子",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578928850827
 	},
 	{
@@ -156,7 +131,7 @@
 	},
 	{
 		"id": "锂电池",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303654
 	},
 	{
