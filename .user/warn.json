@@ -1,5 +1,13 @@
 [
 	{
+		"name": "错误",
+		"id": "7164092",
+		"trigger": "5",
+		"content": "止盈快，止损慢。",
+		"type": "interval",
+		"timestamp": 1581862010822
+	},
+	{
 		"name": "",
 		"id": "6830350",
 		"trigger": "1",
