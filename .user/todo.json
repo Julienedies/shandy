@@ -20,7 +20,7 @@
 		"content": "上冲条件添加：竞价强 和  创新高  条件；",
 		"timestamp": 1581263795840,
 		"promptTimes": 7,
-		"prevPromptTime": 1581940985652
+		"prevPromptTime": 1582114024048
 	},
 	{
 		"name": "",
@@ -32,7 +32,7 @@
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
 		"timestamp": 1581084979181,
 		"promptTimes": 7,
-		"prevPromptTime": 1581941581583
+		"prevPromptTime": 1582114624649
 	},
 	{
 		"name": "",
@@ -44,7 +44,7 @@
 		"content": "通达信公式 趋势向上",
 		"timestamp": 1579495236987,
 		"promptTimes": 7,
-		"prevPromptTime": 1581942182373
+		"prevPromptTime": 1582115224096
 	},
 	{
 		"name": "",
@@ -54,7 +54,9 @@
 		"interval": 45,
 		"repeat": 1,
 		"content": "把pc机和大屏平行放置。上下放置不易观看。",
-		"timestamp": 1578917354425
+		"timestamp": 1578917354425,
+		"disable": true,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -117,7 +119,7 @@
 		"content": "优化竞价系统；\n整理交易系统；",
 		"timestamp": 1577596280705,
 		"promptTimes": 4,
-		"prevPromptTime": 1581933782629
+		"prevPromptTime": 1582106823334
 	},
 	{
 		"name": "",
@@ -129,7 +131,7 @@
 		"content": "优化竞价条件，早上时间太紧张，过滤无效标的，错过太多机会。\n条件要求太过宽松，贪便宜的倾向，起跳表示强势。条件要反映出超强势，或该弱不弱。\n\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
 		"timestamp": 1578023594839,
 		"promptTimes": 7,
-		"prevPromptTime": 1581942781548
+		"prevPromptTime": 1582115823337
 	},
 	{
 		"name": "",
@@ -141,7 +143,7 @@
 		"content": "查看财联社新闻",
 		"timestamp": 1577862818798,
 		"promptTimes": 2,
-		"prevPromptTime": 1581943382337
+		"prevPromptTime": 1582116424648
 	},
 	{
 		"name": "",
@@ -153,7 +155,7 @@
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
 		"timestamp": 1577697423900,
 		"promptTimes": 4,
-		"prevPromptTime": 1581949983145
+		"prevPromptTime": 1582123024034
 	},
 	{
 		"name": "",
@@ -164,8 +166,9 @@
 		"repeat": 5,
 		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜\n过滤上冲; 上冲意味着进攻信号；\n过滤破板\n要过一遍涨停池；旗形涨停值得关注；                          ",
 		"timestamp": 1577964389066,
-		"promptTimes": 5,
-		"prevPromptTime": 1581952982038
+		"promptTimes": 4,
+		"prevPromptTime": 1582126023017,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -177,7 +180,8 @@
 		"content": "做好次日的交易计划。",
 		"timestamp": 1580821790410,
 		"promptTimes": 3,
-		"prevPromptTime": 1581951781267
+		"prevPromptTime": 1582124223152,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -189,7 +193,8 @@
 		"timestamp": 1577539413052,
 		"type": "",
 		"promptTimes": 2,
-		"prevPromptTime": 1581951181287
+		"prevPromptTime": 1582124823953,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -200,8 +205,8 @@
 		"repeat": 4,
 		"content": "更新csd。",
 		"timestamp": 1577862911294,
-		"promptTimes": 2,
-		"prevPromptTime": 1581952381252,
+		"promptTimes": 1,
+		"prevPromptTime": 1582119424483,
 		"complete": true
 	},
 	{
@@ -214,6 +219,7 @@
 		"content": "时不我待，我已经37岁了；\n不要忘记那些恐惧和痛苦；",
 		"timestamp": 1579093820041,
 		"promptTimes": 2,
-		"prevPromptTime": 1581953592314
+		"prevPromptTime": 1582125423684,
+		"complete": true
 	}
 ]

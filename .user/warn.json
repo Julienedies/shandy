@@ -1,5 +1,13 @@
 [
 	{
+		"name": "",
+		"id": "7301134",
+		"trigger": "1",
+		"content": "做精不做多，1周10%；",
+		"type": "interval",
+		"timestamp": 1582122208365
+	},
+	{
 		"name": "错误",
 		"id": "7164092",
 		"trigger": "5",
