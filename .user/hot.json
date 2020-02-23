@@ -1,33 +1,8 @@
 [
 	{
-		"id": "OLED",
-		"selected": false,
-		"timestamp": 1582072920068
-	},
-	{
-		"id": "安防",
-		"selected": false,
-		"timestamp": 1582069364912
-	},
-	{
-		"id": "智慧政务",
-		"selected": false,
-		"timestamp": 1582069321720
-	},
-	{
 		"id": "光刻胶",
 		"selected": false,
 		"timestamp": 1582069232767
-	},
-	{
-		"id": "航空发动机",
-		"selected": false,
-		"timestamp": 1582069164307
-	},
-	{
-		"id": "大飞机",
-		"selected": false,
-		"timestamp": 1581954420374
 	},
 	{
 		"id": "智慧城市",
@@ -111,7 +86,7 @@
 	},
 	{
 		"id": "5G",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579613271519
 	},
 	{
@@ -136,7 +111,7 @@
 	},
 	{
 		"id": "年报预增",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579526307015
 	},
 	{

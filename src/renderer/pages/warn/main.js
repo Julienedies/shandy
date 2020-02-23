@@ -20,6 +20,8 @@ import voice from '../../../libs/voice'
 import warnText from '../../js/warn-text'
 import userJodb from '../../../libs/user-jodb'
 
+//import './ani.js'
+
 const ipc = electron.ipcRenderer
 const BrowserWindow = electron.remote.BrowserWindow
 
@@ -42,6 +44,7 @@ const show = () => {
 const show2 = (content) => {
     $place.text(content);
     brick.view.to('place');
+    //$place.animate({'backgroundColor':'rgba(0,0,0,1)'});
 };
 
 const hide = () => {
@@ -134,6 +137,10 @@ socket.on('warn', (info) => {
 
     if (info === 'sell' || info === 'buy' || info === 'daban') {
         show2(warnHandleMap[info]);
+/*        $body.css({backgroundColor: 'rgba(0,0,0,0.8)'});
+        setTimeout(() => {
+            $body.css({'backgroundColor': 'rgba(0,0,0,0)'});
+        }, 1300);*/
     } else {
         show2(info);
     }

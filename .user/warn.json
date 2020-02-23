@@ -1,16 +1,72 @@
 [
 	{
-		"name": "",
-		"id": "7301134",
-		"trigger": "1",
-		"content": "做精不做多，1周10%；",
+		"name": "逻辑",
+		"id": "5053196",
+		"trigger": "20",
+		"content": "多空博弈周期，时机就是一切；",
 		"type": "interval",
-		"timestamp": 1582122208365
+		"timestamp": 1582467564243
+	},
+	{
+		"name": "",
+		"id": "4813931",
+		"trigger": "1",
+		"content": "贪婪恐惧，人性不变；\n多空博弈，时机就是一切；",
+		"type": "interval",
+		"timestamp": 1582467507876
+	},
+	{
+		"name": "大局观",
+		"id": "4668682",
+		"trigger": "15",
+		"content": "行情持续性、强度、广度；",
+		"type": "interval",
+		"timestamp": 1582448523001
+	},
+	{
+		"name": "",
+		"id": "8617086",
+		"trigger": "15",
+		"content": "消息热点启动，确定性不高，但盈亏比高。\n策略：循序分批建仓；",
+		"type": "interval",
+		"timestamp": 1582448454037
+	},
+	{
+		"name": "",
+		"id": "5283218",
+		"trigger": "3",
+		"content": "我\b总是临盘犹豫，每天都错过机会。",
+		"type": "interval",
+		"timestamp": 1582296221473
+	},
+	{
+		"name": "",
+		"id": "1683865",
+		"trigger": "10",
+		"content": "大盘\b情绪；板块热点；个股人气；趋势形态；\n大盘共振，启动，转折，爆发；",
+		"type": "interval",
+		"timestamp": 1582295557056
+	},
+	{
+		"name": "错误",
+		"id": "4174437",
+		"trigger": "1",
+		"content": "短视、主观、贪婪、恐惧；\n反省自己的心态；",
+		"type": "interval",
+		"timestamp": 1581656133379
+	},
+	{
+		"name": "",
+		"id": "4102451",
+		"trigger": "5",
+		"content": "人气龙头\b反转、超强势。\n那些\b真正符合\b系统条件的个股我都因为恐惧错过了。",
+		"type": "interval",
+		"timestamp": 1582201448542
 	},
 	{
 		"name": "错误",
 		"id": "7164092",
-		"trigger": "5",
+		"trigger": "15",
 		"content": "止盈快，止损慢。",
 		"type": "interval",
 		"timestamp": 1581862010822
@@ -26,7 +82,7 @@
 	{
 		"name": "",
 		"id": "2150429",
-		"trigger": "1",
+		"trigger": "20",
 		"content": "为了避免重复错误，把交易严格限定在交易系统内；\n随时思考自己的交易模型；",
 		"type": "interval",
 		"timestamp": 1581675687772
@@ -42,18 +98,10 @@
 	{
 		"name": "错误",
 		"id": "6870841",
-		"trigger": "2",
+		"trigger": "30",
 		"content": "相同的错误一直重复了三年？\n我有多少时间可以浪费？\n",
 		"type": "interval",
 		"timestamp": 1580567106132
-	},
-	{
-		"name": "",
-		"id": "4174437",
-		"trigger": "1",
-		"content": "短视、主观、贪婪、恐惧；",
-		"type": "interval",
-		"timestamp": 1581656133379
 	},
 	{
 		"name": "",
@@ -67,9 +115,10 @@
 		"name": "",
 		"id": "6901080",
 		"trigger": "1",
-		"content": "随时反省自己的心态；\n不要重复错误；",
+		"content": "随时",
 		"type": "interval",
-		"timestamp": 1581637710024
+		"timestamp": 1581637710024,
+		"disable": true
 	},
 	{
 		"name": "理解力",
@@ -161,6 +210,14 @@
 		"timestamp": 1563849669023,
 		"disable": false,
 		"type": "interval"
+	},
+	{
+		"name": "逻辑",
+		"id": "1123937",
+		"trigger": "5",
+		"content": "只有大概率，没有百分百；\n",
+		"type": "interval",
+		"timestamp": 1580997679728
 	},
 	{
 		"name": "逻辑",
@@ -347,7 +404,7 @@
 		"name": "",
 		"id": "2959839",
 		"trigger": "daban",
-		"content": "一定要系统内建仓！一定要系统内建仓！",
+		"content": "一定要系统内建仓！\n交易逻辑、交易模型；",
 		"timestamp": 1562998416497,
 		"disable": false,
 		"type": "action"
@@ -395,15 +452,6 @@
 		"type": "interval"
 	},
 	{
-		"name": "大局观",
-		"id": "8521862",
-		"trigger": "5",
-		"content": "情绪、节奏、热点、股性、人气、形态；\n",
-		"timestamp": 1578217234006,
-		"type": "interval",
-		"disable": true
-	},
-	{
 		"name": "逻辑",
 		"id": "5000145",
 		"trigger": "30",
@@ -448,12 +496,13 @@
 		"type": "interval"
 	},
 	{
-		"name": "逻辑",
-		"id": "1123937",
+		"name": "",
+		"id": "8004817",
 		"trigger": "30",
-		"content": "只有大概率，没有百分百；\n操作只有对错，盈亏交给市场；\n",
-		"type": "interval",
-		"timestamp": 1580997679728
+		"content": "情绪转折是时机，  主线热点是方向。\n目标行情； 买点；衡量收益和风险；",
+		"timestamp": 1564028988301,
+		"disable": false,
+		"type": "interval"
 	},
 	{
 		"name": "",
@@ -464,6 +513,15 @@
 		"type": "interval"
 	},
 	{
+		"name": "大局观",
+		"id": "8521862",
+		"trigger": "5",
+		"content": "情绪、节奏、热点、股性、人气、形态；\n",
+		"timestamp": 1578217234006,
+		"type": "interval",
+		"disable": true
+	},
+	{
 		"name": "",
 		"id": "3186410",
 		"trigger": "15",
@@ -471,15 +529,6 @@
 		"type": "interval",
 		"timestamp": 1581342990986,
 		"disable": true
-	},
-	{
-		"name": "",
-		"id": "8004817",
-		"trigger": "30",
-		"content": "情绪转折是时机，  主线热点是方向。\n目标行情； 买点；衡量收益和风险；",
-		"timestamp": 1564028988301,
-		"disable": false,
-		"type": "interval"
 	},
 	{
 		"name": "",
@@ -565,6 +614,14 @@
 		"content": "一致高潮时卖出。",
 		"type": "interval",
 		"timestamp": 1580690838525
+	},
+	{
+		"name": "",
+		"id": "7301134",
+		"trigger": "30",
+		"content": "做精不做多，1周10%；",
+		"type": "interval",
+		"timestamp": 1582122208365
 	},
 	{
 		"name": "",
