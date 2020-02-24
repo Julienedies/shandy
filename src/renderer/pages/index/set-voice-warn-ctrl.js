@@ -26,11 +26,6 @@ export default function (scope) {
 
     let currentType;
 
-    /*    warnJodb.each((item) => {
-            item.type = getType(item.trigger);
-        });
-        warnJodb.save();*/
-
     ipcRenderer.on('warn', (event, info) => {
         console.log(info, warnHandleMap[info]);
         voice(warnHandleMap[info] || '');
@@ -133,7 +128,7 @@ export default function (scope) {
                     warnIntervalArr.push(warnText);
                     ipcRenderer.send('voice_warn', warnText);
                 }
-            }, 1000 * 60 * 1);
+            }, 1000 * 60 * 1.1);
         }
     }
 
@@ -177,8 +172,8 @@ export default function (scope) {
         scope.render('setWarnItem', {model: {}});
     };
 
-    scope.add = function(e) {
-        scope.render('setWarnItem', {model:{}});
+    scope.add = function (e) {
+        scope.render('setWarnItem', {model: {}});
     };
 
     scope.edit = function (e, id) {
@@ -202,17 +197,17 @@ export default function (scope) {
         //$(this).text(isDisable ? '启用' : '禁用');
     };
 
-    utils.timer('11:30', () => {
-        updateVoiceWarn(true);
-    });
+    /*    utils.timer('11:30', () => {
+            updateVoiceWarn(true);
+        });
 
-    utils.timer('12:45', () => {
-        updateVoiceWarn();
-    });
+        utils.timer('12:45', () => {
+            updateVoiceWarn();
+        });
 
-    utils.timer('15:00', () => {
-        updateVoiceWarn(true);
-    });
+        utils.timer('15:00', () => {
+            updateVoiceWarn(true);
+        });*/
 
     // -------------------------------------------------------------------
 

@@ -193,12 +193,11 @@ brick.reg('rts_ctrl', function (scope) {
         first_objm.clear();
     };
     scope.pause = function (e) {
-        console.log('pause');
         voice.clear();
         q_rtso.pause();
     };
-    scope.remove = function (e) {
-        _remove($stock_code.val());
+    scope.remove = function (e, code) {
+        _remove(code || $stock_code.val());
     };
     scope.fill = function (e) {
         $stock_code.val($(this).attr('code'));

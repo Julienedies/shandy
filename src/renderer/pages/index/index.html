@@ -161,6 +161,7 @@
                                     <span class="price">{{v.price}} </span>
                                     <span class="time"> {{v.time}}</span>
                                     <span style="font-size:0.8em;">{{ +new Date() }}</span>
+                                    <span><button class="button is-small" ic-click="remove:{{ v.code }}">删除</button></span>
                                 </li>
                             </ul>
                         </div>
@@ -245,7 +246,7 @@
                             <button class="button is-primary is-small" ic-click="add" ic-popup-target="setWarnItem">添加新项</button>
                             <button class="button is-small" role="toggleBtn" ic-click="toggle">开启语音</button>
                             <button class="button is-small" ic-popup-close>关闭窗口</button>
-                            <button class="button is-small none" ic-click="debug">debug</button>
+                            <button class="button is-small" ic-click="debug">debug</button>
                         </h3>
                         <div class="tags is-right" ic-select="type" ic-select-cla="is-primary" ic-select-on-change="onTypeChange">
                             <span class="tag" ic-val="timer">timer</span>

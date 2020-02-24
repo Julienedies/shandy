@@ -197,7 +197,7 @@ brick.reg('mainCtrl', function (scope) {
             });
             setTimeout(() => {
                 newsWin.win.setIgnoreMouseEvents(true);
-            }, 1000 * 60 * 1);
+            }, 1000 * 60 * 1.1);
         }
     };
 

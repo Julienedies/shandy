@@ -122,7 +122,7 @@ console.log(warnIntervalArr);
 $('[ic-view]').on('ic-view.active', function (e) {
     setTimeout(() => {
         hide();
-    }, 1000 * 36);
+    }, 1000 * 64);
 });
 
 const audioMap = {
@@ -157,5 +157,7 @@ socket.on('warn', (info) => {
 
 brick.reg('mainCtrl', function (scope) {
 });
+
+
 
 brick.bootstrap();

@@ -1,6 +1,16 @@
 [
 	{
 		"name": "",
+		"id": "1480591",
+		"type": "",
+		"start": "9:00",
+		"interval": 45,
+		"repeat": 1,
+		"content": "我\b总是主观臆想、临盘犹豫，每天都错过机会。",
+		"timestamp": 1582548055425
+	},
+	{
+		"name": "",
 		"id": "7743574",
 		"type": "",
 		"start": "15:00",
@@ -9,7 +19,7 @@
 		"content": "每天更新自选股票池。\n加入 启动 爆发 转折 超强势的个股\n移除趋弱的个股；\n记住我做的是超短。",
 		"timestamp": 1582429000702,
 		"promptTimes": 7,
-		"prevPromptTime": 1582459448164
+		"prevPromptTime": 1582547202846
 	},
 	{
 		"name": "",
@@ -21,7 +31,7 @@
 		"content": "我每天都临盘犹豫，错过机会；怎么解决；\n必须信任我的交易逻辑",
 		"timestamp": 1582296291296,
 		"promptTimes": 7,
-		"prevPromptTime": 1582369863002
+		"prevPromptTime": 1582547801958
 	},
 	{
 		"name": "",
@@ -33,7 +43,7 @@
 		"content": "怎么尽快确定日内热点是什么？\n优化竞价强1，\n优化上冲选股： 添加竞价强 和 新高条件；\n向上趋势条件优化；",
 		"timestamp": 1582294062908,
 		"promptTimes": 7,
-		"prevPromptTime": 1582367463086
+		"prevPromptTime": 1582548405789
 	},
 	{
 		"name": "",
@@ -45,7 +55,8 @@
 		"content": "开发屏幕文本随机浮动效果。",
 		"timestamp": 1582196033164,
 		"promptTimes": 7,
-		"prevPromptTime": 1582288179587
+		"prevPromptTime": 1582549004181,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -68,7 +79,7 @@
 		"content": "上冲条件添加：竞价强 和  创新高  条件；",
 		"timestamp": 1581263795840,
 		"promptTimes": 7,
-		"prevPromptTime": 1582293486126
+		"prevPromptTime": 1582552602648
 	},
 	{
 		"name": "",
@@ -79,8 +90,8 @@
 		"repeat": 7,
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
 		"timestamp": 1581084979181,
-		"promptTimes": 7,
-		"prevPromptTime": 1582368063065
+		"promptTimes": 2,
+		"prevPromptTime": 1582556204099
 	},
 	{
 		"name": "",
@@ -91,8 +102,8 @@
 		"repeat": 7,
 		"content": "通达信公式 趋势向上",
 		"timestamp": 1579495236987,
-		"promptTimes": 7,
-		"prevPromptTime": 1582294685258
+		"promptTimes": 4,
+		"prevPromptTime": 1582559802375
 	},
 	{
 		"name": "",
@@ -165,8 +176,8 @@
 		"repeat": 4,
 		"content": "优化竞价系统；下调单纯的热点起跳，趋势起跳，调整起跳级别；\njq级里太多无效个股，真正符合条件的我又恐惧不敢上。\n优化止损策略；\n\n整理交易系统；",
 		"timestamp": 1577596280705,
-		"promptTimes": 4,
-		"prevPromptTime": 1582280386629
+		"promptTimes": 3,
+		"prevPromptTime": 1582557406072
 	},
 	{
 		"name": "",
@@ -177,9 +188,8 @@
 		"repeat": 7,
 		"content": "优化竞价条件，早上时间太紧张，过滤无效标的，错过太多机会。\n条件要求太过宽松，贪便宜的倾向，起跳表示强势。条件要反映出超强势，或该弱不弱。\n\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
 		"timestamp": 1578023594839,
-		"promptTimes": 7,
-		"prevPromptTime": 1582359063379,
-		"complete": true
+		"promptTimes": 3,
+		"prevPromptTime": 1582558003674
 	},
 	{
 		"name": "",
@@ -191,7 +201,7 @@
 		"content": "查看财联社新闻",
 		"timestamp": 1577862818798,
 		"promptTimes": 2,
-		"prevPromptTime": 1582365662269
+		"prevPromptTime": 1582558601554
 	},
 	{
 		"name": "",
@@ -202,8 +212,8 @@
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
 		"timestamp": 1577697423900,
-		"promptTimes": 4,
-		"prevPromptTime": 1582372264377
+		"promptTimes": 2,
+		"prevPromptTime": 1582559201535
 	},
 	{
 		"name": "",
@@ -213,9 +223,7 @@
 		"interval": 30,
 		"repeat": 5,
 		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜\n过滤上冲; 上冲意味着进攻信号；\n过滤破板\n要过一遍涨停池；旗形涨停值得关注；                          ",
-		"timestamp": 1577964389066,
-		"promptTimes": 5,
-		"prevPromptTime": 1582379462667
+		"timestamp": 1577964389066
 	},
 	{
 		"name": "",
@@ -225,10 +233,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "做好次日的交易计划。",
-		"timestamp": 1580821790410,
-		"promptTimes": 1,
-		"prevPromptTime": 1582373461993,
-		"complete": true
+		"timestamp": 1580821790410
 	},
 	{
 		"name": "",
@@ -238,10 +243,7 @@
 		"repeat": 4,
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
-		"type": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1582374061973,
-		"complete": true
+		"type": ""
 	},
 	{
 		"name": "",
@@ -251,10 +253,7 @@
 		"interval": 60,
 		"repeat": 4,
 		"content": "更新csd。",
-		"timestamp": 1577862911294,
-		"promptTimes": 2,
-		"prevPromptTime": 1582380662625,
-		"complete": true
+		"timestamp": 1577862911294
 	},
 	{
 		"name": "",
@@ -264,8 +263,6 @@
 		"interval": 60,
 		"repeat": 4,
 		"content": "时不我待，我已经37岁了；\n不要忘记那些恐惧和痛苦；",
-		"timestamp": 1579093820041,
-		"promptTimes": 4,
-		"prevPromptTime": 1582380062647
+		"timestamp": 1579093820041
 	}
 ]

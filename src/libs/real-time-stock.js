@@ -96,8 +96,8 @@ class Rts {
             //console.log(error, response, body, +new Date);
             if (error) {
                 console.error('error:', error);
-                //that.toggle();
-                return that.callback('请求实时行情数据出现错误！');
+                that.callback('请求实时行情数据出现错误！');
+                return that.query();
             }
             //console.log('statusCode:', response && response.statusCode);
             //console.log('body:', body);
