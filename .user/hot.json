@@ -1,12 +1,12 @@
 [
 	{
 		"id": "物联网",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1582556957954
 	},
 	{
 		"id": "超级电容",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1582556822552
 	},
 	{
@@ -101,7 +101,7 @@
 	},
 	{
 		"id": "医疗器械概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579565192274
 	},
 	{
@@ -116,7 +116,7 @@
 	},
 	{
 		"id": "生物医药",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579526862860
 	},
 	{
@@ -151,7 +151,7 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928807285
 	},
 	{

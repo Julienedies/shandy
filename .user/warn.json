@@ -1,9 +1,17 @@
 [
 	{
 		"name": "逻辑",
+		"id": "9572961",
+		"trigger": "5",
+		"content": "衡量收益和风险；\n概率、盈亏比；",
+		"type": "interval",
+		"timestamp": 1582598568792
+	},
+	{
+		"name": "逻辑",
 		"id": "9927851",
-		"trigger": "3",
-		"content": "竞价指示了日内热点，情绪强弱；\n热点所在，行情所在；",
+		"trigger": "1",
+		"content": "竞价指示了日内热点，情绪强弱；\n热点所在，热钱所在；",
 		"type": "interval",
 		"timestamp": 1582553098997
 	},
