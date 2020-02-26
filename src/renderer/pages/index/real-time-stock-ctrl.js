@@ -222,7 +222,7 @@ window.addEventListener('beforeunload', function (e) {
 bridge.timer('14:55', () => {
     q_rtso.pause();
     prev_objm.clear();
-    rtsJo.set('stocks', []);
+    //rtsJo.set('stocks', []);
 });
 
 //

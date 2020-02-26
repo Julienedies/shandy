@@ -1,5 +1,15 @@
 [
 	{
+		"id": "苹果概念",
+		"selected": false,
+		"timestamp": 1582646473178
+	},
+	{
+		"id": "蔚来汽车概念",
+		"selected": false,
+		"timestamp": 1582646455294
+	},
+	{
 		"id": "物联网",
 		"selected": false,
 		"timestamp": 1582556957954
@@ -56,7 +66,7 @@
 	},
 	{
 		"id": "云计算",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1580910052305
 	},
 	{
@@ -101,12 +111,12 @@
 	},
 	{
 		"id": "医疗器械概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579565192274
 	},
 	{
 		"id": "口罩",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579565036849
 	},
 	{
@@ -116,7 +126,7 @@
 	},
 	{
 		"id": "生物医药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579526862860
 	},
 	{

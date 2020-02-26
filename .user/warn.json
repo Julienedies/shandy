@@ -1,5 +1,13 @@
 [
 	{
+		"name": "错误",
+		"id": "0586849",
+		"trigger": "5",
+		"content": "无系统建仓；\n情绪建仓；\n主观臆想建仓；",
+		"type": "interval",
+		"timestamp": 1582720512996
+	},
+	{
 		"name": "逻辑",
 		"id": "9572961",
 		"trigger": "5",
@@ -400,7 +408,7 @@
 		"name": "",
 		"id": "2234810",
 		"trigger": "buy",
-		"content": "无系统建仓；\n情绪建仓；\n主观臆想建仓；",
+		"content": "一定要系统内建仓！\n一定要系统内建仓！",
 		"timestamp": 1576660953345,
 		"type": "action"
 	},
@@ -408,7 +416,7 @@
 		"name": "",
 		"id": "3250183",
 		"trigger": "sell",
-		"content": "无大局观卖飞；无耐心卖飞；\n止损要快；止损要快；",
+		"content": "不要卖飞；止损要快；\n不要卖飞；止损要快；",
 		"timestamp": 1576661024135,
 		"disable": false,
 		"type": "action"
@@ -417,7 +425,7 @@
 		"name": "",
 		"id": "2959839",
 		"trigger": "daban",
-		"content": "一定要系统内建仓！\n交易逻辑、交易模型；",
+		"content": "一定要系统内建仓！\n一定要系统内建仓！\n",
 		"timestamp": 1562998416497,
 		"disable": false,
 		"type": "action"

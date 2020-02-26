@@ -15,7 +15,7 @@
 			"ycj"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 984,
+		"fetchFromIndex": 322,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
 		"hotCsvFile": "/Users/j/截图/JX.txt"
@@ -94,7 +94,7 @@
 		"bounds": {
 			"x": 1518,
 			"y": 0,
-			"width": 1725,
+			"width": 1773,
 			"height": 74
 		}
 	},
