@@ -1,9 +1,18 @@
 [
 	{
 		"name": "错误",
+		"id": "1430943",
+		"trigger": "2",
+		"content": "我有选弱势股，恐高，贪便宜的倾向；",
+		"type": "interval",
+		"timestamp": 1580398829841,
+		"disable": false
+	},
+	{
+		"name": "错误",
 		"id": "0586849",
-		"trigger": "5",
-		"content": "无系统建仓；\n情绪建仓；\n主观臆想建仓；",
+		"trigger": "10",
+		"content": "情绪建仓；\n无系统建仓；\n主观臆想建仓；",
 		"type": "interval",
 		"timestamp": 1582720512996
 	},
@@ -11,7 +20,7 @@
 		"name": "逻辑",
 		"id": "9572961",
 		"trigger": "5",
-		"content": "衡量收益和风险；\n概率、盈亏比；",
+		"content": "概率、盈亏比；\n衡量收益和风险；",
 		"type": "interval",
 		"timestamp": 1582598568792
 	},
@@ -66,6 +75,14 @@
 	},
 	{
 		"name": "",
+		"id": "8596476",
+		"trigger": "2",
+		"content": "我的交易系统是什么？\n支撑我的交易逻辑是什么？",
+		"type": "interval",
+		"timestamp": 1581649943000
+	},
+	{
+		"name": "",
 		"id": "4102451",
 		"trigger": "15",
 		"content": "人气龙头、\b反转、超强势。\n那些\b真正符合\b系统条件的个股我都因为恐惧错过了。",
@@ -106,14 +123,6 @@
 		"timestamp": 1576856488447,
 		"disable": false,
 		"type": "interval"
-	},
-	{
-		"name": "",
-		"id": "8596476",
-		"trigger": "1",
-		"content": "一定要系统内建仓！一定要系统内建仓！",
-		"type": "interval",
-		"timestamp": 1581649943000
 	},
 	{
 		"name": "控制力",
@@ -438,15 +447,6 @@
 		"type": "interval",
 		"timestamp": 1582448454037,
 		"disable": true
-	},
-	{
-		"name": "错误",
-		"id": "1430943",
-		"trigger": "15",
-		"content": "对热点的反应太慢；\n有选弱势股的倾向；",
-		"type": "interval",
-		"timestamp": 1580398829841,
-		"disable": false
 	},
 	{
 		"name": "大局观",

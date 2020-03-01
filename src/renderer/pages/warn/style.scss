@@ -47,16 +47,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.5;
+  opacity: 0.6;
   background: rgba(0, 0, 0, 0) !important;
 
   .box {
     //width: 48%;
     // border: solid 1px yellowgreen;
-    margin-top: -16%;
+    margin-top: -18%;
     margin-left: 20%;
     min-width: 50%;
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.1);
 
     .title {
       margin: 3px 0 10px 0 !important;
