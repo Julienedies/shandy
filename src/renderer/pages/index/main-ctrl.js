@@ -27,47 +27,54 @@ import setVoiceWarnCtrl from './set-voice-warn-ctrl'
 const {ipcRenderer} = electron;
 
 brick.services.reg('viewsModel', () => {
-    const list = []
-    let activeItem
+    const list = [];
+    let activeItem;
     return {
         get (isActiveItem) {
             return isActiveItem ? activeItem : list;
         },
         add (item) {
             if (!this.has(item)) {
-                list.push(item)
-                this.active(item)
+                list.push(item);
+                this.active(item);
             }
         },
         remove (item) {
-            let index = this.getIndex(item)
-            item = this.find(item)
+            let index = this.getIndex(item);
+            item = this.find(item);
             if (item) {
                 if (activeItem === item) {
-                    let nextItem = list[index + 1] || list[0]
-                    nextItem && this.active(nextItem)
+                    let nextItem = list[index + 1] || list[0];
+                    nextItem && this.active(nextItem);
                 }
-                item.$webView.remove()
-                list.splice(index, 1)
+                if(this.isUrl()){
+                    item.$webView.remove();
+                }else{
+                    item.$webView = null;
+                }
+                list.splice(index, 1);
             }
         },
         has (item) {
-            return this.getIndex(item) !== -1
+            return this.getIndex(item) !== -1;
+        },
+        isUrl () {
+             return /\.html?$/img.test(this.url);
         },
         active (item) {
-            item = this.find(item)
+            item = this.find(item);
             if (activeItem) {
-                activeItem.active = false
-                activeItem.$webView.hide()
+                activeItem.active = false;
+                activeItem.$webView.hide();
             }
-            item.active = true
-            item.$webView.show()
-            activeItem = item
+            item.active = true;
+            item.$webView.show();
+            activeItem = item;
         },
         getIndex (item) {
             return list.findIndex((v) => {
-                return v.url === item.url
-            })
+                return v.url === item.url;
+            });
         },
         /**
          * 参数里的item只有url属性, 并不等于list里存储的item
@@ -96,23 +103,33 @@ brick.reg('mainCtrl', function (scope) {
         let list = viewsModel.get();
         $viewTabs.icRender({model: list});
         if (!list.length) {
-            scope.showIndex();
+            //scope.showIndex();
         }
     };
 
-    this.show = function (e, url) {
-        $viewsWrapper.show();
-        $indexView.hide();
-        let $th = $(this)
-        let title = $th.text();
-        let item = {title, url};
+    function _show (item) {
         if (viewsModel.has(item)) {
             viewsModel.active(item);
         } else {
-            item.$webView = $(`<webview src="${ url }" nodeintegration style="height: 100%; "></webview>`).appendTo($views);
+            if (/.+\.html$/img.test(item.url)) {
+                item.$webView = $(`<webview src="${ item.url }" nodeintegration style="height: 100%; "></webview>`).appendTo($views);
+            } else {
+                item.$webView = $(`${ item.url }`).appendTo($views);
+            }
             viewsModel.add(item);
         }
+        $viewsWrapper.show();
+        //$indexView.hide();
         render();
+    }
+
+    // 显示标签视图
+    this.showTab = function (e, url) {
+        let $th = $(this);
+        let title = $th.text().trim() || $th.attr('aria-label') || $th.attr('title') || '无题';
+        let item = {title, url};
+        console.log(item);
+        _show(item);
     };
 
     this.closeTab = function (e, url) {
@@ -130,6 +147,10 @@ brick.reg('mainCtrl', function (scope) {
         $indexView.show();
         $viewsWrapper.hide();
     };
+
+
+    // ----------------------------------------------------------
+    _show({url: '#indexView', title: '股票实时监控'});
 
     // -------------------------------------------------------------------------------------------
 
@@ -333,6 +354,8 @@ brick.reg('mainCtrl', function (scope) {
             //scope.warnWindow && scope.warnWindow.close();
         });
     }
+
+
 
 });
 

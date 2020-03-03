@@ -17,7 +17,7 @@
                 <a class="btn-btn-default hint--bottom" aria-label="阶段涨幅" ic-click="view_403">
                     <i class="icon icon-up"></i>
                 </a>
-                <a class="btn-btn-default hint--bottom" aria-label="涨跌停价计算" ic-popup-target="countSwing">
+                <a class="btn-btn-default hint--bottom" aria-label="涨跌停价计算" ic-click="showTab:#countSwingCtrl" Xic-popup-target="countSwing">
                     <i class="icon icon-publish"></i>
                 </a>
             </div>
@@ -32,13 +32,13 @@
                 <a class="btn-btn-default hint--bottom" aria-label="个股资料" ic-click="viewStock">
                     <span class="icon icon-book-open"></span>
                 </a>
-                <a class="btn-btn-default hint--bottom" aria-label="添加股票" ic-popup-target="addStock">
+                <a class="btn-btn-default hint--bottom none" aria-label="添加股票" ic-popup-target="addStock">
                     <span class="icon icon-plus-circled"></span>
                 </a>
             </div>
 
             <div class="btn-group">
-                <a class="btn-btn-default hint--bottom" aria-label="语音提醒" ic-popup-target="setVoiceWarn">
+                <a class="btn-btn-default hint--bottom" aria-label="语音提醒" Xic-popup-target="setVoiceWarn" ic-click="showTab:#setVoiceWarnCtrl">
                     <i class="icon icon-sound"></i><!-- icon-sound icon-mute ic-click="playWarnAudio" id="playWarnAudioBtn" -->
                 </a>
                 <a class="btn-btn-default hint--bottom" aria-label="OCR重命名" ic-click="renameByOcr">
@@ -78,7 +78,7 @@
         <div class="pane-group" style="overflow: hidden;">
             <aside class="pane-sm sidebar" ic-tabs2="a" ic-tab-$=".nav-group-item" style="height: 100%;overflow-y: auto;">
                 <nav class="nav-group">
-                    <a class="nav-group-item active" ic-click="showIndex"><i class="icon icon-home"></i> 首页 </a>
+                    <a class="nav-group-item active" ic-click="showTab:#indexView"><i class="icon icon-home"></i> 首页 </a>
                 </nav>
                 <nav class="nav-group">
                     <h5 class="nav-group-title">N</h5>
@@ -89,23 +89,23 @@
                 </nav>
                 <nav class="nav-group">
                     <h5 class="nav-group-title">T</h5>
-                    <a class="nav-group-item" ic-click="show:system.html" ic-dblclick="openByWindow:system.html">
+                    <a class="nav-group-item" ic-click="showTab:system.html" ic-dblclick="openByWindow:system.html">
                         <i class="icon icon-shareable"></i> 系统
                     </a>
-                    <a class="nav-group-item" ic-click="show:tags.html" ic-dblclick="openByWindow:tags.html">
+                    <a class="nav-group-item" ic-click="showTab:tags.html" ic-dblclick="openByWindow:tags.html">
                         <i class="icon icon-tag"></i> 标签
                     </a>
-                    <a class="nav-group-item" ic-click="show:stock_replay.html"><i class="icon icon-eye"></i> 复盘</a>
-                    <a class="nav-group-item" ic-click="show:mistake.html"><i class="icon icon-cancel-circled"></i> 错误</a>
-                    <a class="nav-group-item" ic-click="show:stock_plan.html"><i class="icon icon-doc-text"></i> 计划</a>
-                    <a class="nav-group-item" ic-click="show:stock_buy.html"><i class="icon icon-doc-text"></i> 建仓</a>
-                    <a class="nav-group-item" ic-click="show:stock_sell.html"><i class="icon icon-doc-text"></i> 平仓</a>
-                    <a class="nav-group-item" ic-click="show:stock_logic.html"><i class="icon icon-help"></i>逻辑</a>
-                    <a class="nav-group-item" ic-click="show:stock_news.html"><i class="icon icon-newspaper"></i> 资讯</a>
-                    <a class="nav-group-item" ic-click="show:note.html"><i class="icon icon-pencil"></i> 笔记</a>
-                    <a class="nav-group-item" ic-click="show:stock_diary.html"><i class="icon icon-pencil"></i> 日记</a>
-                    <a class="nav-group-item" ic-click="show:memo.html"><i class="icon icon-calendar"></i> 备忘</a>
-                    <!--<a class="nav-group-item" ic-click="show:stock_point.html"><i class="icon  icon-doc-text"></i> 要素</a>-->
+                    <a class="nav-group-item" ic-click="showTab:stock_replay.html"><i class="icon icon-eye"></i> 复盘</a>
+                    <a class="nav-group-item" ic-click="showTab:mistake.html"><i class="icon icon-cancel-circled"></i> 错误</a>
+                    <a class="nav-group-item" ic-click="showTab:stock_plan.html"><i class="icon icon-doc-text"></i> 计划</a>
+                    <a class="nav-group-item" ic-click="showTab:stock_buy.html"><i class="icon icon-doc-text"></i> 建仓</a>
+                    <a class="nav-group-item" ic-click="showTab:stock_sell.html"><i class="icon icon-doc-text"></i> 平仓</a>
+                    <a class="nav-group-item" ic-click="showTab:stock_logic.html"><i class="icon icon-help"></i>逻辑</a>
+                    <a class="nav-group-item" ic-click="showTab:stock_news.html"><i class="icon icon-newspaper"></i> 资讯</a>
+                    <a class="nav-group-item" ic-click="showTab:note.html"><i class="icon icon-pencil"></i> 笔记</a>
+                    <a class="nav-group-item" ic-click="showTab:stock_diary.html"><i class="icon icon-pencil"></i> 日记</a>
+                    <a class="nav-group-item" ic-click="showTab:memo.html"><i class="icon icon-calendar"></i> 备忘</a>
+                    <!--<a class="nav-group-item" ic-click="showTab:stock_point.html"><i class="icon  icon-doc-text"></i> 要素</a>-->
                 </nav>
                 <nav class="nav-group">
                     <h5 class="nav-group-title">N</h5>
@@ -211,7 +211,7 @@
                 </div>
 
                 <!-- 股票价格涨跌幅计算 -->
-                <div ic-ctrl="countSwingCtrl" ic-popup="countSwing">
+                <div id="countSwingCtrl" ic-ctrl="countSwingCtrl" Xic-popup="countSwing">
                     <div class="column is-10" ic-form="sw" style="padding:10px 20px 0 20px;">
 
                         <div class="field is-grouped is-grouped-right">
@@ -239,16 +239,16 @@
                 </div>
 
                 <!-- 语音提醒 -->
-                <div ic-ctrl="setVoiceWarnCtrl" ic-popup="setVoiceWarn">
+                <div id="setVoiceWarnCtrl" ic-ctrl="setVoiceWarnCtrl" Xic-popup="setVoiceWarn">
                     <div class="column is-12" style="padding:20px;">
                         <h3 class="title is-5">
                             <button class="button is-small" ic-click="debug">debug</button>
                             <span style="padding:0 9px 0 9px; vertical-align: -4px;">设置语音警告</span>
                             <button class="button is-primary is-small" ic-click="add" ic-popup-target="setWarnItem">添加新项</button>
                             <button class="button is-small" role="toggleBtn" ic-click="toggle">开启语音</button>
-                            <button class="button is-small" ic-popup-close>关闭窗口</button>
+                            <button class="button is-small none" ic-popup-close>关闭窗口</button>
                         </h3>
-                        <div class="tags is-right" ic-select="type" ic-select-cla="is-primary" ic-select-on-change="onTypeChange">
+                        <div class="tags" ic-select="type" ic-select-cla="is-primary" ic-select-on-change="onTypeChange">
                             <span class="tag" ic-val="timer">timer</span>
                             <span class="tag" ic-val="interval">interval</span>
                             <span class="tag" ic-val="action">action</span>

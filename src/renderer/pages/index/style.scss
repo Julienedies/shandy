@@ -149,10 +149,10 @@ div[ic-ctrl="rtsCtrl"] button {
 }
 
 ////////////////////////////////////////////////////
-/*#indexView{
-  z-index: 9; // 需要大于 #viewsWrapper
-}*/
-#viewsWrapper, #indexView {
+#indexView{
+  display: none;
+}
+#viewsWrapper {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -194,7 +194,7 @@ div[ic-ctrl="rtsCtrl"] button {
   #views {
     flex: 1;
     border: solid 2px rgba(255,255,255,1);
-    overflow: hidden;
+    overflow-y: scroll;
   }
 }
 
@@ -202,4 +202,8 @@ div[ic-ctrl="rtsCtrl"] button {
 .onDragOver{
   background:blue;
   color:#fff;
+}
+
+[Xic-popup]{
+  display: none;
 }

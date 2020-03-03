@@ -1,25 +1,15 @@
 [
 	{
 		"name": "",
-		"id": "1480591",
-		"type": "",
-		"start": "9:00",
-		"interval": 45,
-		"repeat": 1,
-		"content": "我\b总是主观臆想、临盘犹豫，每天都错过机会。",
-		"timestamp": 1582548055425
-	},
-	{
-		"name": "",
-		"id": "7743574",
+		"id": "3208152",
 		"type": "",
 		"start": "15:00",
 		"interval": 45,
 		"repeat": 7,
-		"content": "每天更新自选股票池。\n加入 启动 爆发 转折 超强势的个股\n移除趋弱的个股；\n记住我做的是超短。",
-		"timestamp": 1582429000702,
-		"promptTimes": 7,
-		"prevPromptTime": 1583064772705
+		"content": "怎么避免一直重复错误？",
+		"timestamp": 1583219900835,
+		"promptTimes": 3,
+		"prevPromptTime": 1583226493136
 	},
 	{
 		"name": "",
@@ -28,10 +18,10 @@
 		"start": "15:00",
 		"interval": 45,
 		"repeat": 7,
-		"content": "我每天都临盘犹豫，错过机会；怎么解决；\n必须信任我的交易逻辑",
+		"content": "我每天都临盘犹豫，错过机会；怎么解决；\n必须信任支撑我的交易逻辑。\n热点龙头；多空博弈周期；衡量收益和风险；超预期强势；\n",
 		"timestamp": 1582296291296,
-		"promptTimes": 7,
-		"prevPromptTime": 1583065377620
+		"promptTimes": 3,
+		"prevPromptTime": 1583225893163
 	},
 	{
 		"name": "",
@@ -42,8 +32,20 @@
 		"repeat": 7,
 		"content": "怎么尽快确定日内热点是什么？\n优化竞价强1，\n优化上冲选股： 添加竞价强 和 新高条件；\n向上趋势条件优化；",
 		"timestamp": 1582294062908,
-		"promptTimes": 7,
-		"prevPromptTime": 1583065975828
+		"promptTimes": 3,
+		"prevPromptTime": 1583227093115
+	},
+	{
+		"name": "",
+		"id": "7743574",
+		"type": "",
+		"start": "15:00",
+		"interval": 45,
+		"repeat": 7,
+		"content": "每天更新自选股票池。\n加入: 启动、 爆发、 转折、 超强势的人气龙头股；\n移除：趋弱的个股；\n记住我做的是超短。",
+		"timestamp": 1582429000702,
+		"promptTimes": 3,
+		"prevPromptTime": 1583225034479
 	},
 	{
 		"name": "",
@@ -54,20 +56,8 @@
 		"repeat": 7,
 		"content": "开发屏幕文本随机浮动效果。",
 		"timestamp": 1582196033164,
-		"promptTimes": 5,
-		"prevPromptTime": 1583060572847,
-		"complete": true
-	},
-	{
-		"name": "",
-		"id": "5007919",
-		"type": "",
-		"start": "9:00",
-		"interval": 45,
-		"repeat": 7,
-		"content": "准备一些物品：纸巾，\n馒头，茼蒿， 面条，  芹菜， 黄豆芽，  ",
-		"timestamp": 1581733287190,
-		"disable": true
+		"promptTimes": 1,
+		"prevPromptTime": 1583227693094
 	},
 	{
 		"name": "",
@@ -77,9 +67,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "上冲条件添加：竞价强 和  创新高  条件；",
-		"timestamp": 1581263795840,
-		"promptTimes": 7,
-		"prevPromptTime": 1583067177518
+		"timestamp": 1581263795840
 	},
 	{
 		"name": "",
@@ -89,10 +77,7 @@
 		"interval": 90,
 		"repeat": 7,
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
-		"timestamp": 1581084979181,
-		"promptTimes": 2,
-		"prevPromptTime": 1583068977044,
-		"complete": true
+		"timestamp": 1581084979181
 	},
 	{
 		"name": "",
@@ -102,9 +87,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "通达信公式 趋势向上",
-		"timestamp": 1579495236987,
-		"promptTimes": 4,
-		"prevPromptTime": 1583075581511
+		"timestamp": 1579495236987
 	},
 	{
 		"name": "",
@@ -176,9 +159,7 @@
 		"interval": 45,
 		"repeat": 4,
 		"content": "优化竞价系统；下调单纯的热点起跳，趋势起跳，调整起跳级别；\njq级里太多无效个股，真正符合条件的我又恐惧不敢上。\n优化止损策略；\n\n整理交易系统；",
-		"timestamp": 1577596280705,
-		"promptTimes": 4,
-		"prevPromptTime": 1583076772335
+		"timestamp": 1577596280705
 	},
 	{
 		"name": "",
@@ -188,10 +169,7 @@
 		"interval": 30,
 		"repeat": 7,
 		"content": "优化竞价条件，早上时间太紧张，过滤无效标的，错过太多机会。\n条件要求太过宽松，贪便宜的倾向，起跳表示强势。条件要反映出超强势，或该弱不弱。\n\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
-		"timestamp": 1578023594839,
-		"promptTimes": 3,
-		"prevPromptTime": 1583073172449,
-		"complete": true
+		"timestamp": 1578023594839
 	},
 	{
 		"name": "",
@@ -201,10 +179,7 @@
 		"interval": 60,
 		"repeat": 2,
 		"content": "查看财联社新闻",
-		"timestamp": 1577862818798,
-		"promptTimes": 1,
-		"prevPromptTime": 1583071372504,
-		"complete": true
+		"timestamp": 1577862818798
 	},
 	{
 		"name": "",
@@ -214,9 +189,7 @@
 		"interval": 45,
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
-		"timestamp": 1577697423900,
-		"promptTimes": 3,
-		"prevPromptTime": 1583077986764
+		"timestamp": 1577697423900
 	},
 	{
 		"name": "",
@@ -226,9 +199,7 @@
 		"interval": 30,
 		"repeat": 5,
 		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜\n过滤上冲; 上冲意味着进攻信号；\n过滤破板\n要过一遍涨停池；旗形涨停值得关注；                          ",
-		"timestamp": 1577964389066,
-		"promptTimes": 2,
-		"prevPromptTime": 1583077375295
+		"timestamp": 1577964389066
 	},
 	{
 		"name": "",
@@ -238,9 +209,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "做好次日的交易计划。",
-		"timestamp": 1580821790410,
-		"promptTimes": 1,
-		"prevPromptTime": 1583076173298
+		"timestamp": 1580821790410
 	},
 	{
 		"name": "",

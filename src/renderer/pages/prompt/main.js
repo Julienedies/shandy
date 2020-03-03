@@ -47,7 +47,7 @@ brick.reg('mainCtrl', function (scope) {
     scope.currentTodoItem = null;
 
     scope.hideWindow = function (e) {
-        currentWindow.hide();
+        currentWindow && currentWindow.hide();
     };
 
     scope.complete = function (e) {
@@ -114,6 +114,9 @@ brick.reg('mainCtrl', function (scope) {
                         todoJodb.set(todoItem);
                         scope.currentTodoItem = todoItem;
                         currentWindow.showInactive();
+                        setTimeout(() => {
+                            scope.hideWindow();
+                        }, 1000 * 40);
                         scope.emit(todoItem.type || 'prompt', todoItem);
                         over = true;  // 终止todo数组循环
                     }
