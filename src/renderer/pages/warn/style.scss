@@ -47,13 +47,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.6;
+  opacity: 1;
   background: rgba(0, 0, 0, 0) !important;
 
   .box {
     //width: 48%;
     // border: solid 1px yellowgreen;
-    margin-top: -18%;
+    margin-top: -3%;
     margin-left: 20%;
     min-width: 50%;
     background: rgba(0, 0, 0, 0.1);
@@ -89,7 +89,59 @@ a {
   }
 }
 
-#place {
+// 弹幕
+#barrageBox div {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  white-space: pre;
+  font-size: 20px;
+  //text-shadow: 1px -0px 0px #fff;
+}
+
+.barrage {
+  animation: barrage 49s 1;
+}
+
+@keyframes barrage {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+.aniIn {
+  margin-top: -620px;
+  text-align: center;
+  color: #F5E3C5;
+  text-shadow: -3px -3px 5px #F6F7F5;
+  animation: aniIn 3s 1;
+  animation-timing-function: ease-in;
+}
+
+@keyframes aniIn {
+  0% {
+    margin-top: 220px;
+    font-size: 12px;
+  }
+  100% {
+    margin-top: 460px;
+    font-size: 52px;
+  }
+}
+
+#place{
+  position: absolute;
+  text-shadow: -0px -0px 2px #fff;
+  transition: top 1s, left 1s, font-size 2s;
+  animation: flash 1s infinite ease-in-out;
+}
+.place {
+  position: absolute;
+  border:solid 0px blue;
+  transition: top 1s, left 1s, font-size 1s;
   text-shadow: 2px 3px 4px #000000;
   -webkit-transform-origin: center center;
   transform-origin: center center;
@@ -106,7 +158,14 @@ a {
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
-
+@-webkit-keyframes flash{
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
 @-webkit-keyframes shake-slow {
   0% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
@@ -264,21 +323,24 @@ a {
 .rotateBox {
   transform-style: preserve-3d;
 }
+
 .rotate {
   animation: rotate 8s linear infinite;
 }
+
 @keyframes rotate {
   to {
     transform: rotateY(360deg);
   }
 }
+
 @keyframes beat {
   from {
     transform: none;
   }
   50% {
     /*transform: scale(1.6);*/
-    font-size:48px;
+    font-size: 48px;
   }
   to {
     transform: none;

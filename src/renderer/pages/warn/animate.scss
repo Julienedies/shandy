@@ -1,0 +1,16 @@
+/*!
+ * Created by j on 20/3/7.
+ */
+
+.dk{width:70%;height:450px;margin:0 auto;overflow:hidden;text-align:center;position:relative;}
+.dk div{
+  position:absolute;width:100%;
+  margin-top:-20px;text-align:center;
+  color:#F5E3C5;text-shadow:-3px -3px 5px #F6F7F5;
+  animation:spanmove 3s 1;
+  animation-timing-function: ease-in;display:none;
+}
+@keyframes spanmove{
+  0% {margin-top: 220px;font-size:12px;}
+  100% {margin-top: 460px;font-size:52px;display:none;}
+}

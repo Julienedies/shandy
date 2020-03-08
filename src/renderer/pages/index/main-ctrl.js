@@ -47,9 +47,9 @@ brick.services.reg('viewsModel', () => {
                     let nextItem = list[index + 1] || list[0];
                     nextItem && this.active(nextItem);
                 }
-                if(this.isUrl()){
+                if (this.isUrl()) {
                     item.$webView.remove();
-                }else{
+                } else {
                     item.$webView = null;
                 }
                 list.splice(index, 1);
@@ -59,7 +59,7 @@ brick.services.reg('viewsModel', () => {
             return this.getIndex(item) !== -1;
         },
         isUrl () {
-             return /\.html?$/img.test(this.url);
+            return /\.html?$/img.test(this.url);
         },
         active (item) {
             item = this.find(item);
@@ -222,7 +222,7 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    scope.openWarn = function () {
+    scope.openWarn = function (e, ignore) {
         let warnWindow = scope.warnWindow;
         if (warnWindow) {
             return warnWindow.close();
@@ -269,7 +269,7 @@ brick.reg('mainCtrl', function (scope) {
                 fn(true);
             };
 
-            fn();
+            ignore ? fn2() : fn();
         }
     };
 
@@ -337,11 +337,11 @@ brick.reg('mainCtrl', function (scope) {
     // ---------------------------------------------------------------------------------------------
 
     scope.openPrompt();
+    !scope.warnWindow && scope.openWarn(null, 1);
 
     if (utils.isTrading()) {
         !scope.newsWin && scope.openNews();
-        !scope.warnWindow && scope.openWarn();
-
+        //!scope.warnWindow && scope.openWarn();
     }
 
     if (utils.isTradingDate()) {
@@ -355,9 +355,8 @@ brick.reg('mainCtrl', function (scope) {
         });
     }
 
-
-
 });
+
 
 brick.reg('memoCtrl', function () {
 

@@ -23,12 +23,15 @@ export default function (scope) {
     let warnIntervalArr = [];
     let warnIntervalTimer = null;
     const dragOverCla = 'onDragOver';
+    const ignoreReg = /[(（].*[）)]/img;
 
     let currentType;
 
     ipcRenderer.on('warn', (event, info) => {
         console.log(info, warnHandleMap[info]);
-        voice(warnHandleMap[info] || '');
+        let str = warnHandleMap[info] || '';
+        str = str.replace(ignoreReg, '');
+        voice(str);
     });
 
     function render (model) {
@@ -124,7 +127,7 @@ export default function (scope) {
             warnIntervalTimer = setInterval(() => {
                 let warnText = warnIntervalArr.shift();
                 if (warnText) {
-                    voice(warnText);
+                    voice(warnText.replace(ignoreReg, ''));
                     warnIntervalArr.push(warnText);
                     ipcRenderer.send('voice_warn', warnText);
                 }
@@ -166,6 +169,7 @@ export default function (scope) {
         warnJodb.set(fields);
         scope.reset();
         scope.$elm.find('[ic-popup="setWarnItem"]').icPopup(false);
+        init();
     };
 
     scope.reset = () => {

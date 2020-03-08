@@ -20,55 +20,69 @@ import voice from '../../../libs/voice'
 import warnText from '../../js/warn-text'
 import userJodb from '../../../libs/user-jodb'
 
-//import './ani.js'
-
-const ipc = electron.ipcRenderer
-const BrowserWindow = electron.remote.BrowserWindow
+const ipc = electron.ipcRenderer;
+const BrowserWindow = electron.remote.BrowserWindow;
 
 const warnJodb = userJodb('warn');
 const warnArr = warnJodb.get() || [];
 
 let win;
 const socket = io();
-const $body = $('body');
-const $place = $('#place');
+
+let $body = $('body');
+let $place = $('#place');
+let $barrageBox = $('#barrageBox');
 
 const warnHandleMap = {};
 let warnIntervalArr = [];
 
+let warnIntervalTimer = null;
+let hideTimer = null;
 
-const show = () => {
+function show () {
     $body.css('opacity', 1).show();
-};
+}
 
-const show2 = (content) => {
-    $place.text(content);
+function show2 (content) {
+    clearTimeout(hideTimer);
+    let cla = 'aniIn';
+    let x = Math.random() * 300 - 190;
+    let y = Math.random() * 400 - 290;
+    let size = 14 + Math.random() * 10;
     brick.view.to('place');
-    //$place.animate({'backgroundColor':'rgba(0,0,0,1)'});
-};
-
-const hide = () => {
-    //$body.css('opacity', 0).hide();
-    brick.view.to('hide');
-};
-
-
-ipc.on('id', function (event, windowID, isFrameMode) {
-    win = BrowserWindow.fromId(windowID);
+    $place.text(content).css({'left': `${ x }%`, 'top': `${ y }%`, color: `${ randomColor() }`, 'font-size': `${ size }px`});
     setTimeout(() => {
-        if (isFrameMode) {
-            // hide();  // 设置透明，鼠标忽略，保持始终窗口显示;
-            setTimeout(hide, 1000 * 9);
-        } else {
-            $body.css('backgroundColor', 'black');
-        }
-    }, 1000 * 1);
-});
+        $place.css({'left': `32%`, 'top': `52%`, 'font-size': '28px'});
+    }, 200);
+}
 
-ipc.on('view', (e, view) => {
-    brick.view.to(view);
-});
+function hide () {
+    brick.view.to('hide');
+}
 
+/**
+ * @todo 随机颜色函数
+ * @returns {string}
+ */
+function randomColor () {
+    return '#' + Math.random().toString(16).slice(-6);
+}
+
+/**
+ * @todo 弹幕显示警告文本
+ * @param txt {String} 弹幕文本内容
+ * @param [cb] {Function}  可选，动画执行完的回调函数
+ */
+function barrage (txt, cb) {
+    let y = 10 + Math.random() * 80;
+    let d = 36 + Math.random() * 19;
+    let size = 16 + Math.random() * 12;
+    let str = `<div style="top: ${ y }%; color:${ randomColor() }; font-size: ${ size }px; animation: barrage ${ d }s;">${ txt }</div>`;
+    $(str).appendTo($barrageBox).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        $(this).remove();
+        cb && cb();
+    });
+}
 
 warnArr.forEach((item, index) => {
     let id = item.id;
@@ -99,7 +113,14 @@ warnArr.forEach((item, index) => {
     }
 });
 
-console.log(warnIntervalArr);
+warnIntervalTimer = setInterval(() => {
+    let warnText = warnIntervalArr.shift();
+    if (warnText) {
+        barrage(warnText);
+        warnIntervalArr.push(warnText);
+    }
+}, 1000 * 24);
+
 
 /*let intervalTimer = setInterval(() => {
     let warnText = warnIntervalArr.shift();
@@ -120,7 +141,7 @@ console.log(warnIntervalArr);
 
 
 $('[ic-view]').on('ic-view.active', function (e) {
-    setTimeout(() => {
+    hideTimer = setTimeout(() => {
         hide();
     }, 1000 * 64);
 });
@@ -137,10 +158,10 @@ socket.on('warn', (info) => {
 
     if (info === 'sell' || info === 'buy' || info === 'daban') {
         show2(warnHandleMap[info]);
-/*        $body.css({backgroundColor: 'rgba(0,0,0,0.8)'});
+        $body.css({backgroundColor: 'rgba(0,0,0,1)'});
         setTimeout(() => {
             $body.css({'backgroundColor': 'rgba(0,0,0,0)'});
-        }, 1300);*/
+        }, 1000 * 4);
     } else {
         show2(info);
     }
@@ -155,9 +176,24 @@ socket.on('warn', (info) => {
     }, 1000 * 5);*/
 });
 
-brick.reg('mainCtrl', function (scope) {
+ipc.on('id', function (event, windowID, isFrameMode) {
+    win = BrowserWindow.fromId(windowID);
+    setTimeout(() => {
+        if (isFrameMode) {
+            setTimeout(hide, 1000 * 9);
+        } else {
+            $body.css('backgroundColor', 'black');
+        }
+    }, 1000 * 1.1);
 });
 
+ipc.on('view', (e, view) => {
+    brick.view.to(view);
+});
+
+
+brick.reg('mainCtrl', function (scope) {
+});
 
 
 brick.bootstrap();

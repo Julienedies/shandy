@@ -194,7 +194,7 @@ div[ic-ctrl="rtsCtrl"] button {
   #views {
     flex: 1;
     border: solid 2px rgba(255,255,255,1);
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 
