@@ -1,6 +1,6 @@
 {
   "name": "shandy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "handy toolkit,",
   "main": "./dist/main/main.js",
   "scripts": {
