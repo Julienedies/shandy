@@ -176,7 +176,7 @@
 	},
 	{
 		"id": "华为概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579097304988
 	},
 	{
@@ -196,7 +196,7 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578928807285
 	},
 	{

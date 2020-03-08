@@ -292,7 +292,7 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    scope.openPrompt = function (isFrame) {
+    scope.openPrompt = function (e, isFrame) {
         let promptWindow = scope.promptWindow;
         if (promptWindow) {
             return promptWindow.show();
@@ -337,11 +337,10 @@ brick.reg('mainCtrl', function (scope) {
     // ---------------------------------------------------------------------------------------------
 
     scope.openPrompt();
-    !scope.warnWindow && scope.openWarn(null, 1);
 
     if (utils.isTrading()) {
         !scope.newsWin && scope.openNews();
-        //!scope.warnWindow && scope.openWarn();
+        !scope.warnWindow && scope.openWarn(null, 1);
     }
 
     if (utils.isTradingDate()) {
@@ -351,7 +350,7 @@ brick.reg('mainCtrl', function (scope) {
 
         utils.timer('15:00', () => {
             scope.newsWin && scope.newsWin.close();
-            //scope.warnWindow && scope.warnWindow.close();
+            scope.warnWindow && scope.warnWindow.close();
         });
     }
 

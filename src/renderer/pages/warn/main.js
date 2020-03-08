@@ -89,11 +89,6 @@ warnArr.forEach((item, index) => {
     let content = item.content;
     let trigger = item.trigger;
     let disable = item.disable;
-    /*
-        if (disable) {
-            return;
-        }*/
-
     // trigger => 10 : 间隔执行
     if (/^\d+$/.test(trigger)) {
         let count = Math.ceil(240 / trigger);
@@ -103,6 +98,7 @@ warnArr.forEach((item, index) => {
     }
     // trigger => 9:00: 定时执行
     else if (/^\d+[:]\d+$/.test(trigger)) {
+        if (disable) return;
         let handle = utils.timer(trigger, () => {
             show2(content);
         });
@@ -113,6 +109,7 @@ warnArr.forEach((item, index) => {
     }
 });
 
+// 定时弹幕
 warnIntervalTimer = setInterval(() => {
     let warnText = warnIntervalArr.shift();
     if (warnText) {
