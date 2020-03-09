@@ -1,5 +1,15 @@
 [
 	{
+		"id": "智能电网",
+		"selected": true,
+		"timestamp": 1583712341575
+	},
+	{
+		"id": "特高压",
+		"selected": true,
+		"timestamp": 1583712332150
+	},
+	{
 		"id": "文化传媒",
 		"selected": false,
 		"timestamp": 1583369508553
@@ -16,7 +26,7 @@
 	},
 	{
 		"id": "工业互联网",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1583107201933
 	},
 	{
@@ -71,7 +81,7 @@
 	},
 	{
 		"id": "互联网金融",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1581897895222
 	},
 	{
@@ -146,7 +156,7 @@
 	},
 	{
 		"id": "医疗器械概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579565192274
 	},
 	{
@@ -186,7 +196,7 @@
 	},
 	{
 		"id": "特斯拉",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578960735043
 	},
 	{

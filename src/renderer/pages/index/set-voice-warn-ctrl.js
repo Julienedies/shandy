@@ -127,7 +127,8 @@ export default function (scope) {
             warnIntervalTimer = setInterval(() => {
                 let warnText = warnIntervalArr.shift();
                 if (warnText) {
-                    voice(warnText.replace(ignoreReg, ''));
+                    let str = warnText.replace(ignoreReg, '');
+                    voice(str+ '\r\n'+str+ '\r\n'+str+ '\r\n'+str);
                     warnIntervalArr.push(warnText);
                     ipcRenderer.send('voice_warn', warnText);
                 }
@@ -201,7 +202,7 @@ export default function (scope) {
         //$(this).text(isDisable ? '启用' : '禁用');
     };
 
-    /*    utils.timer('11:30', () => {
+        utils.timer('11:30', () => {
             updateVoiceWarn(true);
         });
 
@@ -211,7 +212,7 @@ export default function (scope) {
 
         utils.timer('15:00', () => {
             updateVoiceWarn(true);
-        });*/
+        });
 
     // -------------------------------------------------------------------
 

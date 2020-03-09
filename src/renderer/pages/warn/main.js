@@ -52,7 +52,7 @@ function show2 (content) {
     brick.view.to('place');
     $place.text(content).css({'left': `${ x }%`, 'top': `${ y }%`, color: `${ randomColor() }`, 'font-size': `${ size }px`});
     setTimeout(() => {
-        $place.css({'left': `32%`, 'top': `52%`, 'font-size': '28px'});
+        $place.css({'left': `${ 25 + Math.random() * 20 }%`, 'top': `${ 35 + Math.random() * 20 }%`, 'font-size': '28px'});
     }, 200);
 }
 
@@ -74,9 +74,9 @@ function randomColor () {
  * @param [cb] {Function}  可选，动画执行完的回调函数
  */
 function barrage (txt, cb) {
-    let y = 10 + Math.random() * 80;
-    let d = 36 + Math.random() * 19;
-    let size = 16 + Math.random() * 12;
+    let y = 15 + Math.random() * 80;
+    let d = 32 + Math.random() * 24;
+    let size = 18 + Math.random() * 12;
     let str = `<div style="top: ${ y }%; color:${ randomColor() }; font-size: ${ size }px; animation: barrage ${ d }s;">${ txt }</div>`;
     $(str).appendTo($barrageBox).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
         $(this).remove();
@@ -140,7 +140,7 @@ warnIntervalTimer = setInterval(() => {
 $('[ic-view]').on('ic-view.active', function (e) {
     hideTimer = setTimeout(() => {
         hide();
-    }, 1000 * 64);
+    }, 1000 * 49);
 });
 
 const audioMap = {
