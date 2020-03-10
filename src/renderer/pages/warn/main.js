@@ -74,7 +74,7 @@ function randomColor () {
  * @param [cb] {Function}  可选，动画执行完的回调函数
  */
 function barrage (txt, cb) {
-    let y = 15 + Math.random() * 80;
+    let y = 15 + Math.random() * 70;
     let d = 32 + Math.random() * 24;
     let size = 18 + Math.random() * 12;
     let str = `<div style="top: ${ y }%; color:${ randomColor() }; font-size: ${ size }px; animation: barrage ${ d }s;">${ txt }</div>`;
@@ -140,7 +140,7 @@ warnIntervalTimer = setInterval(() => {
 $('[ic-view]').on('ic-view.active', function (e) {
     hideTimer = setTimeout(() => {
         hide();
-    }, 1000 * 49);
+    }, 1000 * 36);
 });
 
 const audioMap = {
@@ -158,7 +158,7 @@ socket.on('warn', (info) => {
         $body.css({backgroundColor: 'rgba(0,0,0,1)'});
         setTimeout(() => {
             $body.css({'backgroundColor': 'rgba(0,0,0,0)'});
-        }, 1000 * 4);
+        }, 1000 * 3);
     } else {
         show2(info);
     }
