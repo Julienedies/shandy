@@ -1,7 +1,12 @@
 [
 	{
-		"id": "新基建",
+		"id": "电力物联网",
 		"selected": false,
+		"timestamp": 1583885640761
+	},
+	{
+		"id": "新基建",
+		"selected": true,
 		"timestamp": 1583799511144
 	},
 	{
@@ -11,7 +16,7 @@
 	},
 	{
 		"id": "充电桩",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1583799473965
 	},
 	{
@@ -41,7 +46,7 @@
 	},
 	{
 		"id": "工业互联网",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1583107201933
 	},
 	{
@@ -216,7 +221,7 @@
 	},
 	{
 		"id": "消费电子",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578928850827
 	},
 	{

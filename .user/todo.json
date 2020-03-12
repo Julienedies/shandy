@@ -9,7 +9,7 @@
 		"content": "怎么避免一直重复错误？",
 		"timestamp": 1583219900835,
 		"promptTimes": 7,
-		"prevPromptTime": 1583851069339
+		"prevPromptTime": 1584024627268
 	},
 	{
 		"name": "",
@@ -21,7 +21,7 @@
 		"content": "我每天都临盘犹豫，错过机会；怎么解决；\n必须信任支撑我的交易逻辑。\n热点龙头；多空博弈周期；衡量收益和风险；超预期强势；\n",
 		"timestamp": 1582296291296,
 		"promptTimes": 7,
-		"prevPromptTime": 1583851660195
+		"prevPromptTime": 1584022827445
 	},
 	{
 		"name": "",
@@ -33,7 +33,7 @@
 		"content": "怎么尽快确定日内热点是什么？\n优化竞价强1，\n优化上冲选股： 添加竞价强 和 新高条件；\n向上趋势条件优化；",
 		"timestamp": 1582294062908,
 		"promptTimes": 7,
-		"prevPromptTime": 1583852872159
+		"prevPromptTime": 1584025826820
 	},
 	{
 		"name": "",
@@ -45,7 +45,7 @@
 		"content": "每天更新自选股票池。\n加入: 启动、 爆发、 转折、 超强势的人气龙头股；\n移除：趋弱的个股；\n记住我做的是超短。",
 		"timestamp": 1582429000702,
 		"promptTimes": 5,
-		"prevPromptTime": 1583852260599
+		"prevPromptTime": 1584026425927
 	},
 	{
 		"name": "",
@@ -56,8 +56,9 @@
 		"repeat": 7,
 		"content": "上冲条件添加：竞价强 和  创新高  条件；",
 		"timestamp": 1581263795840,
-		"promptTimes": 6,
-		"prevPromptTime": 1583848663004
+		"promptTimes": 7,
+		"prevPromptTime": 1584025226020,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -68,8 +69,8 @@
 		"repeat": 7,
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
 		"timestamp": 1581084979181,
-		"promptTimes": 4,
-		"prevPromptTime": 1583849866334
+		"promptTimes": 5,
+		"prevPromptTime": 1584028227123
 	},
 	{
 		"name": "",
@@ -80,8 +81,8 @@
 		"repeat": 7,
 		"content": "通达信公式 趋势向上",
 		"timestamp": 1579495236987,
-		"promptTimes": 6,
-		"prevPromptTime": 1583850460260
+		"promptTimes": 7,
+		"prevPromptTime": 1584027025871
 	},
 	{
 		"name": "",
@@ -155,7 +156,7 @@
 		"content": "优化竞价系统；下调单纯的热点起跳，趋势起跳，调整起跳级别；\njq级里太多无效个股，真正符合条件的我又恐惧不敢上。\n优化止损策略；\n\n整理交易系统；",
 		"timestamp": 1577596280705,
 		"promptTimes": 4,
-		"prevPromptTime": 1583845672726
+		"prevPromptTime": 1584018626596
 	},
 	{
 		"name": "",
@@ -166,8 +167,8 @@
 		"repeat": 7,
 		"content": "优化竞价条件，早上时间太紧张，过滤无效标的，错过太多机会。\n条件要求太过宽松，贪便宜的倾向，起跳表示强势。条件要反映出超强势，或该弱不弱。\n\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
 		"timestamp": 1578023594839,
-		"promptTimes": 3,
-		"prevPromptTime": 1583837275645
+		"promptTimes": 4,
+		"prevPromptTime": 1584027626611
 	},
 	{
 		"name": "",

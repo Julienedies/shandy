@@ -116,7 +116,7 @@ brick.reg('mainCtrl', function (scope) {
                         currentWindow.showInactive();
                         setTimeout(() => {
                             scope.hideWindow();
-                        }, 1000 * 18);
+                        }, 1000 * 10);
                         scope.emit(todoItem.type || 'prompt', todoItem);
                         over = true;  // 终止todo数组循环
                     }

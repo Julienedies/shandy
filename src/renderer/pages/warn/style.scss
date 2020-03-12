@@ -134,10 +134,11 @@ a {
 
 #place{
   position: absolute;
+  opacity: 0.7;
   text-shadow: -0px -0px 2px #fff;
   transition: top 1s, left 1s, font-size 2s;
   animation: flash 2s infinite ease-in-out;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
 }
 .place {
   position: absolute;
@@ -164,10 +165,10 @@ a {
     opacity: 0.1;
   }
   20% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   100% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
 }
 @-webkit-keyframes shake-slow {

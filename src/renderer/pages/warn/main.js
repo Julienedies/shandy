@@ -52,7 +52,8 @@ function show2 (content) {
     brick.view.to('place');
     $place.text(content).css({'left': `${ x }%`, 'top': `${ y }%`, color: `${ randomColor() }`, 'font-size': `${ size }px`});
     setTimeout(() => {
-        $place.css({'left': `${ 25 + Math.random() * 20 }%`, 'top': `${ 35 + Math.random() * 20 }%`, 'font-size': '28px'});
+        //$place.css({'left': `${ 25 + Math.random() * 20 }%`, 'top': `${ 35 + Math.random() * 20 }%`, 'font-size': '28px'});
+        $place.css({'left': `${ 35 }%`, 'top': `${ 34 }%`, 'font-size': '28px'});
     }, 200);
 }
 
@@ -140,7 +141,7 @@ warnIntervalTimer = setInterval(() => {
 $('[ic-view]').on('ic-view.active', function (e) {
     hideTimer = setTimeout(() => {
         hide();
-    }, 1000 * 36);
+    }, 1000 * 24);
 });
 
 const audioMap = {
@@ -154,11 +155,12 @@ socket.on('warn', (info) => {
     }
 
     if (info === 'sell' || info === 'buy' || info === 'daban') {
+        let d = info === 'sell' ? 3 : 0.4;
         show2(warnHandleMap[info]);
         $body.css({backgroundColor: 'rgba(0,0,0,1)'});
         setTimeout(() => {
             $body.css({'backgroundColor': 'rgba(0,0,0,0)'});
-        }, 1000 * 3);
+        }, 1000 * d);
     } else {
         show2(info);
     }

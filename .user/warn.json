@@ -1,21 +1,5 @@
 [
 	{
-		"name": "",
-		"id": "8301544",
-		"trigger": "1",
-		"content": "主线热点定方向；博弈周期定时机；",
-		"type": "interval",
-		"timestamp": 1583662766059
-	},
-	{
-		"name": "",
-		"id": "7510338",
-		"trigger": "1",
-		"content": "反人性；反人性；反人性；反人性；\n我没有时间再重复错误了！",
-		"type": "interval",
-		"timestamp": 1583659760504
-	},
-	{
 		"name": "错误",
 		"id": "3260431",
 		"trigger": "1",
@@ -45,24 +29,16 @@
 	{
 		"name": "错误",
 		"id": "4174437",
-		"trigger": "1",
-		"content": "贪婪、贪婪、贪婪、恐惧、恐惧、恐惧;\n主观、主观、主观、短视、无大局观；",
+		"trigger": "5",
+		"content": "贪婪、贪婪、贪婪、恐惧、恐惧、恐惧;\n主观、主观、主观、无大局观、无大局观、无大局观；",
 		"type": "interval",
 		"timestamp": 1581656133379
-	},
-	{
-		"name": "逻辑",
-		"id": "5366922",
-		"trigger": "1",
-		"content": "多空博弈周期，时机就是一切；\n",
-		"timestamp": 1578369739146,
-		"type": "interval"
 	},
 	{
 		"name": "大局观",
 		"id": "6506825",
 		"trigger": "1",
-		"content": "热点龙头是什么？热点龙头是什么？\n热点所在，热钱所在，行情所在；\n",
+		"content": "热点龙头是什么？热点龙头是什么？\n",
 		"timestamp": 1577700857608,
 		"type": "interval",
 		"disable": false
@@ -70,10 +46,18 @@
 	{
 		"name": "",
 		"id": "1683865",
-		"trigger": "1",
-		"content": "市场\b情绪； 板块热点；人气龙头；\n大盘共振，启动，转折，爆发；",
+		"trigger": "2",
+		"content": "市场\b情绪； 板块热点；人气龙头；\n",
 		"type": "interval",
 		"timestamp": 1582295557056
+	},
+	{
+		"name": "",
+		"id": "6482540",
+		"trigger": "3",
+		"content": "大盘共振，启动，转折，爆发；",
+		"type": "interval",
+		"timestamp": 1583899117601
 	},
 	{
 		"name": "理解力",
@@ -82,14 +66,6 @@
 		"content": "不要主观臆想，一切以实际盘面为准。",
 		"timestamp": 1576725560319,
 		"type": "interval"
-	},
-	{
-		"name": "理解力",
-		"id": "5354311",
-		"trigger": "1",
-		"content": "多空动态博弈；多空动态转换；",
-		"type": "interval",
-		"timestamp": 1580734892039
 	},
 	{
 		"name": "理解力",
@@ -102,12 +78,28 @@
 	},
 	{
 		"name": "理解力",
-		"id": "1611255",
-		"trigger": "15",
-		"content": "资金类型、行情性质、行情生命周期；",
+		"id": "5354311",
+		"trigger": "1",
+		"content": "多空动态博弈；多空动态转换；",
 		"type": "interval",
-		"timestamp": 1580459136311,
-		"disable": false
+		"timestamp": 1580734892039
+	},
+	{
+		"name": "",
+		"id": "8301544",
+		"trigger": "3",
+		"content": "主线热点定方向；博弈周期定时机；",
+		"type": "interval",
+		"timestamp": 1583662766059
+	},
+	{
+		"name": "逻辑",
+		"id": "0843570",
+		"trigger": "5",
+		"content": "支撑我的交易逻辑：\n多空博弈、热点龙头、反身性、超预期强势；",
+		"timestamp": 1576856488447,
+		"disable": false,
+		"type": "interval"
 	},
 	{
 		"name": "逻辑",
@@ -118,13 +110,31 @@
 		"timestamp": 1582598568792
 	},
 	{
+		"name": "理解力",
+		"id": "1611255",
+		"trigger": "15",
+		"content": "资金类型、行情性质、行情生命周期；",
+		"type": "interval",
+		"timestamp": 1580459136311,
+		"disable": true
+	},
+	{
+		"name": "",
+		"id": "7510338",
+		"trigger": "1",
+		"content": "反人性；反人性；反人性；反人性；\n我没有时间再重复错误了！",
+		"type": "interval",
+		"timestamp": 1583659760504,
+		"disable": true
+	},
+	{
 		"name": "逻辑",
-		"id": "0843570",
-		"trigger": "5",
-		"content": "支撑我的交易逻辑：\n多空博弈、热点龙头、反身性、超预期强势；",
-		"timestamp": 1576856488447,
-		"disable": false,
-		"type": "interval"
+		"id": "5366922",
+		"trigger": "1",
+		"content": "多空博弈周期，时机就是一切；\n",
+		"timestamp": 1578369739146,
+		"type": "interval",
+		"disable": true
 	},
 	{
 		"name": "逻辑",
@@ -476,7 +486,7 @@
 		"name": "",
 		"id": "2234810",
 		"trigger": "buy",
-		"content": "管住手，一定要系统内建仓！\n大盘情绪； 板块热点； 股性人气； 启动、转折、爆发；\n\n( 隆华科技； \b高新兴； 露笑科技；  国轩高科；)\n",
+		"content": "管住手，一定要系统内建仓！太容易犯错了！\n\n( 隆华科技； \b高新兴； 露笑科技；  国轩高科；)\n",
 		"timestamp": 1576660953345,
 		"type": "action"
 	},
@@ -484,7 +494,7 @@
 		"name": "",
 		"id": "3250183",
 		"trigger": "sell",
-		"content": "不要卖飞；不要卖飞；不要卖飞；不要卖飞；\n止损要快；止损要快；止损要快；止损要快；\n\n( 深康佳A；  常山北明； 搜于特； \b华天科技；台基股份；)\n",
+		"content": "不要卖飞；不要卖飞；你在恐慌什么？你在恐慌什么？\n止损要快；止损要快；囿于小利；囿于小利；\n\n( 深康佳A；  常山北明； 搜于特； \b华天科技；台基股份；)\n",
 		"timestamp": 1576661024135,
 		"disable": false,
 		"type": "action"
@@ -493,7 +503,7 @@
 		"name": "",
 		"id": "2959839",
 		"trigger": "daban",
-		"content": "管住手，一定要系统内建仓！\n大盘情绪； 板块热点； 股性人气； 启动、转折、爆发；\n\n( 隆华科技； \b高新兴； 露笑科技；  国轩高科；)\n",
+		"content": "管住手，一定要系统内建仓！太容易犯错了！\n\n( 隆华科技； \b高新兴； 露笑科技；  国轩高科；)\n",
 		"timestamp": 1562998416497,
 		"disable": false,
 		"type": "action"

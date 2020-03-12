@@ -31,7 +31,7 @@ export default function (scope) {
         console.log(info, warnHandleMap[info]);
         let str = warnHandleMap[info] || '';
         str = str.replace(ignoreReg, '');
-        voice(str);
+        voice(str + '\r\n' + str);
     });
 
     function render (model) {
@@ -128,7 +128,7 @@ export default function (scope) {
                 let warnText = warnIntervalArr.shift();
                 if (warnText) {
                     let str = warnText.replace(ignoreReg, '');
-                    voice(str+ '\r\n'+str+ '\r\n'+str+ '\r\n'+str);
+                    voice(str + '\r\n' + str + '\r\n' + str);
                     warnIntervalArr.push(warnText);
                     ipcRenderer.send('voice_warn', warnText);
                 }
@@ -202,17 +202,17 @@ export default function (scope) {
         //$(this).text(isDisable ? '启用' : '禁用');
     };
 
-        utils.timer('11:30', () => {
-            updateVoiceWarn(true);
-        });
+    utils.timer('11:30', () => {
+        updateVoiceWarn(true);
+    });
 
-        utils.timer('12:45', () => {
-            updateVoiceWarn();
-        });
+    utils.timer('12:45', () => {
+        updateVoiceWarn();
+    });
 
-        utils.timer('15:00', () => {
-            updateVoiceWarn(true);
-        });
+    utils.timer('15:00', () => {
+        updateVoiceWarn(true);
+    });
 
     // -------------------------------------------------------------------
 
