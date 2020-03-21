@@ -44,6 +44,8 @@ ipc.on('view', (e, view) => {
 
 brick.reg('mainCtrl', function (scope) {
 
+    let hideWindowTimer = null;
+
     scope.currentTodoItem = null;
 
     scope.hideWindow = function (e) {
@@ -59,7 +61,7 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     scope.stop = function (e) {
-        clearInterval(scope.timer);
+        clearInterval(scope.todoTimer);
     };
 
     // 每天早上开启时，清除昨天的提醒数据,重新开始
@@ -74,7 +76,7 @@ brick.reg('mainCtrl', function (scope) {
         }
     })();
 
-    // 处理只执行一次的定时器
+    // 处理只执行一次的任务定时器
     todoJodb.each((todoItem) => {
         if (todoItem.disable) return;
         if (todoItem.repeat === 1 && todoItem.start) {
@@ -86,7 +88,7 @@ brick.reg('mainCtrl', function (scope) {
     });
 
     // 每10分钟执行一次, 检查todo列表里是否有项需要提醒 win.showInactive()
-    scope.timer = setInterval(() => {
+    scope.todoTimer = setInterval(() => {
         let todoArr = todoJodb.get();
         let over = false;
         todoArr.forEach((todoItem, index) => {
@@ -114,9 +116,9 @@ brick.reg('mainCtrl', function (scope) {
                         todoJodb.set(todoItem);
                         scope.currentTodoItem = todoItem;
                         currentWindow.showInactive();
-                        setTimeout(() => {
+                        hideWindowTimer = setTimeout(() => {
                             scope.hideWindow();
-                        }, 1000 * 10);
+                        }, 1000 * 7);
                         scope.emit(todoItem.type || 'prompt', todoItem);
                         over = true;  // 终止todo数组循环
                     }
@@ -127,13 +129,17 @@ brick.reg('mainCtrl', function (scope) {
 
     }, 1000 * 60 * 10);
 
+    // 点击返回按钮回到主视图后，取消定时隐藏窗口
+    $('[ic-view="jobsCtrl"]').on('ic-view.active', function (e) {
+            clearTimeout(hideWindowTimer);
+    });
 
+    // 获取视图内容并显示
     $.get('/stock/tags/').done((data) => {
         console.log(data);
         let model = data;
         scope.render('prepare', {model});
         scope.render('mistake', {model});
-        //scope.render('logic', model);
         //scope.render('principle', model);
     });
 

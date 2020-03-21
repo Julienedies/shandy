@@ -102,7 +102,10 @@ function ready () {
 
     // 快捷键 =>  只截大屏幕的图
     globalShortcut.register('CommandOrControl+shift+2', function () {
-        mainWindow.webContents.send('screenCapture');
+        ac.getStockName(function (stock) {
+            mainWindow.webContents.send('screenCapture', stock);
+            ac.activeTdx();
+        });
     });
 
     // renderer进程 (打板封单监控数据) => socket.io => socket.client (浏览器页面 http://192.168.3.20:3000/)

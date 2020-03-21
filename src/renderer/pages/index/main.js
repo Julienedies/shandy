@@ -6,6 +6,7 @@ import './index.html'
 import '../../css/common/common.scss'
 import './style.scss'
 
+import fs from 'fs'
 import electron from 'electron'
 
 import utils from '../../../libs/utils'
@@ -26,6 +27,7 @@ import './main-ctrl.js'
 import './tool-bar-ctrl.js'
 import view_stock from './view-stock-ctrl'
 import rtsc from './real-time-stock-ctrl'
+
 
 const {remote, shell, ipcRenderer} = electron;
 const {BrowserWindow} = remote;
@@ -144,10 +146,15 @@ ipcRenderer.on('rts_cancel', function (event, arg) {
 });
 
 // 截屏
-ipcRenderer.on('screenCapture', function (event, arg) {
+ipcRenderer.on('screenCapture', function (event, stock) {
     screenCapture({
-        returnType: 'file', dir: '/Users/j/截图/', callback: (arg) => {
+        returnType: 'file', dir: '/Users/j/截图/', callback: (imgPath) => {
             kcAudio.play();
+            let rename = imgPath
+                .replace('屏幕快照', stock.name)
+                .replace('(2)', `-${ stock.name }`)
+                .replace(/\.png$/, `-${ stock.code }.png`);
+            fs.renameSync(imgPath, rename);
         }
     }, {thumbnailSize: {width: 3840, height: 2160}});
 });

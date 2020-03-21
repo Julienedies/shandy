@@ -1,5 +1,10 @@
 [
 	{
+		"id": "数据中心",
+		"selected": true,
+		"timestamp": 1584625135523
+	},
+	{
 		"id": "电力物联网",
 		"selected": false,
 		"timestamp": 1583885640761
@@ -21,7 +26,7 @@
 	},
 	{
 		"id": "智能电网",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1583712341575
 	},
 	{
@@ -33,11 +38,6 @@
 		"id": "文化传媒",
 		"selected": false,
 		"timestamp": 1583369508553
-	},
-	{
-		"id": "雄安新区",
-		"selected": false,
-		"timestamp": 1583278698751
 	},
 	{
 		"id": "高端装备",
@@ -55,11 +55,6 @@
 		"timestamp": 1582763855658
 	},
 	{
-		"id": "汽车电子",
-		"selected": false,
-		"timestamp": 1582763839536
-	},
-	{
 		"id": "机器人概念",
 		"selected": false,
 		"timestamp": 1582762412051
@@ -70,39 +65,19 @@
 		"timestamp": 1582646473178
 	},
 	{
-		"id": "蔚来汽车概念",
-		"selected": false,
-		"timestamp": 1582646455294
-	},
-	{
 		"id": "物联网",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1582556957954
 	},
 	{
-		"id": "超级电容",
-		"selected": false,
-		"timestamp": 1582556822552
-	},
-	{
 		"id": "光刻胶",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1582069232767
-	},
-	{
-		"id": "智慧城市",
-		"selected": false,
-		"timestamp": 1581954327390
 	},
 	{
 		"id": "军工",
 		"selected": false,
 		"timestamp": 1581954239265
-	},
-	{
-		"id": "互联网金融",
-		"selected": false,
-		"timestamp": 1581897895222
 	},
 	{
 		"id": "国产软件",
@@ -113,16 +88,6 @@
 		"id": "光伏概念",
 		"selected": false,
 		"timestamp": 1581522864794
-	},
-	{
-		"id": "卫星导航",
-		"selected": false,
-		"timestamp": 1581167374245
-	},
-	{
-		"id": "智能医疗",
-		"selected": false,
-		"timestamp": 1580999912034
 	},
 	{
 		"id": "云游戏",
@@ -143,21 +108,6 @@
 		"id": "云办公",
 		"selected": false,
 		"timestamp": 1580819392489
-	},
-	{
-		"id": "在线教育",
-		"selected": false,
-		"timestamp": 1580819364731
-	},
-	{
-		"id": "基因测序",
-		"selected": false,
-		"timestamp": 1580614257432
-	},
-	{
-		"id": "互联网医疗",
-		"selected": false,
-		"timestamp": 1580614246287
 	},
 	{
 		"id": "生物疫苗",
@@ -181,7 +131,7 @@
 	},
 	{
 		"id": "口罩",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579565036849
 	},
 	{
@@ -201,7 +151,7 @@
 	},
 	{
 		"id": "集成电路概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579098000269
 	},
 	{

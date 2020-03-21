@@ -1,38 +1,36 @@
 [
 	{
-		"name": "错误",
-		"id": "3260431",
+		"name": "",
+		"id": "2201739",
 		"trigger": "1",
-		"content": "管住手! 交易不是每天要做的;",
+		"content": "为什么我每次都刚好做反！因为交易是反人性的！",
 		"type": "interval",
-		"timestamp": 1583219336601,
-		"disable": false
+		"timestamp": 1584716475055
 	},
 	{
 		"name": "控制力",
-		"id": "4507049",
+		"id": "6830350",
 		"trigger": "1",
-		"content": "不要因为鸡肋交易，丧失掉最好的交易机会；",
-		"timestamp": 1563849669023,
-		"disable": false,
-		"type": "interval"
+		"content": "交易只有对错！\n不要想着钱，把事情做对；",
+		"type": "interval",
+		"timestamp": 1581760967937,
+		"disable": false
 	},
 	{
 		"name": "",
-		"id": "7912179",
+		"id": "8305120",
 		"trigger": "1",
-		"content": "系统内建仓；\n不要卖飞； \n止损要快；",
-		"timestamp": 1576717578806,
-		"disable": false,
-		"type": "interval"
+		"content": "简单、纯粹、一致、避免犯错；概率优势；\n",
+		"type": "interval",
+		"timestamp": 1584088026372
 	},
 	{
-		"name": "错误",
-		"id": "4174437",
-		"trigger": "5",
-		"content": "贪婪、贪婪、贪婪、恐惧、恐惧、恐惧;\n主观、主观、主观、无大局观、无大局观、无大局观；",
+		"name": "理解力",
+		"id": "5354311",
+		"trigger": "1",
+		"content": "多空动态博弈；多空动态转换；",
 		"type": "interval",
-		"timestamp": 1581656133379
+		"timestamp": 1580734892039
 	},
 	{
 		"name": "大局观",
@@ -42,22 +40,6 @@
 		"timestamp": 1577700857608,
 		"type": "interval",
 		"disable": false
-	},
-	{
-		"name": "",
-		"id": "1683865",
-		"trigger": "2",
-		"content": "市场\b情绪； 板块热点；人气龙头；\n",
-		"type": "interval",
-		"timestamp": 1582295557056
-	},
-	{
-		"name": "",
-		"id": "6482540",
-		"trigger": "3",
-		"content": "大盘共振，启动，转折，爆发；",
-		"type": "interval",
-		"timestamp": 1583899117601
 	},
 	{
 		"name": "理解力",
@@ -77,12 +59,54 @@
 		"disable": false
 	},
 	{
-		"name": "理解力",
-		"id": "5354311",
-		"trigger": "1",
-		"content": "多空动态博弈；多空动态转换；",
+		"name": "",
+		"id": "7912179",
+		"trigger": "2",
+		"content": "系统内建仓；\n不要卖飞； \n止损要快；",
+		"timestamp": 1576717578806,
+		"disable": false,
+		"type": "interval"
+	},
+	{
+		"name": "错误",
+		"id": "3260431",
+		"trigger": "3",
+		"content": "管住手! 交易不是每天要做的;\n不要因为鸡肋交易，丧失掉最好的交易机会；",
 		"type": "interval",
-		"timestamp": 1580734892039
+		"timestamp": 1583219336601,
+		"disable": false
+	},
+	{
+		"name": "",
+		"id": "2471796",
+		"trigger": "5",
+		"content": "人气龙头主升浪；\b烂板上冲弱转强；连续上冲启动爆发浪；多空博弈反转浪；",
+		"type": "interval",
+		"timestamp": 1584792500874
+	},
+	{
+		"name": "错误",
+		"id": "4174437",
+		"trigger": "5",
+		"content": "贪婪、贪婪、恐惧、恐惧;\n主观、主观、无大局观、无大局观；",
+		"type": "interval",
+		"timestamp": 1581656133379
+	},
+	{
+		"name": "",
+		"id": "1683865",
+		"trigger": "4",
+		"content": "市场\b情绪； 板块热点；人气龙头；\n",
+		"type": "interval",
+		"timestamp": 1582295557056
+	},
+	{
+		"name": "",
+		"id": "6482540",
+		"trigger": "3",
+		"content": "大盘共振，启动，转折，爆发；",
+		"type": "interval",
+		"timestamp": 1583899117601
 	},
 	{
 		"name": "",
@@ -96,7 +120,7 @@
 		"name": "逻辑",
 		"id": "0843570",
 		"trigger": "5",
-		"content": "支撑我的交易逻辑：\n多空博弈、热点龙头、反身性、超预期强势；",
+		"content": "支撑我的交易逻辑：\n多空博弈、热点龙头、趋势反身性、超预期强势；",
 		"timestamp": 1576856488447,
 		"disable": false,
 		"type": "interval"
@@ -251,15 +275,6 @@
 		"content": "人气龙头、\b反转、超强势。\n那些\b真正符合\b系统条件的个股我都因为恐惧错过了。",
 		"type": "interval",
 		"timestamp": 1582201448542,
-		"disable": true
-	},
-	{
-		"name": "控制力",
-		"id": "6830350",
-		"trigger": "10",
-		"content": "不要想着钱，把事情做对；",
-		"type": "interval",
-		"timestamp": 1581760967937,
 		"disable": true
 	},
 	{
@@ -458,19 +473,19 @@
 	},
 	{
 		"name": "",
-		"id": "1710855",
-		"trigger": "9:30",
-		"content": "鸡肋头寸，错误头寸，非预期头寸，尽快平仓，机会成本。\n鸡肋头寸，错误头寸，非预期头寸，尽快平仓，机会成本。",
-		"timestamp": 1564255977192,
-		"disable": true,
-		"type": "timer"
-	},
-	{
-		"name": "",
 		"id": "1571635",
 		"trigger": "9:31",
 		"content": "不要停止条件止损单，设定最低1个点的止损单。\n不要停止条件止损单，设定最低1个点的止损单。\n低开表示弱势，意味着风险；低开表示弱势，意味着风险;",
 		"timestamp": 1564112484159,
+		"disable": false,
+		"type": "timer"
+	},
+	{
+		"name": "",
+		"id": "1710855",
+		"trigger": "9:35",
+		"content": "9点40，早盘市场合力出结果，明确止盈或止损或持仓。",
+		"timestamp": 1564255977192,
 		"disable": false,
 		"type": "timer"
 	},
@@ -494,7 +509,7 @@
 		"name": "",
 		"id": "3250183",
 		"trigger": "sell",
-		"content": "不要卖飞；不要卖飞；你在恐慌什么？你在恐慌什么？\n止损要快；止损要快；囿于小利；囿于小利；\n\n( 深康佳A；  常山北明； 搜于特； \b华天科技；台基股份；)\n",
+		"content": "不要卖飞；你在恐慌什么？\n止损要快；不要囿于小利！\n\n( 深康佳A；  常山北明； 搜于特； \b华天科技；台基股份；)\n",
 		"timestamp": 1576661024135,
 		"disable": false,
 		"type": "action"
