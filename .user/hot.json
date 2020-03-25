@@ -1,5 +1,10 @@
 [
 	{
+		"id": "非科创次新股",
+		"selected": false,
+		"timestamp": 1584922603372
+	},
+	{
 		"id": "数据中心",
 		"selected": true,
 		"timestamp": 1584625135523
@@ -26,7 +31,7 @@
 	},
 	{
 		"id": "智能电网",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1583712341575
 	},
 	{

@@ -1,17 +1,34 @@
 [
 	{
+		"name": "大局观",
+		"id": "6506825",
+		"trigger": "1",
+		"content": "热点龙头是什么？\n",
+		"timestamp": 1577700857608,
+		"type": "interval",
+		"disable": false
+	},
+	{
+		"name": "理解力",
+		"id": "3181899",
+		"trigger": "1",
+		"content": "不要主观臆想，一切以实际盘面为准。",
+		"timestamp": 1576725560319,
+		"type": "interval"
+	},
+	{
 		"name": "",
 		"id": "2201739",
-		"trigger": "1",
-		"content": "为什么我每次都刚好做反！因为交易是反人性的！",
+		"trigger": "2",
+		"content": "交易反人性！",
 		"type": "interval",
 		"timestamp": 1584716475055
 	},
 	{
 		"name": "控制力",
 		"id": "6830350",
-		"trigger": "1",
-		"content": "交易只有对错！\n不要想着钱，把事情做对；",
+		"trigger": "2",
+		"content": "把事情做对；",
 		"type": "interval",
 		"timestamp": 1581760967937,
 		"disable": false
@@ -33,23 +50,6 @@
 		"timestamp": 1580734892039
 	},
 	{
-		"name": "大局观",
-		"id": "6506825",
-		"trigger": "1",
-		"content": "热点龙头是什么？热点龙头是什么？\n",
-		"timestamp": 1577700857608,
-		"type": "interval",
-		"disable": false
-	},
-	{
-		"name": "理解力",
-		"id": "3181899",
-		"trigger": "1",
-		"content": "不要主观臆想，一切以实际盘面为准。",
-		"timestamp": 1576725560319,
-		"type": "interval"
-	},
-	{
 		"name": "理解力",
 		"id": "8827345",
 		"trigger": "2",
@@ -61,7 +61,7 @@
 	{
 		"name": "",
 		"id": "7912179",
-		"trigger": "2",
+		"trigger": "3",
 		"content": "系统内建仓；\n不要卖飞； \n止损要快；",
 		"timestamp": 1576717578806,
 		"disable": false,
@@ -77,14 +77,6 @@
 		"disable": false
 	},
 	{
-		"name": "",
-		"id": "2471796",
-		"trigger": "5",
-		"content": "人气龙头主升浪；\b烂板上冲弱转强；连续上冲启动爆发浪；多空博弈反转浪；",
-		"type": "interval",
-		"timestamp": 1584792500874
-	},
-	{
 		"name": "错误",
 		"id": "4174437",
 		"trigger": "5",
@@ -95,7 +87,7 @@
 	{
 		"name": "",
 		"id": "1683865",
-		"trigger": "4",
+		"trigger": "5",
 		"content": "市场\b情绪； 板块热点；人气龙头；\n",
 		"type": "interval",
 		"timestamp": 1582295557056
@@ -103,7 +95,7 @@
 	{
 		"name": "",
 		"id": "6482540",
-		"trigger": "3",
+		"trigger": "5",
 		"content": "大盘共振，启动，转折，爆发；",
 		"type": "interval",
 		"timestamp": 1583899117601
@@ -111,7 +103,7 @@
 	{
 		"name": "",
 		"id": "8301544",
-		"trigger": "3",
+		"trigger": "10",
 		"content": "主线热点定方向；博弈周期定时机；",
 		"type": "interval",
 		"timestamp": 1583662766059
@@ -119,7 +111,7 @@
 	{
 		"name": "逻辑",
 		"id": "0843570",
-		"trigger": "5",
+		"trigger": "10",
 		"content": "支撑我的交易逻辑：\n多空博弈、热点龙头、趋势反身性、超预期强势；",
 		"timestamp": 1576856488447,
 		"disable": false,
@@ -132,6 +124,14 @@
 		"content": "概率、盈亏比；\n衡量收益和风险；",
 		"type": "interval",
 		"timestamp": 1582598568792
+	},
+	{
+		"name": "",
+		"id": "2471796",
+		"trigger": "15",
+		"content": "人气龙头主升浪；\b\n烂板上冲弱转强；\n连续上冲启动爆发浪；\n多空博弈反转浪；",
+		"type": "interval",
+		"timestamp": 1584792500874
 	},
 	{
 		"name": "理解力",

@@ -157,22 +157,11 @@ export default {
      */
     crop: function (imgPath, crop) {
         console.info('crop => ', imgPath, crop);
-
         let img = nativeImage.createFromPath(imgPath);
         img = img.crop(crop);
         let dataUrl = img.toDataURL();
         console.info("%c", `border:solid 1px blue;padding:20px 240px; line-height:60px;background:url(${ dataUrl }) no-repeat 0 0`);
         return dataUrl;
-
-        /*        let file_name = img_path.split('/').pop();
-                let file_path = path.join(os.tmpdir(), file_name.replace(/\.png$/,'___x.png'));
-                console.log(file_path);
-                fs.writeFile(file_path, img.toPNG(), function (error) {
-                    if (error) {
-                        return console.error(error);
-                    }
-                });*/
-
     },
 
     /**
