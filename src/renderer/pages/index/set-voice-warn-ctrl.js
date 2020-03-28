@@ -31,7 +31,7 @@ export default function (scope) {
         console.log(info, warnHandleMap[info]);
         let str = warnHandleMap[info] || '';
         str = str.replace(ignoreReg, '');
-        voice(str + '\r\n' + str);
+        voice(str + '\r\n' + str + '\r\n' + str);
     });
 
     function render (model) {
@@ -128,7 +128,7 @@ export default function (scope) {
                 let warnText = warnIntervalArr.shift();
                 if (warnText) {
                     let str = warnText.replace(ignoreReg, '');
-                    voice(str + '\r\n' + str + '\r\n' + str);
+                    voice(str + '\r\n' + str);
                     warnIntervalArr.push(warnText);
                     ipcRenderer.send('voice_warn', warnText);
                 }

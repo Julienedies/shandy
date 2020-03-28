@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div id="history" class="column is-7" ic-tpl="history">
-                <div class="field is-grouped is-grouped-multiline" ic-for="i,k in ['X交割单学习','竞价系统', '目标行情','交易记录']" ic-for-init="arr=model[k]">
+                <div class="field is-grouped is-grouped-multiline" ic-for="i,k in ['X交割单学习','目标行情','竞价系统','交易记录']" ic-for-init="arr=model[k]">
                     <h6 class="tag is-primary" style="margin-right:1em;">{{ k }}</h6>
                     <div class="control" ic-for="i,v in arr">
                         <div class="tags has-addons">
@@ -82,11 +82,11 @@
             <p></p>
             <div>
                 <a ic-click="editImg">编辑</a>
-                <a ic-click="viewItemInFolder">查看</a>
+                <a ic-click="viewItemInFolder">Finder查看</a>
                 <a ic-click="viewerMarkTag" ic-popup-target="viewerMarkTag">标记</a>
                 <a ic-click="viewInTdx">通达信查看</a>
                 <a ic-click="viewInFtnn">富途查看</a>
-                <a ic-click="markMistake">标记错误</a>
+                <!--<a ic-click="markMistake">标记错误</a>-->
                 <a ic-click="markQuotation">标记行情</a>
                 <a ic-click="moveToTrash">回收站</a>
             </div>

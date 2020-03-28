@@ -76,7 +76,7 @@
 	},
 	{
 		"id": "光刻胶",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1582069232767
 	},
 	{
@@ -131,7 +131,7 @@
 	},
 	{
 		"id": "医疗器械概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579565192274
 	},
 	{
@@ -141,7 +141,7 @@
 	},
 	{
 		"id": "流感",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579526877755
 	},
 	{
@@ -156,7 +156,7 @@
 	},
 	{
 		"id": "集成电路概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579098000269
 	},
 	{
@@ -181,7 +181,7 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928807285
 	},
 	{
@@ -191,7 +191,7 @@
 	},
 	{
 		"id": "芯片概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303653
 	},
 	{

@@ -83,8 +83,10 @@ export default function (scope) {
 
     function copyImageToDist (dirPath) {
         let imgObj = scope.viewerCurrentImg;
-        let fileName = imgObj.f.split('/').pop();
-        utils.copy(imgObj.f, `${ dirPath }${ fileName }`)
+        let pathArr = imgObj.f.split('/');
+        let fileName = pathArr.pop();
+        let dirOfImg = pathArr.join('/')
+        utils.copy(imgObj.f, `${ dirPath }/${ dirOfImg }/${ fileName }`)
             .then(() => {
                 $.icMessage('ok!')
             })

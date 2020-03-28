@@ -155,7 +155,7 @@ socket.on('warn', (info) => {
     }
 
     if (info === 'sell' || info === 'buy' || info === 'daban') {
-        let d = info === 'sell' ? 0.4 : 0.2;
+        let d = info === 'sell' ? 0.4 : 0;
         show2(warnHandleMap[info]);
         if(d > 0) {
             $body.css({backgroundColor: 'rgba(0,0,0,1)'});
