@@ -53,7 +53,7 @@ function show2 (content) {
     $place.text(content).css({'left': `${ x }%`, 'top': `${ y }%`, color: `${ randomColor() }`, 'font-size': `${ size }px`});
     setTimeout(() => {
         //$place.css({'left': `${ 25 + Math.random() * 20 }%`, 'top': `${ 35 + Math.random() * 20 }%`, 'font-size': '28px'});
-        $place.css({'left': `${ 35 }%`, 'top': `${ 34 }%`, 'font-size': '28px'});
+        $place.css({'left': `${ 36 }%`, 'top': `${ 30 }%`, 'font-size': '28px'});
     }, 200);
 }
 
@@ -111,13 +111,13 @@ warnArr.forEach((item, index) => {
 });
 
 // 定时弹幕
-warnIntervalTimer = setInterval(() => {
+/*warnIntervalTimer = setInterval(() => {
     let warnText = warnIntervalArr.shift();
     if (warnText) {
         barrage(warnText);
         warnIntervalArr.push(warnText);
     }
-}, 1000 * 24);
+}, 1000 * 24);*/
 
 
 /*let intervalTimer = setInterval(() => {
@@ -141,7 +141,7 @@ warnIntervalTimer = setInterval(() => {
 $('[ic-view]').on('ic-view.active', function (e) {
     hideTimer = setTimeout(() => {
         hide();
-    }, 1000 * 24);
+    }, 1000 * 14);
 });
 
 const audioMap = {
@@ -155,7 +155,7 @@ socket.on('warn', (info) => {
     }
 
     if (info === 'sell' || info === 'buy' || info === 'daban') {
-        let d = info === 'sell' ? 0.4 : 0;
+        let d = info === 'sell' ? 0.7 : 0;
         show2(warnHandleMap[info]);
         if(d > 0) {
             $body.css({backgroundColor: 'rgba(0,0,0,1)'});

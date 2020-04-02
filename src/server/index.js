@@ -50,7 +50,15 @@ app.get('/msg/', (req, res) => {
     io.emit('warn', info);
     events.emit('warn', info);
     res.send(`info: ${ info }`);
-})
+});
+
+app.get('/message/', (req, res) => {
+    let info = req.query.info;
+    console.log('/message', info);
+    //io.emit(info, req.query);
+    events.emit(info, req.query);
+    res.send(`info: ${ info }`);
+});
 
 app.use('/web/', express.static(webStaticDir));
 app.use('/upload/', express.static(config.UPLOAD_DIR));

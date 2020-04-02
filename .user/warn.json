@@ -1,5 +1,29 @@
 [
 	{
+		"name": "",
+		"id": "7509458",
+		"trigger": "5",
+		"content": "对盘面变化不敏感；\n优柔寡断；\n先入为主，思维\b定势；",
+		"type": "interval",
+		"timestamp": 1585831543466
+	},
+	{
+		"name": "",
+		"id": "3253376",
+		"trigger": "1",
+		"content": "为何我总是抓不住机会？",
+		"type": "interval",
+		"timestamp": 1585810908436
+	},
+	{
+		"name": "",
+		"id": "8305120",
+		"trigger": "1",
+		"content": "简单、纯粹、一致、概率；\n",
+		"type": "interval",
+		"timestamp": 1584088026372
+	},
+	{
 		"name": "大局观",
 		"id": "6506825",
 		"trigger": "1",
@@ -32,14 +56,6 @@
 		"type": "interval",
 		"timestamp": 1581760967937,
 		"disable": false
-	},
-	{
-		"name": "",
-		"id": "8305120",
-		"trigger": "1",
-		"content": "简单、纯粹、一致、避免犯错；概率优势；\n",
-		"type": "interval",
-		"timestamp": 1584088026372
 	},
 	{
 		"name": "理解力",
@@ -110,20 +126,21 @@
 		"type": "interval"
 	},
 	{
-		"name": "逻辑",
-		"id": "9572961",
-		"trigger": "15",
-		"content": "概率、盈亏比；\n衡量收益和风险；",
-		"type": "interval",
-		"timestamp": 1582598568792
-	},
-	{
 		"name": "",
 		"id": "2471796",
 		"trigger": "10",
 		"content": "人气龙头主升浪；\b\n烂板上冲弱转强；\n连续上冲启动爆发浪；\n多空博弈反转浪；",
 		"type": "interval",
 		"timestamp": 1584792500874
+	},
+	{
+		"name": "逻辑",
+		"id": "9572961",
+		"trigger": "15",
+		"content": "概率、盈亏比；\n衡量收益和风险；",
+		"type": "interval",
+		"timestamp": 1582598568792,
+		"disable": true
 	},
 	{
 		"name": "",

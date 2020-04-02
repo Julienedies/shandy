@@ -9,7 +9,7 @@
 		"content": "根据目标行情类型，设置持仓条件单！\n止损；\n低开处理；\n止盈处理；\n",
 		"timestamp": 1584416255440,
 		"promptTimes": 7,
-		"prevPromptTime": 1585404455984
+		"prevPromptTime": 1585836364140
 	},
 	{
 		"name": "",
@@ -21,7 +21,7 @@
 		"content": "优化竞价系统：需要大幅精简；\n反转系统: 只要趋势向上反转，和昨日下跌反转；\n添加向上趋势限制；",
 		"timestamp": 1584372193622,
 		"promptTimes": 7,
-		"prevPromptTime": 1585397255448
+		"prevPromptTime": 1585829260980
 	},
 	{
 		"name": "",
@@ -33,7 +33,7 @@
 		"content": "我现在需要做的是知行合一；交易只有对错！\n1：遵守交易系统，保持交易一致性，通过概率获利；\n2：取舍：要纯粹，不能任何行情都想抓住，反而最后什么都没抓住；\n",
 		"timestamp": 1584198563562,
 		"promptTimes": 7,
-		"prevPromptTime": 1585397856209
+		"prevPromptTime": 1585829861141
 	},
 	{
 		"name": "",
@@ -45,7 +45,7 @@
 		"content": "怎么避免一直重复错误？\n简单，纯粹！",
 		"timestamp": 1583219900835,
 		"promptTimes": 6,
-		"prevPromptTime": 1585408055834
+		"prevPromptTime": 1585840564829
 	},
 	{
 		"name": "",
@@ -57,7 +57,7 @@
 		"content": "优化竞价系统；早上时间太紧张，过滤无效标的，错过太多机会。\n若水三千，只取一瓢； 双鸟在林不如一鸟在手;\n---------------------------------------------------------------\n条件要求太过宽松，贪便宜的倾向，起跳表示强势。条件要反映出超强势，或该弱不弱。\n下调单纯的热点起跳，趋势起跳，调整起跳级别；\njq级里太多无效个股，真正符合条件的我又恐惧不敢上。\n\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
 		"timestamp": 1578023594839,
 		"promptTimes": 7,
-		"prevPromptTime": 1585399655528
+		"prevPromptTime": 1585831660496
 	},
 	{
 		"name": "",
@@ -69,7 +69,7 @@
 		"content": "怎么尽快确定日内热点是什么？\n优化竞价强1，\n优化上冲选股： 添加竞价强 和 新高条件；\n向上趋势条件优化；",
 		"timestamp": 1582294062908,
 		"promptTimes": 5,
-		"prevPromptTime": 1585405056305
+		"prevPromptTime": 1585838163959
 	},
 	{
 		"name": "",
@@ -80,8 +80,8 @@
 		"repeat": 7,
 		"content": "我每天都临盘犹豫，错过机会；怎么解决；\n必须纯粹，熟练自己的系统，快速反应！\n\n必须信任支撑我的交易逻辑。\n热点龙头；多空博弈周期；衡量收益和风险；超预期强势；\n",
 		"timestamp": 1582296291296,
-		"promptTimes": 3,
-		"prevPromptTime": 1585405655104
+		"promptTimes": 4,
+		"prevPromptTime": 1585841164595
 	},
 	{
 		"name": "",
@@ -92,8 +92,8 @@
 		"repeat": 7,
 		"content": "每天更新自选股票池。\n加入: 启动、 爆发、 转折、 超强势的人气龙头股；\n移除：趋弱的个股；\n记住我做的是超短。",
 		"timestamp": 1582429000702,
-		"promptTimes": 3,
-		"prevPromptTime": 1585409254903
+		"promptTimes": 2,
+		"prevPromptTime": 1585838764792
 	},
 	{
 		"name": "",
@@ -104,8 +104,9 @@
 		"repeat": 7,
 		"content": "上冲条件添加：竞价强 和  创新高  条件；",
 		"timestamp": 1581263795840,
-		"promptTimes": 3,
-		"prevPromptTime": 1585406855422
+		"promptTimes": 2,
+		"prevPromptTime": 1585837564757,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -117,7 +118,7 @@
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
 		"timestamp": 1581084979181,
 		"promptTimes": 1,
-		"prevPromptTime": 1585403256407
+		"prevPromptTime": 1585839364720
 	},
 	{
 		"name": "",
@@ -129,7 +130,7 @@
 		"content": "通达信公式 趋势向上",
 		"timestamp": 1579495236987,
 		"promptTimes": 1,
-		"prevPromptTime": 1585407454980
+		"prevPromptTime": 1585839963973
 	},
 	{
 		"name": "",
@@ -201,9 +202,7 @@
 		"interval": 60,
 		"repeat": 2,
 		"content": "查看财联社新闻",
-		"timestamp": 1577862818798,
-		"promptTimes": 1,
-		"prevPromptTime": 1585408656215
+		"timestamp": 1577862818798
 	},
 	{
 		"name": "",

@@ -175,7 +175,7 @@ brick.reg('mainCtrl', function (scope) {
     let imgDir = setting.get('viewer.imgDir');
     scope.imgDir = imgDir;
     if (imgDir) {
-        scope.init(imgDir)
+        scope.init(imgDir);
     }
 
     scope.crop = setting.get('viewer.crop');
