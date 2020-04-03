@@ -1,12 +1,12 @@
 [
 	{
 		"id": "猪肉",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1585702381862
 	},
 	{
 		"id": "C2M概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1585525810921
 	},
 	{
@@ -96,7 +96,7 @@
 	},
 	{
 		"id": "国产软件",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1581523179748
 	},
 	{
@@ -166,12 +166,12 @@
 	},
 	{
 		"id": "集成电路概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579098000269
 	},
 	{
 		"id": "华为概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579097304988
 	},
 	{
@@ -186,7 +186,7 @@
 	},
 	{
 		"id": "消费电子",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928850827
 	},
 	{

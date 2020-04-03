@@ -61,6 +61,14 @@ function hide () {
     brick.view.to('hide');
 }
 
+function copy (text, number) {
+    let d = number || 16;
+    let line = text.split(/[\n]/img);
+    d = Math.ceil(d/line.length);
+    let arr = _.fill(Array(d), text);
+    return arr.join('\n');
+}
+
 /**
  * @todo 随机颜色函数
  * @returns {string}
@@ -141,7 +149,7 @@ warnArr.forEach((item, index) => {
 $('[ic-view]').on('ic-view.active', function (e) {
     hideTimer = setTimeout(() => {
         hide();
-    }, 1000 * 14);
+    }, 1000 * 7);
 });
 
 const audioMap = {
@@ -156,7 +164,8 @@ socket.on('warn', (info) => {
 
     if (info === 'sell' || info === 'buy' || info === 'daban') {
         let d = info === 'sell' ? 0.7 : 0;
-        show2(warnHandleMap[info]);
+        let str = warnHandleMap[info];
+        show2(copy(str));
         if(d > 0) {
             $body.css({backgroundColor: 'rgba(0,0,0,1)'});
             setTimeout(() => {
@@ -170,11 +179,6 @@ socket.on('warn', (info) => {
     /*        let audio = new Audio(audioMap[info]);
             audio.volume = 1;
             audio.play();*/
-
-    /*setTimeout(() => {
-        //hide();
-        brick.view.to('hide');
-    }, 1000 * 5);*/
 });
 
 ipc.on('id', function (event, windowID, isFrameMode) {
