@@ -72,7 +72,7 @@
                 ic-viewer-on-close="onViewerClose">
 
                 <li ic-for="i,v in model" url="file://{{v.f}}">
-                    <h5>{{v.f}}</h5>
+                    <h5><span style="display: inline-block; min-width:42em;">{{v.f}} </span>  <a>{{ v.tags }}</a></h5>
                 </li>
 
             </ol>

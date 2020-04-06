@@ -127,7 +127,7 @@ let proto = {
         let result = this.get(value, query);
         result = JSON.parse(JSON.stringify(result));
 
-        if (result.length === 1 && !isFilterCb && (query === this.key || (value && query === undefined))) {
+        if (result.length < 2 && !isFilterCb && (query === this.key || (value && query === undefined))) {
             result = result[0];
             return beforeGet ? beforeGet(result, 0) : result;
         } else {

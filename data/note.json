@@ -317,13 +317,6 @@
 		"timestamp": 1563086678967
 	},
 	{
-		"text": "echo \"# crx-bookmarks-react\" >> README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit remote add origin https://github.com/Julienedies/crx-bookmarks-react.git\ngit push -u origin master",
-		"type": "git",
-		"id": "9755810",
-		"level": 1.1558359935432,
-		"timestamp": 1563086678967
-	},
-	{
 		"text": "echo \"# shandy-react\" >> README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit remote add origin https://github.com/Julienedies/shandy-react.git\ngit push -u origin master",
 		"type": "git",
 		"id": "5761121",

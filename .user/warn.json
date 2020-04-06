@@ -1,6 +1,22 @@
 [
 	{
 		"name": "",
+		"id": "8305120",
+		"trigger": "1",
+		"content": "简单、纯粹、一致、概率；\n取舍；跟随；龙头；\n",
+		"type": "interval",
+		"timestamp": 1584088026372
+	},
+	{
+		"name": "",
+		"id": "3027557",
+		"trigger": "5",
+		"content": "对主线龙头我总是后知后觉；",
+		"type": "interval",
+		"timestamp": 1585928465976
+	},
+	{
+		"name": "",
 		"id": "0290958",
 		"trigger": "1",
 		"content": "大盘，板块，个股人气，行情性质；\n概率，盈亏比；",
@@ -22,14 +38,6 @@
 		"content": "为何我总是抓不住机会？",
 		"type": "interval",
 		"timestamp": 1585810908436
-	},
-	{
-		"name": "",
-		"id": "8305120",
-		"trigger": "1",
-		"content": "简单、纯粹、一致、概率；\n",
-		"type": "interval",
-		"timestamp": 1584088026372
 	},
 	{
 		"name": "大局观",
@@ -60,7 +68,7 @@
 		"name": "控制力",
 		"id": "6830350",
 		"trigger": "1",
-		"content": "把事情做对；",
+		"content": "不要想着钱，把事情做对；",
 		"type": "interval",
 		"timestamp": 1581760967937,
 		"disable": false

@@ -66,7 +66,7 @@ function copy (text, number) {
     let line = text.split(/[\n]/img);
     d = Math.ceil(d/line.length);
     let arr = _.fill(Array(d), text);
-    return arr.join('\n');
+    return arr.join('\r');
 }
 
 /**

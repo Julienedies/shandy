@@ -18,8 +18,9 @@ import $ from 'jquery'
 import debugMenu from 'debug-menu'
 
 import userJo from '../../../libs/user-jo'
-import userJodb from '../../../libs/user-jodb'
+import ju from '../../../libs/jodb-user'
 import setting from '../../../libs/setting'
+import jd from '../../../libs/jodb-data'
 import utils from '../../../libs/utils'
 
 import helper from './helper'
@@ -34,7 +35,9 @@ debugMenu.install();
 // 交易记录json
 const tradeArr = userJo('SEL', []).get();
 
-const viewerJodb = userJodb('viewer');
+const viewerJodb = ju('viewer');
+const tagsJodb = jd('tags');
+
 
 brick.services.reg('historyModel', historyModel);
 
@@ -45,6 +48,11 @@ brick.reg('mainCtrl', function (scope) {
 
     let $list = $('#list');
     let $imgDir = $('input[name=imgDir]');
+
+    let tagsMap = {};
+    tagsJodb.each((item) => {
+        tagsMap[item.id] = item.text;
+    });
 
     scope.reload = function (e) {
         location.reload();
@@ -76,14 +84,17 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     // 显示目录下图片列表
-    scope.init = function (dir) {
+    scope.init = async function (dir) {
         dir = dir || scope.imgDir;
         scope.imgDir = dir;
         if (!fs.existsSync(dir)) {
             return $.icMsg(`${ dir }\r不存在!`);
         }
+
+        //
+        let isAddTags = /交易记录/img.test(dir);
+
         let urls = helper.getImages(dir);
-        console.log('urls =>', urls);
         if (!urls.length) {
             return $.icMsg('no images.');
         }
@@ -92,8 +103,17 @@ brick.reg('mainCtrl', function (scope) {
                 // 交易信息 对应 code 和 时间
                 return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
             });
+
+            if (isAddTags) {
+                let obj = viewerJodb.get(o.f, 'img')[0] || {tags: []};
+                let arr = obj.tags || [];
+                //console.log(obj);
+                o.tags = arr.map((v) => {
+                    return tagsMap[v];
+                });
+            }
         });
-        console.info(urls);
+        console.log('urls =>', urls);
         scope.urls = urls;
         $imgDir.val(dir);
         $list.icRender('list', urls);
