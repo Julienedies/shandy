@@ -225,12 +225,15 @@
                 <label class="label"></label>
             </div>
             <div class="field-body">
-                <div class="field">
-                    <p class="control">
+                <div class="field has-addons">
+                    <div class="control">
                         <button class="button is-primary" ic-form-submit="findHot" ic-submit-action="findHot()">
                             热点分析
                         </button>
-                    </p>
+                    </div>
+                    <div class="control is-expanded">
+                        <input class="input" type="text" value="" placeholder="search" ic-enter-press="search">
+                    </div>
                 </div>
             </div>
         </div>

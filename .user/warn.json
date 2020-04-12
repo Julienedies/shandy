@@ -1,8 +1,57 @@
 [
 	{
 		"name": "",
+		"id": "4451980",
+		"trigger": "15",
+		"content": "我必须克服我\b性格中优柔寡断的部分；",
+		"type": "interval",
+		"timestamp": 1586708458122
+	},
+	{
+		"name": "",
+		"id": "9073603",
+		"trigger": "3",
+		"content": "市场反映一切；",
+		"type": "interval",
+		"timestamp": 1586641802597
+	},
+	{
+		"name": "",
+		"id": "3194812",
+		"trigger": "2",
+		"content": "我总是踏错节奏；",
+		"type": "interval",
+		"timestamp": 1586574650704,
+		"disable": true
+	},
+	{
+		"name": "",
+		"id": "9835050",
+		"trigger": "5",
+		"content": "市场氛围；板块热点；股性人气；波浪形态；",
+		"type": "interval",
+		"timestamp": 1586493631319
+	},
+	{
+		"name": "",
+		"id": "6482540",
+		"trigger": "3",
+		"content": "时机就是一切；\n大盘共振，启动，转折，爆发；",
+		"type": "interval",
+		"timestamp": 1583899117601
+	},
+	{
+		"name": "",
+		"id": "0268635",
+		"trigger": "5",
+		"content": "系统内不敢出手；胆怯犹豫；\n选股总是最弱的；\n",
+		"type": "interval",
+		"timestamp": 1586415896316
+	},
+	{
+		"name": "",
 		"id": "8305120",
-		"trigger": "1",
+		"trigger": "3",
 		"content": "简单、纯粹、一致、概率；\n取舍；跟随；龙头；\n",
 		"type": "interval",
 		"timestamp": 1584088026372
@@ -10,7 +59,7 @@
 	{
 		"name": "",
 		"id": "3027557",
-		"trigger": "5",
+		"trigger": "15",
 		"content": "对主线龙头我总是后知后觉；",
 		"type": "interval",
 		"timestamp": 1585928465976
@@ -18,15 +67,16 @@
 	{
 		"name": "",
 		"id": "0290958",
-		"trigger": "1",
+		"trigger": "3",
 		"content": "大盘，板块，个股人气，行情性质；\n概率，盈亏比；",
 		"type": "interval",
-		"timestamp": 1585874280328
+		"timestamp": 1585874280328,
+		"disable": true
 	},
 	{
 		"name": "",
 		"id": "7509458",
-		"trigger": "5",
+		"trigger": "15",
 		"content": "优柔寡断；\n先入为主，思维\b定势；\n对盘面变化反应慢；\n",
 		"type": "interval",
 		"timestamp": 1585831543466
@@ -34,7 +84,7 @@
 	{
 		"name": "",
 		"id": "3253376",
-		"trigger": "1",
+		"trigger": "3",
 		"content": "为何我总是抓不住机会？",
 		"type": "interval",
 		"timestamp": 1585810908436
@@ -52,7 +102,7 @@
 		"name": "理解力",
 		"id": "3181899",
 		"trigger": "1",
-		"content": "不要主观臆想，一切以实际盘面为准。",
+		"content": "跟随；不要主观臆想，一切以实际盘面为准。",
 		"timestamp": 1576725560319,
 		"type": "interval"
 	},
@@ -115,14 +165,6 @@
 		"content": "贪婪、贪婪、恐惧、恐惧;\n主观、主观、无大局观、无大局观；",
 		"type": "interval",
 		"timestamp": 1581656133379
-	},
-	{
-		"name": "",
-		"id": "6482540",
-		"trigger": "5",
-		"content": "大盘共振，启动，转折，爆发；",
-		"type": "interval",
-		"timestamp": 1583899117601
 	},
 	{
 		"name": "",
@@ -508,7 +550,7 @@
 	{
 		"name": "",
 		"id": "1571635",
-		"trigger": "9:31",
+		"trigger": "9:33",
 		"content": "不要停止条件止损单，设定最低1个点的止损单。\n不要停止条件止损单，设定最低1个点的止损单。\n低开表示弱势，意味着风险；低开表示弱势，意味着风险;",
 		"timestamp": 1564112484159,
 		"disable": false,

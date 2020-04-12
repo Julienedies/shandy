@@ -149,7 +149,7 @@ warnArr.forEach((item, index) => {
 $('[ic-view]').on('ic-view.active', function (e) {
     hideTimer = setTimeout(() => {
         hide();
-    }, 1000 * 7);
+    }, 1000 * 4);
 });
 
 const audioMap = {
@@ -163,9 +163,9 @@ socket.on('warn', (info) => {
     }
 
     if (info === 'sell' || info === 'buy' || info === 'daban') {
-        let d = info === 'sell' ? 0.7 : 0;
+        let d = info === 'sell' ? 0 : 0;
         let str = warnHandleMap[info];
-        show2(copy(str));
+        //show2(copy(str));
         if(d > 0) {
             $body.css({backgroundColor: 'rgba(0,0,0,1)'});
             setTimeout(() => {
