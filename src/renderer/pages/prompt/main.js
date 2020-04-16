@@ -118,7 +118,7 @@ brick.reg('mainCtrl', function (scope) {
                         currentWindow.showInactive();
                         hideWindowTimer = setTimeout(() => {
                             scope.hideWindow();
-                        }, 1000 * 7);
+                        }, 1000 * 9);
                         scope.emit(todoItem.type || 'prompt', todoItem);
                         over = true;  // 终止todo数组循环
                     }
@@ -131,7 +131,10 @@ brick.reg('mainCtrl', function (scope) {
 
     // 点击返回按钮回到主视图后，取消定时隐藏窗口
     $('[ic-view="jobsCtrl"]').on('ic-view.active', function (e) {
-            clearTimeout(hideWindowTimer);
+    });
+    // 当窗口激活，取消隐藏窗口定时器
+    $(window).on('focus', function (e) {
+        clearTimeout(hideWindowTimer);
     });
 
     // 获取视图内容并显示

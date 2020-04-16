@@ -1,7 +1,7 @@
 [
 	{
 		"id": "食品",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1586706780259
 	},
 	{
@@ -11,12 +11,12 @@
 	},
 	{
 		"id": "5G消息",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1586700618887
 	},
 	{
 		"id": "RCS富媒体通信",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1586306889273
 	},
 	{
@@ -26,7 +26,7 @@
 	},
 	{
 		"id": "农业种植",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1586306692364
 	},
 	{
@@ -66,7 +66,7 @@
 	},
 	{
 		"id": "新基建",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1583799511144
 	},
 	{
@@ -176,7 +176,7 @@
 	},
 	{
 		"id": "5G",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579613271519
 	},
 	{

@@ -58,13 +58,6 @@
 
     <div ic-view="setJob" ic-ctrl="setJobCtrl">
         <div class="column">
-            <div class="field">
-                <div class="control">
-                    <button class="button is-primary" ic-view-to="jobs">
-                        返回
-                    </button>
-                </div>
-            </div>
             <div ic-tpl="setJob" ic-tpl-init="{}">
                 <div ic-form>
                     <div class="field">
@@ -101,7 +94,7 @@
                     </div>
                     <div class="field">
                         <div class="control">
-                                <textarea rows="5" class="textarea" placeholder="任务内容" ic-form-field="content">{{ model.content }}</textarea>
+                                <textarea rows="14" class="textarea" placeholder="任务内容" ic-form-field="content">{{ model.content }}</textarea>
                         </div>
                     </div>
                     <div class="field">
@@ -118,13 +111,19 @@
                 </div>
             </div>
 
+            <div class="field">
+                <div class="control" style="text-align: right;">
+                    <button class="button is-primary" ic-view-to="jobs">
+                        返回
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
     <div ic-view="prompt" ic-ctrl="promptCtrl">
         <div>
             <div class="box">
-                <h4 class="title is-4">提醒</h4>
                 <div>
                     <div id="todoContent" class="pre" style="padding:20px; margin:20px 0; background:blue; color:#fff; font-size: 1.2em;">
                         todo!
