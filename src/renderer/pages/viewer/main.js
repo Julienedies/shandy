@@ -104,7 +104,7 @@ brick.reg('mainCtrl', function (scope) {
                 return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
             });
 
-            if (isAddTags) {
+            if (1) {
                 let obj = viewerJodb.get(o.f, 'img')[0] || {tags: []};
                 let arr = obj.tags || [];
                 //console.log(obj);

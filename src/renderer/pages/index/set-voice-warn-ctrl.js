@@ -27,6 +27,7 @@ export default function (scope) {
 
     let currentType;
 
+    // 接收外部动作消息, 目前是 打板; 买入; 卖出;
     ipcRenderer.on('warn', (event, info) => {
         console.log(info, warnHandleMap[info]);
         let str = warnHandleMap[info] || '';
@@ -55,6 +56,7 @@ export default function (scope) {
         }
     }
 
+    // 类型分为 定时; 动作; 间隔; 三个标签
     function getType (trigger) {
         if (/^\d+$/.test(trigger)) {
             return 'interval';
@@ -73,6 +75,8 @@ export default function (scope) {
         let old = warnHandleMap[id];
 
         let type = getType(trigger);
+
+        content = _.fill(Array(item.repeat || 1), content).join('\r\n');
 
         // trigger => 10 : 间隔执行
         if (type === 'interval') {
@@ -143,6 +147,7 @@ export default function (scope) {
         utils.msg(msg);
     };
 
+    // 类型分为 定时; 动作; 间隔; 三个标签
     scope.onTypeChange = function (msg) {
         currentType = msg.value;
         render();
@@ -165,42 +170,53 @@ export default function (scope) {
         }
     };
 
-    scope.save = function (fields) {
-        fields.type = getType(fields.trigger);
-        warnJodb.set(fields);
-        scope.reset();
-        scope.$elm.find('[ic-popup="setWarnItem"]').icPopup(false);
-        init();
-    };
-
-    scope.reset = () => {
-        scope.render('setWarnItem', {model: {}});
-    };
-
+    // 添加新项
     scope.add = function (e) {
         scope.render('setWarnItem', {model: {}});
     };
 
+    // 修改单项
     scope.edit = function (e, id) {
         let model = warnJodb.get2(id);
         scope.render('setWarnItem', {model});
-        //scope.$elm.animate({scrollTop: scope.$elm.height()}, 400);
     };
 
+    // 删除单项
     scope.rm = function (e, id) {
         warnJodb.remove(id);
     };
 
+    // 置顶单项
     scope.up = function (e, id) {
         warnJodb.insert(id);
     };
 
+    // 试听单项
+    scope.hear = function (e, id) {
+        let item = warnJodb.get2(id);
+        let str = _.fill(Array(item.repeat || 1), item.content).join('\r\n');
+        voice(str);
+    };
+
+    // 禁用单项
     scope.disable = function (e, id, isDisable) {
         let item = warnJodb.get2(id);
         item.disable = !item.disable;
         warnJodb.set(item);
         //$(this).text(isDisable ? '启用' : '禁用');
     };
+
+    // 保存添加或修改
+    scope.save = function (fields) {
+        fields.type = getType(fields.trigger);
+        warnJodb.set(fields);
+        scope.$elm.find('[ic-popup="setWarnItem"]').icPopup(false);
+    };
+
+    scope.reset = () => {
+        scope.render('setWarnItem', {model: {}});
+    };
+
 
     utils.timer('11:30', () => {
         updateVoiceWarn(true);

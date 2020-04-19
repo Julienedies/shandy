@@ -258,11 +258,13 @@
                                 ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
                                 <td>{{ v.name }}</td>
                                 <td>{{ v.trigger }}</td>
+                                <td><span style="opacity: 0.3;">{{ v.repeat || 1 }}</span></td>
                                 <td class="pre">{{ v.content }}</td>
                                 <td>
                                     <button class="button is-primary is-small" ic-click="edit:{{ v.id }}" ic-popup-target="setWarnItem">修改</button>
                                     <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
                                     <button class="button is-primary is-small" ic-click="up:{{ v.id }}">置顶</button>
+                                    <button class="button is-primary is-small" ic-click="hear:{{ v.id }}">试听</button>
                                     <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
                                         {{ v.disable ? '启用':'禁用' }}
                                     </button>
@@ -289,6 +291,12 @@
                                         <div class="control">
                                             <textarea rows="11" class="textarea" placeholder="警告内容"
                                                       ic-form-field="content">{{ model.content }}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" type="number" placeholder="重复次数"
+                                                   ic-value="{{ model.repeat || 1 }}" ic-form-field="repeat">
                                         </div>
                                     </div>
                                     <div class="field">

@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "2484977",
+		"type": "",
+		"start": "15:00",
+		"interval": 45,
+		"repeat": 7,
+		"content": "我的竞价&涨停交易系统是有效的；我需要增强自己的理解力和执行力；\n\n我的性格问题；\n除了优柔寡断，临盘犹豫，抓不住机会；\n还有左右摇摆不定的问题；打板没有一直坚持；不能保持交易一致性；\n一遇到挫折，就想着改弦更张；",
+		"timestamp": 1587135535525,
+		"promptTimes": 7,
+		"prevPromptTime": 1587205641210
+	},
+	{
+		"name": "",
 		"id": "8768314",
 		"type": "",
 		"start": "15:00",
@@ -9,7 +21,7 @@
 		"content": "我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n\n我必须在很短的时间做出决定；尤其是股市变量很多；\n导致很容易犯错，尤其是亏钱状态不好的时候；\n必须纯粹，精简自己的系统，快速反应！\n\n怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；\n1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）\n2:  热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；\n\n首先竞价系统本身逻辑是对的：指示了市场强弱和日内热点；热点是方向；强弱是时机；\n涨停板指示了热钱方向和市场强弱；\n\n支撑我的交易逻辑是什么?\n1. 超预期强势： 强势市场，大干快上； 弱转强，多空博弈转折，时机就是一切；\n1. 热点：热钱所在，行情所在；方向所在；\n1. 衡量收益和风险；\n",
 		"timestamp": 1582296291296,
 		"promptTimes": 7,
-		"prevPromptTime": 1587038474808
+		"prevPromptTime": 1587129947457
 	},
 	{
 		"name": "",
@@ -20,8 +32,9 @@
 		"repeat": 13,
 		"content": "怎么避免一直重复错误？\n简单，纯粹！",
 		"timestamp": 1583219900835,
-		"promptTimes": 7,
-		"prevPromptTime": 1587049874444
+		"promptTimes": 6,
+		"prevPromptTime": 1587135345745,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -33,7 +46,7 @@
 		"content": "我错过了多少模式行情；克服胆怯犹豫；\n我现在需要做的是知行合一；交易只有对错！\n1：遵守交易系统，保持交易一致性，通过概率获利；\n2：取舍：要纯粹，不能任何行情都想抓住，反而最后什么都没抓住；\n",
 		"timestamp": 1584198563562,
 		"promptTimes": 7,
-		"prevPromptTime": 1587040874555
+		"prevPromptTime": 1587131747243
 	},
 	{
 		"name": "",
@@ -45,7 +58,7 @@
 		"content": "优化竞价系统：需要大幅精简；\n反转系统: 只要趋势向上反转，和昨日下跌反转；\n添加向上趋势限制；",
 		"timestamp": 1584372193622,
 		"promptTimes": 7,
-		"prevPromptTime": 1587041473863
+		"prevPromptTime": 1587136546327
 	},
 	{
 		"name": "",
@@ -57,7 +70,7 @@
 		"content": "优化竞价系统；早上时间太紧张，过滤无效标的，错过太多机会。\n若水三千，只取一瓢； 双鸟在林不如一鸟在手;\n---------------------------------------------------------------\n条件要求太过宽松，贪便宜的倾向，起跳表示强势。条件要反映出超强势，或该弱不弱。\n下调单纯的热点起跳，趋势起跳，调整起跳级别；\njq级里太多无效个股，真正符合条件的我又恐惧不敢上。\n\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
 		"timestamp": 1578023594839,
 		"promptTimes": 7,
-		"prevPromptTime": 1587042074532
+		"prevPromptTime": 1587137364391
 	},
 	{
 		"name": "",
@@ -68,8 +81,8 @@
 		"repeat": 7,
 		"content": "怎么尽快确定日内热点是什么？\n优化竞价强1，\n优化上冲选股： 添加竞价强 和 新高条件；\n向上趋势条件优化；",
 		"timestamp": 1582294062908,
-		"promptTimes": 4,
-		"prevPromptTime": 1587048074545
+		"promptTimes": 7,
+		"prevPromptTime": 1587203841273
 	},
 	{
 		"name": "",
@@ -80,8 +93,8 @@
 		"repeat": 7,
 		"content": "通达信公式 趋势向上",
 		"timestamp": 1579495236987,
-		"promptTimes": 5,
-		"prevPromptTime": 1587051672908
+		"promptTimes": 7,
+		"prevPromptTime": 1587204441253
 	},
 	{
 		"name": "",
@@ -92,8 +105,8 @@
 		"repeat": 7,
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
 		"timestamp": 1581084979181,
-		"promptTimes": 2,
-		"prevPromptTime": 1587049273072
+		"promptTimes": 7,
+		"prevPromptTime": 1587224852068
 	},
 	{
 		"name": "",
@@ -166,8 +179,8 @@
 		"repeat": 7,
 		"content": "查看财联社新闻",
 		"timestamp": 1577862818798,
-		"promptTimes": 2,
-		"prevPromptTime": 1587050474204
+		"promptTimes": 7,
+		"prevPromptTime": 1587294751707
 	},
 	{
 		"name": "日程",
@@ -178,8 +191,8 @@
 		"repeat": 7,
 		"content": "根据目标行情类型，设置持仓条件单！\n止损；\n低开处理；\n止盈处理；\n",
 		"timestamp": 1584416255440,
-		"promptTimes": 2,
-		"prevPromptTime": 1587051073526
+		"promptTimes": 7,
+		"prevPromptTime": 1587223052129
 	},
 	{
 		"name": "日程",
@@ -190,8 +203,8 @@
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
 		"timestamp": 1577697423900,
-		"promptTimes": 2,
-		"prevPromptTime": 1587052274214
+		"promptTimes": 4,
+		"prevPromptTime": 1587218252294
 	},
 	{
 		"name": "日程",
@@ -202,8 +215,8 @@
 		"repeat": 7,
 		"content": "在 JN  里 跑一遍 竞价强2 选股；",
 		"timestamp": 1587008893339,
-		"promptTimes": 1,
-		"prevPromptTime": 1587047473202
+		"promptTimes": 7,
+		"prevPromptTime": 1587294151118
 	},
 	{
 		"name": "日程",
@@ -213,7 +226,9 @@
 		"interval": 30,
 		"repeat": 5,
 		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜\n过滤上冲; 上冲意味着进攻信号；\n过滤破板\n要过一遍涨停池；旗形涨停值得关注；                          ",
-		"timestamp": 1577964389066
+		"timestamp": 1577964389066,
+		"promptTimes": 5,
+		"prevPromptTime": 1587223652114
 	},
 	{
 		"name": "日程",
@@ -223,7 +238,9 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "做好次日的交易计划。",
-		"timestamp": 1580821790410
+		"timestamp": 1580821790410,
+		"promptTimes": 7,
+		"prevPromptTime": 1587303750569
 	},
 	{
 		"name": "日程",
@@ -233,7 +250,9 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "每天更新自选股票池。\n加入: 启动、 爆发、 转折、 超强势的人气龙头股；\n移除：趋弱的个股；\n记住我做的是超短。",
-		"timestamp": 1582429000702
+		"timestamp": 1582429000702,
+		"promptTimes": 5,
+		"prevPromptTime": 1587307349869
 	},
 	{
 		"name": "日程",
@@ -243,7 +262,10 @@
 		"repeat": 5,
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
-		"type": ""
+		"type": "",
+		"promptTimes": 3,
+		"prevPromptTime": 1587304951139,
+		"complete": true
 	},
 	{
 		"name": "日程",
@@ -253,7 +275,9 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "做烂板上冲、连续上冲假设推演；",
-		"timestamp": 1586779488900
+		"timestamp": 1586779488900,
+		"promptTimes": 4,
+		"prevPromptTime": 1587308549980
 	},
 	{
 		"name": "日程",
@@ -263,7 +287,9 @@
 		"interval": 60,
 		"repeat": 4,
 		"content": "更新csd。",
-		"timestamp": 1577862911294
+		"timestamp": 1577862911294,
+		"promptTimes": 2,
+		"prevPromptTime": 1587306150937
 	},
 	{
 		"name": "",
@@ -273,6 +299,8 @@
 		"interval": 45,
 		"repeat": 9,
 		"content": "不要忘记那些恐惧和痛苦；时不我待，我已经37岁了；",
-		"timestamp": 1579093820041
+		"timestamp": 1579093820041,
+		"promptTimes": 9,
+		"prevPromptTime": 1587296551622
 	}
 ]
