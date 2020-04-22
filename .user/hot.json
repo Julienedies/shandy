@@ -1,5 +1,15 @@
 [
 	{
+		"id": "基因测序",
+		"selected": true,
+		"timestamp": 1587483476154
+	},
+	{
+		"id": "新冠检测",
+		"selected": true,
+		"timestamp": 1587473744976
+	},
+	{
 		"id": "金融科技",
 		"selected": false,
 		"timestamp": 1587084956886
@@ -30,11 +40,6 @@
 		"timestamp": 1586306889273
 	},
 	{
-		"id": "乡村振兴",
-		"selected": false,
-		"timestamp": 1586306730498
-	},
-	{
 		"id": "农业种植",
 		"selected": false,
 		"timestamp": 1586306692364
@@ -55,11 +60,6 @@
 		"timestamp": 1585702381862
 	},
 	{
-		"id": "C2M概念",
-		"selected": false,
-		"timestamp": 1585525810921
-	},
-	{
 		"id": "非科创次新股",
 		"selected": false,
 		"timestamp": 1584922603372
@@ -68,11 +68,6 @@
 		"id": "数据中心",
 		"selected": false,
 		"timestamp": 1584625135523
-	},
-	{
-		"id": "电力物联网",
-		"selected": false,
-		"timestamp": 1583885640761
 	},
 	{
 		"id": "新基建",
@@ -86,7 +81,7 @@
 	},
 	{
 		"id": "充电桩",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1583799473965
 	},
 	{
@@ -165,18 +160,8 @@
 		"timestamp": 1580910052305
 	},
 	{
-		"id": "手机游戏",
-		"selected": false,
-		"timestamp": 1580819403089
-	},
-	{
-		"id": "云办公",
-		"selected": false,
-		"timestamp": 1580819392489
-	},
-	{
 		"id": "生物疫苗",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579613298327
 	},
 	{
@@ -186,7 +171,7 @@
 	},
 	{
 		"id": "5G",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579613271519
 	},
 	{
@@ -201,7 +186,7 @@
 	},
 	{
 		"id": "流感",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579526877755
 	},
 	{
@@ -241,7 +226,7 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578928807285
 	},
 	{
@@ -251,7 +236,7 @@
 	},
 	{
 		"id": "芯片概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303653
 	},
 	{

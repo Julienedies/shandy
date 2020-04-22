@@ -173,7 +173,7 @@ socket.on('warn', (info) => {
             }, 1000 * d);
         }
     } else {
-        show2(info);
+        //show2(info);
     }
 
     /*        let audio = new Audio(audioMap[info]);
