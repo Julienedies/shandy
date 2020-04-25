@@ -1,6 +1,15 @@
 [
 	{
 		"name": "",
+		"id": "1869145",
+		"trigger": "1",
+		"content": "操作只有对错！",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1587725105876
+	},
+	{
+		"name": "",
 		"id": "2916856",
 		"trigger": "15",
 		"content": "持筹者和持币者的多空心理；",
@@ -29,8 +38,8 @@
 	{
 		"name": "",
 		"id": "5576819",
-		"trigger": "5",
-		"content": "交易只有对错；亏损是交易的一部分；",
+		"trigger": "3",
+		"content": "交易只有对错；包容亏损和波动；",
 		"repeat": 2,
 		"type": "interval",
 		"timestamp": 1587512092414
