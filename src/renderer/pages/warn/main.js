@@ -50,19 +50,21 @@ function show2 (content) {
     let y = Math.random() * 400 - 290;
     let size = 14 + Math.random() * 10;
     brick.view.to('place');
-    $place.text(content).css({'left': `${ x }%`, 'top': `${ y }%`, color: `${ randomColor() }`, 'font-size': `${ size }px`});
+    $place.text(content);
+/*    $place.css({'left': `${ x }%`, 'top': `${ y }%`, color: `${ randomColor() }`, 'font-size': `${ size }px`});
     setTimeout(() => {
         //$place.css({'left': `${ 25 + Math.random() * 20 }%`, 'top': `${ 35 + Math.random() * 20 }%`, 'font-size': '28px'});
         $place.css({'left': `${ 36 }%`, 'top': `${ 30 }%`, 'font-size': '28px'});
-    }, 200);
+    }, 200);*/
 }
 
 function hide () {
     brick.view.to('hide');
 }
 
+// 重复复制文本
 function copy (text, number) {
-    let d = number || 16;
+    let d = number || 4;
     let line = text.split(/[\n]/img);
     d = Math.ceil(d/line.length);
     let arr = _.fill(Array(d), text);
@@ -128,28 +130,10 @@ warnArr.forEach((item, index) => {
 }, 1000 * 24);*/
 
 
-/*let intervalTimer = setInterval(() => {
-    let warnText = warnIntervalArr.shift();
-    warnIntervalArr.push(warnText);
-    show2(warnText);
-}, 1000 * 60 * 4);*/
-
-/*[
-    ['9:05', '交易准备'],
-    ['9:29', '竞价研判'],
-    ['9:45', '早盘'],
-].forEach((item) => {
-    utils.timer(item[0], () => {
-        show();
-        brick.view.to(item[1]);
-    });
-});*/
-
-
-$('[ic-view]').on('ic-view.active', function (e) {
+$('[ic-view="place"]').on('ic-view.active', function (e) {
     hideTimer = setTimeout(() => {
         hide();
-    }, 1000 * 4);
+    }, 1000 * 9);
 });
 
 const audioMap = {
@@ -157,7 +141,8 @@ const audioMap = {
 };
 
 socket.on('warn', (info) => {
-
+    //$.icMsg(info);
+    //if(!info) return;
     if (info === 'esc') {
         return hide();
     }
@@ -165,7 +150,7 @@ socket.on('warn', (info) => {
     if (info === 'sell' || info === 'buy' || info === 'daban') {
         let d = info === 'sell' ? 0 : 0;
         let str = warnHandleMap[info];
-        //show2(copy(str));
+        show2(copy(str));
         if(d > 0) {
             $body.css({backgroundColor: 'rgba(0,0,0,1)'});
             setTimeout(() => {
@@ -173,10 +158,10 @@ socket.on('warn', (info) => {
             }, 1000 * d);
         }
     } else {
-        //show2(info);
+        show2(info);
     }
 
-    /*        let audio = new Audio(audioMap[info]);
+/*            let audio = new Audio(audioMap[info]);
             audio.volume = 1;
             audio.play();*/
 });

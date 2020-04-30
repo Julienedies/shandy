@@ -337,6 +337,7 @@ brick.reg('mainCtrl', function (scope) {
     // ---------------------------------------------------------------------------------------------
 
     scope.openPrompt();
+    !scope.warnWindow && scope.openWarn(null, 1);
 
     if (utils.isTrading()) {
         !scope.newsWin && scope.openNews();

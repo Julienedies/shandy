@@ -27,13 +27,14 @@ export default function (scope) {
 
     let currentType;
 
-    // 接收外部动作消息, 目前是 打板; 买入; 卖出;
-    ipcRenderer.on('warn', (event, info) => {
-        console.log(info, warnHandleMap[info]);
-        let str = warnHandleMap[info] || '';
-        str = str.replace(ignoreReg, '');
-        voice(str + '\r\n' + str + '\r\n' + str);
-    });
+    // 通知主进程ipcMain, 主进程通过io广播给client
+    function send (msg) {
+        ipcRenderer.send('voice_warn', msg);
+    }
+
+    function copyX (str, count) {
+        return _.fill(Array(count || 1), str).join('\r\n');
+    }
 
     function render (model) {
         model = currentType ? warnJodb.get(currentType, 'type') : warnJodb.get();
@@ -49,7 +50,7 @@ export default function (scope) {
     function init () {
         render();
         // 如果不是交易时段, 则不设置语音警告
-        if (utils.isTrading() || isAbleVoiceWarn) {
+        if (utils.isTrading() || isAbleVoiceWarn || 0) {
             isAbleVoiceWarn = true;  // 如果是交易时段, 语音警告可用
             updateVoiceWarn();
             scope.$elm.find('button[role=toggleBtn]').text('关闭语音').addClass('is-primary');
@@ -69,29 +70,28 @@ export default function (scope) {
 
     function setVoiceWarnForItem (item, cancel) {
         let id = item.id;
-        let content = item.content;
         let trigger = item.trigger;
+        let content = item.content;
+        let content2 = copyX(content, item.repeat);
         let disable = item.disable || cancel;
         let old = warnHandleMap[id];
 
         let type = getType(trigger);
 
-        content = _.fill(Array(item.repeat || 1), content).join('\r\n');
-
-        // trigger => 10 : 间隔执行
+        // interval => 10 : 间隔执行
         if (type === 'interval') {
             if (disable) {
-                _.remove(warnIntervalArr, (text) => {
-                    return text === content;
+                _.remove(warnIntervalArr, (v) => {
+                    return v === id;
                 });
                 return;
             }
             let count = Math.ceil(60 / trigger);
-            let arr = _.fill(Array(count), content);
+            let arr = _.fill(Array(count), id);
             warnIntervalArr = warnIntervalArr.concat(arr);
             warnIntervalArr = _.shuffle(warnIntervalArr);
         }
-        // trigger => 9:00: 定时执行
+        // timer => 9:00: 定时执行
         else if (type === 'timer') {
             if (old && old.handle) {
                 old.handle.cancel();
@@ -101,18 +101,18 @@ export default function (scope) {
                 return;
             }
             let handle = utils.timer(trigger, () => {
-                voice('timer', content);
-                ipcRenderer.send('voice_warn', content);
+                voice('timer', content2);
+                send(content);
             });
             warnHandleMap[id] = {handle};
         }
-        // trigger => 'daban': 打板动作触发
+        // active => 'daban': 打板动作触发
         else {
             old && delete warnHandleMap[old.handle];
             if (disable) {
                 return;
             }
-            warnHandleMap[trigger] = content;
+            warnHandleMap[trigger] = id;
             warnHandleMap[id] = {handle: trigger};
         }
     }
@@ -129,18 +129,16 @@ export default function (scope) {
 
         if (!cancel && !warnIntervalTimer && isAbleVoiceWarn) {
             warnIntervalTimer = setInterval(() => {
-                let warnText = warnIntervalArr.shift();
-                if (warnText) {
-                    let str = warnText.replace(ignoreReg, '');
-                    voice(str + '\r\n' + str);
-                    warnIntervalArr.push(warnText);
-                    ipcRenderer.send('voice_warn', warnText);
-                }
-            }, 1000 * 40 * 1.3);
+                let id = warnIntervalArr.shift();
+                let item = warnJodb.get2(id);
+                let str = _.fill(Array(item.repeat || 1), item.content).join('\r\n');
+                str = str.replace(ignoreReg, '');
+                voice(str);
+                //send(item.content);
+                warnIntervalArr.push(id);
+            }, 1000 * 60 * 1.1);
         }
     }
-
-    warnJodb.on('change', init);
 
     scope.debug = function (e) {
         let msg = JSON.stringify(warnIntervalArr, null, '\t');
@@ -170,6 +168,14 @@ export default function (scope) {
         }
     };
 
+    // 试听单项
+    scope.hear = function (e, id) {
+        let item = warnJodb.get2(id);
+        let str = _.fill(Array(item.repeat || 1), item.content).join('\r\n');
+        voice(str);
+        send(str);
+    };
+
     // 添加新项
     scope.add = function (e) {
         scope.render('setWarnItem', {model: {}});
@@ -189,13 +195,6 @@ export default function (scope) {
     // 置顶单项
     scope.up = function (e, id) {
         warnJodb.insert(id);
-    };
-
-    // 试听单项
-    scope.hear = function (e, id) {
-        let item = warnJodb.get2(id);
-        let str = _.fill(Array(item.repeat || 1), item.content).join('\r\n');
-        voice(str);
     };
 
     // 禁用单项
@@ -233,6 +232,18 @@ export default function (scope) {
     // -------------------------------------------------------------------
 
     init();
+
+    warnJodb.on('change', init);
+
+    // 接收外部动作消息, 目前是 打板; 买入; 卖出;
+    ipcRenderer.on('warn', (event, info) => {
+        console.log(info, warnHandleMap[info]);
+        let id = warnHandleMap[info] || '';
+        let item = warnJodb.get2(id);
+        let str = _.fill(Array(item.repeat || 1), item.content).join('\r\n');
+        let str2 = str.replace(ignoreReg, '');
+        voice('x', str2);
+    });
 
     // --------------------------------------------------------------------
 

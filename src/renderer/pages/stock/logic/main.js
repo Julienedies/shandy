@@ -52,8 +52,8 @@ brick.reg('logicCtrl', function () {
 
     let updateLogic = () => {
         let tag = scope.tag;
-        logicArr = tag !== undefined ? recordManager.get((record, index) => {
-            return record.tag === tag || String(record.tag) === tag;
+        logicArr = tag !== undefined ? recordManager.get((item, index) => {
+            return item.tag === tag || String(item.tag) === tag || (item.type && item.type.includes(tag));
         }) : recordManager.get();
     };
 
@@ -62,12 +62,28 @@ brick.reg('logicCtrl', function () {
         reader.init();
     };
 
+    this.toggleFull = function (e) {
+        scope.$elm.find('#logicList .tar').toggle();
+    };
+
     this.onGetLogicDone = function (data) {
         recordManager.init(data);
-        let tags = data.map((item, index) => {
-            return item.tag || item.type;
+        let tags = [];
+        let types = [];
+        data.map((item, index) => {
+            let tag = item.tag;
+            let type = item.type;
+            if(tag){
+                tags.push(tag);
+            }
+            if(type){
+                type.forEach((v) => {
+                    types.push(v);
+                });
+            }
         });
         scope.tagMap = _.countBy(tags);
+        scope.typeMap = _.countBy(types);
         scope.render('tags', scope);
         render();
     };
@@ -91,6 +107,7 @@ brick.reg('logicCtrl', function () {
         edit: function (e, id) {
             let vm = id ? recordManager.get(id) : {};
             vm.tagMap = scope.tagMap;
+            vm.typeMap = scope.typeMap;
             scope.emit('logic.edit', vm);
         },
         remove: function (data) {
@@ -115,6 +132,8 @@ brick.reg('setLogicCtrl', function () {
     let scope = this;
     let $elm = this.$elm;
 
+    scope.vm = {};
+
     scope.done = function (data) {
         scope.emit('logic.edit.done', data);
         $elm.icPopup(false);
@@ -126,12 +145,46 @@ brick.reg('setLogicCtrl', function () {
 
     scope.on('logic.edit', function (e, logic) {
         console.log('on logic.edit', logic);
+        scope.vm = logic;
         scope.render(logic);
         $elm.icPopup(true);
     });
 
-    scope.onSelectChange = function (msg) {
+    scope.onLogicTagSelectChange = function (msg) {
         $elm.find('[ic-form-field="tag"]').val(msg.value);
+    };
+
+    scope.addLogicType = function (e) {
+        let vm = scope.vm;
+        let str = $(this).val();
+        if(!str) return;
+        if(vm.typeMap[str]){
+            return alert('类型已经存在.');
+        }else{
+            vm.typeMap[str] = 1;
+            let obj = $elm.find('[ic-form="setLogic"]').icForm();
+            obj.type = obj.type || [];
+            obj.type.push(str);
+            Object.assign(vm, obj);
+        }
+        console.log(11, vm);
+        scope.render(vm);
+    };
+
+    scope.addLogicTag = function (e) {
+        let vm = scope.vm;
+        let str = $(this).val();
+        if(!str) return;
+        if(vm.tagMap[str]){
+            return alert('标签已经存在.');
+        }else{
+            vm.tagMap[str] = 1;
+            let obj = $elm.find('[ic-form="setLogic"]').icForm();
+            obj.type = str;
+            Object.assign(vm, obj);
+        }
+        console.log(12, vm);
+        scope.render(vm);
     };
 
 });

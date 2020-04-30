@@ -60,13 +60,15 @@ export default {
         dialog.showErrorBox(title, msg);
     },
     timer (time = '8:55', f) {
-        let [h, m] = time.split(/\D/g).map((v) => v * 1);
+        let [h, m, s] = time.split(/\D/g).map((v) => v * 1);
         let rule = new schedule.RecurrenceRule();
         rule.dayOfWeek = [0, new schedule.Range(1, 6)];
         rule.hour = h;
         rule.minute = m;
+        rule.second = s;
+        console.log('define timer', time, f);
         return schedule.scheduleJob(rule, function () {
-            console.log('timer ', (new Date).toLocaleString());
+            console.log('exec timer ', (new Date).toLocaleString());
             f();
         });
     },

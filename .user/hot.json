@@ -1,7 +1,7 @@
 [
 	{
 		"id": "种业",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1587600891460
 	},
 	{
@@ -26,7 +26,7 @@
 	},
 	{
 		"id": "新冠检测",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1587473744976
 	},
 	{
@@ -36,7 +36,7 @@
 	},
 	{
 		"id": "区块链",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1587084951044
 	},
 	{
@@ -46,7 +46,7 @@
 	},
 	{
 		"id": "医药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1586706080874
 	},
 	{
@@ -61,7 +61,7 @@
 	},
 	{
 		"id": "农业种植",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1586306692364
 	},
 	{
@@ -181,7 +181,7 @@
 	},
 	{
 		"id": "生物疫苗",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579613298327
 	},
 	{
@@ -196,7 +196,7 @@
 	},
 	{
 		"id": "医疗器械概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579565192274
 	},
 	{
@@ -211,7 +211,7 @@
 	},
 	{
 		"id": "生物医药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579526862860
 	},
 	{
