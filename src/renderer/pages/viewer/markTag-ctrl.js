@@ -64,9 +64,13 @@ export default function (scope) {
     });
 
     scope.$elm.hover(function () {
-        scope.$elm.css('opacity', 1);
+        //scope.$elm.find('.tag, .button').css('opacity', 1);
+        //scope.$elm.css('background', '');
     }, function () {
-        scope.$elm.css('opacity', 0);
+        //scope.$elm.css('opacity', 0);
+        //scope.$elm.css('cssText', 'background:none!important;');
+        //scope.$elm.find('.tag, .button').not('.tag.is-info').css('opacity', 0);
+        //scope.$elm.find('.tag.is-info').css('opacity', 1);
     });
 
 }

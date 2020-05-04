@@ -49,6 +49,12 @@
 
 #list li {
   margin: 0 0 10px 40px;
+
+  &.is-end {
+    padding-bottom: 9px;
+    border-bottom: 0px #b5b3b3 dotted;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0);
+  }
 }
 
 
@@ -57,6 +63,6 @@
 
   > .tags {
     display: inline-block;
-    margin-bottom:0;
+    margin-bottom: 0;
   }
 }

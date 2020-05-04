@@ -50,13 +50,14 @@
 
     <ul ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
-            <div class="pre">{{v.text}}</div>
+            <div class="pre" style="max-height: 32em;">{{v.text}}</div>
             <div class="tar">
                 <span class="tag is-primary" ic-if="v.type" ic-for="k,j in v.type">{{j || ''}}</span>&nbsp;&nbsp;&nbsp;
                 <span class="tag is-info" ic-if="v.note">{{v.note || ''}}</span>&nbsp;&nbsp;&nbsp;
                 <span class="tag" ic-if="v.level">{{v.level || ''}}</span>&nbsp;
                 <span class="tag" ic-if="v.tag">{{v.tag || ''}}</span>
                 <a class="no" ic-click="logic.edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
+                <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
                 <a class="no"
                    ic-ajax
                    ic-submit-method="get"

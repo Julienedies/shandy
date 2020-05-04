@@ -139,6 +139,10 @@ export default {
             arr.sort(function (a, b) {
                 return a.c - b.c;
             });
+            let start = arr[0];
+            let end = arr[arr.length - 1];
+            if (start) start.start = 1;
+            if (end) end.end = 1;
         });
 
         // @step3: 对code数组排序

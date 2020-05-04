@@ -67,12 +67,8 @@ setInterval( () => {
      audio.play();
 }, 1000 * 60 * 130);*/
 
-// --------------------------------接收主进程发来的消息 ------------------------
-// 交易语音警告
-ipcRenderer.on('warn', (event, info) => {
-    //voice(warnText.voice[info] || '')
-});
 
+// -------------------------- 接收主进程发来的消息 ------------------------
 // 通达信中查看该股票
 ipcRenderer.on('view_in_tdx', function (event, msg) {
     console.log('view in tdx =>', msg);

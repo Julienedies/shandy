@@ -6,26 +6,29 @@
 body {
   padding: 1px;
   color: #202020;
-  font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif!important;
+  font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
   @media screen and (max-width: 800px) {
     font-size: 16px;
   }
+
   &::-webkit-scrollbar {
     //width: 0 !important;
     //display: none;
   }
 }
 
-.textarea{
-  min-height:1rem;
+.textarea {
+  min-height: 1rem;
   overflow-y: visible;
 }
 
-.icon > .far {
-  opacity: 0.1;
+.icon {
+  & > .far, & > .fas {
+    opacity: 0.1;
+  }
 }
 
-.tag.is-medium.is-delete{
+.tag.is-medium.is-delete {
   opacity: 0.3;
 }
 
@@ -38,26 +41,26 @@ label.radio {
 // bulma 重写
 
 .notification {
-  margin-bottom: 0.8rem!important;
-  padding-bottom:0.5rem;
+  margin-bottom: 0.8rem !important;
+  padding-bottom: 0.5rem;
   background: #fff7e5; //#f5edd0; //fff1e5
 }
 
-.box{
+.box {
   padding: 1rem;
 }
 
-.title{
-  margin-bottom: 1rem!important;
+.title {
+  margin-bottom: 1rem !important;
 }
 
-.tag, .button{
+.tag, .button {
   -webkit-user-select: none;
   user-select: none;
 }
 
-a.tag, a.tag:hover{
-  text-decoration: none!important;
+a.tag, a.tag:hover {
+  text-decoration: none !important;
 }
 
 ///////////////////
@@ -83,14 +86,45 @@ a.tag, a.tag:hover{
   }
 }*/
 
-[class*="hint--"][aria-label]:after{
+[class*="hint--"][aria-label]:after {
   white-space: pre;
   line-height: 1.6;
 }
 
 // brick 样式覆盖
-#ic-message-box{
-  background: rgb(117,190,35)!important;
-  color:#fff!important;
-  border:none!important;
+#ic-message-box {
+  background: rgb(117, 190, 35) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+[ic-ctrl="viewerMarkTagCtrl"] {
+  background: none !important;
+  transition: opacity 0ms!important;
+
+  .tags .tag:not(:last-child) {
+    margin-right: 0.8rem;
+  }
+
+  .tag, .button {
+    opacity: 0;
+  }
+
+  .tag.is-info {
+    opacity: 1;
+    transform: scale(1.1,1.1);
+    animation: flash 1.5s infinite ease-in-out;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8) !important;
+
+    .tag, .button {
+      opacity: 1;
+    }
+
+    .tag.is-info {
+      animation: none;
+    }
+  }
 }

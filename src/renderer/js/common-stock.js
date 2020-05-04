@@ -136,11 +136,10 @@ function mainCtrl () {
 
 }
 
-
 brick.reg('main_ctrl', mainCtrl);
-brick.reg('mainCtrl', mainCtrl)
+brick.reg('mainCtrl', mainCtrl);
 
 
 setTimeout(function () {
-    brick.bootstrap()
-}, 30)
+    brick.bootstrap();
+}, 30);

@@ -45,7 +45,7 @@ function getAllConcept () {
         return {name, key};
     });
     result.sort((a, b) => {
-        return a.key.localeCompare(b.key)
+        return a.key.localeCompare(b.key);
     });
     getAllConcept.result = result;
     return result;

@@ -11,17 +11,17 @@
 <body>
 <div ic-view-stage ic-ctrl="mainCtrl">
 
-    <div ic-view="jobs" ic-active ic-ctrl="jobsCtrl">
+    <div ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
         <div class="column">
             <div class="buttons is-right">
                 <button class="button is-primary" ic-view-to="prepare">prepare</button>
                 <button class="button is-primary" ic-view-to="mistake">mistake</button>
                 <button class="button is-primary" ic-view-to="prompt">prompt</button>
-                <button class="button is-primary" ic-click="addJob">新ToDo</button>
+                <button class="button is-primary" ic-click="addTodo">新ToDo</button>
                 <button class="button is-primary" ic-click="stop">停止提醒</button>
                 <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
             </div>
-            <table class="table is-striped is-fullwidth" style="margin-top:15px;font-size:14px;" ic-tpl="jobs">
+            <table class="table is-striped is-fullwidth" style="margin-top:15px;font-size:14px;" ic-tpl="todoList">
                 <tr style="white-space: nowrap;">
                     <th>name</th>
                     <th>类型</th>
@@ -56,9 +56,9 @@
         </div>
     </div>
 
-    <div ic-view="setJob" ic-ctrl="setJobCtrl">
+    <div ic-view="setTodo" ic-ctrl="setTodoCtrl">
         <div class="column">
-            <div ic-tpl="setJob" ic-tpl-init="{}">
+            <div ic-tpl="setTodo" ic-tpl-init="{}">
                 <div ic-form>
                     <div class="field">
                         <div class="control">
@@ -113,7 +113,7 @@
 
             <div class="field">
                 <div class="control" style="text-align: right;">
-                    <button class="button is-primary" ic-view-to="jobs">
+                    <button class="button is-primary" ic-view-to="todoList">
                         返回
                     </button>
                 </div>
@@ -132,7 +132,7 @@
                         <button class="button is-primary" ic-click="hideWindow">
                             关闭窗口
                         </button>
-                        <button class="button is-primary" ic-view-to="jobs">
+                        <button class="button is-primary" ic-view-to="todoList">
                             返回
                         </button>
                         <button class="button is-primary" ic-click="complete">
@@ -165,7 +165,7 @@
             </div>
             <div class="buttons" style="padding-top:20px;">
                 <button class="button" ic-click="hideWindow">关闭</button>
-                <button class="button is-primary" ic-view-to="jobs">返回</button>
+                <button class="button is-primary" ic-view-to="todoList">返回</button>
                 <button class="button is-primary" ic-click="complete">完成</button>
             </div>
         </div>
@@ -202,7 +202,7 @@
                     </ul>
                     <div class="buttons" style="padding-top:30px;">
                         <button class="button is-primary" ic-click="complete">完成</button>
-                        <button class="button is-primary" ic-view-to="jobs">返回</button>
+                        <button class="button is-primary" ic-view-to="todoList">返回</button>
                         <button class="button is-primary" ic-click="hideWindow">关闭</button>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
             </div>
             <div class="buttons">
                 <button class="button is-primary" ic-click="hideWindow">关闭</button>
-                <button class="button is-primary" ic-view-to="jobs">返回</button>
+                <button class="button is-primary" ic-view-to="todoList">返回</button>
                 <button class="button is-primary" ic-click="complete">完成</button>
             </div>
         </div>

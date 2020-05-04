@@ -5,6 +5,7 @@
 import os from 'os'
 import electron from 'electron'
 
+import pinyin from 'pinyin'
 import schedule from 'node-schedule'
 import fse from 'fs-extra'
 import moment from 'moment'
@@ -173,6 +174,26 @@ export default {
             });
         });
     },
+
+    /**
+     * 安排拼音字母排序
+     * @param arr {Object|Array}
+     */
+    sortByPinYin (arr) {
+
+        return arr.sort((a, b) => {
+            let aKeys = pinyin(a, {
+                style: pinyin.STYLE_FIRST_LETTER
+            });
+            let bKeys = pinyin(b, {
+                style: pinyin.STYLE_FIRST_LETTER
+            });
+            let aKey = aKeys[0][0];
+            let bKey = bKeys[0][0];
+            return aKey.localeCompare(bKey);
+        });
+
+    }
 
 }
 

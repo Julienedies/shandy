@@ -106,10 +106,10 @@
 	},
 	"reminder": {
 		"bounds": {
-			"x": 0,
-			"y": 23,
-			"width": 1440,
-			"height": 808
+			"x": 1440,
+			"y": 0,
+			"width": 1920,
+			"height": 1080
 		}
 	},
 	"setting": {
@@ -170,10 +170,18 @@
 	},
 	"tags": {
 		"bounds": {
-			"x": 0,
-			"y": 23,
-			"width": 1440,
-			"height": 808
+			"x": 1440,
+			"y": 0,
+			"width": 1920,
+			"height": 1080
+		}
+	},
+	"mistake": {
+		"bounds": {
+			"x": 1440,
+			"y": 0,
+			"width": 1920,
+			"height": 1080
 		}
 	}
 }

@@ -103,6 +103,17 @@ brick.reg('logicCtrl', function () {
         render();
     };
 
+    this.toggleText = function (e) {
+        let cla = 'isx';
+        let $th = $(this).toggleClass(cla);
+        if($th.hasClass(cla)){
+            $th.closest('li').find('.pre').css('max-height', 'none');
+        }else{
+            $th.closest('li').find('.pre').css('max-height', '32em');
+        }
+
+    };
+
     this.logic = {
         edit: function (e, id) {
             let vm = id ? recordManager.get(id) : {};

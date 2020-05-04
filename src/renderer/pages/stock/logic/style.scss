@@ -2,6 +2,11 @@ a.no {
   text-decoration: none !important;
 }
 
+.notification div.pre{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .tags .input{
   width:10em!important;
   max-width: 10em!important;

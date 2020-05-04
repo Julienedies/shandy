@@ -1,15 +1,53 @@
 [
 	{
 		"name": "",
+		"id": "7494274",
+		"trigger": "5",
+		"content": "大盘共振；\b板块共振；强弱；人气地位；资金类型；行情性质；波浪形态；盈亏比；",
+		"repeat": 1,
+		"type": "interval",
+		"timestamp": 1588524531717
+	},
+	{
+		"id": "5103392",
+		"trigger": "16:02:45",
+		"content": "做好交易准备! 做好交易准备! 做好交易准备! ",
+		"timestamp": 1562988678222,
+		"name": "",
+		"type": "timer",
+		"disable": false,
+		"repeat": 1
+	},
+	{
+		"name": "执行力",
+		"id": "3253376",
+		"trigger": "1",
+		"content": "为何我总是临盘犹豫，抓不住机会？",
+		"type": "interval",
+		"timestamp": 1585810908436,
+		"repeat": 4
+	},
+	{
+		"name": "执行力",
+		"id": "9895132",
+		"trigger": "1",
+		"content": "不要临盘犹豫；竞价买入；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1588262100948,
+		"disable": true
+	},
+	{
+		"name": "执行力",
 		"id": "5999793",
 		"trigger": "1",
-		"content": "不要想着钱，把事情做对；",
+		"content": "操作只有对错；不要想着钱；",
 		"repeat": 5,
 		"type": "interval",
 		"timestamp": 1588258417721
 	},
 	{
-		"name": "",
+		"name": "交易逻辑",
 		"id": "4740483",
 		"trigger": "1",
 		"content": "超预期强势；共振；股性；形态；盈亏比;  行情类型；",
@@ -18,17 +56,17 @@
 		"timestamp": 1588084459651
 	},
 	{
-		"name": "大局观",
+		"name": "理解力",
 		"id": "6506825",
 		"trigger": "1",
-		"content": "热点龙头是什么？\n",
+		"content": "热钱所在，行情所在；\n热点龙头是什么？\n",
 		"timestamp": 1577700857608,
 		"type": "interval",
 		"disable": false,
 		"repeat": 4
 	},
 	{
-		"name": "",
+		"name": "理解力",
 		"id": "9572961",
 		"trigger": "1",
 		"content": "行情类型、确定性、衡量收益和风险；",
@@ -38,13 +76,23 @@
 		"repeat": 4
 	},
 	{
-		"name": "",
+		"name": "控制力",
+		"id": "5462864",
+		"trigger": "1",
+		"content": "控制不住情绪和本能，失败是注定的；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1588299669395
+	},
+	{
+		"name": "控制力",
 		"id": "2201739",
 		"trigger": "1",
 		"content": "交易反人性！控制情绪和本能；",
 		"type": "interval",
 		"timestamp": 1584716475055,
-		"repeat": 5
+		"repeat": 5,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -54,15 +102,6 @@
 		"type": "interval",
 		"timestamp": 1587011005023,
 		"repeat": 5
-	},
-	{
-		"name": "",
-		"id": "3253376",
-		"trigger": "1",
-		"content": "为何我总是临盘犹豫，抓不住机会？",
-		"type": "interval",
-		"timestamp": 1585810908436,
-		"repeat": 4
 	},
 	{
 		"name": "理解力",
@@ -185,6 +224,15 @@
 		"type": "interval",
 		"timestamp": 1584088026372,
 		"disable": true
+	},
+	{
+		"name": "",
+		"id": "3409638",
+		"trigger": "5",
+		"content": "打板只是形式，本质是追随市场主流资金和主线热点；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1588296433202
 	},
 	{
 		"name": "",
@@ -644,15 +692,6 @@
 		"disable": true
 	},
 	{
-		"id": "5103392",
-		"trigger": "8:59",
-		"content": "做好交易准备! 做好交易准备! 做好交易准备! ",
-		"timestamp": 1562988678222,
-		"name": "",
-		"type": "timer",
-		"disable": true
-	},
-	{
 		"name": "",
 		"id": "0657640",
 		"trigger": "9:05",
@@ -713,7 +752,7 @@
 		"name": "",
 		"id": "3113270",
 		"trigger": "9:29:45",
-		"content": "他妈的竞价买入；你脑子在想什么？要把错误重复多少次？\n竞价买入；竞价买入；竞价买入；",
+		"content": "竞价买入；竞价买入；竞价买入；\n他妈的竞价买入；你脑子在想什么？要把错误重复多少次？",
 		"repeat": 3,
 		"type": "timer",
 		"timestamp": 1588258378706

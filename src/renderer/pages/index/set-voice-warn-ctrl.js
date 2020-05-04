@@ -18,14 +18,14 @@ export default function (scope) {
 
     const warnJodb = userJodb('warn', []);
     // 存储定时器句柄，用以取消
-    let isAbleVoiceWarn = false;  // 语音警告是否启用
+    let isAbleVoiceWarn = null;  // 语音警告是否启用
     const warnHandleMap = {};
     let warnIntervalArr = [];
     let warnIntervalTimer = null;
     const dragOverCla = 'onDragOver';
     const ignoreReg = /[(（].*[）)]/img;
 
-    let currentType;
+    let currentTabType = '';
 
     // 通知主进程ipcMain, 主进程通过io广播给client
     function send (msg) {
@@ -36,8 +36,8 @@ export default function (scope) {
         return _.fill(Array(count || 1), str).join('\r\n');
     }
 
-    function render (model) {
-        model = currentType ? warnJodb.get(currentType, 'type') : warnJodb.get();
+    function render () {
+        let model = currentTabType ? warnJodb.get(currentTabType, 'type') : warnJodb.get();
         scope.render('warnList', {model}, function () {
             $(this).find('tr')
                 .on('dragstart', scope.dragstart)
@@ -49,6 +49,8 @@ export default function (scope) {
 
     function init () {
         render();
+        // 如果语言警告明确设置为false，返回
+        if (isAbleVoiceWarn === false) return;
         // 如果不是交易时段, 则不设置语音警告
         if (utils.isTrading() || isAbleVoiceWarn || 0) {
             isAbleVoiceWarn = true;  // 如果是交易时段, 语音警告可用
@@ -147,7 +149,7 @@ export default function (scope) {
 
     // 类型分为 定时; 动作; 间隔; 三个标签
     scope.onTypeChange = function (msg) {
-        currentType = msg.value;
+        currentTabType = msg.value;
         render();
     };
 

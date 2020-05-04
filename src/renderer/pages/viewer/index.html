@@ -71,7 +71,7 @@
                 ic-viewer-on-open="onViewerOpen"
                 ic-viewer-on-close="onViewerClose">
 
-                <li ic-for="i,v in model" url="file://{{v.f}}">
+                <li ic-for="i,v in model" url="file://{{v.f}}" ic-class="{{ v.end ? 'is-end':'' }}">
                     <h5>
                         <span style="display: inline-block; min-width:42em;">{{v.f}} </span>
                         <span ic-for="k,s in v.tags" class="tag is-medium is-info">{{ s }}</span>

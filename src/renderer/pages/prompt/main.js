@@ -46,6 +46,8 @@ brick.reg('mainCtrl', function (scope) {
 
     let hideWindowTimer = null;
 
+    let timerHandleArr = [];
+
     scope.currentTodoItem = null;
 
     scope.hideWindow = function (e) {
@@ -61,8 +63,92 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     scope.stop = function (e) {
+        clearTimeout(hideWindowTimer);
         clearInterval(scope.todoTimer);
+        let handle;
+        while(handle = timerHandleArr.shift()){
+            handle.cancel();
+        }
     };
+
+
+    function start () {
+        // 处理只执行一次的任务定时器
+        todoJodb.each((todoItem) => {
+            if (todoItem.disable) return;
+            if (todoItem.repeat === 1 && todoItem.start) {
+                let handle = utils.timer(todoItem.start, () => {
+                    currentWindow.showInactive();
+                    scope.emit(todoItem.type || 'prompt', todoItem);
+                });
+                timerHandleArr.push(handle);
+            }
+        });
+
+        // 每10分钟执行一次, 检查todo列表里是否有项需要提醒 win.showInactive()
+        scope.todoTimer = setInterval(() => {
+            let todoArr = todoJodb.get();
+            let over = false;
+            todoArr.forEach((todoItem, index) => {
+                // 每轮只执行一个提醒
+                if (over) return;
+                if (todoItem.disable) return;
+                // 先判断任务是否完成，未完成才提醒
+                if (todoItem.complete || todoItem.repeat === 1) {
+                    return;
+                }
+                // 计算当前时间和任务开始时间之差
+                // moment().diff(moment('8:00', 'HH:mm'),'minutes');
+                let diffM = moment().diff(moment(todoItem.start, 'HH:mm'), 'minutes');
+                // 如果到达开始时间
+                if (diffM > 0) {
+                    let promptTimes = todoItem.promptTimes || 0; // 提醒次数
+                    let prevPromptTime = todoItem.prevPromptTime; // 上次提醒时间
+                    // 如果还没有达到提醒次数
+                    if (promptTimes < todoItem.repeat) {
+                        // 如果还没有提醒过; 或者
+                        // 当前时间和上次提醒时间之差达到间隔时间
+                        if (promptTimes === 0 || moment().diff(moment(prevPromptTime, 'x'), 'minutes') >= todoItem.interval) {
+                            todoItem.promptTimes = promptTimes + 1;
+                            todoItem.prevPromptTime = +new Date();
+                            todoJodb.set(todoItem);
+                            scope.currentTodoItem = todoItem;
+                            currentWindow.showInactive();
+                            hideWindowTimer = setTimeout(() => {
+                                scope.hideWindow();
+                            }, 1000 * 9);
+                            scope.emit(todoItem.type || 'prompt', todoItem);
+                            over = true;  // 终止todo数组循环
+                        }
+                    }
+                }
+
+            });
+
+        }, 1000 * 60 * 10);
+
+    }
+
+    // 当窗口激活，表明我在当前窗口进行操作，暂停执行todo提示
+    $(window).on('focus', function (e) {
+        clearTimeout(hideWindowTimer);
+        //scope.stop();
+    });
+
+    // 当窗口失去焦点，恢复todo提示
+    $(window).on('blue', function (e) {
+        //scope.stop();
+        //start();
+    });
+
+    // 获取视图内容并显示
+    $.get('/stock/tags/').done((data) => {
+        console.log(data);
+        let model = data;
+        scope.render('prepare', {model});
+        scope.render('mistake', {model});
+        //scope.render('principle', model);
+    });
 
     // 每天早上开启时，清除昨天的提醒数据,重新开始
     (function () {
@@ -76,86 +162,19 @@ brick.reg('mainCtrl', function (scope) {
         }
     })();
 
-    // 处理只执行一次的任务定时器
-    todoJodb.each((todoItem) => {
-        if (todoItem.disable) return;
-        if (todoItem.repeat === 1 && todoItem.start) {
-            utils.timer(todoItem.start, () => {
-                currentWindow.showInactive();
-                scope.emit(todoItem.type || 'prompt', todoItem);
-            });
-        }
-    });
-
-    // 每10分钟执行一次, 检查todo列表里是否有项需要提醒 win.showInactive()
-    scope.todoTimer = setInterval(() => {
-        let todoArr = todoJodb.get();
-        let over = false;
-        todoArr.forEach((todoItem, index) => {
-            // 每轮只执行一个提醒
-            if (over) return;
-            if (todoItem.disable) return;
-            // 先判断任务是否完成，未完成才提醒
-            if (todoItem.complete || todoItem.repeat === 1) {
-                return;
-            }
-            // 计算当前时间和任务开始时间之差
-            // moment().diff(moment('8:00', 'HH:mm'),'minutes');
-            let diffM = moment().diff(moment(todoItem.start, 'HH:mm'), 'minutes');
-            // 如果到达开始时间
-            if (diffM > 0) {
-                let promptTimes = todoItem.promptTimes || 0; // 提醒次数
-                let prevPromptTime = todoItem.prevPromptTime; // 上次提醒时间
-                // 如果还没有达到提醒次数
-                if (promptTimes < todoItem.repeat) {
-                    // 如果还没有提醒过; 或者
-                    // 当前时间和上次提醒时间之差达到间隔时间
-                    if (promptTimes === 0 || moment().diff(moment(prevPromptTime, 'x'), 'minutes') >= todoItem.interval) {
-                        todoItem.promptTimes = promptTimes + 1;
-                        todoItem.prevPromptTime = +new Date();
-                        todoJodb.set(todoItem);
-                        scope.currentTodoItem = todoItem;
-                        currentWindow.showInactive();
-                        hideWindowTimer = setTimeout(() => {
-                            scope.hideWindow();
-                        }, 1000 * 9);
-                        scope.emit(todoItem.type || 'prompt', todoItem);
-                        over = true;  // 终止todo数组循环
-                    }
-                }
-            }
-
-        });
-
-    }, 1000 * 60 * 10);
-
-    // 点击返回按钮回到主视图后，取消定时隐藏窗口
-    $('[ic-view="jobsCtrl"]').on('ic-view.active', function (e) {
-    });
-    // 当窗口激活，取消隐藏窗口定时器
-    $(window).on('focus', function (e) {
-        clearTimeout(hideWindowTimer);
-    });
-
-    // 获取视图内容并显示
-    $.get('/stock/tags/').done((data) => {
-        console.log(data);
-        let model = data;
-        scope.render('prepare', {model});
-        scope.render('mistake', {model});
-        //scope.render('principle', model);
-    });
+    start();
 
 });
 
-brick.reg('jobsCtrl', function (scope) {
+
+brick.reg('todoListCtrl', function (scope) {
 
     const dragOverCla = 'onDragOver';
 
     function render () {
         let todoArr = todoJodb.get();
         console.log(todoArr);
-        scope.render('jobs', {model: todoArr}, function () {
+        scope.render('todoList', {model: todoArr}, function () {
             $(this).find('tr').on('dragstart', scope.dragstart)
                 .on('dragover', scope.dragover)
                 .on('dragleave', scope.dragleave)
@@ -163,14 +182,14 @@ brick.reg('jobsCtrl', function (scope) {
         });
     }
 
-    scope.addJob = function (e) {
-        brick.view.to('setJob');
-        scope.emit('setJob', {});
+    scope.addTodo = function (e) {
+        brick.view.to('setTodo');
+        //scope.emit('setTodo', {});
     };
 
     scope.edit = function (e, id) {
-        brick.view.to('setJob');
-        scope.emit('setJob', todoJodb.get2(id));
+        brick.view.to('setTodo');
+        scope.emit('setTodo', todoJodb.get2(id));
     };
 
     scope.rm = function (e, id) {
@@ -227,28 +246,30 @@ brick.reg('jobsCtrl', function (scope) {
     };
 });
 
-brick.reg('setJobCtrl', function (scope) {
+
+brick.reg('setTodoCtrl', function (scope) {
 
     this.save = function (fields) {
         console.log(fields);
         todoJodb.set(fields);
-        brick.view.to('jobs');
+        brick.view.to('todoList');
     };
 
     this.reset = function () {
-        scope.render('setJob', {model: {}});
+        scope.render('setTodo', {model: {}});
     };
 
     this.cancel = function (e) {
-        brick.view.to('jobs');
+        brick.view.to('todoList');
     };
 
-    scope.on('setJob', function (e, msg) {
+    scope.on('setTodo', function (e, msg) {
         console.log(33, msg, e);
-        scope.render('setJob', {model: msg || {}});
+        scope.render('setTodo', {model: msg || {}});
     });
 
 });
+
 
 brick.reg('promptCtrl', function () {
 
