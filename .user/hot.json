@@ -10,16 +10,6 @@
 		"timestamp": 1587600882973
 	},
 	{
-		"id": "电子商务",
-		"selected": false,
-		"timestamp": 1587600826982
-	},
-	{
-		"id": "粮食安全",
-		"selected": false,
-		"timestamp": 1587600751886
-	},
-	{
 		"id": "基因测序",
 		"selected": false,
 		"timestamp": 1587483476154
@@ -91,7 +81,7 @@
 	},
 	{
 		"id": "新基建",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1583799511144
 	},
 	{
@@ -241,7 +231,7 @@
 	},
 	{
 		"id": "消费电子",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928850827
 	},
 	{
@@ -256,7 +246,7 @@
 	},
 	{
 		"id": "芯片概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303653
 	},
 	{

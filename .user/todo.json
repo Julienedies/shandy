@@ -1,40 +1,37 @@
 [
 	{
 		"name": "",
-		"id": "1064166",
+		"id": "2006005",
 		"type": "",
-		"start": "15:00",
+		"start": "9:30",
 		"interval": 45,
-		"repeat": 9,
-		"content": "已经3个月了，我还是一无所得；\n错误也还是在不断的重复；但我没有那么痛苦了；",
-		"timestamp": 1588581474642,
-		"promptTimes": 9,
-		"prevPromptTime": 1588606135362
+		"repeat": 1,
+		"content": "分仓竞价买入； 市场反映一切； 概率优势；",
+		"timestamp": 1588771295970
 	},
 	{
 		"name": "",
 		"id": "0602904",
 		"type": "",
-		"start": "15:00",
+		"start": "9:00",
 		"interval": 45,
 		"repeat": 7,
-		"content": "我面临的问题：\n1. 分仓与全仓。\n= 分仓的问题是操作顾不过来；全仓的问题是系统性风险；\n\n2. ",
+		"content": "交易总是感觉不流畅； 必须设定明确的操作流程；简单重复！简单，纯粹；取舍；  我做到知行合一了吗？\n我为何犹豫，似乎来自主观判断； 根据概率和经验，只有很少的时候我的主观看法契合竞价系统；\n很多时候，我的盈利只是因为我买入了。甚至我买后反而后悔。\n我的主观是我临盘犹豫的最大障碍。\n\n竞价系统的逻辑:  竞价指示了热点方向；启动、转折、爆发时机； （  类似涨停指示了市场热点方向一样  ）\n概率优势是验证过的；市场反映一切；根据系统信号和系统条件作出衡量买入；减小主观信心的影响；\n\n打板买入: \n优点：放弃主观臆想， 跟随市场；  确定性；  最强选股，热点龙头；明确的买点，构成基本的交易系统；\n缺点:  追高买入；成本高；盈亏比低；容易冲动交易；\n\n1：分仓是必须的；最少最少两支； 参见  分仓首板 系统；\n1:  明确的买点；\n\n\n我面临的问题：\n1. 分仓与全仓。\n= 分仓的问题是操作顾不过来；全仓的问题是系统性风险；\n\n2. ",
 		"timestamp": 1588392788941,
-		"promptTimes": 7,
-		"prevPromptTime": 1588423439320
+		"promptTimes": 6,
+		"prevPromptTime": 1588771615784
 	},
 	{
 		"name": "",
-		"id": "3208152",
+		"id": "1064166",
 		"type": "",
 		"start": "15:00",
-		"interval": 70,
-		"repeat": 13,
-		"content": "交易总是感觉不流畅；\n简单，纯粹；取舍；  \n我做到知行合一了吗？",
-		"timestamp": 1583219900835,
-		"disable": false,
-		"promptTimes": 13,
-		"prevPromptTime": 1588434536614
+		"interval": 45,
+		"repeat": 9,
+		"content": "已经3个月了，我还是一无所得；",
+		"timestamp": 1588581474642,
+		"promptTimes": 4,
+		"prevPromptTime": 1588769820007
 	},
 	{
 		"name": "",
@@ -45,8 +42,8 @@
 		"repeat": 7,
 		"content": "我的买入以竞价为买点；避免盘中情绪波动；\n封板做为加仓点；\n衡量收益和风险是我的交易核心；\n",
 		"timestamp": 1588245903639,
-		"promptTimes": 7,
-		"prevPromptTime": 1588336616366
+		"promptTimes": 3,
+		"prevPromptTime": 1588770415815
 	},
 	{
 		"name": "",
@@ -57,8 +54,8 @@
 		"repeat": 7,
 		"content": "我要如何克服本能和情绪？\n我要如何克服本能和情绪?\n我要如何克服本能和情绪?\n\n如果我不能克服，失败是注定的！",
 		"timestamp": 1588237081098,
-		"promptTimes": 7,
-		"prevPromptTime": 1588337216342
+		"promptTimes": 3,
+		"prevPromptTime": 1588771015799
 	},
 	{
 		"name": "",
@@ -69,8 +66,8 @@
 		"repeat": 7,
 		"content": "我一直重复错误； 渐渐麻木； \n1. 临盘犹豫; \n2. 无系统建仓；\n3. 卖飞；\n4. 止损犹豫；\n\n理解力；  控制力；   执行力； 都不行；",
 		"timestamp": 1587443782538,
-		"promptTimes": 7,
-		"prevPromptTime": 1588337816323
+		"promptTimes": 2,
+		"prevPromptTime": 1588772217790
 	},
 	{
 		"name": "",
@@ -80,9 +77,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "围绕竞价和涨停股构建交易系统。\n竞价指示了市场强弱，热点方向，时机。\n相信这个系统，大方向是对的。\n\n我的竞价&涨停交易系统是有效的；我需要增强自己的理解力和执行力；\n\n我的性格问题；\n除了优柔寡断，临盘犹豫，抓不住机会；\n还有左右摇摆不定的问题；打板没有一直坚持；不能保持交易一致性；\n一遇到挫折，就想着改弦更张；",
-		"timestamp": 1587135535525,
-		"promptTimes": 7,
-		"prevPromptTime": 1588338416299
+		"timestamp": 1587135535525
 	},
 	{
 		"name": "",
@@ -92,9 +87,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n\n我必须在很短的时间做出决定；尤其是股市变量很多；\n导致很容易犯错，尤其是亏钱状态不好的时候；\n必须纯粹，精简自己的系统，快速反应！\n\n怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；\n1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）\n2:  热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；\n\n首先竞价系统本身逻辑是对的：指示了市场强弱和日内热点；热点是方向；强弱是时机；\n涨停板指示了热钱方向和市场强弱；\n\n支撑我的交易逻辑是什么?\n1. 超预期强势： 强势市场，大干快上； 弱转强，多空博弈转折，时机就是一切；\n1. 热点：热钱所在，行情所在；方向所在；\n1. 衡量收益和风险；\n",
-		"timestamp": 1582296291296,
-		"promptTimes": 7,
-		"prevPromptTime": 1588345655867
+		"timestamp": 1582296291296
 	},
 	{
 		"name": "",
@@ -115,9 +108,7 @@
 		"interval": 30,
 		"repeat": 7,
 		"content": "优化竞价系统；早上时间太紧张，过滤无效标的，错过太多机会。\n若水三千，只取一瓢； 双鸟在林不如一鸟在手;\n---------------------------------------------------------------\n条件要求太过宽松，贪便宜的倾向，起跳表示强势。条件要反映出超强势，或该弱不弱。\n下调单纯的热点起跳，趋势起跳，调整起跳级别；\njq级里太多无效个股，真正符合条件的我又恐惧不敢上。\n\n比如过滤不会接力的涨停\n超过300亿的大盘股条件优化；\n 竞价强提示优化，比如蓝筹起跳太模糊，还有加上异动提示；",
-		"timestamp": 1578023594839,
-		"promptTimes": 7,
-		"prevPromptTime": 1588409539207
+		"timestamp": 1578023594839
 	},
 	{
 		"name": "",
@@ -127,9 +118,7 @@
 		"interval": 70,
 		"repeat": 7,
 		"content": "怎么尽快确定日内热点是什么？\n优化竞价强1，\n优化上冲选股： 添加竞价强 和 新高条件；\n向上趋势条件优化；",
-		"timestamp": 1582294062908,
-		"promptTimes": 7,
-		"prevPromptTime": 1588435142409
+		"timestamp": 1582294062908
 	},
 	{
 		"name": "",
@@ -139,9 +128,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "通达信公式 趋势向上",
-		"timestamp": 1579495236987,
-		"promptTimes": 7,
-		"prevPromptTime": 1588414338122
+		"timestamp": 1579495236987
 	},
 	{
 		"name": "",
@@ -151,9 +138,7 @@
 		"interval": 90,
 		"repeat": 7,
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
-		"timestamp": 1581084979181,
-		"promptTimes": 7,
-		"prevPromptTime": 1588496953384
+		"timestamp": 1581084979181
 	},
 	{
 		"name": "",
@@ -203,9 +188,7 @@
 		"interval": 60,
 		"repeat": 7,
 		"content": "查看财联社新闻",
-		"timestamp": 1577862818798,
-		"promptTimes": 7,
-		"prevPromptTime": 1588508415147
+		"timestamp": 1577862818798
 	},
 	{
 		"name": "日程",
@@ -215,9 +198,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "根据目标行情类型，设置持仓条件单！\n止损；\n低开处理；\n止盈处理；\n",
-		"timestamp": 1584416255440,
-		"promptTimes": 7,
-		"prevPromptTime": 1588507816573
+		"timestamp": 1584416255440
 	},
 	{
 		"name": "日程",
@@ -227,9 +208,7 @@
 		"interval": 45,
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
-		"timestamp": 1577697423900,
-		"promptTimes": 4,
-		"prevPromptTime": 1588509016317
+		"timestamp": 1577697423900
 	},
 	{
 		"name": "日程",
@@ -239,10 +218,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "在 JN  里 跑一遍 竞价强2 选股；",
-		"timestamp": 1587008893339,
-		"promptTimes": 3,
-		"prevPromptTime": 1588509616635,
-		"complete": true
+		"timestamp": 1587008893339
 	},
 	{
 		"name": "日程",
@@ -252,9 +228,7 @@
 		"interval": 30,
 		"repeat": 5,
 		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜\n过滤上冲; 上冲意味着进攻信号；\n过滤破板\n要过一遍涨停池；旗形涨停值得关注；                          ",
-		"timestamp": 1577964389066,
-		"promptTimes": 5,
-		"prevPromptTime": 1588513816441
+		"timestamp": 1577964389066
 	},
 	{
 		"name": "日程",
@@ -264,9 +238,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "每天更新自选股票池。\n加入: 启动、 爆发、 转折、 超强势的人气龙头股；\n移除：趋弱的个股；\n记住我做的是超短。",
-		"timestamp": 1582429000702,
-		"promptTimes": 7,
-		"prevPromptTime": 1588594148218
+		"timestamp": 1582429000702
 	},
 	{
 		"name": "日程",
@@ -276,10 +248,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "做好次日的交易计划。",
-		"timestamp": 1580821790410,
-		"promptTimes": 4,
-		"prevPromptTime": 1588521013145,
-		"complete": true
+		"timestamp": 1580821790410
 	},
 	{
 		"name": "日程",
@@ -289,10 +258,7 @@
 		"repeat": 5,
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
-		"type": "",
-		"promptTimes": 2,
-		"prevPromptTime": 1588516216117,
-		"complete": true
+		"type": ""
 	},
 	{
 		"name": "日程",
@@ -302,10 +268,7 @@
 		"interval": 45,
 		"repeat": 7,
 		"content": "做烂板上冲、连续上冲假设推演；",
-		"timestamp": 1586779488900,
-		"promptTimes": 3,
-		"prevPromptTime": 1588519815108,
-		"complete": true
+		"timestamp": 1586779488900
 	},
 	{
 		"name": "日程",
@@ -315,10 +278,7 @@
 		"interval": 60,
 		"repeat": 4,
 		"content": "更新csd。",
-		"timestamp": 1577862911294,
-		"promptTimes": 1,
-		"prevPromptTime": 1588515616143,
-		"complete": true
+		"timestamp": 1577862911294
 	},
 	{
 		"name": "",
@@ -330,7 +290,6 @@
 		"content": "一切有为法；一切有因果；\n不要忘记那些恐惧和痛苦；\n时不我待，我已经37岁了；",
 		"timestamp": 1579093820041,
 		"promptTimes": 7,
-		"prevPromptTime": 1588581056389,
-		"complete": true
+		"prevPromptTime": 1588746134275
 	}
 ]

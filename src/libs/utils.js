@@ -66,7 +66,7 @@ export default {
         rule.dayOfWeek = [0, new schedule.Range(1, 6)];
         rule.hour = h;
         rule.minute = m;
-        rule.second = s;
+        rule.second = s || 0;
         console.log('define timer', time, f);
         return schedule.scheduleJob(rule, function () {
             console.log('exec timer ', (new Date).toLocaleString());

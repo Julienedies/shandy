@@ -14,11 +14,11 @@
     <div ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
         <div class="column">
             <div class="buttons is-right">
+                <button class="button is-primary" ic-click="stop">停止提醒</button>
                 <button class="button is-primary" ic-view-to="prepare">prepare</button>
                 <button class="button is-primary" ic-view-to="mistake">mistake</button>
                 <button class="button is-primary" ic-view-to="prompt">prompt</button>
                 <button class="button is-primary" ic-click="addTodo">新ToDo</button>
-                <button class="button is-primary" ic-click="stop">停止提醒</button>
                 <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
             </div>
             <table class="table is-striped is-fullwidth" style="margin-top:15px;font-size:14px;" ic-tpl="todoList">
