@@ -51,11 +51,11 @@ function show2 (content) {
     let size = 14 + Math.random() * 10;
     brick.view.to('place');
     $place.text(content);
-/*    $place.css({'left': `${ x }%`, 'top': `${ y }%`, color: `${ randomColor() }`, 'font-size': `${ size }px`});
-    setTimeout(() => {
-        //$place.css({'left': `${ 25 + Math.random() * 20 }%`, 'top': `${ 35 + Math.random() * 20 }%`, 'font-size': '28px'});
-        $place.css({'left': `${ 36 }%`, 'top': `${ 30 }%`, 'font-size': '28px'});
-    }, 200);*/
+    /*    $place.css({'left': `${ x }%`, 'top': `${ y }%`, color: `${ randomColor() }`, 'font-size': `${ size }px`});
+        setTimeout(() => {
+            //$place.css({'left': `${ 25 + Math.random() * 20 }%`, 'top': `${ 35 + Math.random() * 20 }%`, 'font-size': '28px'});
+            $place.css({'left': `${ 36 }%`, 'top': `${ 30 }%`, 'font-size': '28px'});
+        }, 200);*/
 }
 
 function hide () {
@@ -66,7 +66,7 @@ function hide () {
 function copy (text, number) {
     let d = number || 4;
     let line = text.split(/[\n]/img);
-    d = Math.ceil(d/line.length);
+    d = Math.ceil(d / line.length);
     let arr = _.fill(Array(d), text);
     return arr.join('\r');
 }
@@ -151,7 +151,7 @@ socket.on('warn', (info) => {
         let d = info === 'sell' ? 0 : 0;
         let str = warnHandleMap[info];
         show2(str);
-        if(d > 0) {
+        if (d > 0) {
             $body.css({backgroundColor: 'rgba(0,0,0,1)'});
             setTimeout(() => {
                 $body.css({'backgroundColor': 'rgba(0,0,0,0)'});
@@ -161,9 +161,9 @@ socket.on('warn', (info) => {
         show2(info);
     }
 
-/*            let audio = new Audio(audioMap[info]);
-            audio.volume = 1;
-            audio.play();*/
+    /*            let audio = new Audio(audioMap[info]);
+                audio.volume = 1;
+                audio.play();*/
 });
 
 ipc.on('id', function (event, windowID, isFrameMode) {

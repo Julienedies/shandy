@@ -63,6 +63,7 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     scope.stop = function (e) {
+        $(this).hide().next().show();
         clearTimeout(hideWindowTimer);
         clearInterval(scope.todoTimer);
         let handle;
@@ -71,6 +72,11 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
+    scope.start = function (e) {
+        $(this).hide().prev().show();
+        start();
+        $.icMsg('已经开启提醒');
+    };
 
     function start () {
         // 处理只执行一次的任务定时器

@@ -1,58 +1,30 @@
 [
 	{
 		"name": "",
-		"id": "7577249",
-		"trigger": "1",
-		"content": "大局观；主线热点是什么？",
-		"repeat": 5,
+		"id": "0446743",
+		"trigger": "5",
+		"content": "选股: 主线热点；市场合力；人气龙头；",
+		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1588738028083
+		"timestamp": 1588894732399
 	},
 	{
 		"name": "",
-		"id": "3064996",
-		"trigger": "1",
-		"content": "日内热点是什么？",
+		"id": "9125610",
+		"trigger": "3",
+		"content": "明确目标行情，耐心等待。",
 		"repeat": 4,
 		"type": "interval",
-		"timestamp": 1588736611528
-	},
-	{
-		"name": "理解力",
-		"id": "6506825",
-		"trigger": "1",
-		"content": "热点龙头是什么？\n",
-		"timestamp": 1577700857608,
-		"type": "interval",
-		"disable": false,
-		"repeat": 4
-	},
-	{
-		"name": "理念",
-		"id": "0468093",
-		"trigger": "2",
-		"content": "简单、纯粹、取舍；",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1587366735911
-	},
-	{
-		"name": "逻辑",
-		"id": "0723367",
-		"trigger": "2",
-		"content": "盈亏同源；一致性； 大概率；",
-		"type": "interval",
-		"timestamp": 1587011005023,
-		"repeat": 5
+		"timestamp": 1588894566104
 	},
 	{
 		"name": "",
-		"id": "3934174",
-		"trigger": "1",
-		"repeat": 4,
-		"content": "只做龙头；只做最强，只做主升；",
-		"type": "interval",
-		"timestamp": 1587208620664
+		"id": "1021632",
+		"trigger": "9:00",
+		"content": "我要实现两个目标：\n1.一致性的交易系统.  盈亏同源、一致性、大概率；   加入机械执行成分。\n2. 简单、纯粹、取舍、重复。\n  \n竞价买入：\n优点:  避免情绪波动，静态预判；成本低；\n缺点:  主观预判，有臆想成分，确定性低；\n缺点弥补： \n通过一组系统条件对个股进行衡量：  1. 行情模型；2. 超预期强势；  3. 股性人气；  4. 形态；  5. 盈亏比。\n先衡量大盘状态，市场氛围；\n\n打板买入:  \n优点:  确定性，避免主观臆想；跟随；\n缺点: 成本高. 容易陷入条件反射似的打板买入；",
+		"repeat": 1,
+		"type": "timer",
+		"timestamp": 1588894058371
 	},
 	{
 		"id": "5103392",
@@ -63,6 +35,79 @@
 		"type": "timer",
 		"disable": true,
 		"repeat": 1
+	},
+	{
+		"name": "",
+		"id": "8732251",
+		"trigger": "9:10",
+		"content": "热点龙头主升浪；热点龙头主升浪；热点龙头主升浪；热点龙头主升浪；热点龙头主升浪；热点龙头主升浪；\n连续上冲启动浪；连续上冲启动浪；连续上冲启动浪；连续上冲启动浪；连续上冲启动浪；连续上冲启动浪；\n连续上冲爆发浪；连续上冲爆发浪；连续上冲爆发浪；连续上冲爆发浪；连续上冲爆发浪；连续上冲爆发浪；\n连续上冲反转浪；连续上冲反转浪；连续上冲反转浪；连续上冲反转浪；连续上冲反转浪；连续上冲反转浪；\n多空博弈反转浪；多空博弈反转浪；多空博弈反转浪；多空博弈反转浪；多空博弈反转浪；多空博弈反转浪；\n趋势起跳爆发浪；趋势起跳爆发浪；趋势起跳爆发浪；趋势起跳爆发浪；趋势起跳爆发浪；趋势起跳爆发浪；\n趋势浪；趋势浪；趋势浪；N形浪；N形浪；N形浪；V形浪；V形浪；V形浪；旗形浪；旗形浪；旗形浪；",
+		"repeat": 5,
+		"type": "timer",
+		"timestamp": 1588841899326
+	},
+	{
+		"name": "",
+		"id": "8502730",
+		"trigger": "2",
+		"content": "我为何总是错失大行情，抓不住机会？没有大局观；踏错节奏；\n行情启动时犹豫；行情退潮时管不住手；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1588814012347
+	},
+	{
+		"name": "执行力",
+		"id": "3253376",
+		"trigger": "1",
+		"content": "为何我总是临盘犹豫？\n因此丧失了多少机会。",
+		"type": "interval",
+		"timestamp": 1585810908436,
+		"repeat": 4
+	},
+	{
+		"name": "",
+		"id": "7577249",
+		"trigger": "1",
+		"content": "大局观；主线热点是什么？\n不做主线热点，你他妈做什么？做一波流的跟风杂毛吗？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1588738028083
+	},
+	{
+		"name": "理解力",
+		"id": "6506825",
+		"trigger": "1",
+		"content": "热点龙头是什么？\n",
+		"timestamp": 1577700857608,
+		"type": "interval",
+		"disable": false,
+		"repeat": 6
+	},
+	{
+		"name": "理念",
+		"id": "0468093",
+		"trigger": "2",
+		"content": "简单、纯粹、取舍；\n做精不做多，耐心等待最好的交易机会；",
+		"repeat": 5,
+		"type": "interval",
+		"timestamp": 1587366735911
+	},
+	{
+		"name": "逻辑",
+		"id": "0723367",
+		"trigger": "2",
+		"content": "盈亏同源；一致性； 大概率；",
+		"type": "interval",
+		"timestamp": 1587011005023,
+		"repeat": 7
+	},
+	{
+		"name": "",
+		"id": "3934174",
+		"trigger": "1",
+		"repeat": 4,
+		"content": "只做龙头；只做最强，只做主升；\n只做自己懂的行情；",
+		"type": "interval",
+		"timestamp": 1587208620664
 	},
 	{
 		"name": "理解力",
@@ -86,7 +131,7 @@
 		"name": "系统条件",
 		"id": "4740483",
 		"trigger": "1",
-		"content": "行情类型；超预期强势；强弱；共振；股性；形态；盈亏比;  ",
+		"content": "行情类型；超预期强势；股性人气；形态；盈亏比;  ",
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1588084459651
@@ -100,15 +145,6 @@
 		"timestamp": 1584716475055,
 		"repeat": 4,
 		"disable": false
-	},
-	{
-		"name": "执行力",
-		"id": "3253376",
-		"trigger": "1",
-		"content": "为何我总是临盘犹豫？\n因此丧失了多少机会。",
-		"type": "interval",
-		"timestamp": 1585810908436,
-		"repeat": 4
 	},
 	{
 		"name": "理解力",
@@ -142,7 +178,7 @@
 		"id": "3332057",
 		"trigger": "3",
 		"repeat": 3,
-		"content": "支撑我的交易逻辑是什么？\n反身性；热点龙头；超预期强势； 多空博弈；",
+		"content": "支撑我的交易逻辑？\n反身性；热点龙头；超预期强势； 多空博弈；",
 		"type": "interval",
 		"timestamp": 1587208678720
 	},
@@ -151,7 +187,7 @@
 		"id": "4047330",
 		"trigger": "3",
 		"repeat": 3,
-		"content": "我要捕捉的目标行情是什么？\n板块启动；\n热点主升；\n博弈反转；\n超跌反弹；\n日内热点；\n大盘共振；",
+		"content": "目标行情？\n板块启动；\n热点主升；\n博弈反转；\n超跌反弹；\n日内热点；\n大盘共振；",
 		"type": "interval",
 		"timestamp": 1587208685781
 	},
@@ -163,6 +199,16 @@
 		"repeat": 2,
 		"type": "interval",
 		"timestamp": 1587512749730
+	},
+	{
+		"name": "错误",
+		"id": "1968194",
+		"trigger": "3",
+		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动时犹豫；行情退潮时管不住手；\n",
+		"timestamp": 1576715145044,
+		"disable": false,
+		"type": "interval",
+		"repeat": 2
 	},
 	{
 		"name": "理解力",
@@ -192,7 +238,7 @@
 		"repeat": 2,
 		"type": "interval",
 		"timestamp": 1587512691831,
-		"disable": true
+		"disable": false
 	},
 	{
 		"name": "",
@@ -248,9 +294,10 @@
 		"name": "",
 		"id": "2471796",
 		"trigger": "10",
-		"content": "人气龙头主升浪；\b\n烂板上冲弱转强；\n连续上冲启动爆发浪；\n多空博弈反转浪；",
+		"content": "热点龙头主升浪；\b\n烂板上冲弱转强；\n连续上冲启动浪；\n多空博弈反转浪；",
 		"type": "interval",
-		"timestamp": 1584792500874
+		"timestamp": 1584792500874,
+		"repeat": 1
 	},
 	{
 		"name": "临盘犹豫",
@@ -261,16 +308,6 @@
 		"type": "interval",
 		"timestamp": 1587470794710,
 		"disable": true
-	},
-	{
-		"name": "错误",
-		"id": "1968194",
-		"trigger": "5",
-		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动时犹豫；行情退潮时管不住手；\n",
-		"timestamp": 1576715145044,
-		"disable": false,
-		"type": "interval",
-		"repeat": 2
 	},
 	{
 		"name": "",
@@ -442,6 +479,15 @@
 		"type": "interval",
 		"timestamp": 1585928465976,
 		"disable": true
+	},
+	{
+		"name": "",
+		"id": "6416790",
+		"trigger": "20",
+		"content": "现在是弱市，一字看强，卖出；一致看空，买入；",
+		"repeat": 1,
+		"type": "interval",
+		"timestamp": 1588823595457
 	},
 	{
 		"name": "错误",

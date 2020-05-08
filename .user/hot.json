@@ -81,7 +81,7 @@
 	},
 	{
 		"id": "新基建",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1583799511144
 	},
 	{
@@ -141,7 +141,7 @@
 	},
 	{
 		"id": "光刻胶",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1582069232767
 	},
 	{
@@ -211,7 +211,7 @@
 	},
 	{
 		"id": "集成电路概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579098000269
 	},
 	{
@@ -241,7 +241,7 @@
 	},
 	{
 		"id": "锂电池",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303654
 	},
 	{
