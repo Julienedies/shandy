@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>reader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
+    <script src="/set_node_modules_path.js"></script>
+</head>
+<body>
+<div class="column">
+
+    <div class="box" ic-ctrl="uploadTextFileCtrl">
+
+        <div class="level-left">
+            <button class="button"
+                    ic-ajax
+                    ic-ajax-auto
+                    ic-submit-method="get"
+                    ic-submit-action="/reader"
+                    ic-submit-on-done="onGetReaderDone">阅读列表
+            </button>
+        </div>
+
+        <div ic-form="uploadTextFile">
+            <div class="field has-addons">
+                <div class="control">
+                    <label class="button is-primary" for="upload">
+                        添加文本文件
+                    </label>
+                </div>
+                <div class="control is-expanded">
+                    <input class="input" readonly type="text" value="" name="textFile" ic-form-field>
+                    <input type="file" id="upload" name="upload" ic-change="onUpload" style="position:absolute; left:-3000px;">
+                </div>
+            </div>
+            <div class="field is-grouped is-grouped-multiline" ic-tpl="textList">
+                <div class="control" ic-for="i,v in model">
+                    <div class="tags has-addons is-small">
+                            <span class="tag is-small is-primary" ic-click="speak:{{v.id}}">
+                                {{ v.name }}
+                            </span>
+                        <span class="tag is-small is-delete" ic-click="remove:{{v.id}}">
+                                <span class="icon is-small"><i class="far fa-edit"></i></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div id="readerBox"></div>
+    </div>
+</div>
+</body>
+</html>

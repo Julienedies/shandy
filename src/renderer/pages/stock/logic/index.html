@@ -110,27 +110,11 @@
 
             <!-- tr -->
             <div>
-                <h6>备注</h6>
-                <div class="control">
-                    <input type="text" class="input is-small" name="note" value="{{model.note}}" ic-form-field="note"/>
-                </div>
-            </div>
-
-            <!-- tr -->
-            <div>
                 <h6>优先级</h6>
                 <div>
                     <input class="input is-small" type="number" name="level" ic-value="{{model.level}}" ic-form-field>
                 </div>
             </div>
-
-            <!-- tr -->
-<!--            <div>
-                <h6>标签</h6>
-                <div class="control">
-                    <input type="text" class="input is-small" value="{{model.tag}}" ic-form-field="tag"/>
-                </div>ic-select-on-change="onLogicTagSelectChange"
-            </div>-->
 
             <!-- tr -->
             <div>
@@ -147,7 +131,7 @@
 
             <!-- tr -->
             <div>
-                <div></div>
+                <h6></h6>
                 <div class="buttons">
                     <button class="button is-primary"
                             ic-form-submit
@@ -157,6 +141,14 @@
                     </button>
                     <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
                     <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
+                </div>
+            </div>
+
+            <!-- tr -->
+            <div>
+                <h6>备注</h6>
+                <div class="control">
+                    <input type="text" class="input is-small" name="note" value="{{model.note}}" ic-form-field="note"/>
                 </div>
             </div>
 

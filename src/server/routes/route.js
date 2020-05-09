@@ -27,7 +27,7 @@ import viewer from './action/viewer'
 
 import note from './action/note'
 import txt from './action/txt'
-
+import reader from './action/reader'
 
 export default function (app) {
 
@@ -97,6 +97,10 @@ export default function (app) {
     app.get('/txt', txt.get)
     app.post('/txt', txt.post)
     app.delete('/txt/:id', txt.del)
+
+    app.get('/reader/:id?', reader.get)
+    app.post('/reader', reader.post)
+    app.delete('/reader/:id', reader.del)
 
     app.use($404)
     app.use($500)

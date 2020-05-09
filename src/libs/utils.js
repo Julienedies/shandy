@@ -8,7 +8,6 @@ import electron from 'electron'
 import pinyin from 'pinyin'
 import schedule from 'node-schedule'
 import fse from 'fs-extra'
-import moment from 'moment'
 import shellJs from 'shelljs'
 import jhandy from 'jhandy'
 
@@ -19,6 +18,8 @@ import ac from './ac'
 import captureOcr from './capture-ocr'
 import stocksManager from './stocks-manager'
 
+import _utils from './_utils.js'
+
 const {remote, shell} = electron;
 const dialog = remote.dialog;
 
@@ -28,6 +29,7 @@ shellJs.config.execPath = nodePath;
 // https://github.com/shelljs/shelljs/issues/480
 
 export default {
+    ..._utils,
     preview (file) {
         shellJs.exec(`open -a Preview "${ file }"`);
     },
@@ -122,33 +124,6 @@ export default {
      */
     move (src, dist) {
         return fse.move(src, dist);
-    },
-    /**
-     * 是否是交易日; 周一至周五返回true
-     * @returns {boolean}
-     */
-    isTradingDate () {
-        let mo = moment();
-        let day = mo.day(); // 礼拜几: 0 - 6
-        return day > 0 && day < 6;
-    },
-    /**
-     * 是否是交易时段
-     * @returns {boolean}
-     */
-    isTradingTime () {
-        let mo = moment();
-        let h = mo.hour(); // 0 - 23
-        return h > 5 && h < 15;
-    },
-    /**
-     * 是否是A股交易时间
-     * @returns {boolean}
-     */
-    isTrading () {
-        let a = this.isTradingDate();
-        let b = this.isTradingTime();
-        return a && b;
     },
     getStockNameFromScreen () {
         return new Promise((resolve, reject) => {

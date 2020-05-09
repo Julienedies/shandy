@@ -19,6 +19,7 @@
                 <button class="button is-primary" ic-view-to="prepare">prepare</button>
                 <button class="button is-primary" ic-view-to="mistake">mistake</button>
                 <button class="button is-primary" ic-view-to="prompt">prompt</button>
+                <button class="button is-primary" ic-view-to="setTodo">go-SetToDo</button>
                 <button class="button is-primary" ic-click="addTodo">新ToDo</button>
                 <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
             </div>
@@ -79,13 +80,7 @@
                         </div>
                         <p class="help">可选，比如下午3点之后才能做的任务，就设置为15:00。</p>
                     </div>
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="number" placeholder="提醒间隔时间(以分钟计算)"
-                                   ic-value="{{ model.interval || 45 }}" ic-form-field="interval">
-                        </div>
-                        <p class="help">半小时提醒一次，还是2小时提醒一次。(以分钟计算)</p>
-                    </div>
+
                     <div class="field">
                         <div class="control">
                             <input class="input" type="number" placeholder="重复次数"
@@ -93,6 +88,7 @@
                         </div>
                         <p class="help">每天重复提醒，还是一次性提醒。</p>
                     </div>
+
                     <div class="field">
                         <div class="control">
                                 <textarea rows="14" class="textarea" placeholder="任务内容" ic-form-field="content">{{ model.content }}</textarea>
@@ -108,6 +104,20 @@
                             </button>
                             <button class="button" ic-click="cancel">取消</button>
                         </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="number" placeholder="提醒间隔时间(以分钟计算)"
+                                   ic-value="{{ model.interval || 45 }}" ic-form-field="interval">
+                        </div>
+                        <p class="help">提醒间隔:半小时提醒一次，还是2小时提醒一次。(以分钟计算)</p>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="number" placeholder="持续时长"
+                                   ic-value="{{ model.duration || 17 }}" ic-form-field="duration">
+                        </div>
+                        <p class="help">每次提醒持续时间，单位秒。</p>
                     </div>
                 </div>
             </div>

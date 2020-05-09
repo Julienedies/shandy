@@ -1,0 +1,17 @@
+#readerBox {
+  white-space: pre-wrap;
+
+  i {
+    font-style: normal;
+  }
+
+  .reader-readable-node-mark {
+    display: none !important;
+  }
+}
+
+[ic-ctrl=uploadTextFileCtrl] {
+  .tag {
+    cursor: pointer;
+  }
+}

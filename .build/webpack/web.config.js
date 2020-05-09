@@ -106,7 +106,7 @@ if (isPro) {
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-let whiteListedModules = ['lodash', 'jquery', '@julienedies/brick', 'echarts']
+let whiteListedModules = ['lodash', 'jquery', '@julienedies/brick', 'echarts', 'moment']
 
 const frontConfig = {
     name: 'frontend',

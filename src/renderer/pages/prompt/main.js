@@ -67,7 +67,7 @@ brick.reg('mainCtrl', function (scope) {
         clearTimeout(hideWindowTimer);
         clearInterval(scope.todoTimer);
         let handle;
-        while(handle = timerHandleArr.shift()){
+        while (handle = timerHandleArr.shift()) {
             handle.cancel();
         }
     };
@@ -78,14 +78,21 @@ brick.reg('mainCtrl', function (scope) {
         $.icMsg('已经开启提醒');
     };
 
+    function activePrompt (todoItem) {
+        currentWindow.showInactive();
+        hideWindowTimer = setTimeout(() => {
+            scope.hideWindow();
+        }, 1000 * (todoItem.duration || 17));
+        scope.emit(todoItem.type || 'prompt', todoItem);
+    }
+
     function start () {
         // 处理只执行一次的任务定时器
         todoJodb.each((todoItem) => {
             if (todoItem.disable) return;
             if (todoItem.repeat === 1 && todoItem.start) {
                 let handle = utils.timer(todoItem.start, () => {
-                    currentWindow.showInactive();
-                    scope.emit(todoItem.type || 'prompt', todoItem);
+                    activePrompt(todoItem);
                 });
                 timerHandleArr.push(handle);
             }
@@ -119,11 +126,7 @@ brick.reg('mainCtrl', function (scope) {
                             todoItem.prevPromptTime = +new Date();
                             todoJodb.set(todoItem);
                             scope.currentTodoItem = todoItem;
-                            currentWindow.showInactive();
-                            hideWindowTimer = setTimeout(() => {
-                                scope.hideWindow();
-                            }, 1000 * 17);
-                            scope.emit(todoItem.type || 'prompt', todoItem);
+                            activePrompt(todoItem);
                             over = true;  // 终止todo数组循环
                         }
                     }
@@ -190,7 +193,7 @@ brick.reg('todoListCtrl', function (scope) {
 
     scope.addTodo = function (e) {
         brick.view.to('setTodo');
-        //scope.emit('setTodo', {});
+        scope.emit('setTodo', {});
     };
 
     scope.edit = function (e, id) {
@@ -270,7 +273,6 @@ brick.reg('setTodoCtrl', function (scope) {
     };
 
     scope.on('setTodo', function (e, msg) {
-        console.log(33, msg, e);
         scope.render('setTodo', {model: msg || {}});
     });
 
