@@ -176,7 +176,7 @@ class Reader {
             Reader.setSpeechSU('pitch', val / 10)
         }).appendTo($reader)
 
-        $(document).on('click', '.reader-readable-node', function (e) {
+        $(document).on('dblclick', '.reader-readable-node', function (e) {
             let $th = $(this);
             let index;
             if ($th.hasClass('reader-readable-node-mark')) {

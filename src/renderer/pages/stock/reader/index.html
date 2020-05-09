@@ -37,7 +37,11 @@
             <div class="field is-grouped is-grouped-multiline" ic-tpl="textList">
                 <div class="control" ic-for="i,v in model">
                     <div class="tags has-addons is-small">
-                            <span class="tag is-small is-primary" ic-click="speak:{{v.id}}">
+                            <span class="tag is-small is-primary"
+                                  ic-ajax
+                                  ic-submit-method="get"
+                                  ic-submit-action="/reader/{{v.id}}"
+                                  ic-submit-on-done="onGetReaderByIdDone">
                                 {{ v.name }}
                             </span>
                         <span class="tag is-small is-delete" ic-click="remove:{{v.id}}">

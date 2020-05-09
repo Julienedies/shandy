@@ -31,7 +31,6 @@ export default {
             let item = readerJoDb.get2(id);
             let name = item.name;
             let jo = readerDb(name);
-            console.log(33, item, id, typeof id, jo.get());
             res.json(jo.get());
         } else {
             res.json(readerJoDb.get());

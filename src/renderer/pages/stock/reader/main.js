@@ -61,6 +61,11 @@ brick.reg('uploadTextFileCtrl', function (scope) {
         fileReader.readAsText(file);
     };
 
+    this.onGetReaderByIdDone = function (data) {
+        console.log(data);
+        init(data.text);
+    };
+
     this.speak = function (e, id) {
         $.ajax({
             url: `/reader/${ id }`,
