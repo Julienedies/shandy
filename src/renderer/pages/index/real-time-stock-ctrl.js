@@ -8,7 +8,7 @@ import rts from '../../../libs/real-time-stock.js'
 import _objm from '../../../libs/objm.js'
 import tdx from '../../../libs/tdx.js'
 import voice from '../../../libs/voice.js'
-import bridge from '../../../libs/e-bridge.js'
+import bridge from '../../../libs/utils.js'
 import userDb from '../../../libs/user-jo.js'
 
 import $ from 'jquery'

@@ -19,9 +19,6 @@ brick.set('render.wrapModel', true);
 
 brick.reg('uploadTextFileCtrl', function (scope) {
 
-    //const readerDb = jsonDb('reader');
-    //const readerJoDb = userJodb('reader', [], {joinType: 'push'});
-
     const reader = new Reader('#readerBox');
 
     let $readerBox = $('#readerBox');
@@ -78,6 +75,7 @@ brick.reg('uploadTextFileCtrl', function (scope) {
     };
 
     this.remove = function (e, id) {
+        if (!confirm('确认删除？')) return;
         let that = this;
         $.ajax({
             url: `/reader/${ id }`,

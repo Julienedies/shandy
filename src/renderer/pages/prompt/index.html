@@ -46,6 +46,7 @@
                     <td style="white-space: nowrap;">
                         <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
                         <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                        <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>
                         <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
                             {{ v.complete ? '完成':'进行' }}
                         </button>
@@ -103,6 +104,10 @@
                                 重置
                             </button>
                             <button class="button" ic-click="cancel">取消</button>
+                            <label style="padding:0 0 0 2em;">是否独立窗口打开? </label>
+                            <!--<input type="checkbox" class="checkbox" name="singleWindow" value="1" onclick="this.value=!!this.checked"
+                                   ic-has-checked="model.singleWindow" ic-form-field="singleWindow">-->
+                            <input type="text" name="singleWindow" value="{{ model.singleWindow }}" ic-form-field="singleWindow">
                         </div>
                     </div>
                     <div class="field">

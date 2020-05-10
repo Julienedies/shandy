@@ -24,6 +24,7 @@ const BrowserWindow = electron.remote.BrowserWindow;
 const todoJodb = userJodb('todo');
 
 let currentWindow;
+let mainWindow;
 let $body = $('body');
 let socket = io();
 
@@ -32,10 +33,12 @@ function randomBgImg () {
     // $body.css('background-image', `url("/file/random/?time=${ +new Date }")`);
 }
 
-ipc.on('id', function (event, windowID) {
-    console.log(event, windowID);
+ipc.on('windowId', function (event, windowID) {
     currentWindow = BrowserWindow.fromId(windowID);
-})
+});
+ipc.on('mainWindowId', function (event, windowID) {
+    mainWindow = windowID && BrowserWindow.fromId(windowID);
+});
 
 ipc.on('view', (e, view) => {
     brick.view.to(view);
@@ -78,12 +81,19 @@ brick.reg('mainCtrl', function (scope) {
         $.icMsg('已经开启提醒');
     };
 
+    scope.activePrompt = activePrompt;
+
     function activePrompt (todoItem) {
         currentWindow.showInactive();
         hideWindowTimer = setTimeout(() => {
             scope.hideWindow();
         }, 1000 * (todoItem.duration || 17));
         scope.emit(todoItem.type || 'prompt', todoItem);
+
+        if(todoItem.singleWindow){
+            console.log('singleWindow =>', todoItem.singleWindow);
+            mainWindow.webContents.send('openWindow', todoItem.singleWindow);
+        }
     }
 
     function start () {
@@ -203,6 +213,11 @@ brick.reg('todoListCtrl', function (scope) {
 
     scope.rm = function (e, id) {
         todoJodb.remove(id);
+    };
+
+    scope.test = function (e, id) {
+        let item = todoJodb.get2(id);
+        scope.activePrompt(item);
     };
 
     scope.complete = function (e, id, isComplete) {

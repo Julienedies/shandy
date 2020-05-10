@@ -183,5 +183,13 @@
 			"width": 1920,
 			"height": 1080
 		}
+	},
+	"stock_replay": {
+		"bounds": {
+			"x": 1440,
+			"y": 0,
+			"width": 1920,
+			"height": 1080
+		}
 	}
 }

@@ -12,17 +12,6 @@ import createReaderHtml from '../../helper/createReaderHtml'
 const readerDb = jsonDb('reader');
 const readerJoDb = userJodb('reader', [], {joinType: 'push'});
 
-function getDb () {
-    getDb.dob = getDb.dob || dobFactory('logic');
-    return getDb.dob;
-}
-
-function getData () {
-    let dob = getDb();
-    return dob.get();
-}
-
-
 export default {
 
     get (req, res) {
@@ -60,10 +49,9 @@ export default {
     },
 
     del (req, res) {
-        let dob = getDb();
         let id = req.params.id;
-        dob.remove(id);
-        res.json(getData());
+        readerJoDb.remove(id);
+        res.json(readerJoDb.get());
     },
 
 }

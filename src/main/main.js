@@ -52,6 +52,10 @@ function createWindow () {
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
+
+    mainWindow.webContents.on('did-finish-load', function () {
+        mainWindow.webContents.send('windowId', mainWindow.id);
+    });
 }
 
 function ready () {
