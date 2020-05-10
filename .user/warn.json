@@ -1,5 +1,53 @@
 [
 	{
+		"name": "周期节奏",
+		"id": "9024301",
+		"trigger": "5",
+		"content": "周期节奏是客观存在的，所以不能线性\b操作和线性仓科。尽量契合周期\b节奏。大周期是N形的。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1589104363674,
+		"disable": true
+	},
+	{
+		"name": "周期节奏",
+		"id": "1112888",
+		"trigger": "3",
+		"content": "时机就是一切；契合周期和节奏；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1588644212860
+	},
+	{
+		"name": "周期节奏",
+		"id": "1968194",
+		"trigger": "1",
+		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动时犹豫；行情退潮时管不住手；\n",
+		"timestamp": 1576715145044,
+		"disable": false,
+		"type": "interval",
+		"repeat": 3
+	},
+	{
+		"name": "周期节奏",
+		"id": "5330891",
+		"trigger": "5",
+		"content": "做转折，而不是做高潮。\n市场转折来临时，我还犹豫迷茫中。",
+		"repeat": 1,
+		"type": "interval",
+		"timestamp": 1589115436359
+	},
+	{
+		"name": "周期节奏",
+		"id": "8301544",
+		"trigger": "5",
+		"content": "主线热点定方向；博弈周期定时机；",
+		"type": "interval",
+		"timestamp": 1583662766059,
+		"disable": false,
+		"repeat": 3
+	},
+	{
 		"name": "错误",
 		"id": "6743696",
 		"trigger": "3",
@@ -15,7 +63,8 @@
 		"content": "我其实对行情性质并没有深刻理解。\n怎么可能不建错仓，不卖飞呢？",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1589025033958
+		"timestamp": 1589025033958,
+		"disable": true
 	},
 	{
 		"name": "错误",
@@ -51,7 +100,8 @@
 		"content": "我要实现两个目标：\n1.一致性的交易系统.  盈亏同源、一致性、大概率；   加入机械执行成分。\n2. 简单、纯粹、取舍、重复。\n  \n竞价买入：\n优点:  避免情绪波动，静态预判；成本低；\n缺点:  主观预判，有臆想成分，确定性低；\n缺点弥补： \n通过一组系统条件对个股进行衡量：  1. 行情模型；2. 超预期强势；  3. 股性人气；  4. 形态；  5. 盈亏比。\n先衡量大盘状态，市场氛围；\n\n打板买入:  \n优点:  确定性，避免主观臆想；跟随；\n缺点: 成本高. 容易陷入条件反射似的打板买入；",
 		"repeat": 1,
 		"type": "timer",
-		"timestamp": 1588894058371
+		"timestamp": 1588894058371,
+		"disable": true
 	},
 	{
 		"id": "5103392",
@@ -137,7 +187,7 @@
 		"timestamp": 1587208620664
 	},
 	{
-		"name": "理解力",
+		"name": "不要主观",
 		"id": "3181899",
 		"trigger": "2",
 		"content": "市场反映一切；跟随；跟随；跟随；\n不要主观臆想，一切以实际盘面为准。",
@@ -183,18 +233,9 @@
 		"repeat": 3
 	},
 	{
-		"name": "时机",
-		"id": "1112888",
-		"trigger": "3",
-		"content": "时机就是一切；契合周期和节奏；",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1588644212860
-	},
-	{
 		"name": "",
 		"id": "2884538",
-		"trigger": "3",
+		"trigger": "5",
 		"content": "择时的核心：赚钱效应",
 		"repeat": 4,
 		"type": "interval",
@@ -226,16 +267,6 @@
 		"repeat": 2,
 		"type": "interval",
 		"timestamp": 1587512749730
-	},
-	{
-		"name": "错误",
-		"id": "1968194",
-		"trigger": "3",
-		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动时犹豫；行情退潮时管不住手；\n",
-		"timestamp": 1576715145044,
-		"disable": false,
-		"type": "interval",
-		"repeat": 2
 	},
 	{
 		"name": "理解力",
@@ -514,7 +545,8 @@
 		"content": "现在是弱市，一字看强，卖出；一致看空，买入；",
 		"repeat": 1,
 		"type": "interval",
-		"timestamp": 1588823595457
+		"timestamp": 1588823595457,
+		"disable": true
 	},
 	{
 		"name": "错误",
@@ -532,15 +564,6 @@
 		"content": "贪婪、贪婪、恐惧、恐惧;\n主观、主观、无大局观、无大局观；",
 		"type": "interval",
 		"timestamp": 1581656133379,
-		"disable": true
-	},
-	{
-		"name": "",
-		"id": "8301544",
-		"trigger": "10",
-		"content": "主线热点定方向；博弈周期定时机；",
-		"type": "interval",
-		"timestamp": 1583662766059,
 		"disable": true
 	},
 	{

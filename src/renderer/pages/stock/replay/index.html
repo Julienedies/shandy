@@ -22,7 +22,7 @@
 
     <div ic-tpl="replay">
 
-        <div>我从来没有做好次日交易准备。</div>
+        <div class="box">我从来没有做好次日交易准备。</div>
 
         <div ic-form="replay" ic-init="replay=model.replay;tags=model.tags">
 
@@ -42,8 +42,8 @@
                                ic-submit-data="{{v.text}}"
                                ic-submit-method="delete"
                                ic-submit-action="/stock/tags/{{v.id}}"
-                               ic-submit-on-done="tag_remove_done"
-                            ></a>
+                               ic-submit-on-done="tag_remove_done">
+                            </a>
                         </div>
                     </div>
                     <div class="control">

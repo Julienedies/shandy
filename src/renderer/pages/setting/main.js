@@ -14,7 +14,7 @@ import '../../js/common.js'
 
 import userJodb from '../../../libs/user-jodb'
 
-import bridge from 'e-bridge'
+import bridge from '../../../libs/utils'
 
 const setting = bridge.setting();
 

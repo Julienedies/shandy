@@ -4,7 +4,7 @@
 
 import electron from 'electron'
 
-import bridge from 'e-bridge'
+import utils from '../../../libs/utils'
 import stocksManager from '../../../libs/stocks-manager.js'
 import stockUrl from '../../../libs/stockUrl.js'
 import tdx from '../../../libs/tdx.js'
@@ -83,20 +83,20 @@ brick.reg('viewStockCtrl', function (scope) {
     };
 
     scope.viewStock = function () {
-        bridge.getStockNameFromScreen().then(({code}) => {
-            bridge.openExternal(stockUrl(code, 0))
+        utils.getStockNameFromScreen().then(({code}) => {
+            utils.openExternal(stockUrl(code, 0))
         })
     };
 
     scope.go_ycj = function () {
-        bridge.getStockNameFromScreen().then(({code}) => {
-            bridge.openExternal(stockUrl(code, 7));
+        utils.getStockNameFromScreen().then(({code}) => {
+            utils.openExternal(stockUrl(code, 7));
         });
     };
 
     scope.view_in_ftnn = function () {
-        bridge.getStockNameFromScreen().then(({code}) => {
-            bridge.view_in_ftnn(code);
+        utils.getStockNameFromScreen().then(({code}) => {
+            utils.view_in_ftnn(code);
         });
     };
 

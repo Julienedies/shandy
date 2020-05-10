@@ -8,9 +8,6 @@ import '../../../css/common/common.scss'
 import './index.html'
 import $ from 'jquery'
 import brick from '@julienedies/brick'
-import '@julienedies/brick/dist/brick.css'
-
-import '../../../js/common.js'
 
 import Reader from '../../../../libs/reader'
 

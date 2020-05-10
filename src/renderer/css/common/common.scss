@@ -3,10 +3,10 @@
 @import "include/ani";
 @import "include/components";
 
-body {
+html, body {
   padding: 1px;
   color: #202020;
-  font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
+  font: 16px/1.6 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
   @media screen and (max-width: 800px) {
     font-size: 16px;
   }
@@ -100,7 +100,7 @@ a.tag, a.tag:hover {
 
 [ic-ctrl="viewerMarkTagCtrl"] {
   background: none !important;
-  transition: opacity 0ms!important;
+  transition: opacity 0ms !important;
 
   .tags .tag:not(:last-child) {
     margin-right: 0.8rem;
@@ -112,7 +112,7 @@ a.tag, a.tag:hover {
 
   .tag.is-info {
     opacity: 1;
-    transform: scale(1.1,1.1);
+    transform: scale(1.1, 1.1);
     animation: flash 1.5s infinite ease-in-out;
   }
 
