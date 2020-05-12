@@ -143,8 +143,8 @@ export default function (scope) {
     }
 
     scope.debug = function (e) {
-        let msg = JSON.stringify(warnIntervalArr, null, '\t');
-        utils.msg(msg);
+        let str = JSON.stringify(warnIntervalArr, null, '\t');
+        console.log(str);
     };
 
     // 类型分为 定时; 动作; 间隔; 三个标签

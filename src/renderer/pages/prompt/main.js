@@ -78,7 +78,7 @@ brick.reg('mainCtrl', function (scope) {
     scope.start = function (e) {
         $(this).hide().prev().show();
         start();
-        $.icMsg('已经开启提醒');
+        $.icMsg('已经开启ToDo提醒');
     };
 
     scope.restart = function () {
@@ -95,6 +95,7 @@ brick.reg('mainCtrl', function (scope) {
         }, 1000 * (todoItem.duration || 17));
         scope.emit(todoItem.type || 'prompt', todoItem);
 
+        // 打开相关的独立窗口
         if (todoItem.singleWindow) {
             console.log('singleWindow =>', todoItem.singleWindow);
             mainWindow.webContents.send('openWindow', todoItem.singleWindow);
@@ -203,7 +204,6 @@ brick.reg('todoListCtrl', function (scope) {
     function render () {
         let todoArr = todoJodb.get();
         console.log(todoArr);
-        scope.restart();
         scope.render('todoList', {model: todoArr}, function () {
             $(this).find('tr').on('dragstart', scope.dragstart)
                 .on('dragover', scope.dragover)
@@ -287,6 +287,7 @@ brick.reg('setTodoCtrl', function (scope) {
     this.save = function (fields) {
         console.log(fields);
         todoJodb.set(fields);
+        scope.restart();   // 添加或修改ToDo后重启定时提醒
         brick.view.to('todoList');
     };
 
