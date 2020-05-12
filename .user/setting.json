@@ -15,7 +15,7 @@
 			"ycj"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 148,
+		"fetchFromIndex": 152,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
 		"hotCsvFile": "/Users/j/截图/JX.txt"
@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/目标行情/2020-05",
+		"imgDir": "/Users/j/截图/交易记录/2004",
 		"bounds": {
 			"x": 1440,
 			"y": 0,
@@ -192,6 +192,14 @@
 			"y": 0,
 			"width": 1920,
 			"height": 1080
+		}
+	},
+	"true": {
+		"bounds": {
+			"x": 402,
+			"y": 198,
+			"width": 800,
+			"height": 600
 		}
 	}
 }

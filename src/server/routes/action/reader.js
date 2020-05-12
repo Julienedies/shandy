@@ -35,7 +35,8 @@ export default {
         readerJoDb.set({name});
 
         let htmlStr = '';
-        text = text.replace(/^\s+$/img, '');
+        text = text.replace(/(^\s+$){2,}/img, '<br/>');
+        text = text.replace(/\n/img,'<br/>');
         let resultArr = text.match(/[^\r.;!。；！]+(?:[.;!]|[。；！]|[\r])/img);
 
         resultArr.map((item, index) => {

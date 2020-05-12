@@ -81,7 +81,7 @@
 	},
 	{
 		"id": "新基建",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1583799511144
 	},
 	{
@@ -166,12 +166,12 @@
 	},
 	{
 		"id": "云计算",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1580910052305
 	},
 	{
 		"id": "生物疫苗",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579613298327
 	},
 	{
@@ -181,7 +181,7 @@
 	},
 	{
 		"id": "5G",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579613271519
 	},
 	{

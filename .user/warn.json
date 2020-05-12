@@ -1,9 +1,18 @@
 [
 	{
+		"name": "",
+		"id": "3720910",
+		"trigger": "1",
+		"content": "大局观；节奏；",
+		"repeat": 5,
+		"type": "interval",
+		"timestamp": 1589189458775
+	},
+	{
 		"name": "周期节奏",
 		"id": "9024301",
 		"trigger": "5",
-		"content": "周期节奏是客观存在的，所以不能线性\b操作和线性仓科。尽量契合周期\b节奏。大周期是N形的。",
+		"content": "周期节奏是客观存在的，所以不能线性\b操作。尽量契合周期\b节奏。大周期是N形的。",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1589104363674,
@@ -13,7 +22,7 @@
 		"name": "周期节奏",
 		"id": "1112888",
 		"trigger": "3",
-		"content": "时机就是一切；契合周期和节奏；",
+		"content": "时机就是一切；契合周期和节奏；\n借大盘的势；启动；转折；爆发；",
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1588644212860
@@ -21,7 +30,7 @@
 	{
 		"name": "周期节奏",
 		"id": "1968194",
-		"trigger": "1",
+		"trigger": "3",
 		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动时犹豫；行情退潮时管不住手；\n",
 		"timestamp": 1576715145044,
 		"disable": false,
@@ -134,7 +143,7 @@
 	{
 		"name": "执行力",
 		"id": "3253376",
-		"trigger": "1",
+		"trigger": "3",
 		"content": "为何我总是临盘犹豫？\n因此丧失了多少机会。",
 		"type": "interval",
 		"timestamp": 1585810908436,
@@ -143,7 +152,7 @@
 	{
 		"name": "",
 		"id": "7577249",
-		"trigger": "1",
+		"trigger": "5",
 		"content": "大局观；主线热点是什么？\n不做主线热点，你他妈做什么？做一波流的跟风杂毛吗？",
 		"repeat": 4,
 		"type": "interval",
@@ -157,7 +166,7 @@
 		"timestamp": 1577700857608,
 		"type": "interval",
 		"disable": false,
-		"repeat": 6
+		"repeat": 4
 	},
 	{
 		"name": "理念",
@@ -175,7 +184,7 @@
 		"content": "盈亏同源；一致性； 大概率；",
 		"type": "interval",
 		"timestamp": 1587011005023,
-		"repeat": 7
+		"repeat": 5
 	},
 	{
 		"name": "",
@@ -198,7 +207,7 @@
 	{
 		"name": "执行力",
 		"id": "5999793",
-		"trigger": "1",
+		"trigger": "3",
 		"content": "操作只有对错；不要想着钱；",
 		"repeat": 5,
 		"type": "interval",
@@ -246,7 +255,7 @@
 		"id": "3332057",
 		"trigger": "3",
 		"repeat": 3,
-		"content": "支撑我的交易逻辑？\n反身性；热点龙头；超预期强势； 多空博弈；",
+		"content": "支撑我的交易逻辑？\n反身性-情绪周期；热点龙头；超预期强势； 多空博弈；",
 		"type": "interval",
 		"timestamp": 1587208678720
 	},

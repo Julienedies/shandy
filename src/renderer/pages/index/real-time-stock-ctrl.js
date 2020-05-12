@@ -2,7 +2,7 @@
  * Created by j on 18/6/15.
  */
 
-import electron, { ipcRenderer } from 'electron'
+import { ipcRenderer } from 'electron'
 
 import rts from '../../../libs/real-time-stock.js'
 import _objm from '../../../libs/objm.js'
@@ -104,14 +104,14 @@ function _f (stock) {
                 console.info(time, `${ name }有破板风险`);
                 voice(code, `${ name }有破板风险`);
             } else
-            // 封单减少量超过阈值,（ 当前封单 - 上次记录的封单 = 封单减少量 ）
+                // 封单减少量超过阈值,（ 当前封单 - 上次记录的封单 = 封单减少量 ）
             if (-b1_reduce > b1_reduce_base) {
                 // 短时间大量减少（小于60秒）
                 if (time_reduce < 60) {
                     console.info(time, `${ name }: 间隔${ time_reduce }秒封单减少`);
                     voice(code, `${ name }封单急速减少`);
                 } else
-                // 撤单量超过阈值,（ 封单减少，成交量没有对应增加, 则说明是撤单）
+                    // 撤单量超过阈值,（ 封单减少，成交量没有对应增加, 则说明是撤单）
                 if (-b1_reduce - v_plus > b1_reduce_base) {
                     console.info(time, `${ name }: 大量撤单${ -b1_reduce - v_plus }手`);
                     voice(code, `${ name }大量撤单`);
@@ -120,7 +120,7 @@ function _f (stock) {
                     voice(code, `${ stock.name }封单减少`);
                 }
             } else
-            // 成交量增加量超过阈值,（ 当前成交量 - 上次记录的成交量 = 增加成交量 ）
+                // 成交量增加量超过阈值,（ 当前成交量 - 上次记录的成交量 = 增加成交量 ）
             if (v_plus > v_plus_base) {
                 voice(code, `${ name }增加成交${ v_plus }手`);
             }
@@ -217,6 +217,15 @@ window.addEventListener('beforeunload', function (e) {
     rtsJo.set('stocks', codes);
 });
 
+// 上午收盘暂时取消行情请求
+bridge.timer('11:30', () => {
+    q_rtso.pause();
+});
+
+// 下午开盘恢复行情请求
+bridge.timer('12:57', () => {
+    q_rtso.query(true);
+});
 
 // 下午3点后取消行情请求
 bridge.timer('14:57', () => {

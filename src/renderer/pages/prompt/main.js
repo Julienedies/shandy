@@ -81,6 +81,11 @@ brick.reg('mainCtrl', function (scope) {
         $.icMsg('已经开启提醒');
     };
 
+    scope.restart = function () {
+        scope.stop();
+        scope.start();
+    };
+
     scope.activePrompt = activePrompt;
 
     function activePrompt (todoItem) {
@@ -90,7 +95,7 @@ brick.reg('mainCtrl', function (scope) {
         }, 1000 * (todoItem.duration || 17));
         scope.emit(todoItem.type || 'prompt', todoItem);
 
-        if(todoItem.singleWindow){
+        if (todoItem.singleWindow) {
             console.log('singleWindow =>', todoItem.singleWindow);
             mainWindow.webContents.send('openWindow', todoItem.singleWindow);
         }
@@ -108,11 +113,16 @@ brick.reg('mainCtrl', function (scope) {
             }
         });
 
+        let currentIndex = -1;
         // 每10分钟执行一次, 检查todo列表里是否有项需要提醒 win.showInactive()
         scope.todoTimer = setInterval(() => {
             let todoArr = todoJodb.get();
+            let length = todoArr.length;
             let over = false;
             todoArr.forEach((todoItem, index) => {
+                if (index <= currentIndex) return;
+                currentIndex = index;
+                if (index === length - 1) currentIndex = -1;
                 // 每轮只执行一个提醒
                 if (over) return;
                 if (todoItem.disable) return;
@@ -193,6 +203,7 @@ brick.reg('todoListCtrl', function (scope) {
     function render () {
         let todoArr = todoJodb.get();
         console.log(todoArr);
+        scope.restart();
         scope.render('todoList', {model: todoArr}, function () {
             $(this).find('tr').on('dragstart', scope.dragstart)
                 .on('dragover', scope.dragover)
