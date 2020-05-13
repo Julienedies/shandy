@@ -473,5 +473,6 @@ brick.reg('setStockCtrl', function () {
     this.addStock = function (fields) {
         console.log(fields);
         utils.addStock(fields);
+        $.icMsg('添加成功.');
     };
 });

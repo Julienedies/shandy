@@ -32,7 +32,7 @@
                 <a class="btn-btn-default hint--bottom" aria-label="个股资料" ic-click="viewStock">
                     <span class="icon icon-book-open"></span>
                 </a>
-                <a class="btn-btn-default hint--bottom none" aria-label="添加股票" ic-popup-target="addStock">
+                <a class="btn-btn-default hint--bottom" aria-label="添加股票" ic-popup-target="addStock">
                     <span class="icon icon-plus-circled"></span>
                 </a>
             </div>
@@ -262,12 +262,12 @@
                                 <td class="pre">{{ v.content }}</td>
                                 <td>
                                     <button class="button is-primary is-small" ic-click="edit:{{ v.id }}" ic-popup-target="setWarnItem">修改</button>
-                                    <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
                                     <button class="button is-primary is-small" ic-click="up:{{ v.id }}">置顶</button>
                                     <button class="button is-primary is-small" ic-click="hear:{{ v.id }}">试听</button>
                                     <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
                                         {{ v.disable ? '启用':'禁用' }}
                                     </button>
+                                    <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
                                 </td>
                             </tr>
                         </table>

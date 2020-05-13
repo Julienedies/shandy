@@ -287,7 +287,6 @@ brick.reg('setTodoCtrl', function (scope) {
     this.save = function (fields) {
         console.log(fields);
         todoJodb.set(fields);
-        scope.restart();   // 添加或修改ToDo后重启定时提醒
         brick.view.to('todoList');
     };
 
