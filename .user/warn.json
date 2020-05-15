@@ -1,5 +1,23 @@
 [
 	{
+		"name": "动态应对",
+		"id": "7226286",
+		"trigger": "1",
+		"content": "不要主观臆想；不要先入为主；不要思维定势；\n做好预期外的应对预案；我从来都对反转的行情措手不及。",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1589523419924
+	},
+	{
+		"name": "多空博弈",
+		"id": "5354311",
+		"trigger": "1",
+		"content": "多空动态博弈；多空动态转换；\n注意盘中情绪反转；注意盘中情绪反转；\n\b否极泰来；\b否极泰来；",
+		"type": "interval",
+		"timestamp": 1580734892039,
+		"repeat": 5
+	},
+	{
 		"name": "一致性",
 		"id": "0723367",
 		"trigger": "2",
@@ -25,17 +43,18 @@
 		"content": "主线热点是什么？\n不做主线热点，你他妈做什么？做一波流的跟风杂毛吗？",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1588738028083
+		"timestamp": 1588738028083,
+		"disable": true
 	},
 	{
 		"name": "热点龙头",
 		"id": "6506825",
 		"trigger": "1",
-		"content": "热点龙头是什么？\n",
+		"content": "主线热点是方向；主线热点是方向；\n热点龙头是什么？热点龙头是什么？\n",
 		"timestamp": 1577700857608,
 		"type": "interval",
 		"disable": false,
-		"repeat": 4
+		"repeat": 3
 	},
 	{
 		"name": "控制力",
@@ -52,26 +71,17 @@
 		"id": "3934174",
 		"trigger": "1",
 		"repeat": 4,
-		"content": "简单、纯粹、取舍；\n只做龙头；只做人气；只做最强，只做主升；",
+		"content": "简单、纯粹、取舍；\n只做龙头；只做最强，只做主升；",
 		"type": "interval",
 		"timestamp": 1587208620664
 	},
 	{
 		"name": "不要主观",
 		"id": "3181899",
-		"trigger": "3",
+		"trigger": "2",
 		"content": "市场反映一切；跟随；跟随；跟随；\n不要主观臆想，一切以实际盘面为准。",
 		"timestamp": 1576725560319,
 		"type": "interval",
-		"repeat": 3
-	},
-	{
-		"name": "多空博弈",
-		"id": "5354311",
-		"trigger": "1",
-		"content": "多空动态博弈；多空动态转换；\n不要先入为主，不要思维定势；\n注意盘中情绪反转；\b否极泰来；",
-		"type": "interval",
-		"timestamp": 1580734892039,
 		"repeat": 3
 	},
 	{
@@ -81,7 +91,8 @@
 		"content": "时机就是一切；契合周期和节奏；\n借大盘的势；启动；转折；爆发；",
 		"repeat": 4,
 		"type": "interval",
-		"timestamp": 1588644212860
+		"timestamp": 1588644212860,
+		"disable": true
 	},
 	{
 		"name": "周期节奏",
@@ -120,7 +131,7 @@
 		"content": "主线热点定方向；博弈周期定时机；",
 		"type": "interval",
 		"timestamp": 1583662766059,
-		"disable": false,
+		"disable": true,
 		"repeat": 3
 	},
 	{
@@ -131,7 +142,7 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1589025594637,
-		"disable": false
+		"disable": true
 	},
 	{
 		"name": "错误",
@@ -153,13 +164,23 @@
 		"timestamp": 1588814012347
 	},
 	{
-		"name": "错误",
+		"name": "大局观",
 		"id": "8949266",
-		"trigger": "5",
-		"content": "没有大局观；对市场理解不够；对行情性质理解不够；是我做错和卖飞的根本原因。\n缺乏大局观让我短视，单纯着眼于K线的微观层面；",
+		"trigger": "2",
+		"content": "没有大局观；对市场理解不够；对行情性质理解不够；是我做错和卖飞的根本原因。\n缺乏大局观让我短视，看不到确定性；单纯着眼于K线的微观层面；",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1588940069004
+	},
+	{
+		"name": "",
+		"id": "2825927",
+		"trigger": "5",
+		"content": "天性选弱惧高；不敢上还是不敢上；",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1587351823802,
+		"disable": false
 	},
 	{
 		"name": "",
@@ -188,7 +209,8 @@
 		"content": "热点龙头主升浪；热点龙头主升浪；热点龙头主升浪；热点龙头主升浪；热点龙头主升浪；热点龙头主升浪；\n连续上冲启动浪；连续上冲启动浪；连续上冲启动浪；连续上冲启动浪；连续上冲启动浪；连续上冲启动浪；\n连续上冲爆发浪；连续上冲爆发浪；连续上冲爆发浪；连续上冲爆发浪；连续上冲爆发浪；连续上冲爆发浪；\n连续上冲反转浪；连续上冲反转浪；连续上冲反转浪；连续上冲反转浪；连续上冲反转浪；连续上冲反转浪；\n多空博弈反转浪；多空博弈反转浪；多空博弈反转浪；多空博弈反转浪；多空博弈反转浪；多空博弈反转浪；\n趋势起跳爆发浪；趋势起跳爆发浪；趋势起跳爆发浪；趋势起跳爆发浪；趋势起跳爆发浪；趋势起跳爆发浪；\n趋势浪；趋势浪；趋势浪；N形浪；N形浪；N形浪；V形浪；V形浪；V形浪；旗形浪；旗形浪；旗形浪；",
 		"repeat": 5,
 		"type": "timer",
-		"timestamp": 1588841899326
+		"timestamp": 1588841899326,
+		"disable": true
 	},
 	{
 		"name": "执行力",
@@ -197,7 +219,8 @@
 		"content": "为何我总是临盘犹豫？\n因此丧失了多少机会。",
 		"type": "interval",
 		"timestamp": 1585810908436,
-		"repeat": 4
+		"repeat": 4,
+		"disable": true
 	},
 	{
 		"name": "一致性",
@@ -206,7 +229,8 @@
 		"content": "操作只有对错；不要让盈亏影响操作；",
 		"repeat": 5,
 		"type": "interval",
-		"timestamp": 1588258417721
+		"timestamp": 1588258417721,
+		"disable": true
 	},
 	{
 		"name": "系统条件",
@@ -215,7 +239,8 @@
 		"content": "行情性质；超预期强势；股性人气；形态；盈亏比;  ",
 		"repeat": 4,
 		"type": "interval",
-		"timestamp": 1588084459651
+		"timestamp": 1588084459651,
+		"disable": true
 	},
 	{
 		"name": "理念",
@@ -274,7 +299,8 @@
 		"content": "忘掉每一次交易的盈亏。\n你的交易应该是按照你的系统来的，而不是随着情绪买入或者卖出",
 		"repeat": 2,
 		"type": "interval",
-		"timestamp": 1587512749730
+		"timestamp": 1587512749730,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -285,16 +311,6 @@
 		"type": "interval",
 		"timestamp": 1587912146764,
 		"disable": true
-	},
-	{
-		"name": "",
-		"id": "2825927",
-		"trigger": "5",
-		"content": "天性选弱惧高；不敢上还是不敢上；",
-		"repeat": 2,
-		"type": "interval",
-		"timestamp": 1587351823802,
-		"disable": false
 	},
 	{
 		"name": "",
@@ -353,7 +369,8 @@
 		"content": "热点龙头主升浪；\b\n烂板上冲弱转强；\n连续上冲启动浪；\n多空博弈反转浪；",
 		"type": "interval",
 		"timestamp": 1584792500874,
-		"repeat": 1
+		"repeat": 1,
+		"disable": true
 	},
 	{
 		"name": "临盘犹豫",

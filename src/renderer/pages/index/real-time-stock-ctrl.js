@@ -159,7 +159,7 @@ function _add (code) {
 
 function _remove (code) {
     q_rtso.remove(code);
-    voice.remove(code);
+    voice.cancel(code);
     prev_objm.remove(code);
     first_objm.remove(code);
     $rts_list.icRender([]);

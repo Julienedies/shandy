@@ -54,7 +54,7 @@ function voice (sign, text, cb) {
     // 有sign，表示优先级高，加入队列头部
     if (sign) {
         q.unshift(item);
-        //speechSynthesis.cancel();
+        speechSynthesis.cancel();
     } else {
         q.push(item);
     }
@@ -65,24 +65,23 @@ function voice (sign, text, cb) {
 }
 
 voice.remove = function (sign) {
-    //speechSynthesis.cancel();
-    isEnd = true;
     q.forEach(function (v, i) {
         if (v.sign === sign) {
             console.log('删除', sign, v.text);
             q.splice(i, 1);
         }
     });
+    isEnd = true;
 };
 
 voice.clear = voice.cancel = function (sign) {
     speechSynthesis.cancel();
-    isEnd = true;
     if (sign) {
         voice.remove(sign);
     } else {
         q = [];
     }
+    isEnd = true;
 };
 
 voice.pause = function () {

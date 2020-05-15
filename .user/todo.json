@@ -13,18 +13,32 @@
 		"disable": true
 	},
 	{
+		"name": "日程",
+		"id": "3739357",
+		"type": "",
+		"start": "17:00",
+		"interval": 45,
+		"repeat": 9,
+		"content": "做烂板上冲、连续上冲假设推演；热点龙头走势的低吸追涨预案。\n弱转强；分歧转一致；\n我从来都对预期外的反转措手不及。",
+		"timestamp": 1586779488900,
+		"singleWindow": "",
+		"duration": 17,
+		"promptTimes": 8,
+		"prevPromptTime": 1589554256836
+	},
+	{
 		"name": "",
 		"id": "2006005",
 		"type": "",
-		"start": "9:30",
+		"start": "15:30",
 		"interval": 45,
 		"repeat": 7,
-		"content": "我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；\n我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。  ======  怎么解决？怎么解决？怎么解决？\n\n我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。     ========   怎么解决？怎么解决？怎么解决？\n\n分仓竞价买入； 市场反映一切； 概率优势；\n\n",
+		"content": "我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；\n我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。  ======  怎么解决？怎么解决？怎么解决？\n\n我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。     ========   怎么解决？怎么解决？怎么解决？\n\n分仓竞价买入； 市场反映一切； 概率优势；\n\n我最初想到竞价系统是为了低点买入，降低成本。\n\n",
 		"timestamp": 1588771295970,
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 7,
-		"prevPromptTime": 1589351854188
+		"prevPromptTime": 1589545762175
 	},
 	{
 		"name": "",
@@ -38,7 +52,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 5,
-		"prevPromptTime": 1589371341513
+		"prevPromptTime": 1589543963563
 	},
 	{
 		"name": "",
@@ -52,7 +66,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 5,
-		"prevPromptTime": 1589376734174
+		"prevPromptTime": 1589544562691
 	},
 	{
 		"name": "",
@@ -66,7 +80,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 5,
-		"prevPromptTime": 1589377334151
+		"prevPromptTime": 1589546363195
 	},
 	{
 		"name": "",
@@ -80,7 +94,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1589369541575
+		"prevPromptTime": 1589532989355
 	},
 	{
 		"name": "",
@@ -94,7 +108,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 5,
-		"prevPromptTime": 1589382140965
+		"prevPromptTime": 1589555478139
 	},
 	{
 		"name": "",
@@ -107,8 +121,8 @@
 		"timestamp": 1588392788941,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 6,
-		"prevPromptTime": 1589384540390
+		"promptTimes": 5,
+		"prevPromptTime": 1589553559633
 	},
 	{
 		"name": "",
@@ -121,8 +135,8 @@
 		"timestamp": 1588581474642,
 		"duration": 17,
 		"singleWindow": "",
-		"promptTimes": 4,
-		"prevPromptTime": 1589383933916
+		"promptTimes": 2,
+		"prevPromptTime": 1589552961632
 	},
 	{
 		"name": "",
@@ -136,7 +150,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1589380341070
+		"prevPromptTime": 1589554803667
 	},
 	{
 		"name": "",
@@ -149,8 +163,8 @@
 		"timestamp": 1588237081098,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 3,
-		"prevPromptTime": 1589383333942
+		"promptTimes": 2,
+		"prevPromptTime": 1589554316834
 	},
 	{
 		"name": "",
@@ -163,8 +177,8 @@
 		"timestamp": 1587135535525,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1589385138989
+		"promptTimes": 1,
+		"prevPromptTime": 1589552360332
 	},
 	{
 		"name": "",
@@ -178,7 +192,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1589382733967
+		"prevPromptTime": 1589554376833
 	},
 	{
 		"name": "",
@@ -216,7 +230,9 @@
 		"content": "怎么尽快确定日内热点是什么？\n优化竞价强1，\n优化上冲选股： 添加竞价强 和 新高条件；\n向上趋势条件优化；",
 		"timestamp": 1582294062908,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1589554436832
 	},
 	{
 		"name": "",
@@ -224,11 +240,13 @@
 		"type": "",
 		"start": "15:00",
 		"interval": 60,
-		"repeat": 4,
-		"content": "通达信公式 趋势向上；\n添加 高位 盈亏比 风险提示；",
+		"repeat": 5,
+		"content": "优化 通达信公式 趋势向上；\n添加 高位 盈亏比 风险提示；\n排除未开板次新；",
 		"timestamp": 1579495236987,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1589554496830
 	},
 	{
 		"name": "",
@@ -240,7 +258,9 @@
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
 		"timestamp": 1581084979181,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1589554595237
 	},
 	{
 		"name": "",
@@ -290,7 +310,9 @@
 		"interval": 60,
 		"repeat": 7,
 		"content": "查看财联社新闻",
-		"timestamp": 1577862818798
+		"timestamp": 1577862818798,
+		"promptTimes": 1,
+		"prevPromptTime": 1589554655234
 	},
 	{
 		"name": "日程",
@@ -302,7 +324,9 @@
 		"content": "根据目标行情类型，设置持仓条件单！\n止损；\n低开处理；\n止盈处理；\n",
 		"timestamp": 1584416255440,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1589554715236
 	},
 	{
 		"name": "日程",
@@ -312,19 +336,23 @@
 		"interval": 45,
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
-		"timestamp": 1577697423900
+		"timestamp": 1577697423900,
+		"promptTimes": 1,
+		"prevPromptTime": 1589554863674
 	},
 	{
 		"name": "日程",
 		"id": "0327544",
 		"type": "",
-		"start": "19:00",
+		"start": "15:00",
 		"interval": 45,
-		"repeat": 5,
-		"content": "复盘：\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜\n过滤上冲; 上冲意味着进攻信号；\n过滤破板\n要过一遍涨停池；旗形涨停值得关注；                          ",
+		"repeat": 9,
+		"content": "复盘：\n资金在哪个方向？  机构资金在哪里？  热钱资金在哪里？ 趋势资金在哪里？  短线资金在哪里？\n--------------------\n查看板块指数\n查看成交额最大的个股\n查看龙虎榜\n\n次日推演；\n----------------\n\n过滤上冲; 上冲意味着进攻信号；\n过滤破板\n要过一遍涨停池；旗形涨停值得关注；                          ",
 		"timestamp": 1577964389066,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1589554925642
 	},
 	{
 		"name": "日程",
@@ -336,7 +364,9 @@
 		"content": "每天更新自选股票池。\n加入: 启动、 爆发、 转折、 超强势的人气龙头股；\n移除：趋弱的个股；\n记住我做的是超短。",
 		"timestamp": 1582429000702,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1589554985588
 	},
 	{
 		"name": "日程",
@@ -348,19 +378,9 @@
 		"content": "做好次日的交易计划。我从来没有做好次日的交易计划。既无预判，更无应对。\n\n大盘会涨会跌？大盘处在何种阶段？哪里有机会？ 哪里有风险？ 方向：机构蓝筹趋势？  热钱情绪题材?\n---------------------------------------------------------------\n热点龙头个股会涨会跌？  能追涨吗？  能低吸吗？  盈亏比几何？\n---------------------------------------------------------------\n\n主线是什么？ 龙头是什么？ 市场人心是怎么样的？  没有大局观；\n我只是看了当前K线，次日会有什么走势完全没有思考，完全是盘中临时应对。所以临盘犹豫，总是错失机会\n\n只会机械追涨吗？ 如果对市场对个股行情性质深刻理解的话，低吸，追涨都是可以做的。\n--------------------------------------------------------------------------------------",
 		"timestamp": 1580821790410,
 		"duration": 34,
-		"singleWindow": "stock_replay"
-	},
-	{
-		"name": "日程",
-		"id": "3739357",
-		"type": "",
-		"start": "20:00",
-		"interval": 60,
-		"repeat": 5,
-		"content": "做烂板上冲、连续上冲假设推演；",
-		"timestamp": 1586779488900,
-		"singleWindow": "",
-		"duration": 17
+		"singleWindow": "stock_replay",
+		"promptTimes": 1,
+		"prevPromptTime": 1589555237285
 	},
 	{
 		"name": "日程",
@@ -371,7 +391,9 @@
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
 		"type": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1589555297287
 	},
 	{
 		"name": "日程",
@@ -382,7 +404,9 @@
 		"repeat": 5,
 		"content": "更新csd。",
 		"timestamp": 1577862911294,
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1589555357285
 	},
 	{
 		"name": "日程",
@@ -394,7 +418,9 @@
 		"content": "在 JN  里 跑一遍 竞价强2 选股；",
 		"timestamp": 1587008893339,
 		"duration": 17,
-		"singleWindow": ""
+		"singleWindow": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1589555538151
 	},
 	{
 		"name": "",
@@ -406,6 +432,8 @@
 		"content": "一切有为法；一切有因果；\n不要忘记那些恐惧和痛苦；\n时不我待，我已经37岁了；",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1589555599671
 	}
 ]

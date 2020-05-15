@@ -328,7 +328,7 @@ brick.reg('mainCtrl', function (scope) {
             }
             // opt.frame = !!isFrame;
             promptWindow = scope.promptWindow = new Win(opt);
-            //promptWindow.maximize();
+            promptWindow.maximize();
             //promptWindow.win.setIgnoreMouseEvents(true);
             promptWindow.win.webContents.on('did-finish-load', function () {
                 promptWindow.win.webContents.send('windowId', promptWindow.win.id);

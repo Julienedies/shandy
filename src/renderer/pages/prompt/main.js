@@ -120,10 +120,13 @@ brick.reg('mainCtrl', function (scope) {
             let todoArr = todoJodb.get();
             let length = todoArr.length;
             let over = false;
+
+            currentIndex += 1;
+            if (currentIndex === length - 1) currentIndex = -1;
+
             todoArr.forEach((todoItem, index) => {
-                if (index <= currentIndex) return;
-                currentIndex = index;
-                if (index === length - 1) currentIndex = -1;
+                if (index < currentIndex) return;
+                console.log('todo =>', index, currentIndex);
                 // 每轮只执行一个提醒
                 if (over) return;
                 if (todoItem.disable) return;
@@ -285,7 +288,7 @@ brick.reg('todoListCtrl', function (scope) {
 brick.reg('setTodoCtrl', function (scope) {
 
     this.save = function (fields) {
-        console.log(fields);
+        //console.log(fields);
         todoJodb.set(fields);
         brick.view.to('todoList');
     };
@@ -337,14 +340,14 @@ brick.reg('planCtrl', function (scope) {
     $.get({
         url: '/stock/replay'
     }).done((data) => {
-        console.info(data);
+        //console.info(data);
         scope.render('replay', {model: data.replay});
     });
 
     $.get({
         url: '/stock/plan'
     }).done((data) => {
-        console.info(data);
+        //console.info(data);
         data.plans && data.plans.length && scope.render('plans', {model: data.plans});
     });
 
