@@ -186,7 +186,7 @@ brick.reg('mainCtrl', function (scope) {
     // 每天早上开启时，清除昨天的提醒数据,重新开始
     (function () {
         let hour = moment().hour();
-        if (hour < 9) {
+        if (hour < 10) {
             todoJodb.each((todoItem) => {
                 delete todoItem.complete;
                 delete todoItem.promptTimes;

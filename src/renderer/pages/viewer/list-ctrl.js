@@ -34,6 +34,9 @@ export default function (scope) {
         }
 
         $info.text('\r\n' + imgObj.f);
+
+        brick.emit('viewer-markTag', scope.viewerCurrentImg);
+        $('[ic-popup="viewerMarkTag"]').icPopup(true);
     };
 
     scope.editImg = () => {

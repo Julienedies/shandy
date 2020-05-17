@@ -2,14 +2,19 @@ a.no {
   text-decoration: none !important;
 }
 
-.notification div.pre{
+.notification div.pre {
+  max-height: 32em;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  &.scroll {
+    overflow-y: scroll;
+  }
 }
 
-.tags .input{
-  width:10em!important;
-  max-width: 10em!important;
+.tags .input {
+  width: 10em !important;
+  max-width: 10em !important;
   height: 2em;
   margin-top: -7px;
 }

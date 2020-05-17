@@ -50,7 +50,7 @@
 
     <ul ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
-            <div class="pre" style="max-height: 32em;">{{v.text}}</div>
+            <div class="pre">{{v.text}}</div>
             <div class="tar">
                 <span class="tag is-primary" ic-if="v.type" ic-for="k,j in v.type">{{j || ''}}</span>&nbsp;&nbsp;&nbsp;
                 <span class="tag is-info" ic-if="v.note">{{v.note || ''}}</span>&nbsp;&nbsp;&nbsp;

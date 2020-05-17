@@ -104,13 +104,14 @@ brick.reg('logicCtrl', function () {
     };
 
     this.toggleText = function (e) {
-        let cla = 'isx';
+        let cla = 'scroll';
         let $th = $(this).toggleClass(cla);
-        if($th.hasClass(cla)){
+        $th.closest('li').find('.pre').toggleClass(cla);
+/*        if($th.hasClass(cla)){
             $th.closest('li').find('.pre').css('max-height', 'none');
         }else{
             $th.closest('li').find('.pre').css('max-height', '32em');
-        }
+        }*/
 
     };
 

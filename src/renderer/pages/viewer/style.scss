@@ -7,6 +7,7 @@
 
 #ic-viewer-box-wrap img {
   margin-top: -35px;
+
 }
 
 #ic-viewer-box-wrap {
@@ -20,6 +21,15 @@
   line-height: 2;
   padding: 10px 0 40px 0;
   background: rgba(0, 0, 0, 0.2) !important;
+}
+
+#ic-viewer-info, #ic-viewer-handle {
+  text-align: right !important;
+  padding-right: 20%!important;
+}
+
+#ic-viewer-handle {
+  padding-right: 30%!important;
 }
 
 .wrap {

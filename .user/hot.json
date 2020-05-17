@@ -1,5 +1,10 @@
 [
 	{
+		"id": "新股与次新股",
+		"selected": true,
+		"timestamp": 1589699376910
+	},
+	{
 		"id": "大消费",
 		"selected": false,
 		"timestamp": 1589417273308
@@ -96,7 +101,7 @@
 	},
 	{
 		"id": "新基建",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1583799511144
 	},
 	{
@@ -196,7 +201,7 @@
 	},
 	{
 		"id": "5G",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579613271519
 	},
 	{
@@ -231,7 +236,7 @@
 	},
 	{
 		"id": "华为概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579097304988
 	},
 	{
@@ -266,7 +271,7 @@
 	},
 	{
 		"id": "网红经济",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303652
 	}
 ]

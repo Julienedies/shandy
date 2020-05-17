@@ -51,7 +51,7 @@ brick.reg('mainCtrl', function (scope) {
 
     let tagsMap = {};
     tagsJodb.each((item) => {
-        tagsMap[item.id] = item.text;
+        tagsMap[item.id] = item;
     });
 
     scope.reload = function (e) {
