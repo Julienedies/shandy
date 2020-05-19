@@ -1,5 +1,11 @@
 [
 	{
+		"text": "来来来,全源码 剔除ST,停牌,未开板新股,首日上市新股,科创板个股\n\nZQ:=BARSCOUNT(C);\nYZ:=C=ZTPRICE(REF(C,1),0.1) AND L=H;\nXG:=(EVERY(YZ,ZQ) OR ZQ=1);\nNOT(XG OR NAMELIKE('ST') OR NAMELIKE('*ST') OR NAMELIKE('S')\nOR DYNAINFO(4)=0 OR INBLOCK('科创板'));",
+		"type": "",
+		"id": "6382804",
+		"timestamp": 1589722851522
+	},
+	{
 		"id": "9382096",
 		"type": "",
 		"level": "0",

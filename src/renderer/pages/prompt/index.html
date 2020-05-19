@@ -46,6 +46,7 @@
                     <td style="white-space: nowrap;">
                         <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
                         <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                        <button class="button is-primary is-small" ic-click="focus:{{ v.id }}">置顶</button>
                         <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>
                         <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
                             {{ v.complete ? '完成':'进行' }}
@@ -150,6 +151,9 @@
                         </button>
                         <button class="button is-primary" ic-view-to="todoList">
                             返回
+                        </button>
+                        <button class="button is-primary" ic-click="edit">
+                            编辑
                         </button>
                         <button class="button is-primary" ic-click="complete">
                             完成

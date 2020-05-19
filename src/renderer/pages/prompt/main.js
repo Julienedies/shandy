@@ -216,17 +216,20 @@ brick.reg('todoListCtrl', function (scope) {
     }
 
     scope.addTodo = function (e) {
-        brick.view.to('setTodo');
         scope.emit('setTodo', {});
     };
 
     scope.edit = function (e, id) {
-        brick.view.to('setTodo');
         scope.emit('setTodo', todoJodb.get2(id));
     };
 
     scope.rm = function (e, id) {
         todoJodb.remove(id);
+    };
+
+    // 置顶
+    scope.focus = function (e, id) {
+        todoJodb.insert(id);
     };
 
     scope.test = function (e, id) {
@@ -302,6 +305,7 @@ brick.reg('setTodoCtrl', function (scope) {
     };
 
     scope.on('setTodo', function (e, msg) {
+        brick.view.to('setTodo');
         scope.render('setTodo', {model: msg || {}});
     });
 
@@ -311,10 +315,16 @@ brick.reg('setTodoCtrl', function (scope) {
 brick.reg('promptCtrl', function () {
 
     const scope = this;
+    let _todoItem = null;
     let $todoContent = scope.$elm.find('#todoContent');
+
+    scope.edit = function (e) {
+        scope.emit('setTodo', _todoItem);
+    };
 
     scope.on('prompt', function (e, todoItem) {
         brick.view.to('prompt');
+        _todoItem = todoItem
         $todoContent.text(todoItem.content);
     });
 

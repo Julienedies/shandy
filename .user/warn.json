@@ -1,12 +1,21 @@
 [
 	{
-		"name": "大局观",
-		"id": "1878180",
-		"trigger": "5",
-		"content": "市场氛围、人气是第一要素；大环境；\n主线热点是方向；",
-		"repeat": 1,
+		"name": "动态应对",
+		"id": "1656099",
+		"trigger": "2",
+		"content": "你他妈的要用脑子看盘，而不是傻乎乎的看着。\n你要思考推演，而不是被动应对。\n你他妈的要找好标的呀。",
+		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1589703738474
+		"timestamp": 1589868775336
+	},
+	{
+		"name": "动态博弈",
+		"id": "5354311",
+		"trigger": "1",
+		"content": "多空动态博弈；多空动态转换；\n注意盘中情绪反转；注意盘中情绪反转；\n不要他妈的只是傻乎乎看着；要做好推演和准备。\n\b否极泰来；\b否极泰来；",
+		"type": "interval",
+		"timestamp": 1580734892039,
+		"repeat": 5
 	},
 	{
 		"name": "控制力",
@@ -31,34 +40,25 @@
 		"name": "准备预案",
 		"id": "7226286",
 		"trigger": "1",
-		"content": "不要主观臆想；不要先入为主；不要思维定势；\n做好预期外的应对预案；我从来都对反转的行情措手不及。",
-		"repeat": 3,
+		"content": "绝不要被以前的经验\b束缚。股市是动态走出来的，实际上是博弈出来的。理解这一点很重要。\n不要主观臆想；不要先入为主；不要思维定势；\n做好预期外的应对预案；我从来都对反转的行情措手不及。\n",
+		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1589523419924
 	},
 	{
 		"name": "不要主观",
 		"id": "3181899",
-		"trigger": "2",
+		"trigger": "3",
 		"content": "市场反映一切；跟随；跟随；跟随；\n不要主观臆想，一切以实际盘面为准。",
 		"timestamp": 1576725560319,
 		"type": "interval",
 		"repeat": 3
 	},
 	{
-		"name": "动态博弈",
-		"id": "5354311",
-		"trigger": "1",
-		"content": "多空动态博弈；多空动态转换；\n注意盘中情绪反转；注意盘中情绪反转；\n\b否极泰来；\b否极泰来；",
-		"type": "interval",
-		"timestamp": 1580734892039,
-		"repeat": 5
-	},
-	{
 		"name": "一致性",
 		"id": "0723367",
-		"trigger": "2",
-		"content": "盈亏同源；一致性； 大概率；\n交易只有对错，盈亏交给市场；",
+		"trigger": "3",
+		"content": "概率；概率；概率；\n盈亏同源；一致性； 大概率；\n交易只有对错，盈亏交给市场；",
 		"type": "interval",
 		"timestamp": 1587011005023,
 		"repeat": 4
@@ -66,7 +66,7 @@
 	{
 		"name": "一致性",
 		"id": "6384511",
-		"trigger": "3",
+		"trigger": "5",
 		"content": "保持交易一致性；\n不要让上次的操作影响你下次的情绪。\n不要以上次交易结果做为下次交易逻辑。",
 		"repeat": 3,
 		"type": "interval",
@@ -74,34 +74,23 @@
 		"disable": false
 	},
 	{
-		"name": "主线热点",
-		"id": "7577249",
-		"trigger": "5",
-		"content": "主线热点是什么？\n不做主线热点，你他妈做什么？做一波流的跟风杂毛吗？",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1588738028083,
-		"disable": true
-	},
-	{
 		"name": "热点龙头",
 		"id": "6506825",
 		"trigger": "1",
-		"content": "主线热点是方向；主线热点是方向；\n热点龙头是什么？热点龙头是什么？\n",
+		"content": "主线热点是方向；\n热点龙头是什么？热点龙头是什么？\n你脑子在想什么？你他妈的要准备好标的呀！\n",
 		"timestamp": 1577700857608,
 		"type": "interval",
 		"disable": false,
-		"repeat": 3
+		"repeat": 4
 	},
 	{
-		"name": "周期节奏",
-		"id": "1112888",
+		"name": "大局观",
+		"id": "8949266",
 		"trigger": "5",
-		"content": "时机就是一切；契合周期和节奏；\n借大盘的势；启动；转折；爆发；",
-		"repeat": 4,
+		"content": "单纯着眼于K线的微观层面；没有大局观；\n对市场理解不够；对行情性质理解不够；是我做错和卖飞的根本原因。\n缺乏大局观让我短视，看不到确定性；",
+		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1588644212860,
-		"disable": true
+		"timestamp": 1588940069004
 	},
 	{
 		"name": "周期节奏",
@@ -114,13 +103,32 @@
 		"repeat": 3
 	},
 	{
-		"name": "周期节奏",
-		"id": "9024301",
-		"trigger": "5",
-		"content": "周期节奏是客观存在的，所以不能线性\b操作。尽量契合周期\b节奏。大周期是N形的。",
+		"name": "",
+		"id": "8502730",
+		"trigger": "10",
+		"content": "我为何总是错失大行情，抓不住机会？\n没有大局观；看不到确定性；\n行情启动时犹豫；行情退潮时管不住手；",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1589104363674,
+		"timestamp": 1588814012347
+	},
+	{
+		"name": "",
+		"id": "2825927",
+		"trigger": "5",
+		"content": "天性选弱惧高；不敢上还是不敢上；",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1587351823802,
+		"disable": false
+	},
+	{
+		"name": "周期节奏",
+		"id": "1112888",
+		"trigger": "5",
+		"content": "时机就是一切；契合周期和节奏；\n借大盘的势；启动；转折；爆发；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1588644212860,
 		"disable": true
 	},
 	{
@@ -144,13 +152,14 @@
 		"repeat": 3
 	},
 	{
-		"name": "大局观",
-		"id": "8949266",
-		"trigger": "2",
-		"content": "没有大局观；对市场理解不够；对行情性质理解不够；是我做错和卖飞的根本原因。\n缺乏大局观让我短视，看不到确定性；单纯着眼于K线的微观层面；",
+		"name": "主线热点",
+		"id": "7577249",
+		"trigger": "5",
+		"content": "主线热点是什么？\n不做主线热点，你他妈做什么？做一波流的跟风杂毛吗？",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1588940069004
+		"timestamp": 1588738028083,
+		"disable": true
 	},
 	{
 		"name": "错误",
@@ -160,6 +169,16 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1589025594637,
+		"disable": true
+	},
+	{
+		"name": "周期节奏",
+		"id": "9024301",
+		"trigger": "5",
+		"content": "周期节奏是客观存在的，所以不能线性\b操作。尽量契合周期\b节奏。大周期是N形的。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1589104363674,
 		"disable": true
 	},
 	{
@@ -173,23 +192,14 @@
 		"disable": true
 	},
 	{
-		"name": "",
-		"id": "8502730",
-		"trigger": "10",
-		"content": "我为何总是错失大行情，抓不住机会？\n没有大局观；看不到确定性；\n行情启动时犹豫；行情退潮时管不住手；",
-		"repeat": 3,
+		"name": "大局观",
+		"id": "1878180",
+		"trigger": "20",
+		"content": "市场氛围、人气是第一要素；大环境；\n主线热点是方向；",
+		"repeat": 1,
 		"type": "interval",
-		"timestamp": 1588814012347
-	},
-	{
-		"name": "",
-		"id": "2825927",
-		"trigger": "5",
-		"content": "天性选弱惧高；不敢上还是不敢上；",
-		"repeat": 2,
-		"type": "interval",
-		"timestamp": 1587351823802,
-		"disable": false
+		"timestamp": 1589703738474,
+		"disable": true
 	},
 	{
 		"name": "",
