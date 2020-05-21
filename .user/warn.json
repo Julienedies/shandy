@@ -1,10 +1,50 @@
 [
 	{
+		"name": "",
+		"id": "1956564",
+		"trigger": "15",
+		"content": "超预期强势，可能是市场情绪反转的信号；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1590019657723,
+		"disable": true
+	},
+	{
+		"name": "",
+		"id": "9135972",
+		"trigger": "3",
+		"content": "多空动态博弈；动态应对；\n市场心理决定收益和风险；\n资金类型决定行情类型；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1590017494660,
+		"disable": true
+	},
+	{
+		"name": "原则",
+		"id": "5610482",
+		"trigger": "5",
+		"content": "把事情做对，而不是想着钱。",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1589969333190,
+		"disable": true
+	},
+	{
+		"name": "",
+		"id": "5625292",
+		"trigger": "3",
+		"content": "我从来都没有明确的操作计划，只会临盘被动应对；所以优柔寡断；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1589931645617,
+		"disable": true
+	},
+	{
 		"name": "动态应对",
 		"id": "1656099",
 		"trigger": "2",
-		"content": "你他妈的要用脑子看盘，而不是傻乎乎的看着。\n你要思考推演，而不是被动应对。\n你他妈的要找好标的呀。",
-		"repeat": 3,
+		"content": "你要用脑子看盘，而不是只会傻乎乎的看着，被动应对。\n你要主动思考推演，准备好标的和如何操作。\n热点龙头？\n做转折？做弱转强？做分歧转一致？",
+		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1589868775336
 	},
@@ -77,7 +117,7 @@
 		"name": "热点龙头",
 		"id": "6506825",
 		"trigger": "1",
-		"content": "主线热点是方向；\n热点龙头是什么？热点龙头是什么？\n你脑子在想什么？你他妈的要准备好标的呀！\n",
+		"content": "主线热点是方向；\n热点龙头是什么？热点龙头是什么？\n寻找介入时机；\n",
 		"timestamp": 1577700857608,
 		"type": "interval",
 		"disable": false,

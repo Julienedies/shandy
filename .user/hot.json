@@ -101,7 +101,7 @@
 	},
 	{
 		"id": "新基建",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1583799511144
 	},
 	{
@@ -186,7 +186,7 @@
 	},
 	{
 		"id": "云计算",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1580910052305
 	},
 	{
@@ -256,12 +256,12 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928807285
 	},
 	{
 		"id": "锂电池",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303654
 	},
 	{
