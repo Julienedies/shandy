@@ -8,13 +8,13 @@ import rts from '../../../libs/real-time-stock.js'
 import _objm from '../../../libs/objm.js'
 import tdx from '../../../libs/tdx.js'
 import voice from '../../../libs/voice.js'
-import bridge from '../../../libs/utils.js'
+import utils from '../../../libs/utils.js'
 import userDb from '../../../libs/user-jo.js'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 
-const rtsJo = userDb('rts')
+const rtsJo = userDb('rts');
 
 let prev_objm = window.prev_objm = _objm();
 let first_objm = window.first_objm = _objm();
@@ -150,6 +150,31 @@ function _f (stock) {
     }
 }
 
+function init () {
+    if (utils.isTrading()) {
+        let codes = rtsJo.get('stocks') || [];
+        codes.length && q_rtso.add(codes);
+
+        // 上午收盘暂时取消行情请求
+        utils.timer('11:30', () => {
+            q_rtso.pause();
+        });
+
+        // 下午开盘恢复行情请求
+        utils.timer('12:57', () => {
+            q_rtso.query(true);
+        });
+
+        // 下午3点后取消行情请求
+        utils.timer('14:57', () => {
+            q_rtso.pause();
+            prev_objm.clear();
+            //rtsJo.set('stocks', []);
+        });
+    }
+
+}
+
 function _add (code) {
     voice.remove(code);
     prev_objm.remove(code);
@@ -205,36 +230,17 @@ brick.reg('rts_ctrl', function (scope) {
     scope.reset = function () {
     };
 
-    // --------------------------------------------
-    let codes = rtsJo.get('stocks') || [];
-    codes.length && q_rtso.add(codes);
+    init();
 });
 
 
 window.addEventListener('beforeunload', function (e) {
     let obj = prev_objm.get();
     let codes = Object.keys(obj);
-    rtsJo.set('stocks', codes);
+    rtsJo.merge('stocks', codes);
 });
 
-// 上午收盘暂时取消行情请求
-bridge.timer('11:30', () => {
-    q_rtso.pause();
-});
 
-// 下午开盘恢复行情请求
-bridge.timer('12:57', () => {
-    q_rtso.query(true);
-});
-
-// 下午3点后取消行情请求
-bridge.timer('14:57', () => {
-    q_rtso.pause();
-    prev_objm.clear();
-    //rtsJo.set('stocks', []);
-});
-
-//
 export default {
     on_rts_db_monitor: function (stock) {
         let code = stock.code;

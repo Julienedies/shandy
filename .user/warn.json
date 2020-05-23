@@ -1,5 +1,82 @@
 [
 	{
+		"name": "明确目标行情和性质",
+		"id": "6743696",
+		"trigger": "5",
+		"content": "不要做自己不懂的行情。\n行情类型都不懂，你凭什么赚到钱？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1589025594637,
+		"disable": true
+	},
+	{
+		"name": "明确目标行情和性质",
+		"id": "3512166",
+		"trigger": "1",
+		"content": "我要捕捉的目标行情是什么？我要捕捉的目标行情是什么？\n这是第一件事，也是最重要的事。\n",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1590217773437
+	},
+	{
+		"name": "浑浑噩噩、被动",
+		"id": "7226286",
+		"trigger": "2",
+		"content": "绝不要被以前的经验\b束缚。股市是动态走出来的，实际上是博弈出来的。理解这一点很重要。\n不要主观臆想；不要先入为主；不要思维定势；\n做好预期外的应对预案；我从来都对反转的行情措手不及。\n",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1589523419924
+	},
+	{
+		"name": "浑浑噩噩、被动",
+		"id": "1656099",
+		"trigger": "2",
+		"content": "你要用脑子看盘，而不是只会傻乎乎的看着，被动应对。\n你要主动思考推演。目标行情和标的是什么？\n",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1589868775336
+	},
+	{
+		"name": "浑浑噩噩、被动",
+		"id": "0495317",
+		"trigger": "15",
+		"content": "我从来没有做好次日的交易计划和预案。\n譬如每次大盘大涨，总是措手不及。",
+		"type": "interval",
+		"timestamp": 1580742710049,
+		"disable": true,
+		"repeat": 1
+	},
+	{
+		"name": "支撑我的交易逻辑",
+		"id": "5053110",
+		"trigger": "5",
+		"content": "支撑我的交易逻辑是：热点龙头；超预期强势； 多空博弈； 盈亏比；",
+		"type": "interval",
+		"timestamp": 1586998593381,
+		"repeat": 1,
+		"disable": true
+	},
+	{
+		"name": "支撑我的交易逻辑",
+		"id": "0843570",
+		"trigger": "5",
+		"content": "支撑我的交易逻辑：\n超预期强势、热点龙头、多空博弈、趋势反身性；",
+		"timestamp": 1576856488447,
+		"disable": true,
+		"type": "interval",
+		"repeat": 1
+	},
+	{
+		"name": "支撑我的交易逻辑",
+		"id": "3332057",
+		"trigger": "3",
+		"repeat": 3,
+		"content": "支撑我的交易逻辑？\n反身性-情绪周期；热点龙头；超预期强势； 多空博弈；",
+		"type": "interval",
+		"timestamp": 1587208678720,
+		"disable": true
+	},
+	{
 		"name": "",
 		"id": "1956564",
 		"trigger": "15",
@@ -40,15 +117,6 @@
 		"disable": true
 	},
 	{
-		"name": "动态应对",
-		"id": "1656099",
-		"trigger": "2",
-		"content": "你要用脑子看盘，而不是只会傻乎乎的看着，被动应对。\n你要主动思考推演，准备好标的和如何操作。\n热点龙头？\n做转折？做弱转强？做分歧转一致？",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1589868775336
-	},
-	{
 		"name": "动态博弈",
 		"id": "5354311",
 		"trigger": "1",
@@ -75,15 +143,6 @@
 		"content": "简单、纯粹、取舍；\n只做龙头；只做最强，只做主升；",
 		"type": "interval",
 		"timestamp": 1587208620664
-	},
-	{
-		"name": "准备预案",
-		"id": "7226286",
-		"trigger": "1",
-		"content": "绝不要被以前的经验\b束缚。股市是动态走出来的，实际上是博弈出来的。理解这一点很重要。\n不要主观臆想；不要先入为主；不要思维定势；\n做好预期外的应对预案；我从来都对反转的行情措手不及。\n",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1589523419924
 	},
 	{
 		"name": "不要主观",
@@ -114,7 +173,17 @@
 		"disable": false
 	},
 	{
-		"name": "热点龙头",
+		"name": "主线热点龙头",
+		"id": "7577249",
+		"trigger": "5",
+		"content": "主线热点是什么？\n不做主线热点，你他妈做什么？做一波流的跟风杂毛吗？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1588738028083,
+		"disable": true
+	},
+	{
+		"name": "主线热点龙头",
 		"id": "6506825",
 		"trigger": "1",
 		"content": "主线热点是方向；\n热点龙头是什么？热点龙头是什么？\n寻找介入时机；\n",
@@ -133,17 +202,17 @@
 		"timestamp": 1588940069004
 	},
 	{
-		"name": "周期节奏",
-		"id": "1968194",
-		"trigger": "3",
-		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动、转折时犹豫；行情退潮时管不住手；\n",
-		"timestamp": 1576715145044,
-		"disable": false,
+		"name": "大局观",
+		"id": "1878180",
+		"trigger": "20",
+		"content": "市场氛围、人气是第一要素；大环境；\n主线热点是方向；",
+		"repeat": 1,
 		"type": "interval",
-		"repeat": 3
+		"timestamp": 1589703738474,
+		"disable": true
 	},
 	{
-		"name": "",
+		"name": "大局观",
 		"id": "8502730",
 		"trigger": "10",
 		"content": "我为何总是错失大行情，抓不住机会？\n没有大局观；看不到确定性；\n行情启动时犹豫；行情退潮时管不住手；",
@@ -152,7 +221,7 @@
 		"timestamp": 1588814012347
 	},
 	{
-		"name": "",
+		"name": "克服本能和情绪",
 		"id": "2825927",
 		"trigger": "5",
 		"content": "天性选弱惧高；不敢上还是不敢上；",
@@ -160,6 +229,16 @@
 		"type": "interval",
 		"timestamp": 1587351823802,
 		"disable": false
+	},
+	{
+		"name": "周期节奏",
+		"id": "1968194",
+		"trigger": "3",
+		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动、转折时犹豫；行情退潮时管不住手；\n",
+		"timestamp": 1576715145044,
+		"disable": false,
+		"type": "interval",
+		"repeat": 3
 	},
 	{
 		"name": "周期节奏",
@@ -192,26 +271,6 @@
 		"repeat": 3
 	},
 	{
-		"name": "主线热点",
-		"id": "7577249",
-		"trigger": "5",
-		"content": "主线热点是什么？\n不做主线热点，你他妈做什么？做一波流的跟风杂毛吗？",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1588738028083,
-		"disable": true
-	},
-	{
-		"name": "错误",
-		"id": "6743696",
-		"trigger": "5",
-		"content": "不要做自己不懂的行情。\n行情类型都不懂，你凭什么赚到钱？",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1589025594637,
-		"disable": true
-	},
-	{
 		"name": "周期节奏",
 		"id": "9024301",
 		"trigger": "5",
@@ -222,23 +281,13 @@
 		"disable": true
 	},
 	{
-		"name": "错误",
+		"name": "行情性质",
 		"id": "5993953",
 		"trigger": "3",
 		"content": "我其实对行情性质并没有深刻理解。\n怎么可能不建错仓，不卖飞呢？",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1589025033958,
-		"disable": true
-	},
-	{
-		"name": "大局观",
-		"id": "1878180",
-		"trigger": "20",
-		"content": "市场氛围、人气是第一要素；大环境；\n主线热点是方向；",
-		"repeat": 1,
-		"type": "interval",
-		"timestamp": 1589703738474,
 		"disable": true
 	},
 	{
@@ -329,16 +378,6 @@
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1587943219721,
-		"disable": true
-	},
-	{
-		"name": "",
-		"id": "3332057",
-		"trigger": "3",
-		"repeat": 3,
-		"content": "支撑我的交易逻辑？\n反身性-情绪周期；热点龙头；超预期强势； 多空博弈；",
-		"type": "interval",
-		"timestamp": 1587208678720,
 		"disable": true
 	},
 	{
@@ -461,15 +500,6 @@
 		"disable": true
 	},
 	{
-		"name": "逻辑",
-		"id": "0843570",
-		"trigger": "5",
-		"content": "支撑我的交易逻辑：\n超预期强势、热点龙头、多空博弈、趋势反身性；",
-		"timestamp": 1576856488447,
-		"disable": true,
-		"type": "interval"
-	},
-	{
 		"name": "",
 		"id": "3409638",
 		"trigger": "5",
@@ -477,16 +507,6 @@
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1588296433202,
-		"disable": true
-	},
-	{
-		"name": "",
-		"id": "5053110",
-		"trigger": "5",
-		"content": "支撑我的交易逻辑是：热点龙头；超预期强势； 多空博弈； 盈亏比；",
-		"type": "interval",
-		"timestamp": 1586998593381,
-		"repeat": 1,
 		"disable": true
 	},
 	{
@@ -806,15 +826,6 @@
 		"content": "止盈快，止损慢。",
 		"type": "interval",
 		"timestamp": 1581862010822,
-		"disable": true
-	},
-	{
-		"name": "错误",
-		"id": "0495317",
-		"trigger": "15",
-		"content": "我从来没有做好次日的交易计划和预案。\n譬如每次大盘大涨，总是措手不及。",
-		"type": "interval",
-		"timestamp": 1580742710049,
 		"disable": true
 	},
 	{

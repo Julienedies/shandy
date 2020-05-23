@@ -57,14 +57,24 @@ class Jo {
 
     merge (key, obj) {
         let args = [].slice.call(arguments);
-        obj = args[1] || args[0]
-        key = args[1] && args[0]
-        let oldVal = this.get(key)
+        obj = args[1] || args[0];
+        key = args[1] && args[0];
+        let oldVal = this.get(key);
+
         if (!oldVal) {
-            oldVal = {}
-            this.set(key, oldVal)
+            oldVal = _.isArray(obj) ? [] : {};
+            this.set(key, oldVal);
         }
-        Object.assign(oldVal, obj)
+
+        // 数组合并或对象合并
+        if (_.isArray(oldVal) && _.isArray(obj)) {
+            obj.forEach((v, i) => {
+                oldVal.push(v);
+            });
+        } else {
+            Object.assign(oldVal, obj);
+        }
+
         return this.save();
     }
 
