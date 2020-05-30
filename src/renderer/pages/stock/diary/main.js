@@ -38,7 +38,7 @@ brick.reg('diaryCtrl', function () {
 
     this.onDelDone = function (data) {
         scope.onGetDiaryDone(data);
-    }
+    };
 
     scope.on('diary.edit.done', function (e, data) {
         scope.onGetDiaryDone(data);

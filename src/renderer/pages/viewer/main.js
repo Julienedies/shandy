@@ -41,6 +41,7 @@ const tagsJodb = jd('tags');
 
 brick.services.reg('historyModel', historyModel);
 
+brick.set('ic-viewer-interval', setting.get('viewer.interval') || 14);
 
 brick.reg('mainCtrl', function (scope) {
 
@@ -53,6 +54,13 @@ brick.reg('mainCtrl', function (scope) {
     tagsJodb.each((item) => {
         tagsMap[item.id] = item;
     });
+
+    scope.setViewerInterval = function (e) {
+        let val = $(this).val() * 1;
+        brick.icViewer.set('interval', val);
+        setting.refresh().set('viewer.interval', val);
+        $.icMsg(val);
+    };
 
     scope.reload = function (e) {
         location.reload();
@@ -133,7 +141,8 @@ brick.reg('mainCtrl', function (scope) {
     // scope.crop = {x: 3140, y: 115, width: 310, height: 50};
     scope.cropTest = function (fields) {
         console.info(fields);
-        let crop = scope.crop = fields || scope.crop;
+        let {x,y,width,height} = fields || scope.crop;
+        let crop = scope.crop = {x,y,width,height};
         let sn = $('#sn').val();
         let dataUrl = helper.crop(scope.urls[sn].f, fields);
         $('#view_crop').attr('src', dataUrl);
@@ -198,8 +207,10 @@ brick.reg('mainCtrl', function (scope) {
         scope.init(imgDir);
     }
 
-    scope.crop = setting.get('viewer.crop');
-    scope.render('crop', {model: scope.crop || {}});
+    scope.viewerVm = setting.get('viewer');
+    scope.render('crop', {model: scope.viewerVm || {}}, () => {
+        scope.$elm.find('#interval').val(scope.viewerVm.interval);
+    });
 
 });
 

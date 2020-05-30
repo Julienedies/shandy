@@ -314,6 +314,7 @@ brick.reg('mainCtrl', function (scope) {
                 url,
                 ...getBounds(name),
                 show: false,
+                simpleFullscreen:true,
                 //frame: false,
                 //transparent: true,
                 //titleBarStyle: 'hidden',

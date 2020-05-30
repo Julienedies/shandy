@@ -11,7 +11,7 @@
 		"duration": 34,
 		"singleWindow": "stock_replay",
 		"promptTimes": 1,
-		"prevPromptTime": 1590678306540
+		"prevPromptTime": 1590839018470
 	},
 	{
 		"name": "错误",
@@ -24,8 +24,8 @@
 		"timestamp": 1588940500338,
 		"singleWindow": "",
 		"duration": 97,
-		"promptTimes": 2,
-		"prevPromptTime": 1590678906738
+		"promptTimes": 3,
+		"prevPromptTime": 1590839620407
 	},
 	{
 		"name": "日程-复盘",
@@ -51,7 +51,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1590679506127
+		"prevPromptTime": 1590826064188
 	},
 	{
 		"name": "",
@@ -65,7 +65,7 @@
 		"duration": 47,
 		"timestamp": 1589644856029,
 		"promptTimes": 2,
-		"prevPromptTime": 1590680106881
+		"prevPromptTime": 1590827865930
 	},
 	{
 		"name": "日程",
@@ -77,9 +77,7 @@
 		"content": "做烂板上冲、连续上冲假设推演；热点龙头走势的低吸追涨预案。\n弱转强；分歧转一致；\n我从来都对预期外的反转措手不及。",
 		"timestamp": 1586779488900,
 		"singleWindow": "",
-		"duration": 24,
-		"promptTimes": 2,
-		"prevPromptTime": 1590680705651
+		"duration": 24
 	},
 	{
 		"name": "",
@@ -93,7 +91,7 @@
 		"duration": 27,
 		"timestamp": 1589730834837,
 		"promptTimes": 2,
-		"prevPromptTime": 1590681306680
+		"prevPromptTime": 1590828464399
 	},
 	{
 		"name": "",
@@ -106,8 +104,8 @@
 		"timestamp": 1588771295970,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1590662106798
+		"promptTimes": 3,
+		"prevPromptTime": 1590832021271
 	},
 	{
 		"name": "",
@@ -120,8 +118,8 @@
 		"timestamp": 1588910961231,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1590662707455
+		"promptTimes": 2,
+		"prevPromptTime": 1590831422600
 	},
 	{
 		"name": "",
@@ -135,7 +133,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1590663306345
+		"prevPromptTime": 1590832621229
 	},
 	{
 		"name": "",
@@ -162,7 +160,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1590663907375
+		"prevPromptTime": 1590833222866
 	},
 	{
 		"name": "",
@@ -176,7 +174,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1590664505910
+		"prevPromptTime": 1590833821186
 	},
 	{
 		"name": "",
@@ -190,7 +188,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1590665106933
+		"prevPromptTime": 1590834420976
 	},
 	{
 		"name": "",
@@ -204,7 +202,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1590665707230
+		"prevPromptTime": 1590835022641
 	},
 	{
 		"name": "",
@@ -216,9 +214,7 @@
 		"content": "我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n\n我必须在很短的时间做出决定；尤其是股市变量很多；\n导致很容易犯错，尤其是亏钱状态不好的时候；\n必须纯粹，精简自己的系统，快速反应！\n\n怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；\n1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）\n2:  热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；\n\n首先竞价系统本身逻辑是对的：指示了市场强弱和日内热点；热点是方向；强弱是时机；\n涨停板指示了热钱方向和市场强弱；\n\n支撑我的交易逻辑是什么?\n1. 超预期强势： 强势市场，大干快上； 弱转强，多空博弈转折，时机就是一切；\n1. 热点：热钱所在，行情所在；方向所在；\n1. 衡量收益和风险；\n",
 		"timestamp": 1582296291296,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1590666306448
+		"duration": 17
 	},
 	{
 		"name": "",
@@ -256,9 +252,7 @@
 		"content": "优化 通达信公式 趋势向上；\n添加 高位 盈亏比 风险提示；",
 		"timestamp": 1579495236987,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1590666907419
+		"duration": 17
 	},
 	{
 		"name": "",
@@ -270,9 +264,7 @@
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
 		"timestamp": 1581084979181,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1590667505952
+		"duration": 17
 	},
 	{
 		"name": "",
@@ -328,9 +320,7 @@
 		"content": "查看财联社新闻",
 		"timestamp": 1577862818798,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1590672306480
+		"duration": 17
 	},
 	{
 		"name": "日程",
@@ -342,9 +332,7 @@
 		"content": "根据目标行情类型，设置持仓条件单！\n止损；\n低开处理；\n止盈处理；\n",
 		"timestamp": 1584416255440,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1590672907090
+		"duration": 17
 	},
 	{
 		"name": "日程",
@@ -354,9 +342,7 @@
 		"interval": 45,
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
-		"timestamp": 1577697423900,
-		"promptTimes": 2,
-		"prevPromptTime": 1590673505988
+		"timestamp": 1577697423900
 	},
 	{
 		"name": "日程",
@@ -368,9 +354,7 @@
 		"content": "每天更新自选股票池。\n加入: 启动、 爆发、 转折、 超强势的人气龙头股；\n移除：趋弱的个股；\n记住我做的是超短。",
 		"timestamp": 1582429000702,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1590674106970
+		"duration": 17
 	},
 	{
 		"name": "日程",
@@ -381,9 +365,7 @@
 		"content": "保存竞价强图片！",
 		"timestamp": 1577539413052,
 		"type": "",
-		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1590674706761
+		"duration": 17
 	},
 	{
 		"name": "日程",
@@ -394,9 +376,7 @@
 		"repeat": 5,
 		"content": "更新csd。",
 		"timestamp": 1577862911294,
-		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1590675306475
+		"duration": 17
 	},
 	{
 		"name": "日程",
@@ -408,9 +388,7 @@
 		"content": "在 JN  里 跑一遍 竞价强2 选股；",
 		"timestamp": 1587008893339,
 		"duration": 17,
-		"singleWindow": "",
-		"promptTimes": 2,
-		"prevPromptTime": 1590675906948
+		"singleWindow": ""
 	},
 	{
 		"name": "",
@@ -422,8 +400,6 @@
 		"content": "一切有为法；一切有因果；\n不要忘记那些恐惧和痛苦；\n时不我待，我已经37岁了；",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 3,
-		"prevPromptTime": 1590676505968
+		"duration": 17
 	}
 ]

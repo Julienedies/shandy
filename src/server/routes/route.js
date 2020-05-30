@@ -25,6 +25,8 @@ import memo from './action/memo'
 import diary from './action/diary'
 import viewer from './action/viewer'
 
+import todo from './action/todo'
+
 import note from './action/note'
 import txt from './action/txt'
 import reader from './action/reader'
@@ -59,6 +61,8 @@ export default function (app) {
     app.get('/stock/diary', diary.get)
     app.post('/stock/diary', diary.post)
     app.delete('/stock/diary/:id', diary.del)
+
+    app.get('/stock/todo/', todo.get)
 
     app.get('/stock/news', news.get)
     app.post('/stock/news', news.post)

@@ -16,15 +16,17 @@
     <div class="level">
 
         <div class="level-left">
-            <button class="button"
-                    ic-ajax
-                    ic-ajax-auto
-                    ic-submit-method="get"
-                    ic-submit-action="/stock/diary"
-                    ic-submit-on-done="onGetDiaryDone">日记列表
-            </button>
-            <button class="button" ic-click="edit">新日记</button>
-            <button class="button" ic-click="reverse">排序反转</button>
+            <div class="buttons has-addons">
+                <button class="button"
+                        ic-ajax
+                        ic-ajax-auto
+                        ic-submit-method="get"
+                        ic-submit-action="/stock/diary"
+                        ic-submit-on-done="onGetDiaryDone">日记列表
+                </button>
+                <button class="button" ic-click="edit">新日记</button>
+                <button class="button" ic-click="reverse">排序反转</button>
+            </div>
         </div>
     </div>
 

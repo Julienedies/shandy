@@ -25,10 +25,10 @@
             <div id="crop" class="column is-5" ic-tpl="crop">
                 <div ic-form>
                     <div class="column">
-                        <label>x:<input type="number" class="input" ic-value="{{ model.x || 3100 }}" ic-form-field="x"></label>
-                        <label class="">y:<input type="number" class="input" ic-value="{{ model.y || 115 }}" ic-form-field="y"></label>
-                        <label class="">width:<input type="number" class="input" ic-value="{{ model.width || 380 }}" ic-form-field="width"></label>
-                        <label class="">height:<input type="number" class="input" ic-value="{{ model.height || 50 }}" ic-form-field="height"></label>
+                        <label>x:<input type="number" class="input" ic-value="{{ model.crop.x || 3100 }}" ic-form-field="x"></label>
+                        <label class="">y:<input type="number" class="input" ic-value="{{ model.crop.y || 115 }}" ic-form-field="y"></label>
+                        <label class="">width:<input type="number" class="input" ic-value="{{ model.crop.width || 380 }}" ic-form-field="width"></label>
+                        <label class="">height:<input type="number" class="input" ic-value="{{ model.crop.height || 50 }}" ic-form-field="height"></label>
                         <label class="">图片序号:<input type="number" class="input" value="0" id="sn"></label>
                     </div>
 
@@ -42,6 +42,12 @@
                             <img id="view_crop" style="border:solid 1px blue;"/>
                             <h6 id="ocr_text"></h6>
                         </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="">播放时间:
+                            <input type="number" class="input" value="" id="interval" ic-enter-press="setViewerInterval">
+                        </label>
                     </div>
                 </div>
             </div>
@@ -66,7 +72,7 @@
             <ol ic-viewer
                 ic-viewer-item="li"
                 ic-viewer-url="url"
-                ic-viewer-interval="9"
+                ic-viewer-interval=""
                 ic-viewer-on-show="onViewerShow"
                 ic-viewer-on-open="onViewerOpen"
                 ic-viewer-on-close="onViewerClose">

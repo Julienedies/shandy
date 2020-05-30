@@ -42,7 +42,7 @@
 
 #crop {
   label {
-    padding-right: 1em;
+    padding-right: 10px;
   }
 
   /*  input {
@@ -52,7 +52,8 @@
     }*/
 
   .input {
-    width: 5em;
+    width: 4em;
+    padding:5px;
     margin-left: 5px;
   }
 }
