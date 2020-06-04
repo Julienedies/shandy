@@ -218,6 +218,9 @@ export default function (scope) {
         scope.render('setWarnItem', {model: {}});
     };
 
+    utils.timer('8:45', () => {
+        updateVoiceWarn();
+    });
 
     utils.timer('11:30', () => {
         updateVoiceWarn(true);

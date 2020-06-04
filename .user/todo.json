@@ -1,5 +1,19 @@
 [
 	{
+		"name": "问题",
+		"id": "2006005",
+		"type": "",
+		"start": "15:30",
+		"interval": 45,
+		"repeat": 7,
+		"content": "================我需要明确的一致性；这是当前最需要解决的问题============================\n================我需要明确的一致性；这是当前最需要解决的问题============================\n我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；\n我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。  ======  怎么解决？怎么解决？怎么解决？\n\n----------------主观  vs   客观  vs  机械  vs 技术  vs 逻辑------------------------\n--------------问题在于主观和机械之间的选择？  我应该选机械还是主观？--------------\n--------------我的主观不一定契合市场的客观机会？-----------------------\n--------------消息没有别人快，题材解读不如别人，完全以技术优先吗？但单纯以K线技术做判断，确定性不高。---------------\n\n我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。     ========   怎么解决？怎么解决？怎么解决？\n\n分仓竞价买入； 市场反映一切； 概率优势；\n\n我最初想到竞价系统是为了低点买入，降低成本。\n\n",
+		"timestamp": 1588771295970,
+		"singleWindow": "",
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1591273910243
+	},
+	{
 		"name": "日程",
 		"id": "8576746",
 		"type": "",
@@ -11,7 +25,7 @@
 		"duration": 34,
 		"singleWindow": "stock_replay",
 		"promptTimes": 1,
-		"prevPromptTime": 1590839018470
+		"prevPromptTime": 1591274511073
 	},
 	{
 		"name": "错误",
@@ -24,8 +38,8 @@
 		"timestamp": 1588940500338,
 		"singleWindow": "",
 		"duration": 97,
-		"promptTimes": 3,
-		"prevPromptTime": 1590839620407
+		"promptTimes": 1,
+		"prevPromptTime": 1591275111960
 	},
 	{
 		"name": "日程-复盘",
@@ -50,8 +64,8 @@
 		"timestamp": 1577964389066,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1590826064188
+		"promptTimes": 1,
+		"prevPromptTime": 1591275712302
 	},
 	{
 		"name": "",
@@ -64,8 +78,8 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1589644856029,
-		"promptTimes": 2,
-		"prevPromptTime": 1590827865930
+		"promptTimes": 1,
+		"prevPromptTime": 1591276311197
 	},
 	{
 		"name": "日程",
@@ -77,7 +91,9 @@
 		"content": "做烂板上冲、连续上冲假设推演；热点龙头走势的低吸追涨预案。\n弱转强；分歧转一致；\n我从来都对预期外的反转措手不及。",
 		"timestamp": 1586779488900,
 		"singleWindow": "",
-		"duration": 24
+		"duration": 24,
+		"promptTimes": 1,
+		"prevPromptTime": 1591276912085
 	},
 	{
 		"name": "",
@@ -90,22 +106,8 @@
 		"interval": 60,
 		"duration": 27,
 		"timestamp": 1589730834837,
-		"promptTimes": 2,
-		"prevPromptTime": 1590828464399
-	},
-	{
-		"name": "",
-		"id": "2006005",
-		"type": "",
-		"start": "15:30",
-		"interval": 45,
-		"repeat": 7,
-		"content": "我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；\n我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。  ======  怎么解决？怎么解决？怎么解决？\n\n----------------主观  vs   客观  vs  机械 ------------------------\n--------------问题在于主观和机械之间的选择？  我应该选机械还是主观？--------------\n--------------我的主观不一定契合市场的客观机会？-----------------------\n\n我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。     ========   怎么解决？怎么解决？怎么解决？\n\n分仓竞价买入； 市场反映一切； 概率优势；\n\n我最初想到竞价系统是为了低点买入，降低成本。\n\n",
-		"timestamp": 1588771295970,
-		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 3,
-		"prevPromptTime": 1590832021271
+		"promptTimes": 1,
+		"prevPromptTime": 1591277512162
 	},
 	{
 		"name": "",
@@ -118,8 +120,8 @@
 		"timestamp": 1588910961231,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1590831422600
+		"promptTimes": 1,
+		"prevPromptTime": 1591278111364
 	},
 	{
 		"name": "",
@@ -133,7 +135,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1590832621229
+		"prevPromptTime": 1591278712344
 	},
 	{
 		"name": "",
@@ -160,21 +162,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1590833222866
-	},
-	{
-		"name": "",
-		"id": "8177043",
-		"type": "",
-		"start": "15:00",
-		"interval": 90,
-		"repeat": 2,
-		"content": "我的买入以竞价为买点；避免盘中情绪波动；\n封板做为加仓点；\n衡量收益和风险是我的交易核心；\n",
-		"timestamp": 1588245903639,
-		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1590833821186
+		"prevPromptTime": 1591279311761
 	},
 	{
 		"name": "",
@@ -188,7 +176,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1590834420976
+		"prevPromptTime": 1591280326582
 	},
 	{
 		"name": "",
@@ -202,7 +190,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1590835022641
+		"prevPromptTime": 1591280927334
 	},
 	{
 		"name": "",
@@ -214,7 +202,22 @@
 		"content": "我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n我每天都临盘犹豫，错过机会；怎么解决； 我为何犹豫？\n\n我必须在很短的时间做出决定；尤其是股市变量很多；\n导致很容易犯错，尤其是亏钱状态不好的时候；\n必须纯粹，精简自己的系统，快速反应！\n\n怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；\n1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）\n2:  热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；\n\n首先竞价系统本身逻辑是对的：指示了市场强弱和日内热点；热点是方向；强弱是时机；\n涨停板指示了热钱方向和市场强弱；\n\n支撑我的交易逻辑是什么?\n1. 超预期强势： 强势市场，大干快上； 弱转强，多空博弈转折，时机就是一切；\n1. 热点：热钱所在，行情所在；方向所在；\n1. 衡量收益和风险；\n",
 		"timestamp": 1582296291296,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1591254257679
+	},
+	{
+		"name": "",
+		"id": "8177043",
+		"type": "",
+		"start": "15:00",
+		"interval": 90,
+		"repeat": 2,
+		"content": "我的买入以竞价为买点；避免盘中情绪波动；\n封板做为加仓点；\n衡量收益和风险是我的交易核心；\n",
+		"timestamp": 1588245903639,
+		"singleWindow": "",
+		"duration": 17,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -252,7 +255,8 @@
 		"content": "优化 通达信公式 趋势向上；\n添加 高位 盈亏比 风险提示；",
 		"timestamp": 1579495236987,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -264,7 +268,9 @@
 		"content": "Math.pow(1.1,40)  =  45.2592555681761\n\nMath.pow(1.2,40)  =  1469.7715679690841",
 		"timestamp": 1581084979181,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1591254856469
 	},
 	{
 		"name": "",
@@ -400,6 +406,8 @@
 		"content": "一切有为法；一切有因果；\n不要忘记那些恐惧和痛苦；\n时不我待，我已经37岁了；",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 2,
+		"prevPromptTime": 1591259656727
 	}
 ]

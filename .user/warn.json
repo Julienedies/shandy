@@ -1,5 +1,32 @@
 [
 	{
+		"name": "要解决的问题",
+		"id": "4781975",
+		"trigger": "5",
+		"content": "三心二意；在多个标的之间犹豫不决；\n放弃打板后，没有明确的买点；在竞价和打板之间犹豫也是我临盘犹豫的原因；\n将竞价和打板做为系统买点；\n\n止损点死板；没有考虑动态博弈；低开引起恐慌；\n\n预判操作的问题是没涨的时候买入没有确定性；涨了再买盈亏比变低；",
+		"repeat": 1,
+		"type": "interval",
+		"timestamp": 1591052935450
+	},
+	{
+		"name": "要解决的问题",
+		"id": "8477026",
+		"trigger": "10",
+		"content": "放弃打板后，没有明确的买点；也是我临盘犹豫的重要原因；",
+		"repeat": 1,
+		"type": "interval",
+		"timestamp": 1590939269120
+	},
+	{
+		"name": "",
+		"id": "8993313",
+		"trigger": "10",
+		"content": "控制；等待；\n计划；预案、准备；明确；\n简单；纯粹；取舍；\n盈亏同源；一致性；概率；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1590923510975
+	},
+	{
 		"name": "",
 		"id": "1051731",
 		"trigger": "3",
@@ -9,10 +36,38 @@
 		"timestamp": 1590839076503
 	},
 	{
+		"name": "支撑我的交易逻辑",
+		"id": "0843570",
+		"trigger": "5",
+		"content": "支撑我的交易逻辑：\n超预期强势、热点龙头、多空博弈周期、趋势反身性；",
+		"timestamp": 1576856488447,
+		"disable": false,
+		"type": "interval",
+		"repeat": 1
+	},
+	{
+		"name": "一致性",
+		"id": "0723367",
+		"trigger": "3",
+		"content": "概率；概率；概率；\n盈亏同源；一致性； 大概率；\n交易只有对错，盈亏交给市场；",
+		"type": "interval",
+		"timestamp": 1587011005023,
+		"repeat": 4
+	},
+	{
+		"name": "简单纯粹取舍",
+		"id": "3934174",
+		"trigger": "1",
+		"repeat": 4,
+		"content": "简单、纯粹、取舍；\n只做龙头；只做最强；只做主升；",
+		"type": "interval",
+		"timestamp": 1587208620664
+	},
+	{
 		"name": "系统要素",
 		"id": "5929184",
 		"trigger": "10",
-		"content": "大盘氛围；主线热点；股性人气；波浪形态；行情性质；生命周期；多空博弈；",
+		"content": "大盘氛围；主线热点；股性人气；波浪形态；行情性质；",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1590494745896
@@ -63,36 +118,6 @@
 		"timestamp": 1580742710049,
 		"disable": true,
 		"repeat": 1
-	},
-	{
-		"name": "支撑我的交易逻辑",
-		"id": "5053110",
-		"trigger": "5",
-		"content": "支撑我的交易逻辑是：热点龙头；超预期强势； 多空博弈； 盈亏比；",
-		"type": "interval",
-		"timestamp": 1586998593381,
-		"repeat": 1,
-		"disable": true
-	},
-	{
-		"name": "支撑我的交易逻辑",
-		"id": "0843570",
-		"trigger": "5",
-		"content": "支撑我的交易逻辑：\n超预期强势、热点龙头、多空博弈、趋势反身性；",
-		"timestamp": 1576856488447,
-		"disable": true,
-		"type": "interval",
-		"repeat": 1
-	},
-	{
-		"name": "支撑我的交易逻辑",
-		"id": "3332057",
-		"trigger": "3",
-		"repeat": 3,
-		"content": "支撑我的交易逻辑？\n反身性-情绪周期；热点龙头；超预期强势； 多空博弈；",
-		"type": "interval",
-		"timestamp": 1587208678720,
-		"disable": true
 	},
 	{
 		"name": "",
@@ -146,39 +171,12 @@
 	{
 		"name": "控制力",
 		"id": "2201739",
-		"trigger": "1",
+		"trigger": "3",
 		"content": "交易反人性！控制不住情绪和本能，失败是注定的；",
 		"type": "interval",
 		"timestamp": 1584716475055,
 		"repeat": 4,
 		"disable": false
-	},
-	{
-		"name": "简单纯粹取舍",
-		"id": "3934174",
-		"trigger": "1",
-		"repeat": 4,
-		"content": "简单、纯粹、取舍；\n只做系统；只做龙头；只做最强；只做主升；",
-		"type": "interval",
-		"timestamp": 1587208620664
-	},
-	{
-		"name": "不要主观",
-		"id": "3181899",
-		"trigger": "3",
-		"content": "市场反映一切；跟随；跟随；跟随；\n不要主观臆想，一切以实际盘面为准。",
-		"timestamp": 1576725560319,
-		"type": "interval",
-		"repeat": 3
-	},
-	{
-		"name": "一致性",
-		"id": "0723367",
-		"trigger": "3",
-		"content": "概率；概率；概率；\n盈亏同源；一致性； 大概率；\n交易只有对错，盈亏交给市场；",
-		"type": "interval",
-		"timestamp": 1587011005023,
-		"repeat": 4
 	},
 	{
 		"name": "一致性",
@@ -239,16 +237,6 @@
 		"timestamp": 1588814012347
 	},
 	{
-		"name": "克服本能和情绪",
-		"id": "2825927",
-		"trigger": "5",
-		"content": "天性选弱惧高；不敢上还是不敢上；",
-		"repeat": 2,
-		"type": "interval",
-		"timestamp": 1587351823802,
-		"disable": false
-	},
-	{
 		"name": "周期节奏",
 		"id": "1968194",
 		"trigger": "3",
@@ -307,6 +295,25 @@
 		"type": "interval",
 		"timestamp": 1589025033958,
 		"disable": true
+	},
+	{
+		"name": "不要主观",
+		"id": "3181899",
+		"trigger": "3",
+		"content": "市场反映一切；跟随；跟随；跟随；\n不要主观臆想，一切以实际盘面为准。",
+		"timestamp": 1576725560319,
+		"type": "interval",
+		"repeat": 3
+	},
+	{
+		"name": "克服本能和情绪",
+		"id": "2825927",
+		"trigger": "5",
+		"content": "天性选弱惧高；不敢上还是不敢上；",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1587351823802,
+		"disable": false
 	},
 	{
 		"name": "",
