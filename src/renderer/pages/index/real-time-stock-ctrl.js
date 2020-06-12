@@ -45,7 +45,7 @@ function f (stocks) {
 
 function _f (stock) {
     // stock => {code: code, name: name, b1: 买一量, v:成交量, p: price}
-    console.log(stock);
+    // console.log(stock);
     let code = stock.code;
     let name = stock.name;
     let b1 = stock.b1;
@@ -168,11 +168,9 @@ function init () {
         // 下午3点后取消行情请求
         utils.timer('14:57', () => {
             q_rtso.pause();
-            prev_objm.clear();
-            //rtsJo.set('stocks', []);
+            serialize();
         });
     }
-
 }
 
 function _add (code) {
@@ -188,6 +186,12 @@ function _remove (code) {
     prev_objm.remove(code);
     first_objm.remove(code);
     $rts_list.icRender([]);
+}
+
+function serialize() {
+    let obj = prev_objm.get();
+    let codes = Object.keys(obj);
+    rtsJo.set('stocks', codes);
 }
 
 brick.reg('rts_ctrl', function (scope) {
@@ -234,11 +238,7 @@ brick.reg('rts_ctrl', function (scope) {
 });
 
 
-window.addEventListener('beforeunload', function (e) {
-    let obj = prev_objm.get();
-    let codes = Object.keys(obj);
-    rtsJo.merge('stocks', codes);
-});
+window.addEventListener('beforeunload', serialize);
 
 
 export default {

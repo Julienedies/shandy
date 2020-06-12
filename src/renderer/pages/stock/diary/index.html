@@ -49,24 +49,24 @@
 
 <div ic-ctrl="setDiaryCtrl" ic-popup="setDiary">
 
-    <div class="column is-10" ic-tpl ic-tpl-init="{}">
+    <div class="column is-10 is-offset-1">
 
-        <div class="table_0" ic-form="setDiary">
+        <div class="" ic-form="setDiary">
 
             <!-- tr -->
             <div>
-                <h6>内容</h6>
+                <h6></h6>
                 <div>
-                    <textarea rows="16" class="textarea is-medium" ic-form-field="text" ic-field-rule="required">{{model.text}}</textarea>
-                    <input type="hidden" name="id" ic-form-field value="{{model.id}}"/>
+                    <textarea id="text" rows="9" class="textarea is-medium" ic-form-field="text" ic-field-rule="required"></textarea>
+                    <input id='id' type="hidden" name="id" ic-form-field value=""/>
                 </div>
             </div>
 
             <!-- tr -->
             <div>
-                <h6>日期</h6>
+                <h6></h6>
                 <div>
-                    <input class="input is-small" type="date" name="date" ic-value="{{model.date || jFormatDate() }}" ic-form-field>
+                    <input id="date" class="input is-small" type="date" name="date" ic-value="{{model.date || jFormatDate() }}" ic-form-field>
                 </div>
             </div>
 
@@ -77,7 +77,7 @@
                     <button class="button is-primary"
                             ic-form-submit
                             ic-submit-action="/stock/diary"
-                            ic-submit-before
+                            ic-submit-before="before"
                             ic-submit-on-done="done">保存
                     </button>
                     <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>

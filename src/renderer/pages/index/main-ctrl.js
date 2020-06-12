@@ -90,7 +90,7 @@ brick.services.reg('viewsModel', () => {
          * @returns {null}
          */
         find (item) {
-            let index = this.getIndex(item)
+            let index = this.getIndex(item);
             return index !== -1 ? list[index] : null
         }
     }
@@ -381,7 +381,7 @@ brick.reg('memoCtrl', function () {
     let $memo = $('#memo');
 
     $.get('/stock/memo').done(function (o) {
-        let text = o.text
+        let text = o.text;
 
         $memo.froalaEditor({
             toolbarInline: true,

@@ -1,17 +1,17 @@
 [
 	{
 		"id": "今日头条概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1591197585513
 	},
 	{
 		"id": "地摊经济",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1591197509321
 	},
 	{
 		"id": "新零售",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1591104219974
 	},
 	{
@@ -181,7 +181,7 @@
 	},
 	{
 		"id": "苹果概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1582646473178
 	},
 	{
@@ -281,7 +281,7 @@
 	},
 	{
 		"id": "消费电子",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578928850827
 	},
 	{
@@ -301,7 +301,7 @@
 	},
 	{
 		"id": "网红经济",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303652
 	}
 ]
