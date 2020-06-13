@@ -32,9 +32,19 @@
 
     <ul id="diaryList" ic-tpl="diaryList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
-            <div class="pre">{{v.text}} <br><span style="opacity:0.3;">{{ v.date }}</span></div>
+            <div class="pre">{{v.text}}</div>
             <div class="tar">
+                <span style="opacity:0.3;float:left;">{{ v.date }}</span>
                 <a class="no" ic-click="edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
+                <a class="no"
+                   ic-ajax
+                   ic-submit-method="get"
+                   ic-submit-action="/stock/diary/up/{{v.id}}"
+                   ic-submit-on-done="onGetDiaryDone">
+                    <span class="icon hint--top-left" aria-label="置顶" titie="置顶">
+                        <i class="far fa-heart"></i>
+                    </span>
+                </a>
             </div>
             <button class="delete is-medium"
                     ic-ajax

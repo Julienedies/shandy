@@ -62,7 +62,7 @@ brick.reg('setDiaryCtrl', function () {
     let $id = $elm.find('#id');
 
     $text.froalaEditor({
-        height: 480,
+        height: 520,
         //toolbarInline: true,
         /*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*/
         // Change save interval (time in miliseconds).

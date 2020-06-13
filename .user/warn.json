@@ -1,5 +1,23 @@
 [
 	{
+		"name": "简单纯粹取舍",
+		"id": "3934174",
+		"trigger": "1",
+		"repeat": 4,
+		"content": "简单、纯粹、取舍；\n只做龙头；只做最强；只做主升；",
+		"type": "interval",
+		"timestamp": 1587208620664
+	},
+	{
+		"name": "",
+		"id": "9400690",
+		"trigger": "2",
+		"content": "以客观的市场表现做为首要标准，而不是我的主观判断。",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592027995326
+	},
+	{
 		"name": "",
 		"id": "1926877",
 		"trigger": "10",
@@ -62,15 +80,6 @@
 		"type": "interval",
 		"timestamp": 1587011005023,
 		"repeat": 4
-	},
-	{
-		"name": "简单纯粹取舍",
-		"id": "3934174",
-		"trigger": "1",
-		"repeat": 4,
-		"content": "简单、纯粹、取舍；\n只做龙头；只做最强；只做主升；",
-		"type": "interval",
-		"timestamp": 1587208620664
 	},
 	{
 		"name": "系统要素",

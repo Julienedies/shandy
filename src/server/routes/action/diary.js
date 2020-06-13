@@ -36,4 +36,12 @@ export default {
         res.json(getData());
     },
 
+    // 提高level级别;
+    up (req, res) {
+        let dob = getDb();
+        let id = req.params.id;
+        dob.move(id);
+        res.json(getData());
+    }
+
 }

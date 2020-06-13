@@ -1,6 +1,20 @@
 [
 	{
 		"name": "",
+		"id": "1802427",
+		"type": "",
+		"start": "15:00",
+		"repeat": 7,
+		"content": "把仓位降下来。不要想着钱，把事情做对。\n对系统和流程进行完善和验证。",
+		"singleWindow": "",
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1592026052270,
+		"promptTimes": 2,
+		"prevPromptTime": 1592057861540
+	},
+	{
+		"name": "",
 		"id": "8768314",
 		"type": "",
 		"start": "15:00",
@@ -11,7 +25,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1591972639015
+		"prevPromptTime": 1592058463095
 	},
 	{
 		"name": "系统",
@@ -25,7 +39,7 @@
 		"duration": 47,
 		"timestamp": 1589644856029,
 		"promptTimes": 2,
-		"prevPromptTime": 1591973240003
+		"prevPromptTime": 1592059063830
 	},
 	{
 		"name": "问题",
@@ -39,7 +53,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1591973838884
+		"prevPromptTime": 1592059662441
 	},
 	{
 		"name": "日程",
@@ -53,7 +67,7 @@
 		"duration": 34,
 		"singleWindow": "stock_replay",
 		"promptTimes": 1,
-		"prevPromptTime": 1591974439499
+		"prevPromptTime": 1592047385616
 	},
 	{
 		"name": "错误",
@@ -66,8 +80,8 @@
 		"timestamp": 1588940500338,
 		"singleWindow": "",
 		"duration": 97,
-		"promptTimes": 2,
-		"prevPromptTime": 1591975040423
+		"promptTimes": 1,
+		"prevPromptTime": 1592047986618
 	},
 	{
 		"name": "日程-复盘",
@@ -92,8 +106,8 @@
 		"timestamp": 1577964389066,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1591975638745
+		"promptTimes": 1,
+		"prevPromptTime": 1592048585575
 	},
 	{
 		"name": "日程",
@@ -106,8 +120,8 @@
 		"timestamp": 1586779488900,
 		"singleWindow": "",
 		"duration": 24,
-		"promptTimes": 2,
-		"prevPromptTime": 1591976239887
+		"promptTimes": 1,
+		"prevPromptTime": 1592049186538
 	},
 	{
 		"name": "",
@@ -120,8 +134,8 @@
 		"interval": 60,
 		"duration": 27,
 		"timestamp": 1589730834837,
-		"promptTimes": 2,
-		"prevPromptTime": 1591976840132
+		"promptTimes": 1,
+		"prevPromptTime": 1592049785534
 	},
 	{
 		"name": "",
@@ -135,7 +149,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1591977439346
+		"prevPromptTime": 1592050385515
 	},
 	{
 		"name": "",
@@ -148,8 +162,8 @@
 		"timestamp": 1588894018045,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1591957644498
+		"promptTimes": 2,
+		"prevPromptTime": 1592050985496
 	},
 	{
 		"name": "",
@@ -175,8 +189,8 @@
 		"timestamp": 1588814037008,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1591958245326
+		"promptTimes": 2,
+		"prevPromptTime": 1592051585477
 	},
 	{
 		"name": "",
@@ -190,7 +204,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1591961840701
+		"prevPromptTime": 1592052185458
 	},
 	{
 		"name": "",
@@ -203,8 +217,8 @@
 		"timestamp": 1587135535525,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1591959445495
+		"promptTimes": 2,
+		"prevPromptTime": 1592052785439
 	},
 	{
 		"name": "",
@@ -270,7 +284,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1591960044210
+		"prevPromptTime": 1592053385420
 	},
 	{
 		"name": "",
@@ -327,8 +341,8 @@
 		"timestamp": 1577862818798,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1591964840594
+		"promptTimes": 1,
+		"prevPromptTime": 1592053987102
 	},
 	{
 		"name": "日程",
@@ -341,8 +355,8 @@
 		"timestamp": 1584416255440,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1591966040654
+		"promptTimes": 1,
+		"prevPromptTime": 1592054587067
 	},
 	{
 		"name": "日程",
@@ -353,8 +367,8 @@
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
 		"timestamp": 1577697423900,
-		"promptTimes": 3,
-		"prevPromptTime": 1591969639068
+		"promptTimes": 1,
+		"prevPromptTime": 1592055187055
 	},
 	{
 		"name": "日程",
@@ -367,8 +381,8 @@
 		"timestamp": 1582429000702,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 3,
-		"prevPromptTime": 1591970240096
+		"promptTimes": 1,
+		"prevPromptTime": 1592055785348
 	},
 	{
 		"name": "日程",
@@ -380,8 +394,9 @@
 		"timestamp": 1577539413052,
 		"type": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1591967840473
+		"promptTimes": 1,
+		"prevPromptTime": 1592042587136,
+		"complete": true
 	},
 	{
 		"name": "日程",
@@ -393,8 +408,8 @@
 		"content": "更新csd。",
 		"timestamp": 1577862911294,
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1591969040547
+		"promptTimes": 1,
+		"prevPromptTime": 1592056387988
 	},
 	{
 		"name": "日程",
@@ -407,8 +422,8 @@
 		"timestamp": 1587008893339,
 		"duration": 17,
 		"singleWindow": "",
-		"promptTimes": 2,
-		"prevPromptTime": 1591972040526
+		"promptTimes": 1,
+		"prevPromptTime": 1592056989103
 	},
 	{
 		"name": "",
@@ -422,6 +437,6 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 3,
-		"prevPromptTime": 1591970840313
+		"prevPromptTime": 1592043186013
 	}
 ]
