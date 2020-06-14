@@ -1,5 +1,24 @@
 [
 	{
+		"name": "控制力",
+		"id": "2201739",
+		"trigger": "2",
+		"content": "交易反人性！控制不住情绪和本能，失败是注定的；\n踏空心理；踏空心理；翻本心理；翻本心理；\b赚钱轻浮；赚钱轻浮；\b亏钱胆怯；\b亏钱胆怯；",
+		"type": "interval",
+		"timestamp": 1584716475055,
+		"repeat": 4,
+		"disable": false
+	},
+	{
+		"name": "交易系统",
+		"id": "1801466",
+		"trigger": "3",
+		"content": "交易系统的背后是交易理念。",
+		"repeat": 1,
+		"type": "interval",
+		"timestamp": 1592107462476
+	},
+	{
 		"name": "简单纯粹取舍",
 		"id": "3934174",
 		"trigger": "1",
@@ -185,16 +204,6 @@
 		"type": "interval",
 		"timestamp": 1580734892039,
 		"repeat": 5
-	},
-	{
-		"name": "控制力",
-		"id": "2201739",
-		"trigger": "3",
-		"content": "交易反人性！控制不住情绪和本能，失败是注定的；",
-		"type": "interval",
-		"timestamp": 1584716475055,
-		"repeat": 4,
-		"disable": false
 	},
 	{
 		"name": "一致性",
