@@ -12,6 +12,7 @@ const viewerJodb = userJodb('viewer');
 
 export default function (scope) {
 
+    let $elm = scope.$elm;
     let currentImg = {};  // 当前显示的viewer img对象
     let model = null;
     let imgObj = {};
@@ -63,7 +64,7 @@ export default function (scope) {
         scope.hide();
     });
 
-    scope.$elm.hover(function () {
+    $elm.hover(function () {
         //scope.$elm.find('.tag, .button').css('opacity', 1);
         //scope.$elm.css('background', '');
     }, function () {
@@ -71,6 +72,11 @@ export default function (scope) {
         //scope.$elm.css('cssText', 'background:none!important;');
         //scope.$elm.find('.tag, .button').not('.tag.is-info').css('opacity', 0);
         //scope.$elm.find('.tag.is-info').css('opacity', 1);
+    });
+
+    $elm.on('mousewheel', function(e) {
+        e.stopPropagation();
+        //return false;
     });
 
 }

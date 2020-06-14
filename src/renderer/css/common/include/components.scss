@@ -53,8 +53,29 @@
 
 [ic-popup="viewerMarkTag"] {
   background: rgba(0, 0, 0, 0.8) !important;
-  overflow-y: hidden !important;
+  overflow-y: auto !important;
   z-index: 4000 !important;
+
+  &::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 1px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 1px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 1px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: transparent;
+  }
+
 }
 
 
