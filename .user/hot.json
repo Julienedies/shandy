@@ -66,7 +66,7 @@
 	},
 	{
 		"id": "新冠检测",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1587473744976
 	},
 	{
@@ -191,7 +191,7 @@
 	},
 	{
 		"id": "光刻胶",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1582069232767
 	},
 	{
@@ -221,7 +221,7 @@
 	},
 	{
 		"id": "生物疫苗",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579613298327
 	},
 	{
@@ -261,7 +261,7 @@
 	},
 	{
 		"id": "集成电路概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579098000269
 	},
 	{
@@ -271,7 +271,7 @@
 	},
 	{
 		"id": "网络游戏",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579011379046
 	},
 	{
@@ -296,12 +296,12 @@
 	},
 	{
 		"id": "芯片概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303653
 	},
 	{
 		"id": "网红经济",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303652
 	}
 ]

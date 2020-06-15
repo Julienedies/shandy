@@ -10,8 +10,8 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1592026052270,
-		"promptTimes": 1,
-		"prevPromptTime": 1592118717944
+		"promptTimes": 2,
+		"prevPromptTime": 1592234262852
 	},
 	{
 		"name": "",
@@ -24,8 +24,8 @@
 		"timestamp": 1582296291296,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592119326096
+		"promptTimes": 2,
+		"prevPromptTime": 1592234862149
 	},
 	{
 		"name": "系统",
@@ -39,7 +39,7 @@
 		"duration": 47,
 		"timestamp": 1589644856029,
 		"promptTimes": 1,
-		"prevPromptTime": 1592119913489
+		"prevPromptTime": 1592215663795
 	},
 	{
 		"name": "问题",
@@ -53,7 +53,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1592120518723
+		"prevPromptTime": 1592216262243
 	},
 	{
 		"name": "日程",
@@ -79,7 +79,7 @@
 		"singleWindow": "",
 		"duration": 97,
 		"promptTimes": 1,
-		"prevPromptTime": 1592121114317
+		"prevPromptTime": 1592216863182
 	},
 	{
 		"name": "日程-复盘",
@@ -105,7 +105,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1592121717936
+		"prevPromptTime": 1592217463616
 	},
 	{
 		"name": "日程",
@@ -117,7 +117,9 @@
 		"content": "做烂板上冲、连续上冲假设推演；热点龙头走势的低吸追涨预案。\n弱转强；分歧转一致；\n我从来都对预期外的反转措手不及。",
 		"timestamp": 1586779488900,
 		"singleWindow": "",
-		"duration": 24
+		"duration": 24,
+		"promptTimes": 1,
+		"prevPromptTime": 1592218062555
 	},
 	{
 		"name": "",
@@ -131,7 +133,7 @@
 		"duration": 27,
 		"timestamp": 1589730834837,
 		"promptTimes": 1,
-		"prevPromptTime": 1592122314278
+		"prevPromptTime": 1592218663522
 	},
 	{
 		"name": "",
@@ -145,7 +147,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1592122917582
+		"prevPromptTime": 1592219263356
 	},
 	{
 		"name": "",
@@ -159,7 +161,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1592123514240
+		"prevPromptTime": 1592219862046
 	},
 	{
 		"name": "",
@@ -186,8 +188,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1592124114221,
-		"complete": false
+		"prevPromptTime": 1592220463585
 	},
 	{
 		"name": "",
@@ -200,8 +201,8 @@
 		"timestamp": 1588392788941,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1592127725703
+		"promptTimes": 1,
+		"prevPromptTime": 1592221062363
 	},
 	{
 		"name": "",
@@ -215,7 +216,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1592125314182
+		"prevPromptTime": 1592221663342
 	},
 	{
 		"name": "",
@@ -280,8 +281,8 @@
 		"timestamp": 1581084979181,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592125920008
+		"promptTimes": 2,
+		"prevPromptTime": 1592222263276
 	},
 	{
 		"name": "",
@@ -314,8 +315,10 @@
 		"start": "8:50",
 		"interval": 45,
 		"repeat": 1,
-		"content": "风口选股",
-		"timestamp": 1577664169847
+		"content": "1. 风口选股：  #字节跳动   #次新   #免税店   #疫情\n2. 假如情绪好，资金的方向会是哪里？",
+		"timestamp": 1577664169847,
+		"singleWindow": "",
+		"duration": 47
 	},
 	{
 		"name": "",
@@ -338,8 +341,8 @@
 		"timestamp": 1577862818798,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592128927001
+		"promptTimes": 2,
+		"prevPromptTime": 1592226463399
 	},
 	{
 		"name": "日程",
@@ -352,8 +355,8 @@
 		"timestamp": 1584416255440,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592132514705
+		"promptTimes": 2,
+		"prevPromptTime": 1592227663027
 	},
 	{
 		"name": "日程",
@@ -364,8 +367,8 @@
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
 		"timestamp": 1577697423900,
-		"promptTimes": 1,
-		"prevPromptTime": 1592129513172
+		"promptTimes": 3,
+		"prevPromptTime": 1592230061871
 	},
 	{
 		"name": "日程",
@@ -377,7 +380,9 @@
 		"content": "每天更新自选股票池。\n加入: 启动、 爆发、 转折、 超强势的人气龙头股；\n移除：趋弱的个股；\n记住我做的是超短。",
 		"timestamp": 1582429000702,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 3,
+		"prevPromptTime": 1592231262971
 	},
 	{
 		"name": "日程",
@@ -389,8 +394,9 @@
 		"timestamp": 1577539413052,
 		"type": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592130114022
+		"promptTimes": 2,
+		"prevPromptTime": 1592229463289,
+		"complete": true
 	},
 	{
 		"name": "日程",
@@ -401,7 +407,9 @@
 		"repeat": 5,
 		"content": "更新csd。",
 		"timestamp": 1577862911294,
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 2,
+		"prevPromptTime": 1592230662843
 	},
 	{
 		"name": "日程",
@@ -413,7 +421,9 @@
 		"content": "在 JN  里 跑一遍 竞价强2 选股；",
 		"timestamp": 1587008893339,
 		"duration": 17,
-		"singleWindow": ""
+		"singleWindow": "",
+		"promptTimes": 2,
+		"prevPromptTime": 1592232463154
 	},
 	{
 		"name": "",
@@ -426,7 +436,7 @@
 		"timestamp": 1579093820041,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 3,
-		"prevPromptTime": 1592130716012
+		"promptTimes": 4,
+		"prevPromptTime": 1592231862274
 	}
 ]

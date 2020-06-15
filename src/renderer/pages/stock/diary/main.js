@@ -63,6 +63,7 @@ brick.reg('setDiaryCtrl', function () {
 
     $text.froalaEditor({
         height: 520,
+        colorsBackground: ['#ff0000', '#0000ff', '#006400', '#ffff00', '#9400D3'],
         //toolbarInline: true,
         /*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*/
         // Change save interval (time in miliseconds).
