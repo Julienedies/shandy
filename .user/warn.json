@@ -1,5 +1,51 @@
 [
 	{
+		"name": "",
+		"id": "8431329",
+		"trigger": "5",
+		"content": "我本身的性格优柔寡断，不够果断。\n容易受上次交易的影响，不能保持一致性。",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592401157829
+	},
+	{
+		"name": "",
+		"id": "7852530",
+		"trigger": "3",
+		"content": "我的交易系统模型是什么？\n只做龙头；只做主升；只做合力；只做最强；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592400678314
+	},
+	{
+		"name": "主线热点龙头",
+		"id": "6506825",
+		"trigger": "1",
+		"content": "日内热点是什么？日内热点是什么？日内热点是什么？日内热点是什么？\n热点龙头是什么？热点龙头是什么？\n寻找介入时机；\n",
+		"timestamp": 1577700857608,
+		"type": "interval",
+		"disable": false,
+		"repeat": 4
+	},
+	{
+		"name": "",
+		"id": "6331961",
+		"trigger": "5",
+		"content": "利润来自于对市场的理解力，人性的纠错。\n不同的资金有不同的行为，塑造不同的技术类型。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592364917672
+	},
+	{
+		"name": "",
+		"id": "9050418",
+		"trigger": "5",
+		"content": "做好准备，标的就那么几支，机会稍纵即逝。\n做好当下手中的票。\n双鸟在林不如一鸟在手；弱水三千，只取一瓢。\n",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592364871476
+	},
+	{
 		"name": "控制力",
 		"id": "2201739",
 		"trigger": "2",
@@ -35,6 +81,16 @@
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1592027995326
+	},
+	{
+		"name": "",
+		"id": "5791246",
+		"trigger": "3",
+		"content": "我不是依靠消息炒股；\n支撑我的是股票的客观表现。",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592316587042,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -224,16 +280,6 @@
 		"type": "interval",
 		"timestamp": 1588738028083,
 		"disable": true
-	},
-	{
-		"name": "主线热点龙头",
-		"id": "6506825",
-		"trigger": "1",
-		"content": "主线热点是方向；\n热点龙头是什么？热点龙头是什么？\n寻找介入时机；\n",
-		"timestamp": 1577700857608,
-		"type": "interval",
-		"disable": false,
-		"repeat": 4
 	},
 	{
 		"name": "大局观",

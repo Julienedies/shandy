@@ -10,8 +10,8 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1592026052270,
-		"promptTimes": 2,
-		"prevPromptTime": 1592234262852
+		"promptTimes": 1,
+		"prevPromptTime": 1592388819989
 	},
 	{
 		"name": "",
@@ -25,7 +25,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1592234862149
+		"prevPromptTime": 1592396422792
 	},
 	{
 		"name": "系统",
@@ -39,7 +39,8 @@
 		"duration": 47,
 		"timestamp": 1589644856029,
 		"promptTimes": 1,
-		"prevPromptTime": 1592215663795
+		"prevPromptTime": 1592397022208,
+		"disable": true
 	},
 	{
 		"name": "问题",
@@ -53,7 +54,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1592216262243
+		"prevPromptTime": 1592397622188
 	},
 	{
 		"name": "日程",
@@ -65,7 +66,9 @@
 		"content": "=========================交易计划==============================\n我从来没有做好次日的交易计划。既无预判，也没有推演，更无应对。然后是交易时傻乎乎看着盘面，临盘犹豫，手足无措。\n尤其是放弃了打板这一手法后，干脆就不知道做什么了。我不是控制力好，我其实是不知道做什么。\n\n-------------------主线热点，资金方向，资金类型，强弱------------------------------\n1.  先确定主线热点； ####  这是支撑我的交易逻辑之一。热钱所在，行情所在。\n2. 根据主线热点，选择标的。\n3.  预判推演标的走势，做出对应的应对计划。\n\n大盘会涨会跌？大盘处在何种阶段？哪里有机会？ 哪里有风险？ 方向：机构蓝筹趋势？  热钱情绪题材?\n---------------------------------------------------------------\n热点龙头个股会涨会跌？  能追涨吗？  能低吸吗？  盈亏比几何？\n---------------------------------------------------------------\n\n\n",
 		"timestamp": 1580821790410,
 		"duration": 34,
-		"singleWindow": "stock_replay"
+		"singleWindow": "stock_replay",
+		"promptTimes": 1,
+		"prevPromptTime": 1592398223134
 	},
 	{
 		"name": "错误",
@@ -79,7 +82,7 @@
 		"singleWindow": "",
 		"duration": 97,
 		"promptTimes": 1,
-		"prevPromptTime": 1592216863182
+		"prevPromptTime": 1592398822147
 	},
 	{
 		"name": "日程-复盘",
@@ -105,7 +108,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1592217463616
+		"prevPromptTime": 1592399422640
 	},
 	{
 		"name": "日程",
@@ -119,7 +122,7 @@
 		"singleWindow": "",
 		"duration": 24,
 		"promptTimes": 1,
-		"prevPromptTime": 1592218062555
+		"prevPromptTime": 1592400023671
 	},
 	{
 		"name": "",
@@ -133,7 +136,7 @@
 		"duration": 27,
 		"timestamp": 1589730834837,
 		"promptTimes": 1,
-		"prevPromptTime": 1592218663522
+		"prevPromptTime": 1592400622140
 	},
 	{
 		"name": "",
@@ -147,7 +150,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1592219263356
+		"prevPromptTime": 1592401223208
 	},
 	{
 		"name": "",
@@ -161,7 +164,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1592219862046
+		"prevPromptTime": 1592401823717
 	},
 	{
 		"name": "",
@@ -187,8 +190,8 @@
 		"timestamp": 1588814037008,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592220463585
+		"promptTimes": 2,
+		"prevPromptTime": 1592402422995
 	},
 	{
 		"name": "",
@@ -201,8 +204,8 @@
 		"timestamp": 1588392788941,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592221062363
+		"promptTimes": 2,
+		"prevPromptTime": 1592403023850
 	},
 	{
 		"name": "",
@@ -215,8 +218,8 @@
 		"timestamp": 1587135535525,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592221663342
+		"promptTimes": 2,
+		"prevPromptTime": 1592403622594
 	},
 	{
 		"name": "",
@@ -282,7 +285,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1592222263276
+		"prevPromptTime": 1592404223653
 	},
 	{
 		"name": "",
@@ -342,7 +345,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1592226463399
+		"prevPromptTime": 1592408423535
 	},
 	{
 		"name": "日程",
@@ -355,8 +358,8 @@
 		"timestamp": 1584416255440,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1592227663027
+		"promptTimes": 1,
+		"prevPromptTime": 1592405423260
 	},
 	{
 		"name": "日程",
@@ -367,8 +370,8 @@
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
 		"timestamp": 1577697423900,
-		"promptTimes": 3,
-		"prevPromptTime": 1592230061871
+		"promptTimes": 2,
+		"prevPromptTime": 1592409022099
 	},
 	{
 		"name": "日程",
@@ -381,8 +384,8 @@
 		"timestamp": 1582429000702,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 3,
-		"prevPromptTime": 1592231262971
+		"promptTimes": 1,
+		"prevPromptTime": 1592406622851
 	},
 	{
 		"name": "日程",
@@ -394,9 +397,8 @@
 		"timestamp": 1577539413052,
 		"type": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1592229463289,
-		"complete": true
+		"promptTimes": 1,
+		"prevPromptTime": 1592407223690
 	},
 	{
 		"name": "日程",
@@ -408,8 +410,8 @@
 		"content": "更新csd。",
 		"timestamp": 1577862911294,
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1592230662843
+		"promptTimes": 1,
+		"prevPromptTime": 1592407822453
 	},
 	{
 		"name": "日程",
@@ -421,9 +423,7 @@
 		"content": "在 JN  里 跑一遍 竞价强2 选股；",
 		"timestamp": 1587008893339,
 		"duration": 17,
-		"singleWindow": "",
-		"promptTimes": 2,
-		"prevPromptTime": 1592232463154
+		"singleWindow": ""
 	},
 	{
 		"name": "",
@@ -436,7 +436,7 @@
 		"timestamp": 1579093820041,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 4,
-		"prevPromptTime": 1592231862274
+		"promptTimes": 3,
+		"prevPromptTime": 1592387620518
 	}
 ]
