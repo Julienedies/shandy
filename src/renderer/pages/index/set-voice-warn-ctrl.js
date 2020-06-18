@@ -167,6 +167,7 @@ export default function (scope) {
         } else {
             $th.removeClass(cla).text(open);
             updateVoiceWarn(true);
+            voice.cancel();
         }
     };
 

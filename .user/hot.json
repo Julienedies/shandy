@@ -66,7 +66,7 @@
 	},
 	{
 		"id": "新冠检测",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1587473744976
 	},
 	{
@@ -181,7 +181,7 @@
 	},
 	{
 		"id": "苹果概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1582646473178
 	},
 	{
@@ -221,7 +221,7 @@
 	},
 	{
 		"id": "生物疫苗",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579613298327
 	},
 	{
@@ -231,12 +231,12 @@
 	},
 	{
 		"id": "5G",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579613271519
 	},
 	{
 		"id": "医疗器械概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579565192274
 	},
 	{
@@ -251,7 +251,7 @@
 	},
 	{
 		"id": "生物医药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579526862860
 	},
 	{
@@ -261,7 +261,7 @@
 	},
 	{
 		"id": "集成电路概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579098000269
 	},
 	{
@@ -281,7 +281,7 @@
 	},
 	{
 		"id": "消费电子",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928850827
 	},
 	{
@@ -296,7 +296,7 @@
 	},
 	{
 		"id": "芯片概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303653
 	},
 	{

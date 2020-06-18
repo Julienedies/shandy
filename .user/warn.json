@@ -1,10 +1,77 @@
 [
 	{
+		"name": "人性",
+		"id": "7294810",
+		"trigger": "10",
+		"content": "平仓止损要快，\b不要等反弹。\n止损犹疑的本质是贪便宜。",
+		"repeat": 1,
+		"type": "interval",
+		"timestamp": 1592479696259
+	},
+	{
+		"name": "一致性",
+		"id": "9854983",
+		"trigger": "3",
+		"content": "不要受以前交易影响。市场有很多变量。\n除非你对市场深刻理解，否则尽量保持交易一致性；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592450654497,
+		"disable": false
+	},
+	{
+		"name": "一致性",
+		"id": "6384511",
+		"trigger": "1",
+		"content": "保持交易一致性；\n不要让上次的操作影响你下次的情绪。\n不要以上次交易结果做为下次交易逻辑。",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1587512691831,
+		"disable": false
+	},
+	{
+		"name": "",
+		"id": "3143273",
+		"trigger": "5",
+		"content": "上涨买入，封板买入，小心高潮和顶部；\n下跌卖出，开板卖出，小心卖飞；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592453272710,
+		"disable": true
+	},
+	{
+		"name": "临盘变量",
+		"id": "2674119",
+		"trigger": "5",
+		"content": "市场氛围节奏是第一考虑变量；\n小心恐慌踩踏；\n小心情绪高潮，盛极而衰；\n",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592452876127
+	},
+	{
+		"name": "",
+		"id": "2808223",
+		"trigger": "5",
+		"content": "情绪高潮，盛极而衰，强弩之末。",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592452731862,
+		"disable": false
+	},
+	{
+		"name": "",
+		"id": "2992134",
+		"trigger": "3",
+		"content": "短线最重要的是应变。市场是动态变化的，多空动态博弈；交易者要时刻保持专注和敏感，切忌死多或死空。\n否极泰来；盛极而衰；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592450024922
+	},
+	{
 		"name": "",
 		"id": "8431329",
-		"trigger": "5",
+		"trigger": "10",
 		"content": "我本身的性格优柔寡断，不够果断。\n容易受上次交易的影响，不能保持一致性。",
-		"repeat": 4,
+		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1592401157829
 	},
@@ -12,8 +79,8 @@
 		"name": "",
 		"id": "7852530",
 		"trigger": "3",
-		"content": "我的交易系统模型是什么？\n只做龙头；只做主升；只做合力；只做最强；",
-		"repeat": 4,
+		"content": "我的交易系统模型是什么？我的交易系统模型是什么？\n只做龙头；只做主升；只做合力；只做最强；",
+		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1592400678314
 	},
@@ -21,16 +88,16 @@
 		"name": "主线热点龙头",
 		"id": "6506825",
 		"trigger": "1",
-		"content": "日内热点是什么？日内热点是什么？日内热点是什么？日内热点是什么？\n热点龙头是什么？热点龙头是什么？\n寻找介入时机；\n",
+		"content": "日内热点是什么？日内热点是什么？日内热点是什么？\n热点龙头是什么？热点龙头是什么？\n寻找介入时机；\n",
 		"timestamp": 1577700857608,
 		"type": "interval",
 		"disable": false,
-		"repeat": 4
+		"repeat": 3
 	},
 	{
 		"name": "",
 		"id": "6331961",
-		"trigger": "5",
+		"trigger": "10",
 		"content": "利润来自于对市场的理解力，人性的纠错。\n不同的资金有不同的行为，塑造不同的技术类型。",
 		"repeat": 3,
 		"type": "interval",
@@ -58,9 +125,9 @@
 	{
 		"name": "交易系统",
 		"id": "1801466",
-		"trigger": "3",
+		"trigger": "10",
 		"content": "交易系统的背后是交易理念。",
-		"repeat": 1,
+		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1592107462476
 	},
@@ -213,14 +280,13 @@
 		"repeat": 1
 	},
 	{
-		"name": "",
-		"id": "1956564",
-		"trigger": "15",
-		"content": "超预期强势，可能是市场情绪反转的信号；",
-		"repeat": 3,
+		"name": "动态博弈",
+		"id": "5354311",
+		"trigger": "1",
+		"content": "多空动态博弈；多空动态转换；\n注意盘中情绪反转；注意盘中情绪反转；\n不要他妈的只是傻乎乎看着；要做好推演和准备。\n\b否极泰来；\b否极泰来；",
 		"type": "interval",
-		"timestamp": 1590019657723,
-		"disable": true
+		"timestamp": 1580734892039,
+		"repeat": 5
 	},
 	{
 		"name": "",
@@ -230,16 +296,6 @@
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1590017494660,
-		"disable": true
-	},
-	{
-		"name": "原则",
-		"id": "5610482",
-		"trigger": "5",
-		"content": "把事情做对，而不是想着钱。",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1589969333190,
 		"disable": true
 	},
 	{
@@ -253,23 +309,24 @@
 		"disable": true
 	},
 	{
-		"name": "动态博弈",
-		"id": "5354311",
-		"trigger": "1",
-		"content": "多空动态博弈；多空动态转换；\n注意盘中情绪反转；注意盘中情绪反转；\n不要他妈的只是傻乎乎看着；要做好推演和准备。\n\b否极泰来；\b否极泰来；",
-		"type": "interval",
-		"timestamp": 1580734892039,
-		"repeat": 5
-	},
-	{
-		"name": "一致性",
-		"id": "6384511",
-		"trigger": "5",
-		"content": "保持交易一致性；\n不要让上次的操作影响你下次的情绪。\n不要以上次交易结果做为下次交易逻辑。",
+		"name": "",
+		"id": "1956564",
+		"trigger": "15",
+		"content": "超预期强势，可能是市场情绪反转的信号；",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1587512691831,
-		"disable": false
+		"timestamp": 1590019657723,
+		"disable": true
+	},
+	{
+		"name": "原则",
+		"id": "5610482",
+		"trigger": "5",
+		"content": "把事情做对，而不是想着钱。",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1589969333190,
+		"disable": true
 	},
 	{
 		"name": "主线热点龙头",
@@ -312,8 +369,8 @@
 	{
 		"name": "周期节奏",
 		"id": "1968194",
-		"trigger": "3",
-		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动、转折时犹豫；行情退潮时管不住手；\n",
+		"trigger": "1",
+		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动、转折时犹豫；行情高潮时管不住手；\n",
 		"timestamp": 1576715145044,
 		"disable": false,
 		"type": "interval",
@@ -322,12 +379,12 @@
 	{
 		"name": "周期节奏",
 		"id": "1112888",
-		"trigger": "5",
+		"trigger": "2",
 		"content": "时机就是一切；契合周期和节奏；\n借大盘的势；启动；转折；爆发；",
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1588644212860,
-		"disable": true
+		"disable": false
 	},
 	{
 		"name": "周期节奏",

@@ -10,8 +10,8 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1592026052270,
-		"promptTimes": 1,
-		"prevPromptTime": 1592388819989
+		"promptTimes": 2,
+		"prevPromptTime": 1592487802679
 	},
 	{
 		"name": "",
@@ -25,7 +25,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1592396422792
+		"prevPromptTime": 1592488404074
 	},
 	{
 		"name": "系统",
@@ -38,8 +38,6 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1589644856029,
-		"promptTimes": 1,
-		"prevPromptTime": 1592397022208,
 		"disable": true
 	},
 	{
@@ -53,8 +51,8 @@
 		"timestamp": 1588771295970,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592397622188
+		"promptTimes": 2,
+		"prevPromptTime": 1592489003377
 	},
 	{
 		"name": "日程",
@@ -68,7 +66,7 @@
 		"duration": 34,
 		"singleWindow": "stock_replay",
 		"promptTimes": 1,
-		"prevPromptTime": 1592398223134
+		"prevPromptTime": 1592489604200
 	},
 	{
 		"name": "错误",
@@ -81,8 +79,8 @@
 		"timestamp": 1588940500338,
 		"singleWindow": "",
 		"duration": 97,
-		"promptTimes": 1,
-		"prevPromptTime": 1592398822147
+		"promptTimes": 2,
+		"prevPromptTime": 1592490202993
 	},
 	{
 		"name": "日程-复盘",
@@ -107,8 +105,8 @@
 		"timestamp": 1577964389066,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592399422640
+		"promptTimes": 2,
+		"prevPromptTime": 1592490802847
 	},
 	{
 		"name": "日程",
@@ -121,8 +119,8 @@
 		"timestamp": 1586779488900,
 		"singleWindow": "",
 		"duration": 24,
-		"promptTimes": 1,
-		"prevPromptTime": 1592400023671
+		"promptTimes": 2,
+		"prevPromptTime": 1592491402560
 	},
 	{
 		"name": "",
@@ -135,8 +133,8 @@
 		"interval": 60,
 		"duration": 27,
 		"timestamp": 1589730834837,
-		"promptTimes": 1,
-		"prevPromptTime": 1592400622140
+		"promptTimes": 2,
+		"prevPromptTime": 1592492003582
 	},
 	{
 		"name": "",
@@ -149,8 +147,8 @@
 		"timestamp": 1588910961231,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592401223208
+		"promptTimes": 2,
+		"prevPromptTime": 1592492602699
 	},
 	{
 		"name": "",
@@ -163,8 +161,8 @@
 		"timestamp": 1588894018045,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592401823717
+		"promptTimes": 3,
+		"prevPromptTime": 1592493203149
 	},
 	{
 		"name": "",
@@ -190,8 +188,8 @@
 		"timestamp": 1588814037008,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1592402422995
+		"promptTimes": 3,
+		"prevPromptTime": 1592493804110
 	},
 	{
 		"name": "",
@@ -204,8 +202,8 @@
 		"timestamp": 1588392788941,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1592403023850
+		"promptTimes": 4,
+		"prevPromptTime": 1592494402657
 	},
 	{
 		"name": "",
@@ -219,7 +217,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1592403622594
+		"prevPromptTime": 1592495003686
 	},
 	{
 		"name": "",
@@ -285,7 +283,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1592404223653
+		"prevPromptTime": 1592495602407
 	},
 	{
 		"name": "",
@@ -345,7 +343,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1592408423535
+		"prevPromptTime": 1592480004223
 	},
 	{
 		"name": "日程",
@@ -358,8 +356,8 @@
 		"timestamp": 1584416255440,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592405423260
+		"promptTimes": 2,
+		"prevPromptTime": 1592482404519
 	},
 	{
 		"name": "日程",
@@ -370,8 +368,8 @@
 		"repeat": 4,
 		"content": "查看当日涨停个股资料，动态、新闻、公告。",
 		"timestamp": 1577697423900,
-		"promptTimes": 2,
-		"prevPromptTime": 1592409022099
+		"promptTimes": 3,
+		"prevPromptTime": 1592483604202
 	},
 	{
 		"name": "日程",
@@ -384,8 +382,8 @@
 		"timestamp": 1582429000702,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592406622851
+		"promptTimes": 3,
+		"prevPromptTime": 1592484803793
 	},
 	{
 		"name": "日程",
@@ -397,8 +395,8 @@
 		"timestamp": 1577539413052,
 		"type": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592407223690
+		"promptTimes": 3,
+		"prevPromptTime": 1592485404256
 	},
 	{
 		"name": "日程",
@@ -410,8 +408,8 @@
 		"content": "更新csd。",
 		"timestamp": 1577862911294,
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1592407822453
+		"promptTimes": 2,
+		"prevPromptTime": 1592486604290
 	},
 	{
 		"name": "日程",
@@ -423,7 +421,9 @@
 		"content": "在 JN  里 跑一遍 竞价强2 选股；",
 		"timestamp": 1587008893339,
 		"duration": 17,
-		"singleWindow": ""
+		"singleWindow": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1592486003301
 	},
 	{
 		"name": "",
@@ -436,7 +436,7 @@
 		"timestamp": 1579093820041,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 3,
-		"prevPromptTime": 1592387620518
+		"promptTimes": 2,
+		"prevPromptTime": 1592484203868
 	}
 ]
