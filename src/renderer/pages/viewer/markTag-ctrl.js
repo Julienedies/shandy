@@ -3,8 +3,8 @@
  * Created by j on 2020-01-01.
  */
 
-/*import 'babel-polyfill'
-import $ from 'jquery'*/
+/*import 'babel-polyfill'*/
+import $ from 'jquery'
 
 import userJodb from '../../../libs/user-jodb'
 const viewerJodb = userJodb('viewer');
@@ -74,9 +74,22 @@ export default function (scope) {
         //scope.$elm.find('.tag.is-info').css('opacity', 1);
     });
 
-    $elm.on('mousewheel', function(e) {
+/*    $elm.on('mousewheel', function(e) {
         e.stopPropagation();
         //return false;
-    });
+    });*/
+
+    scope.toggleScrollMode = function (e) {
+        let cla = 'is-primary';
+        let $th = $(this);
+        $th.toggleClass(cla);
+        if ($th.hasClass(cla)) {
+            $elm.on('mousewheel', function (e) {
+                e.stopPropagation();
+            });
+        } else {
+            $elm.off('mousewheel');
+        }
+    };
 
 }

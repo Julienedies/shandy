@@ -1,5 +1,11 @@
 [
 	{
+		"id": "7183888",
+		"date": "2020-06-13",
+		"text": "<p><strong><span style=\"font-size: 30px; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255);\">关于复盘</span></strong></p><p><br></p><p><strong>1. 当前市场状态怎么样?</strong></p><p>&nbsp; &nbsp; 指数状态</p><p>&nbsp; &nbsp; 情绪状态</p><p>&nbsp; &nbsp;&nbsp;</p><p>2. &nbsp;主线是什么？ &nbsp;短期热点是什么？</p><p><br></p><p><br></p><p>3. &nbsp;资金方向？</p><p>&nbsp; &nbsp; &nbsp;趋势蓝筹</p><p>&nbsp; &nbsp; &nbsp;情绪题材</p><p><br></p><p><br></p>",
+		"timestamp": 1592025757666
+	},
+	{
 		"id": "9041321",
 		"date": "2020-06-12",
 		"text": "<p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;关于频率 VS 分仓 VS 仓位控制&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255);\">&nbsp;1. &nbsp;分仓是必须的，防范系统性风险，保持概率优势。</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 255);\">&nbsp;分仓数量不超过3只，最好的交易标的就那么几只。参考@纵横股道 的交易系统.&nbsp;</span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 255);\">&nbsp;个股仓位不超过1/2, &nbsp;整体仓位不超过2/3; &nbsp;</span></span></p><p><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;在临盘试错，验证的过程中，循序分仓建仓；正确的加仓，错误的次日平仓。&nbsp;</span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255);\">&nbsp;2. &nbsp;频率和仓位； 市场是波动的，所以频率和仓位应契合市场状态。&nbsp;</span></strong></p><p><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">1、低仓高频：每日都要操作，主要是保持盘感和感知市场情绪及应对系统风险。</span></p><p><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">2、高仓低频：大仓位出击，只用在确定性最高的大行情中。</span></p><p><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp; &nbsp; 机会来临时，全力以赴。</span></p><p><br></p><p><strong><span style=\"font-size: 18px;\">原因：</span></strong></p><p>分仓是必须的，如果要在市场上长久活下去，风险控制是必须的。同时交易成功是通过概率体现的，而不是单次交易。</p><p>当然每次交易机会会有不同的确定性和盈亏比考虑。</p><p><br></p><p><strong><span style=\"font-size: 18px;\">具体做法：</span></strong></p><p>个股仓位不超过1/3，最大1/2</p><p>整体仓位不超过2/3</p><p><br></p><p><strong><span style=\"font-size: 18px;\">分仓的潜在问题：</span></strong></p><p><strong><span style=\"font-size: 18px;\">1. 顾不过来，超短转瞬即涨即跌。</span></strong></p><p><strong><span style=\"font-size: 18px;\">尝试通过一天买，一天卖；详尽的条件单解决。</span></strong></p>",
@@ -70,12 +76,6 @@
 		"date": "2020-06-15",
 		"text": "<p>好的标的并不多，从这个角度来说， 分仓容易拉低收益。 盈亏同源。</p><p>还有主观判断的问题。我的主观判断总是出错。是不是应该机械执行呢？</p><p><br></p><p>主观判断的部分非常重要；包括股性（资金类型，人气，地位）；技术面 （波浪形态）；市场氛围（时机）；主线热点（方向）；&nbsp;</p><p>我本身倾向全仓一只票</p>",
 		"timestamp": 1592218205837
-	},
-	{
-		"id": "7183888",
-		"date": "2020-06-13",
-		"text": "<p><strong><span style=\"font-size: 30px; background-color: rgb(255, 0, 0); color: rgb(255, 255, 255);\">关于复盘</span></strong></p><p><br></p><p><strong>1. 当前市场状态怎么样?</strong></p><p>&nbsp; &nbsp; 指数状态</p><p>&nbsp; &nbsp; 情绪状态</p><p>&nbsp; &nbsp;&nbsp;</p><p>2. &nbsp;主线是什么？ &nbsp;短期热点是什么？</p><p><br></p><p><br></p><p>3. &nbsp;资金方向？</p><p>&nbsp; &nbsp; &nbsp;趋势蓝筹</p><p>&nbsp; &nbsp; &nbsp;情绪题材</p><p><br></p><p><br></p>",
-		"timestamp": 1592025757666
 	},
 	{
 		"id": "4080980",

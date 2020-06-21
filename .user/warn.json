@@ -1,5 +1,60 @@
 [
 	{
+		"name": "周期节奏",
+		"id": "1968194",
+		"trigger": "1",
+		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动、转折时犹豫；行情高潮时管不住手；\n",
+		"timestamp": 1576715145044,
+		"disable": false,
+		"type": "interval",
+		"repeat": 3
+	},
+	{
+		"name": "",
+		"id": "9238429",
+		"trigger": "10",
+		"content": "热点决定方向；\n情绪决定时机；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592738935715
+	},
+	{
+		"name": "市场",
+		"id": "1336099",
+		"trigger": "10",
+		"content": "博弈驱动行情；热点驱动行情；趋势驱动行情；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592715738196
+	},
+	{
+		"name": "错误",
+		"id": "3932706",
+		"trigger": "5",
+		"content": "我每次都节奏相反，判断相反；\n这绝不是偶然的。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592710063686
+	},
+	{
+		"name": "简单纯粹取舍",
+		"id": "3934174",
+		"trigger": "1",
+		"repeat": 4,
+		"content": "简单、纯粹、取舍、控制；\n只做系统；只做计划；只做理解；只做龙头；只做最强；只做主升；",
+		"type": "interval",
+		"timestamp": 1587208620664
+	},
+	{
+		"name": "",
+		"id": "2045410",
+		"trigger": "5",
+		"content": "管住手，不要因为鸡肋交易浪费最好的交易机会。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592709293488
+	},
+	{
 		"name": "",
 		"id": "3605543",
 		"trigger": "5",
@@ -38,7 +93,7 @@
 	{
 		"name": "",
 		"id": "1003131",
-		"trigger": "5",
+		"trigger": "10",
 		"content": "市场走势和我的预判相反，怎么办？",
 		"repeat": 3,
 		"type": "interval",
@@ -93,7 +148,7 @@
 		"name": "重复错误",
 		"id": "6319683",
 		"trigger": "1",
-		"content": "准备不足，临盘犹豫；盘中随意交易，管不住手；\n一直重复相同的错误；你他妈的真是该死！",
+		"content": "准备不足，临盘犹豫；盘中随意交易，管不住手；\n一直重复相同的错误，你不恨这样的你吗？",
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1592551038644
@@ -239,15 +294,6 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1592107462476
-	},
-	{
-		"name": "简单纯粹取舍",
-		"id": "3934174",
-		"trigger": "1",
-		"repeat": 4,
-		"content": "简单、纯粹、取舍、重复；\n只做龙头；只做最强；只做主升；只做合力；只做系统；只做理解；",
-		"type": "interval",
-		"timestamp": 1587208620664
 	},
 	{
 		"name": "",
@@ -474,16 +520,6 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1588814012347
-	},
-	{
-		"name": "周期节奏",
-		"id": "1968194",
-		"trigger": "1",
-		"content": "没有大局观，总是和市场节奏相反：\n\b行情启动、转折时犹豫；行情高潮时管不住手；\n",
-		"timestamp": 1576715145044,
-		"disable": false,
-		"type": "interval",
-		"repeat": 3
 	},
 	{
 		"name": "周期节奏",
