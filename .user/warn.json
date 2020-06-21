@@ -1,29 +1,138 @@
 [
 	{
+		"name": "",
+		"id": "3605543",
+		"trigger": "5",
+		"content": "不可吃着碗里看着锅里",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592704305350
+	},
+	{
+		"name": "",
+		"id": "0933414",
+		"trigger": "1",
+		"content": "简单、纯粹、取舍；\n准备预案；\n控制、避免犯错；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592669251920
+	},
+	{
+		"name": "交易逻辑",
+		"id": "4887300",
+		"trigger": "5",
+		"content": "人性不变，历史会重复。\n我要做的就是找到那些会重复发生的事。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592668633740
+	},
+	{
+		"name": "",
+		"id": "7954658",
+		"trigger": "10",
+		"content": "市场处在动态变化中；\n要不就等待目标行情；\n要不就根据当前市场状态做对应的操作；",
+		"repeat": 1,
+		"type": "interval",
+		"timestamp": 1592645940234
+	},
+	{
+		"name": "",
+		"id": "1003131",
+		"trigger": "5",
+		"content": "市场走势和我的预判相反，怎么办？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592629219298
+	},
+	{
+		"name": "动态博弈",
+		"id": "8903672",
+		"trigger": "5",
+		"content": "我很容易陷入非涨即跌的单一思维，市场是动态博弈的，不要思维定势。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592627990179
+	},
+	{
+		"name": "动态博弈",
+		"id": "3422908",
+		"trigger": "5",
+		"content": "股市是动态走出来的，实际上是博弈出来的。理解这一点很重要。\n决不能死多死空。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592622853580
+	},
+	{
+		"name": "思维定势",
+		"id": "1188334",
+		"trigger": "3",
+		"content": "千万不要有\b一定是顶部；一定是双头；一定是反弹这种想法。\n市场变量很多；多空动态博弈；客观看待；动态应对；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592577334735
+	},
+	{
+		"name": "准备预案",
+		"id": "3592199",
+		"trigger": "5",
+		"content": "我从来没有做好次日的交易计划。既无预判，也没有推演，更无应对。\n交易时傻乎乎看着盘面，被动反应，临盘犹豫，手足无措，冲动随意。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592566824220
+	},
+	{
+		"name": "交易系统",
+		"id": "7013784",
+		"trigger": "3",
+		"content": "我要捕捉的目标行情是什么？\n我的买点是什么？\n盈亏比；市场环境变量；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592566756746
+	},
+	{
+		"name": "重复错误",
+		"id": "6319683",
+		"trigger": "1",
+		"content": "准备不足，临盘犹豫；盘中随意交易，管不住手；\n一直重复相同的错误；你他妈的真是该死！",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1592551038644
+	},
+	{
+		"name": "",
+		"id": "3669476",
+		"trigger": "1",
+		"content": "我的每一笔交易都有错误；\n5个月了，我还是\b在不断的重复错误；\n恨自己失败无能的感觉可以\b持续多久？\n我这种人就是该死！就是该有悲惨的结局！",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592550381265
+	},
+	{
 		"name": "人性",
 		"id": "7294810",
 		"trigger": "10",
 		"content": "平仓止损要快，\b不要等反弹。\n止损犹疑的本质是贪便宜。",
 		"repeat": 1,
 		"type": "interval",
-		"timestamp": 1592479696259
+		"timestamp": 1592479696259,
+		"disable": true
 	},
 	{
 		"name": "一致性",
 		"id": "9854983",
-		"trigger": "3",
+		"trigger": "10",
 		"content": "不要受以前交易影响。市场有很多变量。\n除非你对市场深刻理解，否则尽量保持交易一致性；",
-		"repeat": 4,
+		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1592450654497,
-		"disable": false
+		"disable": true
 	},
 	{
 		"name": "一致性",
 		"id": "6384511",
 		"trigger": "1",
 		"content": "保持交易一致性；\n不要让上次的操作影响你下次的情绪。\n不要以上次交易结果做为下次交易逻辑。",
-		"repeat": 4,
+		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1587512691831,
 		"disable": false
@@ -55,7 +164,7 @@
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1592452731862,
-		"disable": false
+		"disable": true
 	},
 	{
 		"name": "",
@@ -136,7 +245,7 @@
 		"id": "3934174",
 		"trigger": "1",
 		"repeat": 4,
-		"content": "简单、纯粹、取舍、重复；\n只做龙头；只做最强；只做主升；",
+		"content": "简单、纯粹、取舍、重复；\n只做龙头；只做最强；只做主升；只做合力；只做系统；只做理解；",
 		"type": "interval",
 		"timestamp": 1587208620664
 	},

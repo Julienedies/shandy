@@ -16,17 +16,19 @@
     <div class="level">
 
         <div class="level-left">
-            <button class="button"
-                    ic-ajax
-                    ic-ajax-auto
-                    ic-submit-method="get"
-                    ic-submit-action="/stock/logic"
-                    ic-submit-on-done="onGetLogicDone">逻辑列表
-            </button>
-            <button class="button" ic-click="logic.edit">新逻辑</button>
-            <button class="button" ic-click="logic.reverse">排序反转</button>
-            <button class="button" ic-click="createReader">Reader</button>
-            <button class="button" ic-click="toggleFull">完整显示</button>
+            <div class="buttons has-addons">
+                <button class="button"
+                        ic-ajax
+                        ic-ajax-auto
+                        ic-submit-method="get"
+                        ic-submit-action="/stock/logic"
+                        ic-submit-on-done="onGetLogicDone">逻辑列表
+                </button>
+                <button class="button" ic-click="logic.edit">新逻辑</button>
+                <button class="button" ic-click="logic.reverse">排序反转</button>
+                <button class="button" ic-click="createReader">Reader</button>
+                <button class="button" ic-click="toggleFull">完整显示</button>
+            </div>
         </div>
 
         <div class="level-right">
@@ -41,16 +43,16 @@
 
     <div class="columns" ic-tpl="tags">
         <div class="tags" ic-select="tags" ic-select-on-change="onTagFilterChange">
-            <span class="tag" ic-for="i,v in model.tagMap" ic-val="{{ i }}" ic-has-selected="i===model.tag">{{ i }}</span>
+            <span class="tag" ic-for="i,v in model.tagArr" ic-val="{{ v }}" ic-has-selected="v===model.tag">{{ v }}</span>
             ~~~~
-            <span class="tag" ic-for="i,v in model.typeMap" ic-val="{{ i }}" ic-has-selected="i===model.type">{{ i }}</span>
+            <span class="tag" ic-for="i,v in model.typeArr" ic-val="{{ v }}" ic-has-selected="v===model.type">{{ v }}</span>
         </div>
     </div>
 
 
     <ul ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
-            <div class="pre">{{v.text}}</div>
+            <div class="pre scroll">{{v.text}}</div>
             <div class="tar">
                 <span class="tag is-primary" ic-if="v.type" ic-for="k,j in v.type">{{j || ''}}</span>&nbsp;&nbsp;&nbsp;
                 <span class="tag is-info" ic-if="v.note">{{v.note || ''}}</span>&nbsp;&nbsp;&nbsp;
@@ -99,9 +101,9 @@
                 <h6>类型</h6>
                 <div>
                     <div class="tags" ic-select="type" ic-select-type="checkbox" ic-form-field="type">
-                        <span ic-for="i,v in model.typeMap" ic-class="tag is-small" ic-val="{{ i }}"
-                              ic-has-selected="model.type && model.type.includes(i)">
-                            {{ i }}
+                        <span ic-for="i,v in model.typeArr" ic-class="tag is-small" ic-val="{{ v }}"
+                              ic-has-selected="model.type && model.type.includes(v)">
+                            {{ v }}
                         </span>
                         <input type="text" class="input is-small" placeholder="添加新类型" ic-enter-press="addLogicType"/>
                     </div>
@@ -121,8 +123,8 @@
                 <h6>标签</h6>
                 <div>
                     <div class="tags" ic-select="logicTag"  ic-form-field="tag">
-                        <span ic-for="i,v in model.tagMap" ic-class="tag is-small" ic-val="{{ i }}" ic-has-selected="i === model.tag">
-                            {{ i }}
+                        <span ic-for="i,v in model.tagArr" ic-class="tag is-small" ic-val="{{ v }}" ic-has-selected="v === model.tag">
+                            {{ v }}
                         </span>
                         <input type="text" class="input is-small" placeholder="添加标签" ic-enter-press="addLogicTag"/>
                     </div>
@@ -136,7 +138,7 @@
                     <button class="button is-primary"
                             ic-form-submit
                             ic-submit-action="/stock/logic"
-                            ic-submit-before
+                            ic-submit-before="before"
                             ic-submit-on-done="done">保存
                     </button>
                     <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
