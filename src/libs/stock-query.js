@@ -15,11 +15,11 @@ function trim (str) {
  */
 export default function (words) {
 
-    console.info(words);
+    console.info('参数 =>', words);
 
     if (!words) return {};
 
-    const stocks = stocksManager.get();
+    let stocks = stocksManager.get();
 
     // 简写code, 譬如002714的简写: 2714
     if (/^\d{3,}$/img.test(words)) {
@@ -52,14 +52,19 @@ export default function (words) {
         return words === stock[1] || code === stock[0];
     });
 
+    console.log(result && result[0]);
+
     result = result.length ? result : stocks.filter(stock => {
         return name === stock[1] || stock[0] === code;
     });
 
+    console.log(result && result[0]);
 
     result = result.length ? result : stocks.filter(stock => {
         return r_name.test(stock[1]);
     });
+
+    console.log(result && result[0]);
 
     let stock = result[0] || [];
 

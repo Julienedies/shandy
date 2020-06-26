@@ -16,12 +16,12 @@
 	},
 	{
 		"id": "今日头条",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1590917148535
 	},
 	{
 		"id": "传媒",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1590916260406
 	},
 	{
@@ -36,12 +36,12 @@
 	},
 	{
 		"id": "大消费",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1589417273308
 	},
 	{
 		"id": "医疗器械",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1589417250291
 	},
 	{
@@ -66,7 +66,7 @@
 	},
 	{
 		"id": "新冠检测",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1587473744976
 	},
 	{
@@ -181,7 +181,7 @@
 	},
 	{
 		"id": "苹果概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1582646473178
 	},
 	{
@@ -191,7 +191,7 @@
 	},
 	{
 		"id": "光刻胶",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1582069232767
 	},
 	{
@@ -211,7 +211,7 @@
 	},
 	{
 		"id": "云游戏",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1580915862404
 	},
 	{
@@ -221,7 +221,7 @@
 	},
 	{
 		"id": "生物疫苗",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579613298327
 	},
 	{
@@ -231,7 +231,7 @@
 	},
 	{
 		"id": "5G",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579613271519
 	},
 	{
@@ -271,7 +271,7 @@
 	},
 	{
 		"id": "网络游戏",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579011379046
 	},
 	{

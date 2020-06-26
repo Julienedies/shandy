@@ -37,7 +37,7 @@
     position: fixed;
     width: 100%;
     bottom: 10%;
-    padding-right: 10%;
+    padding-right: 4%;
     text-align: right;
 
     a {
@@ -50,6 +50,14 @@
   }
 
 }
+
+#ic-viewer-info {
+  padding-left: 840px!important;
+}
+#ic-viewer-handle {
+  padding-left: 640px!important;
+}
+
 
 [ic-popup="viewerMarkTag"] {
   background: rgba(0, 0, 0, 0.8) !important;

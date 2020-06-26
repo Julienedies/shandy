@@ -7,8 +7,8 @@
 import $ from 'jquery'
 
 import userJodb from '../../../libs/user-jodb'
-const viewerJodb = userJodb('viewer');
 
+const viewerJodb = userJodb('viewer');
 
 export default function (scope) {
 

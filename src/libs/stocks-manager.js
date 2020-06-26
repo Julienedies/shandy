@@ -8,17 +8,18 @@ import path from 'path'
 import jo from './jsono'
 import config from './config'
 
-const jsonPath = path.resolve(config.CSD_DIR, './stocks.json')
+const jsonPath = path.resolve(config.CSD_DIR, './stocks.json');
 
-let stocksJo
+let stocksJo;
+let id = +new Date;
 
 function getStocksJo () {
-    stocksJo = stocksJo || jo(jsonPath)
+    stocksJo = stocksJo || jo(jsonPath);
     /*    stocksJo.json.forEach((arr, i) => {
             arr[1] = arr[1].replace('Ａ', 'A')
         })
         stocksJo.save()*/
-    return stocksJo
+    return stocksJo;
 }
 
 export default {
@@ -27,13 +28,14 @@ export default {
      * @return {Array}
      */
     get: function () {
-        stocksJo = getStocksJo()
-        return stocksJo.json
+        console.log(id);
+        stocksJo = getStocksJo();
+        return stocksJo.json;
     },
     add: function (stock) {
-        stocksJo = getStocksJo()
-        stocksJo.json.unshift([stock.code, stock.name])
-        stocksJo.save()
+        stocksJo = getStocksJo();
+        stocksJo.json.unshift([stock.code, stock.name]);
+        stocksJo.save();
     },
     refresh: function () {
         stocksJo = jo(jsonPath);

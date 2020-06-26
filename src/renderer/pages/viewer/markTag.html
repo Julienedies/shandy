@@ -1,15 +1,15 @@
-<div class="column is-6" ic-ctrl="viewerMarkTagCtrl" ic-popup="viewerMarkTag">
+<div class="column is-7" ic-ctrl="viewerMarkTagCtrl" ic-popup="viewerMarkTag">
     <div>
         <header class="buttons">
-            <button class="button is-primary"
+            <button class="button is-primary is-small"
                     ic-ajax
                     ic-ajax-auto
                     ic-submit-method="get"
                     ic-submit-action="/stock/system"
                     ic-submit-on-done="onGetSystemDone">交易系统列表
             </button>
-            <button class="button" ic-click="toggleScrollMode">切换滚动模式</button>
-            <button class="button is-primary" ic-popup-close>关闭</button>
+            <button class="button is-small" ic-click="toggleScrollMode">切换滚动模式</button>
+            <button class="button is-primary is-small" ic-popup-close>关闭</button>
         </header>
 
         <div ic-tpl="viewerTags">
