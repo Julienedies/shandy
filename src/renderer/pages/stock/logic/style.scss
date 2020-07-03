@@ -3,11 +3,11 @@ a.no {
 }
 
 .notification div.pre {
-  max-height: 32em;
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
 
   &.scroll {
+    max-height: 32em;
     overflow-y: scroll;
   }
 }

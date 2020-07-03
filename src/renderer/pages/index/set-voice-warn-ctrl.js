@@ -25,19 +25,32 @@ export default function (scope) {
     const dragOverCla = 'onDragOver';
     const ignoreReg = /[(（].*[）)]/img;
 
-    let currentTabType = '';
+    let currentTabType = 'interval';
+    let currentTag = '';
+
+    let cla = 'is-primary';
+
+    let $toggleBtn = scope.$elm.find('button[role=toggleBtn]');
 
     // 通知主进程ipcMain, 主进程通过io广播给client
-    function send (msg) {
+    function send(msg) {
         ipcRenderer.send('voice_warn', msg);
     }
 
-    function copyX (str, count) {
+    function copyX(str, count) {
         return _.fill(Array(count || 1), str).join('\r\n');
     }
 
-    function render () {
+    function render() {
         let model = currentTabType ? warnJodb.get(currentTabType, 'type') : warnJodb.get();
+
+        if (currentTag) {
+            currentTag = currentTag === '_null' ? '' : currentTag;
+            model = model.filter((item) => {
+                return currentTag ? item.name.includes(currentTag) : item.name === currentTag;
+            });
+        }
+
         scope.render('warnList', {model}, function () {
             $(this).find('tr')
                 .on('dragstart', scope.dragstart)
@@ -45,22 +58,32 @@ export default function (scope) {
                 .on('dragleave', scope.dragleave)
                 .on('drop', scope.drop);
         });
+
     }
 
-    function init () {
+    function render2() {
+        let tagsModel = {};
+        warnJodb.each((v, i) => {
+            tagsModel[v.name || '_null'] = 1;
+        });
+        scope.render('tags', {model: tagsModel});
+    }
+
+    function init() {
         render();
+        render2();
         // 如果语言警告明确设置为false，返回
         if (isAbleVoiceWarn === false) return;
         // 如果不是交易时段, 则不设置语音警告
         if (utils.isTrading() || isAbleVoiceWarn || 0) {
             isAbleVoiceWarn = true;  // 如果是交易时段, 语音警告可用
             updateVoiceWarn();
-            scope.$elm.find('button[role=toggleBtn]').text('关闭语音').addClass('is-primary');
+            $toggleBtn.text('关闭语音').addClass('is-primary');
         }
     }
 
     // 类型分为 定时; 动作; 间隔; 三个标签
-    function getType (trigger) {
+    function getType(trigger) {
         if (/^\d+$/.test(trigger)) {
             return 'interval';
         } else if (/^\d\d?(?:[:]\d\d?)+$/.test(trigger)) {
@@ -70,7 +93,7 @@ export default function (scope) {
         }
     }
 
-    function setVoiceWarnForItem (item, cancel) {
+    function setVoiceWarnForItem(item, cancel) {
         let id = item.id;
         let trigger = item.trigger;
         let content = item.content;
@@ -119,7 +142,7 @@ export default function (scope) {
         }
     }
 
-    function updateVoiceWarn (cancel) {
+    function updateVoiceWarn(cancel) {
         warnIntervalArr = [];
         if (cancel) {
             clearInterval(warnIntervalTimer);
@@ -147,28 +170,44 @@ export default function (scope) {
         console.log(str);
     };
 
+    scope.toggleShow = function (e) {
+        $(this).toggleClass('is-primary');
+        scope.$elm.find('tr.disable').toggle();
+    };
+
     // 类型分为 定时; 动作; 间隔; 三个标签
     scope.onTypeChange = function (msg) {
         currentTabType = msg.value;
+        currentTag = '';
+        render();
+    };
+
+    scope.onTagFilterChange = function (msg) {
+        currentTag = msg.value;
         render();
     };
 
     // 开启语音警告或关闭
     scope.toggle = function (e) {
-        let $th = $(this);
-        let open = '开启语音';
-        let close = '关闭语音';
-        let cla = 'is-primary';
-        let str = $th.text();
-        isAbleVoiceWarn = !isAbleVoiceWarn;
-        if (str === open) {
-            $th.addClass(cla).text(close);
-            updateVoiceWarn();
+        if ($toggleBtn.hasClass(cla)) {
+            scope.stop();
         } else {
-            $th.removeClass(cla).text(open);
-            updateVoiceWarn(true);
-            voice.cancel();
+            scope.open();
         }
+    };
+
+    // 开启语音
+    scope.open = function () {
+        isAbleVoiceWarn = true;
+        $toggleBtn.addClass(cla).text('关闭语音');
+        updateVoiceWarn();
+    };
+    // 停止语音
+    scope.stop = function () {
+        isAbleVoiceWarn = false;
+        $toggleBtn.removeClass(cla).text('开启语音');
+        updateVoiceWarn(true);
+        voice.cancel();
     };
 
     // 试听单项
@@ -220,19 +259,19 @@ export default function (scope) {
     };
 
     utils.timer('8:45', () => {
-        updateVoiceWarn();
+        scope.open();
     });
 
     utils.timer('11:30', () => {
-        updateVoiceWarn(true);
+        scope.stop();
     });
 
     utils.timer('12:45', () => {
-        updateVoiceWarn();
+        scope.open();
     });
 
     utils.timer('15:00', () => {
-        updateVoiceWarn(true);
+        scope.stop();
     });
 
     // -------------------------------------------------------------------
