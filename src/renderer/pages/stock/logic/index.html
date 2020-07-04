@@ -41,12 +41,17 @@
     </div>
 
     <div class="columns" ic-tpl="tags">
-        <div class="tags" ic-select="tags" ic-select-on-change="onTagFilterChange">
+        <div class="tags" ic-select="tags" ic-select-item=".tag" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
             <span class="tag" ic-for="i,v in model.authorArr" ic-val="{{ v }}" ic-has-selected="v===model.author">{{ v }}</span>
-            ~~~~~~~~~~~~&nbsp;&nbsp;&nbsp;
+            ~~~~~~~&nbsp;&nbsp;&nbsp;
             <span class="tag" ic-for="i,v in model.typeArr" ic-val="{{ v }}" ic-has-selected="v===model.type">{{ v }}</span>
+            ~~~~~~~&nbsp;
+            <div class="column ">
+                <span class="tag" ic-for="i,v in model.tradingKeyTags" ic-val="{{ v.id }}" ic-has-selected="">{{ v.text }}</span>
+            </div>
         </div>
     </div>
+
 
     <ul ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
@@ -83,7 +88,7 @@
 
 <div ic-ctrl="setLogicCtrl" ic-popup="set_logic">
 
-    <div class="column is-10" ic-tpl ic-tpl-init="{logic:{}, tags: {}, typeArr:{}, authorArr:{}}">
+    <div class="column is-12" ic-tpl ic-tpl-init="{logic:{}, tags: {}, typeArr:{}, authorArr:{}}">
 
         <div class="table_0" ic-form="setLogic" ic-init="logic=model.logic; tags=model.tags; typeArr=model.typeArr; authorArr=model.authorArr;">
 
@@ -112,7 +117,7 @@
 
             <!-- tr -->
             <div>
-                <h6>交易要素标签</h6>
+                <h6>交易要素</h6>
                 <div>
                     <div class="field is-grouped is-grouped-multiline" ic-select="tradingKeyTags" ic-select-type="checkbox" ic-select-cla="is-primary" ic-form-field="tag">
                         <div class="control" ic-for="i,v in tags">
@@ -162,7 +167,7 @@
                         <span ic-for="i,v in authorArr" ic-class="tag is-small" ic-val="{{ v }}" ic-has-selected="v === logic.author">
                             {{ v }}
                         </span>
-                        <input type="text" class="input is-small" placeholder="添加标签" ic-enter-press="addLogicTag"/>
+                        <input type="text" class="input is-small" placeholder="添加标签" ic-enter-press="addLogicAuthor"/>
                     </div>
                 </div>
             </div>

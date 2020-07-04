@@ -60,7 +60,7 @@ export default function (scope) {
         if (currentTag) {
             currentTag = currentTag === '_null' ? '' : currentTag;
             model = model.filter((item) => {
-                return currentTag ? item.name.includes(currentTag) : item.name === currentTag;
+                return currentTag ? (item.name.includes(currentTag)|| item.tag && item.tag.includes(currentTag)) : item.name === currentTag;
             });
         }
 
@@ -75,11 +75,12 @@ export default function (scope) {
     }
 
     function render2 () {
-        let tagsModel = {};
+        let names = {};
         warnJodb.each((v, i) => {
-            tagsModel[v.name || '_null'] = 1;
+            names[v.name || '_null'] = 1;
         });
-        scope.render('tags', {model: tagsModel});
+        let model = {names, tradingKeyTags};
+        scope.render('tags', {model});
     }
 
     function init () {
@@ -95,88 +96,6 @@ export default function (scope) {
         }
     }
 
-    // 类型分为 定时; 动作; 间隔; 三个标签
-    function getType (trigger) {
-        if (/^\d+$/.test(trigger)) {
-            return 'interval';
-        } else if (/^\d\d?(?:[:]\d\d?)+$/.test(trigger)) {
-            return 'timer';
-        } else {
-            return 'action';
-        }
-    }
-
-    function setVoiceWarnForItem (item, cancel) {
-        let id = item.id;
-        let trigger = item.trigger;
-        let content = item.content;
-        let content2 = copyX(content, item.repeat);
-        let disable = item.disable || cancel;
-        let old = warnHandleMap[id];
-
-        let type = getType(trigger);
-
-        // interval => 10 : 间隔执行
-        if (type === 'interval') {
-            if (disable) {
-                _.remove(warnIntervalArr, (v) => {
-                    return v === id;
-                });
-                return;
-            }
-            let count = Math.ceil(60 / trigger);
-            let arr = _.fill(Array(count), id);
-            warnIntervalArr = warnIntervalArr.concat(arr);
-            warnIntervalArr = _.shuffle(warnIntervalArr);
-        }
-        // timer => 9:00: 定时执行
-        else if (type === 'timer') {
-            if (old && old.handle) {
-                old.handle.cancel();
-                delete old.handle;
-            }
-            if (disable) {
-                return;
-            }
-            let handle = utils.timer(trigger, () => {
-                voice('timer', content2);
-                send(content);
-            });
-            warnHandleMap[id] = {handle};
-        }
-        // active => 'daban': 打板动作触发
-        else {
-            old && delete warnHandleMap[old.handle];
-            if (disable) {
-                return;
-            }
-            warnHandleMap[trigger] = id;
-            warnHandleMap[id] = {handle: trigger};
-        }
-    }
-
-    function updateVoiceWarn (cancel) {
-        warnIntervalArr = [];
-        if (cancel) {
-            clearInterval(warnIntervalTimer);
-            warnIntervalTimer = null;
-        }
-        warnJodb.get().forEach((item, index) => {
-            setVoiceWarnForItem(item, cancel);
-        });
-
-        if (!cancel && !warnIntervalTimer && isAbleVoiceWarn) {
-            warnIntervalTimer = setInterval(() => {
-                let id = warnIntervalArr.shift();
-                let item = warnJodb.get2(id);
-                let str = _.fill(Array(item.repeat || 1), item.content).join('\r\n');
-                str = str.replace(ignoreReg, '');
-                voice(str);
-                //send(item.content);
-                warnIntervalArr.push(id);
-            }, 1000 * 60 * 1.1);
-        }
-    }
 
     scope.debug = function (e) {
         let str = JSON.stringify(warnIntervalArr, null, '\t');
@@ -294,12 +213,114 @@ export default function (scope) {
     scope.on(`${ ON_SET_TAG_DONE }, ${ ON_DEL_TAG_DONE }`, function (e, data) {
         tradingKeyTags = data['交易要素'];
         let warnItem = $elm.find('[ic-form="setWarnItem"]').icForm();
-        $.icMsg(warnItem);
-        console.log(444, warnItem);
         let model = {warnItem, tags: tradingKeyTags};
         scope.render('setWarnItem', {model});
     });
 
+    // -------------------------------------------------------------------
+
+    scope.one(ON_GET_TAGS_DONE, (e, data) => {
+        console.log('only one');
+        tradingKeyTags = data['交易要素'];
+        init();
+    });
+
+    warnJodb.on('change', init);
+
+    // 接收外部动作消息, 目前是 打板; 买入; 卖出;
+    ipcRenderer.on('warn', (event, info) => {
+        console.log(info, warnHandleMap[info]);
+        let id = warnHandleMap[info] || '';
+        let item = warnJodb.get2(id);
+        let str = _.fill(Array(item.repeat || 1), item.content).join('\r\n');
+        let str2 = str.replace(ignoreReg, '');
+        voice('x', str2);
+    });
+
+    // 类型分为 定时; 动作; 间隔; 三个标签
+    function getType (trigger) {
+        if (/^\d+$/.test(trigger)) {
+            return 'interval';
+        } else if (/^\d\d?(?:[:]\d\d?)+$/.test(trigger)) {
+            return 'timer';
+        } else {
+            return 'action';
+        }
+    }
+
+    function setVoiceWarnForItem (item, cancel) {
+        let id = item.id;
+        let trigger = item.trigger;
+        let content = item.content;
+        let content2 = copyX(content, item.repeat);
+        let disable = item.disable || cancel;
+        let old = warnHandleMap[id];
+
+        let type = getType(trigger);
+
+        // interval => 10 : 间隔执行
+        if (type === 'interval') {
+            if (disable) {
+                _.remove(warnIntervalArr, (v) => {
+                    return v === id;
+                });
+                return;
+            }
+            let count = Math.ceil(60 / trigger);
+            let arr = _.fill(Array(count), id);
+            warnIntervalArr = warnIntervalArr.concat(arr);
+            warnIntervalArr = _.shuffle(warnIntervalArr);
+        }
+        // timer => 9:00: 定时执行
+        else if (type === 'timer') {
+            if (old && old.handle) {
+                old.handle.cancel();
+                delete old.handle;
+            }
+            if (disable) {
+                return;
+            }
+            let handle = utils.timer(trigger, () => {
+                voice('timer', content2);
+                send(content);
+            });
+            warnHandleMap[id] = {handle};
+        }
+        // active => 'daban': 打板动作触发
+        else {
+            old && delete warnHandleMap[old.handle];
+            if (disable) {
+                return;
+            }
+            warnHandleMap[trigger] = id;
+            warnHandleMap[id] = {handle: trigger};
+        }
+    }
+
+    function updateVoiceWarn (cancel) {
+        warnIntervalArr = [];
+        if (cancel) {
+            clearInterval(warnIntervalTimer);
+            warnIntervalTimer = null;
+        }
+        warnJodb.get().forEach((item, index) => {
+            setVoiceWarnForItem(item, cancel);
+        });
+
+        if (!cancel && !warnIntervalTimer && isAbleVoiceWarn) {
+            warnIntervalTimer = setInterval(() => {
+                let id = warnIntervalArr.shift();
+                let item = warnJodb.get2(id);
+                let str = _.fill(Array(item.repeat || 1), item.content).join('\r\n');
+                str = str.replace(ignoreReg, '');
+                voice(str);
+                //send(item.content);
+                warnIntervalArr.push(id);
+            }, 1000 * 60 * 1.1);
+        }
+    }
+
+    // --------------------------------------------------------------------
 
     utils.timer('8:45', () => {
         scope.open();
@@ -316,27 +337,6 @@ export default function (scope) {
     utils.timer('15:00', () => {
         scope.stop();
     });
-
-    // -------------------------------------------------------------------
-
-    scope.one(ON_GET_TAGS_DONE, () => {
-        console.log('only one');
-        init();
-    });
-
-    warnJodb.on('change', init);
-
-    // 接收外部动作消息, 目前是 打板; 买入; 卖出;
-    ipcRenderer.on('warn', (event, info) => {
-        console.log(info, warnHandleMap[info]);
-        let id = warnHandleMap[info] || '';
-        let item = warnJodb.get2(id);
-        let str = _.fill(Array(item.repeat || 1), item.content).join('\r\n');
-        let str2 = str.replace(ignoreReg, '');
-        voice('x', str2);
-    });
-
-    // --------------------------------------------------------------------
 
     scope.dragstart = function (e) {
         let id = $(this).data('id');

@@ -11,7 +11,16 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import { ADD_LOGIC, EDIT_LOGIC, DEL_LOGIC, ON_DEL_LOGIC_DONE, ON_SET_LOGIC_DONE, ON_GET_LOGIC_DONE, ON_GET_TAGS_DONE, } from '../../../js/constants'
+import {
+    ADD_LOGIC,
+    EDIT_LOGIC,
+    DEL_LOGIC,
+    ON_DEL_LOGIC_DONE,
+    ON_SET_LOGIC_DONE,
+    ON_GET_LOGIC_DONE,
+    ON_GET_TAGS_DONE,
+    ON_SET_TAG_DONE, ON_DEL_TAG_DONE, DEL_TAG,
+} from '../../../js/constants'
 
 import utils from '../../../js/utils'
 import '../../../js/common-stock.js'
@@ -24,45 +33,41 @@ brick.reg('setTagCtrl', setTagCtrl);
 brick.reg('logicCtrl', function () {
 
     let scope = this;
-    let $elm = scope.$elm;
     let $title = $('title');
-    let recordManager = brick.services.get('recordManager')();
-    let sortType = brick.utils.get_query('sort') || 'time';
+    let logicManager = brick.services.get('recordManager')();
+    let sortType = brick.utils.getQuery('sort') || 'time';
     let isSortByTime = sortType === 'time';
     let isReverse = false;
-    let logicArr = [];  // 当前显示的logic数组
-
-    scope.tagMap = {};
-    scope.author = undefined;
-    scope.tagsMap = {};
-
 
     let reader;  // 语音阅读器
 
-    let updateLogic = () => {
-        let tag = scope.author;
-        logicArr = tag !== undefined ? recordManager.get((item, index) => {
-            return item.author === tag || String(item.author) === tag || (item.type && item.type.includes(tag));
-        }) : recordManager.get();
+    //scope.tagsMap = {};  // 所有的标签数据集合
+    let logicArr = [];  // 当前显示的logic数组
+
+    let updateLogicArrByFilterKey = () => {
+        let filterKey = scope.filterKey;
+        logicArr = filterKey !== undefined ? logicManager.get((item, index) => {
+            let isAuthorMatch = item.author === filterKey || String(item.author) === filterKey;
+            let isTypeMatch = item.type && item.type.includes(filterKey);
+            let isTagMatch = item.tag && item.tag.includes(filterKey);
+            return  isAuthorMatch || isTypeMatch || isTagMatch;
+        }) : logicManager.get();
     };
 
     let render = () => {
-        updateLogic();
-        console.log('isSortByTime =>', isSortByTime);
-        if (isSortByTime) {
-            // 原始数据是sort排序，list.get是拷贝数据，所以会始终保留原始排序数据
-        } else {
-            logicArr.sort((a, b) => {
-                a = a.level || 0;
-                b = b.level || 0;
-                return b * 1 - a * 1;
-            });
-        }
+        updateLogicArrByFilterKey();
+        // 原始数据是time排序，list.get是拷贝数据，所以会始终保留原始排序数据
+        !isSortByTime && logicArr.sort((a, b) => {
+            a = a.level || 0;
+            b = b.level || 0;
+            return b * 1 - a * 1;
+        });
 
-        let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
-        $title.text(`logic_${ scope.author || sortType }_${ date }`);
         isReverse && logicArr.reverse();
         scope.render('logic', logicArr);
+        // 更新html title, 下载text用
+        let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
+        $title.text(`logic_${ scope.filterKey || sortType }_${ date }`);
     };
 
     // 文本语音阅读
@@ -77,14 +82,14 @@ brick.reg('logicCtrl', function () {
     };
 
     this.onGetLogicDone = function (data) {
-        recordManager.init(data);
-        let tags = [];
+        logicManager.init(data);
+        let authors = [];
         let types = [];
         data.map((item, index) => {
-            let tag = item.author;
+            let author = item.author;
             let type = item.type;
-            if (tag) {
-                tags.push(tag);
+            if (author) {
+                authors.push(author);
             }
             if (type) {
                 type.forEach((v) => {
@@ -92,12 +97,10 @@ brick.reg('logicCtrl', function () {
                 });
             }
         });
-        scope.authorMap = _.countBy(tags);
+        scope.authorMap = _.countBy(authors);
         scope.typeMap = _.countBy(types);
-        let tagArr = [];
-        let typeArr = [];
-        tagArr = _.keys(scope.authorMap);
-        typeArr = _.keys(scope.typeMap);
+        let tagArr = _.keys(scope.authorMap);
+        let typeArr = _.keys(scope.typeMap);
         tagArr.sort(utils.sortByPy);
         typeArr.sort(utils.sortByPy);
         scope.authorArr = tagArr;
@@ -116,8 +119,8 @@ brick.reg('logicCtrl', function () {
     };
 
     // 标签改变
-    this.onTagFilterChange = function (msg) {
-        scope.author = msg.value;
+    this.onFilterKeyChange = function (msg) {
+        scope.filterKey = msg.value;
         render();
     };
 
@@ -136,10 +139,10 @@ brick.reg('logicCtrl', function () {
 
     this.logic = {
         edit: function (e, id) {
-            let logic = id ? recordManager.get(id) : {};
+            let logic = id ? logicManager.get(id) : {};
             let authorArr = scope.authorArr;
             let typeArr = scope.typeArr;
-            let tags = scope.tagsMap['交易要素'];
+            let tags = scope.tradingKeyTags;
             scope.emit(EDIT_LOGIC, {logic, authorArr, typeArr, tags});
         },
         remove: function (data) {
@@ -157,11 +160,11 @@ brick.reg('logicCtrl', function () {
     });
 
     scope.on(ON_GET_TAGS_DONE, function (e, data) {
-        scope.tagsMap = data;
+        //scope.tagsMap = data;
+        scope.tradingKeyTags = data['交易要素'];
     });
 
 });
-
 
 
 brick.reg('setLogicCtrl', function () {
@@ -169,6 +172,7 @@ brick.reg('setLogicCtrl', function () {
     let scope = this;
     let $elm = this.$elm;
 
+    // 暂存当前要修改或添加的logic Model
     scope.vm = {};
 
     scope.before = function (data) {
@@ -182,6 +186,10 @@ brick.reg('setLogicCtrl', function () {
 
     scope.reset = function () {
         scope.render({});
+    };
+
+    scope.delTag = function (e, id) {
+        scope.emit(DEL_TAG, id);
     };
 
     // 订阅修改logic事件
@@ -213,20 +221,30 @@ brick.reg('setLogicCtrl', function () {
         scope.render(vm);
     };
 
-    scope.addLogicTag = function (e) {
+    scope.addLogicAuthor = function (e) {
         let vm = scope.vm;
         let str = $(this).val();
         if (!str) return;
         if (vm.authorArr.includes(str)) {
-            return alert('标签已经存在.');
+            return alert('著者已经存在.');
         } else {
-            vm.authorArr.push(str);
-            let obj = $elm.find('[ic-form="setLogic"]').icForm();
+            let obj = getFormVm();
             obj.type = str;
+            vm.authorArr.push(str);
             Object.assign(vm, obj);
         }
-        console.log(12, vm);
         scope.render(vm);
     };
+
+    scope.on(`${ ON_SET_TAG_DONE }, ${ ON_DEL_TAG_DONE }`, function (e, data) {
+        let vm = scope.vm;
+        vm.logic = getFormVm();
+        vm.tags = data['交易要素'];
+        scope.render(vm);
+    });
+
+    function getFormVm () {
+        return $elm.find('[ic-form="setLogic"]').icForm();
+    }
 
 });

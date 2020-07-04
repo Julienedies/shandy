@@ -25,7 +25,9 @@ ${ require('../tags/set-tag.html') }
 
         <div class="columns" ic-tpl="tags">
             <div class="tags" ic-select="tags" ic-select-cla="is-primary" ic-select-on-change="onTagFilterChange">
-                <span class="tag" ic-for="i,v in model" ic-val="{{ i }}">{{ i }}</span>
+                <span class="tag" ic-for="i,v in model.names" ic-val="{{ i }}">{{ i }}</span>
+                ~~~~~~~~~
+                <span class="tag" ic-for="i,v in model.tradingKeyTags" ic-val="{{ v.id }}" ic-has-selected="">{{ v.text }}</span>
             </div>
         </div>
 
