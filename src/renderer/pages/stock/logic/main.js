@@ -6,18 +6,20 @@ import './index.html'
 import '../../../css/common/common.scss'
 import './style.scss'
 
+import _ from 'lodash'
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
+import { ADD_LOGIC, EDIT_LOGIC, DEL_LOGIC, ON_DEL_LOGIC_DONE, ON_SET_LOGIC_DONE, ON_GET_LOGIC_DONE, ON_GET_TAGS_DONE, } from '../../../js/constants'
+
+import utils from '../../../js/utils'
 import '../../../js/common-stock.js'
 import Reader from '../../../../libs/reader'
 
-import _ from 'lodash'
+import setTagCtrl from '../../tags/set-tag-ctrl'
 
-function sortByPy(param1, param2) {
-    return param1.localeCompare(param2, "zh");
-}
+brick.reg('setTagCtrl', setTagCtrl);
 
 brick.reg('logicCtrl', function () {
 
@@ -31,14 +33,16 @@ brick.reg('logicCtrl', function () {
     let logicArr = [];  // 当前显示的logic数组
 
     scope.tagMap = {};
-    scope.tag = undefined;
+    scope.author = undefined;
+    scope.tagsMap = {};
+
 
     let reader;  // 语音阅读器
 
     let updateLogic = () => {
-        let tag = scope.tag;
+        let tag = scope.author;
         logicArr = tag !== undefined ? recordManager.get((item, index) => {
-            return item.tag === tag || String(item.tag) === tag || (item.type && item.type.includes(tag));
+            return item.author === tag || String(item.author) === tag || (item.type && item.type.includes(tag));
         }) : recordManager.get();
     };
 
@@ -56,7 +60,7 @@ brick.reg('logicCtrl', function () {
         }
 
         let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
-        $title.text(`logic_${ scope.tag || sortType }_${ date }`);
+        $title.text(`logic_${ scope.author || sortType }_${ date }`);
         isReverse && logicArr.reverse();
         scope.render('logic', logicArr);
     };
@@ -77,26 +81,26 @@ brick.reg('logicCtrl', function () {
         let tags = [];
         let types = [];
         data.map((item, index) => {
-            let tag = item.tag;
+            let tag = item.author;
             let type = item.type;
-            if(tag){
+            if (tag) {
                 tags.push(tag);
             }
-            if(type){
+            if (type) {
                 type.forEach((v) => {
                     types.push(v);
                 });
             }
         });
-        scope.tagMap = _.countBy(tags);
+        scope.authorMap = _.countBy(tags);
         scope.typeMap = _.countBy(types);
         let tagArr = [];
         let typeArr = [];
-        tagArr = _.keys(scope.tagMap);
+        tagArr = _.keys(scope.authorMap);
         typeArr = _.keys(scope.typeMap);
-        tagArr.sort(sortByPy);
-        typeArr.sort(sortByPy);
-        scope.tagArr = tagArr;
+        tagArr.sort(utils.sortByPy);
+        typeArr.sort(utils.sortByPy);
+        scope.authorArr = tagArr;
         scope.typeArr = typeArr;
         scope.render('tags', scope);
         render();
@@ -113,31 +117,30 @@ brick.reg('logicCtrl', function () {
 
     // 标签改变
     this.onTagFilterChange = function (msg) {
-        let tag = scope.tag = msg.value;
-        tag = tag ? tag : '';
+        scope.author = msg.value;
         render();
     };
-
 
     // 长logic文本内容显示方式切换
     this.toggleText = function (e) {
         let cla = 'scroll';
         let $th = $(this).toggleClass(cla);
         $th.closest('li').find('.pre').toggleClass(cla);
-/*        if($th.hasClass(cla)){
-            $th.closest('li').find('.pre').css('max-height', 'none');
-        }else{
-            $th.closest('li').find('.pre').css('max-height', '32em');
-        }*/
+        /*        if($th.hasClass(cla)){
+                    $th.closest('li').find('.pre').css('max-height', 'none');
+                }else{
+                    $th.closest('li').find('.pre').css('max-height', '32em');
+                }*/
 
     };
 
     this.logic = {
         edit: function (e, id) {
-            let vm = id ? recordManager.get(id) : {};
-            vm.tagArr = scope.tagArr;
-            vm.typeArr = scope.typeArr;
-            scope.emit('logic.edit', vm);
+            let logic = id ? recordManager.get(id) : {};
+            let authorArr = scope.authorArr;
+            let typeArr = scope.typeArr;
+            let tags = scope.tagsMap['交易要素'];
+            scope.emit(EDIT_LOGIC, {logic, authorArr, typeArr, tags});
         },
         remove: function (data) {
             scope.onGetLogicDone(data);
@@ -149,11 +152,16 @@ brick.reg('logicCtrl', function () {
         }
     };
 
-    scope.on('logic.edit.done', function (e, data) {
+    scope.on(ON_SET_LOGIC_DONE, function (e, data) {
         scope.onGetLogicDone(data);
     });
 
+    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+        scope.tagsMap = data;
+    });
+
 });
+
 
 
 brick.reg('setLogicCtrl', function () {
@@ -166,8 +174,9 @@ brick.reg('setLogicCtrl', function () {
     scope.before = function (data) {
     };
 
+    // 当logic添加或修改完成，广播事件
     scope.done = function (data) {
-        scope.emit('logic.edit.done', data);
+        scope.emit(ON_SET_LOGIC_DONE, data);
         $elm.icPopup(false);
     };
 
@@ -175,10 +184,11 @@ brick.reg('setLogicCtrl', function () {
         scope.render({});
     };
 
-    scope.on('logic.edit', function (e, logic) {
-        console.log('on logic.edit', logic);
-        scope.vm = logic;
-        scope.render(logic);
+    // 订阅修改logic事件
+    scope.on(EDIT_LOGIC, function (e, msg) {
+        console.log('on logic.edit', msg);
+        scope.vm = msg;
+        scope.render(msg);
         $elm.icPopup(true);
     });
 
@@ -189,10 +199,10 @@ brick.reg('setLogicCtrl', function () {
     scope.addLogicType = function (e) {
         let vm = scope.vm;
         let str = $(this).val();
-        if(!str) return;
-        if(vm.typeArr.includes(str)){
+        if (!str) return;
+        if (vm.typeArr.includes(str)) {
             return alert('类型已经存在.');
-        }else{
+        } else {
             vm.typeArr.push(str);
             let obj = $elm.find('[ic-form="setLogic"]').icForm();
             obj.type = obj.type || [];
@@ -206,11 +216,11 @@ brick.reg('setLogicCtrl', function () {
     scope.addLogicTag = function (e) {
         let vm = scope.vm;
         let str = $(this).val();
-        if(!str) return;
-        if(vm.tagArr.includes(str)){
+        if (!str) return;
+        if (vm.authorArr.includes(str)) {
             return alert('标签已经存在.');
-        }else{
-            vm.tagArr.push(str);
+        } else {
+            vm.authorArr.push(str);
             let obj = $elm.find('[ic-form="setLogic"]').icForm();
             obj.type = str;
             Object.assign(vm, obj);

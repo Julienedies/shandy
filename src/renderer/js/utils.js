@@ -41,6 +41,16 @@ function countTag (arr) {
     return result;
 }
 
+/**
+ * 中文首字母排序比较方式
+ * @param param1
+ * @param param2
+ * @returns {number}
+ */
+function sortByPy(param1, param2) {
+    return param1.localeCompare(param2, "zh");
+}
+
 try {
 
     window.parseImgName = parseImgName;
@@ -53,5 +63,6 @@ try {
 
 export default {
     parseImgName,
-    parseImgPath
+    parseImgPath,
+    sortByPy
 }

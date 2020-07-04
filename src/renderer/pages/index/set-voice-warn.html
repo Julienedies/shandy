@@ -1,3 +1,4 @@
+${ require('../tags/set-tag.html') }
 <!-- 语音提醒 -->
 <div id="setVoiceWarnCtrl" ic-ctrl="setVoiceWarnCtrl" Xic-popup="setVoiceWarn">
     <div class="column is-12" style="padding:20px;">
@@ -31,7 +32,10 @@
         <table class="table is-striped" style="margin-top:15px;font-size:14px;" ic-tpl="warnList">
             <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                 ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" ic-class="{{v.disable? 'disable': ''}}">
-                <td>{{ v.name }}</td>
+                <td>
+                    <div><span class="tag is-danger">{{ TAGS_MAP_BY_ID[v.tag] && TAGS_MAP_BY_ID[v.tag].text }}</span> </div>
+                    <div>{{ v.name }}</div>
+                </td>
                 <td>{{ v.trigger }}</td>
                 <td><span style="opacity: 0.3;">{{ v.repeat || 1 }}</span></td>
                 <td class="pre">{{ v.content }}</td>
@@ -47,31 +51,63 @@
             </tr>
         </table>
 
+        <!-- 修改添加警告项 -->
         <div class="column" ic-popup="setWarnItem">
-            <div ic-tpl="setWarnItem" ic-tpl-init="{}">
-                <div ic-form>
+            <div ic-tpl="setWarnItem" ic-tpl-init="{warnItem:{}, tags:{}}">
+                <div ic-form="setWarnItem"  ic-init="warnItem=model.warnItem; tags=model.tags;">
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
-                            <input type="hidden" value="{{ model.id }}" ic-form-field="id">
+                            <input class="input" type="text" placeholder="name,可选" value="{{ warnItem.name }}" ic-form-field="name">
+                            <input type="hidden" value="{{ warnItem.id }}" ic-form-field="id">
                         </div>
                     </div>
+
+                    <!-- 交易要素 标签 -->
+                    <div class="field is-grouped is-grouped-multiline" ic-select="tag" ic-select-cla="is-primary"  ic-form-field="tag">
+                        <div class="control" ic-for="i,v in tags">
+                            <div class="tags has-addons">
+                                <span class="tag is-small"
+                                      ic-select-item
+                                      ic-has-selected="warnItem.tag === v.id"
+                                      ic-val="{{v.id}}">{{v.text}}
+                                </span>
+                                <a class="tag is-small" ic-click="editTag:{{v.id}}">
+                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
+                                </a>
+                                <a class="tag is-delete is-small"
+                                   ic-click="delTag:{{ v.id }}"
+                                   x-ic-ajax
+                                   ic-submit-data="{{v.text}}"
+                                   ic-submit-method="delete"
+                                   ic-submit-action="/stock/tags/{{v.id}}"
+                                   ic-submit-on-done="onTagDeleteDone"
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-small" ic-click="addTag:交易要素">
+                                    <span class="icon is-small"><i class="fas fa-file-medical"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="field">
                         <div class="control">
                             <input class="input" type="text" placeholder="动作触发:daban | 定时触发: 9:00 | 重复触发:10(单位分钟)"
-                                   value="{{ model.trigger }}" ic-form-field="trigger">
+                                   value="{{ warnItem.trigger }}" ic-form-field="trigger">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                                            <textarea rows="11" class="textarea" placeholder="警告内容"
-                                                      ic-form-field="content">{{ model.content }}</textarea>
+                            <textarea rows="11" class="textarea" placeholder="警告内容"ic-form-field="content">{{ warnItem.content }}</textarea>
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
                             <input class="input" type="number" placeholder="重复次数"
-                                   ic-value="{{ model.repeat || 3 }}" ic-form-field="repeat">
+                                   ic-value="{{ warnItem.repeat || 3 }}" ic-form-field="repeat">
                         </div>
                     </div>
                     <div class="field">

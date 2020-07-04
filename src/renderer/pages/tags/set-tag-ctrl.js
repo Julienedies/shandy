@@ -3,6 +3,8 @@
  */
 
 import $ from 'jquery'
+import brick from '@julienedies/brick'
+import { EDIT_TAG, ADD_TAG, ON_SET_TAG_DONE, DEL_TAG, ON_GET_TAGS_DONE, ON_DEL_TAG_DONE } from '../../js/constants'
 
 export default function () {
 
@@ -10,8 +12,27 @@ export default function () {
     let $elm = scope.$elm;
     let types = [];
 
-    let onGetTagMapDone = (tagMap) => {
-        types = tagMap['type'];
+    // 因为都是通过 setTagCtrl 进行标签添加或修改, setTagCtrl里的标签数据总是最新的
+    let tagsManager = brick.services.get('recordManager')();
+
+    window.TAGS_MAP_BY_ID = {};
+
+    function tagsMap2Arr (data) {
+        let result = [];
+        for (let i in data) {
+            let arr= data[i];
+            arr.forEach((item) => {
+                TAGS_MAP_BY_ID[item.id] = item;
+            });
+            result = result.concat(arr);
+        }
+        return result;
+    }
+
+    let onGetTagMapDone = (data) => {
+        tagsManager.init(tagsMap2Arr(data));
+        types = data['type'];
+        scope.emit(ON_GET_TAGS_DONE, data);
     };
 
     $.ajax({
@@ -20,10 +41,10 @@ export default function () {
     }).done(onGetTagMapDone);
 
     // tag ajax post one done
-    scope.done = function (data) {
+    scope.onSetTagDone = function (data) {
         onGetTagMapDone(data);
         $elm.icPopup(false);
-        scope.emit('tag.edit.done', data);
+        scope.emit(ON_SET_TAG_DONE, data);
     };
 
     scope.reset = function () {
@@ -31,10 +52,51 @@ export default function () {
     };
 
     /**
-     * 上传图片：只在electron端使用
-     * @param data {Array} 图片路径数组, 可以是绝对路径或者url
-     * @returns {boolean}
+     * 修改标签对象
+     * @param msg {String|Object}  标签Id 或者 标签对象 或者 是单个标签对象数组 ()
      */
+    scope.on(EDIT_TAG, function (e, msg) {
+        console.info(e, msg);
+        let tagItemVm = msg;
+        if (typeof msg === 'number' || typeof msg === 'string') {
+            tagItemVm = tagsManager.get2(msg);
+        }
+        if (Array.isArray(msg)) {
+            tagItemVm = msg[0];
+        }
+
+        tagItemVm.types = tagItemVm.types || types;
+        scope.render({model: tagItemVm});
+        $elm.icPopup(true);
+    });
+    /**
+     * 添加标签事件
+     * @param msg {Object|String}  含有标签类型的标签对象或标签类型
+     */
+    scope.on(ADD_TAG, function (e, msg) {
+        console.info(e, msg);
+        let model = msg;
+        if (typeof msg === 'string') {
+            model = {types, type: msg};
+        }
+        model.types = model.types || types;
+        scope.render({model});
+        $elm.icPopup(true);
+    });
+
+    /**
+     * 要求删除标签事件
+     */
+    scope.on(DEL_TAG, function (e, id) {
+        $.ajax({
+            url: `/stock/tags/${ id }`,
+            method: `delete`,
+        }).done((data) => {
+            scope.emit(ON_DEL_TAG_DONE, data);
+        });
+    });
+
+
     scope.onSelectPathDone = function (data) {
         // 获取表单数据model
         let model = $elm.find('[ic-form="setTag"]').icForm();
@@ -47,6 +109,12 @@ export default function () {
         return false;
     };
 
+    /**
+     * 上传图片：只在electron端使用
+     * @param data {Array} 图片路径数组, 可以是绝对路径或者url
+     * @returns {boolean}
+     */
+
     // 图片上传 web端使用，暂时无用，
     /*scope.onUploadDone = function (data) {
         // 获取表单数据model
@@ -57,20 +125,5 @@ export default function () {
         });
         scope.render(model);
     };*/
-
-    // 编辑标签或添加标签
-    // msg 可能是null, 或者是Object, 或者是Array
-    scope.on('tag.add, tag.edit', function (e, msg) {
-        console.info(e, msg);
-        let vm = msg || {types};
-        if (Array.isArray(msg)) {
-            vm = msg[0];
-        }
-        if (!vm.types) {
-            vm.types = types;
-        }
-        scope.render(vm);
-        $elm.icPopup(true);
-    });
 
 }

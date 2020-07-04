@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../../css/vendor/hint.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
-<body ic-ctrl="main_ctrl">
+<body ic-ctrl="mainCtrl">
 
 <div class="column is-10 is-offset-1" ic-ctrl="logicCtrl">
 
@@ -40,24 +40,23 @@
 
     </div>
 
-
     <div class="columns" ic-tpl="tags">
         <div class="tags" ic-select="tags" ic-select-on-change="onTagFilterChange">
-            <span class="tag" ic-for="i,v in model.tagArr" ic-val="{{ v }}" ic-has-selected="v===model.tag">{{ v }}</span>
-            ~~~~
+            <span class="tag" ic-for="i,v in model.authorArr" ic-val="{{ v }}" ic-has-selected="v===model.author">{{ v }}</span>
+            ~~~~~~~~~~~~&nbsp;&nbsp;&nbsp;
             <span class="tag" ic-for="i,v in model.typeArr" ic-val="{{ v }}" ic-has-selected="v===model.type">{{ v }}</span>
         </div>
     </div>
-
 
     <ul ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre scroll">{{v.text}}</div>
             <div class="tar">
                 <span class="tag is-primary" ic-if="v.type" ic-for="k,j in v.type">{{j || ''}}</span>&nbsp;&nbsp;&nbsp;
+                <span class="tag is-danger" ic-if="v.tag" ic-for="k,j in v.tag">{{ TAGS_MAP_BY_ID[j] && TAGS_MAP_BY_ID[j].text }}</span>
                 <span class="tag is-info" ic-if="v.note">{{v.note || ''}}</span>&nbsp;&nbsp;&nbsp;
                 <span class="tag" ic-if="v.level">{{v.level || ''}}</span>&nbsp;
-                <span class="tag" ic-if="v.tag">{{v.tag || ''}}</span>
+                <span class="tag" ic-if="v.author">{{v.author || ''}}</span>
                 <a class="no" ic-click="logic.edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
                 <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
                 <a class="no"
@@ -81,18 +80,19 @@
 
 </div>
 
+
 <div ic-ctrl="setLogicCtrl" ic-popup="set_logic">
 
-    <div class="column is-10" ic-tpl ic-tpl-init="{}">
+    <div class="column is-10" ic-tpl ic-tpl-init="{logic:{}, tags: {}, typeArr:{}, authorArr:{}}">
 
-        <div class="table_0" ic-form="setLogic">
+        <div class="table_0" ic-form="setLogic" ic-init="logic=model.logic; tags=model.tags; typeArr=model.typeArr; authorArr=model.authorArr;">
 
             <!-- tr -->
             <div>
                 <h6>逻辑</h6>
                 <div>
-                    <textarea rows="12" class="textarea" ic-form-field="text">{{model.text}}</textarea>
-                    <input type="hidden" name="id" ic-form-field value="{{model.id}}"/>
+                    <textarea rows="12" class="textarea" ic-form-field="text">{{logic.text}}</textarea>
+                    <input type="hidden" name="id" ic-form-field value="{{logic.id}}"/>
                 </div>
             </div>
 
@@ -101,8 +101,8 @@
                 <h6>类型</h6>
                 <div>
                     <div class="tags" ic-select="type" ic-select-type="checkbox" ic-form-field="type">
-                        <span ic-for="i,v in model.typeArr" ic-class="tag is-small" ic-val="{{ v }}"
-                              ic-has-selected="model.type && model.type.includes(v)">
+                        <span ic-for="i,v in typeArr" ic-class="tag is-small" ic-val="{{ v }}"
+                              ic-has-selected="logic.type && logic.type.includes(v)">
                             {{ v }}
                         </span>
                         <input type="text" class="input is-small" placeholder="添加新类型" ic-enter-press="addLogicType"/>
@@ -112,18 +112,54 @@
 
             <!-- tr -->
             <div>
-                <h6>优先级</h6>
+                <h6>交易要素标签</h6>
                 <div>
-                    <input class="input is-small" type="number" name="level" ic-value="{{model.level}}" ic-form-field>
+                    <div class="field is-grouped is-grouped-multiline" ic-select="tradingKeyTags" ic-select-type="checkbox" ic-select-cla="is-primary" ic-form-field="tag">
+                        <div class="control" ic-for="i,v in tags">
+                            <div class="tags has-addons">
+                                <span class="tag is-small"
+                                      ic-select-item
+                                      ic-has-selected="logic.tag && logic.tag.includes(v.id)"
+                                      ic-val="{{v.id}}">{{v.text}}
+                                </span>
+                                <a class="tag is-small" ic-click="editTag:{{v.id}}">
+                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
+                                </a>
+                                <a class="tag is-delete is-small"
+                                   ic-click="delTag:{{ v.id }}"
+                                   x-ic-ajax
+                                   ic-submit-data="{{v.text}}"
+                                   ic-submit-method="delete"
+                                   ic-submit-action="/stock/tags/{{v.id}}"
+                                   ic-submit-on-done="onTagDeleteDone"
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-small" ic-click="addTag:交易要素">
+                                    <span class="icon is-small"><i class="fas fa-file-medical"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- tr -->
             <div>
-                <h6>标签</h6>
+                <h6>优先级</h6>
                 <div>
-                    <div class="tags" ic-select="logicTag"  ic-form-field="tag">
-                        <span ic-for="i,v in model.tagArr" ic-class="tag is-small" ic-val="{{ v }}" ic-has-selected="v === model.tag">
+                    <input class="input is-small" type="number" name="level" ic-value="{{logic.level}}" ic-form-field>
+                </div>
+            </div>
+
+            <!-- tr -->
+            <div>
+                <h6>著者</h6>
+                <div>
+                    <div class="tags" ic-select="authors" ic-form-field="author">
+                        <span ic-for="i,v in authorArr" ic-class="tag is-small" ic-val="{{ v }}" ic-has-selected="v === logic.author">
                             {{ v }}
                         </span>
                         <input type="text" class="input is-small" placeholder="添加标签" ic-enter-press="addLogicTag"/>
@@ -150,7 +186,7 @@
             <div>
                 <h6>备注</h6>
                 <div class="control">
-                    <input type="text" class="input is-small" name="note" value="{{model.note}}" ic-form-field="note"/>
+                    <input type="text" class="input is-small" name="note" value="{{logic.note}}" ic-form-field="note"/>
                 </div>
             </div>
 
@@ -160,5 +196,6 @@
 
 </div>
 
+${ require('../../tags/set-tag.html') }
 </body>
 </html>

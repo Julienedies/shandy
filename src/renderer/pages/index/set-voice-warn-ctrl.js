@@ -12,6 +12,8 @@ import utils from '../../../libs/utils'
 import _ from 'lodash'
 import $ from 'jquery'
 
+import { EDIT_TAG, ADD_TAG, ON_SET_TAG_DONE, DEL_TAG, ON_GET_TAGS_DONE, ON_DEL_TAG_DONE } from '../../js/constants'
+
 const {ipcRenderer} = electron;
 
 export default function (scope) {
@@ -28,20 +30,31 @@ export default function (scope) {
     let currentTabType = 'interval';
     let currentTag = '';
 
+    let tradingKeyTags = [];
+
     let cla = 'is-primary';
 
-    let $toggleBtn = scope.$elm.find('button[role=toggleBtn]');
+    let $elm = scope.$elm;
+    let $toggleBtn = $elm.find('button[role=toggleBtn]');
+
+    // 获取标签数据备用
+    /*    $.get('/stock/tags').done((data) => {
+            console.log(data);
+            //$.icMsg(data);
+            tradingKeyTags = data['交易要素'];
+        });*/
+
 
     // 通知主进程ipcMain, 主进程通过io广播给client
-    function send(msg) {
+    function send (msg) {
         ipcRenderer.send('voice_warn', msg);
     }
 
-    function copyX(str, count) {
+    function copyX (str, count) {
         return _.fill(Array(count || 1), str).join('\r\n');
     }
 
-    function render() {
+    function render () {
         let model = currentTabType ? warnJodb.get(currentTabType, 'type') : warnJodb.get();
 
         if (currentTag) {
@@ -61,7 +74,7 @@ export default function (scope) {
 
     }
 
-    function render2() {
+    function render2 () {
         let tagsModel = {};
         warnJodb.each((v, i) => {
             tagsModel[v.name || '_null'] = 1;
@@ -69,7 +82,7 @@ export default function (scope) {
         scope.render('tags', {model: tagsModel});
     }
 
-    function init() {
+    function init () {
         render();
         render2();
         // 如果语言警告明确设置为false，返回
@@ -83,7 +96,7 @@ export default function (scope) {
     }
 
     // 类型分为 定时; 动作; 间隔; 三个标签
-    function getType(trigger) {
+    function getType (trigger) {
         if (/^\d+$/.test(trigger)) {
             return 'interval';
         } else if (/^\d\d?(?:[:]\d\d?)+$/.test(trigger)) {
@@ -93,7 +106,7 @@ export default function (scope) {
         }
     }
 
-    function setVoiceWarnForItem(item, cancel) {
+    function setVoiceWarnForItem (item, cancel) {
         let id = item.id;
         let trigger = item.trigger;
         let content = item.content;
@@ -142,7 +155,7 @@ export default function (scope) {
         }
     }
 
-    function updateVoiceWarn(cancel) {
+    function updateVoiceWarn (cancel) {
         warnIntervalArr = [];
         if (cancel) {
             clearInterval(warnIntervalTimer);
@@ -172,7 +185,7 @@ export default function (scope) {
 
     scope.toggleShow = function (e) {
         $(this).toggleClass('is-primary');
-        scope.$elm.find('tr.disable').toggle();
+        $elm.find('tr.disable').toggle();
     };
 
     // 类型分为 定时; 动作; 间隔; 三个标签
@@ -218,16 +231,6 @@ export default function (scope) {
         send(str);
     };
 
-    // 添加新项
-    scope.add = function (e) {
-        scope.render('setWarnItem', {model: {}});
-    };
-
-    // 修改单项
-    scope.edit = function (e, id) {
-        let model = warnJodb.get2(id);
-        scope.render('setWarnItem', {model});
-    };
 
     // 删除单项
     scope.rm = function (e, id) {
@@ -251,12 +254,52 @@ export default function (scope) {
     scope.save = function (fields) {
         fields.type = getType(fields.trigger);
         warnJodb.set(fields);
-        scope.$elm.find('[ic-popup="setWarnItem"]').icPopup(false);
+        $elm.find('[ic-popup="setWarnItem"]').icPopup(false);
     };
 
     scope.reset = () => {
         scope.render('setWarnItem', {model: {}});
     };
+
+    // 添加新项
+    scope.add = function (e) {
+        scope.render('setWarnItem', {model: {}});
+    };
+
+    // 修改单项
+    scope.edit = function (e, id) {
+        let warnItem = warnJodb.get2(id);
+        let model = {warnItem, tags: tradingKeyTags};
+        scope.render('setWarnItem', {model});
+    };
+
+    // 交易要素 标签 修改
+    scope.editTag = function (e, id) {
+        scope.emit(EDIT_TAG, id);
+    };
+
+    // 交易要素 标签 添加
+    scope.addTag = function (e, type) {
+        scope.emit(ADD_TAG, type);
+    };
+
+    scope.delTag = function (e, id) {
+        scope.emit(DEL_TAG, id);
+    };
+
+    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+        tradingKeyTags = data['交易要素'];
+    });
+
+    scope.on(`${ ON_SET_TAG_DONE }, ${ ON_DEL_TAG_DONE }`, function (e, data) {
+        tradingKeyTags = data['交易要素'];
+        let warnItem = $elm.find('[ic-form="setWarnItem"]').icForm();
+        $.icMsg(warnItem);
+        console.log(444, warnItem);
+        let model = {warnItem, tags: tradingKeyTags};
+        scope.render('setWarnItem', {model});
+    });
+
 
     utils.timer('8:45', () => {
         scope.open();
@@ -276,7 +319,10 @@ export default function (scope) {
 
     // -------------------------------------------------------------------
 
-    init();
+    scope.one(ON_GET_TAGS_DONE, () => {
+        console.log('only one');
+        init();
+    });
 
     warnJodb.on('change', init);
 

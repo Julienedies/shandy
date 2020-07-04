@@ -16,7 +16,7 @@
                            ic-field-rule="required">
                     <input type="hidden" name="id" ic-form-field value="{{model.id}}"/>
                     <div ic-if="model.types">
-                        <div ic-select="tagType" ic-select-type="radio" ic-form-field="type">
+                        <div ic-select="tagType" ic-select-type="radio" ic-select-cla="is-info" ic-form-field="type">
                             <div class="tags">
                                 <span class="tag is-medium"
                                       ic-for="i,v in model.types"
@@ -107,7 +107,7 @@
                             ic-form-submit="setTag"
                             ic-submit-action="/stock/tags"
                             ic-submit-before="before"
-                            ic-submit-on-done="done">
+                            ic-submit-on-done="onSetTagDone">
                         保存
                     </button>
                     <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>

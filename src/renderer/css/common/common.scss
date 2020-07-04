@@ -63,6 +63,10 @@ a.tag, a.tag:hover {
   text-decoration: none !important;
 }
 
+[ic-select-item], [ic-click] {
+  cursor: pointer;
+}
+
 ///////////////////
 // forala 样式重写
 /*

@@ -21,10 +21,9 @@ import captureOcr from '../../../libs/capture-ocr'
 import rts from '../../../libs/real-time-stock'
 import userJodb from '../../../libs/user-jodb'
 
-import view_stock from './view-stock-ctrl'
+import parentCtrl from '../../js/parentCtrl'
+import setTagCtrl from '../tags/set-tag-ctrl'
 import setVoiceWarnCtrl from './set-voice-warn-ctrl'
-import stockQuery from '../../../libs/stock-query'
-import tdx from '../../../libs/tdx'
 
 const {ipcRenderer} = electron;
 let mainWindowId;
@@ -106,6 +105,8 @@ brick.reg('mainCtrl', function (scope) {
     let $views = $('#views');
 
     const viewsModel = brick.services.get('viewsModel');
+
+
 
     let render = () => {
         let list = viewsModel.get();
@@ -376,6 +377,9 @@ brick.reg('mainCtrl', function (scope) {
 
 });
 
+//brick.reg('parentCtrl', parentCtrl);
+brick.reg('setTagCtrl', setTagCtrl);
+
 brick.reg('memoCtrl', function () {
 
     let $memo = $('#memo');
@@ -477,3 +481,4 @@ brick.reg('setStockCtrl', function () {
         $.icMsg('添加成功.');
     };
 });
+
