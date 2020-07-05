@@ -35,7 +35,9 @@ ${ require('../tags/set-tag.html') }
             <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                 ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" ic-class="{{v.disable? 'disable': ''}}">
                 <td>
-                    <div><span class="tag is-danger">{{ TAGS_MAP_BY_ID[v.tag] && TAGS_MAP_BY_ID[v.tag].text }}</span> </div>
+                    <div ic-if="v.tag">
+                        <span class="tag is-danger">{{ TAGS_MAP_BY_ID[v.tag] && TAGS_MAP_BY_ID[v.tag].text }}</span>
+                    </div>
                     <div>{{ v.name }}</div>
                 </td>
                 <td>{{ v.trigger }}</td>

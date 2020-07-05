@@ -14,7 +14,7 @@ const tagsJodb = dob('tags', {
         let tagsByTypeMap2 = {};
         let list = this.get2();
         list.forEach(function (item) {
-            let type = item.type;
+            let type = item.type || '_null';
             let arr = tagsByTypeMap[type] = tagsByTypeMap[type] || [];
             arr.push(item);
         });

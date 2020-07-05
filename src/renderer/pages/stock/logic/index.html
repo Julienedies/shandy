@@ -43,6 +43,7 @@
     <div class="columns" ic-tpl="tags">
         <div class="tags" ic-select="tags" ic-select-item=".tag" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
             <span class="tag" ic-for="i,v in model.authorArr" ic-val="{{ v }}" ic-has-selected="v===model.author">{{ v }}</span>
+            <span class="tag" ic-val="">null</span>
             ~~~~~~~&nbsp;&nbsp;&nbsp;
             <span class="tag" ic-for="i,v in model.typeArr" ic-val="{{ v }}" ic-has-selected="v===model.type">{{ v }}</span>
             ~~~~~~~&nbsp;
