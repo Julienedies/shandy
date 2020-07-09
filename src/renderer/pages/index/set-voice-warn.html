@@ -14,7 +14,7 @@ ${ require('../tags/set-tag.html') }
             <div class="column">
                 <div class="tags" ic-select="type" ic-select-cla="is-primary" ic-select-on-change="onTypeChange">
                     <span class="tag" ic-val="timer">timer</span>
-                    <span class="tag" ic-val="interval" ic-selected>interval</span>
+                    <span class="tag" ic-val="interval" selected>interval</span>
                     <span class="tag" ic-val="action">action</span>
                 </div>
             </div>
@@ -24,19 +24,26 @@ ${ require('../tags/set-tag.html') }
         </div>
 
         <div class="columns" ic-tpl="tags">
-            <div class="tags" ic-select="tags" ic-select-cla="is-primary" ic-select-on-change="onTagFilterChange">
-                <span class="tag" ic-for="i,v in model.names" ic-val="{{ i }}">{{ i }}</span>
-                ~~~~~~~~~
-                <span class="tag" ic-for="i,v in model.tradingKeyTags" ic-val="{{ v.id }}" ic-has-selected="">{{ v.text }}</span>
+            <div ic-select="tags" ic-select-cla="is-primary" ic-select-item=".tag" ic-select-on-change="onTagFilterChange">
+                <div class="tags">
+                    <span class="tag" ic-for="i,v in model.names" ic-val="{{ i }}">{{ i }}</span>
+                </div>
+                <div class="tags">
+                    <span class="tag" ic-for="i,v in model.tradingKeyTags" ic-val="{{ v.id }}" ic-has-selected="">
+                        <!--<i ic-if="v.parentId">{{ TAGS_MAP_BY_ID[v.parentId] && TAGS_MAP_BY_ID[v.parentId].text }} ~ </i>-->
+                        {{ v.text }}
+                    </span>
+                </div>
             </div>
         </div>
 
         <table class="table is-striped" style="margin-top:15px;font-size:14px;" ic-tpl="warnList">
-            <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
-                ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" ic-class="{{v.disable? 'disable': ''}}">
+            <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" ic-class="{{v.disable? 'disable': ''}}" ic-style="opacity:{{ v.disable? 0.4: 1 }}">
                 <td>
                     <div ic-if="v.tag">
-                        <span class="tag is-danger">{{ TAGS_MAP_BY_ID[v.tag] && TAGS_MAP_BY_ID[v.tag].text }}</span>
+                        <span class="tag is-danger">
+                            {{ TAGS_MAP_BY_ID[v.tag] && TAGS_MAP_BY_ID[v.tag].text }}
+                        </span>
                     </div>
                     <div>{{ v.name }}</div>
                 </td>
@@ -74,6 +81,7 @@ ${ require('../tags/set-tag.html') }
                                       ic-select-item
                                       ic-has-selected="warnItem.tag === v.id"
                                       ic-val="{{v.id}}">{{v.text}}
+                                    <sup>{{ v.level }}</sup>
                                 </span>
                                 <a class="tag is-small" ic-click="editTag:{{v.id}}">
                                     <span class="icon is-small"><i class="far fa-edit"></i></span>

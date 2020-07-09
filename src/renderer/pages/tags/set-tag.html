@@ -36,18 +36,15 @@
                 </div>
             </div>
 
-            <div ic-if="model.parents">
+            <div ic-if="model.parents || model.type==='交易要素' || model.type==='交易错误'">
                 <h6>父标签</h6>
                 <div>
                     <div>
                         <div ic-select="parentId" ic-form-field="parentId">
                             <div class="tags">
-                                <span class="tag is-small"
-                                      ic-for="i,v in model.parents"
-                                      ic-select-item
-                                      ic-has-selected="model.parentId===v.id"
-                                      ic-val="{{ v.id }}">
+                                <span class="tag is-small" ic-for="i,v in (model.parents || TAGS_MAP[model.type])" ic-select-item    ic-has-selected="model.parentId===v.id" ic-val="{{ v.id }}">
                                     {{ v.text }}
+                                    <sup>{{ v.level }}</sup>
                                 </span>
                             </div>
                         </div>

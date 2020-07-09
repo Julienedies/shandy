@@ -41,6 +41,10 @@ brick.reg('logicCtrl', function () {
 
     let reader;  // 语音阅读器
 
+    scope.filterKey = brick.utils.getQuery('filter') || undefined;
+
+    scope.$elm.find(`[ic-select="sortType"] [ic-val=${ sortType }]`).addClass('is-primary');
+
     //scope.tagsMap = {};  // 所有的标签数据集合
     let logicArr = [];  // 当前显示的logic数组
 
@@ -50,7 +54,7 @@ brick.reg('logicCtrl', function () {
             let isAuthorMatch = item.author === filterKey || String(item.author) === filterKey;
             let isTypeMatch = item.type && item.type.includes(filterKey);
             let isTagMatch = item.tag && item.tag.includes(filterKey);
-            return  isAuthorMatch || isTypeMatch || isTagMatch;
+            return isAuthorMatch || isTypeMatch || isTagMatch;
         }) : logicManager.get();
     };
 
@@ -67,7 +71,8 @@ brick.reg('logicCtrl', function () {
         scope.render('logic', logicArr);
         // 更新html title, 下载text用
         let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
-        $title.text(`logic_${ scope.filterKey || sortType }_${ date }`);
+        let text = scope.filterKey && TAGS_MAP_BY_ID[scope.filterKey] && TAGS_MAP_BY_ID[scope.filterKey].text;
+        $title.text(`logic_${ text || scope.filterKey || sortType }_${ date }`);
     };
 
     // 文本语音阅读
@@ -113,15 +118,16 @@ brick.reg('logicCtrl', function () {
     scope.onSortChange = function (arg) {
         sortType = arg.value;
         isSortByTime = sortType === 'time';
-        let url = location.href.split('?')[0];
-        history.pushState(null, null, `${ url }?sort=${ sortType }`);
         render();
+        updateUrl();
     };
 
-    // 标签改变
+    // 过滤标签改变
     this.onFilterKeyChange = function (msg) {
-        scope.filterKey = msg.value;
+        let val = msg.value;
+        scope.filterKey = val === '' ? undefined : val === '_null' ? '' : val;
         render();
+        updateUrl();
     };
 
     // 长logic文本内容显示方式切换
@@ -162,7 +168,13 @@ brick.reg('logicCtrl', function () {
     scope.on(ON_GET_TAGS_DONE, function (e, data) {
         //scope.tagsMap = data;
         scope.tradingKeyTags = data['交易要素'];
+        scope.render('tags', scope);
     });
+
+    function updateUrl () {
+        let url = location.href.split('?')[0];
+        history.pushState(null, null, `${ url }?sort=${ sortType }&filter=${ scope.filterKey||'' }`);
+    }
 
 });
 
@@ -176,6 +188,10 @@ brick.reg('setLogicCtrl', function () {
     scope.vm = {};
 
     scope.before = function (data) {
+        //  type属性如果是空数组，由于合并的关系，似乎并不会在服务器端删除，临时处理，先把type设为''
+        if (data.type && data.type.length === 0) {
+            data.type = '';
+        }
     };
 
     // 当logic添加或修改完成，广播事件
@@ -200,10 +216,6 @@ brick.reg('setLogicCtrl', function () {
         $elm.icPopup(true);
     });
 
-    scope.onLogicTagSelectChange = function (msg) {
-        $elm.find('[ic-form-field="tag"]').val(msg.value);
-    };
-
     scope.addLogicType = function (e) {
         let vm = scope.vm;
         let str = $(this).val();
@@ -212,12 +224,11 @@ brick.reg('setLogicCtrl', function () {
             return alert('类型已经存在.');
         } else {
             vm.typeArr.push(str);
-            let obj = $elm.find('[ic-form="setLogic"]').icForm();
+            let obj = getFormVm();
             obj.type = obj.type || [];
             obj.type.push(str);
             Object.assign(vm, obj);
         }
-        console.log(11, vm);
         scope.render(vm);
     };
 
@@ -229,7 +240,7 @@ brick.reg('setLogicCtrl', function () {
             return alert('著者已经存在.');
         } else {
             let obj = getFormVm();
-            obj.type = str;
+            obj.author = str;
             vm.authorArr.push(str);
             Object.assign(vm, obj);
         }

@@ -32,7 +32,7 @@
         </div>
 
         <div class="level-right">
-            <div class="buttons has-addons" ic-select="a" ic-select-cla="is-primary" ic-select-on-change="onSortChange">
+            <div class="buttons has-addons" ic-select="sortType" ic-select-auto="false" ic-select-cla="is-primary" ic-select-on-change="onSortChange">
                 <button class="button" ic-val="level">level排序</button>
                 <button class="button" ic-val="time">时间排序</button>
             </div>
@@ -41,18 +41,22 @@
     </div>
 
     <div class="columns" ic-tpl="tags">
-        <div class="tags" ic-select="tags" ic-select-item=".tag" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
-            <span class="tag" ic-for="i,v in model.authorArr" ic-val="{{ v }}" ic-has-selected="v===model.author">{{ v }}</span>
-            <span class="tag" ic-val="">null</span>
-            ~~~~~~~&nbsp;&nbsp;&nbsp;
-            <span class="tag" ic-for="i,v in model.typeArr" ic-val="{{ v }}" ic-has-selected="v===model.type">{{ v }}</span>
-            ~~~~~~~&nbsp;
-            <div class="column ">
-                <span class="tag" ic-for="i,v in model.tradingKeyTags" ic-val="{{ v.id }}" ic-has-selected="">{{ v.text }}</span>
+        <div class="column is-12" ic-select="tags" ic-select-item=".tag" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
+            <div class="tags">
+                <span class="tag" ic-for="i,v in model.authorArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">{{ v }}</span>
+                <span class="tag" ic-val="_null">null</span>
+            </div>
+            <div class="tags">
+                <span class="tag" ic-for="i,v in model.tradingKeyTags" ic-val="{{ v.id }}" ic-has-selected="v.id===model.filterKey">
+                    <!--<i ic-if="v.parentId">{{ TAGS_MAP_BY_ID[v.parentId] && TAGS_MAP_BY_ID[v.parentId].text }} ~ </i>-->
+                    {{ v.text }}
+                </span>
+            </div>
+            <div class="tags">
+                <span class="tag" ic-for="i,v in model.typeArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">{{ v }}</span>
             </div>
         </div>
     </div>
-
 
     <ul ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
@@ -97,7 +101,7 @@
             <div>
                 <h6>逻辑</h6>
                 <div>
-                    <textarea rows="12" class="textarea" ic-form-field="text">{{logic.text}}</textarea>
+                    <textarea rows="7" class="textarea" ic-form-field="text">{{logic.text}}</textarea>
                     <input type="hidden" name="id" ic-form-field value="{{logic.id}}"/>
                 </div>
             </div>
@@ -123,10 +127,10 @@
                     <div class="field is-grouped is-grouped-multiline" ic-select="tradingKeyTags" ic-select-type="checkbox" ic-select-cla="is-primary" ic-form-field="tag">
                         <div class="control" ic-for="i,v in tags">
                             <div class="tags has-addons">
-                                <span class="tag is-small"
-                                      ic-select-item
-                                      ic-has-selected="logic.tag && logic.tag.includes(v.id)"
-                                      ic-val="{{v.id}}">{{v.text}}
+                                <span class="tag is-small" ic-select-item ic-has-selected="logic.tag && logic.tag.includes(v.id)" ic-val="{{v.id}}">
+                                     <!--<i ic-if="v.parentId">{{ TAGS_MAP_BY_ID[v.parentId].text }} ~ </i>-->
+                                    {{v.text}}
+                                    <sup>{{ v.level }}</sup>
                                 </span>
                                 <a class="tag is-small" ic-click="editTag:{{v.id}}">
                                     <span class="icon is-small"><i class="far fa-edit"></i></span>

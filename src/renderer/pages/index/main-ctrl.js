@@ -25,6 +25,8 @@ import parentCtrl from '../../js/parentCtrl'
 import setTagCtrl from '../tags/set-tag-ctrl'
 import setVoiceWarnCtrl from './set-voice-warn-ctrl'
 
+import viewsModel from './viewsModel'
+
 const {ipcRenderer} = electron;
 let mainWindowId;
 
@@ -33,67 +35,7 @@ ipcRenderer.on('windowId', function (event, windowId) {
     mainWindowId = windowId;
 });
 
-brick.services.reg('viewsModel', () => {
-    const list = [];
-    let activeItem;
-    return {
-        get (isActiveItem) {
-            return isActiveItem ? activeItem : list;
-        },
-        add (item) {
-            if (!this.has(item)) {
-                list.push(item);
-                this.active(item);
-            }
-        },
-        remove (item) {
-            let index = this.getIndex(item);
-            item = this.find(item);
-            if (item) {
-                if (activeItem === item) {
-                    let nextItem = list[index + 1] || list[0];
-                    nextItem && this.active(nextItem);
-                }
-                if (this.isUrl()) {
-                    item.$webView.remove();
-                } else {
-                    item.$webView = null;
-                }
-                list.splice(index, 1);
-            }
-        },
-        has (item) {
-            return this.getIndex(item) !== -1;
-        },
-        isUrl () {
-            return /\.html?$/img.test(this.url);
-        },
-        active (item) {
-            item = this.find(item);
-            if (activeItem) {
-                activeItem.active = false;
-                activeItem.$webView.hide();
-            }
-            item.active = true;
-            item.$webView.show();
-            activeItem = item;
-        },
-        getIndex (item) {
-            return list.findIndex((v) => {
-                return v.url === item.url;
-            });
-        },
-        /**
-         * 参数里的item只有url属性, 并不等于list里存储的item
-         * @param item
-         * @returns {null}
-         */
-        find (item) {
-            let index = this.getIndex(item);
-            return index !== -1 ? list[index] : null
-        }
-    }
-});
+brick.services.reg('viewsModel', viewsModel);
 
 brick.reg('mainCtrl', function (scope) {
 
@@ -105,8 +47,6 @@ brick.reg('mainCtrl', function (scope) {
     let $views = $('#views');
 
     const viewsModel = brick.services.get('viewsModel');
-
-
 
     let render = () => {
         let list = viewsModel.get();
@@ -287,7 +227,7 @@ brick.reg('mainCtrl', function (scope) {
     scope.openReminder = function () {
         let reminderWin = scope.reminderWin;
         if (reminderWin) {
-            reminderWin.show()
+            reminderWin.close();
         } else {
             let name = 'reminder';
             let url = 'reminder.html';
@@ -295,6 +235,8 @@ brick.reg('mainCtrl', function (scope) {
                 name,
                 url,
                 ...getBounds(name),
+                frame: false,
+                //fullscreen: true,
                 onClose: () => {
                     delete scope.reminderWin;
                 },
@@ -315,7 +257,7 @@ brick.reg('mainCtrl', function (scope) {
                 url,
                 ...getBounds(name),
                 show: false,
-                simpleFullscreen:true,
+                simpleFullscreen: true,
                 //frame: false,
                 //transparent: true,
                 //titleBarStyle: 'hidden',
@@ -365,10 +307,12 @@ brick.reg('mainCtrl', function (scope) {
     }
 
     if (utils.isTradingDate()) {
-        utils.timer('8:55', () => {
+        utils.timer('9:00', () => {
             scope.openReminder();
         });
-
+        utils.timer('12:45', () => {
+            scope.openReminder();
+        });
         utils.timer('15:00', () => {
             scope.newsWin && scope.newsWin.close();
             scope.warnWindow && scope.warnWindow.close();

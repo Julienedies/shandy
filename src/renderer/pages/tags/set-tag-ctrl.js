@@ -16,6 +16,7 @@ export default function () {
     let tagsManager = brick.services.get('recordManager')();
 
     window.TAGS_MAP_BY_ID = {};
+    window.TAGS_MAP = {};
 
     function tagsMap2Arr (data) {
         let result = [];
@@ -30,6 +31,7 @@ export default function () {
     }
 
     let onGetTagMapDone = (data) => {
+        window.TAGS_MAP = data;
         tagsManager.init(tagsMap2Arr(data));
         types = data['type'];
         scope.emit(ON_GET_TAGS_DONE, data);
@@ -56,7 +58,7 @@ export default function () {
      * @param msg {String|Object}  标签Id 或者 标签对象 或者 是单个标签对象数组 ()
      */
     scope.on(EDIT_TAG, function (e, msg) {
-        console.info(e, msg);
+        console.info('on edit tag', e, msg);
         let tagItemVm = msg;
         if (typeof msg === 'number' || typeof msg === 'string') {
             tagItemVm = tagsManager.get2(msg);
@@ -74,7 +76,7 @@ export default function () {
      * @param msg {Object|String}  含有标签类型的标签对象或标签类型
      */
     scope.on(ADD_TAG, function (e, msg) {
-        console.info(e, msg);
+        console.info('on add tag', e, msg);
         let model = msg;
         if (typeof msg === 'string') {
             model = {types, type: msg};
@@ -88,12 +90,15 @@ export default function () {
      * 要求删除标签事件
      */
     scope.on(DEL_TAG, function (e, id) {
-        $.ajax({
-            url: `/stock/tags/${ id }`,
-            method: `delete`,
-        }).done((data) => {
-            scope.emit(ON_DEL_TAG_DONE, data);
-        });
+        if(window.confirm('确定删除此标签？')){
+            $.ajax({
+                url: `/stock/tags/${ id }`,
+                method: `delete`,
+            }).done((data) => {
+                scope.emit(ON_DEL_TAG_DONE, data);
+                onGetTagMapDone(data);
+            });
+        }
     });
 
 

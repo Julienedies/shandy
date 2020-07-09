@@ -67,6 +67,18 @@ a.tag, a.tag:hover {
   cursor: pointer;
 }
 
+.tag i {
+  font-style: normal;
+}
+
+.tag sup, .tag sub {
+  margin-top: -0.9em;
+  opacity: 0.6;
+  transform: scale(0.8);
+  font-size: 0.8em;
+  vertical-align: text-top;
+}
+
 ///////////////////
 // forala 样式重写
 /*

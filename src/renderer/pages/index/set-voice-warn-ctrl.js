@@ -60,7 +60,7 @@ export default function (scope) {
         if (currentTag) {
             currentTag = currentTag === '_null' ? '' : currentTag;
             model = model.filter((item) => {
-                return currentTag ? (item.name.includes(currentTag)|| item.tag && item.tag.includes(currentTag)) : item.name === currentTag;
+                return currentTag ? (item.name.includes(currentTag) || item.tag && item.tag.includes(currentTag)) : item.name === currentTag;
             });
         }
 
@@ -104,7 +104,7 @@ export default function (scope) {
 
     scope.toggleShow = function (e) {
         $(this).toggleClass('is-primary');
-        $elm.find('tr.disable').toggle();
+        $elm.toggleClass('hide-disable');
     };
 
     // 类型分为 定时; 动作; 间隔; 三个标签
@@ -150,7 +150,6 @@ export default function (scope) {
         send(str);
     };
 
-
     // 删除单项
     scope.rm = function (e, id) {
         warnJodb.remove(id);
@@ -182,7 +181,8 @@ export default function (scope) {
 
     // 添加新项
     scope.add = function (e) {
-        scope.render('setWarnItem', {model: {}});
+        let model = {warnItem: {}, tags: tradingKeyTags};
+        scope.render('setWarnItem', {model});
     };
 
     // 修改单项

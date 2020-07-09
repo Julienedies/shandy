@@ -25,6 +25,17 @@ brick.reg('reminderCtrl', function (scope) {
         //scope.render('principle', data);
     });
 
+    let timer = 1300; // 10分钟，600秒
+    let $timer = $('#timer');
+
+    setInterval(() => {
+        timer--;
+        $timer.text(timer);
+        if(timer <= 0) {
+            //window.close();
+        }
+    }, 1000);
+
 });
 
 brick.reg('mistakeCtrl', function (scope) {

@@ -22,14 +22,14 @@
         </div>
 
         <div class="columns">
-            <div id="crop" class="column is-5" ic-tpl="crop">
+            <div id="crop" class="column is-4" ic-tpl="crop">
                 <div ic-form>
                     <div class="column">
                         <label>x:<input type="number" class="input" ic-value="{{ model.crop.x || 3100 }}" ic-form-field="x"></label>
                         <label class="">y:<input type="number" class="input" ic-value="{{ model.crop.y || 115 }}" ic-form-field="y"></label>
-                        <label class="">width:<input type="number" class="input" ic-value="{{ model.crop.width || 380 }}" ic-form-field="width"></label>
-                        <label class="">height:<input type="number" class="input" ic-value="{{ model.crop.height || 50 }}" ic-form-field="height"></label>
-                        <label class="">图片序号:<input type="number" class="input" value="0" id="sn"></label>
+                        <label class="">W:<input type="number" class="input" ic-value="{{ model.crop.width || 380 }}" ic-form-field="width"></label>
+                        <label class="">H:<input type="number" class="input" ic-value="{{ model.crop.height || 50 }}" ic-form-field="height"></label>
+                        <label class="">序号:<input type="number" class="input" value="0" id="sn"></label>
                     </div>
 
                     <div class="field">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div id="history" class="column is-7" ic-tpl="history">
+            <div id="history" class="column is-8" ic-tpl="history">
                 <div class="field is-grouped is-grouped-multiline" ic-for="i,k in ['X交割单学习','目标行情','竞价系统','交易记录']" ic-for-init="arr=model[k]">
                     <h6 class="tag is-primary" style="margin-right:1em;">{{ k }}</h6>
                     <div class="control" ic-for="i,v in arr">
