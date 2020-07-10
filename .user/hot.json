@@ -1,5 +1,10 @@
 [
 	{
+		"id": "新基建",
+		"selected": true,
+		"timestamp": 1594342405585
+	},
+	{
 		"id": "军工",
 		"selected": true,
 		"timestamp": 1594256070569
@@ -26,7 +31,7 @@
 	},
 	{
 		"id": "互联网金融",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1593996674120
 	},
 	{

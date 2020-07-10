@@ -1,10 +1,20 @@
 [
 	{
 		"name": "",
+		"id": "9585351",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "怎么解决盘中随意交易的错误？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1594365258206
+	},
+	{
+		"name": "",
 		"id": "8944951",
 		"tag": "0238231",
 		"trigger": "3",
-		"content": "大局观；市场理解力；\n节奏和周期；",
+		"content": "大局观；市场理解力；\n对盘面总是后知后决;",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1594279369771
@@ -24,7 +34,7 @@
 		"id": "0578346",
 		"tag": "9480900",
 		"trigger": "3",
-		"content": "计划准备预期；预期外的应对；",
+		"content": "计划准备预案；做好预期外的应对；",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1594278895678
@@ -47,7 +57,8 @@
 		"content": "今日操作策略：低位启动；低吸核心",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1594256644721
+		"timestamp": 1594256644721,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -67,7 +78,8 @@
 		"content": "看空的情况下，做好市场强势的应对预案。",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1594199030809
+		"timestamp": 1594199030809,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -281,11 +293,12 @@
 	{
 		"name": "错误",
 		"id": "4505666",
-		"trigger": "1",
-		"content": "已经4年了，我还是不断的在重复错误；",
-		"repeat": 9,
+		"trigger": "3",
+		"content": "已经4年了，我还是不断的在重复错误；\n我还有多少时间可以浪费；",
+		"repeat": 4,
 		"type": "interval",
-		"timestamp": 1593662205437
+		"timestamp": 1593662205437,
+		"tag": ""
 	},
 	{
 		"name": "克服本能和情绪",
@@ -487,7 +500,7 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1588940069004,
-		"disable": false,
+		"disable": true,
 		"tag": "0238231"
 	},
 	{
