@@ -11,6 +11,11 @@ import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 import '@julienedies/brick/dist/brick.transition.js'
 
+import '@fortawesome/fontawesome-free/css/all.css'
+import 'froala-editor/css/froala_editor.pkgd.css'
+import 'froala-editor/css/froala_style.min.css'
+import 'froala-editor/js/froala_editor.pkgd.min.js'
+
 import '../../js/utils.js'
 
 import electron from 'electron'
@@ -158,7 +163,7 @@ brick.reg('mainCtrl', function (scope) {
 
             });
 
-        }, 1000 * 60 * 10);
+        }, 1000 * 60 * 30);
 
     }
 
@@ -290,8 +295,12 @@ brick.reg('todoListCtrl', function (scope) {
 
 brick.reg('setTodoCtrl', function (scope) {
 
+    let $elm = scope.$elm;
+    let $editor;
+
     this.save = function (fields) {
         //console.log(fields);
+        fields.content = $editor.froalaEditor('html.get', true);
         todoJodb.set(fields);
         brick.view.to('todoList');
     };
@@ -306,7 +315,14 @@ brick.reg('setTodoCtrl', function (scope) {
 
     scope.on('setTodo', function (e, msg) {
         brick.view.to('setTodo');
-        scope.render('setTodo', {model: msg || {}});
+        let model = msg || {};
+        scope.render('setTodo', {model}, function () {
+            $editor = $elm.find('#editor').froalaEditor({
+                height: 320,
+                colorsBackground: ['#ff0000', '#0000ff', '#006400', '#ffff00', '#9400D3'],
+            });
+            $editor.froalaEditor('html.set', model.content || '');
+        });
     });
 
 });

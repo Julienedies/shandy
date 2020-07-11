@@ -23,18 +23,6 @@ brick.reg('todoCtrl', function () {
         scope.render('list', data);
     };
 
-    this.edit = function(e, id) {
-        scope.emit('diary.edit', id && list.get(id));
-    };
-
-    this.onDelDone = function (data) {
-        scope.onGetDiaryDone(data);
-    };
-
-    scope.on('diary.edit.done', function (e, data) {
-        scope.onGetDiaryDone(data);
-    });
-
 });
 
 

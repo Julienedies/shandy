@@ -57,30 +57,19 @@ brick.reg('setDiaryCtrl', function () {
     let scope = this;
     let $elm = this.$elm;
 
-    let $text = $elm.find('#text');
     let $date = $elm.find('#date');
     let $id = $elm.find('#id');
+    let $editor = $elm.find('#editor');
 
-    $text.froalaEditor({
+    $editor.froalaEditor({
         height: 520,
         colorsBackground: ['#ff0000', '#0000ff', '#006400', '#ffff00', '#9400D3'],
         //toolbarInline: true,
         /*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*/
-        // Change save interval (time in miliseconds).
-        //saveInterval: 2500,
-        // Set the save param.
-        //saveParam: 'text',
-        // Set the save URL.
-        //saveURL: '/stock/memo',
-        // HTTP request type.
-        //saveMethod: 'POST',
-        // Additional save params.
-        //saveParams: {time: +new Date}
     });
 
     scope.before = function (formDataObj) {
-        let text = $text.froalaEditor('html.get', true);
-        formDataObj.text = text;
+        formDataObj.text = $editor.froalaEditor('html.get', true);
     };
 
     scope.done = function (data) {
@@ -97,7 +86,7 @@ brick.reg('setDiaryCtrl', function () {
         diaryObj = diaryObj || {};
         $id.val(diaryObj.id);
         $date.val(diaryObj.date || jFormatDate());
-        $text.froalaEditor('html.set', diaryObj.text || '');
+        $editor.froalaEditor('html.set', diaryObj.text || '');
     });
 
 });

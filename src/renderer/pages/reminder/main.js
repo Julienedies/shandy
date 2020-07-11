@@ -17,6 +17,11 @@ import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
 
 brick.reg('reminderCtrl', function (scope) {
 
+    let $memo = $('#memo');
+    $.get('/stock/memo').done(function (o) {
+        $memo.html(o.text);
+    });
+
     $.get('/stock/tags/').done((data) => {
         console.log(data);
         scope.render('prepare', data);
@@ -31,7 +36,7 @@ brick.reg('reminderCtrl', function (scope) {
     setInterval(() => {
         timer--;
         $timer.text(timer);
-        if(timer <= 0) {
+        if (timer <= 0) {
             //window.close();
         }
     }, 1000);

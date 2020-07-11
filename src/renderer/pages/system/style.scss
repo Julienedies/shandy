@@ -1,5 +1,14 @@
 @import "../../css/basic/0.7/basic.base.css";
 
+[ic-viewer-popup] {
+  z-index: 3000 !important;
+}
+
+.tags[ic-viewer] {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
 .table_1 {
   > dd.is-table {
     padding: 0;
@@ -10,9 +19,11 @@
 .table_1.is-td {
   margin: 0;
   border-top: none;
+
   dt, dd {
     border-left: none;
   }
+
   dd {
     border-right: none;
   }
@@ -26,6 +37,7 @@
     word-break: break-all;
     word-wrap: break-word;
     overflow: hidden;
+
     > dd {
       padding: 0;
       border: none;
@@ -38,11 +50,3 @@
 
 }
 
-[ic-viewer-popup]{
-  z-index: 3000!important;
-}
-
-.onDragOver{
-  background:blue;
-  color:#fff;
-}

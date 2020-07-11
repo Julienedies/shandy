@@ -1,6 +1,26 @@
 [
 	{
 		"name": "",
+		"id": "9734583",
+		"tag": "9586736",
+		"trigger": "3",
+		"content": "做精不做多；耐心等待；不要因为鸡肋交易丧失掉最好的交易机会；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1594482626149
+	},
+	{
+		"name": "",
+		"id": "6762904",
+		"tag": "9586736",
+		"trigger": "10",
+		"content": "交易只有对错；把事情做对；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1594462875587
+	},
+	{
+		"name": "",
 		"id": "9585351",
 		"tag": "9586736",
 		"trigger": "1",
