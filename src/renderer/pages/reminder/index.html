@@ -12,16 +12,16 @@
     <div class="h-wrapper">
         <section>
             <h3 class="title is-5">交易准备 <span id="timer"></span></h3>
-            <div class="tags" ic-tpl="prepare">
+            <div class="tags none" ic-tpl="prepare">
                 <span class="tag is-info" ic-for="i,v in model['交易准备']">
                     {{ v.text }}
                 </span>
             </div>
 
             <div class="column content" id="mistake">
-                <div id="memo" style="height: 420px; overflow: hidden;"></div>
+                <div id="memo" class="scroll" style="height: 640px; overflow-y: scroll;"></div>
                 <ul id="point">
-                    <li><h4 style="white-space: pre-line;line-height:1.6; color:blue;">
+                    <li><h4 style="white-space: pre-line;line-height:1.4; color:blue;">
                         2020.07.05 记
                         这不是普通提醒。这些是非常重要的关键点。这关乎我能否在交易之路上走下去。
                         人的天性容易麻木，适应环境。但是痛苦和恐惧并没有消失。它只是在等最后一击。

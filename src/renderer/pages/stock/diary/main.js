@@ -10,6 +10,7 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
+import { COLORS_BACKGROUND } from '../../../js/constants'
 import '../../../js/common-stock.js'
 
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -62,10 +63,8 @@ brick.reg('setDiaryCtrl', function () {
     let $editor = $elm.find('#editor');
 
     $editor.froalaEditor({
-        height: 520,
-        colorsBackground: ['#ff0000', '#0000ff', '#006400', '#ffff00', '#9400D3'],
-        //toolbarInline: true,
-        /*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*/
+        height: 480,
+        colorsBackground: COLORS_BACKGROUND,
     });
 
     scope.before = function (formDataObj) {

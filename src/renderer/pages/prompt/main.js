@@ -17,6 +17,7 @@ import 'froala-editor/css/froala_style.min.css'
 import 'froala-editor/js/froala_editor.pkgd.min.js'
 
 import '../../js/utils.js'
+import { COLORS_BACKGROUND } from '../../js/constants'
 
 import electron from 'electron'
 import moment from 'moment'
@@ -303,6 +304,7 @@ brick.reg('setTodoCtrl', function (scope) {
         fields.content = $editor.froalaEditor('html.get', true);
         todoJodb.set(fields);
         brick.view.to('todoList');
+        //$editor.froalaEditor('destroy');
     };
 
     this.reset = function () {
@@ -319,7 +321,7 @@ brick.reg('setTodoCtrl', function (scope) {
         scope.render('setTodo', {model}, function () {
             $editor = $elm.find('#editor').froalaEditor({
                 height: 320,
-                colorsBackground: ['#ff0000', '#0000ff', '#006400', '#ffff00', '#9400D3'],
+                colorsBackground: COLORS_BACKGROUND,
             });
             $editor.froalaEditor('html.set', model.content || '');
         });
@@ -341,7 +343,7 @@ brick.reg('promptCtrl', function () {
     scope.on('prompt', function (e, todoItem) {
         brick.view.to('prompt');
         _todoItem = todoItem
-        $todoContent.text(todoItem.content);
+        $todoContent.html(todoItem.content);
     });
 
 });

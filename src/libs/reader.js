@@ -57,10 +57,12 @@ class Reader {
                 border-radius: 50%!important;
             }
             .reader-reading{
-                color:#0359cc;
+                color:#fff!important;
+                background: blue!important;
+                text-decoration: underline;
                 font-weight: bold;
 /*                background:#95b750;
-                color:#fff;*/
+                color:#0359cc;*/
             }
         </style>`).appendTo(document.head)
     }
@@ -274,6 +276,10 @@ class Reader {
     resume () {
         speechSynthesis.resume();
         this.setState('resume');
+    }
+
+    autoSpeak () {
+        this.$speakBtn.click();
     }
 
 }

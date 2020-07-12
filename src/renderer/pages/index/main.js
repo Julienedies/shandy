@@ -62,10 +62,10 @@ voice('voice test.', () => {
 });
 
 let kcAudio = new Audio(require('./audio/kc.mp3'));
-/*let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
+let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
 setInterval( () => {
      audio.play();
-}, 1000 * 60 * 130);*/
+}, 1000 * 60 * 60 * 4);
 
 
 // -------------------------- 接收主进程发来的消息 ------------------------

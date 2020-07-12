@@ -10,6 +10,8 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
+import Reader from '../../../libs/reader'
+
 import '../../js/common.js'
 import '../../js/common-stock.js'
 import '../../js/utils.js'
@@ -20,6 +22,9 @@ brick.reg('reminderCtrl', function (scope) {
     let $memo = $('#memo');
     $.get('/stock/memo').done(function (o) {
         $memo.html(o.text);
+        let reader = new Reader('#memo');
+        reader.init();
+        reader.autoSpeak();
     });
 
     $.get('/stock/tags/').done((data) => {
