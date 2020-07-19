@@ -1,6 +1,118 @@
 [
 	{
 		"name": "",
+		"id": "8842596",
+		"tag": "4109794",
+		"trigger": "1",
+		"content": "\b\b临盘时没有明确的\b交易计划；被市场牵着鼻子走；脑子一热随意交易；\n你他妈的要重复多少次这种错误？\n没有交易计划就他妈的不要看盘。",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1595063516801
+	},
+	{
+		"name": "",
+		"id": "5432774",
+		"tag": "4109794",
+		"trigger": "1",
+		"content": "回顾自己的交易；几乎每一笔交易都有错误；而且是不断重复的错误；\n你他妈要重复错误多少次？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1595063417388
+	},
+	{
+		"name": "",
+		"id": "4799517",
+		"tag": "4109794",
+		"trigger": "3",
+		"content": "我的交易系统模型：\n底部启动；确定性不高；盈亏比高；\n博弈转折；\n主升爆发；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1594999522403
+	},
+	{
+		"name": "",
+		"id": "0069881",
+		"tag": "0001719",
+		"trigger": "5",
+		"content": "千万不要先入为主；受缚于经验；市场环境是变化的；\n可能是双头，也可能是二浪；\n可能是反抽，也可能是\b转折；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1594997034346
+	},
+	{
+		"name": "",
+		"id": "1211620",
+		"tag": "9480900",
+		"trigger": "1",
+		"content": "今日策略：\n市场处在退潮期；风险大于机会；管住手；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1594256644721,
+		"disable": false
+	},
+	{
+		"name": "",
+		"id": "2407622",
+		"tag": "9586736",
+		"trigger": "3",
+		"content": "做精不做多；耐心等待；\n不要沉迷于日常交易中；回顾自己的亏损交易和盈利交易；\n十年加法是积累，最后减法才能升华。\n正确的路只有一条，错误的路却有千千万万条",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1594940430267
+	},
+	{
+		"name": "",
+		"id": "9840181",
+		"tag": "0238231",
+		"trigger": "3",
+		"content": "大局观：市场状态是最重要的系统变量；\n当前市场处在什么状态和阶段？\n赚钱效应如何？亏钱效应如何？\n风险是什么？机会是什么? 热点是什么？\n我对市场总是后知后觉；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1594893731992
+	},
+	{
+		"name": "",
+		"id": "8346906",
+		"trigger": "2",
+		"content": "要有大局观，不要线性思维；\n\b\b多空动态博弈转换；\n不要因盘中分时向下就看空。",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1593773375159,
+		"tag": "0238231"
+	},
+	{
+		"name": "",
+		"id": "3122661",
+		"tag": "0238231",
+		"trigger": "5",
+		"content": "不要单纯以形态做为交易逻辑。\n关键是大局观；\n市场状态；行情性质；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1594860919167
+	},
+	{
+		"name": "",
+		"id": "1112888",
+		"trigger": "5",
+		"content": "时机就是一切；契合周期和节奏；\n借大盘的势；启动；转折；爆发；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1588644212860,
+		"disable": false,
+		"tag": "0238231"
+	},
+	{
+		"name": "",
+		"id": "8502730",
+		"trigger": "5",
+		"content": "我为何总是错失大行情，抓不住机会？\n没有大局观；看不到确定性；\n行情启动时犹豫；行情退潮时管不住手；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1588814012347,
+		"tag": "0238231"
+	},
+	{
+		"name": "",
 		"id": "9734583",
 		"tag": "9586736",
 		"trigger": "3",
@@ -8,6 +120,16 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1594482626149
+	},
+	{
+		"name": "",
+		"id": "0009952",
+		"tag": "9586736",
+		"trigger": "2",
+		"content": "心态和控制力；简单纯粹取舍；",
+		"repeat": 5,
+		"type": "interval",
+		"timestamp": 1594278830066
 	},
 	{
 		"name": "",
@@ -21,74 +143,44 @@
 	},
 	{
 		"name": "",
-		"id": "9585351",
-		"tag": "9586736",
+		"id": "3934174",
 		"trigger": "1",
-		"content": "怎么解决盘中随意交易的错误？",
+		"repeat": 5,
+		"content": "简单、纯粹、取舍；\n只做龙头；只做主升；只做最强；只做系统；",
+		"type": "interval",
+		"timestamp": 1587208620664,
+		"disable": false,
+		"tag": "9586736"
+	},
+	{
+		"name": "",
+		"id": "3605543",
+		"trigger": "5",
+		"content": "不可吃着碗里看着锅里；\n做好当前手中的票；",
 		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592704305350,
+		"tag": "9586736"
+	},
+	{
+		"name": "",
+		"id": "9585351",
+		"tag": "9480900",
+		"trigger": "5",
+		"content": "怎么解决盘中随意交易的错误？\n提前做好交易计划\b与准备；",
+		"repeat": 5,
 		"type": "interval",
 		"timestamp": 1594365258206
 	},
 	{
 		"name": "",
-		"id": "8944951",
-		"tag": "0238231",
-		"trigger": "3",
-		"content": "大局观；市场理解力；\n对盘面总是后知后决;",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1594279369771
-	},
-	{
-		"name": "",
-		"id": "9820701",
-		"tag": "0001719",
-		"trigger": "2",
-		"content": "多空动态博弈转换；客观跟随；",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1594278905532
-	},
-	{
-		"name": "",
 		"id": "0578346",
 		"tag": "9480900",
-		"trigger": "3",
+		"trigger": "10",
 		"content": "计划准备预案；做好预期外的应对；",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1594278895678
-	},
-	{
-		"name": "",
-		"id": "0009952",
-		"tag": "9586736",
-		"trigger": "1",
-		"content": "心态和控制力；简单纯粹取舍；",
-		"repeat": 5,
-		"type": "interval",
-		"timestamp": 1594278830066
-	},
-	{
-		"name": "",
-		"id": "1211620",
-		"tag": "",
-		"trigger": "1",
-		"content": "今日操作策略：低位启动；低吸核心",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1594256644721,
-		"disable": true
-	},
-	{
-		"name": "",
-		"id": "7747142",
-		"tag": "0001719",
-		"trigger": "5",
-		"content": "如果市场走势和我预期的不一样，说明我的主观预判是错误的。",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1594251218012
 	},
 	{
 		"name": "",
@@ -144,16 +236,6 @@
 		"timestamp": 1593815088507,
 		"tag": "0238231",
 		"disable": true
-	},
-	{
-		"name": "错误：线性思维",
-		"id": "8346906",
-		"trigger": "2",
-		"content": "要有大局观，不要线性思维；多少次因盘中分时向下就看空。",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1593773375159,
-		"tag": "0238231"
 	},
 	{
 		"name": "交易系统",
@@ -252,6 +334,58 @@
 		"disable": true
 	},
 	{
+		"name": "",
+		"id": "8903672",
+		"trigger": "5",
+		"content": "我很容易陷入非涨即跌的单一思维，多空动态博弈转换；不要线性思维，不要思维定势。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592627990179,
+		"tag": "7926786"
+	},
+	{
+		"name": "",
+		"id": "1051731",
+		"trigger": "3",
+		"content": "支撑我的交易逻辑是什么？\n我要捕捉的目标行情是什么？\n我的交易系统模型是什么？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1590839076503,
+		"tag": "4109794"
+	},
+	{
+		"name": "",
+		"id": "0843570",
+		"trigger": "5",
+		"content": "支撑我的交易逻辑：\n超预期强势、热点龙头、多空博弈周期、趋势反身性；",
+		"timestamp": 1576856488447,
+		"disable": false,
+		"type": "interval",
+		"repeat": 3,
+		"tag": "4109794"
+	},
+	{
+		"name": "",
+		"id": "6384511",
+		"trigger": "3",
+		"content": "保持交易一致性；\n潜意识会受上次交易的影响；\n不要让上次的操作影响你下次的情绪。\n不要以上次交易结果做为下次交易逻辑。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1587512691831,
+		"disable": false,
+		"tag": "3707729"
+	},
+	{
+		"name": "",
+		"id": "9400690",
+		"trigger": "3",
+		"content": "客观跟随：\n如果市场走势和我预期的不一样，说明我的主观预判是错误的。\n以客观的市场表现做为交易标准，而不是我的主观判断。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1592027995326,
+		"tag": "0001719"
+	},
+	{
 		"name": "主线热点龙头",
 		"id": "6506825",
 		"trigger": "1",
@@ -260,27 +394,6 @@
 		"type": "interval",
 		"disable": false,
 		"repeat": 3
-	},
-	{
-		"name": "",
-		"id": "3605543",
-		"trigger": "5",
-		"content": "不可吃着碗里看着锅里；\n做好当前手中的票；",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1592704305350,
-		"tag": "9586736"
-	},
-	{
-		"name": "",
-		"id": "3934174",
-		"trigger": "1",
-		"repeat": 7,
-		"content": "简单、纯粹、取舍；\n只做龙头；只做主升；只做最强；只做系统；",
-		"type": "interval",
-		"timestamp": 1587208620664,
-		"disable": false,
-		"tag": "6462480"
 	},
 	{
 		"name": "竞价系统",
@@ -313,9 +426,9 @@
 	{
 		"name": "错误",
 		"id": "4505666",
-		"trigger": "3",
+		"trigger": "5",
 		"content": "已经4年了，我还是不断的在重复错误；\n我还有多少时间可以浪费；",
-		"repeat": 4,
+		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1593662205437,
 		"tag": ""
@@ -344,11 +457,11 @@
 	{
 		"name": "动态博弈",
 		"id": "5354311",
-		"trigger": "1",
+		"trigger": "3",
 		"content": "多空动态博弈转换；\n注意盘中情绪反转；注意盘中情绪反转；\n不要他妈的只是傻乎乎看着；要做好推演和准备。\n\b否极泰来；\b否极泰来；",
 		"type": "interval",
 		"timestamp": 1580734892039,
-		"repeat": 4,
+		"repeat": 3,
 		"tag": "9373395"
 	},
 	{
@@ -360,16 +473,6 @@
 		"timestamp": 1583662766059,
 		"disable": true,
 		"repeat": 3
-	},
-	{
-		"name": "支撑我的交易逻辑",
-		"id": "0843570",
-		"trigger": "5",
-		"content": "支撑我的交易逻辑：\n超预期强势、热点龙头、多空博弈周期、趋势反身性；",
-		"timestamp": 1576856488447,
-		"disable": false,
-		"type": "interval",
-		"repeat": 1
 	},
 	{
 		"name": "浑浑噩噩、被动",
@@ -402,25 +505,6 @@
 		"disable": true
 	},
 	{
-		"name": "",
-		"id": "1051731",
-		"trigger": "3",
-		"content": "支撑我的交易逻辑是什么？\n我要捕捉的目标行情是什么？\n为何我总是临盘犹豫？\n为何我总是错过机会？",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1590839076503
-	},
-	{
-		"name": "",
-		"id": "9400690",
-		"trigger": "5",
-		"content": "客观跟随\n以客观的市场表现做为首要标准，而不是我的主观判断。",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1592027995326,
-		"tag": "0001719"
-	},
-	{
 		"name": "控制力",
 		"id": "2201739",
 		"trigger": "3",
@@ -430,17 +514,6 @@
 		"repeat": 3,
 		"disable": true,
 		"tag": "9586736"
-	},
-	{
-		"name": "一致性",
-		"id": "6384511",
-		"trigger": "3",
-		"content": "一致性概率\n保持交易一致性；\n潜意识会受上次交易的影响；\n不要让上次的操作影响你下次的情绪。\n不要以上次交易结果做为下次交易逻辑。",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1587512691831,
-		"disable": false,
-		"tag": "3707729"
 	},
 	{
 		"name": "重复错误",
@@ -471,16 +544,6 @@
 		"type": "interval",
 		"timestamp": 1592566824220,
 		"disable": true
-	},
-	{
-		"name": "动态博弈",
-		"id": "8903672",
-		"trigger": "5",
-		"content": "我很容易陷入非涨即跌的单一思维，市场是动态博弈的，不要思维定势。",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1592627990179,
-		"tag": "7926786"
 	},
 	{
 		"name": "",
@@ -521,27 +584,6 @@
 		"type": "interval",
 		"timestamp": 1588940069004,
 		"disable": true,
-		"tag": "0238231"
-	},
-	{
-		"name": "大局观",
-		"id": "8502730",
-		"trigger": "5",
-		"content": "我为何总是错失大行情，抓不住机会？\n没有大局观；看不到确定性；\n行情启动时犹豫；行情退潮时管不住手；",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1588814012347,
-		"tag": "0238231"
-	},
-	{
-		"name": "周期节奏",
-		"id": "1112888",
-		"trigger": "1",
-		"content": "时机就是一切；契合周期和节奏；\n借大盘的势；启动；转折；爆发；",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1588644212860,
-		"disable": false,
 		"tag": "0238231"
 	},
 	{

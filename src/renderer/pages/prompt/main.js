@@ -17,12 +17,13 @@ import 'froala-editor/css/froala_style.min.css'
 import 'froala-editor/js/froala_editor.pkgd.min.js'
 
 import '../../js/utils.js'
-import { COLORS_BACKGROUND } from '../../js/constants'
+import { FroalaEditorConfig } from '../../js/constants'
 
 import electron from 'electron'
 import moment from 'moment'
 import utils from '../../../libs/utils'
 import userJodb from '../../../libs/user-jodb'
+import voice from '../../../libs/voice'
 
 const ipc = electron.ipcRenderer;
 const BrowserWindow = electron.remote.BrowserWindow;
@@ -230,7 +231,9 @@ brick.reg('todoListCtrl', function (scope) {
     };
 
     scope.rm = function (e, id) {
-        todoJodb.remove(id);
+        if (confirm('确认删除？')) {
+            todoJodb.remove(id);
+        }
     };
 
     // 置顶
@@ -320,8 +323,8 @@ brick.reg('setTodoCtrl', function (scope) {
         let model = msg || {};
         scope.render('setTodo', {model}, function () {
             $editor = $elm.find('#editor').froalaEditor({
-                height: 320,
-                colorsBackground: COLORS_BACKGROUND,
+                ...FroalaEditorConfig,
+                height: 360,
             });
             $editor.froalaEditor('html.set', model.content || '');
         });
@@ -344,6 +347,9 @@ brick.reg('promptCtrl', function () {
         brick.view.to('prompt');
         _todoItem = todoItem
         $todoContent.html(todoItem.content);
+        let str = $todoContent.text();
+        console.log(str, str.substr(0, 240));
+        voice(str.substr(0, 240));
     });
 
 });

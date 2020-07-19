@@ -15,16 +15,15 @@ export default function () {
     scope.model = {};
 
     let fx = (tagMap) => {
-        for(let i in tagMap){
+        for (let i in tagMap) {
             let arr = tagMap[i];
             console.log(i);
-            if(i !== 'type'){
+            if (i !== 'type') {
                 $.ajax({
-                    url:'/stock/tags',
-                    type:'post',
-                    dataType:'json',
-                    data: {
-                    }
+                    url: '/stock/tags',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {}
                 });
             }
         }
@@ -50,6 +49,18 @@ export default function () {
         vm.types = types;
         scope.emit('tag.edit', vm);
         return false; // 禁止事件冒泡，触发父元素的事件绑定，有用;
+    };
+
+    scope.edit2 = function (e, id, type, text) {
+        if (type === 'type') {
+            let $target = $(`[tabindex=${ text }]`);
+            if($target.length){
+                $('html, body').animate({scrollTop: $target.offset().top}, 500);
+            }
+            return false;
+        } else {
+            return scope.edit(e, id);
+        }
     };
 
     scope.add = function (e, type) {

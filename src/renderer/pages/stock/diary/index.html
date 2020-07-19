@@ -32,10 +32,11 @@
 
     <ul id="diaryList" ic-tpl="diaryList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
-            <div class="pre">{{v.text}}</div>
+            <div class="pre scroll">{{v.text}}</div>
             <div class="tar">
                 <span style="opacity:0.3;float:left;">{{ v.date }}</span>
                 <a class="no" ic-click="edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
+                <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
                 <a class="no"
                    ic-ajax
                    ic-submit-method="get"
@@ -59,7 +60,7 @@
 
 <div ic-ctrl="setDiaryCtrl" ic-popup="setDiary">
 
-    <div class="column is-10 is-offset-1">
+    <div class="column is-10 is-offset-1" ic-tpl="setDiary">
 
         <div class="" ic-form="setDiary">
 
@@ -68,7 +69,7 @@
                 <h6></h6>
                 <div>
                     <textarea id="editor" rows="9" class="textarea is-medium" ic-form-field="text" ic-field-rule="required"></textarea>
-                    <input id='id' type="hidden" name="id" ic-form-field value=""/>
+                    <input id='id' type="hidden" name="id" ic-form-field value="{{ model.id }}"/>
                 </div>
             </div>
 

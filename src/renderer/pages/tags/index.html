@@ -25,13 +25,14 @@
 
     <div ic-tpl="tags">
         <div class="box" ic-for="k,arr in model" ic-click="view:{{ k }}">
-            <h6 class="title is-6">{{k}}</h6>
+            <h6 class="title is-6" tabindex="{{ k }}">{{k}}</h6>
             <div class="field is-grouped is-grouped-multiline">
                 <div class="control" ic-for="i,v in arr">
                     <div class="tags has-addons is-medium">
-                            <span ic-class="tag is-medium is-info hint--top-right" aria-label="{{ v.desc }}" ic-click="edit:{{v.id}}">
+                            <a ic-class="tag is-medium is-info hint--top-right" aria-label="{{ v.desc }}"
+                               ic-click="edit2:{{v.id}}:{{v.type }}:{{ v.text }}">
                                 {{v.text}}
-                            </span>
+                            </a>
                         <a class="tag is-medium" ic-click="edit:{{v.id}}">
                             <span class="icon is-medium"><i class="far fa-edit"></i></span>
                         </a>
@@ -44,7 +45,7 @@
                     </div>
                 </div>
                 <div class="control">
-                    <a class="tag is-medium" ic-click="add:{{k}}">
+                    <a class="tag is-medium" ic-click="add:{{k}}" >
                         <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
                     </a>
                 </div>

@@ -43,17 +43,17 @@
                     <td>{{ v.repeat }}</td>
                     <td class="pre">{{ v.content }}</td>
                     <td>{{ v.promptTimes || 0 }}</td>
-                    <td style="white-space: nowrap;">
-                        <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
-                        <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
-                        <button class="button is-primary is-small" ic-click="focus:{{ v.id }}">置顶</button>
-                        <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>
-                        <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
-                            {{ v.complete ? '完成':'进行' }}
-                        </button>
-                        <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
-                            {{ v.disable ? '启用':'禁止' }}
-                        </button>
+                    <td>
+                        <div style="white-space: pre-line;"><button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
+                            <button class="button is-primary is-small" ic-click="focus:{{ v.id }}">置顶</button>
+                            <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>
+                            <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
+                                {{ v.complete ? '完成':'进行' }}
+                            </button>
+                            <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
+                                {{ v.disable ? '启用':'禁止' }}
+                            </button>
+                            <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button></div>
                     </td>
                 </tr>
             </table>
@@ -64,31 +64,23 @@
         <div class="column">
             <div ic-tpl="setTodo" ic-tpl-init="{}">
                 <div ic-form>
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
-                            <input type="hidden" value="{{ model.id }}" ic-form-field="id">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="todo类型,可选" value="{{ model.type }}" ic-form-field="type">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="text" placeholder="任务提示开始时间=> 9:00"
-                                   value="{{ model.start || '16:00' }}" ic-form-field="start">
-                        </div>
-                        <p class="help">可选，比如下午3点之后才能做的任务，就设置为15:00。</p>
-                    </div>
 
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="number" placeholder="重复次数"
-                                   ic-value="{{ model.repeat || 4 }}" ic-form-field="repeat">
+                    <div class="columns">
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
+                                    <input type="hidden" value="{{ model.id }}" ic-form-field="id">
+                                </div>
+                            </div>
                         </div>
-                        <p class="help">每天重复提醒，还是一次性提醒。</p>
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="todo类型,可选" value="{{ model.type }}" ic-form-field="type">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="field">
@@ -96,6 +88,7 @@
                             <textarea id="editor" rows="14" class="textarea" placeholder="内容" ic-form-field="content"></textarea>
                         </div>
                     </div>
+
                     <div class="field">
                         <div class="control">
                             <button class="button is-primary" ic-form-submit ic-submit-action="save()">
@@ -111,20 +104,49 @@
                             <input type="text" name="singleWindow" value="{{ model.singleWindow }}" ic-form-field="singleWindow">
                         </div>
                     </div>
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="number" placeholder="提醒间隔时间(以分钟计算)"
-                                   ic-value="{{ model.interval || 60 }}" ic-form-field="interval">
+
+                    <div class="columns">
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="任务提示开始时间=> 9:00"
+                                           value="{{ model.start || '16:00' }}" ic-form-field="start">
+                                </div>
+                                <p class="help">可选，比如下午3点之后才能做的任务，就设置为15:00。</p>
+                            </div>
                         </div>
-                        <p class="help">提醒间隔:半小时提醒一次，还是2小时提醒一次。(以分钟计算)</p>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" type="number" placeholder="持续时长"
-                                   ic-value="{{ model.duration || 47 }}" ic-form-field="duration">
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="number" placeholder="重复次数"
+                                           ic-value="{{ model.repeat || 4 }}" ic-form-field="repeat">
+                                </div>
+                                <p class="help">每天重复提醒，还是一次性提醒。</p>
+                            </div>
                         </div>
-                        <p class="help">每次提醒持续时间，单位秒。</p>
                     </div>
+
+                    <div class="columns">
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="number" placeholder="提醒间隔时间(以分钟计算)"
+                                           ic-value="{{ model.interval || 60 }}" ic-form-field="interval">
+                                </div>
+                                <p class="help">提醒间隔:半小时提醒一次，还是2小时提醒一次。(以分钟计算)</p>
+                            </div>
+                        </div>
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="number" placeholder="持续时长"
+                                           ic-value="{{ model.duration || 47 }}" ic-form-field="duration">
+                                </div>
+                                <p class="help">每次提醒持续时间，单位秒。</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 

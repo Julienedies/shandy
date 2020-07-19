@@ -27,6 +27,8 @@ export default function (scope) {
     const dragOverCla = 'onDragOver';
     const ignoreReg = /[(（].*[）)]/img;
 
+    const intervalDuration = 3;  // 三分钟一次语音警告
+
     let currentTabType = 'interval';
     let currentTag = '';
 
@@ -316,28 +318,31 @@ export default function (scope) {
                 voice(str);
                 //send(item.content);
                 warnIntervalArr.push(id);
-            }, 1000 * 60 * 1.1);
+            }, 1000 * 60 * intervalDuration);
         }
     }
 
     // --------------------------------------------------------------------
 
-    utils.timer('8:45', () => {
-        scope.open();
-    });
+    if (utils.isTradingDate()) {
+        utils.timer('8:45', () => {
+            scope.open();
+        });
 
-    utils.timer('11:30', () => {
-        scope.stop();
-    });
+        utils.timer('11:30', () => {
+            scope.stop();
+        });
 
-    utils.timer('12:45', () => {
-        scope.open();
-    });
+        utils.timer('12:45', () => {
+            scope.open();
+        });
 
-    utils.timer('15:00', () => {
-        scope.stop();
-    });
+        utils.timer('15:00', () => {
+            scope.stop();
+        });
+    }
 
+    //-----------------------------------------------------------------------
     scope.dragstart = function (e) {
         let id = $(this).data('id');
         e.originalEvent.dataTransfer.setData("Text", id);

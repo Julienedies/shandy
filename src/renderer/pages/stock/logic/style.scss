@@ -2,6 +2,10 @@ a.no {
   text-decoration: none !important;
 }
 
+.notification{
+  position: relative;
+}
+
 .notification div.pre {
   overflow: visible;
   text-overflow: ellipsis;

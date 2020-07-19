@@ -10,7 +10,7 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import { COLORS_BACKGROUND } from '../../../js/constants'
+import { FroalaEditorConfig } from '../../../js/constants'
 import '../../../js/common-stock.js'
 
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -42,6 +42,12 @@ brick.reg('diaryCtrl', function () {
         scope.emit('diary.edit', id && list.get(id));
     };
 
+    this.toggleText = function (e) {
+        let cla = 'scroll';
+        let $th = $(this).toggleClass(cla);
+        $th.closest('li').find('.pre').toggleClass(cla);
+    };
+
     this.onDelDone = function (data) {
         scope.onGetDiaryDone(data);
     };
@@ -62,13 +68,8 @@ brick.reg('setDiaryCtrl', function () {
     let $id = $elm.find('#id');
     let $editor = $elm.find('#editor');
 
-    $editor.froalaEditor({
-        height: 480,
-        colorsBackground: COLORS_BACKGROUND,
-    });
-
-    scope.before = function (formDataObj) {
-        formDataObj.text = $editor.froalaEditor('html.get', true);
+    scope.before = function (fields) {
+        fields.text = $editor.froalaEditor('html.get', true);
     };
 
     scope.done = function (data) {
@@ -80,12 +81,19 @@ brick.reg('setDiaryCtrl', function () {
         //scope.render({});
     };
 
-    scope.on('diary.edit', function (e, diaryObj) {
+    scope.on('diary.edit', function (e, model) {
         $elm.icPopup(true);
-        diaryObj = diaryObj || {};
-        $id.val(diaryObj.id);
+        model = model || {};
+        scope.render('setDiary', model, function () {
+            $editor = $elm.find('#editor').froalaEditor({
+                ...FroalaEditorConfig,
+                height: 480,
+            });
+            $editor.froalaEditor('html.set', model.text || '');
+        });
+/*        $id.val(diaryObj.id);
         $date.val(diaryObj.date || jFormatDate());
-        $editor.froalaEditor('html.set', diaryObj.text || '');
+        $editor.froalaEditor('html.set', diaryObj.text || '');*/
     });
 
 });
