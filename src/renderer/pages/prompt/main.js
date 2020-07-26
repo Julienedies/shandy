@@ -349,7 +349,7 @@ brick.reg('promptCtrl', function () {
         $todoContent.html(todoItem.content);
         let str = $todoContent.text();
         console.log(str, str.substr(0, 240));
-        voice(str.substr(0, 240));
+        //voice(str.substr(0, 240));
     });
 
 });

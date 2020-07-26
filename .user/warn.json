@@ -1,11 +1,63 @@
 [
 	{
 		"name": "",
+		"id": "8158267",
+		"tag": "9480900",
+		"trigger": "1",
+		"content": "如果现在市场转强，你要买什么票？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1595573321752
+	},
+	{
+		"name": "",
+		"id": "4563146",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "我就像一个赌徒；管不住手；随时随刻想交易；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1595406609063
+	},
+	{
+		"name": "",
+		"id": "7009728",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "交易错误的痛苦能持续多久？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1595401821790,
+		"disable": true
+	},
+	{
+		"name": "",
+		"id": "1211620",
+		"tag": "9480900",
+		"trigger": "1",
+		"content": "今日策略：\n反弹高点；退潮期；风险大于机会；管住手；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1594256644721,
+		"disable": false
+	},
+	{
+		"name": "",
+		"id": "1605099",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "不要想着钱；要想着把事情做对；\n不要沉迷于日常交易；\n心态和控制力；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1595204626683
+	},
+	{
+		"name": "",
 		"id": "8842596",
 		"tag": "4109794",
 		"trigger": "1",
 		"content": "\b\b临盘时没有明确的\b交易计划；被市场牵着鼻子走；脑子一热随意交易；\n你他妈的要重复多少次这种错误？\n没有交易计划就他妈的不要看盘。",
-		"repeat": 4,
+		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1595063516801
 	},
@@ -14,7 +66,7 @@
 		"id": "5432774",
 		"tag": "4109794",
 		"trigger": "1",
-		"content": "回顾自己的交易；几乎每一笔交易都有错误；而且是不断重复的错误；\n你他妈要重复错误多少次？",
+		"content": "回顾自己的交易；几乎每一笔交易都有错误；而且是不断重复的错误；\n十年加法是积累，最后减法才能升华。\n正确的路只有一条，错误的路却有千千万万条",
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1595063417388
@@ -27,7 +79,8 @@
 		"content": "我的交易系统模型：\n底部启动；确定性不高；盈亏比高；\n博弈转折；\n主升爆发；",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1594999522403
+		"timestamp": 1594999522403,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -38,17 +91,6 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1594997034346
-	},
-	{
-		"name": "",
-		"id": "1211620",
-		"tag": "9480900",
-		"trigger": "1",
-		"content": "今日策略：\n市场处在退潮期；风险大于机会；管住手；",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1594256644721,
-		"disable": false
 	},
 	{
 		"name": "",
@@ -66,7 +108,7 @@
 		"tag": "0238231",
 		"trigger": "3",
 		"content": "大局观：市场状态是最重要的系统变量；\n当前市场处在什么状态和阶段？\n赚钱效应如何？亏钱效应如何？\n风险是什么？机会是什么? 热点是什么？\n我对市场总是后知后觉；",
-		"repeat": 4,
+		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1594893731992
 	},
@@ -93,7 +135,7 @@
 	{
 		"name": "",
 		"id": "1112888",
-		"trigger": "5",
+		"trigger": "2",
 		"content": "时机就是一切；契合周期和节奏；\n借大盘的势；启动；转折；爆发；",
 		"repeat": 3,
 		"type": "interval",

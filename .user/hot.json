@@ -1,5 +1,15 @@
 [
 	{
+		"id": "蚂蚁金服",
+		"selected": true,
+		"timestamp": 1595378589411
+	},
+	{
+		"id": "蚂蚁金服概念",
+		"selected": false,
+		"timestamp": 1595378585309
+	},
+	{
 		"id": "业绩预增",
 		"selected": true,
 		"timestamp": 1594595813324
@@ -16,7 +26,7 @@
 	},
 	{
 		"id": "军工",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594256070569
 	},
 	{
@@ -41,12 +51,12 @@
 	},
 	{
 		"id": "互联网金融",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1593996674120
 	},
 	{
 		"id": "券商",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1593996593340
 	},
 	{
@@ -116,7 +126,7 @@
 	},
 	{
 		"id": "医药",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1586706080874
 	},
 	{
@@ -181,7 +191,7 @@
 	},
 	{
 		"id": "集成电路概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579098000269
 	},
 	{
@@ -211,7 +221,7 @@
 	},
 	{
 		"id": "芯片概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303653
 	},
 	{
