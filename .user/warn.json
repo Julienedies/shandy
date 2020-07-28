@@ -1,6 +1,17 @@
 [
 	{
 		"name": "",
+		"id": "3934174",
+		"trigger": "1",
+		"repeat": 5,
+		"content": "简单、纯粹、取舍；\n只做龙头；只做主升；只做最强；只做系统；",
+		"type": "interval",
+		"timestamp": 1587208620664,
+		"disable": false,
+		"tag": "9586736"
+	},
+	{
+		"name": "",
 		"id": "8158267",
 		"tag": "9480900",
 		"trigger": "1",
@@ -182,17 +193,6 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1594462875587
-	},
-	{
-		"name": "",
-		"id": "3934174",
-		"trigger": "1",
-		"repeat": 5,
-		"content": "简单、纯粹、取舍；\n只做龙头；只做主升；只做最强；只做系统；",
-		"type": "interval",
-		"timestamp": 1587208620664,
-		"disable": false,
-		"tag": "9586736"
 	},
 	{
 		"name": "",
@@ -444,7 +444,8 @@
 		"content": "竞价系统；竞价买入；\n氛围节奏；主线热点；股性人气；波浪形态；盈亏比；",
 		"repeat": 5,
 		"type": "interval",
-		"timestamp": 1592824137233
+		"timestamp": 1592824137233,
+		"disable": true
 	},
 	{
 		"name": "系统变量",
