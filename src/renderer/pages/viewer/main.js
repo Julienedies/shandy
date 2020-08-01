@@ -184,7 +184,9 @@ brick.reg('mainCtrl', function (scope) {
 
     // 显示某个历史目录
     scope.show = function (e, dir) {
+        //let $th = $(this).icSetLoading();
         scope.init(dir);
+        //$th.icClearLoading();
     };
 
     // 删除历史目录

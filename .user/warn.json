@@ -1,6 +1,115 @@
 [
 	{
 		"name": "",
+		"id": "4927325",
+		"tag": "",
+		"trigger": "1",
+		"content": "我为什么总是错过龙头，因为我把时间都浪费在杂毛身上了；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596251448657
+	},
+	{
+		"name": "",
+		"id": "0027617",
+		"tag": "4109794",
+		"trigger": "",
+		"content": "只做龙头，这就是大概率；",
+		"repeat": 3,
+		"type": "action",
+		"timestamp": 1596251180823
+	},
+	{
+		"name": "",
+		"id": "1082292",
+		"tag": "4109794",
+		"trigger": "1",
+		"content": "只做最强；只做龙头；只做主升；\n股性就是大概率；\n龙头恐高就用小仓位试错；\n\n只做最强；超预期强势；股性 + 烂板上冲；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596249803097
+	},
+	{
+		"name": "",
+		"id": "4511553",
+		"tag": "4109794",
+		"trigger": "1",
+		"content": "关键是选股；\b股性是最重要的变量之一；\n一定要做龙头；\b通过股性就可以知道有没有龙头潜力；\n龙头就那么几支；人气就是一切；\b\n人气龙头超强势，这就是大概率；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596246560943
+	},
+	{
+		"name": "",
+		"id": "9444091",
+		"tag": "0238231",
+		"trigger": "1",
+		"content": "最主要的是大局观；\b\n当前的市场状态；节奏周期；主线热点\b；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596183425761
+	},
+	{
+		"name": "系统变量",
+		"id": "5929184",
+		"trigger": "1",
+		"content": "氛围节奏；主线热点；股性人气；波浪形态；系统模型；行情性质；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1590494745896
+	},
+	{
+		"name": "",
+		"id": "2196427",
+		"tag": "4893750",
+		"trigger": "3",
+		"content": "我总是\b踏不准节奏；错过最好的交易机会；\n行情\b转折是准备不足；\n行情退潮是管不住手；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596153588072
+	},
+	{
+		"name": "",
+		"id": "7645534",
+		"tag": "9480900",
+		"trigger": "1",
+		"content": "今天是不是转折期？\b今天是不是转折期？\b\n我从来都在转折期手足无措；错过最好的交易时机；",
+		"repeat": 5,
+		"type": "interval",
+		"timestamp": 1596098260292
+	},
+	{
+		"name": "",
+		"id": "8502730",
+		"trigger": "3",
+		"content": "我为何总是错失大航情，抓不住机会？\n没有大局观；对市场状态、节奏周期、主线热点总是\b后知后觉；\n行情启动时犹豫；行情转折时准备不足；行情退潮时管不住手；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1588814012347,
+		"tag": "0238231"
+	},
+	{
+		"name": "",
+		"id": "4731456",
+		"tag": "6462480",
+		"trigger": "3",
+		"content": "最好的交易机会转瞬即逝；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596069824661
+	},
+	{
+		"name": "",
+		"id": "6969932",
+		"tag": "0238231",
+		"trigger": "1",
+		"content": "时机就是一切；抓住市场\b转强的周期节点；",
+		"repeat": 5,
+		"type": "interval",
+		"timestamp": 1596034343633
+	},
+	{
+		"name": "",
 		"id": "3934174",
 		"trigger": "1",
 		"repeat": 5,
@@ -16,7 +125,7 @@
 		"tag": "9480900",
 		"trigger": "1",
 		"content": "如果现在市场转强，你要买什么票？",
-		"repeat": 3,
+		"repeat": 5,
 		"type": "interval",
 		"timestamp": 1595573321752
 	},
@@ -50,7 +159,7 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1594256644721,
-		"disable": false
+		"disable": true
 	},
 	{
 		"name": "",
@@ -60,12 +169,13 @@
 		"content": "不要想着钱；要想着把事情做对；\n不要沉迷于日常交易；\n心态和控制力；",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1595204626683
+		"timestamp": 1595204626683,
+		"disable": true
 	},
 	{
 		"name": "",
 		"id": "8842596",
-		"tag": "4109794",
+		"tag": "9586736",
 		"trigger": "1",
 		"content": "\b\b临盘时没有明确的\b交易计划；被市场牵着鼻子走；脑子一热随意交易；\n你他妈的要重复多少次这种错误？\n没有交易计划就他妈的不要看盘。",
 		"repeat": 3,
@@ -75,8 +185,8 @@
 	{
 		"name": "",
 		"id": "5432774",
-		"tag": "4109794",
-		"trigger": "1",
+		"tag": "9586736",
+		"trigger": "5",
 		"content": "回顾自己的交易；几乎每一笔交易都有错误；而且是不断重复的错误；\n十年加法是积累，最后减法才能升华。\n正确的路只有一条，错误的路却有千千万万条",
 		"repeat": 4,
 		"type": "interval",
@@ -107,7 +217,7 @@
 		"name": "",
 		"id": "2407622",
 		"tag": "9586736",
-		"trigger": "3",
+		"trigger": "5",
 		"content": "做精不做多；耐心等待；\n不要沉迷于日常交易中；回顾自己的亏损交易和盈利交易；\n十年加法是积累，最后减法才能升华。\n正确的路只有一条，错误的路却有千千万万条",
 		"repeat": 3,
 		"type": "interval",
@@ -152,16 +262,6 @@
 		"type": "interval",
 		"timestamp": 1588644212860,
 		"disable": false,
-		"tag": "0238231"
-	},
-	{
-		"name": "",
-		"id": "8502730",
-		"trigger": "5",
-		"content": "我为何总是错失大行情，抓不住机会？\n没有大局观；看不到确定性；\n行情启动时犹豫；行情退潮时管不住手；",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1588814012347,
 		"tag": "0238231"
 	},
 	{
@@ -446,15 +546,6 @@
 		"type": "interval",
 		"timestamp": 1592824137233,
 		"disable": true
-	},
-	{
-		"name": "系统变量",
-		"id": "5929184",
-		"trigger": "1",
-		"content": "氛围节奏；主线热点；股性人气；波浪形态；系统模型；行情性质；",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1590494745896
 	},
 	{
 		"name": "",
