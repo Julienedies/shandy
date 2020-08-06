@@ -104,8 +104,8 @@ brick.reg('mainCtrl', function (scope) {
     // 默认显示实时监控和语言警告两个标签
     _show({url: '#indexView', title: '股票实时监控'});
     _show({url: '#setVoiceWarnCtrl', title: '语言警告'});
-    _show({url: 'system.html', title: '系统'});
-    _show({url: 'tags.html', title: '标签'});
+    //_show({url: 'system.html', title: '系统'});
+    //_show({url: 'tags.html', title: '标签'});
     // -------------------------------------------------------------------------------------------
 
     function getBounds (name) {

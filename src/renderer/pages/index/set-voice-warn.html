@@ -26,10 +26,10 @@ ${ require('../tags/set-tag.html') }
         <div class="columns" ic-tpl="tags">
             <div ic-select="tags" ic-select-cla="is-primary" ic-select-item=".tag" ic-select-on-change="onTagFilterChange">
                 <div class="tags">
-                    <span class="tag" ic-for="i,v in model.names" ic-val="{{ i }}">{{ i }}</span>
+                    <span class="tag" ic-for="i,v in model.names" ic-val="{{ i }}" ic-has-selected="currentTag && i.includes(model.currentTag)">{{ i }}</span>
                 </div>
                 <div class="tags">
-                    <span class="tag" ic-for="i,v in model.tradingKeyTags" ic-val="{{ v.id }}" ic-has-selected="">
+                    <span class="tag" ic-for="i,v in model.tradingKeyTags" ic-val="{{ v.id }}" ic-has-selected="v.id===model.currentTag">
                         <!--<i ic-if="v.parentId">{{ TAGS_MAP_BY_ID[v.parentId] && TAGS_MAP_BY_ID[v.parentId].text }} ~ </i>-->
                         {{ v.text }}
                     </span>

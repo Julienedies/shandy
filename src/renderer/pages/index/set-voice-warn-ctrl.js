@@ -39,6 +39,8 @@ export default function (scope) {
     let $elm = scope.$elm;
     let $toggleBtn = $elm.find('button[role=toggleBtn]');
 
+    $.icMsg(currentTag);
+
     // 获取标签数据备用
     /*    $.get('/stock/tags').done((data) => {
             console.log(data);
@@ -81,7 +83,7 @@ export default function (scope) {
         warnJodb.each((v, i) => {
             names[v.name || '_null'] = 1;
         });
-        let model = {names, tradingKeyTags};
+        let model = {names, tradingKeyTags, currentTag};
         scope.render('tags', {model});
     }
 
