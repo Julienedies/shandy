@@ -11,6 +11,7 @@ import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
 import '../../js/common-stock.js'
+import { FroalaEditorConfig } from '../../js/constants'
 
 brick.reg('todoCtrl', function () {
 
@@ -24,5 +25,6 @@ brick.reg('todoCtrl', function () {
     };
 
 });
+
 
 

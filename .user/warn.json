@@ -1,9 +1,129 @@
 [
 	{
 		"name": "",
-		"id": "4927325",
-		"tag": "",
+		"id": "0347488",
+		"tag": "4757788",
+		"trigger": "5",
+		"content": "一定要做龙头，怕高就小仓位试错。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596713093487
+	},
+	{
+		"name": "",
+		"id": "0347317",
+		"tag": "4109794",
 		"trigger": "1",
+		"content": "我的交易模型是什么？\n我要捕捉的目标行情是什么？\n盈亏比是多少？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596693446886
+	},
+	{
+		"name": "",
+		"id": "5128628",
+		"tag": "0238231",
+		"trigger": "3",
+		"content": "现在毫无疑问是牛市；整体机会大于风险；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596630969333
+	},
+	{
+		"name": "",
+		"id": "6195916",
+		"tag": "5511909",
+		"trigger": "1",
+		"content": "我为何总是错过龙头行情；臆测到顶；上涨嫌高，下跌不想买；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596618728814
+	},
+	{
+		"name": "动态博弈",
+		"id": "5354311",
+		"trigger": "3",
+		"content": "多空动态博弈转换；\n注意盘中情绪反转；注意盘中情绪反转；\n不要他妈的只是傻乎乎看着；要做好推演和准备。\n\b否极泰来；\b否极泰来；",
+		"type": "interval",
+		"timestamp": 1580734892039,
+		"repeat": 3,
+		"tag": "9373395"
+	},
+	{
+		"name": "",
+		"id": "1252317",
+		"tag": "4109794",
+		"trigger": "5",
+		"content": "\b承认市场的不确定性。\n实际操作中，预判、试错、确认、加仓;",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596618238329
+	},
+	{
+		"name": "",
+		"id": "6815149",
+		"tag": "6462480",
+		"trigger": "3",
+		"content": "简单纯粹取舍；\n你不能什么行情都想抓住，结果什么都没有抓住；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596580175101
+	},
+	{
+		"name": "",
+		"id": "3665079",
+		"tag": "4109794",
+		"trigger": "3",
+		"content": "我的交易是对还是错？\n不是赚钱或者亏钱；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596513538469
+	},
+	{
+		"name": "",
+		"id": "8218085",
+		"tag": "3707729",
+		"trigger": "1",
+		"content": "盈亏同源；一致性概率优势；",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1596455438071
+	},
+	{
+		"name": "",
+		"id": "8842596",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "\b\b临盘时没有明确的\b交易计划；被市场牵着鼻子走；脑子一热随意交易；\n你他妈的要重复多少次这种错误？\n没有交易计划就他妈的不要看盘。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1595063516801
+	},
+	{
+		"name": "",
+		"id": "9614905",
+		"tag": "4109794",
+		"trigger": "3",
+		"content": "超预期强势是一个建仓信号。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596347228023
+	},
+	{
+		"name": "",
+		"id": "0180251",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "我焦虑的心态是交易的障碍；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1596347158947
+	},
+	{
+		"name": "",
+		"id": "4927325",
+		"tag": "4757788",
+		"trigger": "3",
 		"content": "我为什么总是错过龙头，因为我把时间都浪费在杂毛身上了；",
 		"repeat": 3,
 		"type": "interval",
@@ -13,10 +133,10 @@
 		"name": "",
 		"id": "0027617",
 		"tag": "4109794",
-		"trigger": "",
+		"trigger": "3",
 		"content": "只做龙头，这就是大概率；",
 		"repeat": 3,
-		"type": "action",
+		"type": "interval",
 		"timestamp": 1596251180823
 	},
 	{
@@ -24,7 +144,7 @@
 		"id": "1082292",
 		"tag": "4109794",
 		"trigger": "1",
-		"content": "只做最强；只做龙头；只做主升；\n股性就是大概率；\n龙头恐高就用小仓位试错；\n\n只做最强；超预期强势；股性 + 烂板上冲；",
+		"content": "只做龙头；只做主升；只做最强；超预期强势；\n盈亏同源；一致性概率优势；\n",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1596249803097
@@ -56,7 +176,8 @@
 		"content": "氛围节奏；主线热点；股性人气；波浪形态；系统模型；行情性质；",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1590494745896
+		"timestamp": 1590494745896,
+		"tag": "4109794"
 	},
 	{
 		"name": "",
@@ -72,9 +193,9 @@
 		"name": "",
 		"id": "7645534",
 		"tag": "9480900",
-		"trigger": "1",
+		"trigger": "2",
 		"content": "今天是不是转折期？\b今天是不是转折期？\b\n我从来都在转折期手足无措；错过最好的交易时机；",
-		"repeat": 5,
+		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1596098260292
 	},
@@ -171,16 +292,6 @@
 		"type": "interval",
 		"timestamp": 1595204626683,
 		"disable": true
-	},
-	{
-		"name": "",
-		"id": "8842596",
-		"tag": "9586736",
-		"trigger": "1",
-		"content": "\b\b临盘时没有明确的\b交易计划；被市场牵着鼻子走；脑子一热随意交易；\n你他妈的要重复多少次这种错误？\n没有交易计划就他妈的不要看盘。",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1595063516801
 	},
 	{
 		"name": "",
@@ -587,16 +698,6 @@
 		"repeat": 3,
 		"tag": "0001719",
 		"disable": true
-	},
-	{
-		"name": "动态博弈",
-		"id": "5354311",
-		"trigger": "3",
-		"content": "多空动态博弈转换；\n注意盘中情绪反转；注意盘中情绪反转；\n不要他妈的只是傻乎乎看着；要做好推演和准备。\n\b否极泰来；\b否极泰来；",
-		"type": "interval",
-		"timestamp": 1580734892039,
-		"repeat": 3,
-		"tag": "9373395"
 	},
 	{
 		"name": "周期节奏",

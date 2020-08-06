@@ -20,10 +20,15 @@ import C from '../../js/constants.js'
 import setTagCtrl from '../tags/set-tag-ctrl'
 import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
 
+import bridge from '../../../libs/utils'
+
+const setting = bridge.setting();
 //brick.set('debug', true)
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
 
 brick.set('ic-select-cla', 'is-info');
+
+brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
 
 brick.reg('setTagCtrl', setTagCtrl);
 
@@ -145,6 +150,7 @@ brick.reg('systemCtrl', function () {
     };
 
 });
+
 
 brick.reg('setSystemCtrl', function () {
 

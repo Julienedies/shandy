@@ -1,12 +1,22 @@
 [
 	{
+		"id": "抖音",
+		"selected": false,
+		"timestamp": 1596409069395
+	},
+	{
+		"id": "黄金",
+		"selected": false,
+		"timestamp": 1596408958867
+	},
+	{
 		"id": "无人机",
 		"selected": false,
 		"timestamp": 1595807622040
 	},
 	{
 		"id": "蚂蚁金服",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1595378589411
 	},
 	{
@@ -196,7 +206,7 @@
 	},
 	{
 		"id": "集成电路概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579098000269
 	},
 	{
@@ -226,7 +236,7 @@
 	},
 	{
 		"id": "芯片概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303653
 	},
 	{

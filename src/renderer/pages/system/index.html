@@ -69,6 +69,7 @@
                                  ic-viewer
                                  ic-viewer-item=">span"
                                  ic-viewer-url="href"
+                                 ic-viewer-interval=""
                                  ic-viewer-on-show="onViewerShow"
                                  ic-viewer-on-open="onViewerOpen"
                                  ic-viewer-on-close="onViewerClose">
@@ -109,7 +110,7 @@
                     <table class="table is-striped is-bordered is-fullwidth">
                         <tr>
                             <th>示例图片</th>
-                            <td ic-viewer ic-viewer-url="href">
+                            <td ic-viewer ic-viewer-url="href" ic-viewer-interval="5">
                                 <span class="tag is-info"
                                       ic-for="i,o in (v['示例图片']||[])"
                                       ic-viewer-item

@@ -21,21 +21,31 @@ const nativeImage = electron.nativeImage;
 export default {
     /**
      * 获取文件夹里的图片对象数组: imgObjArr
-     * @param dir {String} 文件夹路径
+     * @param dir {String|Array} 文件夹路径 或 图片数组
      * @param [isOnlyPath] {Boolean} 图片对象是否只包含路径
      * @returns {Array} [{f:图片路径，c:图片创建时间戳，d:图片创建日期, code: 股票code}]
      */
     getImages: function (dir, isOnlyPath) {
         console.log('getImages => ', dir);
-        // 测试是否是交易记录图片, 因为主要功能是浏览k线截图
-        if (dir.indexOf('截图') === -1) {
-            let files = glob.sync(path.join(dir, './*.+(jpg|png)')) || [];
-            return files.map((path) => {
-                return {f: path};
-            })
-        }
+        let arr;
+        if (Array.isArray(dir)) {
+            arr = dir;
+            dir = '';
+            arr = arr.filter((f) => {
+                //return fs.existsSync(f);
+                return true;
+            });
+        } else {
+            // 测试是否是交易记录图片, 因为主要功能是浏览k线截图
+            if (dir.indexOf('截图') === -1) {
+                let files = glob.sync(path.join(dir, './*.+(jpg|png)')) || [];
+                return files.map((path) => {
+                    return {f: path};
+                })
+            }
 
-        let arr = fs.readdirSync(dir);
+            arr = fs.readdirSync(dir);
+        }
 
         arr = arr.filter(f => {
             return /\.png$/img.test(f);
@@ -45,9 +55,12 @@ export default {
             let fullPath = path.join(dir, f);
             let arr = f.match(/\d{6}(?=\.png$)/) || [];
             let code = arr[0];
-            let stat = fs.statSync(fullPath);
-            arr = f.match(/\d{4}-\d{2}-\d{2}/) || [];
-            return {f: fullPath, c: stat.birthtimeMs, d: arr[0], code};
+            //let stat = fs.statSync(fullPath);
+            //let c = stat.birthtimeMs;
+            let f2 = f.replace('上午', 'am').replace('下午', 'pm');
+            let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s+[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/) || [];
+            let m = moment(arr2[0], "YYYY-MM-DD Ah.m.s");
+            return {f: fullPath, c: +m, d: arr2[1], code};
         });
 
         arr = this.sort(arr);

@@ -31,7 +31,12 @@ brick.reg('mainCtrl', function (scope) {
     this.onSelectRandomBgImgDirDone = (paths) => {
         let randomBgImgDir = paths[0]
         randomBgImgDir && setting.refresh().merge('warn', {randomBgImgDir}).save();
-    }
+    };
+
+    this.setIcViewerInterval = function (e) {
+        let v = $('#icViewerInterval').val();
+        v && setting.refresh().set('icViewerInterval', v).save();
+    };
 
 });
 

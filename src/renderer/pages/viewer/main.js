@@ -41,7 +41,7 @@ const tagsJodb = jd('tags');
 
 brick.services.reg('historyModel', historyModel);
 
-brick.set('ic-viewer-interval', setting.get('viewer.interval') || 14);
+brick.set('ic-viewer-interval', setting.get('viewer.interval') || 10);
 
 brick.reg('mainCtrl', function (scope) {
 

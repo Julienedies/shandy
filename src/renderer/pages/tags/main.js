@@ -22,7 +22,13 @@ import detailsCtrl from './details-ctrl'
 import setTagCtrl from './set-tag-ctrl'
 import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
 
+import bridge from '../../../libs/utils'
+
+const setting = bridge.setting();
+
 window.brick = brick; // 不是测试用；模板里需要全局获取
+
+brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
 
 brick.reg('tagsCtrl', tagsCtrl);
 

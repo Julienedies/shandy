@@ -29,6 +29,26 @@
                 </div>
             </div>
         </div>
+
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label">图片播放间隔时间</label>
+            </div>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="nubmer" id="icViewerInterval" value="{{ model.icViewerInterval || 7 }}" ic-enter-press="setIcViewerInterval">
+                    </div>
+                    <div class="control">
+                        <a class="button is-primary" ic-click="setIcViewerInterval">
+                            确定
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
     <div class="box">

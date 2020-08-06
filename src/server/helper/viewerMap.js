@@ -5,8 +5,8 @@
 
 import moment from 'moment'
 import _ from 'lodash'
-import userJodb from '../../libs/user-jodb';
-
+import userJodb from '../../libs/user-jodb'
+import imagesHelper from '../../renderer/pages/viewer/helper'
 
 /**
  * VIEWER_AMP 是以Tag ID作为键，对应一个图片数组；
@@ -32,12 +32,14 @@ export default {
         });
         for (let i in VIEWER_MAP) {
             let arr = VIEWER_MAP[i];
-            arr.sort((a, b) => {
+            arr = imagesHelper.getImages(arr, 1);
+            VIEWER_MAP[i] = arr.reverse();
+/*            arr.sort((a, b) => {
                 //console.log(a, b);
                 let ad = (a.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
                 let bd = (b.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
                 return new Date(bd) - new Date(ad);
-            });
+            });*/
         }
         return VIEWER_MAP;
     }
