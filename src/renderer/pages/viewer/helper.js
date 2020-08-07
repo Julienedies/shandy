@@ -158,7 +158,7 @@ export default {
         for (let i = 0; i < dateMapArr.length; i++) {
             let imgArr = dateMapArr[i];
             imgArr = this._sortByCodeAndDate(imgArr);
-            //console.log(imgArr);
+            console.log(111,imgArr);
             resultArr.push(imgArr);
         }
 
