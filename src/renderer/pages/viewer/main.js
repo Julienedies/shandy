@@ -50,6 +50,8 @@ brick.reg('mainCtrl', function (scope) {
     let $list = $('#list');
     let $imgDir = $('input[name=imgDir]');
 
+    let isReverse = false;
+
     let tagsMap = {};
     tagsJodb.each((item) => {
         tagsMap[item.id] = item;
@@ -87,12 +89,14 @@ brick.reg('mainCtrl', function (scope) {
 
     // 反转图片列表
     scope.reverse = function (e) {
-        scope.urls.reverse();
-        $list.icRender('list', scope.urls);
+        //scope.urls.reverse();
+        //$list.icRender('list', scope.urls);
+        scope.init('', isReverse);
+        isReverse = !isReverse;
     };
 
     // 显示目录下图片列表
-    scope.init = async function (dir) {
+    scope.init = async function (dir, isReverse = true) {
         dir = dir || scope.imgDir;
         scope.imgDir = dir;
         if (!fs.existsSync(dir)) {
@@ -102,7 +106,7 @@ brick.reg('mainCtrl', function (scope) {
         //
         let isAddTags = /交易记录/img.test(dir);
 
-        let urls = helper.getImages(dir);
+        let urls = helper.getImages(dir, {isReverse});
         if (!urls.length) {
             return $.icMsg('no images.');
         }
@@ -141,8 +145,8 @@ brick.reg('mainCtrl', function (scope) {
     // scope.crop = {x: 3140, y: 115, width: 310, height: 50};
     scope.cropTest = function (fields) {
         console.info(fields);
-        let {x,y,width,height} = fields || scope.crop;
-        let crop = scope.crop = {x,y,width,height};
+        let {x, y, width, height} = fields || scope.crop;
+        let crop = scope.crop = {x, y, width, height};
         let sn = $('#sn').val();
         let dataUrl = helper.crop(scope.urls[sn].f, fields);
         $('#view_crop').attr('src', dataUrl);

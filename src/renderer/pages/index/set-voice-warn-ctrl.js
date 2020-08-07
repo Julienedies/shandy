@@ -39,8 +39,6 @@ export default function (scope) {
     let $elm = scope.$elm;
     let $toggleBtn = $elm.find('button[role=toggleBtn]');
 
-    $.icMsg(currentTag);
-
     // 获取标签数据备用
     /*    $.get('/stock/tags').done((data) => {
             console.log(data);

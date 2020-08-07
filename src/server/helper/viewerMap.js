@@ -32,7 +32,7 @@ export default {
         });
         for (let i in VIEWER_MAP) {
             let arr = VIEWER_MAP[i];
-            arr = imagesHelper.getImages(arr, 1);
+            arr = imagesHelper.sort(arr);
             VIEWER_MAP[i] = arr.reverse();
 /*            arr.sort((a, b) => {
                 //console.log(a, b);

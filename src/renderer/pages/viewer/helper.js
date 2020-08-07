@@ -16,42 +16,53 @@ import _ from 'lodash'
 import ocr from '../../../libs/baidu-ocr'
 import stockQuery from '../../../libs/stock-query'
 
+import ju from '../../../libs/jodb-user'
+
 const nativeImage = electron.nativeImage;
+
+const viewerJsonDb = ju('viewer');
+const imagesJsonDb = ju('images', {});
 
 export default {
     /**
      * 获取文件夹里的图片对象数组: imgObjArr
      * @param dir {String|Array} 文件夹路径 或 图片数组
-     * @param [isOnlyPath] {Boolean} 图片对象是否只包含路径
+     * @param [conf] {Boolean|Object} 图片对象是否只包含路径
      * @returns {Array} [{f:图片路径，c:图片创建时间戳，d:图片创建日期, code: 股票code}]
      */
-    getImages: function (dir, isOnlyPath) {
+    getImages: function (dir, conf = {isOnlyPath: false, isReverse: true}) {
         console.log('getImages => ', dir);
         let arr;
-        if (Array.isArray(dir)) {
-            arr = dir;
-            dir = '';
-            arr = arr.filter((f) => {
-                //return fs.existsSync(f);
-                return true;
-            });
-        } else {
-            // 测试是否是交易记录图片, 因为主要功能是浏览k线截图
-            if (dir.indexOf('截图') === -1) {
-                let files = glob.sync(path.join(dir, './*.+(jpg|png)')) || [];
-                return files.map((path) => {
-                    return {f: path};
-                })
-            }
-
-            arr = fs.readdirSync(dir);
+        // 测试是否是交易记录图片, 因为主要功能是浏览k线截图
+        if (dir.indexOf('截图') === -1) {
+            let files = glob.sync(path.join(dir, './*.+(jpg|png)')) || [];
+            return files.map((path) => {
+                return {f: path};
+            })
         }
+
+        arr = fs.readdirSync(dir);
 
         arr = arr.filter(f => {
             return /\.png$/img.test(f);
         });
 
-        arr = arr.map(f => {
+        arr = this.supplement(arr, dir);
+
+        arr = this._sort(arr, conf.isReverse);
+
+        return !conf.isOnlyPath ? arr : arr.map(o => {
+            return o.f;
+        });
+    },
+
+    supplement: function (arr, dir = '') {
+        return arr.map(f => {
+            // 先尝试读取缓存
+            let key = this.getKey(f);
+            let item = imagesJsonDb.get(f);
+            if (item) return item;
+
             let fullPath = path.join(dir, f);
             let arr = f.match(/\d{6}(?=\.png$)/) || [];
             let code = arr[0];
@@ -60,21 +71,42 @@ export default {
             let f2 = f.replace('上午', 'am').replace('下午', 'pm');
             let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s+[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/) || [];
             let m = moment(arr2[0], "YYYY-MM-DD Ah.m.s");
+            item = {f: fullPath, c: +m, d: arr2[1], code};
+            // 保存到缓存
+            imagesJsonDb.set(key, item);
             return {f: fullPath, c: +m, d: arr2[1], code};
         });
+    },
 
-        arr = this.sort(arr);
+    /**
+     * 缓存图片信息
+     */
+    cache: function () {
+        let that = this;
+        viewerJsonDb.each((item) => {
+            let key = that.getKey(item.img);
+            imagesJsonDb.set(key, item);
+        });
+    },
 
-        return !isOnlyPath ? arr : arr.map(o => {
-            return o.f;
+    getKey: function (imgPath) {
+        return imgPath.split('/').pop().replace(/\s+|\./img, '_').replace(/_png$/, '');
+    },
+
+    sort: function (arr) {
+        arr = this.supplement(arr);
+        arr = this._sort(arr, true);
+        return arr.map((item, i) => {
+            return item.f;
         });
     },
 
     /**
      * @param images  {Array} imgObjArr 图片对象数组
+     * @param isReverse [Bool] 是否反转排序
      * @returns {Array} imgObjArr
      */
-    sort: function (images) {
+    _sort: function (images, isReverse) {
         // 先按时间排序
         images.sort((a, b) => {
             let a1 = +moment(a.d);
@@ -130,6 +162,7 @@ export default {
             resultArr.push(imgArr);
         }
 
+        resultArr = isReverse ? resultArr.reverse() : resultArr;
         return _.flatten(resultArr, true);
     },
 

@@ -1,13 +1,34 @@
 [
 	{
 		"name": "",
-		"id": "0347488",
-		"tag": "4757788",
-		"trigger": "5",
-		"content": "",
+		"id": "3934174",
+		"trigger": "1",
+		"repeat": 5,
+		"content": "简单、纯粹、取舍；\n只做龙头；只做主升；只做最强；只做系统；",
+		"type": "interval",
+		"timestamp": 1587208620664,
+		"disable": false,
+		"tag": "9586736"
+	},
+	{
+		"name": "",
+		"id": "8158267",
+		"tag": "9480900",
+		"trigger": "1",
+		"content": "如果现在市场转强，你要买什么票？",
+		"repeat": 5,
+		"type": "interval",
+		"timestamp": 1595573321752
+	},
+	{
+		"name": "",
+		"id": "4563146",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "我就像一个赌徒；管不住手；随时随刻想交易；\n无系统无计划临盘随意冲动交易是我最大的亏损原因。",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1596713093487
+		"timestamp": 1595406609063
 	},
 	{
 		"name": "",
@@ -143,8 +164,8 @@
 		"name": "",
 		"id": "4511553",
 		"tag": "4109794",
-		"trigger": "1",
-		"content": "关键是选股；\b股性是最重要的变量之一；\n一定要做龙头；\b通过股性就可以知道有没有龙头潜力；\n龙头就那么几支；人气就是一切；\b\n人气龙头超强势，这就是大概率；",
+		"trigger": "3",
+		"content": "一定要做龙头；\n龙头就那么几支；人气就是一切；\b\n人气龙头超强势，这就是大概率；",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1596246560943
@@ -199,37 +220,6 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1596069824661
-	},
-	{
-		"name": "",
-		"id": "3934174",
-		"trigger": "1",
-		"repeat": 5,
-		"content": "简单、纯粹、取舍；\n只做龙头；只做主升；只做最强；只做系统；",
-		"type": "interval",
-		"timestamp": 1587208620664,
-		"disable": false,
-		"tag": "9586736"
-	},
-	{
-		"name": "",
-		"id": "8158267",
-		"tag": "9480900",
-		"trigger": "1",
-		"content": "如果现在市场转强，你要买什么票？",
-		"repeat": 5,
-		"type": "interval",
-		"timestamp": 1595573321752
-	},
-	{
-		"name": "",
-		"id": "4563146",
-		"tag": "9586736",
-		"trigger": "1",
-		"content": "我就像一个赌徒；管不住手；随时随刻想交易；",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1595406609063
 	},
 	{
 		"name": "",

@@ -61,7 +61,7 @@ brick.reg('toolBarCtrl', function (scope) {
         let $th = $(this).icSetLoading();
         let dir = setting.get('viewer.MQ_DIR');
         let crop = setting.get('viewer.crop');
-        let arr = helper.getImages(dir, true);
+        let arr = helper.getImages(dir, {isOnlyPath: true});
         let str = '';
         helper.renameByOcr(arr, crop, (info) => {
             console.log(info);
