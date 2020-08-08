@@ -1,14 +1,49 @@
 [
 	{
+		"id": "2129324",
+		"tag": [
+			"简单纯粹取舍",
+			"交易模式"
+		],
+		"date": "2020-08-08",
+		"text": "<p>我的操作习惯， 隔日超短，不能低开，直接上冲。 符合这些条件的标的其实很少。</p><p>而我就在习惯和其它机会之间三心二意，摇摆不定。</p>",
+		"timestamp": 1596899774737
+	},
+	{
+		"id": "1823471",
+		"tag": [
+			"主观"
+		],
+		"date": "2020-08-08",
+		"text": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">放弃我的主观感觉，根据系统操作；</span></strong></p><p><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\"><strong>事实上是我的大部分盈利都是根据系统赚来的。并不是我的主观判断。</strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">我的主观判断最大的影响是错过了很多机会。</span></strong></p>",
+		"timestamp": 1596863665759
+	},
+	{
+		"id": "3838504",
+		"tag": [
+			"恐高",
+			"三心二意",
+			"为何总是错过大行情",
+			"主观"
+		],
+		"date": "2020-08-08",
+		"text": "<p>我为何总是错过大行情？</p><p>我为何总是错过龙头行情？</p><p>我为何总是错过热点板块主升行情？</p><p><br></p><p>这不是一次二次的问题？</p><p><br></p><p><strong><span style=\"background-color: rgb(255, 255, 0);\">我对市场理解不够；没有大局观；主观；</span></strong></p><p><span style=\"background-color: rgb(255, 255, 0);\"><strong>思维方式也有问题；总是担心顶部，恐高。但是盈亏同源。</strong></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0);\">三心二意，把时间和精力都浪费在杂毛身上了。眼前的龙头不关注，却在市场没有明确目的的东找西找。</span></strong></p>",
+		"timestamp": 1596852315639
+	},
+	{
 		"id": "0755382",
-		"tag": "",
+		"tag": [
+			"龙头"
+		],
 		"date": "2020-08-07",
 		"text": "<p>龙头和跟风是市场上的客观存在；大部分人都是在跟风而已；</p>",
 		"timestamp": 1596814147533
 	},
 	{
 		"id": "1348317",
-		"tag": "",
+		"tag": [
+			"简单纯粹取舍"
+		],
 		"date": "2020-08-06",
 		"text": "<p>简单纯粹取舍</p><p>你什么行情都想抓住，就什么行情都抓不住；</p><p><br></p><p>竞价系统就是一个杂烩；</p><p><br></p><p>技术驱动？ 情绪驱动？ 博弈驱动？热点驱动？</p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">怎么衡量确定性 vs 盈亏比 vs 效率？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">热点龙头主升</span></strong></p>",
 		"timestamp": 1596675523537
@@ -22,28 +57,38 @@
 	},
 	{
 		"id": "9123642",
-		"tag": "",
+		"tag": [
+			"市场理解力",
+			"大局观"
+		],
 		"date": "2020-08-05",
-		"text": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">关于市场心理</span></strong></p><p><br></p><p>昨日医疗跳水，大盘下跌，加上指数双头位置，市场心理有些恐慌。&nbsp;</p><p>早盘买盘汹涌，可以从竞价看出。昨日的下跌让昨天买入持股者担心恐慌抛售。</p><p>恐慌盘压力释放完毕，其实是低吸的好机会。</p><p><br></p><p>如果对当前市场理解够的话，就可以考虑龙头恐慌低吸。因为其实市场是非常强的，资金面也是非常充沛。 有分歧，但也不会一致共振向下。</p><p><br></p><p><span style=\"background-color: rgb(255, 255, 0);\"><strong>对市场理解的不够。譬如今日君正集团的大长腿反包。说明了市场非常强势。我就应该寻找机会建仓。</strong></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0);\">同时也说明了我的思维有问题。我先入为主根据经验觉得君正完蛋了，所以君正超预期反包的机会我就抓不到。</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0);\">相同的K线可以走出不同的走势，关键是当时的市场变量。（大盘状态，市场情绪，主线热点，个股人气等）</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0);\">我的线性思维，主观判断，是我交易的最大障碍。</span></strong></p><p><span style=\"background-color: rgb(255, 255, 0);\"><strong>重要的是应对；客观跟随；</strong></span></p><p><br></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">还有就是复星医药，我为什么抓不住机会；</span></p><p><br></p><p>历史会重复，贪婪恐惧循环往复。</p><p><br></p><p><br></p>",
+		"text": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">关于市场心理</span></strong></p><p><br></p><p>昨日医疗跳水，大盘下跌，加上指数双头位置，市场心理有些恐慌。&nbsp;</p><p>早盘买盘汹涌，可以从竞价看出。昨日的下跌让昨天买入持股者担心恐慌抛售。</p><p>恐慌盘压力释放完毕，其实是低吸的好机会。</p><p><br></p><p>如果对当前市场理解够的话，就可以考虑龙头恐慌低吸。因为其实市场是非常强的，资金面也是非常充沛。 有分歧，但也不会一致共振向下。</p><p><span style=\"font-size: 18px;\"><br></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>对市场理解的不够。譬如今日君正集团的大长腿反包。说明了市场非常强势。我就应该寻找机会建仓。</strong></span></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">同时也说明了我的思维有问题。我先入为主根据经验觉得君正完蛋了，所以君正超预期反包的机会我就抓不到。</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">相同的K线可以走出不同的走势，关键是当时的市场变量。（大盘状态，市场情绪，主线热点，个股人气等）</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我的线性思维，主观判断，是我交易的最大障碍。</span></strong></span></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">重要的是应对；客观跟随；</span></strong></p><p><br></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">还有就是复星医药，我为什么抓不住机会；</span></p><p><br></p><p>历史会重复，贪婪恐惧循环往复。</p><p><br></p><p><br></p>",
 		"timestamp": 1596615810792
 	},
 	{
 		"id": "7302798",
-		"tag": "",
+		"tag": [
+			"龙头",
+			"盈亏同源一致性概率"
+		],
 		"date": "2020-08-05",
 		"text": "<p>选股一定要爆发中，强势，有人气（譬如大量资金）；形态是主升；有涨停经历；</p><p>我的介入点是弱转强，分歧转一致；</p><p>竞价系统来说就是 烂板上冲；</p><p>烂板上冲体现的就是该弱不弱，看多。超预期强势。</p><p>背后可能是个股强势，或者大盘转势。 &nbsp;不深究，关键是以市场客观表现做为判断标准。</p><p>机械执行，一致性的概率优势，盈亏同源；</p>",
 		"timestamp": 1596613532890
 	},
 	{
 		"id": "1966294",
-		"tag": "",
+		"tag": [
+			"龙头"
+		],
 		"date": "2020-08-04",
 		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">只做龙头；只做主升；只做最强；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">盈亏同源；一致性的概率优势；</span></strong></p><p><br></p><p>股性就是大概率；</p><p>龙头恐高就用小仓位试错；</p><p><br></p><p>只做最强；超预期强势；股性 + 烂板上冲；</p>",
 		"timestamp": 1596499793903
 	},
 	{
 		"id": "4086256",
-		"tag": "",
+		"tag": [
+			"主观"
+		],
 		"date": "2020-08-03",
 		"text": "<p>我的主观判断是我交易的最大障碍；</p>",
 		"timestamp": 1596466367975
@@ -53,18 +98,24 @@
 		"date": "2020-08-01",
 		"text": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">关于我的心态</span></strong></p><p>我以前做的交易有积累吗？</p><p>没有；但我竟然一直重复这种状态，为什么？</p><p><br></p><p>我又陷入前几年的困境了，我突然觉得自己还是不会做股票；</p><p>我凭什么以为自己可以以交易为生。</p><p>支撑我的交易逻辑是什么？</p><p><br></p><p>我突然不知道以什么做为衡量标准？ 我怎么衡量确定性？</p>",
 		"timestamp": 1596297321499,
-		"tag": ""
+		"tag": [
+			"心态"
+		]
 	},
 	{
 		"id": "6148780",
 		"date": "2020-08-02",
 		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">关于竞价系统</span></strong></p><p><span style=\"font-size: 16px;\">我的竞价系统能够筛选出爆发的个股；这是一个事实；</span></p><p><span style=\"font-size: 16px;\">但是我却把握不住；原因何在？</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">这就好比牛股一定在涨停里；但不是所有涨停都会是牛股；</span></p><p><br></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">竞价只是一个买点信号，关键是这个信号意味着什么？</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">我理解这个信号表示什么吗？它和我的模式是什么关系？</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？这个信号和目标行情的关系是什么？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">正是因为我对当前市场理解的不够；对自己的系统理的不够明确。</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">所以我会犹豫；所以我会抓不住机会；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">我一开始主要做烂板上冲，本质是该弱不弱，看多；超预期强势；</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">连续上冲同样的思路，比较强势。</span></strong></p>",
 		"timestamp": 1596323981935,
-		"tag": ""
+		"tag": [
+			"竞价系统"
+		]
 	},
 	{
 		"id": "7363704",
-		"tag": "",
+		"tag": [
+			"市场理解力"
+		],
 		"date": "2020-08-02",
 		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我预料不到会涨多高；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我看不到后续行情发展；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我以什么做为我的交易逻辑；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">超强势</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">打板的确是最简单的超短系统；</span></strong></p>",
 		"timestamp": 1596339390484
@@ -72,8 +123,13 @@
 	{
 		"id": "1933894",
 		"date": "2020-08-01",
-		"text": "<p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">我以前就想过通过小仓位循序渐进做龙头。</span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">但为什么没有执行呢？</span></span></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">沉迷于日常交易中；忘记初心；</span></p>",
-		"timestamp": 1596254224850
+		"text": "<p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">我以前就想过通过小仓位循序渐进做龙头。</span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">但为什么没有执行呢？</span></span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">我其实不喜欢循序建仓，这其实是我对某些行情没有信心和把握的折中之举。</span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">但这是不是正确的做法呢？&nbsp;</span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">它跟 预判、试错、确认、加仓 &nbsp;性质一样吗？</span></p><p><br></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">沉迷于日常交易中；忘记初心；</span></p>",
+		"timestamp": 1596254224850,
+		"tag": [
+			"单点全仓 VS 循序建仓",
+			"简单纯粹取舍",
+			"明确的标准"
+		]
 	},
 	{
 		"id": "4964930",
@@ -102,32 +158,52 @@
 	{
 		"id": "8997862",
 		"date": "2020-07-31",
-		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我要做高频模式 &nbsp;还是 &nbsp;低频波段模式；</span></strong></p><p><strong></strong><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">不是要简单纯粹吗？</span></strong></p>",
-		"timestamp": 1596186155395
+		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我要做高频模式 &nbsp;还是 &nbsp;低频波段模式；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">不是要简单纯粹吗？</span></strong></p>",
+		"timestamp": 1596186155395,
+		"tag": [
+			"高频 VS 低频",
+			"简单纯粹取舍"
+		]
 	},
 	{
 		"id": "8467863",
 		"date": "2020-07-31",
 		"text": "<p>一定要控制心态；一定要控制心态；一定要控制心态；</p><p>踏空的焦虑，急于赚钱的焦虑；</p><p>都是需要克服的；</p>",
-		"timestamp": 1596184802590
+		"timestamp": 1596184802590,
+		"tag": [
+			"心态"
+		]
 	},
 	{
 		"id": "4116222",
 		"date": "2020-07-31",
 		"text": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">机会稍纵即逝，我总是临盘犹豫；</span><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">临盘应对很差；</span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">因为我没有明确的交易想法；</span></p><p><br></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">哪怕机械执行，也要比犹豫来的好；</span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">关键是操作要符合交易理念： 热点龙头（热钱反向）；热钱出击的时机</span></p>",
-		"timestamp": 1596184417485
+		"timestamp": 1596184417485,
+		"tag": [
+			"临盘犹豫",
+			"明确的标准",
+			"机械执行"
+		]
 	},
 	{
 		"id": "2072937",
 		"date": "2020-07-31",
 		"text": "<p>我总是缺乏准备，市场转强的时候，连标的都没有准备好；</p><p>我总是主观预判市场弱；结果市场转强，就手足无措；</p>",
-		"timestamp": 1596184367756
+		"timestamp": 1596184367756,
+		"tag": [
+			"缺乏预案、应对差"
+		]
 	},
 	{
 		"id": "8462347",
 		"date": "2020-07-31",
-		"text": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">一定要提前制定计划；决不能临盘随意交易；这是我最大的亏损来源；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">关键是对市场的理解；</span></strong></p><p><strong></strong><br></p><p>从这一定上来说，竞价静态买入的好处是避免盘中冲动交易；</p>",
-		"timestamp": 1596183744073
+		"text": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">一定要提前制定计划；决不能临盘随意交易；这是我最大的亏损来源；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">关键是对市场的理解；</span></strong></p><p><br></p><p>从这一定上来说，竞价静态买入的好处是避免盘中冲动交易；</p>",
+		"timestamp": 1596183744073,
+		"tag": [
+			"随意交易",
+			"交易系统",
+			"交易计划"
+		]
 	},
 	{
 		"id": "3077441",
@@ -151,31 +227,46 @@
 		"id": "5673201",
 		"date": "2020-07-27",
 		"text": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">关于龙头</span></strong></p><p>只有龙头才能引来足够的资金推动上涨；连续上涨=》 赚钱效应 =》 引来更多资金 =》 趋势反身性</p><p>只有市场合力龙头股，才会在市场合力资金推动下，连续上涨。（这可以做为一个选股标准）</p><p><br></p><p>我对消息、题材、政策等要素没有优势；</p><p>如果只以技术形态做为交易标准，概率不大；</p><p><br></p><p>低吸损失的是效率和确定性；优势是高盈亏比；</p><p><br></p><p>股票走势本质是持币者与持筹者的博弈产生，应该多揣摩两者之心，让自己站在主动的这一方即可。</p><p><br></p><p><br></p>",
-		"timestamp": 1595810168494
+		"timestamp": 1595810168494,
+		"tag": [
+			"龙头"
+		]
 	},
 	{
 		"id": "6283093",
 		"date": "2020-07-25",
 		"text": "<p>关于自己的心态控制；</p><p>每天没有明确系统的交易；容易陷入为交易而交易的状态；</p><p>尤其是赚钱的压力强迫自己不断的交易；</p><p>利令智昏；</p><p>越是盲目交易越是做错交易；</p><p>陷入恶性循环；</p><p><br></p><p>不要忘记初心；</p>",
-		"timestamp": 1595664993113
+		"timestamp": 1595664993113,
+		"tag": [
+			"心态"
+		]
 	},
 	{
 		"id": "0151395",
 		"date": "2020-07-25",
 		"text": "<p>关于超短操作的2种模式</p><p><br></p><p><strong>1 准备好标的，目标行情</strong></p><p><strong>2 次日根据时机盘面情况进行操作</strong></p><p><br></p><p><strong>优点：简单纯粹重复；客观跟随，避免臆想；</strong></p><p>特点：高频重复，积小成大；每日换标的操作；</p><p><strong>代表人物：独孤一箭</strong></p><p><br></p><p>做趋势波动；在龙头里做T；</p><p>特点：大局观；低频大空间；</p><p>大行情不会一蹴而就；</p><p><br></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">我在以上两种模式里犹豫不决；纠缠不清；</span></strong></p><p><br></p><p>竞价系统只是一个单纯的买点系统； &nbsp;要捕捉的目标行情是什么？我不够明确；</p><p><br></p>",
-		"timestamp": 1595646752806
+		"timestamp": 1595646752806,
+		"tag": [
+			"高频 VS 低频"
+		]
 	},
 	{
 		"id": "5970235",
 		"date": "2020-07-24",
 		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">关于龙头 只做龙头</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">趋势 &nbsp;焦点 &nbsp;热钱 &nbsp; 赚钱效应 &nbsp; 反身性</span></strong></p><p><br></p>",
-		"timestamp": 1595602418510
+		"timestamp": 1595602418510,
+		"tag": [
+			"龙头"
+		]
 	},
 	{
 		"id": "2732616",
 		"date": "2020-07-24",
 		"text": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">这是我当前的问题所在</span></strong></p><p><span style=\"background-color: rgb(255, 255, 0);\">我为什么会错过牛市行情？</span></p><p><span style=\"background-color: rgb(255, 255, 0);\">上涨的过程中；我总是担心会跌；</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><span style=\"background-color: rgb(255, 255, 0);\">我不敢做那些高位票，风险是没有；但是也放弃了机会；关键是概率优势；</span></span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><span style=\"background-color: rgb(255, 255, 0);\">盈亏同源；保持交易一致性；我没有做到。我总是首上次交易的影响，左右被打脸。</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><span style=\"background-color: rgb(255, 255, 0);\">客观跟随，客观跟随；市场反映一切；</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">历史一直在重复；我却为什么抓不住机会？</span></strong></p><p><br></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\"><strong>我对K线的理解非常差；市场是多空动态博弈的；</strong></span></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\"><strong>本周我错过的票；这不是偶然的，这说明我的思维方式有问题，才会错过这么多机会；</strong></span></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\"><strong>譬如中航沈飞、中船防务、西藏药业；东富龙；金达威；复星医药；航天彩虹；海利生物；沈阳化工；智飞生物；中国中免；</strong></span></p><p><strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">我好像只有线性思维；下跌就看空；上涨担心回落；没有大局观，看不到大势；</span></span></strong></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\"><strong>股票的K线走势，我好多都没有理解，所以自然抓不住机会；</strong></span></p>",
-		"timestamp": 1595589344695
+		"timestamp": 1595589344695,
+		"tag": [
+			"为何总是错过大行情"
+		]
 	},
 	{
 		"id": "6318188",
@@ -187,7 +278,10 @@
 		"id": "5740171",
 		"date": "2020-07-22",
 		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">缺乏大局观； 看不到行情，看不到确定性；这些历史会重复；</span></strong></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">证券，免税驱动的市场主升浪，我没有抓住；本周的军工驱动反弹行情我也错过了；</span></p><p>&nbsp;</p><p>我要捕捉的行情： 市场合力驱动的行情，以多空博弈驱动；</p><p>板块行情</p><p>龙头行情</p>",
-		"timestamp": 1595413665613
+		"timestamp": 1595413665613,
+		"tag": [
+			"为何总是错过大行情"
+		]
 	},
 	{
 		"id": "0313974",
@@ -199,7 +293,10 @@
 		"id": "5118851",
 		"date": "2020-07-18",
 		"text": "<p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">历史会重复</span></strong></p><p><br></p><p><strong>很多行情类型一直在重复</strong></p><p><strong>我需要仔细归纳行情类型重复的条件，比如当时的大盘环境；板块状态；个股的资金类型、技术形态；</strong></p><p><br></p><p><strong>这就是我的交易系统。 否则的话，我临盘脑子是懵的，被市场牵着鼻子走，随意交易，浪费时间，浪费机会，没有积累；</strong></p><p><br></p><p><strong>避免那些亏损的交易；重复那些赚钱的交易；</strong></p>",
-		"timestamp": 1595038013989
+		"timestamp": 1595038013989,
+		"tag": [
+			"历史会重复"
+		]
 	},
 	{
 		"id": "4017840",

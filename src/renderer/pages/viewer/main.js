@@ -38,6 +38,8 @@ const tradeArr = userJo('SEL', []).get();
 const viewerJodb = ju('viewer');
 const tagsJodb = jd('tags');
 
+window.$ = $;
+
 
 brick.services.reg('historyModel', historyModel);
 
@@ -50,7 +52,8 @@ brick.reg('mainCtrl', function (scope) {
     let $list = $('#list');
     let $imgDir = $('input[name=imgDir]');
 
-    let isReverse = false;
+    let isReverse = true;
+    let isRefresh = false;
 
     let tagsMap = {};
     tagsJodb.each((item) => {
@@ -64,9 +67,6 @@ brick.reg('mainCtrl', function (scope) {
         $.icMsg(val);
     };
 
-    scope.reload = function (e) {
-        location.reload();
-    };
 
     scope.clean = function (e) {
         let imgArr = viewerJodb.get();
@@ -87,6 +87,12 @@ brick.reg('mainCtrl', function (scope) {
         console.info('scope.clean', resultArr);
     };
 
+    scope.reload = function (e) {
+        isRefresh = true;
+        scope.init('');
+        //location.reload();
+    };
+
     // 反转图片列表
     scope.reverse = function (e) {
         //scope.urls.reverse();
@@ -96,17 +102,17 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     // 显示目录下图片列表
-    scope.init = async function (dir, isReverse = true) {
+    scope.init = async function (dir) {
         dir = dir || scope.imgDir;
         scope.imgDir = dir;
         if (!fs.existsSync(dir)) {
             return $.icMsg(`${ dir }\r不存在!`);
         }
-
+        $imgDir.val(dir);
         //
         let isAddTags = /交易记录/img.test(dir);
 
-        let urls = helper.getImages(dir, {isReverse});
+        let urls = helper.getImages(dir, {isReverse, isRefresh});
         if (!urls.length) {
             return $.icMsg('no images.');
         }
@@ -127,7 +133,7 @@ brick.reg('mainCtrl', function (scope) {
         });
         console.log('urls =>', urls);
         scope.urls = urls;
-        $imgDir.val(dir);
+
         $list.icRender('list', urls);
         setting.refresh().set('viewer.imgDir', dir);
     };
@@ -189,7 +195,12 @@ brick.reg('mainCtrl', function (scope) {
     // 显示某个历史目录
     scope.show = function (e, dir) {
         //let $th = $(this).icSetLoading();
-        scope.init(dir);
+        $.icSetLoading();
+        setTimeout(() => {
+            scope.init(dir);
+            $.icClearLoading();
+        }, 40);
+        //$.icClearLoading();
         //$th.icClearLoading();
     };
 

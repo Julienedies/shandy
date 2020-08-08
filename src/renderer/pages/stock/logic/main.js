@@ -124,7 +124,15 @@ brick.reg('logicCtrl', function () {
 
     // 过滤标签改变
     this.onFilterKeyChange = function (msg) {
-        let val = msg.value;
+        scope._onFilterKeyChange(msg.value);
+    };
+
+    this.onFilterKeyChange2 = function (e, val) {
+        scope._onFilterKeyChange(val);
+        scope.render('tags', scope);
+    };
+
+    this._onFilterKeyChange = function (val) {
         scope.filterKey = val === '' ? undefined : val === '_null' ? '' : val;
         render();
         updateUrl();
@@ -135,12 +143,6 @@ brick.reg('logicCtrl', function () {
         let cla = 'scroll';
         let $th = $(this).toggleClass(cla);
         $th.closest('li').find('.pre').toggleClass(cla);
-        /*        if($th.hasClass(cla)){
-                    $th.closest('li').find('.pre').css('max-height', 'none');
-                }else{
-                    $th.closest('li').find('.pre').css('max-height', '32em');
-                }*/
-
     };
 
     this.logic = {
@@ -173,7 +175,7 @@ brick.reg('logicCtrl', function () {
 
     function updateUrl () {
         let url = location.href.split('?')[0];
-        history.pushState(null, null, `${ url }?sort=${ sortType }&filter=${ scope.filterKey||'' }`);
+        history.pushState(null, null, `${ url }?sort=${ sortType }&filter=${ scope.filterKey || '' }`);
     }
 
 });
@@ -187,10 +189,10 @@ brick.reg('setLogicCtrl', function () {
     // 暂存当前要修改或添加的logic Model
     scope.vm = {};
 
-    scope.before = function (data) {
+    scope.before = function (fields) {
         //  type属性如果是空数组，由于合并的关系，似乎并不会在服务器端删除，临时处理，先把type设为''
-        if (data.type && data.type.length === 0) {
-            data.type = '';
+        if (fields.type && fields.type.length === 0) {
+            fields.type = '';
         }
     };
 
@@ -220,15 +222,14 @@ brick.reg('setLogicCtrl', function () {
         let vm = scope.vm;
         let str = $(this).val();
         if (!str) return;
-        if (vm.typeArr.includes(str)) {
-            return alert('类型已经存在.');
-        } else {
+        if (!vm.typeArr.includes(str)) {
             vm.typeArr.push(str);
-            let obj = getFormVm();
-            obj.type = obj.type || [];
-            obj.type.push(str);
-            Object.assign(vm, obj);
         }
+        let obj = getFormVm();
+        obj.type = obj.type || [];
+        obj.type.push(str);
+        Object.assign(vm.logic, obj);
+
         scope.render(vm);
     };
 
@@ -236,14 +237,13 @@ brick.reg('setLogicCtrl', function () {
         let vm = scope.vm;
         let str = $(this).val();
         if (!str) return;
-        if (vm.authorArr.includes(str)) {
-            return alert('著者已经存在.');
-        } else {
-            let obj = getFormVm();
-            obj.author = str;
+        if (!vm.authorArr.includes(str)) {
             vm.authorArr.push(str);
-            Object.assign(vm, obj);
         }
+        let obj = getFormVm();
+        obj.author = str;
+        Object.assign(vm.logic, obj);
+
         scope.render(vm);
     };
 

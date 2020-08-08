@@ -14,6 +14,10 @@ import jo from './jsono'
 export default function (name) {
 
     switch (name) {
+        case 'viewer':
+            return (name, initData) => {
+                return jo(path.resolve(config.USER_DIR, `./viewer/${ name }.json`), initData)
+            }
         case 'temp':
             return (name, initData) => {
                 return jo(path.resolve(config.USER_DIR, `./temp/${ name }.json`), initData)

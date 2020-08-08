@@ -15,7 +15,9 @@ import _ from 'lodash'
 import ocr from '../../../libs/baidu-ocr'
 import stockQuery from '../../../libs/stock-query'
 
+const viewerDbFactory = jsonDb('viewer')
 import ju from '../../../libs/jodb-user'
+import jsonDb from '../../../libs/json-jo'
 
 const nativeImage = electron.nativeImage;
 
@@ -29,7 +31,7 @@ export default {
      * @param [conf] {Boolean|Object} 图片对象是否只包含路径
      * @returns {Array} [{f:图片路径，c:图片创建时间戳，d:图片创建日期, code: 股票code}]
      */
-    getImages: function (dir, conf = {isOnlyPath: false, isReverse: true}) {
+    getImages: function (dir, conf = {isOnlyPath: false, isReverse: true, isRefresh: false}) {
         console.log('getImages => ', dir);
         let arr;
         // 测试是否是交易记录图片, 因为主要功能是浏览k线截图
@@ -40,15 +42,25 @@ export default {
             })
         }
 
-        arr = fs.readdirSync(dir);
+        let key = dir.replace(/[/\s\.]+/img, '_');
+        let dirJo = viewerDbFactory(key);
+        let cacheArr = dirJo.get();
 
-        arr = arr.filter(f => {
-            return /\.png$/img.test(f);
-        });
+        if (cacheArr.length && !conf.isRefresh) {
+            arr = cacheArr;
+        } else {
+            arr = fs.readdirSync(dir);
 
-        arr = this.supplement(arr, dir);
+            arr = arr.filter(f => {
+                return /\.png$/img.test(f);
+            });
 
-        arr = this._sort(arr, conf.isReverse);
+            arr = this.supplement(arr, dir);
+
+            arr = this._sort(arr, conf.isReverse);
+
+            dirJo.set(arr).save();
+        }
 
         return !conf.isOnlyPath ? arr : arr.map(o => {
             return o.f;
@@ -157,7 +169,7 @@ export default {
         for (let i = 0; i < dateMapArr.length; i++) {
             let imgArr = dateMapArr[i];
             imgArr = this._sortByCodeAndDate(imgArr);
-            console.log(111,imgArr);
+            console.log(111, imgArr);
             resultArr.push(imgArr);
         }
 

@@ -14,7 +14,6 @@
 <div class="column is-10 is-offset-1" ic-ctrl="diaryCtrl">
 
     <div class="level">
-
         <div class="level-left">
             <div class="buttons has-addons">
                 <button class="button"
@@ -30,10 +29,21 @@
         </div>
     </div>
 
+    <div class="columns" ic-tpl="tags">
+        <div class="column is-12" ic-select="tags" ic-select-item=".tag" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
+            <div class="tags">
+                <span class="tag" ic-for="i,v in model.tagArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">{{ v }}</span>
+            </div>
+        </div>
+    </div>
+
     <ul id="diaryList" ic-tpl="diaryList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre scroll">{{v.text}}</div>
             <div class="tar">
+                <span class="tag is-info" ic-if="v.tag" ic-for="k,j in v.tag" ic-click="onFilterKeyChange2:{{ j }}">
+                    {{j || ''}}
+                </span>&nbsp;&nbsp;&nbsp;
                 <span style="opacity:0.3;float:left;">{{ v.date }}</span>
                 <a class="no" ic-click="edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
                 <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
@@ -62,35 +72,33 @@
 
     <div class="column is-10 is-offset-1" ic-tpl="setDiary">
 
-        <div class="" ic-form="setDiary">
+        <div ic-form="setDiary" ic-init="diary=model.diary;tagArr=model.tagArr">
 
             <!-- tr -->
             <div>
                 <h6></h6>
                 <div>
                     <textarea id="editor" rows="9" class="textarea is-medium" ic-form-field="text" ic-field-rule="required"></textarea>
-                    <input id='id' type="hidden" name="id" ic-form-field value="{{ model.id }}"/>
+                    <input id='id' type="hidden" name="id" ic-form-field value="{{ diary.id }}"/>
                 </div>
             </div>
 
             <!-- tr -->
-            <div>
+            <div style="padding:7px 0;">
                 <h6></h6>
-                <div>
-                    <input id="tag" class="input is-small" type="text" name="tag" ic-value="{{model.tag || '' }}" ic-form-field>
+                <div class="control">
+                    <div class="tags" ic-select="tags" ic-select-cla="is-primary" ic-select-type="checkbox" ic-form-field="tag">
+                        <span ic-for="i,v in tagArr" ic-class="tag is-small" ic-val="{{ v }}"
+                              ic-has-selected="diary.tag && diary.tag.includes(v)">
+                            {{ v }}
+                        </span>
+                        <input type="text" class="input is-small" style="width:18em!important;" placeholder="添加标签" ic-enter-press="addTag"/>
+                    </div>
                 </div>
             </div>
 
             <!-- tr -->
-            <div>
-                <h6></h6>
-                <div>
-                    <input id="date" class="input is-small" type="date" name="date" ic-value="{{model.date || jFormatDate() }}" ic-form-field>
-                </div>
-            </div>
-
-            <!-- tr -->
-            <div>
+            <div style="padding:3px 0;">
                 <div></div>
                 <div class="buttons">
                     <button class="button is-primary"
@@ -101,6 +109,14 @@
                     </button>
                     <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
                     <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
+                </div>
+            </div>
+
+            <!-- tr -->
+            <div>
+                <h6></h6>
+                <div>
+                    <input id="date" class="input is-small" type="date" name="date" ic-value="{{diary.date || jFormatDate() }}" ic-form-field>
                 </div>
             </div>
 

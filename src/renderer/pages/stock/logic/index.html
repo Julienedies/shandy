@@ -28,6 +28,7 @@
                 <button class="button" ic-click="logic.reverse">排序反转</button>
                 <button class="button" ic-click="createReader">Reader</button>
                 <button class="button" ic-click="toggleFull">完整显示</button>
+                <button class="button" ic-click="onFilterKeyChange2">取消过滤</button>
             </div>
         </div>
 
@@ -62,11 +63,15 @@
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre scroll">{{v.text}}</div>
             <div class="tar">
-                <span class="tag is-primary" ic-if="v.type" ic-for="k,j in v.type">{{j || ''}}</span>&nbsp;&nbsp;&nbsp;
-                <span class="tag is-danger" ic-if="v.tag" ic-for="k,j in v.tag">{{ TAGS_MAP_BY_ID[j] && TAGS_MAP_BY_ID[j].text }}</span>
+                <span class="tag is-info" ic-if="v.type" ic-for="k,j in v.type" ic-click="onFilterKeyChange2:{{ j }}">
+                    {{j || ''}}
+                </span>&nbsp;&nbsp;&nbsp;
+                <span class="tag is-danger" ic-if="v.tag" ic-for="k,j in v.tag" ic-click="onFilterKeyChange2:{{ j }}">
+                    {{ TAGS_MAP_BY_ID[j] && TAGS_MAP_BY_ID[j].text }}
+                </span>
                 <span class="tag is-info" ic-if="v.note">{{v.note || ''}}</span>&nbsp;&nbsp;&nbsp;
                 <span class="tag" ic-if="v.level">{{v.level || ''}}</span>&nbsp;
-                <span class="tag" ic-if="v.author">{{v.author || ''}}</span>
+                <span class="tag" ic-if="v.author" ic-click="onFilterKeyChange2:{{ v.author }}">{{v.author || ''}}</span>
                 <a class="no" ic-click="logic.edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
                 <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
                 <a class="no"
@@ -101,7 +106,7 @@
             <div>
                 <h6>逻辑</h6>
                 <div>
-                    <textarea rows="7" class="textarea" ic-form-field="text">{{logic.text}}</textarea>
+                    <textarea rows="11" class="textarea" ic-form-field="text">{{logic.text}}</textarea>
                     <input type="hidden" name="id" ic-form-field value="{{logic.id}}"/>
                 </div>
             </div>
@@ -110,7 +115,7 @@
             <div>
                 <h6>类型</h6>
                 <div>
-                    <div class="tags" ic-select="type" ic-select-type="checkbox" ic-form-field="type">
+                    <div class="tags" ic-select="type" ic-select-cla="is-primary" ic-select-type="checkbox" ic-form-field="type">
                         <span ic-for="i,v in typeArr" ic-class="tag is-small" ic-val="{{ v }}"
                               ic-has-selected="logic.type && logic.type.includes(v)">
                             {{ v }}
@@ -158,17 +163,9 @@
 
             <!-- tr -->
             <div>
-                <h6>优先级</h6>
-                <div>
-                    <input class="input is-small" type="number" name="level" ic-value="{{logic.level}}" ic-form-field>
-                </div>
-            </div>
-
-            <!-- tr -->
-            <div>
                 <h6>著者</h6>
                 <div>
-                    <div class="tags" ic-select="authors" ic-form-field="author">
+                    <div class="tags" ic-select="authors" ic-select-cla="is-primary" ic-form-field="author">
                         <span ic-for="i,v in authorArr" ic-class="tag is-small" ic-val="{{ v }}" ic-has-selected="v === logic.author">
                             {{ v }}
                         </span>
@@ -178,17 +175,28 @@
             </div>
 
             <!-- tr -->
+<!--            <div>
+                <h6>优先级</h6>
+                <div class="tags">
+
+                </div>
+            </div>-->
+
+            <!-- tr -->
             <div>
-                <h6></h6>
+                <h6>优先级</h6>
                 <div class="buttons">
+                    <input class="input is-medium" type="number" name="level" ic-value="{{logic.level || 0}}" ic-form-field>
+
                     <button class="button is-primary"
+                            style="margin-left:2em;"
                             ic-form-submit
                             ic-submit-action="/stock/logic"
                             ic-submit-before="before"
                             ic-submit-on-done="done">保存
                     </button>
-                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
-                    <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
+                    <button class="button none" ic-click="reset" style="margin-left:2em;"> 重置</button>
+                    <button class="button" ic-popup-close style="margin-left:2em;"> 关闭</button>
                 </div>
             </div>
 
