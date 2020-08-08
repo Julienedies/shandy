@@ -16,6 +16,7 @@ const proto = {
 
     init: function(data){
         this._pool = data;
+        this.emit('change');
         return this;
     },
 

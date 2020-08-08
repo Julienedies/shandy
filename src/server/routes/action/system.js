@@ -3,10 +3,13 @@
  * Created by j on 2019-08-18.
  */
 
-import dob from '../../../libs/dob.js'
-import viewerMap, { beforeGet } from '../../helper/viewerMap'
-import _tags from './tags'
 import _ from 'lodash'
+import dob from '../../../libs/dob.js'
+import _tags from './tags'
+
+import ViewerMap, { beforeGet } from '../../helper/viewerMap'
+
+const viewerMap = ViewerMap.getInstance();  // 全局单例
 
 const tags = _tags.tags;
 

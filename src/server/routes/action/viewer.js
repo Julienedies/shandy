@@ -4,8 +4,11 @@
  */
 
 import userJodb from '../../../libs/user-jodb'
+import ViewerMap, { beforeGet } from '../../helper/viewerMap'
 
-const viewerJodb = userJodb('viewer');
+const viewerMap = ViewerMap.getInstance();  // 全局单例
+
+const viewerJsonDb = userJodb('viewer');
 
 
 export default {
@@ -13,20 +16,25 @@ export default {
     get (req, res) {
         let id = req.params.id;
         let [[key, value]] = Object.entries(req.query);
-        let result = (key && value) ? viewerJodb.get(value, key) : viewerJodb.get(id);
+        let result = (key && value) ? viewerJsonDb.get(value, key) : viewerJsonDb.get(id);
         res.json(result);
     },
 
     post (req, res) {
         let item = req.body;
-        viewerJodb.set(item);
-        res.json(viewerJodb.get());
+        viewerJsonDb.set(item);
+        res.json(viewerJsonDb.get());
     },
 
     del (req, res) {
         let id = req.params.id;
-        viewerJodb.remove(id);
-        res.json(viewerJodb.get());
+        viewerJsonDb.remove(id);
+        res.json(viewerJsonDb.get());
+    },
+
+    refresh (req, res) {
+        viewerMap.refresh();
+        res.json({msg: 'ok'});
     },
 
 }

@@ -5,7 +5,6 @@
 
 import fs from 'fs'
 import path from 'path'
-import os from 'os'
 
 import glob from 'glob'
 import moment from 'moment'

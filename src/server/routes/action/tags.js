@@ -5,7 +5,9 @@
 
 import dob from '../../../libs/dob.js'; // 功能类似jodb
 
-import viewerMap, { beforeGet } from '../../helper/viewerMap'
+import ViewerMap, { beforeGet } from '../../helper/viewerMap'
+
+let viewerMap = ViewerMap.getInstance(); // 全局单例
 
 const tagsJodb = dob('tags', {
     beforeGet,

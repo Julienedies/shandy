@@ -7,18 +7,41 @@ import moment from 'moment'
 import _ from 'lodash'
 import userJodb from '../../libs/user-jodb'
 import imagesHelper from '../../renderer/pages/viewer/helper'
+import ju from '../../libs/jodb-user'
+
 
 /**
  * VIEWER_AMP 是以Tag ID作为键，对应一个图片数组；
  * example:
  * {'92893399': ['东方通 2019-09-11 下午10.35.27 -东方通-300379', '东信和平 2019-09-10 下午10.30.33 -东信和平-002017']}
  */
-let VIEWER_MAP = {};
 
-export default {
+class ViewerMap {
+    constructor () {
+
+    }
+    static getInstance () {
+        return ViewerMap.instance;
+    }
+}
+
+ViewerMap.VIEWER_MAP = {};
+
+ViewerMap.instance = {
+    // 默认使用缓存
     get: function () {
+        let viewerMapJsonDb = ju('viewerMap', {});
+        ViewerMap.VIEWER_MAP = viewerMapJsonDb.get();
+        return ViewerMap.VIEWER_MAP;
+    },
+    get2: function () {
+        return this.refresh();
+    },
+    // 强制更新
+    refresh: function () {
+        let VIEWER_MAP = ViewerMap.VIEWER_MAP = {};
+        let viewerMapJsonDb = ju('viewerMap', {});
         let viewerJodb = userJodb('viewer');
-        VIEWER_MAP = {};
         viewerJodb.get().forEach((item, index) => {
             let img = item.img;
             let system = item.system;
@@ -32,8 +55,7 @@ export default {
         });
         for (let i in VIEWER_MAP) {
             let arr = VIEWER_MAP[i];
-            arr = imagesHelper.sort(arr);
-            VIEWER_MAP[i] = arr.reverse();
+            VIEWER_MAP[i] = imagesHelper.sort(arr);
 /*            arr.sort((a, b) => {
                 //console.log(a, b);
                 let ad = (a.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
@@ -41,13 +63,14 @@ export default {
                 return new Date(bd) - new Date(ad);
             });*/
         }
+        viewerMapJsonDb.init(VIEWER_MAP);
         return VIEWER_MAP;
     }
 }
 
 
 function beforeGet (record, index) {
-    let example = VIEWER_MAP[record.id];
+    let example = ViewerMap.VIEWER_MAP[record.id];
     let oldExample = record['示例图片'];
     if (example) {
         if (oldExample) {
@@ -62,4 +85,5 @@ function beforeGet (record, index) {
 
 export { beforeGet }
 
-export { VIEWER_MAP }
+export default ViewerMap
+
