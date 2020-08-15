@@ -42,11 +42,14 @@ export default {
             })
         }
 
-        let key = dir.replace(/[/\s\.]+/img, '_');
+        let key = dir.replace(/[/\s.\\]+/img, '_');
+        if (conf.isReverse === false) {
+            key = key + '_R';
+        }
         let dirJo = viewerDbFactory(key);
         let cacheArr = dirJo.get();
 
-        if (cacheArr.length && !conf.isRefresh) {
+        if (cacheArr && cacheArr.length && !conf.isRefresh) {
             arr = cacheArr;
         } else {
             arr = fs.readdirSync(dir);

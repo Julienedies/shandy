@@ -30,7 +30,7 @@
     </div>
 
     <div class="columns" ic-tpl="tags">
-        <div class="column is-12" ic-select="tags" ic-select-item=".tag" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
+        <div class="column is-12" ic-select="tags" ic-select-item=".tag" ic-select-auto="false" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
             <div class="tags">
                 <span class="tag" ic-for="i,v in model.tagArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">{{ v }}</span>
             </div>

@@ -93,6 +93,7 @@ brick.reg('diaryCtrl', function () {
         }
 
         scope.render('diaryList', resultArr);
+        $.icMsg(`render item => ${ resultArr.length }`);
     };
 
 
@@ -164,7 +165,7 @@ brick.reg('setDiaryCtrl', function () {
         scope.render('setDiary', model, function () {
             $editor = $elm.find('#editor').froalaEditor({
                 ...FroalaEditorConfig,
-                height: 480,
+                height: 450,
             });
             $editor.froalaEditor('html.set', model.diary.text || '');
         });

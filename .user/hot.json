@@ -1,5 +1,20 @@
 [
 	{
+		"id": "生态农业",
+		"selected": true,
+		"timestamp": 1597361530478
+	},
+	{
+		"id": "粮食安全",
+		"selected": false,
+		"timestamp": 1597361522485
+	},
+	{
+		"id": "轨道交通",
+		"selected": false,
+		"timestamp": 1597107112219
+	},
+	{
 		"id": "抖音",
 		"selected": false,
 		"timestamp": 1596409069395
@@ -16,7 +31,7 @@
 	},
 	{
 		"id": "蚂蚁金服",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1595378589411
 	},
 	{
@@ -26,12 +41,12 @@
 	},
 	{
 		"id": "业绩预增",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594595813324
 	},
 	{
 		"id": "半年报预增",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594595812234
 	},
 	{
@@ -53,16 +68,6 @@
 		"id": "锂电池",
 		"selected": false,
 		"timestamp": 1594165362205
-	},
-	{
-		"id": "电子烟",
-		"selected": false,
-		"timestamp": 1594165288519
-	},
-	{
-		"id": "烟草",
-		"selected": false,
-		"timestamp": 1594139038612
 	},
 	{
 		"id": "互联网金融",
@@ -105,18 +110,13 @@
 		"timestamp": 1590917148535
 	},
 	{
-		"id": "传媒",
-		"selected": false,
-		"timestamp": 1590916260406
-	},
-	{
 		"id": "新股与次新股",
 		"selected": false,
 		"timestamp": 1589699376910
 	},
 	{
 		"id": "医疗器械",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1589417250291
 	},
 	{
@@ -141,7 +141,7 @@
 	},
 	{
 		"id": "医药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1586706080874
 	},
 	{
@@ -180,13 +180,8 @@
 		"timestamp": 1581522864794
 	},
 	{
-		"id": "云游戏",
-		"selected": false,
-		"timestamp": 1580915862404
-	},
-	{
 		"id": "生物疫苗",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579613298327
 	},
 	{
@@ -206,7 +201,7 @@
 	},
 	{
 		"id": "集成电路概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579098000269
 	},
 	{
@@ -231,12 +226,12 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928807285
 	},
 	{
 		"id": "芯片概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303653
 	},
 	{

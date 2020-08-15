@@ -48,7 +48,7 @@ brick.reg('logicCtrl', function () {
     //scope.tagsMap = {};  // 所有的标签数据集合
     let logicArr = [];  // 当前显示的logic数组
 
-    let updateLogicArrByFilterKey = () => {
+    function updateLogicArrByFilterKey () {
         let filterKey = scope.filterKey;
         logicArr = filterKey !== undefined ? logicManager.get((item, index) => {
             let isAuthorMatch = item.author === filterKey || String(item.author) === filterKey;
@@ -56,9 +56,9 @@ brick.reg('logicCtrl', function () {
             let isTagMatch = item.tag && item.tag.includes(filterKey);
             return isAuthorMatch || isTypeMatch || isTagMatch;
         }) : logicManager.get();
-    };
+    }
 
-    let render = () => {
+    function render () {
         updateLogicArrByFilterKey();
         // 原始数据是time排序，list.get是拷贝数据，所以会始终保留原始排序数据
         !isSortByTime && logicArr.sort((a, b) => {
@@ -68,12 +68,13 @@ brick.reg('logicCtrl', function () {
         });
 
         isReverse && logicArr.reverse();
+        $.icMsg(`render item => ${ logicArr.length }`);
         scope.render('logic', logicArr);
         // 更新html title, 下载text用
         let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
         let text = scope.filterKey && TAGS_MAP_BY_ID[scope.filterKey] && TAGS_MAP_BY_ID[scope.filterKey].text;
         $title.text(`logic_${ text || scope.filterKey || sortType }_${ date }`);
-    };
+    }
 
     // 文本语音阅读
     this.createReader = () => {

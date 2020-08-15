@@ -87,7 +87,7 @@ brick.reg('mainCtrl', function (scope) {
         console.info('scope.clean', resultArr);
     };
 
-    scope.reload = function (e) {
+    scope.refresh = function (e) {
         isRefresh = true;
         scope.init('');
         //location.reload();
@@ -97,12 +97,20 @@ brick.reg('mainCtrl', function (scope) {
     scope.reverse = function (e) {
         //scope.urls.reverse();
         //$list.icRender('list', scope.urls);
-        scope.init('', isReverse);
+        scope.init('');
         isReverse = !isReverse;
     };
 
+    scope.init = function (dir) {
+        $.icSetLoading();
+        setTimeout(() => {
+            scope._init(dir);
+            $.icClearLoading();
+        }, 40);
+    };
+
     // 显示目录下图片列表
-    scope.init = async function (dir) {
+    scope._init = async function (dir) {
         dir = dir || scope.imgDir;
         scope.imgDir = dir;
         if (!fs.existsSync(dir)) {
@@ -195,11 +203,12 @@ brick.reg('mainCtrl', function (scope) {
     // 显示某个历史目录
     scope.show = function (e, dir) {
         //let $th = $(this).icSetLoading();
-        $.icSetLoading();
+        scope.init(dir);
+/*        $.icSetLoading();
         setTimeout(() => {
             scope.init(dir);
             $.icClearLoading();
-        }, 40);
+        }, 40);*/
         //$.icClearLoading();
         //$th.icClearLoading();
     };
