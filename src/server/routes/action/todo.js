@@ -4,12 +4,18 @@
 
 import userJodb from '../../../libs/user-jodb'
 
-const todoJoDb = userJodb('todo', [], {joinType: 'push'});
-const warnJoDb = userJodb('warn', [], {joinType: 'push'});
+let todoJoDb;
+let warnJoDb;
+
+function getDb () {
+    todoJoDb = userJodb('todo', [], {joinType: 'push'});
+    warnJoDb = userJodb('warn', [], {joinType: 'push'});
+}
 
 export default {
 
-    get(req, res) {
+    get (req, res) {
+        getDb();
         let type = req.query.type;
         if (type === 'todo') {
             return res.json(todoJoDb.get());
@@ -23,11 +29,11 @@ export default {
         }
     },
 
-    post(req, res) {
+    post (req, res) {
         res.json({});
     },
 
-    del(req, res) {
+    del (req, res) {
         let id = req.params.id;
     }
 

@@ -41,12 +41,12 @@
 	},
 	{
 		"id": "业绩预增",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1594595813324
 	},
 	{
 		"id": "半年报预增",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1594595812234
 	},
 	{

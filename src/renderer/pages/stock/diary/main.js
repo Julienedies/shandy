@@ -52,7 +52,7 @@ brick.reg('diaryCtrl', function () {
         tagArr.sort(utils.sortByPy);
         scope.tagArr = tagArr;
         scope.render('tags', scope);
-        scope.render('diaryList', data);
+        render();
     };
 
     this.edit = function (e, id) {
@@ -81,9 +81,18 @@ brick.reg('diaryCtrl', function () {
     };
 
     this._onFilterKeyChange = function (val) {
-        let resultArr = list.get();
+        scope.filterKey = val;
+        render();
+    };
 
-        let filterKey = scope.filterKey = val === '' ? undefined : val === '_null' ? '' : val;
+    scope.on('diary.edit.done', function (e, data) {
+        scope.onGetDiaryDone(data);
+    });
+
+    function render () {
+        let resultArr = list.get();
+        let val = scope.filterKey;
+        let filterKey = val === '' ? undefined : val === '_null' ? '' : val;
         // 如果有过滤条件
         if (filterKey) {
             resultArr = resultArr.filter((item) => {
@@ -94,12 +103,7 @@ brick.reg('diaryCtrl', function () {
 
         scope.render('diaryList', resultArr);
         $.icMsg(`render item => ${ resultArr.length }`);
-    };
-
-
-    scope.on('diary.edit.done', function (e, data) {
-        scope.onGetDiaryDone(data);
-    });
+    }
 
 });
 
