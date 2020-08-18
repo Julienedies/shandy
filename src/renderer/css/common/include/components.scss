@@ -34,11 +34,15 @@
   }
 
   > div {
+    opacity: 0.1;
     position: fixed;
     width: 100%;
     bottom: 10%;
     padding-right: 4%;
     text-align: right;
+    &:hover{
+      opacity: 1;
+    }
 
     a {
       color: greenyellow;

@@ -27,7 +27,8 @@
 		"content": "现在是高位退潮期；管住手；\n大盘状态是最重要的系统变量；\n只能低吸，不能追涨；小心上冲回落；",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1597043128765
+		"timestamp": 1597043128765,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -213,9 +214,9 @@
 	{
 		"name": "",
 		"id": "4927325",
-		"tag": "4757788",
-		"trigger": "5",
-		"content": "我为什么总是错过龙头，因为我把时间都浪费在杂毛身上了；",
+		"tag": "4109794",
+		"trigger": "3",
+		"content": "大盘共振转折是时机；人气热点龙头是方向；",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1596251448657

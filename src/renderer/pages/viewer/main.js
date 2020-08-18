@@ -39,7 +39,7 @@ const viewerJodb = ju('viewer');
 const tagsJodb = jd('tags');
 
 window.$ = $;
-
+window.brick = brick;
 
 brick.services.reg('historyModel', historyModel);
 

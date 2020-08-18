@@ -14,12 +14,11 @@
 }
 
 #ic-viewer-info {
-  bottom: 10px !important;
-  white-space: pre;
+  bottom: 0!important;
   font-size: 1.4em;
-  line-height: 2;
-  padding: 10px 0 40px 0;
-  background: rgba(0, 0, 0, 0.2) !important;
+  line-height: 1.6;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.6) !important;
 }
 
 #ic-viewer-info, #ic-viewer-handle {
@@ -29,6 +28,7 @@
 
 #ic-viewer-handle {
   padding-right: 23%!important;
+  padding-left:20px;
 }
 
 .wrap {
