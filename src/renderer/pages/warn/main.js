@@ -148,11 +148,11 @@ socket.on('warn', (info) => {
     }
 
     if (info === 'sell' || info === 'buy' || info === 'daban') {
-        let d = info === 'sell' ? 0 : 0;
+        let d = info === 'sell' ? 4 : 4;
         let str = warnHandleMap[info];
         show2(str);
         if (d > 0) {
-            $body.css({backgroundColor: 'rgba(0,0,0,1)'});
+            $body.css({backgroundColor: 'rgba(0,0,0,0.9)'});
             setTimeout(() => {
                 $body.css({'backgroundColor': 'rgba(0,0,0,0)'});
             }, 1000 * d);

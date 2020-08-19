@@ -1,6 +1,16 @@
 [
 	{
 		"name": "",
+		"id": "3270847",
+		"tag": "4109794",
+		"trigger": "1",
+		"content": "当前的市场状态是强还是弱？\n当前的主线热点是什么？\n有没有介入机会？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1597850645602
+	},
+	{
+		"name": "",
 		"id": "2237736",
 		"tag": "9586736",
 		"trigger": "1",
@@ -2010,30 +2020,33 @@
 		"name": "",
 		"id": "2959839",
 		"trigger": "daban",
-		"content": " 一定要系统内建仓；支撑逻辑；盈亏比；\n",
+		"content": "不要他妈的临盘随意交易；\n( 君正集团、亚光科技、光启技术、中天金融、神州泰岳 )\n你的交易系统是什么？",
 		"timestamp": 1562998416497,
 		"disable": false,
 		"type": "action",
-		"repeat": 2
+		"repeat": 3,
+		"tag": ""
 	},
 	{
 		"name": "",
 		"id": "3250183",
 		"trigger": "sell",
-		"content": "不要卖飞；大局观；他妈的不要恐慌；\n止损要快；不要囿于小利；\n",
+		"content": "止损要快；不要囿于小利；\n不要卖飞；大局观；他妈的不要恐慌；\n",
 		"timestamp": 1576661024135,
 		"disable": false,
 		"type": "action",
-		"repeat": 2
+		"repeat": 3,
+		"tag": ""
 	},
 	{
 		"name": "",
 		"id": "2234810",
 		"trigger": "buy",
-		"content": " 一定要系统内建仓；支撑逻辑；盈亏比；",
+		"content": "不要他妈的临盘随意交易；\n( 君正集团、亚光科技、光启技术、中天金融、神州泰岳 )\n你的交易系统是什么？\n",
 		"timestamp": 1576660953345,
 		"type": "action",
-		"repeat": 2
+		"repeat": 3,
+		"tag": ""
 	},
 	{
 		"name": "",
