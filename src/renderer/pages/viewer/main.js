@@ -29,6 +29,7 @@ import historyModel from './historyModel'
 
 import markTagCtrl from './markTag-ctrl'
 import listCtrl from './list-ctrl'
+
 // activate context menu
 debugMenu.install();
 
@@ -144,6 +145,7 @@ brick.reg('mainCtrl', function (scope) {
 
         $list.icRender('list', urls);
         setting.refresh().set('viewer.imgDir', dir);
+        $('#countShow').text(`共有 ${ urls.length } 项.`);
     };
 
     // 图片目录路径选中后回调
@@ -204,11 +206,11 @@ brick.reg('mainCtrl', function (scope) {
     scope.show = function (e, dir) {
         //let $th = $(this).icSetLoading();
         scope.init(dir);
-/*        $.icSetLoading();
-        setTimeout(() => {
-            scope.init(dir);
-            $.icClearLoading();
-        }, 40);*/
+        /*        $.icSetLoading();
+                setTimeout(() => {
+                    scope.init(dir);
+                    $.icClearLoading();
+                }, 40);*/
         //$.icClearLoading();
         //$th.icClearLoading();
     };

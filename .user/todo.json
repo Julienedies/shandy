@@ -10,8 +10,8 @@
 		"interval": 60,
 		"duration": 30,
 		"timestamp": 1594995614163,
-		"promptTimes": 1,
-		"prevPromptTime": 1597831484634
+		"promptTimes": 2,
+		"prevPromptTime": 1598095085536
 	},
 	{
 		"name": "",
@@ -25,7 +25,7 @@
 		"duration": 47,
 		"timestamp": 1597160146691,
 		"promptTimes": 1,
-		"prevPromptTime": 1597833285052
+		"prevPromptTime": 1598096885674
 	},
 	{
 		"name": "问题",
@@ -39,7 +39,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1597835083356
+		"prevPromptTime": 1598098685877
 	},
 	{
 		"name": "",
@@ -53,7 +53,7 @@
 		"duration": 47,
 		"timestamp": 1595590485334,
 		"promptTimes": 1,
-		"prevPromptTime": 1597836885243
+		"prevPromptTime": 1598100486159
 	},
 	{
 		"name": "日程",
@@ -67,7 +67,7 @@
 		"duration": 34,
 		"singleWindow": "stock_replay",
 		"promptTimes": 1,
-		"prevPromptTime": 1597838684942
+		"prevPromptTime": 1598102286460
 	},
 	{
 		"name": "",
@@ -81,7 +81,7 @@
 		"duration": 60,
 		"timestamp": 1594895079041,
 		"promptTimes": 1,
-		"prevPromptTime": 1597840484073
+		"prevPromptTime": 1598104084377
 	},
 	{
 		"name": "",
@@ -95,7 +95,7 @@
 		"singleWindow": "",
 		"duration": 140,
 		"promptTimes": 1,
-		"prevPromptTime": 1597842284442
+		"prevPromptTime": 1598105886435
 	},
 	{
 		"name": "",
@@ -109,7 +109,7 @@
 		"duration": 47,
 		"timestamp": 1594365344529,
 		"promptTimes": 1,
-		"prevPromptTime": 1597844084829
+		"prevPromptTime": 1598107686201
 	},
 	{
 		"name": "",
@@ -123,7 +123,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1597845885017
+		"prevPromptTime": 1598109484196
 	},
 	{
 		"name": "",
@@ -135,9 +135,7 @@
 		"singleWindow": "",
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1594896086224,
-		"promptTimes": 1,
-		"prevPromptTime": 1597847684656
+		"timestamp": 1594896086224
 	},
 	{
 		"name": "错误",
@@ -149,9 +147,7 @@
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">要解决的错误及弱点</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">没有大局观</span></strong></p><p>没有大局观；总是着眼于K线的微观层面和小波动，受情绪驱动 (所以会卖飞；看不到确定性，临盘犹豫；)； 对市场理解不够；对行情性质理解不够；</p><p>是我做错和卖飞的根本原因。缺乏大局观让我短视，看不到确定性；</p><p>不理解的行情就不要做；</p><p>主线是什么？ 龙头是什么？ 市场人心是怎么样的？</p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">对市场理解不够，线性思维，思维定式</span></strong></p><p>如果市场就是1+1=2，那还有什么难度。 相同的k线可以走出不同的走势。</p><p>关键是理解背后的市场环境、主线热点、股性人气、多空博弈动态转换等变量。</p><p><br></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">从没有做好次日交易计划</span></strong></p><p>我只是看了当前K线，次日会有什么走势完全没有思考，完全是盘中临时应对。所以临盘犹豫，总是错失机会</p><p>只会机械追涨吗？ 如果对市场对个股行情性质深刻理解的话，低吸，追涨都是可以做的。</p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">临盘应对太差，非预期或反转行情总是手足无措</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我从来没有没有明确的操作计划，只会被动等待、应对。</span></strong></span></p><p><br></p><p>没有人能预知未来，做股票的核心要义就是判断形势，然后采取策略，让自己尽量把屁股坐到大概率一方的阵营里。而普通投资者和超高手的区别就在于，超高手没有或者尽量减少定式思维，而普通投资者脑子一时半会转不过来&mdash;&mdash;适用于无论是个股还是大盘，这是普通投资者一辈子无法击穿的&ldquo;叹息之墙&rdquo;&mdash;&mdash;不过，一旦击穿了就是超高手了。</p><p><br></p><p><strong><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\">只会追涨一种手法</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">无法克服情绪和本能</span></strong></p><p>我要如何克服本能和情绪？任何情绪都是交易的障碍！</p><p>踏空心理 、 沮丧失落 、信心于否。</p><p>如果我不能克服，失败是注定的！</p>",
 		"timestamp": 1588940500338,
 		"singleWindow": "",
-		"duration": 160,
-		"promptTimes": 1,
-		"prevPromptTime": 1597849483325
+		"duration": 160
 	},
 	{
 		"name": "日程",
@@ -308,7 +304,7 @@
 		"timestamp": 1579093820041,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1597826084839
+		"promptTimes": 3,
+		"prevPromptTime": 1598089687036
 	}
 ]
