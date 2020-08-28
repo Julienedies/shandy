@@ -1,6 +1,27 @@
 [
 	{
 		"name": "",
+		"id": "2848696",
+		"tag": "0238231",
+		"trigger": "1",
+		"content": "热钱出击的时机和方向；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1598183292782
+	},
+	{
+		"name": "",
+		"id": "3943126",
+		"tag": "4109794",
+		"trigger": "10",
+		"content": "竞价系统太容易脑子臆想，必须先有明确的行情模型。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1598151085568,
+		"disable": true
+	},
+	{
+		"name": "",
 		"id": "0980571",
 		"tag": "9586736",
 		"trigger": "1",

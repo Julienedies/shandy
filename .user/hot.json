@@ -1,7 +1,7 @@
 [
 	{
 		"id": "食品",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1597884818557
 	},
 	{
@@ -16,12 +16,12 @@
 	},
 	{
 		"id": "农业种植",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1597788529864
 	},
 	{
 		"id": "生态农业",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1597361530478
 	},
 	{
@@ -61,12 +61,12 @@
 	},
 	{
 		"id": "业绩预增",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594595813324
 	},
 	{
 		"id": "半年报预增",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594595812234
 	},
 	{
@@ -236,7 +236,7 @@
 	},
 	{
 		"id": "特斯拉",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578960735043
 	},
 	{
