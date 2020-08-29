@@ -11,6 +11,7 @@ export default function (scope) {
 
     let render = () => {
         let vm = arr2tree(scope.model[type]);
+        console.log(111, vm);
         $typeTitle.text(type);
         scope.render('details', vm);
     };

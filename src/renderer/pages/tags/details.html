@@ -3,7 +3,26 @@
     <div ic-tpl="details">
         <table class="table is-bordered is-fullwidth" ic-click="close">
             <tr ic-for="i,v in model">
-                <th style="white-space: nowrap; width:9em;" ic-click="edit:{{ v.id }}">{{ v.text }}</th>
+                <th style="width:9em;">
+                    <div style="white-space: nowrap;" ic-click="edit:{{ v.id }}">{{ v.text }} &nbsp; {{ (v['示例图片']||[]).length }}</div>
+                    <div class="tags"
+                         ic-if="v.children"
+                         style="height: 2em;overflow: hidden;"
+                         ic-viewer
+                         ic-viewer-item=">a"
+                         ic-viewer-url="href"
+                         ic-viewer-interval=""
+                         ic-viewer-on-show="onViewerShow"
+                         ic-viewer-on-open="onViewerOpen"
+                         ic-viewer-on-close="onViewerClose">
+                        <a class="tag is-small is-warning"
+                           style="padding-right:1rem;"
+                           ic-for="i,o in (v['示例图片']||[])"
+                           ic-href="{{ parseImgPath(o) }}">
+                            {{ parseImgName(o) }}
+                        </a>
+                    </div>
+                </th>
                 <td>
                     <div class="nest" ic-if-start="v.children">
                         {{ brick.getTpl('details')({model:v.children}) }}

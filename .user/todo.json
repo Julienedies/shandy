@@ -9,7 +9,9 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1598523956216
+		"timestamp": 1598523956216,
+		"promptTimes": 1,
+		"prevPromptTime": 1598709715214
 	},
 	{
 		"name": "",
@@ -23,7 +25,8 @@
 		"duration": 30,
 		"timestamp": 1594995614163,
 		"promptTimes": 1,
-		"prevPromptTime": 1598570747244
+		"prevPromptTime": 1598660843072,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -35,7 +38,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1597160146691
+		"timestamp": 1597160146691,
+		"promptTimes": 1,
+		"prevPromptTime": 1598711515083
 	},
 	{
 		"name": "问题",
@@ -47,7 +52,9 @@
 		"content": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。 &nbsp;怎么解决？</strong></span></p><p><br></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>以市场的客观表现做为操作依据；而不是我的主观判断；因为我对市场理解不够；我的主观判断并没有优势；</strong></span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>或者我找到我的主观判断有优势的地方去发挥；比如市场心理，博弈周期；</strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>消息 与 技术 两者如何权衡&nbsp;</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>主观 vs 客观 vs 机械 vs 技术 vs 逻辑</strong></span></p><p><span style=\"font-size: 16px;\">问题在于主观和机械之间的选择？ 我应该选机械还是主观？</span></p><p><span style=\"font-size: 16px;\">我的主观不一定契合市场的客观机会？</span></p><p><span style=\"font-size: 16px;\">消息没有别人快，题材解读不如别人，完全以技术优先吗？但单纯以K线技术做判断，确定性不高。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。 怎么解决？怎么解决？怎么解决？</span></p><p><span style=\"font-size: 16px;\">没有百分百，只有大概率；我应该追求大概率的优势，而不是寄望于单次机会。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">分仓竞价买入； 市场反映一切； 概率优势；</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我最初想到竞价系统是为了低点买入，降低成本。</span></p><p><br></p><p><br></p>",
 		"timestamp": 1588771295970,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1598713313025
 	},
 	{
 		"name": "",
@@ -239,7 +246,9 @@
 		"content": "<p>查看当日涨停个股资料，动态、新闻、公告。</p>",
 		"timestamp": 1577697423900,
 		"singleWindow": "",
-		"duration": 47
+		"duration": 47,
+		"promptTimes": 1,
+		"prevPromptTime": 1598700713549
 	},
 	{
 		"name": "日程",
@@ -251,7 +260,9 @@
 		"content": "<p>每天更新自选股票池。</p><p>加入: 启动、 爆发、 转折、 超强势的人气龙头股；</p><p>移除：趋弱的个股；</p><p>记住我做的是超短。</p>",
 		"timestamp": 1582429000702,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1598702514645
 	},
 	{
 		"name": "日程",
@@ -263,7 +274,10 @@
 		"timestamp": 1577539413052,
 		"type": "",
 		"duration": 17,
-		"singleWindow": ""
+		"singleWindow": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1598704315035,
+		"complete": true
 	},
 	{
 		"name": "日程",
@@ -275,7 +289,9 @@
 		"content": "<p>更新csd。",
 		"timestamp": 1577862911294,
 		"duration": 17,
-		"singleWindow": ""
+		"singleWindow": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1598706115434
 	},
 	{
 		"name": "日程",
@@ -287,7 +303,9 @@
 		"content": "<p>根据目标行情类型，设置持仓条件单！</p><p>止损；</p><p>低开处理；</p><p>止盈处理；</p><p><br></p>",
 		"timestamp": 1584416255440,
 		"singleWindow": "",
-		"duration": 24
+		"duration": 24,
+		"promptTimes": 1,
+		"prevPromptTime": 1598707913316
 	},
 	{
 		"name": "警告",
@@ -300,7 +318,7 @@
 		"timestamp": 1579093820041,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 3,
-		"prevPromptTime": 1598608541747
+		"promptTimes": 2,
+		"prevPromptTime": 1598691439142
 	}
 ]
