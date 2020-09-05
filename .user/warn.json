@@ -1,6 +1,16 @@
 [
 	{
 		"name": "",
+		"id": "9860987",
+		"tag": "9480900",
+		"trigger": "1",
+		"content": "今天你要买的标的是什么？\n你他妈的没准备就不要看盘了。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1599015210283
+	},
+	{
+		"name": "",
 		"id": "5595766",
 		"tag": "0047468",
 		"trigger": "3",
@@ -49,16 +59,6 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1597850645602
-	},
-	{
-		"name": "",
-		"id": "2237736",
-		"tag": "9586736",
-		"trigger": "1",
-		"content": "不要沉迷于日常交易；\n多思考，多总结；而不是重复无意义的操作；\n除了浪费时间，没有任何积累；",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1597586860673
 	},
 	{
 		"name": "",

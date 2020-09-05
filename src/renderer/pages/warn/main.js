@@ -148,7 +148,7 @@ socket.on('warn', (info) => {
     }
 
     if (info === 'sell' || info === 'buy' || info === 'daban') {
-        let d = info === 'sell' ? 2 : 2;
+        let d = info === 'sell' ? 0 : 0;
         let str = warnHandleMap[info];
         show2(str);
         if (d > 0) {

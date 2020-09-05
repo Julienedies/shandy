@@ -109,6 +109,8 @@ brick.reg('mainCtrl', function (scope) {
         let $th = $(this).icSetLoading();
         setting.refresh().merge('csd', fields);
 
+        let fetchLimit = fields.fetchLimit * 1;
+
         let stockArr;
         // 如果是csv格式的txt文件, 先解析成json
         if (/\.txt$/.test(fields.fetchByStocks)) {
@@ -118,6 +120,13 @@ brick.reg('mainCtrl', function (scope) {
         jhandy.fetch(fields.csdPath, stockArr || fields.fetchByStocks, fields.fetchFromIndex, fields.fetchSources, (stat, err) => {
             console.log('fetch => ', stat.name, stat.index, err);
             $log.text(JSON.stringify(stat));
+
+            if(fetchLimit && stat.index > fetchLimit) {
+                $th.icClearLoading();
+                scope.fetchStop();
+                return;
+            }
+
             if (err) {
                 console.error(err);
                 $th.icClearLoading();

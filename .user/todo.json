@@ -1,6 +1,48 @@
 [
 	{
 		"name": "",
+		"id": "5012422",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">我需要不断的翻看交易记录，增加理解力，增加肌肉记忆。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">历史会重复。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1599293279369,
+		"promptTimes": 1,
+		"prevPromptTime": 1599310744024
+	},
+	{
+		"name": "",
+		"id": "0906267",
+		"type": "",
+		"content": "<p><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255); font-size: 24px;\">一定要做龙头。</span></strong></p><p><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255); font-size: 24px;\">一定要做龙头。</span></strong></p><p><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255); font-size: 24px;\">一定要做龙头。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1599277516060,
+		"promptTimes": 1,
+		"prevPromptTime": 1599312544620
+	},
+	{
+		"name": "",
+		"id": "6188429",
+		"type": "",
+		"content": "<p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">你他妈的怎么复盘的？</span></strong></span></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">热钱在哪里？赚钱效应在哪里？</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">主线不会一直变化的。</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">不要他妈的臆测行情结束了。</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">行情结束的时候，会有信号出现的。</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><br></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>为什么总是错过当前的热点行情？ 汇金股份、坚瑞沃能、华昌达。</u></span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>我总是在行情走出来才能意识到行情的存在。</u></span></strong></span></p>",
+		"singleWindow": "",
+		"start": "15:00",
+		"repeat": 9,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1598963764706,
+		"promptTimes": 1,
+		"prevPromptTime": 1599314344687
+	},
+	{
+		"name": "",
 		"id": "2787286",
 		"type": "",
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">我总是错过大行情。</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">我是不是又错过了当下的热点行情？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>当前的热点行情是什么？</strong></span></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">我为什么没有介入？</span></strong></p><p><br></p><p><br></p>",
@@ -11,7 +53,7 @@
 		"duration": 47,
 		"timestamp": 1598523956216,
 		"promptTimes": 1,
-		"prevPromptTime": 1598709715214
+		"prevPromptTime": 1599316144473
 	},
 	{
 		"name": "",
@@ -24,9 +66,8 @@
 		"interval": 60,
 		"duration": 30,
 		"timestamp": 1594995614163,
-		"promptTimes": 1,
-		"prevPromptTime": 1598660843072,
-		"complete": true
+		"promptTimes": 2,
+		"prevPromptTime": 1599265749980
 	},
 	{
 		"name": "",
@@ -38,9 +79,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1597160146691,
-		"promptTimes": 1,
-		"prevPromptTime": 1598711515083
+		"timestamp": 1597160146691
 	},
 	{
 		"name": "问题",
@@ -52,9 +91,7 @@
 		"content": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。 &nbsp;怎么解决？</strong></span></p><p><br></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>以市场的客观表现做为操作依据；而不是我的主观判断；因为我对市场理解不够；我的主观判断并没有优势；</strong></span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>或者我找到我的主观判断有优势的地方去发挥；比如市场心理，博弈周期；</strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>消息 与 技术 两者如何权衡&nbsp;</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>主观 vs 客观 vs 机械 vs 技术 vs 逻辑</strong></span></p><p><span style=\"font-size: 16px;\">问题在于主观和机械之间的选择？ 我应该选机械还是主观？</span></p><p><span style=\"font-size: 16px;\">我的主观不一定契合市场的客观机会？</span></p><p><span style=\"font-size: 16px;\">消息没有别人快，题材解读不如别人，完全以技术优先吗？但单纯以K线技术做判断，确定性不高。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。 怎么解决？怎么解决？怎么解决？</span></p><p><span style=\"font-size: 16px;\">没有百分百，只有大概率；我应该追求大概率的优势，而不是寄望于单次机会。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">分仓竞价买入； 市场反映一切； 概率优势；</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我最初想到竞价系统是为了低点买入，降低成本。</span></p><p><br></p><p><br></p>",
 		"timestamp": 1588771295970,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1598713313025
+		"duration": 17
 	},
 	{
 		"name": "",
@@ -248,7 +285,7 @@
 		"singleWindow": "",
 		"duration": 47,
 		"promptTimes": 1,
-		"prevPromptTime": 1598700713549
+		"prevPromptTime": 1599301743750
 	},
 	{
 		"name": "日程",
@@ -260,9 +297,7 @@
 		"content": "<p>每天更新自选股票池。</p><p>加入: 启动、 爆发、 转折、 超强势的人气龙头股；</p><p>移除：趋弱的个股；</p><p>记住我做的是超短。</p>",
 		"timestamp": 1582429000702,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1598702514645
+		"duration": 17
 	},
 	{
 		"name": "日程",
@@ -276,8 +311,7 @@
 		"duration": 17,
 		"singleWindow": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1598704315035,
-		"complete": true
+		"prevPromptTime": 1599305343616
 	},
 	{
 		"name": "日程",
@@ -289,9 +323,7 @@
 		"content": "<p>更新csd。",
 		"timestamp": 1577862911294,
 		"duration": 17,
-		"singleWindow": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1598706115434
+		"singleWindow": ""
 	},
 	{
 		"name": "日程",
@@ -305,7 +337,7 @@
 		"singleWindow": "",
 		"duration": 24,
 		"promptTimes": 1,
-		"prevPromptTime": 1598707913316
+		"prevPromptTime": 1599308943815
 	},
 	{
 		"name": "警告",
@@ -318,7 +350,7 @@
 		"timestamp": 1579093820041,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1598691439142
+		"promptTimes": 4,
+		"prevPromptTime": 1599307143437
 	}
 ]
