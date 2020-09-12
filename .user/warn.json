@@ -48,7 +48,8 @@
 		"content": "我真是恨死自己了，真他妈的该死；\n可惜这种情绪保持不了多长时间；\n然后继续重复错误；\n",
 		"repeat": 5,
 		"type": "interval",
-		"timestamp": 1597885493975
+		"timestamp": 1597885493975,
+		"disable": false
 	},
 	{
 		"name": "",

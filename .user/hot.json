@@ -1,5 +1,40 @@
 [
 	{
+		"id": "固废处理",
+		"selected": false,
+		"timestamp": 1599613021783
+	},
+	{
+		"id": "节能环保",
+		"selected": false,
+		"timestamp": 1599613003084
+	},
+	{
+		"id": "MiniLED",
+		"selected": false,
+		"timestamp": 1599491185366
+	},
+	{
+		"id": "创业板重组松绑",
+		"selected": false,
+		"timestamp": 1599436088128
+	},
+	{
+		"id": "氮化镓",
+		"selected": false,
+		"timestamp": 1599435873296
+	},
+	{
+		"id": "第三代半导体",
+		"selected": true,
+		"timestamp": 1599435867532
+	},
+	{
+		"id": "半导体",
+		"selected": true,
+		"timestamp": 1599435860033
+	},
+	{
 		"id": "食品",
 		"selected": false,
 		"timestamp": 1597884818557
@@ -55,11 +90,6 @@
 		"timestamp": 1595378589411
 	},
 	{
-		"id": "蚂蚁金服概念",
-		"selected": false,
-		"timestamp": 1595378585309
-	},
-	{
 		"id": "业绩预增",
 		"selected": true,
 		"timestamp": 1594595813324
@@ -76,7 +106,7 @@
 	},
 	{
 		"id": "军工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1594256070569
 	},
 	{
@@ -236,7 +266,7 @@
 	},
 	{
 		"id": "特斯拉",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578960735043
 	},
 	{
@@ -246,7 +276,7 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578928807285
 	},
 	{
