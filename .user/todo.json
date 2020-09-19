@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "7432084",
+		"type": "",
+		"content": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">有哪些票是超出你预期上涨的？</span><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">&nbsp;卡倍亿的错误。</span></strong></p>",
+		"singleWindow": "",
+		"start": "15:00",
+		"repeat": 4,
+		"interval": 50,
+		"duration": 47,
+		"timestamp": 1600266768199
+	},
+	{
+		"name": "",
 		"id": "3047605",
 		"type": "",
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">&nbsp;没有赚到钱，你凭什么觉得自己入门了？</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">&nbsp;很早以前，你也觉得自己可以成功。</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">&nbsp;支撑你的交易逻辑是什么？</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">&nbsp;4年了，你还有多少时间可以浪费？</span></strong></p>",
@@ -9,9 +21,7 @@
 		"repeat": 9,
 		"interval": 45,
 		"duration": 47,
-		"timestamp": 1599391604451,
-		"promptTimes": 1,
-		"prevPromptTime": 1599924729591
+		"timestamp": 1599391604451
 	},
 	{
 		"name": "",
@@ -71,7 +81,9 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1598963764706
+		"timestamp": 1598963764706,
+		"promptTimes": 1,
+		"prevPromptTime": 1600500272534
 	},
 	{
 		"name": "",
@@ -83,7 +95,9 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1598523956216
+		"timestamp": 1598523956216,
+		"promptTimes": 1,
+		"prevPromptTime": 1600503873645
 	},
 	{
 		"name": "",
@@ -96,8 +110,8 @@
 		"interval": 60,
 		"duration": 30,
 		"timestamp": 1594995614163,
-		"promptTimes": 4,
-		"prevPromptTime": 1599883331383
+		"promptTimes": 7,
+		"prevPromptTime": 1600502073393
 	},
 	{
 		"name": "",
@@ -109,7 +123,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1597160146691
+		"timestamp": 1597160146691,
+		"promptTimes": 1,
+		"prevPromptTime": 1600505673376
 	},
 	{
 		"name": "问题",
@@ -121,7 +137,9 @@
 		"content": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。 &nbsp;怎么解决？</strong></span></p><p><br></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>以市场的客观表现做为操作依据；而不是我的主观判断；因为我对市场理解不够；我的主观判断并没有优势；</strong></span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>或者我找到我的主观判断有优势的地方去发挥；比如市场心理，博弈周期；</strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>消息 与 技术 两者如何权衡&nbsp;</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>主观 vs 客观 vs 机械 vs 技术 vs 逻辑</strong></span></p><p><span style=\"font-size: 16px;\">问题在于主观和机械之间的选择？ 我应该选机械还是主观？</span></p><p><span style=\"font-size: 16px;\">我的主观不一定契合市场的客观机会？</span></p><p><span style=\"font-size: 16px;\">消息没有别人快，题材解读不如别人，完全以技术优先吗？但单纯以K线技术做判断，确定性不高。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。 怎么解决？怎么解决？怎么解决？</span></p><p><span style=\"font-size: 16px;\">没有百分百，只有大概率；我应该追求大概率的优势，而不是寄望于单次机会。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">分仓竞价买入； 市场反映一切； 概率优势；</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我最初想到竞价系统是为了低点买入，降低成本。</span></p><p><br></p><p><br></p>",
 		"timestamp": 1588771295970,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1600507472293
 	},
 	{
 		"name": "",
@@ -133,7 +151,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334
+		"timestamp": 1595590485334,
+		"promptTimes": 1,
+		"prevPromptTime": 1600509273826
 	},
 	{
 		"name": "日程",
@@ -145,7 +165,9 @@
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px;\">我从来没有做好次日的交易计划。既无预判，也没有推演，更无应对。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">然后交易时傻乎乎看着盘面，被动应对，临盘犹豫，手足无措、脑子一热随意交易。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是主观预判市场弱，<strong><span style=\"background-color: rgb(255, 255, 0);\">缺乏准备</span></strong>；结果市场转强，就手足无措；<strong><span style=\"background-color: rgb(255, 255, 0);\">连标的都没有；</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 16px;\">尤其是放弃了打板这一手法后，干脆就不知道做什么了。我不是控制力好，我其实是不知道做什么。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">主线热点，资金方向，资金类型，强弱</span></p><p><span style=\"font-size: 16px;\">1. 先确定主线热点； 这是支撑我的交易逻辑之一。热钱所在，行情所在。</span></p><p><span style=\"font-size: 16px;\">2. 根据主线热点，选择标的。</span></p><p><span style=\"font-size: 16px;\">3. 预判推演标的走势，做出对应的应对计划。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">大盘会涨会跌？大盘处在何种阶段？哪里有机会？ 哪里有风险？ 方向：机构蓝筹趋势？ 热钱情绪题材?</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">热点龙头个股会涨会跌？ 能追涨吗？ 能低吸吗？ 盈亏比几何？</span></p>",
 		"timestamp": 1580821790410,
 		"duration": 34,
-		"singleWindow": "stock_replay"
+		"singleWindow": "stock_replay",
+		"promptTimes": 1,
+		"prevPromptTime": 1600511073195
 	},
 	{
 		"name": "",
@@ -158,8 +180,8 @@
 		"interval": 60,
 		"duration": 60,
 		"timestamp": 1594895079041,
-		"promptTimes": 2,
-		"prevPromptTime": 1599890530663
+		"promptTimes": 4,
+		"prevPromptTime": 1600512873521
 	},
 	{
 		"name": "",
@@ -171,7 +193,9 @@
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">准备交易计划</span></strong></p><p><span style=\"font-size: 18px;\"><strong>1. <span style=\"background-color: rgb(255, 255, 0);\">大局观</span>：当前市场状态是什么？ 赚钱效应；亏钱效应；风险和机会是什么？&nbsp;</strong></span></p><p><strong><span style=\"font-size: 18px;\">2. <span style=\"background-color: rgb(255, 255, 0);\">热点</span>：风口选股：&nbsp;</span></strong></p><p><strong><span style=\"font-size: 18px;\">3. <span style=\"background-color: rgb(255, 255, 0);\">龙头</span>：当下市场的核心股是什么？有没有介入机会？主升浪启动？低吸弱转强？分歧转一致？</span></strong></p><p><span style=\"font-size: 18px;\"><strong>4. <span style=\"background-color: rgb(255, 255, 0);\">做好预期外的应对</span>：假如热钱出击，资金的方向会是哪里？你做好准备了吗？</strong></span></p><p><br></p><p><strong>1. 遍历交易系统；寻找交易标的；</strong></p><p><strong>2. 做烂板上冲、连续上冲假设推演；热点龙头走势的低吸追涨预案。</strong></p><p><strong>3. 弱转强；分歧转一致；</strong></p><p><strong>4. 我从来都对预期外的反转措手不及。做市场转强，热钱出击的推演；不要因为市场悲观向下就无准备；</strong></p>",
 		"timestamp": 1577664169847,
 		"singleWindow": "",
-		"duration": 140
+		"duration": 140,
+		"promptTimes": 1,
+		"prevPromptTime": 1600514673420
 	},
 	{
 		"name": "",
@@ -183,7 +207,9 @@
 		"singleWindow": "",
 		"interval": 90,
 		"duration": 47,
-		"timestamp": 1594365344529
+		"timestamp": 1594365344529,
+		"promptTimes": 1,
+		"prevPromptTime": 1600516473290
 	},
 	{
 		"name": "",
@@ -197,7 +223,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1599897729574
+		"prevPromptTime": 1600518272186
 	},
 	{
 		"name": "",
@@ -211,7 +237,7 @@
 		"duration": 47,
 		"timestamp": 1594896086224,
 		"promptTimes": 1,
-		"prevPromptTime": 1599899529514
+		"prevPromptTime": 1600520072480
 	},
 	{
 		"name": "错误",
@@ -224,8 +250,8 @@
 		"timestamp": 1588940500338,
 		"singleWindow": "",
 		"duration": 160,
-		"promptTimes": 2,
-		"prevPromptTime": 1599901329469
+		"promptTimes": 1,
+		"prevPromptTime": 1600521871801
 	},
 	{
 		"name": "日程",
@@ -239,7 +265,8 @@
 		"singleWindow": "",
 		"duration": 60,
 		"promptTimes": 1,
-		"prevPromptTime": 1599903129897
+		"prevPromptTime": 1600523673078,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -265,7 +292,7 @@
 		"singleWindow": "",
 		"duration": 24,
 		"promptTimes": 1,
-		"prevPromptTime": 1599904930350
+		"prevPromptTime": 1600525473198
 	},
 	{
 		"name": "",
@@ -326,8 +353,8 @@
 		"timestamp": 1577697423900,
 		"singleWindow": "",
 		"duration": 47,
-		"promptTimes": 2,
-		"prevPromptTime": 1599910330620
+		"promptTimes": 1,
+		"prevPromptTime": 1600527273165
 	},
 	{
 		"name": "日程",
@@ -340,8 +367,8 @@
 		"timestamp": 1582429000702,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1599917530385
+		"promptTimes": 1,
+		"prevPromptTime": 1600529072340
 	},
 	{
 		"name": "日程",
@@ -354,8 +381,8 @@
 		"type": "",
 		"duration": 17,
 		"singleWindow": "",
-		"promptTimes": 2,
-		"prevPromptTime": 1599913929508,
+		"promptTimes": 1,
+		"prevPromptTime": 1600530872577,
 		"complete": true
 	},
 	{
@@ -368,10 +395,7 @@
 		"content": "<p>更新csd。",
 		"timestamp": 1577862911294,
 		"duration": 17,
-		"singleWindow": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1599915730048,
-		"complete": true
+		"singleWindow": ""
 	},
 	{
 		"name": "日程",
@@ -383,9 +407,7 @@
 		"content": "<p>根据目标行情类型，设置持仓条件单！</p><p>止损；</p><p>低开处理；</p><p>止盈处理；</p><p><br></p>",
 		"timestamp": 1584416255440,
 		"singleWindow": "",
-		"duration": 24,
-		"promptTimes": 1,
-		"prevPromptTime": 1599919330242
+		"duration": 24
 	},
 	{
 		"name": "警告",
@@ -397,8 +419,6 @@
 		"content": "<p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">一切有为法；一切有因果；</span></strong></span></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">不要忘记那些恐惧和痛苦；</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">时不我待，我已经37岁了；</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">我并没有本质上的改变，我还是在重复错误；</span></strong></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">那些交易原则我知道，但我没有做到知行合一；</span></strong></span></p>",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1599921128943
+		"duration": 17
 	}
 ]

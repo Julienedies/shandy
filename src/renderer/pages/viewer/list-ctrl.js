@@ -20,7 +20,7 @@ export default function (scope) {
         scope.emit('viewer-close');
     };
 
-    scope.onViewerShow = function (index, src, $info) {
+    scope.onViewerShow = function (index, src, $info, isFirstShow) {
         let imgObj = scope.viewerCurrentImg = scope.urls[index]; // scope.urls 继承自mainCtrl
         scope.viewerMarkTag();
         let arr = imgObj.tradeInfo;
@@ -36,7 +36,7 @@ export default function (scope) {
         $info.text('\r\n' + imgObj.f);
 
         brick.emit('viewer-markTag', scope.viewerCurrentImg);
-        $('[ic-popup="viewerMarkTag"]').icPopup(true);
+        isFirstShow && $('[ic-popup="viewerMarkTag"]').icPopup(true);
     };
 
     scope.editImg = () => {

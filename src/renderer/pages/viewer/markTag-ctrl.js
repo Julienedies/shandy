@@ -52,7 +52,7 @@ export default function (scope) {
 
     scope.on('viewer-markTag', function (e, msg) {
         currentImg = msg;
-        console.log(msg);
+        //console.log(msg);
         render();
     });
 

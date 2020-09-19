@@ -17,7 +17,7 @@
 #viewerAttach {
   display: none;
   position: fixed;
-  z-index: 10001;
+  z-index: 1001;
   color: #fff;
   top: 95px;
   left: 0;
@@ -40,7 +40,8 @@
     bottom: 10%;
     padding-right: 4%;
     text-align: right;
-    &:hover{
+
+    &:hover {
       opacity: 1;
     }
 
@@ -56,10 +57,11 @@
 }
 
 #ic-viewer-info {
-  padding-left: 840px!important;
+  padding-left: 840px !important;
 }
+
 #ic-viewer-handle {
-  padding-left: 640px!important;
+  padding-left: 640px !important;
 }
 
 

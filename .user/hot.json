@@ -1,5 +1,10 @@
 [
 	{
+		"id": "风电",
+		"selected": true,
+		"timestamp": 1600383573738
+	},
+	{
 		"id": "固废处理",
 		"selected": false,
 		"timestamp": 1599613021783
@@ -21,12 +26,12 @@
 	},
 	{
 		"id": "氮化镓",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1599435873296
 	},
 	{
 		"id": "第三代半导体",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1599435867532
 	},
 	{
@@ -91,12 +96,12 @@
 	},
 	{
 		"id": "业绩预增",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1594595813324
 	},
 	{
 		"id": "半年报预增",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1594595812234
 	},
 	{
@@ -221,12 +226,12 @@
 	},
 	{
 		"id": "光刻胶",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1582069232767
 	},
 	{
 		"id": "光伏概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1581522864794
 	},
 	{
@@ -276,12 +281,12 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928807285
 	},
 	{
 		"id": "芯片概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303653
 	},
 	{
