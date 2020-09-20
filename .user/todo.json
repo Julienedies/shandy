@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "5129491",
+		"type": "",
+		"content": "<p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？</span></strong></span></span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？</span></strong></span></span></strong></span></span></strong></span></p>",
+		"singleWindow": "",
+		"start": "15:00",
+		"repeat": 5,
+		"interval": 75,
+		"duration": 47,
+		"timestamp": 1600596359187
+	},
+	{
+		"name": "",
 		"id": "7432084",
 		"type": "",
 		"content": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">有哪些票是超出你预期上涨的？</span><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">&nbsp;卡倍亿的错误。</span></strong></p>",
@@ -9,7 +21,9 @@
 		"repeat": 4,
 		"interval": 50,
 		"duration": 47,
-		"timestamp": 1600266768199
+		"timestamp": 1600266768199,
+		"promptTimes": 1,
+		"prevPromptTime": 1600591032326
 	},
 	{
 		"name": "",
@@ -21,7 +35,9 @@
 		"repeat": 9,
 		"interval": 45,
 		"duration": 47,
-		"timestamp": 1599391604451
+		"timestamp": 1599391604451,
+		"promptTimes": 1,
+		"prevPromptTime": 1600592833109
 	},
 	{
 		"name": "",
@@ -33,7 +49,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599401260764
+		"timestamp": 1599401260764,
+		"promptTimes": 1,
+		"prevPromptTime": 1600594633374
 	},
 	{
 		"name": "",
@@ -45,7 +63,9 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599388379024
+		"timestamp": 1599388379024,
+		"promptTimes": 1,
+		"prevPromptTime": 1600596432146
 	},
 	{
 		"name": "",
@@ -57,7 +77,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599277516060
+		"timestamp": 1599277516060,
+		"promptTimes": 1,
+		"prevPromptTime": 1600598233836
 	},
 	{
 		"name": "",
@@ -69,7 +91,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599293279369
+		"timestamp": 1599293279369,
+		"promptTimes": 1,
+		"prevPromptTime": 1600600033980
 	},
 	{
 		"name": "",
@@ -81,7 +105,9 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1598963764706
+		"timestamp": 1598963764706,
+		"promptTimes": 1,
+		"prevPromptTime": 1600601834127
 	},
 	{
 		"name": "",
@@ -89,11 +115,13 @@
 		"type": "",
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">我总是错过大行情。</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">我是不是又错过了当下的热点行情？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>当前的热点行情是什么？</strong></span></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">我为什么没有介入？</span></strong></p><p><br></p><p><br></p>",
 		"singleWindow": "",
-		"start": "16:00",
+		"start": "15:00",
 		"repeat": 7,
-		"interval": 60,
+		"interval": 50,
 		"duration": 47,
-		"timestamp": 1598523956216
+		"timestamp": 1598523956216,
+		"promptTimes": 1,
+		"prevPromptTime": 1600603633942
 	},
 	{
 		"name": "",
@@ -106,8 +134,8 @@
 		"interval": 60,
 		"duration": 30,
 		"timestamp": 1594995614163,
-		"promptTimes": 4,
-		"prevPromptTime": 1600582854135
+		"promptTimes": 5,
+		"prevPromptTime": 1600605433739
 	},
 	{
 		"name": "",
@@ -119,7 +147,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1597160146691
+		"timestamp": 1597160146691,
+		"promptTimes": 1,
+		"prevPromptTime": 1600607233566
 	},
 	{
 		"name": "问题",
@@ -131,7 +161,9 @@
 		"content": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。 &nbsp;怎么解决？</strong></span></p><p><br></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>以市场的客观表现做为操作依据；而不是我的主观判断；因为我对市场理解不够；我的主观判断并没有优势；</strong></span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>或者我找到我的主观判断有优势的地方去发挥；比如市场心理，博弈周期；</strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>消息 与 技术 两者如何权衡&nbsp;</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>主观 vs 客观 vs 机械 vs 技术 vs 逻辑</strong></span></p><p><span style=\"font-size: 16px;\">问题在于主观和机械之间的选择？ 我应该选机械还是主观？</span></p><p><span style=\"font-size: 16px;\">我的主观不一定契合市场的客观机会？</span></p><p><span style=\"font-size: 16px;\">消息没有别人快，题材解读不如别人，完全以技术优先吗？但单纯以K线技术做判断，确定性不高。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。 怎么解决？怎么解决？怎么解决？</span></p><p><span style=\"font-size: 16px;\">没有百分百，只有大概率；我应该追求大概率的优势，而不是寄望于单次机会。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">分仓竞价买入； 市场反映一切； 概率优势；</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我最初想到竞价系统是为了低点买入，降低成本。</span></p><p><br></p><p><br></p>",
 		"timestamp": 1588771295970,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 1,
+		"prevPromptTime": 1600609032771
 	},
 	{
 		"name": "",
@@ -143,7 +175,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334
+		"timestamp": 1595590485334,
+		"promptTimes": 1,
+		"prevPromptTime": 1600610833192
 	},
 	{
 		"name": "日程",
@@ -155,7 +189,9 @@
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px;\">我从来没有做好次日的交易计划。既无预判，也没有推演，更无应对。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">然后交易时傻乎乎看着盘面，被动应对，临盘犹豫，手足无措、脑子一热随意交易。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是主观预判市场弱，<strong><span style=\"background-color: rgb(255, 255, 0);\">缺乏准备</span></strong>；结果市场转强，就手足无措；<strong><span style=\"background-color: rgb(255, 255, 0);\">连标的都没有；</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 16px;\">尤其是放弃了打板这一手法后，干脆就不知道做什么了。我不是控制力好，我其实是不知道做什么。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">主线热点，资金方向，资金类型，强弱</span></p><p><span style=\"font-size: 16px;\">1. 先确定主线热点； 这是支撑我的交易逻辑之一。热钱所在，行情所在。</span></p><p><span style=\"font-size: 16px;\">2. 根据主线热点，选择标的。</span></p><p><span style=\"font-size: 16px;\">3. 预判推演标的走势，做出对应的应对计划。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">大盘会涨会跌？大盘处在何种阶段？哪里有机会？ 哪里有风险？ 方向：机构蓝筹趋势？ 热钱情绪题材?</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">热点龙头个股会涨会跌？ 能追涨吗？ 能低吸吗？ 盈亏比几何？</span></p>",
 		"timestamp": 1580821790410,
 		"duration": 34,
-		"singleWindow": "stock_replay"
+		"singleWindow": "stock_replay",
+		"promptTimes": 1,
+		"prevPromptTime": 1600612631590
 	},
 	{
 		"name": "",
@@ -168,8 +204,8 @@
 		"interval": 60,
 		"duration": 60,
 		"timestamp": 1594895079041,
-		"promptTimes": 3,
-		"prevPromptTime": 1600586454604
+		"promptTimes": 4,
+		"prevPromptTime": 1600614433492
 	},
 	{
 		"name": "",
