@@ -31,7 +31,7 @@ export default {
      * @param [conf] {Boolean|Object} 图片对象是否只包含路径
      * @returns {Array} [{f:图片路径，c:图片创建时间戳，d:图片创建日期, code: 股票code}]
      */
-    getImages: function (dir, conf = {isOnlyPath: false, isReverse: true, isRefresh: false}) {
+    getImages: function (dir, conf = {isOnlyPath: false, isReverse: true, isRefresh: false, isOrigin: false}) {
         console.log('getImages => ', dir);
         let arr;
         // 测试是否是交易记录图片, 因为主要功能是浏览k线截图
@@ -49,7 +49,7 @@ export default {
         let dirJo = viewerDbFactory(key);
         let cacheArr = dirJo.get();
 
-        if (cacheArr && cacheArr.length && !conf.isRefresh) {
+        if (cacheArr && cacheArr.length && !conf.isRefresh && !conf.isOrigin) {
             arr = cacheArr;
         } else {
             arr = fs.readdirSync(dir);
@@ -59,6 +59,14 @@ export default {
             });
 
             arr = this.supplement(arr, dir);
+
+            if (conf.isOrigin) {
+                return arr.sort((a, b) => {
+                    let a1 = +moment(a.d);
+                    let b1 = +moment(b.d);
+                    return a1 - b1;
+                });
+            }
 
             arr = this._sort(arr, conf.isReverse);
 
@@ -70,6 +78,7 @@ export default {
         });
     },
 
+    // 获取图片额外数据
     supplement: function (arr, dir = '') {
         return arr.map(f => {
             // 先尝试读取缓存
@@ -154,18 +163,20 @@ export default {
         let dateMapArr = _.values(dateMap2);
         console.log('dateMapArr', dateMapArr);
         // 处理相邻日期chunk数组里相同code被分割在两个chunk数组里的情况，移动相同code的imgObj到同一个chunk数组
-        _.reduceRight(dateMapArr, function (prevArr, currentArr) {
+        _.reduceRight(dateMapArr, function (currentArr, prevArr) {
+            console.log(prevArr, currentArr);
             prevArr.forEach((imgObj, index) => {
                 for (let i = currentArr.length - 1; i >= 0; i--) {
                     let imgObj2 = currentArr[i];
                     if (imgObj2.code === imgObj.code) {
                         let arr = currentArr.splice(i, 1);
+                        //console.log('xxxxx', arr);
                         prevArr.push(arr[0]);
                     }
                 }
             });
-            return currentArr;
-        }, []);
+            return prevArr;
+        });
 
         let resultArr = [];
 

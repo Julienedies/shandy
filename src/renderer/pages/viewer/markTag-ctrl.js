@@ -28,7 +28,7 @@ export default function (scope) {
         if (!imgObj[0]) {
             imgObj = {img: imgPath};
         }*/
-        console.log(imgObj);
+        //console.log(imgObj);
         model.img = imgObj;
         scope.render('viewerTags', {model});
     }

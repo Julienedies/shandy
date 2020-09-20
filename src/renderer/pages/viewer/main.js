@@ -55,6 +55,7 @@ brick.reg('mainCtrl', function (scope) {
 
     let isReverse = true;
     let isRefresh = false;
+    let isOrigin = false;
 
     let tagsMap = {};
     tagsJodb.each((item) => {
@@ -77,15 +78,20 @@ brick.reg('mainCtrl', function (scope) {
             let imgPath = imgObj.img;
             if (!fs.existsSync(imgPath)) {
                 resultArr.push(imgObj);
-                if (confirm(`找不到：\r\n ${ imgPath }`)) {
-                    viewerJodb.remove(imgObj.id);
-                } else {
-                    break;
-                }
             }
         }
-        !resultArr.length && $.icMsg('没有错误图片记录.');
-        console.info('scope.clean', resultArr);
+
+        if (resultArr.length) {
+            if (confirm(`是否删除以下 ${ resultArr.length } 项：\r\n ${ JSON.stringify(resultArr, null, '\t') }`)) {
+                resultArr.forEach((imgObj, index) => {
+                    viewerJodb.remove(imgObj.id);
+                });
+            }
+            console.info('scope.clean', resultArr);
+        } else {
+            $.icMsg('没有错误图片记录.');
+        }
+
     };
 
     scope.refresh = function (e) {
@@ -100,6 +106,11 @@ brick.reg('mainCtrl', function (scope) {
         //$list.icRender('list', scope.urls);
         scope.init('');
         isReverse = !isReverse;
+    };
+
+    scope.toggleOrigin = function (e) {
+        isOrigin = $(this).prop('checked');
+        scope.init('');
     };
 
     scope.init = function (dir) {
@@ -121,7 +132,7 @@ brick.reg('mainCtrl', function (scope) {
         //
         let isAddTags = /交易记录/img.test(dir);
 
-        let urls = helper.getImages(dir, {isReverse, isRefresh});
+        let urls = helper.getImages(dir, {isReverse, isRefresh, isOrigin});
         if (!urls.length) {
             return $.icMsg('no images.');
         }
