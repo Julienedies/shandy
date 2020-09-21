@@ -1,5 +1,15 @@
 [
 	{
+		"id": "苹果产业链",
+		"selected": false,
+		"timestamp": 1600643624045
+	},
+	{
+		"id": "光伏",
+		"selected": true,
+		"timestamp": 1600643622777
+	},
+	{
 		"id": "风电",
 		"selected": true,
 		"timestamp": 1600383573738
@@ -31,7 +41,7 @@
 	},
 	{
 		"id": "第三代半导体",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1599435867532
 	},
 	{
@@ -111,7 +121,7 @@
 	},
 	{
 		"id": "军工",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594256070569
 	},
 	{
@@ -148,11 +158,6 @@
 		"id": "今日头条概念",
 		"selected": false,
 		"timestamp": 1591197585513
-	},
-	{
-		"id": "地摊经济",
-		"selected": false,
-		"timestamp": 1591197509321
 	},
 	{
 		"id": "新零售",
@@ -231,7 +236,7 @@
 	},
 	{
 		"id": "光伏概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1581522864794
 	},
 	{

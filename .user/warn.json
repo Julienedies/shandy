@@ -17,7 +17,8 @@
 		"content": "交易只有对错，盈亏交给市场。",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1598665220226
+		"timestamp": 1598665220226,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -100,7 +101,8 @@
 		"content": "不要他妈的临盘随意交易；\n你他妈的很快会忘记这种悔恨；然后不断的重复错误；",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1597114815929
+		"timestamp": 1597114815929,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -140,7 +142,8 @@
 		"content": "交易是否能赚到钱与操作理念有关，与钱多钱少无关。\n不要想着赚钱，把事情做对。",
 		"repeat": 5,
 		"type": "interval",
-		"timestamp": 1597015080598
+		"timestamp": 1597015080598,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -241,7 +244,8 @@
 		"content": "\b\b临盘时没有明确的\b交易计划；被市场牵着鼻子走；脑子一热随意交易；\n你他妈的要重复多少次这种错误？\n没有交易计划就他妈的不要看盘。",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1595063516801
+		"timestamp": 1595063516801,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -261,7 +265,8 @@
 		"content": "我焦虑的心态是交易的障碍；",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1596347158947
+		"timestamp": 1596347158947,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -342,7 +347,8 @@
 		"content": "简单、纯粹、取舍、明确、重复；\n这就是我现在最需要解决的问题；",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1596900815656
+		"timestamp": 1596900815656,
+		"disable": true
 	},
 	{
 		"name": "",

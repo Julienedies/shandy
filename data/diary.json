@@ -1,5 +1,27 @@
 [
 	{
+		"id": "1225162",
+		"tag": [
+			"交易系统",
+			"要解决的问题"
+		],
+		"date": "2020-09-21",
+		"text": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我现在其实还是处在无系统的操作层面。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">临盘根据经验交易。</span></strong></p>",
+		"timestamp": 1600680274642
+	},
+	{
+		"id": "3424610",
+		"tag": [
+			"交易理念",
+			"交易模式",
+			"交易系统",
+			"要解决的问题"
+		],
+		"date": "2020-09-20",
+		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">分仓打板系统的背后理念：捕捉热点行情；捕捉主升浪行情；客观跟随；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 20px;background-color: rgb(148, 0, 211);\"><strong>打板：既是买点，又是客观跟随，又有确定性；</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">分仓保证了概率优势。</span></strong></p>",
+		"timestamp": 1600616302775
+	},
+	{
 		"id": "0045266",
 		"tag": [
 			"交易系统",
@@ -43,7 +65,7 @@
 			"VS"
 		],
 		"date": "2020-09-18",
-		"text": "<p>交易系统一致性的概率优势。</p><p><br></p><p>机械概率：代表人物，纵横股道、寂寞和弦、（具体操作还是有主观判断 + 机械概率）</p><p><strong><span style=\"font-size: 18px;\">分仓打板系统的背后理念：客观跟随，市场热点；明确的买入锚点；</span></strong></p><p><strong><span style=\"font-size: 18px;\">之所以分仓高频，只要策略正确，只要有概率优势。通过分仓保持整体概率优势，通过高频复利效应获取收益。</span></strong></p><p><br></p><p>主观理解力：</p>",
+		"text": "<p><span style=\"font-size: 20px;\"><strong>交易系统一致性的概率优势。</strong></span></p><p><br></p><p>机械概率：代表人物，纵横股道、寂寞和弦、（具体操作还是有主观判断 + 机械概率）</p><p><strong><span style=\"font-size: 18px;\">分仓打板系统的背后理念：客观跟随，市场热点；明确的买入锚点；</span></strong></p><p><strong><span style=\"font-size: 18px;\">之所以分仓高频，只要策略正确，只要有概率优势。通过分仓保持整体概率优势，通过高频复利效应获取收益。</span></strong></p><p><br></p><p>主观理解力：</p>",
 		"timestamp": 1600382296734
 	},
 	{

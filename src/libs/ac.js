@@ -25,7 +25,7 @@ function _exec (fileName, args, callback) {
 
     applescript.execFile(filePath, args, function (err, result) {
         if (err) {
-            throw new Error(err)
+            return console.log(err);
         }
         callback && callback(result);
     });
