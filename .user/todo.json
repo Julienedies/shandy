@@ -57,9 +57,7 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599388379024,
-		"promptTimes": 1,
-		"prevPromptTime": 1600672745326
+		"timestamp": 1599388379024
 	},
 	{
 		"name": "",
@@ -83,9 +81,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599293279369,
-		"promptTimes": 1,
-		"prevPromptTime": 1600676346277
+		"timestamp": 1599293279369
 	},
 	{
 		"name": "",
@@ -97,9 +93,7 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1598963764706,
-		"promptTimes": 2,
-		"prevPromptTime": 1600678146439
+		"timestamp": 1598963764706
 	},
 	{
 		"name": "",
@@ -111,9 +105,7 @@
 		"repeat": 7,
 		"interval": 50,
 		"duration": 47,
-		"timestamp": 1598523956216,
-		"promptTimes": 1,
-		"prevPromptTime": 1600679946240
+		"timestamp": 1598523956216
 	},
 	{
 		"name": "",
@@ -126,8 +118,8 @@
 		"interval": 60,
 		"duration": 30,
 		"timestamp": 1594995614163,
-		"promptTimes": 6,
-		"prevPromptTime": 1600681746018
+		"promptTimes": 5,
+		"prevPromptTime": 1601186651431
 	},
 	{
 		"name": "",
@@ -139,9 +131,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1597160146691,
-		"promptTimes": 1,
-		"prevPromptTime": 1600683544809
+		"timestamp": 1597160146691
 	},
 	{
 		"name": "问题",
@@ -153,9 +143,7 @@
 		"content": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。 &nbsp;怎么解决？</strong></span></p><p><br></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>以市场的客观表现做为操作依据；而不是我的主观判断；因为我对市场理解不够；我的主观判断并没有优势；</strong></span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>或者我找到我的主观判断有优势的地方去发挥；比如市场心理，博弈周期；</strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>消息 与 技术 两者如何权衡&nbsp;</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>主观 vs 客观 vs 机械 vs 技术 vs 逻辑</strong></span></p><p><span style=\"font-size: 16px;\">问题在于主观和机械之间的选择？ 我应该选机械还是主观？</span></p><p><span style=\"font-size: 16px;\">我的主观不一定契合市场的客观机会？</span></p><p><span style=\"font-size: 16px;\">消息没有别人快，题材解读不如别人，完全以技术优先吗？但单纯以K线技术做判断，确定性不高。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。 怎么解决？怎么解决？怎么解决？</span></p><p><span style=\"font-size: 16px;\">没有百分百，只有大概率；我应该追求大概率的优势，而不是寄望于单次机会。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">分仓竞价买入； 市场反映一切； 概率优势；</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我最初想到竞价系统是为了低点买入，降低成本。</span></p><p><br></p><p><br></p>",
 		"timestamp": 1588771295970,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1600685345818
+		"duration": 17
 	},
 	{
 		"name": "",
@@ -167,9 +155,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334,
-		"promptTimes": 1,
-		"prevPromptTime": 1600687145112
+		"timestamp": 1595590485334
 	},
 	{
 		"name": "日程",
@@ -181,9 +167,7 @@
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px;\">我从来没有做好次日的交易计划。既无预判，也没有推演，更无应对。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">然后交易时傻乎乎看着盘面，被动应对，临盘犹豫，手足无措、脑子一热随意交易。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是主观预判市场弱，<strong><span style=\"background-color: rgb(255, 255, 0);\">缺乏准备</span></strong>；结果市场转强，就手足无措；<strong><span style=\"background-color: rgb(255, 255, 0);\">连标的都没有；</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 16px;\">尤其是放弃了打板这一手法后，干脆就不知道做什么了。我不是控制力好，我其实是不知道做什么。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">主线热点，资金方向，资金类型，强弱</span></p><p><span style=\"font-size: 16px;\">1. 先确定主线热点； 这是支撑我的交易逻辑之一。热钱所在，行情所在。</span></p><p><span style=\"font-size: 16px;\">2. 根据主线热点，选择标的。</span></p><p><span style=\"font-size: 16px;\">3. 预判推演标的走势，做出对应的应对计划。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">大盘会涨会跌？大盘处在何种阶段？哪里有机会？ 哪里有风险？ 方向：机构蓝筹趋势？ 热钱情绪题材?</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">热点龙头个股会涨会跌？ 能追涨吗？ 能低吸吗？ 盈亏比几何？</span></p>",
 		"timestamp": 1580821790410,
 		"duration": 34,
-		"singleWindow": "stock_replay",
-		"promptTimes": 1,
-		"prevPromptTime": 1600688945492
+		"singleWindow": "stock_replay"
 	},
 	{
 		"name": "",
@@ -197,7 +181,7 @@
 		"duration": 60,
 		"timestamp": 1594895079041,
 		"promptTimes": 4,
-		"prevPromptTime": 1600690745912
+		"prevPromptTime": 1601195650462
 	},
 	{
 		"name": "",
@@ -209,9 +193,7 @@
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">准备交易计划</span></strong></p><p><span style=\"font-size: 18px;\"><strong>1. <span style=\"background-color: rgb(255, 255, 0);\">大局观</span>：当前市场状态是什么？ 赚钱效应；亏钱效应；风险和机会是什么？&nbsp;</strong></span></p><p><strong><span style=\"font-size: 18px;\">2. <span style=\"background-color: rgb(255, 255, 0);\">热点</span>：风口选股：&nbsp;</span></strong></p><p><strong><span style=\"font-size: 18px;\">3. <span style=\"background-color: rgb(255, 255, 0);\">龙头</span>：当下市场的核心股是什么？有没有介入机会？主升浪启动？低吸弱转强？分歧转一致？</span></strong></p><p><span style=\"font-size: 18px;\"><strong>4. <span style=\"background-color: rgb(255, 255, 0);\">做好预期外的应对</span>：假如热钱出击，资金的方向会是哪里？你做好准备了吗？</strong></span></p><p><br></p><p><strong>1. 遍历交易系统；寻找交易标的；</strong></p><p><strong>2. 做烂板上冲、连续上冲假设推演；热点龙头走势的低吸追涨预案。</strong></p><p><strong>3. 弱转强；分歧转一致；</strong></p><p><strong>4. 我从来都对预期外的反转措手不及。做市场转强，热钱出击的推演；不要因为市场悲观向下就无准备；</strong></p>",
 		"timestamp": 1577664169847,
 		"singleWindow": "",
-		"duration": 140,
-		"promptTimes": 1,
-		"prevPromptTime": 1600692545868
+		"duration": 140
 	},
 	{
 		"name": "",
@@ -224,8 +206,8 @@
 		"interval": 90,
 		"duration": 47,
 		"timestamp": 1594365344529,
-		"promptTimes": 1,
-		"prevPromptTime": 1600694345603
+		"promptTimes": 2,
+		"prevPromptTime": 1601199250678
 	},
 	{
 		"name": "",
@@ -238,8 +220,8 @@
 		"timestamp": 1582296291296,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1600696144434
+		"promptTimes": 2,
+		"prevPromptTime": 1601201050860
 	},
 	{
 		"name": "",
@@ -253,7 +235,7 @@
 		"duration": 47,
 		"timestamp": 1594896086224,
 		"promptTimes": 1,
-		"prevPromptTime": 1600697944808
+		"prevPromptTime": 1601202850964
 	},
 	{
 		"name": "错误",
@@ -266,8 +248,8 @@
 		"timestamp": 1588940500338,
 		"singleWindow": "",
 		"duration": 160,
-		"promptTimes": 1,
-		"prevPromptTime": 1600699745094
+		"promptTimes": 2,
+		"prevPromptTime": 1601204649581
 	},
 	{
 		"name": "日程",
@@ -279,7 +261,9 @@
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">复盘</span></strong></p><p>资金在哪个方向？ 机构资金在哪里？ 热钱资金在哪里？ 趋势资金在哪里？ 短线资金在哪里？</p><p><br></p><p>我复盘主要是看昨天的涨停板今天的赚钱效应，哪一类涨停股次日有肉，哪一类股持续有肉，今天买进的人明天能出，明天买进的人后天可以出，这就是持续的赚钱效应，这类股中最强的那个板块是人气板块。反之，今天涨停的明日闷杀，或者跑路的时间不多，机会很少，那么你就得小心这类股了。比如之前创小板赚钱效应一直不错，在6月3号的时候， 002625(光启技术) 本来之前连续一字的，当日却突然快速跌停，这时候你得注意小盘股风险了。创业板的内在走弱是从3号开始的，而指数上是从4号才开始。这就是盘感，自己长期复盘和市场天天对话的结果，而不是看别人帖子的结果。</p><p><br></p><p>查看板块指数</p><p>查看成交额最大的个股</p><p>查看龙虎榜</p><p><br></p><p>次日推演；</p><p><br></p><p>过滤上冲; 上冲意味着进攻信号；</p><p>过滤破板</p><p>要过一遍涨停池；旗形涨停值得关注；</p>",
 		"timestamp": 1577964389066,
 		"singleWindow": "",
-		"duration": 60
+		"duration": 60,
+		"promptTimes": 1,
+		"prevPromptTime": 1601206449438
 	},
 	{
 		"name": "",
@@ -303,7 +287,9 @@
 		"content": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">我只要一周赚10%，一年就可以赚到到45倍；</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">做精不做多；避免犯错；避免回撤；</span></strong></p><p><br></p><p><span style=\"font-size: 18px;\">Math.pow(1.1,40) = 45.2592555681761</span></p><p><span style=\"font-size: 18px;\">Math.pow(1.2,40) = 1469.7715679690841</span></p>",
 		"timestamp": 1581084979181,
 		"singleWindow": "",
-		"duration": 24
+		"duration": 24,
+		"promptTimes": 1,
+		"prevPromptTime": 1601208249251
 	},
 	{
 		"name": "",
@@ -363,7 +349,9 @@
 		"content": "<p>查看当日涨停个股资料，动态、新闻、公告。</p>",
 		"timestamp": 1577697423900,
 		"singleWindow": "",
-		"duration": 47
+		"duration": 47,
+		"promptTimes": 2,
+		"prevPromptTime": 1601215449605
 	},
 	{
 		"name": "日程",
@@ -375,7 +363,9 @@
 		"content": "<p>每天更新自选股票池。</p><p>加入: 启动、 爆发、 转折、 超强势的人气龙头股；</p><p>移除：趋弱的个股；</p><p>记住我做的是超短。</p>",
 		"timestamp": 1582429000702,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 2,
+		"prevPromptTime": 1601217249720
 	},
 	{
 		"name": "日程",
@@ -387,16 +377,18 @@
 		"timestamp": 1577539413052,
 		"type": "",
 		"duration": 17,
-		"singleWindow": ""
+		"singleWindow": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1601213649430
 	},
 	{
 		"name": "日程",
 		"id": "5438627",
 		"type": "",
-		"start": "20:00",
+		"start": "21:00",
 		"interval": 60,
 		"repeat": 2,
-		"content": "<p>更新csd。",
+		"content": "<p>更新csd。</p>",
 		"timestamp": 1577862911294,
 		"duration": 17,
 		"singleWindow": ""

@@ -11,7 +11,7 @@
 	},
 	{
 		"id": "风电",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1600383573738
 	},
 	{
@@ -30,23 +30,18 @@
 		"timestamp": 1599491185366
 	},
 	{
-		"id": "创业板重组松绑",
-		"selected": false,
-		"timestamp": 1599436088128
-	},
-	{
 		"id": "氮化镓",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1599435873296
 	},
 	{
 		"id": "第三代半导体",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1599435867532
 	},
 	{
 		"id": "半导体",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1599435860033
 	},
 	{
@@ -78,11 +73,6 @@
 		"id": "粮食安全",
 		"selected": false,
 		"timestamp": 1597361522485
-	},
-	{
-		"id": "轨道交通",
-		"selected": false,
-		"timestamp": 1597107112219
 	},
 	{
 		"id": "抖音",
@@ -121,7 +111,7 @@
 	},
 	{
 		"id": "军工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1594256070569
 	},
 	{
@@ -176,7 +166,7 @@
 	},
 	{
 		"id": "医疗器械",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1589417250291
 	},
 	{
@@ -231,7 +221,7 @@
 	},
 	{
 		"id": "光刻胶",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1582069232767
 	},
 	{
@@ -241,7 +231,7 @@
 	},
 	{
 		"id": "生物疫苗",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579613298327
 	},
 	{
@@ -256,7 +246,7 @@
 	},
 	{
 		"id": "生物医药",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1579526862860
 	},
 	{
@@ -286,12 +276,12 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578928807285
 	},
 	{
 		"id": "芯片概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303653
 	},
 	{
