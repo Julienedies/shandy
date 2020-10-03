@@ -11,7 +11,7 @@
 	},
 	{
 		"id": "风电",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1600383573738
 	},
 	{
@@ -36,12 +36,12 @@
 	},
 	{
 		"id": "第三代半导体",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1599435867532
 	},
 	{
 		"id": "半导体",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1599435860033
 	},
 	{
@@ -96,7 +96,7 @@
 	},
 	{
 		"id": "业绩预增",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594595813324
 	},
 	{
@@ -111,7 +111,7 @@
 	},
 	{
 		"id": "军工",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594256070569
 	},
 	{
@@ -136,12 +136,12 @@
 	},
 	{
 		"id": "跨境电商",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1593956295738
 	},
 	{
 		"id": "免税店",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1593956198333
 	},
 	{
@@ -221,7 +221,7 @@
 	},
 	{
 		"id": "光刻胶",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1582069232767
 	},
 	{
@@ -246,7 +246,7 @@
 	},
 	{
 		"id": "生物医药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579526862860
 	},
 	{
@@ -276,12 +276,12 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928807285
 	},
 	{
 		"id": "芯片概念",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578926303653
 	},
 	{
