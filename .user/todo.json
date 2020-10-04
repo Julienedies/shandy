@@ -117,9 +117,7 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 30,
-		"timestamp": 1594995614163,
-		"promptTimes": 1,
-		"prevPromptTime": 1601708879922
+		"timestamp": 1594995614163
 	},
 	{
 		"name": "",
@@ -143,9 +141,7 @@
 		"content": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。 &nbsp;怎么解决？</strong></span></p><p><br></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>以市场的客观表现做为操作依据；而不是我的主观判断；因为我对市场理解不够；我的主观判断并没有优势；</strong></span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>或者我找到我的主观判断有优势的地方去发挥；比如市场心理，博弈周期；</strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>消息 与 技术 两者如何权衡&nbsp;</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>主观 vs 客观 vs 机械 vs 技术 vs 逻辑</strong></span></p><p><span style=\"font-size: 16px;\">问题在于主观和机械之间的选择？ 我应该选机械还是主观？</span></p><p><span style=\"font-size: 16px;\">我的主观不一定契合市场的客观机会？</span></p><p><span style=\"font-size: 16px;\">消息没有别人快，题材解读不如别人，完全以技术优先吗？但单纯以K线技术做判断，确定性不高。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。 怎么解决？怎么解决？怎么解决？</span></p><p><span style=\"font-size: 16px;\">没有百分百，只有大概率；我应该追求大概率的优势，而不是寄望于单次机会。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">分仓竞价买入； 市场反映一切； 概率优势；</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我最初想到竞价系统是为了低点买入，降低成本。</span></p><p><br></p><p><br></p>",
 		"timestamp": 1588771295970,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1601710679786
+		"duration": 17
 	},
 	{
 		"name": "",
@@ -157,9 +153,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334,
-		"promptTimes": 1,
-		"prevPromptTime": 1601712479705
+		"timestamp": 1595590485334
 	},
 	{
 		"name": "日程",
@@ -184,8 +178,8 @@
 		"interval": 60,
 		"duration": 60,
 		"timestamp": 1594895079041,
-		"promptTimes": 7,
-		"prevPromptTime": 1601707079311
+		"promptTimes": 4,
+		"prevPromptTime": 1601800105026
 	},
 	{
 		"name": "",
@@ -211,7 +205,7 @@
 		"duration": 47,
 		"timestamp": 1594365344529,
 		"promptTimes": 1,
-		"prevPromptTime": 1601627776536
+		"prevPromptTime": 1601801904772
 	},
 	{
 		"name": "",
@@ -225,7 +219,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1601629576653
+		"prevPromptTime": 1601803703493
 	},
 	{
 		"name": "",
@@ -239,7 +233,7 @@
 		"duration": 47,
 		"timestamp": 1594896086224,
 		"promptTimes": 1,
-		"prevPromptTime": 1601631376489
+		"prevPromptTime": 1601805503850
 	},
 	{
 		"name": "错误",
@@ -253,7 +247,7 @@
 		"singleWindow": "",
 		"duration": 160,
 		"promptTimes": 2,
-		"prevPromptTime": 1601633176287
+		"prevPromptTime": 1601807304146
 	},
 	{
 		"name": "日程",
@@ -267,7 +261,7 @@
 		"singleWindow": "",
 		"duration": 60,
 		"promptTimes": 1,
-		"prevPromptTime": 1601634975105
+		"prevPromptTime": 1601809104387
 	},
 	{
 		"name": "",
@@ -293,7 +287,7 @@
 		"singleWindow": "",
 		"duration": 24,
 		"promptTimes": 1,
-		"prevPromptTime": 1601636775156
+		"prevPromptTime": 1601810904483
 	},
 	{
 		"name": "",
@@ -367,7 +361,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 2,
-		"prevPromptTime": 1601645774867
+		"prevPromptTime": 1601818103349
 	},
 	{
 		"name": "日程",
@@ -405,7 +399,7 @@
 		"singleWindow": "",
 		"duration": 24,
 		"promptTimes": 2,
-		"prevPromptTime": 1601647574989
+		"prevPromptTime": 1601819903652
 	},
 	{
 		"name": "警告",
@@ -418,7 +412,8 @@
 		"timestamp": 1579093820041,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 5,
-		"prevPromptTime": 1601652975465
+		"promptTimes": 1,
+		"prevPromptTime": 1601812702956,
+		"complete": true
 	}
 ]
