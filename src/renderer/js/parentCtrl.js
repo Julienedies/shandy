@@ -62,12 +62,15 @@ function parentCtrl () {
         scope.emit('viewer-close');
     };
 
-    scope.onViewerShow = function (index, src, $info) {
+    scope.onViewerShow = function (index, src, $info, isFirstShow) {
         let arr = src.split('=');
         src = arr[1] || arr[0];
         scope.viewerCurrentImg = {f: src};
         scope.viewerMarkTag();
         $info.text(src);
+
+        brick.emit('viewer-markTag', scope.viewerCurrentImg);
+        isFirstShow && $('[ic-popup="viewerMarkTag"]').icPopup(true);
     };
 
     scope.editImg = () => {
