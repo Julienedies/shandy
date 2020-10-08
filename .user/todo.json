@@ -57,9 +57,7 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599388379024,
-		"promptTimes": 1,
-		"prevPromptTime": 1601969390369
+		"timestamp": 1599388379024
 	},
 	{
 		"name": "",
@@ -71,9 +69,7 @@
 		"repeat": 5,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599277516060,
-		"promptTimes": 1,
-		"prevPromptTime": 1601972990835
+		"timestamp": 1599277516060
 	},
 	{
 		"name": "",
@@ -85,9 +81,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599293279369,
-		"promptTimes": 1,
-		"prevPromptTime": 1601974790719
+		"timestamp": 1599293279369
 	},
 	{
 		"name": "",
@@ -99,9 +93,7 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1598963764706,
-		"promptTimes": 2,
-		"prevPromptTime": 1601976590599
+		"timestamp": 1598963764706
 	},
 	{
 		"name": "",
@@ -115,7 +107,7 @@
 		"duration": 47,
 		"timestamp": 1598523956216,
 		"promptTimes": 1,
-		"prevPromptTime": 1601978390714
+		"prevPromptTime": 1602141056870
 	},
 	{
 		"name": "",
@@ -129,7 +121,7 @@
 		"duration": 30,
 		"timestamp": 1594995614163,
 		"promptTimes": 1,
-		"prevPromptTime": 1601980190792
+		"prevPromptTime": 1602142857187
 	},
 	{
 		"name": "",
@@ -143,7 +135,7 @@
 		"duration": 47,
 		"timestamp": 1597160146691,
 		"promptTimes": 1,
-		"prevPromptTime": 1601981990905
+		"prevPromptTime": 1602144657623
 	},
 	{
 		"name": "问题",
@@ -157,7 +149,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1601983790854
+		"prevPromptTime": 1602146457999
 	},
 	{
 		"name": "",
@@ -171,7 +163,7 @@
 		"duration": 47,
 		"timestamp": 1595590485334,
 		"promptTimes": 1,
-		"prevPromptTime": 1601985590851
+		"prevPromptTime": 1602148258220
 	},
 	{
 		"name": "日程",
@@ -185,7 +177,7 @@
 		"duration": 34,
 		"singleWindow": "stock_replay",
 		"promptTimes": 1,
-		"prevPromptTime": 1601987390891
+		"prevPromptTime": 1602150058014
 	},
 	{
 		"name": "",
@@ -198,8 +190,8 @@
 		"interval": 60,
 		"duration": 60,
 		"timestamp": 1594895079041,
-		"promptTimes": 2,
-		"prevPromptTime": 1601989190868
+		"promptTimes": 3,
+		"prevPromptTime": 1602151857896
 	},
 	{
 		"name": "",
@@ -213,7 +205,7 @@
 		"singleWindow": "",
 		"duration": 140,
 		"promptTimes": 1,
-		"prevPromptTime": 1601990990816
+		"prevPromptTime": 1602153657742
 	},
 	{
 		"name": "",
@@ -221,13 +213,13 @@
 		"type": "",
 		"start": "16:00",
 		"repeat": 5,
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">怎么解决盘中随意交易的问题？</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">不要他妈的临盘随意交易；</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">这是我最大的亏损来源；</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">你他妈的很快会忘记这种悔恨；</span></strong></span><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">然后不断的重复错误；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">关键是我没有明确的交易系统、目标行情、买点、交易计划；</span></strong></p><p>我盯盘时，没有明确的目的；只是被市场牵着鼻子走；被动应对市场，浑浑噩噩；一不留神就会随手买入；</p><p>尤其是市场转好，怕踏空买入；</p><p>或个股冲高，就会臆想买入；</p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">怎么解决盘中随意交易的问题？</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">不要他妈的临盘随意交易；</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">这是我最大的亏损来源；</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">你他妈的很快会忘记这种悔恨；</span></strong></span><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">然后不断的重复错误；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">关键是我没有明确的交易系统、目标行情、买点、交易计划；</span></strong></p><p><span style=\"font-size: 20px;\">我盯盘时，没有明确的目的；只是被市场牵着鼻子走；被动应对市场，浑浑噩噩；一不留神就会随手买入；</span></p><p><span style=\"font-size: 20px;\">尤其是市场转好，怕踏空买入；</span></p><p><span style=\"font-size: 20px;\">或个股冲高，就会臆想买入；</span></p><p><br></p>",
 		"singleWindow": "",
 		"interval": 90,
 		"duration": 47,
 		"timestamp": 1594365344529,
 		"promptTimes": 1,
-		"prevPromptTime": 1601992791102
+		"prevPromptTime": 1602155456327
 	},
 	{
 		"name": "",
@@ -241,7 +233,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1601994589764
+		"prevPromptTime": 1602157255674
 	},
 	{
 		"name": "",
@@ -255,7 +247,7 @@
 		"duration": 47,
 		"timestamp": 1594896086224,
 		"promptTimes": 1,
-		"prevPromptTime": 1601996389703
+		"prevPromptTime": 1602159057561
 	},
 	{
 		"name": "错误",
@@ -269,7 +261,7 @@
 		"singleWindow": "",
 		"duration": 160,
 		"promptTimes": 1,
-		"prevPromptTime": 1601998190876
+		"prevPromptTime": 1602160857728
 	},
 	{
 		"name": "日程",
@@ -283,7 +275,7 @@
 		"singleWindow": "",
 		"duration": 60,
 		"promptTimes": 1,
-		"prevPromptTime": 1601999990855
+		"prevPromptTime": 1602162657429
 	},
 	{
 		"name": "",
@@ -307,7 +299,9 @@
 		"content": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">我只要一周赚10%，一年就可以赚到到45倍；</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">做精不做多；避免犯错；避免回撤；</span></strong></p><p><br></p><p><span style=\"font-size: 18px;\">Math.pow(1.1,40) = 45.2592555681761</span></p><p><span style=\"font-size: 18px;\">Math.pow(1.2,40) = 1469.7715679690841</span></p>",
 		"timestamp": 1581084979181,
 		"singleWindow": "",
-		"duration": 24
+		"duration": 24,
+		"promptTimes": 1,
+		"prevPromptTime": 1602164456335
 	},
 	{
 		"name": "",
@@ -379,7 +373,9 @@
 		"content": "<p>每天更新自选股票池。</p><p>加入: 启动、 爆发、 转折、 超强势的人气龙头股；</p><p>移除：趋弱的个股；</p><p>记住我做的是超短。</p>",
 		"timestamp": 1582429000702,
 		"singleWindow": "",
-		"duration": 17
+		"duration": 17,
+		"promptTimes": 2,
+		"prevPromptTime": 1602169857146
 	},
 	{
 		"name": "日程",
@@ -415,7 +411,9 @@
 		"content": "<p>根据目标行情类型，设置持仓条件单！</p><p>止损；</p><p>低开处理；</p><p>止盈处理；</p><p><br></p>",
 		"timestamp": 1584416255440,
 		"singleWindow": "",
-		"duration": 24
+		"duration": 24,
+		"promptTimes": 2,
+		"prevPromptTime": 1602171657385
 	},
 	{
 		"name": "警告",
