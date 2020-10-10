@@ -48,6 +48,8 @@ brick.reg('logicCtrl', function () {
     //scope.tagsMap = {};  // 所有的标签数据集合
     let logicArr = [];  // 当前显示的logic数组
 
+    scope.logicListModel = logicArr;
+
     function updateLogicArrByFilterKey () {
         let filterKey = scope.filterKey;
         logicArr = filterKey !== undefined ? logicManager.get((item, index) => {
@@ -69,7 +71,7 @@ brick.reg('logicCtrl', function () {
 
         isReverse && logicArr.reverse();
         $.icMsg(`render item => ${ logicArr.length }`);
-        scope.render('logic', logicArr);
+        scope.render('logic', logicArr.slice(0, 700));
         // 更新html title, 下载text用
         let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
         let text = scope.filterKey && TAGS_MAP_BY_ID[scope.filterKey] && TAGS_MAP_BY_ID[scope.filterKey].text;

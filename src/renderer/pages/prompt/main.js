@@ -97,6 +97,7 @@ brick.reg('mainCtrl', function (scope) {
 
     function activePrompt (todoItem) {
         currentWindow.showInactive();
+        //currentWindow.setFullScreen(true);
         hideWindowTimer = setTimeout(() => {
             scope.hideWindow();
         }, 1000 * (todoItem.duration || 17));

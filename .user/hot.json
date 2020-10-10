@@ -136,12 +136,12 @@
 	},
 	{
 		"id": "跨境电商",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1593956295738
 	},
 	{
 		"id": "免税店",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1593956198333
 	},
 	{

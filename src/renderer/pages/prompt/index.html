@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>任务提醒</title>
+    <title>任务提醒 - prompt</title>
     <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
     <link rel="stylesheet" href="../../css/vendor/effeckt/animations.css">
     <script src="/set_node_modules_path.js"></script>
@@ -13,7 +13,7 @@
 
     <div ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
         <div class="column">
-            <div class="buttons is-right">
+            <div class="buttons is-right" id="fixedButtons" style="position: fixed;z-index: 1000; right:8%; ">
                 <button class="button is-primary" ic-click="stop">停止提醒</button>
                 <button class="button is-primary" ic-click="start" style="display:none;">开启提醒</button>
                 <button class="button is-primary" ic-view-to="prepare">prepare</button>
@@ -23,7 +23,7 @@
                 <button class="button is-primary" ic-click="addTodo">新ToDo</button>
                 <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
             </div>
-            <table class="table is-striped is-fullwidth" style="margin-top:15px;font-size:14px;" ic-tpl="todoList">
+            <table class="table is-striped is-fullwidth" style="margin-top:45px;font-size:14px;" ic-tpl="todoList">
                 <tr style="white-space: nowrap;">
                     <th>name</th>
                     <th>类型</th>
@@ -44,7 +44,8 @@
                     <td class="pre">{{ v.content }}</td>
                     <td>{{ v.promptTimes || 0 }}</td>
                     <td>
-                        <div style="white-space: pre-line;"><button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
+                        <div style="white-space: pre-line;">
+                            <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
                             <button class="button is-primary is-small" ic-click="focus:{{ v.id }}">置顶</button>
                             <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>
                             <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
@@ -53,7 +54,8 @@
                             <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
                                 {{ v.disable ? '启用':'禁止' }}
                             </button>
-                            <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button></div>
+                            <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -207,7 +209,7 @@
             </div>
             <div class="buttons" style="padding-top:20px;">
                 <button class="button" ic-click="hideWindow">关闭</button>
-                <button class="button is-primary"  ic-view-to="todoList">返回</button>
+                <button class="button is-primary" ic-view-to="todoList">返回</button>
                 <button class="button is-primary" ic-click="complete">完成</button>
             </div>
         </div>
