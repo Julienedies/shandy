@@ -36,12 +36,12 @@
 	},
 	{
 		"id": "第三代半导体",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1599435867532
 	},
 	{
 		"id": "半导体",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1599435860033
 	},
 	{
@@ -221,7 +221,7 @@
 	},
 	{
 		"id": "光刻胶",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1582069232767
 	},
 	{
@@ -281,7 +281,7 @@
 	},
 	{
 		"id": "芯片概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303653
 	},
 	{
