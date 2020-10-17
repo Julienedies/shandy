@@ -10,8 +10,8 @@
 		"interval": 90,
 		"duration": 17,
 		"timestamp": 1602572831758,
-		"promptTimes": 1,
-		"prevPromptTime": 1602860492314,
+		"promptTimes": 2,
+		"prevPromptTime": 1602911264469,
 		"complete": true
 	},
 	{
@@ -192,10 +192,7 @@
 		"singleWindow": "",
 		"interval": 60,
 		"duration": 45,
-		"timestamp": 1594895079041,
-		"promptTimes": 1,
-		"prevPromptTime": 1602831694817,
-		"complete": true
+		"timestamp": 1594895079041
 	},
 	{
 		"name": "",
@@ -219,10 +216,7 @@
 		"singleWindow": "",
 		"interval": 90,
 		"duration": 47,
-		"timestamp": 1594365344529,
-		"promptTimes": 1,
-		"prevPromptTime": 1602835294681,
-		"complete": true
+		"timestamp": 1594365344529
 	},
 	{
 		"name": "",
@@ -234,10 +228,7 @@
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">我为何总是临盘犹豫，错过机会？</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">1. 准备不足；</span></strong></span></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>2. 系统不明确；</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">3. 本能贪便宜，畏高。</span></strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我必须在很短的时间做出决定；尤其是股市变量很多；</span></p><p><span style=\"font-size: 16px;\">导致很容易犯错，尤其是亏钱状态不好的时候；</span></p><p><span style=\"font-size: 16px;\">必须纯粹，精简自己的系统，快速反应！</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；</span></p><p><span style=\"font-size: 16px;\">1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）</span></p><p><span style=\"font-size: 16px;\">2: 热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；</span></p>",
 		"timestamp": 1582296291296,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1602837094538,
-		"complete": true
+		"duration": 17
 	},
 	{
 		"name": "",
@@ -249,9 +240,7 @@
 		"singleWindow": "",
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1594896086224,
-		"promptTimes": 1,
-		"prevPromptTime": 1602838894399
+		"timestamp": 1594896086224
 	},
 	{
 		"name": "错误",
@@ -263,10 +252,7 @@
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">要解决的错误及弱点</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">没有大局观</span></strong></p><p>没有大局观；总是着眼于K线的微观层面和小波动，受情绪驱动 (所以会卖飞；看不到确定性，临盘犹豫；)； 对市场理解不够；对行情性质理解不够；</p><p>是我做错和卖飞的根本原因。缺乏大局观让我短视，看不到确定性；</p><p>主线是什么？ 龙头是什么？ 市场人心是怎么样的？赚钱效应；市场阶段和状态和节奏；</p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">对市场理解不够，线性思维，思维定式, <strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">只会追涨一种手法</span></strong></span></strong></p><p>如果市场就是1+1=2，那还有什么难度。 相同的k线可以走出不同的走势。</p><p>关键是理解背后的市场环境、主线热点、股性人气、多空博弈动态转换等变量。</p><p><br></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">从没有做好次日交易计划</span></strong></p><p>我只是看了当前K线，次日会有什么走势完全没有思考，完全是盘中临时应对。所以临盘犹豫，总是错失机会</p><p>只会机械追涨吗？ 如果对市场对个股行情性质深刻理解的话，低吸，追涨都是可以做的。</p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">临盘应对太差，非预期或反转行情总是手足无措</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我从来没有没有明确的操作计划，只会被动等待、应对。</span></strong></span></p><p>没有人能预知未来，做股票的核心要义就是判断形势，然后采取策略，让自己尽量把屁股坐到大概率一方的阵营里。而普通投资者和超高手的区别就在于，超高手没有或者尽量减少定式思维，而普通投资者脑子一时半会转不过来&mdash;&mdash;适用于无论是个股还是大盘，这是普通投资者一辈子无法击穿的&ldquo;叹息之墙&rdquo;&mdash;&mdash;不过，一旦击穿了就是超高手了。</p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">无法克服情绪和本能</span></strong></p><p>我要如何克服本能和情绪？任何情绪都是交易的障碍！</p><p>踏空心理 、 沮丧失落 、信心于否。</p><p>如果我不能克服，失败是注定的！</p>",
 		"timestamp": 1588940500338,
 		"singleWindow": "",
-		"duration": 160,
-		"promptTimes": 1,
-		"prevPromptTime": 1602833493905,
-		"complete": true
+		"duration": 160
 	},
 	{
 		"name": "日程",
@@ -278,10 +264,7 @@
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">复盘</span></strong></p><p>资金在哪个方向？ 机构资金在哪里？ 热钱资金在哪里？ 趋势资金在哪里？ 短线资金在哪里？</p><p><br></p><p>我复盘主要是看昨天的涨停板今天的赚钱效应，哪一类涨停股次日有肉，哪一类股持续有肉，今天买进的人明天能出，明天买进的人后天可以出，这就是持续的赚钱效应，这类股中最强的那个板块是人气板块。反之，今天涨停的明日闷杀，或者跑路的时间不多，机会很少，那么你就得小心这类股了。比如之前创小板赚钱效应一直不错，在6月3号的时候， 002625(光启技术) 本来之前连续一字的，当日却突然快速跌停，这时候你得注意小盘股风险了。创业板的内在走弱是从3号开始的，而指数上是从4号才开始。这就是盘感，自己长期复盘和市场天天对话的结果，而不是看别人帖子的结果。</p><p><br></p><p>查看板块指数</p><p>查看成交额最大的个股</p><p>查看龙虎榜</p><p><br></p><p>次日推演；</p><p><br></p><p>过滤上冲; 上冲意味着进攻信号；</p><p>过滤破板</p><p>要过一遍涨停池；旗形涨停值得关注；</p>",
 		"timestamp": 1577964389066,
 		"singleWindow": "",
-		"duration": 60,
-		"promptTimes": 1,
-		"prevPromptTime": 1602840692965,
-		"complete": true
+		"duration": 60
 	},
 	{
 		"name": "",
@@ -305,10 +288,7 @@
 		"content": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">我只要一周赚10%，一年就可以赚到到45倍；</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">做精不做多；避免犯错；避免回撤；</span></strong></p><p><br></p><p><span style=\"font-size: 18px;\">Math.pow(1.1,40) = 45.2592555681761</span></p><p><span style=\"font-size: 18px;\">Math.pow(1.2,40) = 1469.7715679690841</span></p>",
 		"timestamp": 1581084979181,
 		"singleWindow": "",
-		"duration": 24,
-		"promptTimes": 1,
-		"prevPromptTime": 1602842492920,
-		"complete": true
+		"duration": 24
 	},
 	{
 		"name": "",
@@ -408,9 +388,6 @@
 		"content": "<p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">一切有为法；一切有因果；</span></strong></span></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">不要忘记那些恐惧和痛苦；</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">时不我待，我已经37岁了；</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">我并没有本质上的改变，我还是在重复错误；</span></strong></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">那些交易原则我知道，但我没有做到知行合一；</span></strong></span></p>",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 24,
-		"promptTimes": 1,
-		"prevPromptTime": 1602844292906,
-		"complete": true
+		"duration": 24
 	}
 ]

@@ -9,7 +9,7 @@ import './index.html'
 import '../../css/common/common.scss'
 import './style.scss'
 
-import fs from  'fs'
+import fs from 'fs'
 import path from 'path'
 
 import _ from 'lodash'
@@ -121,7 +121,7 @@ brick.reg('mainCtrl', function (scope) {
             console.log('fetch => ', stat.name, stat.index, err);
             $log.text(JSON.stringify(stat));
 
-            if(fetchLimit && stat.index > fetchLimit) {
+            if (fetchLimit && stat.index > fetchLimit) {
                 $th.icClearLoading();
                 scope.fetchStop();
                 return;
@@ -179,7 +179,7 @@ brick.reg('mainCtrl', function (scope) {
         stockArr.forEach(([code, name]) => {
             let sjo = stockJo(code);
             let c1 = sjo.json['概念'].split(/[，]+\s*/img);
-            let c2 = sjo.json['概念y'].replace(/-\d*%/img,'').split(/[，]?\s+/img);
+            let c2 = sjo.json['概念y'].replace(/-\d*%/img, '').split(/[，]?\s+/img);
             let c3 = (sjo.json['概念z'] || '').split(/[，]?\s+/img);
 
             let arr = _.flatten([c1, c2, c3]);
@@ -201,25 +201,42 @@ brick.reg('mainCtrl', function (scope) {
         $th.icClearLoading();
 
         let hotPoints = hotDob.get().map((item) => {
-              return item.selected && item.id;
+            return item.selected && item.id;
         });
         scope.render('hotResult', {arr: resultArr, hotPoints});
     };
 
     this.search = function (e) {
         let str = $(this).val();
-        $('#findHotResult a').each(function(i) {
+        $('#findHotResult a').each(function (i) {
             let text = this.innerText;
-            if(text.search(str) > -1){
+            if (text.search(str) > -1) {
                 $(this).addClass('is-dark');
             }
         });
+    };
+
+    // 自定义输入热点
+    this.customHot = function (e) {
+        let val = $('#customHot').val();
+        if (val) {
+            hotDob.set({id: val, selected: true});
+            renderHotPoints();
+        }
     };
 
     scope.onAddHotChange = function (msg) {
         hotDob.set({id: msg.change, selected: msg.selected});
         renderHotPoints();
     };
+
+    // 根据提示选择热点
+    scope.onTypeHotDone = function (e, msg) {
+        console.log(msg);
+        hotDob.set({id: msg.name, selected: true});
+        renderHotPoints();
+    };
+
 
     // ------------------------------------------------------------------------------
     // 创建通达信自定义数据文件

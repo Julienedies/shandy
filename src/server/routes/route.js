@@ -43,6 +43,7 @@ export default function (app) {
     app.get('/csd/days', csd.getDays)
     app.get('/csd/tick', csd.getTick)
 
+    app.get('/stock/concept', concept.get)
     app.get('/stock/concept/(:name)?', concept.get)
     app.get('/stock/c/:code', stock.get)
     app.post('/stock/c/:code', stock.post)

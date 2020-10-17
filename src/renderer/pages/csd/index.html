@@ -282,6 +282,43 @@
                 </div>
             </div>
         </div>
+
+        <!-- 手动输入添加热点  -->
+        <div class="field is-horizontal">
+            <div class="field-label is-normal">
+                <label class="label"></label>
+            </div>
+            <div class="field-body">
+                <div class="field has-addons">
+                    <div class="control">
+                        <button class="button is-primary">
+                            提示添加热点
+                        </button>
+                    </div>
+                    <div class="control is-expanded">
+                        <input class="input" type="search" value="" placeholder="输入热点名称" id="customHot"
+                               ic-type-ahead="typeHot"
+                               ic-on-type-done="onTypeHotDone"
+                               ic-source-ajax="/stock/concept">
+                    </div>
+                    <div class="control">
+                        <button class="button is-primary" ic-click="customHot">
+                            自定义输入热点
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 输入提示列表 -->
+        <div ic-type-list="typeHot" ic-tpl="typeHot">
+            <ul ic-init="list=model" ic-if="list">
+                <li ic-for="i,v in list" ic-class="{{i==0?'active':''}}" ic-type-item="{{v.name}}">
+                     <span class="" ic-bind="v.name"></span>
+                </li>
+            </ul>
+        </div>
+
     </div>
 
     <!-- 创建通达信自定义数据文件 -->
