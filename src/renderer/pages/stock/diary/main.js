@@ -20,14 +20,6 @@ import 'froala-editor/js/froala_editor.pkgd.min.js'
 import _ from 'lodash'
 import utils from '../../../js/utils'
 
-// 把当前日期转换为 yyyy-mm-dd格式
-window.jFormatDate = () => {
-    let d = new Date;
-    return d.toLocaleDateString().split('/').map((v) => {
-        return v.length > 1 ? v : '0' + v;
-    }).join('-');
-};
-
 
 brick.reg('diaryCtrl', function () {
 

@@ -6,7 +6,7 @@
                 <h6>股票名称</h6>
                 <div>
                     <div class="control">
-                        <input class="input is-medium" type="text" name="股票名称" value="{{plan['股票名称']}}" ic-form-field ic-field-rule="required">
+                        <input class="input is-medium" type="text" name="股票名称" value="{{ plan['股票名称'] || formatDate() }}" ic-form-field ic-field-rule="required">
                         <input type="hidden" name="id" value="{{plan.id}}" ic-form-field>
                     </div>
                 </div>

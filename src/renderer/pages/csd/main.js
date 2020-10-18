@@ -41,7 +41,7 @@ brick.reg('mainCtrl', function (scope) {
 
     scope.csdPath = model.csdPath;
     scope.tdx_extern_user_file = model.tdx_extern_user_file;
-    scope.tdxProps = ['概念', '概念y', '产品', '业务', '全名', '备注', '概念z'];
+    scope.tdxProps = ['概念', '概念y', '产品', '业务', '全名', '备注', '概念z', '亮点'];
 
     console.log(model);
 

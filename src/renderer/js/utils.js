@@ -16,14 +16,14 @@ function _isUrlPath (path) {
  * @return {String|void}
  */
 function parseImgName (path) {
-    if(!path || typeof path !== 'string') return console.log(path);
+    if (!path || typeof path !== 'string') return console.log(path);
     path = _isUrlPath(path) ? decodeURIComponent(path) : path;
     let arr = path.match(/^.+-(.+)-\d{6}\.png$/);
     return arr && arr[1] || path;
 }
 
 function parseImgPath (path) {
-    if(!path) return console.log(path);
+    if (!path) return console.log(path);
     return _isUrlPath(path) ? path : `${ FILE_PATH }=${ path }`;
 }
 
@@ -35,7 +35,7 @@ function parseImgPath (path) {
  */
 function countTag (arr) {
     let result = {};
-    arr.forEach( (v, i) => {
+    arr.forEach((v, i) => {
         result[v] = (result[v] || 0) + 1;
     });
     return result;
@@ -47,14 +47,24 @@ function countTag (arr) {
  * @param param2
  * @returns {number}
  */
-function sortByPy(param1, param2) {
+function sortByPy (param1, param2) {
     return param1.localeCompare(param2, "zh");
+}
+
+// 把当前日期转换为 yyyy-mm-dd格式
+function formatDate () {
+    let d = new Date;
+    return d.toLocaleDateString().split('/').map((v) => {
+        return v.length > 1 ? v : '0' + v;
+    }).join('-');
 }
 
 try {
 
     window.parseImgName = parseImgName;
     window.parseImgPath = parseImgPath;
+    window.sortByPy = sortByPy;
+    window.formatDate = formatDate;
 
 } catch (e) {
     console.error(e)

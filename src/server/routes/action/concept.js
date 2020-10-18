@@ -58,7 +58,7 @@ function getConceptByKey (key) {
     let arr = getAllConcept();
     let reg = new RegExp(key, 'img');
 
-    let result = arr.filter( (item, i,) => {
+    return arr.filter( (item, i,) => {
         if (_.isObject(item)) {
             let result = _.filter(item, function (v) {
                 return reg.test(v);
@@ -69,18 +69,6 @@ function getConceptByKey (key) {
         }
     });
 
-    /*let result = _.filter(_pool, function (item, i, list) {
-        if (_.isObject(item)) {
-            let result = _.filter(item, function (item) {
-                return reg.test(item);
-            });
-            return result.length;
-        } else {
-            return reg.test(item);
-        }
-    });*/
-    console.log(result);
-    return result;
 }
 
 export default {
