@@ -10,8 +10,8 @@
 		"interval": 90,
 		"duration": 17,
 		"timestamp": 1602572831758,
-		"promptTimes": 2,
-		"prevPromptTime": 1602911264469,
+		"promptTimes": 1,
+		"prevPromptTime": 1603121539903,
 		"complete": true
 	},
 	{
@@ -48,9 +48,7 @@
 		"repeat": 9,
 		"interval": 45,
 		"duration": 47,
-		"timestamp": 1599391604451,
-		"promptTimes": 1,
-		"prevPromptTime": 1602918320469
+		"timestamp": 1599391604451
 	},
 	{
 		"name": "",
@@ -62,9 +60,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599401260764,
-		"promptTimes": 1,
-		"prevPromptTime": 1602921922390
+		"timestamp": 1599401260764
 	},
 	{
 		"name": "",
@@ -76,9 +72,7 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599388379024,
-		"promptTimes": 1,
-		"prevPromptTime": 1602920122527
+		"timestamp": 1599388379024
 	},
 	{
 		"name": "",
@@ -90,9 +84,7 @@
 		"repeat": 5,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599277516060,
-		"promptTimes": 1,
-		"prevPromptTime": 1602923721105
+		"timestamp": 1599277516060
 	},
 	{
 		"name": "",
@@ -104,9 +96,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599293279369,
-		"promptTimes": 1,
-		"prevPromptTime": 1602925521141
+		"timestamp": 1599293279369
 	},
 	{
 		"name": "",
@@ -118,9 +108,7 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1598963764706,
-		"promptTimes": 1,
-		"prevPromptTime": 1602927321139
+		"timestamp": 1598963764706
 	},
 	{
 		"name": "",
@@ -132,10 +120,7 @@
 		"repeat": 7,
 		"interval": 50,
 		"duration": 47,
-		"timestamp": 1598523956216,
-		"promptTimes": 2,
-		"prevPromptTime": 1603005074824,
-		"complete": true
+		"timestamp": 1598523956216
 	},
 	{
 		"name": "",
@@ -147,10 +132,7 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 30,
-		"timestamp": 1594995614163,
-		"promptTimes": 1,
-		"prevPromptTime": 1602930921196,
-		"complete": true
+		"timestamp": 1594995614163
 	},
 	{
 		"name": "",
@@ -162,10 +144,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1597160146691,
-		"promptTimes": 1,
-		"prevPromptTime": 1602932721182,
-		"complete": true
+		"timestamp": 1597160146691
 	},
 	{
 		"name": "问题",
@@ -177,9 +156,7 @@
 		"content": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的很多盈利都是因为我买入了，而不是我判断正确。甚至我后悔买入，但是大赚；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我的主观看法和市场很多时候是背离的。 但我会因为主观判断临盘犹豫，错失机会。 &nbsp;怎么解决？</strong></span></p><p><br></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>以市场的客观表现做为操作依据；而不是我的主观判断；因为我对市场理解不够；我的主观判断并没有优势；</strong></span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>或者我找到我的主观判断有优势的地方去发挥；比如市场心理，博弈周期；</strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\">我需要明确的一致性；这是当前最需要解决的问题</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>消息 与 技术 两者如何权衡&nbsp;</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>主观 vs 客观 vs 机械 vs 技术 vs 逻辑</strong></span></p><p><span style=\"font-size: 16px;\">问题在于主观和机械之间的选择？ 我应该选机械还是主观？</span></p><p><span style=\"font-size: 16px;\">我的主观不一定契合市场的客观机会？</span></p><p><span style=\"font-size: 16px;\">消息没有别人快，题材解读不如别人，完全以技术优先吗？但单纯以K线技术做判断，确定性不高。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我的临盘犹豫丧失了多少机会和时间。我的主观是我临盘犹豫的最大障碍。 怎么解决？怎么解决？怎么解决？</span></p><p><span style=\"font-size: 16px;\">没有百分百，只有大概率；我应该追求大概率的优势，而不是寄望于单次机会。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">分仓竞价买入； 市场反映一切； 概率优势；</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我最初想到竞价系统是为了低点买入，降低成本。</span></p>",
 		"timestamp": 1588771295970,
 		"singleWindow": "",
-		"duration": 24,
-		"promptTimes": 3,
-		"prevPromptTime": 1603010476773
+		"duration": 24
 	},
 	{
 		"name": "",
@@ -191,9 +168,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334,
-		"promptTimes": 2,
-		"prevPromptTime": 1603008676707
+		"timestamp": 1595590485334
 	},
 	{
 		"name": "日程",
@@ -205,10 +180,7 @@
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px;\">我从来没有做好次日的交易计划。既无预判，也没有推演，更无应对。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">然后交易时傻乎乎看着盘面，被动应对，临盘犹豫，手足无措、脑子一热随意交易。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是主观预判市场弱，<strong><span style=\"background-color: rgb(255, 255, 0);\">缺乏准备</span></strong>；结果市场转强，就手足无措；<strong><span style=\"background-color: rgb(255, 255, 0);\">连标的都没有；</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 16px;\">尤其是放弃了打板这一手法后，干脆就不知道做什么了。我不是控制力好，我其实是不知道做什么。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">主线热点，资金方向，资金类型，强弱</span></p><p><span style=\"font-size: 16px;\">1. 先确定主线热点； 这是支撑我的交易逻辑之一。热钱所在，行情所在。</span></p><p><span style=\"font-size: 16px;\">2. 根据主线热点，选择标的。</span></p><p><span style=\"font-size: 16px;\">3. 预判推演标的走势，做出对应的应对计划。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">大盘会涨会跌？大盘处在何种阶段？哪里有机会？ 哪里有风险？ 方向：机构蓝筹趋势？ 热钱情绪题材?</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">热点龙头个股会涨会跌？ 能追涨吗？ 能低吸吗？ 盈亏比几何？</span></p>",
 		"timestamp": 1580821790410,
 		"duration": 34,
-		"singleWindow": "stock_replay",
-		"promptTimes": 1,
-		"prevPromptTime": 1602938121205,
-		"complete": true
+		"singleWindow": "stock_replay"
 	},
 	{
 		"name": "",
@@ -222,8 +194,7 @@
 		"duration": 45,
 		"timestamp": 1594895079041,
 		"promptTimes": 1,
-		"prevPromptTime": 1602939921254,
-		"complete": true
+		"prevPromptTime": 1603090942142
 	},
 	{
 		"name": "错误",
@@ -236,8 +207,8 @@
 		"timestamp": 1588940500338,
 		"singleWindow": "",
 		"duration": 160,
-		"promptTimes": 2,
-		"prevPromptTime": 1603012276118,
+		"promptTimes": 1,
+		"prevPromptTime": 1603092742076,
 		"complete": true
 	},
 	{
@@ -250,10 +221,7 @@
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">准备交易计划</span></strong></p><p><span style=\"font-size: 18px;\"><strong>1. <span style=\"background-color: rgb(255, 255, 0);\">大局观</span>：当前市场状态是什么？ 赚钱效应；亏钱效应；风险和机会是什么？&nbsp;</strong></span></p><p><strong><span style=\"font-size: 18px;\">2. <span style=\"background-color: rgb(255, 255, 0);\">热点</span>：风口选股：&nbsp;</span></strong></p><p><strong><span style=\"font-size: 18px;\">3. <span style=\"background-color: rgb(255, 255, 0);\">龙头</span>：当下市场的核心股是什么？有没有介入机会？主升浪启动？低吸弱转强？分歧转一致？</span></strong></p><p><span style=\"font-size: 18px;\"><strong>4. <span style=\"background-color: rgb(255, 255, 0);\">做好预期外的应对</span>：假如热钱出击，资金的方向会是哪里？你做好准备了吗？</strong></span></p><p><br></p><p><strong><span style=\"font-size: 18px;\">1. 遍历交易系统；寻找交易标的；</span></strong></p><p><span style=\"font-size: 18px;\"><strong>2. 做烂板上冲、连续上冲假设推演；热点龙头走势的低吸追涨预案。</strong></span></p><p><span style=\"font-size: 18px;\"><strong>3. 弱转强；分歧转一致；</strong></span></p><p><strong><span style=\"font-size: 18px;\">4. 我从来都对预期外的反转措手不及。做市场转强，热钱出击的推演；不要因为市场悲观向下就无准备；</span></strong></p>",
 		"timestamp": 1577664169847,
 		"singleWindow": "",
-		"duration": 140,
-		"promptTimes": 1,
-		"prevPromptTime": 1602941721541,
-		"complete": true
+		"duration": 140
 	},
 	{
 		"name": "",
@@ -267,7 +235,7 @@
 		"duration": 47,
 		"timestamp": 1594365344529,
 		"promptTimes": 1,
-		"prevPromptTime": 1602943521584,
+		"prevPromptTime": 1603094541950,
 		"complete": true
 	},
 	{
@@ -281,8 +249,8 @@
 		"timestamp": 1582296291296,
 		"singleWindow": "",
 		"duration": 17,
-		"promptTimes": 2,
-		"prevPromptTime": 1603014076307,
+		"promptTimes": 1,
+		"prevPromptTime": 1603096341829,
 		"complete": true
 	},
 	{
@@ -296,8 +264,8 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1594896086224,
-		"promptTimes": 3,
-		"prevPromptTime": 1603021276387
+		"promptTimes": 1,
+		"prevPromptTime": 1603098141823
 	},
 	{
 		"name": "日程",
@@ -311,8 +279,7 @@
 		"singleWindow": "",
 		"duration": 60,
 		"promptTimes": 1,
-		"prevPromptTime": 1603017676581,
-		"complete": true
+		"prevPromptTime": 1603099941794
 	},
 	{
 		"name": "",
@@ -338,8 +305,7 @@
 		"singleWindow": "",
 		"duration": 24,
 		"promptTimes": 1,
-		"prevPromptTime": 1603019476394,
-		"complete": true
+		"prevPromptTime": 1603101741805
 	},
 	{
 		"name": "",
@@ -441,6 +407,7 @@
 		"singleWindow": "",
 		"duration": 24,
 		"promptTimes": 1,
-		"prevPromptTime": 1603023075490
+		"prevPromptTime": 1603103540673,
+		"complete": true
 	}
 ]

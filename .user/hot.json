@@ -1,7 +1,17 @@
 [
 	{
-		"id": "纺织",
+		"id": "燃气",
+		"selected": false,
+		"timestamp": 1603064777065
+	},
+	{
+		"id": "量子",
 		"selected": true,
+		"timestamp": 1603064768025
+	},
+	{
+		"id": "纺织",
+		"selected": false,
 		"timestamp": 1602911093267
 	},
 	{
@@ -11,12 +21,12 @@
 	},
 	{
 		"id": "光伏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1600643622777
 	},
 	{
 		"id": "风电",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1600383573738
 	},
 	{
@@ -101,7 +111,7 @@
 	},
 	{
 		"id": "业绩预增",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1594595813324
 	},
 	{
@@ -171,7 +181,7 @@
 	},
 	{
 		"id": "医疗器械",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1589417250291
 	},
 	{
@@ -236,7 +246,7 @@
 	},
 	{
 		"id": "生物疫苗",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579613298327
 	},
 	{
