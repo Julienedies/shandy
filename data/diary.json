@@ -1,5 +1,55 @@
 [
 	{
+		"id": "7692277",
+		"tag": [
+			"交易逻辑",
+			"交易系统",
+			"市场理解力",
+			"要解决的问题"
+		],
+		"date": "2020-10-28",
+		"text": "<p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">深刻理解趋势。趋势是市场非常重要的本质。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">短线生态也是非常重要的市场本质，这是理解市场参与者行为逻辑的关键。</span></strong></p>",
+		"timestamp": 1603876162399
+	},
+	{
+		"id": "2803587",
+		"tag": [
+			"心态和控制力",
+			"要解决的问题"
+		],
+		"date": "2020-10-27",
+		"text": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我的性格是交易的最大阻碍。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">优柔寡断、三心二意、没有耐心；</span></strong></p>",
+		"timestamp": 1603760367209
+	},
+	{
+		"id": "0254278",
+		"tag": [
+			"交易模式",
+			"交易系统",
+			"要解决的问题"
+		],
+		"date": "2020-10-26",
+		"text": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">衡山五神剑、爱学习的人</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">两者都是根据龙头做低位补涨。</span></strong></p>",
+		"timestamp": 1603718732662
+	},
+	{
+		"id": "3055915",
+		"tag": [
+			"心态和控制力",
+			"要解决的问题"
+		],
+		"date": "2020-10-26",
+		"text": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">想回本，止损犹疑，贪婪，怕踏空，本质都是利令智昏。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">交易只有对错，交易只有对错。把事情做对，把事情做对。</span></strong></p>",
+		"timestamp": 1603718098987
+	},
+	{
+		"id": "3826417",
+		"tag": "",
+		"date": "2020-10-24",
+		"text": "<p>简单纯粹取舍，优化一下竞价系统。</p>",
+		"timestamp": 1603553151703
+	},
+	{
 		"id": "6640820",
 		"tag": [
 			"要解决的问题"

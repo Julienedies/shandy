@@ -1,12 +1,22 @@
 [
 	{
+		"id": "注册制次新股",
+		"selected": false,
+		"timestamp": 1603670047271
+	},
+	{
+		"id": "充电桩",
+		"selected": true,
+		"timestamp": 1603590652087
+	},
+	{
 		"id": "网络直播",
 		"selected": false,
 		"timestamp": 1603324224132
 	},
 	{
 		"id": "电子商务",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1603324205453
 	},
 	{
@@ -31,7 +41,7 @@
 	},
 	{
 		"id": "光伏",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1600643622777
 	},
 	{
@@ -71,7 +81,7 @@
 	},
 	{
 		"id": "蚂蚁金服",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1595378589411
 	},
 	{
@@ -211,7 +221,7 @@
 	},
 	{
 		"id": "网红经济",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578926303652
 	}
 ]

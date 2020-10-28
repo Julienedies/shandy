@@ -13,7 +13,7 @@ export default function (f) {
     console.time('截图ocr');
     capture({
         returnType: 'dataUrl',
-        crop: {x: 2530, y: 120, width: 280, height: 42},
+        crop: {x: 2500, y: 120, width: 280, height: 42},
         callback: function (dataUrl) {
             console.info("\n\n\n\n\n%c", `padding:50px 240px;background:url(${ dataUrl }) no-repeat 0 0`);
             ocr({
