@@ -1,6 +1,16 @@
 [
 	{
 		"name": "",
+		"id": "4432948",
+		"tag": "9480900",
+		"trigger": "2",
+		"content": "永远做好转强的准备。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1603897948997
+	},
+	{
+		"name": "",
 		"id": "3971338",
 		"tag": "9586736",
 		"trigger": "2",

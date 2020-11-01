@@ -15,11 +15,11 @@
 			"ycj"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 201,
+		"fetchFromIndex": 401,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
 		"hotCsvFile": "/Users/j/截图/JX.txt",
-		"fetchLimit": "200"
+		"fetchLimit": "400"
 	},
 	"warn": {
 		"randomBgImgDir": "/Users/j/pim/img/人物",
@@ -32,7 +32,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/交易记录/2010",
+		"imgDir": "/Users/j/截图/目标行情/2020-10",
 		"bounds": {
 			"x": 1440,
 			"y": 0,

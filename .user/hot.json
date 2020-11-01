@@ -31,7 +31,7 @@
 	},
 	{
 		"id": "量子",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1603064768025
 	},
 	{
@@ -41,7 +41,7 @@
 	},
 	{
 		"id": "光伏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1600643622777
 	},
 	{
