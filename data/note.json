@@ -1,5 +1,12 @@
 [
 	{
+		"id": "9585946",
+		"type": "",
+		"level": "0",
+		"text": "针对您所说更新版本后无法打开的问题，请麻烦先试试删除牛牛缓存目录，操作步骤如下：\n\n 1. 点击屏幕右上角的“搜索”按钮，输入Terminal.app，点击回车键（Enter键）打开Terminal.app(中文名为“终端”)；\n2. 在打开的Terminal.app中，输入以下命令后点击回车键（Enter键）：\n      open ~/Library/Containers/cn.futu.Niuniu\n3. 删除整个cn.futu.Niuniu目录\n\n如进行该操作后，麻烦提供一下您的\n1. 牛牛号\n2. 富途牛牛版本号",
+		"timestamp": 1604915725807
+	},
+	{
 		"text": "你输入字母\nA-现价,S-涨停价,D跌停价,F-昨收价,Z-买一价,Q卖一价,X买二价,W卖二价,C买三价,E卖三价",
 		"type": "",
 		"id": "0787580",

@@ -1,12 +1,32 @@
 [
 	{
+		"id": "化学",
+		"selected": true,
+		"timestamp": 1605537020453
+	},
+	{
+		"id": "金属",
+		"selected": true,
+		"timestamp": 1605484221330
+	},
+	{
+		"id": "有色",
+		"selected": true,
+		"timestamp": 1605484212697
+	},
+	{
+		"id": "机器人",
+		"selected": false,
+		"timestamp": 1604446236173
+	},
+	{
 		"id": "注册制次新股",
 		"selected": false,
 		"timestamp": 1603670047271
 	},
 	{
 		"id": "充电桩",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1603590652087
 	},
 	{
@@ -96,7 +116,7 @@
 	},
 	{
 		"id": "军工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1594256070569
 	},
 	{
@@ -141,7 +161,7 @@
 	},
 	{
 		"id": "医疗器械",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1589417250291
 	},
 	{
@@ -176,7 +196,7 @@
 	},
 	{
 		"id": "生物疫苗",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1579613298327
 	},
 	{
