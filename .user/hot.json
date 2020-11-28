@@ -1,5 +1,25 @@
 [
 	{
+		"id": "稀土永磁",
+		"selected": true,
+		"timestamp": 1606349943145
+	},
+	{
+		"id": "酒",
+		"selected": false,
+		"timestamp": 1606089203012
+	},
+	{
+		"id": "无人驾驶",
+		"selected": false,
+		"timestamp": 1606042765682
+	},
+	{
+		"id": "车联网",
+		"selected": false,
+		"timestamp": 1606042747484
+	},
+	{
 		"id": "化学",
 		"selected": true,
 		"timestamp": 1605537020453
@@ -30,34 +50,9 @@
 		"timestamp": 1603590652087
 	},
 	{
-		"id": "网络直播",
-		"selected": false,
-		"timestamp": 1603324224132
-	},
-	{
-		"id": "电子商务",
-		"selected": false,
-		"timestamp": 1603324205453
-	},
-	{
 		"id": "物联网",
 		"selected": false,
 		"timestamp": 1603240071091
-	},
-	{
-		"id": "燃气",
-		"selected": false,
-		"timestamp": 1603064777065
-	},
-	{
-		"id": "量子",
-		"selected": false,
-		"timestamp": 1603064768025
-	},
-	{
-		"id": "纺织",
-		"selected": false,
-		"timestamp": 1602911093267
 	},
 	{
 		"id": "光伏",
@@ -85,11 +80,6 @@
 		"timestamp": 1599435860033
 	},
 	{
-		"id": "食品",
-		"selected": false,
-		"timestamp": 1597884818557
-	},
-	{
 		"id": "航天军工",
 		"selected": false,
 		"timestamp": 1597788574237
@@ -100,28 +90,13 @@
 		"timestamp": 1595807622040
 	},
 	{
-		"id": "蚂蚁金服",
-		"selected": false,
-		"timestamp": 1595378589411
-	},
-	{
-		"id": "业绩预增",
-		"selected": false,
-		"timestamp": 1594595813324
-	},
-	{
-		"id": "半年报预增",
-		"selected": false,
-		"timestamp": 1594595812234
-	},
-	{
 		"id": "军工",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594256070569
 	},
 	{
 		"id": "锂电池",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594165362205
 	},
 	{
@@ -135,26 +110,6 @@
 		"timestamp": 1593996593340
 	},
 	{
-		"id": "跨境电商",
-		"selected": false,
-		"timestamp": 1593956295738
-	},
-	{
-		"id": "免税店",
-		"selected": false,
-		"timestamp": 1593956198333
-	},
-	{
-		"id": "新零售",
-		"selected": false,
-		"timestamp": 1591104219974
-	},
-	{
-		"id": "今日头条",
-		"selected": false,
-		"timestamp": 1590917148535
-	},
-	{
 		"id": "新股与次新股",
 		"selected": false,
 		"timestamp": 1589699376910
@@ -165,16 +120,6 @@
 		"timestamp": 1589417250291
 	},
 	{
-		"id": "新冠检测",
-		"selected": false,
-		"timestamp": 1587473744976
-	},
-	{
-		"id": "金融科技",
-		"selected": false,
-		"timestamp": 1587084956886
-	},
-	{
 		"id": "医药",
 		"selected": false,
 		"timestamp": 1586706080874
@@ -183,11 +128,6 @@
 		"id": "非科创次新股",
 		"selected": false,
 		"timestamp": 1584922603372
-	},
-	{
-		"id": "光刻胶",
-		"selected": false,
-		"timestamp": 1582069232767
 	},
 	{
 		"id": "光伏概念",
@@ -238,10 +178,5 @@
 		"id": "芯片概念",
 		"selected": false,
 		"timestamp": 1578926303653
-	},
-	{
-		"id": "网红经济",
-		"selected": false,
-		"timestamp": 1578926303652
 	}
 ]

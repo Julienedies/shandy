@@ -230,7 +230,7 @@ brick.reg('mainCtrl', function (scope) {
     scope.openReminder = function () {
         let reminderWin = scope.reminderWin;
         if (reminderWin) {
-            reminderWin.close();
+            //reminderWin.close();
         } else {
             let name = 'reminder';
             let url = 'reminder.html';
@@ -239,6 +239,12 @@ brick.reg('mainCtrl', function (scope) {
                 url,
                 ...getBounds(name),
                 frame: false,
+                simpleFullscreen: true,
+                //frame: false,
+                //transparent: true,
+                //titleBarStyle: 'hidden',
+                //hasShadow: false,
+                alwaysOnTop: true,
                 //fullscreen: true,
                 onClose: () => {
                     delete scope.reminderWin;

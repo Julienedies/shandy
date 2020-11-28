@@ -2106,7 +2106,7 @@
 		"timestamp": 1562998416497,
 		"disable": false,
 		"type": "action",
-		"repeat": 3,
+		"repeat": 2,
 		"tag": ""
 	},
 	{
@@ -2117,7 +2117,7 @@
 		"timestamp": 1576661024135,
 		"disable": false,
 		"type": "action",
-		"repeat": 3,
+		"repeat": 2,
 		"tag": ""
 	},
 	{
@@ -2127,7 +2127,7 @@
 		"content": "不要他妈的临盘随意交易；\n( 君正集团、亚光科技、光启技术、中天金融、神州泰岳 )\n你的交易系统是什么？\n",
 		"timestamp": 1576660953345,
 		"type": "action",
-		"repeat": 3,
+		"repeat": 2,
 		"tag": ""
 	},
 	{
