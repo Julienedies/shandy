@@ -1,6 +1,116 @@
 [
 	{
 		"name": "",
+		"id": "2143653",
+		"tag": "4893750",
+		"trigger": "2",
+		"content": "择时的重要性，我总是错过最好的时机。",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1607957971409
+	},
+	{
+		"name": "",
+		"id": "4788276",
+		"tag": "9586736",
+		"trigger": "2",
+		"content": "不能被恐惧和贪婪的心态控制，根据盘面客观跟随。\n恐惧让我不敢买，贪婪让我随意买。",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1607956427085
+	},
+	{
+		"name": "",
+		"id": "1440225",
+		"tag": "4109794",
+		"trigger": "3",
+		"content": "不要为加仓而加仓，不要想着钱，而是把事情做对。",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1607906849902
+	},
+	{
+		"name": "",
+		"id": "5421715",
+		"tag": "4109794",
+		"trigger": "5",
+		"content": "我的目标行情是转折行情，恐惧转贪婪、分歧转一致；弱转强；\n其次是热点板块行情；",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1607265632250
+	},
+	{
+		"name": "",
+		"id": "1315626",
+		"tag": "9586736",
+		"trigger": "3",
+		"content": "我为什么总是卖飞。\n每个正确的头寸的都卖飞了。\n下杀恐慌。",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1607080897606
+	},
+	{
+		"name": "",
+		"id": "6950641",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "临盘随意交易，无系统交易是我最大的亏损来源，是我一直重复的\b错误。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1606618310352
+	},
+	{
+		"name": "",
+		"id": "5010611",
+		"tag": "5511909",
+		"trigger": "1",
+		"content": "为什么我总是错过大行情；行情走出来才后知后觉。\n错过白酒行情、错过有色行情、错过汽车行情、错过金融行情。\n",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1607080778750
+	},
+	{
+		"name": "",
+		"id": "1446590",
+		"tag": "0238231",
+		"trigger": "2",
+		"content": "为什么我会错过白酒行情、汽车行情、有色行情、金融行情？\n因为我没有大局观、对市场理解不够。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1607039461698
+	},
+	{
+		"name": "",
+		"id": "2765805",
+		"tag": "4109794",
+		"trigger": "2",
+		"content": "没有系统的约束，盘中我总是会有各种臆想，一有上冲，就会臆想大涨。",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1606898689447
+	},
+	{
+		"name": "",
+		"id": "5313644",
+		"tag": "4109794",
+		"trigger": "1",
+		"content": "我要捕捉的行情是什么？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1606897423561
+	},
+	{
+		"name": "",
+		"id": "1051731",
+		"trigger": "1",
+		"content": "支撑我的交易逻辑是什么？\n我要捕捉的目标行情是什么？\n我的交易系统模型是什么？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1590839076503,
+		"tag": "4109794"
+	},
+	{
+		"name": "",
 		"id": "7820821",
 		"tag": "4109794",
 		"trigger": "1",
@@ -23,9 +133,9 @@
 		"name": "",
 		"id": "3971338",
 		"tag": "9586736",
-		"trigger": "2",
+		"trigger": "3",
 		"content": "想回本，止损犹疑，贪婪，怕踏空，本质都是利令智昏。\n交易只有对错，交易只有对错。把事情做对，把事情做对。\n不要想着钱；不要想着钱；不要想着钱；",
-		"repeat": 3,
+		"repeat": 1,
 		"type": "interval",
 		"timestamp": 1603718143392
 	},
@@ -43,12 +153,12 @@
 		"name": "",
 		"id": "8423814",
 		"tag": "9480900",
-		"trigger": "1",
+		"trigger": "5",
 		"content": "你准备好交易品种了吗？\n最好的交易机会转瞬即逝。",
-		"repeat": 3,
+		"repeat": 2,
 		"type": "interval",
 		"timestamp": 1600055732646,
-		"disable": true
+		"disable": false
 	},
 	{
 		"name": "",
@@ -130,9 +240,9 @@
 		"name": "",
 		"id": "9840181",
 		"tag": "0238231",
-		"trigger": "2",
+		"trigger": "5",
 		"content": "大局观：\n市场状态是最重要的系统变量；市场状态是最重要的系统变量；\n节奏周期；主线热点\b；\n当前的市场是在变强还是变弱？\n当前市场处在什么周期和阶段？\n赚钱效应如何？亏钱效应如何？\n风险是什么？机会是什么? 热点是什么？\n我对市场总是后知后觉；",
-		"repeat": 3,
+		"repeat": 1,
 		"type": "interval",
 		"timestamp": 1594893731992
 	},
@@ -151,9 +261,9 @@
 		"name": "",
 		"id": "2645412",
 		"tag": "9586736",
-		"trigger": "1",
+		"trigger": "3",
 		"content": "你\b今天有交易计划吗？\n交易系统明确吗？",
-		"repeat": 3,
+		"repeat": 2,
 		"type": "interval",
 		"timestamp": 1597055352458
 	},
@@ -184,7 +294,7 @@
 		"tag": "4757788",
 		"trigger": "5",
 		"content": "你不做当前的\b热点，不做当前的龙头，你要他妈做什么？",
-		"repeat": 3,
+		"repeat": 1,
 		"type": "interval",
 		"timestamp": 1596979074914
 	},
@@ -218,16 +328,6 @@
 		"timestamp": 1587208620664,
 		"disable": false,
 		"tag": "6462480"
-	},
-	{
-		"name": "",
-		"id": "1051731",
-		"trigger": "1",
-		"content": "支撑我的交易逻辑是什么？\n我要捕捉的目标行情是什么？\n我的交易系统模型是什么？",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1590839076503,
-		"tag": "4109794"
 	},
 	{
 		"name": "",

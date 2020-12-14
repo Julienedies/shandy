@@ -3,16 +3,13 @@
 		"name": "",
 		"id": "7493394",
 		"type": "",
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><u>一直重复的错误：</u></span></strong></p><p><strong><span style=\"font-size: 22px;\"><br></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">临盘随意交易，无系统交易是我最大的亏损来源；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有大局观，对手市场理解不够：</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">行情启动时犹豫，行情退潮时管不住手；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">看看我怎么操作航新转债，上涨时急于卖出，下跌时却去买入；</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><u>一直重复的错误：</u></span></strong></p><p><strong><span style=\"font-size: 22px;\"><br></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">临盘随意交易，无系统交易是我最大的亏损来源；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有大局观，对市场理解不够：</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">行情启动时犹豫，行情退潮时管不住手；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">看看我怎么操作航新转债，上涨时急于卖出，下跌时却去买入；</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1606540540693,
-		"promptTimes": 1,
-		"prevPromptTime": 1606572567920,
-		"complete": true
+		"timestamp": 1606540540693
 	},
 	{
 		"name": "",
@@ -24,10 +21,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1606567297957,
-		"promptTimes": 1,
-		"prevPromptTime": 1606574370315,
-		"complete": true
+		"timestamp": 1606567297957
 	},
 	{
 		"name": "",
@@ -39,10 +33,7 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 30,
-		"timestamp": 1594995614163,
-		"promptTimes": 1,
-		"prevPromptTime": 1606491241486,
-		"complete": true
+		"timestamp": 1594995614163
 	},
 	{
 		"name": "",
@@ -54,10 +45,7 @@
 		"singleWindow": "",
 		"interval": 90,
 		"duration": 47,
-		"timestamp": 1594365344529,
-		"promptTimes": 1,
-		"prevPromptTime": 1606576170225,
-		"complete": true
+		"timestamp": 1594365344529
 	},
 	{
 		"name": "",
@@ -70,8 +58,8 @@
 		"interval": 90,
 		"duration": 17,
 		"timestamp": 1602572831758,
-		"promptTimes": 2,
-		"prevPromptTime": 1606538399638,
+		"promptTimes": 1,
+		"prevPromptTime": 1607909544373,
 		"complete": true
 	},
 	{
@@ -86,7 +74,8 @@
 		"duration": 47,
 		"timestamp": 1600596359187,
 		"promptTimes": 1,
-		"prevPromptTime": 1606547435482
+		"prevPromptTime": 1607930574355,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -98,7 +87,10 @@
 		"repeat": 5,
 		"interval": 50,
 		"duration": 47,
-		"timestamp": 1600266768199
+		"timestamp": 1600266768199,
+		"promptTimes": 1,
+		"prevPromptTime": 1607934175219,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -111,8 +103,9 @@
 		"interval": 45,
 		"duration": 47,
 		"timestamp": 1599391604451,
-		"promptTimes": 1,
-		"prevPromptTime": 1606549236395
+		"promptTimes": 2,
+		"prevPromptTime": 1607935974873,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -126,7 +119,7 @@
 		"duration": 47,
 		"timestamp": 1599401260764,
 		"promptTimes": 1,
-		"prevPromptTime": 1606551033798,
+		"prevPromptTime": 1607937774494,
 		"complete": true
 	},
 	{
@@ -141,7 +134,7 @@
 		"duration": 47,
 		"timestamp": 1599388379024,
 		"promptTimes": 1,
-		"prevPromptTime": 1606552833621,
+		"prevPromptTime": 1607939574258,
 		"complete": true
 	},
 	{
@@ -156,8 +149,7 @@
 		"duration": 47,
 		"timestamp": 1599277516060,
 		"promptTimes": 1,
-		"prevPromptTime": 1606554633671,
-		"complete": true
+		"prevPromptTime": 1607941375321
 	},
 	{
 		"name": "",
@@ -171,7 +163,7 @@
 		"duration": 47,
 		"timestamp": 1599293279369,
 		"promptTimes": 1,
-		"prevPromptTime": 1606556433817,
+		"prevPromptTime": 1607943175311,
 		"complete": true
 	},
 	{
@@ -186,7 +178,7 @@
 		"duration": 47,
 		"timestamp": 1598963764706,
 		"promptTimes": 1,
-		"prevPromptTime": 1606558233794,
+		"prevPromptTime": 1607944975237,
 		"complete": true
 	},
 	{
@@ -201,7 +193,8 @@
 		"duration": 47,
 		"timestamp": 1598523956216,
 		"promptTimes": 1,
-		"prevPromptTime": 1606560033702
+		"prevPromptTime": 1607946775263,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -215,7 +208,7 @@
 		"duration": 47,
 		"timestamp": 1597160146691,
 		"promptTimes": 1,
-		"prevPromptTime": 1606561833343
+		"prevPromptTime": 1607948575284
 	},
 	{
 		"name": "问题",
@@ -229,13 +222,14 @@
 		"singleWindow": "",
 		"duration": 24,
 		"promptTimes": 1,
-		"prevPromptTime": 1606563633339
+		"prevPromptTime": 1607950373748,
+		"complete": true
 	},
 	{
 		"name": "",
 		"id": "5441430",
 		"type": "",
-		"content": "<p><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>我为何总是错失大行情，抓不住机会？&nbsp;</strong></span></p><p><span style=\"font-size: 18px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">1. 没有大局观；对市场状态和热点方向，总是后知后决。总是踏错节奏；</span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 18px;;background-color: rgb(148, 0, 211);\">2. 三心二意；没有专注于明确的模式；机会到来时犹豫不决，错失机会；</span></span></p><p><span style=\"font-size: 18px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">3. 主观，先入为主； 对预期外的状况措手不及。</span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">这是我当前的问题所在，我的思维方式有问题&nbsp;</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">类似光大证券、中航沈飞；航天彩虹；王府井；中国中免；中船防务等股票；</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">为什么我抓不住？它们都在我的自选里；</span></strong></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我为什么会错过牛市行情？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">上涨的过程中；我总是担心会跌；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我不敢做那些高位票，风险是没有；但是也放弃了机会；关键是概率优势；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">盈亏同源；保持交易一致性；我没有做到。我总是首上次交易的影响，左右被打脸。</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">客观跟随，客观跟随；市场反映一切；</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">历史一直在重复；我却为什么抓不住机会？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我对K线的理解非常差；市场是多空动态博弈的；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>本周我错过的票；这不是偶然的，这说明我的思维方式有问题，才会错过这么多机会；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>譬如中航沈飞、中船防务、西藏药业；东富龙；金达威；复星医药；航天彩虹；海利生物；沈阳化工；智飞生物；中国中免；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我好像只有线性思维；下跌就看空；上涨担心回落；没有大局观，看不到大势；</strong></span></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">股票的K线走势，我好多都没有理解，所以自然抓不住机会；</span></strong></p>",
+		"content": "<p><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>我为何总是错失大行情，抓不住机会？&nbsp;</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">1. 没有大局观；对市场状态和热点方向，总是后知后决。总是踏错节奏；</span></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\">2. 三心二意；没有专注于明确的模式；机会到来时犹豫不决，错失机会；</span></span></span></p><p><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">3. 主观，先入为主； 对预期外的状况措手不及。</span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">这是我当前的问题所在，我的思维方式有问题&nbsp;</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">类似光大证券、中航沈飞；航天彩虹；王府井；中国中免；中船防务等股票；</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">为什么我抓不住？它们都在我的自选里；</span></strong></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我为什么会错过牛市行情？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">上涨的过程中；我总是担心会跌；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我不敢做那些高位票，风险是没有；但是也放弃了机会；关键是概率优势；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">盈亏同源；保持交易一致性；我没有做到。我总是首上次交易的影响，左右被打脸。</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">客观跟随，客观跟随；市场反映一切；</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">历史一直在重复；我却为什么抓不住机会？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我对K线的理解非常差；市场是多空动态博弈的；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>本周我错过的票；这不是偶然的，这说明我的思维方式有问题，才会错过这么多机会；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>譬如中航沈飞、中船防务、西藏药业；东富龙；金达威；复星医药；航天彩虹；海利生物；沈阳化工；智飞生物；中国中免；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我好像只有线性思维；下跌就看空；上涨担心回落；没有大局观，看不到大势；</strong></span></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">股票的K线走势，我好多都没有理解，所以自然抓不住机会；</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
@@ -243,7 +237,8 @@
 		"duration": 47,
 		"timestamp": 1595590485334,
 		"promptTimes": 1,
-		"prevPromptTime": 1606565433330
+		"prevPromptTime": 1607952175243,
+		"complete": true
 	},
 	{
 		"name": "日程",
@@ -257,7 +252,7 @@
 		"duration": 34,
 		"singleWindow": "stock_replay",
 		"promptTimes": 1,
-		"prevPromptTime": 1606567233380,
+		"prevPromptTime": 1607953975287,
 		"complete": true
 	},
 	{
@@ -272,8 +267,7 @@
 		"duration": 45,
 		"timestamp": 1594895079041,
 		"promptTimes": 1,
-		"prevPromptTime": 1606460643858,
-		"complete": true
+		"prevPromptTime": 1607955775012
 	},
 	{
 		"name": "错误",
@@ -287,7 +281,7 @@
 		"singleWindow": "",
 		"duration": 160,
 		"promptTimes": 1,
-		"prevPromptTime": 1606462443728,
+		"prevPromptTime": 1607957574732,
 		"complete": true
 	},
 	{
@@ -302,7 +296,7 @@
 		"singleWindow": "",
 		"duration": 140,
 		"promptTimes": 1,
-		"prevPromptTime": 1606569033235,
+		"prevPromptTime": 1607959374493,
 		"complete": true
 	},
 	{
@@ -315,10 +309,7 @@
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">我为何总是临盘犹豫，错过机会？</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">1. 准备不足；</span></strong></span></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>2. 系统不明确；</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">3. 本能贪便宜，畏高。</span></strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我必须在很短的时间做出决定；尤其是股市变量很多；</span></p><p><span style=\"font-size: 16px;\">导致很容易犯错，尤其是亏钱状态不好的时候；</span></p><p><span style=\"font-size: 16px;\">必须纯粹，精简自己的系统，快速反应！</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；</span></p><p><span style=\"font-size: 16px;\">1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）</span></p><p><span style=\"font-size: 16px;\">2: 热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；</span></p>",
 		"timestamp": 1582296291296,
 		"singleWindow": "",
-		"duration": 17,
-		"promptTimes": 1,
-		"prevPromptTime": 1606464242451,
-		"complete": true
+		"duration": 17
 	},
 	{
 		"name": "",
@@ -330,10 +321,7 @@
 		"singleWindow": "",
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1594896086224,
-		"promptTimes": 1,
-		"prevPromptTime": 1606466042451,
-		"complete": true
+		"timestamp": 1594896086224
 	},
 	{
 		"name": "日程",
@@ -345,9 +333,7 @@
 		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">复盘</span></strong></p><p>资金在哪个方向？ 机构资金在哪里？ 热钱资金在哪里？ 趋势资金在哪里？ 短线资金在哪里？</p><p><br></p><p>我复盘主要是看昨天的涨停板今天的赚钱效应，哪一类涨停股次日有肉，哪一类股持续有肉，今天买进的人明天能出，明天买进的人后天可以出，这就是持续的赚钱效应，这类股中最强的那个板块是人气板块。反之，今天涨停的明日闷杀，或者跑路的时间不多，机会很少，那么你就得小心这类股了。比如之前创小板赚钱效应一直不错，在6月3号的时候， 002625(光启技术) 本来之前连续一字的，当日却突然快速跌停，这时候你得注意小盘股风险了。创业板的内在走弱是从3号开始的，而指数上是从4号才开始。这就是盘感，自己长期复盘和市场天天对话的结果，而不是看别人帖子的结果。</p><p><br></p><p>查看板块指数</p><p>查看成交额最大的个股</p><p>查看龙虎榜</p><p><br></p><p>次日推演；</p><p><br></p><p>过滤上冲; 上冲意味着进攻信号；</p><p>过滤破板</p><p>要过一遍涨停池；旗形涨停值得关注；</p>",
 		"timestamp": 1577964389066,
 		"singleWindow": "",
-		"duration": 60,
-		"promptTimes": 2,
-		"prevPromptTime": 1606473242797
+		"duration": 60
 	},
 	{
 		"name": "",
@@ -371,9 +357,7 @@
 		"content": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">我只要一周赚10%，一年就可以赚到到45倍；</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">做精不做多；避免犯错；避免回撤；</span></strong></p><p><br></p><p><span style=\"font-size: 18px;\">Math.pow(1.1,40) = 45.2592555681761</span></p><p><span style=\"font-size: 18px;\">Math.pow(1.2,40) = 1469.7715679690841</span></p>",
 		"timestamp": 1581084979181,
 		"singleWindow": "",
-		"duration": 24,
-		"promptTimes": 2,
-		"prevPromptTime": 1606476842614
+		"duration": 24
 	},
 	{
 		"name": "",
@@ -473,9 +457,6 @@
 		"content": "<p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">一切有为法；一切有因果；</span></strong></span></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">不要忘记那些恐惧和痛苦；</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">时不我待，我已经37岁了；</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">我并没有本质上的改变，我还是在重复错误；</span></strong></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">那些交易原则我知道，但我没有做到知行合一；</span></strong></span></p>",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 24,
-		"promptTimes": 4,
-		"prevPromptTime": 1606489441550,
-		"complete": true
+		"duration": 24
 	}
 ]
