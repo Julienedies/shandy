@@ -191,6 +191,11 @@ brick.reg('mainCtrl', function (scope) {
         //scope.render('principle', model);
     });
 
+    // main --------------------------------------------------------
+    if (!utils.isTradingDate()) {
+        return;
+    }
+
     // 每天早上开启时，清除昨天的提醒数据,重新开始
     (function () {
         let hour = moment().hour();
