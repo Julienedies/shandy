@@ -91,7 +91,7 @@
 	},
 	{
 		"id": "风电",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1600383573738
 	},
 	{
@@ -121,7 +121,7 @@
 	},
 	{
 		"id": "军工",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1594256070569
 	},
 	{

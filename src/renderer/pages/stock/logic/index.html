@@ -15,31 +15,31 @@
 
     <div class="level">
 
-        <div class="level-left">
-            <div class="buttons has-addons">
-                <button class="button"
-                        ic-ajax
-                        ic-ajax-auto
-                        ic-submit-method="get"
-                        ic-submit-action="/stock/logic"
-                        ic-submit-on-done="onGetLogicDone">逻辑列表
-                </button>
-                <button class="button" ic-click="logic.edit">新逻辑</button>
-                <button class="button" ic-click="logic.reverse">排序反转</button>
-                <button class="button" ic-click="createReader">Reader</button>
-                <button class="button" ic-click="toggleFull">完整显示</button>
-                <button class="button" ic-click="onFilterKeyChange2">取消过滤</button>
+            <div class="level-left">
+                <div class="buttons has-addons">
+                    <button class="button"
+                            ic-ajax
+                            ic-ajax-auto
+                            ic-submit-method="get"
+                            ic-submit-action="/stock/logic"
+                            ic-submit-on-done="onGetLogicDone">逻辑列表
+                    </button>
+                    <button class="button" ic-click="logic.edit">新逻辑</button>
+                    <button class="button" ic-click="logic.reverse">排序反转</button>
+                    <button class="button" ic-click="createReader">Reader</button>
+                    <button class="button" ic-click="toggleFull">完整显示</button>
+                    <button class="button" ic-click="onFilterKeyChange2">取消过滤</button>
+                </div>
             </div>
-        </div>
 
-        <div class="level-right">
-            <div class="buttons has-addons" ic-select="sortType" ic-select-auto="false" ic-select-cla="is-primary" ic-select-on-change="onSortChange">
-                <button class="button" ic-val="level">level排序</button>
-                <button class="button" ic-val="time">时间排序</button>
+            <div class="level-right">
+                <div class="buttons has-addons" ic-select="sortType" ic-select-auto="false" ic-select-cla="is-primary" ic-select-on-change="onSortChange">
+                    <button class="button" ic-val="level">level排序</button>
+                    <button class="button" ic-val="time">时间排序</button>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
 
     <div class="columns" ic-tpl="tags">
         <div class="column is-12" ic-select="tags" ic-select-item=".tag" ic-select-auto="false" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
@@ -48,7 +48,7 @@
                 <span class="tag" ic-val="_null">null</span>
             </div>
             <div class="tags">
-                <span class="tag" ic-for="i,v in model.tradingKeyTags" ic-val="{{ v.id }}" ic-has-selected="v.id===model.filterKey">
+                <span class="tag is-dark is-medium" ic-for="i,v in model.tradingKeyTags" ic-val="{{ v.id }}" ic-has-selected="v.id===model.filterKey">
                     <!--<i ic-if="v.parentId">{{ TAGS_MAP_BY_ID[v.parentId] && TAGS_MAP_BY_ID[v.parentId].text }} ~ </i>-->
                     {{ v.text }}
                 </span>
@@ -59,7 +59,7 @@
         </div>
     </div>
 
-    <ul ic-tpl="logic" id="logicList">
+    <ul class="column is-12" ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre scroll">{{v.text}}</div>
             <div class="tar">
@@ -114,7 +114,7 @@
 
     <div class="column is-12" ic-tpl ic-tpl-init="{logic:{}, tags: {}, typeArr:{}, authorArr:{}}">
 
-        <div class="table_0" style="margin-top:-18px;" ic-form="setLogic" ic-init="logic=model.logic; tags=model.tags; typeArr=model.typeArr; authorArr=model.authorArr;">
+        <div class="table_0" style="margin-top:-18px;margin-left:-90px;" ic-form="setLogic" ic-init="logic=model.logic; tags=model.tags; typeArr=model.typeArr; authorArr=model.authorArr;">
 
             <!-- tr -->
             <div>

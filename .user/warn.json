@@ -1,6 +1,36 @@
 [
 	{
 		"name": "",
+		"id": "1664062",
+		"tag": "0238231",
+		"trigger": "2",
+		"content": "没有大局观，着眼于小波动；\n卖飞，抓不住大航情。",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1608879811988
+	},
+	{
+		"name": "",
+		"id": "5676181",
+		"tag": "4109794",
+		"trigger": "3",
+		"content": "反包、修复、低吸高潮、分歧转一致、被动下跌、",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1608871817444
+	},
+	{
+		"name": "",
+		"id": "9451056",
+		"tag": "5511909",
+		"trigger": "5",
+		"content": "我往往会以形态图形臆想后续航情走势。",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1608682738461
+	},
+	{
+		"name": "",
 		"id": "2389767",
 		"tag": "9586736",
 		"trigger": "2",
@@ -14,7 +44,7 @@
 		"id": "6974092",
 		"tag": "4109794",
 		"trigger": "2",
-		"content": "以板块热点做为最重要的交易逻辑。",
+		"content": "以板块热点做为最重要的交易变量。",
 		"repeat": 2,
 		"type": "interval",
 		"timestamp": 1608442193186

@@ -29,15 +29,15 @@
         </div>
     </div>
 
-    <div class="columns" ic-tpl="tags">
-        <div class="column is-12" ic-select="tags" ic-select-item=".tag" ic-select-auto="false" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
+    <div ic-tpl="tags">
+        <div ic-select="tags" ic-select-item=".tag" ic-select-auto="false" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
             <div class="tags">
-                <span class="tag" ic-for="i,v in model.tagArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">{{ v }}</span>
+                <span class="tag is-medium" ic-for="i,v in model.tagArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">{{ v }}</span>
             </div>
         </div>
     </div>
 
-    <ul id="diaryList" ic-tpl="diaryList">
+    <ul class="column is-12" id="diaryList" ic-tpl="diaryList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre scroll">{{v.text}}</div>
             <div class="tar">
@@ -70,7 +70,7 @@
 
 <div ic-ctrl="setDiaryCtrl" ic-popup="setDiary">
 
-    <div class="column is-10 is-offset-1" ic-tpl="setDiary">
+    <div class="column is-12" ic-tpl="setDiary">
 
         <div ic-form="setDiary" ic-init="diary=model.diary;tagArr=model.tagArr">
 

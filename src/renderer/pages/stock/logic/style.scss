@@ -33,3 +33,7 @@ a.no {
 .table_0 > * > *:first-child{
   flex: 1 1 6%;
 }
+
+.tag:not(body).is-medium{
+  font-size:0.85rem;
+}
