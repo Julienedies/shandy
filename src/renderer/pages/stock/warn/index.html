@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>todo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/hint.css"/>
+    <script src="/set_node_modules_path.js"></script>
+</head>
+<body ic-ctrl="mainCtrl">
+
+<div class="column is-10 is-offset-1" ic-ctrl="todoCtrl">
+
+    <div class="level">
+
+        <div class="level-left">
+            <div class="buttons has-addons">
+                <button class="button"
+                        ic-ajax
+                        ic-ajax-auto
+                        ic-submit-method="get"
+                        ic-submit-action="/stock/todo?type=todo"
+                        ic-submit-on-done="onGetTodoDone">todo列表
+                </button>
+                <button class="button"
+                        ic-ajax
+                        ic-submit-method="get"
+                        ic-submit-action="/stock/todo?type=warn"
+                        ic-submit-on-done="onGetTodoDone">warn列表
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div ic-tpl="list">
+        <ul>
+            <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
+                <h6 class="title is-6"></h6>
+                <div class="pre" ic-if="!!!v.trigger || (v.trigger && /^\\d+$/.test(v.trigger))">{{v.content}}</div>
+                <div class="tar">
+                    <a class="no" ic-click="edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
+                </div>
+                <button class="delete is-medium none"
+                        ic-ajax
+                        ic-submit-method="delete"
+                        ic-submit-action="/stock/todo/{{v.id}}"
+                        ic-submit-before="ajax_before_confirm:确认删除?"
+                        ic-submit-on-done="onDelDone"></button>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>

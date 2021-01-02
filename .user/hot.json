@@ -1,5 +1,10 @@
 [
 	{
+		"id": "天然气",
+		"selected": false,
+		"timestamp": 1609114381441
+	},
+	{
 		"id": "医美",
 		"selected": false,
 		"timestamp": 1607946813103
@@ -36,7 +41,7 @@
 	},
 	{
 		"id": "酒",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1606089203012
 	},
 	{

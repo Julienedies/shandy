@@ -1,45 +1,117 @@
 [
 	{
 		"name": "",
-		"id": "5129491",
+		"id": "7222976",
 		"type": "",
-		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\"><u>&nbsp;</u></span></strong><u><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\">交易系统</span></strong></u><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\"><u>&nbsp;</u></span></strong></span></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">我要捕捉的目标行情是什么？</span></strong></span></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;大局观：市场大趋势、强弱、主线热点 。即涅盘所说的6个变量。&nbsp;</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是在行情走出来，才意识到市场强势和大趋势。本质都是后知后觉。</span></strong></p><p><br></p><p>大周期是向上还是向下，还是震荡。</p><p>强势还是弱势。</p><p>大周期向上或强势，则分歧容易修复或转一致。</p><p>大周期向下或弱势，</p>",
 		"singleWindow": "",
-		"start": "15:00",
-		"repeat": 7,
-		"interval": 55,
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 30,
 		"duration": 47,
-		"timestamp": 1600596359187
+		"timestamp": 1609600599192
 	},
 	{
 		"name": "",
-		"id": "7493394",
+		"id": "3975590",
 		"type": "",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">&nbsp;我现在首要考虑的应该是建立系统，把事情做对，而不是赚钱。</span></strong></p><p>系统包括目标行情，买点，止盈止损；</p><p>盈亏比；确定性；效率。我做超短，所以围绕着热钱热点操作。</p><p><br></p><p><strong><span style=\"font-size: 24px;\">我交易的错误：</span></strong></p><p>1. &nbsp;无系统，无计划，临盘随意交易，主观臆想是我最大的亏损来源。没有一致的内核；不能重复。三心二意。什么都想抓住，最后什么都没有抓住。</p><p>2. &nbsp;卖飞。</p><p>3. 行情启动初期，犹豫不决；后期管不住手。</p><p>4. 线性思维，从来没有做好反转的准备。</p><p>5. 临盘犹豫，不明确；错过机会。</p><p><br></p><p><strong><span style=\"font-size: 24px;\">我的问题：</span></strong></p><p><br></p><p>1.我以什么做为判断标准。</p><p>2. 我没有消息优势，资金优势。我不知道上涨的原因何在。 依靠机械概率吗？</p><p><br></p><p><br></p><p><strong><span style=\"font-size: 24px;\">我要遵从的原则：</span></strong></p><p>1. &nbsp;要想着把事情做对，而不是想着赚钱。</p><p>2. &nbsp;必须先要有交易计划和预案。</p><p>3 . 简单纯粹取舍重复专注一致</p><p><br></p><p><strong><span style=\"font-size: 24px;\">我的交易系统：</span></strong></p><p>1. 围绕市场热钱。涨停是市场热钱的表现形式。所以选股必须在涨停里选。</p><p>2. 预判、试错、确认、加仓</p><p>3. 截断亏损，让利润奔跑。</p><p><br></p><p><br></p><p><strong><span style=\"font-size: 24px;\">交易系统变量：</span></strong></p><p>1. &nbsp;大盘氛围</p><p>2. &nbsp;板块强度</p><p>3. 个股人气地位</p><p>4. 周期节奏，时机就是一切。</p><p><br></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有大局观，对市场理解不够：</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">行情启动时犹豫，行情退潮时管不住手；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">看看我怎么操作航新转债，上涨时急于卖出，下跌时却去买入；</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\"> 关于短线炒作的本质 </span></strong></p><p><br></p><p>理解短线炒作的本质。</p><p>短线资金的行为逻辑。情绪、题材、消息、趋势、反身性驱动。</p><p>一只票能炒多高，更短线资金经验有关系。跟市场情绪有关系。</p><p>就像东方通信、贵州燃气、王府井、郑州煤电。这些都是市场短线资金的记忆。</p><p>包括博弈，分歧、一致、龙头、补涨、等都是短线资金的行为逻辑继承。</p><p>这些很多资金行为都和涨停板息息相关。比如通过涨停来选股，来做确定性。来抱团。</p><p>也许有一天会随着交易规则的变化而改变。</p><p>这些资金经验，会不断的重复。所谓人性，历史会重复。贪婪、恐慌、希望、臆想。分歧转一致、弱转强。</p><p><strong><span style=\"font-size: 22px;\">我要做的是从大局观上来理解市场。这就是支撑我的交易逻辑。</span></strong></p><p><br></p><p>20cm的趋势抱团。</p><p><br></p><p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>&nbsp;大局观和市场理解力&nbsp;</u></span></strong>&nbsp;</p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;市场的波动来源于何处？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;支撑我的交易逻辑？&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">短线生态。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;短线资金的行为逻辑。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1606540540693
+		"timestamp": 1609565575214
+	},
+	{
+		"name": "",
+		"id": "0400065",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;应对、应对、应对，关键是动态应对 。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;什么样的情况，做什么样的操作。做好预案。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 70,
+		"duration": 47,
+		"timestamp": 1599388379024,
+		"promptTimes": 1,
+		"prevPromptTime": 1609504430202,
+		"complete": true
+	},
+	{
+		"name": "",
+		"id": "0906267",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">你为什么不专注于当前的龙头，天天花时间在那些未知的个股上。</span></strong></p><p><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255); font-size: 28px;\">一定要做龙头。</span></strong><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">一定要做龙头。</span></strong></span><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255); font-size: 28px;\">一定要做龙头。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 5,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1599277516060,
+		"promptTimes": 2,
+		"prevPromptTime": 1609509830563
+	},
+	{
+		"name": "",
+		"id": "2825697",
+		"type": "",
+		"content": "<p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">关键是应对。什么样的情况做什么样的操作。</span></strong></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">关键是应对。什么样的情况做什么样的操作。</span></strong></span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">关键是应对。什么样的情况做什么样的操作。</span></strong></span></strong></span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;应对、应对、应对，关键是动态应对 。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;什么样的情况，做什么样的操作。做好预案。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">简单纯粹取舍；专注重复一致。</span></strong></p><p><br></p><p><br></p><p><span style=\"font-size: 20px;\"><br></span></p><p><strong><span style=\"font-size: 20px;\">关键是应对，这是非常重要的短线操作要素。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1609491034659
+	},
+	{
+		"name": "",
+		"id": "5129491",
+		"type": "",
+		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\">&nbsp;</span></strong><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\">交易系统</span></strong><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\">&nbsp;</span></strong></span></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"></span><span style=\"font-size: 24px;;background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>支撑我的交易逻辑是什么？</u></span></strong></span><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u> </u></span></strong></span></span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"></span><span style=\"font-size: 22px;;background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">人性不变，历史会重复</span></strong></span><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"></span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">我要捕捉的目标行情是什么？</span></strong></span></p><p><br></p><p><br></p>",
+		"singleWindow": "",
+		"start": "15:00",
+		"repeat": 7,
+		"interval": 55,
+		"duration": 47,
+		"timestamp": 1600596359187,
+		"promptTimes": 1,
+		"prevPromptTime": 1609490030696,
+		"complete": true
+	},
+	{
+		"name": "",
+		"id": "7493394",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;我现在首要考虑的应该是建立系统，把事情做对，而不是赚钱。</span></strong></p><p>系统包括目标行情，买点，止盈止损；</p><p>盈亏比；确定性；效率。我做超短，所以围绕着热钱热点操作。</p><p><br></p><p><strong><span style=\"font-size: 24px;\">我交易的错误：</span></strong></p><p>1. &nbsp;无系统，无计划，临盘随意交易，主观臆想是我最大的亏损来源。没有一致的内核；不能重复。三心二意。什么都想抓住，最后什么都没有抓住。</p><p>2. &nbsp;卖飞。</p><p>3. 行情启动初期，犹豫不决；后期管不住手。</p><p>4. 线性思维，从来没有做好反转的准备。</p><p>5. 临盘犹豫，不明确；错过机会。</p><p><br></p><p><strong><span style=\"font-size: 24px;\">我的问题：</span></strong></p><p><br></p><p>1.我以什么做为判断标准。</p><p>2. 我没有消息优势，资金优势。我不知道上涨的原因何在。 依靠机械概率吗？</p><p><br></p><p><br></p><p><strong><span style=\"font-size: 24px;\">我要遵从的原则：</span></strong></p><p>1. &nbsp;要想着把事情做对，而不是想着赚钱。</p><p>2. &nbsp;必须先要有交易计划和预案。</p><p>3 . 简单纯粹取舍重复专注一致</p><p><br></p><p><strong><span style=\"font-size: 24px;\">我的交易系统：</span></strong></p><p>1. 围绕市场热钱。涨停是市场热钱的表现形式。所以选股必须在涨停里选。</p><p>2. 预判、试错、确认、加仓</p><p>3. 截断亏损，让利润奔跑。</p><p><br></p><p><br></p><p><strong><span style=\"font-size: 24px;\">交易系统变量：</span></strong></p><p>1. &nbsp;大盘氛围</p><p>2. &nbsp;板块强度</p><p>3. 个股人气地位</p><p>4. 周期节奏，时机就是一切。</p><p><br></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有大局观，对市场理解不够：</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">行情启动时犹豫，行情退潮时管不住手；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">看看我怎么操作航新转债，上涨时急于卖出，下跌时却去买入；</span></strong></p><p><br></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1606540540693,
+		"promptTimes": 1,
+		"prevPromptTime": 1609491830648
 	},
 	{
 		"name": "",
 		"id": "5540632",
 		"type": "",
 		"start": "16:00",
-		"repeat": 5,
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>重复错误1：</u><u><strong><span style=\"background-color: rgb(255, 255, 0);\">没有明确的交易计划和准备，临盘随意交易。</span></strong></u></span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">临盘随意交易，主观臆想，无系统交易是我最大的亏损来源；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</span></strong></p><p><strong><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">这是我最大的亏损来源；我已经重复这个错误4年了。</span></strong></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我盯盘时，没有明确的计划；只是被市场牵着鼻子走；被动应对，浑浑噩噩；一冲动就会随手买入；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">尤其是市场转好，怕踏空买入；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">或个股冲高，就会臆想买入；</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">关键是我没有明确的交易系统、目标行情、买点、交易计划；</span></strong></p>",
+		"repeat": 3,
+		"content": "<p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误1：无系统，无计划</u></span></strong><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><strong><u>，主观臆想，临盘随意交易。</u></strong></span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">临盘随意交易，主观臆想，无系统交易是我最大的亏损来源；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</span></strong></p><p><strong><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">这是我最大的亏损来源；我已经重复这个错误4年了。</span></strong></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我盯盘时，没有明确的计划；只是被市场牵着鼻子走；被动应对，浑浑噩噩；一冲动就会随手买入；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">尤其是市场转好，怕踏空买入；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">或个股冲高，就会臆想买入；</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">关键是我没有明确的交易系统、目标行情、买点、交易计划；</span></strong></p>",
 		"singleWindow": "",
-		"interval": 90,
+		"interval": 40,
 		"duration": 47,
-		"timestamp": 1594365344529
+		"timestamp": 1594365344529,
+		"promptTimes": 1,
+		"prevPromptTime": 1609493630575
 	},
 	{
 		"name": "",
 		"id": "5441430",
 		"type": "",
-		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 32px;\"><u>重复错误2：总是错过热点大行情。</u></span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><br></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>为什么总是错过当前的热点行情？ 汇金股份、坚瑞沃能、华昌达。</u></span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>为什么总是在行情走出来才能意识到行情的存在。</u></span></strong></span></p><p><br></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">我是不是又错过了当下的热点行情？</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><u>当前的热点行情是什么？当前的市场龙头是什么？</u></strong></span></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px;\"><u>我为什么没有介入？</u></span></strong></p><p><br></p><p><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">1. 没有大局观；对市场状态和热点方向，总是后知后决。总是踏错节奏；</span></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\">2. 三心二意；没有专注于明确的模式；机会到来时犹豫不决，错失机会；</span></span></span></p><p><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">3. 主观，先入为主； 对预期外的状况措手不及。</span></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;任何阶段，市场总是会有龙头的。因为这是资金逐利的属性决定的。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;收集龙头，介入。</span></strong></p><p><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>有哪些票是超出你预期上涨的？</strong></span><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>&nbsp;</strong></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">卡倍亿</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">新余国科</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>我为何总是错失大行情，抓不住机会？</strong></span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">这是我当前的问题所在，我的思维方式有问题&nbsp;</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">类似光大证券、中航沈飞；航天彩虹；王府井；中国中免；中船防务等股票；</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">为什么我抓不住？它们都在我的自选里；</span></strong></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我为什么会错过牛市行情？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">上涨的过程中；我总是担心会跌；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我不敢做那些高位票，风险是没有；但是也放弃了机会；关键是概率优势；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">盈亏同源；保持交易一致性；我没有做到。我总是首上次交易的影响，左右被打脸。</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">客观跟随，客观跟随；市场反映一切；</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">历史一直在重复；我却为什么抓不住机会？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我对K线的理解非常差；市场是多空动态博弈的；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>本周我错过的票；这不是偶然的，这说明我的思维方式有问题，才会错过这么多机会；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>譬如中航沈飞、中船防务、西藏药业；东富龙；金达威；复星医药；航天彩虹；海利生物；沈阳化工；智飞生物；中国中免；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我好像只有线性思维；下跌就看空；上涨担心回落；没有大局观，看不到大势；</strong></span></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">股票的K线走势，我好多都没有理解，所以自然抓不住机会；</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">你他妈的怎么复盘的？</span></strong></span></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">热钱在哪里？赚钱效应在哪里？</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">主线不会每天变化。</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">不要他妈的臆测行情结束了。</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">行情结束的时候，会有信号出现的。</span></strong></p>",
+		"content": "<p><span style=\"background-color: rgb(255, 255, 0); font-size: 32px; color: rgb(0, 0, 0);\"><strong><u>错误2：为何总是错过大行情？</u></strong></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">没有大局观，对市场理解不够。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">为何没有做龙头？</span></strong></span><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><br></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>为什么总是错过当前的热点行情？ 汇金股份、坚瑞沃能、华昌达。</u></span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>为什么总是在行情走出来才能意识到行情的存在。</u></span></strong></span></p><p><br></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">我是不是又错过了当下的热点行情？</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><u>当前的热点行情是什么？当前的市场龙头是什么？</u></strong></span></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px;\"><u>我为什么没有介入？</u></span></strong></p><p><br></p><p><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">1. 没有大局观；对市场状态和热点方向，总是后知后决。总是踏错节奏；</span></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\">2. 三心二意；没有专注于明确的模式；机会到来时犹豫不决，错失机会；</span></span></span></p><p><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">3. 主观，先入为主； 对预期外的状况措手不及。</span></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;任何阶段，市场总是会有龙头的。因为这是资金逐利的属性决定的。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;收集龙头，介入。</span></strong></p><p><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>有哪些票是超出你预期上涨的？</strong></span><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>&nbsp;</strong></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">卡倍亿</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">新余国科</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>我为何总是错失大行情，抓不住机会？</strong></span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">这是我当前的问题所在，我的思维方式有问题&nbsp;</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">类似光大证券、中航沈飞；航天彩虹；王府井；中国中免；中船防务等股票；</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">为什么我抓不住？它们都在我的自选里；</span></strong></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我为什么会错过牛市行情？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">上涨的过程中；我总是担心会跌；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我不敢做那些高位票，风险是没有；但是也放弃了机会；关键是概率优势；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">盈亏同源；保持交易一致性；我没有做到。我总是首上次交易的影响，左右被打脸。</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">客观跟随，客观跟随；市场反映一切；</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">历史一直在重复；我却为什么抓不住机会？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我对K线的理解非常差；市场是多空动态博弈的；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>本周我错过的票；这不是偶然的，这说明我的思维方式有问题，才会错过这么多机会；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>譬如中航沈飞、中船防务、西藏药业；东富龙；金达威；复星医药；航天彩虹；海利生物；沈阳化工；智飞生物；中国中免；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我好像只有线性思维；下跌就看空；上涨担心回落；没有大局观，看不到大势；</strong></span></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">股票的K线走势，我好多都没有理解，所以自然抓不住机会；</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">你他妈的怎么复盘的？</span></strong></span></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">热钱在哪里？赚钱效应在哪里？</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">主线不会每天变化。</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">不要他妈的臆测行情结束了。</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">行情结束的时候，会有信号出现的。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
@@ -47,7 +119,7 @@
 		"duration": 47,
 		"timestamp": 1595590485334,
 		"promptTimes": 1,
-		"prevPromptTime": 1608887263107
+		"prevPromptTime": 1609495430514
 	},
 	{
 		"name": "日程",
@@ -56,24 +128,38 @@
 		"start": "17:00",
 		"interval": 45,
 		"repeat": 7,
-		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 32px;\"><u>重复错误3：我从来没有做好次日的交易计划。</u></span></strong></p><p><strong><u><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;background-color: rgb(255, 255, 0); font-size: 32px;\">总是临盘犹豫，手足无措，错过最好的交易机会。</span></strong></u></strong></p><p><br></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">既无预判，也没有推演，更无应对。</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">我为何总是临盘犹豫，错过机会？</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">1. 准备不足；</span></strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>2. 系统不明确；</strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">3. 本能贪便宜，畏高。</span></strong></span></p><p><br></p><p><strong><u><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我缺少明确的交易理念，市场复杂多变；而我总是处在混沌不明确的状态；</span></u></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong><span style=\"color: rgb(0, 0, 0);\">我现在最重要的事是明确系统；对交易原则做到知行合一；</span></strong></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">支撑我的交易逻辑是什么？</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>简单、纯粹、取舍、明确、重复；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>这就是我现在最需要解决的问题；</strong></span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 18px;\">简单纯粹 避免犯错</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">取舍 ： 弱水三千，只取一瓢</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">重复那些盈利的交易；避免重复那些亏损的交易；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">不要沉迷于日常交易中；我至今还是在重复3年前的交易状态；不明确；随意交易；浪费时间和机</span></span><span style=\"font-size: 18px; color: rgb(0, 0, 0);\">会；</span></p><p><br></p><p>一致性概率优势系统的逻辑是什么？</p><p>基于主观判断的系统逻辑是什么？</p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我必须在很短的时间做出决定；尤其是股市变量很多；</span></p><p><span style=\"font-size: 16px;\">导致很容易犯错，尤其是亏钱状态不好的时候；</span></p><p><span style=\"font-size: 16px;\">必须纯粹，精简自己的系统，快速反应！</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；</span></p><p><span style=\"font-size: 16px;\">1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）</span></p><p><span style=\"font-size: 16px;\">2: 热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；</span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">然后交易时傻乎乎看着盘面，被动应对，临盘犹豫，手足无措、脑子一热随意交易。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是主观预判市场弱，<strong><span style=\"background-color: rgb(255, 255, 0);\">缺乏准备</span></strong>；结果市场转强，就手足无措；<strong><span style=\"background-color: rgb(255, 255, 0);\">连标的都没有；</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 16px;\">尤其是放弃了打板这一手法后，干脆就不知道做什么了。我不是控制力好，我其实是不知道做什么。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">主线热点，资金方向，资金类型，强弱</span></p><p><span style=\"font-size: 16px;\">1. 先确定主线热点； 这是支撑我的交易逻辑之一。热钱所在，行情所在。</span></p><p><span style=\"font-size: 16px;\">2. 根据主线热点，选择标的。</span></p><p><span style=\"font-size: 16px;\">3. 预判推演标的走势，做出对应的应对计划。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">大盘会涨会跌？大盘处在何种阶段？哪里有机会？ 哪里有风险？ 方向：机构蓝筹趋势？ 热钱情绪题材?</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">热点龙头个股会涨会跌？ 能追涨吗？ 能低吸吗？ 盈亏比几何？</span></p>",
+		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 32px; color: rgb(0, 0, 0);\"><u>错误3：为何总是临盘犹豫，手足无措，错过最好的交易机会。</u></span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">没有交易系统，没有明确的目标行情，没有明确的判断锚点，没有明确的买点。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">线性思维，主观看空。行情反转，措手不及，犹豫不决。</span></strong></p><p><br></p><p><br></p><p><br></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px; color: rgb(0, 0, 0);\">我从来没有做好次日的交易计划。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">既无预判，也没有推演，更无应对。</span></strong></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px;\">我为何总是临盘犹豫，错过机会？</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">1. 准备不足；</span></strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>2. 系统不明确；</strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">3. 本能贪便宜，畏高。</span></strong></span></p><p><br></p><p><strong><u><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我缺少明确的交易理念，市场复杂多变；而我总是处在混沌不明确的状态；</span></u></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong><span style=\"color: rgb(0, 0, 0);\">我现在最重要的事是明确系统；对交易原则做到知行合一；</span></strong></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">支撑我的交易逻辑是什么？</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>简单、纯粹、取舍、明确、重复；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>这就是我现在最需要解决的问题；</strong></span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 18px;\">简单纯粹 避免犯错</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">取舍 ： 弱水三千，只取一瓢</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">重复那些盈利的交易；避免重复那些亏损的交易；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">不要沉迷于日常交易中；我至今还是在重复3年前的交易状态；不明确；随意交易；浪费时间和机</span></span><span style=\"font-size: 18px; color: rgb(0, 0, 0);\">会；</span></p><p><br></p><p>一致性概率优势系统的逻辑是什么？</p><p>基于主观判断的系统逻辑是什么？</p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我必须在很短的时间做出决定；尤其是股市变量很多；</span></p><p><span style=\"font-size: 16px;\">导致很容易犯错，尤其是亏钱状态不好的时候；</span></p><p><span style=\"font-size: 16px;\">必须纯粹，精简自己的系统，快速反应！</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；</span></p><p><span style=\"font-size: 16px;\">1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）</span></p><p><span style=\"font-size: 16px;\">2: 热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；</span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">然后交易时傻乎乎看着盘面，被动应对，临盘犹豫，手足无措、脑子一热随意交易。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是主观预判市场弱，<strong><span style=\"background-color: rgb(255, 255, 0);\">缺乏准备</span></strong>；结果市场转强，就手足无措；<strong><span style=\"background-color: rgb(255, 255, 0);\">连标的都没有；</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 16px;\">尤其是放弃了打板这一手法后，干脆就不知道做什么了。我不是控制力好，我其实是不知道做什么。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">主线热点，资金方向，资金类型，强弱</span></p><p><span style=\"font-size: 16px;\">1. 先确定主线热点； 这是支撑我的交易逻辑之一。热钱所在，行情所在。</span></p><p><span style=\"font-size: 16px;\">2. 根据主线热点，选择标的。</span></p><p><span style=\"font-size: 16px;\">3. 预判推演标的走势，做出对应的应对计划。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">大盘会涨会跌？大盘处在何种阶段？哪里有机会？ 哪里有风险？ 方向：机构蓝筹趋势？ 热钱情绪题材?</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">热点龙头个股会涨会跌？ 能追涨吗？ 能低吸吗？ 盈亏比几何？</span></p>",
 		"timestamp": 1580821790410,
 		"duration": 34,
 		"singleWindow": "stock_replay",
 		"promptTimes": 1,
-		"prevPromptTime": 1608889064608
+		"prevPromptTime": 1609497230450
 	},
 	{
 		"name": "",
 		"id": "7981263",
 		"type": "",
-		"content": "<p><strong><u><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">重复错误4：线性思维，先入为主&nbsp;</span></u></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误4：线性思维，先入为主。 </u></span></strong></p><p><strong><span style=\"font-size: 18px;\">先入为主，认为行情结束了，不会起二波。</span></strong></p><p><strong><span style=\"font-size: 18px;\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "15:00",
 		"repeat": 9,
 		"interval": 60,
 		"duration": 30,
-		"timestamp": 1594995614163
+		"timestamp": 1594995614163,
+		"promptTimes": 1,
+		"prevPromptTime": 1609499031823
+	},
+	{
+		"name": "",
+		"id": "4598456",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误4：没有大局观，对主线热点总是后知后觉。</u></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">行情启动时犹豫，行情退潮时管不住手。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1609555783779
 	},
 	{
 		"name": "错误",
@@ -87,7 +173,7 @@
 		"singleWindow": "",
 		"duration": 160,
 		"promptTimes": 1,
-		"prevPromptTime": 1608892663967
+		"prevPromptTime": 1609500831762
 	},
 	{
 		"name": "",
@@ -99,31 +185,10 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1599401260764
-	},
-	{
-		"name": "",
-		"id": "0400065",
-		"type": "",
-		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;应对、应对、应对，关键是动态应对 。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;什么样的情况，做什么样的操作。做好预案。</span></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 4,
-		"interval": 70,
-		"duration": 47,
-		"timestamp": 1599388379024
-	},
-	{
-		"name": "",
-		"id": "0906267",
-		"type": "",
-		"content": "<p><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255); font-size: 24px;\">一定要做龙头。</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">一定要做龙头。</span></strong></span></p><p><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255); font-size: 24px;\">一定要做龙头。</span></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 5,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1599277516060
+		"timestamp": 1599401260764,
+		"promptTimes": 1,
+		"prevPromptTime": 1609502631808,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -135,7 +200,10 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 47,
-		"timestamp": 1599293279369
+		"timestamp": 1599293279369,
+		"promptTimes": 1,
+		"prevPromptTime": 1609508030865,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -149,8 +217,7 @@
 		"duration": 47,
 		"timestamp": 1597160146691,
 		"promptTimes": 1,
-		"prevPromptTime": 1608883664227,
-		"complete": true
+		"prevPromptTime": 1609511630181
 	},
 	{
 		"name": "",
@@ -164,7 +231,7 @@
 		"singleWindow": "",
 		"duration": 17,
 		"promptTimes": 1,
-		"prevPromptTime": 1608896263482,
+		"prevPromptTime": 1609513429915,
 		"complete": true
 	},
 	{
@@ -179,7 +246,8 @@
 		"duration": 45,
 		"timestamp": 1594895079041,
 		"promptTimes": 1,
-		"prevPromptTime": 1608890864365
+		"prevPromptTime": 1609485134059,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -191,9 +259,7 @@
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">准备交易计划</span></strong></p><p><span style=\"font-size: 18px;\"><strong>1. <span style=\"background-color: rgb(255, 255, 0);\">大局观</span>：当前市场状态是什么？ 赚钱效应；亏钱效应；风险和机会是什么？&nbsp;</strong></span></p><p><strong><span style=\"font-size: 18px;\">2. <span style=\"background-color: rgb(255, 255, 0);\">热点</span>：风口选股：&nbsp;</span></strong></p><p><strong><span style=\"font-size: 18px;\">3. <span style=\"background-color: rgb(255, 255, 0);\">龙头</span>：当下市场的核心股是什么？有没有介入机会？主升浪启动？低吸弱转强？分歧转一致？</span></strong></p><p><span style=\"font-size: 18px;\"><strong>4. <span style=\"background-color: rgb(255, 255, 0);\">做好预期外的应对</span>：假如热钱出击，资金的方向会是哪里？你做好准备了吗？</strong></span></p><p><br></p><p><strong><span style=\"font-size: 18px;\">1. 遍历交易系统；寻找交易标的；</span></strong></p><p><span style=\"font-size: 18px;\"><strong>2. 做烂板上冲、连续上冲假设推演；热点龙头走势的低吸追涨预案。</strong></span></p><p><span style=\"font-size: 18px;\"><strong>3. 弱转强；分歧转一致；</strong></span></p><p><strong><span style=\"font-size: 18px;\">4. 我从来都对预期外的反转措手不及。做市场转强，热钱出击的推演；不要因为市场悲观向下就无准备；</span></strong></p>",
 		"timestamp": 1577664169847,
 		"singleWindow": "",
-		"duration": 140,
-		"promptTimes": 1,
-		"prevPromptTime": 1608894462867
+		"duration": 140
 	},
 	{
 		"name": "",
@@ -205,10 +271,7 @@
 		"singleWindow": "",
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1594896086224,
-		"promptTimes": 1,
-		"prevPromptTime": 1608898063828,
-		"complete": true
+		"timestamp": 1594896086224
 	},
 	{
 		"name": "问题",
@@ -222,7 +285,7 @@
 		"singleWindow": "",
 		"duration": 24,
 		"promptTimes": 1,
-		"prevPromptTime": 1608885464151,
+		"prevPromptTime": 1609486935037,
 		"complete": true
 	},
 	{
@@ -236,9 +299,6 @@
 		"timestamp": 1577964389066,
 		"singleWindow": "",
 		"duration": 60,
-		"promptTimes": 1,
-		"prevPromptTime": 1608899863554,
-		"complete": true,
 		"disable": true
 	},
 	{
@@ -263,10 +323,7 @@
 		"content": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">我只要一周赚10%，一年就可以赚到到45倍；</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">做精不做多；避免犯错；避免回撤；</span></strong></p><p><br></p><p><span style=\"font-size: 18px;\">Math.pow(1.1,40) = 45.2592555681761</span></p><p><span style=\"font-size: 18px;\">Math.pow(1.2,40) = 1469.7715679690841</span></p>",
 		"timestamp": 1581084979181,
 		"singleWindow": "",
-		"duration": 24,
-		"promptTimes": 1,
-		"prevPromptTime": 1608901663290,
-		"complete": true
+		"duration": 24
 	},
 	{
 		"name": "",
@@ -366,9 +423,6 @@
 		"content": "<p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">一切有为法；一切有因果；</span></strong></span></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">不要忘记那些恐惧和痛苦；</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">时不我待，我已经37岁了；</span></strong></p><p><strong><span style=\"font-size: 18px;background-color: rgb(255, 255, 0);\">我并没有本质上的改变，我还是在重复错误；</span></strong></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">那些交易原则我知道，但我没有做到知行合一；</span></strong></span></p>",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 24,
-		"promptTimes": 1,
-		"prevPromptTime": 1608903462567,
-		"complete": true
+		"duration": 24
 	}
 ]

@@ -41,10 +41,10 @@
                     <td>{{ v.start }}</td>
                     <td>{{ v.interval }}</td>
                     <td>{{ v.repeat }}</td>
-                    <td class="pre">{{ v.content }}</td>
+                    <td><div class="pre text" ic-dblclick="toggle">{{ v.content }}</div></td>
                     <td>{{ v.promptTimes || 0 }}</td>
                     <td>
-                        <div style="white-space: pre-line;">
+                        <div style="white-space: normal;">
                             <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
                             <button class="button is-primary is-small" ic-click="focus:{{ v.id }}">置顶</button>
                             <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>

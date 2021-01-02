@@ -38,7 +38,7 @@ ${ require('../tags/set-tag.html') }
         </div>
 
         <table class="table is-striped" style="margin-top:15px;font-size:14px;" ic-tpl="warnList">
-            <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" ic-class="{{v.disable? 'disable': ''}}" ic-style="opacity:{{ v.disable? 0.4: 1 }}">
+            <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" ic-class="{{v.disable? 'disable': ''}}" ic-style="opacity:{{ v.disable? 0.5: 1 }}">
                 <td>
                     <div ic-if="v.tag">
                         <span class="tag is-danger">

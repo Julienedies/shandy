@@ -228,6 +228,11 @@ brick.reg('todoListCtrl', function (scope) {
         });
     }
 
+    scope.toggle = function (e) {
+        let cla = 'toggle';
+        $(this).toggleClass(cla);
+    };
+
     scope.addTodo = function (e) {
         scope.emit('setTodo', {});
     };
