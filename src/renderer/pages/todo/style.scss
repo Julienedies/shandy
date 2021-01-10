@@ -75,10 +75,11 @@ a {
 
 
 .text {
-  height: 11em;
+  height: 14em;
   overflow-y: hidden;
 
   &.toggle {
     height: auto;
+    min-height: 32em;
   }
 }

@@ -254,13 +254,13 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
-    scope.openPrompt = function (e, isFrame) {
-        let promptWindow = scope.promptWindow;
-        if (promptWindow) {
-            return promptWindow.show();
+    scope.openTodo = function (e, isFrame) {
+        let todoWindow = scope.todoWindow;
+        if (todoWindow) {
+            return todoWindow.show();
         } else {
-            let name = 'prompt';
-            let url = 'prompt.html';
+            let name = 'todo';
+            let url = 'todo.html';
             let opt = {
                 name,
                 url,
@@ -273,19 +273,19 @@ brick.reg('mainCtrl', function (scope) {
                 //hasShadow: false,
                 //alwaysOnTop: true,
                 onClose () {
-                    delete scope.promptWindow;
+                    delete scope.todoWindow;
                     setTimeout(() => {
-                        scope.openPrompt();
+                        scope.openTodo();
                     }, 100);
                 }
             }
             // opt.frame = !!isFrame;
-            promptWindow = scope.promptWindow = new Win(opt);
-            promptWindow.maximize();
-            //promptWindow.win.setIgnoreMouseEvents(true);
-            promptWindow.win.webContents.on('did-finish-load', function () {
-                promptWindow.win.webContents.send('windowId', promptWindow.win.id);
-                promptWindow.win.webContents.send('mainWindowId', mainWindowId);
+            todoWindow = scope.todoWindow = new Win(opt);
+            todoWindow.maximize();
+            //todoWindow.win.setIgnoreMouseEvents(true);
+            todoWindow.win.webContents.on('did-finish-load', function () {
+                todoWindow.win.webContents.send('windowId', todoWindow.win.id);
+                todoWindow.win.webContents.send('mainWindowId', mainWindowId);
             });
         }
     };
@@ -295,7 +295,7 @@ brick.reg('mainCtrl', function (scope) {
     window.addEventListener('beforeunload', function (e) {
         scope.newsWin && scope.newsWin.close();
         scope.warnWindow && scope.warnWindow.close();
-        scope.promptWindow && scope.promptWindow.close();
+        scope.todoWindow && scope.todoWindow.close();
     });
 
     ipcRenderer.on('openWindow', function (event, windowName) {
@@ -306,7 +306,7 @@ brick.reg('mainCtrl', function (scope) {
     // ---------------------------------------------------------------------------------------------
 
     setTimeout(() => {
-        scope.openPrompt();
+        scope.openTodo();
     }, 1000 * 4);
 
 

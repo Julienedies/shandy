@@ -45,7 +45,11 @@ ${ require('../tags/set-tag.html') }
                             {{ TAGS_MAP_BY_ID[v.tag] && TAGS_MAP_BY_ID[v.tag].text }}
                         </span>
                     </div>
-                    <div>{{ v.name }}</div>
+                    <div ic-if="v.name">
+                        <span class="tag is-info">
+                            {{ v.name }}
+                        </span>
+                    </div>
                 </td>
                 <td>{{ v.trigger }}</td>
                 <td><span style="opacity: 0.3;">{{ v.repeat || 1 }}</span></td>

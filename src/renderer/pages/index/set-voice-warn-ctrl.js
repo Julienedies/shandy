@@ -27,7 +27,7 @@ export default function (scope) {
     const dragOverCla = 'onDragOver';
     const ignoreReg = /[(（].*[）)]/img;
 
-    const intervalDuration = 3;  // 三分钟一次语音警告
+    const intervalDuration = 2;  // 三分钟一次语音警告
 
     let currentTabType = 'interval';
     let currentTag = '';
@@ -148,6 +148,7 @@ export default function (scope) {
     scope.hear = function (e, id) {
         let item = warnJodb.get2(id);
         let str = _.fill(Array(item.repeat || 1), item.content).join('\r\n');
+        voice.cancel();
         voice(str);
         send(str);
     };
@@ -268,7 +269,7 @@ export default function (scope) {
                 });
                 return;
             }
-            let count = Math.ceil(60 / trigger);
+            let count = Math.ceil(30 / trigger);
             let arr = _.fill(Array(count), id);
             warnIntervalArr = warnIntervalArr.concat(arr);
             warnIntervalArr = _.shuffle(warnIntervalArr);
@@ -330,15 +331,15 @@ export default function (scope) {
         });
 
         utils.timer('11:30', () => {
-            scope.stop();
+            //scope.stop();
         });
 
         utils.timer('12:45', () => {
-            scope.open();
+            //scope.open();
         });
 
         utils.timer('15:00', () => {
-            scope.stop();
+            //scope.stop();
         });
     }
 
