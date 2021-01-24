@@ -13,11 +13,11 @@
 			"ths_p"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 201,
+		"fetchFromIndex": 831,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
 		"hotCsvFile": "/Users/j/截图/JX.txt",
-		"fetchLimit": "200"
+		"fetchLimit": "0"
 	},
 	"warn": {
 		"randomBgImgDir": "/Users/j/pim/img/人物",
@@ -30,7 +30,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/交易记录/2010",
+		"imgDir": "/Users/j/截图/目标行情/2020-12",
 		"bounds": {
 			"x": 1440,
 			"y": 0,
@@ -237,10 +237,10 @@
 	"icViewerInterval": "3",
 	"todo": {
 		"bounds": {
-			"x": 0,
-			"y": 23,
-			"width": 1440,
-			"height": 808
+			"x": 1440,
+			"y": 0,
+			"width": 1920,
+			"height": 1080
 		}
 	}
 }

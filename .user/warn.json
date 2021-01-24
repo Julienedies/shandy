@@ -1,6 +1,96 @@
 [
 	{
 		"name": "",
+		"id": "3842662",
+		"tag": "5511909",
+		"trigger": "10",
+		"content": "为何我总是要等到涨到天上才参与？",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1611475805257
+	},
+	{
+		"name": "",
+		"id": "9042353",
+		"tag": "4109794",
+		"trigger": "5",
+		"content": "我为什么没有研判所有自选股可能的走势？\n我以什么做为判断锚点？",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1611336888568
+	},
+	{
+		"name": "",
+		"id": "9481088",
+		"tag": "0238231",
+		"trigger": "1",
+		"content": "为何我总是后知后觉，一定要高潮爆发才能看到行情？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1611210776257
+	},
+	{
+		"name": "",
+		"id": "2563038",
+		"tag": "9586736",
+		"trigger": "3",
+		"content": "为何我总是因为鸡肋的票，丧失掉更好的机会。\n如果我没有必涨的判断，就不要把机会浪费掉。",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1611201674421
+	},
+	{
+		"name": "",
+		"id": "1549905",
+		"tag": "4109794",
+		"trigger": "1",
+		"content": "为何我总是浑浑噩噩？弱转强，分歧转一致，修复，\n市场热钱在哪里？\n今日热点是什么？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1611197967208
+	},
+	{
+		"name": "",
+		"id": "2696778",
+		"tag": "4810091",
+		"trigger": "1",
+		"content": "为何我总是卖 飞？",
+		"repeat": 5,
+		"type": "interval",
+		"timestamp": 1610189162411
+	},
+	{
+		"name": "",
+		"id": "8203311",
+		"tag": "8831977",
+		"trigger": "1",
+		"content": "为何我总是线性思维，先入为主？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1610785989213
+	},
+	{
+		"name": "",
+		"id": "7223726",
+		"tag": "0238231",
+		"trigger": "2",
+		"content": "为何我总是后知后觉？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1611061898489
+	},
+	{
+		"name": "",
+		"id": "1671963",
+		"tag": "4893750",
+		"trigger": "5",
+		"content": "节奏，时机就是一切；",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1610895586395
+	},
+	{
+		"name": "",
 		"id": "7024245",
 		"tag": "7024222",
 		"trigger": "1",
@@ -28,26 +118,6 @@
 		"repeat": 7,
 		"type": "interval",
 		"timestamp": 1610190810967
-	},
-	{
-		"name": "",
-		"id": "2696778",
-		"tag": "4810091",
-		"trigger": "1",
-		"content": "为何我总是卖 飞？",
-		"repeat": 5,
-		"type": "interval",
-		"timestamp": 1610189162411
-	},
-	{
-		"name": "",
-		"id": "8203311",
-		"tag": "8831977",
-		"trigger": "2",
-		"content": "为何我总是线性思维，先入为主？",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1610785989213
 	},
 	{
 		"name": "",
@@ -103,7 +173,7 @@
 		"name": "",
 		"id": "1965087",
 		"tag": "2430358",
-		"trigger": "2",
+		"trigger": "10",
 		"content": "日内上攻首波回落，二波上攻，我为何总是错过？",
 		"repeat": 2,
 		"type": "interval",
@@ -131,13 +201,24 @@
 	},
 	{
 		"name": "",
+		"id": "5676181",
+		"tag": "5511909",
+		"trigger": "5",
+		"content": "反包、修复、 大长腿、补跌、穿越、低吸高潮回落、分歧转一致、被动下跌、V形转折",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1608871817444
+	},
+	{
+		"name": "",
 		"id": "9625973",
 		"tag": "4757788",
 		"trigger": "10",
 		"content": "主线热点龙头没有结束信号前，就围绕着主线热点龙头继续。",
 		"repeat": 2,
 		"type": "interval",
-		"timestamp": 1610182991583
+		"timestamp": 1610182991583,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -158,7 +239,8 @@
 		"content": "热钱所在，行情所在。\n切换、轮动、\n历史会重复。\n短线生态、参与者的行为逻辑。",
 		"repeat": 2,
 		"type": "interval",
-		"timestamp": 1610730716030
+		"timestamp": 1610730716030,
+		"disable": true
 	},
 	{
 		"name": "重复错误",
@@ -298,16 +380,6 @@
 		"type": "interval",
 		"timestamp": 1609332499309,
 		"disable": false
-	},
-	{
-		"name": "",
-		"id": "5676181",
-		"tag": "4109794",
-		"trigger": "10",
-		"content": "反包、修复、低吸高潮、分歧转一致、被动下跌、",
-		"repeat": 2,
-		"type": "interval",
-		"timestamp": 1608871817444
 	},
 	{
 		"name": "",
