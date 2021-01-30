@@ -1,13 +1,43 @@
 [
 	{
 		"name": "",
-		"id": "3842662",
-		"tag": "5511909",
-		"trigger": "10",
-		"content": "为何我总是要等到涨到天上才参与？",
-		"repeat": 2,
+		"id": "9424333",
+		"tag": "4810091",
+		"trigger": "1",
+		"content": "为何我总是卖 飞？",
+		"repeat": 4,
 		"type": "interval",
-		"timestamp": 1611475805257
+		"timestamp": 1611793995578
+	},
+	{
+		"name": "",
+		"id": "7899564",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "为何我不能停下来，做出真正的改变？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1611793337003
+	},
+	{
+		"name": "",
+		"id": "0814145",
+		"tag": "9373395",
+		"trigger": "1",
+		"content": "多空动态博弈，根据盘面应对。",
+		"repeat": 5,
+		"type": "interval",
+		"timestamp": 1611731531071
+	},
+	{
+		"name": "",
+		"id": "5334677",
+		"tag": "0238231",
+		"trigger": "1",
+		"content": "为何我总是着眼于小波动，看不到大的趋势？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1611590826367
 	},
 	{
 		"name": "",
@@ -33,7 +63,7 @@
 		"name": "",
 		"id": "2563038",
 		"tag": "9586736",
-		"trigger": "3",
+		"trigger": "5",
 		"content": "为何我总是因为鸡肋的票，丧失掉更好的机会。\n如果我没有必涨的判断，就不要把机会浪费掉。",
 		"repeat": 3,
 		"type": "interval",
@@ -51,16 +81,6 @@
 	},
 	{
 		"name": "",
-		"id": "2696778",
-		"tag": "4810091",
-		"trigger": "1",
-		"content": "为何我总是卖 飞？",
-		"repeat": 5,
-		"type": "interval",
-		"timestamp": 1610189162411
-	},
-	{
-		"name": "",
 		"id": "8203311",
 		"tag": "8831977",
 		"trigger": "1",
@@ -74,7 +94,7 @@
 		"id": "7223726",
 		"tag": "0238231",
 		"trigger": "2",
-		"content": "为何我总是后知后觉？",
+		"content": "为何我总是后知后绝？",
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1611061898489
@@ -171,16 +191,6 @@
 	},
 	{
 		"name": "",
-		"id": "1965087",
-		"tag": "2430358",
-		"trigger": "10",
-		"content": "日内上攻首波回落，二波上攻，我为何总是错过？",
-		"repeat": 2,
-		"type": "interval",
-		"timestamp": 1610706280248
-	},
-	{
-		"name": "",
 		"id": "9062812",
 		"tag": "4109794",
 		"trigger": "5",
@@ -208,6 +218,26 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1608871817444
+	},
+	{
+		"name": "",
+		"id": "1965087",
+		"tag": "2430358",
+		"trigger": "10",
+		"content": "日内上攻首波回落，二波上攻，我为何总是错过？",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1610706280248
+	},
+	{
+		"name": "",
+		"id": "3842662",
+		"tag": "5511909",
+		"trigger": "10",
+		"content": "为何我总是要等到涨到天上才参与？",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1611475805257
 	},
 	{
 		"name": "",

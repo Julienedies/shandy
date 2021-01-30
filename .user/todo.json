@@ -1,6 +1,66 @@
 [
 	{
 		"name": "",
+		"id": "7925960",
+		"type": "",
+		"content": "<p><strong><u><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">不要想着赚钱，要想着把事情做对。</span></u></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1611931919580
+	},
+	{
+		"name": "",
+		"id": "6257804",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>思维没有方向；操作没有系统；不知以什么做为判断锚点。</u></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">打板是一个最简单的超短交易系统；没有了打板，我不知道如何做超短交易。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1611881119094
+	},
+	{
+		"name": "",
+		"id": "5500273",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>我今天还是在重复错误，没有解决问题的情况下，始终沉浸在日常交易中。</u></span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1611748129741
+	},
+	{
+		"name": "",
+		"id": "7171205",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我总是没有做好市场资金出击的准备。</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">不知道如何交易，还在赚钱的心理下管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">真正的机会抓不住。风险来临管不住手。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1611591305528
+	},
+	{
+		"name": "",
+		"id": "5773210",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">为何我总是看不到大趋势，没有大局观？</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">就象6月份的大盘主升行情一样，今次的大盘主升行情我一样没抓住。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1611591229689
+	},
+	{
+		"name": "",
 		"id": "9926538",
 		"type": "",
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">打板不是目的，本质是跟随市场上的资金方向。这是我交易的核心。或者说搜集强势股，寻找介入机会。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">主要以市场热点趋势为目标行情；具有持续性；</span></strong></p><p><strong><span style=\"font-size: 24px; color: rgb(255, 255, 255);;background-color: rgb(148, 0, 211);\">以计划内的自选股为交易标的。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">问自己：现在市场上的资金攻击点是什么？</span></strong></p>",
@@ -130,8 +190,8 @@
 		"interval": 45,
 		"duration": 47,
 		"timestamp": 1610770805615,
-		"promptTimes": 3,
-		"prevPromptTime": 1611288361977,
+		"promptTimes": 1,
+		"prevPromptTime": 1611882460142,
 		"complete": true
 	},
 	{
@@ -146,7 +206,7 @@
 		"duration": 47,
 		"timestamp": 1609804278523,
 		"promptTimes": 1,
-		"prevPromptTime": 1611302764851,
+		"prevPromptTime": 1611907655406,
 		"complete": true
 	},
 	{
@@ -159,19 +219,24 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1610163063160
+		"timestamp": 1610163063160,
+		"promptTimes": 1,
+		"prevPromptTime": 1611909455252,
+		"complete": true
 	},
 	{
 		"name": "",
 		"id": "3700708",
 		"type": "",
-		"content": "<p><span style=\"font-size: 16px;\">我要捕捉的目标行情是什么？ 买点？ 盈亏比？确定性？ 判断锚点？</span></p><p><span style=\"font-size: 16px;\">我到底是做波段趋势还是做高频超短？</span></p><p><span style=\"font-size: 16px;\">我没有消息优势和判断能力，以什么做为判断锚点？</span></p><p><span style=\"font-size: 16px;\">怎么克服恐慌贪便宜本能导致的卖飞？</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我的买点是什么？ 低位启动、趋势爆发、超预期加速、弱转强、分歧转一致；</span></p><p><span style=\"font-size: 16px;\">跟随、应对、一致、重复、如何执行？</span></p>",
+		"content": "<p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？ 买点？ 盈亏比？确定性？ 判断锚点？</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我到底是做波段趋势还是做高频超短？</strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我没有消息优势和判断能力，以什么做为判断锚点？</strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>怎么克服恐慌贪便宜本能导致的卖飞？</strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><br></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我的买点是什么？ 低位启动、趋势爆发、超预期加速、弱转强、分歧转一致；</strong></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">跟随、应对、一致、重复、如何执行？</span></strong></span></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1610162924689
+		"timestamp": 1610162924689,
+		"promptTimes": 1,
+		"prevPromptTime": 1611911255001
 	},
 	{
 		"name": "",
@@ -185,7 +250,7 @@
 		"duration": 47,
 		"timestamp": 1609769321075,
 		"promptTimes": 1,
-		"prevPromptTime": 1611304560758,
+		"prevPromptTime": 1611913054397,
 		"complete": true
 	},
 	{
@@ -200,8 +265,7 @@
 		"duration": 47,
 		"timestamp": 1595590485334,
 		"promptTimes": 1,
-		"prevPromptTime": 1611306368664,
-		"complete": true
+		"prevPromptTime": 1611914854965
 	},
 	{
 		"name": "日程",
@@ -215,7 +279,7 @@
 		"duration": 34,
 		"singleWindow": "stock_replay",
 		"promptTimes": 1,
-		"prevPromptTime": 1611308161830
+		"prevPromptTime": 1611916655125
 	},
 	{
 		"name": "",
@@ -229,7 +293,8 @@
 		"duration": 47,
 		"timestamp": 1597160146691,
 		"promptTimes": 1,
-		"prevPromptTime": 1611309961177
+		"prevPromptTime": 1611918454529,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -243,7 +308,7 @@
 		"duration": 47,
 		"timestamp": 1610184636301,
 		"promptTimes": 1,
-		"prevPromptTime": 1611311760974,
+		"prevPromptTime": 1611920254325,
 		"complete": true
 	},
 	{
@@ -258,7 +323,7 @@
 		"duration": 47,
 		"timestamp": 1594365344529,
 		"promptTimes": 1,
-		"prevPromptTime": 1611313561108,
+		"prevPromptTime": 1611922055534,
 		"complete": true
 	},
 	{
@@ -273,14 +338,14 @@
 		"duration": 47,
 		"timestamp": 1609555783779,
 		"promptTimes": 1,
-		"prevPromptTime": 1611315360879,
+		"prevPromptTime": 1611923855554,
 		"complete": true
 	},
 	{
 		"name": "",
 		"id": "7981263",
 		"type": "",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误3：线性思维，先入为主。&nbsp;</u></span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</u></span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻这些封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>涨的高，就认为是顶。上涨初期，不在意。</u></span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误3：线性思维，先入为主。&nbsp;</u></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>下跌也可以走V；</u></span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</u></span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻这些封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>涨的高，就认为是顶。上涨初期，不在意。</u></span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "15:00",
 		"repeat": 9,
@@ -288,14 +353,14 @@
 		"duration": 30,
 		"timestamp": 1594995614163,
 		"promptTimes": 1,
-		"prevPromptTime": 1611299161292,
+		"prevPromptTime": 1611904055566,
 		"complete": true
 	},
 	{
 		"name": "",
 		"id": "6824189",
 		"type": "",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">错误4：每次都踏错节奏，每次逼空都没有准备好标的。</span></strong></p>",
+		"content": "<p><strong><u><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">错误4：每次都踏错节奏，每次逼空都没有准备好标的。</span></u></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
@@ -303,8 +368,7 @@
 		"duration": 47,
 		"timestamp": 1609731345334,
 		"promptTimes": 1,
-		"prevPromptTime": 1611317161513,
-		"complete": true
+		"prevPromptTime": 1611925655607
 	},
 	{
 		"name": "",
@@ -318,7 +382,7 @@
 		"duration": 47,
 		"timestamp": 1610455034740,
 		"promptTimes": 1,
-		"prevPromptTime": 1611318960882,
+		"prevPromptTime": 1611927453909,
 		"complete": true
 	},
 	{
@@ -332,8 +396,8 @@
 		"interval": 45,
 		"duration": 47,
 		"timestamp": 1609667569090,
-		"promptTimes": 6,
-		"prevPromptTime": 1611300961113,
+		"promptTimes": 2,
+		"prevPromptTime": 1611887855346,
 		"complete": true
 	},
 	{
@@ -348,7 +412,7 @@
 		"duration": 47,
 		"timestamp": 1609600599192,
 		"promptTimes": 1,
-		"prevPromptTime": 1611320760746,
+		"prevPromptTime": 1611929255567,
 		"complete": true
 	},
 	{
@@ -363,7 +427,7 @@
 		"duration": 47,
 		"timestamp": 1609491034659,
 		"promptTimes": 1,
-		"prevPromptTime": 1611322560610,
+		"prevPromptTime": 1611931054198,
 		"complete": true
 	},
 	{
@@ -391,7 +455,7 @@
 		"duration": 47,
 		"timestamp": 1600596359187,
 		"promptTimes": 1,
-		"prevPromptTime": 1611324361762,
+		"prevPromptTime": 1611905855695,
 		"complete": true
 	},
 	{
@@ -406,8 +470,7 @@
 		"duration": 47,
 		"timestamp": 1606540540693,
 		"promptTimes": 1,
-		"prevPromptTime": 1611326160611,
-		"complete": true
+		"prevPromptTime": 1611932855426
 	},
 	{
 		"name": "错误",
@@ -421,8 +484,7 @@
 		"singleWindow": "",
 		"duration": 160,
 		"promptTimes": 1,
-		"prevPromptTime": 1611327960203,
-		"complete": true
+		"prevPromptTime": 1611934655424
 	},
 	{
 		"name": "",
@@ -434,10 +496,7 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 47,
-		"timestamp": 1599293279369,
-		"promptTimes": 1,
-		"prevPromptTime": 1611329760776,
-		"complete": true
+		"timestamp": 1599293279369
 	},
 	{
 		"name": "",

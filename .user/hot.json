@@ -1,12 +1,22 @@
 [
 	{
+		"id": "游戏",
+		"selected": true,
+		"timestamp": 1611880551104
+	},
+	{
+		"id": "煤化工",
+		"selected": true,
+		"timestamp": 1611620135306
+	},
+	{
 		"id": "电子烟",
 		"selected": false,
 		"timestamp": 1611102288850
 	},
 	{
 		"id": "芯片",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1610979058468
 	},
 	{
@@ -26,7 +36,7 @@
 	},
 	{
 		"id": "医美",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1607946813103
 	},
 	{
@@ -116,7 +126,7 @@
 	},
 	{
 		"id": "风电",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1600383573738
 	},
 	{
@@ -131,7 +141,7 @@
 	},
 	{
 		"id": "半导体",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1599435860033
 	},
 	{
@@ -146,7 +156,7 @@
 	},
 	{
 		"id": "军工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1594256070569
 	},
 	{
@@ -171,12 +181,12 @@
 	},
 	{
 		"id": "医疗器械",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1589417250291
 	},
 	{
 		"id": "医药",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1586706080874
 	},
 	{
