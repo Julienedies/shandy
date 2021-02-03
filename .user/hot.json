@@ -1,12 +1,17 @@
 [
 	{
-		"id": "游戏",
+		"id": "化工",
 		"selected": true,
+		"timestamp": 1612311616588
+	},
+	{
+		"id": "游戏",
+		"selected": false,
 		"timestamp": 1611880551104
 	},
 	{
 		"id": "煤化工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1611620135306
 	},
 	{
@@ -36,7 +41,7 @@
 	},
 	{
 		"id": "医美",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1607946813103
 	},
 	{
@@ -86,7 +91,7 @@
 	},
 	{
 		"id": "化学",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1605537020453
 	},
 	{
@@ -181,12 +186,12 @@
 	},
 	{
 		"id": "医疗器械",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1589417250291
 	},
 	{
 		"id": "医药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1586706080874
 	},
 	{

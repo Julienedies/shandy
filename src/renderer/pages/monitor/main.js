@@ -22,6 +22,13 @@ function emit (msg) {
     socket.emit(channel, msg);
 }
 
+// 计算买一金额
+window.b1Amount = function (n) {
+    let y = 10000 * 10000;
+    let qw = 1000 * 10000;
+    return  n/y > 1 ? (n/y).toFixed(1) + '亿' : (n/10000).toFixed(0) + '万';
+};
+
 socket.on('rts_push', function (arr) {
     //console.log(arr, +new Date);
     $rts_list.icRender(arr);

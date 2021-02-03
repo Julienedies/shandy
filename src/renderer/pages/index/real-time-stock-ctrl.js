@@ -52,6 +52,11 @@ function _f (stock) {
     let v = stock.v;
     let price = stock.price;
     let time = stock.time;
+
+    let b1_amount = b1 * 100 * price;  // 买一金额
+    let least_amount = 1000 * 10000;  // 最小封单金额
+    //let least = 9000;  // 最低封单量 9000手
+
     let p_stock = prev_objm.get(code);
     let f_stock = first_objm.get(code);
 
@@ -60,11 +65,11 @@ function _f (stock) {
     let minute = now.getMinutes();
     let second = now.getSeconds();
     // 竞价阶段或尾盘阶段
-    if ((hour === 9 && minute < 30) || (hour === 14 && minute > 53)) {
+    if ((hour === 9 && minute < 30) || (hour === 14 && minute > 54)) {
         return stock;
     }
 
-    if (stock.price < stock.maxPrice || b1 < 1000) {
+    if (stock.price < stock.maxPrice || b1_amount < least_amount) {
         voice.remove(code);
         prev_objm.remove(code);
         stock.rout = 1; // 破板
@@ -85,7 +90,6 @@ function _f (stock) {
         let time_reduce = Math.floor((stock.timestamp - p_stock.timestamp) / 1000); // 间隔秒数
         let b1_reduce_base = Math.floor(p_b1 / rtsc_threshold) || 3000;   // 封单减少量预警基准
         let v_plus_base = Math.floor(p_v / rtsc_threshold) || 5000;       // 成交增加量预警基准
-        let least = 9000;  // 最低封单量 9000手
 
         //console.log(name, '预警：封单-',Math.floor(b1_reduce_base/1000) + 'k', '成交量+', Math.floor(v_plus_base/1000) + 'k');
         /*
@@ -97,10 +101,12 @@ function _f (stock) {
          * 排单计算：计算我前面的排单：累计增加成交量
          * 封单减少，成交单没有对应增加，则说明是撤单
          */
-        if (b1 < least || -b1_reduce > b1_reduce_base || v_plus > v_plus_base) {
+        if (b1_amount < least_amount || -b1_reduce > b1_reduce_base || v_plus > v_plus_base) {
 
             // 早盘封单小于阈值
-            if (b1 < least && hour < 16 && price < 50) {
+            // old: b1 < least && hour < 16 && price < 50
+            // new: 封单额小于1500万
+            if (b1_amount < least_amount) {
                 console.info(time, `${ name }有破板风险`);
                 voice(code, `${ name }有破板风险`);
             } else

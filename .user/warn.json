@@ -1,5 +1,65 @@
 [
 	{
+		"name": "我为何总是错过大行情？",
+		"id": "5010611",
+		"tag": "2430358",
+		"trigger": "5",
+		"content": "为何我总是错过大航情？\n为何我总是错过当前龙头？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1607080778750
+	},
+	{
+		"name": "",
+		"id": "0315994",
+		"tag": "0238231",
+		"trigger": "1",
+		"content": "为何我总是踏错节奏？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1610326849426
+	},
+	{
+		"name": "",
+		"id": "3181636",
+		"tag": "6166677",
+		"trigger": "1",
+		"content": "为何管不住手?\n为何我总是临盘冲动随意交易？",
+		"repeat": 5,
+		"type": "interval",
+		"timestamp": 1610190810967
+	},
+	{
+		"name": "",
+		"id": "8203311",
+		"tag": "8831977",
+		"trigger": "1",
+		"content": "为何我总是线性思维，先入为主？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1610785989213
+	},
+	{
+		"name": "",
+		"id": "8147566",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "为何我不能保持一致性，总是被左右打脸？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1612154139042
+	},
+	{
+		"name": "",
+		"id": "2269806",
+		"tag": "9586736",
+		"trigger": "5",
+		"content": "为何我总是囿于小利，止损犹疑？\n为何我总是想着钱，而不是把事情做对？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1612154065401
+	},
+	{
 		"name": "",
 		"id": "9424333",
 		"tag": "4810091",
@@ -13,7 +73,7 @@
 		"name": "",
 		"id": "7899564",
 		"tag": "9586736",
-		"trigger": "1",
+		"trigger": "5",
 		"content": "为何我不能停下来，做出真正的改变？",
 		"repeat": 4,
 		"type": "interval",
@@ -41,20 +101,10 @@
 	},
 	{
 		"name": "",
-		"id": "9042353",
-		"tag": "4109794",
-		"trigger": "5",
-		"content": "我为什么没有研判所有自选股可能的走势？\n我以什么做为判断锚点？",
-		"repeat": 2,
-		"type": "interval",
-		"timestamp": 1611336888568
-	},
-	{
-		"name": "",
 		"id": "9481088",
 		"tag": "0238231",
 		"trigger": "1",
-		"content": "为何我总是后知后觉，一定要高潮爆发才能看到行情？",
+		"content": "为何我总是后知后绝，一定要高潮爆发才能看到行情？",
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1611210776257
@@ -78,26 +128,6 @@
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1611197967208
-	},
-	{
-		"name": "",
-		"id": "8203311",
-		"tag": "8831977",
-		"trigger": "1",
-		"content": "为何我总是线性思维，先入为主？",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1610785989213
-	},
-	{
-		"name": "",
-		"id": "7223726",
-		"tag": "0238231",
-		"trigger": "2",
-		"content": "为何我总是后知后绝？",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1611061898489
 	},
 	{
 		"name": "",
@@ -131,16 +161,6 @@
 	},
 	{
 		"name": "",
-		"id": "3181636",
-		"tag": "6166677",
-		"trigger": "1",
-		"content": "为何我总是临盘冲动随意交易？",
-		"repeat": 7,
-		"type": "interval",
-		"timestamp": 1610190810967
-	},
-	{
-		"name": "",
 		"id": "5071893",
 		"tag": "8831977",
 		"trigger": "2",
@@ -148,6 +168,17 @@
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1610773521017
+	},
+	{
+		"name": "",
+		"id": "9042353",
+		"tag": "4109794",
+		"trigger": "5",
+		"content": "我为什么没有研判所有自选股可能的走势？\n我以什么做为判断锚点？",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1611336888568,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -170,26 +201,6 @@
 		"timestamp": 1610192419585
 	},
 	{
-		"name": "我为何总是错过大行情？",
-		"id": "5010611",
-		"tag": "2430358",
-		"trigger": "1",
-		"content": "为何我总是错过大航情？\n为何我总是错过当前龙头？",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1607080778750
-	},
-	{
-		"name": "",
-		"id": "0315994",
-		"tag": "0238231",
-		"trigger": "1",
-		"content": "为何我总是踏错节奏？",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1610326849426
-	},
-	{
 		"name": "",
 		"id": "9062812",
 		"tag": "4109794",
@@ -207,14 +218,15 @@
 		"content": "为什么控制不住自己的情绪和本能？",
 		"repeat": 4,
 		"type": "interval",
-		"timestamp": 1610607736111
+		"timestamp": 1610607736111,
+		"disable": false
 	},
 	{
 		"name": "",
 		"id": "5676181",
 		"tag": "5511909",
 		"trigger": "5",
-		"content": "反包、修复、 大长腿、补跌、穿越、低吸高潮回落、分歧转一致、被动下跌、V形转折",
+		"content": "反包、修复、 大长腿、补跌、穿越、低吸高潮回落、分歧转一致、被动下跌、V形转折、分歧低开弱转强；",
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1608871817444
