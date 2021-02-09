@@ -79,9 +79,10 @@ html, body {
 }
 
 #rts_list span.b1 {
-  width: 7em;
+  width: 8em;
   & > b {
-    width: 3em;
+    width: 4em;
+    font-weight: normal;
   }
 }
 

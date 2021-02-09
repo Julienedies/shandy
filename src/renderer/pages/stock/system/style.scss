@@ -1,0 +1,39 @@
+html, body {
+  font: 16px/1.6;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h1, h2, h3, dt {
+  //text-decoration: underline;
+}
+
+
+section {
+  margin: 1em 0;
+  padding: 0 0.5em 0.5em 0.5em;
+  border: solid 1px blue;
+
+  > div {
+    padding: 0 0 0 1em;
+  }
+}
+
+table {
+  th, td {
+    vertical-align: middle;
+  }
+
+  th {
+    padding: 0 2em 0 0;
+    font-size: 1.4em;
+  }
+}
+
+

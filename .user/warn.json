@@ -1,5 +1,15 @@
 [
 	{
+		"name": "",
+		"id": "2133661",
+		"tag": "9586736",
+		"trigger": "1",
+		"content": "为何不能克服情绪本能？",
+		"repeat": 7,
+		"type": "interval",
+		"timestamp": 1612504327065
+	},
+	{
 		"name": "我为何总是错过大行情？",
 		"id": "5010611",
 		"tag": "2430358",
@@ -98,16 +108,6 @@
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1611590826367
-	},
-	{
-		"name": "",
-		"id": "9481088",
-		"tag": "0238231",
-		"trigger": "1",
-		"content": "为何我总是后知后绝，一定要高潮爆发才能看到行情？",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1611210776257
 	},
 	{
 		"name": "",
@@ -250,6 +250,16 @@
 		"repeat": 2,
 		"type": "interval",
 		"timestamp": 1611475805257
+	},
+	{
+		"name": "",
+		"id": "9481088",
+		"tag": "0238231",
+		"trigger": "5",
+		"content": "为何我总是后知后绝，一定要高潮爆发才能看到行情？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1611210776257
 	},
 	{
 		"name": "",
