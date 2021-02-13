@@ -170,6 +170,8 @@ brick.reg('mainCtrl', function (scope) {
 
     // 图片剪切测试  fields => {x: 3140, y: 115, width: 310, height: 50}
     // scope.crop = {x: 3140, y: 115, width: 310, height: 50};
+    // p2415q => {x: 3100, y: 117, width: 360, height: 50};
+    // 328b => {x: 3200, y: 77, width: 190, height: 37};
     scope.cropTest = function (fields) {
         console.info(fields);
         let {x, y, width, height} = fields || scope.crop;

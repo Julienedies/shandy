@@ -30,20 +30,21 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/交易记录/2009",
+		"imgDir": "/Users/j/截图/交易记录/2101",
 		"bounds": {
 			"x": 1440,
 			"y": 0,
-			"width": 1920,
-			"height": 1080
+			"width": 3008,
+			"height": 1692
 		},
 		"crop": {
-			"x": 3100,
-			"y": 117,
-			"width": 360,
-			"height": 49
+			"x": 3200,
+			"y": 77,
+			"width": 190,
+			"height": 37
 		},
 		"history": [
+			"/Users/j/截图/交易记录/2101",
 			"/Users/j/截图/竞价系统/2020-12",
 			"/Users/j/截图/目标行情/2020-12",
 			"/Users/j/截图/交易记录/2012",

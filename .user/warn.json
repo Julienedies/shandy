@@ -44,7 +44,7 @@
 		"id": "8203311",
 		"tag": "8831977",
 		"trigger": "1",
-		"content": "为何我总是线性思维，先入为主？",
+		"content": "为何我总是线性思维，先入为主？\n多空动态博弈转换。多空动态博弈转换。",
 		"repeat": 4,
 		"type": "interval",
 		"timestamp": 1610785989213
@@ -81,16 +81,6 @@
 	},
 	{
 		"name": "",
-		"id": "7899564",
-		"tag": "9586736",
-		"trigger": "5",
-		"content": "为何我不能停下来，做出真正的改变？",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1611793337003
-	},
-	{
-		"name": "",
 		"id": "0814145",
 		"tag": "9373395",
 		"trigger": "1",
@@ -98,6 +88,16 @@
 		"repeat": 5,
 		"type": "interval",
 		"timestamp": 1611731531071
+	},
+	{
+		"name": "",
+		"id": "7024245",
+		"tag": "7024222",
+		"trigger": "1",
+		"content": "我以什么做为判断锚点？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1610192458954
 	},
 	{
 		"name": "",
@@ -131,6 +131,16 @@
 	},
 	{
 		"name": "",
+		"id": "7899564",
+		"tag": "9586736",
+		"trigger": "5",
+		"content": "为何我不能停下来，做出真正的改变？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1611793337003
+	},
+	{
+		"name": "",
 		"id": "1671963",
 		"tag": "4893750",
 		"trigger": "5",
@@ -138,16 +148,6 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1610895586395
-	},
-	{
-		"name": "",
-		"id": "7024245",
-		"tag": "7024222",
-		"trigger": "1",
-		"content": "我以什么做为判断锚点？",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1610192458954
 	},
 	{
 		"name": "",
