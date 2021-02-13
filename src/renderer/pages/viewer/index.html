@@ -90,7 +90,7 @@
                     <h5>
                         <span style="display: inline-block; min-width:42em;">{{v.f}} </span>
                         <span ic-for="k,o in v.tags"
-                              ic-class="tag {{o ? o.type=='交易错误'?'is-dark' : o.text.includes('亏损') ? 'is-primary': o.text.includes('盈利')?'is-danger':'is-info' : ''}}">
+                              ic-class="tag is-medium {{o ? o.type=='交易错误'?'is-dark' : o.text.includes('亏损') ? 'is-primary': o.text.includes('盈利')?'is-danger':'is-info' : ''}}">
                             {{ o && o.text }}
                         </span>
                     </h5>

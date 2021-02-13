@@ -1,22 +1,22 @@
 <div class="column is-7" ic-ctrl="viewerMarkTagCtrl" ic-popup="viewerMarkTag">
     <div>
         <header class="buttons">
-            <button class="button is-primary is-small"
+            <button class="button is-primary is-medium"
                     ic-ajax
                     ic-ajax-auto
                     ic-submit-method="get"
                     ic-submit-action="/stock/system"
                     ic-submit-on-done="onGetSystemDone">交易系统列表
             </button>
-            <button class="button is-small" ic-click="toggleScrollMode">切换滚动模式</button>
-            <button class="button is-primary is-small" ic-popup-close>关闭</button>
+            <button class="button is-medium" ic-click="toggleScrollMode">切换滚动模式</button>
+            <button class="button is-primary is-medium" ic-popup-close>关闭</button>
         </header>
 
         <div ic-tpl="viewerTags">
             <div class="ic-select" ic-select="system" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
                 <div class="tags">
-                    <span class="tag is-medium is-primary">交易系统</span>
-                    <span class="tag is-small is-black" ic-for="i, v in model.system" ic-select-item ic-val="{{ v.id }}"
+                    <span class="tag is-large is-primary">交易系统</span>
+                    <span class="tag is-black" ic-for="i, v in model.system" ic-select-item ic-val="{{ v.id }}"
                           ic-has-selected="model.img.system && model.img.system.includes(v.id)">
                         {{v.name}}
                     </span>
@@ -24,8 +24,8 @@
             </div>
             <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
                 <div class="tags">
-                    <span class="tag is-primary is-medium" ic-for-start="k,arr in model.tags" ic-if-start="k!=='type'">{{k}}</span>
-                    <span class="tag is-small is-black" ic-for-end ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
+                    <span class="tag is-primary is-large" ic-for-start="k,arr in model.tags" ic-if-start="k!=='type'">{{k}}</span>
+                    <span class="tag is-medium is-black" ic-for-end ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
                           ic-has-selected="model.img.tags && model.img.tags.includes(v.id)">
                         {{v.text}}
                     </span>
