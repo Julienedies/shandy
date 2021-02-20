@@ -47,6 +47,10 @@ brick.reg('diaryCtrl', function () {
         render();
     };
 
+    this.reverse = function () {
+        render(true);
+    };
+
     this.edit = function (e, id) {
         let diary = (id && list.get(id)) || {};
         scope.emit('diary.edit', {diary, tagArr: scope.tagArr});
@@ -81,8 +85,9 @@ brick.reg('diaryCtrl', function () {
         scope.onGetDiaryDone(data);
     });
 
-    function render () {
+    function render (isReverse) {
         let resultArr = list.get();
+        isReverse && resultArr.reverse();
         let val = scope.filterKey;
         let filterKey = val === '' ? undefined : val === '_null' ? '' : val;
         // 如果有过滤条件

@@ -26,7 +26,7 @@
 	},
 	{
 		"id": "预增",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1610898031672
 	},
 	{
@@ -41,7 +41,7 @@
 	},
 	{
 		"id": "医美",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1607946813103
 	},
 	{
@@ -56,7 +56,7 @@
 	},
 	{
 		"id": "可降解塑料",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1607300642521
 	},
 	{
@@ -126,7 +126,7 @@
 	},
 	{
 		"id": "光伏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1600643622777
 	},
 	{
@@ -166,7 +166,7 @@
 	},
 	{
 		"id": "锂电池",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1594165362205
 	},
 	{
@@ -241,7 +241,7 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578928807285
 	},
 	{

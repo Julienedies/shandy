@@ -208,7 +208,7 @@ brick.reg('mainCtrl', function (scope) {
         }
     })();
 
-    start();
+    //start();
 
 });
 
@@ -217,9 +217,25 @@ brick.reg('todoListCtrl', function (scope) {
 
     const dragOverCla = 'onDragOver';
 
-    function render () {
+    function getMapByType (arr) {
+        let mapByType = {};
+        arr.forEach((v, i) => {
+            let arr2 = mapByType[v.type || '_null'] = mapByType[v.type || '_null'] || [];
+            arr2.push(v);
+        });
+
+        console.log(mapByType);
+        return mapByType;
+    }
+
+    function render (filterByType) {
         let todoArr = todoJodb.get();
+        let mapByType = getMapByType(todoArr);
+        if (filterByType) {
+            todoArr = mapByType[filterByType];
+        }
         console.log(todoArr);
+        scope.render('types', {model: mapByType});
         scope.render('todoList', {model: todoArr}, function () {
             $(this).find('tr').on('dragstart', scope.dragstart)
                 .on('dragover', scope.dragover)
@@ -227,6 +243,14 @@ brick.reg('todoListCtrl', function (scope) {
                 .on('drop', scope.drop);
         });
     }
+
+    scope.filter = function (e, type) {
+        render(type);
+    };
+
+    scope.onFilterKeyChange = function(msg) {
+        render(msg.value);
+    };
 
     scope.toggle = function (e) {
         let cla = 'toggle';

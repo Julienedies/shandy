@@ -13,7 +13,14 @@
 
     <div ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
         <div class="column">
+
             <div class="buttons is-right" id="fixedButtons" style="position: fixed;z-index: 1000; right:8%; ">
+                 <span class="tags is-left" ic-tpl="types">
+                    <span ic-select="tags" ic-select-item=".tag" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
+                        <i ic-for="v,i in model"  ic-val="{{ v }}" class="tag is-small">{{ v }}</i>
+                    </span>
+                     &nbsp;&nbsp;&nbsp;
+                </span>
                 <button class="button is-primary" ic-click="stop">停止提醒</button>
                 <button class="button is-primary" ic-click="start" style="display:none;">开启提醒</button>
                 <button class="button is-primary" ic-view-to="prepare">prepare</button>
@@ -37,12 +44,14 @@
                 <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                     ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
                     <td>{{ v.name }}</td>
-                    <td>{{ v.type }}</td>
+                    <td><span ic-click="filter:{{ v.type }}">{{ v.type }} </span></td>
                     <td>{{ v.start }}</td>
                     <td>{{ v.interval }}</td>
-                    <td>{{ v.repeat }}</td>
-                    <td><div class="pre text" ic-dblclick="toggle">{{ v.content }}</div></td>
                     <td>{{ v.promptTimes || 0 }}</td>
+                    <td>{{ v.repeat }}</td>
+                    <td>
+                        <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
+                    </td>
                     <td>
                         <div style="white-space: normal;">
                             <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
@@ -121,7 +130,7 @@
                             <div class="field">
                                 <div class="control">
                                     <input class="input" type="number" placeholder="重复次数"
-                                           ic-value="{{ model.repeat || 4 }}" ic-form-field="repeat">
+                                           ic-value="{{ model.repeat || 3 }}" ic-form-field="repeat">
                                 </div>
                                 <p class="help">每天重复提醒，还是一次性提醒。</p>
                             </div>

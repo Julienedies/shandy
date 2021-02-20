@@ -83,7 +83,7 @@
 		"name": "",
 		"id": "0814145",
 		"tag": "9373395",
-		"trigger": "1",
+		"trigger": "3",
 		"content": "多空动态博弈，根据盘面应对。",
 		"repeat": 5,
 		"type": "interval",

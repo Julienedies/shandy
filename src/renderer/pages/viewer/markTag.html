@@ -16,7 +16,7 @@
             <div class="ic-select" ic-select="system" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
                 <div class="tags">
                     <span class="tag is-large is-primary">交易系统</span>
-                    <span class="tag is-black" ic-for="i, v in model.system" ic-select-item ic-val="{{ v.id }}"
+                    <span class="tag is-black is-medium" ic-for="i, v in model.system" ic-select-item ic-val="{{ v.id }}"
                           ic-has-selected="model.img.system && model.img.system.includes(v.id)">
                         {{v.name}}
                     </span>
