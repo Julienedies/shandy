@@ -208,7 +208,7 @@ brick.reg('mainCtrl', function (scope) {
         }
     })();
 
-    //start();
+    start();
 
 });
 
@@ -293,7 +293,9 @@ brick.reg('todoListCtrl', function (scope) {
         todoJodb.set(item);
     };
 
-    todoJodb.on('change', render);
+    todoJodb.on('change', function() {
+        render();
+    });
 
     render();
 

@@ -14,12 +14,11 @@
     <div ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
         <div class="column">
 
-            <div class="buttons is-right" id="fixedButtons" style="position: fixed;z-index: 1000; right:8%; ">
+            <div class="buttons is-right" id="fixedButtons" style="position: fixed;z-index: 1000; right:4%; ">
                  <span class="tags is-left" ic-tpl="types">
                     <span ic-select="tags" ic-select-item=".tag" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
                         <i ic-for="v,i in model"  ic-val="{{ v }}" class="tag is-small">{{ v }}</i>
                     </span>
-                     &nbsp;&nbsp;&nbsp;
                 </span>
                 <button class="button is-primary" ic-click="stop">停止提醒</button>
                 <button class="button is-primary" ic-click="start" style="display:none;">开启提醒</button>
