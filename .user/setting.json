@@ -13,11 +13,11 @@
 			"ths_p"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 101,
+		"fetchFromIndex": 228,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
 		"hotCsvFile": "/Users/j/截图/JX.txt",
-		"fetchLimit": "100"
+		"fetchLimit": "0"
 	},
 	"warn": {
 		"randomBgImgDir": "/Users/j/pim/img/人物",

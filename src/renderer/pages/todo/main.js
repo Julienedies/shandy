@@ -216,6 +216,7 @@ brick.reg('mainCtrl', function (scope) {
 brick.reg('todoListCtrl', function (scope) {
 
     const dragOverCla = 'onDragOver';
+    let filterByType = null;
 
     function getMapByType (arr) {
         let mapByType = {};
@@ -228,7 +229,7 @@ brick.reg('todoListCtrl', function (scope) {
         return mapByType;
     }
 
-    function render (filterByType) {
+    function render () {
         let todoArr = todoJodb.get();
         let mapByType = getMapByType(todoArr);
         if (filterByType) {
@@ -245,11 +246,13 @@ brick.reg('todoListCtrl', function (scope) {
     }
 
     scope.filter = function (e, type) {
-        render(type);
+        filterByType = type;
+        render();
     };
 
     scope.onFilterKeyChange = function(msg) {
-        render(msg.value);
+        filterByType = msg.value;
+        render();
     };
 
     scope.toggle = function (e) {
