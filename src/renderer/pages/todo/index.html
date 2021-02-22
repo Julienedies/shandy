@@ -16,8 +16,8 @@
 
             <div class="buttons is-right" id="fixedButtons" style="position: fixed;z-index: 1000; right:4%; ">
                  <span class="tags is-left" ic-tpl="types">
-                    <span ic-select="tags" ic-select-item=".tag" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
-                        <i ic-for="v,i in model"  ic-val="{{ v }}" class="tag is-small">{{ v }}</i>
+                    <span ic-select="tags" ic-select-item=".tag" ic-select-cla="is-primary"  ic-has-selected="v===model.filterByType" ic-select-on-change="onFilterKeyChange">
+                        <i ic-for="v,i in model.mapByType"  ic-val="{{ v }}" class="tag is-small">{{ v }}</i>
                     </span>
                 </span>
                 <button class="button is-primary" ic-click="stop">停止提醒</button>
@@ -38,7 +38,6 @@
                     <th>重复</th>
                     <th>已提醒</th>
                     <th>ToDo</th>
-                    <th></th>
                 </tr>
                 <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                     ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
@@ -49,21 +48,22 @@
                     <td>{{ v.repeat }}</td>
                     <td>{{ v.promptTimes || 0 }}</td>
                     <td>
-                        <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
-                    </td>
-                    <td>
-                        <div style="white-space: pre;">
-                            <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
-                            <button class="button is-primary is-small" ic-click="focus:{{ v.id }}">置顶</button>
-                            <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>
-                            <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
-                                {{ v.complete ? '完成':'进行' }}
-                            </button>
-                            <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
-                                {{ v.disable ? '启用':'禁止' }}
-                            </button>
-                            <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                        <div style="display: flex;">
+                            <div style="flex:1 1 auto;" class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
+                            <div style="display:flex; flex-flow: column; white-space: pre;">
+                                <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
+                                <button class="button is-primary is-small" ic-click="focus:{{ v.id }}">置顶</button>
+                                <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>
+                                <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
+                                    {{ v.complete ? '完成':'进行' }}
+                                </button>
+                                <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
+                                    {{ v.disable ? '启用':'禁止' }}
+                                </button>
+                                <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                            </div>
                         </div>
+
                     </td>
                 </tr>
             </table>

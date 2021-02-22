@@ -235,8 +235,8 @@ brick.reg('todoListCtrl', function (scope) {
         if (filterByType) {
             todoArr = mapByType[filterByType];
         }
-        console.log(todoArr);
-        scope.render('types', {model: mapByType});
+        console.log(filterByType, todoArr);
+        scope.render('types', {model: {mapByType:mapByType, filterByType:filterByType}});
         scope.render('todoList', {model: todoArr}, function () {
             $(this).find('tr').on('dragstart', scope.dragstart)
                 .on('dragover', scope.dragover)
@@ -246,14 +246,17 @@ brick.reg('todoListCtrl', function (scope) {
     }
 
     scope.filter = function (e, type) {
-        filterByType = type;
-        render();
+        _onFilter(type);
     };
 
     scope.onFilterKeyChange = function(msg) {
-        filterByType = msg.value;
-        render();
+        _onFilter(msg.value);
     };
+
+    function _onFilter (type) {
+        filterByType = type;
+        render();
+    }
 
     scope.toggle = function (e) {
         let cla = 'toggle';

@@ -1,6 +1,34 @@
 [
 	{
 		"name": "",
+		"id": "9631044",
+		"type": "问题",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">应对：临盘时，我依据什么做什么操作？</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1613988914994,
+		"promptTimes": 1,
+		"prevPromptTime": 1613994258552
+	},
+	{
+		"name": "",
+		"id": "5992275",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误：我总是浑浑噩噩，所有的自选股有想过什么样的条件介入吗？</u></span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">为何总是没有对自选股进行推演和计划，你选自选股的意义何在？</span></strong></u></span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">竞价出来后，我脑子里想的是什么？自选股高开表现了什么？</span></strong></u></span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1613977676936,
+		"promptTimes": 1,
+		"prevPromptTime": 1613996058502
+	},
+	{
+		"name": "",
 		"id": "5441430",
 		"type": "问题",
 		"content": "<p><span style=\"background-color: rgb(255, 255, 0); font-size: 32px; color: rgb(0, 0, 0);\"><strong><u>问题1：为何总是错过大行情？为什么没有参与龙头？</u></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">没有大局观，对市场理解不够。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><u>我总是在行情走出来，才意识到市场强势和大趋势。本质都是后知后觉。</u></span></strong></p><p><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255); font-size: 28px;\">一定要做龙头。</span></strong><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">一定要做龙头。</span></strong></span><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255); font-size: 28px;\">一定要做龙头。</span></strong><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><br></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>为什么总是错过当前的热点行情？ 汇金股份、坚瑞沃能、华昌达。</u></span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>为什么总是在行情走出来才能意识到行情的存在。</u></span></strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">你为什么不专注于当前的龙头，天天花时间在那些未知的个股上。</span></strong></p><p><br></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">我是不是又错过了当下的热点行情？</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><u>当前的热点行情是什么？当前的市场龙头是什么？</u></strong></span></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px;\"><u>我为什么没有介入？</u></span></strong></p><p><br></p><p><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">1. 没有大局观；对市场状态和热点方向，总是后知后决。总是踏错节奏；</span></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\">2. 三心二意；没有专注于明确的模式；机会到来时犹豫不决，错失机会；</span></span></span></p><p><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">3. 主观，先入为主； 对预期外的状况措手不及。</span></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;任何阶段，市场总是会有龙头的。因为这是资金逐利的属性决定的。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;收集龙头，介入。</span></strong></p><p><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>有哪些票是超出你预期上涨的？</strong></span><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>&nbsp;</strong></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">卡倍亿</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">新余国科</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>我为何总是错失大行情，抓不住机会？</strong></span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">这是我当前的问题所在，我的思维方式有问题&nbsp;</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">类似光大证券、中航沈飞；航天彩虹；王府井；中国中免；中船防务等股票；</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">为什么我抓不住？它们都在我的自选里；</span></strong></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我为什么会错过牛市行情？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">上涨的过程中；我总是担心会跌；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我不敢做那些高位票，风险是没有；但是也放弃了机会；关键是概率优势；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">盈亏同源；保持交易一致性；我没有做到。我总是首上次交易的影响，左右被打脸。</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">客观跟随，客观跟随；市场反映一切；</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">历史一直在重复；我却为什么抓不住机会？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我对K线的理解非常差；市场是多空动态博弈的；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>本周我错过的票；这不是偶然的，这说明我的思维方式有问题，才会错过这么多机会；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>譬如中航沈飞、中船防务、西藏药业；东富龙；金达威；复星医药；航天彩虹；海利生物；沈阳化工；智飞生物；中国中免；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我好像只有线性思维；下跌就看空；上涨担心回落；没有大局观，看不到大势；</strong></span></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">股票的K线走势，我好多都没有理解，所以自然抓不住机会；</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">你他妈的怎么复盘的？</span></strong></span></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">热钱在哪里？赚钱效应在哪里？</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">主线不会每天变化。</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">不要他妈的臆测行情结束了。</span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">行情结束的时候，会有信号出现的。</span></strong></p>",
@@ -9,7 +37,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334
+		"timestamp": 1595590485334,
+		"promptTimes": 1,
+		"prevPromptTime": 1613981559613
 	},
 	{
 		"name": "",
@@ -33,7 +63,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1597160146691
+		"timestamp": 1597160146691,
+		"promptTimes": 1,
+		"prevPromptTime": 1613983358936
 	},
 	{
 		"name": "",
@@ -45,7 +77,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1610184636301
+		"timestamp": 1610184636301,
+		"promptTimes": 2,
+		"prevPromptTime": 1613990558032
 	},
 	{
 		"name": "",
@@ -83,7 +117,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613314074347
+		"timestamp": 1613314074347,
+		"promptTimes": 1,
+		"prevPromptTime": 1613986959316
 	},
 	{
 		"name": "",
@@ -95,13 +131,15 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1610455034740
+		"timestamp": 1610455034740,
+		"promptTimes": 1,
+		"prevPromptTime": 1613988758078
 	},
 	{
 		"name": "",
 		"id": "6824189",
 		"type": "错误",
-		"content": "<p><strong><u><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">错误4：每次都踏错节奏，每次逼空都没有准备好标的。</span></u></strong></p>",
+		"content": "<p><strong><u><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">错误4：每次都踏错节奏，每次逼空都没有准备好标的。</span></u></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>每次市场强势出击都踏空。</u></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>好的标的和机会转瞬即逝。而我因为没有明确的判断锚点，总是犹豫不决。</u></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">总是浑浑噩噩，今天的永兴转债加入自选，但是怎么操作呢？没有想法。没有想法。没有想法。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
@@ -119,7 +157,9 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 30,
-		"timestamp": 1594995614163
+		"timestamp": 1594995614163,
+		"promptTimes": 1,
+		"prevPromptTime": 1613979758419
 	},
 	{
 		"name": "",
@@ -155,9 +195,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1611881119094,
-		"promptTimes": 1,
-		"prevPromptTime": 1613746700973
+		"timestamp": 1611881119094
 	},
 	{
 		"name": "",
@@ -197,20 +235,6 @@
 	},
 	{
 		"name": "",
-		"id": "8792356",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">错误：为何总是没有对自选股进行推演和计划，你选自选股的意义何在？</span></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 1,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1612358966268,
-		"promptTimes": 1,
-		"prevPromptTime": 1613743101099
-	},
-	{
-		"name": "",
 		"id": "2541287",
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\">错误：我总是倾向看空，每次大阳线都在我预期之外。</span></strong></p>",
@@ -219,9 +243,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1612849451096,
-		"promptTimes": 1,
-		"prevPromptTime": 1613728701151
+		"timestamp": 1612849451096
 	},
 	{
 		"name": "",
@@ -269,9 +291,7 @@
 		"repeat": 1,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1612163571288,
-		"promptTimes": 1,
-		"prevPromptTime": 1613741300947
+		"timestamp": 1612163571288
 	},
 	{
 		"name": "",
@@ -289,21 +309,19 @@
 		"name": "",
 		"id": "0871577",
 		"type": "复盘",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;关于复盘： &nbsp;</span><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">正确解读<strong><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">市场表现</span></strong></strong>。 理解市场，跟随市场；</span></strong></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">大局观</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">大盘趋势：向上? 向下？震荡？强势？弱势？突破？ 下破？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>反身性：赚钱效应？亏钱效应？赚钱效应会带来正反馈，直至高潮。</strong></span></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>主线热点：主线热点不是天天变化。也许会有周期起伏。但不会天天改变。</strong></span></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">个股龙头是谁？ 次日走势推演？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">超预期个股？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">高低切换？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">风格切换？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">共振、分歧、背离、分化？</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;关于复盘： &nbsp;</span><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">正确解读</span><strong><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">市场表现</span></strong></strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">。 理解市场，跟随市场；</span></strong></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">大局观</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">有没有板块处在行情进行中？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">大盘次日的走势推演？ 下探? 上冲？ 分化背离？&nbsp;</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">大盘趋势：向上? 向下？震荡？强势？弱势？突破？ 下破？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>反身性：赚钱效应？亏钱效应？赚钱效应会带来正反馈，直至高潮。</strong></span></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>主线热点：主线热点不是天天变化。也许会有周期起伏。但不会天天改变。</strong></span></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">个股龙头是谁？ 次日走势推演？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">超预期个股？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">高低切换？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">风格切换？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">共振、分歧、背离、分化？</span></strong></p>",
 		"singleWindow": "",
 		"start": "17:00",
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613116533547,
-		"promptTimes": 1,
-		"prevPromptTime": 1613723302259
+		"timestamp": 1613116533547
 	},
 	{
 		"name": "",
 		"id": "2499479",
 		"type": "复盘",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;怎么复盘个股？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;资金类型？</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>&nbsp;预期外？</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>&nbsp;板块效应？<br></strong></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>&nbsp;人气地位？</strong></span></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;技术形态？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;强度&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;潜力&nbsp;</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;怎么复盘个股？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;资金类型？</span></strong><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>&nbsp;预期外？</strong></span></span></span><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>&nbsp;板块效应、主线热点？</strong></span></span></span><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>&nbsp;人气地位？</strong></span></span></span><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;技术形态？</span></strong><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;强度 ？</span></strong><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;风险？ 收益？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">1. 技术状态？ &nbsp;启动？ &nbsp;分歧？ &nbsp;调整？ &nbsp;高位？ 低位？ 爆发？&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">2. 高开表示什么？是否介入？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">3. 略高开表示什么？是否介入？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">2. 一字开，是否打T字板？ 是否介入？盈亏比如何？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">3. 封板表示什么？ 是否介入？ 盈亏比如何？</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
@@ -430,9 +448,7 @@
 		"repeat": 4,
 		"interval": 30,
 		"duration": 47,
-		"timestamp": 1609600599192,
-		"promptTimes": 1,
-		"prevPromptTime": 1613730501966
+		"timestamp": 1609600599192
 	},
 	{
 		"name": "",
@@ -444,9 +460,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613056712193,
-		"promptTimes": 1,
-		"prevPromptTime": 1613726902066
+		"timestamp": 1613056712193
 	},
 	{
 		"name": "",
@@ -458,9 +472,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1610163063160,
-		"promptTimes": 1,
-		"prevPromptTime": 1613732301994
+		"timestamp": 1610163063160
 	},
 	{
 		"name": "",
@@ -472,9 +484,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1606540540693,
-		"promptTimes": 1,
-		"prevPromptTime": 1613734101338
+		"timestamp": 1606540540693
 	},
 	{
 		"name": "",
@@ -486,9 +496,7 @@
 		"repeat": 7,
 		"interval": 55,
 		"duration": 47,
-		"timestamp": 1600596359187,
-		"promptTimes": 2,
-		"prevPromptTime": 1613735901429
+		"timestamp": 1600596359187
 	},
 	{
 		"name": "",
@@ -500,9 +508,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1611414563220,
-		"promptTimes": 1,
-		"prevPromptTime": 1613737701553
+		"timestamp": 1611414563220
 	},
 	{
 		"name": "",
@@ -514,10 +520,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1612193035549,
-		"promptTimes": 1,
-		"prevPromptTime": 1613739501317,
-		"complete": true
+		"timestamp": 1612193035549
 	},
 	{
 		"name": "",
@@ -529,9 +532,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1611060089179,
-		"promptTimes": 2,
-		"prevPromptTime": 1613744901089
+		"timestamp": 1611060089179
 	},
 	{
 		"name": "",
@@ -706,9 +707,8 @@
 		"interval": 45,
 		"duration": 47,
 		"timestamp": 1609667569090,
-		"promptTimes": 1,
-		"prevPromptTime": 1613696305249,
-		"complete": true
+		"promptTimes": 7,
+		"prevPromptTime": 1613975680649
 	},
 	{
 		"name": "",
