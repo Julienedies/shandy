@@ -101,7 +101,12 @@ brick.reg('mainCtrl', function (scope) {
         hideWindowTimer = setTimeout(() => {
             scope.hideWindow();
         }, 1000 * (todoItem.duration || 17));
-        scope.emit(todoItem.type || 'prompt', todoItem);
+
+        let type = todoItem.type;
+
+        type = (type === 'prepare' || type === 'mistake') ? type : 'prompt';
+
+        scope.emit(type, todoItem);
 
         // 打开相关的独立窗口
         if (todoItem.singleWindow) {
