@@ -1,6 +1,54 @@
 [
 	{
 		"name": "",
+		"id": "1853898",
+		"type": "错误",
+		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><u><span style=\"font-size: 32px; background-color: rgb(0, 0, 0);\">2020年6月，我就发现所有的交易错误了。但是都没有改正。</span></u></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><u><span style=\"font-size: 32px; background-color: rgb(0, 0, 0);\">看看你的交易日记，停下来思考，解决那些错误和问题。</span></u></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><u><span style=\"font-size: 32px; background-color: rgb(0, 0, 0);\">而不是每天重复无意义的交易。</span></u></strong></span></p><p><br></p><p><br></p><p><strong><u><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">看看周K，市场从2019年到现在，已经涨了2年了。</span></u></strong></p><p><strong><u><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">我没有大局观，就像我的交易，着眼于小波动，看不到大趋势，也看不到大的确定性。</span></u></strong></p><p><strong><u><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">一个持续一周的上涨周期很多，我有看到吗？</span></u></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1614268639096
+	},
+	{
+		"name": "",
+		"id": "6257804",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>思维没有方向；操作没有系统；不知以什么做为判断锚点。</u></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">打板是一个最简单的超短交易系统；没有了打板，我不知道如何做超短交易。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1611881119094
+	},
+	{
+		"name": "",
+		"id": "1321674",
+		"type": "问题",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">盛和资源、郑州煤电、光大证券、王府井、</span><span style=\"font-size: 28px;background-color: rgb(255, 255, 0);\">豫能控股、星期六。</span></strong></p><p><span style=\"font-size: 28px;background-color: rgb(255, 255, 0);\"><strong>这些龙头行情背后推动的题材和政策，我没有优势？市场参与者的行为逻辑。</strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">这是非常重要的问题。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">所以那些超预期强势的票，要特别注意。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 1,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1614400248332
+	},
+	{
+		"name": "",
+		"id": "5725722",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>没有做龙头；没有做龙头；没有做龙头;</u></span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">强调过多少次了，但为什么还是没有做龙头；</span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我好象陷在习惯和本能里，很难改变。</span></strong></p><p><span style=\"font-size: 24px; background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255);\"><br></span></strong></span></p><p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">所有的错误，一再重复为何？</span></strong></p>",
+		"singleWindow": "",
+		"start": "10:00",
+		"repeat": 7,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1614392475849
+	},
+	{
+		"name": "",
 		"id": "9532863",
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>着眼于小波动，没有大局观，看不到大的确定性。</u></span></strong></p><p><br></p><p><strong><u><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">看看周K，市场从2019年到现在，已经涨了2年了。</span></u></strong></p><p><strong><u><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">我没有大局观，就像我的交易，着眼于小波动，看不到大趋势，也看不到大的确定性。</span></u></strong></p><p><strong><u><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">一个持续一周的上涨周期很多，我有看到吗？</span></u></strong></p>",
@@ -10,18 +58,6 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1614269587876
-	},
-	{
-		"name": "",
-		"id": "1853898",
-		"type": "错误",
-		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><u><span style=\"font-size: 32px; background-color: rgb(0, 0, 0);\">看看你的交易日记，停下来思考，解决那些错误和问题。</span></u></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><u><span style=\"font-size: 32px; background-color: rgb(0, 0, 0);\">而不是每天重复无意义的交易。</span></u></strong></span></p><p><br></p><p><strong><u><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">看看周K，市场从2019年到现在，已经涨了2年了。</span></u></strong></p><p><strong><u><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">我没有大局观，就像我的交易，着眼于小波动，看不到大趋势，也看不到大的确定性。</span></u></strong></p><p><strong><u><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">一个持续一周的上涨周期很多，我有看到吗？</span></u></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 3,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1614268639096
 	},
 	{
 		"name": "",
@@ -47,18 +83,6 @@
 		"duration": 47,
 		"timestamp": 1611189022632,
 		"disable": false
-	},
-	{
-		"name": "",
-		"id": "6257804",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>思维没有方向；操作没有系统；不知以什么做为判断锚点。</u></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">打板是一个最简单的超短交易系统；没有了打板，我不知道如何做超短交易。</span></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1611881119094
 	},
 	{
 		"name": "",
@@ -95,7 +119,9 @@
 		"repeat": 17,
 		"interval": 45,
 		"duration": 47,
-		"timestamp": 1609667569090
+		"timestamp": 1609667569090,
+		"promptTimes": 4,
+		"prevPromptTime": 1614312738659
 	},
 	{
 		"name": "",
@@ -180,7 +206,9 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1611591229689,
-		"disable": false
+		"disable": false,
+		"promptTimes": 1,
+		"prevPromptTime": 1614327139635
 	},
 	{
 		"name": "",
@@ -192,7 +220,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1610455034740
+		"timestamp": 1610455034740,
+		"promptTimes": 1,
+		"prevPromptTime": 1614328939014
 	},
 	{
 		"name": "",
@@ -210,13 +240,16 @@
 		"name": "",
 		"id": "7981263",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误3：线性思维，先入为主。&nbsp;</u></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>下跌也可以走V；</u></span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</u></span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻这些封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>涨的高，就认为是顶。上涨初期，不在意。</u></span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误3：线性思维，先入为主。&nbsp;</u></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>下跌也可以走V；</u></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>大盘受外围影响大幅低开恐慌，却低开高走。</u></span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</u></span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻这些封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>涨的高，就认为是顶。上涨初期，不在意。</u></span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "15:00",
-		"repeat": 4,
+		"repeat": 2,
 		"interval": 60,
 		"duration": 30,
-		"timestamp": 1594995614163
+		"timestamp": 1594995614163,
+		"promptTimes": 1,
+		"prevPromptTime": 1614323538331,
+		"complete": true
 	},
 	{
 		"name": "",
@@ -228,7 +261,9 @@
 		"singleWindow": "",
 		"interval": 40,
 		"duration": 47,
-		"timestamp": 1594365344529
+		"timestamp": 1594365344529,
+		"promptTimes": 2,
+		"prevPromptTime": 1614334339084
 	},
 	{
 		"name": "",
@@ -264,7 +299,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1609769321075
+		"timestamp": 1609769321075,
+		"promptTimes": 2,
+		"prevPromptTime": 1614337938503
 	},
 	{
 		"name": "",
@@ -288,7 +325,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613800265445
+		"timestamp": 1613800265445,
+		"promptTimes": 2,
+		"prevPromptTime": 1614341538047
 	},
 	{
 		"name": "",
@@ -300,7 +339,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613572636483
+		"timestamp": 1613572636483,
+		"promptTimes": 2,
+		"prevPromptTime": 1614345137744
 	},
 	{
 		"name": "",
@@ -324,7 +365,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613532753439
+		"timestamp": 1613532753439,
+		"promptTimes": 2,
+		"prevPromptTime": 1614346938853
 	},
 	{
 		"name": "",
@@ -336,7 +379,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613116533547
+		"timestamp": 1613116533547,
+		"promptTimes": 1,
+		"prevPromptTime": 1614348738894
 	},
 	{
 		"name": "",
@@ -348,7 +393,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613549977472
+		"timestamp": 1613549977472,
+		"promptTimes": 1,
+		"prevPromptTime": 1614350538904
 	},
 	{
 		"name": "",
@@ -360,7 +407,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613403391906
+		"timestamp": 1613403391906,
+		"promptTimes": 1,
+		"prevPromptTime": 1614352338937
 	},
 	{
 		"name": "",
@@ -372,7 +421,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613441524741
+		"timestamp": 1613441524741,
+		"promptTimes": 1,
+		"prevPromptTime": 1614354138961
 	},
 	{
 		"name": "",
@@ -517,7 +568,9 @@
 		"repeat": 7,
 		"interval": 55,
 		"duration": 47,
-		"timestamp": 1600596359187
+		"timestamp": 1600596359187,
+		"promptTimes": 1,
+		"prevPromptTime": 1614325339499
 	},
 	{
 		"name": "",

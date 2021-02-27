@@ -27,6 +27,25 @@ brick.reg('diaryCtrl', function () {
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
 
+    scope.order = false;  // 排序方式: 顺序  or  逆序
+
+    function render () {
+        let resultArr = list.get();
+        scope.order && resultArr.reverse();
+        let val = scope.filterKey;
+        let filterKey = val === '' ? undefined : val === '_null' ? '' : val;
+        // 如果有过滤条件
+        if (filterKey) {
+            resultArr = resultArr.filter((item) => {
+                let tag = item.tag;
+                return Array.isArray(tag) && tag.includes(filterKey);
+            });
+        }
+
+        $.icMsg(`render item => ${ resultArr.length }`);
+        scope.render('diaryList', resultArr);
+    }
+
     this.onGetDiaryDone = function (data) {
         list.init(data);
 
@@ -48,7 +67,8 @@ brick.reg('diaryCtrl', function () {
     };
 
     this.reverse = function () {
-        render(true);
+        let order = scope.order = !scope.order;
+        render();
     };
 
     this.edit = function (e, id) {
@@ -84,23 +104,6 @@ brick.reg('diaryCtrl', function () {
     scope.on('diary.edit.done', function (e, data) {
         scope.onGetDiaryDone(data);
     });
-
-    function render (isReverse) {
-        let resultArr = list.get();
-        isReverse && resultArr.reverse();
-        let val = scope.filterKey;
-        let filterKey = val === '' ? undefined : val === '_null' ? '' : val;
-        // 如果有过滤条件
-        if (filterKey) {
-            resultArr = resultArr.filter((item) => {
-                let tag = item.tag;
-                return Array.isArray(tag) && tag.includes(filterKey);
-            });
-        }
-
-        scope.render('diaryList', resultArr);
-        $.icMsg(`render item => ${ resultArr.length }`);
-    }
 
 });
 
