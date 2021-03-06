@@ -154,7 +154,7 @@ brick.reg('mainCtrl', function (scope) {
                 name,
                 url,
                 width: 600,
-                height: 34,
+                height: 48,
                 x: 60,
                 ...getBounds(name),
                 titleBarStyle: 'hiddenInset',
@@ -271,7 +271,7 @@ brick.reg('mainCtrl', function (scope) {
                 //transparent: true,
                 //titleBarStyle: 'hidden',
                 //hasShadow: false,
-                //alwaysOnTop: true,
+                alwaysOnTop: true,
                 onClose () {
                     delete scope.todoWindow;
                     setTimeout(() => {
