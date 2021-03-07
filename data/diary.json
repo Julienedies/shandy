@@ -7,7 +7,7 @@
 			"为何总是错过大行情"
 		],
 		"date": "2021-03-05",
-		"text": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我总是后知后觉。</span></strong></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><strong>虽然指数一直在跌。</strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">但是短线情绪很好。风格切换的小盘超跌走出了一波行情。</span></strong></p>",
+		"text": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我总是后知后觉。<strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">风格切换的龙头行情又没抓住。</span></strong></span></strong></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><strong>虽然指数一直在跌。</strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">但是短线情绪很好。风格切换的小盘超跌走出了一波行情。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">类似于宜宾纸业那波，那波是蓝筹调整的穿插。这波就比较主流了。</span></strong></p><p><br></p>",
 		"timestamp": 1614959877989
 	},
 	{
@@ -3314,8 +3314,12 @@
 	{
 		"id": "8946679",
 		"tag": [
+			"_错误汇总",
+			"不知道以什么做为判断锚点",
+			"交易理念",
 			"交易系统",
 			"临盘随意交易",
+			"龙头",
 			"重复错误"
 		],
 		"date": "2020-08-13",
@@ -4009,7 +4013,7 @@
 	{
 		"id": "6110587",
 		"date": "2020-06-13",
-		"text": "<p><span style=\"font-size: 24px;\"><strong>交易流程</strong></span></p><p style=\"line-height: 1.5;\"><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 255); font-size: 20px;\"> 收集强势股 &nbsp; =&gt; &nbsp;一直关注 &nbsp;=&gt; &nbsp;找到合适的时机介入 &nbsp;=&gt; &nbsp; 如果不成功割肉走人。</span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(0, 0, 255);\"><br></span></span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(0, 0, 255);\"><span style=\"color: rgb(255, 255, 255);\">&nbsp;1. 更新股票池，市场上的人气龙头票就那么几只票（不会超过10支）。</span></span></span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(0, 0, 255);\"><span style=\"color: rgb(255, 255, 255);\">这主要是盘后的复盘准备工作，只做龙头，只做主升，只做最强。</span></span></span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(0, 0, 255);\"><span style=\"color: rgb(255, 255, 255);\">选股标准：股性（资金类型，行情类型），人气地位，主升，爆发力，强势，合力，<span style=\"color: rgb(255, 255, 255);\">赚钱效应，反身性</span></span></span></span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(0, 0, 255);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"color: rgb(255, 255, 255);\">买点：启动，转折，爆发</span></span></span></span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(0, 0, 255);\"><span style=\"color: rgb(255, 255, 255);\">龙头会涨停，是因为抢筹。理论上，资金无限，龙头有限。所以买盘大于买盘。</span></span></span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(0, 0, 255);\"><br></span></span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(0, 0, 255);\"><span style=\"color: rgb(255, 255, 255);\">&nbsp;2. 预判、试错、确认、加仓；（ 对的加仓或持仓，错的平仓止损。截断亏损，让利润奔跑。）</span></span></span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(0, 0, 255);\"><br></span></span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 255);\">&nbsp;3. 周期是客观存在的，根据盈亏控制仓位大小。分仓滚动，以追涨热点与低吸反抽交替为主。</span></span></p><p style=\"line-height: 1.5;\"><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(0, 0, 255);\"><br></span></span></p><p style=\"line-height: 1.5;\"><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 255); font-size: 20px;\">&nbsp;4. 临盘必须有准备，果断执行。</span></p>",
+		"text": "<p><span style=\"font-size: 24px;\"><strong>交易流程</strong></span></p><p style=\"line-height: 1.5;\"><span style=\"color: rgb(255, 255, 255); background-color: rgb(148, 0, 211); font-size: 20px;\"> 收集强势股 &nbsp; =&gt; &nbsp;一直关注 &nbsp;=&gt; &nbsp;找到合适的时机介入 &nbsp;=&gt; &nbsp; 如果不成功割肉走人。</span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><br></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><span style=\"color: rgb(255, 255, 255);\">&nbsp;1. 更新股票池，市场上的人气龙头票就那么几只票（不会超过10支）。</span></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><span style=\"color: rgb(255, 255, 255);\">这主要是盘后的复盘准备工作，只做龙头，只做主升，只做最强。</span></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><span style=\"color: rgb(255, 255, 255);\">选股标准：股性（资金类型，行情类型），人气地位，主升，爆发力，强势，合力，<span style=\"color: rgb(255, 255, 255);\">赚钱效应，反身性</span></span></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"color: rgb(255, 255, 255);\">买点：启动，转折，爆发</span></span></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><span style=\"color: rgb(255, 255, 255);\">龙头会涨停，是因为抢筹。理论上，资金无限，龙头有限。所以买盘大于买盘。</span></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><br></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><span style=\"color: rgb(255, 255, 255);\">&nbsp;2. 预判、试错、确认、加仓；（ 对的加仓或持仓，错的平仓止损。截断亏损，让利润奔跑。）</span></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><br></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><span style=\"color: rgb(255, 255, 255);\">&nbsp;3. 周期是客观存在的，根据盈亏控制仓位大小。分仓滚动，以追涨热点与低吸反抽交替为主。</span></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"background-color: rgb(148, 0, 211);\"></span><span style=\"font-size: 20px;;background-color: rgb(148, 0, 211);\"><br></span><span style=\"background-color: rgb(148, 0, 211);\"></span></p><p style=\"line-height: 1.5;\"><span style=\"color: rgb(255, 255, 255); background-color: rgb(148, 0, 211); font-size: 20px;\">&nbsp;4. 临盘必须有准备，果断执行。</span></p>",
 		"timestamp": 1591980878409,
 		"tag": ""
 	},
@@ -4052,7 +4056,10 @@
 		"timestamp": 1591981760177,
 		"tag": [
 			"技术 VS  原因",
+			"为何总是错过大行情",
 			"要解决的问题",
+			"依靠预测交易",
+			"主观 VS 机械",
 			"VS"
 		]
 	},
