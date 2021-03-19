@@ -1,5 +1,11 @@
 [
 	{
+		"text": "此心安处是我乡",
+		"type": "",
+		"id": "4473274",
+		"timestamp": 1616075332790
+	},
+	{
 		"text": "四连扳的公式, 过滤一字板\n\nZT:=C>=ZTPRICE(REF(C,1),0.095) AND C>L;\nBARSLASTCOUNT(ZT)=4;",
 		"type": "",
 		"id": "9934992",

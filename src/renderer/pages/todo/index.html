@@ -110,6 +110,9 @@
                                 重置
                             </button>
                             <button class="button" ic-click="cancel">取消</button>
+                            <button class="button" ic-view-to="todoList">
+                                返回
+                            </button>
                             <label style="padding:0 0 0 2em;">是否独立窗口打开? </label>
                             <!--<input type="checkbox" class="checkbox" name="singleWindow" value="1" onclick="this.value=!!this.checked"
                                    ic-has-checked="model.singleWindow" ic-form-field="singleWindow">-->
@@ -164,9 +167,9 @@
 
             <div class="field">
                 <div class="control" style="text-align: right;">
-                    <button class="button is-primary" ic-view-to="todoList">
+<!--                    <button class="button is-primary" ic-view-to="todoList">
                         返回
-                    </button>
+                    </button>-->
                 </div>
             </div>
         </div>
@@ -180,18 +183,18 @@
                         todo!
                     </div>
                     <div class="buttons is-right">
-                        <button class="button is-primary" ic-click="hideWindow">
+                       <!-- <button class="button is-primary" ic-click="hideWindow">
                             关闭窗口
-                        </button>
+                        </button>-->
                         <button class="button is-primary" ic-view-to="todoList">
                             返回
                         </button>
                         <button class="button is-primary" ic-click="edit">
                             编辑
                         </button>
-                        <button class="button is-primary" ic-click="complete">
+                     <!--   <button class="button is-primary" ic-click="complete">
                             完成
-                        </button>
+                        </button>-->
                     </div>
                 </div>
             </div>

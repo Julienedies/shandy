@@ -1,5 +1,20 @@
 [
 	{
+		"id": "核电",
+		"selected": false,
+		"timestamp": 1615734970588
+	},
+	{
+		"id": "水电",
+		"selected": true,
+		"timestamp": 1615734938070
+	},
+	{
+		"id": "电力",
+		"selected": true,
+		"timestamp": 1615734930866
+	},
+	{
 		"id": "煤炭",
 		"selected": true,
 		"timestamp": 1615393699637
@@ -16,7 +31,7 @@
 	},
 	{
 		"id": "环保",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1614729938932
 	},
 	{
@@ -141,7 +156,7 @@
 	},
 	{
 		"id": "有色",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1605484212697
 	},
 	{
@@ -171,7 +186,7 @@
 	},
 	{
 		"id": "风电",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1600383573738
 	},
 	{

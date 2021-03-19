@@ -1,28 +1,40 @@
 [
 	{
 		"name": "",
+		"id": "8122254",
+		"type": "理念",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">选股：市场合力、主升龙头</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1616060257339
+	},
+	{
+		"name": "",
 		"id": "9205895",
 		"type": "警告",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">人会变得麻木</span></strong></p><p><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>一切有因果</strong></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>时不我待</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">恐惧和痛苦</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 0);\">快5年了，都没有盈利交易。我已经37岁了。我还有多少时间？</span></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">是不是因为没有外部约束，我才会这样懒散的生活<strong><span style=\"background-color: rgb(0, 0, 0);\">、随意的交易</span></strong>。</span></strong></span></strong></span></span></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">人会变得麻木</span></strong></p><p><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>一切有因果</strong></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>时不我待</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">恐惧和痛苦</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 0);\">快5年了，都没有盈利交易。我已经37岁了。我还有多少时间？</span></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">是不是因为没有外部约束，我才会这样懒散的生活<strong><span style=\"background-color: rgb(0, 0, 0);\">、随意的交易</span></strong>。</span></strong></span></strong></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 32px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>我还是没有改变。我还是在重复错误的交易流程。2021.03.17</strong></span></strong></span></strong></span></span></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 7,
 		"interval": 60,
-		"duration": 24,
+		"duration": 14,
 		"timestamp": 1614682522617,
 		"promptTimes": 1,
-		"prevPromptTime": 1615510930174
+		"prevPromptTime": 1616113055500
 	},
 	{
 		"name": "",
 		"id": "4080995",
 		"type": "警告",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>我无数次觉得自己可以盈利了，但是最后证明只是我的臆想。</u></span></strong></p><p><u><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>人会麻木。我已经忘记了恐惧和痛苦的感觉。</strong></span></span></u></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>时不我待。我还有多少时间？</u></span></strong></p>",
+		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0);\">我无数次觉得自己可以盈利了，但最后证明只是我的臆想。</span></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>人会麻木。我已经忘记了恐惧和痛苦的感觉。</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0);\">时不我待。我还有多少时间？</span></strong></span></p>",
 		"singleWindow": "",
 		"start": "10:00",
 		"repeat": 7,
 		"interval": 90,
-		"duration": 23,
+		"duration": 9,
 		"timestamp": 1615117783867
 	},
 	{
@@ -41,7 +53,7 @@
 		"name": "",
 		"id": "5217282",
 		"type": "问题",
-		"content": "<p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>问题2：我搞不清楚行情性质怎么办？</u></span></strong><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>我不清楚市场资金的行为逻辑。</u></span></strong></span></p><p><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>行情性质是非常重要的问题。而这是我最薄弱的地方。</strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">因为全球央行货币放水带来持续近两年的蓝筹牛市。我没有这种层次，就抓不住这种行情。</span></strong></span></p><p><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>类似郑州煤电、光大证券、王府井、星期六。因为我不了解行情性质，</strong></span><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>同样无法抓住这种。</strong></span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">盛和资源、郑州煤电、光大证券、王府井、</span><span style=\"font-size: 28px;background-color: rgb(255, 255, 0);\">豫能控股、星期六。</span></strong></p><p><span style=\"font-size: 28px;background-color: rgb(255, 255, 0);\"><strong>这些龙头行情背后推动的题材和政策，我没有优势？市场参与者的行为逻辑。</strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">这是非常重要的问题。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">所以那些超预期强势的票，要特别注意。</span></strong></p>",
+		"content": "<p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>问题2：我搞不清楚行情性质怎么办？</u></span></strong><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>我不清楚市场资金的行为逻辑。</u></span></strong></span></p><p><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>行情性质是非常重要的问题。而这是我最薄弱的地方。</strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">因为全球央行货币放水带来持续近两年的蓝筹牛市。我没有这种层次，就抓不住这种行情。</span></strong></span></p><p><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>类似郑州煤电、光大证券、王府井、星期六。因为我不了解行情性质，</strong></span><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);font-size: 24px; background-color: rgb(255, 255, 0);\"><strong>同样无法抓住这种。</strong></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">焦作万方 &nbsp;碳中和水电铝</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">盛和资源、郑州煤电、光大证券、王府井、</span><span style=\"font-size: 28px;background-color: rgb(255, 255, 0);\">豫能控股、星期六。</span></strong></p><p><span style=\"font-size: 28px;background-color: rgb(255, 255, 0);\"><strong>这些龙头行情背后推动的题材和政策，我没有优势？市场参与者的行为逻辑。</strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">这是非常重要的问题。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">所以那些超预期强势的票，要特别注意。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 1,
@@ -58,8 +70,20 @@
 		"start": "16:00",
 		"repeat": 4,
 		"interval": 60,
-		"duration": 47,
+		"duration": 27,
 		"timestamp": 1597160146691
+	},
+	{
+		"name": "",
+		"id": "6317608",
+		"type": "问题",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>问题3：每次市场的走势都和我的预判相反。我以什么做为判断锚点？</u></span></strong></p><p><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><strong>华银电力、南网能源、中材节能全部高位放大量烂板，但全都反包。</strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">技术形态是结果不是原因。客观跟随。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1615911180619
 	},
 	{
 		"name": "",
@@ -181,11 +205,10 @@
 		"start": "8:00",
 		"repeat": 17,
 		"interval": 45,
-		"duration": 47,
+		"duration": 13,
 		"timestamp": 1609667569090,
-		"promptTimes": 1,
-		"prevPromptTime": 1615512731047,
-		"complete": true
+		"promptTimes": 8,
+		"prevPromptTime": 1616140052965
 	},
 	{
 		"name": "",
@@ -221,11 +244,10 @@
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 34,
+		"duration": 24,
 		"timestamp": 1614268639096,
-		"promptTimes": 1,
-		"prevPromptTime": 1615536127716,
-		"complete": true
+		"promptTimes": 2,
+		"prevPromptTime": 1616147252609
 	},
 	{
 		"name": "",
@@ -238,9 +260,8 @@
 		"interval": 40,
 		"duration": 47,
 		"timestamp": 1594365344529,
-		"promptTimes": 1,
-		"prevPromptTime": 1615537928306,
-		"complete": true
+		"promptTimes": 2,
+		"prevPromptTime": 1616149052636
 	},
 	{
 		"name": "",
@@ -251,10 +272,10 @@
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 47,
+		"duration": 7,
 		"timestamp": 1615446438741,
 		"promptTimes": 2,
-		"prevPromptTime": 1615545128390
+		"prevPromptTime": 1616150852419
 	},
 	{
 		"name": "",
@@ -267,8 +288,8 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1611881119094,
-		"promptTimes": 2,
-		"prevPromptTime": 1615546928530
+		"promptTimes": 1,
+		"prevPromptTime": 1616152651554
 	},
 	{
 		"name": "",
@@ -281,8 +302,8 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1615197827140,
-		"promptTimes": 2,
-		"prevPromptTime": 1615548727069
+		"promptTimes": 1,
+		"prevPromptTime": 1616154451322
 	},
 	{
 		"name": "",
@@ -296,7 +317,7 @@
 		"duration": 47,
 		"timestamp": 1609555783779,
 		"promptTimes": 1,
-		"prevPromptTime": 1615550528489
+		"prevPromptTime": 1616156250867
 	},
 	{
 		"name": "",
@@ -311,8 +332,7 @@
 		"timestamp": 1611591229689,
 		"disable": false,
 		"promptTimes": 1,
-		"prevPromptTime": 1615552328069,
-		"complete": true
+		"prevPromptTime": 1616158050330
 	},
 	{
 		"name": "",
@@ -330,15 +350,15 @@
 		"name": "",
 		"id": "9532863",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误：<strong></strong></u></span><u><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);;font-size: 32px; background-color: rgb(255, 255, 0);\"><u>没有大局观，</u></span></strong></u><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u><strong></strong>着眼于小波动，看不到大的确定性。</u></span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">看看周K，市场从2019年到现在，已经涨了2年了。</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我没有大局观，就像我的交易，着眼于小波动，看不到大趋势，也看不到大的确定性。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">一个持续一周的上涨周期很多，我有看到吗？</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误：</u></span><u><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);font-size: 32px; background-color: rgb(255, 255, 0);\"><u>没有大局观，</u></span></strong></u><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>着眼于小波动，看不到大的确定性。</u></span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">看看周K，市场从2019年到现在，已经涨了2年了。</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我没有大局观，就像我的交易，着眼于小波动，看不到大趋势，也看不到大的确定性。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">一个持续一周的上涨周期很多，我有看到吗？</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 47,
+		"duration": 17,
 		"timestamp": 1614269587876,
 		"promptTimes": 1,
-		"prevPromptTime": 1615554127081
+		"prevPromptTime": 1616159850846
 	},
 	{
 		"name": "",
@@ -352,14 +372,13 @@
 		"duration": 47,
 		"timestamp": 1609491034659,
 		"promptTimes": 1,
-		"prevPromptTime": 1615555927764,
-		"complete": true
+		"prevPromptTime": 1616161652031
 	},
 	{
 		"name": "",
 		"id": "7981263",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误4：线性思维，先入为主。&nbsp;</u></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">高开下杀放量大阴线，就认为完蛋了，却修复了。陕西黑猫、中材节能、深证能源、</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>下跌也可以走V；上冲回落就认为完蛋了，却修复了。</u></span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>大盘受外围影响大幅低开恐慌，却低开高走。</u></span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</u></span></strong></span></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻这些封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>涨的高，就认为是顶。上涨初期，不在意。</u></span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误4：线性思维，先入为主。&nbsp;</u></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">高开下杀放量大阴线，就认为完蛋了，却修复了。</span><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">陕西黑猫、中材节能、深证能源、南网能源</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>下跌也可以走V；上冲回落就认为完蛋了，却修复了。</u></span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>大盘受外围影响大幅低开恐慌，却低开高走。</u></span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</u></span></strong></span></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻这些封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>涨的高，就认为是顶。上涨初期，不在意。</u></span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "15:00",
 		"repeat": 3,
@@ -367,14 +386,13 @@
 		"duration": 30,
 		"timestamp": 1594995614163,
 		"promptTimes": 2,
-		"prevPromptTime": 1615557727549,
-		"complete": true
+		"prevPromptTime": 1616163451994
 	},
 	{
 		"name": "",
 		"id": "7755008",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误5：我依靠主观预测交易，但我的预判总是错误。</u></span></strong></p><p><strong><strong><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">我总是倾向看空，</span></strong></strong><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\">从来没做好转强的准备。</span></span></strong></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">每次大阳线都在我预期之外。每次都措手不及，错失机会。</span></strong></span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">线性思维，每次修复转折行情总是预期之外。</span></strong></span></strong><br></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我总是没有做好市场资金出击的准备。</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">不知道如何交易，还在赚钱的心理下管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">真正的机会抓不住。风险来临管不住手。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误5：我依靠主观预测交易，但我的预判总是错误。</u></span></strong></p><p><br></p><p><strong><strong><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">我总是倾向看空，</span></strong></strong><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\">从来没做好转强的准备。</span></span></strong></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">每次大阳线都在我预期之外。每次都措手不及，错失机会。</span></strong></span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">线性思维，每次修复转折行情总是预期之外。</span></strong></span></strong><br></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我总是没有做好市场资金出击的准备。</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">不知道如何交易，还在赚钱的心理下管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">真正的机会抓不住。风险来临管不住手。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
@@ -382,14 +400,13 @@
 		"duration": 47,
 		"timestamp": 1610455034740,
 		"promptTimes": 1,
-		"prevPromptTime": 1615559527236,
-		"complete": true
+		"prevPromptTime": 1616165251984
 	},
 	{
 		"name": "",
 		"id": "3981678",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误5：主观看空，市场走出与我预期相反的走势，我总是手足无措。</u></span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">连续阳线可能会回调，也可能会继续大阳。所谓强更强。</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>弱转强，我跟不上，因为我还沉浸在下跌的悲观中。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">强更强，我也抓不住，因为恐高，预期之外。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误5：主观看空，市场走出与我预期相反的走势，我总是手足无措。</u></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">因为我依靠预测交易。所以市场走势和我的预期相反，我就措手不及，犹豫不定。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">连续阳线可能会回调，也可能会继续大阳。所谓强更强。</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>弱转强，我跟不上，因为我还沉浸在下跌的悲观中。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">强更强，我也抓不住，因为恐高，预期之外。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 2,
@@ -397,14 +414,13 @@
 		"duration": 47,
 		"timestamp": 1611404588896,
 		"promptTimes": 1,
-		"prevPromptTime": 1615561327059,
-		"complete": true
+		"prevPromptTime": 1616167051893
 	},
 	{
 		"name": "",
 		"id": "8501357",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误5：临盘应对差：</u></span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>我始终是靠预测在交易，而不是依据客观标准做应对。</u></span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>1. 预判错误，或者说对市场理解错误。我总是倾向看空。着自然会影响我的操作。</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">2. 临盘犹豫，一是因为市场和预期相反，措手不及。二是没有明确的判断锚点，不知道如何操作。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>错误5：临盘应对差，我没有明确一致的判断锚点。</u></span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>因为我依靠预测交易，当市场表现和我预期不一样，我就措手不及，犹豫不定。</u></span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(255, 255, 0);\"><u>我始终是靠预测在交易，而不是依据客观标准做应对。</u></span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>1. 预判错误，或者说对市场理解错误。我总是倾向看空。着自然会影响我的操作。</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">2. 临盘犹豫，一是因为市场和预期相反，措手不及。二是没有明确的判断锚点，不知道如何操作。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
@@ -412,8 +428,7 @@
 		"duration": 47,
 		"timestamp": 1614761080717,
 		"promptTimes": 1,
-		"prevPromptTime": 1615563126901,
-		"complete": true
+		"prevPromptTime": 1616168851897
 	},
 	{
 		"name": "",
@@ -443,7 +458,7 @@
 		"name": "",
 		"id": "7737617",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 32px;\"><u><span style=\"background-color: rgb(255, 255, 0);\">错误8：克服不了人性本能</span></u></span></strong></p><p><strong><span style=\"font-size: 28px;\"><u><span style=\"background-color: rgb(255, 255, 0);\">我的性格是交易的最大阻碍。</span></u></span></strong><strong><span style=\"font-size: 28px;\"><u><span style=\"background-color: rgb(255, 255, 0);\">优柔寡断、三心二意、没有耐心；</span></u></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>交易心理分析</u></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">除了急于赚钱的心理，交易上瘾心理。管不住手外。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">左右打脸，犹豫不决。没有信心，恐惧亏损等都是需要克服的心理本能。</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 32px;\"><u><span style=\"background-color: rgb(255, 255, 0);\">错误8：克服不了人性本能</span></u></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">1. 我恐慌的本能如此强烈。多少次大盘因外围低开就恐慌卖出。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">2. 持仓影响我的判断。因为持仓，就因为下跌恐慌。或急于兑现利润导致卖飞。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">3. 空仓总想着买。持仓总想着卖。</span></strong></p><p><strong><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\">4.&nbsp;</span></span></strong><strong><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\">优柔寡断、三心二意、没有耐心；</span></span></strong></p><p><strong><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">5.&nbsp;</span></strong></span><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">除了急于赚钱的心理，交易上瘾心理。管不住手外。</span></strong></span></strong></span></span></strong></p><p><strong><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">左右打脸，犹豫不决。没有信心，恐惧亏损等都是需要克服的心理本能。</span></strong></span></span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>交易心理分析</u></span></strong></p><p><br></p><p><br></p><p><br></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 2,
@@ -509,11 +524,10 @@
 		"start": "10:00",
 		"repeat": 4,
 		"interval": 60,
-		"duration": 47,
+		"duration": 13,
 		"timestamp": 1614392475849,
-		"promptTimes": 1,
-		"prevPromptTime": 1615514530589,
-		"complete": true
+		"promptTimes": 3,
+		"prevPromptTime": 1616134651852
 	},
 	{
 		"name": "",
@@ -725,6 +739,18 @@
 	},
 	{
 		"name": "",
+		"id": "8223604",
+		"type": "系统",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">锚定龙头补涨是市场中非常重要的逻辑。</span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">本质是锚点、学习、复制、跟随。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 1,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1613532753439
+	},
+	{
+		"name": "",
 		"id": "5129491",
 		"type": "系统",
 		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\">&nbsp;</span></strong><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\">交易系统</span></strong><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\">&nbsp;</span></strong></span></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"font-size: 24px;background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>支撑我的交易逻辑是什么？</u></span></strong></span><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>&nbsp;</u></span></strong></span></span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"font-size: 22px;background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">人性不变，历史会重复</span></strong></span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">我要捕捉的目标行情是什么？</span></strong></span></p><p><br></p><p><br></p>",
@@ -733,10 +759,7 @@
 		"repeat": 4,
 		"interval": 55,
 		"duration": 47,
-		"timestamp": 1600596359187,
-		"promptTimes": 1,
-		"prevPromptTime": 1615534328158,
-		"complete": true
+		"timestamp": 1600596359187
 	},
 	{
 		"name": "",
@@ -773,18 +796,6 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1606540540693
-	},
-	{
-		"name": "",
-		"id": "8223604",
-		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">补涨是市场中非常重要的逻辑。</span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">本质是锚点、学习、复制、跟随。</span></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 1,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1613532753439
 	},
 	{
 		"name": "问题",
@@ -1029,7 +1040,7 @@
 		"start": "19:00",
 		"repeat": 1,
 		"interval": 60,
-		"duration": 47,
+		"duration": 4,
 		"timestamp": 1614093736830
 	},
 	{
@@ -1067,7 +1078,7 @@
 		"content": "<p>保存竞价强图片！</p>",
 		"timestamp": 1577539413052,
 		"type": "流程",
-		"duration": 17,
+		"duration": 4,
 		"singleWindow": ""
 	},
 	{
@@ -1093,7 +1104,7 @@
 		"timestamp": 1579093820041,
 		"singleWindow": "",
 		"duration": 24,
-		"promptTimes": 3,
-		"prevPromptTime": 1615527128045
+		"promptTimes": 2,
+		"prevPromptTime": 1616131051990
 	}
 ]
