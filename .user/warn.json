@@ -7,7 +7,8 @@
 		"content": "如果你没有全仓的信心，就不要做这笔交易。",
 		"repeat": 2,
 		"type": "interval",
-		"timestamp": 1614426133979
+		"timestamp": 1614426133979,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -67,7 +68,8 @@
 		"content": "为何我总是线性思维，先入为主？\n多空动态博弈转换。多空动态博弈转换。",
 		"repeat": 4,
 		"type": "interval",
-		"timestamp": 1610785989213
+		"timestamp": 1610785989213,
+		"disable": true
 	},
 	{
 		"name": "",

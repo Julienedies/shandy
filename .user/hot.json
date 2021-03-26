@@ -1,5 +1,25 @@
 [
 	{
+		"id": "碳汇",
+		"selected": true,
+		"timestamp": 1616687091679
+	},
+	{
+		"id": "区块链",
+		"selected": true,
+		"timestamp": 1616687066615
+	},
+	{
+		"id": "数字货币",
+		"selected": true,
+		"timestamp": 1616687053736
+	},
+	{
+		"id": "次新",
+		"selected": false,
+		"timestamp": 1616413837872
+	},
+	{
 		"id": "核电",
 		"selected": false,
 		"timestamp": 1615734970588
@@ -16,12 +36,12 @@
 	},
 	{
 		"id": "煤炭",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1615393699637
 	},
 	{
 		"id": "钢铁",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1614776807415
 	},
 	{
@@ -56,23 +76,13 @@
 	},
 	{
 		"id": "化工",
-		"selected": true,
-		"timestamp": 1612311616588
-	},
-	{
-		"id": "游戏",
 		"selected": false,
-		"timestamp": 1611880551104
+		"timestamp": 1612311616588
 	},
 	{
 		"id": "煤化工",
 		"selected": false,
 		"timestamp": 1611620135306
-	},
-	{
-		"id": "电子烟",
-		"selected": false,
-		"timestamp": 1611102288850
 	},
 	{
 		"id": "芯片",
@@ -85,11 +95,6 @@
 		"timestamp": 1610898031672
 	},
 	{
-		"id": "OLED",
-		"selected": false,
-		"timestamp": 1610553234727
-	},
-	{
 		"id": "天然气",
 		"selected": false,
 		"timestamp": 1609114381441
@@ -100,29 +105,9 @@
 		"timestamp": 1607946813103
 	},
 	{
-		"id": "食品",
-		"selected": false,
-		"timestamp": 1607644896710
-	},
-	{
 		"id": "太阳能",
 		"selected": false,
 		"timestamp": 1607644849441
-	},
-	{
-		"id": "可降解塑料",
-		"selected": false,
-		"timestamp": 1607300642521
-	},
-	{
-		"id": "农业",
-		"selected": false,
-		"timestamp": 1607038499622
-	},
-	{
-		"id": "银行",
-		"selected": false,
-		"timestamp": 1606868671816
 	},
 	{
 		"id": "稀土永磁",
@@ -130,54 +115,9 @@
 		"timestamp": 1606349943145
 	},
 	{
-		"id": "酒",
-		"selected": false,
-		"timestamp": 1606089203012
-	},
-	{
-		"id": "无人驾驶",
-		"selected": false,
-		"timestamp": 1606042765682
-	},
-	{
-		"id": "车联网",
-		"selected": false,
-		"timestamp": 1606042747484
-	},
-	{
-		"id": "化学",
-		"selected": false,
-		"timestamp": 1605537020453
-	},
-	{
 		"id": "金属",
 		"selected": false,
 		"timestamp": 1605484221330
-	},
-	{
-		"id": "有色",
-		"selected": false,
-		"timestamp": 1605484212697
-	},
-	{
-		"id": "机器人",
-		"selected": false,
-		"timestamp": 1604446236173
-	},
-	{
-		"id": "注册制次新股",
-		"selected": false,
-		"timestamp": 1603670047271
-	},
-	{
-		"id": "充电桩",
-		"selected": false,
-		"timestamp": 1603590652087
-	},
-	{
-		"id": "物联网",
-		"selected": false,
-		"timestamp": 1603240071091
 	},
 	{
 		"id": "光伏",
@@ -190,79 +130,9 @@
 		"timestamp": 1600383573738
 	},
 	{
-		"id": "氮化镓",
-		"selected": false,
-		"timestamp": 1599435873296
-	},
-	{
-		"id": "第三代半导体",
-		"selected": false,
-		"timestamp": 1599435867532
-	},
-	{
-		"id": "半导体",
-		"selected": false,
-		"timestamp": 1599435860033
-	},
-	{
-		"id": "航天军工",
-		"selected": false,
-		"timestamp": 1597788574237
-	},
-	{
-		"id": "无人机",
-		"selected": false,
-		"timestamp": 1595807622040
-	},
-	{
-		"id": "军工",
-		"selected": false,
-		"timestamp": 1594256070569
-	},
-	{
-		"id": "锂电池",
-		"selected": false,
-		"timestamp": 1594165362205
-	},
-	{
-		"id": "互联网金融",
-		"selected": false,
-		"timestamp": 1593996674120
-	},
-	{
-		"id": "券商",
-		"selected": false,
-		"timestamp": 1593996593340
-	},
-	{
-		"id": "新股与次新股",
-		"selected": false,
-		"timestamp": 1589699376910
-	},
-	{
-		"id": "医疗器械",
-		"selected": false,
-		"timestamp": 1589417250291
-	},
-	{
-		"id": "医药",
-		"selected": false,
-		"timestamp": 1586706080874
-	},
-	{
-		"id": "非科创次新股",
-		"selected": false,
-		"timestamp": 1584922603372
-	},
-	{
 		"id": "光伏概念",
 		"selected": false,
 		"timestamp": 1581522864794
-	},
-	{
-		"id": "生物疫苗",
-		"selected": false,
-		"timestamp": 1579613298327
 	},
 	{
 		"id": "5G",
@@ -270,38 +140,8 @@
 		"timestamp": 1579613271519
 	},
 	{
-		"id": "医疗器械概念",
-		"selected": false,
-		"timestamp": 1579565192274
-	},
-	{
-		"id": "生物医药",
-		"selected": false,
-		"timestamp": 1579526862860
-	},
-	{
-		"id": "集成电路概念",
-		"selected": false,
-		"timestamp": 1579098000269
-	},
-	{
-		"id": "特斯拉",
-		"selected": false,
-		"timestamp": 1578960735043
-	},
-	{
-		"id": "消费电子",
-		"selected": false,
-		"timestamp": 1578928850827
-	},
-	{
 		"id": "新能源汽车",
 		"selected": false,
 		"timestamp": 1578928807285
-	},
-	{
-		"id": "芯片概念",
-		"selected": false,
-		"timestamp": 1578926303653
 	}
 ]
