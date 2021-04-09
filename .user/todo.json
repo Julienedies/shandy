@@ -11,7 +11,7 @@
 		"duration": 9,
 		"timestamp": 1617161666529,
 		"promptTimes": 1,
-		"prevPromptTime": 1617585849360
+		"prevPromptTime": 1617928876882
 	},
 	{
 		"name": "",
@@ -111,7 +111,7 @@
 		"duration": 13,
 		"timestamp": 1616303429099,
 		"promptTimes": 3,
-		"prevPromptTime": 1617596651533
+		"prevPromptTime": 1617943274414
 	},
 	{
 		"name": "",
@@ -125,7 +125,7 @@
 		"duration": 14,
 		"timestamp": 1614682522617,
 		"promptTimes": 3,
-		"prevPromptTime": 1617600250569
+		"prevPromptTime": 1617941474462
 	},
 	{
 		"name": "",
@@ -138,8 +138,8 @@
 		"interval": 70,
 		"duration": 13,
 		"timestamp": 1614744358005,
-		"promptTimes": 1,
-		"prevPromptTime": 1617603849637
+		"promptTimes": 2,
+		"prevPromptTime": 1617945073186
 	},
 	{
 		"name": "",
@@ -164,8 +164,8 @@
 		"interval": 45,
 		"duration": 37,
 		"timestamp": 1609667569090,
-		"promptTimes": 4,
-		"prevPromptTime": 1617605649750
+		"promptTimes": 3,
+		"prevPromptTime": 1617950473027
 	},
 	{
 		"name": "",
@@ -189,9 +189,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1614784511292,
-		"promptTimes": 1,
-		"prevPromptTime": 1617611050776
+		"timestamp": 1614784511292
 	},
 	{
 		"name": "",
@@ -205,7 +203,7 @@
 		"duration": 17,
 		"timestamp": 1614764001082,
 		"promptTimes": 1,
-		"prevPromptTime": 1617612850807
+		"prevPromptTime": 1617955873693
 	},
 	{
 		"name": "",
@@ -220,7 +218,7 @@
 		"timestamp": 1611189022632,
 		"disable": false,
 		"promptTimes": 1,
-		"prevPromptTime": 1617614650769
+		"prevPromptTime": 1617957672311
 	},
 	{
 		"name": "",
@@ -241,13 +239,13 @@
 		"type": "错误&问题",
 		"start": "16:00",
 		"repeat": 2,
-		"content": "<p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>错误1：无系统，无计划</u></span></strong><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><u>，临盘随意冲动交易。</u></strong></span></strong></span></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>错误1：从来没有准备好次日的交易计划，总是错过最好的机会。</u></span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><u><span style=\"background-color: rgb(255, 255, 0);\">错误1：每次都踏错节奏，<strong><span style=\"background-color: rgb(255, 255, 0);\"><u>每次市场转强、</u></span></strong>每次逼空都没有标的</span></u></strong><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>踏空。</u></span></strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有系统和计划就不要交易，不要沉迷于日常交易中。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">好的标的和机会转瞬即逝。而我因为没有明确的判断锚点，总是犹豫不决。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">总是浑浑噩噩，今天的永兴转债加入自选，但是怎么操作呢？没有想法。没有想法。</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">临盘被动应对，犹豫，总是错过行情转强的机会。问自己：如果行情转强，做什么？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">临盘冲动交易，主观臆想，无系统交易是我最大的亏损来源；<strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我已经重复这个错误4年了。</span></strong></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我盯盘时，没有明确的计划；只是被市场牵着鼻子走；被动应对，浑浑噩噩；一冲动就会随手买入；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">尤其是市场转好，怕踏空买入；</span></strong><strong><span style=\"background-color: rgb(255, 255, 0);\">或个股冲高，就会臆想买入；</span></strong></span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">不知道如何交易，还在赚钱的心理下管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">真正的机会抓不住。风险来临管不住手。</span></strong></p>",
+		"content": "<p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\"><u>错误1：无系统，无计划</u></span></strong><span style=\"font-size: 30px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><u>，临盘随意冲动交易。</u></strong></span></strong></span></span></p><p><span style=\"font-size: 30px;;color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\"><strong>错误1：从来没有准备好次日的交易计划，总是错过最好的机会。</strong></span></p><p><span style=\"font-size: 30px;;color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\"><strong>错误1：每次都踏错节奏，<strong>每次市场转强、</strong>每次逼空都没有标的</strong><strong>踏空。</strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有系统和计划就不要交易，不要沉迷于日常交易中。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">好的标的和机会转瞬即逝。而我因为没有明确的判断锚点，总是犹豫不决。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">总是浑浑噩噩，今天的永兴转债加入自选，但是怎么操作呢？没有想法。没有想法。</span></strong></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 24px;\">临盘被动应对，犹豫，总是错过行情转强的机会。问自己：如果行情转强，做什么？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">临盘冲动交易，主观臆想，无系统交易是我最大的亏损来源；<strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我已经重复这个错误4年了。</span></strong></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我盯盘时，没有明确的计划；只是被市场牵着鼻子走；被动应对，浑浑噩噩；一冲动就会随手买入；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">尤其是市场转好，怕踏空买入；</span></strong><strong><span style=\"background-color: rgb(255, 255, 0);\">或个股冲高，就会臆想买入；</span></strong></span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">不知道如何交易，还在赚钱的心理下管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">真正的机会抓不住。风险来临管不住手。</span></strong></p>",
 		"singleWindow": "",
 		"interval": 40,
 		"duration": 27,
 		"timestamp": 1594365344529,
 		"promptTimes": 1,
-		"prevPromptTime": 1617616449198
+		"prevPromptTime": 1617959472692
 	},
 	{
 		"name": "",
@@ -261,7 +259,7 @@
 		"duration": 47,
 		"timestamp": 1611881119094,
 		"promptTimes": 1,
-		"prevPromptTime": 1617618250786
+		"prevPromptTime": 1617961273086
 	},
 	{
 		"name": "",
@@ -275,7 +273,7 @@
 		"duration": 47,
 		"timestamp": 1609555783779,
 		"promptTimes": 1,
-		"prevPromptTime": 1617620049078
+		"prevPromptTime": 1617963072280
 	},
 	{
 		"name": "",
@@ -289,7 +287,7 @@
 		"duration": 13,
 		"timestamp": 1609491034659,
 		"promptTimes": 1,
-		"prevPromptTime": 1617621850355
+		"prevPromptTime": 1617964872111
 	},
 	{
 		"name": "",
@@ -303,7 +301,7 @@
 		"duration": 17,
 		"timestamp": 1594995614163,
 		"promptTimes": 2,
-		"prevPromptTime": 1617623650211
+		"prevPromptTime": 1617966671943
 	},
 	{
 		"name": "",
@@ -317,7 +315,7 @@
 		"duration": 17,
 		"timestamp": 1610455034740,
 		"promptTimes": 1,
-		"prevPromptTime": 1617625449961
+		"prevPromptTime": 1617968473127
 	},
 	{
 		"name": "",
@@ -331,7 +329,7 @@
 		"duration": 24,
 		"timestamp": 1614761080717,
 		"promptTimes": 1,
-		"prevPromptTime": 1617627249656
+		"prevPromptTime": 1617970273131
 	},
 	{
 		"name": "",
@@ -345,7 +343,7 @@
 		"duration": 7,
 		"timestamp": 1616220645834,
 		"promptTimes": 1,
-		"prevPromptTime": 1617629048781
+		"prevPromptTime": 1617972073148
 	},
 	{
 		"name": "",
@@ -359,7 +357,7 @@
 		"duration": 17,
 		"timestamp": 1613977676936,
 		"promptTimes": 1,
-		"prevPromptTime": 1617630849349
+		"prevPromptTime": 1617973873169
 	},
 	{
 		"name": "",
@@ -408,8 +406,8 @@
 		"interval": 90,
 		"duration": 7,
 		"timestamp": 1614392475849,
-		"promptTimes": 2,
-		"prevPromptTime": 1617632649044
+		"promptTimes": 3,
+		"prevPromptTime": 1617975672554
 	},
 	{
 		"name": "",
@@ -450,7 +448,7 @@
 		"timestamp": 1610199493327,
 		"disable": false,
 		"promptTimes": 1,
-		"prevPromptTime": 1617634449471
+		"prevPromptTime": 1617977473052
 	},
 	{
 		"name": "",
@@ -468,7 +466,7 @@
 		"name": "",
 		"id": "9408389",
 		"type": "理念",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">持续一致性是非常重要的原则。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">我被上一次交易影响，左右打脸。犹豫错过机会。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">持续一致性是非常重要的原则。</span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盈亏同源，放弃了风险也放弃了机会。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">我被上一次交易影响，左右打脸。犹豫错过机会。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 2,
@@ -476,7 +474,7 @@
 		"duration": 4,
 		"timestamp": 1613315497825,
 		"promptTimes": 1,
-		"prevPromptTime": 1617636249952
+		"prevPromptTime": 1617979272866
 	},
 	{
 		"name": "",
@@ -488,7 +486,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613116533547
+		"timestamp": 1613116533547,
+		"promptTimes": 1,
+		"prevPromptTime": 1617981072668
 	},
 	{
 		"name": "",

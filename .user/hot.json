@@ -1,7 +1,17 @@
 [
 	{
-		"id": "半导体",
+		"id": "燃料电池",
 		"selected": true,
+		"timestamp": 1617799780489
+	},
+	{
+		"id": "氢能源",
+		"selected": true,
+		"timestamp": 1617708085732
+	},
+	{
+		"id": "半导体",
+		"selected": false,
 		"timestamp": 1617619979123
 	},
 	{
@@ -11,7 +21,7 @@
 	},
 	{
 		"id": "新疆",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1616945464729
 	},
 	{
@@ -66,7 +76,7 @@
 	},
 	{
 		"id": "钢铁",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1614776807415
 	},
 	{
@@ -111,7 +121,7 @@
 	},
 	{
 		"id": "芯片",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1610979058468
 	},
 	{
@@ -126,7 +136,7 @@
 	},
 	{
 		"id": "医美",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1607946813103
 	},
 	{
