@@ -1,5 +1,10 @@
 [
 	{
+		"id": "华为",
+		"selected": true,
+		"timestamp": 1618840752319
+	},
+	{
 		"id": "华为汽车",
 		"selected": true,
 		"timestamp": 1618723056795
@@ -206,7 +211,7 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928807285
 	}
 ]
