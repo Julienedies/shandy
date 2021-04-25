@@ -181,8 +181,10 @@ brick.reg('mainCtrl', function (scope) {
             let c1 = sjo.json['概念'].split(/[，]+\s*/img);
             let c2 = sjo.json['概念y'].replace(/-\d*%/img, '').split(/[，]?\s+/img);
             let c3 = (sjo.json['概念z'] || '').split(/[，]?\s+/img);
+            let c4 = sjo.json['产品'].split(/[，]+\s*/img);
+            let c5 = sjo.json['业务'].split(/[，]+\s*/img);
 
-            let arr = _.flatten([c1, c2, c3]);
+            let arr = _.flatten([c1, c2, c3, c4, c5]);
             keys.push(arr);
         });
 

@@ -1,5 +1,15 @@
 [
 	{
+		"id": "原料药",
+		"selected": true,
+		"timestamp": 1619362329972
+	},
+	{
+		"id": "医药",
+		"selected": false,
+		"timestamp": 1619362317542
+	},
+	{
 		"id": "华为",
 		"selected": true,
 		"timestamp": 1618840752319
@@ -21,12 +31,12 @@
 	},
 	{
 		"id": "婴童",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1618503309202
 	},
 	{
 		"id": "二胎",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1618501889287
 	},
 	{
@@ -48,11 +58,6 @@
 		"id": "半导体",
 		"selected": false,
 		"timestamp": 1617619979123
-	},
-	{
-		"id": "雄安",
-		"selected": false,
-		"timestamp": 1617199028522
 	},
 	{
 		"id": "新疆",
@@ -140,11 +145,6 @@
 		"timestamp": 1614615787154
 	},
 	{
-		"id": "乡村",
-		"selected": false,
-		"timestamp": 1613952417018
-	},
-	{
 		"id": "化工",
 		"selected": false,
 		"timestamp": 1612311616588
@@ -163,11 +163,6 @@
 		"id": "预增",
 		"selected": false,
 		"timestamp": 1610898031672
-	},
-	{
-		"id": "天然气",
-		"selected": false,
-		"timestamp": 1609114381441
 	},
 	{
 		"id": "医美",

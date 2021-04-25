@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "3456312",
+		"type": "复盘",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">弱市管住手，强势大干快上。做的话，做最强，做龙头。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">现在是强势还是弱势？赚钱效应在哪里？</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>哪个板块最强？谁是龙头？</strong></span></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">次日可能的走势是什么？如何应对？有没有介入机会？</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1619249637958
+	},
+	{
+		"name": "",
 		"id": "7239077",
 		"type": "错误&问题",
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：我还是依靠主观预测交易。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">但是因为我对市场理解不够。我总是预测错误，错过机会。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有计划，没有预案。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有想过弱转强的机会，没有想过分歧转一致的机会。没有想过多空反转地天板的机会。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">小康股份</span></strong></p>",
@@ -15,7 +27,7 @@
 		"name": "",
 		"id": "2369730",
 		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">由大及小，先考虑大盘，再考虑板块，再考虑个股。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">轮动、切换、卡位、修复、加强、分歧、分歧转一致、弱转强、强更强。</span></strong></p><p><strong><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);;font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">分化、背离、共振、</span><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);;font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);;font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">延迟、惯性、</span></strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);;font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">补跌</span></strong></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">锚点、复制、补涨</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">指数溢价； 板块热点溢价；人气龙头溢价；题材热点在市场的地位；个股在题材热点中的低位；</span></strong></p><p><strong><strong><strong><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);;font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);;font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);;font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">（市场并不是即刻一致的，看多有延迟，看空也有延迟）</span></strong></strong></strong></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">由大及小，先考虑大盘，再考虑板块，再考虑个股。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">轮动、切换、卡位、修复、加强、分歧、分歧转一致、弱转强、强更强、恐慌转贪婪。</span></strong></p><p><strong><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">分化、背离、共振、</span><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">延迟（滞后）、惯性、</span></strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">补跌、穿越、<strong>先手。</strong></span></strong></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">锚点、复制、补涨</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">指数溢价； 板块热点溢价；人气龙头溢价；题材热点在市场的地位；个股在题材热点中的低位；</span></strong></p><p><strong><strong><strong><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">（市场并不是即刻一致的，看多有延迟，看空也有延迟）</span></strong></strong></strong></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 9,
@@ -290,10 +302,10 @@
 		"name": "",
 		"id": "4017341",
 		"type": "理念",
-		"content": "<p><strong><span style=\"background-color: rgb(148, 0, 211); font-size: 30px; color: rgb(255, 255, 255);\">市场任何时候都是有主线和龙头的。<strong><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">只做龙头<strong><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">、</span></strong></strong></span></strong></strong></span></strong></strong></span><strong><span style=\"background-color: rgb(148, 0, 211); font-size: 30px; color: rgb(255, 255, 255);\">只做主升、<strong><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">只做最强</span></strong></strong></span></strong></strong></p><p><br></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong>如果龙头都没有人做，那么其它个股更不会有人做。</strong></span></span><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong>如何没有，就应该空仓。</strong></span></span></strong></span></span></span></p><p><br></p>",
+		"content": "<p><strong><span style=\"background-color: rgb(148, 0, 211); font-size: 30px; color: rgb(255, 255, 255);\">市场任何时候都是有主线和龙头的。<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">只做龙头<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">、</span></strong></span></strong></span></strong>只做主升、<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">只做最强</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong>如果龙头都没有人做，那么其它个股更不会有人做。</strong><strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong>如何没有，就应该空仓。</strong></span></span></strong></span></span></span></p><p><br></p><p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\">这市场的短线参与者都是人，他们在想什么？市场的G点是什么？</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": 3,
+		"repeat": 5,
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1614764001082
