@@ -13,11 +13,11 @@
 			"ths_p"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": 301,
+		"fetchFromIndex": 201,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
 		"hotCsvFile": "/Users/j/截图/JX.txt",
-		"fetchLimit": "300"
+		"fetchLimit": "200"
 	},
 	"warn": {
 		"randomBgImgDir": "/Users/j/pim/img/人物",
@@ -133,8 +133,8 @@
 	},
 	"news": {
 		"bounds": {
-			"x": 1451,
-			"y": 974,
+			"x": 1448,
+			"y": 778,
 			"width": 1440,
 			"height": 59
 		}

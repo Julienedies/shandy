@@ -1,18 +1,28 @@
 [
 	{
+		"id": "辅助生殖",
+		"selected": true,
+		"timestamp": 1619626003963
+	},
+	{
+		"id": "换电",
+		"selected": true,
+		"timestamp": 1619625995730
+	},
+	{
+		"id": "新冠",
+		"selected": true,
+		"timestamp": 1619394248028
+	},
+	{
 		"id": "原料药",
 		"selected": true,
 		"timestamp": 1619362329972
 	},
 	{
 		"id": "医药",
-		"selected": false,
-		"timestamp": 1619362317542
-	},
-	{
-		"id": "华为",
 		"selected": true,
-		"timestamp": 1618840752319
+		"timestamp": 1619362317542
 	},
 	{
 		"id": "华为汽车",
@@ -21,7 +31,7 @@
 	},
 	{
 		"id": "汽车电子",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1618723014684
 	},
 	{
@@ -31,12 +41,12 @@
 	},
 	{
 		"id": "婴童",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1618503309202
 	},
 	{
 		"id": "二胎",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1618501889287
 	},
 	{
@@ -45,39 +55,14 @@
 		"timestamp": 1618118316399
 	},
 	{
-		"id": "燃料电池",
-		"selected": false,
-		"timestamp": 1617799780489
-	},
-	{
-		"id": "氢能源",
-		"selected": false,
-		"timestamp": 1617708085732
-	},
-	{
 		"id": "半导体",
 		"selected": false,
 		"timestamp": 1617619979123
 	},
 	{
-		"id": "新疆",
-		"selected": false,
-		"timestamp": 1616945464729
-	},
-	{
-		"id": "纺织",
-		"selected": false,
-		"timestamp": 1616945453904
-	},
-	{
 		"id": "服装",
 		"selected": false,
 		"timestamp": 1616945434364
-	},
-	{
-		"id": "碳汇",
-		"selected": false,
-		"timestamp": 1616687091679
 	},
 	{
 		"id": "区块链",
@@ -86,18 +71,13 @@
 	},
 	{
 		"id": "数字货币",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1616687053736
 	},
 	{
 		"id": "次新",
 		"selected": true,
 		"timestamp": 1616413837872
-	},
-	{
-		"id": "核电",
-		"selected": false,
-		"timestamp": 1615734970588
 	},
 	{
 		"id": "水电",
@@ -145,34 +125,19 @@
 		"timestamp": 1614615787154
 	},
 	{
-		"id": "化工",
-		"selected": false,
-		"timestamp": 1612311616588
-	},
-	{
-		"id": "煤化工",
-		"selected": false,
-		"timestamp": 1611620135306
-	},
-	{
 		"id": "芯片",
 		"selected": false,
 		"timestamp": 1610979058468
 	},
 	{
 		"id": "预增",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1610898031672
 	},
 	{
 		"id": "医美",
 		"selected": true,
 		"timestamp": 1607946813103
-	},
-	{
-		"id": "太阳能",
-		"selected": false,
-		"timestamp": 1607644849441
 	},
 	{
 		"id": "稀土永磁",
@@ -193,16 +158,6 @@
 		"id": "风电",
 		"selected": false,
 		"timestamp": 1600383573738
-	},
-	{
-		"id": "光伏概念",
-		"selected": false,
-		"timestamp": 1581522864794
-	},
-	{
-		"id": "5G",
-		"selected": false,
-		"timestamp": 1579613271519
 	},
 	{
 		"id": "新能源汽车",

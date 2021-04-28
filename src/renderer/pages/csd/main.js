@@ -181,10 +181,10 @@ brick.reg('mainCtrl', function (scope) {
             let c1 = sjo.json['概念'].split(/[，]+\s*/img);
             let c2 = sjo.json['概念y'].replace(/-\d*%/img, '').split(/[，]?\s+/img);
             let c3 = (sjo.json['概念z'] || '').split(/[，]?\s+/img);
-            let c4 = sjo.json['产品'].split(/[，]+\s*/img);
-            let c5 = sjo.json['业务'].split(/[，]+\s*/img);
+            //let c4 = sjo.json['产品'].split(/[，]+\s*/img);
+            //let c5 = sjo.json['业务'].split(/[，]+\s*/img);
 
-            let arr = _.flatten([c1, c2, c3, c4, c5]);
+            let arr = _.flatten([c1, c2, c3]);
             keys.push(arr);
         });
 
@@ -259,7 +259,7 @@ brick.reg('mainCtrl', function (scope) {
             stocks.forEach(([code, name]) => {
                 let szh = /^6/.test(code) ? 1 : 0;
                 let sjo = jo(path.resolve(csdPath, `./s/${ code }.json`));
-                let concept = `${ sjo.get('概念') } ${ sjo.get('概念z') } ${ sjo.get('概念y') } ${ sjo.get('行业') }`;
+                let concept = `${ sjo.get('概念') } ${ sjo.get('概念z') } ${ sjo.get('概念y') } ${ sjo.get('行业') } ${ sjo.get('产品') } ${ sjo.get('业务') }`;
                 let hotStr = '';
                 hotPointArr.forEach((point) => {
                     if (concept.search(point) > -1) {
