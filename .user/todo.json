@@ -13,6 +13,20 @@
 	},
 	{
 		"name": "",
+		"id": "6432946",
+		"type": "错误&问题",
+		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\">错误：恐慌卖飞。为何克服不了这种本能。</span></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\">心理本能是一个非常重要的问题。<span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\">依靠本能操作。忘记计划和理智。</span></strong></span></span></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\">冲动臆想、脑子发热、急于止盈、恐慌、恐高、犹豫、囿于小利，止损犹疑。</span></strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">恐慌的本能如此强大，我脑子只剩恐慌，完全忘记了卖飞这种一直重复的错误。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">我多少次决定宁可亏损一个点卖，也不要卖飞。但为什么就是不执行？</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 24px;\">雪人股份、雪迪龙、</span></strong><span style=\"background-color: rgb(0, 0, 0); font-size: 24px;\">华银电力、台基股份、供销大集</span></strong></span></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 9,
+		"timestamp": 1617161666529,
+		"promptTimes": 3,
+		"prevPromptTime": 1619755078152
+	},
+	{
+		"name": "",
 		"id": "7239077",
 		"type": "错误&问题",
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>错误：我还是依靠主观预测交易。</u></span></strong></p><p><u><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">但是因为我对市场理解不够。我总是预测错误，错过机会。</span></strong></span></u></p><p><u><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">没有计划，没有预案。总是错过市场转强的时机，总是踏错节奏。</span></strong></span></u></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>没有想过弱转强的机会，没有想过分歧转一致的机会。没有想过多空反转地天板的机会。</u></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">小康股份</span></strong></p>",
@@ -34,8 +48,8 @@
 		"interval": 60,
 		"duration": 44,
 		"timestamp": 1618978825238,
-		"promptTimes": 2,
-		"prevPromptTime": 1619574914203
+		"promptTimes": 1,
+		"prevPromptTime": 1619742476752
 	},
 	{
 		"name": "",
@@ -60,8 +74,8 @@
 		"interval": 70,
 		"duration": 24,
 		"timestamp": 1614744358005,
-		"promptTimes": 2,
-		"prevPromptTime": 1619578514076
+		"promptTimes": 1,
+		"prevPromptTime": 1619744277325
 	},
 	{
 		"name": "",
@@ -122,20 +136,6 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1617982755447
-	},
-	{
-		"name": "",
-		"id": "6432946",
-		"type": "错误&问题",
-		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\">错误：恐慌卖飞。为何克服不了这种本能。</span></strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">恐慌的本能如此强大，我脑子只剩恐慌，完全忘记了卖飞这种一直重复的错误。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">我多少次决定宁可亏损一个点卖，也不要卖飞。但为什么就是不执行？</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 24px;\">雪人股份、雪迪龙、</span></strong><span style=\"background-color: rgb(0, 0, 0); font-size: 24px;\">华银电力、台基股份、供销大集</span></strong></span></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 9,
-		"timestamp": 1617161666529,
-		"promptTimes": 4,
-		"prevPromptTime": 1619589309175
 	},
 	{
 		"name": "",
@@ -208,9 +208,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1615034653124,
-		"promptTimes": 1,
-		"prevPromptTime": 1619598309809
+		"timestamp": 1615034653124
 	},
 	{
 		"name": "",
@@ -224,7 +222,7 @@
 		"duration": 13,
 		"timestamp": 1616303429099,
 		"promptTimes": 3,
-		"prevPromptTime": 1619591109364
+		"prevPromptTime": 1619762277049
 	},
 	{
 		"name": "",
@@ -237,8 +235,8 @@
 		"interval": 60,
 		"duration": 14,
 		"timestamp": 1614682522617,
-		"promptTimes": 4,
-		"prevPromptTime": 1619600109825
+		"promptTimes": 6,
+		"prevPromptTime": 1619771277563
 	},
 	{
 		"name": "",
@@ -251,8 +249,8 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1614905595465,
-		"promptTimes": 2,
-		"prevPromptTime": 1619609311622
+		"promptTimes": 1,
+		"prevPromptTime": 1619773077604
 	},
 	{
 		"name": "",
@@ -265,8 +263,8 @@
 		"interval": 45,
 		"duration": 37,
 		"timestamp": 1609667569090,
-		"promptTimes": 3,
-		"prevPromptTime": 1619611110887
+		"promptTimes": 4,
+		"prevPromptTime": 1619774877625
 	},
 	{
 		"name": "",
@@ -280,7 +278,7 @@
 		"duration": 47,
 		"timestamp": 1610785651586,
 		"promptTimes": 1,
-		"prevPromptTime": 1619612910644
+		"prevPromptTime": 1619776675605
 	},
 	{
 		"name": "",
@@ -294,7 +292,7 @@
 		"duration": 47,
 		"timestamp": 1614784511292,
 		"promptTimes": 1,
-		"prevPromptTime": 1619614710788
+		"prevPromptTime": 1619778477004
 	},
 	{
 		"name": "",
@@ -308,7 +306,7 @@
 		"duration": 17,
 		"timestamp": 1614764001082,
 		"promptTimes": 1,
-		"prevPromptTime": 1619616509976
+		"prevPromptTime": 1619782016089
 	},
 	{
 		"name": "",
@@ -323,7 +321,7 @@
 		"timestamp": 1611189022632,
 		"disable": false,
 		"promptTimes": 1,
-		"prevPromptTime": 1619618312095
+		"prevPromptTime": 1619783815992
 	},
 	{
 		"name": "",
@@ -349,8 +347,8 @@
 		"interval": 40,
 		"duration": 27,
 		"timestamp": 1594365344529,
-		"promptTimes": 1,
-		"prevPromptTime": 1619620111690
+		"promptTimes": 2,
+		"prevPromptTime": 1619789215871
 	},
 	{
 		"name": "",
@@ -364,7 +362,7 @@
 		"duration": 47,
 		"timestamp": 1611881119094,
 		"promptTimes": 1,
-		"prevPromptTime": 1619621911363
+		"prevPromptTime": 1619787415954
 	},
 	{
 		"name": "",
@@ -378,7 +376,7 @@
 		"duration": 47,
 		"timestamp": 1609555783779,
 		"promptTimes": 1,
-		"prevPromptTime": 1619623711011
+		"prevPromptTime": 1619791015647
 	},
 	{
 		"name": "",
@@ -392,7 +390,7 @@
 		"duration": 13,
 		"timestamp": 1609491034659,
 		"promptTimes": 1,
-		"prevPromptTime": 1619625510665
+		"prevPromptTime": 1619792814694
 	},
 	{
 		"name": "",
@@ -500,7 +498,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 7,
-		"timestamp": 1614392475849
+		"timestamp": 1614392475849,
+		"promptTimes": 1,
+		"prevPromptTime": 1619831985892
 	},
 	{
 		"name": "",
