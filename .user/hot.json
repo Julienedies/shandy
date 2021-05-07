@@ -1,13 +1,23 @@
 [
 	{
+		"id": "疫苗",
+		"selected": true,
+		"timestamp": 1620260032705
+	},
+	{
+		"id": "生物疫苗",
+		"selected": false,
+		"timestamp": 1620259979294
+	},
+	{
+		"id": "锂电池",
+		"selected": true,
+		"timestamp": 1620202724942
+	},
+	{
 		"id": "辅助生殖",
 		"selected": true,
 		"timestamp": 1619626003963
-	},
-	{
-		"id": "换电",
-		"selected": true,
-		"timestamp": 1619625995730
 	},
 	{
 		"id": "新冠",
@@ -16,7 +26,7 @@
 	},
 	{
 		"id": "原料药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1619362329972
 	},
 	{
@@ -71,7 +81,7 @@
 	},
 	{
 		"id": "数字货币",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1616687053736
 	},
 	{
@@ -131,7 +141,7 @@
 	},
 	{
 		"id": "预增",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1610898031672
 	},
 	{
