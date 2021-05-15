@@ -20,7 +20,7 @@ export default function (scope) {
 
     const warnJodb = userJodb('warn', []);
     // 存储定时器句柄，用以取消
-    let isAbleVoiceWarn = null;  // 语音警告是否启用
+    let isAbleVoiceWarn = false;  // 语音警告是否启用
     const warnHandleMap = {};
     let warnIntervalArr = [];
     let warnIntervalTimer = null;
@@ -327,7 +327,7 @@ export default function (scope) {
 
     if (utils.isTradingDate()) {
         utils.timer('8:45', () => {
-            scope.open();
+            //scope.open();
         });
 
         utils.timer('11:30', () => {

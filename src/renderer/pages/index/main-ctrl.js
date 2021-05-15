@@ -271,7 +271,7 @@ brick.reg('mainCtrl', function (scope) {
                 //transparent: true,
                 //titleBarStyle: 'hidden',
                 //hasShadow: false,
-                alwaysOnTop: true,
+                //alwaysOnTop: true,
                 onClose () {
                     delete scope.todoWindow;
                     setTimeout(() => {
@@ -312,7 +312,7 @@ brick.reg('mainCtrl', function (scope) {
 
     if (utils.isTrading()) {
         !scope.newsWin && scope.openNews();
-        !scope.warnWindow && scope.openWarn(null, 1);
+        //!scope.warnWindow && scope.openWarn(null, 1);
     }
 
     if (utils.isTradingDate()) {
