@@ -27,7 +27,7 @@ export default function (scope) {
     const dragOverCla = 'onDragOver';
     const ignoreReg = /[(（].*[）)]/img;
 
-    const intervalDuration = 1.5;  // 三分钟一次语音警告
+    const intervalDuration = 3;  // 三分钟一次语音警告
 
     let currentTabType = 'interval';
     let currentTag = '';

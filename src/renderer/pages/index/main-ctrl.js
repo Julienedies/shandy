@@ -154,7 +154,7 @@ brick.reg('mainCtrl', function (scope) {
                 name,
                 url,
                 width: 600,
-                height: 48,
+                height: 64,
                 x: 60,
                 ...getBounds(name),
                 titleBarStyle: 'hiddenInset',

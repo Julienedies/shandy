@@ -1,17 +1,27 @@
 [
 	{
+		"id": "医疗",
+		"selected": true,
+		"timestamp": 1621384076760
+	},
+	{
+		"id": "证券",
+		"selected": false,
+		"timestamp": 1621208943907
+	},
+	{
 		"id": "摘帽",
 		"selected": true,
 		"timestamp": 1620834118567
 	},
 	{
 		"id": "华为概念",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1620833704909
 	},
 	{
 		"id": "华为",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1620833661060
 	},
 	{
@@ -51,7 +61,7 @@
 	},
 	{
 		"id": "新冠",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1619394248028
 	},
 	{
@@ -100,11 +110,6 @@
 		"timestamp": 1616945434364
 	},
 	{
-		"id": "区块链",
-		"selected": false,
-		"timestamp": 1616687066615
-	},
-	{
 		"id": "数字货币",
 		"selected": true,
 		"timestamp": 1616687053736
@@ -121,7 +126,7 @@
 	},
 	{
 		"id": "电力",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1615734930866
 	},
 	{
@@ -151,7 +156,7 @@
 	},
 	{
 		"id": "碳中和",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1614729913123
 	},
 	{

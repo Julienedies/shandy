@@ -40,7 +40,7 @@ ipc.on('id', function (event, windowID) {
     win = BrowserWindow.fromId(windowID);
     setTimeout(() => {
         hideWin();
-    }, 60 * 1000);
+    }, 45 * 1000);
 });
 
 // 有新消息显示窗口,  稍后隐藏窗口
@@ -52,7 +52,7 @@ function cb (msg) {
         showWin();
         timer = setTimeout(() => {
             hideWin();
-        }, 30 * 1000);
+        }, 24 * 1000);
     }
 }
 
