@@ -1,12 +1,17 @@
 [
 	{
+		"id": "送转填权",
+		"selected": true,
+		"timestamp": 1621555607590
+	},
+	{
 		"id": "医疗",
 		"selected": true,
 		"timestamp": 1621384076760
 	},
 	{
 		"id": "证券",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1621208943907
 	},
 	{
@@ -120,13 +125,8 @@
 		"timestamp": 1616413837872
 	},
 	{
-		"id": "水电",
-		"selected": false,
-		"timestamp": 1615734938070
-	},
-	{
 		"id": "电力",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1615734930866
 	},
 	{
@@ -173,11 +173,6 @@
 		"id": "医美",
 		"selected": true,
 		"timestamp": 1607946813103
-	},
-	{
-		"id": "稀土永磁",
-		"selected": false,
-		"timestamp": 1606349943145
 	},
 	{
 		"id": "金属",
