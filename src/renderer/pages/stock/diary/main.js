@@ -169,6 +169,7 @@ brick.reg('setDiaryCtrl', function () {
         scope.render('setDiary', model, function () {
             $editor = $elm.find('#editor').froalaEditor({
                 ...FroalaEditorConfig,
+                fontSizeDefaultSelection: '18',
                 //toolbarInline: true,
                 height: 400,
             });
