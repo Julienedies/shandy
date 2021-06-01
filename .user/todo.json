@@ -214,8 +214,8 @@
 		"interval": 60,
 		"duration": 13,
 		"timestamp": 1616303429099,
-		"promptTimes": 2,
-		"prevPromptTime": 1622432088856
+		"promptTimes": 1,
+		"prevPromptTime": 1622518095615
 	},
 	{
 		"name": "",
@@ -227,9 +227,7 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 14,
-		"timestamp": 1614682522617,
-		"promptTimes": 2,
-		"prevPromptTime": 1622428488225
+		"timestamp": 1614682522617
 	},
 	{
 		"name": "",
@@ -241,9 +239,7 @@
 		"repeat": 17,
 		"interval": 45,
 		"duration": 37,
-		"timestamp": 1609667569090,
-		"promptTimes": 1,
-		"prevPromptTime": 1622430287632
+		"timestamp": 1609667569090
 	},
 	{
 		"name": "",
