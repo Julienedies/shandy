@@ -213,9 +213,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 13,
-		"timestamp": 1616303429099,
-		"promptTimes": 1,
-		"prevPromptTime": 1622518095615
+		"timestamp": 1616303429099
 	},
 	{
 		"name": "",

@@ -250,9 +250,9 @@
 	"todo": {
 		"bounds": {
 			"x": 0,
-			"y": 23,
-			"width": 1440,
-			"height": 808
+			"y": 809,
+			"width": 0,
+			"height": 22
 		}
 	}
 }
