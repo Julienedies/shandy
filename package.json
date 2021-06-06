@@ -16,7 +16,9 @@
     "start": "electron ./dist/electron/main.js",
     "start:web": "node ./dist/web/server.js",
     "build": "node ./.build/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web:front": "cross-env NODE_ENV=production webpack --config .build/webpack/web.front.config.js",
+    "web:server": "cross-env NODE_ENV=production webpack --config .build/webpack/web.server.config.js"
   },
   "repository": {
     "type": "git",
@@ -64,7 +66,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.7.2",
-    "@julienedies/brick": "^0.8.5",
+    "@julienedies/brick": "^0.9.34",
     "applescript": "^1.0.0",
     "artyom.js": "^1.0.6",
     "babel-polyfill": "^6.26.0",
@@ -76,7 +78,7 @@
     "debug-menu": "^0.6.1",
     "dialogs": "^1.1.20",
     "echarts": "^4.1.0",
-    "electron": "^2.0.17",
+    "electron": "^13.1.1",
     "electron-debug": "^2.0.0",
     "events": "^3.0.0",
     "express": "^4.16.3",
@@ -85,7 +87,7 @@
     "fs-extra": "^7.0.1",
     "glob": "^7.1.3",
     "iconv-lite": "^0.4.23",
-    "jhandy": "^0.5.16",
+    "jhandy": "^0.5.24",
     "jquery": "^3.3.1",
     "jschardet": "^2.1.0",
     "keypress": "^0.2.1",
@@ -94,9 +96,9 @@
     "moment": "^2.24.0",
     "node-schedule": "^1.3.0",
     "pinyin": "^2.8.3",
+    "react": "^17.0.2",
     "request": "^2.87.0",
     "request-promise": "^4.2.5",
-    "robotjs": "^0.5.1",
     "shelljs": "^0.8.2",
     "socket.io": "^2.1.1",
     "sortablejs": "^1.10.0-rc3",

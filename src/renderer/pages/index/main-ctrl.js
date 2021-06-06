@@ -275,7 +275,7 @@ brick.reg('mainCtrl', function (scope) {
                 onClose () {
                     delete scope.todoWindow;
                     setTimeout(() => {
-                        scope.openTodo();
+                        //scope.openTodo();
                     }, 100);
                 }
             }
@@ -306,12 +306,12 @@ brick.reg('mainCtrl', function (scope) {
     // ---------------------------------------------------------------------------------------------
 
     setTimeout(() => {
-        scope.openTodo();
+        //scope.openTodo();
     }, 1000 * 4);
 
 
     if (utils.isTrading()) {
-        !scope.newsWin && scope.openNews();
+        //!scope.newsWin && scope.openNews();
         //!scope.warnWindow && scope.openWarn(null, 1);
     }
 

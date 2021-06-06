@@ -1,7 +1,7 @@
 /*!
  * Created by j on 2019-03-05.
  */
-const {spawn} = require('child_process');
+const { spawn } = require('child_process');
 const path = require('path')
 
 const nodemon = require('nodemon');
@@ -16,7 +16,7 @@ const webConfig = require('./web.config')
 const serverConfig = webConfig.serverConfig
 const frontConfig = webConfig.frontConfig
 
-let spawnNodemonProcess
+let spawnNodemonProcess;
 
 
 function logStats (proc, data) {
@@ -58,6 +58,8 @@ function serverLog (data, color) {
     }
 }
 
+
+
 function startFront () {
 
     const devServerPort = 8090
@@ -66,7 +68,7 @@ function startFront () {
 
     compiler.hooks.done.tap('done', stats => {
         logStats('Front', stats)
-    })
+    });
 
     if (frontConfig.mode === 'production') {
 
@@ -117,7 +119,7 @@ function startFront () {
 
 function startServer () {
 
-    const compiler = webpack(serverConfig)
+    const compiler = webpack(serverConfig);
 
     compiler.watch({}, (err, stats) => {
         if (err) {
@@ -130,7 +132,8 @@ function startServer () {
             spawnNodemonProcess.send('restart');
         } else {
 
-            let serverJs = path.resolve(serverConfig.output.path, './server.js')
+            let serverJs = path.resolve(serverConfig.output.path, './server.js');
+
             spawnNodemonProcess = spawn('nodemon', [serverJs, '--watch', serverJs], {
                 stdio: ['pipe', 'pipe', 'pipe', 'ipc']
             });
@@ -162,6 +165,6 @@ function startServer () {
 }
 
 
-startFront()
+startFront();
 
-startServer()
+startServer();

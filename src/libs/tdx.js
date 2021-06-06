@@ -3,16 +3,16 @@
  *  通达信软件快捷键脚本化接口
  */
 
-import robot from 'robotjs'
+//import robot from 'robotjs'
 import ac from './ac'
 
 function _keyTap(keys) {
-    var delay = 100;
-    var key = keys.shift();
+    let delay = 100;
+    let key = keys.shift();
     if (key) {
         // if (key == 'enter') delay = 300;
         setTimeout(function () {
-            robot.keyTap(key);
+            //robot.keyTap(key);
             _keyTap(keys);
         }, delay);
     }

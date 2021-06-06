@@ -53,10 +53,11 @@ app.get('/msg/', (req, res) => {
 });
 
 app.get('/message/', (req, res) => {
-    let info = req.query.info;
-    console.log('/message', info);
+    let reqQuery = req.query;
+    let info = reqQuery.info;
+    console.log('/message', req.url);
     //io.emit(info, req.query);
-    events.emit(info, req.query);
+    events.emit(info, reqQuery);
     res.send(`info: ${ info }`);
 });
 

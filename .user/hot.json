@@ -1,7 +1,7 @@
 [
 	{
 		"id": "基金",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1622375017590
 	},
 	{
@@ -26,7 +26,7 @@
 	},
 	{
 		"id": "软件",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1621874928750
 	},
 	{
@@ -76,7 +76,7 @@
 	},
 	{
 		"id": "华为",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1620833661060
 	},
 	{

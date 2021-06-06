@@ -14,6 +14,7 @@ const desktopCapturer = electron.desktopCapturer;
 const electronScreen = electron.screen;
 
 function determineScreenShotSize () {
+    console.log(electron);
     const screenSize = electronScreen.getPrimaryDisplay().workAreaSize;
     const maxDimension = Math.max(screenSize.width, screenSize.height);
     return {
@@ -25,7 +26,6 @@ function determineScreenShotSize () {
 function createDateStr () {
     let now = new Date();
     let str = now.toLocaleString().replace(/\//img, '-').replace(/[:]/img, '.');
-    console.log(str);
     // 为单个日期数字添加前缀0
     let str2 = str.replace(/\d{4}-\d{1,2}-\d{1,2}/, moment(now).format('YYYY-MM-DD'));
     console.log(str2);
@@ -42,8 +42,8 @@ function createDateStr () {
  */
 export default function (args, options = {}) {
 
-    let thumbSize = determineScreenShotSize();
-    options = Object.assign({types: ['screen'], thumbnailSize: thumbSize}, options);
+    //let thumbSize = determineScreenShotSize();  thumbnailSize: thumbSize
+    options = Object.assign({types: ['screen'], thumbnailSize: {width: 3840, height: 2160}}, options);
 
     args = Object.assign({
         returnType: 'file',
@@ -52,44 +52,45 @@ export default function (args, options = {}) {
         }
     }, args);
 
-    desktopCapturer.getSources(options, function (error, sources) {
+    desktopCapturer.getSources(options).then( sources => {
 
-        if (error) {
-            return console.log(error);
-        }
+            sources.forEach(function (source) {
 
-        sources.forEach(function (source) {
+                console.info(source);
+                console.info(os.tmpdir());
 
-            //console.log(source);
-            let img = source.thumbnail;
+                let img = source.thumbnail;
 
-            if (source.name === 'Entire screen' || source.name === 'Screen 2') {
+                if (source.name === 'Screen 1') {
 
-                if (args.crop) {
-                    img = img.crop(args.crop);
+                    if (args.crop) {
+                        img = img.crop(args.crop);
+                    }
+
+                    if (args.returnType === 'file') {
+                        let dirPath = args.dir || os.tmpdir();
+                        let dateStr = createDateStr();
+                        let imgName = `屏幕快照 ${ dateStr } (2).png`;
+                        let imgPath = path.join(dirPath, imgName);
+                        fs.writeFile(imgPath, img.toPNG(), function (error) {
+                            if (error) {
+                                return console.error(error);
+                            }
+                            args.callback(imgPath);
+                        });
+                    }
+
+                    if (args.returnType === 'dataUrl') {
+                        let dataUrl = img.toDataURL();
+                        args.callback(dataUrl);
+                    }
+
                 }
+            });
 
-                if (args.returnType === 'file') {
-                    let dirPath = args.dir || os.tmpdir();
-                    let dateStr = createDateStr();
-                    let imgName = `屏幕快照 ${ dateStr } (2).png`;
-                    let imgPath = path.join(dirPath, imgName);
-                    fs.writeFile(imgPath, img.toPNG(), function (error) {
-                        if (error) {
-                            return console.error(error);
-                        }
-                        args.callback(imgPath);
-                    });
-                }
 
-                if (args.returnType === 'dataUrl') {
-                    let dataUrl = img.toDataURL();
-                    args.callback(dataUrl);
-                }
-
-            }
-        });
     });
+
 
 }
 

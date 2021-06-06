@@ -35,7 +35,13 @@ class Win {
             x: 0,
             y: 0,
             webPreferences: {
-                webSecurity: false
+                webSecurity: false,
+                nodeIntegration: true, // 赋予此窗口页面中的JavaScript访问Node.js环境的能力
+                // 官网似乎说是默认false，但是这里必须设置contextIsolation
+                contextIsolation: false,
+                // 在electron 10.0.0之后，remote模块默认关闭, 不推荐使用
+                // 必须手动设置webPreferences中的enableRemoteModule为true之后才能使用
+                enableRemoteModule: true,   // 打开remote模块
             }
         };
 
@@ -73,7 +79,7 @@ class Win {
             });
         }
 
-        this.opt.dev && win.webContents.openDevTools();
+        /*this.opt.dev && */win.webContents.openDevTools();
 
         url && this.load(url);
 

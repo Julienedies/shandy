@@ -35,7 +35,13 @@ function createWindow () {
         titleBarStyle: 'hidden',
         title: app.getName(),
         webPreferences: {
-            webSecurity: false
+            webSecurity: false,
+            nodeIntegration: true, // 赋予此窗口页面中的JavaScript访问Node.js环境的能力
+            // 官网似乎说是默认false，但是这里必须设置contextIsolation
+            contextIsolation: false,
+            // 在electron 10.0.0之后，remote模块默认关闭, 不推荐使用
+            // 必须手动设置webPreferences中的enableRemoteModule为true之后才能使用
+            enableRemoteModule: true,   // 打开remote模块
         }
     };
 
@@ -47,7 +53,7 @@ function createWindow () {
     } else {
         mainWindow.loadURL(`${ config.LOAD_PROTOCOL }/index.html`);
     }
-    //mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools()
     mainWindow.maximize();
     mainWindow.on('closed', function () {
         mainWindow = null;
@@ -105,10 +111,7 @@ function ready () {
     });
 
     function screenshot () {
-        ac.getStockName(function (stock) {
-            mainWindow.webContents.send('screenCapture', stock);
-            ac.activeTdx();
-        });
+        mainWindow.webContents.send('screenCapture');
     }
 
     // 截屏: 快捷键 => 只截大屏幕的图
@@ -116,9 +119,25 @@ function ready () {
         screenshot();
     });
 
+    /***************************************************************************************************************************/
+    /***************************************************************************************************************************/
+
+    // 打开浏览器查看个股资料
+    server.on('viewStock', function (msg) {
+        console.log('打板封单监控', msg);
+        mainWindow.webContents.send('view_stock_info', msg);
+    });
+
+    // 打板封单监控: 通过鼠标手势向server发送打板封单监控
+    server.on('rts', function (msg) {
+        console.log('打板封单监控', msg);
+        mainWindow.webContents.send('rts_db_monitor', msg);
+    });
+
     // 截屏: 通过鼠标手势向server发送截屏请求
     server.on('screenshot', function (msg) {
-        screenshot();
+        console.log('server 要求截屏', msg);
+        mainWindow.webContents.send('screenCapture', msg);
     });
 
     // renderer进程 (打板封单监控数据) => socket.io => socket.client (浏览器页面 http://192.168.3.20:3000/)

@@ -15,8 +15,9 @@ export default function (f) {
     console.time('截图ocr');
     capture({
         returnType: 'dataUrl',
-        crop: {x: 2560, y: 72, width: 180, height: 36},
+        crop: {x: 3434, y: 58, width: 180, height: 40},
         callback: function (dataUrl) {
+            //console.log(dataUrl);
             console.info("\n\n\n\n\n%c", `padding:50px 240px;background:url(${ dataUrl }) no-repeat 0 0`);
             ocr({
                 image: dataUrl,

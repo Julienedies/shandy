@@ -22,7 +22,7 @@ const nodeSassIncludePaths = [path.resolve(__dirname, '../../')]
 
 const projectRoot = path.resolve(__dirname, '../../')
 const context = path.resolve(__dirname, '../../src')
-const outputPath = path.resolve(__dirname, '../../dist/web')
+const outputPath = path.resolve(__dirname, '../../dist/web/')
 const publicPath = ''
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -202,7 +202,7 @@ const frontConfig = {
                 ]
             },
             {
-                test: [/\.(sa|sc)ss$/, /node_modules\/.+\.css$/],
+                test: [/\.(sa|sc)ss$/, /node_modules.+\.css$/],
                 use: [
                     cssLoader,
                     {
@@ -305,7 +305,7 @@ const serverConfig = {
         ...Object.keys(dependencies || {})
     ],
     plugins: [
-        new webpack.NoEmitOnErrorsPlugin()
+        //new webpack.NoEmitOnErrorsPlugin()
     ],
     module: {
         rules: [

@@ -9,6 +9,7 @@ import './style.scss'
 import fs from 'fs'
 import electron from 'electron'
 
+import config from '../../../libs/config'
 import utils from '../../../libs/utils'
 import Win from '../../../libs/window'
 import tdx from '../../../libs/tdx'
@@ -62,10 +63,10 @@ voice('voice test.', () => {
 });
 
 let kcAudio = new Audio(require('./audio/kc.mp3'));
-let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
-setInterval( () => {
-     audio.play();
-}, 1000 * 60 * 60 * 7);
+//let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
+// setInterval( () => {
+//      audio.play();
+// }, 1000 * 60 * 60 * 7);
 
 
 // -------------------------- 接收主进程发来的消息 ------------------------
@@ -90,16 +91,6 @@ ipcRenderer.on('view_in_ftnn', function (event, msg) {
     code && tdx.view_in_ftnn(code);
 });
 
-// 浏览器中查看该股资料
-ipcRenderer.on('view_stock_info', function (event, stock) {
-    if (stock.code) {
-        view_stock(stock.code);
-    } else {
-        captureOcr(stock => {
-            view_stock(stock.code);
-        });
-    }
-});
 
 // 打开股票内容修改窗口
 ipcRenderer.on('set_stock_c', function (event, stock) {
@@ -125,9 +116,30 @@ ipcRenderer.on('set_stock_c', function (event, stock) {
     }
 });
 
+
+
+// 浏览器中查看该股资料
+ipcRenderer.on('view_stock_info', function (event, arg) {
+    console.log(arg);
+
+    if (arg.name) {
+        let stock = stockQuery(arg.name);
+        view_stock(stock.code);
+    } else {
+        captureOcr(stock => {
+            view_stock(stock.code);
+        });
+    }
+});
+
+
+
 // 打板监控
-ipcRenderer.on('rts_db_monitor', function (event, stock) {
-    if (stock.code) {
+ipcRenderer.on('rts_db_monitor', function (event, arg) {
+    console.log(arg);
+
+    if (arg.name) {
+        let stock = stockQuery(arg.name);
         rtsc.on_rts_db_monitor(stock);
     } else {
         captureOcr(stock => {
@@ -142,9 +154,13 @@ ipcRenderer.on('rts_cancel', function (event, arg) {
 });
 
 // 截屏
-ipcRenderer.on('screenCapture', function (event, stock) {
+ipcRenderer.on('screenCapture', function (event, arg) {
+
+    console.log(arg);
+    let stock = stockQuery(arg.name);
+
     screenCapture({
-        returnType: 'file', dir: '/Users/j/截图/', callback: (imgPath) => {
+        returnType: 'file', dir: config.STOCK_IMG_DIR, callback: (imgPath) => {
             kcAudio.play();
             let rename = imgPath
                 .replace('屏幕快照', stock.name)
@@ -152,7 +168,7 @@ ipcRenderer.on('screenCapture', function (event, stock) {
                 .replace(/\.png$/, `-${ stock.code }.png`);
             fs.renameSync(imgPath, rename);
         }
-    }, {thumbnailSize: {width: 3840, height: 2160}});
+    }, );
 });
 
 

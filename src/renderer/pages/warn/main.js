@@ -137,7 +137,7 @@ $('[ic-view="place"]').on('ic-view.active', function (e) {
 });
 
 const audioMap = {
-    'daban': require(`./audio/daban-10.mp3`)
+    //'daban': require(`./audio/daban-10.mp3`)
 };
 
 socket.on('warn', (info) => {

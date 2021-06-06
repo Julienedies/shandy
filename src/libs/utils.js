@@ -52,7 +52,10 @@ export default {
         return setting;
     },
     select () {
-        return dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']});
+        return dialog.showOpenDialogSync({properties: ['openFile', 'multiSelections']});
+    },
+    selectDir () {
+        return dialog.showOpenDialogSync({properties: ['openDirectory']});
     },
     msg (msg, title = '') {
         dialog.showMessageBox({type: 'info', title, message: msg}, (res) => {
@@ -78,7 +81,8 @@ export default {
         let ip;
         try {
             let networkInterfaces = os.networkInterfaces();
-            ip = networkInterfaces.en0[0].address;
+            console.info(networkInterfaces);
+            ip = networkInterfaces['WLAN 2'][0].address;
         } catch (e) {
             console.log('ip address 获取失败. =>', e);
         }
