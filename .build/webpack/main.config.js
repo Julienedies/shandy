@@ -31,7 +31,7 @@ let mainConfig = {
         ...Object.keys(dependencies || {})
     ],
     plugins: [
-        new webpack.NoEmitOnErrorsPlugin()
+        //new webpack.NoEmitOnErrorsPlugin()
     ],
     module: {
         rules: [

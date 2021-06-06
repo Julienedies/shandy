@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "3138562",
+		"type": "问题",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\"><u>首先必须明确要捕捉的目标行情。</u></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？ 这是我首先要解决的问题。</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>什么都想抓住，就什么也抓不住。</strong></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>操作不明确，机会转瞬即逝。</strong></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>复盘无头绪。</strong></span></span></p><p><span style=\"font-size: 24px;\"><u><span style=\"background-color: rgb(255, 255, 0);\"><strong><br></strong></span></u></span></p><p><br></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1622768936755
+	},
+	{
+		"name": "",
 		"id": "8018085",
 		"type": "问题",
 		"content": "<p><strong><span style=\"font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">问题：我没有消息优势，没有资金优势，我凭什么在市场上胜出？</span></strong></p>",
@@ -141,7 +153,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1621737388870
+		"timestamp": 1621737388870,
+		"promptTimes": 1,
+		"prevPromptTime": 1622794290265
 	},
 	{
 		"name": "",
@@ -153,7 +167,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1609555783779
+		"timestamp": 1609555783779,
+		"promptTimes": 1,
+		"prevPromptTime": 1622796091765
 	},
 	{
 		"name": "",
@@ -165,7 +181,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1619178994699
+		"timestamp": 1619178994699,
+		"promptTimes": 1,
+		"prevPromptTime": 1622797891267
 	},
 	{
 		"name": "",
@@ -177,7 +195,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1594995614163
+		"timestamp": 1594995614163,
+		"promptTimes": 2,
+		"prevPromptTime": 1622799690420
 	},
 	{
 		"name": "",
@@ -189,7 +209,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1611881119094
+		"timestamp": 1611881119094,
+		"promptTimes": 1,
+		"prevPromptTime": 1622801491547
 	},
 	{
 		"name": "",
@@ -201,7 +223,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1610163063160
+		"timestamp": 1610163063160,
+		"promptTimes": 1,
+		"prevPromptTime": 1622803290853
 	},
 	{
 		"name": "",
@@ -213,7 +237,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 13,
-		"timestamp": 1616303429099
+		"timestamp": 1616303429099,
+		"promptTimes": 3,
+		"prevPromptTime": 1622781692006
 	},
 	{
 		"name": "",
@@ -225,7 +251,9 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 14,
-		"timestamp": 1614682522617
+		"timestamp": 1614682522617,
+		"promptTimes": 7,
+		"prevPromptTime": 1622805091163
 	},
 	{
 		"name": "",
@@ -237,7 +265,9 @@
 		"repeat": 17,
 		"interval": 45,
 		"duration": 37,
-		"timestamp": 1609667569090
+		"timestamp": 1609667569090,
+		"promptTimes": 2,
+		"prevPromptTime": 1622806890270
 	},
 	{
 		"name": "",
@@ -249,7 +279,9 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 47,
-		"timestamp": 1610785651586
+		"timestamp": 1610785651586,
+		"promptTimes": 1,
+		"prevPromptTime": 1622808691007
 	},
 	{
 		"name": "",
@@ -274,7 +306,9 @@
 		"interval": 60,
 		"duration": 27,
 		"timestamp": 1611189022632,
-		"disable": false
+		"disable": false,
+		"promptTimes": 2,
+		"prevPromptTime": 1622814091021
 	},
 	{
 		"name": "",
@@ -286,7 +320,9 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1618113128264
+		"timestamp": 1618113128264,
+		"promptTimes": 1,
+		"prevPromptTime": 1622812290328
 	},
 	{
 		"name": "",
@@ -311,7 +347,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1617982755447
+		"timestamp": 1617982755447,
+		"promptTimes": 1,
+		"prevPromptTime": 1622815890832
 	},
 	{
 		"name": "",
@@ -324,7 +362,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1611410765613,
-		"disable": false
+		"disable": false,
+		"promptTimes": 2,
+		"prevPromptTime": 1622821290770
 	},
 	{
 		"name": "",
@@ -336,7 +376,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1616220645834
+		"timestamp": 1616220645834,
+		"promptTimes": 1,
+		"prevPromptTime": 1622819490577
 	},
 	{
 		"name": "",
@@ -348,7 +390,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1617161666529
+		"timestamp": 1617161666529,
+		"promptTimes": 1,
+		"prevPromptTime": 1622787091756
 	},
 	{
 		"name": "",

@@ -30,7 +30,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/目标行情/2021-04",
+		"imgDir": "/Users/j/截图/交易记录/2102",
 		"bounds": {
 			"x": 1440,
 			"y": 0,
@@ -250,9 +250,9 @@
 	"todo": {
 		"bounds": {
 			"x": 0,
-			"y": 809,
-			"width": 0,
-			"height": 22
+			"y": 23,
+			"width": 1440,
+			"height": 808
 		}
 	}
 }
