@@ -3,10 +3,10 @@
 		"tdx_extern_user_file": "E:\\new_jyplug\\T0002\\signals\\extern_user.txt",
 		"csdPath": "E:\\dev\\csd",
 		"bounds": {
-			"x": 139,
-			"y": 59,
-			"width": 1266,
-			"height": 771
+			"x": 679,
+			"y": 116,
+			"width": 1270,
+			"height": 1581
 		},
 		"fetchSources": [
 			"ths_new",

@@ -351,11 +351,11 @@
                     <div class="field has-addons">
                         <div class="control is-expanded">
                             <input class="input" type="text" placeholder="通达信自定义数据文件路径" name="tdx_extern_user_file"
-                                   value="{{ model.tdx_extern_user_file || 'E:\new_jyplug\T0002\signals/extern_user.txt' }}" ic-form-field/>
+                                   value="{{ model.tdx_extern_user_file }}" ic-form-field/>
                         </div>
                         <div class="control">
                             <a class="button is-primary" ic-select-path="tdx_extern_user_file"
-                               ic-select-path-default="E:\new_jyplug\T0002\signals\extern_user.txt">
+                               ic-select-path-default="">
                                 选择自定义数据文件路径
                             </a>
                         </div>

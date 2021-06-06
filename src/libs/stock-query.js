@@ -41,7 +41,7 @@ export default function (words) {
 
     // (?:.+)?
     let arr = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
-    console.info(arr);
+    //console.info(arr);
     let name = arr[1] || words;
     let code = arr[2];
 
@@ -52,13 +52,13 @@ export default function (words) {
         return words === stock[1] || code === stock[0];
     });
 
-    console.log(result && result[0]);
+    //console.log(result && result[0]);
 
     result = result.length ? result : stocks.filter(stock => {
         return name === stock[1] || stock[0] === code;
     });
 
-    console.log(result && result[0]);
+    //console.log(result && result[0]);
 
     result = result.length ? result : stocks.filter(stock => {
         return r_name.test(stock[1]);

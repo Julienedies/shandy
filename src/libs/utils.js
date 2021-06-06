@@ -82,7 +82,13 @@ export default {
         try {
             let networkInterfaces = os.networkInterfaces();
             console.info(networkInterfaces);
-            ip = networkInterfaces['WLAN 2'][0].address;
+            let arr = networkInterfaces['WLAN 2'];
+            for (let i in arr) {
+                if (arr[i].family === 'IPv4') {
+                    ip = arr[i].address;
+                    break;
+                }
+            }
         } catch (e) {
             console.log('ip address 获取失败. =>', e);
         }
