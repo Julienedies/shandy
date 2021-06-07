@@ -37,6 +37,7 @@ export default {
      * @param callback {Function} 通过apple Script获取股票名称后的回调函数，传入股票代码
      */
     getStockName: function (callback) {
+        return;
         _exec('get-stock-name', function (result) {
             console.log(result);
             // result = '通达信金融终端V7.38 - [组合图-天首发展]'; 从dock通达信图标右键菜单获取的字符串
@@ -48,6 +49,7 @@ export default {
         });
     },
     activeTdx: function () {
+        return;
         _exec('active-tdx');
     },
     activeFtnn: function () {

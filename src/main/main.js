@@ -3,6 +3,8 @@
  * Created by j on 18/5/21.
  */
 
+import stockQuery from '../libs/stock-query'
+
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
 
 import path from 'path'
@@ -114,6 +116,19 @@ function ready () {
     // 截屏: 快捷键 => 只截大屏幕的图
     globalShortcut.register('CommandOrControl+shift+2', function () {
         screenshot();
+    });
+
+    /**************************************************************************************/
+    // 查看个股信息: 鼠标手势 =》 http =>  查看个股信息
+    server.on('viewStock', function (msg) {
+        let stock = stockQuery(msg.name);
+        mainWindow.webContents.send('view_stock_info', stock);
+    });
+
+    // 封单监控: 鼠标手势 =》 http请求 =>  封单监控
+    server.on('rts', function (msg) {
+        let stock = stockQuery(msg.name);
+        mainWindow.webContents.send('rts_db_monitor', stock);
     });
 
     // 截屏: 通过鼠标手势向server发送截屏请求
