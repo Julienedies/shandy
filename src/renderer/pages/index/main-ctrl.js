@@ -159,7 +159,7 @@ brick.reg('mainCtrl', function (scope) {
                 ...getBounds(name),
                 titleBarStyle: 'hiddenInset',
                 transparent: true,
-                // frame: false,
+                frame: false,
                 hasShadow: false,
                 alwaysOnTop: true,
                 onClose: () => {
@@ -311,7 +311,7 @@ brick.reg('mainCtrl', function (scope) {
 
 
     if (utils.isTrading()) {
-        //!scope.newsWin && scope.openNews();
+        !scope.newsWin && scope.openNews();
         //!scope.warnWindow && scope.openWarn(null, 1);
     }
 

@@ -79,7 +79,7 @@ class Win {
             });
         }
 
-        /*this.opt.dev && */win.webContents.openDevTools();
+        this.opt.dev && win.webContents.openDevTools();
 
         url && this.load(url);
 

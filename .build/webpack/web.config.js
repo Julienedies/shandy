@@ -197,6 +197,7 @@ const frontConfig = {
                         loader: 'css-loader',
                         options: {
                             url: true,
+                            modules: false
                         }
                     },
                 ]
@@ -209,6 +210,7 @@ const frontConfig = {
                         loader: 'css-loader',
                         options: {
                             url: true,
+                            modules:false
                         }
                     },
                     {

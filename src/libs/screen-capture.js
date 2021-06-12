@@ -61,7 +61,7 @@ export default function (args, options = {}) {
 
                 let img = source.thumbnail;
 
-                if (source.name === 'Screen 1') {
+                if (source.name === 'Screen 2') {
 
                     if (args.crop) {
                         img = img.crop(args.crop);

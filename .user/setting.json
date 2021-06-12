@@ -3,21 +3,21 @@
 		"tdx_extern_user_file": "E:\\new_jyplug\\T0002\\signals\\extern_user.txt",
 		"csdPath": "E:\\dev\\csd",
 		"bounds": {
-			"x": 679,
-			"y": 116,
-			"width": 1270,
-			"height": 1581
+			"x": 360,
+			"y": 0,
+			"width": 1476,
+			"height": 1040
 		},
 		"fetchSources": [
 			"ths_new",
 			"ths_p"
 		],
 		"fetchByStocks": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
-		"fetchFromIndex": 1,
+		"fetchFromIndex": 401,
 		"stocksCsvFile": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
 		"stocksJsonFile": "E:\\dev\\csd\\stocks.json",
 		"hotCsvFile": "/Users/j/截图/JX.txt",
-		"fetchLimit": "100"
+		"fetchLimit": "400"
 	},
 	"warn": {
 		"randomBgImgDir": "/Users/j/pim/img/人物",
@@ -30,12 +30,12 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "E:\\dev\\simg\\交易记录\\2105",
+		"imgDir": "E:\\dev\\simg\\交易记录\\2106",
 		"bounds": {
-			"x": -7,
-			"y": 0,
-			"width": 3009,
-			"height": 1688
+			"x": 1912,
+			"y": -648,
+			"width": 3074,
+			"height": 1695
 		},
 		"crop": {
 			"x": 3200,
@@ -44,6 +44,7 @@
 			"height": 37
 		},
 		"history": [
+			"E:\\dev\\simg\\交易记录\\2106",
 			"E:\\dev\\simg\\交易记录\\2105",
 			"/Users/j/截图/竞价系统/2021-05",
 			"/Users/j/截图/交易记录/2105",
@@ -137,10 +138,10 @@
 	},
 	"news": {
 		"bounds": {
-			"x": 1713,
-			"y": 776,
-			"width": 1179,
-			"height": 59
+			"x": 1948,
+			"y": 96,
+			"width": 1196,
+			"height": 187
 		}
 	},
 	"reminder": {

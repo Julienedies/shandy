@@ -52,7 +52,7 @@ const plugins = [
     new webpack.DefinePlugin({
         'process.env.DEV': JSON.stringify(!isPro),
     }),
-    //new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new ManifestPlugin(),
     new CleanPlugin([`dist/electron`], {
         root: projectRoot
@@ -197,15 +197,15 @@ const config = {
                         loader: 'css-loader',
                         options: {
                             url: true,
-                            modules: true,
+                            modules: false,
                         }
                     },
-/*                    {
+                    {
                         loader: 'sass-loader',
                         options: {
                             includePaths: nodeSassIncludePaths || ['']
                         }
-                    }*/
+                    }
                 ]
             },
             {
@@ -216,6 +216,7 @@ const config = {
                         loader: 'css-loader',
                         options: {
                             url: true,
+                            modules:false
                         }
                     },
                     {
