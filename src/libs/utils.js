@@ -2,6 +2,7 @@
  * Created by j on 2019-02-28.
  */
 
+import path from 'path'
 import os from 'os'
 import electron from 'electron'
 
@@ -167,7 +168,8 @@ export default {
             return aKey.localeCompare(bKey);
         });
 
-    }
+    },
+
 
 }
 

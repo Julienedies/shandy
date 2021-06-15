@@ -13,6 +13,7 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../js/common.js'
 
+import path from 'path'
 import fs from 'fs'
 import $ from 'jquery'
 import debugMenu from 'debug-menu'
@@ -33,9 +34,15 @@ import listCtrl from './list-ctrl'
 // activate context menu
 debugMenu.install();
 
-// 截图根目录
-const imgRootDir = '/Users/j/截图/';
 
+/**
+ *
+ */
+function fullImgPathCb (item) {
+    // 截图根目录
+    const imgRootDir = '/Users/j/截图/';
+    return path.join(imgRootDir, item.img);
+}
 // 交易记录json
 const tradeArr = userJo('SEL', []).get();
 
@@ -48,6 +55,9 @@ window.brick = brick;
 brick.services.reg('historyModel', historyModel);
 
 brick.set('ic-viewer-interval', setting.get('viewer.interval') || 10);
+
+
+
 
 brick.reg('mainCtrl', function (scope) {
 
@@ -100,7 +110,6 @@ brick.reg('mainCtrl', function (scope) {
     scope.refresh = function (e) {
         isRefresh = true;
         scope.init('');
-        //location.reload();
     };
 
     // 反转图片列表
