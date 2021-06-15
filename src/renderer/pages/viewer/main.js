@@ -218,6 +218,7 @@ brick.reg('mainCtrl', function (scope) {
     // 显示某个历史目录
     scope.show = function (e, dir) {
         //let $th = $(this).icSetLoading();
+        dir = $(this).data('dir');
         scope.init(dir);
         /*        $.icSetLoading();
                 setTimeout(() => {

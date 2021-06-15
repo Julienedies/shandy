@@ -65,7 +65,7 @@
                     <h6 class="tag is-primary" style="margin-right:1em;">{{ k }}</h6>
                     <div class="control" ic-for="i,v in arr">
                         <div class="tags has-addons">
-                            <a class="tag is-info" ic-click="show:{{ v }}">{{ v.split('/').pop() }}</a>
+                            <a class="tag is-info" ic-click="show" data-dir="{{ v }}">{{ v.split("\\\\").pop() }}</a>
                             <a class="tag is-delete" ic-click="remove:{{ v }}"></a>
                         </div>
                     </div>

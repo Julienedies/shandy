@@ -18,7 +18,7 @@ export default function () {
         _group: function () {
             let arr = this._pool;
             let nameMap = _.groupBy(arr, (str) => {
-                let arr = str.split('/');
+                let arr = str.split("\\");  // /[/]|[\\]{2}/img
                 arr.pop();
                 return arr.pop(); //arr.join('_');
             });
@@ -27,7 +27,7 @@ export default function () {
                 let arr = nameMap[i];
                 arr.sort((a, b) => {
                     let f = (s) => {
-                        let d = s.split('/').pop();
+                        let d = s.split("\\").pop();
                         d = d.replace('-','.');
                         return d * 1 || 0;
                     };
