@@ -44,7 +44,7 @@
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 47,
+		"duration": 17,
 		"timestamp": 1621658103771
 	},
 	{
@@ -183,13 +183,15 @@
 		"name": "",
 		"id": "7981263",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误2：线性思维，先入为主。&nbsp;</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">高开下杀放量大阴线，就认为完蛋了，却修复了。</span><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">陕西黑猫、中材节能、深圳能源、南网能源</span></span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">下跌也可以走V；上冲回落就认为完蛋了，却修复了。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">大盘受外围影响大幅低开恐慌，却低开高走。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">涨的高，就认为是顶。上涨初期，不在意。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误2：主观；线性思维，先入为主。&nbsp;</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">高开下杀放量大阴线，就认为完蛋了，却修复了。</span><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">陕西黑猫、中材节能、深圳能源、南网能源</span></span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">下跌也可以走V；上冲回落就认为完蛋了，却修复了。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">大盘受外围影响大幅低开恐慌，却低开高走。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">涨的高，就认为是顶。上涨初期，不在意。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "15:00",
 		"repeat": 3,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1594995614163
+		"timestamp": 1594995614163,
+		"promptTimes": 1,
+		"prevPromptTime": 1623741611325
 	},
 	{
 		"name": "",
@@ -201,7 +203,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1611881119094
+		"timestamp": 1611881119094,
+		"promptTimes": 1,
+		"prevPromptTime": 1623745210251
 	},
 	{
 		"name": "",
@@ -213,7 +217,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1610163063160
+		"timestamp": 1610163063160,
+		"promptTimes": 1,
+		"prevPromptTime": 1623747011043
 	},
 	{
 		"name": "",
@@ -226,8 +232,8 @@
 		"interval": 60,
 		"duration": 13,
 		"timestamp": 1616303429099,
-		"promptTimes": 2,
-		"prevPromptTime": 1623036489645
+		"promptTimes": 3,
+		"prevPromptTime": 1623734410379
 	},
 	{
 		"name": "",
@@ -240,8 +246,8 @@
 		"interval": 60,
 		"duration": 14,
 		"timestamp": 1614682522617,
-		"promptTimes": 3,
-		"prevPromptTime": 1623034689351
+		"promptTimes": 7,
+		"prevPromptTime": 1623748811089
 	},
 	{
 		"name": "",
@@ -254,8 +260,8 @@
 		"interval": 45,
 		"duration": 37,
 		"timestamp": 1609667569090,
-		"promptTimes": 3,
-		"prevPromptTime": 1623038288892
+		"promptTimes": 4,
+		"prevPromptTime": 1623738010717
 	},
 	{
 		"name": "",
@@ -366,7 +372,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1617161666529
+		"timestamp": 1617161666529,
+		"promptTimes": 1,
+		"prevPromptTime": 1623739810274
 	},
 	{
 		"name": "",
@@ -527,6 +535,18 @@
 		"duration": 47,
 		"timestamp": 1613403391906,
 		"disable": true
+	},
+	{
+		"name": "",
+		"id": "2369730",
+		"type": "复盘",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;由大及小，先考虑大盘，再考虑板块，再考虑个股。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;轮动、切换、卡位、修复、加强、分歧、分歧转一致、弱转强、强更强、恐慌转贪婪。</span></strong></p><p><strong><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;分化、背离、共振、</span><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">延迟（滞后）、惯性、</span></strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">补跌、穿越、<strong>先手。</strong></span></strong></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;锚点、复制、补涨、发散、激发、带动、传导&nbsp;</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;指数溢价； 板块热点溢价；人气龙头溢价；题材热点在市场的地位；个股在题材热点中的低位；</span></strong></p><p><strong><strong><strong><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">（市场并不是即刻一致的，看多有延迟，看空也有延迟）</span></strong></strong></strong></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 9,
+		"interval": 60,
+		"duration": 44,
+		"timestamp": 1618978825238
 	},
 	{
 		"name": "",
@@ -709,18 +729,6 @@
 		"duration": 47,
 		"timestamp": 1610770805615,
 		"disable": false
-	},
-	{
-		"name": "",
-		"id": "2369730",
-		"type": "复盘",
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;由大及小，先考虑大盘，再考虑板块，再考虑个股。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;轮动、切换、卡位、修复、加强、分歧、分歧转一致、弱转强、强更强、恐慌转贪婪。</span></strong></p><p><strong><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;分化、背离、共振、</span><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">延迟（滞后）、惯性、</span></strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">补跌、穿越、<strong>先手。</strong></span></strong></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;锚点、复制、补涨、发散、激发、带动、传导&nbsp;</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;指数溢价； 板块热点溢价；人气龙头溢价；题材热点在市场的地位；个股在题材热点中的低位；</span></strong></p><p><strong><strong><strong><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">（市场并不是即刻一致的，看多有延迟，看空也有延迟）</span></strong></strong></strong></strong></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 9,
-		"interval": 60,
-		"duration": 44,
-		"timestamp": 1618978825238
 	},
 	{
 		"name": "",

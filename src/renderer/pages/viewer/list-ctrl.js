@@ -35,8 +35,8 @@ export default function (scope) {
 
         $info.text('\r\n' + imgObj.f);
 
-        brick.emit('viewer-markTag', scope.viewerCurrentImg);
-        isFirstShow && $('[ic-popup="viewerMarkTag"]').icPopup(true);
+        //brick.emit('viewer-markTag', scope.viewerCurrentImg);
+        //isFirstShow && $('[ic-popup="viewerMarkTag"]').icPopup(true);
     };
 
     scope.editImg = () => {

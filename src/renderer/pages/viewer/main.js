@@ -33,6 +33,9 @@ import listCtrl from './list-ctrl'
 // activate context menu
 debugMenu.install();
 
+// 截图根目录
+const imgRootDir = '/Users/j/截图/';
+
 // 交易记录json
 const tradeArr = userJo('SEL', []).get();
 

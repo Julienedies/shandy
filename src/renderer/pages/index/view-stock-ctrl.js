@@ -46,12 +46,12 @@ function view_stock (code) {
     objm.set('code', code);
     clipboard.writeText(code);
 
+    let flag = objm.get('is_mashup') ? 0 : 2;
 
-    let flag = objm.get('is_mashup') ? 0 : 1;
-
-
-    shell.openExternal(stockUrl(code, flag) + (flag === 1 ? '?self=1' : ''));
-    //ac.activeTdx();
+    shell.openExternal(stockUrl(code, flag) + (flag === 2 ? '?self=1' : ''));
+    setTimeout(function () {
+        //ac.activeTdx();
+    }, 1000);
 
     /*    if (!objm.get('is_open')) {
             return ac.activeTdx();
@@ -64,10 +64,6 @@ function view_stock (code) {
             stockWin.loadURL(stockUrl(code, 0));
             stockWin.focus();
         }*/
-
-    setTimeout(function () {
-        ac.activeTdx();
-    }, 1000);
 
 }
 
