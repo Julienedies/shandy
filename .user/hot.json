@@ -1,5 +1,15 @@
 [
 	{
+		"id": "VR",
+		"selected": true,
+		"timestamp": 1623799048380
+	},
+	{
+		"id": "虚拟现实",
+		"selected": true,
+		"timestamp": 1623772343041
+	},
+	{
 		"id": "化工",
 		"selected": false,
 		"timestamp": 1623255728974
@@ -156,12 +166,12 @@
 	},
 	{
 		"id": "碳中和",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1614729913123
 	},
 	{
 		"id": "芯片",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1610979058468
 	},
 	{
@@ -191,7 +201,7 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1578928807285
 	}
 ]

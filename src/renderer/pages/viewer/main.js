@@ -231,6 +231,7 @@ brick.reg('mainCtrl', function (scope) {
 
     // 删除历史目录
     scope.remove = function (e, dir) {
+        dir = $(this).data('dir');
         historyModel.remove(dir);
     };
 
