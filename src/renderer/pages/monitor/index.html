@@ -14,7 +14,6 @@
         <ul id="rts_list" ic-tpl="list">
             <li ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
                 <div class="flex flex-mc">
-                    <span class="code">{{v.code}} </span>
                     <span class="name">
                         <b>{{v.name}}</b>
                         &nbsp;&nbsp;&nbsp; {{v.increase}}%

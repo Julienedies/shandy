@@ -59,27 +59,27 @@ html, body {
 }
 
 #rts_list li {
-  padding: 5px 10px;
+  padding: 5px 5px;
 }
 
 #rts_list li span {
-  border: solid 0 blue;
+  border-right: solid 0px blue;
 }
 
 #rts_list span.name, #rts_list span.b1 {
-  width: 9em;
+  width: 7em;
   color: red;
   flex: 1;
   white-space: nowrap;
 
   & > b {
     display: inline-block;
-    width: 5em;
+    width: 4em;
   }
 }
 
 #rts_list span.b1 {
-  width: 8em;
+  width: 7em;
   & > b {
     width: 4em;
     font-weight: normal;
@@ -117,4 +117,11 @@ html, body {
 
 section {
   margin: 0 0 10px 0;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    border:solid 1px blue;
+    font-size:16px!important;
+  }
 }

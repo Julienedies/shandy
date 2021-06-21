@@ -1,34 +1,6 @@
 [
 	{
 		"name": "",
-		"id": "3138562",
-		"type": "问题",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\"><u>首先必须明确要捕捉的目标行情。</u></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？ 这是我首先要解决的问题。</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>什么都想抓住，就什么也抓不住。</strong></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>操作不明确，机会转瞬即逝。</strong></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>复盘无头绪。</strong></span></span></p><p><span style=\"font-size: 24px;\"><u><span style=\"background-color: rgb(255, 255, 0);\"><strong><br></strong></span></u></span></p><p><br></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 3,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1622768936755,
-		"promptTimes": 1,
-		"prevPromptTime": 1623752549840
-	},
-	{
-		"name": "",
-		"id": "8018085",
-		"type": "问题",
-		"content": "<p><strong><span style=\"font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">问题：我没有消息优势，没有资金优势，我凭什么在市场上胜出？</span></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 3,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1622252131622,
-		"promptTimes": 1,
-		"prevPromptTime": 1623754352049
-	},
-	{
-		"name": "",
 		"id": "2318044",
 		"type": "警告",
 		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">虽然我意识到自己的错误，但我就是改不了。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">1. 没有大局观，后知后觉。总是行情走出来才意识到。盛和资源的超预期，神火股份的异动。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>2. 应对差，</strong></span><strong><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">市场变量太多，充满了背离和冲突。</span></strong></span></strong></strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>没有明确的判断锚点。<span style=\"background-color: rgb(255, 255, 0);\"><strong>不知道如何操作，总是临盘犹豫。</strong></span></strong></span></span></p><p><strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">3. 潜意识总是担心下跌。上涨不敢买，下跌不想买。</span></span><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>没涨没有确定性，涨起来嫌高。</strong></span></strong></p>",
@@ -43,29 +15,13 @@
 		"name": "",
 		"id": "5766290",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：无系统、无计划、临盘随意冲动交易。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">管不住手，交易成瘾。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">连续做可转债，连续亏钱。但还是管不住手。</span></strong></span></p>",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：无系统、无计划、临盘随意冲动交易。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">管不住手，交易成瘾。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">连续做可转债，连续亏钱。但还是管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">临盘随意冲动交易，主观臆想，无系统交易是我最大的亏损来源；我已经重复这个错误4年了。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我盯盘时，没有明确的计划；只是被市场牵着鼻子走；被动应对，浑浑噩噩；一冲动就会随手买入；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>尤其是市场转好，怕踏空买入；或个股冲高，就会臆想买入；</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">关键是我没有明确的交易系统、目标行情、买点、交易计划；</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1621658103771,
-		"promptTimes": 1,
-		"prevPromptTime": 1623756151565
-	},
-	{
-		"name": "",
-		"id": "6288718",
-		"type": "问题",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题1：我的系统是什么？要捕捉的目标行情是什么？</span></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 3,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1621656781526,
-		"promptTimes": 1,
-		"prevPromptTime": 1623757950927
+		"timestamp": 1621658103771
 	},
 	{
 		"name": "",
@@ -77,9 +33,19 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334,
-		"promptTimes": 1,
-		"prevPromptTime": 1623759750356
+		"timestamp": 1595590485334
+	},
+	{
+		"name": "",
+		"id": "6288718",
+		"type": "问题",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题1：我的系统是什么？要捕捉的目标行情是什么？</span></strong></p><p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\"><u>首先必须明确要捕捉的目标行情。</u></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？ 这是我首先要解决的问题。</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>什么都想抓住，就什么也抓不住。</strong></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>操作不明确，机会转瞬即逝。</strong></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>复盘无头绪。</strong></span></span></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1621656781526
 	},
 	{
 		"name": "",
@@ -121,7 +87,7 @@
 		"name": "",
 		"id": "5217282",
 		"type": "问题",
-		"content": "<p><span style=\"color: rgb(255, 255, 255); font-size: 30px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\">问题4：我搞不清楚行情性质怎么办？</span></strong><strong><span style=\"background-color: rgb(0, 0, 0);\">我不清楚市场资金的行为逻辑。</span></strong></span></p><p><span style=\"font-size: 18px;\"><br></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>行情性质是非常重要的问题。我没有信息优势。而这是我最薄弱的地方。</strong></span></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">因为全球央行货币放水带来持续近两年的蓝筹牛市。我没有这种层次，就抓不住这种行情。</span></strong></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>类似郑州煤电、光大证券、王府井、星期六。因为我不了解行情性质，</strong></span><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>同样无法抓住这种。</strong></span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">焦作万方 &nbsp;碳中和水电铝</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">盛和资源、郑州煤电、光大证券、王府井、豫能控股、星期六。</span></strong></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>这些龙头行情背后推动的题材和政策，我没有优势？市场参与者的行为逻辑。</strong></span></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">这是非常重要的问题。</span></strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">所以那些超预期强势的票，要特别注意。</span></strong></p>",
+		"content": "<p><span style=\"color: rgb(255, 255, 255); font-size: 30px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\">问题4：我搞不清楚行情性质怎么办？</span></strong><strong><span style=\"background-color: rgb(0, 0, 0);\">我不清楚市场资金的行为逻辑。</span></strong></span></p><p><strong><span style=\"font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">问题4：</span><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);;font-size: 30px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">资讯匮乏，很多逻辑不知道。怎么解决？</span></strong></strong></p><p><strong><span style=\"font-size: 24px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 0);\">我没有消息优势，没有资金优势，我凭什么在市场上胜出？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">譬如三峡能源、上海贝岭、国产中大、它们的上涨逻辑不知道是什么？也就不知道如何操作？</span></strong></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>行情性质是非常重要的问题。我没有信息优势。而这是我最薄弱的地方。</strong></span></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">因为全球央行货币放水带来持续近两年的蓝筹牛市。我没有这种层次，就抓不住这种行情。</span></strong></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>类似郑州煤电、光大证券、王府井、星期六。因为我不了解行情性质，</strong></span><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>同样无法抓住这种。</strong></span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">焦作万方 &nbsp;碳中和水电铝</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">盛和资源、郑州煤电、光大证券、王府井、豫能控股、星期六。</span></strong></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>这些龙头行情背后推动的题材和政策，我没有优势？市场参与者的行为逻辑。</strong></span></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">这是非常重要的问题。</span></strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">所以那些超预期强势的票，要特别注意。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 1,
@@ -140,6 +106,30 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1618223159947
+	},
+	{
+		"name": "",
+		"id": "3872258",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：没有对自选股的深入思考及推演。加了自选，但没有任何交易准备。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中国石油现在有一个上升趋势，我加了自选。然后呢? 我有任何推演、思考及交易计划吗？</span></strong></p><p><br></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1624075143455
+	},
+	{
+		"name": "",
+		"id": "6257804",
+		"type": "错误",
+		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\">错误1：<span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">临盘应对差，</span></strong></span>思维没方向；操作无系统；不知以何做为判断锚点。</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">应对什么？ 应对市场博弈的结果；强、弱；转强；转弱；分歧；切换、卡位；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我因为爆量烂板，就判断长源电力弱了。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>但龙头强势反包了，超预期加速。这些都是市场给我的信号。</strong></span><strong><span style=\"background-color: rgb(255, 255, 0);\">我跟随就可以了。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">对我来说，热点的变化，是发酵变强，是超预期，是分歧转一致，是弱转强。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">这是我应该关注的，我应该客观跟随，动态应对的。</span></strong></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我总是浑浑噩噩，所有的自选股有想过什么样的条件介入吗？</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">为何总是没有对自选股进行推演和计划，你选自选股的意义何在？</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">竞价出来后，我脑子里想的是什么？自选股高开表现了什么？</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">因为我依靠预测交易，当市场表现和我预期不一样，我就措手不及，犹豫不定。</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我始终是靠预测在交易，而不是依据客观标准做应对。</span></strong></span></p><p><br></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>1. 预判错误，或者说对市场理解错误。我总是倾向看空。着自然会影响我的操作。</strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">2. 临盘犹豫，一是因为市场和预期相反，措手不及。二是没有明确的判断锚点，不知道如何操作。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我要做的就是围绕主线热点龙头，寻找介入时机。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是后知后觉。 抱团蓝筹 VS 超跌题材 的风格切换行情又错过了。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">热点方向不但有题材、还有风格。比如蓝筹、大盘、小盘、超跌、趋势、情绪；</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>一拖股份类同宜宾股份； 风格切换；超跌反弹。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>南极光类同日月明。 注册制超跌反弹。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>仁东控股的超跌垃圾股行情。 &nbsp; &nbsp;类同天山生物；</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">郑州煤电做的大概是老龙头反抽。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">因为没有判断锚点，所以临盘犹豫，被市场牵着鼻子走，左右打脸。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">打板是一个最简单的超短交易系统；没有了打板，我不知道如何做超短交易。</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我以什么做为判断锚点？我看到一个k线，我有想到后续会如何发展吗？</strong></span></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我有想到在什么走势下去参与\b吗？ 没有，统统没有，那我的复盘有什么意义？</strong></span></p><p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 24px; color: rgb(255, 255, 255);\">我跟个傻逼似的复盘或盯盘，脑子里浑浑噩噩，没有明确的思维方向。</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>要捕捉的目标行情是什么？资金攻击方向是哪里？</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>机会在哪里？</strong></span></span></span></p><p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 24px; color: rgb(255, 255, 255);\">你脑子里在想什么？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">纠结犹豫不明确；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">做趋势，做打板；</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>没涨起来，觉得没有确定性；</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>涨起来觉得高，没空间；</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">重仓犹豫，小仓位不屑。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1611881119094
 	},
 	{
 		"name": "",
@@ -169,7 +159,7 @@
 		"name": "",
 		"id": "4598456",
 		"type": "错误",
-		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\">错误1：无大局观，对市场状态、节奏周期、主线热点总是后知后觉。</span></strong></span></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">没有大局观，行情启动时犹豫，行情退潮时管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">后知后觉，身在此山中，牛市或牛股走出来，我才意识到。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">没有大局观，</span></strong>着眼于小波动，看不到大的确定性。</span></strong></p><p><span style=\"font-size: 20px;\"><br></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">包括图形也是，只有图形走出来，我才意识到突破或主升爆发浪。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我以什么做为判断锚点？</span></strong>我不了解行情性质，预见不到行情高度。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">事后看，都很简单。但身处其中很难清醒。</span></strong></p><p><span style=\"font-size: 18px;\"><br></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">现在是什么周期？</span></strong></span></strong><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">为何我总是看不到大趋势，没有大局观？</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">就象6月份的大盘主升行情一样，今次的大盘蓝筹主升行情我一样没抓住。</span></strong></span></p><p><span style=\"font-size: 18px;\"><br></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">看看周K，市场从2019年到现在，已经涨了2年了。</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我没有大局观，就像我的交易，着眼于小波动，看不到大趋势，也看不到大的确定性。</span></strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">一个持续一周的上涨周期很多，我有看到吗？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">英科医疗、比亚迪、连续上涨一年以上，我有深入思考过吗?</span></strong></p>",
+		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\">错误2：无大局观，对市场状态、节奏周期、主线热点总是后知后觉。</span></strong></span></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">没有大局观，行情启动时犹豫，行情退潮时管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">后知后觉，身在此山中，牛市或牛股走出来，我才意识到。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">没有大局观，</span></strong>着眼于小波动，看不到大的确定性。</span></strong></p><p><span style=\"font-size: 20px;\"><br></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">包括图形也是，只有图形走出来，我才意识到突破或主升爆发浪。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我以什么做为判断锚点？</span></strong>我不了解行情性质，预见不到行情高度。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">事后看，都很简单。但身处其中很难清醒。</span></strong></p><p><span style=\"font-size: 18px;\"><br></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">现在是什么周期？</span></strong></span></strong><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">为何我总是看不到大趋势，没有大局观？</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">就象6月份的大盘主升行情一样，今次的大盘蓝筹主升行情我一样没抓住。</span></strong></span></p><p><span style=\"font-size: 18px;\"><br></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">看看周K，市场从2019年到现在，已经涨了2年了。</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我没有大局观，就像我的交易，着眼于小波动，看不到大趋势，也看不到大的确定性。</span></strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">一个持续一周的上涨周期很多，我有看到吗？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">英科医疗、比亚迪、连续上涨一年以上，我有深入思考过吗?</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
@@ -193,7 +183,7 @@
 		"name": "",
 		"id": "7981263",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误2：主观；线性思维，先入为主。&nbsp;</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">高开下杀放量大阴线，就认为完蛋了，却修复了。</span><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">陕西黑猫、中材节能、深圳能源、南网能源</span></span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">下跌也可以走V；上冲回落就认为完蛋了，却修复了。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">大盘受外围影响大幅低开恐慌，却低开高走。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">涨的高，就认为是顶。上涨初期，不在意。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误2：主观；线性思维，先入为主。&nbsp;</span></strong></p><p><br></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">高开下杀放量大阴线，就认为完蛋了，却修复了。</span><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">陕西黑猫、中材节能、深圳能源、南网能源</span></span></strong></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">下跌也可以走V；上冲回落就认为完蛋了，却修复了。</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">大盘受外围影响大幅低开恐慌，却低开高走。</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</span></strong></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">涨的高，就认为是顶。上涨初期，不在意。</span></strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "15:00",
 		"repeat": 3,
@@ -201,21 +191,7 @@
 		"duration": 17,
 		"timestamp": 1594995614163,
 		"promptTimes": 1,
-		"prevPromptTime": 1623741611325
-	},
-	{
-		"name": "",
-		"id": "6257804",
-		"type": "错误",
-		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\">错误2：<span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">临盘应对差，</span></strong></span>思维没方向；操作无系统；不知以何做为判断锚点。</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">应对什么？ 应对市场博弈的结果；强、弱；转强；转弱；分歧；切换、卡位；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我因为爆量烂板，就判断长源电力弱了。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>但龙头强势反包了，超预期加速。这些都是市场给我的信号。</strong></span><strong><span style=\"background-color: rgb(255, 255, 0);\">我跟随就可以了。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">对我来说，热点的变化，是发酵变强，是超预期，是分歧转一致，是弱转强。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">这是我应该关注的，我应该客观跟随，动态应对的。</span></strong></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我总是浑浑噩噩，所有的自选股有想过什么样的条件介入吗？</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">为何总是没有对自选股进行推演和计划，你选自选股的意义何在？</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">竞价出来后，我脑子里想的是什么？自选股高开表现了什么？</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">因为我依靠预测交易，当市场表现和我预期不一样，我就措手不及，犹豫不定。</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我始终是靠预测在交易，而不是依据客观标准做应对。</span></strong></span></p><p><br></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>1. 预判错误，或者说对市场理解错误。我总是倾向看空。着自然会影响我的操作。</strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">2. 临盘犹豫，一是因为市场和预期相反，措手不及。二是没有明确的判断锚点，不知道如何操作。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我要做的就是围绕主线热点龙头，寻找介入时机。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是后知后觉。 抱团蓝筹 VS 超跌题材 的风格切换行情又错过了。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">热点方向不但有题材、还有风格。比如蓝筹、大盘、小盘、超跌、趋势、情绪；</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>一拖股份类同宜宾股份； 风格切换；超跌反弹。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>南极光类同日月明。 注册制超跌反弹。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>仁东控股的超跌垃圾股行情。 &nbsp; &nbsp;类同天山生物；</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">郑州煤电做的大概是老龙头反抽。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">因为没有判断锚点，所以临盘犹豫，被市场牵着鼻子走，左右打脸。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">打板是一个最简单的超短交易系统；没有了打板，我不知道如何做超短交易。</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我以什么做为判断锚点？我看到一个k线，我有想到后续会如何发展吗？</strong></span></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我有想到在什么走势下去参与\b吗？ 没有，统统没有，那我的复盘有什么意义？</strong></span></p><p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 24px; color: rgb(255, 255, 255);\">我跟个傻逼似的复盘或盯盘，脑子里浑浑噩噩，没有明确的思维方向。</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>要捕捉的目标行情是什么？资金攻击方向是哪里？</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>机会在哪里？</strong></span></span></span></p><p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 24px; color: rgb(255, 255, 255);\">你脑子里在想什么？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">纠结犹豫不明确；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">做趋势，做打板；</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>没涨起来，觉得没有确定性；</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>涨起来觉得高，没空间；</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">重仓犹豫，小仓位不屑。</span></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1611881119094,
-		"promptTimes": 1,
-		"prevPromptTime": 1623745210251
+		"prevPromptTime": 1624260182481
 	},
 	{
 		"name": "",
@@ -227,9 +203,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1610163063160,
-		"promptTimes": 1,
-		"prevPromptTime": 1623747011043
+		"timestamp": 1610163063160
 	},
 	{
 		"name": "",
@@ -243,7 +217,7 @@
 		"duration": 13,
 		"timestamp": 1616303429099,
 		"promptTimes": 3,
-		"prevPromptTime": 1623734410379
+		"prevPromptTime": 1624252981736
 	},
 	{
 		"name": "",
@@ -257,7 +231,7 @@
 		"duration": 14,
 		"timestamp": 1614682522617,
 		"promptTimes": 7,
-		"prevPromptTime": 1623748811089
+		"prevPromptTime": 1624265582712
 	},
 	{
 		"name": "",
@@ -270,8 +244,8 @@
 		"interval": 45,
 		"duration": 37,
 		"timestamp": 1609667569090,
-		"promptTimes": 5,
-		"prevPromptTime": 1623750610745
+		"promptTimes": 7,
+		"prevPromptTime": 1624275421205
 	},
 	{
 		"name": "",
@@ -283,7 +257,9 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 47,
-		"timestamp": 1610785651586
+		"timestamp": 1610785651586,
+		"promptTimes": 1,
+		"prevPromptTime": 1624277221130
 	},
 	{
 		"name": "",
@@ -308,7 +284,9 @@
 		"interval": 60,
 		"duration": 27,
 		"timestamp": 1611189022632,
-		"disable": false
+		"disable": false,
+		"promptTimes": 1,
+		"prevPromptTime": 1624279022503
 	},
 	{
 		"name": "",
@@ -320,7 +298,9 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1618113128264
+		"timestamp": 1618113128264,
+		"promptTimes": 1,
+		"prevPromptTime": 1624280822615
 	},
 	{
 		"name": "",
@@ -345,7 +325,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1617982755447
+		"timestamp": 1617982755447,
+		"promptTimes": 1,
+		"prevPromptTime": 1624282620896
 	},
 	{
 		"name": "",
@@ -384,7 +366,7 @@
 		"duration": 9,
 		"timestamp": 1617161666529,
 		"promptTimes": 1,
-		"prevPromptTime": 1623739810274
+		"prevPromptTime": 1624258381662
 	},
 	{
 		"name": "",
@@ -895,7 +877,7 @@
 		"name": "",
 		"id": "1808609",
 		"type": "流程",
-		"content": "<p><strong><span style=\"font-size: 32px;\">看期股联动。</span></strong></p>",
+		"content": "<p><span style=\"font-size: 24px;\">看期股联动。</span></p>",
 		"singleWindow": "",
 		"start": "19:00",
 		"repeat": 1,
@@ -935,7 +917,7 @@
 		"start": "20:00",
 		"interval": 60,
 		"repeat": 1,
-		"content": "<p>保存竞价强图片！</p>",
+		"content": "<p><span style=\"font-size: 20px;\">保存竞价强图片！</span></p>",
 		"timestamp": 1577539413052,
 		"type": "流程",
 		"duration": 4,
@@ -948,7 +930,7 @@
 		"start": "21:00",
 		"interval": 60,
 		"repeat": 1,
-		"content": "<p>更新csd。</p>",
+		"content": "<p><span style=\"font-size: 22px;\">更新csd。</span></p><p><span style=\"font-size: 22px;\">同步csd。</span></p>",
 		"timestamp": 1577862911294,
 		"duration": 4,
 		"singleWindow": ""
