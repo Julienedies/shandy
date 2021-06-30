@@ -35,14 +35,15 @@ export default {
         console.log('getImages => ', dir);
         let arr;
         // 测试是否是交易记录图片, 因为主要功能是浏览k线截图
-        if (dir.indexOf('截图') === -1) {
-            let files = glob.sync(path.join(dir, './*.+(jpg|png)')) || [];
+       /* if (dir.indexOf('截图') === -1) {
+            let files = glob.sync(path.join(dir, './!*.+(jpg|png)')) || [];
             return files.map((path) => {
                 return {f: path};
             })
-        }
+        }*/
 
-        let key = dir.replace(/[/\s.\\]+/img, '_');
+        //console.log(this.getDirKey(dir));
+        let key = this.getDirKey(dir);
         if (conf.isReverse === false) {
             key = key + '_R';
         }
@@ -76,6 +77,15 @@ export default {
         return !conf.isOnlyPath ? arr : arr.map(o => {
             return o.f;
         });
+    },
+
+    getDirKey: function (dirPath) {
+        console.log(dirPath);
+        let arr = dirPath.split(/[\\/]+/img);
+        let date = arr.pop();
+        let name = arr.pop();
+        return `${ name }_${ date }`;
+        //let key = dir.replace(/[/\s.\\:]+/img, '_');
     },
 
     // 获取图片额外数据
@@ -112,7 +122,14 @@ export default {
         });
     },
 
+    /**
+     * 单个图片名称，不包含路径
+     * @param imgPath
+     * @returns {*}
+     */
     getKey: function (imgPath) {
+       /* let arr = imgPath.split(/[\]|[/]/img);
+        console.log(imgPath, arr);*/
         return imgPath.split('/').pop().replace(/\s+|\./img, '_').replace(/_png$/, '');
     },
 

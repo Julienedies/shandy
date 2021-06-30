@@ -1,12 +1,17 @@
 [
 	{
+		"id": "军工",
+		"selected": false,
+		"timestamp": 1624289250789
+	},
+	{
 		"id": "VR",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1623799048380
 	},
 	{
 		"id": "虚拟现实",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1623772343041
 	},
 	{
@@ -16,7 +21,7 @@
 	},
 	{
 		"id": "物联网",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1623167607792
 	},
 	{
@@ -46,7 +51,7 @@
 	},
 	{
 		"id": "软件",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1621874928750
 	},
 	{
@@ -126,7 +131,7 @@
 	},
 	{
 		"id": "半导体",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1617619979123
 	},
 	{
@@ -176,7 +181,7 @@
 	},
 	{
 		"id": "预增",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1610898031672
 	},
 	{
@@ -191,7 +196,7 @@
 	},
 	{
 		"id": "光伏",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1600643622777
 	},
 	{
@@ -201,7 +206,7 @@
 	},
 	{
 		"id": "新能源汽车",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1578928807285
 	}
 ]
