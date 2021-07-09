@@ -13,7 +13,7 @@
 			"ths_p"
 		],
 		"fetchByStocks": "/Users/j/截图/沪深Ａ股20190821.txt",
-		"fetchFromIndex": "0",
+		"fetchFromIndex": 5,
 		"stocksCsvFile": "/Users/j/截图/沪深Ａ股20190821.txt",
 		"stocksJsonFile": "/Users/j/dev/csd/stocks.json",
 		"hotCsvFile": "/Users/j/截图/JX.txt",
@@ -137,8 +137,8 @@
 	},
 	"news": {
 		"bounds": {
-			"x": 163,
-			"y": 302,
+			"x": 108,
+			"y": 98,
 			"width": 1179,
 			"height": 59
 		}
