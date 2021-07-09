@@ -1,5 +1,15 @@
 [
 	{
+		"id": "稀土永磁",
+		"selected": true,
+		"timestamp": 1625700347073
+	},
+	{
+		"id": "中药",
+		"selected": false,
+		"timestamp": 1625185835764
+	},
+	{
 		"id": "军工",
 		"selected": false,
 		"timestamp": 1624289250789
@@ -46,7 +56,7 @@
 	},
 	{
 		"id": "鸿蒙",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1621956386089
 	},
 	{
@@ -71,7 +81,7 @@
 	},
 	{
 		"id": "摘帽",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1620834118567
 	},
 	{
