@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "5383681",
+		"type": "错误",
+		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 28px; color: rgb(255, 255, 255);\">错误1：为什么我总是错过大行情？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锂电池不断活跃，持续时间最久。但我就是没有参与？我是怎么复盘的？我是怎么理解市场的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中恒电气、中矿资源、天齐锂业、天华超净，蓝晓科技、这些都在我的自选里。我是怎么思考的？</span></strong></p><p><br></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1625975362922
+	},
+	{
+		"name": "",
 		"id": "2542954",
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 28px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">错误1：为什么就是没有对个股的推演和预案呢？</span></strong></p><p><strong><span style=\"font-size: 28px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">你觉的谁是龙头？龙头会怎么走？你的预案是怎么？ 预期外怎么应对？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 0);\">北方稀土今天烂板上冲，我为什么错过?</span></strong></p>",
@@ -15,7 +27,7 @@
 		"name": "",
 		"id": "8077439",
 		"type": "问题",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我以什么做为判断锚点？</span></strong><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>士兰微距我5月打板买入一次，现在已经翻倍了。</strong></span></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">以士兰微为例，我应该如何理解士兰微的行情？应该如何参与？</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">五矿稀土的连续上冲，我应该打板吗？我以什么做为判断锚点？</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为什么我临盘随意想打的板都是烂板？</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我看好西藏矿业连板（机构买入1亿），我不想追涨，但是低开又显弱。我如何处理这种背离？我还是对行情性质理解不够。西藏矿业是偏趋势行情。所以通常没有很高开，是正常的。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">锂电已经持续了一段时间，为什么我就是没有明确意识到呢？为什么我总是错过大行情？为什么我总是后知后觉？我有问过自己市场的主线是什么吗？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我以什么做为判断锚点？</span></strong><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>士兰微距我5月打板买入一次，现在已经翻倍了。</strong></span></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">以士兰微为例，我应该如何理解士兰微的行情？应该如何参与？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">五矿稀土的连续上冲，我应该打板吗？我以什么做为判断锚点？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为什么我临盘随意想打的板都是烂板？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我看好西藏矿业连板（机构买入1亿），我不想追涨，但是低开又显弱。我如何处理这种背离？我还是对行情性质理解不够。西藏矿业是偏趋势行情。所以通常没有很高开，是正常的。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
