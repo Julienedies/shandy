@@ -43,7 +43,11 @@ table {
 .system {
   font-size: 16px!important;
   //color: #242424;
-  padding-bottom: 30px;
+  margin-bottom: 90px!important;
+
+  .lever1 *{
+    color: red!important;
+  }
 
   h1,h2,h3{
     //font-weight: bold;
@@ -51,6 +55,7 @@ table {
   }
   h6, p{
     font-size: 0.9em;
+    color: #848383;
   }
   >tbody >tr >td:first-child {
     //padding:0.2em 0.3em 0.2em 0.5em;

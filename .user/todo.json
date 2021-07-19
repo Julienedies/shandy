@@ -1,9 +1,21 @@
 [
 	{
 		"name": "",
+		"id": "0045558",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">错误1：我看不到大的交易逻辑。</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">我为什么新能源的两次大趋势波段。</span></strong></p><p><span style=\"font-size: 18px;;background-color: rgb(255, 255, 0);\"><strong>为什么错过稀土的两次爆发？</strong></span></p><p><span style=\"font-size: 18px;;background-color: rgb(255, 255, 0);\"><strong>为什么错过中远海控？</strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">为什么错过永兴材料二波、上机数控2波？ 天齐锂业2波？ 宁德时代新高？</span></strong></p><p><br></p><p><br></p><p><br></p><p><br></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 3,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1626650977149
+	},
+	{
+		"name": "",
 		"id": "5383681",
 		"type": "错误",
-		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 28px; color: rgb(255, 255, 255);\">错误1：为什么我总是错过大行情？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锂电池不断活跃，持续时间最久。但我就是没有参与？我是怎么复盘的？我是怎么理解市场的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中恒电气、中矿资源、天齐锂业、天华超净，蓝晓科技、这些都在我的自选里。我是怎么思考的？</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 28px; color: rgb(255, 255, 255);\">错误1：为什么我总是错过大行情？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锂电池不断活跃，持续时间最久。但我就是没有参与？我是怎么复盘的？我是怎么理解市场的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中恒电气、中矿资源、天齐锂业、天华超净，蓝晓科技、这些都在我的自选里。我是怎么思考的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么我错过稀土行情？为什么错过北方稀土、五矿稀土？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过PVDF？为什么错过联创股份？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过磷化工行情？</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
@@ -153,9 +165,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1624075143455,
-		"promptTimes": 1,
-		"prevPromptTime": 1626424065104
+		"timestamp": 1624075143455
 	},
 	{
 		"name": "",
@@ -167,9 +177,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1611881119094,
-		"promptTimes": 1,
-		"prevPromptTime": 1626425864147
+		"timestamp": 1611881119094
 	},
 	{
 		"name": "",
@@ -181,9 +189,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1622254636347,
-		"promptTimes": 1,
-		"prevPromptTime": 1626427665021
+		"timestamp": 1622254636347
 	},
 	{
 		"name": "",
@@ -195,9 +201,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1621737388870,
-		"promptTimes": 1,
-		"prevPromptTime": 1626429465122
+		"timestamp": 1621737388870
 	},
 	{
 		"name": "",
@@ -209,9 +213,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1609555783779,
-		"promptTimes": 1,
-		"prevPromptTime": 1626431264539
+		"timestamp": 1609555783779
 	},
 	{
 		"name": "",
@@ -225,7 +227,7 @@
 		"duration": 47,
 		"timestamp": 1619178994699,
 		"promptTimes": 1,
-		"prevPromptTime": 1626433063588
+		"prevPromptTime": 1626692159725
 	},
 	{
 		"name": "",
@@ -239,7 +241,7 @@
 		"duration": 17,
 		"timestamp": 1594995614163,
 		"promptTimes": 2,
-		"prevPromptTime": 1626434864555
+		"prevPromptTime": 1626693957928
 	},
 	{
 		"name": "",
@@ -253,7 +255,7 @@
 		"duration": 47,
 		"timestamp": 1610163063160,
 		"promptTimes": 1,
-		"prevPromptTime": 1626436663230
+		"prevPromptTime": 1626695757890
 	},
 	{
 		"name": "",
@@ -267,7 +269,7 @@
 		"duration": 13,
 		"timestamp": 1616303429099,
 		"promptTimes": 3,
-		"prevPromptTime": 1626411464293
+		"prevPromptTime": 1626672541342
 	},
 	{
 		"name": "",
@@ -280,8 +282,8 @@
 		"interval": 60,
 		"duration": 14,
 		"timestamp": 1614682522617,
-		"promptTimes": 5,
-		"prevPromptTime": 1626438463184
+		"promptTimes": 7,
+		"prevPromptTime": 1626681542486
 	},
 	{
 		"name": "",
@@ -294,8 +296,8 @@
 		"interval": 45,
 		"duration": 37,
 		"timestamp": 1609667569090,
-		"promptTimes": 4,
-		"prevPromptTime": 1626440263116
+		"promptTimes": 7,
+		"prevPromptTime": 1626701158863
 	},
 	{
 		"name": "",
@@ -309,7 +311,7 @@
 		"duration": 47,
 		"timestamp": 1610785651586,
 		"promptTimes": 1,
-		"prevPromptTime": 1626442063325
+		"prevPromptTime": 1626699357816
 	},
 	{
 		"name": "",
@@ -336,7 +338,7 @@
 		"timestamp": 1611189022632,
 		"disable": false,
 		"promptTimes": 1,
-		"prevPromptTime": 1626443864028
+		"prevPromptTime": 1626702961713
 	},
 	{
 		"name": "",
@@ -350,7 +352,7 @@
 		"duration": 17,
 		"timestamp": 1618113128264,
 		"promptTimes": 1,
-		"prevPromptTime": 1626445663425
+		"prevPromptTime": 1626704760006
 	},
 	{
 		"name": "",
@@ -412,9 +414,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1617161666529,
-		"promptTimes": 1,
-		"prevPromptTime": 1626416864252
+		"timestamp": 1617161666529
 	},
 	{
 		"name": "",
