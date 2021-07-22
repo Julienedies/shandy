@@ -27,6 +27,11 @@ let q_rtso = rts('qq', f);
 
 //let s_rtso = rts('sina', f);
 
+// 对封单数量四舍五入
+function _round (n) {
+    return Math.round(n/100) * 100;
+}
+
 function f (stocks) {
     if (!Array.isArray(stocks)) {
         console.info(stocks);
@@ -119,16 +124,16 @@ function _f (stock) {
                 } else
                     // 撤单量超过阈值,（ 封单减少，成交量没有对应增加, 则说明是撤单）
                 if (-b1_reduce - v_plus > b1_reduce_base) {
-                    console.info(time, `${ name }: 大量撤单${ -b1_reduce - v_plus }手`);
+                    console.info(time, `${ name }: 大量撤单${ _round(-b1_reduce - v_plus) }手`);
                     voice(code, `${ name }大量撤单`);
                 } else {
-                    console.info(time, `${ name }: 封单累计减少 ${ -b1_reduce }手，余${ b1 }手`);
+                    console.info(time, `${ name }: 封单累计减少 ${ _round(-b1_reduce) }手，余${ _round(b1) }手`);
                     voice(code, `${ stock.name }封单减少`);
                 }
             } else
                 // 成交量增加量超过阈值,（ 当前成交量 - 上次记录的成交量 = 增加成交量 ）
             if (v_plus > v_plus_base) {
-                voice(code, `${ name }增加成交${ v_plus }手`);
+                voice(code, `${ name }增加成交${ _round(v_plus) }手`);
             }
 
             stock.warning = 1;
@@ -150,6 +155,8 @@ function _f (stock) {
         return stock;
 
     } else {
+        let str = `${ name }封板。`;
+        voice(code, str + str);
         first_objm.set(code, stock);
         prev_objm.set(code, stock);
         return stock;

@@ -81,7 +81,9 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334
+		"timestamp": 1595590485334,
+		"promptTimes": 1,
+		"prevPromptTime": 1626938366920
 	},
 	{
 		"name": "",
@@ -117,7 +119,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 27,
-		"timestamp": 1597160146691
+		"timestamp": 1597160146691,
+		"promptTimes": 1,
+		"prevPromptTime": 1626941966582
 	},
 	{
 		"name": "",
@@ -129,7 +133,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1618224000885
+		"timestamp": 1618224000885,
+		"promptTimes": 1,
+		"prevPromptTime": 1626943767477
 	},
 	{
 		"name": "",
@@ -153,7 +159,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1618223159947
+		"timestamp": 1618223159947,
+		"promptTimes": 1,
+		"prevPromptTime": 1626945567639
 	},
 	{
 		"name": "",
@@ -165,7 +173,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1624075143455
+		"timestamp": 1624075143455,
+		"promptTimes": 1,
+		"prevPromptTime": 1626947367038
 	},
 	{
 		"name": "",
@@ -177,7 +187,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1611881119094
+		"timestamp": 1611881119094,
+		"promptTimes": 2,
+		"prevPromptTime": 1626952767394
 	},
 	{
 		"name": "",
@@ -189,7 +201,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1622254636347
+		"timestamp": 1622254636347,
+		"promptTimes": 2,
+		"prevPromptTime": 1626954567128
 	},
 	{
 		"name": "",
@@ -201,7 +215,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1621737388870
+		"timestamp": 1621737388870,
+		"promptTimes": 1,
+		"prevPromptTime": 1626958667384
 	},
 	{
 		"name": "",
@@ -213,7 +229,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1609555783779
+		"timestamp": 1609555783779,
+		"promptTimes": 1,
+		"prevPromptTime": 1626960468740
 	},
 	{
 		"name": "",
@@ -227,7 +245,7 @@
 		"duration": 47,
 		"timestamp": 1619178994699,
 		"promptTimes": 1,
-		"prevPromptTime": 1626692159725
+		"prevPromptTime": 1626962268624
 	},
 	{
 		"name": "",
@@ -241,7 +259,7 @@
 		"duration": 17,
 		"timestamp": 1594995614163,
 		"promptTimes": 2,
-		"prevPromptTime": 1626693957928
+		"prevPromptTime": 1626964068380
 	},
 	{
 		"name": "",
@@ -249,13 +267,11 @@
 		"type": "系统",
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;交易系统类型：高频超短、趋势波段、基于概率、基于理解力；&nbsp;</span></strong></p><p><span style=\"font-size: 16px;\">分仓打首板概率：北京炒家、创世纪、陈小豪、</span></p><p><span style=\"font-size: 16px;\">机械概率：纵横股道、寂寞和弦</span></p><p><span style=\"font-size: 16px;\">接力板:</span></p><p><span style=\"font-size: 16px;\">波段趋势：</span></p><p><span style=\"font-size: 16px;\">基于大盘和板块的首板：管手剁；</span></p><p><span style=\"font-size: 16px;\">搜集强势股龙头股：寻找介入机会；</span></p><p><span style=\"font-size: 16px;\">日内热点捕捉 ： 张英雄</span></p><p><span style=\"font-size: 16px;\">看高做低：爱学习的人，衡山五神剑</span></p><p><span style=\"font-size: 16px;\">基于市场理解力的应对：涅盘重升</span></p><p><br></p>",
 		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 4,
+		"start": "19:00",
+		"repeat": 1,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1610163063160,
-		"promptTimes": 1,
-		"prevPromptTime": 1626695757890
+		"timestamp": 1610163063160
 	},
 	{
 		"name": "",
@@ -269,7 +285,7 @@
 		"duration": 13,
 		"timestamp": 1616303429099,
 		"promptTimes": 3,
-		"prevPromptTime": 1626672541342
+		"prevPromptTime": 1626929367319
 	},
 	{
 		"name": "",
@@ -283,7 +299,7 @@
 		"duration": 14,
 		"timestamp": 1614682522617,
 		"promptTimes": 7,
-		"prevPromptTime": 1626681542486
+		"prevPromptTime": 1626965868055
 	},
 	{
 		"name": "",
@@ -296,8 +312,8 @@
 		"interval": 45,
 		"duration": 37,
 		"timestamp": 1609667569090,
-		"promptTimes": 7,
-		"prevPromptTime": 1626701158863
+		"promptTimes": 4,
+		"prevPromptTime": 1626967667767
 	},
 	{
 		"name": "",
@@ -311,7 +327,7 @@
 		"duration": 47,
 		"timestamp": 1610785651586,
 		"promptTimes": 1,
-		"prevPromptTime": 1626699357816
+		"prevPromptTime": 1626969467516
 	},
 	{
 		"name": "",
@@ -336,9 +352,7 @@
 		"interval": 60,
 		"duration": 27,
 		"timestamp": 1611189022632,
-		"disable": false,
-		"promptTimes": 1,
-		"prevPromptTime": 1626702961713
+		"disable": false
 	},
 	{
 		"name": "",
@@ -350,9 +364,7 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1618113128264,
-		"promptTimes": 1,
-		"prevPromptTime": 1626704760006
+		"timestamp": 1618113128264
 	},
 	{
 		"name": "",
@@ -414,7 +426,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1617161666529
+		"timestamp": 1617161666529,
+		"promptTimes": 1,
+		"prevPromptTime": 1626934766831
 	},
 	{
 		"name": "",
