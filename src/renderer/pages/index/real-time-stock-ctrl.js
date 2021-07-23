@@ -179,7 +179,7 @@ function init () {
         });
 
         // 下午3点后取消行情请求
-        utils.timer('14:57', () => {
+        utils.timer('14:59', () => {
             q_rtso.pause();
             serialize();
         });
