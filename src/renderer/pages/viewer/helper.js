@@ -94,7 +94,7 @@ export default {
             // 先尝试读取缓存
             let key = this.getKey(f);
             let item = imagesJsonDb.get(f);
-            if (item) return item;
+            if (item && item.c && item.d) return item;
 
             let fullPath = path.join(dir, f);
             let arr = f.match(/\d{6}(?=\.png$)/) || [];
@@ -102,8 +102,11 @@ export default {
             //let stat = fs.statSync(fullPath);
             //let c = stat.birthtimeMs;
             let f2 = f.replace('上午', 'am').replace('下午', 'pm');
-            let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s+[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/) || [];
+
+            let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s*[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/);
+            //console.log(f2, arr2);
             let m = moment(arr2[0], "YYYY-MM-DD Ah.m.s");
+            //console.log('xxx', +m, arr2[1]);
             item = {f: fullPath, c: +m, d: arr2[1], code};
             // 保存到缓存
             imagesJsonDb.set(key, item);

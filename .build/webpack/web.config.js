@@ -93,7 +93,7 @@ if (isPro) {
     })
     plugins.push(new webpack.HotModuleReplacementPlugin())
 
-    /*    devServer = {
+        /*devServer = {
             publicPath: publicPath,
             contentBase: outputPath,
             port: devServerPort,

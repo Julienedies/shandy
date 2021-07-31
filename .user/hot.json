@@ -1,5 +1,25 @@
 [
 	{
+		"id": "储能",
+		"selected": true,
+		"timestamp": 1627573287670
+	},
+	{
+		"id": "MiniLED",
+		"selected": false,
+		"timestamp": 1626872980845
+	},
+	{
+		"id": "磷化工",
+		"selected": false,
+		"timestamp": 1626357702889
+	},
+	{
+		"id": "网络安全",
+		"selected": false,
+		"timestamp": 1626108246541
+	},
+	{
 		"id": "稀土永磁",
 		"selected": true,
 		"timestamp": 1625700347073
@@ -46,7 +66,7 @@
 	},
 	{
 		"id": "光刻胶",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1622125248663
 	},
 	{
@@ -91,7 +111,7 @@
 	},
 	{
 		"id": "华为",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1620833661060
 	},
 	{
@@ -191,7 +211,7 @@
 	},
 	{
 		"id": "预增",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1610898031672
 	},
 	{
