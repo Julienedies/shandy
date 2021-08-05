@@ -26,10 +26,11 @@
                     <span ic-class="b1_reduce {{v.b1_reduce > 0 ? 'up':'down'}}">{{v.b1_reduce}} </span>
                     <span class="price">{{v.price}} </span>
                     <span class="time"> {{v.time}}</span>
+                    <button class="button" code="{{v.code}}" ic-click="view">查看</button>
+                    <button class="button" code="{{v.code}}" ic-click="cancel">取消</button>
                 </div>
                 <div class="flex flex-mj">
-                    <button class="button" code="{{v.code}}" ic-click="view">查看股票</button>
-                    <button class="button" code="{{v.code}}" ic-click="cancel">取消监控</button>
+
                 </div>
             </li>
         </ul>
@@ -69,9 +70,9 @@
         </div>
     </section>
 
-    <footer style="position: fixed;bottom:0; left:0; right:0;" ic-ctrl="help_ctrl">
+    <footer style="position: fixed;bottom:0; left:0; right:0;display: none;" ic-ctrl="help_ctrl">
         <div ic-tpl="links">
-            <a class="button is-info" ic-href="http://{{model.ip}}/web/stock_plan.html" target="_blank">当前计划</a>
+            <a class="button is-info" ic-href="http://{{model.ip}}/web/stock_plan.html" target="_blank">计划</a>
         </div>
     </footer>
 
