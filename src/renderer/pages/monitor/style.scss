@@ -1,7 +1,9 @@
 html, body {
   font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.5;
+  background: #000;
+  overflow-y: hidden;
 }
 
 .pre {
@@ -13,12 +15,13 @@ html, body {
 }
 
 .warn {
-  animation: ani 0.5s 3 ease-in-out;
+  animation: ani 0.9s 5 ease-in-out;
 }
 
 .rout {
-  opacity: 0.5;
-  background: greenyellow;
+  //opacity: 0.5;
+  //background: #fff;
+  color: greenyellow;
 }
 
 @keyframes ani {
@@ -43,11 +46,15 @@ html, body {
   }
 
   .down {
-    color: green !important;
+    color: greenyellow !important;
   }
 
   li{
-    border-bottom: solid 1px #e6e6e6;
+    border-bottom: solid 1px #7a7a7a;
+    color: red;
+    &.rout{
+      color:greenyellow;
+    }
   }
 
   li div {
@@ -72,7 +79,7 @@ html, body {
 
 #rts_list span.name, #rts_list span.b1 {
   width: 7em;
-  color: red;
+  color: inherit;
   flex: 1;
   white-space: nowrap;
 
@@ -96,13 +103,13 @@ html, body {
 
 #rts_list span.code, #rts_list span.time, #rts_list span.increase, #rts_list span.price {
   font-size: 0.6em;
-  color: #ccc;
+  color: #fff;
   padding: 0 5px;
 }
 
 #rts_list span.increase, #rts_list span.price {
   font-size: 0.8em;
-  color: #333;
+  color: #fff;
   padding: 0 10px;
   width: 4em;
 }
@@ -123,9 +130,13 @@ section {
   margin: 0 0 10px 0;
 }
 
+#notify_news{
+  color: #fff;
+}
+
 @media screen and (max-width: 900px) {
   body {
     border:solid 1px blue;
-    font-size:16px!important;
+    font-size:20px!important;
   }
 }

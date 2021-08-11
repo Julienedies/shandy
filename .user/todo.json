@@ -1,6 +1,20 @@
 [
 	{
 		"name": "",
+		"id": "8172404",
+		"type": "警告",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我有本质的改变吗？ 我是不是又沉浸到了日常交易中了？</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 7,
+		"interval": 90,
+		"duration": 7,
+		"timestamp": 1628513394321,
+		"promptTimes": 1,
+		"prevPromptTime": 1628677390851
+	},
+	{
+		"name": "",
 		"id": "0045558",
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">错误1：我看不到大的交易逻辑。</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">我为什么新能源的两次大趋势波段。</span></strong></p><p><span style=\"font-size: 18px;;background-color: rgb(255, 255, 0);\"><strong>为什么错过稀土的两次爆发？</strong></span></p><p><span style=\"font-size: 18px;;background-color: rgb(255, 255, 0);\"><strong>为什么错过中远海控？</strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">为什么错过永兴材料二波、上机数控2波？ 天齐锂业2波？ 宁德时代新高？</span></strong></p><p><br></p><p><br></p><p><br></p><p><br></p>",
@@ -9,7 +23,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1626650977149
+		"timestamp": 1626650977149,
+		"promptTimes": 1,
+		"prevPromptTime": 1628679191895
 	},
 	{
 		"name": "",
@@ -21,7 +37,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1625975362922
+		"timestamp": 1625975362922,
+		"promptTimes": 1,
+		"prevPromptTime": 1628680991805
 	},
 	{
 		"name": "",
@@ -33,7 +51,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1625831460227
+		"timestamp": 1625831460227,
+		"promptTimes": 1,
+		"prevPromptTime": 1628682792645
 	},
 	{
 		"name": "",
@@ -45,7 +65,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1625493182033
+		"timestamp": 1625493182033,
+		"promptTimes": 1,
+		"prevPromptTime": 1628684591292
 	},
 	{
 		"name": "",
@@ -69,7 +91,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1621658103771
+		"timestamp": 1621658103771,
+		"promptTimes": 1,
+		"prevPromptTime": 1628686392821
 	},
 	{
 		"name": "",
@@ -201,9 +225,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1621737388870,
-		"promptTimes": 1,
-		"prevPromptTime": 1628151164908
+		"timestamp": 1621737388870
 	},
 	{
 		"name": "",
@@ -217,7 +239,7 @@
 		"duration": 47,
 		"timestamp": 1609555783779,
 		"promptTimes": 1,
-		"prevPromptTime": 1628152965027
+		"prevPromptTime": 1628669114914
 	},
 	{
 		"name": "",
@@ -231,7 +253,7 @@
 		"duration": 47,
 		"timestamp": 1619178994699,
 		"promptTimes": 1,
-		"prevPromptTime": 1628154764413
+		"prevPromptTime": 1628670912676
 	},
 	{
 		"name": "",
@@ -245,7 +267,7 @@
 		"duration": 17,
 		"timestamp": 1594995614163,
 		"promptTimes": 2,
-		"prevPromptTime": 1628156563330
+		"prevPromptTime": 1628672712817
 	},
 	{
 		"name": "",
@@ -271,7 +293,7 @@
 		"duration": 13,
 		"timestamp": 1616303429099,
 		"promptTimes": 3,
-		"prevPromptTime": 1628136765590
+		"prevPromptTime": 1628656516853
 	},
 	{
 		"name": "",
@@ -285,7 +307,7 @@
 		"duration": 14,
 		"timestamp": 1614682522617,
 		"promptTimes": 7,
-		"prevPromptTime": 1628158363386
+		"prevPromptTime": 1628667316206
 	},
 	{
 		"name": "",
@@ -298,8 +320,8 @@
 		"interval": 45,
 		"duration": 37,
 		"timestamp": 1609667569090,
-		"promptTimes": 7,
-		"prevPromptTime": 1628163764229
+		"promptTimes": 4,
+		"prevPromptTime": 1628660115766
 	},
 	{
 		"name": "",
@@ -311,9 +333,7 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 47,
-		"timestamp": 1610785651586,
-		"promptTimes": 1,
-		"prevPromptTime": 1628161963266
+		"timestamp": 1610785651586
 	},
 	{
 		"name": "",
@@ -338,9 +358,7 @@
 		"interval": 60,
 		"duration": 27,
 		"timestamp": 1611189022632,
-		"disable": false,
-		"promptTimes": 1,
-		"prevPromptTime": 1628165563710
+		"disable": false
 	},
 	{
 		"name": "",
@@ -352,9 +370,7 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1618113128264,
-		"promptTimes": 1,
-		"prevPromptTime": 1628167363643
+		"timestamp": 1618113128264
 	},
 	{
 		"name": "",
@@ -379,9 +395,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1617982755447,
-		"promptTimes": 2,
-		"prevPromptTime": 1628174563395
+		"timestamp": 1617982755447
 	},
 	{
 		"name": "",
@@ -394,9 +408,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1611410765613,
-		"disable": false,
-		"promptTimes": 2,
-		"prevPromptTime": 1628176362627
+		"disable": false
 	},
 	{
 		"name": "",
@@ -408,9 +420,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1616220645834,
-		"promptTimes": 1,
-		"prevPromptTime": 1628172762767
+		"timestamp": 1616220645834
 	},
 	{
 		"name": "",
@@ -424,7 +434,7 @@
 		"duration": 9,
 		"timestamp": 1617161666529,
 		"promptTimes": 1,
-		"prevPromptTime": 1628143963973
+		"prevPromptTime": 1628661915384
 	},
 	{
 		"name": "",

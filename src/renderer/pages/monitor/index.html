@@ -18,16 +18,16 @@
                         <b>{{v.name}}</b>
                         &nbsp;&nbsp;&nbsp; {{v.increase}}%
                     </span>
-                    <span class="increase"></span>
+                   <!-- <span class="increase"></span>-->
                     <span class="b1">
+                        {{ b1Amount( v.b1*100*v.price ) }}&nbsp;&nbsp;&nbsp;&nbsp;
                         <b>{{ (v.b1/1000).toFixed(1) }} <i>k</i></b>
-                        &nbsp;&nbsp;&nbsp; {{ b1Amount( v.b1*100*v.price ) }}
                     </span>
                     <span ic-class="b1_reduce {{v.b1_reduce > 0 ? 'up':'down'}}">{{v.b1_reduce}} </span>
-                    <span class="price">{{v.price}} </span>
+                    <!--<span class="price">{{v.price}} </span>-->
                     <span class="time"> {{v.time}}</span>
-                    <button class="button" code="{{v.code}}" ic-click="view">查看</button>
-                    <button class="button" code="{{v.code}}" ic-click="cancel">取消</button>
+                    <!--<button class="button" code="{{v.code}}" ic-click="view">查看</button>-->
+                    <a herf="#" code="{{v.code}}" ic-click="cancel">取消</a>
                 </div>
                 <div class="flex flex-mj">
 
