@@ -9,9 +9,7 @@
 		"repeat": 7,
 		"interval": 90,
 		"duration": 7,
-		"timestamp": 1628513394321,
-		"promptTimes": 1,
-		"prevPromptTime": 1628677390851
+		"timestamp": 1628513394321
 	},
 	{
 		"name": "",
@@ -23,9 +21,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1626650977149,
-		"promptTimes": 1,
-		"prevPromptTime": 1628679191895
+		"timestamp": 1626650977149
 	},
 	{
 		"name": "",
@@ -37,9 +33,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1625975362922,
-		"promptTimes": 1,
-		"prevPromptTime": 1628680991805
+		"timestamp": 1625975362922
 	},
 	{
 		"name": "",
@@ -51,9 +45,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1625831460227,
-		"promptTimes": 1,
-		"prevPromptTime": 1628682792645
+		"timestamp": 1625831460227
 	},
 	{
 		"name": "",
@@ -65,9 +57,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1625493182033,
-		"promptTimes": 1,
-		"prevPromptTime": 1628684591292
+		"timestamp": 1625493182033
 	},
 	{
 		"name": "",
@@ -85,15 +75,13 @@
 		"name": "",
 		"id": "5766290",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：无系统、无计划、临盘随意冲动交易。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">决不能临盘随意交易，必须提前写好交易计划。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">管不住手，交易成瘾。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">连续做可转债，连续亏钱。但还是管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">临盘随意冲动交易，主观臆想，无系统交易是我最大的亏损来源；我已经重复这个错误4年了。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我盯盘时，没有明确的计划；只是被市场牵着鼻子走；被动应对，浑浑噩噩；一冲动就会随手买入；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>尤其是市场转好，怕踏空买入；或个股冲高，就会臆想买入；</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">关键是我没有明确的交易系统、目标行情、买点、交易计划；</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：无系统、无计划、临盘随意冲动交易。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">决不能临盘随意交易，必须提前写好交易计划。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">临盘随意交易是我最大的亏损来源。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">管不住手，交易成瘾。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">连续做可转债，连续亏钱。但还是管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">临盘随意冲动交易，主观臆想，无系统交易是我最大的亏损来源；我已经重复这个错误4年了。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我盯盘时，没有明确的计划；只是被市场牵着鼻子走；被动应对，浑浑噩噩；一冲动就会随手买入；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>尤其是市场转好，怕踏空买入；或个股冲高，就会臆想买入；</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">关键是我没有明确的交易系统、目标行情、买点、交易计划；</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1621658103771,
-		"promptTimes": 1,
-		"prevPromptTime": 1628686392821
+		"timestamp": 1621658103771
 	},
 	{
 		"name": "",
@@ -237,9 +225,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1609555783779,
-		"promptTimes": 1,
-		"prevPromptTime": 1628669114914
+		"timestamp": 1609555783779
 	},
 	{
 		"name": "",
@@ -253,7 +239,7 @@
 		"duration": 47,
 		"timestamp": 1619178994699,
 		"promptTimes": 1,
-		"prevPromptTime": 1628670912676
+		"prevPromptTime": 1628842480613
 	},
 	{
 		"name": "",
@@ -267,7 +253,7 @@
 		"duration": 17,
 		"timestamp": 1594995614163,
 		"promptTimes": 2,
-		"prevPromptTime": 1628672712817
+		"prevPromptTime": 1628844279833
 	},
 	{
 		"name": "",
@@ -293,7 +279,7 @@
 		"duration": 13,
 		"timestamp": 1616303429099,
 		"promptTimes": 3,
-		"prevPromptTime": 1628656516853
+		"prevPromptTime": 1628829880697
 	},
 	{
 		"name": "",
@@ -307,7 +293,7 @@
 		"duration": 14,
 		"timestamp": 1614682522617,
 		"promptTimes": 7,
-		"prevPromptTime": 1628667316206
+		"prevPromptTime": 1628846079036
 	},
 	{
 		"name": "",
@@ -320,8 +306,8 @@
 		"interval": 45,
 		"duration": 37,
 		"timestamp": 1609667569090,
-		"promptTimes": 4,
-		"prevPromptTime": 1628660115766
+		"promptTimes": 7,
+		"prevPromptTime": 1628851479056
 	},
 	{
 		"name": "",
@@ -333,7 +319,9 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 47,
-		"timestamp": 1610785651586
+		"timestamp": 1610785651586,
+		"promptTimes": 1,
+		"prevPromptTime": 1628849678723
 	},
 	{
 		"name": "",
@@ -358,7 +346,9 @@
 		"interval": 60,
 		"duration": 27,
 		"timestamp": 1611189022632,
-		"disable": false
+		"disable": false,
+		"promptTimes": 1,
+		"prevPromptTime": 1628853280092
 	},
 	{
 		"name": "",
@@ -370,7 +360,9 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1618113128264
+		"timestamp": 1618113128264,
+		"promptTimes": 1,
+		"prevPromptTime": 1628855078539
 	},
 	{
 		"name": "",
@@ -395,7 +387,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1617982755447
+		"timestamp": 1617982755447,
+		"promptTimes": 2,
+		"prevPromptTime": 1628860479607
 	},
 	{
 		"name": "",
@@ -408,7 +402,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1611410765613,
-		"disable": false
+		"disable": false,
+		"promptTimes": 2,
+		"prevPromptTime": 1628862279739
 	},
 	{
 		"name": "",
@@ -420,7 +416,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1616220645834
+		"timestamp": 1616220645834,
+		"promptTimes": 1,
+		"prevPromptTime": 1628864078233
 	},
 	{
 		"name": "",
@@ -433,8 +431,8 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1617161666529,
-		"promptTimes": 1,
-		"prevPromptTime": 1628661915384
+		"promptTimes": 2,
+		"prevPromptTime": 1628865878172
 	},
 	{
 		"name": "",
