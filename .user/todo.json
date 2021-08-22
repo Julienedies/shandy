@@ -1,15 +1,29 @@
 [
 	{
 		"name": "",
+		"id": "7028271",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\">错误2：事有两面，总是有两种情况可能发生。</span></strong></p><p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\">而我总是先入为主，或者被上次经验影响，不能保持一致性，左右打脸。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能双头或反弹，也可能是N浪。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能利好兑现，也可能继续爆发。</span></strong></p>",
+		"singleWindow": "",
+		"start": "9:00",
+		"repeat": 7,
+		"interval": 60,
+		"duration": 7,
+		"timestamp": 1629155362746
+	},
+	{
+		"name": "",
 		"id": "8172404",
 		"type": "警告",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我有本质的改变吗？ 我是不是又沉浸到了日常交易中了？</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我有本质的改变吗？ 我是不是又沉浸到了日常交易中了？</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">临盘随意交易是我最大的亏损来源，但迄今我的交易主要还是临盘随意交易。盘前没有计划。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">管住手，等待最好的交易机会。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 7,
 		"interval": 90,
-		"duration": 7,
-		"timestamp": 1628513394321
+		"duration": 5,
+		"timestamp": 1628513394321,
+		"promptTimes": 1,
+		"prevPromptTime": 1629419094812
 	},
 	{
 		"name": "",
@@ -39,7 +53,7 @@
 		"name": "",
 		"id": "2542954",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">错误1：为什么就是没有对个股的推演和预案呢？</span></strong></p><p><strong><span style=\"font-size: 28px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">你觉的谁是龙头？龙头会怎么走？你的预案是怎么？ 预期外怎么应对？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 0);\">北方稀土今天烂板上冲，我为什么错过?</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：永远没有做好交易计划和准备，没有做盘面的推演和应对。</span></strong></p><p><strong><span style=\"font-size: 28px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">错误1：为什么就是没有对个股的推演和预案呢？</span></strong></p><p><strong><span style=\"font-size: 24px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">你觉的谁是龙头？龙头会怎么走？你的预案是怎么？ 预期外怎么应对？</span></strong></p><p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\">临盘随意冲动交易。</span></strong></p><p><strong><span style=\"font-size: 22px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 0);\">北方稀土今天烂板上冲，我为什么错过?</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
@@ -200,7 +214,7 @@
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 47,
+		"duration": 9,
 		"timestamp": 1622254636347
 	},
 	{
@@ -212,8 +226,10 @@
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 47,
-		"timestamp": 1621737388870
+		"duration": 24,
+		"timestamp": 1621737388870,
+		"promptTimes": 1,
+		"prevPromptTime": 1629447895341
 	},
 	{
 		"name": "",
@@ -225,13 +241,15 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1609555783779
+		"timestamp": 1609555783779,
+		"promptTimes": 1,
+		"prevPromptTime": 1629449694579
 	},
 	{
 		"name": "",
 		"id": "7239077",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误2：依靠主观预测交易，但我的预判总是错误。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>1：</u></span><u><strong><span style=\"font-size: 24px;font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">对市场理解不够。我总是预测错误，错过机会。</span></strong></u></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>2：主观看空，市场走出与我预期相反的走势，总是<strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">措手不及，犹豫不定</span></strong>。</u></span></strong></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">连续阳线可能会回调，也可能会继续大阳。所谓强更强。</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>弱转强，我跟不上，因为我还沉浸在下跌的悲观中。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">强更强，我也抓不住，因为恐高，预期之外。</span></strong></p><p><br></p><p><strong><strong><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我总是倾向看空，</span></strong></strong><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\">从来没做好转强的准备。</span></span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">每次大阳线都在我预期之外。每次都措手不及，错失机会。</span></strong></span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">线性思维，每次修复转折行情总是预期之外。</span></strong></span></strong><br></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我总是没有做好市场资金出击的准备。</span></strong></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">没有计划，没有预案。总是错过市场转强的时机，总是踏错节奏。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">没有想过弱转强的机会，没有想过分歧转一致的机会。没有想过多空反转地天板的机会。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>问题：不能靠预测交易；</u></span></strong><span style=\"font-size: 28px;\"><u><strong><span style=\"background-color: rgb(255, 255, 0);\">那要依据什么进行交易？</span></strong></u></span></p><p><strong><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\"><u>关键是</u></span></span><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>应对，临盘时，我依据什么做什么操作？</u></span></strong></strong></p><p><strong><span style=\"font-size: 24px;\">趋势 &nbsp; 概率 &nbsp; &nbsp;应对 &nbsp; 判断锚点 &nbsp; 规则 &nbsp;目标行情</span></strong></p><p><span style=\"font-size: 24px;\"><strong>机械概率 &nbsp; 关键点 &nbsp;市场变量</strong></span></p><p><strong><span style=\"font-size: 24px;\">大局观 &nbsp;市场理解力 &nbsp;</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误2：依靠主观预测交易，但我的预判总是错误。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我以什么做为判断锚点？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>1：</u></span><u><strong><span style=\"font-size: 24px;font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">对市场理解不够。我总是预测错误，错过机会。</span></strong></u></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>2：主观看空，市场走出与我预期相反的走势，总是</u></span><u><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);;font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">措手不及，犹豫不定</span></strong></u><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>。</u></span></strong></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">连续阳线可能会回调，也可能会继续大阳。所谓强更强。</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>弱转强，我跟不上，因为我还沉浸在下跌的悲观中。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">强更强，我也抓不住，因为恐高，预期之外。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我总是倾向看空，</span><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\">从来没做好转强的准备。</span></span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">每次大阳线都在我预期之外。每次都措手不及，错失机会。</span></strong></span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">线性思维，每次修复转折行情总是预期之外。</span></strong></span></strong><br></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我总是没有做好市场资金出击的准备。</span></strong></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">没有计划，没有预案。总是错过市场转强的时机，总是踏错节奏。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">没有想过弱转强的机会，没有想过分歧转一致的机会。没有想过多空反转地天板的机会。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>问题：不能靠预测交易；</u></span></strong><span style=\"font-size: 28px;\"><u><strong><span style=\"background-color: rgb(255, 255, 0);\">那要依据什么进行交易？</span></strong></u></span></p><p><strong><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\"><u>关键是</u></span></span><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>应对，临盘时，我依据什么做什么操作？</u></span></strong></p><p><strong><span style=\"font-size: 24px;\">趋势 &nbsp; 概率 &nbsp; &nbsp;应对 &nbsp; 判断锚点 &nbsp; 规则 &nbsp;目标行情</span></strong></p><p><span style=\"font-size: 24px;\"><strong>机械概率 &nbsp; 关键点 &nbsp;市场变量</strong></span></p><p><strong><span style=\"font-size: 24px;\">大局观 &nbsp;市场理解力 &nbsp;</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
@@ -239,7 +257,7 @@
 		"duration": 47,
 		"timestamp": 1619178994699,
 		"promptTimes": 1,
-		"prevPromptTime": 1628842480613
+		"prevPromptTime": 1629451495747
 	},
 	{
 		"name": "",
@@ -253,7 +271,7 @@
 		"duration": 17,
 		"timestamp": 1594995614163,
 		"promptTimes": 2,
-		"prevPromptTime": 1628844279833
+		"prevPromptTime": 1629453295670
 	},
 	{
 		"name": "",
@@ -279,7 +297,7 @@
 		"duration": 13,
 		"timestamp": 1616303429099,
 		"promptTimes": 3,
-		"prevPromptTime": 1628829880697
+		"prevPromptTime": 1629437094807
 	},
 	{
 		"name": "",
@@ -293,21 +311,21 @@
 		"duration": 14,
 		"timestamp": 1614682522617,
 		"promptTimes": 7,
-		"prevPromptTime": 1628846079036
+		"prevPromptTime": 1629455094944
 	},
 	{
 		"name": "",
 		"id": "1047723",
 		"type": "警告",
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我还是没有改变。快3个月了。 2021-4-28</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我解决问题了吗？</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我次日的交易计划是什么？什么条件做什么操作？</span></strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><br></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我以什么做为判断锚点？我要捕捉的目标行情是什么？ </strong></span></span></span></p><p><br></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">2020年6月，我就发现所有的交易错误了。但是都没有改正。</span></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>看看你的交易日记，停下来思考，解决那些错误和问题。</strong></span></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">而不是每天重复无意义的交易。</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我必须做出真正的改变。既然没有效果，我每天重复有什么意义？</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>浪费时间吗？思考！思考！思考！</strong><br></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong><span style=\"color: rgb(0, 0, 0);\">我每天持续不断的交易，学到什么？积累了什么？还是在重复无用功？</span></strong></span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我今天还是在重复错误，没有解决问题的情况下，始终沉浸在日常交易中。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我为何无动于衷，既然知道自己的交易有问题，为什么我还是不断重复?</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>就像我刚刚炒股的17年、18年、明明知道自己的交易没有获取收益，为何我一直重复？</strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我现在还是和之前的状态一样，明明没有获利。但还是没有改变。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我还是没有改变。快3个月了。 2021-4-28</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我解决问题了吗？</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我次日的交易计划是什么？什么条件做什么操作？</span></strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><br></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我以什么做为判断锚点？我要捕捉的目标行情是什么？&nbsp;</strong></span></span></span></p><p><br></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">2020年6月，我就发现所有的交易错误了。但是都没有改正。</span></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>看看你的交易日记，停下来思考，解决那些错误和问题。</strong></span></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">而不是每天重复无意义的交易。</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我必须做出真正的改变。既然没有效果，我每天重复有什么意义？</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>浪费时间吗？思考！思考！思考！</strong><br></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong><span style=\"color: rgb(0, 0, 0);\">我每天持续不断的交易，学到什么？积累了什么？还是在重复无用功？</span></strong></span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我今天还是在重复错误，没有解决问题的情况下，始终沉浸在日常交易中。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我为何无动于衷，既然知道自己的交易有问题，为什么我还是不断重复?</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>就像我刚刚炒股的17年、18年、明明知道自己的交易没有获取收益，为何我一直重复？</strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我现在还是和之前的状态一样，明明没有获利。但还是没有改变。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 17,
-		"interval": 45,
+		"repeat": 9,
+		"interval": 90,
 		"duration": 37,
 		"timestamp": 1609667569090,
-		"promptTimes": 7,
-		"prevPromptTime": 1628851479056
+		"promptTimes": 4,
+		"prevPromptTime": 1629456894179
 	},
 	{
 		"name": "",
@@ -321,7 +339,7 @@
 		"duration": 47,
 		"timestamp": 1610785651586,
 		"promptTimes": 1,
-		"prevPromptTime": 1628849678723
+		"prevPromptTime": 1629458695673
 	},
 	{
 		"name": "",
@@ -347,8 +365,8 @@
 		"duration": 27,
 		"timestamp": 1611189022632,
 		"disable": false,
-		"promptTimes": 1,
-		"prevPromptTime": 1628853280092
+		"promptTimes": 2,
+		"prevPromptTime": 1629465890089
 	},
 	{
 		"name": "",
@@ -361,8 +379,8 @@
 		"interval": 90,
 		"duration": 17,
 		"timestamp": 1618113128264,
-		"promptTimes": 1,
-		"prevPromptTime": 1628855078539
+		"promptTimes": 2,
+		"prevPromptTime": 1629467690675
 	},
 	{
 		"name": "",
@@ -389,7 +407,7 @@
 		"duration": 47,
 		"timestamp": 1617982755447,
 		"promptTimes": 2,
-		"prevPromptTime": 1628860479607
+		"prevPromptTime": 1629469490753
 	},
 	{
 		"name": "",
@@ -403,8 +421,8 @@
 		"duration": 17,
 		"timestamp": 1611410765613,
 		"disable": false,
-		"promptTimes": 2,
-		"prevPromptTime": 1628862279739
+		"promptTimes": 1,
+		"prevPromptTime": 1629471290299
 	},
 	{
 		"name": "",
@@ -418,7 +436,7 @@
 		"duration": 7,
 		"timestamp": 1616220645834,
 		"promptTimes": 1,
-		"prevPromptTime": 1628864078233
+		"prevPromptTime": 1629473089971
 	},
 	{
 		"name": "",
@@ -432,7 +450,7 @@
 		"duration": 9,
 		"timestamp": 1617161666529,
 		"promptTimes": 2,
-		"prevPromptTime": 1628865878172
+		"prevPromptTime": 1629435294870
 	},
 	{
 		"name": "",
