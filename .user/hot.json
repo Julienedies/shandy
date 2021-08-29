@@ -1,17 +1,42 @@
 [
 	{
-		"id": "燃料电池",
+		"id": "机床",
 		"selected": true,
+		"timestamp": 1629677937818
+	},
+	{
+		"id": "HIT电池",
+		"selected": true,
+		"timestamp": 1629677335512
+	},
+	{
+		"id": "专精特新",
+		"selected": true,
+		"timestamp": 1629677326732
+	},
+	{
+		"id": "有机硅",
+		"selected": true,
+		"timestamp": 1629672328254
+	},
+	{
+		"id": "HJT",
+		"selected": true,
+		"timestamp": 1629672297430
+	},
+	{
+		"id": "燃料电池",
+		"selected": false,
 		"timestamp": 1629016091754
 	},
 	{
 		"id": "氢能源",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1628305464313
 	},
 	{
 		"id": "智能制造",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1627992087989
 	},
 	{
@@ -21,7 +46,7 @@
 	},
 	{
 		"id": "储能",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1627573287670
 	},
 	{
@@ -31,7 +56,7 @@
 	},
 	{
 		"id": "磷化工",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1626357702889
 	},
 	{
@@ -45,24 +70,9 @@
 		"timestamp": 1625700347073
 	},
 	{
-		"id": "中药",
-		"selected": false,
-		"timestamp": 1625185835764
-	},
-	{
 		"id": "军工",
 		"selected": true,
 		"timestamp": 1624289250789
-	},
-	{
-		"id": "VR",
-		"selected": false,
-		"timestamp": 1623799048380
-	},
-	{
-		"id": "虚拟现实",
-		"selected": false,
-		"timestamp": 1623772343041
 	},
 	{
 		"id": "化工",
@@ -78,11 +88,6 @@
 		"id": "5G",
 		"selected": false,
 		"timestamp": 1623160671685
-	},
-	{
-		"id": "酒",
-		"selected": false,
-		"timestamp": 1623080478890
 	},
 	{
 		"id": "光刻胶",
@@ -103,11 +108,6 @@
 		"id": "软件",
 		"selected": false,
 		"timestamp": 1621874928750
-	},
-	{
-		"id": "白酒",
-		"selected": false,
-		"timestamp": 1621874910686
 	},
 	{
 		"id": "盐湖提锂",
@@ -196,7 +196,7 @@
 	},
 	{
 		"id": "次新",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1616413837872
 	},
 	{
@@ -233,11 +233,6 @@
 		"id": "预增",
 		"selected": false,
 		"timestamp": 1610898031672
-	},
-	{
-		"id": "医美",
-		"selected": false,
-		"timestamp": 1607946813103
 	},
 	{
 		"id": "金属",
