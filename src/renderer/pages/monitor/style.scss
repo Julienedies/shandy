@@ -99,6 +99,7 @@ html, body {
 
 #rts_list span.b1_reduce {
   width: 4em;
+  text-align: center;
 }
 
 #rts_list span.code, #rts_list span.time, #rts_list span.increase, #rts_list span.price {
@@ -138,5 +139,12 @@ section {
   body {
     border:solid 1px blue;
     font-size:20px!important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    border:solid 1px red;
+    font-size:28px!important;
   }
 }
