@@ -307,11 +307,11 @@ brick.reg('mainCtrl', function (scope) {
 
     setTimeout(() => {
         scope.openTodo();
-    }, 1000 * 4);
+    }, 1000 * 7);
 
 
     if (utils.isTrading()) {
-        !scope.newsWin && scope.openNews();
+        //!scope.newsWin && scope.openNews();
         //!scope.warnWindow && scope.openWarn(null, 1);
     }
 

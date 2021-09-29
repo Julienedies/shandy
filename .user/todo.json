@@ -9,7 +9,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1631162251134
+		"timestamp": 1631162251134,
+		"promptTimes": 1,
+		"prevPromptTime": 1632877563621
 	},
 	{
 		"name": "",
@@ -33,7 +35,9 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1629155362746
+		"timestamp": 1629155362746,
+		"promptTimes": 1,
+		"prevPromptTime": 1632879364403
 	},
 	{
 		"name": "",
@@ -45,7 +49,9 @@
 		"repeat": 7,
 		"interval": 90,
 		"duration": 5,
-		"timestamp": 1628513394321
+		"timestamp": 1628513394321,
+		"promptTimes": 1,
+		"prevPromptTime": 1632881164102
 	},
 	{
 		"name": "",
@@ -177,7 +183,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1618224000885
+		"timestamp": 1618224000885,
+		"promptTimes": 1,
+		"prevPromptTime": 1632902759728
 	},
 	{
 		"name": "",
@@ -200,8 +208,10 @@
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 47,
-		"timestamp": 1618223159947
+		"duration": 24,
+		"timestamp": 1618223159947,
+		"promptTimes": 1,
+		"prevPromptTime": 1632904560009
 	},
 	{
 		"name": "",
@@ -213,7 +223,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1624075143455
+		"timestamp": 1624075143455,
+		"promptTimes": 1,
+		"prevPromptTime": 1632906361000
 	},
 	{
 		"name": "",
@@ -225,7 +237,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1611881119094
+		"timestamp": 1611881119094,
+		"promptTimes": 1,
+		"prevPromptTime": 1632908161068
 	},
 	{
 		"name": "",
@@ -237,13 +251,15 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1622254636347
+		"timestamp": 1622254636347,
+		"promptTimes": 1,
+		"prevPromptTime": 1632909960005
 	},
 	{
 		"name": "",
 		"id": "0123054",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：后知后觉，行情走出来才意识到。没有明确的目标行情意识。</span></strong></p><p><br></p><p>大盘从4月份开始上涨。今天指数已经临近新高了。我才意识到。</p><p>机构主导的票</p><p>锦鸿股份持续了这么久，我都没有深刻思考。</p><p>我对市场理解不够。</p><p><br></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">继续错过煤炭、锂电池、光伏行情。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">小康股份涨了3个月，</span></strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>朗姿股份涨了大半年。类似西藏药业的疫苗行情。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>旗天科技、御银股份的主升波段。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>北汽蓝谷、长安汽车的主升波段。</strong></span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>奥园美谷的主升浪、朗姿股份的主升浪、</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>华银电力的V形二浪、哈三联的V形二浪；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>华亚智能对顺控发展的复制。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">顺控发展、美邦服饰的主升浪。烂板弱转强。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">小康股份的主升浪，川能动力的主升浪；</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锦鸿集团的二波。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：后知后觉，行情走出来才意识到。没有明确的目标行情意识。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">大盘从4月份开始上涨。今天指数已经临近新高了。我才意识到。</span></strong></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>机构主导的票</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>锦鸿股份持续了这么久，我都没有深刻思考。</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我对市场理解不够。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">继续错过煤炭、锂电池、光伏行情。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">小康股份涨了3个月，</span></strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>朗姿股份涨了大半年。类似西藏药业的疫苗行情。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>旗天科技、御银股份的主升波段。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>北汽蓝谷、长安汽车的主升波段。</strong></span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>奥园美谷的主升浪、朗姿股份的主升浪、</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>华银电力的V形二浪、哈三联的V形二浪；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>华亚智能对顺控发展的复制。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">顺控发展、美邦服饰的主升浪。烂板弱转强。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">小康股份的主升浪，川能动力的主升浪；</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锦鸿集团的二波。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
@@ -251,7 +267,7 @@
 		"duration": 24,
 		"timestamp": 1621737388870,
 		"promptTimes": 1,
-		"prevPromptTime": 1631261906505
+		"prevPromptTime": 1632911759404
 	},
 	{
 		"name": "",
@@ -265,7 +281,7 @@
 		"duration": 47,
 		"timestamp": 1609555783779,
 		"promptTimes": 1,
-		"prevPromptTime": 1631263706443
+		"prevPromptTime": 1632913559476
 	},
 	{
 		"name": "",
@@ -279,7 +295,7 @@
 		"duration": 27,
 		"timestamp": 1619178994699,
 		"promptTimes": 1,
-		"prevPromptTime": 1631265507294
+		"prevPromptTime": 1632915360006
 	},
 	{
 		"name": "",
@@ -293,7 +309,7 @@
 		"duration": 17,
 		"timestamp": 1594995614163,
 		"promptTimes": 2,
-		"prevPromptTime": 1631267306549
+		"prevPromptTime": 1632917159934
 	},
 	{
 		"name": "",
@@ -319,7 +335,7 @@
 		"duration": 13,
 		"timestamp": 1616303429099,
 		"promptTimes": 3,
-		"prevPromptTime": 1631251107617
+		"prevPromptTime": 1632891960784
 	},
 	{
 		"name": "",
@@ -330,10 +346,10 @@
 		"start": "8:00",
 		"repeat": 7,
 		"interval": 60,
-		"duration": 14,
+		"duration": 24,
 		"timestamp": 1614682522617,
-		"promptTimes": 7,
-		"prevPromptTime": 1631269107738
+		"promptTimes": 6,
+		"prevPromptTime": 1632922559710
 	},
 	{
 		"name": "",
@@ -346,8 +362,8 @@
 		"interval": 90,
 		"duration": 24,
 		"timestamp": 1609667569090,
-		"promptTimes": 5,
-		"prevPromptTime": 1631270907508
+		"promptTimes": 3,
+		"prevPromptTime": 1632920759600
 	},
 	{
 		"name": "",
@@ -358,10 +374,10 @@
 		"start": "17:00",
 		"repeat": 2,
 		"interval": 90,
-		"duration": 47,
+		"duration": 32,
 		"timestamp": 1610785651586,
 		"promptTimes": 1,
-		"prevPromptTime": 1631272707428
+		"prevPromptTime": 1632924359833
 	},
 	{
 		"name": "",
@@ -394,13 +410,11 @@
 		"type": "系统",
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">退潮补跌风险；丹邦科技</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">退潮风险：次新退潮，泰坦股份、迎丰股份、舒华体育</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">高潮风险；</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">切换风险； &nbsp;大湖股份、泰岳股份股份；</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">借势风险：粤泰股份；</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">非主流风险；<strong><span style=\"background-color: rgb(255, 255, 0);\">丹邦科技</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">跟风后排：</span></strong></span></strong></p>",
 		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 2,
+		"start": "17:00",
+		"repeat": 1,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1618113128264,
-		"promptTimes": 2,
-		"prevPromptTime": 1631279907480
+		"timestamp": 1618113128264
 	},
 	{
 		"name": "",
@@ -426,8 +440,8 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1617982755447,
-		"promptTimes": 2,
-		"prevPromptTime": 1631281706700
+		"promptTimes": 1,
+		"prevPromptTime": 1632926159298
 	},
 	{
 		"name": "",
@@ -442,7 +456,7 @@
 		"timestamp": 1611410765613,
 		"disable": false,
 		"promptTimes": 1,
-		"prevPromptTime": 1631278107434
+		"prevPromptTime": 1632927960006
 	},
 	{
 		"name": "",
@@ -467,8 +481,8 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1617161666529,
-		"promptTimes": 3,
-		"prevPromptTime": 1631318909120
+		"promptTimes": 1,
+		"prevPromptTime": 1632897359923
 	},
 	{
 		"name": "",
@@ -589,9 +603,7 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1619249637958,
-		"promptTimes": 1,
-		"prevPromptTime": 1631320708457
+		"timestamp": 1619249637958
 	},
 	{
 		"name": "",
@@ -642,9 +654,7 @@
 		"repeat": 9,
 		"interval": 60,
 		"duration": 44,
-		"timestamp": 1618978825238,
-		"promptTimes": 1,
-		"prevPromptTime": 1631322508395
+		"timestamp": 1618978825238
 	},
 	{
 		"name": "",
@@ -667,7 +677,7 @@
 		"start": "16:00",
 		"repeat": 4,
 		"interval": 60,
-		"duration": 47,
+		"duration": 24,
 		"timestamp": 1610162924689
 	},
 	{
@@ -704,7 +714,7 @@
 		"start": "16:00",
 		"repeat": 4,
 		"interval": 60,
-		"duration": 47,
+		"duration": 9,
 		"timestamp": 1613056712193
 	},
 	{
@@ -714,9 +724,9 @@
 		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\">&nbsp;</span></strong><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\">交易系统</span></strong><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211);\">&nbsp;</span></strong></span></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"font-size: 24px;background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>支撑我的交易逻辑是什么？</u></span></strong></span><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>&nbsp;</u></span></strong></span></span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"font-size: 22px;background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">人性不变，历史会重复</span></strong></span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">我要捕捉的目标行情是什么？</span></strong></span></p><p><br></p><p><br></p>",
 		"singleWindow": "",
 		"start": "15:00",
-		"repeat": 4,
+		"repeat": 1,
 		"interval": 55,
-		"duration": 47,
+		"duration": 7,
 		"timestamp": 1600596359187
 	},
 	{
@@ -846,11 +856,12 @@
 		"type": "复盘",
 		"start": "18:00",
 		"interval": 60,
-		"repeat": 5,
+		"repeat": 0,
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">准备交易计划</span></strong></p><p><span style=\"font-size: 18px;\"><strong>1. <span style=\"background-color: rgb(255, 255, 0);\">大局观</span>：当前市场状态是什么？ 赚钱效应；亏钱效应；风险和机会是什么？&nbsp;</strong></span></p><p><strong><span style=\"font-size: 18px;\">2. <span style=\"background-color: rgb(255, 255, 0);\">热点</span>：风口选股：&nbsp;</span></strong></p><p><strong><span style=\"font-size: 18px;\">3. <span style=\"background-color: rgb(255, 255, 0);\">龙头</span>：当下市场的核心股是什么？有没有介入机会？主升浪启动？低吸弱转强？分歧转一致？</span></strong></p><p><span style=\"font-size: 18px;\"><strong>4. <span style=\"background-color: rgb(255, 255, 0);\">做好预期外的应对</span>：假如热钱出击，资金的方向会是哪里？你做好准备了吗？</strong></span></p><p><br></p><p><strong><span style=\"font-size: 18px;\">1. 遍历交易系统；寻找交易标的；</span></strong></p><p><span style=\"font-size: 18px;\"><strong>2. 做烂板上冲、连续上冲假设推演；热点龙头走势的低吸追涨预案。</strong></span></p><p><span style=\"font-size: 18px;\"><strong>3. 弱转强；分歧转一致；</strong></span></p><p><strong><span style=\"font-size: 18px;\">4. 我从来都对预期外的反转措手不及。做市场转强，热钱出击的推演；不要因为市场悲观向下就无准备；</span></strong></p>",
 		"timestamp": 1577664169847,
 		"singleWindow": "",
-		"duration": 140
+		"duration": 140,
+		"disable": true
 	},
 	{
 		"name": "日程",

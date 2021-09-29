@@ -50,35 +50,32 @@ html, body {
   }
 
   li{
+    padding: 5px 1px;
     border-bottom: solid 1px #7a7a7a;
     color: red;
     &.rout{
       color:greenyellow;
     }
+
+    div {
+      margin: 0;
+      padding: 0 0;
+    }
+
+
+    button {
+      display: inline-block;
+      //flex: 1;
+    }
+
   }
 
-  li div {
-    margin: 0;
-    padding: 0 0;
-  }
-
-  button {
-    display: inline-block;
-    //flex: 1;
-  }
 
 }
 
-#rts_list li {
-  padding: 5px 5px;
-}
-
-#rts_list li span {
-  border-right: solid 0px blue;
-}
 
 #rts_list span.name, #rts_list span.b1 {
-  width: 7em;
+  width: 10em;
   color: inherit;
   flex: 1;
   white-space: nowrap;
@@ -90,9 +87,9 @@ html, body {
 }
 
 #rts_list span.b1 {
-  width: 7em;
+  width: 9em;
   & > b {
-    width: 4em;
+    width: 5em;
     font-weight: normal;
   }
 }
@@ -138,13 +135,13 @@ section {
 @media screen and (max-width: 900px) {
   body {
     border:solid 1px blue;
-    font-size:20px!important;
+    font-size:24px!important;
   }
 }
 
 @media screen and (max-width: 1000px) {
   body {
     border:solid 1px red;
-    font-size:28px!important;
+    font-size:24px!important;
   }
 }

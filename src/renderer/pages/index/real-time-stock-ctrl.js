@@ -70,7 +70,7 @@ function _f (stock) {
     let minute = now.getMinutes();
     let second = now.getSeconds();
     // 竞价阶段或尾盘阶段
-    if ((hour === 9 && minute < 30) || (hour === 14 && minute > 54)) {
+    if ((hour === 9 && minute < 30) || (hour === 14 && minute > 55)) {
         return stock;
     }
 

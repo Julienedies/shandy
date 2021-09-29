@@ -9,18 +9,18 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-<div class="column">
+<div class="column" style="padding: 0.5rem 0.2rem;">
     <section id="rts" ic-ctrl="rts_ctrl">
         <ul id="rts_list" ic-tpl="list">
             <li ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
                 <div class="flex flex-mc">
                     <span class="name">
                         <b>{{v.name}}</b>
-                        &nbsp;&nbsp;&nbsp; {{v.increase}}%
+                        &nbsp;&nbsp;&nbsp; {{v.increase}}% &nbsp;&nbsp;
                     </span>
                    <!-- <span class="increase"></span>-->
-                    <span class="b1">
-                        {{ b1Amount( v.b1*100*v.price ) }}&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="b1" style="padding-left:1em;">
+                        <b>{{ b1Amount( v.b1*100*v.price ) }}</b>
                         <b>{{ (v.b1/1000).toFixed(1) }} <i>k</i></b>
                     </span>
                     <span ic-class="b1_reduce {{v.b1_reduce > 0 ? 'up':'down'}}">{{v.b1_reduce}} </span>
