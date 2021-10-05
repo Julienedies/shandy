@@ -22,6 +22,9 @@ function emit (msg) {
     socket.emit(channel, msg);
 }
 
+
+//$notify_news.text(window.screen.width + ' - ' + window.screen.height);
+
 // 计算买一金额
 window.b1Amount = function (n) {
     let y = 10000 * 10000;

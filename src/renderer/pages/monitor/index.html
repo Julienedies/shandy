@@ -11,29 +11,63 @@
 <body>
 <div class="column" style="padding: 0.5rem 0.2rem;">
     <section id="rts" ic-ctrl="rts_ctrl">
-        <ul id="rts_list" ic-tpl="list">
+        <table class="" id="rts_list" ic-tpl="list">
+            <tr ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
+                <td>
+                      <span class="name">
+                        {{v.name}}
+                    </span>
+                </td>
+                <td>
+                    <span class="increase">
+                        {{v.increase}}%
+                    </span>
+                </td>
+                <td>
+                    <span class="b1">
+                        <b>{{ b1Amount( v.b1*100*v.price ) }}</b>
+                    </span>
+                </td>
+                <td>
+                    <span class="b1">
+                        <b>{{ (v.b1/1000).toFixed(1) }} <i>k</i></b>
+                    </span>
+                </td>
+                <td  ic-class="b1_reduce {{v.b1_reduce > 0 ? 'up':'down'}}">
+                    <span>{{v.b1_reduce}}</span>
+                </td>
+                <td class="time">
+                     {{v.time}}
+                </td>
+                <td class="cancel">
+                    <a herf="#" code="{{v.code}}" ic-click="cancel" style="white-space: nowrap;">取消</a>
+                </td>
+            </tr>
+        </table>
+
+        <!--<ul id="rts_list" ic-tpl="list">
             <li ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
                 <div class="flex flex-mc">
                     <span class="name">
                         <b>{{v.name}}</b>
                         &nbsp;&nbsp;&nbsp; {{v.increase}}% &nbsp;&nbsp;
                     </span>
-                   <!-- <span class="increase"></span>-->
+                   &lt;!&ndash; <span class="increase"></span>&ndash;&gt;
                     <span class="b1" style="padding-left:1em;">
                         <b>{{ b1Amount( v.b1*100*v.price ) }}</b>
                         <b>{{ (v.b1/1000).toFixed(1) }} <i>k</i></b>
                     </span>
                     <span ic-class="b1_reduce {{v.b1_reduce > 0 ? 'up':'down'}}">{{v.b1_reduce}} </span>
-                    <!--<span class="price">{{v.price}} </span>-->
+                    &lt;!&ndash;<span class="price">{{v.price}} </span>&ndash;&gt;
                     <span class="time"> {{v.time}}</span>
-                    <!--<button class="button" code="{{v.code}}" ic-click="view">查看</button>-->
-                    <a herf="#" code="{{v.code}}" ic-click="cancel">取消</a>
+                    &lt;!&ndash;<button class="button" code="{{v.code}}" ic-click="view">查看</button>&ndash;&gt;
+                    <a herf="#" code="{{v.code}}" ic-click="cancel" style="white-space: nowrap;">取消</a>
                 </div>
                 <div class="flex flex-mj">
 
                 </div>
             </li>
-        </ul>
+        </ul>-->
     </section>
 
     <section ic-ctrl="plans_ctrl" style="display: none;">
