@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "0871003",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：一定要认识到打板追涨的风险，一定要最强和最稀缺。</span></strong></p>",
+		"singleWindow": "",
+		"start": "14:00",
+		"repeat": 1,
+		"interval": 90,
+		"duration": 47,
+		"timestamp": 1633852427544
+	},
+	{
+		"name": "",
 		"id": "2448325",
 		"type": "错误",
 		"content": "<p><span style=\"font-size: 28px; color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">错误：为何我一直卖飞？为何我一直重复这个错误？</span></strong></span></p><p><br></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">为何每次临盘时，我都记不起这个不断重复的错误？</span></strong></span></p><p><br></p>",
@@ -47,7 +59,7 @@
 		"duration": 5,
 		"timestamp": 1628513394321,
 		"promptTimes": 1,
-		"prevPromptTime": 1633393684956
+		"prevPromptTime": 1633910716883
 	},
 	{
 		"name": "",
@@ -161,13 +173,15 @@
 		"name": "",
 		"id": "1487578",
 		"type": "问题",
-		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\"><strong>问题3：</strong><strong>我以什么做为判断锚点？为何</strong><strong><strong>每次市场的走势都和我的预判相反？</strong></strong></span></span></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">问题：我是否理解短线交易的行为逻辑？</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">问题：一支票是否上涨，我依据什么进行判断？</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">错误：不理解市场大部分超短交易者的行为逻辑。所以总是预判错误。</span></strong></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">错误：我对市场理解不够，我不理解为什么一些票能连续上涨。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">这背后是我不理解参与者的行为逻辑。因为我没有形成龙头连板正反馈。</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">这说明我的判断锚点是错误的。</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"color: rgb(0, 0, 0);\">华银电力、南网能源、中材节能全部高位放大量烂板，但全都反包。</span></strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">技术形态是结果不是原因。客观跟随。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">大的周期节奏；转折或爆发； 时机就是一切；时机就是一切；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(148, 0, 211);\"><strong>主线热点；热钱所在；市场是有主线的；</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(148, 0, 211);\"><strong>个股的人气地位；一定要做龙头；一定要做龙头；</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">个股K线形态，生命周期；修复；补跌；穿越；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>问题5：虽然知道要跟随，但是怎么跟随？</u></span><u><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);font-size: 28px; background-color: rgb(255, 255, 0);\"><u>我以什么做为判断锚点？</u></span></strong></u></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">不知道题材逻辑的情况下，单纯依据市场表现（技术强度），会导致后知后觉，反应太慢。</span></strong></p><p><strong><span style=\"font-size: 20px;\">市场是有主力资金的。</span></strong></p><p><span style=\"font-size: 20px;\"><strong>这个主力资金是多维度的。既包括大资金，也包括取得共识的市场合力资金。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>市场的资金或参与者的层次是不一样的。有的有资金优势，有的有消息优势。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>所以想做好超短。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>就要理解当下市场，主力资金的方向在哪里。题材逻辑又是什么？</strong></span></p><p><span style=\"font-size: 20px;\"><strong>以前的星期六、省广集团、郑州煤电、光大集团、鄂尔多斯、盛和资源。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>即便再出现，我能抓住吗？</strong></span></p><p><span style=\"font-size: 20px;\"><strong><br></strong></span></p><p><span style=\"font-size: 20px;\"><strong>我没有任何判断锚点。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>首先不说我的层次眼界不够，看不到长期的大趋势。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>即便我知道一个消息，也可能没办法判断消息会造成什么样的影响。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>即便我认为是利好，市场其他参与者也可能不认同。</strong></span></p><p><br></p><p><span style=\"font-size: 28px;\"><strong>在这种情形下，我要怎么做呢？ 我能做的只是跟随。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>尽快尽可能的理解市场资金的方向。这个方向包括题材、蓝筹、风格（市值大小、高位低位）。</strong></span></p><p><span style=\"font-size: 20px;\"><strong><br></strong></span></p><p><span style=\"font-size: 20px;\"><strong>市场参与者的行为逻辑。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>我依据什么做为判断锚点呢？</strong></span></p><p><strong><span style=\"font-size: 20px;\">趋势系统其实就是一个纯技术系统。依据技术形态做为判断锚点。它的要求比较低。收益更多取决于市场。偏被动。</span></strong></p><p><br></p>",
+		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\"><strong>问题3：</strong><strong>我以什么做为判断锚点？为何</strong><strong><strong>每次市场的走势都和我的预判相反？</strong></strong></span></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">问题：我是否理解短线交易的行为逻辑？</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">问题：一支票是否上涨，我依据什么进行判断？</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">错误：不理解市场大部分超短交易者的行为逻辑。所以总是预判错误。</span></strong></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">错误：我对市场理解不够，我不理解为什么一些票能连续上涨。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">这背后是我不理解参与者的行为逻辑。因为我没有形成龙头连板正反馈。</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">这说明我的判断锚点是错误的。</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"color: rgb(0, 0, 0);\">华银电力、南网能源、中材节能全部高位放大量烂板，但全都反包。</span></strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">技术形态是结果不是原因。客观跟随。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">大的周期节奏；转折或爆发； 时机就是一切；时机就是一切；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(148, 0, 211);\"><strong>主线热点；热钱所在；市场是有主线的；</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(148, 0, 211);\"><strong>个股的人气地位；一定要做龙头；一定要做龙头；</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">个股K线形态，生命周期；修复；补跌；穿越；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>问题5：虽然知道要跟随，但是怎么跟随？</u></span><u><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);font-size: 28px; background-color: rgb(255, 255, 0);\"><u>我以什么做为判断锚点？</u></span></strong></u></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">不知道题材逻辑的情况下，单纯依据市场表现（技术强度），会导致后知后觉，反应太慢。</span></strong></p><p><strong><span style=\"font-size: 20px;\">市场是有主力资金的。</span></strong></p><p><span style=\"font-size: 20px;\"><strong>这个主力资金是多维度的。既包括大资金，也包括取得共识的市场合力资金。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>市场的资金或参与者的层次是不一样的。有的有资金优势，有的有消息优势。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>所以想做好超短。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>就要理解当下市场，主力资金的方向在哪里。题材逻辑又是什么？</strong></span></p><p><span style=\"font-size: 20px;\"><strong>以前的星期六、省广集团、郑州煤电、光大集团、鄂尔多斯、盛和资源。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>即便再出现，我能抓住吗？</strong></span></p><p><span style=\"font-size: 20px;\"><strong><br></strong></span></p><p><span style=\"font-size: 20px;\"><strong>我没有任何判断锚点。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>首先不说我的层次眼界不够，看不到长期的大趋势。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>即便我知道一个消息，也可能没办法判断消息会造成什么样的影响。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>即便我认为是利好，市场其他参与者也可能不认同。</strong></span></p><p><br></p><p><span style=\"font-size: 28px;\"><strong>在这种情形下，我要怎么做呢？ 我能做的只是跟随。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>尽快尽可能的理解市场资金的方向。这个方向包括题材、蓝筹、风格（市值大小、高位低位）。</strong></span></p><p><span style=\"font-size: 20px;\"><strong><br></strong></span></p><p><span style=\"font-size: 20px;\"><strong>市场参与者的行为逻辑。</strong></span></p><p><span style=\"font-size: 20px;\"><strong>我依据什么做为判断锚点呢？</strong></span></p><p><strong><span style=\"font-size: 20px;\">趋势系统其实就是一个纯技术系统。依据技术形态做为判断锚点。它的要求比较低。收益更多取决于市场。偏被动。</span></strong></p><p><br></p>",
 		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 4,
-		"interval": 60,
+		"start": "14:00",
+		"repeat": 2,
+		"interval": 100,
 		"duration": 27,
-		"timestamp": 1597160146691
+		"timestamp": 1597160146691,
+		"promptTimes": 1,
+		"prevPromptTime": 1633932316323
 	},
 	{
 		"name": "",
@@ -199,11 +213,13 @@
 		"type": "错误",
 		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0);\"><strong>错误1：从没有准备好次日的交易计划，主观看空，总是错过最好的机会。</strong></span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">0: &nbsp;总是主观看空，预期之外，措手不及。（涨的高，担心下跌。下跌，更是看空。）</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">1：没有明确的交易计划，什么样的条件做什么操作。</span></strong></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">2：没有对热点龙头的推演和预案。</span></strong><strong><span style=\"background-color: rgb(255, 255, 0);\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">临盘被动应对。</span></strong></span></span></strong></span></span></strong></span></span></strong></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">3：无系统，无计划</span></strong><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>，临盘随意冲动交易。</strong></span></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>4：每次都踏错节奏，每次市场转强、每次逼空都没有标的</strong><strong>踏空。</strong></span></span></span></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我总是浑浑噩噩，所有的自选股有想过什么样的条件介入吗？</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">为何总是没有对自选股进行推演和计划，你选自选股的意义何在？</span></strong></span></strong></span></p><p><br></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我计划要买长源电力，计划要买中材节能；但为什么最后都没有买入。</span></strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">豫能控股什么样的条件买入，我也没有计划。重庆钢铁什么样的条件买入，我也没有计划。</span></strong></p>",
 		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 3,
-		"interval": 60,
-		"duration": 24,
-		"timestamp": 1618223159947
+		"start": "8:00",
+		"repeat": 4,
+		"interval": 90,
+		"duration": 14,
+		"timestamp": 1618223159947,
+		"promptTimes": 4,
+		"prevPromptTime": 1633934116013
 	},
 	{
 		"name": "",
@@ -215,7 +231,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1624075143455
+		"timestamp": 1624075143455,
+		"promptTimes": 1,
+		"prevPromptTime": 1633939516240
 	},
 	{
 		"name": "",
@@ -227,7 +245,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1611881119094
+		"timestamp": 1611881119094,
+		"promptTimes": 1,
+		"prevPromptTime": 1633941316479
 	},
 	{
 		"name": "",
@@ -251,7 +271,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1621737388870
+		"timestamp": 1621737388870,
+		"promptTimes": 1,
+		"prevPromptTime": 1633943115167
 	},
 	{
 		"name": "",
@@ -263,7 +285,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1609555783779
+		"timestamp": 1609555783779,
+		"promptTimes": 1,
+		"prevPromptTime": 1633944915760
 	},
 	{
 		"name": "",
@@ -275,7 +299,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 27,
-		"timestamp": 1619178994699
+		"timestamp": 1619178994699,
+		"promptTimes": 1,
+		"prevPromptTime": 1633946716021
 	},
 	{
 		"name": "",
@@ -284,12 +310,12 @@
 		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误2：主观；线性思维，先入为主。&nbsp;</span></strong></p><p><br></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">高开下杀放量大阴线，就认为完蛋了，却修复了。</span><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">陕西黑猫、中材节能、深圳能源、南网能源</span></span></strong></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">下跌也可以走V；上冲回落就认为完蛋了，却修复了。</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">大盘受外围影响大幅低开恐慌，却低开高走。</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">先入为主，认为行情结束了，不会起二波。</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">放量大阴线，就认为完蛋了。或下杀大阴线就认为完蛋了。</span></strong></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>分时下杀，就看空。没有立刻封板，就认为弱。</strong></span></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">涨的高，就认为是顶。上涨初期，不在意。</span></strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">对于某些大牛股，因为少见，所以会以平常经验看待。根本没有想到白酒会起二波。其实K线明明白白显示着二波。</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "15:00",
-		"repeat": 3,
-		"interval": 60,
+		"repeat": 2,
+		"interval": 90,
 		"duration": 17,
 		"timestamp": 1594995614163,
-		"promptTimes": 1,
-		"prevPromptTime": 1633418883545
+		"promptTimes": 2,
+		"prevPromptTime": 1633948515902
 	},
 	{
 		"name": "",
@@ -309,13 +335,11 @@
 		"type": "系统",
 		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">我的交易系统就是围绕市场主线热点龙头，寻找介入机会。</span></strong></p><p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">主流资金的流向变化。</span></strong><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">热点热钱、热点热钱；</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">主线没有明确的结束信号，就不要主观臆想结束了。</span></strong></p><p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">买点：启动、弱转强、恐惧转贪婪、分歧转一致、超预期、</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">系统变量：市场氛围、节奏周期、主线热点、人气地位、风格偏好；</span></strong></p><p><br></p>",
 		"singleWindow": "",
-		"start": "11:00",
-		"repeat": 3,
+		"start": "13:00",
+		"repeat": 1,
 		"interval": 90,
-		"duration": 9,
-		"timestamp": 1616303429099,
-		"promptTimes": 3,
-		"prevPromptTime": 1633417085016
+		"duration": 14,
+		"timestamp": 1616303429099
 	},
 	{
 		"name": "",
@@ -329,7 +353,7 @@
 		"duration": 9,
 		"timestamp": 1614682522617,
 		"promptTimes": 4,
-		"prevPromptTime": 1633413484825
+		"prevPromptTime": 1633937716867
 	},
 	{
 		"name": "",
@@ -343,7 +367,7 @@
 		"duration": 24,
 		"timestamp": 1609667569090,
 		"promptTimes": 2,
-		"prevPromptTime": 1633408085214
+		"prevPromptTime": 1633928716175
 	},
 	{
 		"name": "",
@@ -414,10 +438,12 @@
 		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\"><strong>错误2：对市场理解不够。对市场参与者的行为逻辑不理解。</strong></span></strong></span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">不理解市场大部分超短交易者的行为逻辑。所以总是预判错误。</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">问题：我是否理解短线交易的行为逻辑？</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">问题：一支票是否上涨，我依据什么进行判断？</span></strong></span></p><p><span style=\"font-size: 22px;\"><br></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">错误：我对市场理解不够，我不理解为什么一些票能连续上涨。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">这背后是我不理解参与者的行为逻辑。因为我没有形成龙头连板正反馈。</span></strong></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><u>对市场理解不够，市场变量太多，充满了背离和冲突。</u></span></strong></span></strong></p><p><span style=\"font-size: 20px;\"><strong><strong><span style=\"background-color: rgb(255, 255, 0);\">周五盯盘，为什么会错过江西铜业和盛和资源？</span></strong></strong></span></p><p><span style=\"font-size: 20px;\"><strong><strong><span style=\"background-color: rgb(255, 255, 0);\">因为指数和个股背离，所以我无所适从。</span></strong></strong></span></p><p><span style=\"font-size: 20px;\"><strong><strong><span style=\"background-color: rgb(255, 255, 0);\">市场很多时候处在分化博弈中，我不应该先入为主，主观臆想。</span></strong></strong></span></p><p><strong><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">长源电力的强势，很多热门股的大跌。并没有说明市场退潮了。</span></strong></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": 3,
+		"repeat": 2,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1617982755447
+		"timestamp": 1617982755447,
+		"promptTimes": 2,
+		"prevPromptTime": 1633953916441
 	},
 	{
 		"name": "",
@@ -426,11 +452,13 @@
 		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px;\"><span style=\"background-color: rgb(0, 0, 0);\">错误4：克服不了人性本能</span></span></strong></span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\">0. 操作总想着钱，而不是对错。</span></span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">1. 我恐慌的本能如此强烈。多少次大盘因外围低开就恐慌卖出。</span></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">2. 持仓影响我的判断。因为持仓，就因为下跌恐慌。或急于兑现利润导致卖飞。</span></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">3. 空仓总想着买。持仓总想着卖。</span></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">4.&nbsp;</span></strong><strong><span style=\"background-color: rgb(255, 255, 0);\">优柔寡断、三心二意、没有耐心；</span></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">5.&nbsp;</span><strong><span style=\"background-color: rgb(255, 255, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">左右打脸，犹豫不决。不能持续一致性。</span></strong></span></span></strong></strong></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">5.&nbsp;</span></strong><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">除了急于赚钱的心理，交易上瘾心理。管不住手外。</span></strong></span></strong></span></span><span style=\"font-size: 28px;\"><strong><strong><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">没有信心，恐惧亏损等都是需要克服的心理本能。</span></strong></span></span></strong></strong></strong></span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">交易心理分析</span></strong></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">就象 &ldquo;交易心理分析&rdquo; 这本书描述的那样，很多理念的东西，我知道了。</span></strong></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">但我并没有真正的深刻理解， 真正的知行合一。</span></strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">譬如： 概率优势；接受风险；不要想着钱，把事情做对（例如实际持仓时，脑子会变化）。</span></strong></p><p><span style=\"font-size: 18px;\"><br></span></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">上瘾的问题会导致我们处于&ldquo;没有选择&rdquo;的混乱状态。到了一定程度上瘾控</span></strong></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>制了我们的思想，我们的焦点和努力都是为了上瘾这个目标。其它时间可以满足</strong></span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>其它需求（比如要相信自己，不要用太多的资金去冒险）的可能被忽略被放弃了。</strong></span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我们没有任何能力，只好满足上瘾。对随机的回报上瘾是交易者特别麻烦的事，</strong></span></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">因为它阻碍了形成思想结构，实现持续一致性。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": 2,
+		"repeat": 1,
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1611410765613,
-		"disable": false
+		"disable": false,
+		"promptTimes": 2,
+		"prevPromptTime": 1633955716048
 	},
 	{
 		"name": "",
@@ -442,7 +470,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1616220645834
+		"timestamp": 1616220645834,
+		"promptTimes": 2,
+		"prevPromptTime": 1633962914880
 	},
 	{
 		"name": "",
@@ -455,8 +485,8 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1617161666529,
-		"promptTimes": 3,
-		"prevPromptTime": 1633420684059
+		"promptTimes": 4,
+		"prevPromptTime": 1633959315277
 	},
 	{
 		"name": "",
@@ -477,10 +507,12 @@
 		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">明确的条件，盈亏同源，持续一致性；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">被上一次交易影响，左右打脸。犹豫错过机会。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": 3,
+		"repeat": 1,
 		"interval": 120,
 		"duration": 7,
-		"timestamp": 1613315497825
+		"timestamp": 1613315497825,
+		"promptTimes": 1,
+		"prevPromptTime": 1633961114633
 	},
 	{
 		"name": "",
@@ -492,7 +524,9 @@
 		"repeat": 5,
 		"interval": 60,
 		"duration": 13,
-		"timestamp": 1609491034659
+		"timestamp": 1609491034659,
+		"promptTimes": 1,
+		"prevPromptTime": 1633964715152
 	},
 	{
 		"name": "",
@@ -574,12 +608,10 @@
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">现在是强势还是弱势？赚钱效应在哪里？处在什么周期？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">现在大周期是向上还是向下？为什么我总是后知后觉，行情走完了，我才意识到。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">如果市场转强或修复，做什么股？（我总是错过转折行情，我主观看空）</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">可能的指数走势？ 指数和情绪的关系？&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px;font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">市场转强怎么应对？</span></strong></span></strong></span></span></span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">当前主线是什么？ 主线没有出现结束信号，就围绕主线操作。</span></strong></span></strong></span></span></span></strong></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 255);\"><strong>哪个板块最强？</strong></span><strong><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">日内热点是什么？</span></strong></span></strong></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">板块继续加强怎么应对？</span></strong></span></strong></span></span></p><p><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><span style=\"color: rgb(255, 255, 255);\"><strong>龙头股是什么？龙头买不到的话，龙二是什么？</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">龙头次日可能的走势是什么？如何应对？有没有介入机会？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">分歧预案：分歧低吸龙头；一字龙头平开；</span></strong></p><p><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong><span style=\"color: rgb(255, 255, 255);\">哪只票超预期，在我预期之外？</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">哪些票可能弱转强？ 分歧转一致？ 修复？</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 9,
-		"interval": 60,
+		"repeat": 3,
+		"interval": 140,
 		"duration": 47,
-		"timestamp": 1619249637958,
-		"promptTimes": 2,
-		"prevPromptTime": 1633415283745
+		"timestamp": 1619249637958
 	},
 	{
 		"name": "",
@@ -751,7 +783,8 @@
 		"repeat": 1,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1613532753439
+		"timestamp": 1613532753439,
+		"disable": false
 	},
 	{
 		"name": "问题",
@@ -976,7 +1009,8 @@
 		"repeat": 1,
 		"interval": 60,
 		"duration": 4,
-		"timestamp": 1614093736830
+		"timestamp": 1614093736830,
+		"disable": true
 	},
 	{
 		"name": "日程",
@@ -1014,7 +1048,8 @@
 		"timestamp": 1577539413052,
 		"type": "流程",
 		"duration": 4,
-		"singleWindow": ""
+		"singleWindow": "",
+		"disable": true
 	},
 	{
 		"name": "日程",
@@ -1026,7 +1061,8 @@
 		"content": "<p><span style=\"font-size: 22px;\">更新csd。</span></p><p><span style=\"font-size: 22px;\">同步csd。</span></p>",
 		"timestamp": 1577862911294,
 		"duration": 4,
-		"singleWindow": ""
+		"singleWindow": "",
+		"disable": true
 	},
 	{
 		"name": "警告",

@@ -1,5 +1,5 @@
 html, body {
-  font: 16px/1.6;
+  font: 18px/1.6;
 }
 
 h1 {
@@ -22,6 +22,28 @@ section {
 
   > div {
     padding: 0 0 0 1em;
+  }
+}
+
+
+div.box {
+  font-weight: bold;
+  h2, h3 {
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 24px !important;
+    color: #036ddd;
+    b{
+      display: inline-block;
+      padding-right:1em;
+      font-size:1.5em;
+      font-style: italic;
+    }
+  }
+
+  >div {
+    padding: 5px 0;
+    border-top: solid 1px #e6e6e6;
   }
 }
 
@@ -50,7 +72,7 @@ table {
   //color: #242424;
   margin-bottom: 60px !important;
 
-  th{
+  th {
     font-size: 18px !important;
     color: #036ddd;
   }
@@ -59,7 +81,8 @@ table {
     th, td {
       vertical-align: middle;
     }
-    th{
+
+    th {
       background: yellow;
     }
 

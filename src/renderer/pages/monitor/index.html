@@ -25,12 +25,12 @@
                 </td>
                 <td>
                     <span class="b1">
-                        <b>{{ b1Amount( v.b1*100*v.price ) }}</b>
+                        {{ b1Amount( v.b1*100*v.price ) }}
                     </span>
                 </td>
                 <td>
                     <span class="b1">
-                        <b>{{ (v.b1/1000).toFixed(1) }} <i>k</i></b>
+                        {{ (v.b1/1000).toFixed(1) }} <i>k</i>
                     </span>
                 </td>
                 <td  ic-class="b1_reduce {{v.b1_reduce > 0 ? 'up':'down'}}">
