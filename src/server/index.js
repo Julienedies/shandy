@@ -3,7 +3,9 @@
  */
 
 import path from 'path'
+import fs from 'fs'
 import http from 'http'
+import https from 'https'
 import express from 'express'
 import socket from 'socket.io'
 import _events from 'events'
@@ -17,6 +19,12 @@ import favicon from '../renderer/img/favicon.ico'
 
 const app = express();
 const httpServer = http.Server(app);
+
+const httpsServer = https.createServer({
+    key: fs.readFileSync(`${config.ROOT_DIR}/cert/cert.key`),
+    cert: fs.readFileSync(`${config.ROOT_DIR}/cert/cert.crt`)
+}, app);
+
 const io = socket(httpServer, {
     pingInterval: 1000 * 1000,
     pingTimeout: 1500 * 1000
@@ -98,7 +106,10 @@ function F () {
     this.start = function (port) {
         port = port || 3300;
         httpServer.listen(port, function () {
-            console.log(`============== server start on port:${ port } ====================`);
+            console.log(`============== http server start on port:${ port } ====================`);
+        });
+        httpsServer.listen(3301, function () {
+            console.log(`============== ssl server start on port:${ 3301 } ====================`);
         });
     }
     this.close = function () {

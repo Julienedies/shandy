@@ -1,5 +1,11 @@
 [
 	{
+		"text": "Update 2021: A few months after I posted this question, the flag I referenced in my original answer was removed, and instead of disabling a security feature I was forced to solve the problem more satisfactorily.\n\n2021年更新: 在我发布这个问题的几个月后，我在原始答案中提到的国旗被移除了，我被迫更加令人满意地解决了这个问题，而不是禁用一个安全特性。\n\nPrivate Network Access (formerly CORS-RFC1918) is a specification that forbids requests from less private network resources to more private network resources. Like HTTP to HTTPS, or a remote host to localhost.\n\n专用网络接入(原 CORS-RFC1918)是一个规范，禁止从较少的专用网络资源请求更多的专用网络资源。比如 HTTP 到 HTTPS，或者远程主机到本地主机。\n\nThe ultimate solution was to add a self-signed certificate, and Access-Control-* headers, which enabled requests from my remote dev server to my localhost webpack-dev-server for assets.\n\n最终的解决方案是添加一个自签名的证书和 Access-Control-* 头，它允许从远程开发服务器向本地主机 webpack-dev-server 请求资产。\n\nGenerate certificates\n生成证书\ncd path/to/.ssl\nnpx mkcert create-cert\nConfigure webpack-dev-server to use certificates\n配置 webpack-dev-server 以使用证书\nmodule.exports = {\n  //...\n  devServer: {\n    https: {\n      key: readFileSync('./.ssl/cert.key'),\n      cert: readFileSync('./.ssl/cert.crt'),\n      cacert: readFileSync('./.ssl/ca.crt'),\n    },\n    headers: {\n      'Access-Control-Allow-Private-Network': true,\n      'Access-Control-Allow-Origin': '*',\n    }\n  }\n}",
+		"type": "",
+		"id": "2323825",
+		"timestamp": 1634382798386
+	},
+	{
 		"text": "2020年7月23日22时45分许，方某按照上述约定，趁妻子小丽（化名）不备之机，将由龚某提供的含有三唑仑成分(有镇静、催眠作用，属国家管制的一类精神类药品)的固体药物放入小丽所喝中药中，在小丽喝下中药昏睡后，又使用七氟烷（吸入式麻醉剂）让小丽吸入后陷入昏迷状态。",
 		"type": "",
 		"id": "3325112",
