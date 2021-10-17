@@ -1,5 +1,6 @@
 html, body {
   font: 20px/1.5;
+  line-height: 1.6;
 }
 
 h1 {
@@ -53,11 +54,18 @@ div.box {
   > div {
     //border-top: solid 1px #e6e6e6;
     color: #000;
+    font-weight: 400;
     //background: blue;
+    .tag{
+      font-size: 1em;
+      font-weight: 700;
+    }
   }
 
   > p {
-    color: #000;
+    color: #333;
+    font-weight: 400;
+    font-size: 0.8em;
     border-top: solid 1px #e6e6e6;
   }
 }

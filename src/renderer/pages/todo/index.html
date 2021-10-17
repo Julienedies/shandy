@@ -126,7 +126,7 @@
                             <div class="field">
                                 <div class="control">
                                     <input class="input" type="text" placeholder="任务提示开始时间=> 9:00"
-                                           value="{{ model.start || '16:00' }}" ic-form-field="start">
+                                           value="{{ model.start || '8:00' }}" ic-form-field="start">
                                 </div>
                                 <p class="help">可选，比如下午3点之后才能做的任务，就设置为15:00。</p>
                             </div>
@@ -135,7 +135,7 @@
                             <div class="field">
                                 <div class="control">
                                     <input class="input" type="number" placeholder="重复次数"
-                                           ic-value="{{ model.repeat || 3 }}" ic-form-field="repeat">
+                                           ic-value="{{ model.repeat || 2 }}" ic-form-field="repeat">
                                 </div>
                                 <p class="help">每天重复提醒，还是一次性提醒。</p>
                             </div>
@@ -156,7 +156,7 @@
                             <div class="field">
                                 <div class="control">
                                     <input class="input" type="number" placeholder="持续时长"
-                                           ic-value="{{ model.duration || 47 }}" ic-form-field="duration">
+                                           ic-value="{{ model.duration || 7 }}" ic-form-field="duration">
                                 </div>
                                 <p class="help">每次提醒持续时间，单位秒。</p>
                             </div>

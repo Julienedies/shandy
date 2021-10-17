@@ -1,5 +1,17 @@
 [
 	{
+		"name": "",
+		"id": "3108565",
+		"type": "理念",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;把事情做对，不要想着赚钱。</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 3,
+		"interval": 90,
+		"duration": 7,
+		"timestamp": 1634458275583
+	},
+	{
 		"name": "警告",
 		"id": "2702811",
 		"type": "警告",
