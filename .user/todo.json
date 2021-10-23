@@ -9,7 +9,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 7,
-		"timestamp": 1634458275583
+		"timestamp": 1634458275583,
+		"promptTimes": 2,
+		"prevPromptTime": 1634911521822
 	},
 	{
 		"name": "警告",
@@ -21,7 +23,9 @@
 		"content": "<p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">一切有为法；一切有因果；</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>时不我待，我已经37岁了；</strong></span></span></span></strong></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>不要忘记那些恐惧和痛苦；人会变得麻木；</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我并没有本质上的改变，我还是在重复错误；</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">那些交易原则我知道，但我没有做到知行合一；</span></strong></span></p>",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 7
+		"duration": 7,
+		"promptTimes": 2,
+		"prevPromptTime": 1634913323387
 	},
 	{
 		"name": "",
@@ -34,8 +38,8 @@
 		"interval": 90,
 		"duration": 9,
 		"timestamp": 1614682522617,
-		"promptTimes": 3,
-		"prevPromptTime": 1634283246549
+		"promptTimes": 1,
+		"prevPromptTime": 1634865849399
 	},
 	{
 		"name": "",
@@ -61,7 +65,7 @@
 		"duration": 9,
 		"timestamp": 1634257137946,
 		"promptTimes": 1,
-		"prevPromptTime": 1634258047309
+		"prevPromptTime": 1634867649890
 	},
 	{
 		"name": "",
@@ -75,7 +79,7 @@
 		"duration": 4,
 		"timestamp": 1633852427544,
 		"promptTimes": 1,
-		"prevPromptTime": 1634259846788
+		"prevPromptTime": 1634869449557
 	},
 	{
 		"name": "",
@@ -89,7 +93,7 @@
 		"duration": 4,
 		"timestamp": 1629155362746,
 		"promptTimes": 1,
-		"prevPromptTime": 1634261646119
+		"prevPromptTime": 1634871249428
 	},
 	{
 		"name": "",
@@ -100,7 +104,7 @@
 		"start": "8:00",
 		"repeat": 1,
 		"interval": 60,
-		"duration": 7,
+		"duration": 5,
 		"timestamp": 1631162251134
 	},
 	{
@@ -115,7 +119,7 @@
 		"duration": 5,
 		"timestamp": 1630328427565,
 		"promptTimes": 1,
-		"prevPromptTime": 1634263446216
+		"prevPromptTime": 1634873049194
 	},
 	{
 		"name": "",
@@ -129,7 +133,7 @@
 		"duration": 5,
 		"timestamp": 1628513394321,
 		"promptTimes": 1,
-		"prevPromptTime": 1634265246147
+		"prevPromptTime": 1634874849474
 	},
 	{
 		"name": "",
@@ -201,7 +205,9 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334
+		"timestamp": 1595590485334,
+		"promptTimes": 1,
+		"prevPromptTime": 1634887448812
 	},
 	{
 		"name": "",
@@ -212,8 +218,10 @@
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 47,
-		"timestamp": 1621656781526
+		"duration": 17,
+		"timestamp": 1621656781526,
+		"promptTimes": 1,
+		"prevPromptTime": 1634891048915
 	},
 	{
 		"name": "",
@@ -239,21 +247,21 @@
 		"duration": 27,
 		"timestamp": 1597160146691,
 		"promptTimes": 2,
-		"prevPromptTime": 1634285046045
+		"prevPromptTime": 1634892849853
 	},
 	{
 		"name": "",
 		"id": "1108614",
 		"type": "复盘",
-		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">板块爆发加强</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;background-color: rgb(148, 0, 211);\"><strong>低位补涨首板</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;background-color: rgb(148, 0, 211);\"><strong>超预期加速</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;background-color: rgb(148, 0, 211);\"><strong>分歧转一致</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;background-color: rgb(148, 0, 211);\"><strong>弱转强</strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">修复</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">上冲异动加强</span></strong></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">交易计划: 当前市场热钱方向：趋势股：钢铁；题材股：碳中和；次新；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong>主线标的是什么？ 当前短线资金的焦点是什么？赚钱效应在哪里？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong>可能的走势，如何应对？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong>上涨封板：</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong>下跌封板：</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong>爆量分歧:</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">缩量观望：</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">板块爆发加强</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;background-color: rgb(148, 0, 211);\"><strong>低位补涨首板</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;background-color: rgb(148, 0, 211);\"><strong>超预期加速</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;background-color: rgb(148, 0, 211);\"><strong>分歧转一致</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 22px;background-color: rgb(148, 0, 211);\"><strong>弱转强</strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">修复</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">上冲异动加强</span></strong></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">交易计划: 当前市场热钱方向：趋势股：钢铁；题材股：碳中和；次新；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong>主线标的是什么？ 当前短线资金的焦点是什么？赚钱效应在哪里？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong>可能的走势，如何应对？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong>上涨封板：</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong>下跌封板：</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 255);\"><strong>爆量分歧:</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">缩量观望：</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 47,
+		"duration": 14,
 		"timestamp": 1618224000885,
 		"promptTimes": 1,
-		"prevPromptTime": 1634286845885
+		"prevPromptTime": 1634894649855
 	},
 	{
 		"name": "",
@@ -279,7 +287,7 @@
 		"duration": 9,
 		"timestamp": 1618223159947,
 		"promptTimes": 3,
-		"prevPromptTime": 1634279645454
+		"prevPromptTime": 1634889248620
 	},
 	{
 		"name": "",
@@ -293,7 +301,7 @@
 		"duration": 7,
 		"timestamp": 1624075143455,
 		"promptTimes": 2,
-		"prevPromptTime": 1634301983427
+		"prevPromptTime": 1634901848907
 	},
 	{
 		"name": "",
@@ -302,12 +310,12 @@
 		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\">错误1：<span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">临盘应对差，</span></strong></span>思维没方向；操作无系统；不知以何做为判断锚点。</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">应对什么？ 应对市场博弈的结果；强、弱；转强；转弱；分歧；切换、卡位；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我因为爆量烂板，就判断长源电力弱了。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>但龙头强势反包了，超预期加速。这些都是市场给我的信号。</strong></span><strong><span style=\"background-color: rgb(255, 255, 0);\">我跟随就可以了。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">对我来说，热点的变化，是发酵变强，是超预期，是分歧转一致，是弱转强。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">这是我应该关注的，我应该客观跟随，动态应对的。</span></strong></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我总是浑浑噩噩，所有的自选股有想过什么样的条件介入吗？</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">为何总是没有对自选股进行推演和计划，你选自选股的意义何在？</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">竞价出来后，我脑子里想的是什么？自选股高开表现了什么？</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">因为我依靠预测交易，当市场表现和我预期不一样，我就措手不及，犹豫不定。</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我始终是靠预测在交易，而不是依据客观标准做应对。</span></strong></span></p><p><br></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>1. 预判错误，或者说对市场理解错误。我总是倾向看空。着自然会影响我的操作。</strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">2. 临盘犹豫，一是因为市场和预期相反，措手不及。二是没有明确的判断锚点，不知道如何操作。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我要做的就是围绕主线热点龙头，寻找介入时机。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是后知后觉。 抱团蓝筹 VS 超跌题材 的风格切换行情又错过了。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">热点方向不但有题材、还有风格。比如蓝筹、大盘、小盘、超跌、趋势、情绪；</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>一拖股份类同宜宾股份； 风格切换；超跌反弹。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>南极光类同日月明。 注册制超跌反弹。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>仁东控股的超跌垃圾股行情。 &nbsp; &nbsp;类同天山生物；</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">郑州煤电做的大概是老龙头反抽。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">因为没有判断锚点，所以临盘犹豫，被市场牵着鼻子走，左右打脸。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">打板是一个最简单的超短交易系统；没有了打板，我不知道如何做超短交易。</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我以什么做为判断锚点？我看到一个k线，我有想到后续会如何发展吗？</strong></span></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>我有想到在什么走势下去参与\b吗？ 没有，统统没有，那我的复盘有什么意义？</strong></span></p><p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 24px; color: rgb(255, 255, 255);\">我跟个傻逼似的复盘或盯盘，脑子里浑浑噩噩，没有明确的思维方向。</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>要捕捉的目标行情是什么？资金攻击方向是哪里？</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>机会在哪里？</strong></span></span></span></p><p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 24px; color: rgb(255, 255, 255);\">你脑子里在想什么？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\">纠结犹豫不明确；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">做趋势，做打板；</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>没涨起来，觉得没有确定性；</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>涨起来觉得高，没空间；</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">重仓犹豫，小仓位不屑。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 47,
+		"repeat": 2,
+		"interval": 90,
+		"duration": 17,
 		"timestamp": 1611881119094,
-		"promptTimes": 1,
-		"prevPromptTime": 1634300183412
+		"promptTimes": 2,
+		"prevPromptTime": 1634903648204
 	},
 	{
 		"name": "",
@@ -325,15 +333,15 @@
 		"name": "",
 		"id": "0123054",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：后知后觉，行情走出来才意识到。没有明确的目标行情意识。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">大盘从4月份开始上涨。今天指数已经临近新高了。我才意识到。</span></strong></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>机构主导的票</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>锦鸿股份持续了这么久，我都没有深刻思考。</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我对市场理解不够。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">继续错过煤炭、锂电池、光伏行情。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">小康股份涨了3个月，</span></strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>朗姿股份涨了大半年。类似西藏药业的疫苗行情。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>旗天科技、御银股份的主升波段。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>北汽蓝谷、长安汽车的主升波段。</strong></span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>奥园美谷的主升浪、朗姿股份的主升浪、</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>华银电力的V形二浪、哈三联的V形二浪；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>华亚智能对顺控发展的复制。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">顺控发展、美邦服饰的主升浪。烂板弱转强。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">小康股份的主升浪，川能动力的主升浪；</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锦鸿集团的二波。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：后知后觉，行情走出来才意识到。没有明确的目标行情意识。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">大盘从4月份开始上涨。今天指数已经临近新高了。我才意识到。</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>机构主导的票</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>锦鸿股份持续了这么久，我都没有深刻思考。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我对市场理解不够。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">继续错过煤炭、锂电池、光伏行情。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">小康股份涨了3个月，</span></strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>朗姿股份涨了大半年。类似西藏药业的疫苗行情。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>旗天科技、御银股份的主升波段。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>北汽蓝谷、长安汽车的主升波段。</strong></span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>奥园美谷的主升浪、朗姿股份的主升浪、</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>华银电力的V形二浪、哈三联的V形二浪；</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>华亚智能对顺控发展的复制。</strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">顺控发展、美邦服饰的主升浪。烂板弱转强。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">小康股份的主升浪，川能动力的主升浪；</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锦鸿集团的二波。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 24,
+		"duration": 14,
 		"timestamp": 1621737388870,
 		"promptTimes": 1,
-		"prevPromptTime": 1634303782428
+		"prevPromptTime": 1634900049644
 	},
 	{
 		"name": "",
@@ -345,9 +353,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1609555783779,
-		"promptTimes": 2,
-		"prevPromptTime": 1634309183315
+		"timestamp": 1609555783779
 	},
 	{
 		"name": "",
@@ -359,9 +365,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 27,
-		"timestamp": 1619178994699,
-		"promptTimes": 2,
-		"prevPromptTime": 1634310982536
+		"timestamp": 1619178994699
 	},
 	{
 		"name": "",
@@ -373,9 +377,7 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1594995614163,
-		"promptTimes": 1,
-		"prevPromptTime": 1634281446280
+		"timestamp": 1594995614163
 	},
 	{
 		"name": "",
@@ -425,7 +427,7 @@
 		"duration": 24,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1634270646614
+		"prevPromptTime": 1634878449515
 	},
 	{
 		"name": "",
@@ -525,8 +527,8 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1617161666529,
-		"promptTimes": 1,
-		"prevPromptTime": 1634276045763
+		"promptTimes": 2,
+		"prevPromptTime": 1634885650098
 	},
 	{
 		"name": "",
@@ -535,9 +537,9 @@
 		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">简单纯粹取舍；专注重复一致。</span></strong></p><p><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><br></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">什么都想抓住，什么都没有抓住。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">做精不做多，保持一个良好的攻击状态更好。</span></strong></span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": 1,
+		"repeat": 3,
 		"interval": 60,
-		"duration": 47,
+		"duration": 7,
 		"timestamp": 1610846581339
 	},
 	{
