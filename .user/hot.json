@@ -1,27 +1,57 @@
 [
 	{
-		"id": "机床",
+		"id": "天然气",
 		"selected": true,
-		"timestamp": 1629677937818
+		"timestamp": 1632837330671
+	},
+	{
+		"id": "电网",
+		"selected": false,
+		"timestamp": 1631836695050
+	},
+	{
+		"id": "甲醇",
+		"selected": false,
+		"timestamp": 1631836673630
+	},
+	{
+		"id": "北交所",
+		"selected": false,
+		"timestamp": 1630937649420
+	},
+	{
+		"id": "新三板",
+		"selected": false,
+		"timestamp": 1630855270633
+	},
+	{
+		"id": "光伏建筑",
+		"selected": false,
+		"timestamp": 1630806122275
+	},
+	{
+		"id": "氟化工",
+		"selected": false,
+		"timestamp": 1630242691587
 	},
 	{
 		"id": "HIT电池",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1629677335512
 	},
 	{
 		"id": "专精特新",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1629677326732
 	},
 	{
 		"id": "有机硅",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1629672328254
 	},
 	{
 		"id": "HJT",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1629672297430
 	},
 	{
@@ -35,34 +65,14 @@
 		"timestamp": 1628305464313
 	},
 	{
-		"id": "智能制造",
-		"selected": true,
-		"timestamp": 1627992087989
-	},
-	{
-		"id": "工业互联网",
-		"selected": false,
-		"timestamp": 1627992066163
-	},
-	{
 		"id": "储能",
 		"selected": false,
 		"timestamp": 1627573287670
 	},
 	{
-		"id": "MiniLED",
-		"selected": false,
-		"timestamp": 1626872980845
-	},
-	{
 		"id": "磷化工",
-		"selected": true,
-		"timestamp": 1626357702889
-	},
-	{
-		"id": "网络安全",
 		"selected": false,
-		"timestamp": 1626108246541
+		"timestamp": 1626357702889
 	},
 	{
 		"id": "稀土永磁",
@@ -71,7 +81,7 @@
 	},
 	{
 		"id": "军工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1624289250789
 	},
 	{
@@ -95,59 +105,14 @@
 		"timestamp": 1622125248663
 	},
 	{
-		"id": "跨境电商",
-		"selected": false,
-		"timestamp": 1621958710687
-	},
-	{
-		"id": "鸿蒙",
-		"selected": false,
-		"timestamp": 1621956386089
-	},
-	{
-		"id": "软件",
-		"selected": false,
-		"timestamp": 1621874928750
-	},
-	{
 		"id": "盐湖提锂",
 		"selected": false,
 		"timestamp": 1621815384601
 	},
 	{
-		"id": "医疗",
-		"selected": false,
-		"timestamp": 1621384076760
-	},
-	{
-		"id": "摘帽",
-		"selected": false,
-		"timestamp": 1620834118567
-	},
-	{
-		"id": "华为概念",
-		"selected": false,
-		"timestamp": 1620833704909
-	},
-	{
-		"id": "华为",
-		"selected": false,
-		"timestamp": 1620833661060
-	},
-	{
-		"id": "铁矿",
-		"selected": false,
-		"timestamp": 1620833618112
-	},
-	{
 		"id": "有色",
 		"selected": false,
 		"timestamp": 1620572417725
-	},
-	{
-		"id": "疫苗",
-		"selected": false,
-		"timestamp": 1620260032705
 	},
 	{
 		"id": "生物疫苗",
@@ -170,29 +135,9 @@
 		"timestamp": 1619362317542
 	},
 	{
-		"id": "华为汽车",
-		"selected": false,
-		"timestamp": 1618723056795
-	},
-	{
-		"id": "无人驾驶",
-		"selected": false,
-		"timestamp": 1618722966056
-	},
-	{
 		"id": "半导体",
 		"selected": false,
 		"timestamp": 1617619979123
-	},
-	{
-		"id": "服装",
-		"selected": false,
-		"timestamp": 1616945434364
-	},
-	{
-		"id": "数字货币",
-		"selected": false,
-		"timestamp": 1616687053736
 	},
 	{
 		"id": "次新",
@@ -201,7 +146,7 @@
 	},
 	{
 		"id": "电力",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1615734930866
 	},
 	{
