@@ -17,13 +17,9 @@ h1, h2, h3, dt {
 
 
 section {
-  margin: 1em 0;
-  padding: 0 0.5em 0.5em 0.5em;
+  margin: 1em 0 2em;
+  padding: 1em 0;
   border: solid 1px blue;
-
-  > div {
-    padding: 0 0 0 1em;
-  }
 }
 
 
@@ -38,6 +34,8 @@ div.box {
 
   h2, h3 {
     padding: 0.2rem 1rem;
+    white-space: nowrap;
+    overflow: hidden;
     font-weight: bold;
     font-size: 24px !important;
     color: #000;
@@ -46,7 +44,7 @@ div.box {
     b {
       display: inline-block;
       padding-right: 1em;
-      font-size: 1.5em;
+      font-size: 1.2em;
       font-style: italic;
     }
   }

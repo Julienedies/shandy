@@ -621,13 +621,24 @@
 	},
 	{
 		"name": "",
-		"id": "3270847",
-		"tag": "4109794",
-		"trigger": "5",
-		"content": "当前的市场状态是强还是弱？\n当前的主线热点是什么？\n有没有介入机会？",
+		"id": "4563146",
+		"tag": "6166677",
+		"trigger": "4",
+		"content": "我就像一个赌徒；管不住手；\n无系统无计划临盘随意冲动交易是我最大的亏损原因。",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1595406609063,
+		"disable": true
+	},
+	{
+		"name": "",
+		"id": "1959592",
+		"tag": "6166677",
+		"trigger": "1",
+		"content": "不要他妈的临盘随意交易；\n你他妈的很快会忘记这种悔恨；然后不断的重复错误；",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1597850645602,
+		"timestamp": 1597114815929,
 		"disable": true
 	},
 	{
@@ -639,6 +650,17 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1597099997584,
+		"disable": true
+	},
+	{
+		"name": "",
+		"id": "3270847",
+		"tag": "4109794",
+		"trigger": "5",
+		"content": "当前的市场状态是强还是弱？\n当前的主线热点是什么？\n有没有介入机会？",
+		"repeat": 3,
+		"type": "interval",
+		"timestamp": 1597850645602,
 		"disable": true
 	},
 	{
@@ -715,28 +737,6 @@
 		"repeat": 3,
 		"type": "interval",
 		"timestamp": 1598151085568,
-		"disable": true
-	},
-	{
-		"name": "",
-		"id": "1959592",
-		"tag": "6166677",
-		"trigger": "1",
-		"content": "不要他妈的临盘随意交易；\n你他妈的很快会忘记这种悔恨；然后不断的重复错误；",
-		"repeat": 3,
-		"type": "interval",
-		"timestamp": 1597114815929,
-		"disable": true
-	},
-	{
-		"name": "",
-		"id": "4563146",
-		"tag": "6166677",
-		"trigger": "4",
-		"content": "我就像一个赌徒；管不住手；\n无系统无计划临盘随意冲动交易是我最大的亏损原因。",
-		"repeat": 2,
-		"type": "interval",
-		"timestamp": 1595406609063,
 		"disable": true
 	},
 	{

@@ -1,6 +1,30 @@
 [
 	{
 		"name": "",
+		"id": "0667699",
+		"type": "系统",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">围绕着板块操作。</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 7,
+		"timestamp": 1635088812447
+	},
+	{
+		"name": "",
+		"id": "7522031",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为何我总是没有做好预期外的应对？</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>我要做的就是做好预期外的应对。</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我要做的就是做好转强的应对。</span></strong></p>",
+		"singleWindow": "",
+		"start": "9:00",
+		"repeat": 3,
+		"interval": 90,
+		"duration": 5,
+		"timestamp": 1630328427565
+	},
+	{
+		"name": "",
 		"id": "3108565",
 		"type": "理念",
 		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;把事情做对，不要想着赚钱。</span></strong></p>",
@@ -10,22 +34,22 @@
 		"interval": 90,
 		"duration": 7,
 		"timestamp": 1634458275583,
-		"promptTimes": 2,
-		"prevPromptTime": 1634911521822
+		"promptTimes": 1,
+		"prevPromptTime": 1635121778108
 	},
 	{
 		"name": "警告",
 		"id": "2702811",
 		"type": "警告",
 		"start": "8:00",
-		"interval": 75,
-		"repeat": 9,
+		"interval": 120,
+		"repeat": 7,
 		"content": "<p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">一切有为法；一切有因果；</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>时不我待，我已经37岁了；</strong></span></span></span></strong></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>不要忘记那些恐惧和痛苦；人会变得麻木；</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我并没有本质上的改变，我还是在重复错误；</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">那些交易原则我知道，但我没有做到知行合一；</span></strong></span></p>",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
 		"duration": 7,
-		"promptTimes": 2,
-		"prevPromptTime": 1634913323387
+		"promptTimes": 1,
+		"prevPromptTime": 1635123577537
 	},
 	{
 		"name": "",
@@ -39,12 +63,12 @@
 		"duration": 9,
 		"timestamp": 1614682522617,
 		"promptTimes": 1,
-		"prevPromptTime": 1634865849399
+		"prevPromptTime": 1635125376625
 	},
 	{
 		"name": "",
 		"id": "0871003",
-		"type": "",
+		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：一定要认识到打板和追涨的风险，一定要最强和最稀缺。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
@@ -53,13 +77,13 @@
 		"duration": 4,
 		"timestamp": 1633852427544,
 		"promptTimes": 1,
-		"prevPromptTime": 1634869449557
+		"prevPromptTime": 1635127176863
 	},
 	{
 		"name": "",
 		"id": "7028271",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：记住：永远有两种可能性。</span></strong></p><p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\">而我总是先入为主，或者被上次经验影响，不能保持一致性，左右打脸。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能双头或反弹，也可能是N浪。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能利好兑现，也可能继续爆发。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：不要被以前的经验影响，总是有两种可能性。</span></strong></p><p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\">而我总是先入为主，或者被上次经验影响，不能保持一致性，左右打脸。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能双头或反弹，也可能是N浪。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能利好兑现，也可能继续爆发。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 4,
@@ -67,7 +91,7 @@
 		"duration": 4,
 		"timestamp": 1629155362746,
 		"promptTimes": 1,
-		"prevPromptTime": 1634871249428
+		"prevPromptTime": 1635128976666
 	},
 	{
 		"name": "",
@@ -83,31 +107,15 @@
 	},
 	{
 		"name": "",
-		"id": "7522031",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为何我总是没有做好预期外的应对？</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>我要做的就是做好预期外的应对。</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我要做的就是做好转强的应对。</span></strong></p>",
-		"singleWindow": "",
-		"start": "9:00",
-		"repeat": 3,
-		"interval": 90,
-		"duration": 5,
-		"timestamp": 1630328427565,
-		"promptTimes": 1,
-		"prevPromptTime": 1634873049194
-	},
-	{
-		"name": "",
 		"id": "8172404",
 		"type": "警告",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我有本质的改变吗？ 我是不是又沉浸到了日常交易中了？</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">临盘随意交易是我最大的亏损来源，但迄今我的交易主要还是临盘随意交易。盘前没有计划。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">管住手，等待最好的交易机会。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我有本质的改变吗？ 我是不是又沉浸到了日常交易中了？</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">临盘随意交易是我最大的亏损来源。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">但迄今我的交易主要还是临盘随意交易。盘前没有计划。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">管住手，等待最好的交易机会。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 3,
+		"repeat": 1,
 		"interval": 120,
-		"duration": 5,
-		"timestamp": 1628513394321,
-		"promptTimes": 1,
-		"prevPromptTime": 1634874849474
+		"duration": 7,
+		"timestamp": 1628513394321
 	},
 	{
 		"name": "",
@@ -149,13 +157,14 @@
 		"name": "",
 		"id": "2318044",
 		"type": "警告",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">虽然我意识到自己的错误，但我就是改不了。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">1. 没有大局观，后知后觉。总是行情走出来才意识到。盛和资源的超预期，神火股份的异动。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>2. 应对差，</strong></span><strong><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">市场变量太多，充满了背离和冲突。</span></strong></span></strong></strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>没有明确的判断锚点。<span style=\"background-color: rgb(255, 255, 0);\"><strong>不知道如何操作，总是临盘犹豫。</strong></span></strong></span></span></p><p><strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">3. 潜意识总是担心下跌。上涨不敢买，下跌不想买。</span></span><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>没涨没有确定性，涨起来嫌高。</strong></span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">虽然我意识到自己的错误，但我就是改不了。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">1. 没有大局观，后知后觉。总是行情走出来才意识到。盛和资源的超预期，神火股份的异动。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>2. 应对差，</strong></span><strong><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">市场变量太多，充满了背离和冲突。</span></strong></span></strong></strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>没有明确的判断锚点。<span style=\"background-color: rgb(255, 255, 0);\"><strong>不知道如何操作，总是临盘犹豫。</strong></span></strong></span></span></p><p><strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">3. 潜意识总是担心下跌。上涨不敢买，下跌不想买。</span></span><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>没涨没有确定性，涨起来嫌高。</strong></span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 1,
 		"interval": 60,
-		"duration": 47,
-		"timestamp": 1613797703223
+		"duration": 10,
+		"timestamp": 1613797703223,
+		"disable": false
 	},
 	{
 		"name": "",
@@ -179,9 +188,7 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334,
-		"promptTimes": 1,
-		"prevPromptTime": 1634887448812
+		"timestamp": 1595590485334
 	},
 	{
 		"name": "",
@@ -193,9 +200,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1621656781526,
-		"promptTimes": 1,
-		"prevPromptTime": 1634891048915
+		"timestamp": 1621656781526
 	},
 	{
 		"name": "",
@@ -208,8 +213,8 @@
 		"interval": 100,
 		"duration": 27,
 		"timestamp": 1597160146691,
-		"promptTimes": 2,
-		"prevPromptTime": 1634892849853
+		"promptTimes": 1,
+		"prevPromptTime": 1635143376546
 	},
 	{
 		"name": "",
@@ -222,8 +227,8 @@
 		"interval": 90,
 		"duration": 9,
 		"timestamp": 1634257137946,
-		"promptTimes": 1,
-		"prevPromptTime": 1634867649890
+		"promptTimes": 3,
+		"prevPromptTime": 1635145176060
 	},
 	{
 		"name": "",
@@ -249,7 +254,7 @@
 		"duration": 14,
 		"timestamp": 1618224000885,
 		"promptTimes": 1,
-		"prevPromptTime": 1634894649855
+		"prevPromptTime": 1635150576582
 	},
 	{
 		"name": "",
@@ -275,7 +280,7 @@
 		"duration": 9,
 		"timestamp": 1618223159947,
 		"promptTimes": 3,
-		"prevPromptTime": 1634889248620
+		"prevPromptTime": 1635146977276
 	},
 	{
 		"name": "",
@@ -289,7 +294,7 @@
 		"duration": 7,
 		"timestamp": 1624075143455,
 		"promptTimes": 2,
-		"prevPromptTime": 1634901848907
+		"prevPromptTime": 1635157776716
 	},
 	{
 		"name": "",
@@ -303,7 +308,7 @@
 		"duration": 17,
 		"timestamp": 1611881119094,
 		"promptTimes": 2,
-		"prevPromptTime": 1634903648204
+		"prevPromptTime": 1635161375730
 	},
 	{
 		"name": "",
@@ -328,8 +333,8 @@
 		"interval": 60,
 		"duration": 14,
 		"timestamp": 1621737388870,
-		"promptTimes": 1,
-		"prevPromptTime": 1634900049644
+		"promptTimes": 2,
+		"prevPromptTime": 1635163176373
 	},
 	{
 		"name": "",
@@ -341,7 +346,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1609555783779
+		"timestamp": 1609555783779,
+		"promptTimes": 2,
+		"prevPromptTime": 1635164976558
 	},
 	{
 		"name": "",
@@ -353,7 +360,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 27,
-		"timestamp": 1619178994699
+		"timestamp": 1619178994699,
+		"promptTimes": 1,
+		"prevPromptTime": 1635166776302
 	},
 	{
 		"name": "",
@@ -365,7 +374,9 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1594995614163
+		"timestamp": 1594995614163,
+		"promptTimes": 2,
+		"prevPromptTime": 1635168576183
 	},
 	{
 		"name": "",
@@ -374,10 +385,12 @@
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;交易系统类型：高频超短、趋势波段、基于概率、基于理解力；&nbsp;</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">分仓打首板概率：北京炒家、创世纪、陈小豪、</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">机械概率：纵横股道、寂寞和弦</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">接力板:</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">波段趋势：</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">基于大盘和板块的首板：管手剁；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">搜集强势股龙头股：寻找介入机会；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">日内热点捕捉 ： 张英雄</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">看高做低：爱学习的人，衡山五神剑</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">基于市场理解力的应对：涅盘重升</span></strong></span></p><p><br></p>",
 		"singleWindow": "",
 		"start": "19:00",
-		"repeat": 1,
+		"repeat": 2,
 		"interval": 60,
-		"duration": 17,
-		"timestamp": 1610163063160
+		"duration": 24,
+		"timestamp": 1610163063160,
+		"promptTimes": 1,
+		"prevPromptTime": 1635170375637
 	},
 	{
 		"name": "",
@@ -400,7 +413,7 @@
 		"start": "17:00",
 		"repeat": 1,
 		"interval": 130,
-		"duration": 9,
+		"duration": 17,
 		"timestamp": 1610785651586
 	},
 	{
@@ -414,8 +427,8 @@
 		"interval": 180,
 		"duration": 24,
 		"timestamp": 1609667569090,
-		"promptTimes": 1,
-		"prevPromptTime": 1634878449515
+		"promptTimes": 2,
+		"prevPromptTime": 1635172175955
 	},
 	{
 		"name": "",
@@ -444,15 +457,15 @@
 	},
 	{
 		"name": "",
-		"id": "1207158",
+		"id": "7222976",
 		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">退潮补跌风险；丹邦科技</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">退潮风险：次新退潮，泰坦股份、迎丰股份、舒华体育</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">高潮风险；</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">切换风险； &nbsp;大湖股份、泰岳股份股份；</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">借势风险：粤泰股份；</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">非主流风险；<strong><span style=\"background-color: rgb(255, 255, 0);\">丹邦科技</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">跟风后排：</span></strong></span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">大局观；大局观；大局观；大局观；</span></strong><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">大局观；大局观；大局观；</span></strong></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;大局观：赚钱效应，亏钱效应；市场大趋势、强弱、主线热点、节奏周期 。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;即涅盘所说的6个变量。强势踏准节奏，弱势管住手。&nbsp;</span></strong></p><p>赚钱效应在哪里？</p><p>大周期是向上还是向下，还是震荡。</p><p>强势还是弱势。</p><p>大周期向上或强势，则分歧容易修复或转一致。</p><p>大周期向下或弱势，</p>",
 		"singleWindow": "",
-		"start": "17:00",
-		"repeat": 1,
-		"interval": 90,
-		"duration": 17,
-		"timestamp": 1618113128264
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 30,
+		"duration": 47,
+		"timestamp": 1609600599192
 	},
 	{
 		"name": "",
@@ -515,8 +528,8 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1617161666529,
-		"promptTimes": 2,
-		"prevPromptTime": 1634885650098
+		"promptTimes": 1,
+		"prevPromptTime": 1635139776213
 	},
 	{
 		"name": "",
@@ -637,7 +650,9 @@
 		"repeat": 3,
 		"interval": 140,
 		"duration": 47,
-		"timestamp": 1619249637958
+		"timestamp": 1619249637958,
+		"promptTimes": 1,
+		"prevPromptTime": 1635141576159
 	},
 	{
 		"name": "",
@@ -729,21 +744,21 @@
 	},
 	{
 		"name": "",
-		"id": "7222976",
+		"id": "1207158",
 		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">大局观；大局观；大局观；大局观；</span></strong><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">大局观；大局观；大局观；</span></strong></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;大局观：赚钱效应，亏钱效应；市场大趋势、强弱、主线热点、节奏周期 。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;即涅盘所说的6个变量。强势踏准节奏，弱势管住手。&nbsp;</span></strong></p><p>赚钱效应在哪里？</p><p>大周期是向上还是向下，还是震荡。</p><p>强势还是弱势。</p><p>大周期向上或强势，则分歧容易修复或转一致。</p><p>大周期向下或弱势，</p>",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">退潮补跌风险；丹邦科技</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">退潮风险：次新退潮，泰坦股份、迎丰股份、舒华体育</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">高潮风险；</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">切换风险； &nbsp;大湖股份、泰岳股份股份；</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">借势风险：粤泰股份；</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">非主流风险；<strong><span style=\"background-color: rgb(255, 255, 0);\">丹邦科技</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">跟风后排：</span></strong></span></strong></p>",
 		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 4,
-		"interval": 30,
-		"duration": 47,
-		"timestamp": 1609600599192
+		"start": "17:00",
+		"repeat": 1,
+		"interval": 90,
+		"duration": 17,
+		"timestamp": 1618113128264
 	},
 	{
 		"name": "",
 		"id": "5181482",
 		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">看高做低，龙头的激发和带动。补涨。时间差。先后手。</span></strong></p><p><strong><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">对市场表现的正确解读。</span></strong></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">锚定龙头补涨是市场中非常重要的逻辑。</span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">本质是锚点、学习、复制、跟随。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">看高做低，龙头的激发和带动。补涨。时间差。先后手。</span></strong></p><p><strong><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">对市场表现的正确解读。</span></strong></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
@@ -789,6 +804,18 @@
 	},
 	{
 		"name": "",
+		"id": "3975590",
+		"type": "系统",
+		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;关于短线炒作的本质、各类资金的行为模式&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>短线这个游戏是怎么玩的， 市场资金关注点，连续性；博弈、反转；分歧、一致；</u></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>退学炒股一直专注于打板，不是没有原因的。他其实只是在短线这个圈子里玩。</u></span></strong></p><p><br></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">热点，市场热钱所在。市场合力，行为比较好预测</span></strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong>。</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">大局观：当前市场的赚钱效应。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">超短生态，这里是有圈子的。围绕涨停板操作才是超短的正确路径。</span></strong></p><p><br></p><p>理解短线炒作的本质。</p><p>短线资金的行为逻辑。情绪、题材、消息、趋势、反身性驱动。</p><p>一只票能炒多高，更短线资金经验有关系。跟市场情绪有关系。</p><p>就像东方通信、贵州燃气、王府井、郑州煤电。这些都是市场短线资金的记忆。</p><p>包括博弈，分歧、一致、龙头、补涨、等都是短线资金的行为逻辑继承。</p><p>这些很多资金行为都和涨停板息息相关。比如通过涨停来选股，来做确定性。来抱团。</p><p>也许有一天会随着交易规则的变化而改变。</p><p>这些资金经验，会不断的重复。所谓人性，历史会重复。贪婪、恐慌、希望、臆想。分歧转一致、弱转强。</p><p><strong><span style=\"font-size: 22px;\">我要做的是从大局观上来理解市场。这就是支撑我的交易逻辑。</span></strong></p><p><br></p><p>20cm的趋势抱团。</p><p><br></p><p><br></p><p>招商证券则在《A股4次著名&ldquo;抱团&rdquo;事件启示录》中写道，2006年以来，以公募基金为代表的机构投资者逐渐崛起为A股的非常重要的一股力量。机构投资者通常拥有相似的决策框架、考核机制、信息渠道、行为模式，导致A股在2007年以后出现过4次非常著名的&ldquo;抱团&rdquo;。</p><p><br></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>&nbsp;大局观和市场理解力&nbsp;</u></span></strong>&nbsp;</p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;市场的波动来源于何处？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;支撑我的交易逻辑？&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">短线生态。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;短线资金的行为逻辑。</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 47,
+		"timestamp": 1609565575214
+	},
+	{
+		"name": "",
 		"id": "7493394",
 		"type": "系统",
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"> 我现在首要考虑的应该是建立系统，把事情做对，而不是赚钱。</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>建立系统，自然而然可以赚到钱。</strong></span></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">不要想着赚钱，要想着把事情做对。</span></strong></span></p><p>系统包括目标行情，买点，止盈止损；</p><p>盈亏比；确定性；效率。我做超短，所以围绕着热钱热点操作。</p><p><br></p><p><strong><span style=\"font-size: 24px;\">我交易的错误：</span></strong></p><p>1. &nbsp;无系统，无计划，临盘随意交易，主观臆想是我最大的亏损来源。没有一致的内核；不能重复。三心二意。什么都想抓住，最后什么都没有抓住。</p><p>2. &nbsp;卖飞。</p><p>3. 行情启动初期，犹豫不决；后期管不住手。</p><p>4. 线性思维，从来没有做好反转的准备。</p><p>5. 临盘犹豫，不明确；错过机会。</p><p><br></p><p><strong><span style=\"font-size: 24px;\">我的问题：</span></strong></p><p><br></p><p>1.我以什么做为判断标准。</p><p>2. 我没有消息优势，资金优势。我不知道上涨的原因何在。 依靠机械概率吗？</p><p><br></p><p><br></p><p><strong><span style=\"font-size: 24px;\">我要遵从的原则：</span></strong></p><p>1. &nbsp;要想着把事情做对，而不是想着赚钱。</p><p>2. &nbsp;必须先要有交易计划和预案。</p><p>3 . 简单纯粹取舍重复专注一致</p><p><br></p><p><strong><span style=\"font-size: 24px;\">我的交易系统：</span></strong></p><p>1. 围绕市场热钱。涨停是市场热钱的表现形式。所以选股必须在涨停里选。</p><p>2. 预判、试错、确认、加仓</p><p>3. 截断亏损，让利润奔跑。</p><p><br></p><p><br></p><p><strong><span style=\"font-size: 24px;\">交易系统变量：</span></strong></p><p>1. &nbsp;大盘氛围</p><p>2. &nbsp;板块强度</p><p>3. 个股人气地位</p><p>4. 周期节奏，时机就是一切。</p><p><br></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有大局观，对市场理解不够：</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">行情启动时犹豫，行情退潮时管不住手；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">看看我怎么操作航新转债，上涨时急于卖出，下跌时却去买入；</span></strong></p><p><br></p>",
@@ -797,20 +824,8 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1606540540693
-	},
-	{
-		"name": "",
-		"id": "8223604",
-		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">锚定龙头补涨是市场中非常重要的逻辑。</span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">本质是锚点、学习、复制、跟随。</span></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 1,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1613532753439,
-		"disable": false
+		"timestamp": 1606540540693,
+		"disable": true
 	},
 	{
 		"name": "问题",
@@ -847,18 +862,6 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1614481282823
-	},
-	{
-		"name": "",
-		"id": "3975590",
-		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;关于短线炒作的本质、各类资金的行为模式&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>短线这个游戏是怎么玩的， 市场资金关注点，连续性；博弈、反转；分歧、一致；</u></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>退学炒股一直专注于打板，不是没有原因的。他其实只是在短线这个圈子里玩。</u></span></strong></p><p><br></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">热点，市场热钱所在。市场合力，行为比较好预测</span></strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong>。</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">大局观：当前市场的赚钱效应。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">超短生态，这里是有圈子的。围绕涨停板操作才是超短的正确路径。</span></strong></p><p><br></p><p>理解短线炒作的本质。</p><p>短线资金的行为逻辑。情绪、题材、消息、趋势、反身性驱动。</p><p>一只票能炒多高，更短线资金经验有关系。跟市场情绪有关系。</p><p>就像东方通信、贵州燃气、王府井、郑州煤电。这些都是市场短线资金的记忆。</p><p>包括博弈，分歧、一致、龙头、补涨、等都是短线资金的行为逻辑继承。</p><p>这些很多资金行为都和涨停板息息相关。比如通过涨停来选股，来做确定性。来抱团。</p><p>也许有一天会随着交易规则的变化而改变。</p><p>这些资金经验，会不断的重复。所谓人性，历史会重复。贪婪、恐慌、希望、臆想。分歧转一致、弱转强。</p><p><strong><span style=\"font-size: 22px;\">我要做的是从大局观上来理解市场。这就是支撑我的交易逻辑。</span></strong></p><p><br></p><p>20cm的趋势抱团。</p><p><br></p><p><br></p><p>招商证券则在《A股4次著名&ldquo;抱团&rdquo;事件启示录》中写道，2006年以来，以公募基金为代表的机构投资者逐渐崛起为A股的非常重要的一股力量。机构投资者通常拥有相似的决策框架、考核机制、信息渠道、行为模式，导致A股在2007年以后出现过4次非常著名的&ldquo;抱团&rdquo;。</p><p><br></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>&nbsp;大局观和市场理解力&nbsp;</u></span></strong>&nbsp;</p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;市场的波动来源于何处？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;支撑我的交易逻辑？&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">短线生态。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;短线资金的行为逻辑。</span></strong></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 47,
-		"timestamp": 1609565575214
 	},
 	{
 		"name": "",
@@ -963,6 +966,18 @@
 	},
 	{
 		"name": "",
+		"id": "7351757",
+		"type": "",
+		"start": "13:00",
+		"interval": 120,
+		"repeat": 3,
+		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我只要一周赚10%，一年就可以赚到到45倍；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">做精不做多；避免犯错；避免回撤；</span></strong></p><p><br></p><p><span style=\"font-size: 18px;\">Math.pow(1.1,40) = 45.2592555681761</span></p><p><span style=\"font-size: 18px;\">Math.pow(1.2,40) = 1469.7715679690841</span></p>",
+		"timestamp": 1581084979181,
+		"singleWindow": "",
+		"duration": 5
+	},
+	{
+		"name": "",
 		"id": "1802427",
 		"type": "",
 		"start": "19:00",
@@ -973,18 +988,6 @@
 		"duration": 30,
 		"timestamp": 1592026052270,
 		"disable": true
-	},
-	{
-		"name": "",
-		"id": "7351757",
-		"type": "",
-		"start": "17:00",
-		"interval": 190,
-		"repeat": 2,
-		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我只要一周赚10%，一年就可以赚到到45倍；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">做精不做多；避免犯错；避免回撤；</span></strong></p><p><br></p><p><span style=\"font-size: 18px;\">Math.pow(1.1,40) = 45.2592555681761</span></p><p><span style=\"font-size: 18px;\">Math.pow(1.2,40) = 1469.7715679690841</span></p>",
-		"timestamp": 1581084979181,
-		"singleWindow": "",
-		"duration": 9
 	},
 	{
 		"name": "",
