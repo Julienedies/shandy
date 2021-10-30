@@ -3,6 +3,7 @@
  * Created by j on 2020-01-01.
  */
 
+import path from 'path'
 import $ from 'jquery'
 import utils from '../../../libs/utils'
 import brick from '@julienedies/brick'
@@ -71,10 +72,11 @@ export default function (scope) {
 
     scope.moveToTrash = () => {
         let imgObj = scope.viewerCurrentImg;
-        let pathArr = imgObj.f.split('/');
+        let pathArr = imgObj.f.split(/\\|\//img);
         let fileName = pathArr.pop();
         let dirOfImg = pathArr.join('/')
-        utils.move(imgObj.f, `${ dirOfImg }/C/${ fileName }`)
+        let trashPath = path.normalize(`${ dirOfImg }/C/${ fileName }`);
+        utils.move(imgObj.f, trashPath)
             .then(() => {
                 $.icMessage('ok!');
             })
@@ -86,10 +88,11 @@ export default function (scope) {
 
     function copyImageToDist (dirPath) {
         let imgObj = scope.viewerCurrentImg;
-        let pathArr = imgObj.f.split('/');
+        let pathArr = imgObj.f.split(/\\|\//img);
         let fileName = pathArr.pop();
         let dirOfImg = pathArr.join('/')
-        utils.copy(imgObj.f, `${ dirPath }/${ dirOfImg }/${ fileName }`)
+        let distPath = path.normalize(`${ dirPath }/${ dirOfImg }/${ fileName }`);
+        utils.copy(imgObj.f, distPath)
             .then(() => {
                 $.icMessage('ok!')
             })

@@ -1,5 +1,15 @@
 [
 	{
+		"id": "绿色电力",
+		"selected": true,
+		"timestamp": 1635262553111
+	},
+	{
+		"id": "元宇宙",
+		"selected": false,
+		"timestamp": 1635163202743
+	},
+	{
 		"id": "天然气",
 		"selected": true,
 		"timestamp": 1632837330671
@@ -66,12 +76,12 @@
 	},
 	{
 		"id": "储能",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1627573287670
 	},
 	{
 		"id": "磷化工",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1626357702889
 	},
 	{
@@ -146,7 +156,7 @@
 	},
 	{
 		"id": "电力",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1615734930866
 	},
 	{
