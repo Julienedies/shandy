@@ -11,7 +11,7 @@
 		"duration": 7,
 		"timestamp": 1635088812447,
 		"promptTimes": 1,
-		"prevPromptTime": 1635293038307
+		"prevPromptTime": 1636025663381
 	},
 	{
 		"name": "",
@@ -23,7 +23,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 5,
-		"timestamp": 1630328427565
+		"timestamp": 1630328427565,
+		"promptTimes": 1,
+		"prevPromptTime": 1636027465088
 	},
 	{
 		"name": "",
@@ -32,12 +34,12 @@
 		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;把事情做对，不要想着赚钱。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 3,
+		"repeat": 2,
 		"interval": 90,
-		"duration": 7,
+		"duration": 4,
 		"timestamp": 1634458275583,
-		"promptTimes": 1,
-		"prevPromptTime": 1635294838373
+		"promptTimes": 2,
+		"prevPromptTime": 1636029264827
 	},
 	{
 		"name": "警告",
@@ -50,8 +52,8 @@
 		"timestamp": 1579093820041,
 		"singleWindow": "",
 		"duration": 7,
-		"promptTimes": 1,
-		"prevPromptTime": 1635296638301
+		"promptTimes": 2,
+		"prevPromptTime": 1636031064908
 	},
 	{
 		"name": "",
@@ -64,8 +66,8 @@
 		"interval": 90,
 		"duration": 9,
 		"timestamp": 1614682522617,
-		"promptTimes": 1,
-		"prevPromptTime": 1635298438497
+		"promptTimes": 2,
+		"prevPromptTime": 1636032863599
 	},
 	{
 		"name": "",
@@ -78,8 +80,8 @@
 		"interval": 90,
 		"duration": 4,
 		"timestamp": 1633852427544,
-		"promptTimes": 1,
-		"prevPromptTime": 1635300238458
+		"promptTimes": 2,
+		"prevPromptTime": 1636034664966
 	},
 	{
 		"name": "",
@@ -92,8 +94,8 @@
 		"interval": 90,
 		"duration": 4,
 		"timestamp": 1629155362746,
-		"promptTimes": 1,
-		"prevPromptTime": 1635302037691
+		"promptTimes": 2,
+		"prevPromptTime": 1636036464133
 	},
 	{
 		"name": "",
@@ -129,7 +131,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1626650977149
+		"timestamp": 1626650977149,
+		"promptTimes": 1,
+		"prevPromptTime": 1636038264774
 	},
 	{
 		"name": "",
@@ -141,7 +145,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1625975362922
+		"timestamp": 1625975362922,
+		"promptTimes": 1,
+		"prevPromptTime": 1636040063874
 	},
 	{
 		"name": "",
@@ -190,9 +196,7 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334,
-		"promptTimes": 1,
-		"prevPromptTime": 1635318238663
+		"timestamp": 1595590485334
 	},
 	{
 		"name": "",
@@ -217,8 +221,8 @@
 		"interval": 100,
 		"duration": 27,
 		"timestamp": 1597160146691,
-		"promptTimes": 2,
-		"prevPromptTime": 1635321837670
+		"promptTimes": 1,
+		"prevPromptTime": 1636006473877
 	},
 	{
 		"name": "",
@@ -232,7 +236,7 @@
 		"duration": 9,
 		"timestamp": 1634257137946,
 		"promptTimes": 3,
-		"prevPromptTime": 1635316437484
+		"prevPromptTime": 1636008273811
 	},
 	{
 		"name": "",
@@ -244,9 +248,7 @@
 		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 30px; color: rgb(255, 255, 255);\">问题2：为何我总是临盘犹豫，手足无措，错过最好的交易机会？</span></strong></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">1. 没有准备明确的交易计划，什么样的条件做什么操作。</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">没有交易系统，没有明确的目标行情，没有明确的判断锚点，没有明确的买点。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">线性思维，主观看空。行情反转，措手不及，犹豫不决。</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">1. 准备不足；</span></strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>2. 系统不明确；</strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">3. 本能贪便宜，畏高。</span></strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我必须在很短的时间做出决定；尤其是股市变量很多；</span></p><p><span style=\"font-size: 16px;\">导致很容易犯错，尤其是亏钱状态不好的时候；</span></p><p><span style=\"font-size: 16px;\">必须纯粹，精简自己的系统，快速反应！</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；</span></p><p><span style=\"font-size: 16px;\">1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）</span></p><p><span style=\"font-size: 16px;\">2: 热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；</span></p><p><br></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px; color: rgb(0, 0, 0);\">我从来没有做好次日的交易计划。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">既无预判，也没有推演，更无应对。</span></strong></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px;\">我为何总是临盘犹豫，错过机会？</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">1. 准备不足；</span></strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>2. 系统不明确；</strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">3. 本能贪便宜，畏高。</span></strong></span></p><p><br></p><p><strong><u><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我缺少明确的交易理念，市场复杂多变；而我总是处在混沌不明确的状态；</span></u></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong><span style=\"color: rgb(0, 0, 0);\">我现在最重要的事是明确系统；对交易原则做到知行合一；</span></strong></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">支撑我的交易逻辑是什么？</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>简单、纯粹、取舍、明确、重复；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>这就是我现在最需要解决的问题；</strong></span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 18px;\">简单纯粹 避免犯错</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">取舍 ： 弱水三千，只取一瓢</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">重复那些盈利的交易；避免重复那些亏损的交易；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">不要沉迷于日常交易中；我至今还是在重复3年前的交易状态；不明确；随意交易；浪费时间和机</span></span><span style=\"font-size: 18px; color: rgb(0, 0, 0);\">会；</span></p><p><br></p><p>一致性概率优势系统的逻辑是什么？</p><p>基于主观判断的系统逻辑是什么？</p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我必须在很短的时间做出决定；尤其是股市变量很多；</span></p><p><span style=\"font-size: 16px;\">导致很容易犯错，尤其是亏钱状态不好的时候；</span></p><p><span style=\"font-size: 16px;\">必须纯粹，精简自己的系统，快速反应！</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；</span></p><p><span style=\"font-size: 16px;\">1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）</span></p><p><span style=\"font-size: 16px;\">2: 热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；</span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">然后交易时傻乎乎看着盘面，被动应对，临盘犹豫，手足无措、脑子一热随意交易。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是主观预判市场弱，<strong><span style=\"background-color: rgb(255, 255, 0);\">缺乏准备</span></strong>；结果市场转强，就手足无措；<strong><span style=\"background-color: rgb(255, 255, 0);\">连标的都没有；</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 16px;\">尤其是放弃了打板这一手法后，干脆就不知道做什么了。我不是控制力好，我其实是不知道做什么。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">主线热点，资金方向，资金类型，强弱</span></p><p><span style=\"font-size: 16px;\">1. 先确定主线热点； 这是支撑我的交易逻辑之一。热钱所在，行情所在。</span></p><p><span style=\"font-size: 16px;\">2. 根据主线热点，选择标的。</span></p><p><span style=\"font-size: 16px;\">3. 预判推演标的走势，做出对应的应对计划。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">大盘会涨会跌？大盘处在何种阶段？哪里有机会？ 哪里有风险？ 方向：机构蓝筹趋势？ 热钱情绪题材?</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">热点龙头个股会涨会跌？ 能追涨吗？ 能低吸吗？ 盈亏比几何？</span></p>",
 		"timestamp": 1580821790410,
 		"duration": 34,
-		"singleWindow": "stock_replay",
-		"promptTimes": 1,
-		"prevPromptTime": 1635325437130
+		"singleWindow": "stock_replay"
 	},
 	{
 		"name": "",
@@ -259,8 +261,8 @@
 		"interval": 60,
 		"duration": 14,
 		"timestamp": 1618224000885,
-		"promptTimes": 2,
-		"prevPromptTime": 1635327237990
+		"promptTimes": 1,
+		"prevPromptTime": 1636013674419
 	},
 	{
 		"name": "",
@@ -286,7 +288,7 @@
 		"duration": 9,
 		"timestamp": 1618223159947,
 		"promptTimes": 3,
-		"prevPromptTime": 1635320037753
+		"prevPromptTime": 1636010073842
 	},
 	{
 		"name": "",
@@ -299,8 +301,8 @@
 		"interval": 60,
 		"duration": 7,
 		"timestamp": 1624075143455,
-		"promptTimes": 1,
-		"prevPromptTime": 1635329038190
+		"promptTimes": 2,
+		"prevPromptTime": 1636020873550
 	},
 	{
 		"name": "",
@@ -313,8 +315,8 @@
 		"interval": 90,
 		"duration": 17,
 		"timestamp": 1611881119094,
-		"promptTimes": 1,
-		"prevPromptTime": 1635330837700
+		"promptTimes": 2,
+		"prevPromptTime": 1636022674327
 	},
 	{
 		"name": "",
@@ -339,8 +341,8 @@
 		"interval": 60,
 		"duration": 14,
 		"timestamp": 1621737388870,
-		"promptTimes": 2,
-		"prevPromptTime": 1635339927593
+		"promptTimes": 1,
+		"prevPromptTime": 1636019073467
 	},
 	{
 		"name": "",
@@ -352,9 +354,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1609555783779,
-		"promptTimes": 2,
-		"prevPromptTime": 1635341727481
+		"timestamp": 1609555783779
 	},
 	{
 		"name": "",
@@ -366,9 +366,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 27,
-		"timestamp": 1619178994699,
-		"promptTimes": 1,
-		"prevPromptTime": 1635343527108
+		"timestamp": 1619178994699
 	},
 	{
 		"name": "",
@@ -382,7 +380,7 @@
 		"duration": 17,
 		"timestamp": 1594995614163,
 		"promptTimes": 1,
-		"prevPromptTime": 1635345326064
+		"prevPromptTime": 1636011874673
 	},
 	{
 		"name": "",
@@ -394,9 +392,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1610163063160,
-		"promptTimes": 1,
-		"prevPromptTime": 1635347126979
+		"timestamp": 1610163063160
 	},
 	{
 		"name": "",
@@ -434,7 +430,7 @@
 		"duration": 24,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1635307437415
+		"prevPromptTime": 1635997474781
 	},
 	{
 		"name": "",
@@ -535,7 +531,7 @@
 		"duration": 9,
 		"timestamp": 1617161666529,
 		"promptTimes": 1,
-		"prevPromptTime": 1635311037912
+		"prevPromptTime": 1636002874000
 	},
 	{
 		"name": "",
@@ -656,7 +652,9 @@
 		"repeat": 3,
 		"interval": 140,
 		"duration": 47,
-		"timestamp": 1619249637958
+		"timestamp": 1619249637958,
+		"promptTimes": 1,
+		"prevPromptTime": 1636004673932
 	},
 	{
 		"name": "",

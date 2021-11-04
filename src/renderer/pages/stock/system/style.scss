@@ -17,9 +17,9 @@ h1, h2, h3, dt {
 
 
 section {
-  margin: 1em 0 2em;
-  padding: 1em 0;
-  border: solid 1px blue;
+  margin: 1em 0 4em;
+  padding: 0 0;
+  //border: solid 1px blue;
 }
 
 
@@ -43,9 +43,9 @@ div.box {
 
     b {
       display: inline-block;
-      padding-right: 1em;
-      font-size: 1.2em;
-      font-style: italic;
+      padding-left: 1em;
+      font-size: 1em;
+      //font-style: italic;
     }
   }
 
