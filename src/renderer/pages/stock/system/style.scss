@@ -1,6 +1,7 @@
 html, body {
   font: 20px/1.5;
   line-height: 1.6;
+  user-select:none;
 }
 
 h1 {
@@ -17,9 +18,11 @@ h1, h2, h3, dt {
 
 
 section {
-  margin: 1em 0 4em;
-  padding: 0 0;
-  //border: solid 1px blue;
+  padding: 1.5em 0;
+  border-bottom: solid 4px blue;
+  &:first-child{
+    padding-top:0;
+  }
 }
 
 
@@ -52,7 +55,7 @@ div.box {
   > div {
     //border-top: solid 1px #e6e6e6;
     display: none;
-    opacity: 0.05;
+    opacity: 0.95;
     color: #000;
     font-weight: 400;
     //background: blue;

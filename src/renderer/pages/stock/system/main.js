@@ -33,6 +33,12 @@ brick.reg('setTagCtrl', setTagCtrl);
 brick.reg('systemCtrl', function () {
 
     let scope = this;
+    let $elm = this.$elm;
+
+    $elm.on('click', 'h2, h3', function () {
+        $(this).nextAll().toggle();
+    });
+
 
 
 });
