@@ -11,26 +11,16 @@
 </head>
 <body ic-ctrl="mainCtrl">
 
-<div class="column is-12 is-offset-0" ic-ctrl="systemCtrl">
+<div class="column is-12 is-offset-0" ic-ctrl="systemCtrl" style="padding-top:0.1rem;">
 
     <!-- 警告 -->
-    <section>
-        <div class="box">
-            <h2>我有做出本质的改变吗？为何我错过所有的大行情？为何我错过所有的龙头？为何我总是沉迷于日常的鸡肋交易中？</h2>
-        </div>
-        <div class="box">
-            <h2>急于赚钱的心态，让我沉迷于日常的鸡肋交易中。 多思考和反省，看看自己的交易日记。把事情做对。 </h2>
-        </div>
-        <div class="box">
-            <h2>简单纯粹取舍，只做龙头。市场上值得操作的短线龙头就那么几支。我没有其它优势，只能围绕着已知的市场龙头操作。<b></b></h2>
-        </div>
-    </section>
-
-    <!-- 复盘 -->
-    ${ require('./_review.html')}
+    ${ require('./_warn.html')}
 
     <!-- 交易计划 交易系统 -->
     ${ require('./_plan.html')}
+
+    <!-- 复盘 -->
+    ${ require('./_review.html')}
 
     <!-- 需要解决的问题 -->
     ${ require('./_question.html')}
@@ -41,35 +31,8 @@
     <!-- 交易原则 交易理念 -->
     ${ require('./_idea.html')}
 
-    <div class="box">
-        <h2>市场参与者的行为逻辑是什么？</h2>
-    </div>
-    <div class="box">
-        <h2>锚定、复制、补涨、当前的主线、赚钱效应是什么？</h2>
-    </div>
-    <div class="box">
-        <h2>有哪些重要的市场变量？市场氛围、主线热点、节奏周期、板块强度、人气地位</h2>
-    </div>
-    <div class="box">
-        <h2></h2>
-    </div>
-
-
-    <div class="box">
-        <h2>我凭什么在市场胜出？我有何优势？ 资金？资讯？反应？控制力？理解力？执行力？</h2>
-        <h2>支撑我的交易逻辑是什么？看高做低； 锚定、复制、补涨、趋势、龙头；</h2>
-    </div>
-
-
-    <div style="margin:30px 0; padding:100px 0;background: greenyellow;"></div>
-
-
-
-    <div class="box">
-        <h3>大趋势和节奏</h3>
-        <div>启动爆发、调整转折，N次分歧、盛极而衰、退潮、强分歧、弱分歧、分歧转一致，弱转强、否极泰来</div>
-        <div>高低切换、</div>
-    </div>
+    <!-- 杂类 -->
+    ${ require('./_other.html')}
 
     <!-- 重复错误 无系统-->
     <table class="table is-bordered is-fullwidth system">
