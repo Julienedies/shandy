@@ -2,10 +2,15 @@
  * Created by j on 18/8/13.
  */
 
+import _ from 'lodash'
+import $ from 'jquery'
+import brick from '@julienedies/brick'
+import '@julienedies/brick/dist/brick.css'
+
 brick.reg('main_ctrl', function(){
 
-    var scope = this;
-    var model = brick.utils.get_query();
+    let scope = this;
+    let model = brick.utils.get_query();
 
     this.render('ajax', model, function(){
         $(this).find('[ic-ajax]').click();

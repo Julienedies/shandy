@@ -1,13 +1,17 @@
+html, body {
+  font-size: 18px!important;
+}
+
 .table {
   border: solid 1px #dbdbdb;
 
   tr {
     &:nth-child(odd) {
-      background: #fbf7ce;
+      background: #fffde8;
     }
 
     &:nth-child(even) {
-      background: #ecf5e2;
+      background: #f9fff2;
     }
   }
 
