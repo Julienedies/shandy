@@ -27,15 +27,15 @@ brick.reg('reminderCtrl', function (scope) {
         reader.autoSpeak();
     });
 
-    $.get('/stock/tags/').done((data) => {
+/*    $.get('/stock/tags/').done((data) => {
         console.log(data);
         scope.render('prepare', data);
         scope.render('mistake', data);
         //scope.render('logic', data);
         //scope.render('principle', data);
-    });
+    });*/
 
-    let timer = 480; // 10分钟，600秒
+    let timer = 360; // 10分钟，600秒
     let $timer = $('#timer');
 
     setInterval(() => {
@@ -44,7 +44,7 @@ brick.reg('reminderCtrl', function (scope) {
         if (timer <= 0) {
             window.close();
         }
-    }, 10000);
+    }, 1000);
 
 });
 

@@ -36,39 +36,38 @@
             </div>
         </section>
 
-        <!--        <section>
-                    <h3 class="title is-5">交易系统</h3>
-                    <ul ic-tpl="logic">
-                        <li ic-for="i,v in model['交易逻辑']" ic-class="{{ v.level*1 > 20 ? 'ani-warn':'' }}">
-                            {{ v.text }}
-                        </li>
-                    </ul>
-                </section>-->
-
-        <section ic-ctrl="mistakeCtrl">
-            <h3 class="title is-5">交易错误</h3>
-            <div ic-tpl="mistake">
-                <ul>
-                    <li ic-for="i,v in model['交易错误']"
-                        ic-viewer
-                        ic-viewer-item="h6>a"
-                        ic-viewer-url="src"
-                        ic-viewer-interval="10"
-                        ic-viewer-on-show="onViewerShow"
-                        ic-viewer-on-open="onViewerOpen"
-                        ic-viewer-on-close="onViewerClose"
-                        ic-class="{{ v.level*1 > 20 ? 'X-ani-warn':'' }}">
-                        <h6 class="title is-6">
-                            <span style="padding-right:1em;">{{ v.text }}</span>
-                            <a style="font-size:0.8em;" ic-for="k,o in v['示例图片']" ic-src="{{ parseImgPath(o) }}">
-                                {{ parseImgName(o) }} &nbsp;&nbsp;
-                            </a>
-                        </h6>
-                    </li>
-                </ul>
-            </div>
-        </section>
     </div>
+    <!--<section ic-ctrl="mistakeCtrl">
+        <h3 class="title is-5">交易错误</h3>
+        <div ic-tpl="mistake">
+            <ul>
+                <li ic-for="i,v in model['交易错误']"
+                    ic-viewer
+                    ic-viewer-item="h6>a"
+                    ic-viewer-url="src"
+                    ic-viewer-interval="10"
+                    ic-viewer-on-show="onViewerShow"
+                    ic-viewer-on-open="onViewerOpen"
+                    ic-viewer-on-close="onViewerClose"
+                    ic-class="{{ v.level*1 > 20 ? 'X-ani-warn':'' }}">
+                    <h6 class="title is-6">
+                        <span style="padding-right:1em;">{{ v.text }}</span>
+                        <a style="font-size:0.8em;" ic-for="k,o in v['示例图片']" ic-src="{{ parseImgPath(o) }}">
+                            {{ parseImgName(o) }} &nbsp;&nbsp;
+                        </a>
+                    </h6>
+                </li>
+            </ul>
+        </div>
+    </section>-->
+    <!--        <section>
+            <h3 class="title is-5">交易系统</h3>
+            <ul ic-tpl="logic">
+                <li ic-for="i,v in model['交易逻辑']" ic-class="{{ v.level*1 > 20 ? 'ani-warn':'' }}">
+                    {{ v.text }}
+                </li>
+            </ul>
+        </section>-->
 
     <!--<div class="h-wrapper">
 

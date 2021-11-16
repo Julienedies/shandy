@@ -18,12 +18,10 @@ html, body {
       padding: 1rem;
       border-left: solid 1px #ccc;
 
-      &:nth-child(0){
-        flex:1 1 30%;
+      &:nth-child(0) {
+        flex: 1 1 60%;
       }
-      &:nth-child(1){
-        flex: 1 1 30%;
-      }
+
       &:last-child {
         flex: 1 1 40%;
       }

@@ -316,11 +316,11 @@ brick.reg('mainCtrl', function (scope) {
     }
 
     if (utils.isTradingDate()) {
-        utils.timer('9:00', () => {
-            //scope.openReminder();
+        utils.timer('8:50', () => {
+            scope.openReminder();
         });
         utils.timer('12:45', () => {
-            //scope.openReminder();
+            scope.openReminder();
         });
         utils.timer('15:00', () => {
             scope.newsWin && scope.newsWin.close();

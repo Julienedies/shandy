@@ -12,7 +12,7 @@ rate – 语速，数值，默认值是1，范围是0.1到10，表示语速的�
 pitch – 表示说话的音高，数值，范围从0（最小）到2（最大）。默认值为1。
  */
 let speechSU = new SpeechSynthesisUtterance();
-speechSU.volume = 0.7;
+speechSU.volume = 0.5;
 speechSU.rate = 1.1;
 speechSU.pitch = 1.1;
 
@@ -59,7 +59,7 @@ class Reader {
             .reader-reading{
                 color:#fff!important;
                 background: blue!important;
-                text-decoration: underline;
+                //text-decoration: underline;
                 font-weight: bold;
 /*                background:#95b750;
                 color:#0359cc;*/
@@ -76,29 +76,29 @@ class Reader {
     }
 
     constructor (elm = 'body') {
-        let that = this
+        let that = this;
 
         this.speechSU = speechSU;
         this.id = +new Date();
-        this.state = null
-        this.elm = elm
-        this.list = []
-        this.index = 0
-        this.$elm = null
-        this.$reader = null
-        this.$speakBtn = null
-        this.$pauseBtn = null
-        this.clicentHeight = $(window).height()
+        this.state = null;
+        this.elm = elm;
+        this.list = [];
+        this.index = 0;
+        this.$elm = null;
+        this.$reader = null;
+        this.$speakBtn = null;
+        this.$pauseBtn = null;
+        this.clicentHeight = $(window).height();
 
         $(window).on('resize', function () {
-            that.clicentHeight = $(window).height()
+            that.clicentHeight = $(window).height();
         });
 
         window.addEventListener('beforeunload', function (e) {
-            that.cancel()
+            that.cancel();
         });
 
-        this._gui(this)
+        this._gui(this);
     }
 
     init (elm) {
@@ -155,7 +155,7 @@ class Reader {
 
         let $pauseBtn = $(`<a>暂停</a>`).hide().on('click', function (e) {
             that.pause()
-        }).appendTo($reader)
+        }).appendTo($reader);
 
         /*
             volume – 声音的音量，区间范围是0到1，默认是1。
