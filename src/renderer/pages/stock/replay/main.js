@@ -10,6 +10,7 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
+import  '../../../js/utils'
 import '../../../js/common-stock.js'
 
 import setTagCtrl from '../../tags/set-tag-ctrl'

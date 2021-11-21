@@ -42,7 +42,7 @@
 
             <ul ic-tpl="plans">
                 <li ic-for="j,plan in model" class="notification">
-                    <h6 class="title is-5">{{plan['股票名称']}} : </h6>
+                    <h6 class="title is-5">{{plan.date}} : </h6>
                     <div class="table_3">
                         <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
                             <h6>{{k}} : </h6>

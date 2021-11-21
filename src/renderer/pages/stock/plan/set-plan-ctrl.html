@@ -209,6 +209,14 @@
                     <textarea class="textarea is-medium" ic-form-field="计划预案" rows="7">{{plan['计划预案']}}</textarea>
                 </div>
             </div>
+
+            <div>
+                <h6></h6>
+                <div>
+                    <input id="date" class="input is-small" type="date" name="date" ic-value="{{plan.date || formatDate() }}" ic-form-field>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

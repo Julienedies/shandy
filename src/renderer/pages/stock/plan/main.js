@@ -27,7 +27,7 @@ brick.reg('planCtrl', function () {
 
     scope.replay_get_done = function(data){
         console.info(data);
-        scope.render('replay', data.replay);
+        scope.render('replay', data.replay[0]);
     };
 
     scope.plan_get_done = function(data){

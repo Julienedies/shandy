@@ -7,7 +7,7 @@ import _tags from './tags'
 
 const tags = _tags.tags;
 
-let plans
+let plans;
 
 function data () {
     plans = plans || dob('plan')

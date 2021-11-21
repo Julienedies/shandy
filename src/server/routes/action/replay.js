@@ -7,11 +7,11 @@ import _tags from './tags.js'
 
 const tags = _tags.tags;
 
-let replay
+let replay;
 
 function initDb () {
-    replay = replay || dob('replay')
-    return replay
+    replay = replay || dob('replay');
+    return replay;
 }
 
 function data () {
@@ -21,13 +21,13 @@ function data () {
 export default {
 
     get: function (req, res) {
-        initDb()
+        initDb();
         res.json(data());
     },
 
     // 复盘
     post: function (req, res) {
-        initDb()
+        initDb();
         let obj = req.body;
         replay.set(obj);
         res.json(data());
