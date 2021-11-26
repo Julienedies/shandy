@@ -35,7 +35,7 @@ brick.reg('reminderCtrl', function (scope) {
         //scope.render('principle', data);
     });*/
 
-    let timer = 360; // 10分钟，600秒
+    let timer = 320; // 10分钟，600秒
     let $timer = $('#timer');
 
     setInterval(() => {
