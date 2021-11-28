@@ -30,7 +30,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "/Users/j/截图/目标行情",
-		"imgDir": "/Users/j/截图/交易记录/2106",
+		"imgDir": "/Users/j/截图/交易记录/2107",
 		"bounds": {
 			"x": 1440,
 			"y": 0,
@@ -44,6 +44,7 @@
 			"height": 37
 		},
 		"history": [
+			"/Users/j/截图/交易记录/2107",
 			"/Users/j/截图/交易记录/2106",
 			"/Users/j/截图/竞价系统/2021-05",
 			"/Users/j/截图/交易记录/2105",

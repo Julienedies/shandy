@@ -251,7 +251,7 @@
 		"name": "",
 		"id": "7028271",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：不要被以前的经验影响，总是有两种可能性。</span></strong></p><p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\">而我总是先入为主，或者被上次经验影响，不能保持一致性，左右打脸。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能双头或反弹，也可能是N浪。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能利好兑现，也可能继续爆发。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：不要被以前的经验影响，总是有两种可能性。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">而我总是先入为主，或者被上次经验影响，不能保持一致性，左右打脸。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能双头或反弹，也可能是N浪。盘中拉升可能是脉冲也可能是启动。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能利好兑现，也可能继续爆发。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 4,
@@ -311,7 +311,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1625975362922
+		"timestamp": 1625975362922,
+		"promptTimes": 1,
+		"prevPromptTime": 1637940713621
 	},
 	{
 		"name": "",
