@@ -1,7 +1,37 @@
 [
 	{
-		"id": "游戏",
+		"id": "电子烟",
 		"selected": true,
+		"timestamp": 1638367221858
+	},
+	{
+		"id": "数字货币",
+		"selected": true,
+		"timestamp": 1638091798672
+	},
+	{
+		"id": "NMN概念",
+		"selected": false,
+		"timestamp": 1637839792574
+	},
+	{
+		"id": "氢能源",
+		"selected": true,
+		"timestamp": 1637536943876
+	},
+	{
+		"id": "虚拟现实",
+		"selected": false,
+		"timestamp": 1637164795022
+	},
+	{
+		"id": "汽车电子",
+		"selected": true,
+		"timestamp": 1636990283483
+	},
+	{
+		"id": "游戏",
+		"selected": false,
 		"timestamp": 1636326972204
 	},
 	{
@@ -11,7 +41,7 @@
 	},
 	{
 		"id": "磷酸铁锂",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1635810207372
 	},
 	{
@@ -33,21 +63,6 @@
 		"id": "电网",
 		"selected": false,
 		"timestamp": 1631836695050
-	},
-	{
-		"id": "甲醇",
-		"selected": false,
-		"timestamp": 1631836673630
-	},
-	{
-		"id": "北交所",
-		"selected": false,
-		"timestamp": 1630937649420
-	},
-	{
-		"id": "新三板",
-		"selected": false,
-		"timestamp": 1630855270633
 	},
 	{
 		"id": "光伏建筑",
@@ -85,13 +100,8 @@
 		"timestamp": 1629016091754
 	},
 	{
-		"id": "氢能源",
-		"selected": false,
-		"timestamp": 1628305464313
-	},
-	{
 		"id": "储能",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1627573287670
 	},
 	{
@@ -101,28 +111,13 @@
 	},
 	{
 		"id": "稀土永磁",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1625700347073
 	},
 	{
 		"id": "军工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1624289250789
-	},
-	{
-		"id": "化工",
-		"selected": false,
-		"timestamp": 1623255728974
-	},
-	{
-		"id": "物联网",
-		"selected": false,
-		"timestamp": 1623167607792
-	},
-	{
-		"id": "5G",
-		"selected": false,
-		"timestamp": 1623160671685
 	},
 	{
 		"id": "光刻胶",
@@ -131,13 +126,8 @@
 	},
 	{
 		"id": "盐湖提锂",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1621815384601
-	},
-	{
-		"id": "有色",
-		"selected": false,
-		"timestamp": 1620572417725
 	},
 	{
 		"id": "生物疫苗",
@@ -151,13 +141,8 @@
 	},
 	{
 		"id": "新冠",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1619394248028
-	},
-	{
-		"id": "医药",
-		"selected": false,
-		"timestamp": 1619362317542
 	},
 	{
 		"id": "半导体",
@@ -173,16 +158,6 @@
 		"id": "电力",
 		"selected": false,
 		"timestamp": 1615734930866
-	},
-	{
-		"id": "煤炭",
-		"selected": false,
-		"timestamp": 1615393699637
-	},
-	{
-		"id": "钢铁",
-		"selected": false,
-		"timestamp": 1614776807415
 	},
 	{
 		"id": "碳交易",

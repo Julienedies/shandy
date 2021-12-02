@@ -50,18 +50,25 @@ ViewerMap.instance = {
                 let arr = VIEWER_MAP[id] = VIEWER_MAP[id] || [];
                 arr.push(img);
             };
+
+
+            if(/中利集团/.test(img)){
+                console.log(img, tags);
+            }
+
+
             system && system.forEach(f);
             tags && tags.forEach(f);
         });
         for (let i in VIEWER_MAP) {
             let arr = VIEWER_MAP[i];
-            VIEWER_MAP[i] = imagesHelper.sort(arr);
-/*            arr.sort((a, b) => {
+            //VIEWER_MAP[i] = imagesHelper.sort(arr);
+           arr.sort((a, b) => {
                 //console.log(a, b);
                 let ad = (a.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
                 let bd = (b.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
                 return new Date(bd) - new Date(ad);
-            });*/
+            });
         }
         viewerMapJsonDb.init(VIEWER_MAP);
         return VIEWER_MAP;
