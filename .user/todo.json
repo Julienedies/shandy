@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "1199799",
+		"type": "问题",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">临盘时，板块涨幅、涨停时、净流入不统一。</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">看不到资金实际攻击方向。</span></strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">版面还要重新设计</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1638547210757
+	},
+	{
+		"name": "",
 		"id": "3130120",
 		"type": "问题",
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题：主观看空，当市场走势和预期的不一样，不知如何操作？</span></strong></p>",
@@ -9,7 +21,9 @@
 		"repeat": 4,
 		"interval": 140,
 		"duration": 17,
-		"timestamp": 1638278934833
+		"timestamp": 1638278934833,
+		"promptTimes": 1,
+		"prevPromptTime": 1638490957637
 	},
 	{
 		"name": "",
@@ -22,8 +36,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1637936622790,
-		"promptTimes": 1,
-		"prevPromptTime": 1638233770938
+		"promptTimes": 2,
+		"prevPromptTime": 1638498785365
 	},
 	{
 		"name": "",
@@ -36,8 +50,8 @@
 		"interval": 100,
 		"duration": 29,
 		"timestamp": 1637673180768,
-		"promptTimes": 1,
-		"prevPromptTime": 1638235571770
+		"promptTimes": 2,
+		"prevPromptTime": 1638500587033
 	},
 	{
 		"name": "",
@@ -50,8 +64,8 @@
 		"interval": 90,
 		"duration": 19,
 		"timestamp": 1637020107294,
-		"promptTimes": 1,
-		"prevPromptTime": 1638237371388
+		"promptTimes": 2,
+		"prevPromptTime": 1638502385937
 	},
 	{
 		"name": "",
@@ -65,7 +79,7 @@
 		"duration": 19,
 		"timestamp": 1636930865826,
 		"promptTimes": 1,
-		"prevPromptTime": 1638239171487
+		"prevPromptTime": 1638504188700
 	},
 	{
 		"name": "",
@@ -79,7 +93,7 @@
 		"duration": 24,
 		"timestamp": 1636803828143,
 		"promptTimes": 1,
-		"prevPromptTime": 1638240971774
+		"prevPromptTime": 1638505988960
 	},
 	{
 		"name": "",
@@ -93,7 +107,7 @@
 		"duration": 9,
 		"timestamp": 1636700906299,
 		"promptTimes": 1,
-		"prevPromptTime": 1638242771133
+		"prevPromptTime": 1638507786015
 	},
 	{
 		"name": "",
@@ -107,7 +121,7 @@
 		"duration": 19,
 		"timestamp": 1628513394321,
 		"promptTimes": 1,
-		"prevPromptTime": 1638244571146
+		"prevPromptTime": 1638509585703
 	},
 	{
 		"name": "",
@@ -119,7 +133,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1610785651586
+		"timestamp": 1610785651586,
+		"promptTimes": 1,
+		"prevPromptTime": 1638511385924
 	},
 	{
 		"name": "",
@@ -133,7 +149,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1638246371029
+		"prevPromptTime": 1638513185934
 	},
 	{
 		"name": "",
@@ -147,7 +163,7 @@
 		"duration": 7,
 		"timestamp": 1636413986087,
 		"promptTimes": 1,
-		"prevPromptTime": 1638248171333
+		"prevPromptTime": 1638514985997
 	},
 	{
 		"name": "",
@@ -161,7 +177,7 @@
 		"duration": 7,
 		"timestamp": 1636326773171,
 		"promptTimes": 1,
-		"prevPromptTime": 1638249970714
+		"prevPromptTime": 1638516788997
 	},
 	{
 		"name": "",
@@ -175,7 +191,7 @@
 		"duration": 24,
 		"timestamp": 1636258154803,
 		"promptTimes": 1,
-		"prevPromptTime": 1638251770617
+		"prevPromptTime": 1638518585667
 	},
 	{
 		"name": "",
@@ -189,7 +205,7 @@
 		"duration": 7,
 		"timestamp": 1636203734653,
 		"promptTimes": 1,
-		"prevPromptTime": 1638253570837
+		"prevPromptTime": 1638520386846
 	},
 	{
 		"name": "",
@@ -203,7 +219,7 @@
 		"duration": 7,
 		"timestamp": 1635088812447,
 		"promptTimes": 1,
-		"prevPromptTime": 1638255370774
+		"prevPromptTime": 1638522185160
 	},
 	{
 		"name": "",
@@ -217,7 +233,7 @@
 		"duration": 4,
 		"timestamp": 1634458275583,
 		"promptTimes": 1,
-		"prevPromptTime": 1638257170748
+		"prevPromptTime": 1638523985765
 	},
 	{
 		"name": "警告",
@@ -231,7 +247,7 @@
 		"singleWindow": "",
 		"duration": 7,
 		"promptTimes": 1,
-		"prevPromptTime": 1638258970333
+		"prevPromptTime": 1638525787442
 	},
 	{
 		"name": "",
@@ -245,7 +261,7 @@
 		"duration": 9,
 		"timestamp": 1614682522617,
 		"promptTimes": 1,
-		"prevPromptTime": 1638260771753
+		"prevPromptTime": 1638527584947
 	},
 	{
 		"name": "",
@@ -259,7 +275,7 @@
 		"duration": 4,
 		"timestamp": 1633852427544,
 		"promptTimes": 1,
-		"prevPromptTime": 1638262570208
+		"prevPromptTime": 1638529387318
 	},
 	{
 		"name": "",
@@ -273,7 +289,7 @@
 		"duration": 4,
 		"timestamp": 1629155362746,
 		"promptTimes": 1,
-		"prevPromptTime": 1638264371384
+		"prevPromptTime": 1638531186571
 	},
 	{
 		"name": "",
@@ -287,7 +303,7 @@
 		"duration": 9,
 		"timestamp": 1630328427565,
 		"promptTimes": 1,
-		"prevPromptTime": 1638266170964
+		"prevPromptTime": 1638532985619
 	},
 	{
 		"name": "",
@@ -310,24 +326,24 @@
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 47,
+		"duration": 19,
 		"timestamp": 1626650977149,
 		"promptTimes": 2,
-		"prevPromptTime": 1638271571034
+		"prevPromptTime": 1638538386576
 	},
 	{
 		"name": "",
 		"id": "5383681",
 		"type": "错误",
-		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 32px; color: rgb(255, 255, 255);\">错误1：为什么我总是错过大行情？</span></strong><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 32px; color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为何所有的龙头我都没有参与？</span></strong></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我错过那么多大行情和大龙头，我有深刻思考和反省过吗？下次我能抓住吗？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：我连续错过中青宝、清水源，湖北宜化、大金重工、为什么？这个问题我解决了吗？</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">就好像我以前错过的任何龙头。豫能控股、郑州煤电、小康股份、朗姿股份</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我对市场的理解力有问题，我的思维方式也有问题。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锂电池不断活跃，持续时间最久。但我就是没有参与？我是怎么复盘的？我是怎么理解市场的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中恒电气、中矿资源、天齐锂业、天华超净，蓝晓科技、这些都在我的自选里。我是怎么思考的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么我错过稀土行情？为什么错过北方稀土、五矿稀土？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过PVDF？为什么错过联创股份？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过磷化工行情？</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 32px; color: rgb(255, 255, 255);\">错误1：为什么我总是错过大行情？</span></strong><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 32px; color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为何所有的龙头我都没有参与？</span></strong></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我错过那么多大行情和大龙头，我有深刻思考和反省过吗？下次我能抓住吗？</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">错误：我连续错过中青宝、清水源，湖北宜化、大金重工、为什么？这个问题我解决了吗？</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>就好像我以前错过的任何龙头。豫能控股、郑州煤电、小康股份、朗姿股份</strong></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我对市场的理解力有问题，我的思维方式也有问题。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锂电池不断活跃，持续时间最久。但我就是没有参与？我是怎么复盘的？我是怎么理解市场的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中恒电气、中矿资源、天齐锂业、天华超净，蓝晓科技、这些都在我的自选里。我是怎么思考的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么我错过稀土行情？为什么错过北方稀土、五矿稀土？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过PVDF？为什么错过联创股份？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过磷化工行情？</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
-		"duration": 17,
+		"duration": 27,
 		"timestamp": 1625975362922,
 		"promptTimes": 1,
-		"prevPromptTime": 1638269771501
+		"prevPromptTime": 1638536587653
 	},
 	{
 		"name": "",
@@ -341,7 +357,7 @@
 		"duration": 24,
 		"timestamp": 1621658103771,
 		"promptTimes": 1,
-		"prevPromptTime": 1638273370623
+		"prevPromptTime": 1638540187296
 	},
 	{
 		"name": "",
@@ -355,7 +371,7 @@
 		"duration": 17,
 		"timestamp": 1625831460227,
 		"promptTimes": 1,
-		"prevPromptTime": 1638275169989
+		"prevPromptTime": 1638541984470
 	},
 	{
 		"name": "",
@@ -381,8 +397,8 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1595590485334,
-		"promptTimes": 2,
-		"prevPromptTime": 1638282369619
+		"promptTimes": 1,
+		"prevPromptTime": 1638543784588
 	},
 	{
 		"name": "",
@@ -395,8 +411,8 @@
 		"interval": 60,
 		"duration": 19,
 		"timestamp": 1621656781526,
-		"promptTimes": 2,
-		"prevPromptTime": 1638284170897
+		"promptTimes": 1,
+		"prevPromptTime": 1638545587826
 	},
 	{
 		"name": "",
@@ -408,9 +424,7 @@
 		"repeat": 2,
 		"interval": 100,
 		"duration": 27,
-		"timestamp": 1597160146691,
-		"promptTimes": 1,
-		"prevPromptTime": 1638280570461
+		"timestamp": 1597160146691
 	},
 	{
 		"name": "",
@@ -422,9 +436,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1634257137946,
-		"promptTimes": 1,
-		"prevPromptTime": 1638285970711
+		"timestamp": 1634257137946
 	},
 	{
 		"name": "",
