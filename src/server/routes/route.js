@@ -19,6 +19,7 @@ import logic from './action/logic'
 import news from './action/news'
 import plan from './action/plan'
 import replay from './action/replay'
+import rp from './action/rp'
 import tags from './action/tags'
 import system from './action/system'
 import memo from './action/memo'
@@ -69,6 +70,11 @@ export default function (app) {
     app.get('/stock/news', news.get)
     app.post('/stock/news', news.post)
     app.delete('/stock/news/:id', news.del)
+
+    app.get('/stock/rp', rp.get)
+    app.post('/stock/rp', rp.post)
+    app.delete('/stock/rp/:id', rp.del)
+    app.post('/stock/rp/move', rp.move)
 
     app.get('/stock/plan', plan.get)
     app.post('/stock/plan', plan.post)

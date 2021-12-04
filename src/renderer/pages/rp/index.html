@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>review - plan</title>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
+    <link rel="stylesheet" href="../../css/vendor/effeckt/animations.css">
+    <script src="/set_node_modules_path.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<div ic-view-stage ic-ctrl="mainCtrl">
+
+    <div ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
+        <div class="column">
+
+            <div class="buttons" id="fixedButtons">
+                <button class="button is-primary" ic-click="addTodo">新ToDo</button>
+                 <span class="tags is-left" ic-tpl="types">
+                    <span ic-select="tags" ic-select-item=".tag" ic-select-auto="false" ic-select-cla="is-primary"
+                          ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
+                        <i ic-for="v,i in model.mapByType" ic-val="{{ v }}" ic-class="tag is-small {{ v==model.filterByType?'is-primary':''  }}">
+                            {{ v }}
+                        </i>
+                    </span>
+                </span>
+            </div>
+
+            <ul ic-tpl="todoList">
+
+                <li class="box" ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
+                    ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
+                    <h3>{{ v.title }}</h3>
+                    <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
+                    <div style="text-align: right;">
+                        <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
+                        <button class="button is-primary is-small" ic-click="focus:{{ v.id }}">置顶</button>
+                        <button class="button is-primary is-small"
+                                ic-ajax
+                                ic-submit-method="delete"
+                                ic-submit-action="/stock/rp/{{v.id}}"
+                                ic-submit-before="delBeforeConfirm"
+                                ic-submit-on-done="onDelDone">删除
+                        </button>
+                        <sapn class="tag"> {{ v.type }}</sapn>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div ic-view="setTodo" ic-ctrl="setTodoCtrl">
+        <div class="column">
+            <div ic-tpl="setTodo" ic-tpl-init="{ items:{} }">
+                <div ic-form>
+
+                    <div class="field has-addons">
+                        <div class="control">
+                            <button class="button is-info">标题</button>
+                        </div>
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Text input" value="{{ model.title }}" ic-form-field="title">
+                            <input type="hidden" value="{{ model.id }}" ic-form-field="id">
+                        </div>
+                        <p class="control">
+                            <span class="select">
+                              <select name="type" ic-form-field>
+                                <option value="question" ic-has-selected="'question'==model.type">问题</option>
+                                <option value="mistake" ic-has-selected="'mistake'==model.type">错误</option>
+                                <option value="warn" ic-has-selected="'warn'==model.type">警告</option>
+                                <option value="review" ic-has-selected="'review'==model.type">复盘</option>
+                              </select>
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="field has-addons">
+                        <div class="control">
+                            <button class="button is-info">备注</button>
+                        </div>
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Text input" value="{{ model.comment }}" ic-form-field="comment">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <p class="control">
+                            <button class="button is-primary is-fullwidth" ic-view-to="tags">
+                                添加新项
+                            </button>
+                        </p>
+                    </div>
+
+
+
+                    <div class="field">
+                        <div class="control">
+                            <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
+                                <div class="tags">
+                                    <span class="tag is-primary is-large" ic-for-start="k,arr in model.tags" ic-if-start="k!=='type'">{{k}}</span>
+                                    <span class="tag is-medium is-black" ic-for-end ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
+                                          ic-has-selected="model.img.tags && model.img.tags.includes(v.id)"> {{v.text}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="field">
+                        <div class="control">
+                            <textarea id="editor" rows="14" class="textarea" placeholder="内容" ic-form-field="content"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary"
+                                    ic-form-submit
+                                    ic-submit-action="/stock/rp"
+                                    ic-submit-before="before"
+                                    ic-submit-on-done="done">保存
+                            </button>
+                            <button class="button" ic-click="reset">
+                                重置
+                            </button>
+                            <button class="button" ic-click="cancel">取消</button>
+                            <button class="button" ic-view-to="todoList">
+                                返回
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div ic-view="tags" ic-ctrl="tagsCtrl">
+        <div class="column">
+
+            <header>
+                <div class="buttons">
+                    <button class="button is-primary" ic-view-to="setTodo">返回</button>
+                </div>
+            </header>
+
+            <div class="box" ic-tpl="tags">
+
+                <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
+
+                    <div class="field is-grouped is-grouped-multiline">
+
+                        <div class="control" ic-for-start="k,arr in model.tags" ic-if-start="k!=='type'">
+                            <span class="button is-primary">{{ k }}</span>
+                        </div>
+
+                        <div class="control"  ic-for="i,v in arr">
+                            <div class="tags has-addons">
+                                <span class="tag is-medium" ic-select-item  ic-val="{{ v.id }}"
+                                      ic-has-selected="model.rp.tags && model.rp.tags.includes(v.id)"> {{v.text}}</span>
+
+                                <a class="tag is-medium" ic-click="editTag:{{v.id}}">
+                                    <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                                </a>
+
+                                <a class="tag is-delete is-medium" ic-click="delTag:{{ v.id }}"></a>
+                            </div>
+                        </div>
+
+                        <div class="control" ic-for-end ic-if-end>
+                            <div class="tags has-addons">
+                                <a class="tag is-medium" ic-click="addTag:{{ k }}">
+                                    <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+${ require('../tags/set-tag.html') }
+</body>
+</html>
