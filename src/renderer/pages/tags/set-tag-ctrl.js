@@ -4,7 +4,7 @@
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
-import { EDIT_TAG, ADD_TAG, ON_SET_TAG_DONE, DEL_TAG, ON_GET_TAGS_DONE, ON_DEL_TAG_DONE } from '../../js/constants'
+import { EDIT_TAG, ADD_TAG, ON_SET_TAG_DONE, DEL_TAG, ON_GET_TAGS_DONE, ON_DEL_TAG_DONE, TAGS_CHANGE } from '../../js/constants'
 
 export default function () {
 
@@ -37,10 +37,15 @@ export default function () {
         scope.emit(ON_GET_TAGS_DONE, data);
     };
 
-    $.ajax({
-        url: '/stock/tags',
-        type: 'get',
-    }).done(onGetTagMapDone);
+
+    function getTags () {
+        $.ajax({
+            url: '/stock/tags',
+            type: 'get',
+        }).done(onGetTagMapDone);
+    }
+
+    getTags();
 
     // tag ajax post one done
     scope.onSetTagDone = function (data) {
@@ -53,6 +58,7 @@ export default function () {
         scope.render({types});
     };
 
+    scope.on(TAGS_CHANGE, getTags);
     /**
      * 修改标签对象
      * @param msg {String|Object}  标签Id 或者 标签对象 或者 是单个标签对象数组 ()

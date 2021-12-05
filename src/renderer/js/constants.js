@@ -17,6 +17,11 @@ export const ON_SET_TAG_DONE = 'tag.edit.done';
 export const ON_GET_TAGS_DONE = 'ON_GET_TAGS_DONE';
 export const ON_DEL_TAG_DONE = 'ON_DEL_TAG_DONE';
 
+export const TAGS_CHANGE = 'TAGS_CHANGE';
+
+// 标签集做为select change
+export const TAG_SELECT_CHANGE = 'TAG_SELECT_CHANGE';
+
 // 交易逻辑数据增删改查
 export const ADD_LOGIC = 'LOGIC.add';
 export const EDIT_LOGIC = 'LOGIC.edit';

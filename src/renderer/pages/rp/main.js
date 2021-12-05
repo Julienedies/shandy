@@ -18,37 +18,26 @@ import 'froala-editor/css/froala_style.min.css'
 import 'froala-editor/js/froala_editor.pkgd.min.js'
 
 import '../../js/utils.js'
-import { FroalaEditorConfig } from '../../js/constants'
+import { FroalaEditorConfig, TAGS_CHANGE } from '../../js/constants'
 
-import moment from 'moment'
-import voice from '../../../libs/voice'
+import {
+    ON_GET_TAGS_DONE,
+    ON_SET_TAG_DONE,
+    ON_DEL_TAG_DONE,
+    DEL_TAG,
+    TAG_SELECT_CHANGE
+} from '../../js/constants'
+
+import '../../js/common-stock.js'
 
 let $body = $('body');
 let socket = io();
 
 import setTagCtrl from '../tags/set-tag-ctrl'
 
-
-brick.reg('mainCtrl', function (scope) {
-
-});
+brick.set('ic-select-cla', 'is-primary');
 
 brick.reg('setTagCtrl', setTagCtrl);
-
-brick.reg('tagsCtrl', function (scope) {
-
-    let model = {tags:[], rp: {}};
-    // 获取视图内容并显示
-    $.get('/stock/tags/').done((data) => {
-        console.log(data);
-        model.tags = data;
-        scope.render('tags', {model});
-    });
-
-    //scope.on()
-
-});
-
 
 brick.reg('todoListCtrl', function (scope) {
 
@@ -77,7 +66,7 @@ brick.reg('todoListCtrl', function (scope) {
         //console.log(filterByType, todoArr);
         scope.render('types', {model: {mapByType: mapByType, filterByType: filterByType}});
         scope.render('todoList', {model: todoArr}, function () {
-            $(this).find('tr').on('dragstart', scope.dragstart)
+            $(this).find('li').on('dragstart', scope.dragstart)
                 .on('dragover', scope.dragover)
                 .on('dragleave', scope.dragleave)
                 .on('drop', scope.drop);
@@ -96,7 +85,11 @@ brick.reg('todoListCtrl', function (scope) {
         render();
     }
 
-    getRpData();
+    // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
+    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+        getRpData();
+    });
+
 
     scope.on('rp.change', function (e, data) {
         console.log('rp.change', data);
@@ -132,6 +125,10 @@ brick.reg('todoListCtrl', function (scope) {
         $('.pre.text').toggleClass(cla);
     };
 
+    scope.refreshTags = function (e) {
+        scope.emit(TAGS_CHANGE);
+    };
+
     scope.addTodo = function (e) {
         scope.emit('setTodo', {});
     };
@@ -150,27 +147,8 @@ brick.reg('todoListCtrl', function (scope) {
 
     // 置顶
     scope.focus = function (e, id) {
-        //todoJodb.insert(id);
         scope.emit('move', {id});
     };
-
-    scope.test = function (e, id) {
-        let item = listManager.get(id);
-        scope.activePrompt(item);
-    };
-
-    scope.complete = function (e, id, isComplete) {
-        //let item = todoJodb.get2(id);
-        // item.complete = !item.complete;
-        //todoJodb.set(item);
-    };
-
-    scope.disable = function (e, id, isDisable) {
-        //let item = todoJodb.get2(id);
-        //item.disable = !item.disable;
-        //todoJodb.set(item);
-    };
-
 
     // ---------------------------------------------------------------------------------------
     scope.dragstart = function (e) {
@@ -196,12 +174,12 @@ brick.reg('todoListCtrl', function (scope) {
         e.stopPropagation();
         let $target = $(e.target);
         let id = e.originalEvent.dataTransfer.getData("Text");
-        let distId = $target.data('id') || $target.closest('tr[data-id]').data('id');
-        if (!distId || distId === id) {
+        let destId = $target.data('id') || $target.closest('li[data-id]').data('id');
+        if (!destId || destId === id) {
             return console.log('not dist');
         }
-        console.log('drop', id, distId + '', e.target);
-        scope.emit('move', {id, dist: distId + ''});
+        console.log('drop', id, destId + '', e.target);
+        scope.emit('move', {id, dest: destId + ''});
         return false;
     };
 });
@@ -211,7 +189,37 @@ brick.reg('setTodoCtrl', function (scope) {
 
     let $elm = scope.$elm;
     let $editor;
+    let model = {};
 
+    scope.on('setTodo', function (e, data) {
+        brick.view.to('setTodo');
+        model = data || {};
+        render();
+    });
+
+    scope.on(TAG_SELECT_CHANGE, function (e, data) {
+        console.log('ON_TAG_SELECT_CHANGE', data);
+        model = getFormVm();
+        model.content = $editor.froalaEditor('html.get', true);
+        model.tags = data.value;
+        render();
+    });
+
+    function getFormVm () {
+        return $elm.find('[ic-form]').icForm();
+    }
+
+    function render () {
+        scope.render('setTodo', {model}, function () {
+            $editor = $elm.find('#editor').froalaEditor({
+                ...FroalaEditorConfig,
+                height: 360,
+            });
+            $editor.froalaEditor('html.set', model.content || '');
+        });
+    }
+
+    // ajax请求服务端前的表单数据处理
     this.before = function (fields) {
         fields.content = $editor.froalaEditor('html.get', true);
         //$editor.froalaEditor('destroy');
@@ -230,17 +238,34 @@ brick.reg('setTodoCtrl', function (scope) {
         brick.view.to('todoList');
     };
 
-    scope.on('setTodo', function (e, msg) {
-        brick.view.to('setTodo');
-        let model = msg || {};
-        scope.render('setTodo', {model}, function () {
-            $editor = $elm.find('#editor').froalaEditor({
-                ...FroalaEditorConfig,
-                height: 360,
-            });
-            $editor.froalaEditor('html.set', model.content || '');
-        });
+
+});
+
+
+brick.reg('tagsCtrl', function (scope) {
+
+    let model = {tags: {}, rp: {}};
+
+    // tags数据保存在setTagCtrl
+    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+        //console.log(data);
+        model.tags = data;
+        render();
     });
+
+    scope.on('setTodo', function (e, data) {
+        model.rp = data || {};
+        render();
+    });
+
+    // tag select change
+    scope.onChange = function (data) {
+        scope.emit(TAG_SELECT_CHANGE, data);
+    };
+
+    function render () {
+        scope.render('tags', {model});
+    }
 
 });
 

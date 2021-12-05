@@ -23,8 +23,9 @@ import {
 } from '../../../js/constants'
 
 import utils from '../../../js/utils'
-import '../../../js/common-stock.js'
 import Reader from '../../../../libs/reader'
+
+import '../../../js/common-stock.js'
 
 import setTagCtrl from '../../tags/set-tag-ctrl'
 
@@ -194,9 +195,10 @@ brick.reg('setLogicCtrl', function () {
 
     scope.before = function (fields) {
         //  type属性如果是空数组，由于合并的关系，似乎并不会在服务器端删除，临时处理，先把type设为''
-        if (fields.type && fields.type.length === 0) {
+        // 服务器端处理， jquery ajax 不能上传空数据
+        /*if (fields.type && fields.type.length === 0) {
             fields.type = '';
-        }
+        }*/
     };
 
     // 当logic添加或修改完成，广播事件

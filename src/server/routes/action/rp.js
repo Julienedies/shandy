@@ -24,6 +24,9 @@ export default {
     post (req, res) {
         let dob = getDb();
         let data = req.body;
+        if(data.tags === undefined) {
+            data.tags = [];
+        }
         dob.set(data);
         res.json(getData());
     },
@@ -38,9 +41,7 @@ export default {
     move (req, res) {
         let dob = getDb();
         let data = req.body;
-        let id = data.id;
-        let destId = data.dest;
-        dob.move(id, destId);
+        dob.move(data.id, data.dest);
         res.json(getData());
     }
 

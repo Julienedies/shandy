@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>review - plan</title>
+    <title>rp</title>
     <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
     <link rel="stylesheet" href="../../css/vendor/effeckt/animations.css">
     <script src="/set_node_modules_path.js"></script>
@@ -11,11 +11,14 @@
 <body>
 <div ic-view-stage ic-ctrl="mainCtrl">
 
+    ${ require('../tags/set-tag.html') }
+
     <div ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
         <div class="column">
 
             <div class="buttons" id="fixedButtons">
-                <button class="button is-primary" ic-click="addTodo">新ToDo</button>
+                <button class="button is-primary none" ic-click="refreshTags">刷新Tags</button>
+                <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
                  <span class="tags is-left" ic-tpl="types">
                     <span ic-select="tags" ic-select-item=".tag" ic-select-auto="false" ic-select-cla="is-primary"
                           ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
@@ -26,32 +29,50 @@
                 </span>
             </div>
 
-            <ul ic-tpl="todoList">
+            <div ic-tpl="todoList">
+                <div ic-form>
+                    <ul>
+                        <li class="box" ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
+                            ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
-                <li class="box" ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
-                    ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
-                    <h3>{{ v.title }}</h3>
-                    <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
-                    <div style="text-align: right;">
-                        <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
-                        <button class="button is-primary is-small" ic-click="focus:{{ v.id }}">置顶</button>
-                        <button class="button is-primary is-small"
-                                ic-ajax
-                                ic-submit-method="delete"
-                                ic-submit-action="/stock/rp/{{v.id}}"
-                                ic-submit-before="delBeforeConfirm"
-                                ic-submit-on-done="onDelDone">删除
-                        </button>
-                        <sapn class="tag"> {{ v.type }}</sapn>
-                    </div>
-                </li>
-            </ul>
+                            <h3>{{ v.title }} <b> {{ v.comment }}</b></h3>
+
+                            <div class="wrap">
+                                <div class="tags" ic-if="v.tags">
+                                    <span class="tag is-large" ic-for="j,k in v.tags"> {{ TAGS_MAP_BY_ID[k].text }}</span>
+                                </div>
+
+                                <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
+
+                                <div class="level">
+                                    <div class="level-left">
+                                    </div>
+                                    <div class="level-right">
+                                        <span class="tag is-small"> {{ v.type }}</span>
+                                        <span class="tag is-small" ic-click="edit:{{ v.id }}">修改</span>
+                                        <span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>
+                                        <span class="tag is-small"
+                                              ic-ajax
+                                              ic-submit-method="delete"
+                                              ic-submit-action="/stock/rp/{{v.id}}"
+                                              ic-submit-before="delBeforeConfirm"
+                                              ic-submit-on-done="onDelDone">删除</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
         </div>
     </div>
 
     <div ic-view="setTodo" ic-ctrl="setTodoCtrl">
         <div class="column">
-            <div ic-tpl="setTodo" ic-tpl-init="{ items:{} }">
+            <div ic-tpl="setTodo" ic-tpl-init="{}">
                 <div ic-form>
 
                     <div class="field has-addons">
@@ -65,10 +86,12 @@
                         <p class="control">
                             <span class="select">
                               <select name="type" ic-form-field>
+                                <option value="rp" ic-has-selected="'rp'==model.type">复盘&计划</option>
                                 <option value="question" ic-has-selected="'question'==model.type">问题</option>
                                 <option value="mistake" ic-has-selected="'mistake'==model.type">错误</option>
                                 <option value="warn" ic-has-selected="'warn'==model.type">警告</option>
-                                <option value="review" ic-has-selected="'review'==model.type">复盘</option>
+                                <option value="理念" ic-has-selected="'理念'==model.type">理念</option>
+                                <option value="市场" ic-has-selected="'市场'==model.type">市场</option>
                               </select>
                             </span>
                         </p>
@@ -83,35 +106,20 @@
                         </div>
                     </div>
 
-                    <div class="field">
+                    <div class="field is-grouped is-grouped-multiline" ic-select="items" ic-select-type="checkbox" ic-form-field="tags">
+                        <div class="control" ic-for="i,v in model.tags">
+                            <div class="tags has-addons">
+                            <span class="tag is-medium" ic-select-item ic-val="{{ v }}" selected>
+                                {{ TAGS_MAP_BY_ID[v].text }}
+                            </span>
+                            </div>
+                        </div>
+
                         <p class="control">
                             <button class="button is-primary is-fullwidth" ic-view-to="tags">
                                 添加新项
                             </button>
                         </p>
-                    </div>
-
-
-
-                    <div class="field">
-                        <div class="control">
-                            <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
-                                <div class="tags">
-                                    <span class="tag is-primary is-large" ic-for-start="k,arr in model.tags" ic-if-start="k!=='type'">{{k}}</span>
-                                    <span class="tag is-medium is-black" ic-for-end ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
-                                          ic-has-selected="model.img.tags && model.img.tags.includes(v.id)"> {{v.text}}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="field">
-                        <div class="control">
-                            <textarea id="editor" rows="14" class="textarea" placeholder="内容" ic-form-field="content"></textarea>
-                        </div>
                     </div>
 
                     <div class="field">
@@ -134,28 +142,25 @@
 
                     <div class="field">
                         <div class="control">
-                            <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
+                            <textarea id="editor" rows="14" class="textarea" placeholder="内容" ic-form-field="content"></textarea>
                         </div>
                     </div>
 
                 </div>
             </div>
-
         </div>
     </div>
 
     <div ic-view="tags" ic-ctrl="tagsCtrl">
         <div class="column">
 
-            <header>
-                <div class="buttons">
-                    <button class="button is-primary" ic-view-to="setTodo">返回</button>
-                </div>
-            </header>
+            <div class="buttons">
+                <button class="button is-primary is-fullwidth" ic-view-to="setTodo">返回</button>
+            </div>
 
             <div class="box" ic-tpl="tags">
 
-                <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
+                <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-auto="false" ic-select-on-change="onChange" ic-select-cla="is-info">
 
                     <div class="field is-grouped is-grouped-multiline">
 
@@ -165,14 +170,14 @@
 
                         <div class="control"  ic-for="i,v in arr">
                             <div class="tags has-addons">
-                                <span class="tag is-medium" ic-select-item  ic-val="{{ v.id }}"
+                                <span class="tag is-medium is-black" ic-select-item  ic-val="{{ v.id }}"
                                       ic-has-selected="model.rp.tags && model.rp.tags.includes(v.id)"> {{v.text}}</span>
 
                                 <a class="tag is-medium" ic-click="editTag:{{v.id}}">
                                     <span class="icon is-medium"><i class="far fa-edit"></i></span>
                                 </a>
 
-                                <a class="tag is-delete is-medium" ic-click="delTag:{{ v.id }}"></a>
+                                <!--<a class="tag is-delete is-medium" ic-click="delTag:{{ v.id }}"></a>-->
                             </div>
                         </div>
 
@@ -190,9 +195,7 @@
 
         </div>
     </div>
+
 </div>
-
-
-${ require('../tags/set-tag.html') }
 </body>
 </html>

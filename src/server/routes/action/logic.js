@@ -24,6 +24,12 @@ export default {
     post (req, res) {
         let dob = getDb();
         let data = req.body;
+        if(data.tag === undefined) {
+            data.tag = [];
+        }
+        if(data.type === undefined) {
+            data.type = [];
+        }
         dob.set(data);
         res.json(getData());
     },
