@@ -1,55 +1,181 @@
 [
 	{
-		"title": "今天盘面可能是哪种状态？",
+		"title": "没有大局观；看不到大趋势；总是后知后觉；行情启动时犹豫，行情退潮时管不住手。",
+		"id": "5328479",
+		"type": "mistake",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638719303089
+	},
+	{
+		"title": "被上次的经验影响，左右打脸；不能保持一致性；无所适从；",
+		"id": "4874109",
+		"type": "mistake",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638719251998
+	},
+	{
+		"title": "主观；线性思维，先入为主；",
+		"id": "5563051",
+		"type": "mistake",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638719204579
+	},
+	{
+		"title": "今天临盘我的交易计划是什么？",
+		"id": "0743188",
+		"type": "rp",
+		"comment": "无系统，无计划，临盘随意交易是我最大的亏损来源。",
+		"tags": [],
+		"content": "",
+		"timestamp": 1638692425572
+	},
+	{
+		"title": "今天盘面可能是哪种状态？节奏怎么样？如何应对？",
 		"id": "6935434",
 		"type": "rp",
-		"comment": "",
-		"content": "",
+		"comment": "我有做好市场转强的预案吗？我总是倾向看空。总是错过市场转强最好的交易机会。",
+		"content": "<p><strong><span style=\"font-size: 20px;\">转折进攻日 &nbsp;分歧日 &nbsp; 退潮日 &nbsp; 高潮日 &nbsp; 调整观望日</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px;\">时机就是一切。弱势管住手，强势踏准节奏。买在转折点。</span></strong></p>",
 		"name": "",
-		"timestamp": 1638681951111
+		"timestamp": 1638681951111,
+		"tags": []
 	},
 	{
-		"title": "我要捕捉的目标行情是什么？",
-		"id": "3676210",
-		"type": "question",
-		"comment": "",
-		"content": "",
-		"name": "3676210",
-		"timestamp": 1638620495062,
-		"tags": [
-			"0177679",
-			"1820273"
-		]
+		"title": "大局观：市场处于什么阶段？  市场有哪些重要的变量？  这里变量会导致什么结果？",
+		"id": "2693186",
+		"type": "rp",
+		"comment": "出现这些结果有哪些机会？ 这些机会收益风险比如何?",
+		"content": "<p>大盘趋势向上，有主流热点，赚钱效应强</p><p>大盘趋势向上，无主流热点，板块轮动</p><p>大盘低位震荡&nbsp;</p><p>大盘高位震荡</p><p>大盘趋势向下 &nbsp; &nbsp;</p><p><br></p><h2><strong><u><span style=\"font-size: 20px;\">6-8月份的大盘主升浪，为什么我眼瞎看不到？</span></u></strong></h2>",
+		"tags": [],
+		"timestamp": 1638689045658
 	},
 	{
-		"title": "大局观：大盘趋势大方向是什么？",
+		"title": "市场主线热点是什么？",
 		"id": "1243691",
 		"type": "rp",
-		"comment": "",
+		"comment": "任何时候市场都是有主线的。不要着眼于市场的各种小波动。",
 		"tags": [],
 		"content": "",
 		"name": "1243691",
 		"timestamp": 1638676655275
 	},
 	{
+		"title": "日内热点是什么？行情性质？与市场主线的关系？次日可能的走势？",
+		"id": "8604600",
+		"type": "rp",
+		"comment": "",
+		"content": "",
+		"tags": [
+			"6957825",
+			"4473908",
+			"3688552",
+			"6249700",
+			"2937591",
+			"5282078",
+			"4644573",
+			"2924839",
+			"7719138"
+		],
+		"timestamp": 1638705609580
+	},
+	{
+		"title": "市场龙头是什么？我有做龙头股走势的推演和预案吗？有没有介入机会博弈空间？",
+		"id": "7438863",
+		"type": "rp",
+		"comment": "为何所有的龙头股我都错过？",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638717495263
+	},
+	{
+		"title": "当前市场偏好风格是什么？最有赚钱效应的是什么？",
+		"id": "8059392",
+		"type": "rp",
+		"comment": "",
+		"tags": [
+			"3502595",
+			"1804142",
+			"3657132",
+			"8892599",
+			"7913663",
+			"8141386"
+		],
+		"content": "",
+		"timestamp": 1638692867662
+	},
+	{
+		"title": "有没有正在爆发的主升浪、N形浪、V形浪、分歧转一致？",
+		"id": "6205201",
+		"type": "rp",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638717864581
+	},
+	{
+		"title": "有没有什么先锋龙头或蓝筹中军，可能带动板块爆发或加强？",
+		"id": "2655716",
+		"type": "rp",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638692460734
+	},
+	{
 		"title": "有哪些个股超预期？在我预期之外。",
 		"id": "5225087",
 		"type": "rp",
 		"comment": "预期之外，说明我的理解和预判可能是错误的。",
-		"tags": [
-			"1820273"
-		],
+		"tags": [],
 		"content": "",
 		"name": "5225087",
 		"timestamp": 1638680127622
 	},
 	{
+		"title": "亏钱效应怎么样？跌停是否增多？有没有系统性风险？",
+		"id": "4495245",
+		"type": "rp",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638717530020
+	},
+	{
+		"title": "我要捕捉的目标行情是什么？",
+		"id": "3676210",
+		"type": "question",
+		"comment": "",
+		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\">围绕市场合力、主流热点；客观跟随；</span></strong></p>",
+		"name": "3676210",
+		"timestamp": 1638620495062,
+		"tags": [
+			"0177679",
+			"1820273",
+			"5691761"
+		]
+	},
+	{
 		"title": "我为何总是错过大行情？",
 		"id": "9141600",
 		"type": "question",
-		"comment": "主观看空；先入为主；线性思维；",
-		"content": "",
+		"comment": "",
+		"content": "<p><strong><span style=\"font-size: 18px;\">没有大局观，看不到大趋势；</span></strong></p><p><strong><span style=\"font-size: 18px;\">主观看空；先入为主；线性思维；</span></strong></p>",
 		"name": "9141600",
-		"timestamp": 1638679624532
+		"timestamp": 1638679624532,
+		"tags": []
+	},
+	{
+		"title": "我以什么做为判断锚点？为何我的预判总是错误？",
+		"id": "3566298",
+		"type": "question",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638719166797
 	}
 ]

@@ -35,14 +35,14 @@ let socket = io();
 
 import setTagCtrl from '../tags/set-tag-ctrl'
 
-brick.set('ic-select-cla', 'is-primary');
+brick.set('ic-select-cla', 'is-info');
 
 brick.reg('setTagCtrl', setTagCtrl);
 
 brick.reg('todoListCtrl', function (scope) {
 
     const dragOverCla = 'onDragOver';
-    let filterByType = null;
+    let filterByType = 'rp';
 
     let listManager = brick.services.get('recordManager')();
 
@@ -92,7 +92,7 @@ brick.reg('todoListCtrl', function (scope) {
 
 
     scope.on('rp.change', function (e, data) {
-        console.log('rp.change', data);
+        //console.log('rp.change', data);
         setList(data);
     });
 
@@ -178,7 +178,7 @@ brick.reg('todoListCtrl', function (scope) {
         if (!destId || destId === id) {
             return console.log('not dist');
         }
-        console.log('drop', id, destId + '', e.target);
+        //console.log('drop', id, destId + '', e.target);
         scope.emit('move', {id, dest: destId + ''});
         return false;
     };
@@ -260,6 +260,7 @@ brick.reg('tagsCtrl', function (scope) {
 
     // tag select change
     scope.onChange = function (data) {
+        model.rp.tags = data.value;
         scope.emit(TAG_SELECT_CHANGE, data);
     };
 

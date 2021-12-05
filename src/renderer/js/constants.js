@@ -32,7 +32,7 @@ export const ON_GET_LOGIC_DONE = 'ON_GET_LOGIC_DONE';
 export const ON_DEL_LOGIC_DONE = 'ON_DEL_LOGIC_DONE';
 export const COLORS_BACKGROUND = ['#ff0000', '#0000ff', '#006400', '#ffff00', '#9400D3', '#000000'];
 export let FroalaEditorConfig = {
-    fontSizeDefaultSelection: '16',
+    fontSizeDefaultSelection: '18',
     fontSize: ['14', '16', '18', '20', '22', '24', '28', '30', '32'],
     colorsBackground: COLORS_BACKGROUND,
 };

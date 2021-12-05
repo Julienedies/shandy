@@ -20,9 +20,10 @@
                 <button class="button is-primary none" ic-click="refreshTags">刷新Tags</button>
                 <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
                  <span class="tags is-left" ic-tpl="types">
-                    <span ic-select="tags" ic-select-item=".tag" ic-select-auto="false" ic-select-cla="is-primary"
+                    <span ic-select="tags" =".tag" ic-select-auto="false" ic-select-cla="is-primary"
                           ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
-                        <i ic-for="v,i in model.mapByType" ic-val="{{ v }}" ic-class="tag is-small {{ v==model.filterByType?'is-primary':''  }}">
+                        <i ic-for="v,i in model.mapByType" ic-select-item ic-val="{{ v }}"
+                           ic-class="tag is-small {{ v==model.filterByType?'is-primary':''  }}">
                             {{ v }}
                         </i>
                     </span>
@@ -38,8 +39,10 @@
                             <h3>{{ v.title }} <b> {{ v.comment }}</b></h3>
 
                             <div class="wrap">
-                                <div class="tags" ic-if="v.tags">
-                                    <span class="tag is-large" ic-for="j,k in v.tags"> {{ TAGS_MAP_BY_ID[k].text }}</span>
+                                <div class="tags" ic-if="v.tags && v.tags.length" ic-select ic-select-type="checkbox" ic-form-field="{{ 'f_'+v.id }}">
+                                    <span class="tag is-large" ic-for="j,k in v.tags" ic-select-item ic-val="{{ k }}">
+                                        {{ TAGS_MAP_BY_ID[k].text }}
+                                    </span>
                                 </div>
 
                                 <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
@@ -66,7 +69,6 @@
                 </div>
             </div>
 
-
         </div>
     </div>
 
@@ -90,7 +92,7 @@
                                 <option value="question" ic-has-selected="'question'==model.type">问题</option>
                                 <option value="mistake" ic-has-selected="'mistake'==model.type">错误</option>
                                 <option value="warn" ic-has-selected="'warn'==model.type">警告</option>
-                                <option value="理念" ic-has-selected="'理念'==model.type">理念</option>
+                                <option value="idea" ic-has-selected="'idea'==model.type">理念</option>
                                 <option value="市场" ic-has-selected="'市场'==model.type">市场</option>
                               </select>
                             </span>
@@ -160,7 +162,7 @@
 
             <div class="box" ic-tpl="tags">
 
-                <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-auto="false" ic-select-on-change="onChange" ic-select-cla="is-info">
+                <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-auto="false" ic-select-on-change="onChange">
 
                     <div class="field is-grouped is-grouped-multiline">
 

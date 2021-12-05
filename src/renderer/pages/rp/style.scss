@@ -7,17 +7,25 @@ html {
 }
 
 .tag:not(body).is-medium {
-  font-size: 0.8rem;
+  font-size: 1rem;
+}
+
+.tag:not(body).is-large {
+  font-size: 1.1rem;
+}
+
+.tags .tag {
+  margin-bottom: 0.2rem;
 }
 
 .box {
   padding: 0.1rem;
 
-  h2, h3, >.wrap{
+  >h2, >h3, >.wrap{
     padding: 0 1em 0.6em 1em;
   }
 
-  h2, h3 {
+  >h2, >h3 {
     padding: 0.1rem 1rem;
     white-space: nowrap;
     overflow: hidden;
