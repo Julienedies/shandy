@@ -42,6 +42,7 @@ ViewerMap.instance = {
         let VIEWER_MAP = ViewerMap.VIEWER_MAP = {};
         let viewerMapJsonDb = ju('viewerMap', {});
         let viewerJodb = userJodb('viewer');
+
         viewerJodb.get().forEach((item, index) => {
             let img = item.img;
             let system = item.system;
@@ -51,24 +52,24 @@ ViewerMap.instance = {
                 arr.push(img);
             };
 
-
-            if(/中利集团/.test(img)){
-                console.log(img, tags);
-            }
-
-
             system && system.forEach(f);
             tags && tags.forEach(f);
         });
+
         for (let i in VIEWER_MAP) {
+            if(['2087414', '3589400'].includes(i)) break;
             let arr = VIEWER_MAP[i];
-            //VIEWER_MAP[i] = imagesHelper.sort(arr);
-           arr.sort((a, b) => {
-                //console.log(a, b);
+            try{
+                VIEWER_MAP[i] = imagesHelper.sort(arr);
+            } catch (e) {
+                console.log(6666666, i, e);
+            }
+
+          /* arr.sort((a, b) => {
                 let ad = (a.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
                 let bd = (b.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
                 return new Date(bd) - new Date(ad);
-            });
+            });*/
         }
         viewerMapJsonDb.init(VIEWER_MAP);
         return VIEWER_MAP;

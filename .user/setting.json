@@ -14,7 +14,7 @@
 			"ycj"
 		],
 		"fetchByStocks": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
-		"fetchFromIndex": "0",
+		"fetchFromIndex": 301,
 		"stocksCsvFile": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
 		"stocksJsonFile": "E:\\dev\\csd\\stocks.json",
 		"hotCsvFile": "E:\\dev\\simg\\JX.txt",
@@ -31,12 +31,12 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2021-12",
+		"imgDir": "E:\\dev\\simg\\交易记录\\2106",
 		"bounds": {
 			"x": 2552,
-			"y": -296,
-			"width": 3088,
-			"height": 1704
+			"y": -288,
+			"width": 3084,
+			"height": 1695
 		},
 		"crop": {
 			"x": 3240,
@@ -142,9 +142,9 @@
 	"review": {
 		"bounds": {
 			"x": 2552,
-			"y": -296,
-			"width": 3088,
-			"height": 1704
+			"y": -288,
+			"width": 3074,
+			"height": 1698
 		}
 	},
 	"news": {
