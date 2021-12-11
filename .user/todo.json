@@ -9,9 +9,7 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 36,
-		"timestamp": 1609667569090,
-		"promptTimes": 1,
-		"prevPromptTime": 1638836762442
+		"timestamp": 1609667569090
 	},
 	{
 		"name": "",
@@ -25,7 +23,7 @@
 		"duration": 24,
 		"timestamp": 1636930865826,
 		"promptTimes": 1,
-		"prevPromptTime": 1638838562337
+		"prevPromptTime": 1639095810749
 	},
 	{
 		"name": "",
@@ -39,7 +37,7 @@
 		"duration": 9,
 		"timestamp": 1638547210757,
 		"promptTimes": 1,
-		"prevPromptTime": 1638840362304
+		"prevPromptTime": 1639097610631
 	},
 	{
 		"name": "",
@@ -53,7 +51,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1638842162179
+		"prevPromptTime": 1639099410054
 	},
 	{
 		"name": "",
@@ -67,7 +65,7 @@
 		"duration": 29,
 		"timestamp": 1637673180768,
 		"promptTimes": 1,
-		"prevPromptTime": 1638843962377
+		"prevPromptTime": 1639101210163
 	},
 	{
 		"name": "",
@@ -81,7 +79,7 @@
 		"duration": 19,
 		"timestamp": 1637020107294,
 		"promptTimes": 1,
-		"prevPromptTime": 1638845762494
+		"prevPromptTime": 1639103010121
 	},
 	{
 		"name": "",
@@ -95,7 +93,7 @@
 		"duration": 24,
 		"timestamp": 1636803828143,
 		"promptTimes": 1,
-		"prevPromptTime": 1638847561985
+		"prevPromptTime": 1639104810265
 	},
 	{
 		"name": "",
@@ -106,10 +104,10 @@
 		"start": "8:00",
 		"repeat": 3,
 		"interval": 90,
-		"duration": 13,
+		"duration": 17,
 		"timestamp": 1636700906299,
 		"promptTimes": 1,
-		"prevPromptTime": 1638849362434
+		"prevPromptTime": 1639106610201
 	},
 	{
 		"name": "",
@@ -117,13 +115,11 @@
 		"type": "警告",
 		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">人不能承受长期的焦虑，所以会变得麻木。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我有本质的改变吗？ 我是不是又沉浸到了日常交易中了？</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">临盘随意交易是我最大的亏损来源。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">但迄今我的交易主要还是临盘随意交易。盘前没有计划。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">管住手，等待最好的交易机会。</span></strong></p>",
 		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 3,
+		"start": "12:00",
+		"repeat": 2,
 		"interval": 120,
 		"duration": 19,
-		"timestamp": 1628513394321,
-		"promptTimes": 1,
-		"prevPromptTime": 1638851163009
+		"timestamp": 1628513394321
 	},
 	{
 		"name": "",
@@ -134,7 +130,7 @@
 		"start": "13:00",
 		"repeat": 4,
 		"interval": 90,
-		"duration": 17,
+		"duration": 29,
 		"timestamp": 1610785651586
 	},
 	{
@@ -149,7 +145,7 @@
 		"duration": 7,
 		"timestamp": 1636413986087,
 		"promptTimes": 1,
-		"prevPromptTime": 1638852961714
+		"prevPromptTime": 1639108411257
 	},
 	{
 		"name": "",
@@ -163,7 +159,7 @@
 		"duration": 7,
 		"timestamp": 1636326773171,
 		"promptTimes": 1,
-		"prevPromptTime": 1638854762010
+		"prevPromptTime": 1639110209857
 	},
 	{
 		"name": "",
@@ -176,8 +172,8 @@
 		"interval": 60,
 		"duration": 24,
 		"timestamp": 1636258154803,
-		"promptTimes": 1,
-		"prevPromptTime": 1638856561858
+		"promptTimes": 2,
+		"prevPromptTime": 1639115610171
 	},
 	{
 		"name": "",
@@ -190,8 +186,8 @@
 		"interval": 60,
 		"duration": 7,
 		"timestamp": 1636203734653,
-		"promptTimes": 1,
-		"prevPromptTime": 1638858361535
+		"promptTimes": 2,
+		"prevPromptTime": 1639117409656
 	},
 	{
 		"name": "",
@@ -205,7 +201,7 @@
 		"duration": 7,
 		"timestamp": 1635088812447,
 		"promptTimes": 1,
-		"prevPromptTime": 1638860161857
+		"prevPromptTime": 1639119210084
 	},
 	{
 		"name": "",
@@ -219,7 +215,7 @@
 		"duration": 4,
 		"timestamp": 1634458275583,
 		"promptTimes": 1,
-		"prevPromptTime": 1638861962685
+		"prevPromptTime": 1639121009258
 	},
 	{
 		"name": "警告",
@@ -233,7 +229,7 @@
 		"singleWindow": "",
 		"duration": 7,
 		"promptTimes": 1,
-		"prevPromptTime": 1638863762639
+		"prevPromptTime": 1639122810229
 	},
 	{
 		"name": "",
@@ -247,7 +243,7 @@
 		"duration": 17,
 		"timestamp": 1614682522617,
 		"promptTimes": 1,
-		"prevPromptTime": 1638865562404
+		"prevPromptTime": 1639124610055
 	},
 	{
 		"name": "",
@@ -261,7 +257,7 @@
 		"duration": 4,
 		"timestamp": 1633852427544,
 		"promptTimes": 1,
-		"prevPromptTime": 1638867362496
+		"prevPromptTime": 1639126409702
 	},
 	{
 		"name": "",
@@ -275,7 +271,7 @@
 		"duration": 4,
 		"timestamp": 1629155362746,
 		"promptTimes": 1,
-		"prevPromptTime": 1638869162276
+		"prevPromptTime": 1639128210612
 	},
 	{
 		"name": "",
@@ -289,7 +285,7 @@
 		"duration": 9,
 		"timestamp": 1630328427565,
 		"promptTimes": 1,
-		"prevPromptTime": 1638870962379
+		"prevPromptTime": 1639130010059
 	},
 	{
 		"name": "",
@@ -315,7 +311,7 @@
 		"duration": 19,
 		"timestamp": 1626650977149,
 		"promptTimes": 1,
-		"prevPromptTime": 1638872761807
+		"prevPromptTime": 1639131809132
 	},
 	{
 		"name": "",
@@ -328,8 +324,8 @@
 		"interval": 60,
 		"duration": 27,
 		"timestamp": 1625975362922,
-		"promptTimes": 2,
-		"prevPromptTime": 1638878161732
+		"promptTimes": 1,
+		"prevPromptTime": 1639133610213
 	},
 	{
 		"name": "",
@@ -343,7 +339,7 @@
 		"duration": 24,
 		"timestamp": 1621658103771,
 		"promptTimes": 1,
-		"prevPromptTime": 1638876361020
+		"prevPromptTime": 1639135410092
 	},
 	{
 		"name": "",
@@ -357,7 +353,7 @@
 		"duration": 17,
 		"timestamp": 1625831460227,
 		"promptTimes": 1,
-		"prevPromptTime": 1638879960796
+		"prevPromptTime": 1639137208909
 	},
 	{
 		"name": "",
@@ -383,8 +379,8 @@
 		"interval": 60,
 		"duration": 47,
 		"timestamp": 1595590485334,
-		"promptTimes": 1,
-		"prevPromptTime": 1638881762105
+		"promptTimes": 2,
+		"prevPromptTime": 1639142609941
 	},
 	{
 		"name": "",
@@ -398,7 +394,7 @@
 		"duration": 19,
 		"timestamp": 1621656781526,
 		"promptTimes": 2,
-		"prevPromptTime": 1638887161847
+		"prevPromptTime": 1639144410056
 	},
 	{
 		"name": "",
@@ -412,7 +408,7 @@
 		"duration": 27,
 		"timestamp": 1597160146691,
 		"promptTimes": 1,
-		"prevPromptTime": 1638885360409
+		"prevPromptTime": 1639146208541
 	},
 	{
 		"name": "",
@@ -426,7 +422,7 @@
 		"duration": 9,
 		"timestamp": 1634257137946,
 		"promptTimes": 1,
-		"prevPromptTime": 1638888961446
+		"prevPromptTime": 1639148009109
 	},
 	{
 		"name": "",
@@ -440,7 +436,7 @@
 		"duration": 24,
 		"singleWindow": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1638890760597
+		"prevPromptTime": 1639149808417
 	},
 	{
 		"name": "",
@@ -452,7 +448,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 14,
-		"timestamp": 1618224000885
+		"timestamp": 1618224000885,
+		"promptTimes": 1,
+		"prevPromptTime": 1639151608191
 	},
 	{
 		"name": "",

@@ -25,7 +25,7 @@ import parentCtrl from '../../js/parentCtrl'
 import setTagCtrl from '../tags/set-tag-ctrl'
 import setVoiceWarnCtrl from './set-voice-warn-ctrl'
 
-import { COLORS_BACKGROUND } from '../../js/constants'
+import { FroalaEditorConfig } from '../../js/constants'
 
 import viewsModel from './viewsModel'
 
@@ -341,8 +341,9 @@ brick.reg('memoCtrl', function () {
         let text = o.text;
 
         $memo.froalaEditor({
+            ...FroalaEditorConfig,
             toolbarInline: true,
-            colorsBackground: COLORS_BACKGROUND,
+            //colorsBackground: COLORS_BACKGROUND,
             /*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*/
             // Change save interval (time in miliseconds).
             saveInterval: 2500,

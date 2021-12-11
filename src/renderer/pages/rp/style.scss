@@ -21,12 +21,13 @@ html {
 
 .box {
   padding: 0.1rem;
+  color: #3c3c3c;
 
-  >h2, >h3, >.wrap{
+  > h2, > h3, > .wrap {
     padding: 0 1em 0.6em 1em;
   }
 
-  >h2, >h3 {
+  > h2, > h3 {
     padding: 0.1rem 1rem;
     white-space: nowrap;
     overflow: hidden;
@@ -37,12 +38,27 @@ html {
 
     b {
       display: inline-block;
-      padding-left: 1em;
+      padding-left: 1.2em;
       font-size: 0.8em;
+      font-weight: 400;
     }
   }
 
-  >.wrap{
-    margin-top:0.5rem;
+  > .wrap {
+    margin-top: 0.5rem;
+  }
+}
+
+.pre {
+  color: #026bdb;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.8;
+
+  table {
+    td, th {
+      border: solid 1px #e3e3e3;
+      padding: 0.2rem 0.5rem;
+    }
   }
 }
