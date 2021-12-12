@@ -16,18 +16,18 @@
     <div ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
         <div class="column">
 
-            <div class="buttons" id="fixedButtons">
-                <button class="button is-primary none" ic-click="refreshTags">刷新Tags</button>
-                <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
-                 <span class="tags is-left" ic-tpl="types">
-                    <span ic-select="tags" =".tag" ic-select-auto="false" ic-select-cla="is-primary"
-                          ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
-                        <i ic-for="v,i in model.mapByType" ic-select-item ic-val="{{ v }}"
-                           ic-class="tag is-small {{ v==model.filterByType?'is-primary':''  }}">
-                            {{ v }}
-                        </i>
-                    </span>
-                </span>
+            <div ic-tpl="types" style="padding-bottom: 0.75rem;">
+                <!--<button class="button is-primary" ic-click="refreshTags">刷新Tags</button>-->
+                <div class="buttons is-centered" ic-select="tags" ic-select-auto="false" ic-select-cla="is-primary"
+                     ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
+
+                    <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
+
+                    <button ic-for="v,i in model.mapByType" ic-select-item ic-val="{{ v }}"
+                            ic-class="button is-small {{ v==model.filterByType?'is-primary':''  }}">
+                        {{ RPMQS_MAP[v] }}
+                    </button>
+                </div>
             </div>
 
             <div ic-tpl="todoList">
@@ -47,10 +47,8 @@
 
                                 <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
 
-                                <div class="level">
-                                    <div class="level-left">
-                                    </div>
-                                    <div class="level-right">
+                                <div>
+                                    <div class="tags is-right">
                                         <span class="tag is-small"> {{ v.type }}</span>
                                         <span class="tag is-small" ic-click="edit:{{ v.id }}">修改</span>
                                         <span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>
@@ -88,12 +86,15 @@
                         <p class="control">
                             <span class="select">
                               <select name="type" ic-form-field>
-                                <option value="rp" ic-has-selected="'rp'==model.type">复盘&计划</option>
-                                <option value="question" ic-has-selected="'question'==model.type">问题</option>
-                                <option value="mistake" ic-has-selected="'mistake'==model.type">错误</option>
-                                <option value="warn" ic-has-selected="'warn'==model.type">警告</option>
-                                <option value="idea" ic-has-selected="'idea'==model.type">理念</option>
-                                <option value="市场" ic-has-selected="'市场'==model.type">市场</option>
+                                  <option ic-for="i,o in TAGS_MAP['rpmqs']" value="{{o.key}}" ic-has-selected="o.key==model.type">
+                                      {{ o.text }}
+                                  </option>
+                                  <!-- <option value="rp" ic-has-selected="'rp'==model.type">复盘&计划</option>
+                                   <option value="question" ic-has-selected="'question'==model.type">问题</option>
+                                   <option value="mistake" ic-has-selected="'mistake'==model.type">错误</option>
+                                   <option value="warn" ic-has-selected="'warn'==model.type">警告</option>
+                                   <option value="idea" ic-has-selected="'idea'==model.type">理念</option>
+                                   <option value="市场" ic-has-selected="'市场'==model.type">市场</option>-->
                               </select>
                             </span>
                         </p>
@@ -170,9 +171,9 @@
                             <span class="button is-primary">{{ k }}</span>
                         </div>
 
-                        <div class="control"  ic-for="i,v in arr">
+                        <div class="control" ic-for="i,v in arr">
                             <div class="tags has-addons">
-                                <span class="tag is-medium is-black" ic-select-item  ic-val="{{ v.id }}"
+                                <span class="tag is-medium is-black" ic-select-item ic-val="{{ v.id }}"
                                       ic-has-selected="model.rp.tags && model.rp.tags.includes(v.id)"> {{v.text}}</span>
 
                                 <a class="tag is-medium" ic-click="editTag:{{v.id}}">

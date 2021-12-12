@@ -43,11 +43,20 @@ brick.reg('todoListCtrl', function (scope) {
 
     const dragOverCla = 'onDragOver';
     let filterByType = 'rp';
+    let rpMap = window.RPMQS_MAP = {};
 
     let listManager = brick.services.get('recordManager')();
 
     function getMapByType (arr) {
         let mapByType = {};
+        let rpmqs = TAGS_MAP['rpmqs'];
+        for(let i in rpmqs) {
+            let o = rpmqs[i];
+            let key = o.key;
+            mapByType[key] = [];
+            rpMap[key] = o.text;
+        }
+
         arr.forEach((v, i) => {
             let arr2 = mapByType[v.type || '_null'] = mapByType[v.type || '_null'] || [];
             arr2.push(v);

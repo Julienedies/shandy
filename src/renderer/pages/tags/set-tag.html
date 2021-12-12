@@ -35,6 +35,12 @@
                     <input class="input is-medium" type="text" name="text" value="{{model.text}}" ic-form-field ic-field-rule="required">
                 </div>
             </div>
+            <div>
+                <h6>key</h6>
+                <div>
+                    <input class="input is-medium" type="text" name="key" value="{{model.key}}" ic-form-field>
+                </div>
+            </div>
 
             <div ic-if="model.parents || model.type==='交易要素' || model.type==='交易错误'">
                 <h6>父标签</h6>
