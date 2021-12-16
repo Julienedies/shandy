@@ -1,12 +1,49 @@
 [
 	{
-		"title": "今天盘面是什么状态？",
-		"id": "7733414",
+		"title": "为何我错过所有的大行情？为什么所有的龙头我都没有参与？",
+		"id": "9141600",
+		"type": "question",
+		"comment": "",
+		"content": "<p><span style=\"font-size: 18px;\"><u>没有大局观，看不到大趋势；</u></span></p><p><span style=\"font-size: 18px;\"><u>主观看空；先入为主；线性思维；</u></span></p>",
+		"name": "9141600",
+		"timestamp": 1638679624532,
+		"tags": []
+	},
+	{
+		"title": "市场在向那个方向演变？赚钱效应是在变强还是在变弱？亏钱效应是在变强还是变弱？",
+		"id": "8683585",
 		"type": "rp",
 		"comment": "",
 		"content": "",
 		"tags": [],
-		"timestamp": 1639487187923
+		"timestamp": 1639656009272
+	},
+	{
+		"title": "我是不是主观看空？有没有预期之外的准备？",
+		"id": "6255155",
+		"type": "rp",
+		"comment": "我总是错过市场转强最好的交易机会。",
+		"content": "<p><u>高开放量大阴线，也可以反包。</u><u>首次分歧，也可以转一致。</u></p><p><u>低吸大长腿；&nbsp; 分歧转一致；</u></p>",
+		"tags": [],
+		"timestamp": 1639655524225
+	},
+	{
+		"title": "我有没有围绕主流热点龙头操作？",
+		"id": "0608836",
+		"type": "rp",
+		"comment": "除非出现明确的信号，否则不要看空主流热点。",
+		"content": "",
+		"tags": [],
+		"timestamp": 1639654881457
+	},
+	{
+		"title": "市场有没有正在进行的行情？为何我总是后知后觉，错过大行情？",
+		"id": "3734022",
+		"type": "rp",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1639654683017
 	},
 	{
 		"title": "今天资金攻击方向是哪里？有加强或修复的可能吗？卡位轮动？有没有会发酵的消息新闻？",
@@ -25,15 +62,6 @@
 		"content": "<p>我每天还是在重复以前的交易动作。\n我需要做出真正的改变。我必须做出真正的改变。\n问题没有解决。\n错误仍在重复。</p>",
 		"tags": [],
 		"timestamp": 1638966078422
-	},
-	{
-		"title": "为何我总是临盘犹豫？",
-		"id": "0710264",
-		"type": "question",
-		"comment": "思维没有方向；判断没有锚点；",
-		"content": "",
-		"tags": [],
-		"timestamp": 1639282041994
 	},
 	{
 		"title": "如果市场走势和我的预判相反，怎么办？",
@@ -244,16 +272,6 @@
 		"timestamp": 1638965965443
 	},
 	{
-		"title": "为何我错过所有的大行情？为什么所有的龙头我都没有参与？",
-		"id": "9141600",
-		"type": "question",
-		"comment": "",
-		"content": "<p><span style=\"font-size: 18px;\"><u>没有大局观，看不到大趋势；</u></span></p><p><span style=\"font-size: 18px;\"><u>主观看空；先入为主；线性思维；</u></span></p>",
-		"name": "9141600",
-		"timestamp": 1638679624532,
-		"tags": []
-	},
-	{
 		"title": "思维方式一直难以改变。为何我总是主观看空那些超出我预期的票？",
 		"id": "2516575",
 		"type": "mistake",
@@ -263,6 +281,15 @@
 		"timestamp": 1638966036834
 	},
 	{
+		"title": "为何我总是临盘犹豫？",
+		"id": "0710264",
+		"type": "question",
+		"comment": "思维没有方向；判断没有锚点；",
+		"content": "",
+		"tags": [],
+		"timestamp": 1639282041994
+	},
+	{
 		"title": "我每天复盘看的是什么？我思考的是什么？",
 		"id": "7409322",
 		"type": "question",
@@ -270,15 +297,6 @@
 		"content": "<p>湖北宜化的3波主升浪我眼瞎吗？下一个大金重工我能抓住吗？</p>",
 		"tags": [],
 		"timestamp": 1638965751427
-	},
-	{
-		"title": "杂类",
-		"id": "9936626",
-		"type": "mistake",
-		"comment": "",
-		"content": "<p>看好，想等下跌买，结果一直涨。都看好的票，怎么会跌呢？如果下跌，就说明我的看法是错误的。</p>",
-		"tags": [],
-		"timestamp": 1638955680561
 	},
 	{
 		"title": "我凭什么在市场胜出？我有何优势？ ",
@@ -322,11 +340,11 @@
 		"timestamp": 1638692425572
 	},
 	{
-		"title": "今天盘面可能是哪种状态？节奏？如何应对？",
+		"title": "今天盘面是哪种状态？明天盘面可能是哪种状态？节奏？如何应对？",
 		"id": "6935434",
 		"type": "rp",
-		"comment": "关键是应对；我有做好市场转强的预案吗？我总是倾向看空。总是错过市场转强最好的交易机会。",
-		"content": "<table style=\"width: 100%;\"><tbody><tr><td><span style=\"font-size: 18px;\">转折进攻日</span><br></td><td><br></td></tr><tr><td style=\"width: 15.4945%;\"><span style=\"font-size: 18px;\">分歧分化日&nbsp;</span><strong><br></strong></td><td style=\"width: 84.4325%;\">超短资金同质性很强；一致高潮就是顶；不要做什么高位活口；主流分歧，非主流卡位</td></tr><tr><td style=\"width: 15.4945%;\"><span style=\"font-size: 18px;\">调整观望日</span><br></td><td style=\"width: 84.4325%;\"><br></td></tr><tr><td style=\"width: 15.4945%;\"><span style=\"font-size: 18px;\">高潮退潮日</span><br></td><td style=\"width: 84.4325%;\"><br></td></tr><tr><td style=\"width: 15.4945%;\"><span style=\"font-size: 18px;\">普反日</span><br></td><td style=\"width: 84.4325%;\"><br></td></tr></tbody></table><p><br></p><p><span style=\"font-size: 18px;\"><u>时机就是一切。弱势管住手，强势踏准节奏。买在转折点。</u></span></p>",
+		"comment": "关键是应对；线性思维，先入为主，主观看空；",
+		"content": "<table style=\"width: 100%;\"><tbody><tr><td><span style=\"font-size: 18px;\">转折进攻、<span style=\"font-size: 18px;\">爆发加强日</span></span><br></td><td><br></td></tr><tr><td style=\"width: 15.4945%;\"><span style=\"font-size: 18px;\">分歧分化、<span style=\"font-size: 18px;\">高潮退潮日</span></span><strong><br></strong></td><td style=\"width: 84.4325%;\">管住手或做低位首板；超短资金同质性很强；一致高潮就是顶；不要做什么高位活口；主流分歧，非主流卡位</td></tr><tr><td style=\"width: 15.4945%;\"><span style=\"font-size: 18px;\">调整观望日</span><br></td><td style=\"width: 84.4325%;\"><br></td></tr></tbody></table><p><br></p><p><span style=\"font-size: 18px;\"><u>我有做好市场转强的预案吗？</u></span><span style=\"font-size: 18px;\"><u>时机就是一切。弱势管住手，强势踏准节奏。买在转折点。</u></span></p>",
 		"name": "",
 		"timestamp": 1638681951111,
 		"tags": [
@@ -366,7 +384,7 @@
 			"7913663",
 			"8141386"
 		],
-		"content": "<p><u><span style=\"font-size: 20px;\">赚钱效应有没有持续性？</span></u></p><p><u><span style=\"font-size: 18px;\">低吸赚钱效应怎么样？追涨赚钱效应怎么样？ 接力板赚钱效应怎么样？</span></u></p>",
+		"content": "<p><u><span style=\"font-size: 18px;\">赚钱效应有没有持续性？</span></u></p><p><u><span style=\"font-size: 18px;\">低吸赚钱效应怎么样？追涨赚钱效应怎么样？ 接力板赚钱效应怎么样？</span></u></p>",
 		"timestamp": 1638692867662
 	},
 	{
@@ -410,7 +428,7 @@
 		"timestamp": 1638705609580
 	},
 	{
-		"title": "市场龙头是什么？我有做龙头股走势的推演和预案吗？有没有介入机会博弈空间？",
+		"title": "市场龙头是什么？明日可能的走势是这样？如何应对？有没有博弈空间？",
 		"id": "7438863",
 		"type": "rp",
 		"comment": "为何所有的龙头股我都错过？",
