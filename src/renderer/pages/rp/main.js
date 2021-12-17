@@ -18,26 +18,27 @@ import 'froala-editor/css/froala_style.min.css'
 import 'froala-editor/js/froala_editor.pkgd.min.js'
 
 import '../../js/utils.js'
-import { FroalaEditorConfig, TAGS_CHANGE } from '../../js/constants'
 
 import {
     ON_GET_TAGS_DONE,
     ON_SET_TAG_DONE,
     ON_DEL_TAG_DONE,
     DEL_TAG,
-    TAG_SELECT_CHANGE
+    TAG_SELECT_CHANGE,
+    ON_SELECT_TAGS,
+    TAGS_CHANGE,
+    FroalaEditorConfig
 } from '../../js/constants'
 
 import '../../js/common-stock.js'
-
-let $body = $('body');
-let socket = io();
-
 import setTagCtrl from '../tags/set-tag-ctrl'
+import selectTagsCtrl from '../tags/select-tags-ctrl'
 
 brick.set('ic-select-cla', 'is-info');
 
 brick.reg('setTagCtrl', setTagCtrl);
+brick.reg('selectTagsCtrl', selectTagsCtrl);
+
 
 brick.reg('todoListCtrl', function (scope) {
 
@@ -203,6 +204,7 @@ brick.reg('setTodoCtrl', function (scope) {
     scope.on('setTodo', function (e, data) {
         brick.view.to('setTodo');
         model = data || {};
+        scope.emit(ON_SELECT_TAGS, model.tags);
         render();
     });
 

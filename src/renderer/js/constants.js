@@ -18,7 +18,7 @@ export const ON_GET_TAGS_DONE = 'ON_GET_TAGS_DONE';
 export const ON_DEL_TAG_DONE = 'ON_DEL_TAG_DONE';
 
 export const TAGS_CHANGE = 'TAGS_CHANGE';
-
+export const ON_SELECT_TAGS = 'ON_SELECT_TAGS';
 // 标签集做为select change
 export const TAG_SELECT_CHANGE = 'TAG_SELECT_CHANGE';
 
@@ -49,6 +49,7 @@ export default {
     ON_DEL_TAG_DONE,
     ON_SET_TAG_DONE,
     ON_GET_TAGS_DONE,
+    ON_SELECT_TAGS,
     ADD_LOGIC,
     EDIT_LOGIC,
     DEL_LOGIC,

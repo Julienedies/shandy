@@ -11,9 +11,7 @@
 <body>
 <div ic-view-stage ic-ctrl="mainCtrl">
 
-    ${ require('../tags/set-tag.html') }
-
-    <div ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
+    <div id="todoList" ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
         <div class="column">
 
             <div ic-tpl="types" style="padding-bottom: 0.75rem;">
@@ -118,8 +116,8 @@
                             </div>
                         </div>
 
-                        <p class="control">
-                            <button class="button is-primary is-fullwidth" ic-view-to="tags">
+                        <p class="control"> <!-- ic-view-to="tags" -->
+                            <button class="button is-primary is-fullwidth" ic-popup-target="selectTags">
                                 添加新项
                             </button>
                         </p>
@@ -154,7 +152,10 @@
         </div>
     </div>
 
-    <div ic-view="tags" ic-ctrl="tagsCtrl">
+    ${ require('../tags/set-tag.html') }
+    ${ require('../tags/select-tags.html') }
+
+    <!--<div ic-view="tags" ic-ctrl="tagsCtrl">
         <div class="column">
 
             <div class="buttons">
@@ -180,7 +181,7 @@
                                     <span class="icon is-medium"><i class="far fa-edit"></i></span>
                                 </a>
 
-                                <!--<a class="tag is-delete is-medium" ic-click="delTag:{{ v.id }}"></a>-->
+                                &lt;!&ndash;<a class="tag is-delete is-medium" ic-click="delTag:{{ v.id }}"></a>&ndash;&gt;
                             </div>
                         </div>
 
@@ -197,7 +198,7 @@
             </div>
 
         </div>
-    </div>
+    </div>-->
 
 </div>
 </body>

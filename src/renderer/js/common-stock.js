@@ -12,7 +12,7 @@ import parentCtrl from './parentCtrl'
 brick.set('ic-show-img-item', 'a[href$=png]');
 brick.set('ic-show-img-url', 'href');
 
-brick.set('ic-select-cla', 'is-warning');
+brick.set('ic-select-cla', 'is-info');
 
 brick.set('cla.error', 'is-danger');
 

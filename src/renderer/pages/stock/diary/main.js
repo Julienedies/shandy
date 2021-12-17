@@ -10,7 +10,7 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import { FroalaEditorConfig } from '../../../js/constants'
+import { FroalaEditorConfig, TAG_SELECT_CHANGE } from '../../../js/constants'
 import '../../../js/common-stock.js'
 
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -20,6 +20,12 @@ import 'froala-editor/js/froala_editor.pkgd.min.js'
 import _ from 'lodash'
 import utils from '../../../js/utils'
 
+import '../../../js/common-stock.js'
+import setTagCtrl from '../../tags/set-tag-ctrl'
+import selectTagsCtrl from '../../tags/select-tags-ctrl'
+
+brick.reg('setTagCtrl', setTagCtrl);
+brick.reg('selectTagsCtrl', selectTagsCtrl);
 
 brick.reg('diaryCtrl', function () {
 
@@ -154,6 +160,15 @@ brick.reg('setDiaryCtrl', function () {
 
         render(vm);
     };
+
+    scope.on(TAG_SELECT_CHANGE, function (e, data) {
+        /*console.log('ON_TAG_SELECT_CHANGE', data);
+        model = getFormVm();
+        model.content = $editor.froalaEditor('html.get', true);
+        model.tags = data.value;
+        render();*/
+    });
+
 
     scope.on('diary.edit', function (e, model) {
         $elm.icPopup(true);
