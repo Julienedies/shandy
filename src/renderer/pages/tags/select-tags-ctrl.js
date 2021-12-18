@@ -14,14 +14,14 @@ export default function () {
 
     // tags数据保存在setTagCtrl
     scope.on(GET_TAGS_DONE, function (e, data) {
-        //console.log(data);
+        console.log(data);
         model.tags = data;
         render();
     });
 
     // 准备选择标签，设置默认选择项
     scope.on(READY_SELECT_TAGS, function (e, data) {
-        console.log('READY_SELECT_TAGS', data);
+        //console.log('READY_SELECT_TAGS', data);
         model.selected = data || [];
         render();
     });

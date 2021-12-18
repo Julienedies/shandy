@@ -39,6 +39,7 @@
             <div class="tags">
                 <span class="tag is-medium" ic-for="i,v in model.tagsArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">
                     {{ TAGS_MAP_BY_ID[v].text }}
+                    <sup>{{ model.tagsMap[v] }}</sup>
                 </span>
             </div>
         </div>
@@ -103,27 +104,13 @@
                      ic-form-field="tags">
                     <div class="control" ic-for="i,v in model.tagsArr">
                         <div class="tags has-addons">
-                            <span class="tag is-medium" ic-select-item ic-val="{{ v }}" ic-has-selected="diary.tags && diary.tags.includes(v)">
+                            <span class="tag is-small" ic-select-item ic-val="{{ v }}" ic-has-selected="diary.tags && diary.tags.includes(v)">
                                 {{ TAGS_MAP_BY_ID[v].text }}
                             </span>
                         </div>
                     </div>
                     <div class="control">
                         <button class="button is-primary is-small" ic-popup-target="selectTags" style="margin-left:4em;"> 添加标签</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- tr -->
-            <div style="padding:7px 0;">
-                <h6></h6>
-                <div class="control">
-                    <div class="tags" ic-select="tag" ic-select-cla="is-primary" ic-select-type="checkbox" ic-form-field="tag">
-                        <span ic-for="i,v in tagArr" ic-class="tag is-small" ic-val="{{ v }}"
-                              ic-has-selected="diary.tag && diary.tag.includes(v)">
-                            {{ v }}
-                        </span>
-                        <input type="text" class="input is-small" style="width:18em!important;" placeholder="添加标签" ic-enter-press="addTag"/>
                     </div>
                 </div>
             </div>
@@ -141,6 +128,20 @@
                     <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
                     <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
 
+                </div>
+            </div>
+
+            <!-- tr -->
+            <div style="padding:7px 0;">
+                <h6></h6>
+                <div class="control">
+                    <div class="tags" ic-select="tag" ic-select-cla="is-primary" ic-select-type="checkbox" ic-form-field="tag">
+                        <span ic-for="i,v in tagArr" ic-class="tag is-small" ic-val="{{ v }}"
+                              ic-has-selected="diary.tag && diary.tag.includes(v)">
+                            {{ v }}
+                        </span>
+                        <input type="text" class="input is-small" style="width:18em!important;" placeholder="添加标签" ic-enter-press="addTag"/>
+                    </div>
                 </div>
             </div>
 

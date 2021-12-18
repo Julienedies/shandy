@@ -83,7 +83,6 @@ brick.reg('todoListCtrl', function (scope) {
         });
     }
 
-
     function getRpData () {
         $.get('/stock/rp').done((data) => {
             setList(data);

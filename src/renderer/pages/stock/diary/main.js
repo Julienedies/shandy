@@ -68,14 +68,24 @@ brick.reg('diaryCtrl', function () {
         //console.log(tagArr);
 
         let tagsMap = _.countBy(tags2);
-        let tagsArr = _.keys(tagsMap);
-        //console.log(333, tagsMap);
-        scope.tagsMap = _.toPairs(tagsMap);
+        //let tagsArr = _.keys(tagsMap);
 
-        /*tagsArr.sort((a, b) => {
-            return a.
-        })*/
-        scope.tagsArr = tagsArr;
+        let tagsArr = _.toPairs(tagsMap);
+
+        tagsArr.sort((a, b) => {
+            return b[1] - a[1];
+        });
+        scope.tagsArr = tagsArr.map((item) => {
+            return item[0];
+        });
+
+        tagsMap = {};
+        _.forEach(tagsArr, (item) => {
+            tagsMap[item[0]] = item[1];
+        });
+
+        scope.tagsMap = tagsMap;
+        //console.log(333, tagsMap, tagsArr);
 
         return tagArr;
     }
@@ -84,7 +94,9 @@ brick.reg('diaryCtrl', function () {
         list.init(data);
         scope.tagArr = getTagArr(data);
         scope.render('tags', scope);
-        render();
+        //render();
+        // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
+        setTimeout(render, 700);
     };
 
     this.reverse = function () {
@@ -151,7 +163,6 @@ brick.reg('setDiaryCtrl', function () {
 
     // 标签选择改变
     scope.on(TAG_SELECT_CHANGE, function (e, data) {
-        console.log(333, data.value);
         let vm = scope.vm;
         let tagsArr = vm.tagsArr;
         let model = getFormVm();
@@ -166,7 +177,7 @@ brick.reg('setDiaryCtrl', function () {
     // ajax before 交易日记提交前数据处理
     scope.before = function (fields) {
         fields.text = $editor.froalaEditor('html.get', true);
-        console.log(444, fields);
+        //console.log(444, fields);
     };
 
     // 交易日记提交到服务器完成 ajax done
@@ -180,6 +191,8 @@ brick.reg('setDiaryCtrl', function () {
     };
 
     scope.onTagsChange = function (msg) {
+        // 首次渲染触发不通知
+        if (msg.time === 0) return console.log(msg.time);
         scope.emit(READY_SELECT_TAGS, msg.value);
     };
 
