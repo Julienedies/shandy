@@ -10,7 +10,7 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import { FroalaEditorConfig, TAG_SELECT_CHANGE } from '../../../js/constants'
+import { FroalaEditorConfig, ON_SELECT_TAGS, TAG_SELECT_CHANGE } from '../../../js/constants'
 import '../../../js/common-stock.js'
 
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -44,7 +44,10 @@ brick.reg('diaryCtrl', function () {
         if (filterKey) {
             resultArr = resultArr.filter((item) => {
                 let tag = item.tag;
-                return Array.isArray(tag) && tag.includes(filterKey);
+                let tags = item.tags;
+                let a = Array.isArray(tag) && tag.includes(filterKey);
+                let b = Array.isArray(tags) && tags.includes(filterKey);
+                return a || b;
             });
         }
 
@@ -52,22 +55,40 @@ brick.reg('diaryCtrl', function () {
         scope.render('diaryList', resultArr);
     }
 
-    this.onGetDiaryDone = function (data) {
-        list.init(data);
-
+    function getTagArr (data) {
         let tags = [];
+        let tags2 = [];
         data.map((item, index) => {
-            let tag = item.tag;
+            tags = tags.concat(item.tag || []);
+            tags2 = tags2.concat(item.tags || []);
+            /*  let tag = item.tag;
             if (tag) {
-                tag.forEach((v) => {
-                    tags.push(v);
-                });
-            }
+                 tag.forEach((v) => {
+                     tags.push(v);
+                 });
+             }*/
         });
         scope.tagMap = _.countBy(tags);
         let tagArr = _.keys(scope.tagMap);
         tagArr.sort(utils.sortByPy);
-        scope.tagArr = tagArr;
+        //console.log(tagArr);
+
+        let tagsMap = _.countBy(tags2);
+        let tagsArr = _.keys(tagsMap);
+        console.log(333, tagsMap);
+        scope.tagsMap = _.toPairs(tagsMap);
+
+        /*tagsArr.sort((a, b) => {
+            return a.
+        })*/
+        scope.tagsArr = tagsArr;
+
+        return tagArr;
+    }
+
+    this.onGetDiaryDone = function (data) {
+        list.init(data);
+        scope.tagArr = getTagArr(data);
         scope.render('tags', scope);
         render();
     };
@@ -79,7 +100,7 @@ brick.reg('diaryCtrl', function () {
 
     this.edit = function (e, id) {
         let diary = (id && list.get(id)) || {};
-        scope.emit('diary.edit', {diary, tagArr: scope.tagArr});
+        scope.emit('diary.edit', {diary, tagArr: scope.tagArr, tagsArr: scope.tagsArr});
     };
 
     this.toggleText = function (e) {
@@ -126,16 +147,33 @@ brick.reg('setDiaryCtrl', function () {
     // 保存传递过来要修改的 diary object
     scope.vm = {};
 
-    // ajax before 提交前数据处理
+    // 准备编写或修改交易日记
+    scope.on('diary.edit', function (e, model) {
+        scope.emit(ON_SELECT_TAGS, model.diary.tags);
+        $elm.icPopup(true);
+        scope.vm = model;
+        render(model);
+    });
+
+    // 标签选择改变
+    scope.on(TAG_SELECT_CHANGE, function (e, data) {
+        let vm = scope.vm;
+        let tagsArr = vm.tagsArr;
+        let model = getFormVm();
+        model.text = $editor.froalaEditor('html.get', true);
+        model.tags = data.value;
+        tagsArr = _.uniq(tagsArr.concat(data.value));
+        vm.tagsArr = tagsArr;
+        Object.assign(vm.diary, model);
+        render(vm);
+    });
+
+    // ajax before 交易日记提交前数据处理
     scope.before = function (fields) {
         fields.text = $editor.froalaEditor('html.get', true);
-        //  tag属性如果是空数组，recordManager.set 由于合并的关系，似乎并不会在服务器端删除，临时处理，先把tag设为''
-        if (fields.tag && fields.tag.length === 0) {
-            fields.tag = '';
-        }
     };
 
-    // ajax done
+    // 交易日记提交到服务器完成 ajax done
     scope.done = function (data) {
         scope.emit('diary.edit.done', data);
         $elm.icPopup(false);
@@ -143,6 +181,10 @@ brick.reg('setDiaryCtrl', function () {
 
     scope.reset = function () {
         //scope.render({});
+    };
+
+    scope.onTagsChange = function (msg) {
+        scope.emit(ON_SELECT_TAGS, msg.value);
     };
 
     scope.addTag = function (e) {
@@ -161,35 +203,21 @@ brick.reg('setDiaryCtrl', function () {
         render(vm);
     };
 
-    scope.on(TAG_SELECT_CHANGE, function (e, data) {
-        /*console.log('ON_TAG_SELECT_CHANGE', data);
-        model = getFormVm();
-        model.content = $editor.froalaEditor('html.get', true);
-        model.tags = data.value;
-        render();*/
-    });
-
-
-    scope.on('diary.edit', function (e, model) {
-        $elm.icPopup(true);
-        scope.vm = model;
-        render(model);
-    });
-
-    function getFormVm () {
-        return $elm.find('[ic-form="setDiary"]').icForm();
-    }
-
     function render (model) {
         scope.render('setDiary', model, function () {
             $editor = $elm.find('#editor').froalaEditor({
                 ...FroalaEditorConfig,
                 fontSizeDefaultSelection: '18',
                 //toolbarInline: true,
-                height: 400,
+                height: 340,
             });
             $editor.froalaEditor('html.set', model.diary.text || '');
         });
+    }
+
+
+    function getFormVm () {
+        return $elm.find('[ic-form="setDiary"]').icForm();
     }
 
 });

@@ -20,7 +20,7 @@ export default function () {
     });
 
     scope.on(ON_SELECT_TAGS, function (e, data) {
-        //console.log('select tags selected', data);
+        console.log('select tags selected', e, data);
         model.selected = data || [];
         render();
     });

@@ -37,6 +37,18 @@ label.radio {
   vertical-align: -0.5em;
 }
 
+[ic-ctrl="selectTagsCtrl"] {
+  padding-top: 40px;
+
+  .buttons:first-child {
+    position: fixed;
+    z-index: 1000;
+    top: 10px;
+    left: 1rem;
+    right: 1rem;
+  }
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // bulma 重写
 
