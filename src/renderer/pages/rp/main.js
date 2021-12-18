@@ -20,12 +20,12 @@ import 'froala-editor/js/froala_editor.pkgd.min.js'
 import '../../js/utils.js'
 
 import {
-    ON_GET_TAGS_DONE,
+    GET_TAGS_DONE,
     ON_SET_TAG_DONE,
     ON_DEL_TAG_DONE,
     DEL_TAG,
     TAG_SELECT_CHANGE,
-    ON_SELECT_TAGS,
+    READY_SELECT_TAGS,
     TAGS_CHANGE,
     FroalaEditorConfig
 } from '../../js/constants'
@@ -96,7 +96,7 @@ brick.reg('todoListCtrl', function (scope) {
     }
 
     // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
-    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+    scope.on(GET_TAGS_DONE, function (e, data) {
         getRpData();
     });
 
@@ -204,7 +204,7 @@ brick.reg('setTodoCtrl', function (scope) {
     scope.on('setTodo', function (e, data) {
         brick.view.to('setTodo');
         model = data || {};
-        scope.emit(ON_SELECT_TAGS, model.tags);
+        scope.emit(READY_SELECT_TAGS, model.tags);
         render();
     });
 
@@ -258,7 +258,7 @@ brick.reg('tagsCtrl', function (scope) {
     let model = {tags: {}, rp: {}};
 
     // tags数据保存在setTagCtrl
-    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+    scope.on(GET_TAGS_DONE, function (e, data) {
         //console.log(data);
         model.tags = data;
         render();

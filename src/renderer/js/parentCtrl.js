@@ -6,14 +6,14 @@
 import $ from 'jquery'
 import utils from '../../libs/e-bridge'
 import brick from '@julienedies/brick'
-import { ON_GET_TAGS_DONE } from './constants'
+import { GET_TAGS_DONE } from './constants'
 
 function parentCtrl () {
 
     let scope = this;
     let $elm = scope.$elm;
 
-    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+    scope.on(GET_TAGS_DONE, function (e, data) {
         scope.tagsMap = data;
     });
 

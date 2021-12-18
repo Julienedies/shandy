@@ -10,7 +10,7 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import { FroalaEditorConfig, ON_SELECT_TAGS, TAG_SELECT_CHANGE } from '../../../js/constants'
+import { FroalaEditorConfig, READY_SELECT_TAGS, TAG_SELECT_CHANGE } from '../../../js/constants'
 import '../../../js/common-stock.js'
 
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -61,12 +61,6 @@ brick.reg('diaryCtrl', function () {
         data.map((item, index) => {
             tags = tags.concat(item.tag || []);
             tags2 = tags2.concat(item.tags || []);
-            /*  let tag = item.tag;
-            if (tag) {
-                 tag.forEach((v) => {
-                     tags.push(v);
-                 });
-             }*/
         });
         scope.tagMap = _.countBy(tags);
         let tagArr = _.keys(scope.tagMap);
@@ -75,7 +69,7 @@ brick.reg('diaryCtrl', function () {
 
         let tagsMap = _.countBy(tags2);
         let tagsArr = _.keys(tagsMap);
-        console.log(333, tagsMap);
+        //console.log(333, tagsMap);
         scope.tagsMap = _.toPairs(tagsMap);
 
         /*tagsArr.sort((a, b) => {
@@ -149,7 +143,7 @@ brick.reg('setDiaryCtrl', function () {
 
     // 准备编写或修改交易日记
     scope.on('diary.edit', function (e, model) {
-        scope.emit(ON_SELECT_TAGS, model.diary.tags);
+        scope.emit(READY_SELECT_TAGS, model.diary.tags);
         $elm.icPopup(true);
         scope.vm = model;
         render(model);
@@ -157,6 +151,7 @@ brick.reg('setDiaryCtrl', function () {
 
     // 标签选择改变
     scope.on(TAG_SELECT_CHANGE, function (e, data) {
+        console.log(333, data.value);
         let vm = scope.vm;
         let tagsArr = vm.tagsArr;
         let model = getFormVm();
@@ -171,6 +166,7 @@ brick.reg('setDiaryCtrl', function () {
     // ajax before 交易日记提交前数据处理
     scope.before = function (fields) {
         fields.text = $editor.froalaEditor('html.get', true);
+        console.log(444, fields);
     };
 
     // 交易日记提交到服务器完成 ajax done
@@ -184,7 +180,7 @@ brick.reg('setDiaryCtrl', function () {
     };
 
     scope.onTagsChange = function (msg) {
-        scope.emit(ON_SELECT_TAGS, msg.value);
+        scope.emit(READY_SELECT_TAGS, msg.value);
     };
 
     scope.addTag = function (e) {

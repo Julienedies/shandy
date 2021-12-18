@@ -18,7 +18,7 @@ import {
     ON_DEL_LOGIC_DONE,
     ON_SET_LOGIC_DONE,
     ON_GET_LOGIC_DONE,
-    ON_GET_TAGS_DONE,
+    GET_TAGS_DONE,
     ON_SET_TAG_DONE, ON_DEL_TAG_DONE, DEL_TAG,
 } from '../../../js/constants'
 
@@ -171,7 +171,7 @@ brick.reg('logicCtrl', function () {
         scope.onGetLogicDone(data);
     });
 
-    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+    scope.on(GET_TAGS_DONE, function (e, data) {
         //scope.tagsMap = data;
         scope.tradingKeyTags = data['交易要素'];
         scope.render('tags', scope);

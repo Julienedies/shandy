@@ -265,13 +265,11 @@ let proto = {
         let id = record.id;
         // 如果没有主键,生成一个随机主键
         if (typeof id === 'undefined' || id === '') {
-            //record.id = Math.random().toFixed(7).replace('0.', '');
             record.id = this._guid();
         }
         // 如果有level属性, 但level为空, 设默认为1;
         let level = record.level;
         if (level === '') {
-            // level = 1 + '.' + (+ new Date());
             record.level = 1;
         }
 
@@ -283,10 +281,17 @@ let proto = {
 
         return record;
     },
+
+    /**
+     *  创建唯一Id
+     * @returns {string}
+     * @private
+     */
     _guid: function () {
-        let id = Math.random().toFixed(7).replace('0.', '');
-        let k = Date.now().toString(36).substr(6);
-        return `id_${ id }_${ k }`;
+        // let id = Math.random().toFixed(7).replace('0.', '');
+        // let k = Date.now().toString(36).substr(6);
+        let timestamp = +new Date();
+        return 'id_' + timestamp;
     },
     /**
      * 查询键值

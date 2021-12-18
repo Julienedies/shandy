@@ -97,9 +97,8 @@
             <div style="padding:12px 0;">
                 <h6></h6>
                 <div class="field is-grouped is-grouped-multiline"
-                     ic-select=""
+                     ic-select="tags"
                      ic-select-type="checkbox"
-                     ic-select-auto="false"
                      ic-select-on-change="onTagsChange"
                      ic-form-field="tags">
                     <div class="control" ic-for="i,v in model.tagsArr">
@@ -115,12 +114,11 @@
                 </div>
             </div>
 
-
             <!-- tr -->
             <div style="padding:7px 0;">
                 <h6></h6>
                 <div class="control">
-                    <div class="tags" ic-select="tags" ic-select-cla="is-primary" ic-select-type="checkbox" ic-form-field="tag">
+                    <div class="tags" ic-select="tag" ic-select-cla="is-primary" ic-select-type="checkbox" ic-form-field="tag">
                         <span ic-for="i,v in tagArr" ic-class="tag is-small" ic-val="{{ v }}"
                               ic-has-selected="diary.tag && diary.tag.includes(v)">
                             {{ v }}
