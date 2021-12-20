@@ -58,15 +58,15 @@
                 <span style="opacity:0.3;float:left;">{{ v.date }}</span>
                 <a class="no" ic-click="edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
                 <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
-                <a class="no"
+                <!--<a class="no"
                    ic-ajax
                    ic-submit-method="get"
                    ic-submit-action="/stock/diary/up/{{v.id}}"
                    ic-submit-on-done="onGetDiaryDone">
-                    <span class="icon hint--top-left" aria-label="置顶" titie="置顶">
+                    <span class="icon hint&#45;&#45;top-left" aria-label="置顶" titie="置顶">
                         <i class="far fa-heart"></i>
                     </span>
-                </a>
+                </a>-->
             </div>
             <button class="delete is-medium"
                     ic-ajax
@@ -135,7 +135,7 @@
             <div style="padding:7px 0;">
                 <h6></h6>
                 <div class="control">
-                    <div class="tags" ic-select="tag" ic-select-cla="is-primary" ic-select-type="checkbox" ic-form-field="tag">
+                    <div class="tags" ic-select="tag" ic-select-type="checkbox" ic-form-field="tag">
                         <span ic-for="i,v in tagArr" ic-class="tag is-small" ic-val="{{ v }}"
                               ic-has-selected="diary.tag && diary.tag.includes(v)">
                             {{ v }}
