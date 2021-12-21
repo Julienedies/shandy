@@ -173,12 +173,12 @@ section {
 }
 
 body {
-  font-size: 24px !important;
+  font-size: 20px !important;
 }
 
 @media screen and (max-device-width: 768px) {
   body {
-    border: solid 0px red;
-    font-size: 28px !important;
+    border: solid 2px blue;
+    font-size: 24px !important;
   }
 }
