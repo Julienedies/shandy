@@ -34,11 +34,15 @@
                         <li class="box" ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                             ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
-                            <h3>{{ v.title }} <b> {{ v.comment }}</b></h3>
+                            <h3 ic-click="toggle">{{ v.title }} <b> {{ v.comment }}</b></h3>
 
                             <div class="wrap">
-                                <div class="tags" ic-if="v.tags && v.tags.length" ic-select ic-select-type="checkbox" ic-form-field="{{ 'f_'+v.id }}">
-                                    <span class="tag is-large" ic-for="j,k in v.tags" ic-select-item ic-val="{{ k }}">
+                                <div class="tags" ic-if="v.tags && v.tags.length"
+                                     ic-select
+                                     ic-select-cla="is-primary"
+                                     ic-select-type="checkbox"
+                                     ic-form-field="{{ 'f_'+v.id }}">
+                                    <span class="tag is-medium is-info" ic-for="j,k in v.tags" ic-select-item ic-val="{{ k }}">
                                         {{ TAGS_MAP_BY_ID[k].text }}
                                     </span>
                                 </div>
@@ -152,9 +156,6 @@
         </div>
     </div>
 
-    ${ require('../tags/set-tag.html') }
-    ${ require('../tags/select-tags.html') }
-
     <!--<div ic-view="tags" ic-ctrl="tagsCtrl">
         <div class="column">
 
@@ -200,6 +201,8 @@
         </div>
     </div>-->
 
+    ${ require('../tags/select-tags.html') }
+    ${ require('../tags/set-tag.html') }
 </div>
 </body>
 </html>

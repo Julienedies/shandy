@@ -4,12 +4,12 @@
 		"id": "6935434",
 		"type": "rp",
 		"comment": "关键是应对；线性思维，先入为主，主观看空；",
-		"content": "<table style=\"width: 100%;\"><tbody><tr><td><span style=\"font-size: 18px;\">转折进攻、<span style=\"font-size: 18px;\">爆发加强日</span></span><br></td><td><br></td></tr><tr><td style=\"width: 15.4945%;\"><span style=\"font-size: 18px;\">分歧分化、<span style=\"font-size: 18px;\">高潮退潮日</span></span><strong><br></strong></td><td style=\"width: 84.4325%;\">管住手或做低位首板；超短资金同质性很强；一致高潮就是顶；不要做什么高位活口；主流分歧，非主流卡位</td></tr><tr><td style=\"width: 15.4945%;\"><span style=\"font-size: 18px;\">调整观望日</span><br></td><td style=\"width: 84.4325%;\"><br></td></tr></tbody></table><p><br></p><p><span style=\"font-size: 18px;\"><u>我有做好市场转强的预案吗？</u></span><span style=\"font-size: 18px;\"><u>时机就是一切。弱势管住手，强势踏准节奏。买在转折点。</u></span></p>",
+		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 19.1575%;\"><span style=\"font-size: 16px;\">转折进攻、爆发加强、强更强</span><br></td><td style=\"width: 80.7695%;\"><br></td></tr><tr><td style=\"width: 19.1575%;\">分歧修复、分歧转一致、弱转强</td><td style=\"width: 80.7695%;\"><br></td></tr><tr><td style=\"width: 19.1575%;\"><span style=\"font-size: 16px;\">分歧分化、</span><strong><br></strong></td><td style=\"width: 80.7695%;\">管住手或做低位首板；超短资金同质性很强；一致高潮就是顶；不要做什么高位活口；主流分歧，非主流卡位</td></tr><tr><td><span style=\"font-size: 16px;\">高潮退潮</span><br></td><td><br></td></tr><tr><td style=\"width: 19.1575%;\"><span style=\"font-size: 16px;\">调整观望</span><br></td><td style=\"width: 80.7695%;\"><br></td></tr></tbody></table><p><br></p><p><span style=\"font-size: 18px;\"><u>我有做好市场转强的预案吗？</u><u>时机就是一切。弱势管住手，强势踏准节奏。买在转折点。</u></span></p>",
 		"name": "",
 		"timestamp": 1638681951111,
 		"tags": [
+			"id_1640217527086",
 			"6159551",
-			"7738639",
 			"5855316",
 			"1220094",
 			"7971170",
@@ -24,6 +24,15 @@
 		"content": "<p><span style=\"font-size: 18px;\"><u>一定要做龙头。龙头就是最重要的判断锚点之一；</u></span><u><span style=\"font-size: 18px;\">龙头就是大概率；盈亏同源，持续一致性</span></u></p><p><span style=\"font-size: 18px;\">三羊马、京城股份、陕西金叶、九安医疗、小康股份、清水源、中青宝、湖北宜化、大金重工、爱康科技、朗姿股份、豫能控股</span></p>",
 		"tags": [],
 		"timestamp": 1638717495263
+	},
+	{
+		"title": "行情启动时犹豫，行情退潮时管不住手。",
+		"id": "id_1640144547990",
+		"type": "mistake",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1640144547990
 	},
 	{
 		"title": "不专注于当前的热点龙头。",
@@ -175,7 +184,7 @@
 		"title": "没有大局观；看不到大趋势；总是后知后觉；",
 		"id": "6361966",
 		"type": "mistake",
-		"comment": "行情启动时犹豫，行情退潮时管不住手。",
+		"comment": "",
 		"content": "<p>看不到更大的交易逻辑。后知后觉，牛市或牛股走出来，我才意识到。</p><p>看不到大势下的确定性，着眼于小波动。看不到大盘主升中。看不到板块行情进行中。</p><p>行情启动时犹豫，行情退潮时，管不住手。</p><p>不知道市场参与者的行为逻辑</p><p>没有消息资讯优势</p><p><span style=\"font-size: 16px;\">上涨初期，不在意。</span></p>",
 		"tags": [],
 		"timestamp": 1638964854760
@@ -472,6 +481,15 @@
 		"content": "",
 		"tags": [],
 		"timestamp": 1638717864581
+	},
+	{
+		"title": "锚定、复制、补涨、跟风、先锋、核心、龙头、轮动、卡位、切换；",
+		"id": "id_1640166033380",
+		"type": "rp",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1640166033380
 	},
 	{
 		"title": "市场风格切换？",
