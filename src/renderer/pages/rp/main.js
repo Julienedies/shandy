@@ -122,7 +122,7 @@ brick.reg('todoListCtrl', function (scope) {
     function _onFilter (type) {
         filterByType = type;
         render();
-    }
+    };
 
     scope.toggle = function (e) {
         $(this).nextAll().find('.pre.text').toggle();

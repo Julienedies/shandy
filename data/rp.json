@@ -26,7 +26,16 @@
 		"timestamp": 1638717495263
 	},
 	{
-		"title": "行情启动时犹豫，行情退潮时管不住手。",
+		"title": "没有大局观：对市场的变化总是后知后觉；看不到大趋势；",
+		"id": "6361966",
+		"type": "mistake",
+		"comment": "",
+		"content": "<p>看不到更大的交易逻辑。后知后觉，牛市或牛股走出来，我才意识到。</p><p>看不到大势下的确定性，着眼于小波动。看不到大盘主升中。看不到板块行情进行中。</p><p>行情启动时犹豫，行情退潮时，管不住手。</p><p>不知道市场参与者的行为逻辑</p><p>没有消息资讯优势</p><p><span style=\"font-size: 16px;\">上涨初期，不在意。</span></p>",
+		"tags": [],
+		"timestamp": 1638964854760
+	},
+	{
+		"title": "没有大局观：行情启动时犹豫，行情退潮时管不住手。",
 		"id": "id_1640144547990",
 		"type": "mistake",
 		"comment": "",
@@ -35,13 +44,13 @@
 		"timestamp": 1640144547990
 	},
 	{
-		"title": "不专注于当前的热点龙头。",
-		"id": "3910872",
-		"type": "mistake",
-		"comment": "",
-		"content": "",
+		"title": "我的交易系统是什么？",
+		"id": "0310145",
+		"type": "question",
+		"comment": "围绕市场龙头寻找介入机会。",
+		"content": "<h2><span style=\"font-size: 18px;\"><u>简单纯粹取舍重复，只做龙头。</u></span></h2><h2><span style=\"font-size: 18px;\"><u>市场热钱合力(值得操作)的短线龙头就那么几支。我没有其它优势，只能围绕着已知市场龙头操作。</u></span></h2><p><br></p><table><thead><tr><th>系统类型</th><th>逻辑</th><th>代表人物</th></tr></thead><tbody><tr></tr><tr><td>分仓打首板</td><td>客观跟随热点、概率优势</td><td>之江小生、北京炒家、创世纪、陈小豪、走刀口1991</td></tr><tr><td>基于大盘和板块的首板</td><td><br></td><td>管手剁</td></tr><tr><td>数板接力板</td><td><br></td><td>股长升、A女王</td></tr><tr><td>基于市场理解力的应对</td><td>市场资金流向</td><td>涅盘重升、花一样的土豆、短线至上</td></tr><tr><td>搜集市场强势股，寻找介入机会</td><td><br></td><td>独孤一剑、</td></tr><tr><td>看高做低</td><td>盈亏比高；锚定&amp;复制&amp;补涨；</td><td>爱学习的人、衡山五神剑、奔狼</td></tr><tr><td>机械概率</td><td><br></td><td>纵横股道、寂寞和弦</td></tr><tr><td>日内热点捕捉</td><td><br></td><td>张英雄</td></tr><tr><td>趋势波段<br></td><td><br></td></tr></tbody></table><p><br></p>",
 		"tags": [],
-		"timestamp": 1639747301594
+		"timestamp": 1638935323630
 	},
 	{
 		"title": "为何我错过所有的大行情？为什么所有的龙头我都没有参与？",
@@ -61,6 +70,22 @@
 		"content": "",
 		"tags": [],
 		"timestamp": 1639656009272
+	},
+	{
+		"title": "当前市场偏好风格是什么？最有赚钱效应的是什么？赚钱效应趋强还是趋弱？",
+		"id": "8059392",
+		"type": "rp",
+		"comment": "越快意识到市场变化越能获取更大的利润。",
+		"tags": [
+			"3502595",
+			"1804142",
+			"3657132",
+			"8892599",
+			"7913663",
+			"8141386"
+		],
+		"content": "<p><u><span style=\"font-size: 18px;\">赚钱效应有没有持续性？</span></u></p><p><u><span style=\"font-size: 18px;\">低吸赚钱效应怎么样？追涨赚钱效应怎么样？ 接力板赚钱效应怎么样？</span></u></p>",
+		"timestamp": 1638692867662
 	},
 	{
 		"title": "我有没有忽略了市场风格转换或行情启动？为何我总是后知后觉，错过大行情？",
@@ -106,6 +131,15 @@
 		"content": "<p>我每天还是在重复以前的交易动作。\n我需要做出真正的改变。我必须做出真正的改变。\n问题没有解决。\n错误仍在重复。</p>",
 		"tags": [],
 		"timestamp": 1638966078422
+	},
+	{
+		"title": "我以什么做为判断锚点？为何我的预判总是错误？",
+		"id": "3566298",
+		"type": "question",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638719166797
 	},
 	{
 		"title": "如果市场走势和我的预判相反，怎么办？",
@@ -172,22 +206,13 @@
 		"timestamp": 1639230657557
 	},
 	{
-		"title": "我以什么做为判断锚点？为何我的预判总是错误？",
-		"id": "3566298",
+		"title": "为何我总是临盘犹豫？",
+		"id": "0710264",
 		"type": "question",
-		"comment": "",
+		"comment": "思维没有方向；判断没有锚点；",
 		"content": "",
 		"tags": [],
-		"timestamp": 1638719166797
-	},
-	{
-		"title": "没有大局观；看不到大趋势；总是后知后觉；",
-		"id": "6361966",
-		"type": "mistake",
-		"comment": "",
-		"content": "<p>看不到更大的交易逻辑。后知后觉，牛市或牛股走出来，我才意识到。</p><p>看不到大势下的确定性，着眼于小波动。看不到大盘主升中。看不到板块行情进行中。</p><p>行情启动时犹豫，行情退潮时，管不住手。</p><p>不知道市场参与者的行为逻辑</p><p>没有消息资讯优势</p><p><span style=\"font-size: 16px;\">上涨初期，不在意。</span></p>",
-		"tags": [],
-		"timestamp": 1638964854760
+		"timestamp": 1639282041994
 	},
 	{
 		"title": "无系统，无计划，临盘随意冲动交易。",
@@ -199,16 +224,34 @@
 		"timestamp": 1638964775096
 	},
 	{
-		"title": "主观，线性思维，先入为主；",
+		"title": "主观：线性思维，先入为主；依靠主观预测交易；",
 		"id": "5563051",
 		"type": "mistake",
-		"comment": "依靠主观预测交易，但我的预判总是错误。",
+		"comment": "",
 		"content": "<table style=\"width: 100%; margin-left: calc(0%);\"><tbody><tr><td><span style=\"font-size: 16px;\">总是有两种可能性<br></span></td><td><span style=\"font-size: 16px;\">强转弱 or 强更强； &nbsp;双头 &nbsp;or &nbsp;二浪<br></span></td></tr><tr><td style=\"width: 50.0000%;\"><span style=\"font-size: 16px;\">主观看空，认为行情结束了。<br></span></td><td style=\"width: 50.0000%;\"><span style=\"font-size: 16px;\">不要主观看空，除非市场给出信号或出现亏钱效应；<br></span></td></tr><tr><td><span style=\"font-size: 16px;\">涨的高，就预期上涨没有空间了，到顶部了；</span><br></td><td><span style=\"font-size: 16px;\">（这是我的主观看法） 如果次日预期外呢？如何应对？</span><br></td></tr><tr><td><span style=\"font-size: 16px;\">主观认为\b一定是顶部；一定是双头；一定是反弹。<br></span></td><td><span style=\"font-size: 16px;\">市场变量很多；多空动态博弈；客观看待；动态应对；<br></span></td></tr><tr><td><span style=\"font-size: 16px;\">高开下杀放量大阴线，就认为完蛋了；上冲回落就认为完蛋了<br></span></td><td><span style=\"font-size: 16px;\"><br></span></td></tr><tr><td><span style=\"font-size: 16px;\">下跌就认为行情结束了，结果走了二波。下跌也可以走V；<br></span></td><td><span style=\"font-size: 16px;\"><br></span></td></tr><tr><td><span style=\"font-size: 16px;\">分时下杀，就看空；没有立刻封板，就认为弱；<br></span></td><td><span style=\"font-size: 16px;\"><br></span></td></tr><tr><td><span style=\"font-size: 16px;\">低开就恐慌看空；</span></td><td><span style=\"font-size: 16px;\">弱转强，大长腿；大盘受外围影响大幅低开恐慌，却低开高走。<br></span></td></tr><tr><td><span style=\"font-size: 16px;\">对于某些大牛股，因为少见，所以会以平常经验看待。<br></span></td><td><span style=\"font-size: 16px;\">&nbsp;根本没有想到白酒会起二波。<br></span></td></tr></tbody></table><p><br></p>",
 		"tags": [],
 		"timestamp": 1638719204579
 	},
 	{
-		"title": "被上次的经验影响，左右打脸；",
+		"title": "不专注于当前的热点龙头。",
+		"id": "3910872",
+		"type": "mistake",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1639747301594
+	},
+	{
+		"title": "临盘犹豫； 好的机会稍纵即逝。",
+		"id": "6464041",
+		"type": "mistake",
+		"comment": "为何我总是临盘犹豫，错过机会？",
+		"content": "",
+		"tags": [],
+		"timestamp": 1639232045768
+	},
+	{
+		"title": "不能保持一致性，被以前的经验影响，左右打脸；",
 		"id": "3484178",
 		"type": "mistake",
 		"comment": "",
@@ -224,15 +267,6 @@
 		"content": "<p>三心二意，不专注；什么都想要，什么都抓不住。</p><p>左右打脸，犹豫不决。不能持续一致性。为何我总是卖飞&amp;过山车？ 高开下杀卖在最低点。</p><p>操作总想着钱，而不是对错。持仓影响我的判断。因为持仓，就因为下跌恐慌。或急于兑现利润导致卖飞。</p><p>急于赚钱，交易上瘾，管不住手。空仓总想着买。持仓总想着卖。</p><p>我恐慌的本能如此强烈。多少次大盘因外围低开就恐慌卖出。</p><p>鸡肋头寸、非预期头寸，止损犹豫；浪费时间和机会成本；</p><p>优柔寡断、三心二意、没有耐心；</p>",
 		"tags": [],
 		"timestamp": 1638719303089
-	},
-	{
-		"title": "临盘犹豫； 好的机会稍纵即逝。",
-		"id": "6464041",
-		"type": "mistake",
-		"comment": "为何我总是临盘犹豫，错过机会？",
-		"content": "",
-		"tags": [],
-		"timestamp": 1639232045768
 	},
 	{
 		"title": "总是有两种可能性；我恐高是对的，但也放弃了主升浪；",
@@ -325,13 +359,27 @@
 		"timestamp": 1638966036834
 	},
 	{
-		"title": "为何我总是临盘犹豫？",
-		"id": "0710264",
+		"title": "市场参与者的行为逻辑是什么？",
+		"id": "id_1640441042409",
 		"type": "question",
-		"comment": "思维没有方向；判断没有锚点；",
+		"comment": "",
 		"content": "",
 		"tags": [],
-		"timestamp": 1639282041994
+		"timestamp": 1640441042409
+	},
+	{
+		"title": "我要捕捉的目标行情是什么？",
+		"id": "3676210",
+		"type": "question",
+		"comment": "围绕市场合力、主流热点；客观跟随；",
+		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 22.381%;\">板块爆发首板<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">板块爆发加强晋级<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">主线卡位先锋<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">主流热点低位补涨首板<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">有板块效应的前排首板</td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">低吸龙头分歧</td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td>大盘转势共振领涨板</td><td><br></td><td><br></td></tr><tr><td>超预期加速<br></td><td><br></td><td><br></td></tr><tr><td>预判轮动低吸</td><td><br></td><td><br></td></tr><tr><td>修复/分歧转一致</td><td><br></td><td><br></td></tr><tr><td>转折/弱转强<br></td><td><br></td><td><br></td></tr></tbody></table><p><br></p>",
+		"name": "3676210",
+		"timestamp": 1638620495062,
+		"tags": [
+			"0177679",
+			"1820273",
+			"5691761"
+		]
 	},
 	{
 		"title": "我每天复盘看的是什么？我思考的是什么？",
@@ -350,29 +398,6 @@
 		"content": "",
 		"tags": [],
 		"timestamp": 1638965605140
-	},
-	{
-		"title": "我要捕捉的目标行情是什么？",
-		"id": "3676210",
-		"type": "question",
-		"comment": "围绕市场合力、主流热点；客观跟随；",
-		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 22.381%;\">板块爆发首板<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">板块爆发加强晋级<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">主线卡位先锋<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">主流热点低位补涨首板<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">有板块效应的前排首板</td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">低吸龙头分歧</td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td>大盘转势共振领涨板</td><td><br></td><td><br></td></tr><tr><td>超预期加速<br></td><td><br></td><td><br></td></tr><tr><td>预判轮动低吸</td><td><br></td><td><br></td></tr><tr><td>修复/分歧转一致</td><td><br></td><td><br></td></tr><tr><td>转折/弱转强<br></td><td><br></td><td><br></td></tr></tbody></table><p><br></p>",
-		"name": "3676210",
-		"timestamp": 1638620495062,
-		"tags": [
-			"0177679",
-			"1820273",
-			"5691761"
-		]
-	},
-	{
-		"title": "我的交易系统是什么？",
-		"id": "0310145",
-		"type": "question",
-		"comment": "围绕市场龙头寻找介入机会。",
-		"content": "<h2><span style=\"font-size: 18px;\"><u>简单纯粹取舍重复，只做龙头。</u></span></h2><h2><span style=\"font-size: 18px;\"><u>市场热钱合力(值得操作)的短线龙头就那么几支。我没有其它优势，只能围绕着已知市场龙头操作。</u></span></h2><p><br></p><table><thead><tr><th>系统类型</th><th>逻辑</th><th>代表人物</th></tr></thead><tbody><tr></tr><tr><td>分仓打首板</td><td>客观跟随热点、概率优势</td><td>之江小生、北京炒家、创世纪、陈小豪、走刀口1991</td></tr><tr><td>基于大盘和板块的首板</td><td><br></td><td>管手剁</td></tr><tr><td>数板接力板</td><td><br></td><td>股长升、A女王</td></tr><tr><td>基于市场理解力的应对</td><td>市场资金流向</td><td>涅盘重升、花一样的土豆、短线至上</td></tr><tr><td>搜集市场强势股，寻找介入机会</td><td><br></td><td>独孤一剑、</td></tr><tr><td>看高做低</td><td>盈亏比高；锚定&amp;复制&amp;补涨；</td><td>爱学习的人、衡山五神剑、奔狼</td></tr><tr><td>机械概率</td><td><br></td><td>纵横股道、寂寞和弦</td></tr><tr><td>日内热点捕捉</td><td><br></td><td>张英雄</td></tr><tr><td>趋势波段<br></td><td><br></td></tr></tbody></table><p><br></p>",
-		"tags": [],
-		"timestamp": 1638935323630
 	},
 	{
 		"title": "今天临盘我的交易计划是什么？手中的票的预案是什么？",
@@ -397,22 +422,6 @@
 			"7484844"
 		],
 		"timestamp": 1638689045658
-	},
-	{
-		"title": "当前市场偏好风格是什么？最有赚钱效应的是什么？赚钱效应趋强还是趋弱？",
-		"id": "8059392",
-		"type": "rp",
-		"comment": "越快意识到市场变化越能获取更大的利润。",
-		"tags": [
-			"3502595",
-			"1804142",
-			"3657132",
-			"8892599",
-			"7913663",
-			"8141386"
-		],
-		"content": "<p><u><span style=\"font-size: 18px;\">赚钱效应有没有持续性？</span></u></p><p><u><span style=\"font-size: 18px;\">低吸赚钱效应怎么样？追涨赚钱效应怎么样？ 接力板赚钱效应怎么样？</span></u></p>",
-		"timestamp": 1638692867662
 	},
 	{
 		"title": "亏钱效应怎么样？跌停是否增多？有没有系统性风险？",

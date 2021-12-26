@@ -37,14 +37,28 @@
                             <h3 ic-click="toggle">{{ v.title }} <b> {{ v.comment }}</b></h3>
 
                             <div class="wrap">
-                                <div class="tags" ic-if="v.tags && v.tags.length"
+
+                                <div class="field is-grouped is-grouped-multiline"  ic-if="v.tags && v.tags.length"
                                      ic-select
-                                     ic-select-cla="is-primary"
+                                     ic-select-cla="is-dark"
                                      ic-select-type="checkbox"
+                                     ic-select-item=".tag"
                                      ic-form-field="{{ 'f_'+v.id }}">
-                                    <span class="tag is-medium is-info" ic-for="j,k in v.tags" ic-select-item ic-val="{{ k }}">
-                                        {{ TAGS_MAP_BY_ID[k].text }}
-                                    </span>
+
+                                    <div class="control" ic-for="j,k in v.tags">
+                                        <div class="tags has-addons" ic-init="o=TAGS_MAP_BY_ID[k]">
+                                            <span class="tag is-medium is-info" ic-if-start="o.type==='交易错误'||o.type==='要解决的问题'" ic-val="{{ k }}">
+                                                {{ o.text }}
+                                            </span>
+                                            <span class="tag is-medium is-info" ic-else-if="o.type==='交易要素'" ic-val="{{ k }}">
+                                                {{ o.text }}
+                                            </span>
+                                            <span class="tag is-medium is-info" ic-else ic-val="{{ k }}">
+                                                {{ o.text }}
+                                            </span>
+                                        </div>
+                                    </div>
+
                                 </div>
 
                                 <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
