@@ -171,7 +171,7 @@ brick.reg('mainCtrl', function (scope) {
 
             });
 
-        }, 1000 * 60 * 30);
+        }, 1000 * 60 * 45);
 
     }
 
