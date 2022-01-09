@@ -6,6 +6,20 @@ html {
   overflow: hidden;
 }
 
+#mainHeader{
+  position: fixed;
+  top:0;
+  width:100%;
+  padding: 0.4rem;
+  margin-left: -1.6rem;
+  background: #fff;
+  box-shadow: 4px 4px 9px #c3c2c2;
+}
+
+#mainContent{
+  padding-top:45px;
+}
+
 #todoList {
   .tag:not(body).is-medium {
     font-size: 0.9rem;
@@ -29,34 +43,43 @@ html {
     padding: 0.1rem;
     color: #3c3c3c;
 
-    > h2, > h3, > .wrap {
-      padding: 0 1em 0.6em 1em;
+    > header, > .wrap {
+      padding: 0 1em 0 1em;
     }
 
-    > h2, > h3 {
-      padding: 0.1rem 1rem;
-      white-space: nowrap;
-      overflow: hidden;
-      font-weight: bold;
-      font-size: 24px !important;
-      color: #000;
+    > header {
       background: yellow;
 
-      b {
-        display: inline-block;
-        padding-left: 1.2em;
-        font-size: 0.9em;
-        font-weight: 400;
+      h2, h3, h6 {
+        padding: 0.1rem 0.1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: bold;
+        font-size: 24px !important;
+        color: #000;
+
+        b {
+          display: inline-block;
+          padding-left: 1.2em;
+          font-size: 0.9em;
+          font-weight: 400;
+        }
       }
+
+      h5, h6 {
+        font-size: 20px!important;
+      }
+
     }
+
 
     > .wrap {
       margin-top: 0.5rem;
+      padding-bottom: 0.3em;
     }
   }
 
   .pre {
-    display: none;
     color: #026bdb;
     font-weight: 500;
     font-size: 16px;

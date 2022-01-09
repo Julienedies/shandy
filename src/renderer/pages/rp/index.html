@@ -11,10 +11,10 @@
 <body>
 <div ic-view-stage ic-ctrl="mainCtrl">
 
-    <div id="todoList" ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
+    <div id="todoList" ic-ctrl="todoListCtrl" ic-view="todoList" ic-active>
         <div class="column">
 
-            <div ic-tpl="types" style="padding-bottom: 0.75rem;">
+            <header id="mainHeader" ic-tpl="types">
                 <!--<button class="button is-primary" ic-click="refreshTags">刷新Tags</button>-->
                 <div class="buttons is-centered" ic-select="tags" ic-select-auto="false" ic-select-cla="is-primary"
                      ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
@@ -26,15 +26,18 @@
                         {{ RPMQS_MAP[v] }}
                     </button>
                 </div>
-            </div>
+            </header>
 
-            <div ic-tpl="todoList">
+            <div id="mainContent" ic-tpl="todoList">
                 <div ic-form>
                     <ul>
-                        <li class="box" ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
-                            ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
+                        <li class="box" ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
-                            <h3 ic-click="toggle">{{ v.title }} <b> {{ v.comment }}</b></h3>
+                            <header>
+                                <h3 ic-click="toggle">{{ v.title }} <b> </b></h3>
+                                <h6>{{ v.comment }}</h6>
+                            </header>
+
 
                             <div class="wrap">
 
@@ -169,51 +172,6 @@
             </div>
         </div>
     </div>
-
-    <!--<div ic-view="tags" ic-ctrl="tagsCtrl">
-        <div class="column">
-
-            <div class="buttons">
-                <button class="button is-primary is-fullwidth" ic-view-to="setTodo">返回</button>
-            </div>
-
-            <div class="box" ic-tpl="tags">
-
-                <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-auto="false" ic-select-on-change="onChange">
-
-                    <div class="field is-grouped is-grouped-multiline">
-
-                        <div class="control" ic-for-start="k,arr in model.tags" ic-if-start="k!=='type'">
-                            <span class="button is-primary">{{ k }}</span>
-                        </div>
-
-                        <div class="control" ic-for="i,v in arr">
-                            <div class="tags has-addons">
-                                <span class="tag is-medium is-black" ic-select-item ic-val="{{ v.id }}"
-                                      ic-has-selected="model.rp.tags && model.rp.tags.includes(v.id)"> {{v.text}}</span>
-
-                                <a class="tag is-medium" ic-click="editTag:{{v.id}}">
-                                    <span class="icon is-medium"><i class="far fa-edit"></i></span>
-                                </a>
-
-                                &lt;!&ndash;<a class="tag is-delete is-medium" ic-click="delTag:{{ v.id }}"></a>&ndash;&gt;
-                            </div>
-                        </div>
-
-                        <div class="control" ic-for-end ic-if-end>
-                            <div class="tags has-addons">
-                                <a class="tag is-medium" ic-click="addTag:{{ k }}">
-                                    <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>-->
 
     ${ require('../tags/select-tags.html') }
     ${ require('../tags/set-tag.html') }

@@ -492,15 +492,6 @@
 		"timestamp": 1638717864581
 	},
 	{
-		"title": "锚定、复制、补涨、跟风、先锋、核心、龙头、轮动、卡位、切换；",
-		"id": "id_1640166033380",
-		"type": "rp",
-		"comment": "",
-		"content": "",
-		"tags": [],
-		"timestamp": 1640166033380
-	},
-	{
 		"title": "市场风格切换？",
 		"id": "0714632",
 		"type": "rp",
@@ -508,5 +499,14 @@
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 50.0000%;\">主板、创业板切换<br></td><td style=\"width: 50.0000%;\"><br></td></tr><tr><td>大盘蓝筹趋势、小盘情绪题材切换<br></td><td><br></td></tr><tr><td>高低切换</td><td><br></td></tr><tr><td>板块切换<br></td><td><br></td></tr></tbody></table><p><br></p>",
 		"tags": [],
 		"timestamp": 1639210256341
+	},
+	{
+		"title": "锚定、复制、补涨、跟风、先锋、核心、龙头、轮动、卡位、切换；",
+		"id": "id_1640166033380",
+		"type": "rp",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1640166033380
 	}
 ]
