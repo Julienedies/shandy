@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "5383681",
+		"type": "错误",
+		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 32px; color: rgb(255, 255, 255);\">错误1：为什么我总是错过大行情？</span></strong><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 32px; color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为何所有的龙头我都没有参与？</span></strong></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我错过那么多大行情和大龙头，我有深刻思考和反省过吗？下次我能抓住吗？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">九安医疗、龙津药业、中锐股份、陕西金叶、三羊马</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">错误：我连续错过中青宝、清水源，湖北宜化、大金重工、为什么？这个问题我解决了吗？</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>就好像我以前错过的任何龙头。豫能控股、郑州煤电、小康股份、朗姿股份</strong></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我对市场的理解力有问题，我的思维方式也有问题。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锂电池不断活跃，持续时间最久。但我就是没有参与？我是怎么复盘的？我是怎么理解市场的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中恒电气、中矿资源、天齐锂业、天华超净，蓝晓科技、这些都在我的自选里。我是怎么思考的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么我错过稀土行情？为什么错过北方稀土、五矿稀土？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过PVDF？为什么错过联创股份？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过磷化工行情？</span></strong></p><p><br></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 37,
+		"timestamp": 1625975362922
+	},
+	{
+		"name": "",
 		"id": "id_1639957717122",
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我不是第一次有悟道的感觉，但为什么一年过去，却丝毫没有改变？</span></strong></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">为什么没有做到知行合一？</span></strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">说了做龙头，做龙头，做龙头，为什么还是错过所有的大龙头？</span></strong></p>",
@@ -11,7 +23,7 @@
 		"duration": 17,
 		"timestamp": 1639957717122,
 		"promptTimes": 1,
-		"prevPromptTime": 1641518106809
+		"prevPromptTime": 1642036787667
 	},
 	{
 		"name": "",
@@ -25,7 +37,7 @@
 		"duration": 24,
 		"timestamp": 1639962005050,
 		"promptTimes": 1,
-		"prevPromptTime": 1641520807484
+		"prevPromptTime": 1642039488757
 	},
 	{
 		"name": "",
@@ -39,7 +51,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1641523507845
+		"prevPromptTime": 1642042188189
 	},
 	{
 		"name": "",
@@ -53,7 +65,7 @@
 		"duration": 17,
 		"timestamp": 1639558190823,
 		"promptTimes": 1,
-		"prevPromptTime": 1641526207490
+		"prevPromptTime": 1642044888083
 	},
 	{
 		"name": "",
@@ -67,7 +79,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1641528907902
+		"prevPromptTime": 1642047588218
 	},
 	{
 		"name": "",
@@ -81,7 +93,7 @@
 		"duration": 24,
 		"timestamp": 1636930865826,
 		"promptTimes": 1,
-		"prevPromptTime": 1641531606288
+		"prevPromptTime": 1642050288463
 	},
 	{
 		"name": "",
@@ -95,7 +107,7 @@
 		"duration": 9,
 		"timestamp": 1638547210757,
 		"promptTimes": 1,
-		"prevPromptTime": 1641534307103
+		"prevPromptTime": 1642052988006
 	},
 	{
 		"name": "",
@@ -109,7 +121,7 @@
 		"duration": 29,
 		"timestamp": 1637673180768,
 		"promptTimes": 1,
-		"prevPromptTime": 1641537007015
+		"prevPromptTime": 1642055688055
 	},
 	{
 		"name": "",
@@ -123,7 +135,7 @@
 		"duration": 4,
 		"timestamp": 1629155362746,
 		"promptTimes": 1,
-		"prevPromptTime": 1641539706820
+		"prevPromptTime": 1642058389040
 	},
 	{
 		"name": "",
@@ -137,7 +149,7 @@
 		"duration": 19,
 		"timestamp": 1637020107294,
 		"promptTimes": 1,
-		"prevPromptTime": 1641542405885
+		"prevPromptTime": 1642061088777
 	},
 	{
 		"name": "",
@@ -151,7 +163,7 @@
 		"duration": 24,
 		"timestamp": 1636803828143,
 		"promptTimes": 1,
-		"prevPromptTime": 1641545107277
+		"prevPromptTime": 1642063788060
 	},
 	{
 		"name": "",
@@ -165,7 +177,7 @@
 		"duration": 17,
 		"timestamp": 1636700906299,
 		"promptTimes": 1,
-		"prevPromptTime": 1641547807864
+		"prevPromptTime": 1642066487737
 	},
 	{
 		"name": "",
@@ -179,7 +191,7 @@
 		"duration": 19,
 		"timestamp": 1628513394321,
 		"promptTimes": 1,
-		"prevPromptTime": 1641550507464
+		"prevPromptTime": 1642069188481
 	},
 	{
 		"name": "",
@@ -193,7 +205,7 @@
 		"duration": 29,
 		"timestamp": 1610785651586,
 		"promptTimes": 1,
-		"prevPromptTime": 1641553206268
+		"prevPromptTime": 1642071888593
 	},
 	{
 		"name": "",
@@ -207,7 +219,7 @@
 		"duration": 7,
 		"timestamp": 1636413986087,
 		"promptTimes": 1,
-		"prevPromptTime": 1641555907097
+		"prevPromptTime": 1642074588594
 	},
 	{
 		"name": "",
@@ -221,7 +233,7 @@
 		"duration": 7,
 		"timestamp": 1636326773171,
 		"promptTimes": 1,
-		"prevPromptTime": 1641558606358
+		"prevPromptTime": 1642077288202
 	},
 	{
 		"name": "",
@@ -235,7 +247,7 @@
 		"duration": 24,
 		"timestamp": 1636258154803,
 		"promptTimes": 1,
-		"prevPromptTime": 1641561307240
+		"prevPromptTime": 1642079987684
 	},
 	{
 		"name": "",
@@ -249,7 +261,7 @@
 		"duration": 7,
 		"timestamp": 1636203734653,
 		"promptTimes": 1,
-		"prevPromptTime": 1641564007437
+		"prevPromptTime": 1642082687586
 	},
 	{
 		"name": "",
@@ -263,7 +275,7 @@
 		"duration": 7,
 		"timestamp": 1635088812447,
 		"promptTimes": 1,
-		"prevPromptTime": 1641566707348
+		"prevPromptTime": 1642085387441
 	},
 	{
 		"name": "",
@@ -275,9 +287,7 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 5,
-		"timestamp": 1634458275583,
-		"promptTimes": 1,
-		"prevPromptTime": 1641569407087
+		"timestamp": 1634458275583
 	},
 	{
 		"name": "警告",
@@ -350,18 +360,6 @@
 		"interval": 60,
 		"duration": 10,
 		"timestamp": 1626650977149
-	},
-	{
-		"name": "",
-		"id": "5383681",
-		"type": "错误",
-		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 32px; color: rgb(255, 255, 255);\">错误1：为什么我总是错过大行情？</span></strong><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 32px; color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为何所有的龙头我都没有参与？</span></strong></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我错过那么多大行情和大龙头，我有深刻思考和反省过吗？下次我能抓住吗？</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">错误：我连续错过中青宝、清水源，湖北宜化、大金重工、为什么？这个问题我解决了吗？</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>就好像我以前错过的任何龙头。豫能控股、郑州煤电、小康股份、朗姿股份</strong></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我对市场的理解力有问题，我的思维方式也有问题。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锂电池不断活跃，持续时间最久。但我就是没有参与？我是怎么复盘的？我是怎么理解市场的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中恒电气、中矿资源、天齐锂业、天华超净，蓝晓科技、这些都在我的自选里。我是怎么思考的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么我错过稀土行情？为什么错过北方稀土、五矿稀土？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过PVDF？为什么错过联创股份？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过磷化工行情？</span></strong></p><p><br></p>",
-		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 37,
-		"timestamp": 1625975362922
 	},
 	{
 		"name": "",
