@@ -144,21 +144,34 @@
                         </p>
                     </div>
 
-                    <div class="field">
-                        <div class="control">
+                    <div class="field has-addons">
+                        <div class="control" style="width:60%;">
                             <button class="button is-primary"
+                                    style="width:300px;"
                                     ic-form-submit
                                     ic-submit-action="/stock/rp"
                                     ic-submit-before="before"
                                     ic-submit-on-done="done">保存
                             </button>
-                            <button class="button" ic-click="reset">
+                            <button class="button" ic-click="reset" style="width:100px;">
                                 重置
                             </button>
-                            <button class="button" ic-click="cancel">取消</button>
-                            <button class="button" ic-view-to="todoList">
+                            <button class="button" ic-click="cancel" style="width:100px;">取消</button>
+                            <button class="button" ic-view-to="todoList" style="width:240px;">
                                 返回
                             </button>
+                        </div>
+
+                        <div class="control" style="width:100px;"></div>
+                        <div class="control">
+                            <button class="button">level</button>
+                        </div>
+                        <div class="control">
+                            <input class="input" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1 }}">
+                        </div>
+                        <div class="control" style="width:100px;"></div>
+                        <div class="control">
+                            <input class="input" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate() }}">
                         </div>
                     </div>
 

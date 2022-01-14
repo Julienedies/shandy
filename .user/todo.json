@@ -287,7 +287,9 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 5,
-		"timestamp": 1634458275583
+		"timestamp": 1634458275583,
+		"promptTimes": 1,
+		"prevPromptTime": 1642174425964
 	},
 	{
 		"name": "警告",
