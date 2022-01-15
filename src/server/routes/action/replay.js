@@ -10,27 +10,30 @@ const tags = _tags.tags;
 let replay;
 
 function initDb () {
-    replay = replay || dob('replay');
+    replay = replay || dob('replay', {key: 'date'});
     return replay;
 }
 
-function data () {
-    return {replay: replay.get(), tags: tags.convert()};
+function data (date) {
+    let vm = date ? replay.get2(date, 'date') : replay.get();
+    return {replay: vm, tags: tags.convert()};
 }
 
 export default {
 
     get: function (req, res) {
         initDb();
-        res.json(data());
+        let date = req.query.date || req.params.date;
+        res.json(data(date));
     },
 
     // 复盘
     post: function (req, res) {
         initDb();
         let obj = req.body;
+        let date = obj.date;
         replay.set(obj);
-        res.json(data());
+        res.json(data(date));
     }
 
 }

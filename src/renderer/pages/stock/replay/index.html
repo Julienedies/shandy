@@ -14,11 +14,11 @@
 
     <button class="button none"
             id="get_replay"
-            ic-ajax="get_replay"
+            x-ic-ajax="get_replay"
             ic-ajax-auto
             ic-submit-method="get"
             ic-submit-action="/stock/replay"
-            ic-submit-on-done="get_replay_done">大盘复盘</button>
+            ic-submit-on-done="onGetReplayDone">大盘复盘</button>
 
     <div ic-tpl="replay">
 
@@ -30,7 +30,7 @@
         <div class="box">筛选潜在符合系统的标的。譬如：烂板上冲、连续上冲、多空反转</div>-->
 
 
-        <div ic-form="replay" ic-init="replay={};tags=model.tags">
+        <div ic-form="replay" ic-init="replay=model.replay;tags=model.tags">
 
             <div>
                 <h6>大盘状态</h6>
@@ -65,7 +65,7 @@
                 <div class="field is-grouped is-grouped-multiline" ic-select="主线风口" ic-select-type="checkbox" ic-form-field="主线风口">
                     <div class="control" ic-for="i,v in tags['主线风口']">
                         <div class="tags has-addons">
-                            <span ic-select-item ic-class="tag" ic-val="{{v.text}}" ic-has-selected="replay['主线风口'].indexOf(v.text)>-1">
+                            <span ic-select-item ic-class="tag" ic-val="{{v.text}}" ic-has-selected="replay['主线风口'] && replay['主线风口'].indexOf(v.text)>-1">
                                 {{v.text}}
                             </span>
                             <a class="tag" ic-click="tag_edit:{{v.id}}">

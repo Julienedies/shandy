@@ -15,16 +15,26 @@
         <div class="column">
 
             <header id="mainHeader" ic-tpl="types">
-                <!--<button class="button is-primary" ic-click="refreshTags">刷新Tags</button>-->
-                <div class="buttons is-centered" ic-select="tags" ic-select-auto="false" ic-select-cla="is-primary"
-                     ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
+                <div class="field is-grouped is-grouped-centered is-grouped-multiline">
+                    <div class="control">
+                        <div class="buttons is-centered" ic-select="tags" ic-select-auto="false" ic-select-cla="is-primary"
+                             ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
 
-                    <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
+                            <!--<button class="button is-primary" ic-click="refreshTags">刷新Tags</button>-->
+                            <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
 
-                    <button ic-for="v,i in model.mapByType" ic-select-item ic-val="{{ v }}"
-                            ic-class="button is-small {{ v==model.filterByType?'is-primary':''  }}">
-                        {{ RPMQS_MAP[v] }}
-                    </button>
+                            <button ic-for="v,i in model.mapByType" ic-select-item ic-val="{{ v }}"
+                                    ic-class="button is-small {{ v==model.filterByType?'is-primary':''  }}">
+                                {{ RPMQS_MAP[v] }}
+                            </button>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button class="button is-primary is-small" ic-click="saveRp">保存</button>
+                    </div>
+                    <div class="control">
+                        <input class="input is-small" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate() }}">
+                    </div>
                 </div>
             </header>
 
@@ -35,9 +45,9 @@
 
                             <header>
                                 <h3 ic-click="toggle">{{ v.title }} <b> </b></h3>
-                                <h6>{{ v.comment }}</h6>
+                                <h5 ic-if="v.caution">{{ v.caution }}</h5>
+                                <h6 ic-if="v.comment">{{ v.comment }}</h6>
                             </header>
-
 
                             <div class="wrap">
 
@@ -121,6 +131,15 @@
 
                     <div class="field has-addons">
                         <div class="control">
+                            <button class="button is-info">提醒</button>
+                        </div>
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Text input" value="{{ model.caution }}" ic-form-field="caution">
+                        </div>
+                    </div>
+
+                    <div class="field has-addons">
+                        <div class="control">
                             <button class="button is-info">备注</button>
                         </div>
                         <div class="control is-expanded">
@@ -162,7 +181,7 @@
                             </button>
                         </div>
 
-                        <div class="control" style="width:100px;"></div>
+                        <div class="control" style="width:10px;"></div>
                         <div class="control">
                             <button class="button">level</button>
                         </div>
@@ -171,7 +190,7 @@
                         </div>
                         <div class="control" style="width:100px;"></div>
                         <div class="control">
-                            <input class="input" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate() }}">
+
                         </div>
                     </div>
 

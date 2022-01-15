@@ -80,7 +80,7 @@ export default function (app) {
     app.post('/stock/plan', plan.post)
     app.delete('/stock/plan/:id', plan.del)
 
-    app.get('/stock/replay', replay.get)
+    app.get('/stock/replay/:date?', replay.get)
     app.post('/stock/replay', replay.post)
 
     app.get('/stock/tags/:type?', tags.get)

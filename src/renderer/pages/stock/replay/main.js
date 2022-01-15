@@ -10,7 +10,7 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import  '../../../js/utils'
+import '../../../js/utils'
 import '../../../js/common-stock.js'
 
 import setTagCtrl from '../../tags/set-tag-ctrl'
@@ -28,7 +28,7 @@ brick.reg('replayCtrl', function () {
     let list = brick.services.get('recordManager')();
     let model;
 
-    scope.get_replay_done = function (data) {
+    scope.onGetReplayDone = function (data) {
         console.info(data);
         list.init(scope.tags_convert(data.tags));
         model = data;
@@ -41,11 +41,10 @@ brick.reg('replayCtrl', function () {
             return fields;
         },
         done: function (data) {
-            scope.get_replay_done(data);
+            scope.onGetReplayDone(data);
             $.icMsg(JSON.stringify(data.replay));
         }
     };
-
 
     scope.tag_edit = function (e, id) {
         scope.emit('tag.edit', list.get(id));
@@ -54,7 +53,7 @@ brick.reg('replayCtrl', function () {
     scope.tag_remove_done = function (data) {
         model.replay = $elm.find('[ic-form="replay"]').icForm();
         model.tags = data;
-        scope.get_replay_done(model);
+        scope.onGetReplayDone(model);
     };
 
 
@@ -68,6 +67,8 @@ brick.reg('replayCtrl', function () {
         let $th = $(this)
         let name = $th.attr('ic-form-field')
         model.replay[name] = $th.attr('ic-val')
-    })
+    });
+
+    $.get(`/stock/replay?date=${ formatDate() }`).done(scope.onGetReplayDone);
 
 });
