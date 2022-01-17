@@ -16,7 +16,8 @@ function initDb () {
 
 function data (date) {
     let vm = date ? replay.get2(date, 'date') : replay.get();
-    return {replay: vm, tags: tags.convert()};
+    //return {replay: vm, tags: tags.convert()};
+    return {replay: vm};
 }
 
 export default {

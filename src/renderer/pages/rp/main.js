@@ -17,8 +17,6 @@ import 'froala-editor/css/froala_editor.pkgd.css'
 import 'froala-editor/css/froala_style.min.css'
 import 'froala-editor/js/froala_editor.pkgd.min.js'
 
-import '../../js/utils.js'
-
 import {
     GET_TAGS_DONE,
     ON_SET_TAG_DONE,
@@ -30,6 +28,7 @@ import {
     FroalaEditorConfig
 } from '../../js/constants'
 
+import '../../js/utils.js'
 import '../../js/common-stock.js'
 import setTagCtrl from '../tags/set-tag-ctrl'
 import selectTagsCtrl from '../tags/select-tags-ctrl'
@@ -122,15 +121,10 @@ brick.reg('todoListCtrl', function (scope) {
     function _onFilter (type) {
         filterByType = type;
         render();
-    };
+    }
 
     scope.toggle = function (e) {
         $(this).nextAll().find('.pre.text').toggle();
-    };
-
-    scope.allToggle = function (e) {
-        let cla = 'toggle';
-        $('.pre.text').toggleClass(cla);
     };
 
     scope.refreshTags = function (e) {
@@ -280,24 +274,56 @@ brick.reg('tagsCtrl', function (scope) {
 });
 
 
-brick.reg('promptCtrl', function () {
+brick.reg('replayCtrl', function () {
 
-    const scope = this;
-    let _todoItem = null;
-    let $todoContent = scope.$elm.find('#todoContent');
+    let scope = this;
+    let $elm = this.$elm;
 
-    scope.edit = function (e) {
-        scope.emit('setTodo', _todoItem);
+    let list = brick.services.get('recordManager')();
+    let model;
+
+    scope.onGetReplayDone = function (data) {
+        console.info(data);
+        list.init(scope.tags_convert(data.tags));
+        model = data;
+        scope.render('replay', data);
     };
 
-    scope.on('prompt', function (e, todoItem) {
-        brick.view.to('prompt');
-        _todoItem = todoItem
-        $todoContent.html(todoItem.content);
-        let str = $todoContent.text();
-        console.log(str, str.substr(0, 240));
-        //voice(str.substr(0, 240));
+    scope.replay = {
+        before: function (fields) {
+            console.info(fields);
+            return fields;
+        },
+        done: function (data) {
+            scope.onGetReplayDone(data);
+            $.icMsg(JSON.stringify(data.replay));
+        }
+    };
+
+    scope.tag_edit = function (e, id) {
+        scope.emit('tag.edit', list.get(id));
+    };
+
+    scope.tag_remove_done = function (data) {
+        model.replay = $elm.find('[ic-form="replay"]').icForm();
+        model.tags = data;
+        scope.onGetReplayDone(model);
+    };
+
+
+    scope.on('tag.edit.done', function (e, msg) {
+        console.info(e, msg);
+        scope.tag_remove_done(msg);
     });
+
+
+    $elm.on('ic-select.change', '[ic-select][ic-form-field]', function (e) {
+        let $th = $(this)
+        let name = $th.attr('ic-form-field')
+        model.replay[name] = $th.attr('ic-val')
+    });
+
+    $.get(`/stock/replay?date=${ formatDate() }`).done(scope.onGetReplayDone);
 
 });
 

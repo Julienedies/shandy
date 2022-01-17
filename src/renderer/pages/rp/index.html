@@ -20,7 +20,6 @@
                         <div class="buttons is-centered" ic-select="tags" ic-select-auto="false" ic-select-cla="is-primary"
                              ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
 
-                            <!--<button class="button is-primary" ic-click="refreshTags">刷新Tags</button>-->
                             <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
 
                             <button ic-for="v,i in model.mapByType" ic-select-item ic-val="{{ v }}"
@@ -29,12 +28,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="control">
-                        <button class="button is-primary is-small" ic-click="saveRp">保存</button>
-                    </div>
-                    <div class="control">
-                        <input class="input is-small" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate() }}">
-                    </div>
+
                 </div>
             </header>
 
@@ -43,13 +37,15 @@
                     <ul>
                         <li class="box" ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
-                            <header>
-                                <h3 ic-click="toggle">{{ v.title }} <b> </b></h3>
+                            <header ic-click="toggle">
+                                <h3>{{ v.title }} <b>{{ v.comment }} </b></h3>
                                 <h5 ic-if="v.caution">{{ v.caution }}</h5>
-                                <h6 ic-if="v.comment">{{ v.comment }}</h6>
                             </header>
 
                             <div class="wrap">
+                                <div>
+                                    <textarea class="textarea is-medium" ic-form-field="{{ v.id }}" rows="1"></textarea>
+                                </div>
 
                                 <div class="field is-grouped is-grouped-multiline"  ic-if="v.tags && v.tags.length"
                                      ic-select
@@ -93,8 +89,33 @@
 
                         </li>
                     </ul>
+
+                    <footer id="mainFooter" ic-ctrl="replayCtrl">
+                        <div>
+                            <div>
+                                <div class="field is-grouped is-grouped-centered">
+                                    <div class="control is-expanded">
+                                        <textarea class="textarea is-small" ic-form-field="复盘汇总" rows="3"></textarea>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-primary is-small"
+                                                ic-form-submit="replay"
+                                                ic-submit-action="/stock/replay"
+                                                ic-submit-before="replay.before"
+                                                ic-submit-on-done="replay.done">
+                                            保存</button>
+                                    </div>
+                                    <div class="control">
+                                        <input class="input is-small" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate() }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
                 </div>
             </div>
+
 
         </div>
     </div>
