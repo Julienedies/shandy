@@ -14,6 +14,7 @@ export default function () {
 
     scope.model = {};
 
+    // 临时用来修正数据, 以后应该用不着了
     let fx = (tagMap) => {
         for (let i in tagMap) {
             let arr = tagMap[i];

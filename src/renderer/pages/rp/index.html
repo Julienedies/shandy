@@ -33,9 +33,9 @@
             </header>
 
             <div id="mainContent" ic-tpl="todoList">
-                <div ic-form>
+                <div ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm.replay;">
                     <ul>
-                        <li class="box" ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
+                        <li class="box" ic-for="i,v in rpList" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
                             <header ic-click="toggle">
                                 <h3>{{ v.title }} <b>{{ v.comment }} </b></h3>
@@ -43,8 +43,8 @@
                             </header>
 
                             <div class="wrap">
-                                <div>
-                                    <textarea class="textarea is-medium" ic-form-field="{{ v.id }}" rows="1"></textarea>
+                                <div style="padding-bottom: 0.5em;">
+                                    <textarea class="textarea is-medium" ic-form-field="{{ v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
                                 </div>
 
                                 <div class="field is-grouped is-grouped-multiline"  ic-if="v.tags && v.tags.length"
@@ -86,20 +86,19 @@
                                     </div>
                                 </div>
                             </div>
-
                         </li>
                     </ul>
 
-                    <footer id="mainFooter" ic-ctrl="replayCtrl">
+                    <footer id="mainFooter">
                         <div>
                             <div>
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control is-expanded">
-                                        <textarea class="textarea is-small" ic-form-field="复盘汇总" rows="3"></textarea>
+                                        <textarea class="textarea" ic-form-field="复盘汇总" rows="3">{{ rpForm['复盘汇总'] }}</textarea>
                                     </div>
                                     <div class="control">
                                         <button class="button is-primary is-small"
-                                                ic-form-submit="replay"
+                                                ic-form-submit="rp"
                                                 ic-submit-action="/stock/replay"
                                                 ic-submit-before="replay.before"
                                                 ic-submit-on-done="replay.done">
@@ -115,7 +114,6 @@
 
                 </div>
             </div>
-
 
         </div>
     </div>

@@ -17,6 +17,7 @@ export default function () {
 
     window.TAGS_MAP_BY_ID = {};
     window.TAGS_MAP = {};
+    window.GET_TAGS_DEF = $.Deferred();
 
     function tagsMap2Arr (data) {
         let result = [];
@@ -34,6 +35,7 @@ export default function () {
         window.TAGS_MAP = data;
         tagsManager.init(tagsMap2Arr(data));
         types = data['type'];
+        window.GET_TAGS_DEF.resolve();
         scope.emit(GET_TAGS_DONE, data);
     };
 
