@@ -3,6 +3,8 @@
  * Created by j on 2019-04-08.
  */
 
+import moment from 'moment';
+
 const FILE_PATH = '/file/?path';
 
 function _isUrlPath (path) {
@@ -51,7 +53,10 @@ function sortByPy (param1, param2) {
     return param1.localeCompare(param2, "zh");
 }
 
-// 把当前日期转换为 yyyy-mm-dd格式
+/**
+ * 获取当前日期 yyyy-mm-dd 格式的字符串
+ * @returns {string}
+ */
 function formatDate () {
     let d = new Date;
     return d.toLocaleDateString().split('/').map((v) => {
@@ -59,15 +64,43 @@ function formatDate () {
     }).join('-');
 }
 
-try {
+/**
+ * 获取特定日期 yyyy-mm-dd 格式的字符串，主要是针对复盘与交易计划设定特定日期
+ * @returns {string}
+ */
+function formatDate2 () {
+    let now = moment();
+    let day = now.day();  // 周几
+    let hour = now.hour();
+    let f = 'YYYY-MM-DD';
+    let m;
+    let amount = 1;
 
+    // 如果是周一至周五，并且超过下午3点，则更新时间为当天时间; 否则为前一天开盘日
+    if (day > 0 && day < 6 && hour >= 15) {
+        m = now;
+    } else {
+        if (day === 0) {
+            amount = 2;
+        }
+        m = moment().subtract(amount, 'days');
+    }
+
+    return m.format(f)
+}
+
+
+////////////////////////////////////////////////////////////////
+// export
+
+try {
     window.parseImgName = parseImgName;
     window.parseImgPath = parseImgPath;
     window.sortByPy = sortByPy;
     window.formatDate = formatDate;
-
+    window.formatDate2 = formatDate2;
 } catch (e) {
-    console.error(e)
+    console.error(e);
 }
 
 

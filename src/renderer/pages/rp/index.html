@@ -33,13 +33,13 @@
             </header>
 
             <div id="mainContent" ic-tpl="todoList">
-                <div ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm.replay;">
+                <div ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm;">
                     <ul>
                         <li class="box" ic-for="i,v in rpList" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
                             <header ic-click="toggle">
-                                <h3>{{ v.title }} <b>{{ v.comment }} </b></h3>
-                                <h5 ic-if="v.caution">{{ v.caution }}</h5>
+                                <h3>{{ v.title }} <b>{{ v.caution || v.comment }} </b></h3>
+                                <h5 ic-if="v.caution"></h5>
                             </header>
 
                             <div class="wrap">
@@ -94,7 +94,7 @@
                             <div>
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control is-expanded">
-                                        <textarea class="textarea" ic-form-field="复盘汇总" rows="3">{{ rpForm['复盘汇总'] }}</textarea>
+                                        <textarea class="textarea" ic-form-field="交易计划" rows="3">{{ rpForm['交易计划'] }}</textarea>
                                     </div>
                                     <div class="control">
                                         <button class="button is-primary is-small"
@@ -105,7 +105,7 @@
                                             保存</button>
                                     </div>
                                     <div class="control">
-                                        <input class="input is-small" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate() }}">
+                                        <input class="input is-small" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate2() }}">
                                     </div>
                                 </div>
                             </div>

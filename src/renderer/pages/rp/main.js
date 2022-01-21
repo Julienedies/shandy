@@ -97,7 +97,7 @@ brick.reg('todoListCtrl', function (scope) {
     }
 
     function getRpForm () {
-        $.get(`/stock/replay?date=${ formatDate() }`).done((data) => {
+        $.get(`/stock/replay?date=${ formatDate2() }`).done((data) => {
             def3.resolve(data);
         });
     }
@@ -119,9 +119,11 @@ brick.reg('todoListCtrl', function (scope) {
     getRpData();
     getRpForm();
 
-    $elm.on('change', () => {
+    function submit () {
         $elm.find('[ic-form="rp"]').icFormSubmit();
-    });
+    }
+
+    $elm.on('keyup', 'textarea', _.throttle(submit, 900));
 
     scope.on('rp.change', function (e, data) {
         setList(data);
@@ -132,6 +134,17 @@ brick.reg('todoListCtrl', function (scope) {
             setList(data);
         });
     });
+
+    scope.replay = {
+        before: function (fields) {
+            console.info(fields);
+            return fields;
+        },
+        done: function (data) {
+            //$.icMsg(JSON.stringify(data.replay));
+            rpForm = data || rpForm;
+        }
+    };
 
     scope.filter = function (e, type) {
         _onFilter(type);
@@ -177,21 +190,7 @@ brick.reg('todoListCtrl', function (scope) {
 
     // ---------------------------------------------------------------------------------------
 
-    scope.onGetReplayDone = function (data) {
-        console.info(data);
-        //scope.render('replay', data);
-    };
 
-    scope.replay = {
-        before: function (fields) {
-            console.info(fields);
-            return fields;
-        },
-        done: function (data) {
-            scope.onGetReplayDone(data);
-            //$.icMsg(JSON.stringify(data.replay));
-        }
-    };
 
     $elm.on('ic-select.change', '[ic-select][ic-form-field]', function (e) {
         let data = $elm.find('[ic-form="rp"]').icForm();

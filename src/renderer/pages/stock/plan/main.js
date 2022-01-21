@@ -14,7 +14,7 @@ import '../../../js/common-stock.js'
 
 import setTagCtrl from '../../tags/set-tag-ctrl'
 
-brick.set('debug', true)
+brick.set('debug', true);
 
 brick.reg('setTagCtrl', setTagCtrl)
 
@@ -24,6 +24,11 @@ brick.reg('planCtrl', function () {
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
     let model = {};
+
+    $.get(`/stock/replay?date=${ formatDate2() }`).done((data) => {
+        console.log(data);
+        scope.render('replay', data);
+    });
 
     scope.replay_get_done = function(data){
         console.info(data);
