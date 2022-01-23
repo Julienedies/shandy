@@ -35,7 +35,8 @@
             <div id="mainContent" ic-tpl="todoList">
                 <div ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm;">
                     <ul>
-                        <li class="box" ic-for="i,v in rpList" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
+                        <li class="box" ic-for="i,v in rpList" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
+                            ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
                             <header ic-click="toggle">
                                 <h3>{{ v.title }} <b>{{ v.caution || v.comment }} </b></h3>
@@ -43,16 +44,12 @@
                             </header>
 
                             <div class="wrap">
-                                <div style="padding-bottom: 0.5em;">
-                                    <textarea class="textarea is-medium" ic-form-field="{{ v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
-                                </div>
-
-                                <div class="field is-grouped is-grouped-multiline"  ic-if="v.tags && v.tags.length"
+                                <div class="field is-grouped is-grouped-multiline" ic-if="v.tags && v.tags.length"
                                      ic-select
                                      ic-select-cla="is-dark"
                                      ic-select-type="checkbox"
                                      ic-select-item=".tag"
-                                     ic-form-field="{{ 'f_'+v.id }}">
+                                     ic-form-field="{{ 'k_'+v.id }}">
 
                                     <div class="control" ic-for="j,k in v.tags">
                                         <div class="tags has-addons" ic-init="o=TAGS_MAP_BY_ID[k]">
@@ -68,6 +65,10 @@
                                         </div>
                                     </div>
 
+                                </div>
+
+                                <div style="padding-bottom: 0.5em;" ic-if="v.role==1">
+                                    <textarea class="textarea is-medium" ic-form-field="{{ 'k_'+v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
                                 </div>
 
                                 <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
@@ -102,10 +103,12 @@
                                                 ic-submit-action="/stock/replay"
                                                 ic-submit-before="replay.before"
                                                 ic-submit-on-done="replay.done">
-                                            保存</button>
+                                            保存
+                                        </button>
                                     </div>
                                     <div class="control">
-                                        <input class="input is-small" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate2() }}">
+                                        <input class="input is-small" type="date" name="date" ic-form-field
+                                               ic-value="{{model.date || formatDate2() }}">
                                     </div>
                                 </div>
                             </div>
@@ -206,6 +209,17 @@
                         </div>
                         <div class="control">
                             <input class="input" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1 }}">
+                        </div>
+                        <div class="control">
+                            <button class="button">role</button>
+                        </div>
+                        <div class="control">
+                            <p class="select">
+                                <select name="role" ic-form-field>
+                                    <option value="0" selected>不需要回答</option>
+                                    <option value="1">需要回答</option>
+                                </select>
+                            </p>
                         </div>
                         <div class="control" style="width:100px;"></div>
                         <div class="control">
