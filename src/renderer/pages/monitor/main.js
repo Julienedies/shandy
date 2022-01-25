@@ -72,7 +72,7 @@ brick.reg('help_ctrl', function (scope) {
 });
 
 //
-brick.reg('plans_ctrl', function () {
+brick.reg('plansCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;

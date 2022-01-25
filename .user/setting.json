@@ -3,18 +3,17 @@
 		"tdx_extern_user_file": "E:\\new_jyplug\\T0002\\signals\\extern_user.txt",
 		"csdPath": "E:\\dev\\csd",
 		"bounds": {
-			"x": 554,
-			"y": 88,
-			"width": 1475,
-			"height": 1032
+			"x": 421,
+			"y": 100,
+			"width": 1480,
+			"height": 1035
 		},
 		"fetchSources": [
 			"ths_new",
-			"ths_p",
-			"ycj"
+			"ths_p"
 		],
 		"fetchByStocks": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
-		"fetchFromIndex": 401,
+		"fetchFromIndex": 4,
 		"stocksCsvFile": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
 		"stocksJsonFile": "E:\\dev\\csd\\stocks.json",
 		"hotCsvFile": "E:\\dev\\simg\\JX.txt",
@@ -31,12 +30,12 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2020-04",
+		"imgDir": "E:\\dev\\simg\\交易记录\\2112",
 		"bounds": {
-			"x": 2552,
-			"y": -288,
-			"width": 3074,
-			"height": 1697
+			"x": -7,
+			"y": -7,
+			"width": 2209,
+			"height": 1209
 		},
 		"crop": {
 			"x": 3240,
@@ -221,8 +220,8 @@
 	},
 	"tags": {
 		"bounds": {
-			"x": 2552,
-			"y": -296,
+			"x": 2187,
+			"y": -501,
 			"width": 3088,
 			"height": 1704
 		}
