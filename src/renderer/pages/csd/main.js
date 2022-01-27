@@ -258,8 +258,8 @@ brick.reg('mainCtrl', function (scope) {
 
             stocks.forEach(([code, name]) => {
                 let szh = /^6/.test(code) ? 1 : 0;
-                let sjo = jo(path.resolve(csdPath, `./s/${ code }.json`));
-                let concept = `${ sjo.get('概念') } ${ sjo.get('概念z') } ${ sjo.get('概念y') } ${ sjo.get('行业') } ${ sjo.get('产品') } ${ sjo.get('业务') }`;
+                let sjo = jo(path.resolve(csdPath, `./s/${ code }.json`));  // ${ sjo.get('概念y') }
+                let concept = `${ sjo.get('概念') } ${ sjo.get('概念z') }  ${ sjo.get('行业') } ${ sjo.get('产品') } ${ sjo.get('业务') }`;
                 let hotStr = '';
                 hotPointArr.forEach((point) => {
                     if (concept.search(point) > -1) {

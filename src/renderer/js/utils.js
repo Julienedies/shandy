@@ -83,6 +83,9 @@ function formatDate2 () {
         if (day === 0) {
             amount = 2;
         }
+        if (day === 1) {
+            amount = 3;
+        }
         m = moment().subtract(amount, 'days');
     }
 

@@ -1,5 +1,17 @@
 [
 	{
+		"title": "理解、预判、试错、验证、跟随",
+		"id": "id_1643192209353",
+		"type": "rp",
+		"caution": "",
+		"comment": "",
+		"level": "1",
+		"role": "0",
+		"content": "",
+		"tags": [],
+		"timestamp": 1643192209353
+	},
+	{
 		"title": "为何我错过所有的大行情？为何所有的龙头我都没有参与？",
 		"id": "9141600",
 		"type": "rp",
@@ -21,6 +33,17 @@
 		"timestamp": 1638719166797,
 		"caution": "",
 		"level": "1"
+	},
+	{
+		"title": "今天临盘我的交易计划是什么？",
+		"id": "id_1642928924172",
+		"type": "rp",
+		"caution": "无计划，无系统，临盘随意交易是我最大的亏损来源。",
+		"comment": "",
+		"level": "1",
+		"content": "",
+		"tags": [],
+		"timestamp": 1642928924173
 	},
 	{
 		"title": "大局观：市场处于什么阶段？  市场有哪些重要的变量？  这里变量会导致什么结果？",
@@ -61,6 +84,15 @@
 		"role": "1"
 	},
 	{
+		"title": "亏钱效应怎么样？跌停是否增多？有没有系统性风险？",
+		"id": "4495245",
+		"type": "rp",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638717530020
+	},
+	{
 		"title": "手中的票的预案是什么？",
 		"id": "0743188",
 		"type": "rp",
@@ -98,15 +130,16 @@
 		"role": "1"
 	},
 	{
-		"title": "今天临盘我的交易计划是什么？",
-		"id": "id_1642928924172",
+		"title": "弱势管住手，强势踏准节奏；现在是强势还是弱势？",
+		"id": "id_1643009469875",
 		"type": "rp",
-		"caution": "无计划，无系统，临盘随意交易是我最大的亏损来源。",
+		"caution": "",
 		"comment": "",
 		"level": "1",
+		"role": "0",
 		"content": "",
 		"tags": [],
-		"timestamp": 1642928924173
+		"timestamp": 1643009469875
 	},
 	{
 		"title": "市场是有节奏的，今天的节奏是什么？明天的节奏是什么？",
@@ -139,11 +172,18 @@
 		"type": "rp",
 		"comment": "为何所有的龙头股我都错过？恐高；主观看空；客观跟随；",
 		"content": "<p><span style=\"font-size: 18px;\"><u>一定要做龙头。龙头就是最重要的判断锚点之一；</u></span><u><span style=\"font-size: 18px;\">龙头就是大概率；盈亏同源，持续一致性</span></u></p><p><span style=\"font-size: 18px;\">三羊马、京城股份、陕西金叶、九安医疗、小康股份、清水源、中青宝、湖北宜化、大金重工、爱康科技、朗姿股份、豫能控股</span></p>",
-		"tags": [],
+		"tags": [
+			"id_1642946186530",
+			"id_1642998273390",
+			"id_1642998254195",
+			"id_1642998239948",
+			"id_1642998212810",
+			"id_1642998193543"
+		],
 		"timestamp": 1638717495263,
 		"caution": "",
 		"level": "1",
-		"role": "1"
+		"role": "0"
 	},
 	{
 		"title": "今天资金攻击方向是哪里？有加强或修复的可能吗？卡位轮动？有没有会发酵的消息新闻？",
@@ -176,13 +216,21 @@
 		"timestamp": 1638705609580
 	},
 	{
-		"title": "亏钱效应怎么样？跌停是否增多？有没有系统性风险？",
-		"id": "4495245",
+		"title": "我要捕捉的目标行情是什么？",
+		"id": "3676210",
 		"type": "rp",
-		"comment": "",
-		"content": "",
-		"tags": [],
-		"timestamp": 1638717530020
+		"comment": "围绕市场合力、主流热点；客观跟随；",
+		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 22.381%;\">板块爆发首板<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">板块爆发加强晋级<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">主线卡位先锋<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">主流热点低位补涨首板<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">有板块效应的前排首板</td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">低吸龙头分歧</td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td>大盘转势共振领涨板</td><td><br></td><td><br></td></tr><tr><td>超预期加速<br></td><td><br></td><td><br></td></tr><tr><td>预判轮动低吸</td><td><br></td><td><br></td></tr><tr><td>修复/分歧转一致</td><td><br></td><td><br></td></tr><tr><td>转折/弱转强<br></td><td><br></td><td><br></td></tr></tbody></table><p><br></p>",
+		"name": "3676210",
+		"timestamp": 1638620495062,
+		"tags": [
+			"0177679",
+			"1820273",
+			"5691761"
+		],
+		"caution": "",
+		"level": "1",
+		"role": "0"
 	},
 	{
 		"title": "市场在向那个方向演变？赚钱效应是在变强还是在变弱？亏钱效应是在变强还是变弱？",
@@ -484,20 +532,6 @@
 		"timestamp": 1640441042409
 	},
 	{
-		"title": "我要捕捉的目标行情是什么？",
-		"id": "3676210",
-		"type": "question",
-		"comment": "围绕市场合力、主流热点；客观跟随；",
-		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 22.381%;\">板块爆发首板<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">板块爆发加强晋级<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">主线卡位先锋<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">主流热点低位补涨首板<br></td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">有板块效应的前排首板</td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 22.381%;\">低吸龙头分歧</td><td style=\"width: 55.0939%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td>大盘转势共振领涨板</td><td><br></td><td><br></td></tr><tr><td>超预期加速<br></td><td><br></td><td><br></td></tr><tr><td>预判轮动低吸</td><td><br></td><td><br></td></tr><tr><td>修复/分歧转一致</td><td><br></td><td><br></td></tr><tr><td>转折/弱转强<br></td><td><br></td><td><br></td></tr></tbody></table><p><br></p>",
-		"name": "3676210",
-		"timestamp": 1638620495062,
-		"tags": [
-			"0177679",
-			"1820273",
-			"5691761"
-		]
-	},
-	{
 		"title": "我每天复盘看的是什么？我思考的是什么？",
 		"id": "7409322",
 		"type": "question",
@@ -534,12 +568,15 @@
 		"timestamp": 1638717864581
 	},
 	{
-		"title": "锚定、复制、补涨、跟风、先锋、核心、龙头、轮动、卡位、切换；",
+		"title": "行为逻辑：锚定、复制、补涨、跟风、先锋、核心、龙头、轮动、卡位、切换；",
 		"id": "id_1640166033380",
 		"type": "rp",
 		"comment": "",
 		"content": "",
 		"tags": [],
-		"timestamp": 1640166033380
+		"timestamp": 1640166033380,
+		"caution": "",
+		"level": "1",
+		"role": "0"
 	}
 ]

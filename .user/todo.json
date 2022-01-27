@@ -1,6 +1,46 @@
 [
 	{
 		"name": "",
+		"id": "id_1643285590954",
+		"type": "",
+		"content": "<p><strong><span style=\"font-size: 22px;\">我心中偶尔涌起的那些感情，有一天都会变得麻木不仁吗？</span></strong></p>",
+		"singleWindow": "",
+		"start": "16:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1643285590954
+	},
+	{
+		"name": "",
+		"id": "id_1643102678977",
+		"type": "警告",
+		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">大概只有亏钱才会让我思考，才会让我在每天的碌碌中反省一下；然后很快忘记，继续重复那些错误。</span></strong></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><strong>思维没有方向，操作没有系统；无计划、无系统、临盘随意交易；</strong></span></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><strong>三心二意；什么都想要，什么也抓不住；</strong></span></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><strong>临盘犹豫；</strong></span></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><strong>卖飞；</strong></span></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><strong>过山车；</strong></span></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><strong>冲动交易；</strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">止损犹豫；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">2022.1.25</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 4,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1643102678977,
+		"promptTimes": 1,
+		"prevPromptTime": 1643245685926
+	},
+	{
+		"name": "",
+		"id": "id_1643018416709",
+		"type": "警告",
+		"content": "<p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</strong></span></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</strong></span></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 7,
+		"interval": 60,
+		"duration": 13,
+		"timestamp": 1643018416709,
+		"promptTimes": 1,
+		"prevPromptTime": 1643248386368
+	},
+	{
+		"name": "",
 		"id": "5383681",
 		"type": "错误",
 		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 32px; color: rgb(255, 255, 255);\">错误1：为什么我总是错过大行情？</span></strong><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 32px; color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为何所有的龙头我都没有参与？</span></strong></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我错过那么多大行情和大龙头，我有深刻思考和反省过吗？下次我能抓住吗？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">九安医疗、龙津药业、中锐股份、陕西金叶、三羊马</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">错误：我连续错过中青宝、清水源，湖北宜化、大金重工、为什么？这个问题我解决了吗？</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>就好像我以前错过的任何龙头。豫能控股、郑州煤电、小康股份、朗姿股份</strong></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我对市场的理解力有问题，我的思维方式也有问题。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锂电池不断活跃，持续时间最久。但我就是没有参与？我是怎么复盘的？我是怎么理解市场的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中恒电气、中矿资源、天齐锂业、天华超净，蓝晓科技、这些都在我的自选里。我是怎么思考的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么我错过稀土行情？为什么错过北方稀土、五矿稀土？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过PVDF？为什么错过联创股份？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过磷化工行情？</span></strong></p><p><br></p>",
@@ -22,8 +62,8 @@
 		"interval": 90,
 		"duration": 17,
 		"timestamp": 1639957717122,
-		"promptTimes": 2,
-		"prevPromptTime": 1642741970991
+		"promptTimes": 1,
+		"prevPromptTime": 1643251086955
 	},
 	{
 		"name": "",
@@ -36,8 +76,8 @@
 		"interval": 60,
 		"duration": 24,
 		"timestamp": 1639962005050,
-		"promptTimes": 2,
-		"prevPromptTime": 1642744670907
+		"promptTimes": 1,
+		"prevPromptTime": 1643253786581
 	},
 	{
 		"name": "",
@@ -50,8 +90,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1637936622790,
-		"promptTimes": 2,
-		"prevPromptTime": 1642747370953
+		"promptTimes": 1,
+		"prevPromptTime": 1643256486086
 	},
 	{
 		"name": "",
@@ -64,8 +104,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1639558190823,
-		"promptTimes": 2,
-		"prevPromptTime": 1642750071135
+		"promptTimes": 1,
+		"prevPromptTime": 1643259187005
 	},
 	{
 		"name": "",
@@ -79,7 +119,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1642738154169
+		"prevPromptTime": 1643261885800
 	},
 	{
 		"name": "",
@@ -91,7 +131,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1636930865826
+		"timestamp": 1636930865826,
+		"promptTimes": 1,
+		"prevPromptTime": 1643264585783
 	},
 	{
 		"name": "",
@@ -103,7 +145,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1638547210757
+		"timestamp": 1638547210757,
+		"promptTimes": 1,
+		"prevPromptTime": 1643267287123
 	},
 	{
 		"name": "",
@@ -115,7 +159,9 @@
 		"repeat": 3,
 		"interval": 100,
 		"duration": 29,
-		"timestamp": 1637673180768
+		"timestamp": 1637673180768,
+		"promptTimes": 1,
+		"prevPromptTime": 1643269986034
 	},
 	{
 		"name": "",
@@ -127,7 +173,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 4,
-		"timestamp": 1629155362746
+		"timestamp": 1629155362746,
+		"promptTimes": 1,
+		"prevPromptTime": 1643272685345
 	},
 	{
 		"name": "",
@@ -139,7 +187,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 19,
-		"timestamp": 1637020107294
+		"timestamp": 1637020107294,
+		"promptTimes": 1,
+		"prevPromptTime": 1643275385241
 	},
 	{
 		"name": "",
@@ -151,7 +201,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1636803828143
+		"timestamp": 1636803828143,
+		"promptTimes": 1,
+		"prevPromptTime": 1643278085136
 	},
 	{
 		"name": "",
@@ -163,7 +215,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1636700906299
+		"timestamp": 1636700906299,
+		"promptTimes": 1,
+		"prevPromptTime": 1643280785167
 	},
 	{
 		"name": "",
@@ -175,7 +229,9 @@
 		"repeat": 2,
 		"interval": 120,
 		"duration": 19,
-		"timestamp": 1628513394321
+		"timestamp": 1628513394321,
+		"promptTimes": 1,
+		"prevPromptTime": 1643283484929
 	},
 	{
 		"name": "",
@@ -187,7 +243,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 29,
-		"timestamp": 1610785651586
+		"timestamp": 1610785651586,
+		"promptTimes": 2,
+		"prevPromptTime": 1643291584823
 	},
 	{
 		"name": "",
@@ -199,7 +257,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1636413986087
+		"timestamp": 1636413986087,
+		"promptTimes": 2,
+		"prevPromptTime": 1643294284521
 	},
 	{
 		"name": "",
@@ -211,7 +271,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1636326773171
+		"timestamp": 1636326773171,
+		"promptTimes": 1,
+		"prevPromptTime": 1643296984422
 	},
 	{
 		"name": "",
@@ -339,8 +401,8 @@
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：无系统、无计划、临盘随意冲动交易。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">临盘随意交易是我最大的亏损来源。</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">决不能临盘随意交易，必须提前写好交易计划。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">管不住手，交易成瘾。</span></strong><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">连续做可转债，连续亏钱。但还是管不住手。</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我盯盘时，没有明确的计划；只是被市场牵着鼻子走；被动应对，浑浑噩噩；一冲动就会随手买入；</strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>尤其是市场转好，怕踏空买入；或个股冲高，就会臆想买入；</strong></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">临盘随意冲动交易，主观臆想，无系统交易是我最大的亏损来源；我已经重复这个错误4年了。</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">关键是我没有明确的交易系统、目标行情、买点、交易计划；</span></strong></p>",
 		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 3,
+		"start": "8:00",
+		"repeat": 5,
 		"interval": 60,
 		"duration": 24,
 		"timestamp": 1621658103771
@@ -566,7 +628,7 @@
 		"name": "",
 		"id": "9276973",
 		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;交易系统类型：高频超短、趋势波段、基于概率、基于理解力；&nbsp;</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">分仓打首板概率：北京炒家、创世纪、陈小豪、</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">机械概率：纵横股道、寂寞和弦</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">接力板:</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">波段趋势：</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">基于大盘和板块的首板：管手剁；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">搜集强势股龙头股：寻找介入机会；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">日内热点捕捉 ： 张英雄</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">看高做低：爱学习的人，衡山五神剑</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">基于市场理解力的应对：涅盘重升</span></strong></span></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;交易系统类型：高频超短、趋势波段、基于概率、基于理解力；&nbsp;</span></strong></p><table style=\"width: 100%;\"><tbody><tr><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">基于市场理解力的应对</span></strong></span><br></td><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">涅盘重升</span></strong></span><br></td></tr><tr><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">基于大盘和板块的首板</span></strong></span><br></td><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">管手剁</span></strong></span><br></td></tr><tr><td style=\"width: 50%;\"><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">打首板</span></strong></td><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">陈小豪、</span></strong></span><br></td></tr><tr><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">分仓打首板概率</span></strong></span><br></td><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">北京炒家、创世纪、</span></strong></span><br></td></tr><tr><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">机械概率</span></strong></span><br></td><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">纵横股道、寂寞和弦</span></strong></span><br></td></tr><tr><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">看高做低</span></strong></span><br></td><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">爱学习的人，衡山五神剑</span></strong></span><br></td></tr><tr><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">日内热点捕捉&nbsp;</span></strong></span><br></td><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">张英雄</span></strong></span><br></td></tr><tr><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">接力板</span></strong></span><br></td><td style=\"width: 50%;\"><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">善行天助</span></strong></td></tr><tr><td style=\"width: 50%;\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">搜集强势股龙头股，</span><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">寻找介入机会</span></strong></span></strong></span><br></td><td style=\"width: 50%;\"><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 20px;\">独孤一剑</span></strong></td></tr><tr><td style=\"width: 50%;\"><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">波段</span></strong></td><td style=\"width: 50%;\"><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">轮回666</span></strong></td></tr></tbody></table><p><br></p>",
 		"singleWindow": "",
 		"start": "19:00",
 		"repeat": 1,
