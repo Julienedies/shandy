@@ -2,14 +2,16 @@
 	{
 		"name": "",
 		"id": "id_1643285590954",
-		"type": "",
-		"content": "<p><strong><span style=\"font-size: 22px;\">我心中偶尔涌起的那些感情，有一天都会变得麻木不仁吗？</span></strong></p>",
+		"type": "警告",
+		"content": "<p><strong><span style=\"font-size: 24px;\">我心中偶尔涌起的那些感情，有一天都会变得麻木不仁吗？</span></strong></p><p><span style=\"font-size: 24px;\"><strong>不要忘记那些恐惧和痛苦。</strong></span></p><p><span style=\"font-size: 24px;\"><strong>一切有为法，一切有因果。</strong></span></p><p><strong><span style=\"font-size: 24px;\">时不我待！时不我待！时不我待！时不我待！</span></strong></p>",
 		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 2,
+		"start": "15:00",
+		"repeat": 5,
 		"interval": 60,
-		"duration": 17,
-		"timestamp": 1643285590954
+		"duration": 19,
+		"timestamp": 1643285590954,
+		"promptTimes": 1,
+		"prevPromptTime": 1643635519879
 	},
 	{
 		"name": "",
@@ -22,8 +24,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1643102678977,
-		"promptTimes": 1,
-		"prevPromptTime": 1643335247123
+		"promptTimes": 3,
+		"prevPromptTime": 1643638221191
 	},
 	{
 		"name": "",
@@ -36,8 +38,8 @@
 		"interval": 60,
 		"duration": 13,
 		"timestamp": 1643018416709,
-		"promptTimes": 1,
-		"prevPromptTime": 1643337947660
+		"promptTimes": 2,
+		"prevPromptTime": 1643640921866
 	},
 	{
 		"name": "",

@@ -22,7 +22,7 @@ export default function () {
     function tagsMap2Arr (data) {
         let result = [];
         for (let i in data) {
-            let arr= data[i];
+            let arr = data[i];
             arr.forEach((item) => {
                 TAGS_MAP_BY_ID[item.id] = item;
             });
@@ -98,7 +98,7 @@ export default function () {
      * 要求删除标签事件
      */
     scope.on(DEL_TAG, function (e, id) {
-        if(window.confirm('确定删除此标签？')){
+        if (window.confirm('确定删除此标签？')) {
             $.ajax({
                 url: `/stock/tags/${ id }`,
                 method: `delete`,

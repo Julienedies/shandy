@@ -74,9 +74,9 @@ brick.reg('logicCtrl', function () {
         $.icMsg(`render item => ${ logicArr.length }`);
         scope.render('logic', logicArr.slice(0, 700));
         // 更新html title, 下载text用
-        let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
+        //let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
         let text = scope.filterKey && TAGS_MAP_BY_ID[scope.filterKey] && TAGS_MAP_BY_ID[scope.filterKey].text;
-        $title.text(`logic_${ text || scope.filterKey || sortType }_${ date }`);
+        $title.text(`logic_${ text || scope.filterKey || sortType }_${ formatDate() }`);
     }
 
     // 文本语音阅读

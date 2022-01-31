@@ -6,7 +6,7 @@
 import $ from 'jquery'
 import utils from '../../libs/e-bridge'
 import brick from '@julienedies/brick'
-import { GET_TAGS_DONE } from './constants'
+import { GET_TAGS_DONE, ADD_TAG, EDIT_TAG, DEL_TAG } from './constants'
 
 function parentCtrl () {
 
@@ -26,11 +26,15 @@ function parentCtrl () {
     };
 
     scope.addTag = scope.tag_add = function (e, type) {
-        scope.emit('tag.add', {type});
+        scope.emit(ADD_TAG, {type});
     };
 
     scope.editTag = scope.tag_edit = function (e, id) {
-        scope.emit('tag.edit', id);
+        scope.emit(EDIT_TAG, id);
+    };
+
+    scope.delTag = function (e, id) {
+        scope.emit(DEL_TAG, id);
     };
 
     scope.tag_remove_done = function (res) {

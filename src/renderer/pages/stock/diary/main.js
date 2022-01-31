@@ -35,6 +35,8 @@ brick.reg('diaryCtrl', function () {
 
     scope.order = false;  // 排序方式: 顺序  or  逆序
 
+    $('title').text(`日记_${ formatDate() }`);
+
     function render () {
         let resultArr = list.get();
         scope.order && resultArr.reverse();

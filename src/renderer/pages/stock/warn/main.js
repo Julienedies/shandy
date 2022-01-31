@@ -10,6 +10,7 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
+import '../../../js/utils'
 import '../../../js/common-stock.js'
 import { FroalaEditorConfig } from '../../../js/constants'
 
@@ -17,6 +18,7 @@ brick.reg('todoCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;
+    let $title = $('title');
     let list = brick.services.get('recordManager')();
 
     scope.mapByType = null;
@@ -47,6 +49,8 @@ brick.reg('todoCtrl', function () {
         $.icMsg(`render ${ filterByType } => ${ todoArr.length }`);
         scope.render('types', scope);
         scope.render('list', todoArr);
+
+        $title.text(`todo_${ scope.filterByType }_${ formatDate() }`);
     }
 
     this.onGetTodoDone = function (data) {
