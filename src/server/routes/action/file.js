@@ -10,7 +10,7 @@ import setting from '../../../libs/setting'
 
 const randomBgImgDir = setting.get('warn.randomBgImgDir') || config.dir.randomBgImg;
 let imgDir = path.join(randomBgImgDir, './**/*.+(jpg|png)');
-let captureDir = config.dir.captureImg;
+let captureDir = config.dir.captureImg;  //
 let imgArr = [];
 
 glob(imgDir, {}, (err, files) => {
@@ -20,13 +20,15 @@ glob(imgDir, {}, (err, files) => {
 
 export default {
     get (req, res) {
-        let imgPath = decodeURIComponent(req.query.path)
-        res.sendFile(path.join(captureDir, imgPath));
+        let imgPath = decodeURIComponent(req.query.path);
+        let fullPath = path.join(captureDir, imgPath);
+        console.log(fullPath);
+        res.sendFile(fullPath);
     },
     random (req, res) {
-        let index = Math.round(Math.random() * imgArr.length)
-        let filePath = imgArr[index - 1]
-        console.log(filePath)
-        res.sendFile(filePath)
+        let index = Math.round(Math.random() * imgArr.length);
+        let fullPath = imgArr[index - 1];
+        console.log(fullPath);
+        res.sendFile(fullPath);
     },
 }
