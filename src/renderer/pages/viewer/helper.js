@@ -15,12 +15,12 @@ import _ from 'lodash'
 import ocr from '../../../libs/baidu-ocr'
 import stockQuery from '../../../libs/stock-query'
 
-const viewerDbFactory = jsonDb('viewer')
 import ju from '../../../libs/jodb-user'
 import jsonDb from '../../../libs/json-jo'
 
 const nativeImage = electron.nativeImage;
 
+const viewerDbFactory = jsonDb('viewer');
 const viewerJsonDb = ju('viewer');
 const imagesJsonDb = ju('images', {});
 
@@ -81,7 +81,7 @@ export default {
     // 获取图片额外数据
     supplement: function (arr, dir = '') {
         return arr.map(f => {
-            // 先尝试读取缓存
+            // 先尝试读取缓存, 有缓存使用缓存
             let key = this.getKey(f);
             let item = imagesJsonDb.get(f);
             if (item) return item;
@@ -89,10 +89,9 @@ export default {
             let fullPath = path.join(dir, f);
             let arr = f.match(/\d{6}(?=\.png$)/) || [];
             let code = arr[0];
-            //let stat = fs.statSync(fullPath);
-            //let c = stat.birthtimeMs;
             let f2 = f.replace('上午', 'am').replace('下午', 'pm');
-            let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s+[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/) || [];
+            let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s*[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/) || [];
+            console.log('1111', arr2);
             let m = moment(arr2[0], "YYYY-MM-DD Ah.m.s");
             item = {f: fullPath, c: +m, d: arr2[1], code};
             // 保存到缓存

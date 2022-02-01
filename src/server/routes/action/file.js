@@ -5,12 +5,12 @@
 import path from 'path'
 import glob from 'glob'
 
-import config from '../../../libs/config'
+import cfg from '../../../libs/config'
 import setting from '../../../libs/setting'
 
-const randomBgImgDir = setting.get('warn.randomBgImgDir') || config.dir.randomBgImg;
+const randomBgImgDir = setting.get('warn.randomBgImgDir') || cfg.dir.randomBgImg;
 let imgDir = path.join(randomBgImgDir, './**/*.+(jpg|png)');
-let captureDir = config.dir.captureImg;  //
+const captureDir = cfg.dir.captureImg;
 let imgArr = [];
 
 glob(imgDir, {}, (err, files) => {

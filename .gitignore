@@ -19,11 +19,13 @@ bower_components/
 node_modules/
 
 #
+.user/
+
+#
 dist/
 data/csd/
 data/upload/
 temp/
-!.user/temp
 
 cert/
 

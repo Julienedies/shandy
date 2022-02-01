@@ -22,13 +22,13 @@ import { FroalaEditorConfig } from '../../js/constants'
 import electron from 'electron'
 import moment from 'moment'
 import utils from '../../../libs/utils'
-import userJodb from '../../../libs/user-jodb'
-import voice from '../../../libs/voice'
+//import userJodb from '../../../libs/user-jodb'
+import jd from '../../../libs/jodb-data'
 
 const ipc = electron.ipcRenderer;
 const BrowserWindow = electron.remote.BrowserWindow;
 
-const todoJodb = userJodb('todo');
+const todoJodb = jd('todo');
 
 let currentWindow;
 let mainWindow;

@@ -18,11 +18,12 @@ import fs from 'fs'
 import $ from 'jquery'
 import debugMenu from 'debug-menu'
 
-import userJo from '../../../libs/user-jo'
+import joda from '../../../libs/jo-da'
 import ju from '../../../libs/jodb-user'
 import setting from '../../../libs/setting'
 import jd from '../../../libs/jodb-data'
 import utils from '../../../libs/utils'
+import cfg from '../../../libs/config'
 
 import helper from './helper'
 
@@ -34,20 +35,20 @@ import listCtrl from './list-ctrl'
 // activate context menu
 debugMenu.install();
 
-
-/**
- *
- */
+// 添加根目录路径，连接成完整的图片路径
+const IMG_DIR = cfg.dir.captureImg;
 function fullImgPathCb (item) {
-    // 截图根目录
-    const imgRootDir = '/Users/j/截图/';
-    return path.join(imgRootDir, item.img);
+    return path.join(IMG_DIR, item.img);
 }
+
+const tagsJodb = jd('tags');
+
 // 交易记录json
-const tradeArr = userJo('SEL', []).get();
+//const tradeArr = userJo('SEL', []).get();
+const tradeArr = joda('SEL', []).get();
 
 const viewerJodb = ju('viewer');
-const tagsJodb = jd('tags');
+
 
 window.$ = $;
 window.brick = brick;
@@ -55,8 +56,6 @@ window.brick = brick;
 brick.services.reg('historyModel', historyModel);
 
 brick.set('ic-viewer-interval', setting.get('viewer.interval') || 10);
-
-
 
 
 brick.reg('mainCtrl', function (scope) {

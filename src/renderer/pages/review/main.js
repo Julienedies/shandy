@@ -22,8 +22,8 @@ import '../../js/common.js'
 import createOpt from '../../js/stock-chart'
 import { a, b } from './ls'
 
-import userDb from '../../../libs/user-jo'
 import jo from '../../../libs/jsono'
+import joda from '../../../libs/jo-da'
 import csd from '../../../libs/csd'
 import utils from '../../../libs/utils'
 
@@ -36,16 +36,9 @@ function sort (arr) {
     });
 }
 
-const tradingDb = userDb('SEL', []);
+const tradingDb = joda('SEL', []);
 let tradingJson = JSON.parse(JSON.stringify(tradingDb.json));
 //sort(tradingJson);
-
-/*const tjo = userDb('trading', []);
-let tjoArr = JSON.parse(JSON.stringify(tjo.json));
-tradingDb.json = tjoArr.map( (v) => {
-    return [v[0],v[1],v[3],v[4],v[5],v[6],v[7],v[8],v[9],v[10],v[11],v[12],v[13],v[14]];
-});
-tradingDb.save();*/
 
 brick.reg('mainCtrl', function (scope) {});
 
