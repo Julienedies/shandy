@@ -156,7 +156,7 @@
 	},
 	{
 		"id": "元宇宙",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1635163202743
 	},
 	{
@@ -246,7 +246,7 @@
 	},
 	{
 		"id": "新冠",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1619394248028
 	},
 	{
