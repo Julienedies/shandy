@@ -94,7 +94,7 @@ export default {
             // 先尝试读取缓存
             let key = this.getKey(f);
             let item = imagesJsonDb.get(f);
-            if (item && item.c && item.d) return item;
+            //if (item && item.c && item.d) return item;
 
             let fullPath = path.join(dir, f);
             let arr = f.match(/\d{6}(?=\.png$)/) || [];
@@ -110,7 +110,9 @@ export default {
             item = {f: fullPath, c: +m, d: arr2[1], code};
             // 保存到缓存
             imagesJsonDb.set(key, item);
-            return {f: fullPath, c: +m, d: arr2[1], code};
+            console.log(item);
+            return item;
+            //return {f: fullPath, c: +m, d: arr2[1], code};
         });
     },
 
