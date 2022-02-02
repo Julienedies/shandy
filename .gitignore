@@ -18,21 +18,22 @@ Thumbs.db
 bower_components/
 node_modules/
 
-#
-.user/
 
-#
+#攻击生成内容
 dist/
 data/csd/
 data/upload/
 temp/
 
+#用户个人数据
+.user/
+
+#证书
 cert/
 
 #私有配置文件
 config.json
 wt.json
-.user/trading.json
 *.mp3
 *.m4a
 

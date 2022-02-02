@@ -288,10 +288,10 @@ let proto = {
      * @private
      */
     _guid: function () {
-        // let id = Math.random().toFixed(7).replace('0.', '');
-        // let k = Date.now().toString(36).substr(6);
+        // let k = Date.now().toString(36).substr();
+        let k = Math.random().toFixed(4).replace('0.', '');
         let timestamp = +new Date();
-        return 'id_' + timestamp;
+        return `id_${ timestamp }_${ k }`;
     },
     /**
      * 查询键值
