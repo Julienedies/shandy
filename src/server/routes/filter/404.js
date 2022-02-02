@@ -7,7 +7,7 @@
 module.exports = function (req, res) {
 
     //logger.warn(req.url);
-    console.log('action 404 =>', req.url);
+    //console.log('action 404 =>', req.url);
 
     res.status(404);
 

@@ -94,7 +94,7 @@ export default {
             // 先尝试读取缓存
             let key = this.getKey(f);
             let item = imagesJsonDb.get(f);
-            //if (item && item.c && item.d) return item;
+            if (item && item.c && item.d) return item;
 
             let fullPath = path.join(dir, f);
             let arr = f.match(/\d{6}(?=\.png$)/) || [];
@@ -138,9 +138,10 @@ export default {
         return imgPath.split('/').pop().replace(/\s+|\./img, '_').replace(/_png$/, '');
     },
 
-    sort: function (arr) {
+    sort: function (arr, isReverse=true) {
+
         arr = this.supplement(arr);
-        arr = this._sort(arr, true);
+        arr = this._sort(arr, isReverse);
         return arr.map((item, i) => {
             return item.f;
         });
@@ -152,6 +153,8 @@ export default {
      * @returns {Array} imgObjArr
      */
     _sort: function (images, isReverse) {
+        console.log(777777777777, images);
+        console.log(88888888888888888);
         // 先按时间排序
         images.sort((a, b) => {
             let a1 = +moment(a.d);

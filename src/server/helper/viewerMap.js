@@ -8,6 +8,7 @@ import _ from 'lodash'
 import userJodb from '../../libs/user-jodb'
 import imagesHelper from '../../renderer/pages/viewer/helper'
 import ju from '../../libs/jodb-user'
+import del from 'del'
 
 
 /**
@@ -20,6 +21,7 @@ class ViewerMap {
     constructor () {
 
     }
+
     static getInstance () {
         return ViewerMap.instance;
     }
@@ -40,15 +42,22 @@ ViewerMap.instance = {
     // 强制更新
     refresh: function () {
         let VIEWER_MAP = ViewerMap.VIEWER_MAP = {};
+        let VIEWER_MAP2 = {};
         let viewerMapJsonDb = ju('viewerMap', {});
         let viewerJodb = userJodb('viewer');
+
+        const k = 'k_';
+
+        console.log('refresh', +new Date);
 
         viewerJodb.get().forEach((item, index) => {
             let img = item.img;
             let system = item.system;
             let tags = item.tags;
+
             let f = (id, i) => {
-                let arr = VIEWER_MAP[id] = VIEWER_MAP[id] || [];
+                id = `${ k }${ id }`;
+                let arr = VIEWER_MAP2[id] = VIEWER_MAP2[id] || [];
                 arr.push(img);
             };
 
@@ -56,20 +65,16 @@ ViewerMap.instance = {
             tags && tags.forEach(f);
         });
 
-        for (let i in VIEWER_MAP) {
-            if(['2087414', '3589400'].includes(i)) break;
-            let arr = VIEWER_MAP[i];
-            try{
-                VIEWER_MAP[i] = imagesHelper.sort(arr);
+        for (let i in VIEWER_MAP2) {
+            if (['2087414', '3589400'].includes(i)) break;
+            let arr = VIEWER_MAP2[i];
+            try {
+                //i = i.replace(k, '');
+                VIEWER_MAP[i] = imagesHelper.sort(arr, true);
+                delete VIEWER_MAP2[i];
             } catch (e) {
                 console.log(6666666, i, e);
             }
-
-          /* arr.sort((a, b) => {
-                let ad = (a.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
-                let bd = (b.match(/\d{4}-\d{2}-\d{2}/) || [])[0];
-                return new Date(bd) - new Date(ad);
-            });*/
         }
         viewerMapJsonDb.init(VIEWER_MAP);
         return VIEWER_MAP;
@@ -78,7 +83,8 @@ ViewerMap.instance = {
 
 
 function beforeGet (record, index) {
-    let example = ViewerMap.VIEWER_MAP[record.id];
+    let id = `k_${ record.id }`;
+    let example = ViewerMap.VIEWER_MAP[id];
     let oldExample = record['示例图片'];
     if (example) {
         if (oldExample) {
