@@ -66,14 +66,15 @@ ViewerMap.instance = {
         });
 
         for (let i in VIEWER_MAP2) {
-            if (['2087414', '3589400'].includes(i)) break;
+            //if (['k_2087414', 'k_3589400'].includes(i)) break;
             let arr = VIEWER_MAP2[i];
             try {
                 //i = i.replace(k, '');
+                console.log(i, arr.length);
                 VIEWER_MAP[i] = imagesHelper.sort(arr, true);
                 delete VIEWER_MAP2[i];
             } catch (e) {
-                console.log(6666666, i, e);
+                console.error(i, e);
             }
         }
         viewerMapJsonDb.init(VIEWER_MAP);
