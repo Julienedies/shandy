@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "id_1643896099264_5205",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误1：思维没有方向，操作没有系统；每天临盘前脑子完全是空的，被市场牵着鼻子走。</span></strong></p><p>日内热点是什么？ &nbsp; 行情性质？ 消息一波流；大题材；情绪题材；趋势题材；广度？高度？持续性？</p><p>龙头是什么？ 有没有博弈空间？预期如何？ &nbsp;超预期买不到如何应对？ 什么条件下买入？</p><p>临盘应对：</p><p>变量：</p><p>当前市场风格：偏趋势风格？ 偏情绪题材炒作？</p><p>大局观：大趋势；市场整体状态？赚钱效应；亏钱效应；</p><p>板块强度：赚钱效应； 亏钱效应；</p><p>节奏：</p><p><br></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 7,
+		"interval": 60,
+		"duration": 34,
+		"timestamp": 1643896099264
+	},
+	{
+		"name": "",
 		"id": "id_1643285590954",
 		"type": "警告",
 		"content": "<p><strong><span style=\"font-size: 24px;\">我心中偶尔涌起的那些感情，有一天都会变得麻木不仁吗？</span></strong></p><p><span style=\"font-size: 24px;\"><strong>不要忘记那些恐惧和痛苦。</strong></span></p><p><span style=\"font-size: 24px;\"><strong>一切有为法，一切有因果。</strong></span></p><p><strong><span style=\"font-size: 24px;\">时不我待！时不我待！时不我待！时不我待！</span></strong></p>",
@@ -201,7 +213,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1636803828143
+		"timestamp": 1636803828143,
+		"promptTimes": 1,
+		"prevPromptTime": 1643891504663
 	},
 	{
 		"name": "",
@@ -213,7 +227,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1636700906299
+		"timestamp": 1636700906299,
+		"promptTimes": 1,
+		"prevPromptTime": 1643894205107
 	},
 	{
 		"name": "",
@@ -225,7 +241,9 @@
 		"repeat": 2,
 		"interval": 120,
 		"duration": 19,
-		"timestamp": 1628513394321
+		"timestamp": 1628513394321,
+		"promptTimes": 1,
+		"prevPromptTime": 1643896905425
 	},
 	{
 		"name": "",
@@ -237,7 +255,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 29,
-		"timestamp": 1610785651586
+		"timestamp": 1610785651586,
+		"promptTimes": 1,
+		"prevPromptTime": 1643899604684
 	},
 	{
 		"name": "",
@@ -249,7 +269,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1636413986087
+		"timestamp": 1636413986087,
+		"promptTimes": 1,
+		"prevPromptTime": 1643902305216
 	},
 	{
 		"name": "",
