@@ -163,6 +163,10 @@ brick.reg('todoListCtrl', function (scope) {
         $(this).nextAll().find('.pre.text').toggle();
     };
 
+    scope.toggleForm = function (e) {
+        $elm.find('#mainFooter').toggle();
+    };
+
     scope.refreshTags = function (e) {
         scope.emit(TAGS_CHANGE);
     };

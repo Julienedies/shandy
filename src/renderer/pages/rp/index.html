@@ -26,6 +26,8 @@
                                     ic-class="button is-small {{ v==model.filterByType?'is-primary':''  }}">
                                 {{ RPMQS_MAP[v] }}
                             </button>
+
+                            <button class="button is-primary is-small" ic-click="toggleForm">toggle</button>
                         </div>
                     </div>
 
@@ -95,7 +97,7 @@
                             <div>
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control is-expanded">
-                                        <textarea class="textarea" ic-form-field="交易计划" rows="3">{{ rpForm['交易计划'] }}</textarea>
+                                        <textarea class="textarea" ic-form-field="交易计划" rows="5">{{ rpForm['交易计划'] }}</textarea>
                                     </div>
                                     <div class="control">
                                         <button class="button is-primary is-small"
