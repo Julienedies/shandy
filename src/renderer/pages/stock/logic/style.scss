@@ -1,17 +1,33 @@
+#mainContainer {
+  padding-top: 70px;
+
+  > header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 10%;
+    background: #fff;
+    box-shadow: 1px 2px 3px #cfcfcf;
+  }
+}
+
+
 a.no {
   text-decoration: none !important;
 }
 
-.notification{
+.notification {
   position: relative;
 }
 
 .notification div.pre {
   color: #000;
-/*  font-weight: 400;
-  font-size: 18px;
-  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;*/
-  font-size:16px;
+  /*  font-weight: 400;
+    font-size: 18px;
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;*/
+  font-size: 16px;
   overflow: visible;
   text-overflow: ellipsis;
 
@@ -28,10 +44,10 @@ a.no {
   margin-top: -7px;
 }
 
-.table_0 > * > *:first-child{
+.table_0 > * > *:first-child {
   flex: 1 1 6%;
 }
 
-.tag:not(body).is-medium{
-  font-size:0.85rem;
+.tag:not(body).is-medium {
+  font-size: 0.85rem;
 }
