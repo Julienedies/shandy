@@ -4,9 +4,18 @@ html, body {
   margin: 0;
 }
 
+#timerBox {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 1px 2px 3px #cfcfcf;
+}
+
 .wrapper {
   height: 100vh;
   display: flex;
+  padding-top: 42px;
 
   .h-wrapper {
     flex: 1;
