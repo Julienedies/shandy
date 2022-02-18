@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "id_1645175299306_8210",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1645175299306
+	},
+	{
+		"name": "",
 		"id": "id_1644026604851_3286",
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：历史会重复，翻看这两年的市场行情，翻来覆去就是这么一回事，为什么我却始终一筹莫展？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">到底我是哪里出了问题？做个次日预判和交易计划有那么难吗？</span></strong></p>",
@@ -11,7 +23,7 @@
 		"duration": 17,
 		"timestamp": 1644026604851,
 		"promptTimes": 1,
-		"prevPromptTime": 1645061304070
+		"prevPromptTime": 1645146748962
 	},
 	{
 		"name": "",
@@ -25,7 +37,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1645064004920
+		"prevPromptTime": 1645149449642
 	},
 	{
 		"name": "",
@@ -39,7 +51,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1645066704848
+		"prevPromptTime": 1645152149470
 	},
 	{
 		"name": "",
@@ -77,7 +89,7 @@
 		"duration": 13,
 		"timestamp": 1643018416709,
 		"promptTimes": 2,
-		"prevPromptTime": 1645074804572
+		"prevPromptTime": 1645160249784
 	},
 	{
 		"name": "",
@@ -103,7 +115,7 @@
 		"duration": 17,
 		"timestamp": 1639957717122,
 		"promptTimes": 2,
-		"prevPromptTime": 1645077504695
+		"prevPromptTime": 1645165649450
 	},
 	{
 		"name": "",
@@ -116,8 +128,8 @@
 		"interval": 60,
 		"duration": 24,
 		"timestamp": 1639962005050,
-		"promptTimes": 1,
-		"prevPromptTime": 1645080204410
+		"promptTimes": 2,
+		"prevPromptTime": 1645168350074
 	},
 	{
 		"name": "",
@@ -131,7 +143,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1645082903996
+		"prevPromptTime": 1645171050368
 	},
 	{
 		"name": "",
@@ -145,7 +157,7 @@
 		"duration": 17,
 		"timestamp": 1639558190823,
 		"promptTimes": 1,
-		"prevPromptTime": 1645085603707
+		"prevPromptTime": 1645173749875
 	},
 	{
 		"name": "",
@@ -159,7 +171,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1645088304883
+		"prevPromptTime": 1645176448963
 	},
 	{
 		"name": "",
@@ -173,7 +185,7 @@
 		"duration": 24,
 		"timestamp": 1636930865826,
 		"promptTimes": 1,
-		"prevPromptTime": 1645091004926
+		"prevPromptTime": 1645179149788
 	},
 	{
 		"name": "",
@@ -187,7 +199,7 @@
 		"duration": 9,
 		"timestamp": 1638547210757,
 		"promptTimes": 1,
-		"prevPromptTime": 1645093704607
+		"prevPromptTime": 1645181849117
 	},
 	{
 		"name": "",
@@ -201,7 +213,7 @@
 		"duration": 29,
 		"timestamp": 1637673180768,
 		"promptTimes": 1,
-		"prevPromptTime": 1645096403290
+		"prevPromptTime": 1645184549199
 	},
 	{
 		"name": "",
@@ -215,7 +227,7 @@
 		"duration": 4,
 		"timestamp": 1629155362746,
 		"promptTimes": 1,
-		"prevPromptTime": 1645099103108
+		"prevPromptTime": 1645187249552
 	},
 	{
 		"name": "",
@@ -229,7 +241,7 @@
 		"duration": 19,
 		"timestamp": 1637020107294,
 		"promptTimes": 1,
-		"prevPromptTime": 1645101803333
+		"prevPromptTime": 1645189949419
 	},
 	{
 		"name": "",
@@ -243,7 +255,7 @@
 		"duration": 24,
 		"timestamp": 1636803828143,
 		"promptTimes": 1,
-		"prevPromptTime": 1645104502908
+		"prevPromptTime": 1645192649397
 	},
 	{
 		"name": "",
@@ -257,7 +269,7 @@
 		"duration": 17,
 		"timestamp": 1636700906299,
 		"promptTimes": 1,
-		"prevPromptTime": 1645107203051
+		"prevPromptTime": 1645195349195
 	},
 	{
 		"name": "",
@@ -271,7 +283,7 @@
 		"duration": 19,
 		"timestamp": 1628513394321,
 		"promptTimes": 1,
-		"prevPromptTime": 1645109902707
+		"prevPromptTime": 1645198047920
 	},
 	{
 		"name": "",
@@ -283,9 +295,7 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 29,
-		"timestamp": 1610785651586,
-		"promptTimes": 1,
-		"prevPromptTime": 1645112603429
+		"timestamp": 1610785651586
 	},
 	{
 		"name": "",
