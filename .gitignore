@@ -19,7 +19,7 @@ bower_components/
 node_modules/
 
 
-#攻击生成内容
+#生成内容
 dist/
 data/csd/
 data/upload/
