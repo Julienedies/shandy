@@ -12,6 +12,13 @@ html, body {
   box-shadow: 1px 2px 3px #cfcfcf;
 }
 
+#memo{
+  pre{
+    width:100%;
+    font-size:1.3em;
+  }
+}
+
 .wrapper {
   height: 100vh;
   display: flex;

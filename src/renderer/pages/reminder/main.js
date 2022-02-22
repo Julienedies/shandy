@@ -37,7 +37,7 @@ brick.reg('reminderCtrl', function (scope) {
     }
 
     $.when(def1, def2).done((d1, d2) => {
-        $memo.html(`<pre style="font-size:1.4rem;">${ d1['交易计划'] } </br> ${ d1['交易计划'] }</pre>${ d2.text }`);
+        $memo.html(`<pre>${ d1['交易计划'] } </pre> <pre>${ d1['交易计划'] }</pre> ${ d2.text }`);
         let reader = new Reader('#memo');
         reader.init();
         reader.autoSpeak();
