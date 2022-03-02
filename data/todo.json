@@ -11,7 +11,7 @@
 		"duration": 17,
 		"timestamp": 1645175299306,
 		"promptTimes": 1,
-		"prevPromptTime": 1646096574102
+		"prevPromptTime": 1646180886952
 	},
 	{
 		"name": "",
@@ -25,7 +25,7 @@
 		"duration": 17,
 		"timestamp": 1644026604851,
 		"promptTimes": 1,
-		"prevPromptTime": 1646099274672
+		"prevPromptTime": 1646183586716
 	},
 	{
 		"name": "",
@@ -39,7 +39,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1646101974117
+		"prevPromptTime": 1646186286090
 	},
 	{
 		"name": "",
@@ -53,7 +53,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1646104674346
+		"prevPromptTime": 1646188986645
 	},
 	{
 		"name": "",
@@ -91,7 +91,7 @@
 		"duration": 13,
 		"timestamp": 1643018416709,
 		"promptTimes": 2,
-		"prevPromptTime": 1646112774117
+		"prevPromptTime": 1646197086030
 	},
 	{
 		"name": "",
@@ -117,7 +117,7 @@
 		"duration": 17,
 		"timestamp": 1639957717122,
 		"promptTimes": 2,
-		"prevPromptTime": 1646118173863
+		"prevPromptTime": 1646202485497
 	},
 	{
 		"name": "",
@@ -131,7 +131,7 @@
 		"duration": 24,
 		"timestamp": 1639962005050,
 		"promptTimes": 2,
-		"prevPromptTime": 1646120873727
+		"prevPromptTime": 1646205186471
 	},
 	{
 		"name": "",
@@ -145,7 +145,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1646123573780
+		"prevPromptTime": 1646207886537
 	},
 	{
 		"name": "",
@@ -159,7 +159,7 @@
 		"duration": 17,
 		"timestamp": 1639558190823,
 		"promptTimes": 1,
-		"prevPromptTime": 1646126273240
+		"prevPromptTime": 1646210586192
 	},
 	{
 		"name": "",
@@ -173,7 +173,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1646128973978
+		"prevPromptTime": 1646213286479
 	},
 	{
 		"name": "",
@@ -187,7 +187,7 @@
 		"duration": 24,
 		"timestamp": 1636930865826,
 		"promptTimes": 1,
-		"prevPromptTime": 1646131674424
+		"prevPromptTime": 1646215985473
 	},
 	{
 		"name": "",
@@ -201,7 +201,7 @@
 		"duration": 9,
 		"timestamp": 1638547210757,
 		"promptTimes": 1,
-		"prevPromptTime": 1646134374484
+		"prevPromptTime": 1646218686252
 	},
 	{
 		"name": "",
@@ -215,7 +215,7 @@
 		"duration": 29,
 		"timestamp": 1637673180768,
 		"promptTimes": 1,
-		"prevPromptTime": 1646137073593
+		"prevPromptTime": 1646221385249
 	},
 	{
 		"name": "",
@@ -229,13 +229,13 @@
 		"duration": 4,
 		"timestamp": 1629155362746,
 		"promptTimes": 1,
-		"prevPromptTime": 1646139774269
+		"prevPromptTime": 1646224085201
 	},
 	{
 		"name": "",
 		"id": "3559616",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：没有明确的行情意识。没有周期和大局观的洞察力。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">行情初期总是不在意。或者行情发动时，完全没有意识到。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">就像大部分的板都是套利一波流，但是真正的龙头也在其中。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我没有处在一个明确的等待行情意识中，也没有在行情发动时，理解意识到行情来了。</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>为什么总是后知后觉？为什么元宇宙行情一直到走完，才意识到行情存在。中青宝</strong></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>为什么错过次新行情？拓新药业</strong></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>为什么没有意识到市场风格转换？</strong></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>为什么没有很快意识到行情启动，并最快的介入？</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">总是等行情走完或到了末期才意识到行情存在？</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：后知后觉，没有明确的行情意识。没有周期和大局观的洞察力。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">行情初期总是不在意。或者行情发动时，完全没有意识到。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">就像大部分的板都是套利一波流，但是真正的龙头也在其中。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我没有处在一个明确的等待行情意识中，也没有在行情发动时，理解意识到行情来了。</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>为什么总是后知后觉？为什么元宇宙行情一直到走完，才意识到行情存在。中青宝</strong></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>为什么错过次新行情？拓新药业</strong></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>为什么没有意识到市场风格转换？</strong></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>为什么没有很快意识到行情启动，并最快的介入？</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">总是等行情走完或到了末期才意识到行情存在？</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 4,
@@ -243,7 +243,7 @@
 		"duration": 19,
 		"timestamp": 1637020107294,
 		"promptTimes": 1,
-		"prevPromptTime": 1646142474061
+		"prevPromptTime": 1646226784953
 	},
 	{
 		"name": "",
@@ -257,7 +257,7 @@
 		"duration": 24,
 		"timestamp": 1636803828143,
 		"promptTimes": 1,
-		"prevPromptTime": 1646145174048
+		"prevPromptTime": 1646229484925
 	},
 	{
 		"name": "",
@@ -271,7 +271,7 @@
 		"duration": 17,
 		"timestamp": 1636700906299,
 		"promptTimes": 1,
-		"prevPromptTime": 1646147872465
+		"prevPromptTime": 1646232184296
 	},
 	{
 		"name": "",
@@ -283,7 +283,9 @@
 		"repeat": 2,
 		"interval": 120,
 		"duration": 19,
-		"timestamp": 1628513394321
+		"timestamp": 1628513394321,
+		"promptTimes": 1,
+		"prevPromptTime": 1646234884561
 	},
 	{
 		"name": "",
