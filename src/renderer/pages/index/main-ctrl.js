@@ -319,7 +319,7 @@ brick.reg('mainCtrl', function (scope) {
         utils.timer('9:01', () => {
             scope.openReminder();
         });
-        utils.timer('12:45', () => {
+        utils.timer('12:51', () => {
             scope.openReminder();
         });
         utils.timer('15:00', () => {

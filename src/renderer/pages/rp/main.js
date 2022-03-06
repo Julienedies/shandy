@@ -33,6 +33,8 @@ import '../../js/common-stock.js'
 import setTagCtrl from '../tags/set-tag-ctrl'
 import selectTagsCtrl from '../tags/select-tags-ctrl'
 
+//brick.set('ic-event.extend', 'click,change,dblclick,focus,hover');
+
 brick.set('ic-select-cla', 'is-info');
 
 brick.reg('setTagCtrl', setTagCtrl);
@@ -42,7 +44,7 @@ brick.reg('selectTagsCtrl', selectTagsCtrl);
 brick.reg('todoListCtrl', function (scope) {
 
     const dragOverCla = 'onDragOver';
-    let filterByType = 'rp';
+    let filterByType = '';
     let rpMap = window.RPMQS_MAP = {};
 
     let $elm = this.$elm;
@@ -78,6 +80,7 @@ brick.reg('todoListCtrl', function (scope) {
         }
         //console.log(filterByType, todoArr);
         scope.render('types', {model: {mapByType: mapByType, filterByType: filterByType}});
+
         scope.render('todoList', {model: {rpList, rpForm}}, function () {
             $(this).find('li').on('dragstart', scope.dragstart)
                 .on('dragover', scope.dragover)
