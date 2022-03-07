@@ -44,7 +44,7 @@ brick.reg('selectTagsCtrl', selectTagsCtrl);
 brick.reg('todoListCtrl', function (scope) {
 
     const dragOverCla = 'onDragOver';
-    let filterByType = '';
+    let filterByType = 'rp';
     let rpMap = window.RPMQS_MAP = {};
 
     let $elm = this.$elm;

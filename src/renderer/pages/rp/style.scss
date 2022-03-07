@@ -76,7 +76,7 @@ html {
         font-size: 22px;
         color: #000;
 
-        .caution {
+        b {
           display: inline-block;
           padding-left: 1.4em;
           font-size: 0.9em;
@@ -85,6 +85,7 @@ html {
       }
 
       .caution {
+        background: #fff;
         //font-size: 20px !important;
         font-size: 1.4em;
         font-size: 19px;

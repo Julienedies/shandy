@@ -41,7 +41,7 @@
                             ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
                             <header ic-click="toggle">
-                                <h3>{{ v.title }} <b class="caution">{{ v.caution || v.comment }} </b></h3>
+                                <h3>{{ v.title }} <b>{{ v.caution || v.comment }} </b></h3>
                                 <h5 class="caution" ic-if="v.caution"></h5>
                             </header>
 
