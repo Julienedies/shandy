@@ -31,11 +31,13 @@
                 <button class="button" ic-click="plan_add" ic-popup-target="set_plan">新计划</button>
             </div>
 
-            <ul ic-tpl="replay" class="notification">
-                <li class="table_3" ic-for="i, v in model" ic-if="v">
-                    <div>
-                        <h6 class="">{{i}} : </h6>
-                        <div class="pre">{{v}}</div>
+            <ul ic-tpl="replay">
+                <li ic-for="k,o in model" class="notification">
+                    <div class="table_3">
+                        <div ic-for="i,v in o" ic-if="i=='date'||i=='交易计划'">
+                            <h6 class="">{{i}} : </h6>
+                            <div class="pre">{{v}}</div>
+                        </div>
                     </div>
                 </li>
             </ul>

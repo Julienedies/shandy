@@ -25,7 +25,7 @@ brick.reg('planCtrl', function () {
     let list = brick.services.get('recordManager')();
     let model = {};
 
-    $.get(`/stock/replay?date=${ formatDate2() }`).done((data) => {
+    $.get(`/stock/replay?date`).done((data) => {
         console.log(data);
         scope.render('replay', data);
     });
