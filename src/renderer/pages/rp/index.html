@@ -69,9 +69,12 @@
 
                                 </div>
 
+                                <div style="padding-bottom: 0.5em; color:blue;">{{ v.comment }}</div>
+
                                 <div style="padding-bottom: 0.5em;" ic-if="v.role==1">
                                     <textarea class="textarea is-medium" ic-form-field="{{ 'k_'+v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
                                 </div>
+
 
                                 <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
 
