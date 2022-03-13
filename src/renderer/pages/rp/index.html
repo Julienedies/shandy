@@ -41,7 +41,7 @@
                             ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
                             <header ic-click="toggle">
-                                <h3>{{ v.title }} <b>{{ v.caution || v.comment }} </b></h3>
+                                <h3>{{ v.title }} <b>{{ v.caution }} </b></h3>
                                 <h5 class="caution" ic-if="v.caution"></h5>
                             </header>
 
@@ -69,7 +69,7 @@
 
                                 </div>
 
-                                <div style="padding-bottom: 0.5em; color:blue;">{{ v.comment }}</div>
+                                <div style="padding-bottom: 0.5em; color:blue;"> {{ v.comment }} </div>
 
                                 <div style="padding-bottom: 0.5em;" ic-if="v.role==1">
                                     <textarea class="textarea is-medium" ic-form-field="{{ 'k_'+v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
@@ -192,7 +192,7 @@
                     </div>
 
                     <div class="field has-addons">
-                        <div class="control" style="width:60%;">
+                        <div class="control" style="width:64%;">
                             <button class="button is-primary"
                                     style="width:300px;"
                                     ic-form-submit
@@ -204,7 +204,7 @@
                                 重置
                             </button>
                             <button class="button" ic-click="cancel" style="width:100px;">取消</button>
-                            <button class="button" ic-view-to="todoList" style="width:240px;">
+                            <button class="button" ic-view-to="todoList" style="width:220px;">
                                 返回
                             </button>
                         </div>
