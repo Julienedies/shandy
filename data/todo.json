@@ -1,6 +1,20 @@
 [
 	{
 		"name": "",
+		"id": "id_1647873146547_6098",
+		"type": "系统",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">龙头是最强的，是最有盈亏的，是最有持续性的，是最有效率的。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">围绕龙头寻找操作机会。市场上的人气龙头就那么几只票。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">主线是谁？龙头是谁？围绕龙头去操作。</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 7,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1647873146547,
+		"promptTimes": 1,
+		"prevPromptTime": 1647909758759
+	},
+	{
+		"name": "",
 		"id": "id_1645175299306_8210",
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；</span></strong></p>",
@@ -11,7 +25,7 @@
 		"duration": 17,
 		"timestamp": 1645175299306,
 		"promptTimes": 1,
-		"prevPromptTime": 1647565642675
+		"prevPromptTime": 1647912459030
 	},
 	{
 		"name": "",
@@ -25,7 +39,7 @@
 		"duration": 17,
 		"timestamp": 1644026604851,
 		"promptTimes": 1,
-		"prevPromptTime": 1647568343794
+		"prevPromptTime": 1647915158590
 	},
 	{
 		"name": "",
@@ -39,7 +53,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1647571043572
+		"prevPromptTime": 1647917858621
 	},
 	{
 		"name": "",
@@ -53,7 +67,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1647573743485
+		"prevPromptTime": 1647920558630
 	},
 	{
 		"name": "",
@@ -91,7 +105,7 @@
 		"duration": 13,
 		"timestamp": 1643018416709,
 		"promptTimes": 2,
-		"prevPromptTime": 1647581843309
+		"prevPromptTime": 1647928658016
 	},
 	{
 		"name": "",
@@ -117,7 +131,7 @@
 		"duration": 17,
 		"timestamp": 1639957717122,
 		"promptTimes": 2,
-		"prevPromptTime": 1647587243939
+		"prevPromptTime": 1647934058712
 	},
 	{
 		"name": "",
@@ -126,12 +140,12 @@
 		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 22px;font-size: 22px; background-color: rgb(148, 0, 211);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\"><strong>错误：主观恐高看空，不敢做龙头；</strong></span><strong><span style=\"font-size: 30px;font-size: 30px; background-color: rgb(0, 0, 0);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>总是依靠主观预测交易；</strong></span></span></span></strong></strong></span></span></strong></span></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">一定要做龙头，龙头就是最重要的判断锚点；龙头就是大概率；</span></strong></span><strong><span style=\"color: rgb(255, 255, 255); font-size: 24px; background-color: rgb(148, 0, 211);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong>龙头就是人气焦点所在。</strong></span></span></span></strong></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我错过了那么多大行情，大龙头，为什么我一点都没有吸取教训；</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我需要做的是客观跟随；清水源、中青宝、宣亚国际、</strong></span></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><strong>怕高不敢做龙头就和最早不理解打板的本质一样，要克服人性本能。</strong></span></span></p><p><br></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">三羊马、九安医疗、 清水源、中青宝、湖北宜化、大金重工、联创股份、郑州煤电</span></strong></span></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 4,
+		"repeat": 7,
 		"interval": 60,
-		"duration": 24,
+		"duration": 19,
 		"timestamp": 1639962005050,
 		"promptTimes": 2,
-		"prevPromptTime": 1647589943165
+		"prevPromptTime": 1647936757680
 	},
 	{
 		"name": "",
@@ -145,7 +159,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1647592643750
+		"prevPromptTime": 1647939457437
 	},
 	{
 		"name": "",
@@ -159,7 +173,7 @@
 		"duration": 17,
 		"timestamp": 1639558190823,
 		"promptTimes": 1,
-		"prevPromptTime": 1647595342867
+		"prevPromptTime": 1647942158567
 	},
 	{
 		"name": "",
@@ -173,7 +187,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1647598042513
+		"prevPromptTime": 1647944858457
 	},
 	{
 		"name": "",
@@ -187,7 +201,7 @@
 		"duration": 24,
 		"timestamp": 1636930865826,
 		"promptTimes": 1,
-		"prevPromptTime": 1647600742747
+		"prevPromptTime": 1647947558463
 	},
 	{
 		"name": "",
@@ -201,7 +215,7 @@
 		"duration": 9,
 		"timestamp": 1638547210757,
 		"promptTimes": 1,
-		"prevPromptTime": 1647603442570
+		"prevPromptTime": 1647950257314
 	},
 	{
 		"name": "",
@@ -215,7 +229,7 @@
 		"duration": 29,
 		"timestamp": 1637673180768,
 		"promptTimes": 1,
-		"prevPromptTime": 1647606143550
+		"prevPromptTime": 1647952958550
 	},
 	{
 		"name": "",
@@ -227,7 +241,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 4,
-		"timestamp": 1629155362746
+		"timestamp": 1629155362746,
+		"promptTimes": 1,
+		"prevPromptTime": 1647955657369
 	},
 	{
 		"name": "",
@@ -239,7 +255,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 19,
-		"timestamp": 1637020107294
+		"timestamp": 1637020107294,
+		"promptTimes": 1,
+		"prevPromptTime": 1647958356715
 	},
 	{
 		"name": "",
@@ -251,7 +269,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1636803828143
+		"timestamp": 1636803828143,
+		"promptTimes": 1,
+		"prevPromptTime": 1647961058034
 	},
 	{
 		"name": "",
@@ -259,11 +279,13 @@
 		"type": "警告",
 		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 28px;\">我以前很多次觉得自己该死，错误能够不断的重复。</span></strong></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>今天再次觉得自己该死。</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>今天重复所有的错误。这一周每天都在重复所有的错误。</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong>卖飞。</strong></strong></span></span></span></p><p><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 28px;\">临盘随意交易。不断的在可转债的小波动中管不住手。</span></strong></p><p><br></p>",
 		"singleWindow": "",
-		"start": "8:00",
+		"start": "11:00",
 		"repeat": 3,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1636700906299
+		"timestamp": 1636700906299,
+		"promptTimes": 1,
+		"prevPromptTime": 1647963757897
 	},
 	{
 		"name": "",
