@@ -53,6 +53,7 @@ brick.reg('todoListCtrl', function (scope) {
 
     let listManager = brick.services.get('recordManager')();
 
+
     function getMapByType (arr) {
         let mapByType = {};
         let rpmqs = TAGS_MAP['rpmqs'];
@@ -197,6 +198,11 @@ brick.reg('todoListCtrl', function (scope) {
 
     // ---------------------------------------------------------------------------------------
 
+
+    $(document.body).on('dblclick', () => {
+        console.log('dblclick');
+        scope.toggleForm();
+    });
 
 
     $elm.on('ic-select.change', '[ic-select][ic-form-field]', function (e) {
