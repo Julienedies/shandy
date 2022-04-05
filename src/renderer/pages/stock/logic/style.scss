@@ -45,7 +45,11 @@ a.no {
 }
 
 .table_0 > * > *:first-child {
-  flex: 1 1 6%;
+  flex: 1 1 2em;
+}
+
+.table_0 > * > * {
+  padding: 7px 5px;
 }
 
 .tag:not(body).is-medium {

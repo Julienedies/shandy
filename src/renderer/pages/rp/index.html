@@ -40,7 +40,7 @@
                         <li class="box" ic-for="i,v in rpList" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                             ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
-                            <header ic-click="toggle">
+                            <header ic-click="toggle" ic-class="role_{{ v.role }}">
                                 <h3>{{ v.title }} <b>{{ v.caution }} </b></h3>
                                 <h5 class="caution" ic-if="v.caution"></h5>
                             </header>
@@ -224,6 +224,7 @@
                                 <select name="role" ic-form-field>
                                     <option value="0" selected>不需要回答</option>
                                     <option value="1">需要回答</option>
+                                    <option value="2">关键要素</option>
                                 </select>
                             </p>
                         </div>

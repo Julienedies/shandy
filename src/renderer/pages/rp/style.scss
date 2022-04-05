@@ -68,6 +68,14 @@ html {
     > header {
       background: yellow;
 
+      &.role_2 {
+        background: blue;
+
+        h3 {
+          color: #fff;
+        }
+      }
+
       h2, h3, h5, h6 {
         padding: 0.1rem 0.1rem;
         white-space: nowrap;
