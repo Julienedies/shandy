@@ -10,8 +10,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1647873146547,
-		"promptTimes": 3,
-		"prevPromptTime": 1649129527250
+		"promptTimes": 1,
+		"prevPromptTime": 1649206467505
 	},
 	{
 		"name": "",
@@ -24,8 +24,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1645175299306,
-		"promptTimes": 2,
-		"prevPromptTime": 1649048651891
+		"promptTimes": 1,
+		"prevPromptTime": 1649209167851
 	},
 	{
 		"name": "",
@@ -38,8 +38,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1644026604851,
-		"promptTimes": 3,
-		"prevPromptTime": 1649132227933
+		"promptTimes": 1,
+		"prevPromptTime": 1649211868267
 	},
 	{
 		"name": "",
@@ -52,8 +52,8 @@
 		"interval": 60,
 		"duration": 24,
 		"timestamp": 1643962033853,
-		"promptTimes": 3,
-		"prevPromptTime": 1649134928479
+		"promptTimes": 1,
+		"prevPromptTime": 1649214568000
 	},
 	{
 		"name": "",
@@ -66,8 +66,8 @@
 		"interval": 60,
 		"duration": 34,
 		"timestamp": 1643896099264,
-		"promptTimes": 3,
-		"prevPromptTime": 1649137628649
+		"promptTimes": 1,
+		"prevPromptTime": 1649217267706
 	},
 	{
 		"name": "",
@@ -79,9 +79,7 @@
 		"repeat": 5,
 		"interval": 60,
 		"duration": 19,
-		"timestamp": 1643285590954,
-		"promptTimes": 2,
-		"prevPromptTime": 1649143028483
+		"timestamp": 1643285590954
 	},
 	{
 		"name": "",
@@ -93,9 +91,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1643102678977,
-		"promptTimes": 2,
-		"prevPromptTime": 1649140328581
+		"timestamp": 1643102678977
 	},
 	{
 		"name": "",
@@ -108,8 +104,8 @@
 		"interval": 60,
 		"duration": 13,
 		"timestamp": 1643018416709,
-		"promptTimes": 4,
-		"prevPromptTime": 1649145728225
+		"promptTimes": 2,
+		"prevPromptTime": 1649225367421
 	},
 	{
 		"name": "",
@@ -121,9 +117,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 37,
-		"timestamp": 1625975362922,
-		"promptTimes": 2,
-		"prevPromptTime": 1649148426680
+		"timestamp": 1625975362922
 	},
 	{
 		"name": "",
@@ -136,8 +130,8 @@
 		"interval": 90,
 		"duration": 17,
 		"timestamp": 1639957717122,
-		"promptTimes": 4,
-		"prevPromptTime": 1649151127673
+		"promptTimes": 2,
+		"prevPromptTime": 1649228067698
 	},
 	{
 		"name": "",
@@ -150,8 +144,8 @@
 		"interval": 60,
 		"duration": 19,
 		"timestamp": 1639962005050,
-		"promptTimes": 3,
-		"prevPromptTime": 1649153827920
+		"promptTimes": 1,
+		"prevPromptTime": 1649230767823
 	},
 	{
 		"name": "",
@@ -164,8 +158,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1637936622790,
-		"promptTimes": 2,
-		"prevPromptTime": 1649075649983
+		"promptTimes": 1,
+		"prevPromptTime": 1649233468352
 	},
 	{
 		"name": "",
@@ -178,8 +172,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1639558190823,
-		"promptTimes": 2,
-		"prevPromptTime": 1649078349605
+		"promptTimes": 1,
+		"prevPromptTime": 1649236168078
 	},
 	{
 		"name": "",
@@ -192,8 +186,8 @@
 		"interval": 90,
 		"duration": 36,
 		"timestamp": 1609667569090,
-		"promptTimes": 4,
-		"prevPromptTime": 1649164626244
+		"promptTimes": 1,
+		"prevPromptTime": 1649238867042
 	},
 	{
 		"name": "",
@@ -206,8 +200,8 @@
 		"interval": 60,
 		"duration": 24,
 		"timestamp": 1636930865826,
-		"promptTimes": 3,
-		"prevPromptTime": 1649159227716
+		"promptTimes": 1,
+		"prevPromptTime": 1649241567544
 	},
 	{
 		"name": "",
@@ -220,8 +214,8 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1638547210757,
-		"promptTimes": 2,
-		"prevPromptTime": 1649086450184
+		"promptTimes": 1,
+		"prevPromptTime": 1649244267422
 	},
 	{
 		"name": "",
@@ -234,8 +228,8 @@
 		"interval": 100,
 		"duration": 29,
 		"timestamp": 1637673180768,
-		"promptTimes": 3,
-		"prevPromptTime": 1649170026356
+		"promptTimes": 1,
+		"prevPromptTime": 1649246967338
 	},
 	{
 		"name": "",
@@ -248,8 +242,8 @@
 		"interval": 90,
 		"duration": 4,
 		"timestamp": 1629155362746,
-		"promptTimes": 3,
-		"prevPromptTime": 1649172726632
+		"promptTimes": 1,
+		"prevPromptTime": 1649249667193
 	},
 	{
 		"name": "",
@@ -263,7 +257,7 @@
 		"duration": 19,
 		"timestamp": 1637020107294,
 		"promptTimes": 1,
-		"prevPromptTime": 1648818302896
+		"prevPromptTime": 1649252366962
 	},
 	{
 		"name": "",
@@ -277,7 +271,7 @@
 		"duration": 24,
 		"timestamp": 1636803828143,
 		"promptTimes": 1,
-		"prevPromptTime": 1648821003043
+		"prevPromptTime": 1649255066633
 	},
 	{
 		"name": "",
@@ -291,7 +285,7 @@
 		"duration": 17,
 		"timestamp": 1636700906299,
 		"promptTimes": 1,
-		"prevPromptTime": 1648823702643
+		"prevPromptTime": 1649257766393
 	},
 	{
 		"name": "",
@@ -303,9 +297,7 @@
 		"repeat": 2,
 		"interval": 120,
 		"duration": 19,
-		"timestamp": 1628513394321,
-		"promptTimes": 1,
-		"prevPromptTime": 1648826403780
+		"timestamp": 1628513394321
 	},
 	{
 		"name": "",
@@ -377,9 +369,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1635088812447,
-		"promptTimes": 1,
-		"prevPromptTime": 1649118848749
+		"timestamp": 1635088812447
 	},
 	{
 		"name": "",
@@ -391,9 +381,7 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 5,
-		"timestamp": 1634458275583,
-		"promptTimes": 1,
-		"prevPromptTime": 1649121547921
+		"timestamp": 1634458275583
 	},
 	{
 		"name": "警告",
@@ -405,9 +393,7 @@
 		"content": "<p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">一切有为法；一切有因果；</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>时不我待，我已经37岁了；</strong></span></span></span></strong></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>不要忘记那些恐惧和痛苦；人会变得麻木；</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我并没有本质上的改变，我还是在重复错误；</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">那些交易原则我知道，但我没有做到知行合一；</span></strong></span></p>",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 7,
-		"promptTimes": 1,
-		"prevPromptTime": 1649124247587
+		"duration": 7
 	},
 	{
 		"name": "",
@@ -1027,7 +1013,7 @@
 		"start": "17:00",
 		"repeat": 1,
 		"interval": 90,
-		"duration": 24,
+		"duration": 17,
 		"timestamp": 1618113128264
 	},
 	{
