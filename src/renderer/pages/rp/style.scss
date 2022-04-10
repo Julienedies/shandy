@@ -57,19 +57,84 @@ html {
     margin-bottom: 0.2rem;
   }
 
+  .comment{
+    white-space: nowrap;
+    overflow: hidden;
+    color: #026bdb;
+    text-decoration: underline;
+  }
+
+  .role_0, .role_1, .role_2, .role_3{
+    color:#fff;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+
+
+  .role_0 {
+    background: yellow;
+    color: #000;
+
+    h3 {
+      color: #000;
+    }
+  }
+
+  .role_1 {
+    background: blue;
+
+    h3 {
+      color: #fff;
+    }
+  }
+
+  .role_2 {
+    background: rgb(148, 0, 211);
+
+    h3 {
+      color: #fff;
+    }
+  }
+
+  .role_3 {
+    background: black;
+
+    h3 {
+      color: #fff;
+    }
+  }
+
+
   .box {
     padding: 0.1rem;
     color: #3c3c3c;
 
     > header, > .wrap {
-      padding: 0 1em 0 1em;
+      padding: 0 1em;
     }
 
     > header {
       background: yellow;
 
-      &.role_2 {
+      &.role_1 {
         background: blue;
+
+        h3 {
+          color: #fff;
+        }
+      }
+
+      &.role_2 {
+        background: rgb(148, 0, 211);
+
+       h3 {
+          color: #fff;
+        }
+      }
+
+      &.role_3 {
+        background: black;
 
         h3 {
           color: #fff;
@@ -93,7 +158,7 @@ html {
       }
 
       .caution {
-        background: #fff;
+        //background: #fff;
         //font-size: 20px !important;
         font-size: 1.4em;
         font-size: 19px;
@@ -103,9 +168,7 @@ html {
     }
 
     > .wrap {
-      margin-top: 0.3rem;
-      padding-bottom: 0.3em;
-
+      padding: 0.25em 1em;
       .textarea {
         border-color: #f7f7f7;
         box-shadow: none;

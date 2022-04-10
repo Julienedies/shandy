@@ -2,16 +2,16 @@
 	{
 		"name": "",
 		"id": "id_1647873146547_6098",
-		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">龙头是最强的，是最有盈亏的，是最有持续性的，是最有效率的。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">围绕龙头寻找操作机会。市场上的人气龙头就那么几只票。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">主线是谁？龙头是谁？围绕龙头去操作。</span></strong></p>",
+		"type": "理念",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盈亏同源，持续一致性；做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">龙头是最强的，是最有盈亏的，是最有持续性的，是最有效率的。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">围绕龙头寻找操作机会。市场上的人气龙头就那么几只票。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">主线是谁？龙头是谁？围绕龙头去操作。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 7,
-		"interval": 60,
-		"duration": 17,
+		"interval": 70,
+		"duration": 9,
 		"timestamp": 1647873146547,
-		"promptTimes": 1,
-		"prevPromptTime": 1649206467505
+		"promptTimes": 2,
+		"prevPromptTime": 1649427032518
 	},
 	{
 		"name": "",
@@ -24,8 +24,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1645175299306,
-		"promptTimes": 1,
-		"prevPromptTime": 1649209167851
+		"promptTimes": 2,
+		"prevPromptTime": 1649429733052
 	},
 	{
 		"name": "",
@@ -38,22 +38,22 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1644026604851,
-		"promptTimes": 1,
-		"prevPromptTime": 1649211868267
+		"promptTimes": 2,
+		"prevPromptTime": 1649432432882
 	},
 	{
 		"name": "",
 		"id": "id_1643962033853_9981",
 		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">判断锚点：（大周期，大主线，为什么我总是错过大行情？）</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">1. <strong><span style=\"background-color: rgb(0, 0, 255); font-size: 24px; color: rgb(255, 255, 255);\">赚钱效应：元宇宙做为当前市场热点，赚钱效应十足。这就是判断锚点啊！</span></strong></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">2. 大周期或主线：这就是判断锚点！不要执着于个股的波动，大局观，大局观，大局观；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">元宇宙周期(湖北广电、博瑞传播)、疫情周期(九安医疗、雅本化学、精华制药)、中药周期()、情绪题材接力周期(陕西金叶、中锐股份)、</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">判断锚点：（大周期，大主线，为什么我总是错过大行情？）</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">1. <strong><span style=\"background-color: rgb(0, 0, 255); font-size: 24px; color: rgb(255, 255, 255);\">赚钱效应：元宇宙做为当前市场热点，赚钱效应十足。这就是判断锚点啊！</span></strong></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 255); font-size: 24px; color: rgb(255, 255, 255);\">2. 人气地位；</span></strong></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">3. 大周期或主线：这就是判断锚点！不要执着于个股的波动，大局观，大局观，大局观；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">元宇宙周期(湖北广电、博瑞传播)、疫情周期(九安医疗、雅本化学、精华制药)、中药周期()、情绪题材接力周期(陕西金叶、中锐股份)、</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 7,
-		"interval": 60,
+		"repeat": 4,
+		"interval": 80,
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1649214568000
+		"prevPromptTime": 1649385255275
 	},
 	{
 		"name": "",
@@ -67,7 +67,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1649217267706
+		"prevPromptTime": 1649387955457
 	},
 	{
 		"name": "",
@@ -105,7 +105,7 @@
 		"duration": 13,
 		"timestamp": 1643018416709,
 		"promptTimes": 2,
-		"prevPromptTime": 1649225367421
+		"prevPromptTime": 1649396055025
 	},
 	{
 		"name": "",
@@ -131,7 +131,7 @@
 		"duration": 17,
 		"timestamp": 1639957717122,
 		"promptTimes": 2,
-		"prevPromptTime": 1649228067698
+		"prevPromptTime": 1649401454744
 	},
 	{
 		"name": "",
@@ -144,8 +144,8 @@
 		"interval": 60,
 		"duration": 19,
 		"timestamp": 1639962005050,
-		"promptTimes": 1,
-		"prevPromptTime": 1649230767823
+		"promptTimes": 2,
+		"prevPromptTime": 1649404155714
 	},
 	{
 		"name": "",
@@ -159,7 +159,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1649233468352
+		"prevPromptTime": 1649406855982
 	},
 	{
 		"name": "",
@@ -173,7 +173,7 @@
 		"duration": 17,
 		"timestamp": 1639558190823,
 		"promptTimes": 1,
-		"prevPromptTime": 1649236168078
+		"prevPromptTime": 1649409554866
 	},
 	{
 		"name": "",
@@ -187,7 +187,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1649238867042
+		"prevPromptTime": 1649412255429
 	},
 	{
 		"name": "",
@@ -200,8 +200,8 @@
 		"interval": 60,
 		"duration": 24,
 		"timestamp": 1636930865826,
-		"promptTimes": 1,
-		"prevPromptTime": 1649241567544
+		"promptTimes": 2,
+		"prevPromptTime": 1649464831367
 	},
 	{
 		"name": "",
@@ -214,8 +214,8 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1638547210757,
-		"promptTimes": 1,
-		"prevPromptTime": 1649244267422
+		"promptTimes": 2,
+		"prevPromptTime": 1649467531487
 	},
 	{
 		"name": "",
@@ -228,8 +228,8 @@
 		"interval": 100,
 		"duration": 29,
 		"timestamp": 1637673180768,
-		"promptTimes": 1,
-		"prevPromptTime": 1649246967338
+		"promptTimes": 2,
+		"prevPromptTime": 1649470231711
 	},
 	{
 		"name": "",
@@ -242,8 +242,8 @@
 		"interval": 90,
 		"duration": 4,
 		"timestamp": 1629155362746,
-		"promptTimes": 1,
-		"prevPromptTime": 1649249667193
+		"promptTimes": 2,
+		"prevPromptTime": 1649472931279
 	},
 	{
 		"name": "",
@@ -257,7 +257,7 @@
 		"duration": 19,
 		"timestamp": 1637020107294,
 		"promptTimes": 1,
-		"prevPromptTime": 1649252366962
+		"prevPromptTime": 1649475632004
 	},
 	{
 		"name": "",
@@ -271,7 +271,7 @@
 		"duration": 24,
 		"timestamp": 1636803828143,
 		"promptTimes": 1,
-		"prevPromptTime": 1649255066633
+		"prevPromptTime": 1649478331407
 	},
 	{
 		"name": "",
@@ -285,7 +285,7 @@
 		"duration": 17,
 		"timestamp": 1636700906299,
 		"promptTimes": 1,
-		"prevPromptTime": 1649257766393
+		"prevPromptTime": 1649481031893
 	},
 	{
 		"name": "",
@@ -297,7 +297,9 @@
 		"repeat": 2,
 		"interval": 120,
 		"duration": 19,
-		"timestamp": 1628513394321
+		"timestamp": 1628513394321,
+		"promptTimes": 1,
+		"prevPromptTime": 1649483731791
 	},
 	{
 		"name": "",
@@ -309,7 +311,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 29,
-		"timestamp": 1610785651586
+		"timestamp": 1610785651586,
+		"promptTimes": 1,
+		"prevPromptTime": 1649486431230
 	},
 	{
 		"name": "",
@@ -321,7 +325,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1636413986087
+		"timestamp": 1636413986087,
+		"promptTimes": 1,
+		"prevPromptTime": 1649489130344
 	},
 	{
 		"name": "",
@@ -333,7 +339,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1636326773171
+		"timestamp": 1636326773171,
+		"promptTimes": 1,
+		"prevPromptTime": 1649491831676
 	},
 	{
 		"name": "",
@@ -345,7 +353,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1636258154803
+		"timestamp": 1636258154803,
+		"promptTimes": 1,
+		"prevPromptTime": 1649494531708
 	},
 	{
 		"name": "",
@@ -357,19 +367,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1636203734653
-	},
-	{
-		"name": "",
-		"id": "0667699",
-		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">围绕着板块操作。</span></strong></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 2,
-		"interval": 60,
-		"duration": 7,
-		"timestamp": 1635088812447
+		"timestamp": 1636203734653,
+		"promptTimes": 1,
+		"prevPromptTime": 1649497231268
 	},
 	{
 		"name": "",
@@ -381,7 +381,9 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 5,
-		"timestamp": 1634458275583
+		"timestamp": 1634458275583,
+		"promptTimes": 1,
+		"prevPromptTime": 1649502630039
 	},
 	{
 		"name": "警告",
@@ -393,7 +395,9 @@
 		"content": "<p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">一切有为法；一切有因果；</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>时不我待，我已经37岁了；</strong></span></span></span></strong></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>不要忘记那些恐惧和痛苦；人会变得麻木；</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我并没有本质上的改变，我还是在重复错误；</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">那些交易原则我知道，但我没有做到知行合一；</span></strong></span></p>",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 7
+		"duration": 7,
+		"promptTimes": 1,
+		"prevPromptTime": 1649505329861
 	},
 	{
 		"name": "",
@@ -405,7 +409,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 39,
-		"timestamp": 1614682522617
+		"timestamp": 1614682522617,
+		"promptTimes": 1,
+		"prevPromptTime": 1649508030905
 	},
 	{
 		"name": "",
@@ -417,7 +423,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 4,
-		"timestamp": 1633852427544
+		"timestamp": 1633852427544,
+		"promptTimes": 1,
+		"prevPromptTime": 1649510730654
 	},
 	{
 		"name": "",
@@ -429,7 +437,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 9,
-		"timestamp": 1630328427565
+		"timestamp": 1630328427565,
+		"promptTimes": 1,
+		"prevPromptTime": 1649513430357
 	},
 	{
 		"name": "",
@@ -453,7 +463,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 10,
-		"timestamp": 1626650977149
+		"timestamp": 1626650977149,
+		"promptTimes": 1,
+		"prevPromptTime": 1649516130832
 	},
 	{
 		"name": "",
@@ -465,7 +477,9 @@
 		"repeat": 5,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1621658103771
+		"timestamp": 1621658103771,
+		"promptTimes": 1,
+		"prevPromptTime": 1649518830411
 	},
 	{
 		"name": "",

@@ -46,6 +46,8 @@
                             </header>
 
                             <div class="wrap">
+                                <h6 class="comment" ic-if="v.comment" style="padding: 0.1em"> {{ v.comment }} </h6>
+
                                 <div class="field is-grouped is-grouped-multiline" ic-if="v.tags && v.tags.length"
                                      ic-select
                                      ic-select-cla="is-info"
@@ -69,7 +71,7 @@
 
                                 </div>
 
-                                <div style="padding-bottom: 0.5em; color:blue;"> {{ v.comment }} </div>
+
 
                                 <div style="padding-bottom: 0.5em;" ic-if="v.role==1">
                                     <textarea class="textarea is-medium" ic-form-field="{{ 'k_'+v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
@@ -222,9 +224,10 @@
                         <div class="control">
                             <p class="select">
                                 <select name="role" ic-form-field>
-                                    <option value="0" selected>不需要回答</option>
-                                    <option value="1">需要回答</option>
-                                    <option value="2">关键要素</option>
+                                    <option value="0" ic-has-selected="model.role==0">问题&错误</option>
+                                    <option value="1" ic-has-selected="model.role==1">复盘思考</option>
+                                    <option value="2" ic-has-selected="model.role==2">关键要素</option>
+                                    <option value="3" ic-has-selected="model.role==3">错误&警告</option>
                                 </select>
                             </p>
                         </div>
