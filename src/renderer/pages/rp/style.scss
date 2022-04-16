@@ -61,7 +61,7 @@ html {
     white-space: nowrap;
     overflow: hidden;
     color: #026bdb;
-    text-decoration: underline;
+    //text-decoration: underline;
   }
 
   .role_0, .role_1, .role_2, .role_3{
@@ -146,7 +146,7 @@ html {
         white-space: nowrap;
         overflow: hidden;
         font-weight: bold;
-        font-size: 22px;
+        font-size: 20px;
         color: #000;
 
         b {
@@ -168,7 +168,7 @@ html {
     }
 
     > .wrap {
-      padding: 0.25em 1em;
+      padding: 0.4em 1em 0.25em 1em;
       .textarea {
         border-color: #f7f7f7;
         box-shadow: none;

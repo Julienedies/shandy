@@ -46,7 +46,6 @@
                             </header>
 
                             <div class="wrap">
-                                <h6 class="comment" ic-if="v.comment" style="padding: 0.1em"> {{ v.comment }} </h6>
 
                                 <div class="field is-grouped is-grouped-multiline" ic-if="v.tags && v.tags.length"
                                      ic-select
@@ -71,9 +70,9 @@
 
                                 </div>
 
+                                <h6 class="comment" ic-if="v.comment" style="padding: 0.1em"> {{ v.comment }} </h6>
 
-
-                                <div style="padding-bottom: 0.5em;" ic-if="v.role==1">
+                                <div style="padding-bottom: 0.5em;" ic-if="v.role==9">
                                     <textarea class="textarea is-medium" ic-form-field="{{ 'k_'+v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
                                 </div>
 
@@ -103,7 +102,7 @@
                             <div>
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control is-expanded">
-                                        <textarea class="textarea" ic-form-field="交易计划" rows="17">{{ rpForm['交易计划'] }}</textarea>
+                                        <textarea class="textarea" ic-form-field="交易计划" rows="9">{{ rpForm['交易计划'] }}</textarea>
                                     </div>
                                     <div class="control">
                                         <button class="button is-primary is-small"
