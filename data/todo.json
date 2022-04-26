@@ -11,7 +11,7 @@
 		"duration": 17,
 		"timestamp": 1650708701077,
 		"promptTimes": 1,
-		"prevPromptTime": 1650844941117
+		"prevPromptTime": 1650936617705
 	},
 	{
 		"name": "",
@@ -25,7 +25,7 @@
 		"duration": 9,
 		"timestamp": 1647873146547,
 		"promptTimes": 1,
-		"prevPromptTime": 1650847641118
+		"prevPromptTime": 1650939318780
 	},
 	{
 		"name": "",
@@ -39,7 +39,7 @@
 		"duration": 17,
 		"timestamp": 1645175299306,
 		"promptTimes": 1,
-		"prevPromptTime": 1650850340526
+		"prevPromptTime": 1650942018701
 	},
 	{
 		"name": "",
@@ -53,7 +53,7 @@
 		"duration": 17,
 		"timestamp": 1644026604851,
 		"promptTimes": 1,
-		"prevPromptTime": 1650853040545
+		"prevPromptTime": 1650944718893
 	},
 	{
 		"name": "",
@@ -67,7 +67,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1650855740449
+		"prevPromptTime": 1650947419274
 	},
 	{
 		"name": "",
@@ -81,7 +81,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1650858441648
+		"prevPromptTime": 1650950118506
 	},
 	{
 		"name": "",
@@ -105,13 +105,15 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1643102678977
+		"timestamp": 1643102678977,
+		"promptTimes": 1,
+		"prevPromptTime": 1650955518119
 	},
 	{
 		"name": "",
 		"id": "id_1643018416709",
 		"type": "警告",
-		"content": "<p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</strong></span></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</strong></span></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</strong></span></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</span></strong></span></p><p><span style=\"font-size: 22px;\"><br></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</strong></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 7,
@@ -119,7 +121,7 @@
 		"duration": 13,
 		"timestamp": 1643018416709,
 		"promptTimes": 2,
-		"prevPromptTime": 1650866540127
+		"prevPromptTime": 1650958218990
 	},
 	{
 		"name": "",
@@ -131,7 +133,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 37,
-		"timestamp": 1625975362922
+		"timestamp": 1625975362922,
+		"promptTimes": 1,
+		"prevPromptTime": 1650960917541
 	},
 	{
 		"name": "",
@@ -144,8 +148,8 @@
 		"interval": 90,
 		"duration": 17,
 		"timestamp": 1639957717122,
-		"promptTimes": 2,
-		"prevPromptTime": 1650871941146
+		"promptTimes": 1,
+		"prevPromptTime": 1650963616724
 	},
 	{
 		"name": "",
@@ -158,8 +162,8 @@
 		"interval": 60,
 		"duration": 19,
 		"timestamp": 1639962005050,
-		"promptTimes": 2,
-		"prevPromptTime": 1650874639645
+		"promptTimes": 1,
+		"prevPromptTime": 1650966318974
 	},
 	{
 		"name": "",
@@ -173,7 +177,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1650877341130
+		"prevPromptTime": 1650969017586
 	},
 	{
 		"name": "",
@@ -187,7 +191,7 @@
 		"duration": 17,
 		"timestamp": 1639558190823,
 		"promptTimes": 1,
-		"prevPromptTime": 1650880039538
+		"prevPromptTime": 1650971718719
 	},
 	{
 		"name": "",
@@ -201,7 +205,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1650882739376
+		"prevPromptTime": 1650974418693
 	},
 	{
 		"name": "",
@@ -215,7 +219,7 @@
 		"duration": 24,
 		"timestamp": 1636930865826,
 		"promptTimes": 1,
-		"prevPromptTime": 1650885440593
+		"prevPromptTime": 1650977118355
 	},
 	{
 		"name": "",
@@ -229,7 +233,7 @@
 		"duration": 9,
 		"timestamp": 1638547210757,
 		"promptTimes": 1,
-		"prevPromptTime": 1650888139217
+		"prevPromptTime": 1650979818234
 	},
 	{
 		"name": "",
@@ -243,7 +247,7 @@
 		"duration": 29,
 		"timestamp": 1637673180768,
 		"promptTimes": 1,
-		"prevPromptTime": 1650890839130
+		"prevPromptTime": 1650982517023
 	},
 	{
 		"name": "",
@@ -257,7 +261,7 @@
 		"duration": 4,
 		"timestamp": 1629155362746,
 		"promptTimes": 1,
-		"prevPromptTime": 1650893540385
+		"prevPromptTime": 1650985217964
 	},
 	{
 		"name": "",
@@ -269,9 +273,7 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 19,
-		"timestamp": 1637020107294,
-		"promptTimes": 1,
-		"prevPromptTime": 1650896238943
+		"timestamp": 1637020107294
 	},
 	{
 		"name": "",
@@ -283,9 +285,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1636803828143,
-		"promptTimes": 1,
-		"prevPromptTime": 1650898939865
+		"timestamp": 1636803828143
 	},
 	{
 		"name": "",
