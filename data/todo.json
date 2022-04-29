@@ -11,7 +11,7 @@
 		"duration": 17,
 		"timestamp": 1650708701077,
 		"promptTimes": 1,
-		"prevPromptTime": 1651105702598
+		"prevPromptTime": 1651197340570
 	},
 	{
 		"name": "",
@@ -25,7 +25,7 @@
 		"duration": 9,
 		"timestamp": 1647873146547,
 		"promptTimes": 1,
-		"prevPromptTime": 1651108402715
+		"prevPromptTime": 1651200041609
 	},
 	{
 		"name": "",
@@ -39,7 +39,7 @@
 		"duration": 17,
 		"timestamp": 1645175299306,
 		"promptTimes": 1,
-		"prevPromptTime": 1651111102650
+		"prevPromptTime": 1651202741430
 	},
 	{
 		"name": "",
@@ -53,7 +53,7 @@
 		"duration": 17,
 		"timestamp": 1644026604851,
 		"promptTimes": 1,
-		"prevPromptTime": 1651113802816
+		"prevPromptTime": 1651205441060
 	},
 	{
 		"name": "",
@@ -67,7 +67,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1651116502973
+		"prevPromptTime": 1651208140914
 	},
 	{
 		"name": "",
@@ -81,7 +81,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1651119202155
+		"prevPromptTime": 1651210840820
 	},
 	{
 		"name": "",
@@ -105,7 +105,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1643102678977
+		"timestamp": 1643102678977,
+		"promptTimes": 1,
+		"prevPromptTime": 1651213541395
 	},
 	{
 		"name": "",
@@ -118,8 +120,8 @@
 		"interval": 60,
 		"duration": 13,
 		"timestamp": 1643018416709,
-		"promptTimes": 2,
-		"prevPromptTime": 1651127302454
+		"promptTimes": 1,
+		"prevPromptTime": 1651216241480
 	},
 	{
 		"name": "",
@@ -131,7 +133,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 37,
-		"timestamp": 1625975362922
+		"timestamp": 1625975362922,
+		"promptTimes": 1,
+		"prevPromptTime": 1651221641207
 	},
 	{
 		"name": "",
@@ -144,8 +148,8 @@
 		"interval": 90,
 		"duration": 17,
 		"timestamp": 1639957717122,
-		"promptTimes": 2,
-		"prevPromptTime": 1651130002968
+		"promptTimes": 1,
+		"prevPromptTime": 1651218940515
 	},
 	{
 		"name": "",
@@ -159,7 +163,7 @@
 		"duration": 19,
 		"timestamp": 1639962005050,
 		"promptTimes": 1,
-		"prevPromptTime": 1651132701614
+		"prevPromptTime": 1651224340321
 	},
 	{
 		"name": "",
@@ -173,7 +177,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1651135401821
+		"prevPromptTime": 1651227040993
 	},
 	{
 		"name": "",
@@ -187,7 +191,7 @@
 		"duration": 17,
 		"timestamp": 1639558190823,
 		"promptTimes": 1,
-		"prevPromptTime": 1651138102650
+		"prevPromptTime": 1651229740129
 	},
 	{
 		"name": "",
@@ -201,7 +205,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1651140802531
+		"prevPromptTime": 1651232440367
 	},
 	{
 		"name": "",
@@ -215,7 +219,7 @@
 		"duration": 24,
 		"timestamp": 1636930865826,
 		"promptTimes": 1,
-		"prevPromptTime": 1651143501227
+		"prevPromptTime": 1651235139964
 	},
 	{
 		"name": "",
@@ -229,7 +233,7 @@
 		"duration": 9,
 		"timestamp": 1638547210757,
 		"promptTimes": 1,
-		"prevPromptTime": 1651146201966
+		"prevPromptTime": 1651237839917
 	},
 	{
 		"name": "",
@@ -243,7 +247,7 @@
 		"duration": 29,
 		"timestamp": 1637673180768,
 		"promptTimes": 1,
-		"prevPromptTime": 1651148902062
+		"prevPromptTime": 1651240539735
 	},
 	{
 		"name": "",
@@ -257,7 +261,7 @@
 		"duration": 4,
 		"timestamp": 1629155362746,
 		"promptTimes": 1,
-		"prevPromptTime": 1651151601962
+		"prevPromptTime": 1651243239715
 	},
 	{
 		"name": "",
@@ -271,7 +275,7 @@
 		"duration": 19,
 		"timestamp": 1637020107294,
 		"promptTimes": 1,
-		"prevPromptTime": 1651154301575
+		"prevPromptTime": 1651245939535
 	},
 	{
 		"name": "",
@@ -283,9 +287,7 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1636803828143,
-		"promptTimes": 1,
-		"prevPromptTime": 1651157000743
+		"timestamp": 1636803828143
 	},
 	{
 		"name": "",
@@ -297,9 +299,7 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1636700906299,
-		"promptTimes": 1,
-		"prevPromptTime": 1651159702280
+		"timestamp": 1636700906299
 	},
 	{
 		"name": "",
