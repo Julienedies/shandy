@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "id_1651503352168_4589",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">对市场参与者的行为逻辑理解不够深刻，判断锚点是错误的，所以才会错过那么多大行情。</span></strong></p><p>稳增长之房地产之中交地产、天保基建、信达地产；</p><p>国产新冠特效药之华润双鹤；</p><p>新冠特效药之中国医药；辉瑞特效药快速获批意味着什么？为什么疫苗始终没有获批？</p><p>疫情之雅本化学；</p><p>元宇宙之湖北广电；</p><p>数字货币之翠微股份；</p><p>盐湖提锂之西藏矿业、江特电机；&nbsp;</p><p>碳中和之南网能源；</p><p><br></p><p><br></p><p><br></p><p><br></p>",
+		"singleWindow": "",
+		"start": "9:00",
+		"repeat": 4,
+		"interval": 90,
+		"duration": 13,
+		"timestamp": 1651503352168
+	},
+	{
+		"name": "",
 		"id": "id_1650708701077_5501",
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有大局观：启动爆发时犹豫，后知后觉；高潮退潮时管不住手；</span></strong></p>",
@@ -11,27 +23,13 @@
 		"duration": 17,
 		"timestamp": 1650708701077,
 		"promptTimes": 1,
-		"prevPromptTime": 1651197340570
-	},
-	{
-		"name": "",
-		"id": "id_1647873146547_6098",
-		"type": "理念",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盈亏同源，持续一致性；做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">龙头是最强的，是最有盈亏的，是最有持续性的，是最有效率的。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">围绕龙头寻找操作机会。市场上的人气龙头就那么几只票。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">主线是谁？龙头是谁？围绕龙头去操作。</span></strong></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 7,
-		"interval": 70,
-		"duration": 9,
-		"timestamp": 1647873146547,
-		"promptTimes": 1,
-		"prevPromptTime": 1651200041609
+		"prevPromptTime": 1651458600433
 	},
 	{
 		"name": "",
 		"id": "id_1645175299306_8210",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
@@ -39,7 +37,7 @@
 		"duration": 17,
 		"timestamp": 1645175299306,
 		"promptTimes": 1,
-		"prevPromptTime": 1651202741430
+		"prevPromptTime": 1651464000894
 	},
 	{
 		"name": "",
@@ -53,7 +51,21 @@
 		"duration": 17,
 		"timestamp": 1644026604851,
 		"promptTimes": 1,
-		"prevPromptTime": 1651205441060
+		"prevPromptTime": 1651466701750
+	},
+	{
+		"name": "",
+		"id": "id_1647873146547_6098",
+		"type": "理念",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盈亏同源，持续一致性；做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">龙头是最强的，是最有盈亏的，是最有持续性的，是最有效率的。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">围绕龙头寻找操作机会。市场上的人气龙头就那么几只票。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">主线是谁？龙头是谁？围绕龙头去操作。</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 7,
+		"interval": 70,
+		"duration": 9,
+		"timestamp": 1647873146547,
+		"promptTimes": 1,
+		"prevPromptTime": 1651461300999
 	},
 	{
 		"name": "",
@@ -67,7 +79,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1651208140914
+		"prevPromptTime": 1651469400360
 	},
 	{
 		"name": "",
@@ -81,7 +93,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1651210840820
+		"prevPromptTime": 1651472101487
 	},
 	{
 		"name": "",
@@ -107,7 +119,7 @@
 		"duration": 17,
 		"timestamp": 1643102678977,
 		"promptTimes": 1,
-		"prevPromptTime": 1651213541395
+		"prevPromptTime": 1651474799918
 	},
 	{
 		"name": "",
@@ -121,7 +133,7 @@
 		"duration": 13,
 		"timestamp": 1643018416709,
 		"promptTimes": 1,
-		"prevPromptTime": 1651216241480
+		"prevPromptTime": 1651477501106
 	},
 	{
 		"name": "",
@@ -135,7 +147,7 @@
 		"duration": 37,
 		"timestamp": 1625975362922,
 		"promptTimes": 1,
-		"prevPromptTime": 1651221641207
+		"prevPromptTime": 1651480199728
 	},
 	{
 		"name": "",
@@ -149,7 +161,7 @@
 		"duration": 17,
 		"timestamp": 1639957717122,
 		"promptTimes": 1,
-		"prevPromptTime": 1651218940515
+		"prevPromptTime": 1651482901074
 	},
 	{
 		"name": "",
@@ -163,7 +175,7 @@
 		"duration": 19,
 		"timestamp": 1639962005050,
 		"promptTimes": 1,
-		"prevPromptTime": 1651224340321
+		"prevPromptTime": 1651485600983
 	},
 	{
 		"name": "",
@@ -177,7 +189,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1651227040993
+		"prevPromptTime": 1651488300406
 	},
 	{
 		"name": "",
@@ -191,7 +203,7 @@
 		"duration": 17,
 		"timestamp": 1639558190823,
 		"promptTimes": 1,
-		"prevPromptTime": 1651229740129
+		"prevPromptTime": 1651490999341
 	},
 	{
 		"name": "",
@@ -205,7 +217,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1651232440367
+		"prevPromptTime": 1651493700267
 	},
 	{
 		"name": "",
@@ -219,21 +231,22 @@
 		"duration": 24,
 		"timestamp": 1636930865826,
 		"promptTimes": 1,
-		"prevPromptTime": 1651235139964
+		"prevPromptTime": 1651496400660
 	},
 	{
 		"name": "",
 		"id": "1199799",
 		"type": "问题",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题：临盘时，板块涨幅、涨停时、净流入不统一。</span></strong></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">看不到资金实际攻击方向。</span></strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">版面还要重新设计</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">问题：临盘时，板块涨幅、涨停时、净流入不统一。</span></strong></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 28px;;background-color: rgb(255, 255, 0);\"><strong>看不到资金实际攻击方向。</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">版面还要重新设计</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1638547210757,
-		"promptTimes": 1,
-		"prevPromptTime": 1651237839917
+		"promptTimes": 2,
+		"prevPromptTime": 1651504498863,
+		"disable": true
 	},
 	{
 		"name": "",
@@ -247,7 +260,7 @@
 		"duration": 29,
 		"timestamp": 1637673180768,
 		"promptTimes": 1,
-		"prevPromptTime": 1651240539735
+		"prevPromptTime": 1651501798956
 	},
 	{
 		"name": "",
@@ -259,9 +272,7 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 4,
-		"timestamp": 1629155362746,
-		"promptTimes": 1,
-		"prevPromptTime": 1651243239715
+		"timestamp": 1629155362746
 	},
 	{
 		"name": "",
@@ -273,9 +284,7 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 19,
-		"timestamp": 1637020107294,
-		"promptTimes": 1,
-		"prevPromptTime": 1651245939535
+		"timestamp": 1637020107294
 	},
 	{
 		"name": "",
