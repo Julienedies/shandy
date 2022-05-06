@@ -1,9 +1,33 @@
 [
 	{
 		"name": "",
+		"id": "id_1651821582886_6867",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">主观看空；心里总是恐慌担忧；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>主观看空主流热点龙头；没有围绕主流热点龙头；</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统、无计划、临盘随意交易；被市场牵着鼻子走；</span></strong></p><p><br></p>",
+		"singleWindow": "",
+		"start": "9:00",
+		"repeat": 4,
+		"interval": 90,
+		"duration": 13,
+		"timestamp": 1651821582886
+	},
+	{
+		"name": "",
+		"id": "id_1651821329311_4246",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;;background-color: rgb(0, 0, 0);\"><strong>每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;;background-color: rgb(0, 0, 0);\"><strong>每天跟赌博一样，着眼于转债的小波动；亏钱也不会让我感觉到痛苦；麻木；</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也不会让我感觉到痛苦；麻木；</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 4,
+		"interval": 90,
+		"duration": 9,
+		"timestamp": 1651821329311
+	},
+	{
+		"name": "",
 		"id": "id_1651503352168_4589",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">对市场参与者的行为逻辑理解不够深刻，判断锚点是错误的，所以才会错过那么多大行情。</span></strong></p><p>稳增长之房地产之中交地产、天保基建、信达地产；</p><p>国产新冠特效药之华润双鹤；</p><p>新冠特效药之中国医药；辉瑞特效药快速获批意味着什么？为什么疫苗始终没有获批？</p><p>疫情之雅本化学；</p><p>元宇宙之湖北广电；</p><p>数字货币之翠微股份；</p><p>盐湖提锂之西藏矿业、江特电机；&nbsp;</p><p>碳中和之南网能源；</p><p><br></p><p><br></p><p><br></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">对市场参与者的行为逻辑理解不深刻，</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">基本是以图形做为判断锚点，但图形只是表面和结果而不是本质和原因。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">所以我的主观预判基本是错误的，所以才会错过那么多大行情。</span></strong></p><p>稳增长之房地产之中交地产、天保基建、信达地产；</p><p>国产新冠特效药之华润双鹤；</p><p>新冠特效药之中国医药；辉瑞特效药快速获批意味着什么？为什么疫苗始终没有获批？</p><p>疫情之雅本化学；</p><p>元宇宙之湖北广电；</p><p>数字货币之翠微股份；</p><p>盐湖提锂之西藏矿业、江特电机；&nbsp;</p><p>碳中和之南网能源；</p><p><br></p><p><br></p><p><br></p><p><br></p>",
 		"singleWindow": "",
 		"start": "9:00",
 		"repeat": 4,
@@ -23,7 +47,7 @@
 		"duration": 17,
 		"timestamp": 1650708701077,
 		"promptTimes": 1,
-		"prevPromptTime": 1651458600433
+		"prevPromptTime": 1651796735276
 	},
 	{
 		"name": "",
@@ -34,10 +58,10 @@
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
-		"duration": 17,
+		"duration": 9,
 		"timestamp": 1645175299306,
 		"promptTimes": 1,
-		"prevPromptTime": 1651464000894
+		"prevPromptTime": 1651799435117
 	},
 	{
 		"name": "",
@@ -51,27 +75,27 @@
 		"duration": 17,
 		"timestamp": 1644026604851,
 		"promptTimes": 1,
-		"prevPromptTime": 1651466701750
+		"prevPromptTime": 1651802134870
 	},
 	{
 		"name": "",
 		"id": "id_1647873146547_6098",
 		"type": "理念",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盈亏同源，持续一致性；做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">龙头是最强的，是最有盈亏的，是最有持续性的，是最有效率的。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">围绕龙头寻找操作机会。市场上的人气龙头就那么几只票。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">主线是谁？龙头是谁？围绕龙头去操作。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盈亏同源，持续一致性；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">龙头是最强的，是最有盈亏的，是最有持续性的，是最有效率的。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">围绕龙头寻找操作机会。市场上的人气龙头就那么几只票。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">主线是谁？龙头是谁？围绕龙头去操作。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 7,
 		"interval": 70,
-		"duration": 9,
+		"duration": 13,
 		"timestamp": 1647873146547,
 		"promptTimes": 1,
-		"prevPromptTime": 1651461300999
+		"prevPromptTime": 1651804835013
 	},
 	{
 		"name": "",
 		"id": "id_1643962033853_9981",
 		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">判断锚点：（大周期，大主线，为什么我总是错过大行情？）</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">1. <strong><span style=\"background-color: rgb(0, 0, 255); font-size: 24px; color: rgb(255, 255, 255);\">赚钱效应：元宇宙做为当前市场热点，赚钱效应十足。这就是判断锚点啊！</span></strong></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 255); font-size: 24px; color: rgb(255, 255, 255);\">2. 人气地位；</span></strong></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">3. 大周期或主线：这就是判断锚点！不要执着于个股的波动，大局观，大局观，大局观；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">元宇宙周期(湖北广电、博瑞传播)、疫情周期(九安医疗、雅本化学、精华制药)、中药周期()、情绪题材接力周期(陕西金叶、中锐股份)、</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">判断锚点：（大周期，大主线，为什么我总是错过大行情？）</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">1. 大周期或主线：这就是判断锚点！不要执着于个股的波动，大局观，大局观，大局观；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">元宇宙周期(湖北广电、博瑞传播)、疫情周期(九安医疗、雅本化学、精华制药)、中药周期()、情绪题材接力周期(陕西金叶、中锐股份)、</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">2. <strong><span style=\"background-color: rgb(0, 0, 255); font-size: 24px; color: rgb(255, 255, 255);\">赚钱效应：元宇宙做为当前市场热点，赚钱效应十足。这就是判断锚点啊！</span></strong></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 255); font-size: 24px; color: rgb(255, 255, 255);\">3. 人气地位；</span></strong></span></strong></p><p><br></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 4,
@@ -79,7 +103,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1651469400360
+		"prevPromptTime": 1651807535855
 	},
 	{
 		"name": "",
@@ -93,7 +117,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1651472101487
+		"prevPromptTime": 1651810235785
 	},
 	{
 		"name": "",
@@ -118,22 +142,22 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1643102678977,
-		"promptTimes": 1,
-		"prevPromptTime": 1651474799918
+		"promptTimes": 2,
+		"prevPromptTime": 1651823734703
 	},
 	{
 		"name": "",
 		"id": "id_1643018416709",
 		"type": "警告",
-		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</strong></span></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</span></strong></span></p><p><span style=\"font-size: 22px;\"><br></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</strong></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 32px;\">麻木了。</span><strong><span style=\"font-size: 32px;\">麻木了。</span><strong><span style=\"font-size: 32px;\">麻木了。</span><strong><span style=\"font-size: 32px;\">麻木了。</span><strong><span style=\"font-size: 32px;\">麻木了。</span></strong></strong></strong></strong></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是否真的能在这个市场生存？我心里存在着盲目的乐观，但事实是我一直没有赚到钱，一直在重复所有的错误。</span></strong></span></p><p><span style=\"font-size: 24px;\"><br></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</span></strong></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</strong></span></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天都在重复错误，却感觉不到悔恨和恐惧。麻木了。心底还是存在着傻乎乎的乐观情绪。当我走到尽头，不知怎么想？</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 7,
-		"interval": 60,
+		"repeat": 4,
+		"interval": 130,
 		"duration": 13,
 		"timestamp": 1643018416709,
-		"promptTimes": 1,
-		"prevPromptTime": 1651477501106
+		"promptTimes": 3,
+		"prevPromptTime": 1651826434758
 	},
 	{
 		"name": "",
@@ -147,7 +171,7 @@
 		"duration": 37,
 		"timestamp": 1625975362922,
 		"promptTimes": 1,
-		"prevPromptTime": 1651480199728
+		"prevPromptTime": 1651829134475
 	},
 	{
 		"name": "",
@@ -160,8 +184,8 @@
 		"interval": 90,
 		"duration": 17,
 		"timestamp": 1639957717122,
-		"promptTimes": 1,
-		"prevPromptTime": 1651482901074
+		"promptTimes": 2,
+		"prevPromptTime": 1651831834421
 	},
 	{
 		"name": "",
@@ -175,7 +199,7 @@
 		"duration": 19,
 		"timestamp": 1639962005050,
 		"promptTimes": 1,
-		"prevPromptTime": 1651485600983
+		"prevPromptTime": 1651834534333
 	},
 	{
 		"name": "",
@@ -189,7 +213,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1651488300406
+		"prevPromptTime": 1651837234857
 	},
 	{
 		"name": "",
@@ -203,7 +227,7 @@
 		"duration": 17,
 		"timestamp": 1639558190823,
 		"promptTimes": 1,
-		"prevPromptTime": 1651490999341
+		"prevPromptTime": 1651839934562
 	},
 	{
 		"name": "",
@@ -217,7 +241,7 @@
 		"duration": 36,
 		"timestamp": 1609667569090,
 		"promptTimes": 1,
-		"prevPromptTime": 1651493700267
+		"prevPromptTime": 1651842633540
 	},
 	{
 		"name": "",
@@ -231,7 +255,7 @@
 		"duration": 24,
 		"timestamp": 1636930865826,
 		"promptTimes": 1,
-		"prevPromptTime": 1651496400660
+		"prevPromptTime": 1651845334121
 	},
 	{
 		"name": "",
@@ -244,8 +268,6 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1638547210757,
-		"promptTimes": 2,
-		"prevPromptTime": 1651504498863,
 		"disable": true
 	},
 	{
@@ -260,7 +282,7 @@
 		"duration": 29,
 		"timestamp": 1637673180768,
 		"promptTimes": 1,
-		"prevPromptTime": 1651501798956
+		"prevPromptTime": 1651848033929
 	},
 	{
 		"name": "",
@@ -272,7 +294,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 4,
-		"timestamp": 1629155362746
+		"timestamp": 1629155362746,
+		"promptTimes": 1,
+		"prevPromptTime": 1651850734368
 	},
 	{
 		"name": "",
