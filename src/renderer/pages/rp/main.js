@@ -75,6 +75,11 @@ brick.reg('todoListCtrl', function (scope) {
 
     function render () {
         let rpList = listManager.get();
+        rpList.sort((a, b) => {
+            let al = a.level || 0;
+            let bl = b.level || 0;
+            return bl - al;
+        });
         let mapByType = getMapByType(rpList);
         if (filterByType) {
             rpList = mapByType[filterByType];
