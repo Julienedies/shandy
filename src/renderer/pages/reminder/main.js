@@ -36,11 +36,10 @@ brick.reg('reminderCtrl', function (scope) {
         });
     }
 
-    
 
     $.when(def1, def2).done((d1, d2) => {
         let plan = d1['交易计划'] || '如果没有明确的交易计划，就不要交易; 无系统、无计划、临盘随意交易是我最大的亏损来源';
-        $memo.html(`<pre>${ plan } </pre> <pre>${ plan }</pre> ${ d2.text }`);
+        $memo.html(`<pre>${ plan } </pre> <pre>${ plan }</pre> <pre>${ plan }</pre>  ${ d2.text }`);
         let reader = new Reader('#memo');
         reader.init();
         reader.autoSpeak();

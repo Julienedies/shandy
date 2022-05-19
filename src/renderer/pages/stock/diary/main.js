@@ -23,6 +23,7 @@ import utils from '../../../js/utils'
 import '../../../js/common-stock.js'
 import setTagCtrl from '../../tags/set-tag-ctrl'
 import selectTagsCtrl from '../../tags/select-tags-ctrl'
+import voice from '../../../../libs/voice'
 
 brick.reg('setTagCtrl', setTagCtrl);
 brick.reg('selectTagsCtrl', selectTagsCtrl);
@@ -115,6 +116,16 @@ brick.reg('diaryCtrl', function () {
         let cla = 'scroll';
         let $th = $(this).toggleClass(cla);
         $th.closest('li').find('.pre').toggleClass(cla);
+    };
+
+    this.play = function (e) {
+        let text = $(this).closest('li').find('.pre').text();
+        text = `${text} ${text} ${text} ${text}`;
+        voice.clear();
+        voice(text);
+    };
+    this.stop = function (e) {
+        voice.clear();
     };
 
     this.onDelDone = function (data) {

@@ -8,8 +8,11 @@ import './style.scss'
 
 import _ from 'lodash'
 import $ from 'jquery'
+
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
+
+import voice from '../../../../libs/voice'
 
 import {
     ADD_LOGIC,
@@ -147,6 +150,17 @@ brick.reg('logicCtrl', function () {
         let cla = 'scroll';
         let $th = $(this).toggleClass(cla);
         $th.closest('li').find('.pre').toggleClass(cla);
+    };
+
+    this.play = function (e) {
+        let text = $(this).closest('li').find('.pre').text();
+        text = `${text} ${text} ${text} ${text}`;
+        voice.clear();
+        voice(text);
+        //voice.cancel(id);
+    };
+    this.stop = function (e) {
+        voice.clear();
     };
 
     this.logic = {
