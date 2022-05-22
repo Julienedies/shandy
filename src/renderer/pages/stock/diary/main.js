@@ -231,7 +231,7 @@ brick.reg('setDiaryCtrl', function () {
                 ...FroalaEditorConfig,
                 fontSizeDefaultSelection: '18',
                 //toolbarInline: true,
-                height: 340,
+                height: 270,
             });
             $editor.froalaEditor('html.set', model.diary.text || '');
         });
