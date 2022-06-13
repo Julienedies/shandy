@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "id_1655164211606_6209",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 4,
+		"interval": 120,
+		"duration": 17,
+		"timestamp": 1655164211606
+	},
+	{
+		"name": "",
 		"id": "id_1654519629339_3116",
 		"type": "理念",
 		"content": "<p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">必须克服金钱得失心。必须克服各种人性本能。</span></strong></p><p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">只有对错。把事情做对，而不是想着钱；</span></strong></p>",
@@ -9,9 +21,7 @@
 		"repeat": 4,
 		"interval": 130,
 		"duration": 9,
-		"timestamp": 1654519629339,
-		"promptTimes": 1,
-		"prevPromptTime": 1654822483901
+		"timestamp": 1654519629339
 	},
 	{
 		"name": "",
@@ -23,9 +33,7 @@
 		"repeat": 3,
 		"interval": 120,
 		"duration": 19,
-		"timestamp": 1654083175248,
-		"promptTimes": 1,
-		"prevPromptTime": 1654825184580
+		"timestamp": 1654083175248
 	},
 	{
 		"name": "",
@@ -49,23 +57,19 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 13,
-		"timestamp": 1651821582886,
-		"promptTimes": 1,
-		"prevPromptTime": 1654827883981
+		"timestamp": 1651821582886
 	},
 	{
 		"name": "",
 		"id": "id_1651821329311_4246",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;;background-color: rgb(0, 0, 0);\"><strong>每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;;background-color: rgb(0, 0, 0);\"><strong>每天跟赌博一样，着眼于转债的小波动；亏钱也不会让我感觉到痛苦；麻木；</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也不会让我感觉到痛苦；麻木；</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>每天跟赌博一样，着眼于转债的小波动；亏钱也不会让我感觉到痛苦；麻木；</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也不会让我感觉到痛苦；麻木；</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 4,
+		"repeat": 2,
 		"interval": 90,
 		"duration": 9,
-		"timestamp": 1651821329311,
-		"promptTimes": 1,
-		"prevPromptTime": 1654830584353
+		"timestamp": 1651821329311
 	},
 	{
 		"name": "",
@@ -77,9 +81,7 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 13,
-		"timestamp": 1651503352168,
-		"promptTimes": 1,
-		"prevPromptTime": 1654833284276
+		"timestamp": 1651503352168
 	},
 	{
 		"name": "",
@@ -91,23 +93,19 @@
 		"repeat": 3,
 		"interval": 100,
 		"duration": 7,
-		"timestamp": 1650708701077,
-		"promptTimes": 1,
-		"prevPromptTime": 1654835984991
+		"timestamp": 1650708701077
 	},
 	{
 		"name": "",
 		"id": "id_1645175299306_8210",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></span></strong></span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1645175299306,
-		"promptTimes": 1,
-		"prevPromptTime": 1654838683962
+		"timestamp": 1645175299306
 	},
 	{
 		"name": "",
@@ -119,9 +117,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1644026604851,
-		"promptTimes": 1,
-		"prevPromptTime": 1654841383552
+		"timestamp": 1644026604851
 	},
 	{
 		"name": "",
@@ -133,9 +129,7 @@
 		"repeat": 7,
 		"interval": 70,
 		"duration": 13,
-		"timestamp": 1647873146547,
-		"promptTimes": 1,
-		"prevPromptTime": 1654844083461
+		"timestamp": 1647873146547
 	},
 	{
 		"name": "",
@@ -147,9 +141,7 @@
 		"repeat": 4,
 		"interval": 80,
 		"duration": 24,
-		"timestamp": 1643962033853,
-		"promptTimes": 1,
-		"prevPromptTime": 1654846783436
+		"timestamp": 1643962033853
 	},
 	{
 		"name": "",
@@ -161,9 +153,7 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 34,
-		"timestamp": 1643896099264,
-		"promptTimes": 1,
-		"prevPromptTime": 1654849483162
+		"timestamp": 1643896099264
 	},
 	{
 		"name": "",
@@ -175,9 +165,7 @@
 		"repeat": 5,
 		"interval": 60,
 		"duration": 19,
-		"timestamp": 1643285590954,
-		"promptTimes": 1,
-		"prevPromptTime": 1654852184147
+		"timestamp": 1643285590954
 	},
 	{
 		"name": "",
@@ -201,9 +189,7 @@
 		"repeat": 4,
 		"interval": 130,
 		"duration": 13,
-		"timestamp": 1643018416709,
-		"promptTimes": 1,
-		"prevPromptTime": 1654854883322
+		"timestamp": 1643018416709
 	},
 	{
 		"name": "",
@@ -215,9 +201,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 37,
-		"timestamp": 1625975362922,
-		"promptTimes": 2,
-		"prevPromptTime": 1654862984306
+		"timestamp": 1625975362922
 	},
 	{
 		"name": "",
@@ -229,9 +213,7 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1639957717122,
-		"promptTimes": 1,
-		"prevPromptTime": 1654860284204
+		"timestamp": 1639957717122
 	},
 	{
 		"name": "",
@@ -243,9 +225,7 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 19,
-		"timestamp": 1639962005050,
-		"promptTimes": 1,
-		"prevPromptTime": 1654865683371
+		"timestamp": 1639962005050
 	},
 	{
 		"name": "",
@@ -257,9 +237,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1637936622790,
-		"promptTimes": 1,
-		"prevPromptTime": 1654868383978
+		"timestamp": 1637936622790
 	},
 	{
 		"name": "",
@@ -271,9 +249,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1639558190823,
-		"promptTimes": 1,
-		"prevPromptTime": 1654871083849
+		"timestamp": 1639558190823
 	},
 	{
 		"name": "",
@@ -322,9 +298,7 @@
 		"repeat": 3,
 		"interval": 100,
 		"duration": 29,
-		"timestamp": 1637673180768,
-		"promptTimes": 1,
-		"prevPromptTime": 1654873783580
+		"timestamp": 1637673180768
 	},
 	{
 		"name": "",
@@ -336,9 +310,7 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 4,
-		"timestamp": 1629155362746,
-		"promptTimes": 1,
-		"prevPromptTime": 1654876483239
+		"timestamp": 1629155362746
 	},
 	{
 		"name": "",

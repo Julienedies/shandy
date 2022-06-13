@@ -271,7 +271,7 @@ brick.reg('mainCtrl', function (scope) {
                 //transparent: true,
                 //titleBarStyle: 'hidden',
                 //hasShadow: false,
-                alwaysOnTop: true,
+                alwaysOnTop: false,
                 onClose () {
                     delete scope.todoWindow;
                     setTimeout(() => {
