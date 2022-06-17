@@ -1,6 +1,18 @@
 [
 	{
 		"name": "",
+		"id": "id_1655363529716_5179",
+		"type": "错误",
+		"content": "<p>我真他妈的恨死自己了，一个人怎么可以这样？着眼于转债的小波动；</p><p>恐慌卖飞；</p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我每天想的是赚钱，而不是把事情做对。</span></strong></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我每天想的是赚钱，而不是把事情做对。</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 3,
+		"interval": 130,
+		"duration": 17,
+		"timestamp": 1655363529716
+	},
+	{
+		"name": "",
 		"id": "id_1655164211606_6209",
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong>思维没有方向，操作没有系统，我要捕捉的目标行情是什么？我的判断锚点是什么？</strong></span></span></p>",
@@ -9,7 +21,9 @@
 		"repeat": 4,
 		"interval": 120,
 		"duration": 17,
-		"timestamp": 1655164211606
+		"timestamp": 1655164211606,
+		"promptTimes": 1,
+		"prevPromptTime": 1655425126824
 	},
 	{
 		"name": "",
@@ -21,7 +35,9 @@
 		"repeat": 4,
 		"interval": 130,
 		"duration": 9,
-		"timestamp": 1654519629339
+		"timestamp": 1654519629339,
+		"promptTimes": 1,
+		"prevPromptTime": 1655427826545
 	},
 	{
 		"name": "",
@@ -33,7 +49,9 @@
 		"repeat": 3,
 		"interval": 120,
 		"duration": 19,
-		"timestamp": 1654083175248
+		"timestamp": 1654083175248,
+		"promptTimes": 1,
+		"prevPromptTime": 1655430526536
 	},
 	{
 		"name": "",
@@ -57,7 +75,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 13,
-		"timestamp": 1651821582886
+		"timestamp": 1651821582886,
+		"promptTimes": 1,
+		"prevPromptTime": 1655433225789
 	},
 	{
 		"name": "",
@@ -66,7 +86,7 @@
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>每天跟赌博一样，着眼于转债的小波动；亏钱也不会让我感觉到痛苦；麻木；</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也不会让我感觉到痛苦；麻木；</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 2,
+		"repeat": 1,
 		"interval": 90,
 		"duration": 9,
 		"timestamp": 1651821329311
@@ -75,13 +95,15 @@
 		"name": "",
 		"id": "id_1651503352168_4589",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">对市场参与者的行为逻辑理解不深刻，</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">基本是以图形做为判断锚点，但图形只是表面和结果而不是本质和原因。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">所以我的主观预判基本是错误的，所以才会错过那么多大行情。</span></strong></p><p>稳增长之房地产之中交地产、天保基建、信达地产；</p><p>国产新冠特效药之华润双鹤；</p><p>新冠特效药之中国医药；辉瑞特效药快速获批意味着什么？为什么疫苗始终没有获批？</p><p>疫情之雅本化学；</p><p>元宇宙之湖北广电；</p><p>数字货币之翠微股份；</p><p>盐湖提锂之西藏矿业、江特电机；&nbsp;</p><p>碳中和之南网能源；</p><p><br></p><p><br></p><p><br></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">对市场参与者的行为逻辑理解不深刻，</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">基本是以图形做为判断锚点，但图形只是表面和结果而不是本质和原因。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">所以我的主观预判基本是错误的，所以才会错过那么多大行情。</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">稳增长之房地产之中交地产、天保基建、信达地产；</span></strong></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 18px;;background-color: rgb(255, 255, 0);\"><strong>国产新冠特效药之华润双鹤；</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 18px;;background-color: rgb(255, 255, 0);\"><strong>新冠特效药之中国医药；辉瑞特效药快速获批意味着什么？为什么疫苗始终没有获批？</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 18px;;background-color: rgb(255, 255, 0);\"><strong>疫情之雅本化学；</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 18px;;background-color: rgb(255, 255, 0);\"><strong>元宇宙之湖北广电；</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 18px;;background-color: rgb(255, 255, 0);\"><strong>数字货币之翠微股份；</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 18px;;background-color: rgb(255, 255, 0);\"><strong>盐湖提锂之西藏矿业、江特电机；&nbsp;</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">碳中和之南网能源；</span></strong></p><p><br></p><p><br></p><p><br></p><p><br></p>",
 		"singleWindow": "",
 		"start": "9:00",
 		"repeat": 4,
 		"interval": 90,
 		"duration": 13,
-		"timestamp": 1651503352168
+		"timestamp": 1651503352168,
+		"promptTimes": 2,
+		"prevPromptTime": 1655441326021
 	},
 	{
 		"name": "",
@@ -93,7 +115,9 @@
 		"repeat": 3,
 		"interval": 100,
 		"duration": 7,
-		"timestamp": 1650708701077
+		"timestamp": 1650708701077,
+		"promptTimes": 1,
+		"prevPromptTime": 1655438625829
 	},
 	{
 		"name": "",
@@ -105,7 +129,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1645175299306
+		"timestamp": 1645175299306,
+		"promptTimes": 1,
+		"prevPromptTime": 1655444025713
 	},
 	{
 		"name": "",
@@ -117,7 +143,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1644026604851
+		"timestamp": 1644026604851,
+		"promptTimes": 1,
+		"prevPromptTime": 1655446726138
 	},
 	{
 		"name": "",
@@ -129,7 +157,9 @@
 		"repeat": 7,
 		"interval": 70,
 		"duration": 13,
-		"timestamp": 1647873146547
+		"timestamp": 1647873146547,
+		"promptTimes": 1,
+		"prevPromptTime": 1655449426362
 	},
 	{
 		"name": "",
@@ -141,7 +171,9 @@
 		"repeat": 4,
 		"interval": 80,
 		"duration": 24,
-		"timestamp": 1643962033853
+		"timestamp": 1643962033853,
+		"promptTimes": 1,
+		"prevPromptTime": 1655452126731
 	},
 	{
 		"name": "",
@@ -153,7 +185,9 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 34,
-		"timestamp": 1643896099264
+		"timestamp": 1643896099264,
+		"promptTimes": 1,
+		"prevPromptTime": 1655454825793
 	},
 	{
 		"name": "",
@@ -165,7 +199,9 @@
 		"repeat": 5,
 		"interval": 60,
 		"duration": 19,
-		"timestamp": 1643285590954
+		"timestamp": 1643285590954,
+		"promptTimes": 1,
+		"prevPromptTime": 1655457526199
 	},
 	{
 		"name": "",
@@ -189,7 +225,9 @@
 		"repeat": 4,
 		"interval": 130,
 		"duration": 13,
-		"timestamp": 1643018416709
+		"timestamp": 1643018416709,
+		"promptTimes": 1,
+		"prevPromptTime": 1655460226098
 	},
 	{
 		"name": "",
@@ -201,7 +239,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 37,
-		"timestamp": 1625975362922
+		"timestamp": 1625975362922,
+		"promptTimes": 2,
+		"prevPromptTime": 1655468326112
 	},
 	{
 		"name": "",
@@ -213,7 +253,9 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1639957717122
+		"timestamp": 1639957717122,
+		"promptTimes": 1,
+		"prevPromptTime": 1655465626201
 	},
 	{
 		"name": "",
@@ -225,7 +267,9 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 19,
-		"timestamp": 1639962005050
+		"timestamp": 1639962005050,
+		"promptTimes": 1,
+		"prevPromptTime": 1655471025232
 	},
 	{
 		"name": "",
@@ -237,7 +281,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1637936622790
+		"timestamp": 1637936622790,
+		"promptTimes": 1,
+		"prevPromptTime": 1655473724953
 	},
 	{
 		"name": "",
@@ -249,7 +295,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1639558190823
+		"timestamp": 1639558190823,
+		"promptTimes": 1,
+		"prevPromptTime": 1655476425597
 	},
 	{
 		"name": "",
@@ -298,7 +346,9 @@
 		"repeat": 3,
 		"interval": 100,
 		"duration": 29,
-		"timestamp": 1637673180768
+		"timestamp": 1637673180768,
+		"promptTimes": 1,
+		"prevPromptTime": 1655479125129
 	},
 	{
 		"name": "",

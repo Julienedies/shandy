@@ -102,9 +102,12 @@
                             <div>
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control is-expanded">
-                                        <textarea class="textarea" ic-form-field="交易计划" rows="13">{{ rpForm['交易计划'] }}</textarea>
+                                        <textarea class="textarea" ic-form-field="交易计划" rows="17">{{ rpForm['交易计划'] }}</textarea>
                                     </div>
                                     <div class="control">
+                                        <input class="input is-small" type="date" name="date" ic-form-field
+                                               ic-value="{{model.date || formatDate2() }}">
+
                                         <button class="button is-primary is-small"
                                                 ic-form-submit="rp"
                                                 ic-submit-action="/stock/replay"
@@ -114,8 +117,7 @@
                                         </button>
                                     </div>
                                     <div class="control">
-                                        <input class="input is-small" type="date" name="date" ic-form-field
-                                               ic-value="{{model.date || formatDate2() }}">
+
                                     </div>
                                 </div>
                             </div>
