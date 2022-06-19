@@ -34,7 +34,7 @@ brick.reg('diaryCtrl', function () {
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
 
-    scope.order = false;  // 排序方式: 顺序  or  逆序
+    scope.order = brick.utils.getQuery('order') || 0;  // 排序方式: 顺序  or  逆序
 
     $('title').text(`日记_${ formatDate() }`);
 
@@ -105,6 +105,8 @@ brick.reg('diaryCtrl', function () {
     this.reverse = function () {
         let order = scope.order = !scope.order;
         render();
+        let url = location.href.split('?')[0];
+        history.pushState(null, null, `${ url }?order=${ order }`);
     };
 
     this.edit = function (e, id) {
@@ -231,7 +233,7 @@ brick.reg('setDiaryCtrl', function () {
                 ...FroalaEditorConfig,
                 fontSizeDefaultSelection: '18',
                 //toolbarInline: true,
-                height: 270,
+                height: 210,
             });
             $editor.froalaEditor('html.set', model.diary.text || '');
         });
