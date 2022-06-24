@@ -1,9 +1,21 @@
 [
 	{
 		"name": "",
+		"id": "id_1656086487722_1471",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我依然每天重复所有的错误！为什么我就是改变不了？</span></strong></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我依然每天重复所有的错误！为什么我就是改变不了？</strong></span></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我依然每天重复所有的错误！为什么我就是改变不了？</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1656086487722
+	},
+	{
+		"name": "",
 		"id": "id_1655363529716_5179",
 		"type": "错误",
-		"content": "<p>我真他妈的恨死自己了，一个人怎么可以这样？着眼于转债的小波动；</p><p>恐慌卖飞；</p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我每天想的是赚钱，而不是把事情做对。</span></strong></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我每天想的是赚钱，而不是把事情做对。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我真他妈的恨死自己了，一个人怎么可以这样？着眼于转债的小波动；</span></strong></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">我真他妈的恨死自己了，一个人怎么可以这样？着眼于转债的小波动；</span></strong></span></span></p><p><strong><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我真他妈的恨死自己了，一个人怎么可以这样？着眼于转债的小波动；</span></strong></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我每天想的是赚钱，而不是把事情做对。</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我每天想的是赚钱，而不是把事情做对。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 3,
@@ -11,7 +23,7 @@
 		"duration": 17,
 		"timestamp": 1655363529716,
 		"promptTimes": 1,
-		"prevPromptTime": 1655857170736
+		"prevPromptTime": 1656030531924
 	},
 	{
 		"name": "",
@@ -25,7 +37,7 @@
 		"duration": 17,
 		"timestamp": 1655164211606,
 		"promptTimes": 1,
-		"prevPromptTime": 1655859870425
+		"prevPromptTime": 1656033231685
 	},
 	{
 		"name": "",
@@ -39,7 +51,7 @@
 		"duration": 9,
 		"timestamp": 1654519629339,
 		"promptTimes": 1,
-		"prevPromptTime": 1655862569854
+		"prevPromptTime": 1656035931303
 	},
 	{
 		"name": "",
@@ -53,7 +65,7 @@
 		"duration": 19,
 		"timestamp": 1654083175248,
 		"promptTimes": 1,
-		"prevPromptTime": 1655865270176
+		"prevPromptTime": 1656038631926
 	},
 	{
 		"name": "",
@@ -79,7 +91,7 @@
 		"duration": 13,
 		"timestamp": 1651821582886,
 		"promptTimes": 1,
-		"prevPromptTime": 1655867969829
+		"prevPromptTime": 1656041331439
 	},
 	{
 		"name": "",
@@ -104,8 +116,8 @@
 		"interval": 90,
 		"duration": 13,
 		"timestamp": 1651503352168,
-		"promptTimes": 1,
-		"prevPromptTime": 1655870670352
+		"promptTimes": 2,
+		"prevPromptTime": 1656049431256
 	},
 	{
 		"name": "",
@@ -119,7 +131,7 @@
 		"duration": 7,
 		"timestamp": 1650708701077,
 		"promptTimes": 1,
-		"prevPromptTime": 1655873370727
+		"prevPromptTime": 1656046731486
 	},
 	{
 		"name": "",
@@ -132,8 +144,8 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1645175299306,
-		"promptTimes": 2,
-		"prevPromptTime": 1655881470739
+		"promptTimes": 1,
+		"prevPromptTime": 1656052131356
 	},
 	{
 		"name": "",
@@ -146,8 +158,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1644026604851,
-		"promptTimes": 2,
-		"prevPromptTime": 1655884169093
+		"promptTimes": 1,
+		"prevPromptTime": 1656054831585
 	},
 	{
 		"name": "",
@@ -161,7 +173,7 @@
 		"duration": 13,
 		"timestamp": 1647873146547,
 		"promptTimes": 1,
-		"prevPromptTime": 1655886869797
+		"prevPromptTime": 1656057530848
 	},
 	{
 		"name": "",
@@ -175,7 +187,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1655889569797
+		"prevPromptTime": 1656060230863
 	},
 	{
 		"name": "",
@@ -189,7 +201,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1655892270213
+		"prevPromptTime": 1656062931158
 	},
 	{
 		"name": "",
@@ -203,7 +215,7 @@
 		"duration": 19,
 		"timestamp": 1643285590954,
 		"promptTimes": 1,
-		"prevPromptTime": 1655894969811
+		"prevPromptTime": 1656065631685
 	},
 	{
 		"name": "",
@@ -229,7 +241,7 @@
 		"duration": 13,
 		"timestamp": 1643018416709,
 		"promptTimes": 1,
-		"prevPromptTime": 1655897669319
+		"prevPromptTime": 1656068330914
 	},
 	{
 		"name": "",
@@ -242,8 +254,8 @@
 		"interval": 60,
 		"duration": 37,
 		"timestamp": 1625975362922,
-		"promptTimes": 1,
-		"prevPromptTime": 1655900369207
+		"promptTimes": 2,
+		"prevPromptTime": 1656076430134
 	},
 	{
 		"name": "",
@@ -257,7 +269,7 @@
 		"duration": 17,
 		"timestamp": 1639957717122,
 		"promptTimes": 1,
-		"prevPromptTime": 1655903069407
+		"prevPromptTime": 1656073730512
 	},
 	{
 		"name": "",
@@ -271,7 +283,7 @@
 		"duration": 19,
 		"timestamp": 1639962005050,
 		"promptTimes": 1,
-		"prevPromptTime": 1655905769804
+		"prevPromptTime": 1656079130210
 	},
 	{
 		"name": "",
@@ -285,7 +297,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1655908469463
+		"prevPromptTime": 1656081829982
 	},
 	{
 		"name": "",
@@ -299,7 +311,7 @@
 		"duration": 17,
 		"timestamp": 1639558190823,
 		"promptTimes": 1,
-		"prevPromptTime": 1655911169460
+		"prevPromptTime": 1656084529575
 	},
 	{
 		"name": "",
