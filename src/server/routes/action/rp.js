@@ -41,6 +41,10 @@ export default {
     move (req, res) {
         let dob = getDb();
         let data = req.body;
+        let a = dob.get2(data.id);
+        let b = dob.get2(data.dest);
+        a.level = b.level * 1 + 1;
+        dob.set(a);
         dob.move(data.id, data.dest);
         res.json(getData());
     }
