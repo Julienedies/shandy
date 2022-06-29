@@ -9,7 +9,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1656086487722
+		"timestamp": 1656086487722,
+		"promptTimes": 1,
+		"prevPromptTime": 1656461954183
 	},
 	{
 		"name": "",
@@ -23,7 +25,7 @@
 		"duration": 17,
 		"timestamp": 1655363529716,
 		"promptTimes": 1,
-		"prevPromptTime": 1656030531924
+		"prevPromptTime": 1656464654114
 	},
 	{
 		"name": "",
@@ -37,7 +39,7 @@
 		"duration": 17,
 		"timestamp": 1655164211606,
 		"promptTimes": 1,
-		"prevPromptTime": 1656033231685
+		"prevPromptTime": 1656467353814
 	},
 	{
 		"name": "",
@@ -51,7 +53,7 @@
 		"duration": 9,
 		"timestamp": 1654519629339,
 		"promptTimes": 1,
-		"prevPromptTime": 1656035931303
+		"prevPromptTime": 1656470053793
 	},
 	{
 		"name": "",
@@ -65,7 +67,7 @@
 		"duration": 19,
 		"timestamp": 1654083175248,
 		"promptTimes": 1,
-		"prevPromptTime": 1656038631926
+		"prevPromptTime": 1656472753298
 	},
 	{
 		"name": "",
@@ -77,7 +79,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1651891867034
+		"timestamp": 1651891867034,
+		"promptTimes": 1,
+		"prevPromptTime": 1656475453572
 	},
 	{
 		"name": "",
@@ -91,7 +95,7 @@
 		"duration": 13,
 		"timestamp": 1651821582886,
 		"promptTimes": 1,
-		"prevPromptTime": 1656041331439
+		"prevPromptTime": 1656478154179
 	},
 	{
 		"name": "",
@@ -116,8 +120,8 @@
 		"interval": 90,
 		"duration": 13,
 		"timestamp": 1651503352168,
-		"promptTimes": 2,
-		"prevPromptTime": 1656049431256
+		"promptTimes": 1,
+		"prevPromptTime": 1656480852917
 	},
 	{
 		"name": "",
@@ -131,7 +135,7 @@
 		"duration": 7,
 		"timestamp": 1650708701077,
 		"promptTimes": 1,
-		"prevPromptTime": 1656046731486
+		"prevPromptTime": 1656483552825
 	},
 	{
 		"name": "",
@@ -145,7 +149,7 @@
 		"duration": 9,
 		"timestamp": 1645175299306,
 		"promptTimes": 1,
-		"prevPromptTime": 1656052131356
+		"prevPromptTime": 1656486253557
 	},
 	{
 		"name": "",
@@ -159,7 +163,7 @@
 		"duration": 17,
 		"timestamp": 1644026604851,
 		"promptTimes": 1,
-		"prevPromptTime": 1656054831585
+		"prevPromptTime": 1656488953777
 	},
 	{
 		"name": "",
@@ -173,7 +177,7 @@
 		"duration": 13,
 		"timestamp": 1647873146547,
 		"promptTimes": 1,
-		"prevPromptTime": 1656057530848
+		"prevPromptTime": 1656491653628
 	},
 	{
 		"name": "",
@@ -187,7 +191,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1656060230863
+		"prevPromptTime": 1656494353630
 	},
 	{
 		"name": "",
@@ -201,7 +205,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1656062931158
+		"prevPromptTime": 1656497053817
 	},
 	{
 		"name": "",
@@ -215,7 +219,7 @@
 		"duration": 19,
 		"timestamp": 1643285590954,
 		"promptTimes": 1,
-		"prevPromptTime": 1656065631685
+		"prevPromptTime": 1656499753762
 	},
 	{
 		"name": "",
@@ -241,7 +245,7 @@
 		"duration": 13,
 		"timestamp": 1643018416709,
 		"promptTimes": 1,
-		"prevPromptTime": 1656068330914
+		"prevPromptTime": 1656502453706
 	},
 	{
 		"name": "",
@@ -255,7 +259,7 @@
 		"duration": 37,
 		"timestamp": 1625975362922,
 		"promptTimes": 2,
-		"prevPromptTime": 1656076430134
+		"prevPromptTime": 1656510552023
 	},
 	{
 		"name": "",
@@ -269,7 +273,7 @@
 		"duration": 17,
 		"timestamp": 1639957717122,
 		"promptTimes": 1,
-		"prevPromptTime": 1656073730512
+		"prevPromptTime": 1656507853514
 	},
 	{
 		"name": "",
@@ -283,7 +287,7 @@
 		"duration": 19,
 		"timestamp": 1639962005050,
 		"promptTimes": 1,
-		"prevPromptTime": 1656079130210
+		"prevPromptTime": 1656513251933
 	},
 	{
 		"name": "",
@@ -297,7 +301,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1656081829982
+		"prevPromptTime": 1656515951841
 	},
 	{
 		"name": "",
@@ -309,9 +313,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1639558190823,
-		"promptTimes": 1,
-		"prevPromptTime": 1656084529575
+		"timestamp": 1639558190823
 	},
 	{
 		"name": "",
@@ -1303,7 +1305,7 @@
 	{
 		"name": "",
 		"id": "5012422",
-		"type": "",
+		"type": "理念",
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">历史会重复。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">我需要不断的翻看交易记录，增加理解力，增加肌肉记忆。</span></strong></span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
@@ -1340,7 +1342,7 @@
 	{
 		"name": "",
 		"id": "7351757",
-		"type": "",
+		"type": "理念",
 		"start": "13:00",
 		"interval": 120,
 		"repeat": 1,
@@ -1352,15 +1354,15 @@
 	{
 		"name": "",
 		"id": "1802427",
-		"type": "",
+		"type": "理念",
 		"start": "19:00",
 		"repeat": 1,
-		"content": "<p><strong><span style=\"font-size: 20px;\">把仓位降下来，不要因为钱不敢操作。不要想着钱，把事情做对。</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">对系统和流程进行完善和验证。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">把仓位降下来，不要因为钱不敢操作。不要想着钱，把事情做对。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">对系统和流程进行完善和验证。</span></strong></p>",
 		"singleWindow": "",
 		"interval": 60,
-		"duration": 30,
+		"duration": 7,
 		"timestamp": 1592026052270,
-		"disable": true
+		"disable": false
 	},
 	{
 		"name": "",
