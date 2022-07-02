@@ -11,7 +11,7 @@
 		"duration": 17,
 		"timestamp": 1656086487722,
 		"promptTimes": 1,
-		"prevPromptTime": 1656461954183
+		"prevPromptTime": 1656549437366
 	},
 	{
 		"name": "",
@@ -25,7 +25,7 @@
 		"duration": 17,
 		"timestamp": 1655363529716,
 		"promptTimes": 1,
-		"prevPromptTime": 1656464654114
+		"prevPromptTime": 1656552137540
 	},
 	{
 		"name": "",
@@ -39,7 +39,7 @@
 		"duration": 17,
 		"timestamp": 1655164211606,
 		"promptTimes": 1,
-		"prevPromptTime": 1656467353814
+		"prevPromptTime": 1656554837416
 	},
 	{
 		"name": "",
@@ -53,7 +53,7 @@
 		"duration": 9,
 		"timestamp": 1654519629339,
 		"promptTimes": 1,
-		"prevPromptTime": 1656470053793
+		"prevPromptTime": 1656557537701
 	},
 	{
 		"name": "",
@@ -67,7 +67,7 @@
 		"duration": 19,
 		"timestamp": 1654083175248,
 		"promptTimes": 1,
-		"prevPromptTime": 1656472753298
+		"prevPromptTime": 1656560237929
 	},
 	{
 		"name": "",
@@ -81,7 +81,7 @@
 		"duration": 9,
 		"timestamp": 1651891867034,
 		"promptTimes": 1,
-		"prevPromptTime": 1656475453572
+		"prevPromptTime": 1656562937376
 	},
 	{
 		"name": "",
@@ -95,7 +95,7 @@
 		"duration": 13,
 		"timestamp": 1651821582886,
 		"promptTimes": 1,
-		"prevPromptTime": 1656478154179
+		"prevPromptTime": 1656565637056
 	},
 	{
 		"name": "",
@@ -121,7 +121,7 @@
 		"duration": 13,
 		"timestamp": 1651503352168,
 		"promptTimes": 1,
-		"prevPromptTime": 1656480852917
+		"prevPromptTime": 1656568336703
 	},
 	{
 		"name": "",
@@ -135,7 +135,7 @@
 		"duration": 7,
 		"timestamp": 1650708701077,
 		"promptTimes": 1,
-		"prevPromptTime": 1656483552825
+		"prevPromptTime": 1656571037365
 	},
 	{
 		"name": "",
@@ -149,7 +149,7 @@
 		"duration": 9,
 		"timestamp": 1645175299306,
 		"promptTimes": 1,
-		"prevPromptTime": 1656486253557
+		"prevPromptTime": 1656573737842
 	},
 	{
 		"name": "",
@@ -163,7 +163,7 @@
 		"duration": 17,
 		"timestamp": 1644026604851,
 		"promptTimes": 1,
-		"prevPromptTime": 1656488953777
+		"prevPromptTime": 1656576437114
 	},
 	{
 		"name": "",
@@ -177,7 +177,7 @@
 		"duration": 13,
 		"timestamp": 1647873146547,
 		"promptTimes": 1,
-		"prevPromptTime": 1656491653628
+		"prevPromptTime": 1656579137628
 	},
 	{
 		"name": "",
@@ -191,7 +191,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1656494353630
+		"prevPromptTime": 1656581837647
 	},
 	{
 		"name": "",
@@ -205,7 +205,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1656497053817
+		"prevPromptTime": 1656584536637
 	},
 	{
 		"name": "",
@@ -219,7 +219,7 @@
 		"duration": 19,
 		"timestamp": 1643285590954,
 		"promptTimes": 1,
-		"prevPromptTime": 1656499753762
+		"prevPromptTime": 1656587237273
 	},
 	{
 		"name": "",
@@ -245,7 +245,7 @@
 		"duration": 13,
 		"timestamp": 1643018416709,
 		"promptTimes": 1,
-		"prevPromptTime": 1656502453706
+		"prevPromptTime": 1656589937215
 	},
 	{
 		"name": "",
@@ -259,7 +259,7 @@
 		"duration": 37,
 		"timestamp": 1625975362922,
 		"promptTimes": 2,
-		"prevPromptTime": 1656510552023
+		"prevPromptTime": 1656598035985
 	},
 	{
 		"name": "",
@@ -273,7 +273,7 @@
 		"duration": 17,
 		"timestamp": 1639957717122,
 		"promptTimes": 1,
-		"prevPromptTime": 1656507853514
+		"prevPromptTime": 1656595336184
 	},
 	{
 		"name": "",
@@ -287,7 +287,7 @@
 		"duration": 19,
 		"timestamp": 1639962005050,
 		"promptTimes": 1,
-		"prevPromptTime": 1656513251933
+		"prevPromptTime": 1656600735979
 	},
 	{
 		"name": "",
@@ -301,7 +301,7 @@
 		"duration": 17,
 		"timestamp": 1637936622790,
 		"promptTimes": 1,
-		"prevPromptTime": 1656515951841
+		"prevPromptTime": 1656603435978
 	},
 	{
 		"name": "",
@@ -446,7 +446,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1636413986087
+		"timestamp": 1636413986087,
+		"promptTimes": 1,
+		"prevPromptTime": 1656635834846
 	},
 	{
 		"name": "",
@@ -458,7 +460,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1636326773171
+		"timestamp": 1636326773171,
+		"promptTimes": 1,
+		"prevPromptTime": 1656638534895
 	},
 	{
 		"name": "",
@@ -470,7 +474,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1636258154803
+		"timestamp": 1636258154803,
+		"promptTimes": 1,
+		"prevPromptTime": 1656641234637
 	},
 	{
 		"name": "",
@@ -482,7 +488,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1636203734653
+		"timestamp": 1636203734653,
+		"promptTimes": 1,
+		"prevPromptTime": 1656643934606
 	},
 	{
 		"name": "",
@@ -494,7 +502,9 @@
 		"repeat": 2,
 		"interval": 90,
 		"duration": 5,
-		"timestamp": 1634458275583
+		"timestamp": 1634458275583,
+		"promptTimes": 1,
+		"prevPromptTime": 1656646634558
 	},
 	{
 		"name": "警告",
@@ -506,7 +516,9 @@
 		"content": "<p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">一切有为法；一切有因果；</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>时不我待，我已经37岁了；</strong></span></span></span></strong></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>不要忘记那些恐惧和痛苦；人会变得麻木；</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我并没有本质上的改变，我还是在重复错误；</strong></span></span></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">那些交易原则我知道，但我没有做到知行合一；</span></strong></span></p>",
 		"timestamp": 1579093820041,
 		"singleWindow": "",
-		"duration": 7
+		"duration": 7,
+		"promptTimes": 1,
+		"prevPromptTime": 1656649335470
 	},
 	{
 		"name": "",
@@ -518,7 +530,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 39,
-		"timestamp": 1614682522617
+		"timestamp": 1614682522617,
+		"promptTimes": 1,
+		"prevPromptTime": 1656652034252
 	},
 	{
 		"name": "",
@@ -530,7 +544,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 4,
-		"timestamp": 1633852427544
+		"timestamp": 1633852427544,
+		"promptTimes": 1,
+		"prevPromptTime": 1656654733947
 	},
 	{
 		"name": "",
@@ -542,7 +558,9 @@
 		"repeat": 3,
 		"interval": 90,
 		"duration": 9,
-		"timestamp": 1630328427565
+		"timestamp": 1630328427565,
+		"promptTimes": 1,
+		"prevPromptTime": 1656657433760
 	},
 	{
 		"name": "",
@@ -566,7 +584,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 10,
-		"timestamp": 1626650977149
+		"timestamp": 1626650977149,
+		"promptTimes": 1,
+		"prevPromptTime": 1656662833623
 	},
 	{
 		"name": "",
@@ -578,7 +598,9 @@
 		"repeat": 5,
 		"interval": 60,
 		"duration": 24,
-		"timestamp": 1621658103771
+		"timestamp": 1621658103771,
+		"promptTimes": 2,
+		"prevPromptTime": 1656665534650
 	},
 	{
 		"name": "",
@@ -590,7 +612,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1625831460227
+		"timestamp": 1625831460227,
+		"promptTimes": 1,
+		"prevPromptTime": 1656668233933
 	},
 	{
 		"name": "",
@@ -615,7 +639,9 @@
 		"repeat": 7,
 		"interval": 60,
 		"duration": 47,
-		"timestamp": 1595590485334
+		"timestamp": 1595590485334,
+		"promptTimes": 2,
+		"prevPromptTime": 1656676332890
 	},
 	{
 		"name": "",
@@ -627,7 +653,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 19,
-		"timestamp": 1621656781526
+		"timestamp": 1621656781526,
+		"promptTimes": 2,
+		"prevPromptTime": 1656679033419
 	},
 	{
 		"name": "",
@@ -639,7 +667,9 @@
 		"repeat": 2,
 		"interval": 100,
 		"duration": 27,
-		"timestamp": 1597160146691
+		"timestamp": 1597160146691,
+		"promptTimes": 1,
+		"prevPromptTime": 1656681733419
 	},
 	{
 		"name": "",
@@ -651,7 +681,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1634257137946
+		"timestamp": 1634257137946,
+		"promptTimes": 1,
+		"prevPromptTime": 1656684434190
 	},
 	{
 		"name": "",
@@ -663,7 +695,9 @@
 		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 30px; color: rgb(255, 255, 255);\">问题2：为何我总是临盘犹豫，手足无措，错过最好的交易机会？</span></strong></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">1. 没有准备明确的交易计划，什么样的条件做什么操作。</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">没有交易系统，没有明确的目标行情，没有明确的判断锚点，没有明确的买点。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">线性思维，主观看空。行情反转，措手不及，犹豫不决。</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">1. 准备不足；</span></strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>2. 系统不明确；</strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">3. 本能贪便宜，畏高。</span></strong></span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我必须在很短的时间做出决定；尤其是股市变量很多；</span></p><p><span style=\"font-size: 16px;\">导致很容易犯错，尤其是亏钱状态不好的时候；</span></p><p><span style=\"font-size: 16px;\">必须纯粹，精简自己的系统，快速反应！</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；</span></p><p><span style=\"font-size: 16px;\">1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）</span></p><p><span style=\"font-size: 16px;\">2: 热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；</span></p><p><br></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px; color: rgb(0, 0, 0);\">我从来没有做好次日的交易计划。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">既无预判，也没有推演，更无应对。</span></strong></span></p><p><strong><span style=\"background-color: rgb(255, 255, 0); font-size: 22px;\">我为何总是临盘犹豫，错过机会？</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">1. 准备不足；</span></strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>2. 系统不明确；</strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">3. 本能贪便宜，畏高。</span></strong></span></p><p><br></p><p><strong><u><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我缺少明确的交易理念，市场复杂多变；而我总是处在混沌不明确的状态；</span></u></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><strong><span style=\"color: rgb(0, 0, 0);\">我现在最重要的事是明确系统；对交易原则做到知行合一；</span></strong></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">支撑我的交易逻辑是什么？</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>简单、纯粹、取舍、明确、重复；</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>这就是我现在最需要解决的问题；</strong></span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 18px;\">简单纯粹 避免犯错</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">取舍 ： 弱水三千，只取一瓢</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">重复那些盈利的交易；避免重复那些亏损的交易；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"color: rgb(0, 0, 0);\">不要沉迷于日常交易中；我至今还是在重复3年前的交易状态；不明确；随意交易；浪费时间和机</span></span><span style=\"font-size: 18px; color: rgb(0, 0, 0);\">会；</span></p><p><br></p><p>一致性概率优势系统的逻辑是什么？</p><p>基于主观判断的系统逻辑是什么？</p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">我必须在很短的时间做出决定；尤其是股市变量很多；</span></p><p><span style=\"font-size: 16px;\">导致很容易犯错，尤其是亏钱状态不好的时候；</span></p><p><span style=\"font-size: 16px;\">必须纯粹，精简自己的系统，快速反应！</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">怎么在20支左右股票中快速筛选出标的？ 我需要一个明确的标准快速衡量；</span></p><p><span style=\"font-size: 16px;\">1：超预期强势。烂板上冲； 连续上冲； （ 这种情况说明市场强势或弱转强 ）</span></p><p><span style=\"font-size: 16px;\">2: 热点是方向。怎么快速判断出日内热点。热点所在，行情所在。 我一直对热点反应缓慢；</span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">然后交易时傻乎乎看着盘面，被动应对，临盘犹豫，手足无措、脑子一热随意交易。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是主观预判市场弱，<strong><span style=\"background-color: rgb(255, 255, 0);\">缺乏准备</span></strong>；结果市场转强，就手足无措；<strong><span style=\"background-color: rgb(255, 255, 0);\">连标的都没有；</span></strong></span></strong></p><p><br></p><p><span style=\"font-size: 16px;\">尤其是放弃了打板这一手法后，干脆就不知道做什么了。我不是控制力好，我其实是不知道做什么。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">主线热点，资金方向，资金类型，强弱</span></p><p><span style=\"font-size: 16px;\">1. 先确定主线热点； 这是支撑我的交易逻辑之一。热钱所在，行情所在。</span></p><p><span style=\"font-size: 16px;\">2. 根据主线热点，选择标的。</span></p><p><span style=\"font-size: 16px;\">3. 预判推演标的走势，做出对应的应对计划。</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">大盘会涨会跌？大盘处在何种阶段？哪里有机会？ 哪里有风险？ 方向：机构蓝筹趋势？ 热钱情绪题材?</span></p><p><span style=\"font-size: 16px;\"><br></span></p><p><span style=\"font-size: 16px;\">热点龙头个股会涨会跌？ 能追涨吗？ 能低吸吗？ 盈亏比几何？</span></p>",
 		"timestamp": 1580821790410,
 		"duration": 24,
-		"singleWindow": ""
+		"singleWindow": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1656687133054
 	},
 	{
 		"name": "",
@@ -675,7 +709,9 @@
 		"repeat": 3,
 		"interval": 60,
 		"duration": 14,
-		"timestamp": 1618224000885
+		"timestamp": 1618224000885,
+		"promptTimes": 1,
+		"prevPromptTime": 1656689832925
 	},
 	{
 		"name": "",
@@ -906,7 +942,9 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1617161666529
+		"timestamp": 1617161666529,
+		"promptTimes": 1,
+		"prevPromptTime": 1656724763684
 	},
 	{
 		"name": "",
