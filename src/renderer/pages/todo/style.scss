@@ -75,11 +75,15 @@ a {
 
 
 .text {
-  height: 10em;
+  height: 11em;
   overflow-y: hidden;
 
   &.toggle {
     height: auto;
     min-height: 24em;
   }
+}
+
+.table td, .table th{
+  padding:0.5em 0.3em;
 }

@@ -34,17 +34,15 @@
             </div>
             <table class="table is-striped is-fullwidth" style="margin-top:45px;font-size:14px;" ic-tpl="todoList">
                 <tr style="white-space: nowrap;">
-                    <th>name</th>
                     <th>类型</th>
                     <th>开始</th>
                     <th>间隔</th>
                     <th>重复</th>
-                    <th>已提醒</th>
+                    <th>提醒</th>
                     <th>ToDo</th>
                 </tr>
                 <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                     ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
-                    <td>{{ v.name }}</td>
                     <td><span ic-click="filter:{{ v.type }}">{{ v.type }} </span></td>
                     <td>{{ v.start }}</td>
                     <td>{{ v.interval }}</td>
