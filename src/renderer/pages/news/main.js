@@ -52,7 +52,7 @@ function cb (msg) {
         showWin();
         timer = setTimeout(() => {
             hideWin();
-        }, 9 * 1000);
+        }, 14 * 1000);
     }
 }
 
