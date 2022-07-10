@@ -19,7 +19,7 @@ import voice from '../../../libs/voice'
 import ac from '../../../libs/ac'
 import captureOcr from '../../../libs/capture-ocr'
 import rts from '../../../libs/real-time-stock'
-import userJodb from '../../../libs/user-jodb'
+import userJodb from '../../../libs/jodb-user'
 
 import parentCtrl from '../../js/parentCtrl'
 import setTagCtrl from '../tags/set-tag-ctrl'

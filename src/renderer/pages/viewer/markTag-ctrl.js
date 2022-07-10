@@ -6,7 +6,7 @@
 /*import 'babel-polyfill'*/
 import $ from 'jquery'
 
-import userJodb from '../../../libs/user-jodb'
+import userJodb from '../../../libs/jodb-user'
 
 const viewerJodb = userJodb('viewer');
 

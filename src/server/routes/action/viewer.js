@@ -3,7 +3,7 @@
  * Created by j on 20/1/26.
  */
 
-import userJodb from '../../../libs/user-jodb'
+import userJodb from '../../../libs/jodb-user'
 import ViewerMap, { beforeGet } from '../../helper/viewerMap'
 
 const viewerMap = ViewerMap.getInstance();  // 全局单例

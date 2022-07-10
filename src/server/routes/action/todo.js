@@ -2,14 +2,14 @@
  * Created by j on 20/5/30.
  */
 
-import userJodb from '../../../libs/jodb-data'
+import jodb from '../../../libs/jodb-data';
 
 let todoJoDb;
 let warnJoDb;
 
 function getDb () {
-    todoJoDb = userJodb('todo', [], {joinType: 'push'});
-    warnJoDb = userJodb('warn', [], {joinType: 'push'});
+    todoJoDb = jodb('todo', [], {joinType: 'push'});
+    warnJoDb = jodb('warn', [], {joinType: 'push'});
 }
 
 export default {

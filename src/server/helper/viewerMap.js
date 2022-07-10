@@ -5,7 +5,7 @@
 
 import moment from 'moment'
 import _ from 'lodash'
-import userJodb from '../../libs/user-jodb'
+import userJodb from '../../libs/jodb-user'
 import imagesHelper from '../../renderer/pages/viewer/helper'
 import ju from '../../libs/jodb-user'
 

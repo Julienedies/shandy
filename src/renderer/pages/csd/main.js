@@ -18,7 +18,7 @@ import jhandy from 'jhandy'
 import utils from '../../../libs/utils'
 import jo from '../../../libs/jsono'
 import stockJo from '../../../libs/stock-jo'
-import userDob from '../../../libs/user-jodb'
+import userDob from '../../../libs/jodb-user'
 import stocksManager from '../../../libs/stocks-manager'
 
 import $ from 'jquery'

@@ -16,7 +16,7 @@ import Reader from '../../../libs/reader'
 
 import jsonDb from '../../../libs/json-jo'
 import setting from '../../../libs/setting'
-import userJodb from '../../../libs/user-jodb'
+import userJodb from '../../../libs/jodb-user'
 
 import createReaderHtml from './createReaderHtml'
 

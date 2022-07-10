@@ -22,7 +22,7 @@ import { FroalaEditorConfig } from '../../js/constants'
 import electron from 'electron'
 import moment from 'moment'
 import utils from '../../../libs/utils'
-//import userJodb from '../../../libs/user-jodb'
+//import userJodb from '../../../libs/jodb-user'
 import jd from '../../../libs/jodb-data'
 
 const ipc = electron.ipcRenderer;
