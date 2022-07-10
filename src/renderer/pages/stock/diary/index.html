@@ -38,7 +38,7 @@
             </div>
             <div class="tags">
                 <span class="tag is-medium" ic-for="i,v in model.tagsArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">
-                    {{ TAGS_MAP_BY_ID[v].text }}
+                    {{ TAGS_MAP_BY_ID[v] && TAGS_MAP_BY_ID[v].text }}
                     <sup>{{ model.tagsMap[v] }}</sup>
                 </span>
             </div>
@@ -106,7 +106,7 @@
                     <div class="control" ic-for="i,v in model.tagsArr">
                         <div class="tags has-addons">
                             <span class="tag is-small" ic-select-item ic-val="{{ v }}" ic-has-selected="diary.tags && diary.tags.includes(v)">
-                                {{ TAGS_MAP_BY_ID[v].text }}
+                                {{TAGS_MAP_BY_ID[v] &&  TAGS_MAP_BY_ID[v].text }}
                             </span>
                         </div>
                     </div>
