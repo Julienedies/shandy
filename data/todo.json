@@ -9,7 +9,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1657448515173
+		"timestamp": 1657448515173,
+		"promptTimes": 1,
+		"prevPromptTime": 1657586660298
 	},
 	{
 		"name": "",
@@ -23,7 +25,7 @@
 		"duration": 17,
 		"timestamp": 1657424005914,
 		"promptTimes": 1,
-		"prevPromptTime": 1657499843911
+		"prevPromptTime": 1657589360027
 	},
 	{
 		"name": "",
@@ -37,7 +39,7 @@
 		"duration": 19,
 		"timestamp": 1654083175248,
 		"promptTimes": 1,
-		"prevPromptTime": 1657502543958
+		"prevPromptTime": 1657592059779
 	},
 	{
 		"name": "",
@@ -51,7 +53,7 @@
 		"duration": 17,
 		"timestamp": 1656824097136,
 		"promptTimes": 1,
-		"prevPromptTime": 1657505244256
+		"prevPromptTime": 1657594759411
 	},
 	{
 		"name": "",
@@ -65,7 +67,7 @@
 		"duration": 17,
 		"timestamp": 1656086487722,
 		"promptTimes": 1,
-		"prevPromptTime": 1657507944164
+		"prevPromptTime": 1657597460779
 	},
 	{
 		"name": "",
@@ -79,7 +81,7 @@
 		"duration": 17,
 		"timestamp": 1655363529716,
 		"promptTimes": 1,
-		"prevPromptTime": 1657510643645
+		"prevPromptTime": 1657600160600
 	},
 	{
 		"name": "",
@@ -105,7 +107,7 @@
 		"duration": 17,
 		"timestamp": 1655164211606,
 		"promptTimes": 1,
-		"prevPromptTime": 1657513344948
+		"prevPromptTime": 1657602859255
 	},
 	{
 		"name": "",
@@ -119,7 +121,7 @@
 		"duration": 9,
 		"timestamp": 1654519629339,
 		"promptTimes": 1,
-		"prevPromptTime": 1657516043917
+		"prevPromptTime": 1657605559508
 	},
 	{
 		"name": "",
@@ -133,7 +135,7 @@
 		"duration": 9,
 		"timestamp": 1651891867034,
 		"promptTimes": 1,
-		"prevPromptTime": 1657518743197
+		"prevPromptTime": 1657608259413
 	},
 	{
 		"name": "",
@@ -147,7 +149,7 @@
 		"duration": 13,
 		"timestamp": 1651821582886,
 		"promptTimes": 1,
-		"prevPromptTime": 1657521443324
+		"prevPromptTime": 1657610960373
 	},
 	{
 		"name": "",
@@ -161,7 +163,7 @@
 		"duration": 13,
 		"timestamp": 1651503352168,
 		"promptTimes": 1,
-		"prevPromptTime": 1657524143341
+		"prevPromptTime": 1657613660238
 	},
 	{
 		"name": "",
@@ -175,7 +177,7 @@
 		"duration": 7,
 		"timestamp": 1650708701077,
 		"promptTimes": 1,
-		"prevPromptTime": 1657526843738
+		"prevPromptTime": 1657616358756
 	},
 	{
 		"name": "",
@@ -189,7 +191,7 @@
 		"duration": 9,
 		"timestamp": 1645175299306,
 		"promptTimes": 1,
-		"prevPromptTime": 1657529543711
+		"prevPromptTime": 1657619058756
 	},
 	{
 		"name": "",
@@ -203,7 +205,7 @@
 		"duration": 17,
 		"timestamp": 1644026604851,
 		"promptTimes": 1,
-		"prevPromptTime": 1657532244236
+		"prevPromptTime": 1657621759830
 	},
 	{
 		"name": "",
@@ -217,7 +219,7 @@
 		"duration": 7,
 		"timestamp": 1610846581339,
 		"promptTimes": 1,
-		"prevPromptTime": 1657534943913
+		"prevPromptTime": 1657624459788
 	},
 	{
 		"name": "",
@@ -231,7 +233,7 @@
 		"duration": 13,
 		"timestamp": 1647873146547,
 		"promptTimes": 1,
-		"prevPromptTime": 1657537642807
+		"prevPromptTime": 1657627159667
 	},
 	{
 		"name": "",
@@ -245,7 +247,7 @@
 		"duration": 24,
 		"timestamp": 1643962033853,
 		"promptTimes": 1,
-		"prevPromptTime": 1657540342742
+		"prevPromptTime": 1657629858624
 	},
 	{
 		"name": "",
@@ -259,7 +261,7 @@
 		"duration": 34,
 		"timestamp": 1643896099264,
 		"promptTimes": 1,
-		"prevPromptTime": 1657543044008
+		"prevPromptTime": 1657632558109
 	},
 	{
 		"name": "",
@@ -273,7 +275,7 @@
 		"duration": 19,
 		"timestamp": 1643285590954,
 		"promptTimes": 1,
-		"prevPromptTime": 1657545742296
+		"prevPromptTime": 1657635259450
 	},
 	{
 		"name": "",
@@ -299,7 +301,7 @@
 		"duration": 13,
 		"timestamp": 1643018416709,
 		"promptTimes": 1,
-		"prevPromptTime": 1657548442364
+		"prevPromptTime": 1657637959009
 	},
 	{
 		"name": "",
@@ -313,7 +315,7 @@
 		"duration": 37,
 		"timestamp": 1625975362922,
 		"promptTimes": 1,
-		"prevPromptTime": 1657551143148
+		"prevPromptTime": 1657640658472
 	},
 	{
 		"name": "",
@@ -325,9 +327,7 @@
 		"repeat": 4,
 		"interval": 90,
 		"duration": 17,
-		"timestamp": 1639957717122,
-		"promptTimes": 1,
-		"prevPromptTime": 1657553843382
+		"timestamp": 1639957717122
 	},
 	{
 		"name": "",
