@@ -34,7 +34,7 @@ brick.reg('diaryCtrl', function () {
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
 
-    scope.order = brick.utils.getQuery('order') || 0;  // 排序方式: 顺序  or  逆序
+    scope.order = brick.utils.getQuery('order') === 'true';  // 排序方式: 顺序  or  逆序
 
     $('title').text(`日记_${ formatDate() }`);
 
@@ -106,7 +106,8 @@ brick.reg('diaryCtrl', function () {
         let order = scope.order = !scope.order;
         render();
         let url = location.href.split('?')[0];
-        history.pushState(null, null, `${ url }?order=${ order }`);
+        let _order = order ? `?order=${ order }` : '';
+        history.pushState(null, null, `${ url }${ _order }`);
     };
 
     this.edit = function (e, id) {
