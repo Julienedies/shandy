@@ -1,6 +1,16 @@
 [
 	{
 		"name": "",
+		"id": "1088882",
+		"tag": "0238231",
+		"trigger": "3",
+		"content": "着眼于小波动，没有大局观，看不到大的确定性。",
+		"repeat": 2,
+		"type": "interval",
+		"timestamp": 1614269561449
+	},
+	{
+		"name": "",
 		"id": "9622293",
 		"tag": "9586736",
 		"trigger": "1",
@@ -9,16 +19,6 @@
 		"type": "interval",
 		"timestamp": 1614426133979,
 		"disable": true
-	},
-	{
-		"name": "",
-		"id": "1088882",
-		"tag": "0238231",
-		"trigger": "3",
-		"content": "着眼于小波动，没有大局观，看不到大的确定性。",
-		"repeat": 2,
-		"type": "interval",
-		"timestamp": 1614269561449
 	},
 	{
 		"name": "",
