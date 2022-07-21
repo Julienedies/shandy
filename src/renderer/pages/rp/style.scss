@@ -76,7 +76,7 @@ html {
 
 
 
-  .role_0 {
+  .role_0, .role_1, .role_2 {
     background: yellow;
     color: #000;
 
@@ -85,7 +85,7 @@ html {
     }
   }
 
-  .role_1 {
+/*  .role_1 {
     background: blue;
 
     h3 {
@@ -100,7 +100,7 @@ html {
     h3 {
       color: #fff;
     }
-  }
+  }*/
 
   .role_3 {
     background: black;
@@ -122,13 +122,13 @@ html {
     > header {
       background: yellow;
 
-      &.role_1 {
+/*      &.role_1 {
         background: blue;
 
         h3 {
           color: #fff;
         }
-      }
+      }*/
 
       &.role_2 {
         background: rgb(148, 0, 211);
@@ -184,7 +184,7 @@ html {
   }
 
   .pre.text {
-    display: none;
+    //display: none;
     color: #026bdb;
     font-weight: 500;
     font-size: 16px;

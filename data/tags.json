@@ -88,7 +88,7 @@
 		"type": "rpmqs",
 		"parentId": "",
 		"desc": "",
-		"level": "5",
+		"level": "4",
 		"key": "system",
 		"text": "交易系统",
 		"示例图片": "",
@@ -695,7 +695,7 @@
 		"key": "idea",
 		"parentId": "",
 		"desc": "",
-		"level": "3",
+		"level": "5",
 		"text": "理念",
 		"示例图片": "",
 		"timestamp": 1639283273487
