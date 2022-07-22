@@ -221,7 +221,7 @@ brick.reg('mainCtrl', function (scope) {
 brick.reg('todoListCtrl', function (scope) {
 
     const dragOverCla = 'onDragOver';
-    let filterByType = null;
+    let filterByType = '错误';
 
     function getMapByType (arr) {
         let mapByType = {};
@@ -240,6 +240,11 @@ brick.reg('todoListCtrl', function (scope) {
         if (filterByType) {
             todoArr = mapByType[filterByType];
         }
+        todoArr.sort((a, b) => {
+            let al = a.level || 0;
+            let bl = b.level || 0;
+            return bl - al;
+        });
         console.log(filterByType, todoArr);
         scope.render('types', {model: {mapByType:mapByType, filterByType:filterByType}});
         scope.render('todoList', {model: todoArr}, function () {
@@ -377,7 +382,7 @@ brick.reg('setTodoCtrl', function (scope) {
         scope.render('setTodo', {model}, function () {
             $editor = $elm.find('#editor').froalaEditor({
                 ...FroalaEditorConfig,
-                height: 360,
+                height: 440,
             });
             $editor.froalaEditor('html.set', model.content || '');
         });

@@ -43,7 +43,7 @@
                 </tr>
                 <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                     ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
-                    <td><span ic-click="filter:{{ v.type }}">{{ v.type }} </span></td>
+                    <td><span ic-click="filter:{{ v.type }}">{{ v.type }} </span><br><span>{{ v.level }}</span></td>
                     <td>{{ v.start }}</td>
                     <td>{{ v.interval }}</td>
                     <td>{{ v.repeat }}</td>
@@ -76,7 +76,7 @@
             <div ic-tpl="setTodo" ic-tpl-init="{}">
                 <div ic-form>
 
-                    <div class="columns">
+                    <div class="columns" style="margin-bottom: 0;">
                         <div class="column is-6">
                             <div class="field">
                                 <div class="control">
@@ -100,22 +100,42 @@
                         </div>
                     </div>
 
-                    <div class="field">
-                        <div class="control">
-                            <button class="button is-primary" ic-form-submit ic-submit-action="save()">
-                                保存
-                            </button>
-                            <button class="button" ic-click="reset">
-                                重置
-                            </button>
-                            <button class="button" ic-click="cancel">取消</button>
-                            <button class="button" ic-view-to="todoList">
-                                返回
-                            </button>
-                            <label style="padding:0 0 0 2em;">是否独立窗口打开? </label>
-                            <!--<input type="checkbox" class="checkbox" name="singleWindow" value="1" onclick="this.value=!!this.checked"
-                                   ic-has-checked="model.singleWindow" ic-form-field="singleWindow">-->
-                            <input type="text" name="singleWindow" value="{{ model.singleWindow }}" ic-form-field="singleWindow">
+                    <div class="columns" style="margin-bottom: 0;">
+                        <div class="column is-4">
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-primary" ic-form-submit ic-submit-action="save()">
+                                        保存
+                                    </button>
+                                    <button class="button" ic-click="reset">
+                                        重置
+                                    </button>
+                                    <button class="button" ic-click="cancel">取消</button>
+                                    <button class="button" ic-view-to="todoList">
+                                        返回
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <label>level</label>
+                                </div>
+                                <div class="control is-expanded">
+                                    <input class="input is-small" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1 }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="field">
+                                <div class="control">
+                                    <label>是否独立窗口打开? </label>
+                                    <!--<input type="checkbox" class="checkbox" name="singleWindow" value="1" onclick="this.value=!!this.checked"
+                                           ic-has-checked="model.singleWindow" ic-form-field="singleWindow">-->
+                                    <input type="text" name="singleWindow" value="{{ model.singleWindow }}" ic-form-field="singleWindow">
+                                </div>
+                            </div>
                         </div>
                     </div>
 

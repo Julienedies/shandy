@@ -1,17 +1,30 @@
 [
 	{
 		"name": "",
-		"id": "id_1658328908383_9759",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">关于确定性：</span></strong></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 22px;;background-color: rgb(255, 255, 0);\"><strong>涨起来或封板，我才看到确定性；这个时候已经一致了，想买买不到；</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">就像龙头股，明牌后也是一致买不到。</span></strong></p>",
+		"id": "2318044",
+		"type": "警告",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">虽然我意识到自己的错误，但我就是改不了。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">1. 没有大局观，后知后觉。总是行情走出来才意识到。盛和资源的超预期，神火股份的异动。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>2. 应对差，</strong></span><strong><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">市场变量太多，充满了背离和冲突。</span></strong></span></strong></strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>没有明确的判断锚点。<span style=\"background-color: rgb(255, 255, 0);\"><strong>不知道如何操作，总是临盘犹豫。</strong></span></strong></span></span></p><p><strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">3. 潜意识总是担心下跌。上涨不敢买，下跌不想买。</span></span><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>没涨没有确定性，涨起来嫌高。</strong></span></strong></p>",
 		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 2,
+		"start": "16:00",
+		"repeat": 1,
 		"interval": 60,
-		"duration": 17,
-		"timestamp": 1658328908383,
-		"promptTimes": 1,
-		"prevPromptTime": 1658363884708
+		"duration": 10,
+		"timestamp": 1613797703223,
+		"disable": false,
+		"level": 1
+	},
+	{
+		"name": "日程",
+		"id": "5438627",
+		"type": "流程",
+		"start": "21:00",
+		"interval": 60,
+		"repeat": 1,
+		"content": "<p><span style=\"font-size: 22px;\">更新csd。</span></p><p><span style=\"font-size: 22px;\">同步csd。</span></p>",
+		"timestamp": 1577862911294,
+		"duration": 4,
+		"singleWindow": "",
+		"disable": true
 	},
 	{
 		"name": "",
@@ -25,35 +38,7 @@
 		"duration": 17,
 		"timestamp": 1658278676173,
 		"promptTimes": 1,
-		"prevPromptTime": 1658366584556
-	},
-	{
-		"name": "",
-		"id": "id_1658278646927_4371",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>上涨初期后知后觉，犹豫不决，高位高潮时傻乎乎接盘。</u></span></strong></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 2,
-		"interval": 60,
-		"duration": 17,
-		"timestamp": 1658278646927,
-		"promptTimes": 1,
-		"prevPromptTime": 1658369284635
-	},
-	{
-		"name": "",
-		"id": "id_1658278539435_8313",
-		"type": "错误",
-		"content": "<p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</span></strong></span></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</strong></span></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</strong></span></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</strong></span></p><p><span style=\"font-size: 20px;;background-color: rgb(255, 255, 0);\"><strong>我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</span></strong></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 2,
-		"interval": 60,
-		"duration": 17,
-		"timestamp": 1658278539435,
-		"promptTimes": 1,
-		"prevPromptTime": 1658371984169
+		"prevPromptTime": 1658457268376
 	},
 	{
 		"name": "",
@@ -67,7 +52,36 @@
 		"duration": 17,
 		"timestamp": 1658235285391,
 		"promptTimes": 1,
-		"prevPromptTime": 1658374683719
+		"prevPromptTime": 1658459968392
+	},
+	{
+		"name": "",
+		"id": "id_1658278646927_4371",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>上涨初期后知后觉，犹豫不决，高位高潮时傻乎乎接盘。</u></span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1658278646927,
+		"promptTimes": 1,
+		"prevPromptTime": 1658462667589
+	},
+	{
+		"name": "",
+		"id": "id_1658278539435_8313",
+		"type": "错误",
+		"content": "<p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</span></strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我还是沉迷于日常的无效交易中，仍然没有建立明确的交易系统，我要捕捉的目标行情是什么？我以什么做为判断锚点？</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1658278539435,
+		"promptTimes": 1,
+		"prevPromptTime": 1658465369040,
+		"level": 101
 	},
 	{
 		"name": "",
@@ -81,13 +95,13 @@
 		"duration": 17,
 		"timestamp": 1658158301140,
 		"promptTimes": 1,
-		"prevPromptTime": 1658377384048
+		"prevPromptTime": 1658468067908
 	},
 	{
 		"name": "",
 		"id": "id_1658134779334_9786",
 		"type": "错误",
-		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong><strong><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></strong></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong><strong><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></strong></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;;background-color: rgb(0, 0, 0);\"><strong><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"font-size: 20px;\"><strong><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</span></strong></span></strong></span></strong></span></p>",
+		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 26px; background-color: rgb(0, 0, 0);\"><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></span></span></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></strong></span></span></span></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></strong></strong></span></span></span></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></span></span></span></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></strong></span></span></span></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></strong></strong></span></span></span></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></span></span></span></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong><strong>永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</strong></strong></strong></span></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"font-size: 20px;\"><strong><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">永远没有做好市场转强的准备；永远没有做好资金进攻的准备；总是错过最好的交易机会；</span></strong></span></strong></span></strong></span></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
@@ -95,7 +109,21 @@
 		"duration": 17,
 		"timestamp": 1658134779334,
 		"promptTimes": 1,
-		"prevPromptTime": 1658380084004
+		"prevPromptTime": 1658470767709
+	},
+	{
+		"name": "",
+		"id": "id_1657973073049_4256",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 28px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1657973073049,
+		"promptTimes": 2,
+		"prevPromptTime": 1658497766956
 	},
 	{
 		"name": "",
@@ -121,13 +149,13 @@
 		"duration": 17,
 		"timestamp": 1658055752493,
 		"promptTimes": 1,
-		"prevPromptTime": 1658382783563
+		"prevPromptTime": 1658473468496
 	},
 	{
 		"name": "",
 		"id": "id_1658055417704_8213",
 		"type": "错误",
-		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>不知道以什么做为判断锚点。我的预判总是错误。</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>不知道以什么做为判断锚点。我的预判总是错误。</strong></span></span></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>不知道以什么做为判断锚点。我的预判总是错误。</strong></span></span></strong></span></span></strong></span></span></p>",
+		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 26px; background-color: rgb(0, 0, 0);\"><strong>不知道以什么做为判断锚点。我的预判总是错误。</strong></span></span></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>不知道以什么做为判断锚点。我的预判总是错误。</strong></span></span></strong></span></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 26px; background-color: rgb(0, 0, 0);\"><strong>不知道以什么做为判断锚点。我的预判总是错误。</strong></span></span></strong></span></span></strong></span></span></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
@@ -135,7 +163,8 @@
 		"duration": 17,
 		"timestamp": 1658055417704,
 		"promptTimes": 1,
-		"prevPromptTime": 1658385484070
+		"prevPromptTime": 1658476168488,
+		"level": 16
 	},
 	{
 		"name": "",
@@ -149,13 +178,13 @@
 		"duration": 17,
 		"timestamp": 1658055314018,
 		"promptTimes": 1,
-		"prevPromptTime": 1658388183739
+		"prevPromptTime": 1658478868437
 	},
 	{
 		"name": "",
 		"id": "id_1658055223733_1562",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">主观测顶，主观认为主线结束。</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong><strong>主观测顶，主观认为主线结束。</strong></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>主观测顶，主观认为主线结束。</strong></span></span></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">主观测顶，主观看空，主观认为主线结束。</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">主观测顶，主观看空，主观认为主线结束。</span></strong></span></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">主观测顶，主观看空，主观认为主线结束。</span></strong></span></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">主观测顶，主观看空，主观认为主线结束。</span></strong></span></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
@@ -163,21 +192,7 @@
 		"duration": 17,
 		"timestamp": 1658055223733,
 		"promptTimes": 1,
-		"prevPromptTime": 1658390884109
-	},
-	{
-		"name": "",
-		"id": "id_1658049227091_3363",
-		"type": "警告",
-		"content": "<p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">2022.07.17；</span></strong></span>我没有任何改变，我任然在重复所有的错误，所有的问题也都没有解决。</span></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>翻看21年的日记，会发现错误和问题早就出现了，那些问题和错误被标记了上百次，但至今为止，我还是每天在重复。</strong></span></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我不知道，我每天是怎么过的？</span></strong></span></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 2,
-		"interval": 60,
-		"duration": 17,
-		"timestamp": 1658049227091,
-		"promptTimes": 1,
-		"prevPromptTime": 1658393583521
+		"prevPromptTime": 1658481567478
 	},
 	{
 		"name": "",
@@ -191,7 +206,8 @@
 		"duration": 19,
 		"timestamp": 1654083175248,
 		"promptTimes": 1,
-		"prevPromptTime": 1658396284321
+		"prevPromptTime": 1658484268331,
+		"level": 91
 	},
 	{
 		"name": "",
@@ -205,7 +221,7 @@
 		"duration": 9,
 		"timestamp": 1654519629339,
 		"promptTimes": 1,
-		"prevPromptTime": 1658398983831
+		"prevPromptTime": 1658486967185
 	},
 	{
 		"name": "",
@@ -231,27 +247,13 @@
 		"duration": 9,
 		"timestamp": 1609491034659,
 		"promptTimes": 2,
-		"prevPromptTime": 1658407083142
-	},
-	{
-		"name": "",
-		"id": "id_1657973073049_4256",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 2,
-		"interval": 60,
-		"duration": 17,
-		"timestamp": 1657973073049,
-		"promptTimes": 2,
-		"prevPromptTime": 1658409783988
+		"prevPromptTime": 1658495066856
 	},
 	{
 		"name": "",
 		"id": "id_1657671437461_7725",
 		"type": "错误",
-		"content": "<p><span style=\"color: rgb(255, 255, 255); font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\">思维没有方向，操作没有系统；没有一个</span></strong><span style=\"background-color: rgb(0, 0, 0);\"><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong>思维没有方向，操作没有系统；没有一个</strong><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong><strong>思维没有方向，操作没有系统；没有一个</strong><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></strong></strong></span></span></span></p><p><span style=\"color: rgb(255, 255, 255); font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\">思维没有方向，操作没有系统；没有一个</span></strong><span style=\"background-color: rgb(0, 0, 0);\"><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong>思维没有方向，操作没有系统；没有一个</strong><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong><strong>思维没有方向，操作没有系统；没有一个</strong><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></strong></strong></span></span></span></p><p><span style=\"color: rgb(255, 255, 255); font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\">思维没有方向，操作没有系统；没有一个</span></strong><span style=\"background-color: rgb(0, 0, 0);\"><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong>思维没有方向，操作没有系统；没有一个</strong><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong><strong>思维没有方向，操作没有系统；没有一个</strong><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></strong></strong></span></span></span></p>",
+		"content": "<p><span style=\"color: rgb(255, 255, 255); font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\">思维没有方向，操作没有系统；没有一个</span></strong><span style=\"background-color: rgb(0, 0, 0);\"><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong>思维没有方向，操作没有系统；没有一个</strong><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong><strong>思维没有方向，操作没有系统；没有一个</strong><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></strong></strong></span></span></span></p><p><span style=\"color: rgb(255, 255, 255); font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\">思维没有方向，操作没有系统；没有一个</span></strong><span style=\"background-color: rgb(0, 0, 0);\"><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong>思维没有方向，操作没有系统；没有一个</strong><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></strong></span></span></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong><strong>思维没有方向，操作没有系统；没有一个</strong><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></strong></strong></span></span></span></p><p><span style=\"color: rgb(255, 255, 255); font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0);\">思维没有方向，操作没有系统；没有一个</span></strong><span style=\"background-color: rgb(0, 0, 0);\"><strong>明确一致的判断锚点，临盘总是犹豫不决。</strong></span></span></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
@@ -259,7 +261,32 @@
 		"duration": 17,
 		"timestamp": 1657671437461,
 		"promptTimes": 1,
-		"prevPromptTime": 1658412483770
+		"prevPromptTime": 1658500467194,
+		"level": 91
+	},
+	{
+		"name": "",
+		"id": "id_1657980045837_7108",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有围绕主流热点龙头，主观看空主流热点龙头；</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1657980045837
+	},
+	{
+		"name": "",
+		"id": "id_1657942815311_1165",
+		"type": "理念",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">每天临盘前，先考虑大盘会怎么样；然后考虑资金会攻击的板块；最后才着眼于个股；</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">每天临盘前，先考虑大盘会怎么样；然后考虑资金会攻击的板块；最后才着眼于个股；</span></strong></span></strong></p><p><span style=\"font-size: 28px;\"><br></span></p><p><br></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1657942815311
 	},
 	{
 		"name": "",
@@ -273,33 +300,7 @@
 		"duration": 17,
 		"timestamp": 1657979970007,
 		"promptTimes": 1,
-		"prevPromptTime": 1658415182728
-	},
-	{
-		"name": "",
-		"id": "id_1657980045837_7108",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有围绕主流热点龙头，主观看空主流热点龙头；</span></strong></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 2,
-		"interval": 60,
-		"duration": 17,
-		"timestamp": 1657980045837,
-		"promptTimes": 1,
-		"prevPromptTime": 1658417882586
-	},
-	{
-		"name": "",
-		"id": "id_1657942815311_1165",
-		"type": "理念",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">每天临盘前，先考虑大盘会怎么样；然后考虑资金会攻击的板块；最后才着眼于个股；</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">每天临盘前，先考虑大盘会怎么样；然后考虑资金会攻击的板块；最后才着眼于个股；</span></strong></span></strong></p><p><span style=\"font-size: 28px;\"><br></span></p><p><br></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 2,
-		"interval": 60,
-		"duration": 17,
-		"timestamp": 1657942815311
+		"prevPromptTime": 1658503165850
 	},
 	{
 		"name": "",
@@ -395,7 +396,8 @@
 		"repeat": 4,
 		"interval": 120,
 		"duration": 17,
-		"timestamp": 1655164211606
+		"timestamp": 1655164211606,
+		"level": 91
 	},
 	{
 		"name": "",
@@ -855,16 +857,17 @@
 	},
 	{
 		"name": "",
-		"id": "2318044",
+		"id": "id_1658049227091_3363",
 		"type": "警告",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">虽然我意识到自己的错误，但我就是改不了。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">1. 没有大局观，后知后觉。总是行情走出来才意识到。盛和资源的超预期，神火股份的异动。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>2. 应对差，</strong></span><strong><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">市场变量太多，充满了背离和冲突。</span></strong></span></strong></strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>没有明确的判断锚点。<span style=\"background-color: rgb(255, 255, 0);\"><strong>不知道如何操作，总是临盘犹豫。</strong></span></strong></span></span></p><p><strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">3. 潜意识总是担心下跌。上涨不敢买，下跌不想买。</span></span><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>没涨没有确定性，涨起来嫌高。</strong></span></strong></p>",
+		"content": "<p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">2022.07.17；</span></strong></span>我没有任何改变，我任然在重复所有的错误，所有的问题也都没有解决。</span></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>翻看21年的日记，会发现错误和问题早就出现了，那些问题和错误被标记了上百次，但至今为止，我还是每天在重复。</strong></span></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我不知道，我每天是怎么过的？</span></strong></span></p>",
 		"singleWindow": "",
-		"start": "16:00",
-		"repeat": 1,
+		"start": "8:00",
+		"repeat": 2,
 		"interval": 60,
-		"duration": 10,
-		"timestamp": 1613797703223,
-		"disable": false
+		"duration": 17,
+		"timestamp": 1658049227091,
+		"promptTimes": 1,
+		"prevPromptTime": 1658451867632
 	},
 	{
 		"name": "",
@@ -1682,16 +1685,17 @@
 		"disable": true
 	},
 	{
-		"name": "日程",
-		"id": "5438627",
-		"type": "流程",
-		"start": "21:00",
-		"interval": 60,
-		"repeat": 1,
-		"content": "<p><span style=\"font-size: 22px;\">更新csd。</span></p><p><span style=\"font-size: 22px;\">同步csd。</span></p>",
-		"timestamp": 1577862911294,
-		"duration": 4,
+		"name": "",
+		"id": "id_1658328908383_9759",
+		"type": "错误",
+		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">关于确定性：</span></strong></p><p><span style=\"background-color: rgb(255, 255, 0);\"></span><span style=\"font-size: 22px;;background-color: rgb(255, 255, 0);\"><strong>涨起来或封板，我才看到确定性；这个时候已经一致了，想买买不到；</strong></span><span style=\"background-color: rgb(255, 255, 0);\"></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">就像龙头股，明牌后也是一致买不到。</span></strong></p>",
 		"singleWindow": "",
-		"disable": true
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1658328908383,
+		"promptTimes": 1,
+		"prevPromptTime": 1658454568280
 	}
 ]
