@@ -22,7 +22,7 @@ brick.reg('todoCtrl', function () {
     let list = brick.services.get('recordManager')();
 
     scope.mapByType = null;
-    scope.filterByType = null;
+    scope.filterByType = '错误';
 
     function getMapByType (arr) {
         let mapByType = {};
@@ -46,6 +46,13 @@ brick.reg('todoCtrl', function () {
 
             });*/
         }
+
+        todoArr.sort((a, b) => {
+            let al = a.level || 0;
+            let bl = b.level || 0;
+            return bl - al;
+        });
+
         $.icMsg(`render ${ filterByType } => ${ todoArr.length }`);
         scope.render('types', scope);
         scope.render('list', todoArr);

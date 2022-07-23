@@ -189,7 +189,7 @@ let proto = {
         let id = this._queryKeyValue(record);
         // push or unshift
         pool[this.joinType](record);
-        this.emit('change');
+        this.emit('change', {type:'add', data: record});
         return this;
     },
     /**

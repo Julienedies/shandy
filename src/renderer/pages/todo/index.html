@@ -53,7 +53,7 @@
                             <div style="flex:1 1 auto;" class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
                             <div style="display:flex; flex-flow: column; white-space: pre;">
                                 <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
-                                <button class="button is-primary is-small" ic-click="focus:{{ v.id }}">置顶</button>
+                                <button class="button is-primary is-small" ic-click="plus:{{ v.id }}">加权</button>
                                 <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>
                                 <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
                                     {{ v.complete ? '完成':'进行' }}
@@ -77,18 +77,37 @@
                 <div ic-form>
 
                     <div class="columns" style="margin-bottom: 0;">
-                        <div class="column is-6">
+                        <div class="column is-4">
+                            <div class="field">
+                                <div class="control">
+                                    <!--<input class="input" type="text" placeholder="todo类型,可选" value="{{ model.type }}" ic-form-field="type">-->
+                                    <p class="select">
+                                        <select name="type" ic-form-field>
+                                            <option value="错误" ic-has-selected="model.type=='错误'">错误</option>
+                                            <option value="理念" ic-has-selected="model.type=='理念'">理念</option>
+                                            <option value="系统" ic-has-selected="model.type=='系统'">系统</option>
+                                            <option value="警告" ic-has-selected="model.type=='警告'">警告</option>
+                                            <option value="" ic-has-selected="model.type==''">null</option>
+                                        </select>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <label>level</label>
+                                </div>
+                                <div class="control is-expanded">
+                                    <input class="input is-small" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1 }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
                             <div class="field">
                                 <div class="control">
                                     <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
                                     <input type="hidden" value="{{ model.id }}" ic-form-field="id">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column is-6">
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input" type="text" placeholder="todo类型,可选" value="{{ model.type }}" ic-form-field="type">
                                 </div>
                             </div>
                         </div>
@@ -117,16 +136,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column is-4">
-                            <div class="field is-grouped">
-                                <div class="control">
-                                    <label>level</label>
-                                </div>
-                                <div class="control is-expanded">
-                                    <input class="input is-small" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1 }}">
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="column is-4">
                             <div class="field">
                                 <div class="control">

@@ -13,13 +13,16 @@ import 'froala-editor/css/froala_editor.pkgd.css'
 import 'froala-editor/css/froala_style.min.css'
 import 'froala-editor/js/froala_editor.pkgd.min.js'
 
+import { FroalaEditorConfig } from '../../js/constants'
+
 brick.reg('memoCtrl', function () {
 
-    let $memo = $('#memo').icSetLoading()
+    let $memo = $('#memo').icSetLoading();
 
     $.get('/stock/memo').done(function (data) {
         $memo.icClearLoading();
         $memo.froalaEditor({
+            ...FroalaEditorConfig,
             toolbarInline: true,
             /*toolbarButtons: ['bold', 'italic', 'underline', 'strikeThrough', 'color', 'emoticons', '-', 'paragraphFormat', 'align', 'formatOL', 'formatUL', 'indent', 'outdent', '-', 'insertImage', 'insertLink', 'insertFile', 'insert'],*/
             // Change save interval (time in miliseconds).
@@ -32,7 +35,7 @@ brick.reg('memoCtrl', function () {
             saveMethod: 'POST',
             // Additional save params.
             saveParams: {time: +new Date}
-        }).froalaEditor('html.set', data.text || '')
+        }).froalaEditor('html.set', data.text || '');
 
     });
 
@@ -40,9 +43,10 @@ brick.reg('memoCtrl', function () {
         let text = $memo.froalaEditor('html.get', true)
         console.log(text)
         $.post('/stock/memo', {text}).done((o) => {
-        })
+        });
     };
 
 });
+
 
 brick.bootstrap();

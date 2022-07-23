@@ -222,6 +222,7 @@ brick.reg('todoListCtrl', function (scope) {
 
     const dragOverCla = 'onDragOver';
     let filterByType = '错误';
+    let $elm = scope.$elm;
 
     function getMapByType (arr) {
         let mapByType = {};
@@ -297,6 +298,13 @@ brick.reg('todoListCtrl', function (scope) {
         todoJodb.insert(id);
     };
 
+    scope.plus = function (e, id) {
+        let item = todoJodb.get2(id);
+        let level = item.level || 1;
+        item.level = level + 2;
+        todoJodb.set(item);
+    };
+
     scope.test = function (e, id) {
         let item = todoJodb.get2(id);
         scope.activePrompt(item);
@@ -314,8 +322,24 @@ brick.reg('todoListCtrl', function (scope) {
         todoJodb.set(item);
     };
 
-    todoJodb.on('change', function() {
+    todoJodb.on('change', function(msg) {
         render();
+        if(msg.type === 'add') {
+            setTimeout(() => {
+                let id = '#k' + msg.data.id;
+                console.log(id);
+                //document.querySelector(id).scrollIntoViewIfNeeded(false);
+                document.querySelector(id).scrollIntoView(true);
+                //let $th = $elm.find('k'+id);
+                //id && $elm.scrollTop($th.offset().top);
+            }, 300);
+
+        }
+    });
+
+    scope.on('scrollToNewItem', function (e, id) {
+        let $th = $elm.find(id);
+        $elm.scrollTop($th.offset().top);
     });
 
     render();
@@ -363,9 +387,13 @@ brick.reg('setTodoCtrl', function (scope) {
     this.save = function (fields) {
         //console.log(fields);
         fields.content = $editor.froalaEditor('html.get', true);
-        todoJodb.set(fields);
+        let result = todoJodb.set(fields);
         brick.view.to('todoList');
         //$editor.froalaEditor('destroy');
+       /* console.log(result);
+        let item = result[0];
+        let id = 'k'+item.id;
+        scope.emit('scrollToNewItem', id);*/
     };
 
     this.reset = function () {
