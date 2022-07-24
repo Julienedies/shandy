@@ -32,7 +32,7 @@ temp/
 cert/
 
 #私有配置文件
-noto2.json
+note2.json
 config.json
 wt.json
 *.mp3
