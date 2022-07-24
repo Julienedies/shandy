@@ -301,7 +301,7 @@ brick.reg('todoListCtrl', function (scope) {
     scope.plus = function (e, id) {
         let item = todoJodb.get2(id);
         let level = item.level || 1;
-        item.level = level + 2;
+        item.level = level + 5;
         todoJodb.set(item);
     };
 

@@ -29,6 +29,7 @@ import viewer from './action/viewer'
 import todo from './action/todo'
 
 import note from './action/note'
+import note2 from './action/note2'
 import txt from './action/txt'
 import reader from './action/reader'
 
@@ -106,6 +107,11 @@ export default function (app) {
     app.post('/note', note.post)
     app.delete('/note/:id', note.del)
     app.get('/stock/note/focus/:id', note.focus)
+
+    app.get('/note2', note2.get)
+    app.post('/note2', note2.post)
+    app.delete('/note2/:id', note2.del)
+    app.get('/stock/note2/focus/:id', note2.focus)
 
     app.get('/txt', txt.get)
     app.post('/txt', txt.post)
