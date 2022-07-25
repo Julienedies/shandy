@@ -10,7 +10,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658561356460
+		"timestamp": 1658561356460,
+		"promptTimes": 1,
+		"prevPromptTime": 1658707577565
 	},
 	{
 		"type": "错误",
@@ -23,7 +25,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658559868021
+		"timestamp": 1658559868021,
+		"promptTimes": 1,
+		"prevPromptTime": 1658710277179
 	},
 	{
 		"type": "错误",
@@ -36,7 +40,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658558460231
+		"timestamp": 1658558460231,
+		"promptTimes": 1,
+		"prevPromptTime": 1658712977072
 	},
 	{
 		"type": "错误",
@@ -49,7 +55,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658558375651
+		"timestamp": 1658558375651,
+		"promptTimes": 1,
+		"prevPromptTime": 1658715677022
 	},
 	{
 		"type": "错误",
@@ -62,7 +70,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658545526846
+		"timestamp": 1658545526846,
+		"promptTimes": 1,
+		"prevPromptTime": 1658718378151
 	},
 	{
 		"type": "错误",
@@ -75,7 +85,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658545473854
+		"timestamp": 1658545473854,
+		"promptTimes": 1,
+		"prevPromptTime": 1658721077205
 	},
 	{
 		"type": "错误",
@@ -88,11 +100,13 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658545339613
+		"timestamp": 1658545339613,
+		"promptTimes": 1,
+		"prevPromptTime": 1658723777991
 	},
 	{
 		"type": "错误",
-		"level": 881,
+		"level": 886,
 		"name": "",
 		"id": "id_1658545171374_3309",
 		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有大局观， 后知后觉，总是行情走出来才意识到。</span></strong></p>",
@@ -101,7 +115,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658545171374
+		"timestamp": 1658545171374,
+		"promptTimes": 1,
+		"prevPromptTime": 1658726476660
 	},
 	{
 		"type": "错误",
@@ -114,7 +130,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658544943250
+		"timestamp": 1658544943250,
+		"promptTimes": 1,
+		"prevPromptTime": 1658729176749
 	},
 	{
 		"type": "错误",
@@ -127,7 +145,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658544940611
+		"timestamp": 1658544940611,
+		"promptTimes": 1,
+		"prevPromptTime": 1658731876856
 	},
 	{
 		"type": "错误",
@@ -140,7 +160,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658544247850
+		"timestamp": 1658544247850,
+		"promptTimes": 1,
+		"prevPromptTime": 1658734577575
 	},
 	{
 		"type": "错误",
@@ -153,20 +175,24 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658544167640
+		"timestamp": 1658544167640,
+		"promptTimes": 1,
+		"prevPromptTime": 1658737276560
 	},
 	{
 		"type": "错误",
 		"level": 816,
 		"name": "",
 		"id": "id_1658542699987_9761",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有大局观，不是从大局上思考市场，然后把思考结果着眼到个股上。</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有大局观，不是从大局上思考市场，然后把思考结果着眼到个股上。</span></strong></p><p><strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">大局观，大局观，大局观，为什么我思维没有方向，为什么我总是后知后觉，</span></span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">记不记得以前看默默者存是怎么考虑板块的，是怎么以市场和板块为主考虑交易的。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我不是着眼于个股，就是着眼于小波动，看不到大趋势和大方向，总是后知后觉；</span></strong></span></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658542699987
+		"timestamp": 1658542699987,
+		"promptTimes": 1,
+		"prevPromptTime": 1658739977505
 	},
 	{
 		"name": "",
@@ -179,7 +205,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658540065742
+		"timestamp": 1658540065742,
+		"promptTimes": 1,
+		"prevPromptTime": 1658742676219
 	},
 	{
 		"name": "",
@@ -192,7 +220,9 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658539789275
+		"timestamp": 1658539789275,
+		"promptTimes": 1,
+		"prevPromptTime": 1658745377382
 	},
 	{
 		"name": "",
@@ -225,16 +255,16 @@
 		"name": "",
 		"id": "id_1658278676173_5014",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">大局观，大局观，大局观，为什么我思维没有方向，为什么我总是后知后觉，</span></span></strong></p><p><strong><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\">记不记得以前看默默者存是怎么考虑板块的，是怎么以市场和板块为主考虑交易的。</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我不是着眼于个股，就是着眼于小波动，看不到大趋势和大方向，总是后知后觉；</span></strong></span></p>",
+		"content": "",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658278676173,
-		"promptTimes": 1,
-		"prevPromptTime": 1658457268376,
-		"level": 801
+		"level": 801,
+		"promptTimes": 2,
+		"prevPromptTime": 1658753477101
 	},
 	{
 		"name": "",
@@ -247,8 +277,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658235285391,
-		"promptTimes": 1,
-		"prevPromptTime": 1658459968392
+		"promptTimes": 2,
+		"prevPromptTime": 1658756176892
 	},
 	{
 		"name": "",
@@ -261,9 +291,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658158301140,
+		"level": 715,
 		"promptTimes": 1,
-		"prevPromptTime": 1658468067908,
-		"level": 715
+		"prevPromptTime": 1658758876787
 	},
 	{
 		"name": "",
@@ -276,24 +306,22 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658134779334,
+		"level": 910,
 		"promptTimes": 1,
-		"prevPromptTime": 1658470767709,
-		"level": 910
+		"prevPromptTime": 1658761576581
 	},
 	{
 		"name": "",
 		"id": "id_1657973073049_4256",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></span></strong></span></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">急于赚钱的心态，沉迷于日常交易中。</span></strong><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">多思考和反省，看看自己的交易日记。把事情做对。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1657973073049,
-		"promptTimes": 2,
-		"prevPromptTime": 1658497766956,
-		"level": 1016
+		"level": 1121
 	},
 	{
 		"name": "",
@@ -318,9 +346,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658055752493,
-		"promptTimes": 1,
-		"prevPromptTime": 1658473468496
+		"timestamp": 1658055752493
 	},
 	{
 		"name": "",
@@ -333,8 +359,6 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658055314018,
-		"promptTimes": 1,
-		"prevPromptTime": 1658478868437,
 		"level": 715
 	},
 	{
@@ -348,8 +372,6 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658055223733,
-		"promptTimes": 1,
-		"prevPromptTime": 1658481567478,
 		"level": 710
 	},
 	{
@@ -363,8 +385,6 @@
 		"interval": 120,
 		"duration": 19,
 		"timestamp": 1654083175248,
-		"promptTimes": 1,
-		"prevPromptTime": 1658484268331,
 		"level": 960
 	},
 	{
@@ -377,9 +397,7 @@
 		"repeat": 4,
 		"interval": 130,
 		"duration": 9,
-		"timestamp": 1654519629339,
-		"promptTimes": 1,
-		"prevPromptTime": 1658486967185
+		"timestamp": 1654519629339
 	},
 	{
 		"name": "",
@@ -403,9 +421,7 @@
 		"repeat": 4,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1609491034659,
-		"promptTimes": 2,
-		"prevPromptTime": 1658495066856
+		"timestamp": 1609491034659
 	},
 	{
 		"name": "",
@@ -418,8 +434,6 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1657671437461,
-		"promptTimes": 1,
-		"prevPromptTime": 1658500467194,
 		"level": 950
 	},
 	{
@@ -457,9 +471,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1657979970007,
-		"promptTimes": 1,
-		"prevPromptTime": 1658503165850
+		"timestamp": 1657979970007
 	},
 	{
 		"name": "",
@@ -472,7 +484,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1657814700731,
-		"level": 815
+		"level": 820
 	},
 	{
 		"name": "",
@@ -524,7 +536,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1656086487722,
-		"level": 1020
+		"level": 1120
 	},
 	{
 		"name": "",
@@ -717,7 +729,7 @@
 		"name": "",
 		"id": "5383681",
 		"type": "错误",
-		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 28px; color: rgb(255, 255, 255);\">为什么我总是错过大行情？</span></strong><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为何所有的龙头我都没有参与？</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我错过那么多大行情和大龙头，我有深刻思考和反省过吗？下次我能抓住吗？</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">泰林转债、盘龙转债，为什么这波转债行情，我什么都没有抓住？行情走出来之前总是后知后觉。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">天保基建、浙江建投、九安医疗、龙津药业、中锐股份、陕西金叶、三羊马</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">错误：我连续错过中青宝、清水源，湖北宜化、大金重工、为什么？这个问题我解决了吗？</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>就好像我以前错过的任何龙头。豫能控股、郑州煤电、小康股份、朗姿股份</strong></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我对市场的理解力有问题，我的思维方式也有问题。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锂电池不断活跃，持续时间最久。但我就是没有参与？我是怎么复盘的？我是怎么理解市场的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中恒电气、中矿资源、天齐锂业、天华超净，蓝晓科技、这些都在我的自选里。我是怎么思考的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么我错过稀土行情？为什么错过北方稀土、五矿稀土？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过PVDF？为什么错过联创股份？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过磷化工行情？</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); font-size: 26px; color: rgb(255, 255, 255);\">为什么我总是错过大行情？</span></strong><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为何所有的龙头我都没有参与？</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我错过那么多大行情和大龙头，我有深刻思考和反省过吗？下次我能抓住吗？</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">泰林转债、盘龙转债，为什么这波转债行情，我什么都没有抓住？行情走出来之前总是后知后觉。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">天保基建、浙江建投、九安医疗、龙津药业、中锐股份、陕西金叶、三羊马</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">错误：我连续错过中青宝、清水源，湖北宜化、大金重工、为什么？这个问题我解决了吗？</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>就好像我以前错过的任何龙头。豫能控股、郑州煤电、小康股份、朗姿股份</strong></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我对市场的理解力有问题，我的思维方式也有问题。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">锂电池不断活跃，持续时间最久。但我就是没有参与？我是怎么复盘的？我是怎么理解市场的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">中恒电气、中矿资源、天齐锂业、天华超净，蓝晓科技、这些都在我的自选里。我是怎么思考的？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么我错过稀土行情？为什么错过北方稀土、五矿稀土？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过PVDF？为什么错过联创股份？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么错过磷化工行情？</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 4,
@@ -904,19 +916,6 @@
 	},
 	{
 		"name": "",
-		"id": "0663385",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">急于赚钱的心态，沉迷于日常交易中。</span></strong></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">多思考和反省，看看自己的交易日记。把事情做对。</span></strong></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 7,
-		"timestamp": 1636326773171,
-		"level": 1115
-	},
-	{
-		"name": "",
 		"id": "3241007",
 		"type": "警告",
 		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>太可笑了，我都不知道自己这一年在做什么，我真的有用脑子在思考吗？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>我有想过那些错过的机会吗？下次我是否能够抓住？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>下一个大金重工出现的时候，我是否能抓住？下一个清水源出现的时候，我是否能抓住？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为何我错过所有的大行情？为什么我错过所有的龙头？</span></strong><br></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>6-8月份的大盘主升浪，我有意识到吗？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>我每天复盘看的是什么？我思考的是什么？湖北宜化的3波主升浪我眼瞎吗？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong><br></strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px;background-color: rgb(0, 0, 0);\"><strong>我要捕捉的目标行情是什么？我以什么做为判断锚点？这两个问题解决了吗？</strong></span></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">为什么在没有解决问题的情况下，我一直重复这些无效的交易呢？</span></strong></p>",
@@ -1038,9 +1037,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658049227091,
-		"promptTimes": 1,
-		"prevPromptTime": 1658451867632
+		"timestamp": 1658049227091
 	},
 	{
 		"name": "",
@@ -1877,8 +1874,6 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658328908383,
-		"promptTimes": 1,
-		"prevPromptTime": 1658454568280
+		"timestamp": 1658328908383
 	}
 ]
