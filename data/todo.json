@@ -1,18 +1,29 @@
 [
 	{
 		"type": "错误",
-		"level": 701,
+		"level": 1211,
 		"name": "",
-		"id": "id_1658561356460_0119",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">线性思维，先入为主，下跌就看跌，上涨就看涨。</span></strong></p>",
+		"id": "id_1658849784603_5549",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">永远没有做好市场进攻的准备，错过最好的交易机会。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">永远没有做好市场进攻的准备，错过最好的交易机会。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">永远没有做好市场进攻的准备，错过最好的交易机会。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">永远没有做好市场进攻的准备，错过最好的交易机会。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658561356460,
-		"promptTimes": 1,
-		"prevPromptTime": 1658707577565
+		"timestamp": 1658849784603
+	},
+	{
+		"type": "错误",
+		"level": 716,
+		"name": "",
+		"id": "id_1658561356460_0119",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">线性思维，先入为主，下跌就看跌，上涨就看涨。</span></strong></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">多空动态博弈转化，不要线性思维；</span></strong></span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": 2,
+		"interval": 60,
+		"duration": 17,
+		"timestamp": 1658561356460
 	},
 	{
 		"type": "错误",
@@ -27,7 +38,7 @@
 		"duration": 17,
 		"timestamp": 1658559868021,
 		"promptTimes": 1,
-		"prevPromptTime": 1658710277179
+		"prevPromptTime": 1658794670786
 	},
 	{
 		"type": "错误",
@@ -42,7 +53,7 @@
 		"duration": 17,
 		"timestamp": 1658558460231,
 		"promptTimes": 1,
-		"prevPromptTime": 1658712977072
+		"prevPromptTime": 1658797370673
 	},
 	{
 		"type": "错误",
@@ -57,7 +68,7 @@
 		"duration": 17,
 		"timestamp": 1658558375651,
 		"promptTimes": 1,
-		"prevPromptTime": 1658715677022
+		"prevPromptTime": 1658800070230
 	},
 	{
 		"type": "错误",
@@ -72,7 +83,7 @@
 		"duration": 17,
 		"timestamp": 1658545526846,
 		"promptTimes": 1,
-		"prevPromptTime": 1658718378151
+		"prevPromptTime": 1658802770307
 	},
 	{
 		"type": "错误",
@@ -87,7 +98,7 @@
 		"duration": 17,
 		"timestamp": 1658545473854,
 		"promptTimes": 1,
-		"prevPromptTime": 1658721077205
+		"prevPromptTime": 1658805469967
 	},
 	{
 		"type": "错误",
@@ -102,7 +113,7 @@
 		"duration": 17,
 		"timestamp": 1658545339613,
 		"promptTimes": 1,
-		"prevPromptTime": 1658723777991
+		"prevPromptTime": 1658808169593
 	},
 	{
 		"type": "错误",
@@ -117,14 +128,14 @@
 		"duration": 17,
 		"timestamp": 1658545171374,
 		"promptTimes": 1,
-		"prevPromptTime": 1658726476660
+		"prevPromptTime": 1658810870400
 	},
 	{
 		"type": "错误",
 		"level": 711,
 		"name": "",
 		"id": "id_1658544943250_3528",
-		"content": "<p><strong><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">依靠主观预测交易，而不是临盘根据盘面客观应对。</span></strong></strong></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong>依靠主观预测交易，而不是临盘根据盘面客观应对。</strong></strong></span></span></span></p>",
+		"content": "<p><strong><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">依靠主观预测交易，而不是临盘根据盘面客观应对。</span></strong></strong></p><p><strong><span style=\"font-size: 26px; background-color: rgb(255, 255, 0);\"><u>问题：不能靠预测交易；</u></span></strong><span style=\"font-size: 26px;\"><u><strong><span style=\"background-color: rgb(255, 255, 0);\">那要依据什么进行交易？</span></strong></u></span></p><p><strong><span style=\"font-size: 26px;\"><span style=\"background-color: rgb(255, 255, 0);\"><u>关键是</u></span></span><span style=\"font-size: 26px; background-color: rgb(255, 255, 0);\"><u>应对，临盘时，我依据什么做什么操作？</u></span></strong></p><p><strong><span style=\"font-size: 24px;\">趋势 &nbsp; 概率 &nbsp; &nbsp;应对 &nbsp; 判断锚点 &nbsp; 规则 &nbsp;目标行情</span></strong></p><p><span style=\"font-size: 24px;\"><strong>机械概率 &nbsp; 关键点 &nbsp;市场变量</strong></span></p><p><strong><span style=\"font-size: 24px;\">大局观 &nbsp;市场理解力 &nbsp;</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
@@ -132,7 +143,7 @@
 		"duration": 17,
 		"timestamp": 1658544943250,
 		"promptTimes": 1,
-		"prevPromptTime": 1658729176749
+		"prevPromptTime": 1658813569971
 	},
 	{
 		"type": "错误",
@@ -147,7 +158,7 @@
 		"duration": 17,
 		"timestamp": 1658544940611,
 		"promptTimes": 1,
-		"prevPromptTime": 1658731876856
+		"prevPromptTime": 1658816270695
 	},
 	{
 		"type": "错误",
@@ -162,7 +173,7 @@
 		"duration": 17,
 		"timestamp": 1658544247850,
 		"promptTimes": 1,
-		"prevPromptTime": 1658734577575
+		"prevPromptTime": 1658818970672
 	},
 	{
 		"type": "错误",
@@ -177,7 +188,7 @@
 		"duration": 17,
 		"timestamp": 1658544167640,
 		"promptTimes": 1,
-		"prevPromptTime": 1658737276560
+		"prevPromptTime": 1658821670510
 	},
 	{
 		"type": "错误",
@@ -192,7 +203,7 @@
 		"duration": 17,
 		"timestamp": 1658542699987,
 		"promptTimes": 1,
-		"prevPromptTime": 1658739977505
+		"prevPromptTime": 1658824369956
 	},
 	{
 		"name": "",
@@ -207,13 +218,13 @@
 		"duration": 17,
 		"timestamp": 1658540065742,
 		"promptTimes": 1,
-		"prevPromptTime": 1658742676219
+		"prevPromptTime": 1658827070490
 	},
 	{
 		"name": "",
 		"id": "id_1658539789275_1323",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">多空动态博弈转化，不要线性思维；</span></strong></p>",
+		"content": "",
 		"level": 715,
 		"singleWindow": "",
 		"start": "8:00",
@@ -222,7 +233,7 @@
 		"duration": 17,
 		"timestamp": 1658539789275,
 		"promptTimes": 1,
-		"prevPromptTime": 1658745377382
+		"prevPromptTime": 1658829769636
 	},
 	{
 		"name": "",
@@ -255,16 +266,16 @@
 		"name": "",
 		"id": "id_1658278676173_5014",
 		"type": "错误",
-		"content": "",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我总是主观看空各个题材，那你找出资金会攻击的地方啊？</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658278676173,
-		"level": 801,
+		"level": 721,
 		"promptTimes": 2,
-		"prevPromptTime": 1658753477101
+		"prevPromptTime": 1658837869859
 	},
 	{
 		"name": "",
@@ -278,7 +289,7 @@
 		"duration": 17,
 		"timestamp": 1658235285391,
 		"promptTimes": 2,
-		"prevPromptTime": 1658756176892
+		"prevPromptTime": 1658840568604
 	},
 	{
 		"name": "",
@@ -291,9 +302,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658158301140,
-		"level": 715,
+		"level": 725,
 		"promptTimes": 1,
-		"prevPromptTime": 1658758876787
+		"prevPromptTime": 1658843268596
 	},
 	{
 		"name": "",
@@ -308,7 +319,7 @@
 		"timestamp": 1658134779334,
 		"level": 910,
 		"promptTimes": 1,
-		"prevPromptTime": 1658761576581
+		"prevPromptTime": 1658845968279
 	},
 	{
 		"name": "",
@@ -321,7 +332,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1657973073049,
-		"level": 1121
+		"level": 1121,
+		"promptTimes": 1,
+		"prevPromptTime": 1658848668241
 	},
 	{
 		"name": "",
@@ -339,14 +352,15 @@
 	{
 		"name": "",
 		"id": "id_1658055752493_2351",
-		"type": "",
+		"type": "错误",
 		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>大局观，大局观，大局观，大局观，大局观；赚钱效应、亏钱效应；</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>大局观，大局观，大局观，大局观，大局观；赚钱效应、亏钱效应；</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>大局观，大局观，大局观，大局观，大局观；赚钱效应、亏钱效应；</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>大局观，大局观，大局观，大局观，大局观；赚钱效应、亏钱效应；</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>大局观，大局观，大局观，大局观，大局观；赚钱效应、亏钱效应；</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">大局观，大局观，大局观，大局观，大局观；赚钱效应、亏钱效应；</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658055752493
+		"timestamp": 1658055752493,
+		"level": 801
 	},
 	{
 		"name": "",
@@ -359,7 +373,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658055314018,
-		"level": 715
+		"level": 725
 	},
 	{
 		"name": "",
@@ -397,31 +411,34 @@
 		"repeat": 4,
 		"interval": 130,
 		"duration": 9,
-		"timestamp": 1654519629339
+		"timestamp": 1654519629339,
+		"level": 91
 	},
 	{
 		"name": "",
 		"id": "9408389",
 		"type": "理念",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盈亏同源，持续一致性，概率优势；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px; background-color: rgb(148, 0, 211);\"><strong>盈亏同源，持续一致性。做龙头、做龙头、做龙头、龙头只有一个，顶只有一个。</strong></span></span></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">被上一次交易影响，左右打脸。犹豫错过机会。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盈亏同源，持续一致性，概率优势；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 26px; background-color: rgb(148, 0, 211);\"><strong>盈亏同源，持续一致性。做龙头、做龙头、做龙头、龙头只有一个，顶只有一个。</strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">不能保持一致性；</span></strong>被上次交易影响，左右打脸。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 1,
 		"interval": 120,
 		"duration": 7,
-		"timestamp": 1613315497825
+		"timestamp": 1613315497825,
+		"level": 86
 	},
 	{
 		"name": "",
 		"id": "2825697",
 		"type": "理念",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">不能靠主观预测交易，</span></strong></span></strong></span><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">关键是应对，客观跟随。</span></span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">明确什么样的条件做什么样的操作，坚决执行。这就是明确的交易系统。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">不能靠主观预测交易，</span></strong></span></strong></span><span style=\"font-size: 26px;\"><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">关键是应对，客观跟随。</span></span></strong></p><p><strong><span style=\"font-size: 26px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">明确什么样的条件做什么样的操作，坚决执行。这就是明确的交易系统。</span></strong></p>",
 		"singleWindow": "",
 		"start": "10:00",
 		"repeat": 4,
 		"interval": 60,
 		"duration": 9,
-		"timestamp": 1609491034659
+		"timestamp": 1609491034659,
+		"level": 81
 	},
 	{
 		"name": "",
@@ -440,7 +457,7 @@
 		"name": "",
 		"id": "id_1657980045837_7108",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有围绕主流热点龙头，主观看空主流热点龙头；</span></strong></p>",
+		"content": "",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
@@ -459,7 +476,8 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1657942815311
+		"timestamp": 1657942815311,
+		"level": 16
 	},
 	{
 		"name": "",
@@ -607,14 +625,14 @@
 		"name": "",
 		"id": "id_1645175299306_8210",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></span></strong></span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong></strong></span><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);;font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：太看重成本或囿于金钱；完全承受不了波动。</span></strong></span></strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong></strong></span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1645175299306,
-		"level": 510
+		"level": 515
 	},
 	{
 		"name": "",
@@ -632,37 +650,40 @@
 		"name": "",
 		"id": "6623304",
 		"type": "理念",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">简单纯粹取舍；专注重复一致。</span></strong></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">简单纯粹取舍，什么都想抓，什么也抓不住；</span></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px; background-color: rgb(148, 0, 211);\"><strong>简单纯粹取舍重复。你什么都想要，什么也抓不住。</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">做精不做多，保持一个良好的攻击状态更好。</span></strong></span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">简单纯粹取舍；专注重复一致。</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">简单纯粹取舍，什么都想抓，什么也抓不住；</span></strong></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 26px; background-color: rgb(148, 0, 211);\"><strong>简单纯粹取舍重复。你什么都想要，什么也抓不住。</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">做精不做多，保持一个良好的攻击状态更好。</span></strong></span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 3,
 		"interval": 60,
 		"duration": 7,
-		"timestamp": 1610846581339
+		"timestamp": 1610846581339,
+		"level": 91
 	},
 	{
 		"name": "",
 		"id": "4017341",
 		"type": "理念",
-		"content": "<p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">围绕主流热点龙头，</span></strong><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">围绕主流热点龙头，<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">围绕主流热点龙头<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">；</span></strong></span></strong></span></strong></span></strong></span></p><p><span style=\"font-size: 28px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong>围绕主流热点龙头，围绕主流热点龙头，围绕主流热点龙头；</strong></span></span></span></p><p><strong><span style=\"background-color: rgb(148, 0, 211); font-size: 28px; color: rgb(255, 255, 255);\">市场任何时候都是有主线和龙头的。<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">只做龙头<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">、</span></strong></span></strong></span></strong>只做主升、<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">只做最强。</span></strong></span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>如果龙头都没有人做，那么其它个股更不会有人做。</strong></span><span style=\"background-color: rgb(148, 0, 211);\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>如何没有，就应该空仓。</strong></span></strong></span></span></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">跟风杂毛就是一口气，一口气上不来就完蛋了。</span></strong></span></span><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">但是龙头即便买在高位，只要行情没结束。就有机会。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\">这市场的短线参与者都是人，他们在想什么？市场的G点是什么？</span></strong></p>",
+		"content": "<p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">围绕主流热点龙头，</span></strong><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">围绕主流热点龙头，<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">围绕主流热点龙头<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">；</span></strong></span></strong></span></strong></span></strong></span></p><p><strong><span style=\"background-color: rgb(148, 0, 211); font-size: 26px; color: rgb(255, 255, 255);\">市场任何时候都是有主线和龙头的。<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">只做龙头<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">、</span></strong></span></strong></span></strong>只做主升、<strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">只做最强。</span></strong></span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>如果龙头都没有人做，那么其它个股更不会有人做。</strong></span></span><span style=\"color: rgb(0, 0, 0);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>如何没有，就应该空仓。</strong></span></strong></span></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">跟风杂毛就是一口气，一口气上不来就完蛋了。</span></strong></span></span><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">但是龙头即便买在高位，只要行情没结束。就有机会。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 30px; background-color: rgb(255, 255, 0);\">这市场的短线参与者都是人，他们在想什么？市场的G点是什么？</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 5,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1614764001082
+		"timestamp": 1614764001082,
+		"level": 61
 	},
 	{
 		"name": "",
 		"id": "id_1647873146547_6098",
 		"type": "理念",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、做龙头、</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盈亏同源，持续一致性；</span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">龙头是最强的，是最有盈亏的，是最有持续性的，是最有效率的。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">围绕龙头寻找操作机会。市场上的人气龙头就那么几只票。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">主线是谁？龙头是谁？围绕龙头去操作。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盈亏同源，持续一致性；</span></strong>做龙头、做龙头、做龙头、做龙头、做龙头、</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">龙头是最强的，是最有盈亏的，是最有持续性的，是最有效率的。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">围绕龙头寻找操作机会。市场上的人气龙头就那么几只票。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">主线是谁？龙头是谁？围绕龙头去操作。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 7,
 		"interval": 70,
 		"duration": 13,
-		"timestamp": 1647873146547
+		"timestamp": 1647873146547,
+		"level": 61
 	},
 	{
 		"name": "",
@@ -762,7 +783,7 @@
 		"interval": 60,
 		"duration": 19,
 		"timestamp": 1639962005050,
-		"level": 715
+		"level": 725
 	},
 	{
 		"name": "",
@@ -788,7 +809,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1639558190823,
-		"level": 515
+		"level": 520
 	},
 	{
 		"name": "",
@@ -843,14 +864,14 @@
 		"name": "",
 		"id": "7028271",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 30px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：不要被以前的经验影响，总是有两种可能性。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">而我总是先入为主，或者被上次经验影响，不能保持一致性，左右打脸。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能双头或反弹，也可能是N浪。盘中拉升可能是脉冲也可能是启动。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">可能利好兑现，也可能继续爆发。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：不要被以前的经验影响，总是有两种可能性。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">而我总是先入为主，或者被上次经验影响，不能保持一致性，左右打脸。</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">可能双头或反弹，也可能是N浪。盘中拉升可能是脉冲也可能是启动。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">可能利好兑现，也可能继续爆发。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 4,
 		"interval": 90,
 		"duration": 4,
 		"timestamp": 1629155362746,
-		"level": 510
+		"level": 515
 	},
 	{
 		"name": "",
@@ -999,7 +1020,7 @@
 		"interval": 60,
 		"duration": 5,
 		"timestamp": 1631162251134,
-		"level": 510
+		"level": 515
 	},
 	{
 		"name": "",
@@ -1224,7 +1245,7 @@
 		"name": "",
 		"id": "7239077",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">依靠主观预测交易，但我的预判总是错误。</span></strong></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我以什么做为判断锚点？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>1：</u></span><u><strong><span style=\"font-size: 24px;font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">对市场理解不够。我总是预测错误，错过机会。</span></strong></u></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>2：主观看空，市场走出与我预期相反的走势，总是</u></span><u><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">措手不及，犹豫不定</span></strong></u><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>。</u></span></strong></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">连续阳线可能会回调，也可能会继续大阳。所谓强更强。</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>弱转强，我跟不上，因为我还沉浸在下跌的悲观中。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">强更强，我也抓不住，因为恐高，预期之外。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我总是倾向看空，</span><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\">从来没做好转强的准备。</span></span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">每次大阳线都在我预期之外。每次都措手不及，错失机会。</span></strong></span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">线性思维，每次修复转折行情总是预期之外。</span></strong></span></strong><br></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我总是没有做好市场资金出击的准备。</span></strong></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">没有计划，没有预案。总是错过市场转强的时机，总是踏错节奏。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">没有想过弱转强的机会，没有想过分歧转一致的机会。没有想过多空反转地天板的机会。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>问题：不能靠预测交易；</u></span></strong><span style=\"font-size: 28px;\"><u><strong><span style=\"background-color: rgb(255, 255, 0);\">那要依据什么进行交易？</span></strong></u></span></p><p><strong><span style=\"font-size: 28px;\"><span style=\"background-color: rgb(255, 255, 0);\"><u>关键是</u></span></span><span style=\"font-size: 28px; background-color: rgb(255, 255, 0);\"><u>应对，临盘时，我依据什么做什么操作？</u></span></strong></p><p><strong><span style=\"font-size: 24px;\">趋势 &nbsp; 概率 &nbsp; &nbsp;应对 &nbsp; 判断锚点 &nbsp; 规则 &nbsp;目标行情</span></strong></p><p><span style=\"font-size: 24px;\"><strong>机械概率 &nbsp; 关键点 &nbsp;市场变量</strong></span></p><p><strong><span style=\"font-size: 24px;\">大局观 &nbsp;市场理解力 &nbsp;</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">依靠主观预测交易，但我的预判总是错误。</span></strong></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我以什么做为判断锚点？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>1：</u></span><u><strong><span style=\"font-size: 24px;font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">对市场理解不够。我总是预测错误，错过机会。</span></strong></u></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>2：主观看空，市场走出与我预期相反的走势，总是</u></span><u><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">措手不及，犹豫不定</span></strong></u><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\"><u>。</u></span></strong></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">连续阳线可能会回调，也可能会继续大阳。所谓强更强。</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>弱转强，我跟不上，因为我还沉浸在下跌的悲观中。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">强更强，我也抓不住，因为恐高，预期之外。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我总是倾向看空，</span><span style=\"font-size: 24px;\"><span style=\"background-color: rgb(255, 255, 0);\">从来没做好转强的准备。</span></span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">每次大阳线都在我预期之外。每次都措手不及，错失机会。</span></strong></span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">线性思维，每次修复转折行情总是预期之外。</span></strong></span></strong><br></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我总是没有做好市场资金出击的准备。</span></strong></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">没有计划，没有预案。总是错过市场转强的时机，总是踏错节奏。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">没有想过弱转强的机会，没有想过分歧转一致的机会。没有想过多空反转地天板的机会。</span></strong></p><p><br></p><p><br></p>",
 		"singleWindow": "",
 		"start": "10:00",
 		"repeat": 4,
@@ -1380,12 +1401,12 @@
 		"type": "错误",
 		"start": "16:00",
 		"repeat": 2,
-		"content": "<p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\"><strong>错误5：<span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 30px; background-color: rgb(0, 0, 0);\"><strong><strong>没有围绕当前主流热点。</strong></strong></span></span></strong><strong><strong>没有专注于当前龙头。</strong></strong></span></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">没有做龙头；没有做龙头；没有做龙头;</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">强调过多少次了，但为什么还是没有做龙头；</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我好象陷在习惯和本能里，很难改变。</span></strong></span></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">没有系统和计划就不要交易，不要沉迷于日常交易中。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">好的标的和机会转瞬即逝。而我因为没有明确的判断锚点，总是犹豫不决。</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">总是浑浑噩噩，今天的永兴转债加入自选，但是怎么操作呢？没有想法。没有想法。</span></strong></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">临盘被动应对，犹豫，总是错过行情转强的机会。问自己：如果行情转强，做什么？</span></strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">临盘冲动交易，主观臆想，无系统交易是我最大的亏损来源；<strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我已经重复这个错误4年了。</span></strong></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我盯盘时，没有明确的计划；只是被市场牵着鼻子走；被动应对，浑浑噩噩；一冲动就会随手买入；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">尤其是市场转好，怕踏空买入；</span></strong><strong><span style=\"background-color: rgb(255, 255, 0);\">或个股冲高，就会臆想买入；</span></strong></span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">不知道如何交易，还在赚钱的心理下管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">真正的机会抓不住。风险来临管不住手。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">没有围绕主流热点龙头，主观看空主流热点龙头；</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px; background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><strong>没有围绕当前主流热点。</strong></strong></span></span></strong><strong><strong>没有专注于当前龙头。</strong></strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">没有做龙头；没有做龙头；没有做龙头;</span></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">强调过多少次了，但为什么还是没有做龙头；</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我好象陷在习惯和本能里，很难改变。</span></strong></span></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">没有系统和计划就不要交易，不要沉迷于日常交易中。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">好的标的和机会转瞬即逝。而我因为没有明确的判断锚点，总是犹豫不决。</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">总是浑浑噩噩，今天的永兴转债加入自选，但是怎么操作呢？没有想法。没有想法。</span></strong></p><p><span style=\"font-size: 18px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">临盘被动应对，犹豫，总是错过行情转强的机会。问自己：如果行情转强，做什么？</span></strong></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">临盘冲动交易，主观臆想，无系统交易是我最大的亏损来源；<strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我已经重复这个错误4年了。</span></strong></span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">这个错误我早就认识到了，但我沉迷于日常交易；始终在重复；</span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我盯盘时，没有明确的计划；只是被市场牵着鼻子走；被动应对，浑浑噩噩；一冲动就会随手买入；</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">尤其是市场转好，怕踏空买入；</span></strong><strong><span style=\"background-color: rgb(255, 255, 0);\">或个股冲高，就会臆想买入；</span></strong></span></p><p><br></p><p><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">不知道如何交易，还在赚钱的心理下管不住手。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">真正的机会抓不住。风险来临管不住手。</span></strong></p>",
 		"singleWindow": "",
 		"interval": 40,
 		"duration": 27,
 		"timestamp": 1594365344529,
-		"level": 420
+		"level": 520
 	},
 	{
 		"name": "",
@@ -1410,7 +1431,8 @@
 		"interval": 60,
 		"duration": 27,
 		"timestamp": 1610199493327,
-		"disable": false
+		"disable": false,
+		"level": 11
 	},
 	{
 		"name": "",
@@ -1632,7 +1654,8 @@
 		"repeat": 1,
 		"interval": 60,
 		"duration": 4,
-		"timestamp": 1612163571288
+		"timestamp": 1612163571288,
+		"level": 11
 	},
 	{
 		"name": "",
@@ -1765,13 +1788,14 @@
 		"name": "",
 		"id": "5012422",
 		"type": "理念",
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">历史会重复。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">我需要不断的翻看交易记录，增加理解力，增加肌肉记忆。</span></strong></span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">历史会重复。</span></strong></p><p><strong><span style=\"font-size: 26px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">我需要不断的翻看交易记录，增加理解力，增加肌肉记忆。</span></strong></span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
 		"repeat": 2,
 		"interval": 120,
 		"duration": 7,
-		"timestamp": 1599293279369
+		"timestamp": 1599293279369,
+		"level": 1
 	},
 	{
 		"name": "",
