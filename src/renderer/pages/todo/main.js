@@ -275,8 +275,9 @@ brick.reg('todoListCtrl', function (scope) {
     };
 
     scope.allToggle = function (e) {
-        let cla = 'toggle';
-        $('.pre.text').toggleClass(cla);
+        $elm.toggleClass('shirk');
+        //let cla = 'toggle';
+        //$('.pre.text').toggleClass(cla);
     };
 
     scope.addTodo = function (e) {

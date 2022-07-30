@@ -73,10 +73,18 @@ a {
 
 }
 
+#todoList {
+  &.shirk {
+    .text {
+      height: 10em;
+      overflow-y: hidden;
+    }
+  }
+}
+
 
 .text {
-  height: 10em;
-  overflow-y: hidden;
+
 
   &.toggle {
     height: auto;
@@ -84,6 +92,6 @@ a {
   }
 }
 
-.table td, .table th{
-  padding:0.5em 0.3em;
+.table td, .table th {
+  padding: 0.5em 0.3em;
 }

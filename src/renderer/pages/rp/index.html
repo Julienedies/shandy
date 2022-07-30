@@ -27,7 +27,8 @@
                                 {{ RPMQS_MAP[v] }}
                             </button>
 
-                            <button class="button is-primary is-small" ic-click="toggleForm">toggle</button>
+                            <button class="button is-primary is-small" ic-click="toggleForm">显示表单</button>
+                            <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>
                         </div>
                     </div>
 
@@ -84,7 +85,7 @@
                                         <span class="tag is-small"> {{ v.level || 0 }}</span>
                                         <span class="tag is-small"> {{ v.type }}</span>
                                         <span class="tag is-small" ic-click="edit:{{ v.id }}">修改</span>
-                                        <span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>
+                                        <!--<span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>-->
                                         <span class="tag is-small"
                                               ic-ajax
                                               ic-submit-method="delete"

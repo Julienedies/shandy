@@ -1,37 +1,49 @@
 [
 	{
+		"title": "",
+		"id": "6572550",
+		"type": "idea",
+		"comment": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1638964603634,
+		"caution": "",
+		"level": null,
+		"role": "2"
+	},
+	{
 		"title": "当前市场地位最高的市场合力短线票是谁？有没有博弈空间？临盘怎么根据盘面博弈；",
 		"id": "id_1658794344412_0254",
 		"type": "rp",
 		"caution": "",
 		"comment": "",
-		"level": "71",
+		"level": "160",
 		"role": "0",
 		"content": "",
 		"tags": [],
 		"timestamp": 1658794344412
 	},
 	{
-		"title": "围绕主流热点，主流热点是什么？",
+		"title": "主流热点：围绕主流热点，主流热点是什么？",
 		"id": "id_1658676109153_8213",
 		"type": "rp",
 		"caution": "",
 		"comment": "",
-		"level": "51",
+		"level": "170",
 		"role": "0",
 		"content": "",
 		"tags": [],
 		"timestamp": 1658676109153
 	},
 	{
-		"title": "问题：今天盘面可能是那种状态，我又该如何应对？",
+		"title": "应对：今天盘面可能是那种状态，我又该如何应对？",
 		"id": "id_1658633450236_5981",
 		"type": "rp",
 		"caution": "",
 		"comment": "",
-		"level": "1",
+		"level": "172",
 		"role": "0",
-		"content": "<p><strong>情绪高潮、情绪退潮、主升分歧转一致、分化、冰点否极泰来、反弹高潮、</strong></p>",
+		"content": "<p><strong>情绪高潮、情绪退潮、主升分歧转一致、分化、冰点否极泰来、反弹高潮、</strong></p><p><strong>空间板如果是顶一字，则是进攻日；但要排除盛极而衰，情绪高潮；</strong></p><p><strong>龙头买不到。低吸其它分支龙头，或低吸龙二。</strong></p><p><strong>龙头停牌，低位补涨；</strong></p><table style=\"width: 100%;\"><tbody><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\">空间板如果是顶一字，则是进攻日；但要排除盛极而衰，情绪高潮；<br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr></tbody></table>",
 		"tags": [],
 		"timestamp": 1658633450236
 	},
@@ -41,7 +53,7 @@
 		"type": "rp",
 		"caution": "主升期？  高位震荡期？  分歧分化？  退潮期？   低位试错期？",
 		"comment": "",
-		"level": "71",
+		"level": "181",
 		"role": "1",
 		"content": "",
 		"tags": [],
@@ -62,16 +74,16 @@
 		],
 		"timestamp": 1638689045658,
 		"caution": "",
-		"level": "81",
+		"level": "181",
 		"role": "1"
 	},
 	{
-		"title": "没有大局观，看不到影响当前市场最重要的东西。当前影响市场最重要的东西是什么？",
+		"title": "主流热点：看不到影响当前市场最重要的东西。当前影响市场最重要的东西是什么？",
 		"id": "id_1658627456517_4680",
 		"type": "rp",
 		"caution": "",
 		"comment": "",
-		"level": "1",
+		"level": "170",
 		"role": "0",
 		"content": "<p>疫情行情：新冠特效药；</p>",
 		"tags": [],
@@ -90,7 +102,7 @@
 		"timestamp": 1651063336665
 	},
 	{
-		"title": "市场在向那个方向演变？赚钱效应是在趋强还是趋弱？亏钱效应是在变强还是变弱？",
+		"title": "大局观：市场在向那个方向演变？赚钱效应是在趋强还是趋弱？亏钱效应是在变强还是变弱？",
 		"id": "8683585",
 		"type": "rp",
 		"comment": "行情好多做；行情不好管住手；做的话，做最强；弱势管住手，强势踏准节奏；现在行情是好是坏？最强的股票是谁？",
@@ -98,20 +110,20 @@
 		"tags": [],
 		"timestamp": 1639656009272,
 		"caution": "跌停是否增多？有没有系统性风险？",
-		"level": 3,
+		"level": "180",
 		"role": "1"
 	},
 	{
-		"title": "市场主线热点是什么？我有没有围绕主流热点龙头操作？市场上最能凝聚合力资金的方向是什么？主线、热点、龙头、风格。",
+		"title": "主流热点：我有没有围绕主流热点龙头操作？市场上最能凝聚合力资金的方向是什么？",
 		"id": "1243691",
 		"type": "rp",
 		"comment": "",
 		"tags": [],
-		"content": "<p>任何时候市场都是有主线的。不要着眼于市场的各种小波动。</p>",
+		"content": "<p>任何时候市场都是有主线的。不要着眼于市场的各种小波动。</p><p>除非有明确的结束信号，否则永远不要主观看空主流热点。</p>",
 		"name": "1243691",
 		"timestamp": 1638676655275,
-		"caution": "除非有明确的结束信号，否则永远不要主观看空主流热点。",
-		"level": 2,
+		"caution": "",
+		"level": "170",
 		"role": "1"
 	},
 	{
@@ -120,7 +132,7 @@
 		"type": "rp",
 		"caution": "资金总是要寻找方向的。",
 		"comment": "房地产行情、化肥行情",
-		"level": 2,
+		"level": "140",
 		"role": "1",
 		"content": "",
 		"tags": [],
@@ -156,7 +168,7 @@
 		"type": "rp",
 		"caution": "所以要围绕新能源操作。无论是趋势还是情绪；",
 		"comment": "",
-		"level": "81",
+		"level": "170",
 		"role": "1",
 		"content": "",
 		"tags": [],
@@ -192,7 +204,7 @@
 		"type": "rp",
 		"caution": "浙江建投、翠微股份、湖北宜化、朗姿股份、华银电力",
 		"comment": "",
-		"level": "69",
+		"level": "169",
 		"role": "1",
 		"content": "",
 		"tags": [],
@@ -204,7 +216,7 @@
 		"type": "rp",
 		"caution": "持续活跃度？广度（板块异动，后续爆发）、高度（譬如空间板，后续引爆板块）",
 		"comment": "",
-		"level": "66",
+		"level": "170",
 		"role": "1",
 		"content": "",
 		"tags": [],
@@ -220,7 +232,7 @@
 		"timestamp": 1638679624532,
 		"tags": [],
 		"caution": "没有大局观，看不到大趋势；主观看空；先入为主；线性思维；",
-		"level": "1000",
+		"level": "990",
 		"role": "0"
 	},
 	{
@@ -255,7 +267,7 @@
 		"comment": "",
 		"level": "91",
 		"role": "1",
-		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 33.3089%;\">整体指数状态、节奏</td><td style=\"width: 33.3333%;\">转折？ 修复？ &nbsp;分歧？ 分化？ &nbsp;退潮？ 高潮？ 调整观望？</td><td style=\"width: 33.3089%;\"><br></td></tr><tr><td style=\"width: 33.3089%;\">整体短线情绪、节奏</td><td style=\"width: 33.3333%;\">分歧、高低切、</td><td style=\"width: 33.3089%;\">轮动、卡位</td></tr><tr><td>板块热点生命周期</td><td>启动爆发？ &nbsp;分歧震荡？&nbsp; 退潮？</td><td><br></td></tr></tbody></table>",
+		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 33.3089%;\">整体指数状态、节奏</td><td style=\"width: 38.1788%;\">转折？ 修复？ &nbsp;分歧？ 分化？ &nbsp;退潮？ 高潮？ 调整观望？</td><td style=\"width: 28.4425%;\"><br></td></tr><tr><td style=\"width: 33.3089%;\">整体短线情绪、节奏</td><td style=\"width: 38.1788%;\">分歧、高低切、</td><td style=\"width: 28.4425%;\">轮动、卡位</td></tr><tr><td>板块热点生命周期</td><td style=\"width: 38.1788%;\">启动爆发？ &nbsp;分歧震荡？&nbsp; 退潮？</td><td style=\"width: 28.4425%;\"><br></td></tr></tbody></table>",
 		"tags": [],
 		"timestamp": 1645108028841
 	},
@@ -277,14 +289,14 @@
 		"type": "idea",
 		"caution": "理解、预判、验证、跟随；",
 		"comment": "",
-		"level": 491,
+		"level": "590",
 		"role": "2",
 		"content": "",
 		"tags": [],
 		"timestamp": 1649560024357
 	},
 	{
-		"title": "关键是应对；关键是应对；客观跟随； ",
+		"title": "关键是应对；客观跟随； ",
 		"id": "1289343",
 		"type": "idea",
 		"comment": "",
@@ -292,7 +304,7 @@
 		"tags": [],
 		"timestamp": 1638952381928,
 		"caution": "",
-		"level": 491,
+		"level": "560",
 		"role": "2"
 	},
 	{
@@ -301,9 +313,9 @@
 		"type": "idea",
 		"caution": "",
 		"comment": "",
-		"level": "490",
+		"level": "510",
 		"role": "2",
-		"content": "<p>围绕主流热点龙头；</p><p>围绕主流热点龙头；</p><p>围绕主流热点龙头；</p><p>围绕主流热点龙头；</p>",
+		"content": "<p><strong>市场任何时候都是有主线的，除非你眼瞎看不见；</strong></p><p><strong>永远不要主观看空主流热点，除非市场有明确的信号；</strong></p>",
 		"tags": [],
 		"timestamp": 1649436886281
 	},
@@ -313,7 +325,7 @@
 		"type": "idea",
 		"caution": "",
 		"comment": "",
-		"level": "490",
+		"level": "501",
 		"role": "2",
 		"content": "",
 		"tags": [],
@@ -325,7 +337,7 @@
 		"type": "rp",
 		"caution": "",
 		"comment": "围绕主线龙头寻找博弈机会；不确定的话，就小仓位试；龙头做T；",
-		"level": "89",
+		"level": "160",
 		"role": "1",
 		"content": "",
 		"tags": [],
@@ -337,7 +349,7 @@
 		"type": "rp",
 		"caution": "",
 		"comment": "",
-		"level": "76",
+		"level": "181",
 		"role": "1",
 		"content": "",
 		"tags": [],
@@ -368,7 +380,7 @@
 		"role": "1"
 	},
 	{
-		"title": "市场理解力：当前市场偏好风格是什么？最有赚钱效应的是什么？",
+		"title": "大局观：当前市场偏好风格是什么？最有赚钱效应的是什么？",
 		"id": "8059392",
 		"type": "rp",
 		"comment": "",
@@ -387,7 +399,7 @@
 		"content": "<p><u><span style=\"font-size: 18px;\">赚钱效应有没有持续性？</span></u><u><span style=\"font-size: 18px;\">低吸赚钱效应怎么样？追涨赚钱效应怎么样？ 接力板赚钱效应怎么样？</span></u></p>",
 		"timestamp": 1638692867662,
 		"caution": "越快意识到市场变化越能获取更大的利润。",
-		"level": "81",
+		"level": "181",
 		"role": "1"
 	},
 	{
@@ -396,7 +408,7 @@
 		"type": "rp",
 		"caution": "理解、预判、验证、试错、跟随",
 		"comment": "市场氛围好坏？ 攻击方向？做个次日预判和交易计划有那么难吗？",
-		"level": "47",
+		"level": "172",
 		"role": "1",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 40.0422%;\">大局观：大周期</td><td style=\"width: 59.8772%;\">指数趋势、情绪强弱、赚钱效应；</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 阶段</td><td style=\"width: 59.8772%;\">主升期、高位震荡期、主跌期、低位震荡期</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 市场风格</td><td style=\"width: 59.8772%;\">蓝筹趋势、情绪题材、趋势题材；</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 主线热点</td><td style=\"width: 59.8772%;\">做核心龙头、挖掘低位、</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 人气龙头</td><td style=\"width: 59.8772%;\">盈亏同源，持续一致；</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 节奏</td><td style=\"width: 59.8772%;\">分歧、分歧转一致、弱转强、强更强、高潮</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 切换</td><td style=\"width: 59.8772%;\">风格切换、高低切换、</td></tr></tbody></table>",
 		"tags": [],
@@ -421,20 +433,8 @@
 			"3226627"
 		],
 		"caution": "市场是有节奏的，今天的节奏是什么？明天的节奏是什么？",
-		"level": "48",
+		"level": "180",
 		"role": "1"
-	},
-	{
-		"title": "预案：龙头买不到。低吸其它分支龙头，或低吸龙二。",
-		"id": "id_1646385853057_1892",
-		"type": "rp",
-		"caution": "",
-		"comment": "",
-		"level": "1",
-		"role": "1",
-		"content": "",
-		"tags": [],
-		"timestamp": 1646385853057
 	},
 	{
 		"title": "今天资金攻击方向是哪里？有加强或修复的可能吗？卡位轮动？有没有会发酵的消息新闻？",
@@ -445,7 +445,7 @@
 		"tags": [],
 		"timestamp": 1639486936279,
 		"caution": "",
-		"level": "61",
+		"level": "160",
 		"role": "1"
 	},
 	{
@@ -469,7 +469,7 @@
 		],
 		"timestamp": 1638705609580,
 		"caution": "",
-		"level": "61",
+		"level": "161",
 		"role": "1"
 	},
 	{
@@ -488,11 +488,11 @@
 		],
 		"timestamp": 1638717495263,
 		"caution": "",
-		"level": "43",
+		"level": "180",
 		"role": "1"
 	},
 	{
-		"title": "手中的票的预案是什么？",
+		"title": "应对：手中的票的预案是什么？",
 		"id": "0743188",
 		"type": "rp",
 		"comment": "",
@@ -505,7 +505,7 @@
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 45.6776%;\">卖飞龙头、超预期头寸</td><td style=\"width: 54.2491%;\">正海磁材、中来股份、东方电缆、</td></tr><tr><td style=\"width: 45.6776%;\">过山车套利头寸</td><td style=\"width: 54.2491%;\"><br></td></tr><tr><td style=\"width: 45.6776%;\">鸡肋头寸、非预期头寸、错误头寸；止损犹疑；浪费时间和机会；</td><td style=\"width: 54.2491%;\"><br></td></tr><tr><td style=\"width: 45.6776%;\">我总是浑浑噩噩、被动应对。持仓平仓之间犹豫不决；不能保持一致性，两面打脸。<br></td><td style=\"width: 54.2491%;\"><br></td></tr></tbody></table>",
 		"timestamp": 1638692425572,
 		"caution": " 卖飞；过山车；止损犹疑；",
-		"level": "1",
+		"level": "170",
 		"role": "1"
 	},
 	{
@@ -521,7 +521,7 @@
 		"role": "1"
 	},
 	{
-		"title": "我是不是主观看空？有没有预期之外的准备？",
+		"title": "应对：我是不是主观看空？有没有预期之外的准备？",
 		"id": "6255155",
 		"type": "rp",
 		"comment": "我总是错过市场转强最好的交易机会。",
@@ -529,7 +529,7 @@
 		"tags": [],
 		"timestamp": 1639655524225,
 		"caution": "",
-		"level": "1",
+		"level": "150",
 		"role": "1"
 	},
 	{
@@ -542,7 +542,7 @@
 		"name": "5225087",
 		"timestamp": 1638680127622,
 		"caution": "预期之外，说明我的理解和预判可能是错误的。",
-		"level": "1",
+		"level": "155",
 		"role": "1"
 	},
 	{
@@ -554,7 +554,7 @@
 		"tags": [],
 		"timestamp": 1638692460734,
 		"caution": "",
-		"level": "1",
+		"level": "160",
 		"role": "1"
 	},
 	{
@@ -566,7 +566,7 @@
 		"tags": [],
 		"timestamp": 1638717864581,
 		"caution": "",
-		"level": "1",
+		"level": "120",
 		"role": "1"
 	},
 	{
@@ -608,11 +608,14 @@
 	{
 		"title": "日复一日，我有做出本质的改变吗？我需要养成正反馈的习惯，而不是一直重复所有的错误。",
 		"id": "6222692",
-		"type": "warn",
+		"type": "question",
 		"comment": "",
 		"content": "<p>我每天还是在重复以前的交易动作。\n我需要做出真正的改变。我必须做出真正的改变。\n问题没有解决。\n错误仍在重复。</p>",
 		"tags": [],
-		"timestamp": 1638966078422
+		"timestamp": 1638966078422,
+		"caution": "",
+		"level": "1000",
+		"role": "0"
 	},
 	{
 		"title": "如果市场走势和我的预判相反，怎么办？",
@@ -766,18 +769,6 @@
 		"role": "0"
 	},
 	{
-		"title": "",
-		"id": "6572550",
-		"type": "idea",
-		"comment": "",
-		"content": "",
-		"tags": [],
-		"timestamp": 1638964603634,
-		"caution": "",
-		"level": "401",
-		"role": "2"
-	},
-	{
 		"title": "简单纯粹重复；避免犯错；",
 		"id": "7769692",
 		"type": "idea",
@@ -786,7 +777,7 @@
 		"tags": [],
 		"timestamp": 1638952363323,
 		"caution": "",
-		"level": 402,
+		"level": "580",
 		"role": "2"
 	},
 	{
@@ -798,7 +789,7 @@
 		"tags": [],
 		"timestamp": 1638952394462,
 		"caution": "",
-		"level": 402,
+		"level": "570",
 		"role": "2"
 	},
 	{
@@ -810,7 +801,7 @@
 		"tags": [],
 		"timestamp": 1639212076634,
 		"caution": "",
-		"level": "401",
+		"level": "500",
 		"role": "2"
 	},
 	{

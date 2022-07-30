@@ -139,9 +139,9 @@ brick.reg('todoListCtrl', function (scope) {
     });
 
     scope.on('move', function (e, data) {
-        $.post('/stock/rp/move', data).done((data) => {
+        /*$.post('/stock/rp/move', data).done((data) => {
             setList(data);
-        });
+        });*/
     });
 
     scope.replay = {
@@ -168,12 +168,17 @@ brick.reg('todoListCtrl', function (scope) {
         render();
     }
 
-    scope.toggle = function (e) {
-        $(this).nextAll().find('.pre.text').toggle();
-    };
 
     scope.toggleForm = function (e) {
         $elm.find('#mainFooter').toggle();
+    };
+
+    scope.toggleText = function (e) {
+        $elm.toggleClass('shrink');
+    };
+
+    scope.toggle = function (e) {
+        $(this).nextAll().find('.pre.text').toggle();
     };
 
     scope.refreshTags = function (e) {
@@ -212,9 +217,9 @@ brick.reg('todoListCtrl', function (scope) {
 
     $elm.on('ic-select.change', '[ic-select][ic-form-field]', function (e) {
         let data = $elm.find('[ic-form="rp"]').icForm();
-        let $th = $(this)
-        let name = $th.attr('ic-form-field')
-        model.replay[name] = $th.attr('ic-val')
+        let $th = $(this);
+        let name = $th.attr('ic-form-field');
+        //model.replay[name] = $th.attr('ic-val');
     });
 
 

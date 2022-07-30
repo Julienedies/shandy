@@ -11,7 +11,7 @@
 <body>
 <div ic-view-stage ic-ctrl="mainCtrl">
 
-    <div ic-view="todoList" ic-active ic-ctrl="todoListCtrl">
+    <div id="todoList" ic-ctrl="todoListCtrl" ic-view="todoList" ic-active>
         <div class="column">
 
             <div class="buttons is-right" id="fixedButtons" style="position: fixed;z-index: 1000; right:4%; ">
@@ -32,6 +32,7 @@
                 <button class="button is-primary" ic-click="addTodo">新ToDo</button>
                 <button class="button is-primary" ic-click="hideWindow">关闭窗口</button>
             </div>
+
             <table class="table is-striped is-fullwidth" style="margin-top:45px;font-size:14px;" ic-tpl="todoList">
                 <tr style="white-space: nowrap;">
                     <th>类型</th>

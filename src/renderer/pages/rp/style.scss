@@ -68,12 +68,19 @@ html {
     //text-decoration: underline;
   }
 
+
+  &.shrink{
+    .pre.text {
+      display: none!important;
+    }
+  }
+
+
   .role_0, .role_1, .role_2, .role_3{
     color:#fff;
     white-space: nowrap;
     overflow: hidden;
   }
-
 
 
   .role_0, .role_1, .role_2 {
@@ -182,6 +189,7 @@ html {
       }
     }
   }
+
 
   .pre.text {
     //display: none;
