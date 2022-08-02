@@ -10,9 +10,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658849784603,
-		"promptTimes": 1,
-		"prevPromptTime": 1659314299440
+		"timestamp": 1658849784603
 	},
 	{
 		"type": "错误",
@@ -25,9 +23,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658561356460,
-		"promptTimes": 1,
-		"prevPromptTime": 1659316999013
+		"timestamp": 1658561356460
 	},
 	{
 		"type": "错误",
@@ -40,9 +36,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658559868021,
-		"promptTimes": 1,
-		"prevPromptTime": 1659319699258
+		"timestamp": 1658559868021
 	},
 	{
 		"type": "错误",
@@ -55,9 +49,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658558460231,
-		"promptTimes": 1,
-		"prevPromptTime": 1659322399282
+		"timestamp": 1658558460231
 	},
 	{
 		"type": "错误",
@@ -70,9 +62,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658558375651,
-		"promptTimes": 1,
-		"prevPromptTime": 1659325099623
+		"timestamp": 1658558375651
 	},
 	{
 		"type": "错误",
@@ -85,9 +75,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658545526846,
-		"promptTimes": 1,
-		"prevPromptTime": 1659327798482
+		"timestamp": 1658545526846
 	},
 	{
 		"type": "错误",
@@ -100,9 +88,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658545473854,
-		"promptTimes": 1,
-		"prevPromptTime": 1659330498884
+		"timestamp": 1658545473854
 	},
 	{
 		"type": "错误",
@@ -115,9 +101,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658545339613,
-		"promptTimes": 1,
-		"prevPromptTime": 1659333198365
+		"timestamp": 1658545339613
 	},
 	{
 		"type": "错误",
@@ -130,9 +114,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658545171374,
-		"promptTimes": 1,
-		"prevPromptTime": 1659335898632
+		"timestamp": 1658545171374
 	},
 	{
 		"type": "错误",
@@ -145,9 +127,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658544943250,
-		"promptTimes": 1,
-		"prevPromptTime": 1659338599335
+		"timestamp": 1658544943250
 	},
 	{
 		"type": "错误",
@@ -160,9 +140,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658544940611,
-		"promptTimes": 1,
-		"prevPromptTime": 1659341298532
+		"timestamp": 1658544940611
 	},
 	{
 		"type": "错误",
@@ -175,9 +153,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658544247850,
-		"promptTimes": 1,
-		"prevPromptTime": 1659343999102
+		"timestamp": 1658544247850
 	},
 	{
 		"type": "错误",
@@ -190,9 +166,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658542699987,
-		"promptTimes": 1,
-		"prevPromptTime": 1659346697814
+		"timestamp": 1658542699987
 	},
 	{
 		"name": "",
@@ -205,9 +179,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658540065742,
-		"promptTimes": 1,
-		"prevPromptTime": 1659349397739
+		"timestamp": 1658540065742
 	},
 	{
 		"name": "",
@@ -247,9 +219,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658278676173,
-		"level": 721,
-		"promptTimes": 2,
-		"prevPromptTime": 1659357497373
+		"level": 721
 	},
 	{
 		"name": "",
@@ -261,9 +231,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658235285391,
-		"promptTimes": 2,
-		"prevPromptTime": 1659360197938
+		"timestamp": 1658235285391
 	},
 	{
 		"name": "",
@@ -276,9 +244,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658158301140,
-		"level": 725,
-		"promptTimes": 1,
-		"prevPromptTime": 1659362897652
+		"level": 725
 	},
 	{
 		"name": "",
@@ -291,24 +257,20 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658134779334,
-		"level": 910,
-		"promptTimes": 1,
-		"prevPromptTime": 1659365598317
+		"level": 910
 	},
 	{
 		"name": "",
 		"id": "id_1657973073049_4256",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">急于赚钱的心态，沉迷于日常交易中。</span></strong><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">多思考和反省，看看自己的交易日记。把事情做对。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天想的是赚钱，而不是把事情做对。每天都沉迷于无效的日常交易；</span></strong></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。<strong>每天都沉迷于无效的日常交易；</strong></strong></span></span></span></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1657973073049,
-		"level": 1126,
-		"promptTimes": 1,
-		"prevPromptTime": 1659368298591
+		"level": 1126
 	},
 	{
 		"name": "",
@@ -481,19 +443,6 @@
 	},
 	{
 		"name": "",
-		"id": "id_1656824097136_7785",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天想的是赚钱，而不是把事情做对。每天都沉迷于无效的日常交易；</span></strong></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。<strong>每天都沉迷于无效的日常交易；</strong></strong></span></span></span></p><p><br></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 3,
-		"interval": 90,
-		"duration": 17,
-		"timestamp": 1656824097136,
-		"level": 1015
-	},
-	{
-		"name": "",
 		"id": "id_1656086487722_1471",
 		"type": "错误",
 		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我依然每天重复所有的错误！为什么我就是改变不了？</span></strong></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我依然每天重复所有的错误！为什么我就是改变不了？</strong></span></span></span></p><p><br></p>",
@@ -507,22 +456,9 @@
 	},
 	{
 		"name": "",
-		"id": "id_1655363529716_5179",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我真他妈的恨死自己了，一个人怎么可以这样？每天着眼于转债的小波动；</span></strong></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">我真他妈的恨死自己了，一个人怎么可以这样？每天着眼于转债的小波动；</span></strong></span></span></p><p><br></p><p><span style=\"font-size: 26px;\"><br></span></p><p><br></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 3,
-		"interval": 130,
-		"duration": 17,
-		"timestamp": 1655363529716,
-		"level": 1010
-	},
-	{
-		"name": "",
 		"id": "id_1651821329311_4246",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</span></strong></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</strong></span></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">为什么我能持续这样做半年？</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</span></strong></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">我真他妈的恨死自己了，一个人怎么可以这样？每天着眼于转债的小波动；</span></strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">为什么我能持续这样做半年？</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 1,
@@ -587,7 +523,7 @@
 		"name": "",
 		"id": "id_1644026604851_3286",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：历史会重复，翻看这两年的市场行情，翻来覆去就是这么一回事，为什么我却始终一筹莫展？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">到底我是哪里出了问题？做个次日预判和交易计划有那么难吗？</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">历史会重复，翻看这两年的市场行情，翻来覆去就是这么一回事，为什么我却始终一筹莫展？</span></strong></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">到底我是哪里出了问题？做个次日预判和交易计划有那么难吗？</span></strong></span></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我不是第一次有悟道的感觉，但为什么一年过去，却丝毫没有改变？</span></strong></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">为什么没有做到知行合一？</span></strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">说了做龙头，做龙头，做龙头，为什么还是错过所有的大龙头？</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 4,
@@ -708,19 +644,6 @@
 		"duration": 37,
 		"timestamp": 1625975362922,
 		"level": 990
-	},
-	{
-		"name": "",
-		"id": "id_1639957717122",
-		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我不是第一次有悟道的感觉，但为什么一年过去，却丝毫没有改变？</span></strong></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">为什么没有做到知行合一？</span></strong></span></span></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">说了做龙头，做龙头，做龙头，为什么还是错过所有的大龙头？</span></strong></p>",
-		"singleWindow": "",
-		"start": "8:00",
-		"repeat": 4,
-		"interval": 90,
-		"duration": 17,
-		"timestamp": 1639957717122,
-		"level": 1060
 	},
 	{
 		"name": "",
@@ -1240,7 +1163,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1614784511292,
-		"level": 1116
+		"level": 990
 	},
 	{
 		"name": "",
