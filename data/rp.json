@@ -1,5 +1,41 @@
 [
 	{
+		"title": "资金每天必然是要出击的，你预判资金会出击什么方向？",
+		"id": "id_1659790923913_1210",
+		"type": "rp",
+		"caution": "",
+		"comment": "",
+		"level": "1",
+		"role": "0",
+		"content": "",
+		"tags": [],
+		"timestamp": 1659790923913
+	},
+	{
+		"title": "现在有什么是初期的异动吗？后续会不会发展成主流热点？为何我总是后知后觉?",
+		"id": "id_1659789660452_8180",
+		"type": "rp",
+		"caution": "行情初期不在意，后知后觉；一致高潮时，才意识到；",
+		"comment": "",
+		"level": "155",
+		"role": "0",
+		"content": "<p>我是怎么错过中美博弈背景下的芯片行情？（华大九天、大港股份）</p><p>我是怎么错过机器人的？（巨轮智能、中大力德、绿的谐波、江苏北人）</p>",
+		"tags": [],
+		"timestamp": 1659789660452
+	},
+	{
+		"title": "主线热点：那些潜在的热点可能发酵成为主线？为什么我他妈的总是后知后觉？",
+		"id": "id_1659713118365_2430",
+		"type": "rp",
+		"caution": "",
+		"comment": "",
+		"level": "175",
+		"role": "0",
+		"content": "<p>错过机器人行情： 巨轮智能、中大力德、江苏北人、绿的谐波一直涨，我他妈的为什么就眼瞎看不见？</p><p>错过芯片行情：光刻机的彤程新材、万业企业、大港股份一直在上涨，我他妈为什么眼瞎看不见？为什么我脑子没有想过背后的逻辑?</p>",
+		"tags": [],
+		"timestamp": 1659713118365
+	},
+	{
 		"title": "主线热点：我是不是又错过了当下的热点行情？ 当前的热点行情是什么？当前的市场龙头是什么？ 我为什么没有介入？",
 		"id": "id_1659237555228_0992",
 		"type": "rp",
@@ -48,14 +84,14 @@
 		"timestamp": 1658676109153
 	},
 	{
-		"title": "应对：今天盘面可能是那种状态，我又该如何应对？",
+		"title": "关键是应对：今天盘面可能是那种状态，我又该如何应对？",
 		"id": "id_1658633450236_5981",
 		"type": "rp",
 		"caution": "",
 		"comment": "",
-		"level": "169",
+		"level": "2169",
 		"role": "0",
-		"content": "<p><strong>情绪高潮、情绪退潮、主升分歧转一致、分化、冰点否极泰来、反弹高潮、</strong></p><p><strong>空间板如果是顶一字，则是进攻日；但要排除盛极而衰，情绪高潮；</strong></p><p><strong>龙头买不到。低吸其它分支龙头，或低吸龙二。</strong></p><p><strong>龙头停牌，低位补涨；</strong></p><table style=\"width: 100%;\"><tbody><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\">空间板如果是顶一字，则是进攻日；但要排除盛极而衰，情绪高潮；<br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr><tr><td style=\"width: 17.9006%;\"><br></td><td style=\"width: 52.1292%;\"><br></td><td style=\"width: 29.897%;\"><br></td></tr></tbody></table>",
+		"content": "<p><strong>情绪高潮、情绪退潮、主升分歧转一致、分化、冰点否极泰来、反弹高潮、</strong></p><p><strong>空间板如果是顶一字，则是进攻日；但要排除盛极而衰，情绪高潮；</strong></p><p><strong>龙头买不到。低吸其它分支龙头，或低吸龙二。</strong></p><p><strong>龙头停牌，低位补涨；</strong></p><table style=\"width: 100%;\"><tbody><tr><td style=\"width: 15.7305%;\">可能的走势</td><td style=\"width: 20.4265%;\">预案</td><td style=\"width: 41.3412%;\">信号</td><td>大局观、大趋势</td></tr><tr><td style=\"width: 15.7305%;\">进攻日：主流热点主升</td><td style=\"width: 20.4265%;\"><br></td><td style=\"width: 41.3412%;\">空间板如果是顶一字，则是进攻日；但要排除盛极而衰，情绪高潮；<br></td><td style=\"width: 22.4214%;\"><br></td></tr><tr><td style=\"width: 15.7305%;\">转折日</td><td style=\"width: 20.4265%;\"><br></td><td style=\"width: 41.3412%;\"><br></td><td style=\"width: 22.4214%;\"><br></td></tr><tr><td style=\"width: 15.7305%;\">弱转强</td><td style=\"width: 20.4265%;\">主流热点高位震荡</td><td style=\"width: 41.3412%;\"><br></td><td style=\"width: 22.4214%;\"><br></td></tr><tr><td style=\"width: 15.7305%;\">分歧日</td><td style=\"width: 20.4265%;\"><br></td><td style=\"width: 41.3412%;\"><br></td><td style=\"width: 22.4214%;\"><br></td></tr><tr><td style=\"width: 15.7305%;\">高低切换</td><td style=\"width: 20.4265%;\"><br></td><td style=\"width: 41.3412%;\"><br></td><td style=\"width: 22.4214%;\"><br></td></tr><tr><td style=\"width: 15.7305%;\">轮动</td><td style=\"width: 20.4265%;\"><br></td><td style=\"width: 41.3412%;\"><br></td><td style=\"width: 22.4214%;\"><br></td></tr><tr><td style=\"width: 15.7305%;\"><br></td><td style=\"width: 20.4265%;\"><br></td><td style=\"width: 41.3412%;\"><br></td><td style=\"width: 22.4214%;\"><br></td></tr></tbody></table>",
 		"tags": [],
 		"timestamp": 1658633450236
 	},
@@ -457,7 +493,7 @@
 		"tags": [],
 		"timestamp": 1639486936279,
 		"caution": "",
-		"level": "160",
+		"level": "165",
 		"role": "1"
 	},
 	{
@@ -545,7 +581,7 @@
 		"role": "1"
 	},
 	{
-		"title": "有哪些个股超预期？在我预期之外。",
+		"title": "有哪些个股超出预期之外？这背后的逻辑是什么？为什么我总是后知后觉？",
 		"id": "5225087",
 		"type": "rp",
 		"comment": "",
@@ -554,7 +590,7 @@
 		"name": "5225087",
 		"timestamp": 1638680127622,
 		"caution": "预期之外，说明我的理解和预判可能是错误的。",
-		"level": "155",
+		"level": "165",
 		"role": "1"
 	},
 	{
