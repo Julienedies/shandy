@@ -4,15 +4,13 @@
 		"level": 1200,
 		"name": "",
 		"id": "id_1659545749677_8204",
-		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘前没有明确的交易计划。</span></strong></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘随意交易。</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题没有解决，我依然他妈的沉浸在无效交易中。</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘前没有明确的交易计划。</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘随意交易。</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题没有解决，我依然他妈的沉浸在无效交易中。</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘前没有明确的交易计划。</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘随意交易。</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题没有解决，我依然他妈的沉浸在无效交易中。</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘前没有明确的交易计划。</span></strong></span></p><p><span style=\"font-size: 28px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘随意交易。</span></strong></span></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题没有解决，我依然他妈的沉浸在无效交易中。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘前没有明确的交易计划。</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘随意交易。</span></strong></span></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题没有解决，我依然他妈的沉浸在无效交易中。</span></strong></span></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1659545749677,
-		"promptTimes": 1,
-		"prevPromptTime": 1659660715856
+		"timestamp": 1659545749677
 	},
 	{
 		"type": "错误",
@@ -27,7 +25,7 @@
 		"duration": 17,
 		"timestamp": 1658849784603,
 		"promptTimes": 1,
-		"prevPromptTime": 1659663416859
+		"prevPromptTime": 1659919369330
 	},
 	{
 		"type": "错误",
@@ -42,7 +40,7 @@
 		"duration": 17,
 		"timestamp": 1658561356460,
 		"promptTimes": 1,
-		"prevPromptTime": 1659666116115
+		"prevPromptTime": 1659922069563
 	},
 	{
 		"type": "错误",
@@ -57,7 +55,7 @@
 		"duration": 17,
 		"timestamp": 1658559868021,
 		"promptTimes": 1,
-		"prevPromptTime": 1659668816160
+		"prevPromptTime": 1659924769235
 	},
 	{
 		"type": "错误",
@@ -72,7 +70,7 @@
 		"duration": 17,
 		"timestamp": 1658558460231,
 		"promptTimes": 1,
-		"prevPromptTime": 1659671515913
+		"prevPromptTime": 1659927469224
 	},
 	{
 		"type": "错误",
@@ -87,7 +85,7 @@
 		"duration": 17,
 		"timestamp": 1658558375651,
 		"promptTimes": 1,
-		"prevPromptTime": 1659674216743
+		"prevPromptTime": 1659930169926
 	},
 	{
 		"type": "错误",
@@ -102,7 +100,7 @@
 		"duration": 17,
 		"timestamp": 1658545526846,
 		"promptTimes": 1,
-		"prevPromptTime": 1659676915995
+		"prevPromptTime": 1659932868735
 	},
 	{
 		"type": "错误",
@@ -117,7 +115,7 @@
 		"duration": 17,
 		"timestamp": 1658545473854,
 		"promptTimes": 1,
-		"prevPromptTime": 1659679615908
+		"prevPromptTime": 1659935569406
 	},
 	{
 		"type": "错误",
@@ -132,7 +130,7 @@
 		"duration": 17,
 		"timestamp": 1658545339613,
 		"promptTimes": 1,
-		"prevPromptTime": 1659682315898
+		"prevPromptTime": 1659938269232
 	},
 	{
 		"type": "错误",
@@ -147,7 +145,7 @@
 		"duration": 17,
 		"timestamp": 1658545171374,
 		"promptTimes": 1,
-		"prevPromptTime": 1659685015652
+		"prevPromptTime": 1659940968715
 	},
 	{
 		"type": "错误",
@@ -162,7 +160,7 @@
 		"duration": 17,
 		"timestamp": 1658544943250,
 		"promptTimes": 1,
-		"prevPromptTime": 1659687716557
+		"prevPromptTime": 1659943668759
 	},
 	{
 		"type": "错误",
@@ -177,7 +175,7 @@
 		"duration": 17,
 		"timestamp": 1658544940611,
 		"promptTimes": 1,
-		"prevPromptTime": 1659690416625
+		"prevPromptTime": 1659946368296
 	},
 	{
 		"type": "错误",
@@ -192,7 +190,7 @@
 		"duration": 17,
 		"timestamp": 1658544247850,
 		"promptTimes": 1,
-		"prevPromptTime": 1659693116793
+		"prevPromptTime": 1659949068937
 	},
 	{
 		"name": "",
@@ -207,7 +205,7 @@
 		"duration": 17,
 		"timestamp": 1658540065742,
 		"promptTimes": 1,
-		"prevPromptTime": 1659698515644
+		"prevPromptTime": 1659951768550
 	},
 	{
 		"name": "",
@@ -249,7 +247,7 @@
 		"timestamp": 1658278676173,
 		"level": 721,
 		"promptTimes": 2,
-		"prevPromptTime": 1659706615782
+		"prevPromptTime": 1659959868562
 	},
 	{
 		"name": "",
@@ -263,7 +261,7 @@
 		"duration": 17,
 		"timestamp": 1658235285391,
 		"promptTimes": 2,
-		"prevPromptTime": 1659709315839
+		"prevPromptTime": 1659962568986
 	},
 	{
 		"name": "",
@@ -278,7 +276,7 @@
 		"timestamp": 1658158301140,
 		"level": 725,
 		"promptTimes": 1,
-		"prevPromptTime": 1659712016054
+		"prevPromptTime": 1659965268942
 	},
 	{
 		"name": "",
@@ -293,20 +291,22 @@
 		"timestamp": 1658134779334,
 		"level": 910,
 		"promptTimes": 1,
-		"prevPromptTime": 1659714714710
+		"prevPromptTime": 1659967968176
 	},
 	{
 		"name": "",
 		"id": "id_1657973073049_4256",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\"><strong><span style=\"color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></span></strong></span></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天想的是赚钱，而不是把事情做对。每天都沉迷于无效的日常交易；</span></strong></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>我每天想的是赚钱，而不是把事情做对。<strong>每天都沉迷于无效的日常交易；</strong></strong></span></span></span></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);\">每天沉迷于无效的日常交易；依然没有建立明确的系统；</span></strong></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天沉迷于无效的日常交易；</span></strong>我每天想的是赚钱，而不是把事情做对。</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1657973073049,
-		"level": 1126
+		"level": 1126,
+		"promptTimes": 1,
+		"prevPromptTime": 1659970668941
 	},
 	{
 		"name": "",
