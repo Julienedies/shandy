@@ -33,7 +33,7 @@ a.no {
   text-overflow: ellipsis;
 
   &.scroll {
-    max-height: 70em;
+    max-height: 40em;
     overflow-y: scroll;
   }
 }
