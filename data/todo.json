@@ -4,13 +4,15 @@
 		"level": 1200,
 		"name": "",
 		"id": "id_1659545749677_8204",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘前没有明确的交易计划。</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘随意交易。</span></strong></span></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题没有解决，我依然他妈的沉浸在无效交易中。</span></strong></span></p><p><br></p>",
+		"content": "<p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘随意交易。</span></strong></span></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无系统，无计划，临盘前没有明确的交易计划。</span></strong></span></p><p><br></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1659545749677
+		"timestamp": 1659545749677,
+		"promptTimes": 1,
+		"prevPromptTime": 1661131926615
 	},
 	{
 		"type": "错误",
@@ -25,7 +27,7 @@
 		"duration": 17,
 		"timestamp": 1658849784603,
 		"promptTimes": 1,
-		"prevPromptTime": 1660869708833
+		"prevPromptTime": 1661134627345
 	},
 	{
 		"type": "错误",
@@ -40,7 +42,7 @@
 		"duration": 17,
 		"timestamp": 1658561356460,
 		"promptTimes": 1,
-		"prevPromptTime": 1660872409222
+		"prevPromptTime": 1661137327327
 	},
 	{
 		"type": "错误",
@@ -55,7 +57,7 @@
 		"duration": 17,
 		"timestamp": 1658559868021,
 		"promptTimes": 1,
-		"prevPromptTime": 1660875108431
+		"prevPromptTime": 1661140028187
 	},
 	{
 		"type": "错误",
@@ -70,7 +72,7 @@
 		"duration": 17,
 		"timestamp": 1658558460231,
 		"promptTimes": 1,
-		"prevPromptTime": 1660877808667
+		"prevPromptTime": 1661142727313
 	},
 	{
 		"type": "错误",
@@ -85,7 +87,7 @@
 		"duration": 17,
 		"timestamp": 1658558375651,
 		"promptTimes": 1,
-		"prevPromptTime": 1660880508290
+		"prevPromptTime": 1661145426796
 	},
 	{
 		"type": "错误",
@@ -100,7 +102,7 @@
 		"duration": 17,
 		"timestamp": 1658545526846,
 		"promptTimes": 1,
-		"prevPromptTime": 1660883209533
+		"prevPromptTime": 1661148126566
 	},
 	{
 		"type": "错误",
@@ -115,7 +117,7 @@
 		"duration": 17,
 		"timestamp": 1658545473854,
 		"promptTimes": 1,
-		"prevPromptTime": 1660885908261
+		"prevPromptTime": 1661150826741
 	},
 	{
 		"type": "错误",
@@ -130,7 +132,7 @@
 		"duration": 17,
 		"timestamp": 1658545339613,
 		"promptTimes": 1,
-		"prevPromptTime": 1660888608698
+		"prevPromptTime": 1661153526774
 	},
 	{
 		"type": "错误",
@@ -145,7 +147,7 @@
 		"duration": 17,
 		"timestamp": 1658545171374,
 		"promptTimes": 1,
-		"prevPromptTime": 1660891308327
+		"prevPromptTime": 1661156226159
 	},
 	{
 		"type": "错误",
@@ -160,7 +162,7 @@
 		"duration": 17,
 		"timestamp": 1658544943250,
 		"promptTimes": 1,
-		"prevPromptTime": 1660894009085
+		"prevPromptTime": 1661158926441
 	},
 	{
 		"type": "错误",
@@ -175,7 +177,7 @@
 		"duration": 17,
 		"timestamp": 1658544940611,
 		"promptTimes": 1,
-		"prevPromptTime": 1660896708992
+		"prevPromptTime": 1661161626274
 	},
 	{
 		"type": "错误",
@@ -190,7 +192,7 @@
 		"duration": 17,
 		"timestamp": 1658544247850,
 		"promptTimes": 1,
-		"prevPromptTime": 1660899408075
+		"prevPromptTime": 1661164327447
 	},
 	{
 		"name": "",
@@ -205,7 +207,7 @@
 		"duration": 17,
 		"timestamp": 1658540065742,
 		"promptTimes": 1,
-		"prevPromptTime": 1660902108166
+		"prevPromptTime": 1661167027067
 	},
 	{
 		"name": "",
@@ -247,7 +249,7 @@
 		"timestamp": 1658278676173,
 		"level": 721,
 		"promptTimes": 2,
-		"prevPromptTime": 1660910207838
+		"prevPromptTime": 1661175125589
 	},
 	{
 		"name": "",
@@ -260,8 +262,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658235285391,
-		"promptTimes": 1,
-		"prevPromptTime": 1660907508151
+		"promptTimes": 2,
+		"prevPromptTime": 1661177825763
 	},
 	{
 		"name": "",
@@ -274,7 +276,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658158301140,
-		"level": 725
+		"level": 725,
+		"promptTimes": 1,
+		"prevPromptTime": 1661180525631
 	},
 	{
 		"name": "",
@@ -475,7 +479,7 @@
 		"name": "",
 		"id": "id_1656086487722_1471",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我依然每天重复所有的错误！为什么我就是改变不了？</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我依然每天重复所有的错误！为什么我就是改变不了？</span></strong></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">问题没有解决，我依然他妈的沉浸在无效交易中。</span></strong></span></span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
@@ -488,7 +492,7 @@
 		"name": "",
 		"id": "id_1651821329311_4246",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</span></strong></p><p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">我真他妈的恨死自己了，一个人怎么可以这样？每天着眼于转债的小波动；</span></strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">为什么我能持续这样做半年？</span></strong></p>",
+		"content": "<p><span style=\"font-size: 26px;\"><span style=\"color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(0, 0, 0);\">我真他妈的恨死自己了，一个人怎么可以这样？每天着眼于转债的小波动；</span></strong></span></span></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">每天跟赌博一样，着眼于转债的小波动；亏钱也没有让我感觉到痛苦；麻木；</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">为什么我能持续这样做半年？</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 1,
