@@ -12,7 +12,7 @@
 		"duration": 17,
 		"timestamp": 1659545749677,
 		"promptTimes": 1,
-		"prevPromptTime": 1661131926615
+		"prevPromptTime": 1661214179289
 	},
 	{
 		"type": "错误",
@@ -27,7 +27,7 @@
 		"duration": 17,
 		"timestamp": 1658849784603,
 		"promptTimes": 1,
-		"prevPromptTime": 1661134627345
+		"prevPromptTime": 1661216879457
 	},
 	{
 		"type": "错误",
@@ -42,7 +42,7 @@
 		"duration": 17,
 		"timestamp": 1658561356460,
 		"promptTimes": 1,
-		"prevPromptTime": 1661137327327
+		"prevPromptTime": 1661219578971
 	},
 	{
 		"type": "错误",
@@ -57,7 +57,7 @@
 		"duration": 17,
 		"timestamp": 1658559868021,
 		"promptTimes": 1,
-		"prevPromptTime": 1661140028187
+		"prevPromptTime": 1661222279145
 	},
 	{
 		"type": "错误",
@@ -72,7 +72,7 @@
 		"duration": 17,
 		"timestamp": 1658558460231,
 		"promptTimes": 1,
-		"prevPromptTime": 1661142727313
+		"prevPromptTime": 1661224979145
 	},
 	{
 		"type": "错误",
@@ -87,7 +87,7 @@
 		"duration": 17,
 		"timestamp": 1658558375651,
 		"promptTimes": 1,
-		"prevPromptTime": 1661145426796
+		"prevPromptTime": 1661227679144
 	},
 	{
 		"type": "错误",
@@ -102,7 +102,7 @@
 		"duration": 17,
 		"timestamp": 1658545526846,
 		"promptTimes": 1,
-		"prevPromptTime": 1661148126566
+		"prevPromptTime": 1661230378246
 	},
 	{
 		"type": "错误",
@@ -117,7 +117,7 @@
 		"duration": 17,
 		"timestamp": 1658545473854,
 		"promptTimes": 1,
-		"prevPromptTime": 1661150826741
+		"prevPromptTime": 1661233078428
 	},
 	{
 		"type": "错误",
@@ -132,7 +132,7 @@
 		"duration": 17,
 		"timestamp": 1658545339613,
 		"promptTimes": 1,
-		"prevPromptTime": 1661153526774
+		"prevPromptTime": 1661235778633
 	},
 	{
 		"type": "错误",
@@ -147,7 +147,7 @@
 		"duration": 17,
 		"timestamp": 1658545171374,
 		"promptTimes": 1,
-		"prevPromptTime": 1661156226159
+		"prevPromptTime": 1661238478571
 	},
 	{
 		"type": "错误",
@@ -162,7 +162,7 @@
 		"duration": 17,
 		"timestamp": 1658544943250,
 		"promptTimes": 1,
-		"prevPromptTime": 1661158926441
+		"prevPromptTime": 1661241179488
 	},
 	{
 		"type": "错误",
@@ -177,7 +177,7 @@
 		"duration": 17,
 		"timestamp": 1658544940611,
 		"promptTimes": 1,
-		"prevPromptTime": 1661161626274
+		"prevPromptTime": 1661243878510
 	},
 	{
 		"type": "错误",
@@ -192,7 +192,7 @@
 		"duration": 17,
 		"timestamp": 1658544247850,
 		"promptTimes": 1,
-		"prevPromptTime": 1661164327447
+		"prevPromptTime": 1661246579090
 	},
 	{
 		"name": "",
@@ -207,7 +207,7 @@
 		"duration": 17,
 		"timestamp": 1658540065742,
 		"promptTimes": 1,
-		"prevPromptTime": 1661167027067
+		"prevPromptTime": 1661249277629
 	},
 	{
 		"name": "",
@@ -249,7 +249,7 @@
 		"timestamp": 1658278676173,
 		"level": 721,
 		"promptTimes": 2,
-		"prevPromptTime": 1661175125589
+		"prevPromptTime": 1661257378625
 	},
 	{
 		"name": "",
@@ -263,7 +263,7 @@
 		"duration": 17,
 		"timestamp": 1658235285391,
 		"promptTimes": 2,
-		"prevPromptTime": 1661177825763
+		"prevPromptTime": 1661260077584
 	},
 	{
 		"name": "",
@@ -278,7 +278,7 @@
 		"timestamp": 1658158301140,
 		"level": 725,
 		"promptTimes": 1,
-		"prevPromptTime": 1661180525631
+		"prevPromptTime": 1661262778777
 	},
 	{
 		"name": "",
@@ -291,7 +291,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658134779334,
-		"level": 910
+		"level": 910,
+		"promptTimes": 1,
+		"prevPromptTime": 1661265477256
 	},
 	{
 		"name": "",
@@ -304,7 +306,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1657973073049,
-		"level": 1126
+		"level": 1126,
+		"promptTimes": 1,
+		"prevPromptTime": 1661268177597
 	},
 	{
 		"name": "",
@@ -1582,7 +1586,7 @@
 	{
 		"name": "",
 		"id": "9631759",
-		"type": "错误",
+		"type": "",
 		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><u>既然问题没有解决，一直亏损。为什么不能停止操作。你的意志在哪里？</u></span></strong></p><p><u><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">没有交易系统的情况下，基于赚钱的心态、交易成瘾、控制不住自己的手，临盘随意交易。</span></strong></span></u></p><p><span style=\"font-size: 22px;\"><u><strong><span style=\"background-color: rgb(255, 255, 0);\">这不但是我亏损的主要来源。</span></strong></u><span style=\"background-color: rgb(255, 255, 0);\"><strong><u>更重要的是我陷在这种状态中，不能提高总结。</u></strong></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">以前错过的行情，星期六、省广集团、光大证券、王府井、有深入思考总结过吗？ 为什么继续错过郑州煤电、豫能控股、晋控电力？</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">如果始终没有明确的操作逻辑，那就只能等待自己看得懂的行情。</span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>最怕的是看不到市场，又管不住手。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>炒股前三年就是这样，不理解市场，偏偏还每天重复那些无效的交易。</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">脑子进水了，为什么就没有好好思考过。</span></strong></p><p><br></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我没有消息优势，题材解读优势。我只能以市场表现做为最主要的判断锚点。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我之前的盈利操作，都是基于烂板上冲、连续上冲等基于市场表现买入的。</span></strong></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我为什么错过京运通、太阳能、阳光电源、天齐锂业、格林美。如果我以竞价系统操作的话，是可以盈利的。但因为我对题材进行了判断。</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我为什么不关注那些超预期的票能？譬如郑州煤电、晋控电力、豫能控股、。</span></strong><span style=\"background-color: rgb(255, 255, 0);\"><strong>这才是短线的正确方向。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">只要有1万，每周10%，一年就可以做到45万。重要的是方法，而不是金额。</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">资金是逐利的，历史会重复。</span></strong></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我为何总是卖飞。没有大局观，控制不住人性本能。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我总是线性思维，市场是动态博弈的。有分化，有切换，有轮动。</span></strong></p>",
 		"singleWindow": "",
 		"start": "15:00",
