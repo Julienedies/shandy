@@ -179,6 +179,7 @@ brick.reg('todoListCtrl', function (scope) {
 
     scope.toggle = function (e) {
         $(this).nextAll().find('.pre.text').toggle();
+        return false;
     };
 
     scope.refreshTags = function (e) {
@@ -203,13 +204,17 @@ brick.reg('todoListCtrl', function (scope) {
 
     // 置顶
     scope.focus = function (e, id) {
-        scope.emit('move', {id});
+       // scope.emit('move', {id});
     };
 
     // 加权
     scope.plus = function (e, id) {
         let item = listManager.get(id);
-
+        let level = (item.level || 1) * 1;
+        item.level = level + 5;
+        $.post('/stock/rp', item).done((data) => {
+            setList(data);
+        });
     };
 
     // ---------------------------------------------------------------------------------------
