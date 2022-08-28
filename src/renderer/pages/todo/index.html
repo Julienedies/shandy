@@ -41,6 +41,7 @@
                     <th>重复</th>
                     <th>提醒</th>
                     <th>ToDo</th>
+                    <th></th>
                 </tr>
                 <tr ic-for="i,v in model" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                     ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
@@ -50,22 +51,28 @@
                     <td>{{ v.repeat }}</td>
                     <td>{{ v.promptTimes || 0 }}</td>
                     <td>
-                        <div style="display: flex;">
-                            <div style="flex:1 1 auto;" class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
-                            <div style="display:flex; flex-flow: column; white-space: pre;">
-                                <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
-                                <button class="button is-primary is-small" ic-click="plus:{{ v.id }}">加权</button>
-                                <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>
-                                <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
-                                    {{ v.complete ? '完成':'进行' }}
-                                </button>
-                                <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
-                                    {{ v.disable ? '启用':'禁止' }}
-                                </button>
-                                <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                        <div class="text" ic-dblclick="toggle">
+                            <h3 class="title">{{ v.title }}</h3>
+                            <!--<div style="flex:1 1 auto;" class="pre text" ic-dblclick="toggle">-->
+                            <div>
+                                {{ v.content }}
                             </div>
                         </div>
-
+                    </td>
+                    <td style="width:2em;">
+                        <!--<div style="display:flex; flex-flow: column; white-space: pre;">-->
+                        <div>
+                            <button class="button is-primary is-small" ic-click="edit:{{ v.id }}">修改</button>
+                            <button class="button is-primary is-small" ic-click="plus:{{ v.id }}">加权</button>
+                            <button class="button is-primary is-small" ic-click="test:{{ v.id }}">测试</button>
+                            <button ic-class="button {{ v.complete?'':'is-primary'}} is-small" ic-click="complete:{{ v.id }}:{{ v.complete }}">
+                                {{ v.complete ? '完成':'进行' }}
+                            </button>
+                            <button ic-class="button {{ v.disable?'':'is-primary'}} is-small" ic-click="disable:{{ v.id }}:{{ v.disable }}">
+                                {{ v.disable ? '启用':'禁止' }}
+                            </button>
+                            <button class="button is-primary is-small" ic-click="rm:{{ v.id }}">删除</button>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -112,6 +119,16 @@
                                     <input type="hidden" value="{{ model.id }}" ic-form-field="id">
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <label>title</label>
+                        </div>
+
+                        <div class="control is-expanded">
+                            <input class="input" name="title" ic-form-field value="{{ model.title || '' }}">
                         </div>
                     </div>
 
