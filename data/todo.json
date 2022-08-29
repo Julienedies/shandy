@@ -11,9 +11,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658849784603,
+		"title": "永远没有做好市场进攻的准备，错过最好的交易机会。",
 		"promptTimes": 1,
-		"prevPromptTime": 1661477428549,
-		"title": "永远没有做好市场进攻的准备，错过最好的交易机会。"
+		"prevPromptTime": 1661732496911
 	},
 	{
 		"type": "错误",
@@ -28,7 +28,7 @@
 		"duration": 17,
 		"timestamp": 1658561356460,
 		"promptTimes": 1,
-		"prevPromptTime": 1661480128700
+		"prevPromptTime": 1661735196947
 	},
 	{
 		"type": "错误",
@@ -43,7 +43,7 @@
 		"duration": 17,
 		"timestamp": 1658559868021,
 		"promptTimes": 1,
-		"prevPromptTime": 1661482828549
+		"prevPromptTime": 1661737896590
 	},
 	{
 		"type": "错误",
@@ -57,9 +57,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658558460231,
+		"title": "预判到是进攻日，但却他妈的没有任何标的。",
 		"promptTimes": 1,
-		"prevPromptTime": 1661485527966,
-		"title": "预判到是进攻日，但却他妈的没有任何标的。"
+		"prevPromptTime": 1661740596702
 	},
 	{
 		"type": "错误",
@@ -73,9 +73,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658545526846,
+		"title": "没有大局观，沉迷于无效的日常操作；",
 		"promptTimes": 1,
-		"prevPromptTime": 1661490927994,
-		"title": "没有大局观，沉迷于无效的日常操作；"
+		"prevPromptTime": 1661743297006
 	},
 	{
 		"type": "错误",
@@ -89,9 +89,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658545473854,
+		"title": "主观测顶，主观看空，主观看空主流热点龙头；",
 		"promptTimes": 1,
-		"prevPromptTime": 1661493627735,
-		"title": "主观测顶，主观看空，主观看空主流热点龙头；"
+		"prevPromptTime": 1661745997671
 	},
 	{
 		"type": "错误",
@@ -106,7 +106,7 @@
 		"duration": 17,
 		"timestamp": 1658545339613,
 		"promptTimes": 1,
-		"prevPromptTime": 1661496327838
+		"prevPromptTime": 1661748697422
 	},
 	{
 		"type": "错误",
@@ -120,9 +120,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658544943250,
+		"title": "依靠主观预测交易，先入为主，而不是临盘根据盘面客观应对，客观跟随；",
 		"promptTimes": 1,
-		"prevPromptTime": 1661501728363,
-		"title": "依靠主观预测交易，先入为主，而不是临盘根据盘面客观应对，客观跟随；"
+		"prevPromptTime": 1661751396462
 	},
 	{
 		"type": "错误",
@@ -137,7 +137,7 @@
 		"duration": 17,
 		"timestamp": 1658544247850,
 		"promptTimes": 1,
-		"prevPromptTime": 1661507128266
+		"prevPromptTime": 1661754096354
 	},
 	{
 		"name": "",
@@ -152,7 +152,7 @@
 		"duration": 17,
 		"timestamp": 1658540065742,
 		"promptTimes": 1,
-		"prevPromptTime": 1661509827034
+		"prevPromptTime": 1661756797262
 	},
 	{
 		"name": "",
@@ -194,7 +194,7 @@
 		"timestamp": 1658278676173,
 		"level": 620,
 		"promptTimes": 2,
-		"prevPromptTime": 1661517926767
+		"prevPromptTime": 1661764896372
 	},
 	{
 		"name": "",
@@ -208,7 +208,7 @@
 		"duration": 17,
 		"timestamp": 1658235285391,
 		"promptTimes": 2,
-		"prevPromptTime": 1661520627129
+		"prevPromptTime": 1661767596901
 	},
 	{
 		"name": "",
@@ -222,9 +222,9 @@
 		"duration": 17,
 		"timestamp": 1658134779334,
 		"level": 810,
+		"title": "计划的交易，临盘犹豫；",
 		"promptTimes": 1,
-		"prevPromptTime": 1661526028071,
-		"title": "计划的交易，临盘犹豫；"
+		"prevPromptTime": 1661770295982
 	},
 	{
 		"name": "",
@@ -238,9 +238,9 @@
 		"duration": 17,
 		"timestamp": 1657973073049,
 		"level": 1126,
+		"title": "每天沉迷于无效的日常交易；依然没有建立明确的系统；",
 		"promptTimes": 1,
-		"prevPromptTime": 1661528727643,
-		"title": "每天沉迷于无效的日常交易；依然没有建立明确的系统；"
+		"prevPromptTime": 1661772996860
 	},
 	{
 		"name": "",
@@ -254,7 +254,9 @@
 		"duration": 17,
 		"timestamp": 1625831460227,
 		"level": 840,
-		"title": ""
+		"title": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1661775696775
 	},
 	{
 		"name": "",
@@ -267,7 +269,9 @@
 		"interval": 130,
 		"duration": 9,
 		"timestamp": 1654519629339,
-		"level": 96
+		"level": 96,
+		"promptTimes": 1,
+		"prevPromptTime": 1661778396579
 	},
 	{
 		"name": "",
@@ -294,7 +298,9 @@
 		"interval": 60,
 		"duration": 9,
 		"timestamp": 1609491034659,
-		"level": 86
+		"level": 86,
+		"promptTimes": 1,
+		"prevPromptTime": 1661781096490
 	},
 	{
 		"name": "",
@@ -307,7 +313,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1657942815311,
-		"level": 16
+		"level": 16,
+		"promptTimes": 1,
+		"prevPromptTime": 1661783796469
 	},
 	{
 		"name": "",
@@ -320,7 +328,9 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1657814700731,
-		"level": 750
+		"level": 750,
+		"promptTimes": 1,
+		"prevPromptTime": 1661786496416
 	},
 	{
 		"name": "",
