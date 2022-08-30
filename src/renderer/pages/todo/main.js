@@ -425,6 +425,7 @@ brick.reg('promptCtrl', function () {
     const scope = this;
     let _todoItem = null;
     let $todoContent = scope.$elm.find('#todoContent');
+    let $todoTitle = scope.$elm.find('#todoTitle');
 
     scope.edit = function (e) {
         scope.emit('setTodo', _todoItem);
@@ -432,7 +433,8 @@ brick.reg('promptCtrl', function () {
 
     scope.on('prompt', function (e, todoItem) {
         brick.view.to('prompt');
-        _todoItem = todoItem
+        _todoItem = todoItem;
+        $todoTitle.text(todoItem.title);
         $todoContent.html(todoItem.content);
         let str = $todoContent.text();
         console.log(str, str.substr(0, 240));
