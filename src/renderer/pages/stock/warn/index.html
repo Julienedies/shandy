@@ -46,7 +46,7 @@
     <div ic-tpl="list">
         <ul>
             <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
-                <h6 class="title is-6"></h6>
+                <h3 class="title is-3">{{ v.title }}</h3>
                 <div class="pre" ic-if="!!!v.trigger || (v.trigger && /^\\d+$/.test(v.trigger))">{{v.content}}</div>
                 <div class="tar">
                     <a class="no" ic-click="edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
