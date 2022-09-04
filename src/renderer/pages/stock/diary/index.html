@@ -11,7 +11,7 @@
 </head>
 <body ic-ctrl="main_ctrl">
 
-<div id="mainContainer" class="column is-10 is-offset-1" ic-ctrl="diaryCtrl">
+<div id="mainContainer" class="column is-12" ic-ctrl="diaryCtrl">
 
     <header class="level">
         <div class="level-left">
@@ -32,20 +32,20 @@
     <div ic-tpl="tags">
         <div ic-select="tags" ic-select-item=".tag" ic-select-auto="false" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
             <div class="tags">
-                <span class="tag is-medium" ic-for="i,v in model.tagArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">
-                    {{ v }}
-                </span>
-            </div>
-            <div class="tags">
                 <span class="tag is-medium" ic-for="i,v in model.tagsArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">
                     {{ TAGS_MAP_BY_ID[v] && TAGS_MAP_BY_ID[v].text }}
                     <sup>{{ model.tagsMap[v] }}</sup>
                 </span>
             </div>
+            <div class="tags">
+                <span class="tag is-medium" ic-for="i,v in model.tagArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">
+                    {{ v }}
+                </span>
+            </div>
         </div>
     </div>
 
-    <ul class="column is-12" id="diaryList" ic-tpl="diaryList">
+    <ul class="column is-10 is-offset-1" id="diaryList" ic-tpl="diaryList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre scroll">{{v.text}}</div>
             <div class="tar">
