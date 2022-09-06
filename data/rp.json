@@ -17,7 +17,7 @@
 		"type": "rp",
 		"caution": "",
 		"comment": "",
-		"level": "1400",
+		"level": "14000",
 		"role": "0",
 		"content": "",
 		"tags": [],
@@ -1104,14 +1104,14 @@
 	{
 		"title": "我要捕捉的目标行情是什么？",
 		"id": "3676210",
-		"type": "system",
+		"type": "rp",
 		"comment": "",
 		"content": "<table style=\"width: 100%; margin-left: calc(0%);\"><tbody><tr><td style=\"width: 26.5979%;\">做核心龙头<br></td><td style=\"width: 50.8664%;\">市场主升期、题材诞生<br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">低位补涨<br></td><td style=\"width: 50.8664%;\">高低切换、锚定、复制、补涨<br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">板块爆发首板；有板块效应的前排首板<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">板块爆发加强晋级<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">主升浪第一次分歧转一致</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">主流热点分歧调整后的卡位回流先锋<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">主流热点低位补涨首板<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">恐惧转贪婪，低吸它长腿</td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">低吸龙头分歧</td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">大盘转势共振领涨板</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">超预期加速<br></td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">预判轮动低吸</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">修复/分歧转一致</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">转折/弱转强<br></td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr></tbody></table><p><br></p>",
 		"name": "3676210",
 		"timestamp": 1638620495062,
 		"tags": [],
 		"caution": "围绕市场合力、主流热点；客观跟随；",
-		"level": "901",
+		"level": "1901",
 		"role": "0"
 	}
 ]
