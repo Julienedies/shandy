@@ -11,9 +11,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1661941742710,
-		"promptTimes": 1,
-		"prevPromptTime": 1663896244006
+		"timestamp": 1661941742710
 	},
 	{
 		"type": "错误",
@@ -27,9 +25,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658561356460,
-		"title": "线性思维，先入为主，下跌就看跌，上涨就看涨。多空动态博弈转化，不要线性思维；",
-		"promptTimes": 1,
-		"prevPromptTime": 1663904345554
+		"title": "线性思维，先入为主，下跌就看跌，上涨就看涨。多空动态博弈转化，不要线性思维；"
 	},
 	{
 		"type": "错误",
@@ -42,9 +38,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658559868021,
-		"promptTimes": 1,
-		"prevPromptTime": 1663907044903
+		"timestamp": 1658559868021
 	},
 	{
 		"type": "错误",
@@ -58,9 +52,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658558460231,
-		"title": "预判到是进攻日，但却他妈的没有任何标的。",
-		"promptTimes": 1,
-		"prevPromptTime": 1663909745489
+		"title": "预判到是进攻日，但却他妈的没有任何标的。"
 	},
 	{
 		"type": "错误",
@@ -74,9 +66,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658545526846,
-		"title": "没有大局观，沉迷于无效的日常操作；",
-		"promptTimes": 1,
-		"prevPromptTime": 1663912444253
+		"title": "没有大局观，沉迷于无效的日常操作；"
 	},
 	{
 		"type": "错误",
@@ -90,9 +80,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658545473854,
-		"title": "主观测顶；顶只有一个；我却他妈的在臆想是顶的过程中错过所有的机会；",
-		"promptTimes": 1,
-		"prevPromptTime": 1663915143687
+		"title": "主观测顶；顶只有一个；我却他妈的在臆想是顶的过程中错过所有的机会；"
 	},
 	{
 		"type": "错误",
@@ -106,9 +94,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658545339613,
-		"title": "没有大局观，着眼于小波动，看不到大趋势和市场主线。",
-		"promptTimes": 1,
-		"prevPromptTime": 1663917844248
+		"title": "没有大局观，着眼于小波动，看不到大趋势和市场主线。"
 	},
 	{
 		"type": "错误",
@@ -122,9 +108,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658544943250,
-		"title": "依靠主观预测交易，先入为主，而不是临盘根据盘面客观应对，客观跟随；",
-		"promptTimes": 1,
-		"prevPromptTime": 1663920544177
+		"title": "依靠主观预测交易，先入为主，而不是临盘根据盘面客观应对，客观跟随；"
 	},
 	{
 		"type": "错误",
@@ -138,9 +122,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658544247850,
-		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
-		"promptTimes": 1,
-		"prevPromptTime": 1663923244161
+		"title": "为何我错过所有的大行情？为何我错过所有的龙头？"
 	},
 	{
 		"name": "",
@@ -154,9 +136,7 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1658540065742,
-		"title": "线性思维，先入为主，主观看空，错过弱转强，分歧转一致、强更强的机会。",
-		"promptTimes": 1,
-		"prevPromptTime": 1663925944942
+		"title": "线性思维，先入为主，主观看空，错过弱转强，分歧转一致、强更强的机会。"
 	},
 	{
 		"name": "",
@@ -197,9 +177,7 @@
 		"duration": 17,
 		"timestamp": 1658278676173,
 		"level": 620,
-		"title": "我总是主观看空各个题材，那你找出资金会攻击的地方啊？",
-		"promptTimes": 2,
-		"prevPromptTime": 1663934044146
+		"title": "我总是主观看空各个题材，那你找出资金会攻击的地方啊？"
 	},
 	{
 		"name": "",
@@ -211,9 +189,7 @@
 		"repeat": 2,
 		"interval": 60,
 		"duration": 17,
-		"timestamp": 1658235285391,
-		"promptTimes": 2,
-		"prevPromptTime": 1663936744495
+		"timestamp": 1658235285391
 	},
 	{
 		"name": "",
@@ -227,9 +203,7 @@
 		"duration": 17,
 		"timestamp": 1658134779334,
 		"level": 810,
-		"title": "计划的交易，临盘犹豫；",
-		"promptTimes": 1,
-		"prevPromptTime": 1663939444270
+		"title": "计划的交易，临盘犹豫；"
 	},
 	{
 		"name": "",
@@ -243,9 +217,7 @@
 		"duration": 17,
 		"timestamp": 1657973073049,
 		"level": 1126,
-		"title": "每天沉迷于无效的日常交易；依然没有明确的交易系统；",
-		"promptTimes": 1,
-		"prevPromptTime": 1663942144132
+		"title": "每天沉迷于无效的日常交易；依然没有明确的交易系统；"
 	},
 	{
 		"name": "",
@@ -259,9 +231,7 @@
 		"duration": 17,
 		"timestamp": 1625831460227,
 		"level": 840,
-		"title": "无系统、无计划；永远没有明确的交易计划和准备，没有做盘面的推演和应对。",
-		"promptTimes": 1,
-		"prevPromptTime": 1663944842859
+		"title": "无系统、无计划；永远没有明确的交易计划和准备，没有做盘面的推演和应对。"
 	},
 	{
 		"name": "",
@@ -274,9 +244,7 @@
 		"interval": 130,
 		"duration": 9,
 		"timestamp": 1654519629339,
-		"level": 96,
-		"promptTimes": 1,
-		"prevPromptTime": 1663947542621
+		"level": 96
 	},
 	{
 		"name": "",
@@ -378,7 +346,7 @@
 		"name": "",
 		"id": "id_1655164211606_6209",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我要捕捉的目标行情是什么？我的判断锚点是什么？</span></strong></p><p><br></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我要捕捉的目标行情是什么？我的判断锚点是什么？</span></strong></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我每天脑子在想什么？</span></strong></p><p><br></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 4,
@@ -386,7 +354,7 @@
 		"duration": 17,
 		"timestamp": 1655164211606,
 		"level": 860,
-		"title": "思维没有方向，操作没有系统；我每天脑子在想什么？"
+		"title": "思维没有方向，操作没有系统；"
 	},
 	{
 		"name": "",
