@@ -249,10 +249,10 @@ brick.reg('todoListCtrl', function (scope) {
         console.log(filterByType, todoArr);
         scope.render('types', {model: {mapByType:mapByType, filterByType:filterByType}});
         scope.render('todoList', {model: todoArr}, function () {
-            $(this).find('tr').on('dragstart', scope.dragstart)
+            /*$(this).find('tr').on('dragstart', scope.dragstart)
                 .on('dragover', scope.dragover)
                 .on('dragleave', scope.dragleave)
-                .on('drop', scope.drop);
+                .on('drop', scope.drop);*/
         });
     }
 
@@ -324,6 +324,7 @@ brick.reg('todoListCtrl', function (scope) {
     };
 
     todoJodb.on('change', function(msg) {
+        console.log('todoJodb changed: ', +new Date);
         render();
         if(msg.type === 'add') {
             setTimeout(() => {
@@ -331,17 +332,15 @@ brick.reg('todoListCtrl', function (scope) {
                 console.log(id);
                 //document.querySelector(id).scrollIntoViewIfNeeded(false);
                 document.querySelector(id).scrollIntoView(true);
-                //let $th = $elm.find('k'+id);
-                //id && $elm.scrollTop($th.offset().top);
             }, 300);
 
         }
     });
 
-    scope.on('scrollToNewItem', function (e, id) {
+/*    scope.on('scrollToNewItem', function (e, id) {
         let $th = $elm.find(id);
         $elm.scrollTop($th.offset().top);
-    });
+    });*/
 
     render();
 
