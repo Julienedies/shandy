@@ -54,10 +54,10 @@
             <div style="padding:10px 0 6px 0;">
                 <span class="tag is-black" ic-if="v.tags" ic-for="k,j in v.tags" ic-click="onFilterKeyChange2:{{ j }}">
                     {{ TAGS_MAP_BY_ID[j].text }}
-                </span>&nbsp;&nbsp;&nbsp;
+                </span>
                 <span class="tag is-info" ic-if="v.tag" ic-for="k,j in v.tag" ic-click="onFilterKeyChange2:{{ j }}">
                     {{j || ''}}
-                </span>&nbsp;&nbsp;&nbsp;
+                </span>
             </div>
             <div class="tar">
                 <span style="opacity:0.3;float:left;">{{ v.date }}</span>
