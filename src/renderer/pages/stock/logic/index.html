@@ -63,18 +63,17 @@
     <ul class="column is-10 is-offset-1" ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre scroll">{{v.text}}</div>
-            <div class="tar">
-                <span class="tag is-info" ic-if="v.type" ic-for="k,j in v.type" ic-click="onFilterKeyChange2:{{ j }}">
-                    {{j || ''}}
-                </span>&nbsp;&nbsp;&nbsp;
+            <div class="tar" style="padding-top: 10px;">
                 <span class="tag is-danger" ic-if="v.tag" ic-for="k,j in v.tag" ic-click="onFilterKeyChange2:{{ j }}">
                     {{ TAGS_MAP_BY_ID[j] && TAGS_MAP_BY_ID[j].text }}
+                </span>
+                <span class="tag is-info" ic-if="v.type" ic-for="k,j in v.type" ic-click="onFilterKeyChange2:{{ j }}">
+                    {{j || ''}}
                 </span>
                 <span class="tag is-info" ic-if="v.note">{{v.note || ''}}</span>&nbsp;&nbsp;&nbsp;
                 <span class="tag" ic-if="v.level">{{v.level || ''}}</span>&nbsp;
                 <span class="tag" ic-if="v.author" ic-click="onFilterKeyChange2:{{ v.author }}">{{v.author || ''}}</span>
                 <a class="no" ic-click="logic.edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
-                <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
                 <a class="no"
                    ic-ajax
                    ic-submit-method="get"
@@ -84,14 +83,23 @@
                         <i class="far fa-heart"></i>
                     </span>
                 </a>
+                <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
                 <a class="no" ic-click="play" ic-dblclick="stop"><span class="icon is-medium" title="播放"><i class="fas fa-play-circle"></i></span></a>
+                <a class="no"
+                        ic-ajax
+                        ic-submit-method="delete"
+                        ic-submit-action="/stock/logic/{{v.id}}"
+                        ic-submit-before="ajax_before_confirm:确认删除?"
+                        ic-submit-on-done="logic.remove">
+                    <span class="icon is-medium" title="删除"><i class="fas fa-trash-alt"></i></span>
+                </a>
             </div>
-            <button class="delete is-medium"
+<!--            <button class="delete is-medium none"
                     ic-ajax
                     ic-submit-method="delete"
                     ic-submit-action="/stock/logic/{{v.id}}"
                     ic-submit-before="ajax_before_confirm:确认删除?"
-                    ic-submit-on-done="logic.remove"></button>
+                    ic-submit-on-done="logic.remove"></button>-->
         </li>
     </ul>
 

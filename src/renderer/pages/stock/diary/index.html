@@ -51,17 +51,27 @@
     <ul class="column is-10 is-offset-1" id="diaryList" ic-tpl="diaryList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre scroll">{{v.text}}</div>
-            <div class="tar">
-                <span class="tag is-danger" ic-if="v.tags" ic-for="k,j in v.tags" ic-click="onFilterKeyChange2:{{ j }}">
+            <div style="padding:10px 0 6px 0;">
+                <span class="tag is-black" ic-if="v.tags" ic-for="k,j in v.tags" ic-click="onFilterKeyChange2:{{ j }}">
                     {{ TAGS_MAP_BY_ID[j].text }}
                 </span>&nbsp;&nbsp;&nbsp;
                 <span class="tag is-info" ic-if="v.tag" ic-for="k,j in v.tag" ic-click="onFilterKeyChange2:{{ j }}">
                     {{j || ''}}
                 </span>&nbsp;&nbsp;&nbsp;
+            </div>
+            <div class="tar">
                 <span style="opacity:0.3;float:left;">{{ v.date }}</span>
                 <a class="no" ic-click="edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
                 <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
                 <a class="no" ic-click="play" ic-dblclick="stop"><span class="icon is-medium" title="播放"><i class="fas fa-play-circle"></i></span></a>
+                <a class="no"
+                        ic-ajax
+                        ic-submit-method="delete"
+                        ic-submit-action="/stock/diary/{{v.id}}"
+                        ic-submit-before="ajax_before_confirm:确认删除?"
+                        ic-submit-on-done="onDelDone">
+                    <span class="icon is-medium" title="删除"><i class="fas fa-trash-alt"></i></span>
+                </a>
                 <!--<a class="no"
                    ic-ajax
                    ic-submit-method="get"
@@ -72,12 +82,12 @@
                     </span>
                 </a>-->
             </div>
-            <button class="delete is-medium"
+<!--            <button class="delete is-medium none"
                     ic-ajax
                     ic-submit-method="delete"
                     ic-submit-action="/stock/diary/{{v.id}}"
                     ic-submit-before="ajax_before_confirm:确认删除?"
-                    ic-submit-on-done="onDelDone"></button>
+                    ic-submit-on-done="onDelDone"></button>-->
         </li>
     </ul>
 
