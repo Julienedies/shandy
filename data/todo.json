@@ -304,7 +304,7 @@
 		"name": "",
 		"id": "id_1657448515173_9796",
 		"type": "错误",
-		"content": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">1. 思维没有方向，操作没有系统；</span></strong></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>2. 没有大局观，着眼于小波动，看不到主升大趋势，看不到主线热点，意识不到行情进行中；</strong></span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>3. 没有信息优势，对市场理解不够，不知道市场参与者的行为逻辑；</strong></span></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">4. 依靠主观预测交易，但我的预测总是错误；</span></strong></p><p><br></p>",
+		"content": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">1. 思维没有方向，操作没有系统；</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">2.&nbsp;<strong>没有大局观，后知后觉。总是行情走出来才意识到。</strong></span></strong></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>2. 没有大局观，着眼于小波动，看不到主升大趋势，看不到主线热点，意识不到行情进行中；</strong></span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>3. 没有信息优势，对市场理解不够，不知道市场参与者的行为逻辑；</strong></span></span></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">4. 依靠主观预测交易，但我的预测总是错误；</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": 2,
@@ -335,12 +335,12 @@
 		"content": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">为什么我能持续这样做半年？亏钱也没有让我感觉到痛苦；麻木；</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 1,
-		"interval": 90,
-		"duration": 9,
+		"repeat": "1",
+		"interval": "90",
+		"duration": "9",
 		"timestamp": 1651821329311,
-		"level": 1010,
-		"title": "我真他妈的恨死自己了，一个人怎么可以这样？每天跟赌博一样，着眼于转债的小波动；"
+		"level": "1010",
+		"title": "真他妈的恨死自己了，一个人怎么可以这样？每天跟赌博一样，着眼于转债的小波动；"
 	},
 	{
 		"name": "",
@@ -1580,5 +1580,19 @@
 		"duration": 17,
 		"timestamp": 1658328908383,
 		"level": 1
+	},
+	{
+		"type": "错误",
+		"level": "10000",
+		"name": "",
+		"id": "id_1664886582058_2218",
+		"title": "test",
+		"content": "",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": "2",
+		"interval": "60",
+		"duration": "17",
+		"timestamp": "1664886582058"
 	}
 ]

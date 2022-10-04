@@ -1,10 +1,30 @@
-a.no {
-  text-decoration: none !important;
+html {
+  overflow: hidden;
 }
+
 
 .title{
   display: inline-block;
   font-size: 28px!important;
   background: black;
   color: white!important;
+}
+
+
+#todoList {
+  &.shirk {
+    .text {
+      min-height: 6em;
+      max-height: 12em;
+      overflow-y: hidden;
+    }
+  }
+}
+
+.text {
+  &.toggle {
+    height: auto!important;
+    min-height: 8em;
+    overflow-y: visible;
+  }
 }

@@ -9,12 +9,14 @@ strong {
   /*  font-weight: 400;
     font-size: 18px;
     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;*/
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 500;
   overflow: visible;
   text-overflow: ellipsis;
 
   &.scroll {
-    max-height: 60em;
+    max-height: 72em;
     overflow-y: scroll;
   }
 }

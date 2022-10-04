@@ -174,7 +174,9 @@ brick.reg('todoListCtrl', function (scope) {
     };
 
     scope.toggleText = function (e) {
-        $elm.toggleClass('shrink');
+        let cla = 'shrink';
+        $elm.toggleClass(cla);
+        let $th = $(this).text($elm.hasClass(cla) ? '收缩模式' : '展开模式');
     };
 
     scope.toggle = function (e) {

@@ -25,12 +25,21 @@ export const TAG_SELECT_CHANGE = 'TAG_SELECT_CHANGE';
 // 交易逻辑数据增删改查
 export const ADD_LOGIC = 'LOGIC.add';
 export const EDIT_LOGIC = 'LOGIC.edit';
-export const DEL_LOGIC = 'DEL_LOGIC'
+export const DEL_LOGIC = 'DEL_LOGIC';
 
 export const ON_SET_LOGIC_DONE = 'LOGIC.edit.done';
 export const ON_GET_LOGIC_DONE = 'ON_GET_LOGIC_DONE';
 export const ON_DEL_LOGIC_DONE = 'ON_DEL_LOGIC_DONE';
 
+// todo数据
+export const SET_TODO = 'SET_TODO';
+export const ADD_TODO = 'ADD_TODO';
+export const EDIT_TODO = 'EDIT_TODO';
+export const DEL_TODO = 'DEL_TODO';
+
+export const SET_TODO_DONE = 'SET_TODO_DONE';
+export const GET_TODO_DONE = 'GET_TODO_DONE';
+export const DEL_TODO_DONE = 'DEL_TODO_DONE';
 
 export const COLORS_BACKGROUND = ['#ff0000', '#0000ff', '#006400', '#ffff00', '#9400D3', '#000000'];
 export let FroalaEditorConfig = {
@@ -56,6 +65,13 @@ export default {
     ON_DEL_LOGIC_DONE,
     ON_SET_LOGIC_DONE,
     ON_GET_LOGIC_DONE,
+    SET_TODO,
+    ADD_TODO,
+    EDIT_TODO,
+    DEL_TODO,
+    GET_TODO_DONE,
+    SET_TODO_DONE,
+    DEL_TODO_DONE,
     COLORS_BACKGROUND,
     FroalaEditorConfig
 }

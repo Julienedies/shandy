@@ -6,65 +6,220 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css"/>
     <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/effeckt/animations.css">
     <link rel="stylesheet" href="../../../css/vendor/hint.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
-<body ic-ctrl="mainCtrl">
+<body>
+<div ic-view-stage  ic-ctrl="mainCtrl">
 
-<div class="column is-10 is-offset-1" ic-ctrl="todoCtrl">
+    <div id="todoList" class="shirk" ic-ctrl="todoCtrl" ic-view="todoList" ic-active>
+        <div class="column is-10 is-offset-1">
 
-    <div class="level">
+            <div class="level">
 
-        <div class="level-left">
-            <div class="buttons has-addons">
-                <button class="button"
-                        ic-ajax
-                        ic-ajax-auto
-                        ic-submit-method="get"
-                        ic-submit-action="/stock/todo?type=todo"
-                        ic-submit-on-done="onGetTodoDone">todo列表
-                </button>
-                <button class="button"
-                        ic-ajax
-                        ic-submit-method="get"
-                        ic-submit-action="/stock/todo?type=warn"
-                        ic-submit-on-done="onGetWarnDone">warn列表
-                </button>
-            </div>
-        </div>
-        <div class="level-right">
-            <div class="tags is-left" ic-tpl="types">
+                <div class="level-left">
+                    <div class="buttons has-addons">
+                        <button class="button"
+                                ic-ajax
+                                ic-ajax-auto
+                                ic-submit-method="get"
+                                ic-submit-action="/stock/todo?type=todo"
+                                ic-submit-on-done="onGetTodoDone">todo列表</button>
+                        <button class="button"
+                                ic-ajax
+                                ic-submit-method="get"
+                                ic-submit-action="/stock/todo?type=warn"
+                                ic-submit-on-done="onGetWarnDone">warn列表</button>
+                        <button class="button" ic-click="edit">新Item</button>
+                        <button class="button is-primary" ic-click="allToggle">精简模式</button>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="tags is-left" ic-tpl="types">
                     <span ic-select="tags" ic-select-item=".tag" ic-select-auto="false" ic-select-cla="is-primary"  ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
                         <i ic-for="v,i in model.mapByType" ic-val="{{ v }}" ic-class="tag is-small {{ v==model.filterByType?'is-primary':''  }}">
                             {{ v }}
                         </i>
                     </span>
+                    </div>
+                </div>
+            </div>
+
+            <div ic-tpl="list">
+                <ul>
+                    <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
+                        <h3 class="title is-3">{{ v.title }}</h3>
+                        <div class="text" ic-dblclick="toggle" ic-if="!!!v.trigger || (v.trigger && /^\\d+$/.test(v.trigger))">
+                            {{v.content}}
+                        </div>
+
+                        <div class="tags is-right">
+                            <span class="tag is-small" ic-click="filter:{{ v.type }}">{{ v.type }} </span>
+                            <span class="tag is-small">{{ v.level }}</span>
+                            <a class="tag is-small" ic-click="edit:{{v.id}}">修改</a>
+                            <a class="tag is-small" ic-click="plus:{{v.id}}">加权</a>
+                            <a class="tag is-small"
+                               ic-ajax
+                               ic-submit-method="delete"
+                               ic-submit-action="/stock/todo/{{v.id}}"
+                               ic-submit-before="delBeforeConfirm:确认删除?"
+                               ic-submit-on-done="onDelDone">删除</a>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div ic-view="setTodo" ic-ctrl="setTodoCtrl">
+        <div class="column">
+            <div ic-tpl="setTodo" ic-tpl-init="{}">
+                <div ic-form>
+
+                    <div class="columns" style="margin-bottom: 0;">
+                        <div class="column is-4">
+                            <div class="field">
+                                <div class="control">
+                                    <!--<input class="input" type="text" placeholder="todo类型,可选" value="{{ model.type }}" ic-form-field="type">-->
+                                    <p class="select">
+                                        <select name="type" ic-form-field>
+                                            <option value="错误" ic-has-selected="model.type=='错误'">错误</option>
+                                            <option value="问题" ic-has-selected="model.type=='问题'">问题</option>
+                                            <option value="理念" ic-has-selected="model.type=='理念'">理念</option>
+                                            <option value="系统" ic-has-selected="model.type=='系统'">系统</option>
+                                            <option value="警告" ic-has-selected="model.type=='警告'">警告</option>
+                                            <option value="" ic-has-selected="model.type==''">null</option>
+                                        </select>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <label>level</label>
+                                </div>
+                                <div class="control is-expanded">
+                                    <input class="input is-small" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1 }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="name,可选" value="{{ model.name }}" ic-form-field="name">
+                                    <input type="hidden" value="{{ model.id }}" ic-form-field="id">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <label>title</label>
+                        </div>
+
+                        <div class="control is-expanded">
+                            <input class="input" name="title" ic-form-field value="{{ model.title || '' }}">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <textarea id="editor" rows="14" class="textarea" placeholder="内容" ic-form-field="content"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="columns" style="margin-bottom: 0;">
+                        <div class="column is-4">
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-primary" ic-form-submit ic-submit-action="save()">
+                                        保存
+                                    </button>
+                                    <button class="button" ic-click="reset">
+                                        重置
+                                    </button>
+                                    <button class="button" ic-click="cancel">取消</button>
+                                    <button class="button" ic-view-to="todoList">
+                                        返回
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column is-4">
+                            <div class="field">
+                                <div class="control">
+                                    <label>是否独立窗口打开? </label>
+                                    <!--<input type="checkbox" class="checkbox" name="singleWindow" value="1" onclick="this.value=!!this.checked"
+                                           ic-has-checked="model.singleWindow" ic-form-field="singleWindow">-->
+                                    <input type="text" name="singleWindow" value="{{ model.singleWindow }}" ic-form-field="singleWindow">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="columns">
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="任务提示开始时间=> 9:00"
+                                           value="{{ model.start || '8:00' }}" ic-form-field="start">
+                                </div>
+                                <p class="help">可选，比如下午3点之后才能做的任务，就设置为15:00。</p>
+                            </div>
+                        </div>
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="number" placeholder="重复次数"
+                                           ic-value="{{ model.repeat || 2 }}" ic-form-field="repeat">
+                                </div>
+                                <p class="help">每天重复提醒，还是一次性提醒。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="columns">
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="number" placeholder="提醒间隔时间(以分钟计算)"
+                                           ic-value="{{ model.interval || 60 }}" ic-form-field="interval">
+                                </div>
+                                <p class="help">提醒间隔:半小时提醒一次，还是2小时提醒一次。(以分钟计算)</p>
+                            </div>
+                        </div>
+                        <div class="column is-6">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="number" placeholder="持续时长"
+                                           ic-value="{{ model.duration || 17 }}" ic-form-field="duration">
+                                </div>
+                                <p class="help">每次提醒持续时间，单位秒。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control" style="text-align: right;">
+                    <!--                    <button class="button is-primary" ic-view-to="todoList">
+                                            返回
+                                        </button>-->
+                </div>
             </div>
         </div>
     </div>
 
-    <div ic-tpl="list">
-        <ul>
-            <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
-                <h3 class="title is-3">{{ v.title }}</h3>
-                <div class="pre" ic-if="!!!v.trigger || (v.trigger && /^\\d+$/.test(v.trigger))">{{v.content}}</div>
-                <div class="tar">
-                    <a class="no" ic-click="edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
-                </div>
-                <button class="delete is-medium none"
-                        ic-ajax
-                        ic-submit-method="delete"
-                        ic-submit-action="/stock/todo/{{v.id}}"
-                        ic-submit-before="ajax_before_confirm:确认删除?"
-                        ic-submit-on-done="onDelDone"></button>
-            </li>
-        </ul>
-    </div>
-
-
 </div>
-
-
-
 </body>
 </html>

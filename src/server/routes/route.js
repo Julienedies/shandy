@@ -67,6 +67,8 @@ export default function (app) {
     app.get('/stock/diary/up/:id', diary.up)
 
     app.get('/stock/todo/', todo.get)
+    app.post('/stock/todo/', todo.post)
+    app.delete('/stock/todo/:id', todo.del)
 
     app.get('/stock/news', news.get)
     app.post('/stock/news', news.post)

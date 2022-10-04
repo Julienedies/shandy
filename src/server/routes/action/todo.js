@@ -17,6 +17,10 @@ export default {
     get (req, res) {
         getDb();
         let type = req.query.type;
+        let id = req.query.id;
+        if (id) {
+            return res.json(todoJoDb.get2(id));
+        }
         if (type === 'todo') {
             return res.json(todoJoDb.get());
         } else if (type === 'warn') {
@@ -30,11 +34,17 @@ export default {
     },
 
     post (req, res) {
-        res.json({});
+        getDb();
+        let data = req.body;
+        todoJoDb.set(data);
+        res.json(todoJoDb.get());
     },
 
     del (req, res) {
+        getDb();
         let id = req.params.id;
+        todoJoDb.remove(id);
+        res.json(todoJoDb.get());
     }
 
 }
