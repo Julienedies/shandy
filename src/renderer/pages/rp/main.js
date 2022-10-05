@@ -88,10 +88,10 @@ brick.reg('todoListCtrl', function (scope) {
         scope.render('types', {model: {mapByType: mapByType, filterByType: filterByType}});
 
         scope.render('todoList', {model: {rpList, rpForm}}, function () {
-            $(this).find('li').on('dragstart', scope.dragstart)
+           /* $(this).find('li').on('dragstart', scope.dragstart)
                 .on('dragover', scope.dragover)
                 .on('dragleave', scope.dragleave)
-                .on('drop', scope.drop);
+                .on('drop', scope.drop);*/
         });
     }
 

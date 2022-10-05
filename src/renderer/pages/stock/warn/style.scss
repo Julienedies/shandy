@@ -2,10 +2,10 @@ html {
   overflow: hidden;
 }
 
-
 .title{
   display: inline-block;
-  font-size: 28px!important;
+  padding: 1px 2px;
+  font-size: 26px!important;
   background: black;
   color: white!important;
 }
@@ -14,8 +14,7 @@ html {
 #todoList {
   &.shirk {
     .text {
-      min-height: 6em;
-      max-height: 12em;
+      max-height: 7em;
       overflow-y: hidden;
     }
   }
@@ -23,8 +22,8 @@ html {
 
 .text {
   &.toggle {
-    height: auto!important;
-    min-height: 8em;
-    overflow-y: visible;
+    max-height: none!important;
+    min-height: 2em;
+    overflow-y: visible!important;
   }
 }
