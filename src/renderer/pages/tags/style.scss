@@ -4,16 +4,13 @@
 }
 
 .tag.is-medium{
-  font-size:14px!important;
+  //font-size:16px!important;
 }
 
 [ic-click] {
   cursor: pointer;
 }
 
-[ic-viewer-popup]{
-  z-index:3000!important;
-}
 
 .table th {
   vertical-align: middle;
@@ -59,4 +56,29 @@
       }
     }
   }
+}
+
+
+
+[ic-viewer-popup]{
+  z-index:3000!important;
+}
+
+
+#ic-viewer-info {
+  bottom: 0!important;
+  font-size: 1.4em;
+  line-height: 1.6;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+#ic-viewer-info, #ic-viewer-handle {
+  text-align: right !important;
+  padding-right: 2%!important;
+}
+
+#ic-viewer-handle {
+  padding-right: 23%!important;
+  padding-left:20px;
 }

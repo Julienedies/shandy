@@ -5,8 +5,8 @@
 		"bounds": {
 			"x": 420,
 			"y": 100,
-			"width": 1498,
-			"height": 1046
+			"width": 1503,
+			"height": 1047
 		},
 		"fetchSources": [
 			"ths_new",
@@ -30,7 +30,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2022-02",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2020-10",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -44,6 +44,11 @@
 			"height": 36
 		},
 		"history": [
+			"E:\\dev\\simg\\目标行情\\2022-09",
+			"E:\\dev\\simg\\交易记录\\2209",
+			"E:\\dev\\simg\\交易记录\\2208",
+			"E:\\dev\\simg\\目标行情\\2022-08",
+			"E:\\dev\\simg\\目标行情\\2022-07",
 			"E:\\dev\\simg\\目标行情\\2022-06",
 			"E:\\dev\\simg\\交易记录\\2206",
 			"E:\\dev\\simg\\目标行情\\2022-05",
@@ -144,24 +149,22 @@
 			"E:\\dev\\simg\\交易记录\\1810-12",
 			"E:\\dev\\simg\\交易记录\\1809",
 			"E:\\dev\\simg\\交易记录\\1808",
-			"E:\\dev\\simg\\交易记录\\1807",
-			"E:\\dev\\simg\\交易记录\\1806",
 			"E:\\dev\\simg\\交易记录\\1804-05"
 		],
 		"interval": 3
 	},
 	"review": {
 		"bounds": {
-			"x": 2552,
-			"y": -288,
-			"width": 3074,
-			"height": 1698
+			"x": 2187,
+			"y": -933,
+			"width": 3856,
+			"height": 2136
 		}
 	},
 	"news": {
 		"bounds": {
-			"x": 2859,
-			"y": 390,
+			"x": 3110,
+			"y": 175,
 			"width": 813,
 			"height": 110
 		}
@@ -233,9 +236,9 @@
 	"tags": {
 		"bounds": {
 			"x": 2187,
-			"y": -501,
-			"width": 3088,
-			"height": 1704
+			"y": -933,
+			"width": 3856,
+			"height": 2136
 		}
 	},
 	"mistake": {

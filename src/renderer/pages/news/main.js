@@ -26,13 +26,14 @@ let $msg = $('#msg');
 function hideWin () {
     //win.hide();
     win && win.minimize();
-    $msg.addClass('warn');
+    $msg.removeClass('warn');
+
 }
 
 function showWin () {
     // win.showInactive();
     win && win.restore();
-    $msg.removeClass('warn');
+    $msg.addClass('warn');
 }
 
 

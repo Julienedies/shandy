@@ -9,7 +9,7 @@ body {
 }
 
 .warn {
-  animation: warn 0.5s 4 ease-in-out;
+  animation: warn 0.5s 2 ease-in-out;
 }
 
 @keyframes warn {
@@ -27,5 +27,5 @@ body {
   padding: 4px 10px 4px 80px;
   color: blue;
   background: rgba(255, 255, 255, 1);
-  font-size: 16px;
+  font-size: 18px;
 }
