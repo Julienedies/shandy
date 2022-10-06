@@ -75,11 +75,16 @@ brick.reg('todoCtrl', function () {
         render();
     }
 
+    this.filter = function (e, key) {
+        _onFilter(key);
+    };
+
     this.onGetTodoDone = function (data) {
         list.init(data);
         getMapByType(data);
         render();
     };
+
     this.onGetWarnDone = function (data) {
         scope.render('list', data);
     };
