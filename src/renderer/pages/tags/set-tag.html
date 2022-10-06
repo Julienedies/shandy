@@ -43,7 +43,7 @@
                 <div>
                     <div>
                         <div ic-select="parentId" ic-form-field="parentId">
-                            <div class="tags">
+                            <div class="tags" id="setParentIdForTag" style="height: 16em; overflow-y: scroll;">
                                 <span class="tag is-small"
                                       ic-for="i,v in (model.parents || TAGS_MAP[model.type])"
                                       ic-select-item

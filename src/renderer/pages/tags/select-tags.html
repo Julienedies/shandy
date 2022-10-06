@@ -19,7 +19,10 @@
                         <div class="control" ic-for="i,v in arr">
                             <div class="tags has-addons">
                                 <span class="tag is-medium is-black" ic-select-item ic-val="{{ v.id }}"
-                                      ic-has-selected="model.selected && model.selected.includes(v.id)"> {{v.text}}</span>
+                                      ic-has-selected="model.selected && model.selected.includes(v.id)">
+                                    {{v.text}}
+                                    <sup>{{ v.level }}</sup>
+                                </span>
 
                                 <a class="tag is-medium" ic-click="editTag:{{v.id}}">
                                     <span class="icon is-medium"><i class="far fa-edit"></i></span>

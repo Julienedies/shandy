@@ -48,6 +48,7 @@ brick.reg('todoListCtrl', function (scope) {
     let rpMap = window.RPMQS_MAP = {};
 
     let $elm = this.$elm;
+    let $title = $('title');
 
     let rpForm = {};
 
@@ -93,6 +94,8 @@ brick.reg('todoListCtrl', function (scope) {
                 .on('dragleave', scope.dragleave)
                 .on('drop', scope.drop);*/
         });
+
+        $title.text(`rp_${ rpMap[filterByType] }_${ formatDate() }`);
     }
 
     //-----------------------------------------------------------

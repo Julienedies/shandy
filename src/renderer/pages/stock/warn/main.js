@@ -28,29 +28,33 @@ brick.reg('todoCtrl', function () {
     let list = brick.services.get('recordManager')();
 
     scope.mapByType = {};
+    scope.mapForTag = {};
     scope.filterByType = '错误';
 
     function getMapByType (arr) {
         let mapByType = {};
+        let mapForTag = {};
         arr.forEach((v, i) => {
             let arr2 = mapByType[v.type || '_null'] = mapByType[v.type || '_null'] || [];
             arr2.push(v);
+            let arr3 = mapForTag[v.tag || 'null_'] = mapForTag[v.tag || 'null_'] || [];
+            arr3.push(v);
         });
 
-        console.log(mapByType);
-        return mapByType;
+        console.log(mapByType, mapForTag);
+        scope.mapForTag = mapForTag;
+        scope.mapByType = mapByType;
     }
+
 
     function render () {
         let todoArr = list.get();
         let mapByType = scope.mapByType;
+        let mapForTag = scope.mapForTag;
         let filterByType = scope.filterByType;
 
         if (filterByType) {
-            todoArr = mapByType[filterByType];
-            /*todoArr  = list.get((item, index) => {
-
-            });*/
+            todoArr = mapByType[filterByType] || mapForTag[filterByType];
         }
 
         todoArr.sort((a, b) => {
@@ -73,7 +77,7 @@ brick.reg('todoCtrl', function () {
 
     this.onGetTodoDone = function (data) {
         list.init(data);
-        scope.mapByType = getMapByType(data);
+        getMapByType(data);
         render();
     };
     this.onGetWarnDone = function (data) {
