@@ -2,16 +2,24 @@ html {
   overflow: hidden;
 }
 
-strong{
+strong {
   font-weight: 600;
 }
 
-.title{
+.title {
   display: inline-block;
-  padding: 1px 2px;
-  font-size: 26px!important;
+  padding: 1px 2px 1px 0;
+  font-size: 26px !important;
   background: black;
-  color: white!important;
+  color: white !important;
+
+  &.concept {
+    background: rgb(148, 0, 211);
+  }
+
+  &.system {
+    background: blue;
+  }
 }
 
 
@@ -25,9 +33,10 @@ strong{
 }
 
 .text {
+  min-height: 3em;
+
   &.toggle {
-    max-height: none!important;
-    min-height: 2em;
-    overflow-y: visible!important;
+    max-height: none !important;
+    overflow-y: visible !important;
   }
 }

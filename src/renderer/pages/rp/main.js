@@ -147,6 +147,10 @@ brick.reg('todoListCtrl', function (scope) {
         });*/
     });
 
+    scope.reset = function () {
+        $elm.find('#replay').text('');
+    };
+
     scope.replay = {
         before: function (fields) {
             console.info(fields);

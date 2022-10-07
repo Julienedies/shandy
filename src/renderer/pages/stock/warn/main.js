@@ -99,7 +99,7 @@ brick.reg('todoCtrl', function () {
         $(this).text($elm.hasClass(cla) ? '精简模式' : '展开模式');
     };
 
-    scope.toggle = function (e) {
+    scope.toggleText = function (e) {
         let cla = 'toggle';
         $(this).toggleClass(cla);
     };

@@ -34,6 +34,7 @@ brick.reg('diaryCtrl', function () {
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
 
+    let anchor = location.href.match(/\#([^#]+$)/) || [];
     scope.order = brick.utils.getQuery('order') === 'true';  // 排序方式: 顺序  or  逆序
 
     $('title').text(`日记_${ formatDate() }`);
@@ -55,7 +56,14 @@ brick.reg('diaryCtrl', function () {
         }
 
         $.icMsg(`render item => ${ resultArr.length }`);
-        scope.render('diaryList', resultArr);
+        scope.render('diaryList', resultArr, function () {
+            if(anchor){
+                let name = anchor[1];
+                anchor = null;
+                document.querySelector(`a[name="${name}"]`).scrollIntoViewIfNeeded(false);
+                //document.querySelector(`a[name="${name}"]`).scrollIntoView(true);
+            }
+        });
     }
 
     function getTagArr (data) {
@@ -123,7 +131,7 @@ brick.reg('diaryCtrl', function () {
 
     this.play = function (e) {
         let text = $(this).closest('li').find('.pre').text();
-        text = `${text} ${text} ${text} ${text}`;
+        text = `${text} ${text} ${text}`;
         voice.clear();
         voice(text);
     };

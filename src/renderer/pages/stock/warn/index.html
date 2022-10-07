@@ -55,8 +55,10 @@
             <div ic-tpl="list">
                 <ul>
                     <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
-                        <h3 class="title is-3">{{ v.title }}</h3>
-                        <div class="text" ic-dblclick="toggle" ic-if="!!!v.trigger || (v.trigger && /^\\d+$/.test(v.trigger))">
+                        <h3 class="title is-3 concept" ic-if-start="v.type==='理念'">{{ v.title }}</h3>
+                        <h3 class="title is-3 system" ic-else-if="v.type==='系统'">{{ v.title }}</h3>
+                        <h3 class="title is-3" ic-else>{{ v.title }}</h3>
+                        <div class="text" ic-dblclick="toggleText" ic-if="!!!v.trigger || (v.trigger && /^\\d+$/.test(v.trigger))">
                             {{v.content}}
                         </div>
 

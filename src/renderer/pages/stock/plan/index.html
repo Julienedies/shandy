@@ -47,6 +47,12 @@
                             <div class="pre">{{v}}</div>
                         </div>-->
                     </div>
+                    <button class="delete is-medium"
+                    ic-ajax
+                    ic-submit-method="delete"
+                    ic-submit-action="/stock/replay/{{o.id}}"
+                    ic-submit-before="ajax_before_confirm:确认删除?"
+                    ic-submit-on-done="onDelDone"></button>
                 </li>
             </ul>
 

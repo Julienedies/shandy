@@ -25,10 +25,14 @@ brick.reg('planCtrl', function () {
     let list = brick.services.get('recordManager')();
     let model = {};
 
-    $.get(`/stock/replay?date`).done((data) => {
+    $.get(`/stock/replay`).done((data) => {
         console.log(data);
         scope.render('replay', data);
     });
+
+    scope.onDelDone = function (data) {
+        scope.render('replay', data);
+    };
 
     scope.replay_get_done = function(data){
         console.info(data);
@@ -41,6 +45,8 @@ brick.reg('planCtrl', function () {
         list.init(data.plans);
         scope.render('plans', data.plans);
     };
+
+
 
     scope.plan_add = function(){
         scope.emit('plan.edit', {plan:{}, tags:model.tags});

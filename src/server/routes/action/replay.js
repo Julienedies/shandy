@@ -14,9 +14,17 @@ function initDb () {
     return replay;
 }
 
-function data (date) {
-    let result = date ? replay.get2(date, 'date') : replay.get();
-    return result ? result : {};
+function getData (date) {
+    let result = {};
+    let list = replay.get();
+    if (date) {
+        let item = replay.get2(date, 'date');
+        result = item || list[0];
+        result['date'] = date;
+    } else {
+        result = list;
+    }
+    return result;
     //return {replay: vm, tags: tags.convert()};
 }
 
@@ -25,7 +33,7 @@ export default {
     get: function (req, res) {
         initDb();
         let date = req.query.date || req.params.date;
-        res.json(data(date));
+        res.json(getData(date));
     },
 
     // 复盘
@@ -34,7 +42,14 @@ export default {
         let obj = req.body;
         let date = obj.date;
         replay.set(obj);
-        res.json(data(date));
-    }
+        res.json(getData(date));
+    },
+
+    del (req, res) {
+        initDb();
+        let id = req.params.id;
+        replay.remove(id, 'id');
+        res.json(getData());
+    },
 
 }
