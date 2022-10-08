@@ -4,6 +4,25 @@
   z-index: 3000 !important;
 }
 
+
+#ic-viewer-info {
+  bottom: 0!important;
+  font-size: 1.4em;
+  line-height: 1.6;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+#ic-viewer-info, #ic-viewer-handle {
+  text-align: right !important;
+  padding-right: 2%!important;
+}
+
+#ic-viewer-handle {
+  padding-right: 23%!important;
+  padding-left:20px;
+}
+
 .tags[ic-viewer] {
   flex-wrap: nowrap;
   overflow: hidden;

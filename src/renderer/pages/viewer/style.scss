@@ -5,6 +5,14 @@
   margin: 0;
 }*/
 
+[ic-popup="viewerMarkTag"]{
+  overflow: hidden!important;
+}
+
+#viewerAttach p{
+  margin-left: 54%;
+}
+
 #ic-viewer-box-wrap img {
   margin-top: -1px;
 }

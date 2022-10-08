@@ -30,7 +30,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2020-10",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2022-03",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -227,10 +227,10 @@
 	},
 	"system": {
 		"bounds": {
-			"x": -7,
-			"y": -7,
-			"width": 2209,
-			"height": 1209
+			"x": 2187,
+			"y": -933,
+			"width": 3856,
+			"height": 2136
 		}
 	},
 	"tags": {
