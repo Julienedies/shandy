@@ -213,7 +213,7 @@ brick.reg('mainCtrl', function (scope) {
         }
     })();
 
-    //start();
+    start();
 
 });
 

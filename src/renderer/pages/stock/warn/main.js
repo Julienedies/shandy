@@ -25,7 +25,7 @@ brick.reg('todoCtrl', function () {
     let scope = this;
     let $elm = scope.$elm;
     let $title = $('title');
-    let list = brick.services.get('recordManager')();
+    let icList = brick.services.get('recordManager')();
 
     scope.mapByType = {};
     scope.mapForTag = {};
@@ -48,7 +48,7 @@ brick.reg('todoCtrl', function () {
 
 
     function render () {
-        let todoArr = list.get();
+        let todoArr = icList.get();
         let mapByType = scope.mapByType;
         let mapForTag = scope.mapForTag;
         let filterByType = scope.filterByType;
@@ -80,7 +80,7 @@ brick.reg('todoCtrl', function () {
     };
 
     this.onGetTodoDone = function (data) {
-        list.init(data);
+        icList.init(data);
         getMapByType(data);
         render();
     };
@@ -105,13 +105,13 @@ brick.reg('todoCtrl', function () {
     };
 
     this.edit = function (e, id) {
-        let item = id ? list.get2(id) : {};
+        let item = id ? icList.get2(id) : {};
         scope.emit(SET_TODO, item);
     };
 
     // 加权
     scope.plus = function (e, id) {
-        let item = list.get(id);
+        let item = icList.get(id);
         let level = (item.level || 1) * 1;
         item.level = level + 5;
         $.post('/stock/todo', item).done((data) => {

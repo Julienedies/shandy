@@ -19,8 +19,13 @@ function getData (date) {
     let list = replay.get();
     if (date) {
         let item = replay.get2(date, 'date');
-        result = item || list[0];
-        result['date'] = date;
+        if(item){
+            result = item;
+        }else{
+            result = list[0];
+            result['date'] = date;
+            delete result.id;
+        }
     } else {
         result = list;
     }

@@ -14,12 +14,12 @@
 <div ic-view-stage  ic-ctrl="mainCtrl">
 
     <div id="todoList" class="shirk" ic-ctrl="todoCtrl" ic-view="todoList" ic-active>
-        <div class="column is-10 is-offset-1">
+        <div class="column">
 
-            <div class="level">
-
+            <header id="mainHeader" class="level">
                 <div class="level-left">
                     <div class="buttons has-addons">
+                        <button class="button" ic-click="allToggle">精简模式</button>
                         <button class="button"
                                 ic-ajax
                                 ic-ajax-auto
@@ -32,7 +32,7 @@
                                 ic-submit-action="/stock/todo?type=warn"
                                 ic-submit-on-done="onGetWarnDone">warn列表</button>
                         <button class="button" ic-click="edit">新Item</button>
-                        <button class="button is-primary" ic-click="allToggle">精简模式</button>
+
                     </div>
                 </div>
                 <div class="level-right">
@@ -50,9 +50,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </header>
 
-            <div ic-tpl="list">
+            <div id="mainContent" ic-tpl="list">
                 <ul>
                     <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
                         <h3 class="title is-3 concept" ic-if-start="v.type==='理念'">{{ v.title }}</h3>

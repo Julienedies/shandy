@@ -6,6 +6,21 @@ strong {
   font-weight: 600;
 }
 
+#mainHeader {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.5rem 9%;
+  margin-left: -1.6rem;
+  background: #fff;
+  box-shadow: 2px 2px 4px 3px #d9d7d7;
+}
+
+#mainContent {
+  padding: 94px 6% 20px 6%;
+}
+
 .title {
   display: inline-block;
   padding: 1px 2px 1px 0;
