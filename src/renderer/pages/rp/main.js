@@ -148,7 +148,7 @@ brick.reg('todoListCtrl', function (scope) {
     });
 
     scope.reset = function () {
-        $elm.find('#replay').text('');
+        $elm.find('#rpPlanItem').text('');
     };
 
     scope.replay = {

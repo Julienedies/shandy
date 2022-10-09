@@ -1,3 +1,25 @@
+
+
+
+#mainHeader {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.4rem 8%;
+  background: #fff;
+  box-shadow: 2px 2px 6px 3px #d9d7d7;
+}
+
+#mainContent{
+  padding: 64px 2% 40px 2%;
+}
+
+#setRp{
+  padding:0 0 24px 0;
+}
+
+
 [ic-ctrl="set_plan_ctrl"], [ic-ctrl="set_tag_ctrl"]{
   padding-top:15px;
   h6{

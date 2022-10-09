@@ -4,12 +4,16 @@ strong {
   font-weight: bold;
 }
 
+a{
+  text-decoration: none !important;
+}
+
 .notification div.pre {
   color: #000;
   /*  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;*/
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
-  font-weight: 500;
+  font-weight: 600;
   overflow: visible;
   text-overflow: ellipsis;
 

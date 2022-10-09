@@ -73,6 +73,45 @@ brick.reg('planCtrl', function () {
 
 });
 
+brick.reg('setRpCtrl', function () {
+
+    let scope = this;
+    let $elm = scope.$elm;
+    let rpForm = {};
+
+    function getRpForm () {
+        $.get(`/stock/replay?date=${ formatDate2() }`).done((data) => {
+
+            scope.render('rp', {rpForm: data});
+
+        });
+    }
+
+    function submit () {
+        $elm.find('[ic-form="rp"]').icFormSubmit();
+    }
+
+    $elm.on('keyup', 'textarea', _.throttle(submit, 900));
+
+    scope.reset = function () {
+        $elm.find('#rpPlanItem').text('');
+    };
+
+    scope.replay = {
+        before: function (fields) {
+            console.info(fields);
+            return fields;
+        },
+        done: function (data) {
+            //$.icMsg(JSON.stringify(data.replay));
+            rpForm = data || rpForm;
+        }
+    };
+
+    getRpForm();
+
+});
+
 brick.reg('set_plan_ctrl', function () {
 
     let scope = this;

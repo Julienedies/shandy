@@ -1,5 +1,43 @@
 [
 	{
+		"id": "id_1665321268665_7049",
+		"tag": [
+			"要解决的问题",
+			"AAA",
+			"Q",
+			"RE"
+		],
+		"date": "2022-10-09",
+		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">机会和确定性来自于哪里？</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">想想市场的主升，想想20年的可转债行情，想想22年的次新可转债行情，</span></strong></p>",
+		"tags": [],
+		"timestamp": 1665321268665
+	},
+	{
+		"id": "id_1665321219587_5729",
+		"tag": [
+			"交易系统",
+			"要解决的问题",
+			"AAA",
+			"RE"
+		],
+		"date": "2022-10-09",
+		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">思维没有方向，操作没有系统；我应该从概率上考虑我的交易系统；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">我的判断锚点是什么？或者说我的交易理念是什么？理念的概率优势，譬如做龙头的概率优势，做涨停板的概率优势；</span></strong></p>",
+		"tags": [],
+		"timestamp": 1665321219587
+	},
+	{
+		"id": "id_1665321171847_2986",
+		"tag": [
+			"要解决的问题",
+			"AAA",
+			"RE"
+		],
+		"date": "2022-10-09",
+		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">重复赚钱的交易，看看自己那些交易是赚钱的，怎么重复；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">看看历史上的龙头股和大行情，什么情况会复现，历史会重复；</span></strong></p>",
+		"tags": [],
+		"timestamp": 1665321171847
+	},
+	{
 		"id": "id_1664553909574_6988",
 		"tags": [
 			"id_1639899390915"
@@ -12,7 +50,7 @@
 	{
 		"id": "id_1664465553124_1116",
 		"date": "2022-09-29",
-		"text": "<p><span style=\"background-color: rgb(255, 255, 0);\">大趋势依然向下，偶尔的阳线只能看成反弹。今天受外围上涨的影响，高开低走；</span></p><p><span style=\"background-color: rgb(255, 255, 0);\">情绪分歧，昨天一致看多。今天一致补跌。</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><span style=\"background-color: rgb(255, 255, 0);\">思维没有方向，操作没有系统；临盘前没有明确的交易计划。</span></p><p><span style=\"background-color: rgb(255, 255, 0);\">没有想过欧洲能源危机板块里的公元股份、彩虹股份、海鸥住工、日出东方的可能走势及应对，主观看空；</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><span style=\"background-color: rgb(255, 255, 0);\">早盘南天信息快速拉升封板，带动了数字货币或跨境支付。可能是轮动关系吧，或是有什么背后我不知道的消息。</span></p><p><span style=\"background-color: rgb(255, 255, 0);\">不知道医疗器械背后的逻辑，所以也不知道大博医疗3连板的逻辑。低位起来的医疗器械今天修复反包。</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><span style=\"background-color: rgb(255, 255, 0);\">早盘新能源下杀，宝馨科技、亿晶光电、传艺科技等下杀，然后我就线性看空。结果新能源又拉起来了。宝馨科技直接拉升至5%左右，然后我就又开始看多了。想买入。结果尾盘又回落。</span></p><p><span style=\"background-color: rgb(255, 255, 0);\">当前新能源依然是主线，但同时它已经是高位了，所以就成了趋势博弈走势，不可能🈶爆发性行情，最好的策略是在里面高抛低吸。</span></p><p><span style=\"background-color: rgb(255, 255, 0);\">新能源的科华数据接近新高。德业股份、爱旭科技这些新能源趋势股依然向上。</span></p><p><span style=\"background-color: rgb(255, 255, 0);\"><br></span></p><p><span style=\"background-color: rgb(255, 255, 0);\">主观看空，结果今天欧洲能源危机依然是资金进攻目标。虽然分化。但是彩虹股份、海鸥住工晋级。日出东方、万和电气补跌。</span></p><p><span style=\"background-color: rgb(255, 255, 0);\">昨天尾盘拉升的招商南油低开跌停。幸亏昨天没有临盘随意买入。不知道是高位的缘故还是运费下跌的关系。</span></p><p><br></p>",
+		"text": "<p><span style=\"background-color: rgb(255, 255, 0); font-size: 18px;\"><strong>大趋势依然向下，偶尔的阳线只能看成反弹。今天受外围上涨的影响，高开低走；</strong></span></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">情绪分歧，昨天一致看多。今天一致补跌。</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">思维没有方向，操作没有系统；临盘前没有明确的交易计划。</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">没有想过欧洲能源危机板块里的公元股份、彩虹股份、海鸥住工、日出东方的可能走势及应对，主观看空；</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">早盘南天信息快速拉升封板，带动了数字货币或跨境支付。可能是轮动关系吧，或是有什么背后我不知道的消息。</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">不知道医疗器械背后的逻辑，所以也不知道大博医疗3连板的逻辑。低位起来的医疗器械今天修复反包。</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">早盘新能源下杀，宝馨科技、亿晶光电、传艺科技等下杀，然后我就线性看空。结果新能源又拉起来了。宝馨科技直接拉升至5%左右，然后我就又开始看多了。想买入。结果尾盘又回落。</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">当前新能源依然是主线，但同时它已经是高位了，所以就成了趋势博弈走势，不可能🈶爆发性行情，最好的策略是在里面高抛低吸。</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">新能源的科华数据接近新高。德业股份、爱旭科技这些新能源趋势股依然向上。</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">主观看空，结果今天欧洲能源危机依然是资金进攻目标。虽然分化。但是彩虹股份、海鸥住工晋级。日出东方、万和电气补跌。</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">昨天尾盘拉升的招商南油低开跌停。幸亏昨天没有临盘随意买入。不知道是高位的缘故还是运费下跌的关系。</span></span></strong></p><p><br></p>",
 		"tag": [],
 		"tags": [
 			"3057456",
@@ -7634,13 +7672,14 @@
 	{
 		"id": "8233239",
 		"tag": [
-			"_理念汇总"
+			"交易系统",
+			"A",
+			"RE"
 		],
 		"date": "2021-01-23",
 		"text": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">无论复盘或者盯盘，我都没有明确的思维方向。</span></strong></p><p><br></p><p><span style=\"font-size: 24px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">复盘没有对次日行情走势的分析和预判及应对。应该预判、验证、跟随。</span></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">盯盘应该抓住热点的变化、异动的加强、修复、切换。</span></strong></p>",
 		"timestamp": 1611383633145,
 		"tags": [
-			"id_5852309_0t",
 			"id_1639899390915",
 			"id_1639908764746"
 		]
@@ -7691,16 +7730,16 @@
 	},
 	{
 		"id": "8013725",
-		"tag": [],
+		"tag": [
+			"要解决的问题"
+		],
 		"date": "2021-01-20",
 		"text": "<p><strong><u><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">前半年，我还有竞价系统约束。</span></u></strong></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><u><strong>现在我连竞价系统都要放弃了。</strong></u></span></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><u><strong>现在又陷入连短线交易流程都没有，临盘随意交易的状态中了。</strong></u></span></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><u><strong><br></strong></u></span></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><u><strong>既然知道问题在哪？问什么不去解决问题，而是沉迷于日常交易中呢？</strong></u></span></p><p><span style=\"font-size: 22px;background-color: rgb(255, 255, 0);\"><u><strong><br></strong></u></span></p><p><strong><u><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">市场上的短线交易者有着怎么样的行为逻辑？</span></u></strong></p>",
 		"timestamp": 1611103763558,
 		"tags": [
 			"0194710",
-			"id_1639908764746",
 			"id_1639899390915",
-			"id_2191924_hq",
-			"id_3591675_ks"
+			"id_1639908764746"
 		]
 	},
 	{
@@ -7719,37 +7758,35 @@
 		"id": "8799767",
 		"tag": [],
 		"date": "2021-01-19",
-		"text": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><u>我的线性思维让我觉得豫能控股退潮了，但豫能控股却走出了V形浪。</u></span></strong></p><p><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>之前的连番上冲只是没有大盘的配合。当时市场的热点是蓝筹趋势。</strong></span></p><p><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>现在配上情绪题材+超跌反弹，终于走出了二波。</strong></span></p><p><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong><br></strong></span></p><p><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>我的脑子太思维简单了。没有想象力，对市场理解也不够深刻。</strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><u>不要先入为主，之前的朗姿股份、智慧农业都走出了V形浪，只不过需要环境的配合。</u></span></strong></p>",
+		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><u>我的线性思维让我觉得豫能控股退潮了，但豫能控股却走出了V形浪。</u></span></strong></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>之前的连番上冲只是没有大盘的配合。当时市场的热点是蓝筹趋势。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>现在配上情绪题材+超跌反弹，终于走出了二波。</strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><br></strong></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我的脑子太思维简单了。没有想象力，对市场理解也不够深刻。</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><u>不要先入为主，之前的朗姿股份、智慧农业都走出了V形浪，只不过需要环境的配合。</u></span></strong></p>",
 		"timestamp": 1611061774158,
 		"tags": [
-			"9273751",
-			"id_5852309_0t",
-			"id_1639813907195"
+			"id_1639813907195",
+			"5837743"
 		]
 	},
 	{
 		"id": "9629215",
 		"tag": [],
 		"date": "2021-01-19",
-		"text": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">今次的蓝筹指数行情，我又错过了。</span></strong></p><p><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>风格切换的超低补涨行情也错过了。</strong></span></p><p><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong><u>为何我总是后知后觉，行情走出来，才看到行情。</u></strong></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">没有大局观，行情启动时犹豫，看不到确定性。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\"><u>补涨就是要等龙头上涨结束或有足够的位差，才有补涨行情。</u></span></strong></p>",
+		"text": "<p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><u>为何我总是后知后觉，行情走出来，才看到行情。</u></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><u>没有大局观，行情启动时犹豫，看不到确定性。</u></strong></span></span></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">今次的蓝筹指数行情，我又错过了。</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>风格切换的超低补涨行情也错过了。</strong></span></span></p><p><span style=\"font-size: 22px;\"><br></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">补涨就是要等龙头上涨结束或有足够的位差，才有补涨行情。</span></strong></p>",
 		"timestamp": 1611045037318,
 		"tags": [
 			"9273751",
-			"9650311",
-			"0001719"
+			"9650311"
 		]
 	},
 	{
 		"id": "6825638",
 		"tag": [],
 		"date": "2021-01-19",
-		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我有一个倾向，那就是偏看空。为什么我总是错过大行情？</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 28px; background-color: rgb(0, 0, 0);\"><strong>行情启动时，犹豫。直到行情走得非常高才忍不住追进去。</strong></span></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong><br></strong></span></p><p><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong>日内热点行情是高频行情。</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong><br></strong></span></p><p><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong>有一个问题，没涨高的时候，我不关注，没有确定性。涨起来又嫌高。</strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我经常错过一些看起来有确定性，也没涨很高的票。因为我想等等看。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">半导体行情、军工行情复盘时已经发现了，为什么没有抓住？</span></strong></p><p><br></p><p><span style=\"color: rgb(0, 0, 0); font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">相同的K线可以走出不同的走势，关键是对市场大局观的理解。</span></strong></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>而我的恐高倾向及看不上低位，让我甚至做得不如初期机械概率好。</strong></span></span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">初期的很多盈利只是我机械执行了竞价系统。</span></strong></span></p>",
+		"text": "<p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px; background-color: rgb(0, 0, 0);\"><strong>行情启动时，犹豫。直到行情走得非常高才忍不住追进去。</strong></span></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我有一个倾向，那就是偏看空。为什么我总是错过大行情？</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong><br></strong></span></p><p><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong>日内热点行情是高频行情。</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong><br></strong></span></p><p><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\"><strong>有一个问题，没涨高的时候，我不关注，没有确定性。涨起来又嫌高。</strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我经常错过一些看起来有确定性，也没涨很高的票。因为我想等等看。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">半导体行情、军工行情复盘时已经发现了，为什么没有抓住？</span></strong></p><p><br></p><p><span style=\"color: rgb(0, 0, 0); font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">相同的K线可以走出不同的走势，关键是对市场大局观的理解。</span></strong></span></p><p><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-size: 24px;background-color: rgb(255, 255, 0);\"><strong>而我的恐高倾向及看不上低位，让我甚至做得不如初期机械概率好。</strong></span></span></p><p><span style=\"color: rgb(0, 0, 0); font-size: 24px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">初期的很多盈利只是我机械执行了竞价系统。</span></strong></span></p>",
 		"timestamp": 1611016808544,
 		"tags": [
 			"9273751",
 			"3057456",
-			"0950403",
-			"9650311"
+			"9650311",
+			"0950403"
 		]
 	},
 	{
@@ -7777,12 +7814,10 @@
 		"id": "5395643",
 		"tag": [],
 		"date": "2021-01-18",
-		"text": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我倾向看空，总是错过转强的机会。</span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">我是根据预测操作，二不是根据盘面应对。</span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">行情好时大干快上，行情差管住手。</span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></p><p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0);\">我的问题是不能正确判断大势是好是坏。 譬如今天日月明、宜宾纸业的一字，怎么衡量确定性和盈亏比。</span></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">当前市场明明是上涨中，至少没有转入下跌。为什么我总是倾向看空呢？</span></p>",
+		"text": "<p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>我倾向看空，总是错过转强的机会。</strong></span></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我是根据预测操作，二不是根据盘面应对。</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">行情好时大干快上，行情差管住手。</span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\"><br></span></span></strong></p><p><strong><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">我的问题是不能正确判断大势是好是坏。 譬如今天日月明、宜宾纸业的一字，怎么衡量确定性和盈亏比。</span></span></strong></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\"><strong>当前市场明明是上涨中，至少没有转入下跌。为什么我总是倾向看空呢？</strong></span></p>",
 		"timestamp": 1610965985570,
 		"tags": [
-			"3057456",
 			"id_1639813907195",
-			"0950403",
 			"id_1664963166005_1680"
 		]
 	},
@@ -7805,26 +7840,26 @@
 		"text": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">对市场理解不够，没有大局观。</span></strong></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong><br></strong></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>错过智慧农业，市场风格切换龙头。</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>错过阳光电源，主线蓝筹趋势龙头。</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>错过郑州煤电，大题材龙头。</strong></span></span></span></p><p><span style=\"font-size: 24px;\"><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(0, 0, 0);\"><strong>错过白酒板块主升浪。</strong></span></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错过指数突破主升浪。</span></strong></p>",
 		"timestamp": 1610870593571,
 		"tags": [
-			"id_5852309_0t",
 			"9273751",
-			"9650311"
+			"9650311",
+			"5006799"
 		]
 	},
 	{
 		"id": "8948133",
 		"tag": [
-			"_错误汇总",
-			"为何总是错过大行情"
+			"无改变"
 		],
 		"date": "2021-01-17",
-		"text": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">今天错过天齐锂业的上冲回落N形反转浪，就好像错过以前的中原证券，太阳能那样。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">一切错误不过是在重复。</span></strong></p>",
-		"timestamp": 1610846765922
+		"text": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">今天错过天齐锂业的上冲回落N形反转浪，就好像错过以前的中原证券，太阳能那样。</span></strong></p><p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">一切错误不过是在重复。</span></strong></p>",
+		"timestamp": 1610846765922,
+		"tags": []
 	},
 	{
 		"id": "4409744",
 		"tag": [],
 		"date": "2021-01-17",
-		"text": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">做精不做多，保持一个良好的攻击状态更好。</span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">不要什么都想抓住，什么都没有抓住。</span></p>",
+		"text": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>做精不做多，保持一个良好的攻击状态更好。</strong></span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\"><strong>不要什么都想抓住，什么都没有抓住。</strong></span></p>",
 		"timestamp": 1610846336075,
 		"tags": [
 			"5505767"
@@ -7832,9 +7867,11 @@
 	},
 	{
 		"id": "8838031",
-		"tag": [],
+		"tag": [
+			"交易系统"
+		],
 		"date": "2021-01-15",
-		"text": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我的脑子是空白的。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我临盘盯盘时，脑子是空白的。没有明确的思维方向。</span></strong></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">盘中川能动力连续上冲封板，我却视而不见。也错过天齐锂业的低吸机会。</span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><br></span></strong></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">你应该思考资金的攻击方向。就象张英雄那样，根据资金攻击方向，建仓。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">昨天看好的日月明，超跌反弹线，也没有做。精力都在阳光电源上，每次我手里有票，会让我错过机会。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我多少次因为鸡肋头寸，错过更好的机会。</span></strong></p>",
+		"text": "<p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我的脑子是空白的。</span></strong></p><p><span style=\"font-size: 26px;\"><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我临盘盯盘时，脑子是空白的。没有明确的思维方向。</span></strong></span></p><p><br></p><p><strong><span style=\"font-size: 26px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">你应该思考资金的攻击方向。就象张英雄那样，根据资金攻击方向，建仓。</span></strong></span></strong></p><p><br></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">盘中川能动力连续上冲封板，我却视而不见。也错过天齐锂业的低吸机会。</span></strong></p><p><br></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">昨天看好的日月明，超跌反弹线，也没有做。精力都在阳光电源上，每次我手里有票，会让我错过机会。</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我多少次因为鸡肋头寸，错过更好的机会。</span></strong></p>",
 		"timestamp": 1610705782486,
 		"tags": [
 			"id_1639899390915",
@@ -7845,8 +7882,10 @@
 		"id": "3222020",
 		"tag": [
 			"交易系统",
+			"要解决的问题",
 			"A",
-			"RE"
+			"RE",
+			"VS"
 		],
 		"date": "2021-01-15",
 		"text": "<p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">我决定做趋势股，是因为注册制后的改革。打板也许会被淘汰。</span></strong></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong><br></strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>高频模式：简单纯粹，避免犯错。 &nbsp; 短视，容易忽略大趋势。</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>我喜欢的交易模型是今天买，次日卖。类似分仓打首板。或张英雄的模式。</strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong><br></strong></span></p><p><span style=\"font-size: 20px;background-color: rgb(255, 255, 0);\"><strong>趋势波段：需要大局观。操作复杂，容易犯错。</strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">趋势股的问题是效率低，很多时候，股价处在平衡状态。对于我的职业操作，浪费时间。</span></strong></p>",

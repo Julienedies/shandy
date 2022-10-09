@@ -9,79 +9,123 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body ic-ctrl="main_ctrl">
-    <div class="column">
-        <section ic-ctrl="planCtrl">
+    <div>
+        <div ic-ctrl="planCtrl">
+            <header id="mainHeader">
+                <div class="buttons has-addons">
+                    <button class="button"
+                            x-ic-ajax="get_replay"
+                            ic-ajax-auto
+                            ic-submit-method="get"
+                            ic-submit-action="/stock/replay"
+                            ic-submit-on-done="replay_get_done">大盘复盘</button>
 
-            <div class="buttons has-addons">
-                <button class="button"
-                        x-ic-ajax="get_replay"
-                        ic-ajax-auto
-                        ic-submit-method="get"
-                        ic-submit-action="/stock/replay"
-                        ic-submit-on-done="replay_get_done">大盘复盘</button>
+                    <button class="button"
+                            id="get_plans"
+                            ic-ajax="plans"
+                            ic-ajax-auto
+                            ic-submit-method="get"
+                            ic-submit-action="/stock/plan"
+                            ic-submit-on-done="plan_get_done">当前计划</button>
 
-                <button class="button"
-                        id="get_plans"
-                        ic-ajax="plans"
-                        ic-ajax-auto
-                        ic-submit-method="get"
-                        ic-submit-action="/stock/plan"
-                        ic-submit-on-done="plan_get_done">当前计划</button>
+                    <button class="button" ic-click="plan_add" ic-popup-target="set_plan">新计划</button>
+                </div>
+            </header>
 
-                <button class="button" ic-click="plan_add" ic-popup-target="set_plan">新计划</button>
+            <div id="mainContent" class="column">
+                <div id="setRp" ic-ctrl="setRpCtrl">
+                    <div ic-tpl="rp">
+                        <div  ic-form="rp" ic-init="rpForm=model.rpForm;">
+                            <div class="field is-grouped">
+                                <div class="control">阶段变量</div>
+                                <div class="control is-expanded">
+                                    <textarea class="textarea" ic-form-field="阶段变量" rows="6">{{ rpForm['阶段变量'] }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="field is-grouped is-grouped-centered">
+                                <div class="control">交易计划</div>
+                                <div class="control is-expanded">
+                                    <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="17">{{ rpForm['交易计划'] }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="field is-grouped is-grouped-centered">
+                                <div class="control">
+                                    <input class="input is-small" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate2() }}">
+                                </div>
+                                <div class="control">
+                                    <button class="button is-primary is-small"
+                                            ic-form-submit="rp"
+                                            ic-submit-action="/stock/replay"
+                                            ic-submit-before="replay.before"
+                                            ic-submit-on-done="replay.done">
+                                        保存
+                                    </button>
+                                </div>
+                                <div class="control">
+                                    <button class="button is-primary is-small" ic-click="reset">
+                                        重置
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul ic-tpl="replay" style="padding:0 0 0 5%;">
+                    <li ic-for="k,o in model" class="notification">
+                        <div class="table_3">
+                            <div>
+                                <h6>日期: </h6>
+                                <div class="pre">{{ o['date'] }}</div>
+                            </div>
+                            <div>
+                                <h6>阶段变量: </h6>
+                                <div class="pre">{{ o['阶段变量'] }}</div>
+                            </div>
+                            <div>
+                                <h6>交易计划: </h6>
+                                <div class="pre">{{ o['交易计划'] }}</div>
+                            </div>
+                            <!--<div ic-for="i,v in o" ic-if="i=='date'||i=='交易计划'">
+                                <h6 class="">{{i}} : </h6>
+                                <div class="pre">{{v}}</div>
+                            </div>-->
+                        </div>
+                        <button class="delete is-medium"
+                                ic-ajax
+                                ic-submit-method="delete"
+                                ic-submit-action="/stock/replay/{{o.id}}"
+                                ic-submit-before="ajax_before_confirm:确认删除?"
+                                ic-submit-on-done="onDelDone"></button>
+                    </li>
+                </ul>
+
+                <ul ic-tpl="plans">
+                    <li ic-for="j,plan in model" class="notification">
+                        <h6 class="title is-5">{{plan.date}} : </h6>
+                        <div class="table_3">
+                            <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
+                                <h6>{{k}} : </h6>
+                                <div class="pre">{{plan[k]}}</div>
+                            </div>
+                        </div>
+                        <div class="tar">
+                            <a ic-click="plan_edit:{{plan.id}}">编辑</a>
+                        </div>
+                        <button class="delete is-large"
+                                ic-ajax
+                                ic-submit-method="delete"
+                                ic-submit-action="/stock/plan/{{plan.id}}"
+                                ic-submit-before="ajax_before_confirm:确认删除?"
+                                ic-submit-on-done="plan_remove_done"></button>
+                    </li>
+                </ul>
             </div>
+        </div>
 
-            <ul ic-tpl="replay">
-                <li ic-for="k,o in model" class="notification">
-                    <div class="table_3">
-                        <div>
-                            <h6>日期: </h6>
-                            <div class="pre">{{ o['date'] }}</div>
-                        </div>
-                        <div>
-                            <h6>阶段变量</h6>
-                            <div class="pre">{{ o['阶段变量'] }}</div>
-                        </div>
-                        <div>
-                            <h6>交易计划: </h6>
-                            <div class="pre">{{ o['交易计划'] }}</div>
-                        </div>
-                        <!--<div ic-for="i,v in o" ic-if="i=='date'||i=='交易计划'">
-                            <h6 class="">{{i}} : </h6>
-                            <div class="pre">{{v}}</div>
-                        </div>-->
-                    </div>
-                    <button class="delete is-medium"
-                    ic-ajax
-                    ic-submit-method="delete"
-                    ic-submit-action="/stock/replay/{{o.id}}"
-                    ic-submit-before="ajax_before_confirm:确认删除?"
-                    ic-submit-on-done="onDelDone"></button>
-                </li>
-            </ul>
 
-            <ul ic-tpl="plans">
-                <li ic-for="j,plan in model" class="notification">
-                    <h6 class="title is-5">{{plan.date}} : </h6>
-                    <div class="table_3">
-                        <div ic-for="i,k in ['选股条件','主线风口', '行情性质','风险','预期收益','K线节点','计划预案']" ic-if="plan[k]">
-                            <h6>{{k}} : </h6>
-                            <div class="pre">{{plan[k]}}</div>
-                        </div>
-                    </div>
-                    <div class="tar">
-                        <a ic-click="plan_edit:{{plan.id}}">编辑</a>
-                    </div>
-                    <button class="delete is-large"
-                            ic-ajax
-                            ic-submit-method="delete"
-                            ic-submit-action="/stock/plan/{{plan.id}}"
-                            ic-submit-before="ajax_before_confirm:确认删除?"
-                            ic-submit-on-done="plan_remove_done"></button>
-                </li>
-            </ul>
-
-        </section>
         ${ require('./set-plan-ctrl.html') }
         ${ require('../../tags/set-tag.html') }
     </div>
