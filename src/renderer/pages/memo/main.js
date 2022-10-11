@@ -15,7 +15,12 @@ import 'froala-editor/js/froala_editor.pkgd.min.js'
 
 import { FroalaEditorConfig } from '../../js/constants'
 
+import '../../js/utils.js'
+
+
 brick.reg('memoCtrl', function () {
+
+    $('title').text(`备忘录_${ formatDate() }`);
 
     let $memo = $('#memo').icSetLoading();
 

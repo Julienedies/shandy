@@ -37,7 +37,7 @@ brick.reg('diaryCtrl', function () {
     let anchor = location.href.match(/\#([^#]+$)/) || [];
     scope.order = brick.utils.getQuery('order') === 'true';  // 排序方式: 顺序  or  逆序
 
-    $('title').text(`日记_${ formatDate() }`);
+    let $title = $('title').text(`日记_${ formatDate() }`);
 
     function render () {
         let resultArr = list.get();
@@ -64,6 +64,8 @@ brick.reg('diaryCtrl', function () {
                 //document.querySelector(`a[name="${name}"]`).scrollIntoView(true);
             }
         });
+
+        $title.text(`日记_${ val }_${ formatDate() }`);
     }
 
     function getTagArr (data) {
@@ -107,7 +109,7 @@ brick.reg('diaryCtrl', function () {
         scope.render('tags', scope);
         //render();
         // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
-        setTimeout(render, 700);
+        setTimeout(render, 900);
     };
 
     this.reverse = function () {
