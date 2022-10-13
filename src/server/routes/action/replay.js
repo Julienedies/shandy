@@ -19,10 +19,10 @@ function getData (date) {
     let list = replay.get();
     if (date) {
         let item = replay.get2(date, 'date');
-        if(item){
+        if (item) {
             result = item;
-        }else{
-            result = list[0];
+        } else {
+            result = Object.assign({}, list[0]);
             result['date'] = date;
             delete result.id;
         }
