@@ -433,8 +433,8 @@ brick.reg('promptCtrl', function () {
     scope.on('prompt', function (e, todoItem) {
         brick.view.to('prompt');
         _todoItem = todoItem;
-        $todoTitle.text(todoItem.title);
-        $todoContent.html(todoItem.content);
+        $todoTitle.text(todoItem.title || '');
+        $todoContent.html(todoItem.content || '<br>');
         let str = $todoContent.text();
         console.log(str, str.substr(0, 240));
         //voice(str.substr(0, 240));
