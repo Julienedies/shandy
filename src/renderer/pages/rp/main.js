@@ -135,7 +135,7 @@ brick.reg('todoListCtrl', function (scope) {
         $elm.find('[ic-form="rp"]').icFormSubmit();
     }
 
-    $elm.on('keyup', 'textarea', _.throttle(submit, 900));
+    $elm.on('keyup', 'textarea', _.throttle(submit, 1900));
 
     scope.on('rp.change', function (e, data) {
         setList(data);

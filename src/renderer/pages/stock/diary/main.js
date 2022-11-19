@@ -57,10 +57,10 @@ brick.reg('diaryCtrl', function () {
 
         $.icMsg(`render item => ${ resultArr.length }`);
         scope.render('diaryList', resultArr, function () {
-            if(anchor){
+            if (anchor) {
                 let name = anchor[1];
                 anchor = null;
-                document.querySelector(`a[name="${name}"]`).scrollIntoViewIfNeeded(false);
+                document.querySelector(`a[name="${ name }"]`).scrollIntoViewIfNeeded(false);
                 //document.querySelector(`a[name="${name}"]`).scrollIntoView(true);
             }
         });
@@ -133,7 +133,7 @@ brick.reg('diaryCtrl', function () {
 
     this.play = function (e) {
         let text = $(this).closest('li').find('.pre').text();
-        text = `${text} ${text} ${text}`;
+        text = `${ text } ${ text } ${ text }`;
         voice.clear();
         voice(text);
     };
@@ -179,6 +179,14 @@ brick.reg('setDiaryCtrl', function () {
     // 保存传递过来要修改的 diary object
     scope.vm = {};
 
+    let isAutoSave = true;
+
+    $elm.on('click', '#saveDiaryButton', function (e) {
+        console.log(e.originalEvent);
+        // 手动触发 e.originalEvent有值，编程触发无值
+        isAutoSave = !!!e.originalEvent;
+    });
+
     // 准备编写或修改交易日记
     scope.on('diary.edit', function (e, model) {
         scope.emit(READY_SELECT_TAGS, model.diary.tags);
@@ -208,6 +216,11 @@ brick.reg('setDiaryCtrl', function () {
 
     // 交易日记提交到服务器完成 ajax done
     scope.done = function (data) {
+        // 如果是定时自动保存, 不切换
+        if (isAutoSave) {
+            $id.val(data[0].id);
+            return;
+        }
         scope.emit('diary.edit.done', data);
         $elm.icPopup(false);
     };
@@ -246,13 +259,25 @@ brick.reg('setDiaryCtrl', function () {
                 //toolbarInline: true,
                 height: 210,
             });
+
             $editor.froalaEditor('html.set', model.diary.text || '');
+
+            // 自动保存输入数据
+            $editor.on('froalaEditor.input', _.throttle(saveForm, 2900) );
+
         });
     }
 
+    function saveForm (e, editor) {
+        console.log('auto save');
+        isAutoSave = true;
+        $elm.find('[ic-form="setDiary"]').icFormSubmit();
+    }
 
     function getFormVm () {
         return $elm.find('[ic-form="setDiary"]').icForm();
     }
 
 });
+
+
