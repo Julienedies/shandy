@@ -169,6 +169,7 @@ brick.reg('diaryCtrl', function () {
 
 brick.reg('setDiaryCtrl', function () {
 
+    const DIARY_CACHE = 'DIARY_CACHE';
     let scope = this;
     let $elm = this.$elm;
 
@@ -216,7 +217,7 @@ brick.reg('setDiaryCtrl', function () {
 
     // 交易日记提交到服务器完成 ajax done
     scope.done = function (data) {
-        // 如果是定时自动保存, 不切换
+        // 如果是定时自动保存, 更新id, 否则会因为空ID而产生很多新数据项
         if (isAutoSave) {
             $id.val(data[0].id);
             return;
@@ -227,6 +228,10 @@ brick.reg('setDiaryCtrl', function () {
 
     scope.reset = function () {
         //scope.render({});
+    };
+
+    scope.recover = function () {
+        $editor.froalaEditor('html.set', localStorage.getItem(DIARY_CACHE) || '');
     };
 
     scope.onTagsChange = function (msg) {
@@ -263,7 +268,7 @@ brick.reg('setDiaryCtrl', function () {
             $editor.froalaEditor('html.set', model.diary.text || '');
 
             // 自动保存输入数据
-            $editor.on('froalaEditor.input', _.throttle(saveForm, 2900) );
+            $editor.on('froalaEditor.input', _.throttle(saveForm, 2900));
 
         });
     }
@@ -271,7 +276,12 @@ brick.reg('setDiaryCtrl', function () {
     function saveForm (e, editor) {
         console.log('auto save');
         isAutoSave = true;
-        $elm.find('[ic-form="setDiary"]').icFormSubmit();
+        //$elm.find('[ic-form="setDiary"]').icFormSubmit();
+        let text = $editor.froalaEditor('html.get', true);
+        console.log(text.length);
+        if (text.length > 14) {
+            localStorage.setItem(DIARY_CACHE, text);
+        }
     }
 
     function getFormVm () {
