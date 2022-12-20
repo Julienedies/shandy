@@ -58,7 +58,7 @@ brick.reg('todoListCtrl', function (scope) {
     function getMapByType (arr) {
         let mapByType = {};
         let rpmqs = TAGS_MAP['rpmqs'];
-        for(let i in rpmqs) {
+        for (let i in rpmqs) {
             let o = rpmqs[i];
             let key = o.key;
             mapByType[key] = [];
@@ -89,10 +89,10 @@ brick.reg('todoListCtrl', function (scope) {
         scope.render('types', {model: {mapByType: mapByType, filterByType: filterByType}});
 
         scope.render('todoList', {model: {rpList, rpForm}}, function () {
-           /* $(this).find('li').on('dragstart', scope.dragstart)
-                .on('dragover', scope.dragover)
-                .on('dragleave', scope.dragleave)
-                .on('drop', scope.drop);*/
+             $(this).find('li').on('dragstart', scope.dragstart)
+                 .on('dragover', scope.dragover)
+                 .on('dragleave', scope.dragleave)
+                 .on('drop', scope.drop);
         });
 
         $title.text(`rp_${ rpMap[filterByType] }_${ formatDate() }`);
@@ -142,9 +142,18 @@ brick.reg('todoListCtrl', function (scope) {
     });
 
     scope.on('move', function (e, data) {
-/*        $.post('/stock/rp/move', data).done((data) => {
+        console.log('move', data);
+        let id = data.id;
+        let dest = data.dest;
+        let a = listManager.get(id);
+        let b = listManager.get(dest);
+        a.level = b.level * 1;
+        $.post('/stock/rp', a).done((data) => {
             setList(data);
-        });*/
+        });
+        /*        $.post('/stock/rp/move', data).done((data) => {
+                    setList(data);
+                });*/
     });
 
     scope.reset = function () {
@@ -213,7 +222,7 @@ brick.reg('todoListCtrl', function (scope) {
 
     // 置顶
     scope.focus = function (e, id) {
-       // scope.emit('move', {id});
+        // scope.emit('move', {id});
     };
 
     // 加权
@@ -241,7 +250,6 @@ brick.reg('todoListCtrl', function (scope) {
         let name = $th.attr('ic-form-field');
         //model.replay[name] = $th.attr('ic-val');
     });
-
 
 
     // ---------------------------------------------------------------------------------------
