@@ -14,7 +14,7 @@
 		"timestamp": 1664936378905,
 		"tag": "没有大局观",
 		"promptTimes": 1,
-		"prevPromptTime": 1671760775692
+		"prevPromptTime": 1672018021545
 	},
 	{
 		"type": "错误",
@@ -31,7 +31,7 @@
 		"timestamp": 1661941742710,
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1671763476280
+		"prevPromptTime": 1672020722554
 	},
 	{
 		"type": "错误",
@@ -48,7 +48,7 @@
 		"title": "线性思维，先入为主，下跌就看跌，上涨就看涨。多空动态博弈转化，不要线性思维；",
 		"tag": "主观",
 		"promptTimes": 1,
-		"prevPromptTime": 1671766176769
+		"prevPromptTime": 1672023421890
 	},
 	{
 		"type": "错误",
@@ -80,7 +80,7 @@
 		"title": "预判到是进攻日，但却他妈的没有任何标的。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1671769702172
+		"prevPromptTime": 1672026122065
 	},
 	{
 		"type": "错误",
@@ -97,7 +97,7 @@
 		"title": "没有大局观，沉迷于无效的日常操作；",
 		"tag": "没有大局观",
 		"promptTimes": 1,
-		"prevPromptTime": 1671772402129
+		"prevPromptTime": 1672028822096
 	},
 	{
 		"type": "错误",
@@ -114,7 +114,7 @@
 		"title": "主观测顶；顶只有一个；我却他妈的在臆想是顶的过程中错过所有的机会；",
 		"tag": "主观",
 		"promptTimes": 1,
-		"prevPromptTime": 1671775102129
+		"prevPromptTime": 1672031521992
 	},
 	{
 		"type": "错误",
@@ -131,7 +131,7 @@
 		"title": "没有大局观，看不到大趋势，看不到大的确定性。",
 		"tag": "没有大局观",
 		"promptTimes": 1,
-		"prevPromptTime": 1671777802257
+		"prevPromptTime": 1672034221374
 	},
 	{
 		"type": "错误",
@@ -148,7 +148,7 @@
 		"title": "依靠主观预测交易，而不是临盘根据盘面客观应对，客观跟随；",
 		"tag": "主观",
 		"promptTimes": 1,
-		"prevPromptTime": 1671780502171
+		"prevPromptTime": 1672036921489
 	},
 	{
 		"type": "错误",
@@ -165,7 +165,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 1,
-		"prevPromptTime": 1671783201764
+		"prevPromptTime": 1672039622614
 	},
 	{
 		"name": "",
@@ -182,7 +182,7 @@
 		"title": "线性思维，先入为主，主观看空，错过弱转强，分歧转一致、强更强的机会。",
 		"tag": "主观",
 		"promptTimes": 1,
-		"prevPromptTime": 1671785902042
+		"prevPromptTime": 1672042322510
 	},
 	{
 		"name": "",
@@ -200,7 +200,7 @@
 		"tag": "无改变",
 		"title": "虽然我意识到自己的错误，但我就是改不了。",
 		"promptTimes": 1,
-		"prevPromptTime": 1671788602732
+		"prevPromptTime": 1672045022158
 	},
 	{
 		"name": "日程",
@@ -230,7 +230,7 @@
 		"title": "我总是主观看空各个题材，那你找出资金会攻击的地方啊？",
 		"tag": "主观",
 		"promptTimes": 2,
-		"prevPromptTime": 1671796702416
+		"prevPromptTime": 1672053122132
 	},
 	{
 		"name": "",
@@ -239,12 +239,15 @@
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">为何我总是后知后觉？行情结束了，我才意识到。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">历史会重复。翻看这两年的市场行情，翻来覆去就这么一回事，为什么我却什么也没有抓住？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">做个次日预判和交易计划有那么难吗？</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 2,
-		"interval": 60,
-		"duration": 17,
+		"repeat": "2",
+		"interval": "60",
+		"duration": "17",
 		"timestamp": 1658235285391,
+		"tag": "错过大行情和龙头",
+		"level": "900",
+		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"promptTimes": 2,
-		"prevPromptTime": 1671799401227
+		"prevPromptTime": 1672055822038
 	},
 	{
 		"name": "",
@@ -276,7 +279,7 @@
 		"title": "每天沉迷于无效的日常交易；依然没有建立明确的交易系统；",
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1671802102227
+		"prevPromptTime": 1672058520459
 	},
 	{
 		"name": "",
@@ -293,7 +296,7 @@
 		"title": "永远没有明确的交易计划和准备，没有做盘面的推演和应对。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1671804802253
+		"prevPromptTime": 1672061220369
 	},
 	{
 		"name": "",
@@ -308,7 +311,7 @@
 		"timestamp": 1654519629339,
 		"level": 96,
 		"promptTimes": 1,
-		"prevPromptTime": 1671807502249
+		"prevPromptTime": 1672063921478
 	},
 	{
 		"name": "",
@@ -325,7 +328,7 @@
 		"title": "盈亏同源，持续一致性，概率优势；",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1671810202171
+		"prevPromptTime": 1672066621432
 	},
 	{
 		"name": "",
@@ -340,7 +343,9 @@
 		"timestamp": 1609491034659,
 		"level": "87",
 		"tag": "",
-		"title": "不能靠主观预测交易，关键是应对，客观跟随。"
+		"title": "不能靠主观预测交易，关键是应对，客观跟随。",
+		"promptTimes": 1,
+		"prevPromptTime": 1672069320579
 	},
 	{
 		"name": "",
@@ -421,7 +426,7 @@
 		"name": "",
 		"id": "id_1655164211606_6209",
 		"type": "错误",
-		"content": "<p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">大局观：</span></p><p><span style=\"font-size: 20px; background-color: rgb(255, 255, 0);\">围绕主流热点龙头，赚钱效应；</span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我要捕捉的目标行情是什么？我的判断锚点是什么？</span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我每天脑子在想什么？我每天复盘思考的是什么？每天临盘思考的是什么？</span></span></p><p><br></p><p><br></p>",
+		"content": "<p><span style=\"font-size: 20px;\"><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">我每天复盘思考的是什么？每天临盘思考的是什么？我要捕捉的目标行情是什么？我的判断锚点是什么？</span></span></p><p><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">大局观：弱势管住手，强势踏准节奏；做的话做最强；围绕主流热点龙头；</span></p><p><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">当前主流热点龙头是什么？龙头是什么？赚钱效应在哪里？</span></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": "4",
@@ -454,12 +459,13 @@
 		"content": "<p><br></p><p><br></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 2,
-		"interval": 60,
-		"duration": 9,
+		"repeat": "2",
+		"interval": "60",
+		"duration": "9",
 		"timestamp": 1645175299306,
-		"level": 515,
-		"title": "太看重成本或囿于金钱；完全承受不了波动。"
+		"level": "460",
+		"title": "太看重成本或囿于金钱；完全承受不了波动。",
+		"tag": "本能"
 	},
 	{
 		"name": "",
@@ -520,7 +526,7 @@
 		"name": "",
 		"id": "id_1643896099264_5205",
 		"type": "错误",
-		"content": "<p><br></p><p><span style=\"font-size: 18px;\"><br></span></p><p><span style=\"font-size: 18px;\"><br></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">日内热点是什么？ &nbsp; 行情性质？ 消息一波流；大题材；情绪题材；趋势题材；广度？高度？持续性？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">龙头是什么？ 有没有博弈空间？预期如何？ &nbsp;超预期买不到如何应对？ 什么条件下买入？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">临盘应对：</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">变量：</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">当前市场风格：偏趋势风格？ 偏情绪题材炒作？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">大局观：大趋势；市场整体状态？赚钱效应；亏钱效应；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">板块强度：赚钱效应； 亏钱效应；</span></span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">节奏：</span></p>",
+		"content": "<p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">日内热点是什么？ &nbsp; 行情性质？ 消息一波流；大题材；情绪题材；趋势题材；广度？高度？持续性？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">龙头是什么？ 有没有博弈空间？预期如何？ &nbsp;超预期买不到如何应对？ 什么条件下买入？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">临盘应对：</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">变量：</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">当前市场风格：偏趋势风格？ 偏情绪题材炒作？</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">大局观：大趋势；市场整体状态？赚钱效应；亏钱效应；</span></span></p><p><span style=\"font-size: 18px;\"><span style=\"background-color: rgb(255, 255, 0);\">板块强度：赚钱效应； 亏钱效应；</span></span></p><p><span style=\"font-size: 18px; background-color: rgb(255, 255, 0);\">节奏：</span></p>",
 		"singleWindow": "",
 		"start": "8:00",
 		"repeat": "7",
@@ -673,8 +679,9 @@
 		"interval": "100",
 		"duration": "29",
 		"timestamp": 1637673180768,
-		"level": "420",
-		"title": "难以克服的一些的情绪本能、思维方式。"
+		"level": "475",
+		"title": "难以克服的一些的情绪本能、思维方式。",
+		"tag": "本能"
 	},
 	{
 		"name": "",
@@ -739,7 +746,7 @@
 	{
 		"name": "",
 		"id": "1528760",
-		"type": "错误",
+		"type": "警告",
 		"content": "<p><strong><span style=\"font-size: 28px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">错误：，我有没有做到？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">我每天重复无效的交易有何意义？</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(255, 255, 0);\">错过的机会我下次是否可以抓住？重复的错误我是否避免了重复？</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
@@ -1168,8 +1175,9 @@
 		"duration": "17",
 		"timestamp": 1611410765613,
 		"disable": false,
-		"level": "455",
-		"title": "克服不了人性本能；控制不住情绪；"
+		"level": "480",
+		"title": "克服不了人性本能；控制不住情绪；",
+		"tag": "本能"
 	},
 	{
 		"name": "",
@@ -1178,12 +1186,13 @@
 		"content": "<p><strong><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\">好的机会转瞬即逝，没时间给你犹豫。</span></span></strong></p><p><strong><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\">专注做龙头，专注做低吸，专注打首板，专注做1进二等。</span></span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": 1,
-		"interval": 60,
-		"duration": 7,
+		"repeat": "1",
+		"interval": "60",
+		"duration": "7",
 		"timestamp": 1616220645834,
-		"level": 350,
-		"title": "三心二意，什么都想抓，什么也没抓住；简单纯粹取舍重复；"
+		"level": "350",
+		"title": "三心二意，什么都想抓，什么也没抓住；",
+		"tag": "本能"
 	},
 	{
 		"name": "",
@@ -1192,12 +1201,13 @@
 		"content": "<p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">为何每次临盘时，我都记不起这个不断重复的错误？</span></strong></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">高开下杀，卖在最低点</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">雪人股份、雪迪龙、</span></strong><strong><span style=\"background-color: rgb(255, 255, 0);\">华银电力、台基股份、供销大集</span></strong></span></span></p><p><span style=\"font-size: 22px;\"><br></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">心理本能是一个非常重要的问题。</span><strong><span style=\"background-color: rgb(255, 255, 0);\">依靠本能操作。忘记计划和理智。</span></strong></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"color: rgb(0, 0, 0);\"><strong><span style=\"background-color: rgb(255, 255, 0);\">冲动臆想、脑子发热、急于止盈、恐慌、恐高、犹豫、囿于小利，止损犹疑。</span></strong></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">恐慌的本能如此强大，我脑子只剩恐慌，完全忘记了卖飞这种一直重复的错误。</span></strong></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">我多少次决定宁可亏损一个点卖，也不要卖飞。但为什么就是不执行？</span></strong></p><p><br></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 9,
-		"timestamp": 1617161666529,
-		"level": 410,
-		"title": "为何我一直恐慌卖飞？为何克服不了这种本能。"
+		"repeat": "4",
+		"interval": "60",
+		"duration": "9",
+		"timestamp": "1617161666529",
+		"level": "465",
+		"title": "为何我一直恐慌卖飞？为何克服不了这种本能。",
+		"tag": "本能"
 	},
 	{
 		"name": "",
@@ -1220,12 +1230,13 @@
 		"content": "",
 		"singleWindow": "",
 		"start": "17:00",
-		"repeat": 2,
-		"interval": 100,
-		"duration": 9,
+		"repeat": "2",
+		"interval": "100",
+		"duration": "9",
 		"timestamp": 1620464090701,
-		"level": 340,
-		"title": "因为鸡肋交易错过最好的交易机会。"
+		"level": "340",
+		"title": "管不住手；因为鸡肋交易错过最好的交易机会。做着做着就沉迷于日常交易中，忘记此教训；",
+		"tag": "本能"
 	},
 	{
 		"name": "",
@@ -1294,16 +1305,18 @@
 	{
 		"name": "",
 		"id": "3413829",
-		"type": "错误",
+		"type": "问题",
 		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">错误：郑州煤电和豫能控股一个V形转折板、一个烂板上冲都给了我介入的机会。但我都没有参与，为什么？</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>这不是问题吗？</strong><strong>问题没有解决前，我怎么还在持续交易？</strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">怎么会不临盘犹豫？</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 47,
+		"repeat": "4",
+		"interval": "60",
+		"duration": "47",
 		"timestamp": 1613403391906,
 		"disable": true,
-		"level": 1
+		"level": "1",
+		"tag": "",
+		"title": ""
 	},
 	{
 		"name": "",
@@ -1333,27 +1346,33 @@
 	{
 		"name": "",
 		"id": "3700708",
-		"type": "错误",
+		"type": "问题",
 		"content": "<p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">我要捕捉的目标行情是什么？ 买点？ 盈亏比？确定性？ 判断锚点？</span></strong></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我到底是做波段趋势还是做高频超短？</strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我没有消息优势和判断能力，以什么做为判断锚点？</strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>怎么克服恐慌贪便宜本能导致的卖飞？</strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><br></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>我的买点是什么？ 低位启动、趋势爆发、超预期加速、弱转强、分歧转一致；</strong></span></span></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0);\">跟随、应对、一致、重复、如何执行？</span></strong></span></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 24,
-		"timestamp": 1610162924689
+		"repeat": "4",
+		"interval": "60",
+		"duration": "24",
+		"timestamp": 1610162924689,
+		"tag": "",
+		"level": "1",
+		"title": ""
 	},
 	{
 		"name": "",
 		"id": "2749408",
-		"type": "错误",
+		"type": "",
 		"content": "<p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">既然通过统计，我卖飞和错失机会的数量非常多，我应该是盈利的。</span></strong></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>为什么我总是猥琐交易呢？</strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong><br></strong></span></span></p><p><span style=\"font-size: 22px;\"><span style=\"background-color: rgb(255, 255, 0);\"><strong>赢家心态非常重要。</strong></span></span></p><p><strong><span style=\"font-size: 22px; background-color: rgb(255, 255, 0);\">记得2020年初的三次交易。记得那时的心态和操作吗？为什么后来不能保持了？</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": 4,
-		"interval": 60,
-		"duration": 47,
+		"repeat": "4",
+		"interval": "60",
+		"duration": "47",
 		"timestamp": 1613318474769,
-		"disable": true
+		"disable": true,
+		"tag": "",
+		"level": "1",
+		"title": ""
 	},
 	{
 		"name": "",
@@ -1796,5 +1815,35 @@
 		"interval": "60",
 		"duration": "17",
 		"timestamp": 1665225867007
+	},
+	{
+		"type": "错误",
+		"tag": "本能",
+		"level": "455",
+		"name": "",
+		"id": "id_1671885646566_2047",
+		"title": "空仓的时候就想着买，持仓的时候就想着卖；完全是本能在主导我的行为；",
+		"content": "",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": "2",
+		"interval": "60",
+		"duration": "17",
+		"timestamp": 1671885646566
+	},
+	{
+		"type": "错误",
+		"tag": "无系统",
+		"level": "800",
+		"name": "",
+		"id": "id_1671949613909_4872",
+		"title": "低吸没有确定性，追涨没有性价比，不知道如何参与趋势股；",
+		"content": "<p><strong><span style=\"background-color: rgb(255, 255, 0);\">看好，加入自选，但是没有明确的介入条件；</span></strong></p>",
+		"singleWindow": "",
+		"start": "8:00",
+		"repeat": "2",
+		"interval": "60",
+		"duration": "17",
+		"timestamp": 1671949613909
 	}
 ]

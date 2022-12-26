@@ -1,5 +1,29 @@
 [
 	{
+		"title": "空仓的时候就想着买，持仓的时候就想着卖；完全是本能在主导我的行为；",
+		"id": "id_1671964240631_6909",
+		"type": "mistake",
+		"caution": "",
+		"comment": "",
+		"level": "1",
+		"role": "0",
+		"content": "",
+		"tags": [],
+		"timestamp": 1671964240631
+	},
+	{
+		"title": "低吸没有确定性，追涨没有性价比，不知道怎么参与一些趋势股？",
+		"id": "id_1671949487746_2077",
+		"type": "system",
+		"caution": "",
+		"comment": "加了自选，却没有明确的介入条件；",
+		"level": "1",
+		"role": "0",
+		"content": "",
+		"tags": [],
+		"timestamp": 1671949487746
+	},
+	{
 		"title": "为什么早期的主升周期，我总是后知后觉意识不到？这是最重要的判断锚点！",
 		"id": "id_1669479835656_8231",
 		"type": "rp",
@@ -825,7 +849,7 @@
 	{
 		"title": "预测可能的日内状态；准备好预案；临盘验证是否符合预测；可以小仓位试错；客观跟随；",
 		"id": "id_1643988980468_1582",
-		"type": "rp",
+		"type": "system",
 		"caution": "理解、预判、验证、试错、跟随",
 		"comment": "市场氛围好坏？ 攻击方向？做个次日预判和交易计划有那么难吗？",
 		"level": "2172",
@@ -1332,7 +1356,7 @@
 	{
 		"title": "我要捕捉的目标行情是什么？",
 		"id": "3676210",
-		"type": "rp",
+		"type": "system",
 		"comment": "",
 		"content": "<table style=\"width: 100%; margin-left: calc(0%);\"><tbody><tr><td style=\"width: 26.5979%;\">做核心龙头<br></td><td style=\"width: 50.8664%;\">市场主升期、题材诞生<br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">低位补涨<br></td><td style=\"width: 50.8664%;\">高低切换、锚定、复制、补涨<br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">板块爆发首板；有板块效应的前排首板<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">板块爆发加强晋级<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">主升浪第一次分歧转一致</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">主流热点分歧调整后的卡位回流先锋<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">主流热点低位补涨首板<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">恐惧转贪婪，低吸它长腿</td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">低吸龙头分歧</td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">大盘转势共振领涨板</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">超预期加速<br></td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">预判轮动低吸</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">修复/分歧转一致</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">转折/弱转强<br></td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr></tbody></table><p><br></p>",
 		"name": "3676210",
