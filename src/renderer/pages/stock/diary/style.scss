@@ -4,7 +4,7 @@ strong {
   font-weight: bold;
 }
 
-a{
+a {
   text-decoration: none !important;
 }
 
@@ -26,4 +26,9 @@ a{
 #setParentIdForTag {
   height: 16em;
   overflow-y: scroll;
+}
+
+
+#diaryList .tag {
+  font-size: 0.8rem;
 }

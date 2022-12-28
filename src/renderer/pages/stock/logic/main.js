@@ -75,7 +75,7 @@ brick.reg('logicCtrl', function () {
 
         isReverse && logicArr.reverse();
         $.icMsg(`render item => ${ logicArr.length }`);
-        scope.render('logic', logicArr.slice(0, 700));
+        scope.render('logic', logicArr.slice(0, 400));
         // 更新html title, 下载text用
         //let date = (new Date()).toLocaleDateString().replace(/\//img, '-');
         let text = scope.filterKey && TAGS_MAP_BY_ID[scope.filterKey] && TAGS_MAP_BY_ID[scope.filterKey].text;

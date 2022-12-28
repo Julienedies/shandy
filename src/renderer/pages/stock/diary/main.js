@@ -55,8 +55,11 @@ brick.reg('diaryCtrl', function () {
             });
         }
 
-        $.icMsg(`render item => ${ resultArr.length }`);
-        scope.render('diaryList', resultArr, function () {
+        // 列表长度限制
+        let resultArr2 = resultArr.slice(0, 400);
+
+        $.icMsg(`render item => ${ resultArr2.length }`);
+        scope.render('diaryList', resultArr2, function () {
             if (anchor) {
                 let name = anchor[1];
                 anchor = null;

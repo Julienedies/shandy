@@ -147,7 +147,7 @@ brick.reg('todoListCtrl', function (scope) {
         let dest = data.dest;
         let a = listManager.get(id);
         let b = listManager.get(dest);
-        a.level = b.level * 1;
+        a.level = b.level * 1 + 1;
         $.post('/stock/rp', a).done((data) => {
             setList(data);
         });
@@ -205,7 +205,7 @@ brick.reg('todoListCtrl', function (scope) {
     };
 
     scope.addTodo = function (e) {
-        scope.emit('setTodo', {});
+        scope.emit('setTodo', {type:filterByType});
     };
 
     scope.edit = function (e, id) {
