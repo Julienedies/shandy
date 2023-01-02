@@ -13,8 +13,8 @@
 		"duration": "17",
 		"timestamp": 1664936378905,
 		"tag": "没有大局观",
-		"promptTimes": 1,
-		"prevPromptTime": 1672364089902
+		"promptTimes": 2,
+		"prevPromptTime": 1672663891447
 	},
 	{
 		"type": "错误",
@@ -30,8 +30,8 @@
 		"duration": "17",
 		"timestamp": 1661941742710,
 		"tag": "无改变",
-		"promptTimes": 1,
-		"prevPromptTime": 1672366790102
+		"promptTimes": 2,
+		"prevPromptTime": 1672666592007
 	},
 	{
 		"type": "错误",
@@ -47,8 +47,8 @@
 		"timestamp": 1658561356460,
 		"title": "线性思维，先入为主，下跌就看跌，上涨就看涨。多空动态博弈转化，不要线性思维；",
 		"tag": "主观",
-		"promptTimes": 1,
-		"prevPromptTime": 1672369490263
+		"promptTimes": 2,
+		"prevPromptTime": 1672669292079
 	},
 	{
 		"type": "错误",
@@ -79,8 +79,8 @@
 		"timestamp": 1658558460231,
 		"title": "预判到是进攻日，但却他妈的没有任何标的。",
 		"tag": "无系统",
-		"promptTimes": 1,
-		"prevPromptTime": 1672372190359
+		"promptTimes": 2,
+		"prevPromptTime": 1672671991792
 	},
 	{
 		"type": "错误",
@@ -96,8 +96,8 @@
 		"timestamp": 1658545526846,
 		"title": "没有大局观，沉迷于无效的日常操作；",
 		"tag": "没有大局观",
-		"promptTimes": 1,
-		"prevPromptTime": 1672374890140
+		"promptTimes": 2,
+		"prevPromptTime": 1672674692069
 	},
 	{
 		"type": "错误",
@@ -1762,7 +1762,7 @@
 		"level": "655",
 		"name": "",
 		"id": "id_1665139179824_3706",
-		"title": "依靠主观预测交易；线性思维，先入为主，主观看空；",
+		"title": "主观；线性思维，先入为主，主观看空；",
 		"content": "<p><strong><strong><span style=\"font-size: 22px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 0);\"><strong>主观看空，当市场走势和预期的不一样，不知如何操作。</strong></span></strong></strong></p><p><span style=\"font-size: 22px;\"><strong><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">主观看空；心里总是恐慌担忧；</span></strong></span></p>",
 		"singleWindow": "",
 		"start": "8:00",
