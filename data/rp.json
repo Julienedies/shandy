@@ -1,5 +1,17 @@
 [
 	{
+		"title": "没有任何改变；",
+		"id": "id_1673533837001_8589",
+		"type": "warn2",
+		"caution": "",
+		"comment": "",
+		"level": "40",
+		"role": "0",
+		"content": "",
+		"tags": [],
+		"timestamp": 1673533837001
+	},
+	{
 		"title": "没有明确的买入条件；",
 		"id": "id_1673456278881_5282",
 		"type": "warn2",

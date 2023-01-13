@@ -36,12 +36,12 @@ brick.reg('diaryCtrl', function () {
 
     let anchor = location.href.match(/\#([^#]+$)/) || [];
     scope.order = brick.utils.getQuery('order') === 'true';  // 排序方式: 顺序  or  逆序
+    scope.pn = brick.utils.getQuery('pn') || 1;
 
     let $title = $('title').text(`日记_${ formatDate() }`);
 
     function render () {
         let resultArr = list.get();
-        scope.order && resultArr.reverse();
         let val = scope.filterKey;
         let filterKey = val === '' ? undefined : val === '_null' ? '' : val;
         // 如果有过滤条件
@@ -56,7 +56,9 @@ brick.reg('diaryCtrl', function () {
         }
 
         // 列表长度限制
-        let resultArr2 = resultArr.slice(0, 400);
+        let pn = scope.pn * 1;
+        let resultArr2 = resultArr.slice((pn - 1) * 400, pn * 400);
+        scope.order && resultArr2.reverse();
 
         $.icMsg(`render item => ${ resultArr2.length }`);
         scope.render('diaryList', resultArr2, function () {
@@ -106,6 +108,7 @@ brick.reg('diaryCtrl', function () {
         return tagArr;
     }
 
+
     this.onGetDiaryDone = function (data) {
         list.init(data);
         scope.tagArr = getTagArr(data);
@@ -115,12 +118,36 @@ brick.reg('diaryCtrl', function () {
         setTimeout(render, 900);
     };
 
+    function _pushState (key, val) {
+        let url = location.href;
+        let url2 = url.split('?')[0];
+        let o = brick.utils.getQuery() || {};
+        o[key] = val;
+        let s = '';
+        for (let i in o) {
+            s = s + i + '=' + o[i] + '&';
+        }
+        s = s.replace(/[&]$/img, '');
+        history.pushState(null, null, `${ url2 }?${ s }`);
+    }
+
+    // 分页
+    $('#pg').on('ic-pagination.change', function (e, msg) {
+        //当前激活的分页
+        console.log(msg);
+        scope.pn = msg;
+        render();
+        _pushState('pn', msg);
+    });
+
+    // 反转排序方式
     this.reverse = function () {
         let order = scope.order = !scope.order;
         render();
-        let url = location.href.split('?')[0];
-        let _order = order ? `?order=${ order }` : '';
-        history.pushState(null, null, `${ url }${ _order }`);
+        _pushState('order', order);
+        /*        let url = location.href.split('?')[0];
+                let _order = order ? `?order=${ order }` : '';
+                history.pushState(null, null, `${ url }${ _order }`);*/
     };
 
     this.edit = function (e, id) {
