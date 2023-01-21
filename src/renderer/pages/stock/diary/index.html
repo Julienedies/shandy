@@ -25,22 +25,23 @@
                 </button>
                 <button class="button" ic-click="edit">新日记</button>
                 <button class="button" ic-click="reverse" data-order="0">排序反转</button>
-                <p class="tag">q:问题; &nbsp; m:错误; &nbsp; c:理念; &nbsp; w:警告;</p>
+                <p class="tag">&nbsp;&nbsp;&nbsp; q:问题; &nbsp; m:错误; &nbsp; c:理念; &nbsp; w:警告;</p>
             </div>
         </div>
         <div class="level-right">
-            <div class="pagination"
-                 id="pg"
-                 ic-pagination="a"
-                 ic-pagination-total="9"
-                 ic-pagination-step="5"
-                 ic-pagination-current="1">
-                <span class="prev" ic-role-pagination-prev>&lt;</span>
-                <span class="ellipsis" ic-role-pagination-ellipsis>...</span>
-                <span href="#{{}}" class="num" ic-role-pagination-num="{{}}">{{}}</span>
-                <span class="next" ic-role-pagination-next>&gt;</span>
+            <div ic-tpl="pagination">
+                <div class="pagination"
+                     id="pg"
+                     ic-pagination="a"
+                     ic-pagination-total="{{ model.total }}"
+                     ic-pagination-step="5"
+                     ic-pagination-current="{{ model.pn }}">
+                    <span class="prev" ic-role-pagination-prev>&lt;</span>
+                    <span class="ellipsis" ic-role-pagination-ellipsis>...</span>
+                    <span href="#{{}}" class="num" ic-role-pagination-num="{{}}">{{}}</span>
+                    <span class="next" ic-role-pagination-next>&gt;</span>
+                </div>
             </div>
-
         </div>
     </header>
 

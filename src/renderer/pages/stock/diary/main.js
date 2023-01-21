@@ -10,7 +10,7 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import { FroalaEditorConfig, READY_SELECT_TAGS, TAG_SELECT_CHANGE } from '../../../js/constants'
+import { FroalaEditorConfig, GET_TAGS_DONE, READY_SELECT_TAGS, TAG_SELECT_CHANGE } from '../../../js/constants'
 import '../../../js/common-stock.js'
 
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -34,11 +34,16 @@ brick.reg('diaryCtrl', function () {
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
 
-    let anchor = location.href.match(/\#([^#]+$)/) || [];
+    let listSize = 400;
+    let $title = $('title').text(`日记_${ formatDate() }`);
+
+    let anchorArr = location.href.match(/\#([^#]+$)/) || [];
+    let anchor = anchorArr[1] || '';
+
     scope.order = brick.utils.getQuery('order') === 'true';  // 排序方式: 顺序  or  逆序
     scope.pn = brick.utils.getQuery('pn') || 1;
+    scope.total = 0;
 
-    let $title = $('title').text(`日记_${ formatDate() }`);
 
     function render () {
         let resultArr = list.get();
@@ -55,17 +60,15 @@ brick.reg('diaryCtrl', function () {
             });
         }
 
-        // 列表长度限制
+        // 分页显示
         let pn = scope.pn * 1;
-        let resultArr2 = resultArr.slice((pn - 1) * 400, pn * 400);
+        let resultArr2 = resultArr.slice((pn - 1) * listSize, pn * listSize);
         scope.order && resultArr2.reverse();
 
         $.icMsg(`render item => ${ resultArr2.length }`);
         scope.render('diaryList', resultArr2, function () {
             if (anchor) {
-                let name = anchor[1];
-                anchor = null;
-                document.querySelector(`a[name="${ name }"]`).scrollIntoViewIfNeeded(false);
+                document.querySelector(`a[name="${ anchor }"]`).scrollIntoViewIfNeeded(false);
                 //document.querySelector(`a[name="${name}"]`).scrollIntoView(true);
             }
         });
@@ -108,15 +111,41 @@ brick.reg('diaryCtrl', function () {
         return tagArr;
     }
 
-
+    // 首次取回数据
+    let def2 = $.Deferred();
     this.onGetDiaryDone = function (data) {
+        def2.resolve(data);
+    };
+
+    function _onGetDiaryDone (data) {
         list.init(data);
         scope.tagArr = getTagArr(data);
+        scope.total = Math.ceil(data.length/listSize);
         scope.render('tags', scope);
         //render();
         // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
-        setTimeout(render, 900);
-    };
+        //setTimeout(render, 400); // 改为通过分页触发渲染
+        scope.render('pagination', scope, function () {
+            // 分页
+            $('#pg').on('ic-pagination.change', function (e, msg) {
+                //当前激活的分页
+                console.log(msg);
+                scope.pn = msg;
+                render();
+                _pushState('pn', msg);
+            });
+        });
+    }
+
+
+    // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
+    scope.on(GET_TAGS_DONE, function (e, data) {
+        $.when(window.GET_TAGS_DEF, def2).done((d1, d2) => {
+            console.log('when', d2);
+            _onGetDiaryDone(d2);
+        });
+    });
+
 
     function _pushState (key, val) {
         let url = location.href;
@@ -128,17 +157,9 @@ brick.reg('diaryCtrl', function () {
             s = s + i + '=' + o[i] + '&';
         }
         s = s.replace(/[&]$/img, '');
-        history.pushState(null, null, `${ url2 }?${ s }`);
+        history.pushState(null, null, `${ url2 }?${ s }#${ anchor }`);
     }
 
-    // 分页
-    $('#pg').on('ic-pagination.change', function (e, msg) {
-        //当前激活的分页
-        console.log(msg);
-        scope.pn = msg;
-        render();
-        _pushState('pn', msg);
-    });
 
     // 反转排序方式
     this.reverse = function () {
