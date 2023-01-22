@@ -1,5 +1,71 @@
 [
 	{
+		"id": "id_1674375809403_1267",
+		"type": "TodoKeys",
+		"parentId": "",
+		"desc": "",
+		"level": "0",
+		"key": "",
+		"text": "大局观",
+		"示例图片": "",
+		"timestamp": 1674375809403
+	},
+	{
+		"id": "id_1674375799022_7851",
+		"type": "TodoKeys",
+		"parentId": "",
+		"desc": "",
+		"level": "0",
+		"key": "",
+		"text": "主流热点龙头",
+		"示例图片": "",
+		"timestamp": 1674375799022
+	},
+	{
+		"id": "id_1674375749622_5781",
+		"type": "TodoKeys",
+		"parentId": "",
+		"desc": "",
+		"level": "0",
+		"key": "",
+		"text": "无改变",
+		"示例图片": "",
+		"timestamp": 1674375749622
+	},
+	{
+		"id": "id_1674375743272_7027",
+		"type": "TodoKeys",
+		"parentId": "",
+		"desc": "",
+		"level": "0",
+		"key": "",
+		"text": "主观",
+		"示例图片": "",
+		"timestamp": 1674375743272
+	},
+	{
+		"id": "id_1674375730340_5740",
+		"type": "TodoKeys",
+		"parentId": "",
+		"desc": "",
+		"level": "0",
+		"key": "",
+		"text": "无系统",
+		"示例图片": "",
+		"timestamp": 1674375730340
+	},
+	{
+		"id": "id_1674375632371_3462",
+		"type": "type",
+		"parentId": "",
+		"desc": "",
+		"level": "2",
+		"key": "",
+		"text": "TodoKeys",
+		"示例图片": "",
+		"timestamp": 1674375632371
+	},
+	{
 		"id": "id_1674312587463_2516",
 		"type": "rpmqs",
 		"parentId": "",
@@ -15,9 +81,9 @@
 		"type": "rpmqs",
 		"parentId": "",
 		"desc": "",
-		"level": "0",
-		"key": "warn2",
-		"text": "warn",
+		"level": "20",
+		"key": "Re",
+		"text": "Re",
 		"示例图片": "",
 		"timestamp": 1672222046352
 	},
@@ -177,7 +243,7 @@
 		"desc": "",
 		"level": "75",
 		"key": "",
-		"text": "依靠主观预测交易；主观看空；",
+		"text": "主观看空；",
 		"示例图片": "",
 		"timestamp": 1643857240395
 	},
@@ -3095,7 +3161,7 @@
 		"parentId": "",
 		"desc": "",
 		"level": "83",
-		"text": "对市场理解不够，不知道市场参与者的行为逻辑；",
+		"text": "没有信息优势，对市场理解不够，不知道市场参与者的行为逻辑；",
 		"示例图片": "",
 		"timestamp": 1577186561558,
 		"key": ""

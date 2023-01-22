@@ -63,13 +63,23 @@ brick.reg('diaryCtrl', function () {
         // 分页显示
         let pn = scope.pn * 1;
         let resultArr2 = resultArr.slice((pn - 1) * listSize, pn * listSize);
+
+        // 判断分页显示是否有数据， 否则不用分页
+        if (resultArr2.length === 0){
+            resultArr2 = resultArr;
+        }
+
+        // 排序方式：正序 或 反序
         scope.order && resultArr2.reverse();
 
         $.icMsg(`render item => ${ resultArr2.length }`);
         scope.render('diaryList', resultArr2, function () {
             if (anchor) {
-                document.querySelector(`a[name="${ anchor }"]`).scrollIntoViewIfNeeded(false);
-                //document.querySelector(`a[name="${name}"]`).scrollIntoView(true);
+                let domA = document.querySelector(`a[name="${ anchor }"]`);
+                if (domA) {
+                    domA.scrollIntoViewIfNeeded(false);
+                    //domA.scrollIntoView(true);
+                }
             }
         });
 
@@ -111,20 +121,36 @@ brick.reg('diaryCtrl', function () {
         return tagArr;
     }
 
-    // 首次取回数据
+    // 这段代码只会在首次取回数据后执行一次；
     let def2 = $.Deferred();
     this.onGetDiaryDone = function (data) {
         def2.resolve(data);
     };
 
-    function _onGetDiaryDone (data) {
+    // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
+    scope.on(GET_TAGS_DONE, function (e, data) {
+        $.when(window.GET_TAGS_DEF, def2).done((d1, d2) => {
+            console.log('when', d2);
+            _onGetDiaryDone(d2);   // 只执行一次分页
+            scope.onGetDiaryDone = function (data) {
+                _onGetDiaryDone2(data);
+                render();
+            };
+        });
+    });
+
+    function _onGetDiaryDone2 (data) {
         list.init(data);
         scope.tagArr = getTagArr(data);
-        scope.total = Math.ceil(data.length/listSize);
+        scope.total = Math.ceil((data.length + 20) / listSize); // 加20是为了处理新建日记后并不修改分页
         scope.render('tags', scope);
         //render();
         // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
         //setTimeout(render, 400); // 改为通过分页触发渲染
+    }
+
+    function _onGetDiaryDone (data) {
+        _onGetDiaryDone2(data);
         scope.render('pagination', scope, function () {
             // 分页
             $('#pg').on('ic-pagination.change', function (e, msg) {
@@ -136,15 +162,6 @@ brick.reg('diaryCtrl', function () {
             });
         });
     }
-
-
-    // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
-    scope.on(GET_TAGS_DONE, function (e, data) {
-        $.when(window.GET_TAGS_DEF, def2).done((d1, d2) => {
-            console.log('when', d2);
-            _onGetDiaryDone(d2);
-        });
-    });
 
 
     function _pushState (key, val) {
