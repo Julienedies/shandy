@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="field">
-                        <label class="" id="countShow">
+                        <label id="countShow" style="font-size:1.4em;color: red;">
                         </label>
                     </div>
                 </div>
@@ -70,6 +70,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="" ic-tpl="viewByDay">
+            <div class="tags" ic-select ic-select-item=".tag" ic-select-cla="is-danger">
+                <span class="tag is-info is-medium" ic-for="i,v in model" ic-click="viewForDay:{{ i }}">{{ i }}</span>
             </div>
         </div>
 

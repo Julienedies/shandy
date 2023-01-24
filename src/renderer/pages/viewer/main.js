@@ -24,6 +24,7 @@ import jd from '../../../libs/jodb-data'
 import utils from '../../../libs/utils'
 
 import helper from './helper'
+import backTop from '../../js/back-top'
 
 import historyModel from './historyModel'
 
@@ -48,16 +49,20 @@ brick.set('ic-viewer-interval', setting.get('viewer.interval') || 10);
 
 brick.reg('mainCtrl', function (scope) {
 
+    backTop();
+
     const historyModel = brick.services.get('historyModel');
 
     let $list = $('#list');
     let $imgDir = $('input[name=imgDir]');
+    let $countShow;
 
     let isReverse = true;
     let isRefresh = false;
     let isOrigin = false;
 
     let tagsMap = {};
+    let urlsByDayMap = {};
     tagsJodb.each((item) => {
         tagsMap[item.id] = item;
     });
@@ -94,6 +99,7 @@ brick.reg('mainCtrl', function (scope) {
 
     };
 
+    // 刷新目录缓存数据
     scope.refresh = function (e) {
         isRefresh = true;
         scope.init('');
@@ -108,9 +114,26 @@ brick.reg('mainCtrl', function (scope) {
         isReverse = !isReverse;
     };
 
+    // 按原始顺序排序显示
     scope.toggleOrigin = function (e) {
         isOrigin = $(this).prop('checked');
         scope.init('');
+    };
+
+    //
+    function viewByDay () {
+        let urls = scope.urls;
+        urls.forEach((v, i) => {
+            let d = v.d;
+            let arr = urlsByDayMap[d] = urlsByDayMap[d] || [];
+            arr.push(v);
+        });
+        scope.render('viewByDay', {model: urlsByDayMap});
+    }
+
+    // 点击后显示单日的股票
+    scope.viewForDay = function (e, day) {
+        scope._init(urlsByDayMap[day]);
     };
 
     scope.init = function (dir) {
@@ -123,39 +146,55 @@ brick.reg('mainCtrl', function (scope) {
 
     // 显示目录下图片列表
     scope._init = async function (dir) {
-        dir = dir || scope.imgDir;
-        scope.imgDir = dir;
-        if (!fs.existsSync(dir)) {
-            return $.icMsg(`${ dir }\r不存在!`);
-        }
-        $imgDir.val(dir);
-        //
-        let isAddTags = /交易记录/img.test(dir);
+        let urls;
+        // 如果直接传递一个数组
+        if (Array.isArray(dir)) {
 
-        let urls = helper.getImages(dir, {isReverse, isRefresh, isOrigin});
-        if (!urls.length) {
-            return $.icMsg('no images.');
-        }
-        urls[0].code && urls.forEach(o => {
-            o.tradeInfo = tradeArr.filter(arr => {
-                // 交易信息 对应 code 和 时间
-                return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
-            });
+            urls = dir;
 
-            if (1) {
-                let obj = viewerJodb.get(o.f, 'img')[0] || {tags: []};
-                let arr = obj.tags || [];
-                //console.log(obj);
-                o.tags = arr.map((v) => {
-                    return tagsMap[v];
-                });
+        } else {
+
+            dir = dir || scope.imgDir;
+            scope.imgDir = dir;
+            if (!fs.existsSync(dir)) {
+                return $.icMsg(`${ dir }\r不存在!`);
             }
-        });
-        console.log('urls =>', urls);
-        scope.urls = urls;
+            $imgDir.val(dir);
+            // 如果是股票交易记录图片，添加交易记录
+            let isAddTags = /交易记录/img.test(dir);
+
+            urls = helper.getImages(dir, {isReverse, isRefresh, isOrigin});
+            if (!urls.length) {
+                return $.icMsg('no images.');
+            }
+            urls[0].code && urls.forEach(o => {
+                o.tradeInfo = tradeArr.filter(arr => {
+                    // 交易信息 对应 code 和 时间
+                    return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
+                });
+
+                if (1) {
+                    let obj = viewerJodb.get(o.f, 'img')[0] || {tags: []};
+                    let arr = obj.tags || [];
+                    //console.log(obj);
+                    o.tags = arr.map((v) => {
+                        return tagsMap[v];
+                    });
+                }
+            });
+            console.log('urls =>', urls);
+            scope.urls = urls;
+
+            setting.refresh().set('viewer.imgDir', dir);
+
+            // 原始顺序模式下显示日列表
+            urlsByDayMap = {}; // 清空上次月份的数据
+            isOrigin && viewByDay();
+
+        }
+
 
         $list.icRender('list', urls);
-        setting.refresh().set('viewer.imgDir', dir);
         $('#countShow').text(`共有 ${ urls.length } 项.`);
     };
 

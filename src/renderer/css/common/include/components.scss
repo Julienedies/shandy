@@ -19,7 +19,7 @@
   position: fixed;
   z-index: 9001;
   color: #fff;
-  top: 95px;
+  top: 180px;
   left: 0;
   width: 100%;
   pointer-events: none;
@@ -27,7 +27,7 @@
 
   > p {
     white-space: pre;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     display: inline-block;
     padding: 0 1em 0 1em;
     margin: 0 0 0 16em;
@@ -40,6 +40,7 @@
     bottom: 10%;
     padding-right: 4%;
     text-align: right;
+    font-size:1.4em;
 
     &:hover {
       opacity: 1;
@@ -56,11 +57,11 @@
 
 }
 
-#ic-viewer-info {
+#ic-viewer-handle {
   padding-left: 840px !important;
 }
 
-#ic-viewer-handle {
+#ic-viewer-info {
   padding-left: 840px !important;
 }
 
