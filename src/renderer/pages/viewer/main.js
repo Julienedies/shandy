@@ -120,7 +120,7 @@ brick.reg('mainCtrl', function (scope) {
         scope.init('');
     };
 
-    //
+    // 按单日分类图片
     function viewByDay () {
         let urls = scope.urls;
         urls.forEach((v, i) => {
@@ -188,8 +188,8 @@ brick.reg('mainCtrl', function (scope) {
             setting.refresh().set('viewer.imgDir', dir);
 
             // 原始顺序模式下显示日列表
-            urlsByDayMap = {}; // 清空上次月份的数据
-            isOrigin && viewByDay();
+            urlsByDayMap = {}; // 清空上次月份的单日数据
+            isOrigin && viewByDay(); // 按单日分类图片
 
         }
 
@@ -257,7 +257,7 @@ brick.reg('mainCtrl', function (scope) {
     // 显示某个历史目录
     scope.show = function (e, dir) {
         //let $th = $(this).icSetLoading();
-        dir = $(this).data('dir');
+        dir = $(this).data('dir'); // 目录字符里包含 : , 所以没有使用事件参数
         scope.init(dir);
         /*        $.icSetLoading();
                 setTimeout(() => {
@@ -271,7 +271,7 @@ brick.reg('mainCtrl', function (scope) {
     // 删除历史目录
     scope.remove = function (e, dir) {
         dir = $(this).data('dir');
-        historyModel.remove(dir);
+        confirm('确认删除?') && historyModel.remove(dir);
     };
 
     // ------------------------------------------------------------------------------------------------
