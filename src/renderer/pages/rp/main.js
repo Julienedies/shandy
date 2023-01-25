@@ -220,6 +220,16 @@ brick.reg('todoListCtrl', function (scope) {
         setList(data);
     };
 
+    // clone
+    scope.re = function (e, id) {
+        let item = listManager.get(id);
+        item.type = 'Re';
+        delete item.id;
+        $.post('/stock/rp', item).done((data) => {
+            setList(data);
+        });
+    };
+
     // 置顶
     scope.focus = function (e, id) {
         // scope.emit('move', {id});

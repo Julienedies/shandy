@@ -12,8 +12,8 @@
 		"interval": 60,
 		"duration": 17,
 		"timestamp": 1674062774322,
-		"promptTimes": 1,
-		"prevPromptTime": 1674177258097
+		"promptTimes": 2,
+		"prevPromptTime": 1674638253022
 	},
 	{
 		"type": "错误",
@@ -29,8 +29,8 @@
 		"duration": "17",
 		"timestamp": 1664936378905,
 		"tag": "没有大局观",
-		"promptTimes": 1,
-		"prevPromptTime": 1674179958653
+		"promptTimes": 2,
+		"prevPromptTime": 1674640952838
 	},
 	{
 		"type": "错误",
@@ -46,8 +46,8 @@
 		"duration": "17",
 		"timestamp": 1661941742710,
 		"tag": "无改变",
-		"promptTimes": 1,
-		"prevPromptTime": 1674182658934
+		"promptTimes": 2,
+		"prevPromptTime": 1674643652747
 	},
 	{
 		"type": "错误",
@@ -63,8 +63,8 @@
 		"timestamp": 1658561356460,
 		"title": "线性思维，先入为主，下跌就看跌，上涨就看涨。多空动态博弈转化，不要线性思维；",
 		"tag": "主观",
-		"promptTimes": 1,
-		"prevPromptTime": 1674185358292
+		"promptTimes": 2,
+		"prevPromptTime": 1674646352197
 	},
 	{
 		"type": "错误",
@@ -95,8 +95,8 @@
 		"timestamp": 1658558460231,
 		"title": "预判到是进攻日，但却他妈的没有任何标的。",
 		"tag": "无系统",
-		"promptTimes": 1,
-		"prevPromptTime": 1674188059644
+		"promptTimes": 2,
+		"prevPromptTime": 1674649052041
 	},
 	{
 		"type": "错误",
@@ -112,8 +112,8 @@
 		"timestamp": 1658545526846,
 		"title": "没有大局观，沉迷于无效的日常操作；",
 		"tag": "没有大局观",
-		"promptTimes": 1,
-		"prevPromptTime": 1674190758027
+		"promptTimes": 2,
+		"prevPromptTime": 1674652379214
 	},
 	{
 		"type": "错误",
@@ -129,8 +129,8 @@
 		"timestamp": "1658545473854",
 		"title": "主观测顶；顶只有一个；我却他妈的在臆想是顶的过程中错过所有的机会；",
 		"tag": "主观",
-		"promptTimes": 1,
-		"prevPromptTime": 1674193457902
+		"promptTimes": 2,
+		"prevPromptTime": 1674655081591
 	},
 	{
 		"type": "错误",
@@ -146,8 +146,8 @@
 		"timestamp": 1658545339613,
 		"title": "没有大局观，看不到大趋势，看不到大的确定性。",
 		"tag": "没有大局观",
-		"promptTimes": 1,
-		"prevPromptTime": 1674196157798
+		"promptTimes": 2,
+		"prevPromptTime": 1674657781419
 	},
 	{
 		"type": "错误",
@@ -163,8 +163,8 @@
 		"timestamp": "1658544943250",
 		"title": "依靠主观预测交易，而不是临盘根据盘面客观应对，客观跟随；",
 		"tag": "主观",
-		"promptTimes": 1,
-		"prevPromptTime": 1674198857603
+		"promptTimes": 2,
+		"prevPromptTime": 1674660481217
 	},
 	{
 		"type": "错误",
@@ -179,9 +179,7 @@
 		"duration": "17",
 		"timestamp": 1658544247850,
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
-		"tag": "错过大行情和龙头",
-		"promptTimes": 1,
-		"prevPromptTime": 1674201558622
+		"tag": "错过大行情和龙头"
 	},
 	{
 		"name": "",
@@ -196,9 +194,7 @@
 		"duration": "17",
 		"timestamp": 1658540065742,
 		"title": "线性思维，先入为主，主观看空，错过弱转强，分歧转一致、强更强的机会。",
-		"tag": "主观",
-		"promptTimes": 1,
-		"prevPromptTime": 1674204258741
+		"tag": "主观"
 	},
 	{
 		"name": "",
@@ -214,9 +210,7 @@
 		"disable": false,
 		"level": "10",
 		"tag": "无改变",
-		"title": "虽然我意识到自己的错误，但我就是改不了。",
-		"promptTimes": 1,
-		"prevPromptTime": 1674206957428
+		"title": "虽然我意识到自己的错误，但我就是改不了。"
 	},
 	{
 		"name": "日程",
@@ -244,9 +238,7 @@
 		"timestamp": 1658278676173,
 		"level": "620",
 		"title": "我总是主观看空各个题材，那你找出资金会攻击的地方啊？",
-		"tag": "主观",
-		"promptTimes": 2,
-		"prevPromptTime": 1674215058355
+		"tag": "主观"
 	},
 	{
 		"name": "",
@@ -261,9 +253,7 @@
 		"timestamp": 1658235285391,
 		"tag": "错过大行情和龙头",
 		"level": "900",
-		"title": "为何我总是错过大行情？为何我总是后知后觉？",
-		"promptTimes": 2,
-		"prevPromptTime": 1674217758209
+		"title": "为何我总是错过大行情？为何我总是后知后觉？"
 	},
 	{
 		"name": "",
@@ -293,9 +283,7 @@
 		"timestamp": 1657973073049,
 		"level": "1126",
 		"title": "每天沉迷于无效的日常交易；依然没有建立明确的交易系统；",
-		"tag": "无改变",
-		"promptTimes": 1,
-		"prevPromptTime": 1674220458044
+		"tag": "无改变"
 	},
 	{
 		"name": "",
@@ -310,9 +298,7 @@
 		"timestamp": 1625831460227,
 		"level": "840",
 		"title": "永远没有明确的交易计划和准备，没有做盘面的推演和应对。",
-		"tag": "无系统",
-		"promptTimes": 1,
-		"prevPromptTime": 1674223157987
+		"tag": "无系统"
 	},
 	{
 		"name": "",
@@ -325,9 +311,7 @@
 		"interval": 130,
 		"duration": 9,
 		"timestamp": 1654519629339,
-		"level": 96,
-		"promptTimes": 1,
-		"prevPromptTime": 1674225856992
+		"level": 96
 	},
 	{
 		"name": "",
@@ -342,9 +326,7 @@
 		"timestamp": "1613315497825",
 		"level": "86",
 		"title": "盈亏同源，持续一致性，概率优势；",
-		"tag": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1674228557951
+		"tag": ""
 	},
 	{
 		"name": "",

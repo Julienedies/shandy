@@ -80,10 +80,11 @@
 
                                 <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
 
-                                <div>
+                                <div style="padding: 2px 0;">
                                     <div class="tags is-right">
                                         <span class="tag is-small"> {{ v.level || 0 }}</span>
                                         <span class="tag is-small"> {{ v.type }}</span>
+                                        <span class="tag is-small" ic-click="re:{{ v.id }}" ic-if="v.type!=='re'">clone</span>
                                         <span class="tag is-small" ic-click="edit:{{ v.id }}">修改</span>
                                         <span class="tag is-small" ic-click="plus:{{ v.id }}">加权</span>
                                         <!--<span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>-->

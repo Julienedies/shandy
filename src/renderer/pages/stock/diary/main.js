@@ -34,7 +34,7 @@ brick.reg('diaryCtrl', function () {
     let $elm = scope.$elm;
     let list = brick.services.get('recordManager')();
 
-    let listSize = 400;
+    let listSize = 300;
     let $title = $('title').text(`日记_${ formatDate() }`);
 
     let anchorArr = location.href.match(/\#([^#]+$)/) || [];

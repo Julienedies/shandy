@@ -51,8 +51,10 @@ html {
     font-size: 1rem;
   }
 
+  // 选中状态
   .tag:not(body).is-info {
-    background-color: #1f8ef9;
+    //    background-color: #00d1b2;
+    //background-color: #1f8ef9;
     background-color: #3899f7;
     color: #fff;
   }

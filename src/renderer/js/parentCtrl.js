@@ -37,7 +37,7 @@ function parentCtrl () {
         scope.emit(DEL_TAG, id);
     };
 
-    scope.tag_remove_done = function (res) {
+    scope.tagRemoveDone = scope.tag_remove_done = function (data) {
         $(this).closest('li').remove();
     };
 
@@ -45,7 +45,7 @@ function parentCtrl () {
         console.info('ic-form-submit-before => ', f);
     };
 
-    this.ajax_before_confirm = function (data, msg) {
+    scope.ajaxBeforeConfirm = this.ajax_before_confirm = function (data, msg) {
         //console.info([].slice.call(arguments));
         return confirm(data || msg);
     };
