@@ -151,6 +151,8 @@ brick.reg('mainCtrl', function (scope) {
         if (Array.isArray(dir)) {
 
             urls = dir;
+            console.log('urls =>', urls);
+            scope.urls = urls;
 
         } else {
 
@@ -189,6 +191,7 @@ brick.reg('mainCtrl', function (scope) {
 
             // 原始顺序模式下显示日列表
             urlsByDayMap = {}; // 清空上次月份的单日数据
+            scope.render('viewByDay', {model: {}});
             isOrigin && viewByDay(); // 按单日分类图片
 
         }
