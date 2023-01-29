@@ -6,8 +6,12 @@ html {
   overflow: hidden;
 }
 
-.textarea{
-  font-size:0.9rem;
+html, body {
+  font-size: 18px;
+}
+
+.textarea {
+  font-size: 0.9rem;
 }
 
 #mainHeader {
@@ -44,7 +48,7 @@ html {
 
 #todoList {
   .tag:not(body).is-medium {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .tag:not(body).is-large {
@@ -63,7 +67,7 @@ html {
     margin-bottom: 0.2rem;
   }
 
-  .comment{
+  .comment {
     white-space: nowrap;
     overflow: hidden;
     color: #026bdb;
@@ -71,15 +75,15 @@ html {
   }
 
 
-  &.shrink{
+  &.shrink {
     .pre.text {
       display: none;
     }
   }
 
 
-  .role_0, .role_1, .role_2, .role_3{
-    color:#fff;
+  .role_0, .role_1, .role_2, .role_3 {
+    color: #fff;
     white-space: nowrap;
     overflow: hidden;
   }
@@ -94,22 +98,22 @@ html {
     }
   }
 
-/*  .role_1 {
-    background: blue;
+  /*  .role_1 {
+      background: blue;
 
-    h3 {
-      color: #fff;
+      h3 {
+        color: #fff;
+      }
     }
-  }
 
-  .role_2 {
-    //background: rgb(148, 0, 211);
-    background: blue;
+    .role_2 {
+      //background: rgb(148, 0, 211);
+      background: blue;
 
-    h3 {
-      color: #fff;
-    }
-  }*/
+      h3 {
+        color: #fff;
+      }
+    }*/
 
   .role_3 {
     background: black;
@@ -131,18 +135,18 @@ html {
     > header {
       background: yellow;
 
-/*      &.role_1 {
-        background: blue;
+      /*      &.role_1 {
+              background: blue;
 
-        h3 {
-          color: #fff;
-        }
-      }*/
+              h3 {
+                color: #fff;
+              }
+            }*/
 
       &.role_2 {
         background: rgb(148, 0, 211);
 
-       h3 {
+        h3 {
           color: #fff;
         }
       }
@@ -160,7 +164,7 @@ html {
         white-space: nowrap;
         overflow: hidden;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 20px;
         color: #000;
 
         b {
@@ -174,8 +178,7 @@ html {
       .caution {
         //background: #fff;
         //font-size: 20px !important;
-        font-size: 1.4em;
-        font-size: 19px;
+        font-size: 18px;
         font-weight: 400;
       }
 
@@ -183,10 +186,11 @@ html {
 
     > .wrap {
       padding: 0.4em 1em 0.25em 1em;
+
       .textarea {
         border-color: #f7f7f7;
         box-shadow: none;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         padding: 0.1rem 0 0.15rem 0;
       }
     }
@@ -197,7 +201,7 @@ html {
     //display: none;
     color: #026bdb;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
 
     table {

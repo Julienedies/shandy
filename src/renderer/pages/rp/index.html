@@ -84,10 +84,10 @@
                                     <div class="tags is-right">
                                         <span class="tag is-small"> {{ v.level || 0 }}</span>
                                         <span class="tag is-small"> {{ v.type }}</span>
-                                        <span class="tag is-small" ic-click="re:{{ v.id }}" ic-if="v.type!=='re'">clone</span>
                                         <span class="tag is-small" ic-click="edit:{{ v.id }}">修改</span>
                                         <span class="tag is-small" ic-click="plus:{{ v.id }}">加权</span>
                                         <!--<span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>-->
+                                        <span class="tag is-small" ic-click="re:{{ v.id }}" ic-if="v.type!=='re'">Re</span>
                                         <span class="tag is-small"
                                               ic-ajax
                                               ic-submit-method="delete"
@@ -113,7 +113,7 @@
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control">交易计划</div>
                                     <div class="control is-expanded">
-                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="17">{{ rpForm['交易计划'] }}</textarea>
+                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="20">{{ rpForm['交易计划'] }}</textarea>
                                     </div>
                                 </div>
 
