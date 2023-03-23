@@ -13,7 +13,7 @@
 		"duration": 17,
 		"timestamp": 1674062774322,
 		"promptTimes": 1,
-		"prevPromptTime": 1679018350053
+		"prevPromptTime": 1679534816928
 	},
 	{
 		"type": "错误",
@@ -30,7 +30,7 @@
 		"timestamp": 1664936378905,
 		"tag": "没有大局观",
 		"promptTimes": 1,
-		"prevPromptTime": 1679021050382
+		"prevPromptTime": 1679537517557
 	},
 	{
 		"type": "错误",
@@ -47,7 +47,7 @@
 		"timestamp": 1661941742710,
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1679023750844
+		"prevPromptTime": 1679540217118
 	},
 	{
 		"type": "错误",
@@ -64,7 +64,7 @@
 		"title": "线性思维，先入为主，下跌就看跌，上涨就看涨。多空动态博弈转化，不要线性思维；",
 		"tag": "主观",
 		"promptTimes": 1,
-		"prevPromptTime": 1679026450234
+		"prevPromptTime": 1679542916719
 	},
 	{
 		"type": "错误",
@@ -96,7 +96,7 @@
 		"title": "预判到是进攻日，但却他妈的没有任何标的。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1679029150063
+		"prevPromptTime": 1679545617421
 	},
 	{
 		"type": "错误",
@@ -113,7 +113,7 @@
 		"title": "没有大局观，沉迷于无效的日常操作；",
 		"tag": "没有大局观",
 		"promptTimes": 1,
-		"prevPromptTime": 1679031850374
+		"prevPromptTime": 1679548317121
 	},
 	{
 		"type": "错误",
@@ -130,7 +130,7 @@
 		"title": "主观测顶；顶只有一个；我却他妈的在臆想是顶的过程中错过所有的机会；",
 		"tag": "主观",
 		"promptTimes": 1,
-		"prevPromptTime": 1679034549800
+		"prevPromptTime": 1679551017011
 	},
 	{
 		"type": "错误",
@@ -147,7 +147,7 @@
 		"title": "没有大局观，看不到大趋势，看不到大的确定性。",
 		"tag": "没有大局观",
 		"promptTimes": 1,
-		"prevPromptTime": 1679037249537
+		"prevPromptTime": 1679553716428
 	},
 	{
 		"type": "错误",
@@ -164,7 +164,7 @@
 		"title": "依靠主观预测交易，而不是临盘根据盘面客观应对，客观跟随；",
 		"tag": "主观",
 		"promptTimes": 1,
-		"prevPromptTime": 1679039949640
+		"prevPromptTime": 1679556416424
 	},
 	{
 		"type": "错误",
@@ -181,7 +181,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 1,
-		"prevPromptTime": 1679042649888
+		"prevPromptTime": 1679559116871
 	},
 	{
 		"name": "",
@@ -198,7 +198,7 @@
 		"title": "线性思维，先入为主，主观看空，错过弱转强，分歧转一致、强更强的机会。",
 		"tag": "主观",
 		"promptTimes": 1,
-		"prevPromptTime": 1679045350638
+		"prevPromptTime": 1679561816926
 	},
 	{
 		"name": "",
@@ -216,7 +216,7 @@
 		"tag": "无改变",
 		"title": "虽然我意识到自己的错误，但我就是改不了。",
 		"promptTimes": 1,
-		"prevPromptTime": 1679048050090
+		"prevPromptTime": 1679564517448
 	},
 	{
 		"name": "日程",
@@ -261,7 +261,7 @@
 		"level": "900",
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"promptTimes": 2,
-		"prevPromptTime": 1679056149509
+		"prevPromptTime": 1679572616100
 	},
 	{
 		"name": "",
@@ -293,7 +293,7 @@
 		"title": "每天沉迷于无效的日常交易；依然没有建立明确的交易系统；",
 		"tag": "无改变",
 		"promptTimes": 2,
-		"prevPromptTime": 1679058850069
+		"prevPromptTime": 1679575316590
 	},
 	{
 		"name": "",
@@ -310,7 +310,7 @@
 		"title": "永远没有明确的交易计划和准备，没有做盘面的推演和应对。",
 		"tag": "无系统",
 		"promptTimes": 2,
-		"prevPromptTime": 1679066949152
+		"prevPromptTime": 1679583415884
 	},
 	{
 		"name": "",
@@ -325,7 +325,7 @@
 		"timestamp": 1654519629339,
 		"level": 96,
 		"promptTimes": 1,
-		"prevPromptTime": 1679064249832
+		"prevPromptTime": 1679580715313
 	},
 	{
 		"name": "",
@@ -340,7 +340,9 @@
 		"timestamp": "1613315497825",
 		"level": "86",
 		"title": "盈亏同源，持续一致性，概率优势；",
-		"tag": ""
+		"tag": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1679586116529
 	},
 	{
 		"name": "",
