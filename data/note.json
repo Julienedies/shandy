@@ -1,5 +1,32 @@
 [
 	{
+		"id": "id_1679876033403_7463",
+		"type": "",
+		"level": "0",
+		"text": "https://www.cnhbstock.com/view/browseuser/article.html?infoId=G11x2Zs9HCNnpcGcT8",
+		"timestamp": 1679876033403
+	},
+	{
+		"id": "id_1679762294091_4304",
+		"type": "vim",
+		"level": "0",
+		"text": "q！忽略修改退出",
+		"timestamp": 1679762294091
+	},
+	{
+		"text": "//安装最新版本覆盖旧版本\nnpm install tdesign-miniprogram@0.11.2",
+		"type": "",
+		"id": "id_1679757826803_7244",
+		"timestamp": 1679757826803
+	},
+	{
+		"text": "更新指定依赖安装包（根据前缀符号更新，有时需要在 package.json 手动更改依赖包相应版本号再更新）\n\nnpm update tdesign-miniprogram -S  (--save/-S or --save-dev/-D)",
+		"type": "npm",
+		"id": "id_1679757364314_8192",
+		"timestamp": 1679757364314,
+		"level": "0"
+	},
+	{
 		"id": "id_1676983017478_9936",
 		"type": "",
 		"level": "0",
