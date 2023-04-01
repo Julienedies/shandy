@@ -17,7 +17,7 @@
                 <div ic-if-start="i=='链接'">
                     <a ic-href="{{v}}" target="_blank">{{v}}</a>
                 </div>
-                <div ic-else>{{v}}</div>
+                <div ic-else>{{ typeof(v) === 'object' ? JSON.stringify(v):v}}</div>
             </li>
         </ul>
         <div class="buttons is-right">

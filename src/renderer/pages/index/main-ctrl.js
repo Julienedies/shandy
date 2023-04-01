@@ -153,7 +153,7 @@ brick.reg('mainCtrl', function (scope) {
             let opt = {
                 name,
                 url,
-                width: 600,
+                width: 720,
                 height: 64,
                 x: 60,
                 ...getBounds(name),
