@@ -1,5 +1,11 @@
 [
 	{
+		"text": "DRAWTEXT(IF(FROMOPEN<210,ISLASTBAR,CURRBARSCOUNT=30),CONST(C),VAR2STR(CONST(C),2));",
+		"type": "",
+		"id": "id_1680521161388_0594",
+		"timestamp": 1680521161388
+	},
+	{
 		"id": "id_1679876033403_7463",
 		"type": "",
 		"level": "0",
