@@ -41,7 +41,8 @@ brick.reg('mainCtrl', function (scope) {
 
     scope.csdPath = model.csdPath;
     scope.tdx_extern_user_file = model.tdx_extern_user_file;
-    scope.tdxProps = ['概念', '概念y', '产品', '业务', '全名', '备注', '概念z', '亮点', '同业'];
+    scope.tdxProps = ['概念', '概念y', '产品', '业务', '全名', '备注', '概念z', '亮点', '同业', '概念详情'];
+    //索引位对应自定义数据-1-------2-------3------4-------5------6-------7-------8------9---------10-----
 
     console.log(model);
 

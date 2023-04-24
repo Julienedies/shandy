@@ -1,5 +1,89 @@
 [
 	{
+		"title": "行情启动、转折时，浑浑噩噩，犹豫不决；高潮时管不住手；",
+		"type": "mistake",
+		"caution": "",
+		"comment": "",
+		"level": "1000",
+		"role": "0",
+		"content": "",
+		"timestamp": "1682046230502",
+		"tags": [],
+		"id": "id_1682046234148_1539"
+	},
+	{
+		"title": "行情启动、转折时，浑浑噩噩，犹豫不决；高潮时管不住手；",
+		"id": "id_1682046230502_8480",
+		"type": "re",
+		"caution": "",
+		"comment": "",
+		"level": "1000",
+		"role": "0",
+		"content": "",
+		"tags": [],
+		"timestamp": 1682046230502
+	},
+	{
+		"title": "为何我错过所有大行情？意识不到行情主升中；",
+		"type": "mistake",
+		"caution": "",
+		"comment": "中科曙光、寒武纪、剑桥科技；",
+		"level": "789",
+		"role": "0",
+		"content": "",
+		"timestamp": "1682038336268",
+		"tags": [],
+		"id": "id_1682038365143_9174"
+	},
+	{
+		"title": "为何我错过所有大行情？意识不到行情主升中；",
+		"id": "id_1682038336268_4376",
+		"type": "re",
+		"caution": "",
+		"comment": "中科曙光、寒武纪、剑桥科技；",
+		"level": "789",
+		"role": "0",
+		"content": "",
+		"tags": [],
+		"timestamp": 1682038336268
+	},
+	{
+		"title": "为何我总是意识不到突破、爆发、主升浪？为什么我总是预期不到个股的可能走势？",
+		"id": "id_1682019363010_0061",
+		"type": "question",
+		"caution": "",
+		"comment": "",
+		"level": "799",
+		"role": "0",
+		"content": "",
+		"tags": [],
+		"timestamp": 1682019363010
+	},
+	{
+		"title": "主观看空；",
+		"type": "mistake",
+		"caution": "",
+		"comment": "",
+		"level": "721",
+		"role": "0",
+		"content": "<p>思维方式一直难以改变。为何我总是主观看空那些超出我预期的票？</p>",
+		"timestamp": "1664856368922",
+		"tags": [],
+		"id": "id_1682016868591_0564"
+	},
+	{
+		"title": "主观测顶；主观恐高；",
+		"type": "mistake",
+		"caution": "",
+		"comment": "",
+		"level": "720",
+		"role": "0",
+		"content": "",
+		"timestamp": "1664856384764",
+		"tags": [],
+		"id": "id_1682016866828_5360"
+	},
+	{
 		"title": "加入自选或看好，但是没有明确的判断锚点和买入条件；不知道如何参与；",
 		"id": "id_1681838191107_3315",
 		"type": "mistake",
@@ -809,7 +893,7 @@
 		"type": "mistake",
 		"caution": "",
 		"comment": "",
-		"level": "1",
+		"level": "700",
 		"role": "0",
 		"content": "",
 		"tags": [],
@@ -828,7 +912,7 @@
 		"timestamp": 1664878930910
 	},
 	{
-		"title": "主观测顶；",
+		"title": "主观测顶；主观恐高；主观看空；",
 		"id": "id_1664856384764_5256",
 		"type": "mistake",
 		"caution": "",
@@ -840,7 +924,7 @@
 		"timestamp": 1664856384764
 	},
 	{
-		"title": "主观看空；主观恐高；",
+		"title": "主观看空；",
 		"id": "id_1664856368922_6710",
 		"type": "mistake",
 		"caution": "",

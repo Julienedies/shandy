@@ -16,7 +16,7 @@
 		"id": "id_1679762294091_4304",
 		"type": "vim",
 		"level": "0",
-		"text": "q！忽略修改退出",
+		"text": "q！忽略修改退出\nwq 保存改变退出",
 		"timestamp": 1679762294091
 	},
 	{
@@ -26,7 +26,7 @@
 		"timestamp": 1679757826803
 	},
 	{
-		"text": "更新指定依赖安装包（根据前缀符号更新，有时需要在 package.json 手动更改依赖包相应版本号再更新）\n\nnpm update tdesign-miniprogram -S  (--save/-S or --save-dev/-D)",
+		"text": "更新指定依赖安装包（根据前缀符号更新，有时需要在 package.json 手动更改依赖包相应版本号再更新）\n\nnpm update tdesign-miniprogram -S  (--save/-S or --save-dev/-D)\n\nnpm i  jhandy@0.5.35 -S",
 		"type": "npm",
 		"id": "id_1679757364314_8192",
 		"timestamp": 1679757364314,
