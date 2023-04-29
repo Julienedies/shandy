@@ -298,6 +298,7 @@ brick.reg('setDiaryCtrl', function () {
         //scope.render({});
     };
 
+    // 恢复文本内容
     scope.recover = function () {
         $editor.froalaEditor('html.set', localStorage.getItem(DIARY_CACHE) || '');
     };
@@ -324,6 +325,7 @@ brick.reg('setDiaryCtrl', function () {
         render(vm);
     };
 
+
     function render (model) {
         scope.render('setDiary', model, function () {
             $editor = $elm.find('#editor').froalaEditor({
@@ -335,8 +337,25 @@ brick.reg('setDiaryCtrl', function () {
 
             $editor.froalaEditor('html.set', model.diary.text || '');
 
+            // 开启全屏
+            //$editor.froalaEditor('fullscreen.isActive');
+
             // 自动保存输入数据
             $editor.on('froalaEditor.input', _.throttle(saveForm, 2900));
+
+
+/*            let editor = new FroalaEditor('#editor', {
+                ...FroalaEditorConfig,
+                fontSizeDefaultSelection: '18',
+                //toolbarInline: true,
+                height: 210,
+            }, function () {
+
+                editor.html.set(model.diary.text || '');
+                editor.fullscreen.isActive();
+
+            });*/
+
 
         });
     }
