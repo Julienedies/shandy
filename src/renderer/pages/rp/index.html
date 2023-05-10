@@ -20,12 +20,16 @@
                         <div class="buttons is-centered" ic-select="tags" ic-select-auto="false" ic-select-cla="is-primary"
                              ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
 
-                            <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
-
                             <button ic-for="v,i in model.mapByType" ic-select-item ic-val="{{ v }}"
                                     ic-class="button is-small {{ v==model.filterByType?'is-primary':''  }}">
                                 {{ RPMQS_MAP[v] }}
                             </button>
+
+                            <button ic-select-item ic-val="Re" ic-class="button is-small {{ model.filterByType==='Re'?'is-primary':''  }}">
+                                Re
+                            </button>
+
+                            <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
 
                             <button class="button is-primary is-small" ic-click="toggleForm">显示表单</button>
                             <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>

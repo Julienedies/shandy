@@ -82,8 +82,16 @@ brick.reg('todoListCtrl', function (scope) {
             return bl - al;
         });
         let mapByType = getMapByType(rpList);
+
+        // 根据类型过滤
         if (filterByType) {
-            rpList = mapByType[filterByType];
+            if(filterByType === 'Re') {
+                rpList = rpList.filter( (v, i)=> {
+                    return v.re;
+                });
+            }else{
+                rpList = mapByType[filterByType];
+            }
         }
         //console.log(filterByType, todoArr);
         scope.render('types', {model: {mapByType: mapByType, filterByType: filterByType}});
@@ -220,12 +228,12 @@ brick.reg('todoListCtrl', function (scope) {
         setList(data);
     };
 
-    // clone
+    // re
     scope.re = function (e, id) {
         let item = listManager.get(id);
-        item.type = 'Re';
-        delete item.id;
+        item.re = !!(item.re);
         $.post('/stock/rp', item).done((data) => {
+            $.icMsg(data && data.length);
             setList(data);
         });
     };
