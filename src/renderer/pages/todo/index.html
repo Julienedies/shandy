@@ -89,7 +89,7 @@
                             <div class="field">
                                 <div class="control">
                                     <!--<input class="input" type="text" placeholder="todo类型,可选" value="{{ model.type }}" ic-form-field="type">-->
-                                    <p class="select">
+                                    <p class="select is-expanded">
                                         <select name="type" ic-form-field>
                                             <option value="错误" ic-has-selected="model.type=='错误'">错误</option>
                                             <option value="问题" ic-has-selected="model.type=='问题'">问题</option>
@@ -108,7 +108,7 @@
                                     <label>level</label>
                                 </div>
                                 <div class="control is-expanded">
-                                    <input class="input is-small" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1 }}">
+                                    <input class="input" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1 }}">
                                 </div>
                             </div>
                         </div>
@@ -168,7 +168,7 @@
                         </div>
                     </div>
 
-                    <div class="columns">
+                    <div class="columns" style="margin-bottom: 0;">
                         <div class="column is-6">
                             <div class="field">
                                 <div class="control">
@@ -203,7 +203,7 @@
                             <div class="field">
                                 <div class="control">
                                     <input class="input" type="number" placeholder="持续时长"
-                                           ic-value="{{ model.duration || 17 }}" ic-form-field="duration">
+                                           ic-value="{{ model.duration || 24 }}" ic-form-field="duration">
                                 </div>
                                 <p class="help">每次提醒持续时间，单位秒。</p>
                             </div>
@@ -225,7 +225,7 @@
 
 <!-- ----------------------------------------------------------------------------------------->
 
-    <div ic-view="prompt" ic-ctrl="promptCtrl">
+    <div id="promptBox" ic-view="prompt" ic-ctrl="promptCtrl">
         <div>
             <div class="box">
                 <div style="padding: 15px 20px;">

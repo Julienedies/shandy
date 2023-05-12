@@ -29,6 +29,10 @@
   animation: warn 0.9s infinite ease-in-out;
 }
 
+.ani-warn2 {
+  animation: warn 0.9s 7 ease-in-out;
+}
+
 @keyframes warn {
   1% {
     background: rgba(0, 0, 0, 0.6);

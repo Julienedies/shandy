@@ -19,18 +19,7 @@ body {
   user-select: none;
 }
 
-[ic-view] {
-  background: rgba(255, 255, 255, 1) !important;
-
-  > div {
-    height: 100%;
-    overflow-y: scroll;
-    padding: 20px 20px;
-  }
-
-}
-
-.wrapper {
+/*.wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -40,7 +29,51 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+}*/
+
+[ic-view] {
+  //background: white!important;
+  overflow: hidden;
+
+  .box {
+    .title, p {
+      padding-left: 3px;
+    }
+  }
+
+  > div {
+    height: 100%;
+    overflow-y: scroll;
+    padding: 20px 20px;
+  }
+
 }
+
+#promptBox {
+  overflow: hidden;
+  background: black!important;
+
+  .box {
+    background: black;
+
+    .title {
+      font-size: 34px;
+      animation: warn 0.9s infinite ease-in;
+    }
+
+    p * {
+      font-size: 24px !important;
+    }
+
+    .buttons {
+      position: absolute;
+      left: 80%;
+      bottom: 30px;
+    }
+
+  }
+}
+
 
 //----------------------------------------------------
 .box, .title {
@@ -54,12 +87,13 @@ a {
   }
 }
 
-.title{
+.title {
   color: white;
   background: black;
   font-size: 26px;
   line-height: 1.2;
   display: inline-block;
+
 }
 
 [ic-ctrl="mistakeCtrl"] {
@@ -93,7 +127,7 @@ a {
 
 .text {
   &.toggle {
-    height: auto!important;
+    height: auto !important;
     min-height: 4em;
   }
 }
