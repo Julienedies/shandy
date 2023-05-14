@@ -58,7 +58,8 @@ body {
 
     .title {
       font-size: 34px;
-      animation: warn 0.9s infinite ease-in;
+      //animation: warn 0.9s infinite ease-in;
+      animation: revolveScale 1.8s infinite;
     }
 
     p * {

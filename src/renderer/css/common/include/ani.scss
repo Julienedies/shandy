@@ -56,13 +56,14 @@
   }
 }
 
+// 放大收缩动画
 @keyframes revolveScale {
   0% {
     transform: translate(0px, 0px) rotate(0deg) scale(1);
     opacity: 1;
   }
   50% {
-    transform: translate(0) rotate(0) scale(1.8);
+    transform: translate(210px, 0) rotate(0) scale(1.6);
     opacity: 1;
   }
   100% {
@@ -70,3 +71,5 @@
     opacity: 1;
   }
 }
+
+// enlarge
