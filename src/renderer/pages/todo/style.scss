@@ -51,15 +51,15 @@ body {
 
 #promptBox {
   overflow: hidden;
-  background: black!important;
+  //background: black!important;
 
   .box {
-    background: black;
+    //background: black;
 
     .title {
       font-size: 34px;
-      //animation: warn 0.9s infinite ease-in;
-      animation: revolveScale 1.8s infinite;
+      animation: warn 0.9s infinite ease-in;
+      //animation: revolveScale 1.8s infinite;
     }
 
     p * {
