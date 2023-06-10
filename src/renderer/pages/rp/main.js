@@ -179,7 +179,7 @@ brick.reg('todoListCtrl', function (scope) {
         }
     };
 
-    scope.filter = function (e, type) {
+    scope.filter = scope.onFilterKeyChange2 = function (e, type) {
         _onFilter(type);
     };
 
@@ -191,7 +191,6 @@ brick.reg('todoListCtrl', function (scope) {
         filterByType = type;
         render();
     }
-
 
     scope.toggleForm = function (e) {
         $elm.find('#mainFooter').toggle();

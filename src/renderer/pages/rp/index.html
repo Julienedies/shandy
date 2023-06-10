@@ -20,13 +20,13 @@
                         <div class="buttons is-centered" ic-select="tags" ic-select-auto="false" ic-select-cla="is-primary"
                              ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
 
+                            <button ic-select-item ic-val="Re" ic-class="button is-small {{ model.filterByType==='Re'?'is-primary':''  }}">
+                                Re
+                            </button>
+
                             <button ic-for="v,i in model.mapByType" ic-select-item ic-val="{{ v }}"
                                     ic-class="button is-small {{ v==model.filterByType?'is-primary':''  }}">
                                 {{ RPMQS_MAP[v] }}
-                            </button>
-
-                            <button ic-select-item ic-val="Re" ic-class="button is-small {{ model.filterByType==='Re'?'is-primary':''  }}">
-                                Re
                             </button>
 
                             <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
@@ -87,11 +87,11 @@
                                 <div style="padding: 2px 0;">
                                     <div class="tags is-right">
                                         <span class="tag is-small"> {{ v.level || 0 }}</span>
-                                        <span class="tag is-small"> {{ v.type }}</span>
+                                        <span class="tag is-small" ic-click="onFilterKeyChange2:{{ v.type }}"> {{ v.type }}</span>
                                         <span class="tag is-small" ic-click="edit:{{ v.id }}">修改</span>
                                         <span class="tag is-small" ic-click="plus:{{ v.id }}">加权</span>
                                         <!--<span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>-->
-                                        <span class="tag is-small" ic-click="re:{{ v.id }}" ic-if="v.type!=='re'">Re</span>
+                                        <span ic-class="tag is-small {{ v.re==='true'?'is-primary':'' }}" ic-click="re:{{ v.id }}">Re</span>
                                         <span class="tag is-small"
                                               ic-ajax
                                               ic-submit-method="delete"

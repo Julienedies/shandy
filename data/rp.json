@@ -1,5 +1,18 @@
 [
 	{
+		"title": "没有明确的判断锚点和买入条件；我以什么做为判断锚点？",
+		"id": "id_1686375348395_2469",
+		"type": "question",
+		"caution": "",
+		"comment": "",
+		"level": "985",
+		"role": "0",
+		"content": "",
+		"tags": [],
+		"timestamp": "1686375348395",
+		"re": "false"
+	},
+	{
 		"title": "有板块效应的N形趋势买点；",
 		"id": "id_1684640213334_1525",
 		"type": "rp",
@@ -13,23 +26,11 @@
 	},
 	{
 		"title": "行情启动、转折时，浑浑噩噩，犹豫不决；高潮时管不住手；",
-		"type": "mistake",
-		"caution": "",
-		"comment": "",
-		"level": "1000",
-		"role": "0",
-		"content": "",
-		"timestamp": "1682046230502",
-		"tags": [],
-		"id": "id_1682046234148_1539"
-	},
-	{
-		"title": "行情启动、转折时，浑浑噩噩，犹豫不决；高潮时管不住手；",
 		"id": "id_1682046230502_8480",
 		"type": "mistake",
 		"caution": "",
 		"comment": "",
-		"level": "1000",
+		"level": "700",
 		"role": "0",
 		"content": "",
 		"tags": [],
@@ -48,28 +49,16 @@
 		"id": "id_1682038365143_9174"
 	},
 	{
-		"title": "为何我错过所有大行情？意识不到行情主升中；",
-		"id": "id_1682038336268_4376",
-		"type": "mistake",
-		"caution": "",
-		"comment": "中科曙光、寒武纪、剑桥科技；",
-		"level": "789",
-		"role": "0",
-		"content": "",
-		"tags": [],
-		"timestamp": 1682038336268
-	},
-	{
 		"title": "为何我总是意识不到突破、爆发、主升浪？为什么我总是预期不到个股的可能走势？",
 		"id": "id_1682019363010_0061",
 		"type": "question",
 		"caution": "",
 		"comment": "",
-		"level": "799",
+		"level": "924",
 		"role": "0",
 		"content": "",
 		"tags": [],
-		"timestamp": 1682019363010
+		"timestamp": "1682019363010"
 	},
 	{
 		"title": "主观看空；",
@@ -218,10 +207,10 @@
 	{
 		"title": "我依靠主观预测交易；但我的预判总是错误；",
 		"id": "id_1674649774657_7259",
-		"type": "question",
+		"type": "mistake",
 		"caution": "",
 		"comment": "",
-		"level": "906",
+		"level": "776",
 		"role": "0",
 		"content": "",
 		"tags": [],
@@ -593,7 +582,7 @@
 		"type": "question",
 		"caution": "",
 		"comment": "",
-		"level": "86",
+		"level": "986",
 		"role": "0",
 		"content": "",
 		"tags": [],
@@ -677,7 +666,7 @@
 		"type": "question",
 		"caution": "",
 		"comment": "",
-		"level": "79",
+		"level": "989",
 		"role": "0",
 		"content": "",
 		"tags": [],
@@ -1429,9 +1418,9 @@
 		"comment": "",
 		"content": "",
 		"tags": [],
-		"timestamp": 1638719166797,
+		"timestamp": "1638719166797",
 		"caution": "",
-		"level": "905",
+		"level": "920",
 		"role": "0"
 	},
 	{
@@ -1502,11 +1491,12 @@
 		"type": "mistake",
 		"caution": "每天临盘前脑子是空白的，被市场牵着鼻子走；我每天脑子在想什么？",
 		"comment": "",
-		"level": "795",
+		"level": "798",
 		"role": "0",
 		"content": "",
 		"tags": [],
-		"timestamp": "1649374520915"
+		"timestamp": "1649374520915",
+		"re": "false"
 	},
 	{
 		"title": "制定交易计划：先考虑整体市场状态；再考虑板块；最后才着落到个股上；",
@@ -1933,13 +1923,13 @@
 	{
 		"title": "为何我总是临盘犹豫？",
 		"id": "0710264",
-		"type": "question",
+		"type": "mistake",
 		"comment": "思维没有方向；判断没有锚点；",
 		"content": "",
 		"tags": [],
 		"timestamp": "1639282041994",
 		"caution": "",
-		"level": "905",
+		"level": "705",
 		"role": "0"
 	},
 	{
@@ -2111,14 +2101,14 @@
 		"role": "0"
 	},
 	{
-		"title": "市场参与者的行为逻辑是什么？没有信息优势，不知道市场资金的行为逻辑，后知后觉；",
+		"title": "市场参与者的行为逻辑是什么？",
 		"id": "id_1640441042409",
 		"type": "question",
 		"comment": "",
 		"content": "",
 		"tags": [],
 		"timestamp": "1640441042409",
-		"caution": "",
+		"caution": "没有信息优势，不知道市场资金的行为逻辑，后知后觉；",
 		"level": "905",
 		"role": "0",
 		"re": "true"
@@ -2144,7 +2134,7 @@
 		"tags": [],
 		"timestamp": 1638965605140,
 		"caution": "",
-		"level": "900",
+		"level": "980",
 		"role": "0"
 	},
 	{

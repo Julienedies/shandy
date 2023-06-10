@@ -125,6 +125,12 @@ function ready () {
         mainWindow.webContents.send('view_stock_info', stock);
     });
 
+    // 编辑个股信息
+    server.on('set_stock_c', function (msg) {
+        let stock = stockQuery(msg.name);
+        mainWindow.webContents.send('set_stock_c', stock);
+    });
+
     // 封单监控: 鼠标手势 =》 http请求 =>  封单监控
     server.on('rts', function (msg) {
         let stock = stockQuery(msg.name);
