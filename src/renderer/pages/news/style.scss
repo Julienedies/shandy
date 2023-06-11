@@ -1,31 +1,81 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0);
+  border: solid 1px blue;
+}
+
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   color: #fff;
-  background: rgba(0, 0, 0, 0);
-  border:solid 1px blue;
   font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
 
-.warn {
-  animation: warn 0.5s 2 ease-in-out;
+
+#cox {
+  height: 10000px;
 }
 
-@keyframes warn {
+#warn {
+  position: fixed;
+  top: 0;
+  left: 20%;
+  right: 30%;
+  padding: 0 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border: solid 0px greenyellow;
+  color: greenyellow;
+  font-size: 20px;
+  transition: all .9ms ease-in-out;
+
+  &.active {
+    z-index: 4;
+    top: 16%;
+    left: 50%;
+  }
+}
+
+#news {
+  position: fixed;
+  top: 0;
+  left: 16%;
+  right: 17%;
+  padding: 2px 16px;
+  height: 1.8em;
+  overflow: hidden;
+  border: solid 1px blue;
+  background: rgba(0, 0, 0, 1);
+  color: yellow;
+  font-size: 20px;
+
+  &.active {
+    top: 1135px;
+    left: 23%;
+    right: 24%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: solid 1px greenyellow;
+    height: 4em;
+  }
+}
+
+
+.blink {
+  animation: blink 0.7s 6 ease-in-out;
+}
+.blink2 {
+  animation: blink 0.7s infinite ease-in-out;
+}
+
+@keyframes blink {
   1% {
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
   }
   100% {
-    background: rgba(255, 255, 0, 1);
+    background: rgba(255, 255, 0, 0.8);
     color: #000;
   }
-}
-
-#msg {
-  padding: 4px 10px 4px 80px;
-  color: blue;
-  background: rgba(255, 255, 255, 1);
-  font-size: 18px;
 }

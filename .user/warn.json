@@ -38,7 +38,8 @@
 		"content": "为何我总是错过大航情？\n为何我总是错过当前龙头？",
 		"repeat": 3,
 		"type": "interval",
-		"timestamp": 1607080778750
+		"timestamp": 1607080778750,
+		"disable": false
 	},
 	{
 		"name": "",

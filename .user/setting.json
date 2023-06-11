@@ -5,7 +5,7 @@
 		"bounds": {
 			"x": 420,
 			"y": 100,
-			"width": 1515,
+			"width": 1517,
 			"height": 1047
 		},
 		"fetchSources": [
@@ -23,15 +23,15 @@
 	"warn": {
 		"randomBgImgDir": "",
 		"bounds": {
-			"x": 2552,
-			"y": -296,
-			"width": 3088,
-			"height": 1704
+			"x": 2187,
+			"y": -933,
+			"width": 3856,
+			"height": 2136
 		}
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2023-02",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2023-06",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -45,6 +45,14 @@
 			"height": 36
 		},
 		"history": [
+			"E:\\dev\\simg\\目标行情\\2023-06",
+			"E:\\dev\\simg\\交易记录\\2306",
+			"E:\\dev\\simg\\交易记录\\2304",
+			"E:\\dev\\simg\\交易记录\\2302",
+			"E:\\dev\\simg\\交易记录\\2301",
+			"E:\\dev\\simg\\目标行情\\2023-05",
+			"E:\\dev\\simg\\目标行情\\2023-03",
+			"E:\\dev\\simg\\目标行情\\2023-04",
 			"E:\\dev\\simg\\目标行情\\2023-01",
 			"E:\\dev\\simg\\目标行情\\2023-02",
 			"E:\\dev\\simg\\目标行情\\2022-12",
@@ -171,26 +179,26 @@
 	},
 	"news": {
 		"bounds": {
-			"x": 3102,
-			"y": 179,
-			"width": 982,
-			"height": 111
+			"x": 2195,
+			"y": -925,
+			"width": 3840,
+			"height": 2120
 		}
 	},
 	"reminder": {
 		"bounds": {
-			"x": 2551,
-			"y": -297,
-			"width": 3090,
-			"height": 1706
+			"x": 2183,
+			"y": -937,
+			"width": 3864,
+			"height": 2144
 		}
 	},
 	"setting": {
 		"bounds": {
-			"x": 250,
+			"x": 249,
 			"y": 104,
-			"width": 1028,
-			"height": 607
+			"width": 1033,
+			"height": 610
 		}
 	},
 	"prompt": {

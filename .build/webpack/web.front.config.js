@@ -51,11 +51,12 @@ const plugins = [
     new webpack.DefinePlugin({
         'process.env.DEV': JSON.stringify(!isPro),
     }),
-    //new webpack.NoEmitOnErrorsPlugin(),  // 有错误的话就不输出编译文件
     new ManifestPlugin(),
-    new CleanPlugin([`dist/web`], {
-        root: projectRoot
-    })
+    //new webpack.NoEmitOnErrorsPlugin(),  // 有错误的话就不输出编译文件
+    // 清除上次生成的文件
+    // new CleanPlugin([`dist/web`], {
+    //     root: projectRoot
+    // })
 ]
 
 const devServerPort = 8090

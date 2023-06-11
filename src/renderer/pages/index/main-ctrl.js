@@ -162,16 +162,21 @@ brick.reg('mainCtrl', function (scope) {
                 frame: false,
                 hasShadow: false,
                 alwaysOnTop: true,
+                simpleFullscreen: true,
+                fullscreen: true,
                 onClose: () => {
                     delete scope.newsWin;
                 }
             }
             newsWin = scope.newsWin = new Win(opt);
+            newsWin.maximize();
+            //newsWin.setFullScreen(true);
+            newsWin.win.setIgnoreMouseEvents(true);
             newsWin.win.webContents.on('did-finish-load', function () {
                 newsWin.win.webContents.send('id', newsWin.win.id);
             });
             setTimeout(() => {
-                newsWin.win.setIgnoreMouseEvents(true);
+                //newsWin.win.setIgnoreMouseEvents(true);
             }, 1000 * 60 * 1.1);
         }
     };
@@ -191,9 +196,9 @@ brick.reg('mainCtrl', function (scope) {
                 x: 2150,
                 y: 220,
                 ...getBounds(name),
-                //transparent: true,
-                //titleBarStyle: 'hidden',
-                //frame: false,
+                transparent: true,
+                titleBarStyle: 'hidden',
+                frame: false,
                 hasShadow: false,
                 alwaysOnTop: true,
                 onClose () {

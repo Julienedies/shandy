@@ -15,13 +15,15 @@ import _ from 'lodash'
 import ocr from '../../../libs/baidu-ocr'
 import stockQuery from '../../../libs/stock-query'
 
-const viewerDbFactory = jsonDb('viewer')
 import ju from '../../../libs/jodb-user'
 import jsonDb from '../../../libs/json-jo'
 
 const nativeImage = electron.nativeImage;
-
+const viewerDbFactory = jsonDb('viewer');
+const imagesDbFactory = jsonDb('images');
 const viewerJsonDb = ju('viewer');
+
+// images.json 保存着个股图片的附加信息：股票代码、图片时间戳、图片日期，在viewer页面里主要起缓存作用，不用每次都通过图片名称对其解析代码和日期
 const imagesJsonDb = ju('images', {});
 
 export default {
@@ -42,6 +44,7 @@ export default {
             })
         }*/
 
+        // 首先尝试使用图片目录缓存
         //console.log(this.getDirKey(dir));
         let key = this.getDirKey(dir);
         if (conf.isReverse === false) {
@@ -79,6 +82,11 @@ export default {
         });
     },
 
+    /**
+     * 把文件目录路径转成一个字符串，用于缓存数据的文件名
+     * @param dirPath
+     * @returns {string}
+     */
     getDirKey: function (dirPath) {
         console.log(dirPath);
         let arr = dirPath.split(/[\\/]+/img);
@@ -88,12 +96,20 @@ export default {
         //let key = dir.replace(/[/\s.\\:]+/img, '_');
     },
 
-    // 获取图片额外数据
+    /**
+     * 获取缓存的图片额外数据（日期、时间戳），如果没有缓存，则首次生成
+     * @param arr  图片对象数据
+     * @param dir  图片目录
+     * @returns {*}
+     */
     supplement: function (arr, dir = '') {
+        // 使用局部目录imagesJsonDb 代替全局 imagesJsonDb，解决文件大小问题
+        let imagesJsonDb = imagesDbFactory(this.getDirKey(dir));
+
         return arr.map(f => {
-            // 先尝试读取缓存
+            // 先尝试从缓存images读取
             let key = this.getKey(f);
-            let item = imagesJsonDb.get(f);
+            let item = imagesJsonDb.get(key);
             if (item && item.c && item.d) return item;
 
             let fullPath = path.join(dir, f);
@@ -125,7 +141,7 @@ export default {
     },
 
     /**
-     * 单个图片名称，不包含路径
+     * 根据图片路径，生成一个只包含图片名称的字符串，作为存储数据的键
      * @param imgPath
      * @returns {*}
      */
@@ -135,6 +151,12 @@ export default {
         return imgPath.split('/').pop().replace(/\s+|\./img, '_').replace(/_png$/, '');
     },
 
+    /**
+     * 图片排序
+     * @param arr
+     * @param isReverse
+     * @returns {*[]}
+     */
     sort: function (arr, isReverse=true) {
 
         arr = this.supplement(arr);
@@ -145,6 +167,7 @@ export default {
     },
 
     /**
+     * 图片排序
      * @param images  {Array} imgObjArr 图片对象数组
      * @param isReverse [Bool] 是否反转排序
      * @returns {Array} imgObjArr
