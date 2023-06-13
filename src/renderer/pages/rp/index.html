@@ -91,7 +91,7 @@
                                         <span class="tag is-small" ic-click="edit:{{ v.id }}">修改</span>
                                         <span class="tag is-small" ic-click="plus:{{ v.id }}">加权</span>
                                         <!--<span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>-->
-                                        <span ic-class="tag is-small {{ v.re==='true'?'is-primary':'' }}" ic-click="re:{{ v.id }}">Re</span>
+                                        <span ic-class="tag is-small {{ v.re==='true' ? 'is-primary':'' }}" ic-click="re:{{ v.id }}">Re</span>
                                         <span class="tag is-small"
                                               ic-ajax
                                               ic-submit-method="delete"
@@ -215,7 +215,7 @@
                     </div>
 
                     <div class="field has-addons">
-                        <div class="control" style="width:64%;">
+                        <div class="control" style="width:60%;">
                             <button class="button is-primary"
                                     style="width:300px;"
                                     ic-form-submit
@@ -227,7 +227,7 @@
                                 重置
                             </button>
                             <button class="button" ic-click="cancel" style="width:100px;">取消</button>
-                            <button class="button" ic-view-to="todoList" style="width:220px;">
+                            <button class="button" ic-view-to="todoList" style="width:200px;">
                                 返回
                             </button>
                         </div>
@@ -252,9 +252,14 @@
                                 </select>
                             </p>
                         </div>
-                        <div class="control" style="width:100px;"></div>
+                        <div class="control" style="width:60px;"></div>
                         <div class="control">
-
+                            <label class="checkbox">
+                                <input type="checkbox" name="re" ic-has-checked="model.re==='true'" ic-form-field="re" value="true">
+                                is Re <!--  onclick="this.value=this.checked ? 'true':'false';" brick form指令里，checked选中，则获取value值，否则为''-->
+                            </label>
+                        </div>
+                        <div class="control">
                         </div>
                     </div>
 

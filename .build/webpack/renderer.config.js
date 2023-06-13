@@ -54,9 +54,9 @@ const plugins = [
     }),
     new webpack.NoEmitOnErrorsPlugin(),
     new ManifestPlugin(),
-    new CleanPlugin([`dist/electron`], {
+    /*new CleanPlugin([`dist/electron`], {
         root: projectRoot
-    })
+    })*/
 ]
 
 

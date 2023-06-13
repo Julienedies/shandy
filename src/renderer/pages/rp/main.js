@@ -87,7 +87,7 @@ brick.reg('todoListCtrl', function (scope) {
         if (filterByType) {
             if(filterByType === 'Re') {
                 rpList = rpList.filter( (v, i)=> {
-                    return v.re;
+                    return v.re === 'true';
                 });
             }else{
                 rpList = mapByType[filterByType];
@@ -230,7 +230,7 @@ brick.reg('todoListCtrl', function (scope) {
     // re
     scope.re = function (e, id) {
         let item = listManager.get(id);
-        item.re = !!(item.re);
+        item.re = item.re === 'true' ? 'false': 'true';
         $.post('/stock/rp', item).done((data) => {
             $.icMsg(data && data.length);
             setList(data);
