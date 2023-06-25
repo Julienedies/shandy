@@ -98,8 +98,8 @@
 		"tag": "无改变",
 		"level": "1000",
 		"title": "",
-		"promptTimes": 2,
-		"prevPromptTime": 1687438925607
+		"promptTimes": 4,
+		"prevPromptTime": 1687508843475
 	},
 	{
 		"name": "",
@@ -131,8 +131,8 @@
 		"singleWindow": "",
 		"level": 980,
 		"title": "为何我总是临盘犹豫，手足无措，错过最好的交易机会？",
-		"promptTimes": 3,
-		"prevPromptTime": 1687447025668
+		"promptTimes": 4,
+		"prevPromptTime": 1687511542550
 	},
 	{
 		"name": "",
@@ -148,8 +148,8 @@
 		"level": 980,
 		"title": "为什么我总是错过大行情？为何所有的龙头我都没有参与？",
 		"tag": "错过大行情和龙头",
-		"promptTimes": 1,
-		"prevPromptTime": 1687444325324
+		"promptTimes": 3,
+		"prevPromptTime": 1687519642449
 	},
 	{
 		"type": "错误",
@@ -182,8 +182,8 @@
 		"level": "965",
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"tag": "错过大行情和龙头",
-		"promptTimes": 1,
-		"prevPromptTime": 1687335508497
+		"promptTimes": 4,
+		"prevPromptTime": 1687526343265
 	},
 	{
 		"type": "错误",
@@ -199,8 +199,8 @@
 		"timestamp": 1658544247850,
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
-		"promptTimes": 1,
-		"prevPromptTime": 1687338209403
+		"promptTimes": 2,
+		"prevPromptTime": 1687493223887
 	},
 	{
 		"name": "",
@@ -216,8 +216,8 @@
 		"level": "955",
 		"title": "我的交易系统是什么？我要捕捉的目标行情是什么？",
 		"tag": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1687340907984
+		"promptTimes": 4,
+		"prevPromptTime": 1687534444310
 	},
 	{
 		"name": "",
@@ -233,8 +233,8 @@
 		"level": "950",
 		"title": "我以什么做为判断锚点？为何我的预判总是错误？",
 		"tag": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1687343609321
+		"promptTimes": 2,
+		"prevPromptTime": 1687531740402
 	},
 	{
 		"name": "",
