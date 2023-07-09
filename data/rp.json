@@ -1,5 +1,18 @@
 [
 	{
+		"title": "我对于趋势上涨的票不知道如何参与？",
+		"id": "id_1688861807247_6199",
+		"type": "question",
+		"caution": "",
+		"comment": "中际旭创、万兴科技、昆仑万维、润和软件、",
+		"level": "800",
+		"role": "0",
+		"re": "true",
+		"content": "",
+		"tags": [],
+		"timestamp": 1688861807247
+	},
+	{
 		"title": "没有信息优势，不知道背后的消息逻辑。即便知道消息，也无法据此消息进行判断操作，还是要根据市场走势，跟随；",
 		"id": "id_1687678444271_9093",
 		"type": "question",
@@ -119,7 +132,7 @@
 		"type": "question",
 		"caution": "",
 		"comment": "中科曙光、寒武纪、剑桥科技；",
-		"level": "752",
+		"level": "852",
 		"role": "0",
 		"content": "",
 		"timestamp": "1682038336268",
@@ -848,7 +861,7 @@
 		"type": "question",
 		"caution": "",
 		"comment": "加了自选，却没有明确的介入条件；",
-		"level": "1",
+		"level": "800",
 		"role": "0",
 		"content": "",
 		"tags": [],

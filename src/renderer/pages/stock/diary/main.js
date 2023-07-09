@@ -335,7 +335,7 @@ brick.reg('setDiaryCtrl', function () {
                 height: 210,
             });
 
-            $editor.froalaEditor('html.set', model.diary.text || '');
+            $editor.froalaEditor('html.set', model.diary.text || '<p>大局观：</p><p><br></p><p>主流热点龙头：</p><p><br></p><p>预案应对：</p>');
 
             // 开启全屏
             //$editor.froalaEditor('fullscreen.isActive');
