@@ -5,8 +5,8 @@
 		"bounds": {
 			"x": 420,
 			"y": 100,
-			"width": 1517,
-			"height": 1047
+			"width": 1519,
+			"height": 1048
 		},
 		"fetchSources": [
 			"ths_new",
@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2023-06",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2021-05",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -251,10 +251,10 @@
 	},
 	"tags": {
 		"bounds": {
-			"x": 2187,
-			"y": -933,
-			"width": 3856,
-			"height": 2136
+			"x": -7,
+			"y": -7,
+			"width": 2209,
+			"height": 1209
 		}
 	},
 	"mistake": {
