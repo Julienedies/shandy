@@ -46,7 +46,16 @@
                     <div class="columns">
                         <div class="column is-10">
                             <header style="padding-bottom: 0.5rem;">
-                                <a class="title is-5" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }}</a>
+                                <h3>
+                                    <a class="title is-5" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }} </a>
+                                    <sup>{{ v && v['示例图片'].length }}</sup>
+                                    <button class="button"
+                                            ic-ajax
+                                            ic-submit-method="get"
+                                            ic-submit-action="/viewer/refresh?id={{ v.id }}"
+                                            ic-submit-on-done="onRefreshed">刷新</button>
+
+                                </h3>
                                 <span class="tag" ic-if="Array.isArray(v['交易系统逻辑'])" ic-for="j,o in v['交易系统逻辑']">
                                     {{ o }}
                                 </span>

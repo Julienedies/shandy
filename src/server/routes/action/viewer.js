@@ -33,7 +33,8 @@ export default {
     },
 
     refresh (req, res) {
-        viewerMap.refresh();
+        let id = req.params.id;
+        viewerMap.refresh(id);
         res.json({msg: 'ok'});
     },
 

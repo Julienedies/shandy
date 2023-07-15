@@ -5,10 +5,13 @@
 
 import moment from 'moment'
 import _ from 'lodash'
+import jsonDb from '../../libs/json-jo'
 import userJodb from '../../libs/user-jodb'
 import imagesHelper from '../../renderer/pages/viewer/helper'
 import ju from '../../libs/jodb-user'
-import del from 'del'
+
+
+const viewerMapDbFactory = jsonDb('viewerMap');
 
 
 /**
@@ -40,23 +43,22 @@ ViewerMap.instance = {
         return this.refresh();
     },
     // 强制更新
-    refresh: function () {
+    refresh: function (id) {
         let VIEWER_MAP = ViewerMap.VIEWER_MAP = {};
         let VIEWER_MAP2 = {};
         let viewerMapJsonDb = ju('viewerMap', {});
         let viewerJodb = userJodb('viewer');
 
-        const k = 'k_';
+        const KPR = 'k_';
 
-        console.log('refresh', +new Date);
-
+        // 遍历viewer.json，生成以tags Id 和system Id 为key的map
         viewerJodb.get().forEach((item, index) => {
             let img = item.img;
             let system = item.system;
             let tags = item.tags;
 
             let f = (id, i) => {
-                id = `${ k }${ id }`;
+                id = `${ KPR }${ id }`;
                 let arr = VIEWER_MAP2[id] = VIEWER_MAP2[id] || [];
                 arr.push(img);
             };
@@ -65,18 +67,46 @@ ViewerMap.instance = {
             tags && tags.forEach(f);
         });
 
+        //console.log('以上代码不会造成内存溢出',VIEWER_MAP2);
+        let q = 0;
         for (let i in VIEWER_MAP2) {
-            //if (['k_2087414', 'k_3589400'].includes(i)) break;
             let arr = VIEWER_MAP2[i];
-            try {
-                //i = i.replace(k, '');
-                console.log(i, arr.length);
+
+            //if (['k_3312753', 'k_1305484', 'k_2055992', k_6734208].includes(i)) break;
+            console.log(q++, '---', i, '---',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                arr.length, '---', arr[0]);
+            
+            if (['k_3312753'].includes(i) || 1) {
                 VIEWER_MAP[i] = imagesHelper.sort(arr, true);
-                delete VIEWER_MAP2[i];
-            } catch (e) {
-                console.error(i, e);
+            } else {
+                VIEWER_MAP[i] = arr;
             }
+            delete VIEWER_MAP2[i];
         }
+
         viewerMapJsonDb.init(VIEWER_MAP);
         return VIEWER_MAP;
     }

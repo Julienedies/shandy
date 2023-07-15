@@ -15,8 +15,8 @@ import setting from '../../../libs/setting'
 
 //const voiceWarnText = setting.get('voiceWarnText') || {};
 const voiceWarnText = {
-    'daban': '无系统买入',
-    'buy': '无系统买入',
+    'daban': '无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；',
+    'buy': '无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；',
     'sell': '卖飞',
 }
 
@@ -85,7 +85,7 @@ socket.on('warn', (info) => {
 
     setTimeout(function () {
         $warn.removeClass(activeCla);
-    }, 1000 * 14);
+    }, 1000 * 4.5);
 
     voice(text);
 

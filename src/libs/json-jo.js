@@ -18,6 +18,10 @@ export default function (name) {
             return (name, initData) => {
                 return jo(path.resolve(config.USER_DIR, `./viewer/${ name }.json`), initData)
             }
+        case 'viewerMap':
+            return (name, initData) => {
+                return jo(path.resolve(config.USER_DIR, `./viewerMap/${ name }.json`), initData)
+            }
         case 'images':
             return (name, initData) => {
                 return jo(path.resolve(config.USER_DIR, `./images/${ name }.json`), initData)

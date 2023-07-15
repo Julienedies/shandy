@@ -91,7 +91,7 @@ export default function (app) {
     app.delete('/stock/memo/:id', memo.del)
     app.get('/stock/memo/focus/:id', memo.focus)
 
-    app.get('/viewer/refresh', viewer.refresh)
+    app.get('/viewer/refresh/:id?', viewer.refresh)
     app.get('/stock/viewer/:id?', viewer.get)
     app.post('/stock/viewer', viewer.post)
     app.delete('/stock/viewer/:id', viewer.del)

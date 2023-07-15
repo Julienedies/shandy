@@ -12,7 +12,7 @@ export default function () {
 z-index:10001;
 position:fixed;
 bottom:10px;
-right:30%;
+right:50%;
 width:36px;
 height:36px;
 background-color:rgba(0,0,0,0.5);

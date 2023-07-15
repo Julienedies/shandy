@@ -24,7 +24,7 @@ const imagesDbFactory = jsonDb('images');
 const viewerJsonDb = ju('viewer');
 
 // images.json 保存着个股图片的附加信息：股票代码、图片时间戳、图片日期，在viewer页面里主要起缓存作用，不用每次都通过图片名称对其解析代码和日期
-const imagesJsonDb = ju('images', {});
+const globalImagesJsonDb = ju('images', {});
 
 export default {
     /**
@@ -92,25 +92,30 @@ export default {
         let arr = dirPath.split(/[\\/]+/img);
         let date = arr.pop();
         let name = arr.pop();
-        return `${ name }_${ date }`;
+        if(name && date){
+            return `${ name }_${ date }`;
+        }else{
+            throw new Error(`no result for imageHelper.getDirKey => ${dirPath}`);
+        }
         //let key = dir.replace(/[/\s.\\:]+/img, '_');
     },
 
     /**
      * 获取缓存的图片额外数据（日期、时间戳），如果没有缓存，则首次生成
-     * @param arr  图片对象数据
-     * @param dir  图片目录
-     * @returns {*}
+     * @param arr  图片对象数据 必选
+     * @param dir  图片目录 可选
+     * @returns {Array}
      */
     supplement: function (arr, dir = '') {
-        // 使用局部目录imagesJsonDb 代替全局 imagesJsonDb，解决文件大小问题
-        let imagesJsonDb = imagesDbFactory(this.getDirKey(dir));
+        // 使用局部目录imagesJsonDb 代替全局 globalImagesJsonDb，解决文件大小问题
+        let imagesJsonDb = dir ? imagesDbFactory(this.getDirKey(dir)) : globalImagesJsonDb;
 
         return arr.map(f => {
             // 先尝试从缓存images读取
-            let key = this.getKey(f);
-            let item = imagesJsonDb.get(key);
-            if (item && item.c && item.d) return item;
+            let item;
+            /*let key = this.getKey(f);
+            item = imagesJsonDb.get(key);
+            if (item && item.c && item.d) return item;*/
 
             let fullPath = path.join(dir, f);
             let arr = f.match(/\d{6}(?=\.png$)/) || [];
@@ -122,10 +127,8 @@ export default {
             let m = moment(arr2[0], "YYYY-MM-DD Ah.m.s");
             item = {f: fullPath, c: +m, d: arr2[1], code};
             // 保存到缓存
-            imagesJsonDb.set(key, item);
-            //console.log(item);
+            //imagesJsonDb.set(key, item);
             return item;
-            //return {f: fullPath, c: +m, d: arr2[1], code};
         });
     },
 
@@ -136,7 +139,7 @@ export default {
         let that = this;
         viewerJsonDb.each((item) => {
             let key = that.getKey(item.img);
-            imagesJsonDb.set(key, item);
+            globalImagesJsonDb.set(key, item);
         });
     },
 
@@ -158,8 +161,8 @@ export default {
      * @returns {*[]}
      */
     sort: function (arr, isReverse=true) {
-
         arr = this.supplement(arr);
+        console.log('#####################');
         arr = this._sort(arr, isReverse);
         return arr.map((item, i) => {
             return item.f;
@@ -294,6 +297,31 @@ export default {
         // 如果是单个图片路径字符串，转为数组
         if (!Array.isArray(images)) {
             images = [images]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         (function fn (arr) {

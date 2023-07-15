@@ -1,5 +1,9 @@
 @import "../../css/basic/0.7/basic.base.css";
 
+body,html{
+  font-size:18px!important;
+}
+
 [ic-viewer-popup] {
   z-index: 3000 !important;
 }

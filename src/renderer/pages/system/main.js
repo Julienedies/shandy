@@ -102,6 +102,11 @@ brick.reg('systemCtrl', function () {
         $(this).closest('li').remove();
     };
 
+    // 刷新标签图片列表回调
+    scope.onRefreshed = function (data) {
+        alert(data);
+    };
+
     scope.on(C.ON_SET_SYSTEM_DONE, function (e, msg) {
         console.info('ON_SET_SYSTEM_DONE =>', msg);
         scope.onGetSystemDone(msg);
@@ -231,7 +236,6 @@ brick.reg('setSystemCtrl', function () {
     };
 
 });
-
 
 
 brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);
