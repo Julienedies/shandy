@@ -115,7 +115,7 @@ ipcRenderer.on('set_stock_c', function (event, stock) {
             url: `stock_c.html?code=${ stock.code }&edit=1`,
             onClose: function () {
                 console.info('on close!');
-                tdx.active();
+                //tdx.active();
             }
         })
     } else {

@@ -1,5 +1,11 @@
 [
 	{
+		"text": "const webview = document.getElementById('foo')\nwebview.openDevTools();",
+		"type": "",
+		"id": "id_1689518050862_0707",
+		"timestamp": 1689518050862
+	},
+	{
 		"text": "菲茨杰拉德的那句名言，“检验一流智力的标准，就是看你能不能在头脑中同时存在两种相反的想法，还能维持正常行事的能力”",
 		"type": "",
 		"id": "id_1687709158923_3974",

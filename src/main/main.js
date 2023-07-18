@@ -3,7 +3,7 @@
  * Created by j on 18/5/21.
  */
 
-import stockQuery from '../libs/stock-query'
+
 
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
 
@@ -11,6 +11,8 @@ import path from 'path'
 import electron from 'electron'
 
 import config from '../libs/config'
+
+import stockQuery from '../libs/stock-query'
 
 import ac from '../libs/ac'
 import server from '../server/index'
