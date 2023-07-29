@@ -36,6 +36,7 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.get('/set_node_modules_path.js', (req, res) => {
     res.send(`
         try{
+            window.nodeintegration = true;
             require('module').globalPaths.push('${ path.resolve(__dirname, '../../node_modules') }');
             require('debug-menu').install();
         }catch(err){

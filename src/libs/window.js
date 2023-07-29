@@ -10,6 +10,14 @@ import config from './config.js'
 
 const BrowserWindow = electron.remote.BrowserWindow;
 
+function getBounds (name) {
+    if(typeof name === 'string') {
+        return setting.refresh().get(`${ name }.bounds`) || {};
+    }else{
+        return {};
+    }
+}
+
 
 class Win {
     static resolve (url) {
@@ -28,12 +36,13 @@ class Win {
 
     constructor (opt) {
         if (!this instanceof Win) return new Win(opt);
+        name = opt.name;
 
         this.win = null;
 
         this.opt = {
-            x: 0,
-            y: 0,
+            // x: 0,
+            // y: 0,
             webPreferences: {
                 webSecurity: false,
                 nodeIntegration: true, // 赋予此窗口页面中的JavaScript访问Node.js环境的能力
@@ -42,7 +51,8 @@ class Win {
                 // 在electron 10.0.0之后，remote模块默认关闭, 不推荐使用
                 // 必须手动设置webPreferences中的enableRemoteModule为true之后才能使用
                 enableRemoteModule: true,   // 打开remote模块
-            }
+            },
+            ...getBounds(name)
         };
 
         if (typeof opt == 'string') {
@@ -50,6 +60,8 @@ class Win {
         }
 
         Object.assign(this.opt, opt);
+
+        console.log(this.opt);
 
         this.create();
     }

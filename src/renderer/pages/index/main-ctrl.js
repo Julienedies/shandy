@@ -30,6 +30,8 @@ import { COLORS_BACKGROUND } from '../../js/constants'
 import viewsModel from './viewsModel'
 
 const {ipcRenderer} = electron;
+//const {WebView} = electron.remote;
+
 let mainWindowId;
 
 ipcRenderer.on('windowId', function (event, windowId) {
@@ -63,7 +65,13 @@ brick.reg('mainCtrl', function (scope) {
             viewsModel.active(item);
         } else {
             if (/.+\.html$/img.test(item.url)) {
-                item.$webView = $(`<webview src="${ item.url }" nodeintegration style="height: 100%; "></webview>`).appendTo($views);
+                // disablewebsecurity allowRunningInsecureContent contextIsolation="no"
+                // let webview = new webviewTag({
+                //     src: item.url,
+                //     nodeintegration: true
+                // });
+                // item.$webView = $(webview).appendTo($views);
+                item.$webView = $(`<webview id="sys" src="${ item.url }" nodeintegration  enableRemoteModule disablewebsecurity contextIsolation="false" webSecurity="false" style="height: 100%; "></webview>`).appendTo($views);
             } else {
                 item.$webView = $(`${ item.url }`).appendTo($views);
             }
@@ -110,6 +118,7 @@ brick.reg('mainCtrl', function (scope) {
 
     function getBounds (name) {
         return setting.get(`${ name }.bounds`) || {};
+        //return {};
     }
 
     this.openByWindow = function (e, url) {
@@ -131,8 +140,8 @@ brick.reg('mainCtrl', function (scope) {
             scope[windowKey] = new Win({
                 name,
                 url,
-                x: 160,
-                y: 80,
+                // x: 160,
+                // y: 80,
                 ...getBounds(name),
                 onClose: () => {
                     delete scope[windowKey];

@@ -96,23 +96,26 @@ ipcRenderer.on('view_in_ftnn', function (event, msg) {
 ipcRenderer.on('set_stock_c', function (event, stock) {
     if (stock.code) {
         new Win({
-            width: 1200,
-            height: 700,
-            x: 1800,
-            y: 300,
+            name:'stock_c',
+            // width: 1200,
+            // height: 800,
+            // x: 2800,
+            // y: 400,
+            alwaysOnTop: true,
             webPreferences: {
                 // nodeIntegration: false  // 远程页面窗口不整合node,  避免jquery等外部类库因为require变量错判执行环境,导致加载错误.
             },
-            url: `stock_c.html?code=${ stock.code }&edit=1`,
+            url: `web/stock_c.html?code=${ stock.code }&edit=1`,
             onClose: function () {
                 console.info('on close!');
-                tdx.active();
+                //tdx.active();
             }
         })
     } else {
-        captureOcr(stock => {
-
-        });
+        console.log(`找不到${stock.code}`);
+        // captureOcr(stock => {
+        //
+        // });
     }
 });
 
@@ -126,6 +129,7 @@ ipcRenderer.on('view_stock_info', function (event, arg) {
         let stock = stockQuery(arg.name);
         view_stock(stock.code);
     } else {
+        console.log(`找不到${arg.name}`);
         captureOcr(stock => {
             view_stock(stock.code);
         });

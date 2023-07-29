@@ -10,6 +10,8 @@ import electron from 'electron'
 
 import config from '../libs/config'
 
+import stockQuery from '../libs/stock-query'
+
 import ac from '../libs/ac'
 import server from '../server/index'
 
@@ -35,6 +37,7 @@ function createWindow () {
         titleBarStyle: 'hidden',
         title: app.getName(),
         webPreferences: {
+            webviewTag: true,
             webSecurity: false,
             nodeIntegration: true, // 赋予此窗口页面中的JavaScript访问Node.js环境的能力
             // 官网似乎说是默认false，但是这里必须设置contextIsolation
@@ -122,10 +125,16 @@ function ready () {
     /***************************************************************************************************************************/
     /***************************************************************************************************************************/
 
-    // 打开浏览器查看个股资料
+    // 查看个股信息: 鼠标手势 =》 http =>  查看个股信息
     server.on('viewStock', function (msg) {
         console.log('打板封单监控', msg);
         mainWindow.webContents.send('view_stock_info', msg);
+    });
+
+    // 编辑个股信息
+    server.on('set_stock_c', function (msg) {
+        let stock = stockQuery(msg.name);
+        mainWindow.webContents.send('set_stock_c', stock);
     });
 
     // 打板封单监控: 通过鼠标手势向server发送打板封单监控
