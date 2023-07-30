@@ -1,5 +1,31 @@
 [
 	{
+		"title": "",
+		"id": "id_1689770399934_7730",
+		"type": "drive",
+		"caution": "",
+		"comment": "",
+		"level": "1",
+		"role": "0",
+		"re": "",
+		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 18.5443%;\">国家政策</td><td style=\"width: 81.3825%;\">新能源政策、一带一路、基建保增长（）</td></tr><tr><td style=\"width: 18.5443%;\">行业产业变化</td><td style=\"width: 81.3825%;\">新能源（光伏、电动车、储能）</td></tr><tr><td style=\"width: 18.5443%;\">个股基本面变化</td><td style=\"width: 81.3825%;\"><br></td></tr></tbody></table>",
+		"tags": [],
+		"timestamp": 1689770399934
+	},
+	{
+		"title": "我没有明确的判断锚点，不知道市场资金的行为逻辑，不能预期可能的走势，",
+		"id": "id_1689693052094_8441",
+		"type": "question",
+		"caution": "",
+		"comment": "",
+		"level": "801",
+		"role": "0",
+		"re": "true",
+		"content": "",
+		"tags": [],
+		"timestamp": 1689693052094
+	},
+	{
 		"title": "我对于趋势上涨的票不知道如何参与？",
 		"id": "id_1688861807247_6199",
 		"type": "question",

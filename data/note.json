@@ -1,5 +1,17 @@
 [
 	{
+		"text": "在任何一个领域，刻意练习都是造就顶尖人才的方法，也是顶尖人才用来保持领先地位的方法。如果你想成为专业人士，刻意训练自己是绝对必不可少的。",
+		"type": "",
+		"id": "id_1690696039928_7596",
+		"timestamp": 1690696039928
+	},
+	{
+		"text": "Get-ItemProperty HKLM:\\SYSTEM\\CurrentControlSet\\Enum\\HID\\*\\*\\Device` Parameters FlipFlopWheel -EA 0 | ForEach-Object { Set-ItemProperty $_.PSPath FlipFlopWheel 1 }\n\npowerShell以管理员身份执行，用于设置windoiws下滚轮方向和mac一样；",
+		"type": "",
+		"id": "id_1689780802439_9720",
+		"timestamp": 1689780802439
+	},
+	{
 		"text": "const webview = document.getElementById('foo')\nwebview.openDevTools();",
 		"type": "",
 		"id": "id_1689518050862_0707",

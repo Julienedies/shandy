@@ -14,7 +14,7 @@
 		"timestamp": 1661941742710,
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1689643316426
+		"prevPromptTime": 1690504127150
 	},
 	{
 		"name": "",
@@ -47,7 +47,7 @@
 		"title": "每天沉迷于无效的日常交易；依然没有建立明确的交易系统；",
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1689646017839
+		"prevPromptTime": 1690506827029
 	},
 	{
 		"name": "",
@@ -64,7 +64,7 @@
 		"title": "真他妈的恨死自己了，一个人怎么可以这样？每天跟赌博一样，着眼于转债的小波动；",
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1689648717703
+		"prevPromptTime": 1690509527193
 	},
 	{
 		"name": "",
@@ -95,9 +95,7 @@
 		"timestamp": 1610785651586,
 		"tag": "无改变",
 		"level": "1000",
-		"title": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1689656817202
+		"title": ""
 	},
 	{
 		"name": "",
@@ -114,7 +112,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1689659517014
+		"prevPromptTime": 1690517627414
 	},
 	{
 		"name": "",
@@ -130,7 +128,7 @@
 		"level": 980,
 		"title": "为何我总是临盘犹豫，手足无措，错过最好的交易机会？",
 		"promptTimes": 1,
-		"prevPromptTime": 1689662216768
+		"prevPromptTime": 1690523026225
 	},
 	{
 		"name": "",
@@ -162,7 +160,7 @@
 		"duration": 17,
 		"timestamp": 1665225867007,
 		"promptTimes": 2,
-		"prevPromptTime": 1689664916507
+		"prevPromptTime": 1690520327096
 	},
 	{
 		"name": "",
@@ -179,7 +177,7 @@
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 1,
-		"prevPromptTime": 1689667617719
+		"prevPromptTime": 1690528426400
 	},
 	{
 		"type": "错误",
@@ -195,8 +193,8 @@
 		"timestamp": 1658544247850,
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
-		"promptTimes": 1,
-		"prevPromptTime": 1689670316705
+		"promptTimes": 2,
+		"prevPromptTime": 1690531125915
 	},
 	{
 		"name": "",
@@ -213,7 +211,7 @@
 		"title": "我的交易系统是什么？我要捕捉的目标行情是什么？",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1689673017762
+		"prevPromptTime": 1690533827276
 	},
 	{
 		"name": "",
@@ -230,7 +228,7 @@
 		"title": "我以什么做为判断锚点？为何我的预判总是错误？",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1689675716698
+		"prevPromptTime": 1690536526995
 	},
 	{
 		"name": "",
@@ -247,7 +245,7 @@
 		"title": "对市场理解不够，不知道市场参与者的行为逻辑。",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1689678416625
+		"prevPromptTime": 1690539226530
 	},
 	{
 		"name": "",
@@ -264,7 +262,7 @@
 		"level": "900",
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"promptTimes": 1,
-		"prevPromptTime": 1689681116419
+		"prevPromptTime": 1690541926776
 	},
 	{
 		"name": "",
@@ -279,7 +277,9 @@
 		"timestamp": 1655164211606,
 		"level": "865",
 		"title": "思维没有方向，操作没有系统；我每天脑子在想什么？",
-		"tag": "无系统"
+		"tag": "无系统",
+		"promptTimes": 1,
+		"prevPromptTime": 1690544626000
 	},
 	{
 		"name": "",
@@ -294,7 +294,9 @@
 		"timestamp": "1643896099264",
 		"level": "860",
 		"title": "思维没有方向，操作没有系统；每天临盘前脑子完全是空的，被市场牵着鼻子走。",
-		"tag": "无系统"
+		"tag": "无系统",
+		"promptTimes": 1,
+		"prevPromptTime": 1690547326754
 	},
 	{
 		"type": "错误",
@@ -309,7 +311,9 @@
 		"repeat": "2",
 		"interval": "60",
 		"duration": "17",
-		"timestamp": "1681838241354"
+		"timestamp": "1681838241354",
+		"promptTimes": 1,
+		"prevPromptTime": 1690550026828
 	},
 	{
 		"name": "",
@@ -324,7 +328,9 @@
 		"timestamp": 1621658103771,
 		"level": "855",
 		"title": "无系统、无计划，临盘随意交易是我最大的亏损来源。",
-		"tag": "无系统"
+		"tag": "无系统",
+		"promptTimes": 1,
+		"prevPromptTime": 1690552726529
 	},
 	{
 		"name": "",
@@ -339,7 +345,9 @@
 		"timestamp": 1611881119094,
 		"level": "855",
 		"title": "无系统，无计划，临盘犹豫应对差，机会转瞬即逝；",
-		"tag": "无系统"
+		"tag": "无系统",
+		"promptTimes": 1,
+		"prevPromptTime": 1690555425666
 	},
 	{
 		"name": "",
@@ -354,7 +362,9 @@
 		"timestamp": 1625831460227,
 		"level": "840",
 		"title": "永远没有明确的交易计划和准备，没有做盘面的推演和应对。",
-		"tag": "无系统"
+		"tag": "无系统",
+		"promptTimes": 1,
+		"prevPromptTime": 1690558126507
 	},
 	{
 		"type": "错误",
@@ -384,7 +394,9 @@
 		"timestamp": 1618223159947,
 		"level": "837",
 		"title": "永远没有做好市场转强的准备；永远没有做好进攻的准备；总是错过最好的交易机会；",
-		"tag": "无系统"
+		"tag": "无系统",
+		"promptTimes": 1,
+		"prevPromptTime": 1690590817188
 	},
 	{
 		"name": "",
