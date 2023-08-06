@@ -335,13 +335,17 @@ brick.reg('setDiaryCtrl', function () {
                 height: 210,
             });
 
-            $editor.froalaEditor('html.set', model.diary.text || '<p>大局观：</p><p><br></p><p>主流热点龙头：</p><p><br></p><p>预案应对：</p>');
-
-            // 开启全屏
-            //$editor.froalaEditor('fullscreen.isActive');
+            $editor.froalaEditor('html.set', model.diary.text || '<p>#大局观  &nbsp;&nbsp;&nbsp;#市场偏好  &nbsp;&nbsp;&nbsp;#主流热点龙头</p><p><br></p><p></p><p><br></p><p>预案应对：</p>');
 
             // 自动保存输入数据
             $editor.on('froalaEditor.input', _.throttle(saveForm, 2900));
+
+            // 开启全屏
+            //$editor.froalaEditor('fullscreen.isActive');
+            /*setTimeout( () => {
+                let b = $elm.find('#fullscreen-1').click();
+                console.log(b);
+            }, 7900);*/
 
 
 /*            let editor = new FroalaEditor('#editor', {
@@ -365,7 +369,7 @@ brick.reg('setDiaryCtrl', function () {
         isAutoSave = true;
         //$elm.find('[ic-form="setDiary"]').icFormSubmit();
         let text = $editor.froalaEditor('html.get', true);
-        console.log(text.length);
+        console.log(text.length, 'text.length:');
         if (text.length > 14) {
             localStorage.setItem(DIARY_CACHE, text);
         }
