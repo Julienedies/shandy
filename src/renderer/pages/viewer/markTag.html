@@ -1,4 +1,4 @@
-<div class="column is-7" ic-ctrl="viewerMarkTagCtrl" ic-popup="viewerMarkTag">
+<div class="column is-6" ic-ctrl="viewerMarkTagCtrl" ic-popup="viewerMarkTag">
     <div>
         <header class="buttons">
             <button class="button is-primary is-medium"
@@ -24,11 +24,13 @@
             </div>
             <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
                 <div class="tags">
-                    <span class="tag is-primary is-large" ic-for-start="k,arr in model.tags" ic-if-start="k!=='type'">{{k}}</span>
-                    <span class="tag is-medium is-black" ic-for-end ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
-                          ic-has-selected="model.img.tags && model.img.tags.includes(v.id)">
-                        {{v.text}}
-                    </span>
+                    <div ic-for="k,arr in model.tags"> <!-- ic-for-end -start -->
+                        <span class="tag is-primary is-large"  ic-if-start="k!=='type'">{{k}}</span>
+                        <span class="tag is-medium is-black"  ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
+                              ic-has-selected="model.img.tags && model.img.tags.includes(v.id)">
+                            {{v.text}}
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
