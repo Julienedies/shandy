@@ -92,4 +92,12 @@ export default function (scope) {
         }
     };
 
+    scope.toggleWh = function (e) {
+
+        $elm.toggleClass('horizontal');
+
+
+
+    };
+
 }

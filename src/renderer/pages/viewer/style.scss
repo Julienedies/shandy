@@ -7,6 +7,10 @@
 
 [ic-popup="viewerMarkTag"]{
   overflow: hidden!important;
+  &.horizontal{
+    width:71%!important;
+    top:58%!important;
+  }
 }
 
 #viewerAttach p{
