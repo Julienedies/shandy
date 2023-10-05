@@ -34,9 +34,9 @@ export default {
 
     refresh (req, res) {
         //let id = req.params.id;
-        let reverse = req.params.reverse;
-        console.log(typeof reverse);
-        viewerMap.refresh(reverse);
+        let reverse = req.query.reverse;
+        console.log(typeof reverse, req.query);
+        viewerMap.refresh(reverse*1);
         res.json({msg: 'ok'});
     },
 

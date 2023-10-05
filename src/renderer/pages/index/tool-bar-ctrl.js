@@ -75,10 +75,12 @@ brick.reg('toolBarCtrl', function (scope) {
     };
 
     this.refreshViewer = function (e, reverse) {
+        console.log(reverse, typeof reverse);
         let $th = $(this).icSetLoading();
         $.get(`/viewer/refresh?x=${ +new Date }&reverse=${ reverse }`);
         $th.icClearLoading();
     };
+
 
     /*    this.playWarnAudio = function () {
             let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
