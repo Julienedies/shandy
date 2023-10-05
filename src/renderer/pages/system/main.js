@@ -5,6 +5,7 @@
 import './index.html'
 import '../../css/common/common.scss'
 import './style.scss'
+import '../viewer/style.scss'
 
 import _ from 'lodash'
 import $ from 'jquery'

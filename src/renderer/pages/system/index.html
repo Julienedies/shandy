@@ -23,6 +23,13 @@
                         ic-submit-action="/stock/system"
                         ic-submit-on-done="onGetSystemDone">交易系统列表
                 </button>
+                <button class="button is-primary is-small"
+                        id="getSystem3"
+                        ic-ajax="system3"
+                        ic-submit-method="get"
+                        ic-submit-action="/stock/system?reverse=1"
+                        ic-submit-on-done="onGetSystemDone">反转排序
+                </button>
                 <button class="button is-primary is-small" ic-click="addSystem" ic-popup-target="setSystem">新交易系统</button>
             </div>
         </div>

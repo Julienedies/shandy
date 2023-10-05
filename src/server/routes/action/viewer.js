@@ -33,8 +33,10 @@ export default {
     },
 
     refresh (req, res) {
-        let id = req.params.id;
-        viewerMap.refresh(id);
+        //let id = req.params.id;
+        let reverse = req.params.reverse;
+        console.log(typeof reverse);
+        viewerMap.refresh(reverse);
         res.json({msg: 'ok'});
     },
 

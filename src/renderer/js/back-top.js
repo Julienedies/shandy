@@ -11,8 +11,8 @@ export default function () {
     div.style.cssText = `
 z-index:10001;
 position:fixed;
-bottom:10px;
-right:50%;
+bottom:24%;
+right:62%;
 width:94px;
 height:64px;
 background-color:rgba(0,0,0,0.5);

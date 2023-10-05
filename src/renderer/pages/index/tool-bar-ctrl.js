@@ -74,9 +74,9 @@ brick.reg('toolBarCtrl', function (scope) {
         });
     };
 
-    this.refreshViewer = function (e) {
+    this.refreshViewer = function (e, reverse) {
         let $th = $(this).icSetLoading();
-        $.get(`/viewer/refresh?x=${ +new Date }`);
+        $.get(`/viewer/refresh?x=${ +new Date }&reverse=${ reverse }`);
         $th.icClearLoading();
     };
 

@@ -18,16 +18,19 @@ let systemJodb = dob('system', {
 });
 
 
-function getData () {
-    viewerMap.get();
+function getData (reverse) {
+    viewerMap.get(reverse);
     return {system: systemJodb.get2(), tags: tags.convert()};
 }
 
 export default {
 
     get (req, res) {
-        res.json(getData());
+        let reverse = req.params.reverse;
+        //viewerMap.isReverse = reverse;
+        res.json(getData(reverse));
     },
+
 
     post (req, res) {
         let obj = req.body;

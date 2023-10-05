@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2023-06",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2023-09",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -45,6 +45,7 @@
 			"height": 36
 		},
 		"history": [
+			"E:\\dev\\simg\\交易记录\\2309",
 			"E:\\dev\\simg\\目标行情\\2023-09",
 			"E:\\dev\\simg\\交易记录\\2307",
 			"E:\\dev\\simg\\目标行情\\2023-08",

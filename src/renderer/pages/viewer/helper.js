@@ -27,6 +27,7 @@ const viewerJsonDb = ju('viewer');
 const globalImagesJsonDb = ju('images', {});
 
 export default {
+
     /**
      * 获取文件夹里的图片对象数组: imgObjArr
      * @param dir {String|Array} 文件夹路径 或 图片数组
@@ -101,6 +102,28 @@ export default {
     },
 
     /**
+     * 缓存图片信息
+     */
+    cache: function () {
+        let that = this;
+        viewerJsonDb.each((item) => {
+            let key = that.getKey(item.img);
+            globalImagesJsonDb.set(key, item);
+        });
+    },
+
+    /**
+     * 根据图片路径，生成一个只包含图片名称的字符串，作为存储数据的键
+     * @param imgPath
+     * @returns {*}
+     */
+    getKey: function (imgPath) {
+        /* let arr = imgPath.split(/[\]|[/]/img);
+         console.log(imgPath, arr);*/
+        return imgPath.split('/').pop().replace(/\s+|\./img, '_').replace(/_png$/, '');
+    },
+
+    /**
      * 获取缓存的图片额外数据（日期、时间戳），如果没有缓存，则首次生成
      * @param arr  图片对象数据 必选
      * @param dir  图片目录 可选
@@ -113,9 +136,11 @@ export default {
         return arr.map(f => {
             // 先尝试从缓存images读取
             let item;
-            /*let key = this.getKey(f);
-            item = imagesJsonDb.get(key);
-            if (item && item.c && item.d) return item;*/
+
+            // 以下这段从缓存读取数据的代码会在生成viewerMap数据时造成内存溢出
+            // let key = this.getKey(f);
+            // item = imagesJsonDb.get(key);
+            // if (item && item.c && item.d) return item;
 
             let fullPath = path.join(dir, f);
             let arr = f.match(/\d{6}(?=\.png$)/) || [];
@@ -133,36 +158,13 @@ export default {
     },
 
     /**
-     * 缓存图片信息
-     */
-    cache: function () {
-        let that = this;
-        viewerJsonDb.each((item) => {
-            let key = that.getKey(item.img);
-            globalImagesJsonDb.set(key, item);
-        });
-    },
-
-    /**
-     * 根据图片路径，生成一个只包含图片名称的字符串，作为存储数据的键
-     * @param imgPath
-     * @returns {*}
-     */
-    getKey: function (imgPath) {
-       /* let arr = imgPath.split(/[\]|[/]/img);
-        console.log(imgPath, arr);*/
-        return imgPath.split('/').pop().replace(/\s+|\./img, '_').replace(/_png$/, '');
-    },
-
-    /**
      * 图片排序
-     * @param arr
-     * @param isReverse
-     * @returns {*[]}
+     * @param arr 要排序的图片数组
+     * @param isReverse  排序方式，默认为反转排序，即最新排在最前面
+     * @returns {*[]} 返回排序过的数组
      */
     sort: function (arr, isReverse=true) {
         arr = this.supplement(arr);
-        console.log('#####################');
         arr = this._sort(arr, isReverse);
         return arr.map((item, i) => {
             return item.f;
@@ -176,6 +178,7 @@ export default {
      * @returns {Array} imgObjArr
      */
     _sort: function (images, isReverse) {
+        let chunkSize = 8;
         // 先按时间排序
         images.sort((a, b) => {
             let a1 = +moment(a.d);
@@ -188,12 +191,13 @@ export default {
             return o.d;
         });
         //console.log('dateMap', dateMap);
+
         // 获取日期key数组，按照4个4个截取分组, 等于先按时间大致排序
         // [[{d:'2018-09-04'}, {d:'2018-09-05'},{d:'2018-09-06'} ,{d:'2018-09-07'}]]
         let dateKeyArr = _.keys(dateMap);
         //console.log('dateKeyArr', dateKeyArr);
 
-        let dateKeyChunkArr = _.chunk(dateKeyArr, 4);
+        let dateKeyChunkArr = _.chunk(dateKeyArr, chunkSize);
         //console.log('dateKeyChunkArr', dateKeyChunkArr);
 
         let dateMap2 = {};
@@ -208,6 +212,7 @@ export default {
 
         let dateMapArr = _.values(dateMap2);
         //console.log('dateMapArr', dateMapArr);
+
         // 处理相邻日期chunk数组里相同code被分割在两个chunk数组里的情况，移动相同code的imgObj到同一个chunk数组
         _.reduceRight(dateMapArr, function (currentArr, prevArr) {
             //console.log(prevArr, currentArr);
@@ -271,7 +276,7 @@ export default {
     },
 
     /**
-     * 对图片进行剪切
+     * 从图片剪切一小块区域，用于ocr
      * @param imgPath {String} 图片路径
      * @param crop {Object} 剪切区域定义  => {x: 3140, y: 115, width: 310, height: 50}
      * @returns {string} 图片dataUrl
@@ -297,31 +302,6 @@ export default {
         // 如果是单个图片路径字符串，转为数组
         if (!Array.isArray(images)) {
             images = [images]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
         (function fn (arr) {
