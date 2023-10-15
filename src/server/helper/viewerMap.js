@@ -35,7 +35,8 @@ ViewerMap.VIEWER_MAP = {};
 ViewerMap.instance = {
     // 默认使用缓存
     get: function (isReverse) {
-        let f = isReverse ? 'viewerMap_R' : 'viewerMap';
+        let f = isReverse*1===1 ? 'viewerMap_R' : 'viewerMap';
+        console.log(isReverse, f);
         let viewerMapJsonDb = ju(f, {});
         ViewerMap.VIEWER_MAP = viewerMapJsonDb.get();
         return ViewerMap.VIEWER_MAP;
@@ -48,6 +49,7 @@ ViewerMap.instance = {
     // 因为默认排序方式为true， 所以isReverse为undefined时，其实为true，
     refresh: function (reverse) {
         let isReverse = reverse === 0;
+        console.log(isReverse);
         let f = isReverse ? 'viewerMap_R' : 'viewerMap';
         let VIEWER_MAP = ViewerMap.VIEWER_MAP = {};
         let VIEWER_MAP2 = {};
@@ -80,7 +82,7 @@ ViewerMap.instance = {
             //if (['k_3312753', 'k_1305484', 'k_2055992', k_6734208].includes(i)) break;
             //console.log(q++, '---', i, '---',arr.length, '---', arr[0]);
 
-            VIEWER_MAP[i] = imagesHelper.sort(arr, !isReverse);
+            VIEWER_MAP[i] = imagesHelper.sort(arr, !isReverse, 8);
 
             delete VIEWER_MAP2[i];
         }
@@ -90,10 +92,6 @@ ViewerMap.instance = {
         return VIEWER_MAP;
     },
 
-    // 反转排序显示
-    reverse: function () {
-
-    }
 }
 
 

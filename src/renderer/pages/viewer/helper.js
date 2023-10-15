@@ -161,11 +161,12 @@ export default {
      * 图片排序
      * @param arr 要排序的图片数组
      * @param isReverse  排序方式，默认为反转排序，即最新排在最前面
+     * @param chunkSize {Number} 每次排序区块大小，默认为4
      * @returns {*[]} 返回排序过的数组
      */
-    sort: function (arr, isReverse=true) {
+    sort: function (arr, isReverse=true, chunkSize=4) {
         arr = this.supplement(arr);
-        arr = this._sort(arr, isReverse);
+        arr = this._sort(arr, isReverse, chunkSize);
         return arr.map((item, i) => {
             return item.f;
         });
@@ -175,10 +176,11 @@ export default {
      * 图片排序
      * @param images  {Array} imgObjArr 图片对象数组
      * @param isReverse [Bool] 是否反转排序
+     * @param chunkSize {Number} 每次排序区块大小，默认为4
      * @returns {Array} imgObjArr
      */
-    _sort: function (images, isReverse) {
-        let chunkSize = 8;
+    _sort: function (images, isReverse, chunkSize) {
+        chunkSize = chunkSize || 4;
         // 先按时间排序
         images.sort((a, b) => {
             let a1 = +moment(a.d);

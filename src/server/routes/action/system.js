@@ -26,8 +26,7 @@ function getData (reverse) {
 export default {
 
     get (req, res) {
-        let reverse = req.params.reverse;
-        //viewerMap.isReverse = reverse;
+        let reverse = req.query.reverse;
         res.json(getData(reverse));
     },
 

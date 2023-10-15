@@ -1,12 +1,12 @@
 [
 	{
 		"id": "创新药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1695831153957
 	},
 	{
 		"id": "工业",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1695256606380
 	},
 	{
@@ -26,7 +26,7 @@
 	},
 	{
 		"id": "鸿蒙",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1693848903100
 	},
 	{
@@ -35,38 +35,18 @@
 		"timestamp": 1693269885388
 	},
 	{
-		"id": "水处理",
-		"selected": false,
-		"timestamp": 1693269760240
-	},
-	{
-		"id": "环保",
-		"selected": false,
-		"timestamp": 1692635652051
-	},
-	{
-		"id": "金融科技",
-		"selected": false,
-		"timestamp": 1692146456053
-	},
-	{
-		"id": "人民币贬值",
-		"selected": false,
-		"timestamp": 1692146392604
-	},
-	{
 		"id": "SPD",
 		"selected": false,
 		"timestamp": 1691974035411
 	},
 	{
 		"id": "次新",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1691642162355
 	},
 	{
 		"id": "GLP",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1691629220731
 	},
 	{
@@ -80,19 +60,9 @@
 		"timestamp": 1691628103723
 	},
 	{
-		"id": "互联网金融",
-		"selected": false,
-		"timestamp": 1691109558000
-	},
-	{
 		"id": "超导",
 		"selected": false,
 		"timestamp": 1690818256348
-	},
-	{
-		"id": "券商",
-		"selected": false,
-		"timestamp": 1690798466719
 	},
 	{
 		"id": "小鹏",
@@ -103,16 +73,6 @@
 		"id": "城镇化",
 		"selected": false,
 		"timestamp": 1690418564094
-	},
-	{
-		"id": "房地产",
-		"selected": false,
-		"timestamp": 1690418533090
-	},
-	{
-		"id": "PPP",
-		"selected": false,
-		"timestamp": 1690124659015
 	},
 	{
 		"id": "存储芯片",
@@ -130,24 +90,14 @@
 		"timestamp": 1688604445513
 	},
 	{
-		"id": "稀土",
-		"selected": false,
-		"timestamp": 1688604249549
-	},
-	{
 		"id": "无人驾驶",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1688482143101
 	},
 	{
 		"id": "自动驾驶",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1688299643408
-	},
-	{
-		"id": "氢能源",
-		"selected": false,
-		"timestamp": 1687866971774
 	},
 	{
 		"id": "减速器",
@@ -166,7 +116,7 @@
 	},
 	{
 		"id": "高压快充",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1683764136589
 	},
 	{
@@ -216,7 +166,7 @@
 	},
 	{
 		"id": "光刻",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1679244916449
 	},
 	{
@@ -271,7 +221,7 @@
 	},
 	{
 		"id": "机器人",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1674148171248
 	},
 	{
@@ -348,21 +298,6 @@
 		"id": "央企",
 		"selected": false,
 		"timestamp": 1650162678163
-	},
-	{
-		"id": "HIT电池",
-		"selected": false,
-		"timestamp": 1629677335512
-	},
-	{
-		"id": "HJT",
-		"selected": false,
-		"timestamp": 1629672297430
-	},
-	{
-		"id": "储能",
-		"selected": false,
-		"timestamp": 1627573287670
 	},
 	{
 		"id": "芯片",

@@ -169,6 +169,7 @@ ipcRenderer.on('screenCapture', function (event, arg) {
             let rename = imgPath
                 .replace('屏幕快照', stock.name)
                 .replace('(2)', `-${ stock.name }`)
+                .replace(/[*]ST/img, 'ST')
                 .replace(/\.png$/, `-${ stock.code }.png`);
             fs.renameSync(imgPath, rename);
         }
