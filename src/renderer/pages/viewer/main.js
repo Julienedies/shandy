@@ -7,6 +7,7 @@ import 'babel-polyfill'
 import './index.html'
 import '../../css/common/common.scss'
 import './style.scss'
+import './icViewer.scss'
 
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
@@ -39,6 +40,7 @@ const tradeArr = userJo('SEL', []).get();
 
 const viewerJodb = ju('viewer');
 const tagsJodb = jd('tags');
+const systemJodb = jd('system');
 
 window.$ = $;
 window.brick = brick;
@@ -62,9 +64,13 @@ brick.reg('mainCtrl', function (scope) {
     let isOrigin = false;
 
     let tagsMap = {};
+    let systemMap = {};
     let urlsByDayMap = {};
     tagsJodb.each((item) => {
         tagsMap[item.id] = item;
+    });
+    systemJodb.each((item) => {
+        systemMap[item.id] = item;
     });
 
     scope.setViewerInterval = function (e) {
@@ -100,7 +106,13 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     // 刷新目录缓存数据
+    scope.reload = function (e) {
+        location.reload();
+    };
+
+    // 刷新目录缓存数据
     scope.refresh = function (e) {
+        viewerJodb.refresh();
         isRefresh = true;
         scope.init('');
         //location.reload();
@@ -175,14 +187,17 @@ brick.reg('mainCtrl', function (scope) {
                     return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
                 });
 
-                if (1) {
-                    let obj = viewerJodb.get(o.f, 'img')[0] || {tags: []};
+                // 附加标签信息
+                    let obj = viewerJodb.get(o.f, 'img')[0] || {tags: [], system: []};
                     let arr = obj.tags || [];
+                    let arr2 = obj.system || [];
                     //console.log(obj);
                     o.tags = arr.map((v) => {
                         return tagsMap[v];
                     });
-                }
+                    o.system = arr2.map((v) => {
+                        return systemMap[v];
+                    });
             });
             console.log('urls =>', urls);
             scope.urls = urls;

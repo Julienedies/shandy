@@ -3,10 +3,10 @@
 		"tdx_extern_user_file": "E:\\new_tdx\\T0002\\signals\\extern_user.txt",
 		"csdPath": "E:\\dev\\csd",
 		"bounds": {
-			"x": 368,
-			"y": 112,
-			"width": 1539,
-			"height": 1063
+			"x": -7,
+			"y": -7,
+			"width": 2209,
+			"height": 1209
 		},
 		"fetchSources": [
 			"ths_new",
@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\交易记录\\2309",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2023-10",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -45,6 +45,8 @@
 			"height": 36
 		},
 		"history": [
+			"E:\\dev\\simg\\交易记录\\2311",
+			"E:\\dev\\simg\\目标行情\\2023-11",
 			"E:\\dev\\simg\\目标行情\\2023-10",
 			"E:\\dev\\simg\\交易记录\\2309",
 			"E:\\dev\\simg\\目标行情\\2023-09",
@@ -249,10 +251,10 @@
 	},
 	"system": {
 		"bounds": {
-			"x": 2187,
-			"y": -933,
-			"width": 3856,
-			"height": 2136
+			"x": -7,
+			"y": -7,
+			"width": 2209,
+			"height": 1209
 		}
 	},
 	"tags": {

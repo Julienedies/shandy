@@ -9,7 +9,7 @@ export default function () {
 
     let div = document.createElement('div');
     div.style.cssText = `
-z-index:10001;
+z-index:900;
 position:fixed;
 bottom:24%;
 right:62%;

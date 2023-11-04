@@ -75,10 +75,13 @@ brick.reg('toolBarCtrl', function (scope) {
     };
 
     this.refreshViewer = function (e, reverse) {
-        console.log(reverse, typeof reverse);
+        //console.log(reverse, typeof reverse); // 传来的0是string
         let $th = $(this).icSetLoading();
-        $.get(`/viewer/refresh?x=${ +new Date }&reverse=${ reverse }`);
-        $th.icClearLoading();
+        $.get(`/viewer/refresh?x=${ +new Date }&reverse=${ reverse }`, function (data) {
+            console.log(data);
+            $.icMsg('refresh ok');
+            $th.icClearLoading();
+        });
     };
 
 

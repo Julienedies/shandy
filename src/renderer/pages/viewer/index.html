@@ -36,7 +36,8 @@
                         <button class="button is-primary" ic-click="clean">清理数据</button>
                         <button class="button is-primary" ic-click="refresh">刷新数据</button>
                         <button class="button is-primary" ic-click="reverse">反转排序</button>
-                        <button class="button is-primary" ic-click="ocrRename">ocr重命名</button>
+                        <button class="button is-primary" ic-click="reload">reload</button>
+                        <!--<button class="button is-primary" ic-click="ocrRename">ocr重命名</button>-->
                         <!--<button class="button is-primary" ic-click="ocrRename">ocr重命名</button>
                         <button class="button is-primary" ic-form-submit ic-submit-action="cropTest()">剪切测试</button>
                         <div style="display: inline-block;">
@@ -99,9 +100,10 @@
                     <h5>
                         <span style="display: inline-block; min-width:42em;">{{v.f}} </span>
                         <span ic-for="k,o in v.tags"
-                              ic-class="tag is-medium {{o ? o.type=='交易错误'?'is-dark' : o.text.includes('亏损') ? 'is-primary': o.text.includes('盈利')?'is-danger':'is-info' : ''}}">
+                              ic-class="tag is-medium {{o ? o.type=='交易错误'?'is-black' : o.text.includes('亏损') ? 'is-primary': o.text.includes('盈利')?'is-danger':'is-info' : ''}}">
                             {{ o && o.text }}
                         </span>
+                        <span ic-for="k,o in v.system" class="tag is-medium is-link">{{ o && o.name }}</span>
                     </h5>
                 </li>
 

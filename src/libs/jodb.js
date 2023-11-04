@@ -27,6 +27,12 @@ export default function (jsonFilePath, initData = [], conf = {}) {
 
     dob.init(jo.json);
 
+    // 其他地方的jodb修改了json，通过这种方式更新当前jodb
+    dob.refresh = function () {
+        jo.refresh();
+        dob.init(jo.json);
+    };
+
     return dob;
 
 }
