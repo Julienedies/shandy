@@ -33,4 +33,8 @@ wt.json
 *.mp3
 *.m4a
 
+#临时文件
 ls.js
+
+# 标记win分支的占位符文件
+win_pla.txt

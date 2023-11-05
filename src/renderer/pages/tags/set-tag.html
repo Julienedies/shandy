@@ -14,7 +14,7 @@
                            ic-has-readonly="model.type"
                            ic-form-field
                            ic-field-rule="required">
-                    <input type="hidden" name="id" ic-form-field value="{{model.id}}"/>
+
                     <div ic-if="model.types">
                         <div ic-select="tagType" ic-select-type="radio" ic-select-cla="is-info" ic-form-field="type">
                             <div class="tags">
@@ -22,7 +22,9 @@
                                       ic-for="i,v in model.types"
                                       ic-select-item
                                       ic-has-selected="model.type===v.text || model.type===v.id"
-                                      ic-val="{{ v.text }}">{{ v.text }}</span>
+                                      ic-val="{{ v.text }}">
+                                    {{ v.text }}
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -32,7 +34,14 @@
             <div>
                 <h6>标签名称</h6>
                 <div>
-                    <input class="input is-medium" type="text" name="text" value="{{model.text}}" ic-form-field ic-field-rule="required">
+                    <div class="field has-addons">
+                        <p class="control is-expanded">
+                            <input class="input is-medium" type="text" name="text" value="{{model.text}}" ic-form-field ic-field-rule="required">
+                        </p>
+                        <p class="control">
+                            <input class="input is-medium" type="text" name="id" value="{{model.id}}" ic-form-field readonly/>
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -41,8 +50,12 @@
                 <div>
                     <div>
                         <div ic-select="parentId" ic-form-field="parentId">
-                            <div class="tags">
-                                <span class="tag is-small" ic-for="i,v in (model.parents || TAGS_MAP[model.type])" ic-select-item    ic-has-selected="model.parentId===v.id" ic-val="{{ v.id }}">
+                            <div class="tags" id="setParentIdForTag" style="height: 16em; overflow-y: scroll;">
+                                <span class="tag is-small"
+                                      ic-for="i,v in (model.parents || TAGS_MAP[model.type])"
+                                      ic-select-item
+                                      ic-val="{{ v.id }}"
+                                      ic-has-selected="model.parentId===v.id">
                                     {{ v.text }}
                                     <sup>{{ v.level }}</sup>
                                 </span>
@@ -109,6 +122,13 @@
                     </button>
                     <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
                     <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
+                </div>
+            </div>
+
+            <div>
+                <h6>key</h6>
+                <div>
+                    <input class="input is-medium" type="text" name="key" value="{{model.key}}" ic-form-field>
                 </div>
             </div>
 
