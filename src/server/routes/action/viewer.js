@@ -32,6 +32,7 @@ export default {
         res.json(viewerJsonDb.get());
     },
 
+    // 更新viewerMap.json
     refresh (req, res) {
         //let id = req.query.id;
         let reverse = req.query.reverse;
@@ -39,5 +40,11 @@ export default {
         viewerMap.refresh(reverse*1);
         res.json({msg: 'ok'});
     },
+
+    // 为viewer.json绑定交易信息
+    bindTradeInfo (req, res) {
+        viewerMap.bindTradeInfo();
+        res.json({msg: 'ok'});
+    }
 
 }

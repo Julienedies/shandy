@@ -94,16 +94,6 @@
 	},
 	{
 		"name": "",
-		"id": "9424333",
-		"tag": "4810091",
-		"trigger": "1",
-		"content": "为何我总是卖 飞？",
-		"repeat": 4,
-		"type": "interval",
-		"timestamp": 1611793995578
-	},
-	{
-		"name": "",
 		"id": "0814145",
 		"tag": "9373395",
 		"trigger": "3",
@@ -111,6 +101,16 @@
 		"repeat": 5,
 		"type": "interval",
 		"timestamp": 1611731531071
+	},
+	{
+		"name": "",
+		"id": "9424333",
+		"tag": "4810091",
+		"trigger": "1",
+		"content": "为何我总是卖 飞？",
+		"repeat": 4,
+		"type": "interval",
+		"timestamp": 1611793995578
 	},
 	{
 		"name": "",

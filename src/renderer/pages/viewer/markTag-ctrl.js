@@ -7,8 +7,13 @@
 import $ from 'jquery'
 
 import userJodb from '../../../libs/user-jodb'
+import userJo from '../../../libs/user-jo'
+
+// 交易记录json
+//const tradeArr = userJo('SEL', []).get();
 
 const viewerJodb = userJodb('viewer');
+
 
 export default function (scope) {
 

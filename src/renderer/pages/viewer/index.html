@@ -12,12 +12,12 @@
     <div class="box">
         <div class="field has-addons">
             <div class="control">
-                <a class="button is-primary" ic-select-path="imgDir" ic-select-dir="true" ic-select-path-on-done="onSelectImgDirDone">
+                <a class="button is-primary is-medium" ic-select-path="imgDir" ic-select-dir="true" ic-select-path-on-done="onSelectImgDirDone">
                     选择图片文件夹
                 </a>
             </div>
             <div class="control is-expanded">
-                <input class="input" type="text" value="" name="imgDir">
+                <input class="input is-medium" style="color:red;font-weight: bold;" type="text" value="" name="imgDir">
             </div>
         </div>
 
@@ -112,16 +112,16 @@
         </div>
 
         <div id="viewerAttach">
-            <p></p>
+            <p id="tradeInfo"></p>
             <div>
                 <a ic-click="editImg">编辑</a>
                 <a ic-click="viewItemInFolder">Finder查看</a>
+                <a ic-click="moveToTrash">回收站</a>
                 <a ic-click="viewerMarkTag" ic-popup-target="viewerMarkTag">显示标记</a>
                 <!--<a ic-click="viewInTdx">通达信查看</a>-->
                 <!--<a ic-click="viewInFtnn">富途查看</a>-->
                 <!--<a ic-click="markMistake">标记错误</a>-->
                 <a ic-click="markQuotation">标记行情</a>
-                <a ic-click="moveToTrash">回收站</a>
             </div>
         </div>
 

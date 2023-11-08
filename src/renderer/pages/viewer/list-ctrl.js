@@ -12,6 +12,7 @@ export default function (scope) {
 
     // ic-viewer  回调函数
     let $viewerAttach = $('#viewerAttach');
+    let $TradeInfo = $('#tradeInfo');
 
     scope.onViewerOpen = () => {
         $viewerAttach.show();
@@ -31,7 +32,7 @@ export default function (scope) {
             });
             arr.reverse(); // 当日多个交易记录按照时间先后显示
             let text = arr.join('\r\n').replace(/,/g, '    ');
-            $viewerAttach.find('p').text(text);
+            $TradeInfo.text(text);
         }
 
         $info.text('\r\n' + imgObj.f);

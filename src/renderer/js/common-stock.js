@@ -24,6 +24,7 @@ brick.set('render.wrapModel', true);
 
 brick.reg('main_ctrl', parentCtrl);
 brick.reg('mainCtrl', parentCtrl);
+brick.reg('parentCtrl', parentCtrl);
 
 
 setTimeout(function () {

@@ -9,9 +9,13 @@ import jsonDb from '../../libs/json-jo'
 import userJodb from '../../libs/user-jodb'
 import imagesHelper from '../../renderer/pages/viewer/helper'
 import ju from '../../libs/jodb-user'
+import userJo from '../../libs/user-jo'
+import path from 'path'
 
 
 const viewerMapDbFactory = jsonDb('viewerMap');
+
+
 
 
 /**
@@ -54,7 +58,7 @@ ViewerMap.instance = {
         let VIEWER_MAP = ViewerMap.VIEWER_MAP = {};
         let VIEWER_MAP2 = {};
         let viewerMapJsonDb = ju(f, {});
-        let viewerJodb = userJodb('viewer');
+        let viewerJodb = ju('viewer');
 
         const KPR = 'k_';
 
@@ -90,6 +94,42 @@ ViewerMap.instance = {
         viewerMapJsonDb.init(VIEWER_MAP);
         console.log('viewerMap OK!');
         return VIEWER_MAP;
+    },
+
+    bindTradeInfo: function (){
+
+        // 交易记录json
+        let tradeArr = userJo('SEL', []).get();
+        let viewerJodb = ju('viewer',[]);
+
+        viewerJodb.each(item => {
+
+            let fullPath = item.img;
+            let arr = fullPath.match(/\d{6}(?=\.png$)/) || [];
+            let code = arr[0];
+            let f2 = f.replace('上午', 'am').replace('下午', 'pm');
+
+            let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s*[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/);
+            //console.log(f2, arr2);
+            let d = arr2[1];
+
+            item.d = d;
+            item.code = code;
+
+            let tradeInfo = tradeArr.filter(arr => {
+                // 交易信息 对应 code 和 时间
+                return code === arr[2] && d && d.replace(/-/g, '') === arr[0];
+            });
+
+            item.tradeInfo = tradeInfo.map(a => {
+                return [a[1], a[4], a[6], a[5]];  // => 时间, 买入/卖出, 数量, 价格
+            });
+
+            //
+            viewerJodb.save();
+
+        });
+
     },
 
 }
