@@ -84,6 +84,16 @@ brick.reg('toolBarCtrl', function (scope) {
         });
     };
 
+    this.bindTradeInfo = function (e) {
+        //console.log(reverse, typeof reverse); // 传来的0是string
+        let $th = $(this).icSetLoading();
+        $.get(`/viewer/bindTradeInfo?x=${ +new Date }`, function (data) {
+            console.log(data);
+            $.icMsg('refresh ok');
+            $th.icClearLoading();
+        });
+    };
+
 
     /*    this.playWarnAudio = function () {
             let audio = new Audio(require('./audio/不要忘记那些恐惧和痛苦.mp3'));
