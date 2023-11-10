@@ -131,7 +131,8 @@ export default {
      */
     supplement: function (arr, dir = '') {
         // 使用局部目录imagesJsonDb 代替全局 globalImagesJsonDb，解决文件大小问题
-        let imagesJsonDb = dir ? imagesDbFactory(this.getDirKey(dir)) : globalImagesJsonDb;
+        // 已经使用viewer替代images目录进行缓存
+        //let imagesJsonDb = dir ? imagesDbFactory(this.getDirKey(dir)) : globalImagesJsonDb;
 
         return arr.map(f => {
             // 先尝试从缓存images读取

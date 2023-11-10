@@ -32,6 +32,9 @@ export let FroalaEditorConfig = {
     colorsBackground: COLORS_BACKGROUND,
 };
 
+// 事件名称
+export const VIEWER_CURRENT_IMG = 'VIEWER_CURRENT_IMG';
+
 export default {
     ADD_SYSTEM,
     ON_SET_SYSTEM_DONE,
@@ -48,6 +51,7 @@ export default {
     ON_DEL_LOGIC_DONE,
     ON_SET_LOGIC_DONE,
     ON_GET_LOGIC_DONE,
+    VIEWER_CURRENT_IMG,
     COLORS_BACKGROUND,
     FroalaEditorConfig
 }

@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 /**
  *
  * Created by j on 2019-09-19.
@@ -11,14 +13,16 @@ export default function (scope) {
 
     let render = () => {
         let vm = arr2tree(scope.model[type]);
-        console.log(111, vm);
+        console.log(vm);
         $typeTitle.text(type);
         scope.render('details', vm);
     };
 
+
     scope.close = function (e) {
         $elm.icPopup();
     };
+
 
     scope.on('view-details', function (e, _type) {
         console.log(_type);
@@ -32,9 +36,19 @@ export default function (scope) {
         $elm.icPopup(true);
     });
 
+
     scope.on('tag.edit.done', function (e, msg) {
         render();
     });
+
+/*    //
+    let $TradeInfo = $('#tradeInfo');
+
+    scope.on('VIEWER_CURRENT_IMG', function (e, msg) {
+        let arr = msg.tradeInfo || [];
+        let text = arr.join('\r\n').replace(/,/g, '    ');
+        $TradeInfo.text(text);
+    });*/
 
 }
 

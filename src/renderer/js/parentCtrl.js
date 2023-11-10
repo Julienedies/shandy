@@ -8,6 +8,9 @@ import utils from '../../libs/e-bridge'
 import brick from '@julienedies/brick'
 import { ON_GET_TAGS_DONE } from './constants'
 
+/**
+ * 定义一些公用函数，可以被子ctrl继承
+ */
 function parentCtrl () {
 
     let scope = this;
@@ -51,9 +54,9 @@ function parentCtrl () {
     });
 
 
-    // ic-viewer 功能
+    // ic-viewer 功能----------------------------------------------------------------------------------
     let $viewerAttach = $('#viewerAttach');
-    // ic-viewer  回调函数
+    // ic-viewer 回调函数
     scope.onViewerOpen = () => {
         $viewerAttach.show();
     };
@@ -63,14 +66,19 @@ function parentCtrl () {
     };
 
     scope.onViewerShow = function (index, src, $info, isFirstShow) {
+        console.log('parentCtrl onViewerShow');
         let arr = src.split('=');
         src = arr[1] || arr[0];
-        scope.viewerCurrentImg = {f: src};
-        scope.viewerMarkTag();
         $info.text(src);
 
+        scope.viewerCurrentImg = {f: src};
+        //scope.viewerMarkTag();
         brick.emit('viewer-markTag', scope.viewerCurrentImg);
         isFirstShow && $('[ic-popup="viewerMarkTag"]').icPopup(true);
+    };
+
+    scope.viewerMarkTag = () => {
+        brick.emit('viewer-markTag', scope.viewerCurrentImg);
     };
 
     scope.editImg = () => {
@@ -87,10 +95,6 @@ function parentCtrl () {
 
     scope.viewInFtnn = () => {
         utils.viewInFtnn(scope.viewerCurrentImg.code);
-    };
-
-    scope.viewerMarkTag = () => {
-        brick.emit('viewer-markTag', scope.viewerCurrentImg);
     };
 
     scope.markMistake = () => {

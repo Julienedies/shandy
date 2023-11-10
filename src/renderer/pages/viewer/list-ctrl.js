@@ -24,14 +24,15 @@ export default function (scope) {
 
     scope.onViewerShow = function (index, src, $info, isFirstShow) {
         let imgObj = scope.viewerCurrentImg = scope.urls[index]; // scope.urls 继承自mainCtrl
-        scope.viewerMarkTag();
         let arr = imgObj.tradeInfo;
+        console.log(index, arr);
         if (arr) {
             arr = arr.map(a => {
                 return [a[1], a[4], a[6], a[5]];  // => 时间, 买入/卖出, 数量, 价格
             });
             arr.reverse(); // 当日多个交易记录按照时间先后显示
             let text = arr.join('\r\n').replace(/,/g, '    ');
+            console.log(text)
             $TradeInfo.text(text);
         }
 
@@ -40,6 +41,8 @@ export default function (scope) {
         brick.emit('viewer-markTag', scope.viewerCurrentImg);
         isFirstShow && $('[ic-popup="viewerMarkTag"]').icPopup(true);
     };
+
+    // 以下代码已经复制到parentCtrul用于公用了
 
     scope.editImg = () => {
         let imgObj = scope.viewerCurrentImg;

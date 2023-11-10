@@ -3,20 +3,14 @@
  * Created by j on 2019-09-08.
  */
 
-import moment from 'moment'
 import _ from 'lodash'
 import jsonDb from '../../libs/json-jo'
-import userJodb from '../../libs/user-jodb'
 import imagesHelper from '../../renderer/pages/viewer/helper'
 import ju from '../../libs/jodb-user'
 import userJo from '../../libs/user-jo'
-import path from 'path'
 
 
 const viewerMapDbFactory = jsonDb('viewerMap');
-
-
-
 
 /**
  * VIEWER_AMP 是以Tag ID作为键，对应一个图片数组；
@@ -28,7 +22,7 @@ class ViewerMap {
     constructor () {
 
     }
-
+    // 单例模式
     static getInstance () {
         return ViewerMap.instance;
     }
@@ -96,27 +90,38 @@ ViewerMap.instance = {
         return VIEWER_MAP;
     },
 
+    // 为viewer.json里的img项绑定交易记录，主要是在tags页面查看各种统计标签方便查看当时的交易记录
     bindTradeInfo: function (){
 
-        // 交易记录json
-        let tradeArr = userJo('SEL', []).get();
-        let viewerJodb = ju('viewer',[]);
+        let tradeArr = userJo('SEL', []).get(); // 交易记录json
+        let viewerJodb = ju('viewer',[]);  // 记录图片绑定的各种标签json
 
-        viewerJodb.each(item => {
-
+        viewerJodb.each( (item,i) => {
+            let d = item.d; // 日期
+            let code =item.code;
+            let tradeInfo = item.tradeInfo;
             let fullPath = item.img;
-            let arr = fullPath.match(/\d{6}(?=\.png$)/) || [];
-            let code = arr[0];
-            let f2 = f.replace('上午', 'am').replace('下午', 'pm');
 
-            let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s*[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/);
-            //console.log(f2, arr2);
-            let d = arr2[1];
+            if(tradeInfo) return; // 已经附加交易信息
+            if(!(/交易记录/img.test(fullPath))) return; // 如果不是交易记录图片，不用附加交易信息
 
-            item.d = d;
-            item.code = code;
+            if(!d || !code){
+                let arr = fullPath.match(/\d{6}(?=\.png$)/) || [];
+                code = arr[0];
+                let f2 = fullPath.replace('上午', 'am').replace('下午', 'pm');
 
-            let tradeInfo = tradeArr.filter(arr => {
+                let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s*[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/);
+                //console.log(f2, arr2);
+                d = arr2[1];
+
+                console.log(fullPath, i);
+
+                item.d = d;
+                item.code = code;
+            }
+
+
+            tradeInfo = tradeArr.filter(arr => {
                 // 交易信息 对应 code 和 时间
                 return code === arr[2] && d && d.replace(/-/g, '') === arr[0];
             });
@@ -124,17 +129,22 @@ ViewerMap.instance = {
             item.tradeInfo = tradeInfo.map(a => {
                 return [a[1], a[4], a[6], a[5]];  // => 时间, 买入/卖出, 数量, 价格
             });
-
-            //
-            viewerJodb.save();
+            item.tradeInfo = item.tradeInfo.reverse();
 
         });
 
+        // 保存
+        viewerJodb.save();
     },
 
 }
 
-
+/**
+ *
+ * @param record
+ * @param index
+ * @returns {*}
+ */
 function beforeGet (record, index) {
     let id = `k_${ record.id }`;
     let example = ViewerMap.VIEWER_MAP[id];
