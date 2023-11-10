@@ -4,7 +4,12 @@
         <table class="table is-bordered is-fullwidth" ic-click="close">
             <tr ic-for="i,v in model">
                 <th style="width:9em;">
-                    <div style="white-space: nowrap;" ic-click="edit:{{ v.id }}">{{ v.text }} &nbsp; {{ (v['示例图片']||[]).length }}</div>
+                    <div style="white-space: nowrap;">
+                        <button class="button is-medium is-black" ic-click="edit:{{ v.id }}">{{ v.text }}</button>
+                        <br/>
+                        <sub style="margin-left:1em;">id: {{ v.id }}</sub>
+                        <sub style="margin-left:1em;" ic-if="(v['示例图片']||[]).length"> len: {{ (v['示例图片']||[]).length }}</sub>
+                    </div>
                     <div class="tags"
                          ic-if="v.children"
                          style="height: 2em;overflow: hidden;"
@@ -50,6 +55,6 @@
         </table>
     </div>
     <div class="column">
-        <button class="button is-primary" ic-popup-close="details">返回</button>
+        <button class="button is-primary is-expanded" ic-popup-close="details">返回</button>
     </div>
 </div>

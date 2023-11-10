@@ -14,7 +14,7 @@
                            ic-has-readonly="model.type"
                            ic-form-field
                            ic-field-rule="required">
-                    <input type="hidden" name="id" ic-form-field value="{{model.id}}"/>
+
                     <div ic-if="model.types">
                         <div ic-select="tagType" ic-select-type="radio" ic-select-cla="is-info" ic-form-field="type">
                             <div class="tags">
@@ -34,7 +34,14 @@
             <div>
                 <h6>标签名称</h6>
                 <div>
-                    <input class="input is-medium" type="text" name="text" value="{{model.text}}" ic-form-field ic-field-rule="required">
+                    <div class="field has-addons">
+                        <p class="control is-expanded">
+                            <input class="input is-medium" type="text" name="text" value="{{model.text}}" ic-form-field ic-field-rule="required">
+                        </p>
+                        <p class="control">
+                            <input class="input is-medium" type="text" name="id" value="{{model.id}}" ic-form-field readonly/>
+                        </p>
+                    </div>
                 </div>
             </div>
 

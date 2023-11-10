@@ -40,6 +40,7 @@ export default function (scope) {
 
 // 数组转tree
 function arr2tree (list = []) {
+    return list;
     const data = JSON.parse(JSON.stringify(list)) // 浅拷贝不改变源数据
     const result = []
     if (!Array.isArray(data)) {
