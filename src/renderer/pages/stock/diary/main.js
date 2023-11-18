@@ -332,7 +332,7 @@ brick.reg('setDiaryCtrl', function () {
                 ...FroalaEditorConfig,
                 fontSizeDefaultSelection: '18',
                 //toolbarInline: true,
-                height: 210,
+                height: 970,
             });
 
             $editor.froalaEditor('html.set', model.diary.text || '<p>#大局观  &nbsp;&nbsp;&nbsp;#市场偏好  &nbsp;&nbsp;&nbsp;#主流热点龙头&nbsp;&nbsp;&nbsp;#预案应对：</p>');

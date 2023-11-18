@@ -1,5 +1,70 @@
 [
 	{
+		"title": "回流首板",
+		"id": "id_1700140144621_1272",
+		"type": "target",
+		"caution": "",
+		"comment": "",
+		"level": "73",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1700140144621
+	},
+	{
+		"title": "补涨首板",
+		"id": "id_1700140126810_6707",
+		"type": "target",
+		"caution": "",
+		"comment": "",
+		"level": "71",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1700140126810
+	},
+	{
+		"title": "消息刺激的首板",
+		"id": "id_1700140112897_6395",
+		"type": "target",
+		"caution": "",
+		"comment": "",
+		"level": "79",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1700140112897
+	},
+	{
+		"title": "有没有2浪、V形浪的走势？",
+		"id": "id_1699682641466_7637",
+		"type": "rp",
+		"caution": "线性思维，我总是错过V形浪；",
+		"comment": "",
+		"level": "1",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1699682641466
+	},
+	{
+		"title": "有没有修复、反包的走势？",
+		"id": "id_1699682586027_5587",
+		"type": "rp",
+		"caution": "",
+		"comment": "",
+		"level": "1",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1699682586027
+	},
+	{
 		"title": "上冲回落的修复可能标的？",
 		"id": "id_1693873582777_1251",
 		"type": "rp",
@@ -397,11 +462,12 @@
 		"type": "target",
 		"caution": "",
 		"comment": "",
-		"level": "1",
+		"level": "47",
 		"role": "0",
 		"content": "",
 		"tags": [],
-		"timestamp": 1674571457471
+		"timestamp": 1674571457471,
+		"re": ""
 	},
 	{
 		"title": "恐惧转贪婪，低吸它长腿；",
@@ -433,11 +499,12 @@
 		"type": "target",
 		"caution": "",
 		"comment": "",
-		"level": "1",
+		"level": "74",
 		"role": "0",
 		"content": "",
 		"tags": [],
-		"timestamp": 1674571284573
+		"timestamp": 1674571284573,
+		"re": ""
 	},
 	{
 		"title": "主流热点低位补涨首板；",
@@ -445,11 +512,12 @@
 		"type": "target",
 		"caution": "",
 		"comment": "",
-		"level": "1",
+		"level": "72",
 		"role": "0",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 100.0000%;\">龙头分歧或者高位<br></td></tr></tbody></table>",
 		"tags": [],
-		"timestamp": 1674571247253
+		"timestamp": 1674571247253,
+		"re": ""
 	},
 	{
 		"title": "低吸龙头分歧",
@@ -469,14 +537,15 @@
 		"type": "target",
 		"caution": "",
 		"comment": "",
-		"level": "1",
+		"level": "78",
 		"role": "0",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 63.8034%;\">突发消息刺激，低位而不是已经反映了预期的高位，高位有利好消息可能趁机出货<br></td><td style=\"width: 36.1227%;\"><br></td></tr></tbody></table>",
 		"tags": [],
-		"timestamp": 1674571031552
+		"timestamp": "1674571031552",
+		"re": ""
 	},
 	{
-		"title": "沉迷于无效的日常交易，重复所有错误；没有任何改变；",
+		"title": "做着做着就忘记了教训，沉迷于无效的日常交易，重复所有错误；没有任何改变；",
 		"type": "warn",
 		"caution": "",
 		"comment": "",
@@ -2217,7 +2286,8 @@
 		"timestamp": "1638620495062",
 		"tags": [],
 		"caution": "围绕市场合力、主流热点；客观跟随；",
-		"level": "5",
-		"role": "0"
+		"level": "0",
+		"role": "0",
+		"re": ""
 	}
 ]

@@ -1,10 +1,43 @@
 [
 	{
 		"type": "交易统计",
-		"id": "id_1699517846460_3839",
+		"id": "id_1699719731933_7229",
+		"parentId": "",
+		"desc": "",
+		"level": "7",
+		"key": "",
+		"text": "大盈利交易",
+		"示例图片": "",
+		"timestamp": 1699719731933
+	},
+	{
+		"type": "交易统计",
+		"id": "id_1699713667904_0593",
+		"parentId": "",
+		"desc": "",
+		"level": "1",
+		"key": "",
+		"text": "临盘随意交易",
+		"示例图片": "",
+		"timestamp": 1699713667904
+	},
+	{
+		"type": "交易错误",
+		"id": "id_1699711734599_0888",
 		"parentId": "",
 		"desc": "",
 		"level": "0",
+		"key": "",
+		"text": "追高跟风股",
+		"示例图片": "",
+		"timestamp": 1699711734599
+	},
+	{
+		"type": "交易统计",
+		"id": "id_1699517846460_3839",
+		"parentId": "",
+		"desc": "",
+		"level": "19",
 		"key": "",
 		"text": "特别错误",
 		"示例图片": "",
@@ -246,7 +279,7 @@
 		"type": "rpmqs",
 		"parentId": "",
 		"desc": "",
-		"level": "4",
+		"level": "9",
 		"key": "target",
 		"text": "目标行情",
 		"示例图片": "",
@@ -450,7 +483,7 @@
 		"type": "rpmqs",
 		"parentId": "",
 		"desc": "",
-		"level": "5",
+		"level": "10",
 		"key": "system",
 		"text": "交易系统",
 		"示例图片": "",
@@ -582,7 +615,7 @@
 		"type": "type",
 		"parentId": "",
 		"desc": "",
-		"level": "95",
+		"level": "94",
 		"key": "",
 		"text": "日内走势推演",
 		"示例图片": "",
@@ -1028,7 +1061,7 @@
 		"key": "idea",
 		"parentId": "",
 		"desc": "",
-		"level": "6",
+		"level": "16",
 		"text": "理念",
 		"示例图片": "",
 		"timestamp": 1639283273487
@@ -1039,7 +1072,7 @@
 		"key": "warn",
 		"parentId": "",
 		"desc": "",
-		"level": "6",
+		"level": "29",
 		"text": "警告",
 		"示例图片": "",
 		"timestamp": 1639283222687
@@ -1050,7 +1083,7 @@
 		"key": "mistake",
 		"parentId": "",
 		"desc": "",
-		"level": "7",
+		"level": "17",
 		"text": "错误",
 		"示例图片": "",
 		"timestamp": 1639283190660
@@ -1061,7 +1094,7 @@
 		"key": "question",
 		"parentId": "",
 		"desc": "",
-		"level": "7",
+		"level": "19",
 		"text": "要解决的问题",
 		"示例图片": "",
 		"timestamp": 1639283142411
@@ -1071,7 +1104,7 @@
 		"type": "rpmqs",
 		"parentId": "",
 		"desc": "",
-		"level": "19",
+		"level": "14",
 		"text": "复盘&计划",
 		"示例图片": "",
 		"timestamp": 1639282945923,
@@ -1229,7 +1262,7 @@
 		"id": "9686631",
 		"type": "type",
 		"desc": "",
-		"level": "84",
+		"level": "85",
 		"text": "行情驱动因素",
 		"示例图片": "",
 		"timestamp": 1639206059752,
@@ -1554,10 +1587,12 @@
 		"id": "5920754",
 		"type": "type",
 		"desc": "",
-		"level": "94",
+		"level": "95",
 		"text": "市场风格",
 		"示例图片": "",
-		"timestamp": 1638692522564
+		"timestamp": 1638692522564,
+		"parentId": "",
+		"key": ""
 	},
 	{
 		"id": "9192685",
@@ -1698,10 +1733,11 @@
 		"type": "交易统计",
 		"parentId": "",
 		"desc": "",
-		"level": "1",
+		"level": "3",
 		"text": "特别典型",
 		"示例图片": "",
-		"timestamp": 1613365324788
+		"timestamp": 1613365324788,
+		"key": ""
 	},
 	{
 		"id": "2430358",
@@ -1770,10 +1806,11 @@
 		"type": "交易统计",
 		"parentId": "",
 		"desc": "",
-		"level": "4",
+		"level": "2",
 		"text": "预期外",
 		"示例图片": "",
-		"timestamp": 1598151547614
+		"timestamp": 1598151547614,
+		"key": ""
 	},
 	{
 		"id": "5986963",
@@ -1801,20 +1838,22 @@
 		"type": "交易统计",
 		"parentId": "",
 		"desc": "",
-		"level": "2",
+		"level": "17",
 		"text": "错误交易",
 		"示例图片": "",
-		"timestamp": 1597144250162
+		"timestamp": 1597144250162,
+		"key": ""
 	},
 	{
 		"id": "8188920",
 		"type": "交易统计",
 		"parentId": "",
 		"desc": "",
-		"level": "5",
+		"level": "6",
 		"text": "卖飞",
 		"示例图片": "",
-		"timestamp": 1597143895439
+		"timestamp": 1597143895439,
+		"key": ""
 	},
 	{
 		"id": "0047468",
@@ -1891,10 +1930,11 @@
 		"type": "交易统计",
 		"parentId": "",
 		"desc": "",
-		"level": "7",
+		"level": "12",
 		"text": "亏损交易",
 		"示例图片": "",
-		"timestamp": 1595660907884
+		"timestamp": 1595660907884,
+		"key": ""
 	},
 	{
 		"id": "9163101",
@@ -2036,48 +2076,52 @@
 		"id": "2055992",
 		"type": "交易统计",
 		"desc": "",
-		"level": "5",
+		"level": "3",
 		"text": "错过的机会",
 		"示例图片": "",
 		"timestamp": 1594990602523,
-		"parentId": ""
+		"parentId": "",
+		"key": ""
 	},
 	{
 		"id": "3968875",
 		"type": "交易统计",
 		"desc": "",
-		"level": "6",
+		"level": "13",
 		"text": "严重亏损交易",
 		"示例图片": "",
 		"timestamp": 1594989368867,
-		"parentId": ""
+		"parentId": "",
+		"key": ""
 	},
 	{
 		"id": "7655004",
 		"type": "交易统计",
 		"desc": "",
-		"level": "9",
+		"level": "7",
 		"text": "盈利交易",
 		"示例图片": "",
 		"timestamp": 1594989344411,
-		"parentId": ""
+		"parentId": "",
+		"key": ""
 	},
 	{
 		"id": "3993626",
 		"type": "交易统计",
 		"desc": "",
-		"level": "1",
+		"level": "4",
 		"text": "鸡肋交易",
 		"示例图片": "",
 		"timestamp": 1594989327818,
-		"parentId": ""
+		"parentId": "",
+		"key": ""
 	},
 	{
 		"id": "4806631",
 		"type": "type",
 		"parentId": "",
 		"desc": "",
-		"level": "96",
+		"level": "97",
 		"text": "交易统计",
 		"示例图片": "",
 		"timestamp": 1594989197421,
@@ -2234,7 +2278,7 @@
 		"type": "type",
 		"parentId": "",
 		"desc": "",
-		"level": "97",
+		"level": "96",
 		"text": "交易要素",
 		"示例图片": "",
 		"timestamp": 1593816225470,
@@ -2294,10 +2338,11 @@
 		"type": "type",
 		"parentId": "",
 		"desc": "",
-		"level": "70",
+		"level": "60",
 		"text": "系统变量",
 		"示例图片": "",
-		"timestamp": 1593159607414
+		"timestamp": 1593159607414,
+		"key": ""
 	},
 	{
 		"id": "3076425",
@@ -4330,7 +4375,9 @@
 		"示例图片": "",
 		"timestamp": 1569245166656,
 		"desc": "",
-		"level": "76"
+		"level": "60",
+		"parentId": "",
+		"key": ""
 	},
 	{
 		"id": "5415236",
@@ -4349,8 +4396,9 @@
 		"示例图片": "",
 		"timestamp": 1569245166627,
 		"desc": "",
-		"level": "85",
-		"parentId": ""
+		"level": "83",
+		"parentId": "",
+		"key": ""
 	},
 	{
 		"id": "4871803",
