@@ -20,17 +20,15 @@
                         <div class="buttons is-centered" ic-select="tags" ic-select-auto="false" ic-select-cla="is-primary"
                              ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
 
-                            <button ic-select-item ic-val="Re" ic-class="button is-small {{ model.filterByType==='Re'?'is-primary':''  }}">
-                                Re
-                            </button>
-
                             <button ic-for="v,i in model.mapByType" ic-select-item ic-val="{{ v }}"
                                     ic-class="button is-small {{ v==model.filterByType?'is-primary':''  }}">
                                 {{ RPMQS_MAP[v] }}
                             </button>
 
+                            <button ic-select-item ic-val="Re" ic-class="button is-small {{ model.filterByType==='Re'?'is-primary':''  }}">
+                                Re
+                            </button>
                             <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
-
                             <button class="button is-primary is-small" ic-click="toggleForm">显示表单</button>
                             <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>
                         </div>
@@ -88,16 +86,22 @@
                                     <div class="tags is-right">
                                         <span class="tag is-small"> {{ v.level || 0 }}</span>
                                         <span class="tag is-small" ic-click="onFilterKeyChange2:{{ v.type }}"> {{ v.type }}</span>
-                                        <span class="tag is-small" ic-click="edit:{{ v.id }}">修改</span>
-                                        <span class="tag is-small" ic-click="plus:{{ v.id }}">加权</span>
+                                        <span class="tag is-small" ic-click="edit:{{ v.id }}">
+                                            <i class="far fa-edit" title="编辑"></i>
+                                        </span>
+                                        <span class="tag is-small" ic-click="plus:{{ v.id }}">
+                                            <i class="fas fa-plus" title="加权"></i>
+                                        </span>
                                         <!--<span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>-->
-                                        <span ic-class="tag is-small {{ v.re==='true' ? 'is-primary':'' }}" ic-click="re:{{ v.id }}">Re</span>
+                                        <span ic-class="tag is-small {{ v.re==='true' ? 'is-primary':'' }}" ic-click="re:{{ v.id }}">
+                                            <i class="far fa-copy" title="Re"></i>
+                                        </span>
                                         <span class="tag is-small"
                                               ic-ajax
                                               ic-submit-method="delete"
                                               ic-submit-action="/stock/rp/{{v.id}}"
                                               ic-submit-before="delBeforeConfirm"
-                                              ic-submit-on-done="onDelDone">删除</span>
+                                              ic-submit-on-done="onDelDone"><i class="fas fa-trash-alt" title="删除"></i></span>
                                     </div>
                                 </div>
                             </div>

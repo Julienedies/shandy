@@ -138,7 +138,7 @@
 
             <!-- tr -->
             <div style="padding:3px 0;">
-                <div></div>
+                <h6></h6>
                 <div class="buttons">
                     <button class="button is-primary"
                             id="saveDiaryButton"
@@ -149,7 +149,8 @@
                     </button>
                     <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
                     <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
-                    <button class="button" ic-click="recover" style="margin-left:4em;"> 恢复</button>
+                    <button class="button" ic-click="recover" style="margin:0 4em;"> 恢复</button>
+                    <input id="date" class="input is-medium" type="date" name="date" ic-value="{{diary.date || formatDate() }}" ic-form-field>
                 </div>
             </div>
 
@@ -182,7 +183,7 @@
             <div>
                 <h6></h6>
                 <div>
-                    <input id="date" class="input is-small" type="date" name="date" ic-value="{{diary.date || formatDate() }}" ic-form-field>
+
                 </div>
             </div>
 
