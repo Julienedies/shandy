@@ -1,5 +1,57 @@
 [
 	{
+		"title": "炒龙-炒数字",
+		"id": "id_1702462653561_9970",
+		"type": "hq_history",
+		"caution": "三柏硕、圣龙股份",
+		"comment": "",
+		"level": "1",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1702462653561
+	},
+	{
+		"title": "AI-pika-多模态",
+		"id": "id_1702462615526_1099",
+		"type": "hq_history",
+		"caution": "",
+		"comment": "",
+		"level": "1",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1702462615526
+	},
+	{
+		"title": "情绪票：国企改革",
+		"id": "id_1702462589179_1345",
+		"type": "hq_history",
+		"caution": "",
+		"comment": "",
+		"level": "1",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1702462589179
+	},
+	{
+		"title": "节奏：转折-一致-分歧",
+		"id": "id_1702462492242_7034",
+		"type": "plan",
+		"caution": "",
+		"comment": "",
+		"level": "494",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"tags": [],
+		"timestamp": 1702462492242
+	},
+	{
 		"title": "短剧行情：2023-11",
 		"id": "id_1701766577382_4638",
 		"type": "hq_history",
@@ -34,7 +86,7 @@
 		"level": "490",
 		"role": "0",
 		"re": "",
-		"content": "",
+		"content": "<table style=\"width: 100%;\"><tbody><tr><td>消息是否是预期内</td><td><br></td></tr><tr><td style=\"width: 50.0000%;\">高位出利好</td><td style=\"width: 50.0000%;\"><br></td></tr></tbody></table>",
 		"tags": [],
 		"timestamp": 1701737628388
 	},
@@ -47,7 +99,7 @@
 		"level": "490",
 		"role": "0",
 		"re": "",
-		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 50.0000%;\">买其它分支龙头</td><td style=\"width: 50.0000%;\"><br></td></tr><tr><td>买最近跟风</td><td><br></td></tr></tbody></table>",
+		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 50.0000%;\">买其它分支龙头</td><td style=\"width: 50.0000%;\"><br></td></tr><tr><td>买最近跟风</td><td><br></td></tr><tr><td>10cm买不到，买20cm</td><td><br></td></tr></tbody></table>",
 		"tags": [],
 		"timestamp": 1701737552234
 	},
@@ -639,10 +691,10 @@
 	},
 	{
 		"title": "做着做着就忘记了教训，沉迷于无效的日常交易，重复所有错误；没有任何改变；",
-		"type": "warn",
+		"type": "mistake",
 		"caution": "",
 		"comment": "",
-		"level": "1100",
+		"level": "990",
 		"role": "0",
 		"content": "",
 		"timestamp": "1672230153644",
@@ -740,11 +792,12 @@
 		"type": "plan",
 		"caution": "",
 		"comment": "",
-		"level": "419",
+		"level": "451",
 		"role": "0",
 		"content": "",
 		"tags": [],
-		"timestamp": "1674542765857"
+		"timestamp": "1674542765857",
+		"re": ""
 	},
 	{
 		"title": "转折：V形浪；N形浪；",
@@ -1322,15 +1375,15 @@
 	{
 		"title": "沉迷于无效的日常交易，仍然没有建立明确的系统；这个错误我很早就认识到了，但我每天在做什么？",
 		"id": "id_1662180439243_5205",
-		"type": "warn",
+		"type": "question",
 		"caution": "",
 		"comment": "所有的错误每天都在重复，但我却没有任何改变。为什么会这样？",
-		"level": "1004",
+		"level": "999",
 		"role": "0",
 		"content": "",
 		"tags": [],
 		"timestamp": "1662180439243",
-		"re": "false"
+		"re": ""
 	},
 	{
 		"title": "为何我重复所有的错误？",
