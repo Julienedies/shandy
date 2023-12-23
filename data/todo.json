@@ -14,7 +14,7 @@
 		"timestamp": 1661941742710,
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1702429891969
+		"prevPromptTime": 1703120900981
 	},
 	{
 		"name": "",
@@ -47,7 +47,7 @@
 		"title": "每天沉迷于无效的日常交易；依然没有建立明确的交易系统；",
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1702432592515
+		"prevPromptTime": 1703123602000
 	},
 	{
 		"name": "",
@@ -64,7 +64,7 @@
 		"title": "真他妈的恨死自己了，一个人怎么可以这样？每天跟赌博一样，着眼于转债的小波动；",
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1702435291941
+		"prevPromptTime": 1703126302232
 	},
 	{
 		"name": "",
@@ -112,7 +112,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1702443393124
+		"prevPromptTime": 1703134401717
 	},
 	{
 		"name": "",
@@ -128,7 +128,7 @@
 		"level": 980,
 		"title": "为何我总是临盘犹豫，手足无措，错过最好的交易机会？",
 		"promptTimes": 1,
-		"prevPromptTime": 1702446092035
+		"prevPromptTime": 1703137101568
 	},
 	{
 		"name": "",
@@ -160,7 +160,7 @@
 		"duration": 17,
 		"timestamp": 1665225867007,
 		"promptTimes": 2,
-		"prevPromptTime": 1702448791462
+		"prevPromptTime": 1703139800959
 	},
 	{
 		"name": "",
@@ -177,7 +177,7 @@
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1702456891164
+		"prevPromptTime": 1703147901384
 	},
 	{
 		"type": "错误",
@@ -194,7 +194,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1702459591464
+		"prevPromptTime": 1703150601961
 	},
 	{
 		"name": "",
@@ -211,7 +211,7 @@
 		"title": "我的交易系统是什么？我要捕捉的目标行情是什么？",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1702462291295
+		"prevPromptTime": 1703153301811
 	},
 	{
 		"name": "",
@@ -228,7 +228,7 @@
 		"title": "我以什么做为判断锚点？为何我的预判总是错误？",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1702464991056
+		"prevPromptTime": 1703156001831
 	},
 	{
 		"name": "",
@@ -245,7 +245,7 @@
 		"title": "对市场理解不够，不知道市场参与者的行为逻辑。",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1702467692031
+		"prevPromptTime": 1703158700522
 	},
 	{
 		"name": "",
@@ -262,7 +262,7 @@
 		"level": "900",
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"promptTimes": 1,
-		"prevPromptTime": 1702470390797
+		"prevPromptTime": 1703161401462
 	},
 	{
 		"name": "",
@@ -279,7 +279,7 @@
 		"title": "思维没有方向，操作没有系统；我每天脑子在想什么？",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1702473091860
+		"prevPromptTime": 1703164101214
 	},
 	{
 		"name": "",
@@ -296,7 +296,7 @@
 		"title": "思维没有方向，操作没有系统；每天盘前脑子完全是空的， 临盘被市场牵着鼻子走。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1702475791325
+		"prevPromptTime": 1703166800342
 	},
 	{
 		"type": "错误",
@@ -313,7 +313,7 @@
 		"duration": "17",
 		"timestamp": "1681838241354",
 		"promptTimes": 1,
-		"prevPromptTime": 1702478491776
+		"prevPromptTime": 1703169500545
 	},
 	{
 		"name": "",
@@ -330,7 +330,7 @@
 		"title": "无系统、无计划，临盘随意交易是我最大的亏损来源。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1702481190616
+		"prevPromptTime": 1703172200975
 	},
 	{
 		"name": "",
@@ -525,7 +525,9 @@
 		"timestamp": "1637020107294",
 		"level": "765",
 		"title": "没有大局观，后知后觉，没有明确的行情意识。没有周期和大局观的洞察力。",
-		"tag": "没有大局观"
+		"tag": "没有大局观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703204599953
 	},
 	{
 		"name": "",
@@ -555,7 +557,9 @@
 		"timestamp": "1657814700731",
 		"level": "760",
 		"title": "没有大局观，不是从大局上思考市场，然后把思考结果着眼到个股上。",
-		"tag": "没有大局观"
+		"tag": "没有大局观",
+		"promptTimes": 2,
+		"prevPromptTime": 1703212698344
 	},
 	{
 		"type": "错误",
@@ -570,7 +574,9 @@
 		"interval": "60",
 		"duration": "17",
 		"timestamp": 1664936378905,
-		"tag": "没有大局观"
+		"tag": "没有大局观",
+		"promptTimes": 2,
+		"prevPromptTime": 1703215398046
 	},
 	{
 		"type": "错误",
@@ -585,7 +591,9 @@
 		"duration": "17",
 		"timestamp": 1658545339613,
 		"title": "没有大局观，看不到大趋势，看不到大的确定性。",
-		"tag": "没有大局观"
+		"tag": "没有大局观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703218099430
 	},
 	{
 		"name": "",
@@ -615,7 +623,9 @@
 		"repeat": "2",
 		"interval": "60",
 		"duration": "17",
-		"timestamp": "1665200288495"
+		"timestamp": "1665200288495",
+		"promptTimes": 1,
+		"prevPromptTime": 1703220798027
 	},
 	{
 		"name": "",
@@ -630,7 +640,9 @@
 		"timestamp": 1650708701077,
 		"level": "725",
 		"title": "没有大局观：行情启动爆发时犹豫，后知后觉；高潮退潮时管不住手；",
-		"tag": "没有大局观"
+		"tag": "没有大局观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703223497940
 	},
 	{
 		"type": "错误",
@@ -645,7 +657,9 @@
 		"duration": "17",
 		"timestamp": 1658545526846,
 		"title": "没有大局观，沉迷于无效的日常操作；",
-		"tag": "没有大局观"
+		"tag": "没有大局观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703226197840
 	},
 	{
 		"name": "",
@@ -660,7 +674,9 @@
 		"timestamp": 1619178994699,
 		"level": "670",
 		"title": "依靠主观预测交易，但我的预判总是错误。我以什么做为判断锚点？",
-		"tag": "主观"
+		"tag": "主观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703228897992
 	},
 	{
 		"name": "",
@@ -675,7 +691,9 @@
 		"timestamp": "1594995614163",
 		"level": "665",
 		"title": "依靠主观预测交易；线性思维，先入为主，预期之外，措手不及；",
-		"tag": "主观"
+		"tag": "主观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703231598555
 	},
 	{
 		"type": "错误",
@@ -690,7 +708,9 @@
 		"duration": "17",
 		"timestamp": "1658544943250",
 		"title": "依靠主观预测交易，而不是临盘根据盘面客观应对，客观跟随；",
-		"tag": "主观"
+		"tag": "主观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703234298460
 	},
 	{
 		"type": "错误",
@@ -705,7 +725,9 @@
 		"repeat": "2",
 		"interval": "60",
 		"duration": "17",
-		"timestamp": "1665139179825"
+		"timestamp": "1665139179825",
+		"promptTimes": 1,
+		"prevPromptTime": 1703236998000
 	},
 	{
 		"name": "",
@@ -720,7 +742,9 @@
 		"timestamp": "1639962005050",
 		"level": "650",
 		"title": "主观恐高看空，不敢做龙头；",
-		"tag": "主观"
+		"tag": "主观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703239697332
 	},
 	{
 		"type": "错误",
@@ -735,7 +759,9 @@
 		"repeat": "2",
 		"interval": "60",
 		"duration": "17",
-		"timestamp": 1665139233735
+		"timestamp": 1665139233735,
+		"promptTimes": 1,
+		"prevPromptTime": 1703242398091
 	},
 	{
 		"type": "错误",
@@ -750,7 +776,9 @@
 		"duration": "17",
 		"timestamp": "1658545473854",
 		"title": "主观测顶；顶只有一个；我却他妈的在臆想是顶的过程中错过所有的机会；",
-		"tag": "主观"
+		"tag": "主观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703245098402
 	},
 	{
 		"name": "",
@@ -765,7 +793,9 @@
 		"duration": "17",
 		"timestamp": 1658540065742,
 		"title": "线性思维，先入为主，主观看空，错过弱转强，分歧转一致、强更强的机会。",
-		"tag": "主观"
+		"tag": "主观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703247798061
 	},
 	{
 		"type": "错误",
@@ -780,7 +810,9 @@
 		"duration": "17",
 		"timestamp": 1658561356460,
 		"title": "线性思维，先入为主，下跌就看跌，上涨就看涨。多空动态博弈转化，不要线性思维；",
-		"tag": "主观"
+		"tag": "主观",
+		"promptTimes": 1,
+		"prevPromptTime": 1703250496651
 	},
 	{
 		"name": "",
@@ -824,7 +856,9 @@
 		"duration": 27,
 		"timestamp": 1594365344529,
 		"level": 550,
-		"title": "没有围绕当前主流热点，没有专注于当前龙头，主观看空主流热点龙头；"
+		"title": "没有围绕当前主流热点，没有专注于当前龙头，主观看空主流热点龙头；",
+		"promptTimes": 2,
+		"prevPromptTime": 1703255896385
 	},
 	{
 		"name": "",
@@ -838,7 +872,9 @@
 		"duration": "17",
 		"timestamp": 1639558190823,
 		"level": "520",
-		"title": "不能保持一致性；总是被左右打脸。不要被以前的经验影响，总是有两种可能性。"
+		"title": "不能保持一致性；总是被左右打脸。不要被以前的经验影响，总是有两种可能性。",
+		"promptTimes": 1,
+		"prevPromptTime": 1703258597456
 	},
 	{
 		"name": "",
@@ -986,7 +1022,9 @@
 		"interval": 130,
 		"duration": 9,
 		"timestamp": 1654519629339,
-		"level": 96
+		"level": 96,
+		"promptTimes": 1,
+		"prevPromptTime": 1703290996561
 	},
 	{
 		"name": "",
@@ -1044,7 +1082,9 @@
 		"interval": 70,
 		"duration": 13,
 		"timestamp": 1647873146547,
-		"level": 80
+		"level": 80,
+		"promptTimes": 2,
+		"prevPromptTime": 1703299095983
 	},
 	{
 		"name": "",
@@ -1089,7 +1129,9 @@
 		"timestamp": 1657942815311,
 		"level": "16",
 		"tag": "",
-		"title": "大局观：每天临盘前，先考虑大盘会怎么样；然后考虑资金会攻击的板块；最后才着眼于个股；"
+		"title": "大局观：每天临盘前，先考虑大盘会怎么样；然后考虑资金会攻击的板块；最后才着眼于个股；",
+		"promptTimes": 2,
+		"prevPromptTime": 1703301795243
 	},
 	{
 		"name": "",
@@ -1145,7 +1187,9 @@
 		"interval": "60",
 		"duration": "47",
 		"timestamp": "1614481282823",
-		"level": "6"
+		"level": "6",
+		"promptTimes": 1,
+		"prevPromptTime": 1703320695258
 	},
 	{
 		"name": "",
@@ -1158,7 +1202,9 @@
 		"interval": 120,
 		"duration": 7,
 		"timestamp": 1599293279369,
-		"level": 6
+		"level": 6,
+		"promptTimes": 1,
+		"prevPromptTime": 1703323394140
 	},
 	{
 		"name": "",
@@ -1171,7 +1217,9 @@
 		"interval": "60",
 		"duration": "9",
 		"timestamp": "1613056712193",
-		"level": "6"
+		"level": "6",
+		"promptTimes": 1,
+		"prevPromptTime": 1703326095222
 	},
 	{
 		"name": "",
@@ -1180,13 +1228,15 @@
 		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我很早就意识到错误，但为什么能一直重复所有的错误到现在呢？</span></strong></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>这里是什么缘故，是我根深蒂固的性格和思维方式吗？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>我现在是不是觉得自己能够战胜错误了，会盈利的？</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>这不是我第一次有这种感觉，</strong><br></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>我很多次觉得自己可以了，但时间过去后，还是在原地踏步。</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>我始终没有真正的改变，我始终陷在负循环里。</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>各种性格缺陷，沉迷于无效的日常的交易里。</strong></span></span></p><p><span style=\"color: rgb(255, 255, 255);\"><span style=\"font-size: 24px;background-color: rgb(0, 0, 0);\"><strong>一切有为法，一切有因果，</strong></span></span></p><p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);\">我是在一步一步走向不可挽救的彻底失败中。</span></strong></p>",
 		"singleWindow": "",
 		"start": "8:00",
-		"repeat": "1",
-		"interval": "60",
-		"duration": "17",
+		"repeat": 4,
+		"interval": 100,
+		"duration": 17,
 		"timestamp": "1636930865826",
-		"level": "6",
+		"level": 6,
 		"tag": "无改变",
-		"title": ""
+		"title": "",
+		"promptTimes": 3,
+		"prevPromptTime": 1703328794102
 	},
 	{
 		"name": "",
@@ -1201,7 +1251,9 @@
 		"timestamp": 1643018416709,
 		"tag": "无改变",
 		"level": "1",
-		"title": ""
+		"title": "",
+		"promptTimes": 3,
+		"prevPromptTime": 1703331494719
 	},
 	{
 		"name": "",
@@ -1216,7 +1268,9 @@
 		"timestamp": 1614682522617,
 		"tag": "无改变",
 		"level": "1",
-		"title": ""
+		"title": "",
+		"promptTimes": 3,
+		"prevPromptTime": 1703334194038
 	},
 	{
 		"name": "",
@@ -1247,7 +1301,9 @@
 		"duration": "7",
 		"tag": "",
 		"level": "1",
-		"title": ""
+		"title": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1703336894540
 	},
 	{
 		"name": "",
@@ -1262,7 +1318,9 @@
 		"timestamp": 1610162924689,
 		"tag": "",
 		"level": "1",
-		"title": ""
+		"title": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1703339594688
 	},
 	{
 		"name": "",
@@ -1293,7 +1351,9 @@
 		"timestamp": 1636258154803,
 		"tag": "无改变",
 		"level": "1",
-		"title": ""
+		"title": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1703342294341
 	},
 	{
 		"name": "",
@@ -1308,7 +1368,9 @@
 		"timestamp": 1609565575214,
 		"tag": "",
 		"level": "1",
-		"title": ""
+		"title": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1703344993518
 	},
 	{
 		"name": "",
