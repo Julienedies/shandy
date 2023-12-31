@@ -10,6 +10,7 @@
 </head>
 <body>
 <div class="column" style="padding: 0.5rem 0.2rem;">
+
     <section id="rts" ic-ctrl="rts_ctrl">
         <table class="" id="rts_list" ic-tpl="list">
             <tr ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">

@@ -22,7 +22,6 @@ function emit (msg) {
     socket.emit(channel, msg);
 }
 
-
 //$notify_news.text(window.screen.width + ' - ' + window.screen.height);
 
 // 计算买一金额
@@ -38,6 +37,7 @@ socket.on('rts_push', function (arr) {
 });
 
 socket.on('cls_news', function (msg) {
+    console.log('通过socket接收cls news.其实消息本来就是从这里先传给服务器的.');
     $notify_news.text(msg).toggleClass('warn');
 });
 
@@ -65,6 +65,7 @@ brick.reg('rts_ctrl', function (scope) {
     scope.notify_news = function () {
         let msg = $(this).text();
         socket.emit('cls_news', msg);
+        console.log('通过socket把cls news发给服务器.');
     };
 
 });
