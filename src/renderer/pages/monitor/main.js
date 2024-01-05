@@ -37,7 +37,7 @@ socket.on('rts_push', function (arr) {
 });
 
 socket.on('cls_news', function (msg) {
-    console.log('通过socket接收cls news.其实消息本来就是从这里先传给服务器的.');
+    console.log('通过socket接收cls news.其实消息本来就是从这里先传给服务器的.主要是为了IPAD可以通过socket接收cls消息.');
     $notify_news.text(msg).toggleClass('warn');
 });
 

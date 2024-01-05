@@ -335,7 +335,7 @@ brick.reg('setDiaryCtrl', function () {
                 height: 340,
             });
 
-            $editor.froalaEditor('html.set', model.diary.text || '<p>#大局观  &nbsp;&nbsp;&nbsp;#市场偏好  &nbsp;&nbsp;&nbsp;#主流热点龙头&nbsp;&nbsp;&nbsp;#预案应对：</p>');
+            $editor.froalaEditor('html.set', model.diary.text || '<p>#大局观  &nbsp;&nbsp;&nbsp;#赚钱亏钱效应 &nbsp;&nbsp;&nbsp;#市场偏好  &nbsp;&nbsp;&nbsp;#主流热点龙头&nbsp;&nbsp;&nbsp;#预案应对：</p>');
 
             // 自动保存输入数据
             $editor.on('froalaEditor.input', _.throttle(saveForm, 2900));

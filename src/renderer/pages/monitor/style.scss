@@ -1,9 +1,25 @@
 html, body {
   font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
-  font-size: 20px;
+  font-size: 20px !important;
   line-height: 1.5;
   background: #000;
   overflow-y: hidden;
+}
+
+@media screen and (max-device-width: 768px) {
+  body {
+    border: solid 2px blue;
+    font-size: 26px !important;
+  }
+}
+
+section {
+  margin: 0 0 10px 0;
+}
+
+.box {
+  margin: 10px 0 0 0;
+  padding: 0.3rem 0.5rem;
 }
 
 .pre {
@@ -38,7 +54,7 @@ html, body {
 table#rts_list {
   border-collapse: collapse;
   border-spacing: 0;
-  width:100%;
+  width: 100%;
   background: transparent;
 
   tr {
@@ -49,7 +65,7 @@ table#rts_list {
     }
 
     td {
-      padding:0.2em 0.2em 0.2em 0;
+      padding: 0.2em 0.2em 0.2em 0;
       white-space: nowrap;
       vertical-align: middle;
       color: inherit;
@@ -65,11 +81,12 @@ table#rts_list {
       }
 
       &.time {
-        font-size:0.6em;
-        color:#fff;
+        font-size: 0.6em;
+        color: #fff;
       }
-      &.cancel{
-        font-size:0.8em;
+
+      &.cancel {
+        font-size: 0.8em;
       }
     }
   }
@@ -155,32 +172,23 @@ ul#rts_list {
 #rts_list span.time {
 }
 */
+
 #notify_news {
   padding: 0.2rem 0.7rem;
-  min-height:1em;
-  border:solid 1px red;
-}
-
-.box {
-  margin: 10px 0 0 0;
-  padding: 0.3rem 0.5rem;
-}
-
-section {
-  margin: 0 0 10px 0;
-}
-
-#notify_news {
+  min-height: 1em;
+  border: solid 1px white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 6em;
+  overflow: hidden;
   color: #fff;
+  background: black;
 }
 
-body {
-  font-size: 20px !important;
-}
 
-@media screen and (max-device-width: 768px) {
-  body {
-    border: solid 2px blue;
-    font-size: 26px !important;
-  }
-}
+
+
+
+
