@@ -22,7 +22,7 @@ import '../../js/common.js'
 import createOpt from '../../js/stock-chart'
 //import { a, b } from './ls'
 
-import userDb from '../../../libs/user-jo'
+import userDb from '../../../libs/jsono-user'
 import jo from '../../../libs/jsono'
 import csd from '../../../libs/csd'
 import utils from '../../../libs/utils'

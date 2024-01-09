@@ -18,7 +18,7 @@ import fs from 'fs'
 import $ from 'jquery'
 import debugMenu from 'debug-menu'
 
-import userJo from '../../../libs/user-jo'
+import userJo from '../../../libs/jsono-user'
 import ju from '../../../libs/jodb-user'
 import setting from '../../../libs/setting'
 import jd from '../../../libs/jodb-data'
@@ -122,8 +122,8 @@ brick.reg('mainCtrl', function (scope) {
     scope.reverse = function (e) {
         //scope.urls.reverse();
         //$list.icRender('list', scope.urls);
-        scope.init('');
         isReverse = !isReverse;
+        scope.init('');
     };
 
     // 按原始顺序排序显示
@@ -174,31 +174,37 @@ brick.reg('mainCtrl', function (scope) {
                 return $.icMsg(`${ dir }\r不存在!`);
             }
             $imgDir.val(dir);
+
             // 如果是股票交易记录图片，添加交易记录
-            let isAddTags = /交易记录/img.test(dir);
+            let isAddTrade = /交易记录/img.test(dir);
 
             urls = helper.getImages(dir, {isReverse, isRefresh, isOrigin});
             if (!urls.length) {
                 return $.icMsg('no images.');
             }
-            urls[0].code && urls.forEach(o => {
-                o.tradeInfo = tradeArr.filter(arr => {
-                    // 交易信息 对应 code 和 时间
-                    return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
+            urls.forEach(o => {
+
+                if (isAddTrade) {
+                    o.tradeInfo = tradeArr.filter(arr => {
+                        // 交易信息 对应 code 和 时间
+                        return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
+                    });
+                }
+
+                // 附加标签信息 和 交易系统信息
+                let obj = viewerJodb.get(o.f, 'img')[0] || {tags: [], system: []};
+                let arr = obj.tags || [];
+                let arr2 = obj.system || [];
+
+                o.tags = arr.map((v) => {
+                    return tagsMap[v];
+                });
+                o.system = arr2.map((v) => {
+                    return systemMap[v];
                 });
 
-                // 附加标签信息
-                    let obj = viewerJodb.get(o.f, 'img')[0] || {tags: [], system: []};
-                    let arr = obj.tags || [];
-                    let arr2 = obj.system || [];
-                    //console.log(obj);
-                    o.tags = arr.map((v) => {
-                        return tagsMap[v];
-                    });
-                    o.system = arr2.map((v) => {
-                        return systemMap[v];
-                    });
             });
+
             console.log('urls =>', urls);
             scope.urls = urls;
 
@@ -306,9 +312,9 @@ brick.reg('mainCtrl', function (scope) {
     scope.imgDir = imgDir;
     if (imgDir) {
         scope.init(imgDir);
-        setTimeout(function (){
+        setTimeout(function () {
             //console.log(scope.$elm.find(`#history a.tag[data-dir="${ imgDir }"]`).addClass('is-danger'), `#history a.tag[data-dir="${imgDir}"]`);
-        },2000);
+        }, 2000);
     }
 
     scope.viewerVm = setting.get('viewer');

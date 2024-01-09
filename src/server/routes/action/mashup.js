@@ -3,7 +3,7 @@
  */
 
 import fs from 'fs'
-import sjo from '../../../libs/stock-jo'
+import sjo from '../../../libs/jsono-stock'
 
 export default {
 

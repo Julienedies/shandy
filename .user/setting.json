@@ -3,10 +3,10 @@
 		"tdx_extern_user_file": "E:\\new_tdx\\T0002\\signals\\extern_user.txt",
 		"csdPath": "E:\\dev\\csd",
 		"bounds": {
-			"x": 341,
-			"y": 123,
-			"width": 1685,
-			"height": 1006
+			"x": 343,
+			"y": 145,
+			"width": 1594,
+			"height": 1021
 		},
 		"fetchSources": [
 			"ths_new",
@@ -14,7 +14,7 @@
 			"ths_c"
 		],
 		"fetchByStocks": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
-		"fetchFromIndex": 299,
+		"fetchFromIndex": 301,
 		"stocksCsvFile": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
 		"stocksJsonFile": "E:\\dev\\csd\\stocks.json",
 		"hotCsvFile": "E:\\dev\\simg\\JX.txt",
@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\交易记录\\2301",
+		"imgDir": "E:\\dev\\simg\\交易记录\\2304",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -45,6 +45,10 @@
 			"height": 36
 		},
 		"history": [
+			"E:\\dev\\simg\\目标行情\\2024-01",
+			"E:\\dev\\simg\\交易记录\\2401",
+			"E:\\dev\\simg\\交易记录\\2312",
+			"E:\\dev\\simg\\目标行情\\2023-12",
 			"E:\\dev\\simg\\交易记录\\2311",
 			"E:\\dev\\simg\\目标行情\\2023-11",
 			"E:\\dev\\simg\\目标行情\\2023-10",
@@ -251,10 +255,10 @@
 	},
 	"system": {
 		"bounds": {
-			"x": -7,
-			"y": -7,
-			"width": 2209,
-			"height": 1209
+			"x": 2187,
+			"y": -933,
+			"width": 3856,
+			"height": 2136
 		}
 	},
 	"tags": {

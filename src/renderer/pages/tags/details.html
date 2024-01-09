@@ -7,8 +7,8 @@
                     <div style="white-space: nowrap;">
                         <button class="button is-medium is-black" ic-click="edit:{{ v.id }}">{{ v.text }}</button>
                         <br/>
-                        <sub style="margin-left:1em;">id: {{ v.id }}</sub>
-                        <sub style="margin-left:1em;" ic-if="(v['示例图片']||[]).length"> len: {{ (v['示例图片']||[]).length }}</sub>
+                        <span style="margin-left:1em;">id: {{ v.id }}</span>
+                        <span style="margin-left:3em;" ic-if="(v['示例图片']||[]).length"> length: {{ (v['示例图片']||[]).length }}</span>
                     </div>
                     <div class="tags"
                          ic-if="v.children"
@@ -41,7 +41,7 @@
                              ic-viewer-on-show="onViewerShow"
                              ic-viewer-on-open="onViewerOpen"
                              ic-viewer-on-close="onViewerClose">
-                            <a class="tag is-small is-warning"
+                            <a class="tag is-warning"
                                style="padding-right:1rem;"
                                ic-for="i,o in (v['示例图片']||[])"
                                ic-href="{{ parseImgPath(o) }}">

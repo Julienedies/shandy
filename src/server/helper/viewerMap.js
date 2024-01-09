@@ -7,7 +7,7 @@ import _ from 'lodash'
 import jsonDb from '../../libs/json-jo'
 import imagesHelper from '../../renderer/pages/viewer/helper'
 import ju from '../../libs/jodb-user'
-import userJo from '../../libs/user-jo'
+import userJo from '../../libs/jsono-user'
 
 
 const viewerMapDbFactory = jsonDb('viewerMap');
@@ -78,14 +78,14 @@ ViewerMap.instance = {
             let arr = VIEWER_MAP2[i];
 
             //if (['k_3312753', 'k_1305484', 'k_2055992', k_6734208].includes(i)) break;
-            //console.log(q++, '---', i, '---',arr.length, '---', arr[0]);
+            console.log(q++, '---', i, '---',arr.length, '---', arr[0]);
 
             VIEWER_MAP[i] = imagesHelper.sort(arr, !isReverse, 8);
 
             delete VIEWER_MAP2[i];
         }
 
-        viewerMapJsonDb.init(VIEWER_MAP);
+        viewerMapJsonDb.init(VIEWER_MAP); // objm init 会触发change事件
         console.log('viewerMap OK!');
         return VIEWER_MAP;
     },
@@ -96,6 +96,7 @@ ViewerMap.instance = {
         let tradeArr = userJo('SEL', []).get(); // 交易记录json
         let viewerJodb = ju('viewer',[]);  // 记录图片绑定的各种标签json
 
+        // 直接遍历所有项，并修改数据
         viewerJodb.each( (item,i) => {
             let d = item.d; // 日期
             let code =item.code;
@@ -120,7 +121,6 @@ ViewerMap.instance = {
                 item.code = code;
             }
 
-
             tradeInfo = tradeArr.filter(arr => {
                 // 交易信息 对应 code 和 时间
                 return code === arr[2] && d && d.replace(/-/g, '') === arr[0];
@@ -138,6 +138,7 @@ ViewerMap.instance = {
     },
 
 }
+
 
 /**
  *

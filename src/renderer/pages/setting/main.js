@@ -12,7 +12,7 @@ import '@julienedies/brick/dist/brick.css'
 
 import '../../js/common.js'
 
-import userJodb from '../../../libs/user-jodb'
+import userJodb from '../../../libs/jodb-user'
 
 import bridge from '../../../libs/utils'
 

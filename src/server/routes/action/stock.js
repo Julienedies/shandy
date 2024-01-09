@@ -4,7 +4,7 @@
  */
 
 import stocksManager from '../../../libs/stocks-manager'
-import sjo from '../../../libs/stock-jo.js'
+import sjo from '../../../libs/jsono-stock.js'
 
 export default {
 

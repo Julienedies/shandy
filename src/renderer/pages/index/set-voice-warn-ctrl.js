@@ -5,7 +5,7 @@
 
 import electron from 'electron'
 
-import userJodb from '../../../libs/user-jodb'
+import userJodb from '../../../libs/jodb-user'
 import voice from '../../../libs/voice'
 import utils from '../../../libs/utils'
 

@@ -8,15 +8,20 @@ import _ from 'lodash'
 
 const EventEmitter = events.EventEmitter;
 
-function Objm(){
+function Objm () {
     this._pool = {};
 }
 
 const proto = {
 
-    init: function(data){
+    init: function (data) {
         this._pool = data;
-        this.emit('change');
+        this.emit('change', 'init');
+        return this;
+    },
+
+    save: function () {
+        this.emit('change', 'save');
         return this;
     },
 
@@ -25,7 +30,7 @@ const proto = {
 
         let keys = key.split('.');
 
-        return (function x(namespace, keys) {
+        return (function x (namespace, keys) {
             let k = keys.shift();
             let o = namespace[k];
             if (o && keys.length) return x(namespace[k], keys);
@@ -36,13 +41,11 @@ const proto = {
 
     set: function (key, val) {
 
-        if(typeof key == 'object'){
+        if (typeof key == 'object') {
 
             Object.assign(this._pool, key);
 
-        }
-        else
-        if(typeof key == 'string'){
+        } else if (typeof key == 'string') {
 
             let old = this.get(key);
             if (old && _.isObject(old) && _.isObject(val)) return Object.assign(old, val);
@@ -50,14 +53,14 @@ const proto = {
 
         }
 
-        this.emit('change');
+        this.emit('change', 'set');
     },
 
     _set: function (key, val) {
 
         let keys = key.split('.');
 
-        (function x(namespace, keys) {
+        (function x (namespace, keys) {
             let k = keys.shift();
             let o = namespace[k];
             if (keys.length) {
@@ -72,11 +75,11 @@ const proto = {
     },
     remove: function (key) {
         this.set(key);
-        this.emit('change');
+        this.emit('change', 'remove');
     },
     clear: function () {
         this._pool = {};
-        this.emit('change');
+        this.emit('change', 'clear');
     }
 };
 
@@ -86,6 +89,6 @@ Objm.prototype = Object.create(EventEmitter.prototype);
 // 扩展原型对象
 Object.assign(Objm.prototype, proto);
 
-export default function(){
+export default function () {
     return new Objm();
 }

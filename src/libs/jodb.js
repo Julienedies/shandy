@@ -20,18 +20,20 @@ export default function (jsonFilePath, initData = [], conf = {}) {
 
     let dob = Array.isArray(initData) ? recordManager(conf) : objm();
 
-    dob.on('change', function (msg) {
-        jo.json = dob.get();
-        jo.save();
-    });
-
-    dob.init(jo.json);
+    dob.init(jo.json);  // 一开始初始化从json文件填充数据不用触发change事件
 
     // 其他地方的jodb修改了json，通过这种方式更新当前jodb
     dob.refresh = function () {
         jo.refresh();
         dob.init(jo.json);
     };
+
+    // 数据更新保存
+    dob.on('change', function (msg) {
+        console.log('on dob.change', msg, jsonFilePath);
+        jo.json = dob.get();
+        jo.save();
+    });
 
     return dob;
 

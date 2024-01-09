@@ -35,6 +35,7 @@ socket.on('rts_push', function (arr) {
 });
 
 socket.on('cls_news', function (msg) {
+    console.log('通过socket接收cls news.其实消息本来就是从这里先传给服务器的.');
     $notify_news.text(msg).toggleClass('warn');
 });
 
@@ -60,6 +61,7 @@ brick.reg('rts_ctrl', function (scope) {
     };
 
     scope.notify_news = function () {
+        console.log('通过socket把cls news发给服务器.');
         let msg = $(this).text();
         socket.emit('cls_news', msg);
     };

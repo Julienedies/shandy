@@ -5,7 +5,7 @@
 
 import dobFactory from '../../../libs/dob.js'
 import jsonDb from '../../../libs/json-jo'
-import userJodb from '../../../libs/user-jodb'
+import userJodb from '../../../libs/jodb-user'
 
 import createReaderHtml from '../../helper/createReaderHtml'
 

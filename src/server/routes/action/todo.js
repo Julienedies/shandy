@@ -2,7 +2,7 @@
  * Created by j on 20/5/30.
  */
 
-import userJodb from '../../../libs/user-jodb'
+import userJodb from '../../../libs/jodb-user'
 
 let todoJoDb;
 let warnJoDb;

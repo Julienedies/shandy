@@ -18,7 +18,7 @@ import electron from 'electron'
 import utils from '../../../libs/utils'
 import voice from '../../../libs/voice'
 import warnText from '../../js/warn-text'
-import userJodb from '../../../libs/user-jodb'
+import userJodb from '../../../libs/jodb-user'
 
 const ipc = electron.ipcRenderer;
 const BrowserWindow = electron.remote.BrowserWindow;

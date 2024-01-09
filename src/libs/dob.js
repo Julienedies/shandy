@@ -22,12 +22,13 @@ export default function (name, conf) {
     // 数组数据或map数据
     let dob = Array.isArray(data) ? recordManager(conf) : objm();
 
+    dob.init(data);
+
     dob.on('change', function (msg) {
         let json = JSON.stringify(dob.get(), null, '\t');
         fs.writeFileSync(jsonPath, json);
     });
 
-    dob.init(data);
-    return dob;
 
+    return dob;
 }

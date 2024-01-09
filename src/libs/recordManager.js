@@ -1,5 +1,6 @@
 /**
  * 列表数据管理,增删改查
+ * 这个是后端使用的，跟brick里的 RecordManager是不同的版本
  * Created by Julien on 2014/8/13.
  */
 
@@ -24,6 +25,7 @@ function RecordManager (conf) {
     this._pool = [];
 }
 
+// 这个版本是后端使用的，跟brick里的 RecordManager是不同的版本
 let proto = {
     /**
      * 默认每条记录的主键为id；
@@ -58,7 +60,7 @@ let proto = {
      * 用于保存整个记录管理器里的数据
      */
     save: function () {
-        this.emit('change');
+        this.emit('change', 'save');
         return this;
     },
     // 替换save
@@ -265,7 +267,7 @@ let proto = {
         let id = record.id;
         // 如果没有主键,生成一个随机主键
         if (typeof id === 'undefined' || id === '') {
-            record.id = Math.random().toFixed(7).replace('0.', '');
+            record.id = this._createId();
         }
         // 如果有level属性, 但level为空, 设默认为1;
         let level = record.level;
@@ -283,7 +285,7 @@ let proto = {
         return record;
     },
     _createId: function () {
-
+        return Math.random().toFixed(7).replace('0.', '');
     },
     /**
      * 查询键值

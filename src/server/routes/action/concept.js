@@ -4,7 +4,7 @@
  */
 import _ from 'lodash'
 import pinyin from 'pinyin'
-import sjo from '../../../libs/stock-jo.js'
+import sjo from '../../../libs/jsono-stock.js'
 import stocksManager from '../../../libs/stocks-manager'
 
 // 根据概念名称获取对应公司列表

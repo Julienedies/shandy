@@ -46,27 +46,27 @@ body {
   left: 16%;
   right: 17%;
   padding: 2px 16px;
-  height: 1.8em;
+  max-height: 1.8em;
   overflow: hidden;
-  border: solid 1px blue;
-  background: rgba(0, 0, 0, 1);
-  color: yellow;
   font-size: 20px;
+  color: yellow;
+  background: rgba(0, 0, 0, 1);
+  border: solid 1px blue;
 
   &.active {
     top: 1135px;
-    left: 23%;
-    right: 24%;
-    background: rgba(0, 0, 0, 0.7);
+    left: 24%;
+    right: 21%;
+    max-height: 3.6em;
     color: #fff;
+    background: rgba(0, 0, 0, 0.7);
     border: solid 1px greenyellow;
-    height: 4em;
   }
 }
 
 
 .blink {
-  animation: blink 0.7s 8 ease-in-out;
+  animation: blink 0.6s 48 ease-in-out;
 }
 .blink2 {
   animation: blink 0.7s infinite ease-in-out;
