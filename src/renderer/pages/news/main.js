@@ -17,7 +17,7 @@ import setting from '../../../libs/setting'
 const voiceWarnText = {
     'daban': '无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；',
     'buy': '无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；',
-    'sell': '卖飞',
+    'sell': '卖飞、卖飞、卖飞',
 }
 
 const ipc = electron.ipcRenderer;

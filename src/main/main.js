@@ -67,6 +67,7 @@ function createWindow () {
     });
 }
 
+//
 function ready () {
 
     createWindow();
@@ -121,6 +122,18 @@ function ready () {
     globalShortcut.register('CommandOrControl+shift+2', function () {
         screenshot();
     });
+
+/*    // 监听通达信F9买入动作， 会覆盖F9功能，并不起到监控键盘按下的动作
+    globalShortcut.register('F9', function () {
+        console.log('F9');
+        server.io.emit('warn', 'buy');
+    });
+
+    // 监听通达信F10卖出动作
+    globalShortcut.register('F10', function () {
+        console.log('F10');
+        server.io.emit('warn', 'sell');
+    });*/
 
     /***************************************************************************************************************************/
     /***************************************************************************************************************************/
@@ -188,7 +201,8 @@ function ready () {
     });
 }
 
-
+//#############################################################################
+//
 app.on('ready', ready);
 
 app.on('window-all-closed', () => {
@@ -205,5 +219,10 @@ app.on('activate', () => {
     if (mainWindow === null) {
         ready();
     }
+});
+
+// 在应用退出时，注销快捷键
+app.on('will-quit', ()=>{
+    globalShortcut.unregisterAll();
 });
 
