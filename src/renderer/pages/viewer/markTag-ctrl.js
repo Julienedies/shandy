@@ -27,6 +27,8 @@ export default function (scope) {
                 if(arr.length){
                     let text = arr.join('\r\n').replace(/,/g, '    ');
                     $TradeInfo.text(text);
+                }else{
+                    $TradeInfo.text('');
                 }
             };
         } else {

@@ -307,9 +307,13 @@ brick.reg('mainCtrl', function (scope) {
 
     historyModel.init(setting.get('viewer.history') || []);
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
     // main 程序入口
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+
     let imgDir = setting.get('viewer.imgDir');
     scope.imgDir = imgDir;
+
     if (imgDir) {
         scope.init(imgDir);
         setTimeout(function () {

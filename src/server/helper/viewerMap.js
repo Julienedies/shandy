@@ -115,7 +115,7 @@ ViewerMap.instance = {
                 //console.log(f2, arr2);
                 d = arr2[1];
 
-                console.log(fullPath, i);
+                //console.log(fullPath, i);
 
                 item.d = d;
                 item.code = code;
@@ -125,6 +125,8 @@ ViewerMap.instance = {
                 // 交易信息 对应 code 和 时间
                 return code === arr[2] && d && d.replace(/-/g, '') === arr[0];
             });
+
+            console.log(fullPath, tradeInfo);
 
             item.tradeInfo = tradeInfo.map(a => {
                 return [a[1], a[4], a[6], a[5]];  // => 时间, 买入/卖出, 数量, 价格

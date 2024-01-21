@@ -19,7 +19,7 @@ function parseImgName (path) {
     if (!path || typeof path !== 'string') return console.log(path);
     path = _isUrlPath(path) ? decodeURIComponent(path) : path;
     let arr = path.match(/^.+-(.+)-\d{6}\.png$/);
-    return arr && arr[1] || path;
+    return arr && arr[1] || 'undefined';
 }
 
 function parseImgPath (path) {
