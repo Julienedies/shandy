@@ -41,11 +41,12 @@ export const SET_TODO_DONE = 'SET_TODO_DONE';
 export const GET_TODO_DONE = 'GET_TODO_DONE';
 export const DEL_TODO_DONE = 'DEL_TODO_DONE';
 
-export const COLORS_BACKGROUND = ['#ff0000', '#0000ff', '#006400', '#ffff00', '#9400D3', '#000000'];
+export const COLORS_BACKGROUND = ['#ffffff', '#ff0000', '#f60838', '#0000ff', '#03f2f2', '#006400', '#08f644', '#ffff00', '#9400D3', '#000000' ];
 export let FroalaEditorConfig = {
     fontSizeDefaultSelection: '18',
     fontSize: ['14', '16', '18', '20', '22', '24', '26', '28', '30', '32'],
     colorsBackground: COLORS_BACKGROUND,
+    colorsText: COLORS_BACKGROUND,
 };
 
 export default {

@@ -11,7 +11,7 @@
 <body>
 <div class="column" style="padding: 0.5rem 0.2rem;">
 
-    <section id="rts" ic-ctrl="rts_ctrl">
+    <section id="rts" ic-ctrl="rtsCtrl">
         <table class="" id="rts_list" ic-tpl="list">
             <tr ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
                 <td>
@@ -71,7 +71,7 @@
         </ul>-->
     </section>
 
-    <section ic-ctrl="plans_ctrl" style="display: none;">
+    <section ic-ctrl="x-plansCtrl" style="display: none;">
         <div class="columns">
             <div class="column is5" ic-tpl="replay">
                 <ul class="box">
@@ -95,7 +95,7 @@
         </div>
     </section>
 
-    <section ic-ctrl="rts_ctrl">
+    <section ic-ctrl="rtsCtrl">
 
         <div id="notify_news" ic-click="notify_news">等待 cls 消息;</div>
 
@@ -105,7 +105,7 @@
         </div>
     </section>
 
-    <footer style="position: fixed;bottom:0; left:0; right:0;display: none;" ic-ctrl="help_ctrl">
+    <footer style="position: fixed;bottom:0; left:0; right:0;display: none;" ic-ctrl="helpCtrl">
         <div ic-tpl="links">
             <a class="button is-info" ic-href="http://{{model.ip}}/web/stock_plan.html" target="_blank">计划</a>
         </div>

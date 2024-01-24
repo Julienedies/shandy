@@ -42,7 +42,7 @@ socket.on('cls_news', function (msg) {
 });
 
 //
-brick.reg('rts_ctrl', function (scope) {
+brick.reg('rtsCtrl', function (scope) {
 
     scope.cancel = function () {
         let $th = $(this);
@@ -71,12 +71,12 @@ brick.reg('rts_ctrl', function (scope) {
 });
 
 //
-brick.reg('help_ctrl', function (scope) {
+brick.reg('helpCtrl', function (scope) {
     scope.render('links', {ip: location.host});
 });
 
 //
-brick.reg('plans_ctrl', function () {
+brick.reg('plansCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;
@@ -86,7 +86,7 @@ brick.reg('plans_ctrl', function () {
         url: '/stock/replay'
     }).done((data) => {
         console.info(data);
-        scope.render('replay', data.replay);
+        scope.render('replay', data);
     });
 
     $.get({
