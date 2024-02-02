@@ -13,11 +13,25 @@ import voice from '../../../libs/voice'
 
 import setting from '../../../libs/setting'
 
+
+
+let w1 = `
+无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
+无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
+无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
+无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
+无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；`;
+
+const w2 = `
+卖飞、卖飞、卖飞、截断亏损、让利润奔跑；
+卖飞、卖飞、卖飞、截断亏损、让利润奔跑；
+卖飞、卖飞、卖飞、截断亏损、让利润奔跑；
+`;
 //const voiceWarnText = setting.get('voiceWarnText') || {};
 const voiceWarnText = {
-    'daban': '无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；',
-    'buy': '无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；',
-    'sell': '卖飞、卖飞、卖飞',
+    'daban': w1,
+    'buy': w1,
+    'sell': w2,
 }
 
 const ipc = electron.ipcRenderer;
@@ -30,6 +44,7 @@ let $news = $('#news');
 let $warn = $('#warn');
 
 let activeCla = 'active blink';
+let activeCla2 = 'active blink2';
 
 //////////////////////////////////////////////////////////////
 // 隐藏窗口
@@ -62,10 +77,10 @@ ipc.on('id', function (event, windowID) {
 // 有财经新消息显示窗口,  稍后隐藏窗口
 socket.on('cls_news', (msg) => {
     clearTimeout(timer);
-    $news.text(msg).addClass(activeCla);
+    $news.text(msg).addClass(activeCla2);
 
     timer = setTimeout(() => {
-        $news.removeClass(activeCla);
+        $news.removeClass(activeCla2);
     }, 14 * 1000);
 
     /*    if (win) {
@@ -85,7 +100,8 @@ socket.on('warn', (info) => {
 
     setTimeout(function () {
         $warn.removeClass(activeCla);
-    }, 1000 * 4.5);
+        voice.clear();
+    }, 1000 * 5);
 
     voice(text);
 

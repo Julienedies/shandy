@@ -24,16 +24,19 @@ body {
   left: 20%;
   right: 30%;
   padding: 0 16px;
+  height: 1em;
+  overflow: hidden;
   background: rgba(0, 0, 0, 0.4);
   border: solid 0px greenyellow;
   color: greenyellow;
   font-size: 20px;
+  white-space: pre;
   transition: all .9ms ease-in-out;
 
   &.active {
     z-index: 4;
-    top: 16%;
-    left: 50%;
+    top: 7%;
+    left: 47%;
     width:100%;
     height: 100%;
     font-size:4em;
@@ -66,19 +69,30 @@ body {
 
 
 .blink {
-  animation: blink 0.6s 48 ease-in-out;
+  animation: blink 0.5s 48 ease-in-out;
 }
 .blink2 {
-  animation: blink 0.7s infinite ease-in-out;
+  animation: blink2 0.7s 68 ease-in-out;
 }
 
 @keyframes blink {
   1% {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.9);
     color: #fff;
   }
   100% {
-    background: rgba(255, 255, 0, 0.8);
+    background: rgba(255, 0, 0, 0.9);
+    color: #000;
+  }
+}
+
+@keyframes blink2 {
+  1% {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+  }
+  100% {
+    background: rgba(255, 255, 0, 0.9);
     color: #000;
   }
 }

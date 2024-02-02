@@ -24,7 +24,11 @@ export default function (scope) {
         if ($TradeInfo.length) {
             return function () {
                 let arr = imgObj.tradeInfo || [];
-                if(arr.length){
+
+                if(typeof(arr) === 'string'){
+                    $TradeInfo.text(arr);
+                }
+                else if(arr.length){
                     let text = arr.join('\r\n').replace(/,/g, '    ');
                     $TradeInfo.text(text);
                 }else{
@@ -40,8 +44,9 @@ export default function (scope) {
 
     function render () {
         // 在viewer中有记录的img 或者 第一次添加标签记录的img；
+        // viewer.json里并不包含所有img，所以有些图片的交易信息只能在viewer.init里进行绑定；
         let imgPath = currentImg.f;
-        imgObj = viewerJodb.get(imgPath, 'img')[0] || {img: imgPath};
+        imgObj = viewerJodb.get(imgPath, 'img')[0] || {img: imgPath, tradeInfo: currentImg.tradeInfoText};
 
         // 为了能够同时在浏览器中工作, 改为使用ajax获取数据
         /*        imgObj = await $.ajax({
