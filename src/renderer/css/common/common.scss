@@ -6,9 +6,16 @@
 html, body {
   padding: 1px;
   color: #202020;
+  // 24寸+显示器
   font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
+  // iPad
   @media screen and (max-width: 800px) {
-    font-size: 16px;
+    font-size: 16px!important;
+  }
+
+  // mac
+  @media screen and (max-width: 1440px) {
+    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
   }
 
   &::-webkit-scrollbar {

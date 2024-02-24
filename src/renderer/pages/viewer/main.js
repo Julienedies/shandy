@@ -56,7 +56,7 @@ window.brick = brick;
 brick.services.reg('historyModel', historyModel);
 
 brick.set('ic-viewer-interval', setting.get('viewer.interval') || 10);
-
+brick.set('ic-select-cla', 'is-danger');
 
 brick.reg('mainCtrl', function (scope) {
 
