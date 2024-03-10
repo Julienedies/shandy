@@ -14,7 +14,7 @@
 		"timestamp": 1661941742710,
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1708652250780
+		"prevPromptTime": 1709860151959
 	},
 	{
 		"name": "",
@@ -47,7 +47,7 @@
 		"title": "每天沉迷于无效的日常交易；依然没有建立明确的交易系统；",
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1708654951086
+		"prevPromptTime": 1709862852240
 	},
 	{
 		"name": "",
@@ -64,7 +64,7 @@
 		"title": "真他妈的恨死自己了，一个人怎么可以这样？每天跟赌博一样，着眼于转债的小波动；",
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1708657651135
+		"prevPromptTime": 1709865552606
 	},
 	{
 		"name": "",
@@ -95,9 +95,7 @@
 		"timestamp": 1610785651586,
 		"tag": "无改变",
 		"level": "1000",
-		"title": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1708665750711
+		"title": ""
 	},
 	{
 		"name": "",
@@ -114,7 +112,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1708668451122
+		"prevPromptTime": 1709873651799
 	},
 	{
 		"name": "",
@@ -130,7 +128,7 @@
 		"level": 980,
 		"title": "为何我总是临盘犹豫，手足无措，错过最好的交易机会？",
 		"promptTimes": 1,
-		"prevPromptTime": 1708671151021
+		"prevPromptTime": 1709876351988
 	},
 	{
 		"name": "",
@@ -162,7 +160,7 @@
 		"duration": 17,
 		"timestamp": 1665225867007,
 		"promptTimes": 2,
-		"prevPromptTime": 1708673850304
+		"prevPromptTime": 1709879052124
 	},
 	{
 		"name": "",
@@ -178,8 +176,8 @@
 		"level": "965",
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"tag": "错过大行情和龙头",
-		"promptTimes": 1,
-		"prevPromptTime": 1708676551568
+		"promptTimes": 2,
+		"prevPromptTime": 1709887151238
 	},
 	{
 		"type": "错误",
@@ -195,8 +193,8 @@
 		"timestamp": 1658544247850,
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
-		"promptTimes": 1,
-		"prevPromptTime": 1708679251266
+		"promptTimes": 2,
+		"prevPromptTime": 1709889852442
 	},
 	{
 		"name": "",
@@ -213,7 +211,7 @@
 		"title": "我的交易系统是什么？我要捕捉的目标行情是什么？",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1708681951316
+		"prevPromptTime": 1709892551104
 	},
 	{
 		"name": "",
@@ -230,7 +228,7 @@
 		"title": "我以什么做为判断锚点？为何我的预判总是错误？",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1708684650136
+		"prevPromptTime": 1709895252338
 	},
 	{
 		"name": "",
@@ -247,7 +245,7 @@
 		"title": "对市场理解不够，不知道市场参与者的行为逻辑。",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1708687350840
+		"prevPromptTime": 1709897951117
 	},
 	{
 		"name": "",
@@ -264,7 +262,7 @@
 		"level": "900",
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"promptTimes": 1,
-		"prevPromptTime": 1708690051155
+		"prevPromptTime": 1709900652253
 	},
 	{
 		"name": "",
@@ -281,7 +279,7 @@
 		"title": "思维没有方向，操作没有系统；我每天脑子在想什么？",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1708692750765
+		"prevPromptTime": 1709903351010
 	},
 	{
 		"name": "",
@@ -298,7 +296,7 @@
 		"title": "思维没有方向，操作没有系统；每天盘前脑子完全是空的， 临盘被市场牵着鼻子走。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1708695449501
+		"prevPromptTime": 1709906051417
 	},
 	{
 		"type": "错误",
@@ -315,7 +313,7 @@
 		"duration": "17",
 		"timestamp": "1681838241354",
 		"promptTimes": 1,
-		"prevPromptTime": 1708698150951
+		"prevPromptTime": 1709908750345
 	},
 	{
 		"name": "",
@@ -332,7 +330,7 @@
 		"title": "无系统、无计划，临盘随意交易是我最大的亏损来源。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1708700850463
+		"prevPromptTime": 1709911451656
 	},
 	{
 		"name": "",
@@ -347,9 +345,7 @@
 		"timestamp": 1611881119094,
 		"level": "855",
 		"title": "无系统，无计划，临盘犹豫应对差，机会转瞬即逝；",
-		"tag": "无系统",
-		"promptTimes": 1,
-		"prevPromptTime": 1708703549357
+		"tag": "无系统"
 	},
 	{
 		"name": "",
@@ -529,7 +525,9 @@
 		"timestamp": "1637020107294",
 		"level": "765",
 		"title": "没有大局观，后知后觉，没有明确的行情意识。没有周期和大局观的洞察力。",
-		"tag": "没有大局观"
+		"tag": "没有大局观",
+		"promptTimes": 1,
+		"prevPromptTime": 1709952724545
 	},
 	{
 		"name": "",
@@ -559,7 +557,9 @@
 		"timestamp": "1657814700731",
 		"level": "760",
 		"title": "没有大局观，不是从大局上思考市场，然后把思考结果着眼到个股上。",
-		"tag": "没有大局观"
+		"tag": "没有大局观",
+		"promptTimes": 2,
+		"prevPromptTime": 1709960049773
 	},
 	{
 		"type": "错误",
@@ -574,7 +574,9 @@
 		"interval": "60",
 		"duration": "17",
 		"timestamp": 1664936378905,
-		"tag": "没有大局观"
+		"tag": "没有大局观",
+		"promptTimes": 2,
+		"prevPromptTime": 1709962748595
 	},
 	{
 		"type": "错误",
@@ -1303,15 +1305,15 @@
 		"name": "",
 		"id": "3975590",
 		"type": "系统",
-		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\"> 关于短线炒作的本质、各类资金的行为模式 </span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>短线这个游戏是怎么玩的， 市场资金关注点，连续性；博弈、反转；分歧、一致；</u></span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>退学炒股一直专注于打板，不是没有原因的。他其实只是在短线这个圈子里玩。</u></span></strong></span></p><p><span style=\"font-size: 20px;\"><br></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">热点，市场热钱所在。市场合力，行为比较好预测</span></strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong>。</strong></span></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">大局观：当前市场的赚钱效应。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">超短生态，这里是有圈子的。围绕涨停板操作才是超短的正确路径。</span></strong></p><p><br></p><p>理解短线炒作的本质。</p><p>短线资金的行为逻辑。情绪、题材、消息、趋势、反身性驱动。</p><p>一只票能炒多高，更短线资金经验有关系。跟市场情绪有关系。</p><p>就像东方通信、贵州燃气、王府井、郑州煤电。这些都是市场短线资金的记忆。</p><p>包括博弈，分歧、一致、龙头、补涨、等都是短线资金的行为逻辑继承。</p><p>这些很多资金行为都和涨停板息息相关。比如通过涨停来选股，来做确定性。来抱团。</p><p>也许有一天会随着交易规则的变化而改变。</p><p>这些资金经验，会不断的重复。所谓人性，历史会重复。贪婪、恐慌、希望、臆想。分歧转一致、弱转强。</p><p><strong><span style=\"font-size: 22px;\">我要做的是从大局观上来理解市场。这就是支撑我的交易逻辑。</span></strong></p><p><br></p><p>20cm的趋势抱团。</p><p><br></p><p><br></p><p>招商证券则在《A股4次著名&ldquo;抱团&rdquo;事件启示录》中写道，2006年以来，以公募基金为代表的机构投资者逐渐崛起为A股的非常重要的一股力量。机构投资者通常拥有相似的决策框架、考核机制、信息渠道、行为模式，导致A股在2007年以后出现过4次非常著名的&ldquo;抱团&rdquo;。</p><p><br></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>&nbsp;大局观和市场理解力&nbsp;</u></span></strong>&nbsp;</p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;市场的波动来源于何处？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;支撑我的交易逻辑？&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">短线生态。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;短线资金的行为逻辑。</span></strong></p>",
+		"content": "<p><strong><span style=\"font-size: 24px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">&nbsp;关于短线炒作的本质、各类资金的行为模式&nbsp;</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>短线这个游戏是怎么玩的， 市场资金关注点，连续性；博弈、反转；分歧、一致；</u></span></strong></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>退学炒股一直专注于打板，不是没有原因的。他其实只是在短线这个圈子里玩。</u></span></strong></span></p><p><span style=\"font-size: 20px;\"><br></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">热点，市场热钱所在。市场合力，行为比较好预测</span></strong><span style=\"color: rgb(255, 255, 255);\"><span style=\"background-color: rgb(148, 0, 211);\"><strong>。</strong></span></span></span></p><p><span style=\"font-size: 20px;\"><strong><span style=\"background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">大局观：当前市场的赚钱效应。</span></strong></span></p><p><strong><span style=\"font-size: 20px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">超短生态，这里是有圈子的。围绕涨停板操作才是超短的正确路径。</span></strong></p><p><br></p><p>理解短线炒作的本质。</p><p>短线资金的行为逻辑。情绪、题材、消息、趋势、反身性驱动。</p><p>一只票能炒多高，更短线资金经验有关系。跟市场情绪有关系。</p><p>就像东方通信、贵州燃气、王府井、郑州煤电。这些都是市场短线资金的记忆。</p><p>包括博弈，分歧、一致、龙头、补涨、等都是短线资金的行为逻辑继承。</p><p>这些很多资金行为都和涨停板息息相关。比如通过涨停来选股，来做确定性。来抱团。</p><p>也许有一天会随着交易规则的变化而改变。</p><p>这些资金经验，会不断的重复。所谓人性，历史会重复。贪婪、恐慌、希望、臆想。分歧转一致、弱转强。</p><p><strong><span style=\"font-size: 22px;\">我要做的是从大局观上来理解市场。这就是支撑我的交易逻辑。</span></strong></p><p><br></p><p>20cm的趋势抱团。</p><p><br></p><p><br></p><p>招商证券则在《A股4次著名&ldquo;抱团&rdquo;事件启示录》中写道，2006年以来，以公募基金为代表的机构投资者逐渐崛起为A股的非常重要的一股力量。机构投资者通常拥有相似的决策框架、考核机制、信息渠道、行为模式，导致A股在2007年以后出现过4次非常著名的&ldquo;抱团&rdquo;。</p><p><br></p><p><br></p><p><br></p><p><strong><span style=\"font-size: 32px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\"><u>&nbsp;大局观和市场理解力&nbsp;</u></span></strong>&nbsp;</p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;市场的波动来源于何处？</span></strong></p><p><br></p><p><strong><span style=\"font-size: 28px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;支撑我的交易逻辑？&nbsp;</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">短线生态。</span></strong></p><p><strong><span style=\"font-size: 24px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">&nbsp;短线资金的行为逻辑。</span></strong></p>",
 		"singleWindow": "",
 		"start": "16:00",
-		"repeat": "2",
-		"interval": "60",
-		"duration": "47",
+		"repeat": 1,
+		"interval": 60,
+		"duration": 47,
 		"timestamp": 1609565575214,
 		"tag": "",
-		"level": "1",
+		"level": 1,
 		"title": ""
 	},
 	{
