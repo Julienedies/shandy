@@ -3,7 +3,7 @@ html, body {
   min-height: 100%;
   overflow: hidden;
   background: rgba(0, 0, 0, 0);
-  border: solid 1px blue;
+  //border: solid 1px blue;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
   padding: 0 16px;
   height: 1em;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0);
   border: solid 0px greenyellow;
   color: greenyellow;
   font-size: 20px;
@@ -45,44 +45,44 @@ body {
 
 #news {
   position: fixed;
-  top: 0;
+  top: -5px;
   left: 16%;
-  right: 17%;
-  padding: 2px 16px;
-  max-height: 1.8em;
+  right: 16.4%;
+  padding: 1px 16px;
+  max-height: 1.6em;
   overflow: hidden;
   font-size: 20px;
   color: yellow;
-  background: rgba(0, 0, 0, 1);
-  border: solid 1px blue;
+  background: rgba(0, 0, 0, 0.8);
+  //border: solid 1px blue;
 
   &.active {
-    top: 1135px;
-    left: 24%;
-    right: 21%;
-    max-height: 3.6em;
+    //top: 742px;
+    //left: 7%;
+    //right: 9.2%;
+    max-height: 3.1em;
     color: #fff;
-    background: rgba(0, 0, 0, 0.7);
-    border: solid 1px greenyellow;
+    background: rgba(0, 0, 0, 1);
+    //border: solid 1px greenyellow;
   }
 }
 
 
 .blink {
-  animation: blink 0.5s 48 ease-in-out;
+  animation: blink 0.5s 30 ease-in-out;
 }
 .blink2 {
-  animation: blink2 0.7s 68 ease-in-out;
+  animation: blink2 0.7s 20 ease-in-out;
 }
 
 @keyframes blink {
   1% {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.7);
     color: #fff;
     font-size:3.6em;
   }
   100% {
-    background: rgba(255, 0, 0, 0.9);
+    background: rgba(255, 0, 0, 0.7);
     color: #000;
     font-size:4.4em;
   }
@@ -94,7 +94,7 @@ body {
     color: #fff;
   }
   100% {
-    background: rgba(255, 255, 0, 0.9);
+    background: rgba(255, 255, 0, 0.8);
     color: #000;
   }
 }

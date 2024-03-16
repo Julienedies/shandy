@@ -190,6 +190,45 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
+    scope.openNews2 = function () {
+        let newsWin2 = scope.newsWin2;
+        if (newsWin2) {
+            newsWin2.close();
+        } else {
+            let name = 'news2';
+            let url = 'news2.html';
+            let opt = {
+                name,
+                url,
+                width: 720,
+                height: 64,
+                x: 60,
+                ...getBounds(name),
+                titleBarStyle: 'hiddenInset',
+                transparent: true,
+                frame: false,
+                hasShadow: false,
+                alwaysOnTop: true,
+                simpleFullscreen: true,
+                fullscreen: true,
+                onClose: () => {
+                    delete scope.newsWin2;
+                }
+            }
+            newsWin2 = scope.newsWin2 = new Win(opt);
+            newsWin2.maximize();
+            //newsWin2.setFullScreen(true);
+            newsWin2.win.setIgnoreMouseEvents(true);
+            newsWin2.win.webContents.on('did-finish-load', function () {
+                newsWin2.win.webContents.send('id', newsWin2.win.id);
+            });
+            setTimeout(() => {
+                //newsWin.win.setIgnoreMouseEvents(true);
+            }, 1000 * 60 * 1.1);
+        }
+    };
+
+
     scope.openWarn = function (e, ignore) {
         let warnWindow = scope.warnWindow;
         if (warnWindow) {
@@ -324,8 +363,10 @@ brick.reg('mainCtrl', function (scope) {
     }, 1000 * 4);
 
 
+    // 如果是交易时间， 打开消息提示窗口
     if (utils.isTrading()) {
         !scope.newsWin && scope.openNews();
+        !scope.newsWin2 && scope.openNews2();
         //!scope.warnWindow && scope.openWarn(null, 1);
     }
 
@@ -338,6 +379,7 @@ brick.reg('mainCtrl', function (scope) {
         });
         utils.timer('15:00', () => {
             scope.newsWin && scope.newsWin.close();
+            scope.newsWin2 && scope.newsWin2.close();
             scope.warnWindow && scope.warnWindow.close();
         });
     }
