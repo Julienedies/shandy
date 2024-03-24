@@ -1,5 +1,37 @@
 [
 	{
+		"id": "id_1711260887242_3877",
+		"type": "",
+		"level": "0",
+		"text": "选股宝 概念 ajax\nhttps://flash-api.xuangubao.cn/api/stage2/plates_by_any_stock?symbol=600973.SS&fields=core_avg_pcp,plate_name\n\n同花顺 同业 ajax\nhttps://basic.10jqka.com.cn/mapp/300799/a_companies_list.json",
+		"timestamp": 1711260887242
+	},
+	{
+		"text": "STR:='要显示的文字文字文字文字文字文字文字';\nSL:=CEILING(STRLEN(STR)/2);\nDRAWTEXT(CURRBARSCOUNT=SL, REFX(H,SL-1), STR),DRAWABOVE;",
+		"type": "",
+		"id": "id_1710809124939_6731",
+		"timestamp": 1710809124939
+	},
+	{
+		"text": "DRAWTEXT(ISLASTBAR, IF(BARPOSX()<80, BARPOSX()*1.1, BARPOSX()/1.1), HIGH*1.08, '要显示的文字文字文字",
+		"type": "",
+		"id": "id_1710780177075_2467",
+		"timestamp": 1710780177075
+	},
+	{
+		"text": "一周是一年的2%。",
+		"type": "",
+		"id": "id_1710753293958_6461",
+		"timestamp": 1710753293958
+	},
+	{
+		"id": "id_1710686842830_5019",
+		"type": "tdx",
+		"level": "0",
+		"text": "A1:=C>=REF(C,1)*1.095 AND C>=H;\nXG:=REF(A1,N);",
+		"timestamp": 1710686842831
+	},
+	{
 		"text": "【美国国债收益率升至2007年以来最高 通胀担忧重燃】财联社9月20日电，加拿大通胀数据高于预期以及油价上涨加剧了全球对通胀压力再度抬头的担忧，推动美国5年期和10年期国债收益率双双升至2007年以来的最高水平。美国5年期国债收益率一度上涨7个基点，至4.52%，而10年期收益率一度上涨6个基点，至4.365%。两年期国债收益率距离多年新高仅差一个基点。PGIM Fixed Income联席首席投资官Gregory Peters表示，这些变动反映出债市意识到美联储将在更长一段时间内把政策利率保持在高位。",
 		"type": "",
 		"id": "id_1695169318185_0397",
@@ -750,9 +782,9 @@
 	},
 	{
 		"id": "3563317",
-		"text": "为项目重新设置git remote url\ngit remote set-url origin git@github.com:gushenwei/ac.git\n",
+		"text": "为项目重新设置git remote url\ngit remote set-url origin git@github.com:gushenwei/ac.git\n\ngit remote set-url origin git@github.com:Julienedies/jhandy-cli.git\n",
 		"type": "git",
-		"level": 1.1558359935432,
+		"level": "1.1558359935432",
 		"timestamp": 1563086678967
 	},
 	{

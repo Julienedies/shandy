@@ -157,9 +157,12 @@ brick.reg('mainCtrl', function (scope) {
                 height: 64,
                 x: 60,
                 ...getBounds(name),
-                titleBarStyle: 'hiddenInset',
+                frame: false,
+                //titleBarStyle: 'hiddenInset',
+                //frame: false,
+                //fullscreen: true,
+                simpleFullscreen: true,
                 transparent: true,
-                // frame: false,
                 hasShadow: false,
                 alwaysOnTop: true,
                 onClose: () => {
@@ -167,12 +170,14 @@ brick.reg('mainCtrl', function (scope) {
                 }
             }
             newsWin = scope.newsWin = new Win(opt);
+            newsWin.maximize();
+            newsWin.win.setIgnoreMouseEvents(true);
             newsWin.win.webContents.on('did-finish-load', function () {
                 newsWin.win.webContents.send('id', newsWin.win.id);
             });
             setTimeout(() => {
                 newsWin.win.setIgnoreMouseEvents(true);
-            }, 1000 * 60 * 1.1);
+            }, 1000 * 4 * 1.1);
         }
     };
 
@@ -240,11 +245,11 @@ brick.reg('mainCtrl', function (scope) {
                 ...getBounds(name),
                 frame: false,
                 simpleFullscreen: true,
+                alwaysOnTop: true,
                 //frame: false,
                 //transparent: true,
                 //titleBarStyle: 'hidden',
                 //hasShadow: false,
-                alwaysOnTop: true,
                 //fullscreen: true,
                 onClose: () => {
                     delete scope.reminderWin;
@@ -311,7 +316,7 @@ brick.reg('mainCtrl', function (scope) {
 
 
     if (utils.isTrading()) {
-        //!scope.newsWin && scope.openNews();
+        !scope.newsWin && scope.openNews();
         //!scope.warnWindow && scope.openWarn(null, 1);
     }
 

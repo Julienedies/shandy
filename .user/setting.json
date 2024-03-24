@@ -140,10 +140,10 @@
 	},
 	"news": {
 		"bounds": {
-			"x": 108,
-			"y": 98,
-			"width": 1179,
-			"height": 59
+			"x": 0,
+			"y": 0,
+			"width": 1440,
+			"height": 900
 		}
 	},
 	"reminder": {

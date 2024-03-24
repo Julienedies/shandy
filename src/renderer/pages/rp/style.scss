@@ -46,6 +46,7 @@ html, body {
   padding: 60px 0 60px 0;
 }
 
+//========================================
 #todoList {
   .tag:not(body).is-medium {
     font-size: 1rem;
@@ -75,52 +76,9 @@ html, body {
     //text-decoration: underline;
   }
 
-
   &.shrink {
     .pre.text {
       display: none;
-    }
-  }
-
-
-  .role_0, .role_1, .role_2, .role_3 {
-    color: #fff;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-
-  .role_0, .role_1, .role_2 {
-    background: yellow;
-    color: #000;
-
-    h3 {
-      color: #000;
-    }
-  }
-
-  /*  .role_1 {
-      background: blue;
-
-      h3 {
-        color: #fff;
-      }
-    }
-
-    .role_2 {
-      //background: rgb(148, 0, 211);
-      background: blue;
-
-      h3 {
-        color: #fff;
-      }
-    }*/
-
-  .role_3 {
-    background: black;
-
-    h3 {
-      color: #fff;
     }
   }
 
@@ -134,18 +92,37 @@ html, body {
     }
 
     > header {
+      color: #000;
       background: yellow;
+      white-space: nowrap;
+      overflow: hidden;
 
-      /*      &.role_1 {
-              background: blue;
+      h3 {
+        color: #000;
+      }
 
-              h3 {
-                color: #fff;
-              }
-            }*/
+      &.role_0, &.role_1, &.role_2, &.role_3 {
+
+      }
+
+      &.role_0 {
+        background: yellow;
+
+        h3 {
+          color: #000;
+        }
+      }
+
+      &.role_1 {
+        background: rgb(0, 0, 255)!important;
+
+        h3 {
+          color: #fff;
+        }
+      }
 
       &.role_2 {
-        background: rgb(148, 0, 211);
+        background: rgb(158, 0, 201);
 
         h3 {
           color: #fff;
@@ -156,7 +133,7 @@ html, body {
         background: black;
 
         h3 {
-          color: #fff;
+          color: red;
         }
       }
 
@@ -213,6 +190,7 @@ html, body {
       }
     }
   }
+
 }
 
 
