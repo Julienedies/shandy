@@ -41,7 +41,7 @@ brick.reg('mainCtrl', function (scope) {
 
     scope.csdPath = model.csdPath;
     scope.tdx_extern_user_file = model.tdx_extern_user_file;
-    scope.tdxProps = ['概念', '概念y', '产品', '业务', '全名', '备注', '概念z', '亮点', '同业'];
+    scope.tdxProps = ['概念', '概念y', '产品', '业务', '全名', '备注', '概念z', '亮点', '同业', '概念x'];  // 和默认的一样, 有一个不在数组中hotPoint的占位符是99
 
     console.log(model);
 
@@ -181,10 +181,11 @@ brick.reg('mainCtrl', function (scope) {
             let c1 = sjo.json['概念'].split(/[，]+\s*/img);
             let c2 = sjo.json['概念y'].replace(/-\d*%/img, '').split(/[，]?\s+/img);
             let c3 = (sjo.json['概念z'] || '').split(/[，]?\s+/img);
+            let c4 = (sjo.json['概念x'] || '').split(/\s+/img);
             //let c4 = sjo.json['产品'].split(/[，]+\s*/img);
             //let c5 = sjo.json['业务'].split(/[，]+\s*/img);
 
-            let arr = _.flatten([c1, c2, c3]);
+            let arr = _.flatten([c1, c2, c3, c4]);
             keys.push(arr);
         });
 
@@ -259,7 +260,7 @@ brick.reg('mainCtrl', function (scope) {
             stocks.forEach(([code, name]) => {
                 let szh = /^6/.test(code) ? 1 : 0;
                 let sjo = jo(path.resolve(csdPath, `./s/${ code }.json`));  // ${ sjo.get('概念y') }
-                let concept = `${ sjo.get('概念') } ${ sjo.get('概念z') } ${ sjo.get('行业') } ${ sjo.get('产品') } ${ sjo.get('业务') }`;
+                let concept = `${ sjo.get('概念') } ${ sjo.get('概念x') } ${ sjo.get('概念z') } ${ sjo.get('行业') } ${ sjo.get('产品') } ${ sjo.get('业务') }`;
                 let hotStr = '';
                 hotPointArr.forEach((point) => {
                     if (concept.search(point) > -1) {
@@ -267,7 +268,7 @@ brick.reg('mainCtrl', function (scope) {
                     }
                 });
                 if (hotStr) {
-                    result += [szh, code, 14, hotStr, '0.000'].join('|') + '\r\n';
+                    result += [szh, code, 99, hotStr, '0.000'].join('|') + '\r\n';
                 }
             });
             console.log(result);

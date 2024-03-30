@@ -48,19 +48,19 @@ body {
   top: -5px;
   left: 16%;
   right: 16.4%;
-  padding: 1px 16px;
+  padding: 9px 18px;
   max-height: 1.6em;
   overflow: hidden;
   font-size: 20px;
-  color: yellow;
+  color: deepskyblue;
   background: rgba(0, 0, 0, 0.8);
   //border: solid 1px blue;
 
   &.active {
-    //top: 742px;
-    //left: 7%;
-    //right: 9.2%;
-    max-height: 3.1em;
+    top: 1080px;
+    left: 12%;
+    right: 26%;
+    max-height: 5em;
     color: #fff;
     background: rgba(0, 0, 0, 1);
     //border: solid 1px greenyellow;
@@ -72,12 +72,12 @@ body {
   animation: blink 0.5s 30 ease-in-out;
 }
 .blink2 {
-  animation: blink2 0.7s 20 ease-in-out;
+  animation: blink2 0.6s 15 ease-in-out;
 }
 
 @keyframes blink {
   1% {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     font-size:3.6em;
   }
@@ -94,7 +94,7 @@ body {
     color: #fff;
   }
   100% {
-    background: rgba(255, 255, 0, 0.8);
+    background: rgba(255, 255, 0, 0.9);
     color: #000;
   }
 }

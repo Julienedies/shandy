@@ -30,10 +30,10 @@
 
             <div class="table_0" ic-form="set_c">
 
-                <div ic-for="i,k in ['行业', '业务', '产品', '概念', '概念y', '概念z', '备注', '链接']">
+                <div ic-for="i,k in ['行业', '业务', '产品', '概念','概念x',  '概念y', '概念z', '备注', '链接']">
                     <h6>{{k}}</h6>
                     <div class="field" ic-init="v=model[k]">
-                        <textarea rows="{{Math.ceil((v && v.length/40) || 2)}}" class="textarea" ic-form-field="{{k}}">{{v}}</textarea>
+                        <textarea rows="{{Math.ceil((v && v.length/40) || 2)}}" class="textarea" ic-form-field="{{ k }}">{{ v }}</textarea>
                     </div>
                 </div>
 

@@ -96,6 +96,8 @@ socket.on('warn', (info) => {
     let text = voiceWarnText[info] || info;
     $warn.text(text).addClass(activeCla);
 
+    $news.removeClass(activeCla2);
+
     setTimeout(function () {
         $warn.removeClass(activeCla);
         voice.clear();
