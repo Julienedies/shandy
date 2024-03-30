@@ -22,6 +22,7 @@ class ViewerMap {
     constructor () {
 
     }
+
     // 单例模式
     static getInstance () {
         return ViewerMap.instance;
@@ -30,18 +31,22 @@ class ViewerMap {
 
 ViewerMap.VIEWER_MAP = {};
 
+
 ViewerMap.instance = {
     // 默认使用缓存
     get: function (isReverse) {
-        let f = isReverse*1===1 ? 'viewerMap_R' : 'viewerMap';
+        let f = isReverse * 1 === 1 ? 'viewerMap_R' : 'viewerMap';
         console.log(isReverse, f);
         let viewerMapJsonDb = ju(f, {});
         ViewerMap.VIEWER_MAP = viewerMapJsonDb.get();
         return ViewerMap.VIEWER_MAP;
     },
+
+    //
     get2: function (isReverse) {
         return this.refresh(isReverse);
     },
+
     // 强制更新
     // 首页toolbar 调用
     // 因为默认排序方式为true， 所以isReverse为undefined时，其实为true，
@@ -78,7 +83,7 @@ ViewerMap.instance = {
             let arr = VIEWER_MAP2[i];
 
             //if (['k_3312753', 'k_1305484', 'k_2055992', k_6734208].includes(i)) break;
-            console.log(q++, '---', i, '---',arr.length, '---', arr[0]);
+            console.log(q++, '---', i, '---', arr.length, '---', arr[0]);
 
             VIEWER_MAP[i] = imagesHelper.sort(arr, !isReverse, 8);
 
@@ -91,22 +96,22 @@ ViewerMap.instance = {
     },
 
     // 为viewer.json里的img项绑定交易记录，主要是在tags页面查看各种统计标签方便查看当时的交易记录
-    bindTradeInfo: function (){
+    bindTradeInfo: function () {
 
         let tradeArr = userJo('SEL', []).get(); // 交易记录json
-        let viewerJodb = ju('viewer',[]);  // 记录图片绑定的各种标签json
+        let viewerJodb = ju('viewer', []);  // 记录图片绑定的各种标签json
 
         // 直接遍历所有项，并修改数据
-        viewerJodb.each( (item,i) => {
+        viewerJodb.each((item, i) => {
             let d = item.d; // 日期
-            let code =item.code;
-            let tradeInfo = item.tradeInfo;
+            let code = item.code;
+            let tradeInfo = item.tradeInfo;  // 默认是空字符串
             let fullPath = item.img;
 
-            if(tradeInfo) return; // 已经附加交易信息
-            if(!(/交易记录/img.test(fullPath))) return; // 如果不是交易记录图片，不用附加交易信息
+            if (tradeInfo) return; // 已经附加交易信息
+            if (!(/交易记录/img.test(fullPath))) return; // 如果不是交易记录图片，不用附加交易信息
 
-            if(!d || !code){
+            if (!d || !code) {
                 let arr = fullPath.match(/\d{6}(?=\.png$)/) || [];
                 code = arr[0];
                 let f2 = fullPath.replace('上午', 'am').replace('下午', 'pm');

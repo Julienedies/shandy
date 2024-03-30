@@ -79,6 +79,7 @@ export default function (scope) {
 
     scope.onChange = function (val) {
         imgObj[val.name] = val.value;
+        console.log('markTag:onChange',imgObj);
         viewerJodb.set(imgObj);
         /*        $.ajax({
                     type: 'post',

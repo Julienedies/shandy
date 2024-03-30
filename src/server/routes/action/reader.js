@@ -3,7 +3,7 @@
  * Created by j on 20/5/9.
  */
 
-import dobFactory from '../../../libs/dob.js'
+import dobFactory from '../../../libs/x-dob.js'
 import jsonDb from '../../../libs/json-jo'
 import userJodb from '../../../libs/jodb-user'
 

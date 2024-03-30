@@ -2,7 +2,7 @@
  * Created by j on 18/7/22.
  */
 
-import dob from '../../../libs/dob.js'
+import dob from '../../../libs/x-dob.js'
 import _tags from './tags'
 
 const tags = _tags.tags;

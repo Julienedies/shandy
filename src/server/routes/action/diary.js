@@ -3,7 +3,7 @@
  * Created by j on 2019-10-01.
  */
 
-import dob from '../../../libs/dob.js'
+import dob from '../../../libs/x-dob.js'
 
 function getDb () {
     getDb.dob = getDb.dob || dob('diary');

@@ -4,7 +4,7 @@
  */
 
 import _ from 'lodash'
-import dob from '../../../libs/dob.js'
+import dob from '../../../libs/x-dob.js'
 import _tags from './tags'
 
 import ViewerMap, { beforeGet } from '../../helper/viewerMap'

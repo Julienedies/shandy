@@ -130,5 +130,7 @@ export { Jo }
 
 
 export default function (jsonFile, initData) {
+
     return new Jo(jsonFile, initData)
+
 }

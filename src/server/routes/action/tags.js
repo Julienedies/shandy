@@ -3,7 +3,7 @@
  * Created by j on 18/7/22.
  */
 
-import dob from '../../../libs/dob.js'; // 功能类似jodb
+import dob from '../../../libs/x-dob.js'; // 功能类似jodb
 
 import ViewerMap, { beforeGet } from '../../helper/viewerMap'
 

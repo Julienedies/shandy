@@ -2,7 +2,7 @@
  * Created by j on 18/7/28.
  */
 
-import dobFactory from '../../../libs/dob.js'
+import dobFactory from '../../../libs/x-dob.js'
 
 function getDb () {
     getDb.dob = getDb.dob || dobFactory('logic');

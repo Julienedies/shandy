@@ -20,8 +20,8 @@ import debugMenu from 'debug-menu'
 
 import userJo from '../../../libs/jsono-user'
 import ju from '../../../libs/jodb-user'
-import setting from '../../../libs/setting'
 import jd from '../../../libs/jodb-data'
+import setting from '../../../libs/setting'
 import utils from '../../../libs/utils'
 
 import helper from './helper'
@@ -38,7 +38,7 @@ debugMenu.install();
 // 交易记录json
 const tradeArr = userJo('SEL', []).get();
 
-const viewerJodb = ju('viewer');
+const viewerJodb = ju('viewer', [], {key:'img'});
 const tagsJodb = jd('tags');
 const systemJodb = jd('system');
 
@@ -78,6 +78,42 @@ brick.reg('mainCtrl', function (scope) {
         brick.icViewer.set('interval', val);
         setting.refresh().set('viewer.interval', val);
         $.icMsg(val);
+    };
+
+    scope.xxx = function () {
+        let imgArr = viewerJodb.get();
+        let map = {};
+        let result = [];
+        let r2 = [];
+        imgArr.forEach((item) => {
+            let id = item.id;
+            let arr = map[id] = map[id] || [];
+            arr.push(item);
+        });
+
+        for(let i in map){
+            let arr = map[i];
+            if(arr.length > 1) {
+                let b = arr[0];
+                let id = b.id;
+                b.id = `id_${b.timestamp}`;
+                if (confirm(`是否修改此项${ id } ：\r\n ${ JSON.stringify(b, null, '\t') }`)) {
+                    viewerJodb.set(b);
+                }
+
+                /*arr.forEach((v) =>{
+                    r2.push(v);
+                });*/
+                result.push(arr);
+            }
+        }
+
+        console.log(result);
+        let r3 = result.filter((a) => {
+            return JSON.stringify(a[0]) === JSON.stringify(a[1]);
+        });
+
+        //console.log(JSON.stringify(r2, null, '\t'));
     };
 
 

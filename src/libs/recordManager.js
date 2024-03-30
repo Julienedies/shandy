@@ -285,7 +285,9 @@ let proto = {
         return record;
     },
     _createId: function () {
-        return Math.random().toFixed(7).replace('0.', '');
+        let r = Math.random().toFixed(4).replace('0.', '');
+        let timestamp = +new Date();
+        return `id_${ timestamp }_${ r }`;
     },
     /**
      * 查询键值

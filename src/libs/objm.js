@@ -89,6 +89,7 @@ Objm.prototype = Object.create(EventEmitter.prototype);
 // 扩展原型对象
 Object.assign(Objm.prototype, proto);
 
+
 export default function () {
     return new Objm();
 }

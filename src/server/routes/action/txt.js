@@ -5,7 +5,7 @@
 import fs from 'fs'
 import path from 'path'
 
-import _dob from '../../../libs/dob.js'
+import _dob from '../../../libs/x-dob.js'
 
 let dob
 
