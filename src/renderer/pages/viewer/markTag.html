@@ -14,7 +14,7 @@
         </header>
 
         <div ic-tpl="viewerTags">
-            <div class="ic-select" ic-select="system" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
+            <div class="ic-select" ic-select="system" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange" ic-select-auto="false">
                 <div class="tags">
                     <span class="tag is-large is-primary">交易系统</span>
                     <span class="tag is-black is-medium" ic-for="i, v in model.system" ic-select-item ic-val="{{ v.id }}"
@@ -23,7 +23,7 @@
                     </span>
                 </div>
             </div>
-            <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange">
+            <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange" ic-select-auto="false">
                 <div class="tags">
                     <div ic-for="k,arr in model.tags"> <!-- ic-for-end -start -->
                         <span class="tag is-primary is-large"  ic-if-start="k!=='type'">{{k}}</span>

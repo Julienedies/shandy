@@ -1,6 +1,8 @@
 /**
  * 列表数据管理,增删改查
  * 这个是后端使用的，跟brick里的 RecordManager是不同的版本
+ * 这个是后端使用的，跟brick里的 RecordManager是不同的版本
+ * 这个是后端使用的，跟brick里的 RecordManager是不同的版本
  * Created by Julien on 2014/8/13.
  */
 
@@ -25,10 +27,14 @@ function RecordManager (conf) {
     this._pool = [];
 }
 
+
+// 这个版本是后端使用的，跟brick里的 RecordManager是不同的版本
+// 这个版本是后端使用的，跟brick里的 RecordManager是不同的版本
 // 这个版本是后端使用的，跟brick里的 RecordManager是不同的版本
 let proto = {
     /**
      * 默认每条记录的主键为id；
+     * 默认后添加的在前面：unshift
      */
     key: 'id',
     joinType: 'unshift',
@@ -47,7 +53,7 @@ let proto = {
         return this;
     },
     /**
-     * 遍历, 会直接修改记录管理器里的数据
+     * 遍历数据池, 能直接修改记录管理器里的数据，但并不会将改变直接保存到json文件，需要手动触发
      * @param cb {Function} 遍历回调函数
      */
     each: function (cb) {
@@ -57,14 +63,19 @@ let proto = {
         return this;
     },
     /**
-     * 用于保存整个记录管理器里的数据
+     * 此方法会触发change事件，保存当前数据池到json文件
      */
     save: function () {
         this.emit('change', 'save');
         return this;
     },
-    // 替换save
-    chang: function () {
+
+    /**
+     * 替换save方法
+     *
+     * @returns this
+     */
+    change: function () {
         this.emit('change');
         return this;
     },
@@ -85,11 +96,9 @@ let proto = {
         let beforeGet = this.beforeGet;
         let result = [];
 
-        let isFilterCb = typeof value === 'function';
-
-        //
-        if (isFilterCb) {
-            for (let i in pool) {
+        // 如果提供的value是一个过滤函数
+        if (typeof value === 'function') {
+            for (let i = 0; i < pool.length; i++) {
                 let record = pool[i];
                 if (value(record, i)) {
                     result.push(record);
@@ -98,7 +107,7 @@ let proto = {
             return result;
         }
 
-        //
+        // 没有提供参数，返回整个数据池
         if (value === void (0)) {
             return pool;
         }
@@ -109,16 +118,18 @@ let proto = {
             value = value[query];
         }
 
-        for (let i in pool) {
+        for (let i = 0; i < pool.length; i++) {
             let record = pool[i];
             if (value === this._queryKeyValue(record, query)) {
                 result.push(record);
             }
         }
+
         return result;
     },
     /**
      * get的包装，返回的是this.get()的copy, 如果是get(id), 返回单个对象而不是数组
+     *
      * @param [value] {*}
      * @param [query] {String}
      * @return {Array|Object}
@@ -168,11 +179,7 @@ let proto = {
 
             result.push(Object.assign(record, data));
 
-            //if (record.id == '1178690') console.log(333, record, data);
-
             that.beforeSave(record);
-
-            //console.log(that.get(), record);
 
         });
 
@@ -194,6 +201,7 @@ let proto = {
         this.emit('change');
         return this;
     },
+
     /**
      * 删除一条记录
      * @param value  {*}            要查询的key值 可选
@@ -285,7 +293,7 @@ let proto = {
         return record;
     },
     _createId: function () {
-        let r = Math.random().toFixed(4).replace('0.', '');
+        let r = Math.random().toFixed(5).replace('0.', '');
         let timestamp = +new Date();
         return `id_${ timestamp }_${ r }`;
     },
@@ -324,20 +332,29 @@ let proto = {
 
     },
 
+    /**
+     * 获取记录的索引
+     * @param record
+     * @param query
+     * @returns {number}
+     * @private
+     */
     _getIndex: function (record, query) {
         let pool = this._pool;
 
         let v = typeof record === 'object' ? this._queryKeyValue(record, query) : record;
 
-        for (let i in pool) {
-
+        for (let i = 0; i < pool.length; i++) {
             if (this._queryKeyValue(pool[i], query) === v) return i;
-
         }
+
+        /*for (let i in pool) {
+            if (this._queryKeyValue(pool[i], query) === v) return i;
+        }*/
     },
 
     /**
-     * @todo  把一条记录位置移动到目标记录前
+     *  把一条记录位置移动到目标记录前
      * @param id   {Object | uid},  要移动的记录
      * @param [dest] {Object | uid}, 目标记录, 可选, 如果没有提供, 则默认是首条记录
      */
@@ -359,11 +376,17 @@ let proto = {
         this.emit('change');
 
     },
+    /**
+     * 改变记录索引位置
+     * @param id
+     * @param destID
+     */
     move: function (id, destID) {
         this.insert(id, destID);
     },
+
     /**
-     * 调整记录位置,在队列里向前移动
+     * 调整记录位置,在队列里向前移动一位
      * @return
      * @example
      *
@@ -385,13 +408,15 @@ let proto = {
 
 };
 
+
 // 继承事件管理接口: on  emit
 RecordManager.prototype = Object.create(EventEmitter.prototype);
+
 
 // 扩展原型对象
 Object.assign(RecordManager.prototype, proto);
 
-// export
+
 export default function (conf) {
     return new RecordManager(conf);
 }

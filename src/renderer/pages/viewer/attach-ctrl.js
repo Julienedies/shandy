@@ -60,6 +60,7 @@ export default function (scope) {
                         result.img = distPath;
                         delete result.id;
                         delete result.timestamp;
+                        delete result.tradeInfo;
                         viewerJodb.set(result);
                     }
                 })
