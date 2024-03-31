@@ -31,6 +31,7 @@ import historyModel from './historyModel'
 
 import markTagCtrl from './markTag-ctrl'
 import listCtrl from './list-ctrl'
+import attachCtrl from './attach-ctrl'
 
 // activate context menu
 debugMenu.install();
@@ -375,6 +376,9 @@ brick.reg('mainCtrl', function (scope) {
 
 
 brick.reg('viewerListCtrl', listCtrl);
+
+
+brick.reg('viewerAttachCtrl', attachCtrl);
 
 
 brick.reg('viewerMarkTagCtrl', markTagCtrl);

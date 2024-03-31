@@ -81,7 +81,7 @@ function parentCtrl () {
         brick.emit('viewer-markTag', scope.viewerCurrentImg);
     };
 
-    scope.editImg = () => {
+/*    scope.editImg = () => {
         utils.preview(scope.viewerCurrentImg.f);
     };
 
@@ -131,7 +131,7 @@ function parentCtrl () {
                 utils.err('error, 查看控制台.')
                 console.error(err)
             });
-    }
+    }*/
 
 }
 

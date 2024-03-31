@@ -24,6 +24,7 @@ import setTagCtrl from '../tags/set-tag-ctrl'
 import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
 
 import bridge from '../../../libs/utils'
+import attachCtrl from '../viewer/attach-ctrl'
 
 const setting = bridge.setting();
 //brick.set('debug', true)
@@ -242,3 +243,5 @@ brick.reg('setSystemCtrl', function () {
 
 
 brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);
+
+brick.reg('viewerAttachCtrl', attachCtrl);

@@ -100,14 +100,17 @@ export default function (scope) {
 
     scope.toggleScrollMode = function (e) {
         let cla = 'is-primary';
+        let cla2 = 'scrollMode';
         let $th = $(this);
         $th.toggleClass(cla);
         if ($th.hasClass(cla)) {
+            $elm.addClass(cla2);
             $elm.on('mousewheel', function (e) {
                 e.stopPropagation();
             });
         } else {
             $elm.off('mousewheel');
+            $elm.removeClass(cla2);
         }
     };
 

@@ -36,8 +36,9 @@ export default function (scope) {
 
     ///////////////////////////////////////////////////////////////////////////////////////////
     // 以下代码已经复制到parentCtrul用于公用了, 但是由于涉及到node调用，parentCtrl不支持node编译
+    // 独立到attachCtrl公用
 
-    scope.editImg = () => {
+/*    scope.editImg = () => {
         let imgObj = scope.viewerCurrentImg;
         utils.preview(imgObj.f);
     };
@@ -97,6 +98,6 @@ export default function (scope) {
                 utils.err('error, 查看控制台.')
                 console.error(err)
             });
-    }
+    }*/
 
 }
