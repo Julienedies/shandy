@@ -4,23 +4,18 @@
  */
 
 import _ from 'lodash'
-import jsonDb from '../../libs/json-jo'
 import imagesHelper from '../../renderer/pages/viewer/helper'
 import ju from '../../libs/jodb-user'
 import userJo from '../../libs/jsono-user'
 
 
-const viewerMapDbFactory = jsonDb('viewerMap');
 
 /**
- * VIEWER_AMP 是以Tag ID作为键，对应一个图片数组；
- * example:
- * {'92893399': ['东方通 2019-09-11 下午10.35.27 -东方通-300379', '东信和平 2019-09-10 下午10.30.33 -东信和平-002017']}
+ * 主要用于管理viewerMap.json数据
+ * 全局单例模式
  */
-
 class ViewerMap {
     constructor () {
-
     }
 
     // 单例模式
@@ -29,6 +24,12 @@ class ViewerMap {
     }
 }
 
+/**
+ * ViewerMap.VIEWER_AMP是一个对象， 是以Tag ID 或 system ID 作为键，对应一个相关的图片数组；
+ * 比如严重亏损交易记录的所有图片， 比如所有热点龙头2024的所有图片
+ * example:
+ * {'92893399': ['东方通 2019-09-11 下午10.35.27 -东方通-300379', '东信和平 2019-09-10 下午10.30.33 -东信和平-002017']}
+ */
 ViewerMap.VIEWER_MAP = {};
 
 
@@ -47,10 +48,20 @@ ViewerMap.instance = {
         return this.refresh(isReverse);
     },
 
-    // 强制更新
+
+    /**
+     * 一次性更新viewerMap.json 和 viewerMap_R.json
+     * @param reverse {0 || undefined} 本质是一个布尔值
+     */
+    refresh: function (reverse) {
+        this._refresh(0);
+        this._refresh();
+    },
+
+    // 强制更新viewerMap.json
     // 首页toolbar 调用
     // 因为默认排序方式为true， 所以isReverse为undefined时，其实为true，
-    refresh: function (reverse) {
+    _refresh: function (reverse) {
         let isReverse = reverse === 0;
         console.log(isReverse);
         let f = isReverse ? 'viewerMap_R' : 'viewerMap';
@@ -90,9 +101,10 @@ ViewerMap.instance = {
             delete VIEWER_MAP2[i];
         }
 
-        viewerMapJsonDb.init(VIEWER_MAP); // objm init 会触发change事件
+        // 强制更新，objm init 会触发change事件
+        viewerMapJsonDb.init(VIEWER_MAP);
         console.log('viewerMap OK!');
-        return VIEWER_MAP;
+        //return VIEWER_MAP;
     },
 
     // 为viewer.json里的img项绑定交易记录，主要是在tags页面查看各种统计标签方便查看当时的交易记录
@@ -151,7 +163,7 @@ ViewerMap.instance = {
  *
  * @param record
  * @param index
- * @returns {*}
+ * @return {*}
  */
 function beforeGet (record, index) {
     let id = `k_${ record.id }`;
@@ -167,6 +179,9 @@ function beforeGet (record, index) {
     }
     return record;
 }
+
+
+
 
 export { beforeGet }
 

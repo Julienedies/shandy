@@ -80,15 +80,18 @@ brick.reg('mainCtrl', function (scope) {
         $.icMsg(val);
     };
 
-    scope.xxx = function () {
+    scope.check = function () {
         let imgArr = viewerJodb.get();
         let map = {};
         let result = [];
         let r2 = [];
         imgArr.forEach((item) => {
             let id = item.id;
+            let img = item.img;
             let arr = map[id] = map[id] || [];
+            let arr2 = map[img] = map[img] || [];
             arr.push(item);
+            arr2.push(item);
         });
 
         for(let i in map){
@@ -97,9 +100,9 @@ brick.reg('mainCtrl', function (scope) {
                 let b = arr[0];
                 let id = b.id;
                 b.id = `id_${b.timestamp}`;
-                if (confirm(`是否修改此项${ id } ：\r\n ${ JSON.stringify(b, null, '\t') }`)) {
+               /* if (confirm(`是否修改此项${ id } ：\r\n ${ JSON.stringify(b, null, '\t') }`)) {
                     viewerJodb.set(b);
-                }
+                }*/
 
                 /*arr.forEach((v) =>{
                     r2.push(v);
@@ -113,7 +116,7 @@ brick.reg('mainCtrl', function (scope) {
             return JSON.stringify(a[0]) === JSON.stringify(a[1]);
         });
 
-        //console.log(JSON.stringify(r2, null, '\t'));
+        //console.log(JSON.stringify(r3, null, '\t'));
     };
 
 

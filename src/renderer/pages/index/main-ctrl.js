@@ -484,6 +484,8 @@ brick.reg('countSwingCtrl', function (scope) {
 
 });
 
+
+
 brick.reg('setStockCtrl', function () {
     this.addStock = function (fields) {
         console.log(fields);

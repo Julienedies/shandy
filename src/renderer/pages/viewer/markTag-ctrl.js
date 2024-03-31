@@ -6,9 +6,9 @@
 /*import 'babel-polyfill'*/
 import $ from 'jquery'
 
-import userJodb from '../../../libs/jodb-user'
+import ju from '../../../libs/jodb-user'
 
-const viewerJodb = userJodb('viewer');
+const viewerJodb = ju('viewer', [], {key: 'img'});
 
 
 export default function (scope) {

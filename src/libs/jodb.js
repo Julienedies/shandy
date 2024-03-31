@@ -19,6 +19,7 @@ import recordManager from './recordManager'
  */
 
 // 单例模式，用于存储同路径唯一json
+// todo 这不是真正的单例模式，在不同的renderer里，还是独立的
 const INSTANCES = {};
 
 

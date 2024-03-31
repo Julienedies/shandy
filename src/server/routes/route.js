@@ -31,6 +31,9 @@ import note from './action/note'
 import txt from './action/txt'
 import reader from './action/reader'
 
+
+
+
 export default function (app) {
 
     app.use(crossDomain)
