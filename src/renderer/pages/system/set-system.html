@@ -1,12 +1,12 @@
-<div ic-ctrl="setSystemCtrl" ic-popup="setSystem">
+<div id="setSystem" ic-ctrl="setSystemCtrl" ic-popup="setSystem">
 
-    <div class="column">
+    <div class="column" style="padding:20px 10%;">
         <div ic-tpl="setSystemCtrl" ic-tpl-init="{system:{}, tags:{}}">
-            <div class="table_0" ic-form="setSystem" ic-init="system=model.system; tags=model.tags;">
+            <div class="table_4" ic-form="setSystem" ic-init="system=model.system; tags=model.tags;">
                 <!-- tr 交易系统名称 -->
-                <div>
-                    <h6>交易系统名称</h6>
-                    <div>
+                <div class="tr">
+                    <h6 class="td">交易系统名称</h6>
+                    <div class="td">
                         <div class="control">
                             <input class="input" type="text" name="name" value="{{system['name']}}" ic-form-field ic-field-rule="required">
                             <input type="hidden" name="id" value="{{system.id}}" ic-form-field>
@@ -15,141 +15,149 @@
                 </div>
 
                 <!-- tr 目标行情 -->
-                <div>
-                    <h6>目标行情</h6>
-                    <div class="field is-grouped is-grouped-multiline" ic-select="目标行情" ic-form-field="目标行情">
-                        <div class="control" ic-for="i,v in tags['目标行情']">
-                            <div class="tags has-addons">
-                                <span class="tag is-small"
+                <div class="tr">
+                    <h6 class="td">目标行情</h6>
+                    <div class="td">
+                        <div class="field is-grouped is-grouped-multiline" ic-select="目标行情" ic-form-field="目标行情">
+                            <div class="control" ic-for="i,v in tags['目标行情']">
+                                <div class="tags has-addons">
+                                <span class="tag"
                                       ic-select-item
                                       ic-has-selected="system['目标行情']===v.text ? 'is-warning':''"
                                       ic-val="{{v.text}}">{{v.text}}
                                 </span>
-                                <a class="tag is-small" ic-click="editTag:{{v.id}}">
-                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
-                                </a>
-                                <a class="tag is-delete is-small"
-                                   ic-ajax
-                                   ic-submit-data="{{v.text}}"
-                                   ic-submit-method="delete"
-                                   ic-submit-action="/stock/tags/{{v.id}}"
-                                   ic-submit-on-done="onTagDeleteDone"
-                                ></a>
+                                    <a class="tag" ic-click="editTag:{{v.id}}">
+                                        <span class="icon"><i class="far fa-edit"></i></span>
+                                    </a>
+                                    <a class="tag is-delete"
+                                       ic-ajax
+                                       ic-submit-data="{{v.text}}"
+                                       ic-submit-method="delete"
+                                       ic-submit-action="/stock/tags/{{v.id}}"
+                                       ic-submit-on-done="onTagDeleteDone"
+                                    ></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags has-addons">
-                                <a class="tag is-small" ic-click="tag_add:目标行情">
-                                    <span class="icon is-small"><i class="fas fa-file-medical"></i></span>
-                                </a>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <a class="tag" ic-click="tag_add:目标行情">
+                                        <span class="icon"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- tr 交易系统条件 -->
-                <div>
-                    <h6>交易系统条件</h6>
-                    <div class="field is-grouped is-grouped-multiline" ic-select="交易系统条件" ic-select-type="checkbox" ic-form-field="交易系统条件">
-                        <div class="control" ic-for="i,v in tags['交易系统条件']">
-                            <div class="tags has-addons">
-                                <span class="tag is-small"
+                <div class="tr">
+                    <h6 class="td">交易系统条件</h6>
+                    <div class="td">
+                        <div class="field is-grouped is-grouped-multiline" ic-select="交易系统条件" ic-select-type="checkbox" ic-form-field="交易系统条件">
+                            <div class="control" ic-for="i,v in tags['交易系统条件']">
+                                <div class="tags has-addons">
+                                <span class="tag"
                                       ic-select-item
                                       ic-has-selected="system['交易系统条件'] && system['交易系统条件'].includes(v.text) ? 'is-warning':''"
                                       ic-val="{{v.text}}">{{v.text}}
                                 </span>
-                                <a class="tag is-small" ic-click="editTag:{{v.id}}">
-                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
-                                </a>
-                                <a class="tag is-delete is-small"
-                                   ic-ajax
-                                   ic-submit-data="{{v.text}}"
-                                   ic-submit-method="delete"
-                                   ic-submit-action="/stock/tags/{{v.id}}"
-                                   ic-submit-on-done="onTagDeleteDone"
-                                ></a>
+                                    <a class="tag" ic-click="editTag:{{v.id}}">
+                                        <span class="icon"><i class="far fa-edit"></i></span>
+                                    </a>
+                                    <a class="tag is-delete"
+                                       ic-ajax
+                                       ic-submit-data="{{v.text}}"
+                                       ic-submit-method="delete"
+                                       ic-submit-action="/stock/tags/{{v.id}}"
+                                       ic-submit-on-done="onTagDeleteDone"
+                                    ></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags has-addons">
-                                <a class="tag is-small" ic-click="tag_add:交易系统条件">
-                                    <span class="icon is-small"><i class="fas fa-file-medical"></i></span>
-                                </a>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <a class="tag" ic-click="tag_add:交易系统条件">
+                                        <span class="icon"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- tr 交易系统逻辑 -->
-                <div>
-                    <h6>交易系统逻辑</h6>
-                    <div class="field is-grouped is-grouped-multiline" ic-select="交易系统逻辑" ic-select-type="checkbox" ic-form-field="交易系统逻辑">
-                        <div class="control" ic-for="i,v in tags['交易系统逻辑']">
-                            <div class="tags has-addons">
-                                <span class="tag is-small"
+                <div class="tr">
+                    <h6 class="td">交易系统逻辑</h6>
+                    <div class="td">
+                        <div class="field is-grouped is-grouped-multiline" ic-select="交易系统逻辑" ic-select-type="checkbox" ic-form-field="交易系统逻辑">
+                            <div class="control" ic-for="i,v in tags['交易系统逻辑']">
+                                <div class="tags has-addons">
+                                <span class="tag"
                                       ic-select-item
                                       ic-has-selected="system['交易系统逻辑'] && system['交易系统逻辑'].includes(v.text) ? 'is-warning':''"
                                       ic-val="{{v.text}}">{{v.text}}
                                 </span>
-                                <a class="tag is-small" ic-click="editTag:{{v.id}}">
-                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
-                                </a>
-                                <a class="tag is-delete is-small"
-                                   ic-ajax
-                                   ic-submit-data="{{v.text}}"
-                                   ic-submit-method="delete"
-                                   ic-submit-action="/stock/tags/{{v.id}}"
-                                   ic-submit-on-done="onTagDeleteDone"
-                                ></a>
+                                    <a class="tag" ic-click="editTag:{{v.id}}">
+                                        <span class="icon"><i class="far fa-edit"></i></span>
+                                    </a>
+                                    <a class="tag is-delete"
+                                       ic-ajax
+                                       ic-submit-data="{{v.text}}"
+                                       ic-submit-method="delete"
+                                       ic-submit-action="/stock/tags/{{v.id}}"
+                                       ic-submit-on-done="onTagDeleteDone"
+                                    ></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags has-addons">
-                                <a class="tag is-small" ic-click="tag_add:交易系统逻辑">
-                                    <span class="icon is-small"><i class="fas fa-file-medical"></i></span>
-                                </a>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <a class="tag" ic-click="tag_add:交易系统逻辑">
+                                        <span class="icon"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- tr 买点 -->
-                <div>
-                    <h6>买点</h6>
-                    <div class="field is-grouped is-grouped-multiline" ic-select="买点" ic-select-type="checkbox" ic-form-field="买点">
-                        <div class="control" ic-for="i,v in tags['买点']">
-                            <div class="tags has-addons">
-                                <span class="tag is-small"
+                <div class="tr">
+                    <h6 class="td">买点</h6>
+                    <div class="td">
+                        <div class="field is-grouped is-grouped-multiline" ic-select="买点" ic-select-type="checkbox" ic-form-field="买点">
+                            <div class="control" ic-for="i,v in tags['买点']">
+                                <div class="tags has-addons">
+                                <span class="tag"
                                       ic-select-item
                                       ic-has-selected="system['买点']==v.text ? 'is-warning':''"
                                       ic-val="{{v.text}}">
                                     {{v.text}}
                                 </span>
-                                <a class="tag is-small" ic-click="editTag:{{v.id}}">
-                                    <span class="icon is-small"><i class="far fa-edit"></i></span>
-                                </a>
-                                <a class="tag is-delete is-small"
-                                   ic-ajax
-                                   ic-submit-data="{{v.text}}"
-                                   ic-submit-method="delete"
-                                   ic-submit-action="/stock/tags/{{v.id}}"
-                                   ic-submit-on-done="onTagDeleteDone">
-                                </a>
+                                    <a class="tag" ic-click="editTag:{{v.id}}">
+                                        <span class="icon"><i class="far fa-edit"></i></span>
+                                    </a>
+                                    <a class="tag is-delete"
+                                       ic-ajax
+                                       ic-submit-data="{{v.text}}"
+                                       ic-submit-method="delete"
+                                       ic-submit-action="/stock/tags/{{v.id}}"
+                                       ic-submit-on-done="onTagDeleteDone">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags has-addons">
-                                <a class="tag is-small" ic-click="tag_add:买点">
-                                    <span class="icon"><i class="fas fa-file-medical"></i></span>
-                                </a>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <a class="tag" ic-click="tag_add:买点">
+                                        <span class="icon"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <h6></h6>
-                    <div>
+                <div class="tr">
+                    <h6 class="td"></h6>
+                    <div class="td">
                         <div class="columns">
                             <div class="column is-6">
                                 <div class="field has-addons">
@@ -179,30 +187,30 @@
                     </div>
                 </div>
 
+                <!-- tr 备注 -->
+                <div class="tr">
+                    <h6 class="td">备注</h6>
+                    <div class="td">
+                        <div class="control">
+                            <textarea rows="3" class="textarea" ic-form-field="note">{{system.note}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- tr -->
-                <div>
-                    <h6></h6>
-                    <div>
+                <div class="tr">
+                    <h6 class="td"></h6>
+                    <div class="td">
                         <div class="buttons">
-                            <button class="button is-primary"
+                            <button class="button is-medium is-primary"
                                     ic-form-submit="setSystem"
                                     ic-submit-action="/stock/system"
                                     ic-submit-before="submitBefore"
                                     ic-submit-on-done="done"
                             >保存
                             </button>
-                            <button class="button" ic-click="reset"> 重置</button>
-                            <button class="button" ic-popup-close="setSystem"> 关闭</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- tr 备注 -->
-                <div>
-                    <h6>备注</h6>
-                    <div>
-                        <div class="control">
-                            <textarea rows="3" class="textarea" ic-form-field="note">{{system.note}}</textarea>
+                            <button class="button is-medium" ic-click="reset"> 重置</button>
+                            <button class="button is-medium" ic-popup-close="setSystem"> 关闭</button>
                         </div>
                     </div>
                 </div>
@@ -220,16 +228,16 @@
         <div class="field is-grouped is-grouped-multiline" ic-select="示例图片" ic-select-type="checkbox" ic-form-field="示例图片">
             <div class="control" ic-for="i,v in (system['示例图片']||[])">
                 <div class="tags has-addons">
-                    <span class="tag is-small" ic-select-item ic-has-selected="true" ic-val="{{ v }}">{{ parseImgName(v) }}</span>
-                    <a class="tag is-small hint&#45;&#45;top" aria-label="图片预览" ic-viewer-item ic-href="{{ parseImgPath(v) }}">
-                        <span class="icon is-small"><i class="far fa-eye"></i></span>
+                    <span class="tag" ic-select-item ic-has-selected="true" ic-val="{{ v }}">{{ parseImgName(v) }}</span>
+                    <a class="tag hint&#45;&#45;top" aria-label="图片预览" ic-viewer-item ic-href="{{ parseImgPath(v) }}">
+                        <span class="icon"><i class="far fa-eye"></i></span>
                     </a>
                 </div>
             </div>
         </div>
         <div class="control">
             <div ic-select-path ic-select-path-on-done="onSelectPathDone">
-                <button class="button is-primary is-small">
+                <button class="button is-primary">
                     添加示例图片
                 </button>
             </div>
@@ -243,7 +251,7 @@
                     <h6>行情逻辑</h6>
                     <div class="field">
                         <div class="control">
-                            <textarea class="textarea is-small" rows="4" ic-form-field="行情逻辑">{{system['行情逻辑']}}</textarea>
+                            <textarea class="textarea" rows="4" ic-form-field="行情逻辑">{{system['行情逻辑']}}</textarea>
                         </div>
                     </div>
                 </div>-->
@@ -252,7 +260,7 @@
                     <h6>系统条件</h6>
                     <div>
                         <div class="control">
-                            <textarea class="textarea is-small" rows="4" ic-form-field="系统条件">{{system['系统条件']}}</textarea>
+                            <textarea class="textarea" rows="4" ic-form-field="系统条件">{{system['系统条件']}}</textarea>
                         </div>
                     </div>
                 </div>-->
@@ -263,12 +271,12 @@
      <div class="field is-grouped is-grouped-multiline" ic-select="选股条件" ic-select-type="checkbox" ic-form-field="选股条件">
          <div class="control" ic-for="i,v in tags['选股条件']">
              <div class="tags has-addons">
-             <span class="tag is-small" ic-select-item ic-has-selected="system['选股条件']&&system['选股条件'].indexOf(v.text)>-1"
+             <span class="tag" ic-select-item ic-has-selected="system['选股条件']&&system['选股条件'].indexOf(v.text)>-1"
                    ic-val="{{v.text}}">{{v.text}}</span>
-                 <a class="tag is-small" ic-click="editTag:{{v.id}}">
-                     <span class="icon is-small"><i class="far fa-edit"></i></span>
+                 <a class="tag" ic-click="editTag:{{v.id}}">
+                     <span class="icon"><i class="far fa-edit"></i></span>
                  </a>
-                 <a class="tag is-delete is-small"
+                 <a class="tag is-delete"
                     ic-ajax
                     ic-submit-data="{{v.text}}"
                     ic-submit-method="delete"
@@ -279,8 +287,8 @@
          </div>
          <div class="control">
              <div class="tags has-addons">
-                 <a class="tag is-small" ic-click="tag_add:选股条件">
-                     <span class="icon is-small"><i class="fas fa-file-medical"></i></span>
+                 <a class="tag" ic-click="tag_add:选股条件">
+                     <span class="icon"><i class="fas fa-file-medical"></i></span>
                  </a>
              </div>
          </div>

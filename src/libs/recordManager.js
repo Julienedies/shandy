@@ -42,6 +42,7 @@ let proto = {
     /**
      * @param arr {Array}  要管理的数据对象
      * @return {this}
+     * 因为是取数据，数据并没有改变，所以没有触发change事件
      */
     init: function (arr) {
         if (!Array.isArray(arr)) throw 'must be Array on init';

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>交易系统</title>
@@ -15,7 +15,7 @@
     <header>
         <div class="">
             <div class="buttons">
-                <button class="button is-primary is-small"
+                <button class="button is-primary"
                         id="getSystem"
                         ic-ajax="system"
                         ic-ajax-auto
@@ -23,14 +23,14 @@
                         ic-submit-action="/stock/system"
                         ic-submit-on-done="onGetSystemDone">交易系统列表
                 </button>
-                <button class="button is-primary is-small"
+                <button class="button is-primary"
                         id="getSystem3"
                         ic-ajax="system3"
                         ic-submit-method="get"
                         ic-submit-action="/stock/system?reverse=1"
                         ic-submit-on-done="onGetSystemDone">反转排序
                 </button>
-                <button class="button is-primary is-small" ic-click="addSystem" ic-popup-target="setSystem">新交易系统</button>
+                <button class="button is-primary" ic-click="addSystem" ic-popup-target="setSystem">新交易系统</button>
             </div>
         </div>
 <!--        <div class="column is-9" style="text-align: right;" ic-tpl="mqElement">
@@ -40,9 +40,10 @@
         </div>-->
     </header>
 
+    <!-- 交易系统条件-->
     <div class="column" ic-tpl="condition">
         <div class="tags" ic-select="condition" ic-select-type="checkbox" ic-select-on-change="onConditionChange">
-            <span class="tag" ic-for="i,v in model" ic-val="{{ v.text }}" style="cursor: pointer;">{{ v.text }}</span>
+            <span class="tag is-medium" ic-for="i,v in model" ic-val="{{ v.text }}" style="cursor: pointer;">{{ v.text }}</span>
         </div>
     </div>
 
@@ -50,28 +51,36 @@
         <ul ic-tpl="systemList">
             <li ic-for="i,v in model" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" data-id="{{ v.id }}" id="{{ 'k'+v.id }}">
                 <div class="box">
-                    <div class="columns">
-                        <div class="column is-10">
-                            <header style="padding-bottom: 0.5rem;">
+                    <div class="columns" style="align-items: start;">
+                        <!-- left column is-10 -->
+                        <div style="flex-grow:1; min-width: 0;">
+                            <header style="padding-bottom: 1.2rem;">
                                 <h3>
-                                    <a class="title is-5" ic-click="view:{{ v.id }}" ic-popup-target="details">{{ v.name }} </a>
-                                    <sup>{{ v && v['示例图片'].length }}</sup>
-                                    <button class="button"
-                                            ic-ajax
-                                            ic-submit-method="get"
-                                            ic-submit-action="/viewer/refresh?id={{ v.id }}"
-                                            ic-submit-on-done="onRefreshed">刷新</button>
+                                    <span class="title is-4">{{ v.name }} </span>
+                                    <sup style="padding:0 1em;">{{ v && v['示例图片'].length }}</sup>
 
+                                    <span class="tag is-danger" ic-if="Array.isArray(v['交易系统逻辑'])" ic-for="j,o in v['交易系统逻辑']">
+                                        {{ o }}
+                                    </span>
+
+                                    <span class="tag is-primary" ic-for="k,s in (v['交易系统条件']||[])">
+                                        {{ s }}
+                                    </span>
+
+                                    <span class="tag is-dark" ic-if="v['买点']">
+                                        {{ v['买点'] }}
+                                    </span>
+
+                                    <span class="tag is-danger" ic-if="v['note']">
+                                        {{ v['note'] }}
+                                    </span>
                                 </h3>
-                                <span class="tag" ic-if="Array.isArray(v['交易系统逻辑'])" ic-for="j,o in v['交易系统逻辑']">
-                                    {{ o }}
-                                </span>
                             </header>
-                            <div style="margin:-5px 0 10px 0;">{{ v['note'] }}</div>
-                            <div class="tags" style="margin-bottom:0.1rem;">
-<!--                                <span class="tag is-black" ic-if="v['目标行情']">
+
+<!--                            <div class="tags" style="margin-bottom:0.1rem;">
+                                <span class="tag is-black" ic-if="v['目标行情']">
                                     {{ v['目标行情'] }}
-                                </span>-->
+                                </span>
 
                                 <span class="tag is-primary is-small" ic-for="k,s in (v['交易系统条件']||[])">
                                     {{ s }}
@@ -79,7 +88,7 @@
                                 <span class="tag is-danger is-small" ic-if="v['买点']">
                                     {{ v['买点'] }}
                                 </span>
-                            </div>
+                            </div>-->
 
                             <div class="tags"
                                  ic-viewer
@@ -89,7 +98,7 @@
                                  ic-viewer-on-show="onViewerShow"
                                  ic-viewer-on-open="onViewerOpen"
                                  ic-viewer-on-close="onViewerClose">
-                                    <span class="tag is-info is-small"
+                                    <span class="tag is-info"
                                           ic-for="i,o in (v['示例图片']||[])"
                                           ic-href="{{ parseImgPath(o) }}">
                                         {{ parseImgName(o) }}
@@ -97,16 +106,22 @@
                             </div>
                         </div>
 
-                        <div class="column is-2 buttons">
-                            <button class="button is-small" ic-click="edit:{{v.id}}">编辑</button>
-                            <!--<button class="button is-small" ic-click="view:{{ v.id }}" ic-popup-target="details">详情</button>-->
-                            <button class="button is-small"
+                        <!-- column is-2 -->
+                        <div class="buttons" style="flex-grow:0; flex-shrink:0; min-width: auto;">
+                            <button class="button" ic-click="edit:{{v.id}}">编辑</button>
+                            <button class="button" ic-click="view:{{ v.id }}" ic-popup-target="details">详情</button>
+                            <button class="button"
                                     ic-ajax
                                     ic-submit-method="get"
                                     ic-submit-action="/stock/system/move/{{v.id}}/"
                                     ic-submit-on-done="onGetSystemDone">置顶
                             </button>
-                            <button class="button is-small"
+                            <button class="button"
+                                    ic-ajax
+                                    ic-submit-method="get"
+                                    ic-submit-action="/viewer/refresh?id={{ v.id }}"
+                                    ic-submit-on-done="onRefreshed">刷新</button>
+                            <button class="button"
                                     ic-ajax
                                     ic-submit-method="delete"
                                     ic-submit-action="/stock/system/{{v.id}}"
@@ -119,20 +134,26 @@
             </li>
         </ul>
 
+
         <div class="column" ic-popup="details">
             <div ic-tpl="details">
                 <div ic-init="v=model;">
-                    <h5 class="title is-6"> {{ v.name }}</h5>
+                    <h5 class="title is-3">
+                        <span style="padding-right: 2em;">{{ v.name }}</span>
+                        <button class="button is-primary" ic-popup-close="details">返回</button>
+                    </h5>
                     <table class="table is-striped is-bordered is-fullwidth">
                         <tr>
                             <th>示例图片</th>
                             <td ic-viewer ic-viewer-url="href" ic-viewer-interval="5">
-                                <span class="tag is-info"
-                                      ic-for="i,o in (v['示例图片']||[])"
-                                      ic-viewer-item
-                                      ic-href="{{ parseImgPath(o) }}">
-                                    {{ parseImgName(o) }}
-                                </span>
+                                <div class="tags">
+                                    <span class="tag is-info"
+                                          ic-for="i,o in (v['示例图片']||[])"
+                                          ic-viewer-item
+                                          ic-href="{{ parseImgPath(o) }}">
+                                        {{ parseImgName(o) }}
+                                    </span>
+                                </div>
                             </td>
                         </tr>
                         <tr ic-for="j,k in ['目标行情','行情逻辑','大盘条件','买点','仓位管理','止盈条件','止损条件','终止条件','持续时间']">
@@ -144,12 +165,11 @@
                     <div class="column">
                         <div class="buttons">
                             <button class="button is-primary" ic-click="edit:{{v.id}}">编辑</button>
-
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="button is-primary" ic-popup-close="details">返回</button>
+
         </div>
 
     </div>

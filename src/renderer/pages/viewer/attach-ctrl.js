@@ -11,7 +11,11 @@ import brick from '@julienedies/brick'
 import path from 'path'
 import ju from '../../../libs/jodb-user'
 
-const viewerJodb = ju('viewer', [], {key: 'img'});
+function getViewerDb () {
+    return ju('viewer', [], {key: 'img'});
+}
+
+
 
 export default function (scope) {
 
@@ -45,16 +49,19 @@ export default function (scope) {
         let pathArr = imgObj.f.split(/\\|\//img);
         let dayDir = pathArr[-2]; // 倒数第二位的日期目录
         // 交易记录里的日期目录是4位简写
-        if (/^\d{4}$/.test(dayDir)) {
-            let reg = /(\d{2})(\d{2})/;
-            distPath = distPath.replace(reg, '$1-$2');
+        if (distPath.includes('交易记录') || /^\d{4}$/.test(dayDir)) {
+            //let reg = /([\/\\]+)(\d{2})(\d{2})(?:-\d{2})?(\1)[\D]+(\d{4}-\d{2})/;
+            let reg = /([\/\\]+)(\d{4}(?:-\d{2})?)(\1[\D]+)(\d{4}-\d{2})/;
+            distPath = distPath.replace(reg, '$1$4$3$4');
+            console.log(distPath);
         }
         distPath = distPath.replace(/交易记录|竞价系统/img, '目标行情');
 
-        if (confirm(`是否复制${ imgFullPath } 到 ${ distPath }?`)) {
+        if (confirm(`是否复制\r\n ${ imgFullPath } \r\n到\r\n ${ distPath }?`)) {
             utils.copy(imgObj.f, distPath)
                 .then(() => {
-                    $.icMessage(`${ imgObj.f }已经拷贝到 => ${ distPath }.`);
+                    $.icMessage(`${ imgObj.f } \r\n已经拷贝到 =>\r\n ${ distPath }.`);
+                    let viewerJodb = getViewerDb();
                     let result = viewerJodb.get2(imgFullPath, 'img');
                     if(typeof result === 'object'){
                         result.img = distPath;
@@ -81,6 +88,8 @@ export default function (scope) {
         let trashPath = path.normalize(`${ dirOfImg }/C/${ fileName }`);
         utils.move(imgObj.f, trashPath)
             .then(() => {
+                let viewerJodb = getViewerDb();
+                viewerJodb.remove(imgObj.f, 'img');
                 $.icMessage('ok!');
             })
             .catch(err => {

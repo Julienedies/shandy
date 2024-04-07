@@ -8,7 +8,10 @@ import $ from 'jquery'
 
 import ju from '../../../libs/jodb-user'
 
-const viewerJodb = ju('viewer', [], {key: 'img'});
+function getViewerDb () {
+    return ju('viewer', [], {key: 'img'});
+}
+
 
 
 export default function (scope) {
@@ -25,13 +28,12 @@ export default function (scope) {
             return function () {
                 let arr = imgObj.tradeInfo || [];
 
-                if(typeof(arr) === 'string'){
+                if (typeof (arr) === 'string') {
                     $TradeInfo.text(arr);
-                }
-                else if(arr.length){
+                } else if (arr.length) {
                     let text = arr.join('\r\n').replace(/,/g, '    ');
                     $TradeInfo.text(text);
-                }else{
+                } else {
                     $TradeInfo.text('');
                 }
             };
@@ -46,6 +48,7 @@ export default function (scope) {
         // 在viewer中有记录的img 或者 第一次添加标签记录的img；
         // viewer.json里并不包含所有img，所以有些图片的交易信息只能在viewer.init里进行绑定；
         let imgPath = currentImg.f;
+        let viewerJodb = getViewerDb();
         imgObj = viewerJodb.get(imgPath, 'img')[0] || {img: imgPath, tradeInfo: currentImg.tradeInfoText};
 
         // 为了能够同时在浏览器中工作, 改为使用ajax获取数据
@@ -79,7 +82,8 @@ export default function (scope) {
 
     scope.onChange = function (val) {
         imgObj[val.name] = val.value;
-        console.log('markTag:onChange',imgObj);
+        console.log('markTag:onChange', imgObj);
+        let viewerJodb = getViewerDb();
         viewerJodb.set(imgObj);
         /*        $.ajax({
                     type: 'post',

@@ -81,6 +81,7 @@ brick.reg('mainCtrl', function (scope) {
         $.icMsg(val);
     };
 
+    // 检查viewer.json里的数据是否有重复和冲突
     scope.check = function () {
         let imgArr = viewerJodb.get();
         let map = {};
@@ -97,6 +98,7 @@ brick.reg('mainCtrl', function (scope) {
 
         for(let i in map){
             let arr = map[i];
+            // 是否有多个相同的img路径或id
             if(arr.length > 1) {
                 let b = arr[0];
                 let id = b.id;
@@ -120,7 +122,7 @@ brick.reg('mainCtrl', function (scope) {
         //console.log(JSON.stringify(r3, null, '\t'));
     };
 
-
+    // 检查viewer.json里包含的图片是否存在于文件系统，不存在的话删除viewer.json里的记录
     scope.clean = function (e) {
         let imgArr = viewerJodb.get();
         let resultArr = [];
@@ -135,7 +137,7 @@ brick.reg('mainCtrl', function (scope) {
         if (resultArr.length) {
             if (confirm(`是否删除以下 ${ resultArr.length } 项：\r\n ${ JSON.stringify(resultArr, null, '\t') }`)) {
                 resultArr.forEach((imgObj, index) => {
-                    viewerJodb.remove(imgObj.id);
+                    viewerJodb.remove(imgObj.img, 'img');
                 });
             }
             console.info('scope.clean', resultArr);

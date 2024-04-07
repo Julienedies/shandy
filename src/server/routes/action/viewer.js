@@ -3,12 +3,14 @@
  * Created by j on 20/1/26.
  */
 
-import userJodb from '../../../libs/jodb-user'
+import jodbUser from '../../../libs/jodb-user'
 import ViewerMap, { beforeGet } from '../../helper/viewerMap'
 
 const viewerMap = ViewerMap.getInstance();  // 全局单例
 
-const viewerJsonDb = userJodb('viewer');
+const getDB = function () {
+    return jodbUser('viewer', [], {key: 'img'});
+}
 
 
 export default {
@@ -16,28 +18,29 @@ export default {
     get (req, res) {
         let id = req.params.id;
         let [[key, value]] = Object.entries(req.query);
-        let result = (key && value) ? viewerJsonDb.get(value, key) : viewerJsonDb.get(id);
+        let viewerJsonDb = getDB();
+        let result = (key && value) ? viewerJsonDb.get(value, key) : viewerJsonDb.get(id, 'id');
         res.json(result);
     },
 
     post (req, res) {
         let item = req.body;
+        let viewerJsonDb = getDB();
         viewerJsonDb.set(item);
         res.json(viewerJsonDb.get());
     },
 
     del (req, res) {
         let id = req.params.id;
-        viewerJsonDb.remove(id);
+        let viewerJsonDb = getDB();
+        viewerJsonDb.remove(id, 'id');
         res.json(viewerJsonDb.get());
     },
 
     // 更新viewerMap.json
     refresh (req, res) {
-        //let id = req.query.id;
         let reverse = req.query.reverse;
-        //console.log(typeof reverse, req.query);
-        viewerMap.refresh(reverse*1);
+        viewerMap.refresh(reverse);
         res.json({msg: 'ok'});
     },
 

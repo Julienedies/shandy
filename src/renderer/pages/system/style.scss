@@ -1,16 +1,71 @@
 @import "../../css/basic/0.7/basic.base.css";
 
-body,html{
-  font-size:18px!important;
+html, body {
+  // 飞利浦屏幕34寸
+  @media screen and (min-width: 3600px) {
+    font-size: 18px !important;
+  }
+  // macBook 屏幕
+  @media screen and (max-width: 1440px) {
+    font-size: 18px !important;
+  }
 }
+
+body, html {
+  font-size: 18px !important;
+}
+
+
+#systemList {
+  header {
+    .tag {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+
+#setSystem {
+  .tag {
+    font-size: 1rem;
+  }
+}
+
+
+.box {
+  padding: 1.8rem;
+  margin: 1.6rem 0;
+}
+
+
+.table_4 {
+  .tr {
+    padding: 24px 10px;
+    border-bottom: solid 1px #e7e7ea;
+
+    .td:first-child {
+      text-align: right;
+      padding-right: 4em;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
 
 [ic-viewer-popup] {
   z-index: 3000 !important;
 }
 
+.tags[ic-viewer] {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
 
 #ic-viewer-info {
-  bottom: 0!important;
+  bottom: 0 !important;
   font-size: 1.4em;
   line-height: 1.6;
   padding: 10px 0;
@@ -19,24 +74,16 @@ body,html{
 
 #ic-viewer-info, #ic-viewer-handle {
   text-align: right !important;
-  padding-right: 2%!important;
+  padding-right: 2% !important;
 }
 
 #ic-viewer-handle {
-  padding-right: 23%!important;
-  padding-left:20px;
+  padding-right: 23% !important;
+  padding-left: 20px;
 }
 
 
-.tags[ic-viewer] {
-  flex-wrap: nowrap;
-  overflow: hidden;
-}
-
-
-
-
-.table_1 {
+/*.table_1 {
   > dd.is-table {
     padding: 0;
     border-bottom: none;
@@ -75,5 +122,4 @@ body,html{
 
 .table_1.in-td {
 
-}
-
+}*/

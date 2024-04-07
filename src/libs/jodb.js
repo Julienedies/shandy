@@ -26,13 +26,15 @@ const INSTANCES = {};
 export default function (jsonFilePath, initData = [], conf = {}) {
 
     let arr = jsonFilePath.split(/[\\/]/img);
-    let key = arr.pop().replace('.json','');
-    let instance = INSTANCES[key];
 
-    if (instance) {
-        console.log('jodb:使用单例实例', key);
-        return instance;
-    }
+    // 并不是真正的单例模式，在不同的renderer里还是独立的实例，还是会在处理json数据时冲突
+    // 目前的解决方式还是尽量不要打开多个renderer
+    // let key = arr.pop().replace('.json','');
+    // let instance = INSTANCES[key];
+    // if (instance) {
+    //     console.log('jodb:使用单例实例', key);
+    //     return instance;
+    // }
 
     const jo = jsono(jsonFilePath, initData);
 
@@ -47,6 +49,7 @@ export default function (jsonFilePath, initData = [], conf = {}) {
     // 更新成单例模式后，这个好像就没有必要了
     dob.refresh = function () {
         jo.refresh();
+        // objm.init会触发change事件; recordManager.init不会触发change事件
         dob.init(jo.json);
     };
 
@@ -57,10 +60,10 @@ export default function (jsonFilePath, initData = [], conf = {}) {
         jo.save();
     });
 
-    // 缓存唯一同名json实例
-    INSTANCES[key] = dob;
-
-    console.log('jodb:第一个实例', key);
+    // 缓存唯一同名json实例;
+    // 不起作用，在不同的renderer里并不是相同实例
+    //INSTANCES[key] = dob;
+    //console.log('jodb:第一个实例', key);
 
     return dob;
 

@@ -41,7 +41,7 @@ brick.reg('systemCtrl', function () {
     let scope = this;
     let $elm = scope.$elm;
     let $details = $elm.find('[ic-popup="details"]')
-    let list = brick.services.get('recordManager')();
+    let systemManager = brick.services.get('recordManager')();
     let model = {};  // 存储ajax数据： stock/system
     let viewId = null;
 
@@ -64,7 +64,7 @@ brick.reg('systemCtrl', function () {
     scope.onGetSystemDone = function (data) {
         console.info(data);
         model = data;
-        list.init(data.system);
+        systemManager.init(data.system);
         //scope.render('mqElement', data.tags['行情要素']);
         scope.render('condition', data.tags['交易系统条件']);
         scope.render('systemList', data.system, function () {
@@ -81,13 +81,13 @@ brick.reg('systemCtrl', function () {
     };
 
     scope.edit = function (e, id) {
-        scope.emit(C.EDIT_SYSTEM, {system: list.get(id), tags: model.tags});
+        scope.emit(C.EDIT_SYSTEM, {system: systemManager.get(id), tags: model.tags});
         return false;
     };
 
     scope.view = function (e, id) {
         viewId = id;
-        let system = list.get(id);
+        let system = systemManager.get(id);
         scope.render('details', {model: system});
     };
 
@@ -97,7 +97,7 @@ brick.reg('systemCtrl', function () {
                     return;
                 }*/
         viewId = id;
-        let system = list.get(id);
+        let system = systemManager.get(id);
         scope.render('details', {model: system});
         $details.icPopup(true);
     };

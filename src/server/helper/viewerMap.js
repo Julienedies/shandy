@@ -54,8 +54,12 @@ ViewerMap.instance = {
      * @param reverse {0 || undefined} 本质是一个布尔值
      */
     refresh: function (reverse) {
+        let that = this;
         this._refresh(0);
-        this._refresh();
+        setTimeout(()=> {
+            that._refresh();
+        }, 300);
+
     },
 
     // 强制更新viewerMap.json

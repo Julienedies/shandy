@@ -16,6 +16,7 @@ brick.set('ic-select-cla', 'is-warning');
 
 brick.set('cla.error', 'is-danger');
 
+
 brick.debug('log');
 
 //brick.set('debug', true);
