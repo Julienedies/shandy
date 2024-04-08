@@ -13,8 +13,8 @@
 		"duration": 17,
 		"timestamp": 1661941742710,
 		"tag": "无改变",
-		"promptTimes": 1,
-		"prevPromptTime": 1711071934924
+		"promptTimes": 3,
+		"prevPromptTime": 1712287057779
 	},
 	{
 		"name": "",
@@ -46,8 +46,8 @@
 		"level": "1126",
 		"title": "每天沉迷于无效的日常交易；依然没有建立明确的交易系统；",
 		"tag": "无改变",
-		"promptTimes": 1,
-		"prevPromptTime": 1711074636037
+		"promptTimes": 2,
+		"prevPromptTime": 1712206884019
 	},
 	{
 		"name": "",
@@ -64,7 +64,7 @@
 		"title": "真他妈的恨死自己了，一个人怎么可以这样？每天跟赌博一样，着眼于转债的小波动；",
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1711077335748
+		"prevPromptTime": 1712111780593
 	},
 	{
 		"name": "",
@@ -80,7 +80,9 @@
 		"disable": false,
 		"level": "1001",
 		"tag": "无改变",
-		"title": ""
+		"title": "",
+		"promptTimes": 1,
+		"prevPromptTime": 1712215008103
 	},
 	{
 		"name": "",
@@ -96,8 +98,8 @@
 		"tag": "无改变",
 		"level": "1000",
 		"title": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1711085435255
+		"promptTimes": 4,
+		"prevPromptTime": 1712300559342
 	},
 	{
 		"name": "",
@@ -114,7 +116,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1711088135247
+		"prevPromptTime": 1712119880092
 	},
 	{
 		"name": "",
@@ -129,8 +131,8 @@
 		"singleWindow": "",
 		"level": 980,
 		"title": "为何我总是临盘犹豫，手足无措，错过最好的交易机会？",
-		"promptTimes": 1,
-		"prevPromptTime": 1711090835092
+		"promptTimes": 4,
+		"prevPromptTime": 1712303258808
 	},
 	{
 		"name": "",
@@ -145,7 +147,9 @@
 		"timestamp": 1625975362922,
 		"level": 980,
 		"title": "为什么我总是错过大行情？为何所有的龙头我都没有参与？",
-		"tag": "错过大行情和龙头"
+		"tag": "错过大行情和龙头",
+		"promptTimes": 1,
+		"prevPromptTime": 1712305959225
 	},
 	{
 		"type": "错误",
@@ -162,7 +166,7 @@
 		"duration": 17,
 		"timestamp": 1665225867007,
 		"promptTimes": 2,
-		"prevPromptTime": 1711093534652
+		"prevPromptTime": 1712125280094
 	},
 	{
 		"name": "",
@@ -178,8 +182,8 @@
 		"level": "965",
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"tag": "错过大行情和龙头",
-		"promptTimes": 1,
-		"prevPromptTime": 1711096235890
+		"promptTimes": 4,
+		"prevPromptTime": 1712314059021
 	},
 	{
 		"type": "错误",
@@ -195,8 +199,8 @@
 		"timestamp": 1658544247850,
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
-		"promptTimes": 1,
-		"prevPromptTime": 1711098935308
+		"promptTimes": 2,
+		"prevPromptTime": 1712136079479
 	},
 	{
 		"name": "",
@@ -212,8 +216,8 @@
 		"level": "955",
 		"title": "我的交易系统是什么？我要捕捉的目标行情是什么？",
 		"tag": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1711101634356
+		"promptTimes": 4,
+		"prevPromptTime": 1712316758249
 	},
 	{
 		"name": "",
@@ -229,8 +233,8 @@
 		"level": "950",
 		"title": "我以什么做为判断锚点？为何我的预判总是错误？",
 		"tag": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1711104335416
+		"promptTimes": 2,
+		"prevPromptTime": 1712319457547
 	},
 	{
 		"name": "",
@@ -246,8 +250,8 @@
 		"level": "945",
 		"title": "对市场理解不够，不知道市场参与者的行为逻辑。",
 		"tag": "",
-		"promptTimes": 1,
-		"prevPromptTime": 1711107035764
+		"promptTimes": 2,
+		"prevPromptTime": 1712322158807
 	},
 	{
 		"name": "",
@@ -263,8 +267,8 @@
 		"tag": "错过大行情和龙头",
 		"level": "900",
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
-		"promptTimes": 1,
-		"prevPromptTime": 1711109735411
+		"promptTimes": 2,
+		"prevPromptTime": 1712292459471
 	},
 	{
 		"name": "",
@@ -280,8 +284,8 @@
 		"level": "865",
 		"title": "思维没有方向，操作没有系统；我每天脑子在想什么？",
 		"tag": "无系统",
-		"promptTimes": 1,
-		"prevPromptTime": 1711112434357
+		"promptTimes": 2,
+		"prevPromptTime": 1712324857392
 	},
 	{
 		"name": "",
@@ -297,8 +301,8 @@
 		"level": 860,
 		"title": "思维没有方向，操作没有系统；每天盘前脑子完全是空的， 临盘被市场牵着鼻子走。",
 		"tag": "无系统",
-		"promptTimes": 1,
-		"prevPromptTime": 1711115133870
+		"promptTimes": 2,
+		"prevPromptTime": 1712327557690
 	},
 	{
 		"type": "错误",
@@ -314,8 +318,8 @@
 		"interval": "60",
 		"duration": "17",
 		"timestamp": "1681838241354",
-		"promptTimes": 1,
-		"prevPromptTime": 1711117834278
+		"promptTimes": 2,
+		"prevPromptTime": 1712330258496
 	},
 	{
 		"name": "",
@@ -332,7 +336,7 @@
 		"title": "无系统、无计划，临盘随意交易是我最大的亏损来源。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1711120534537
+		"prevPromptTime": 1712157679059
 	},
 	{
 		"name": "",

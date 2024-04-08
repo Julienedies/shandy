@@ -1,19 +1,58 @@
+html, body {
+  // 飞利浦屏幕34寸
+  @media screen and (min-width: 3600px) {
+    font-size: 18px !important;
+  }
+  // macBook 屏幕
+  @media screen and (max-width: 1440px) {
+    font-size: 18px !important;
+  }
+}
+
+
+// 飞利浦屏幕34寸
+@media screen and (min-width: 3600px) {
+  html, body {
+    font-size: 18px !important;
+  }
+
+  #tags {
+    .tag {
+      font-size: 1rem;
+    }
+  }
+}
+
+// macBook 屏幕
+@media screen and (max-width: 1440px) {
+  html, body {
+    font-size: 18px !important;
+  }
+
+}
+
+
+#details {
+  .tag.is-small {
+    font-size: 0.8rem !important;
+  }
+}
+
+
 .tag:not(body).is-default {
   color: #fff;
   background: #c7c8d3;
 }
 
-.tag.is-medium{
-  font-size:14px!important;
+.tag.is-medium {
+  //font-size:16px!important;
+  //font-size:1.1rem!important;
 }
 
 [ic-click] {
   cursor: pointer;
 }
 
-[ic-viewer-popup]{
-  z-index:3000!important;
-}
 
 .table th {
   //vertical-align: middle;
@@ -59,4 +98,28 @@
       }
     }
   }
+}
+
+
+[ic-viewer-popup] {
+  z-index: 3000 !important;
+}
+
+
+#ic-viewer-info {
+  bottom: 0 !important;
+  font-size: 1.4em;
+  line-height: 1.6;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+#ic-viewer-info, #ic-viewer-handle {
+  text-align: right !important;
+  padding-right: 2% !important;
+}
+
+#ic-viewer-handle {
+  padding-right: 23% !important;
+  padding-left: 20px;
 }

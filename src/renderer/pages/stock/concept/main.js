@@ -25,7 +25,7 @@ brick.reg('conceptCtrl', function (scope) {
 
     $elm.icSetLoading();
 
-    $.ajax({url: `/stock/concept/${ name }`, dataType: 'json'})
+    $.ajax({url: `/stock/concept/${ encodeURIComponent(name) }`, dataType: 'json'})
         .done(function (data) {
             name ? scope.render('list', {name: name, list: data}) : scope.render('allConcept', _.groupBy(data, (item) => {
                 return item.key;

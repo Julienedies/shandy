@@ -15,16 +15,24 @@
     <div ic-ctrl="conceptCtrl">
 
         <div ic-tpl="list">
-            <h2 class="title is-5">{{ model.name }} - {{model.list.length}}</h2>
+            <h2 class="title is-5" style="text-align: center;">{{ model.name }} - {{model.list.length}}</h2>
             <table class="table is-bordered">
                 <tr ic-for="i,v in model.list">
                     <td>
-                        <i style="opacity: 0.1;">{{i}} . </i>
-                        <a href="stock_c.html?code={{v.code}}&edit=1" target="_blank">{{v.name}}</a>
+                        <i style="opacity: 0.1;">{{ ++i }} . </i>
+                        <a href="stock_c.html?code={{v.code}}&edit=1" target="_blank">{{ v.name }}</a>
                         &nbsp;
-                        <a style="opacity:0.2;" ic-click="viewInTdx:{{ v.code }}" title="通达信查看">
+                        <!--<a style="opacity:0.2;" x-ic-click="viewInTdx:{{ v.code }}" title="通达信查看">
+                            <i class="far fa-eye"></i>
+                        </a>-->
+                        <a style="opacity:0.1;" ic-href="https://basic.10jqka.com.cn/{{ v.code }}/concept.html" target="_blank" title="同花顺查看">
                             <i class="far fa-eye"></i>
                         </a>
+                        <a style="opacity:0.1;" ic-href="https://xuangubao.cn/stock/{{ v.code }}.S{{ /^6/.test(v.code)?'H':'Z' }}" target="_blank"
+                           title="选股宝">
+                            <i class="far fa-eye"></i>
+                        </a>
+
                     </td>
                     <td>{{v.text}}</td>
                 </tr>
@@ -33,12 +41,12 @@
 
         <div ic-tpl="allConcept">
             <section ic-for="k,o in model">
-                <h6>{{ k }}</h6>
+                <h6 style="padding:9px;">{{ k }}</h6>
                 <div class="tags">
-                    <a class="tag is-medium is-danger" target="_blank" ic-for="i,v in o" ic-href="{{ 'stock_concept.html?name='+ v.name }}">
+                    <a class="tag is-medium is-danger" target="_blank" ic-for="i,v in o" ic-href="{{ 'stock_concept.html?name='+ encodeURIComponent(v.name) }}">
                     <span>
                     {{ v.name }}
-                    <!--<sup>{{ v.key }}</sup>-->
+                        <!--<sup>{{ v.key }}</sup>-->
                     </span>
                     </a>
                 </div>
