@@ -48,6 +48,10 @@ html, body {
 
 //========================================
 #todoList {
+  .box {
+    margin-bottom: 2.5rem;
+  }
+
   .tag:not(body).is-medium {
     font-size: 1rem;
   }
@@ -114,7 +118,7 @@ html, body {
       }
 
       &.role_1 {
-        background: rgb(0, 0, 255)!important;
+        background: rgb(0, 0, 255) !important;
 
         h3 {
           color: #fff;

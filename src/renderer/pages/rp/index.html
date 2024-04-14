@@ -52,13 +52,13 @@
 
                                 <div class="field is-grouped is-grouped-multiline" ic-if="v.tags && v.tags.length"
                                      ic-select
-                                     ic-select-cla="is-info"
+                                     ic-select-cla="is-danger"
                                      ic-select-type="checkbox"
-                                     ic-select-item=".tag"
+                                     ic-select-item=".button"
                                      ic-form-field="{{ 'k_'+v.id }}">
 
                                     <div class="control" ic-for="j,k in v.tags">
-                                        <div class="tags has-addons" ic-init="o=TAGS_MAP_BY_ID[k]">
+                                        <div class="buttons has-addons" ic-init="o=TAGS_MAP_BY_ID[k]">
                                             <span class="button" ic-if-start="o.type==='交易错误'||o.type==='要解决的问题'" ic-val="{{ k }}">
                                                 {{ o.text }}
                                             </span>
