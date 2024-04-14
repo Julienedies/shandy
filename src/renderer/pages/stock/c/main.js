@@ -56,6 +56,8 @@ brick.reg('set_c_ctrl', function () {
         bridge.openExternal(url)
     }
 
+    alert(window.screen.screenLeft);
+
     if (window.screen.screenLeft >= 1700 || window.innerWidth === 1200) {
 
         scope.done = function (data) {

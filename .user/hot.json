@@ -1,7 +1,17 @@
 [
 	{
+		"id": "银",
+		"selected": false,
+		"timestamp": 1712586061259
+	},
+	{
+		"id": "铜",
+		"selected": false,
+		"timestamp": 1712586055858
+	},
+	{
 		"id": "金属",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1712082663568
 	},
 	{
@@ -20,11 +30,6 @@
 		"timestamp": 1711946686285
 	},
 	{
-		"id": "智慧灯杆",
-		"selected": false,
-		"timestamp": 1711672628234
-	},
-	{
 		"id": "AI语料",
 		"selected": false,
 		"timestamp": 1711587145306
@@ -36,7 +41,7 @@
 	},
 	{
 		"id": "锂电池",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1711501398350
 	},
 	{
@@ -46,7 +51,7 @@
 	},
 	{
 		"id": "小米汽车",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1711414654284
 	},
 	{
@@ -66,17 +71,17 @@
 	},
 	{
 		"id": "碳纤维",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1711068923025
 	},
 	{
 		"id": "大飞机",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1710895395426
 	},
 	{
 		"id": "无人机",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1710264325990
 	},
 	{
@@ -86,7 +91,7 @@
 	},
 	{
 		"id": "飞行汽车",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1710179473387
 	},
 	{
@@ -101,7 +106,7 @@
 	},
 	{
 		"id": "AI",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1709435416242
 	},
 	{
@@ -225,11 +230,6 @@
 		"timestamp": 1688482143101
 	},
 	{
-		"id": "减速器",
-		"selected": false,
-		"timestamp": 1687692787329
-	},
-	{
 		"id": "英伟达",
 		"selected": false,
 		"timestamp": 1685407879348
@@ -258,11 +258,6 @@
 		"id": "云计算",
 		"selected": false,
 		"timestamp": 1677999488154
-	},
-	{
-		"id": "充电桩",
-		"selected": false,
-		"timestamp": 1676471240066
 	},
 	{
 		"id": "昇腾",
@@ -306,18 +301,13 @@
 	},
 	{
 		"id": "国企",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1672761397190
 	},
 	{
 		"id": "数据",
 		"selected": false,
 		"timestamp": 1671460377951
-	},
-	{
-		"id": "数据确权",
-		"selected": false,
-		"timestamp": 1670431075197
 	},
 	{
 		"id": "国企改革",
