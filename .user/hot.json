@@ -1,5 +1,25 @@
 [
 	{
+		"id": "预增",
+		"selected": true,
+		"timestamp": 1713270044782
+	},
+	{
+		"id": "家电",
+		"selected": true,
+		"timestamp": 1713270024049
+	},
+	{
+		"id": "智能家居",
+		"selected": true,
+		"timestamp": 1713269209190
+	},
+	{
+		"id": "中特估",
+		"selected": true,
+		"timestamp": 1713188163341
+	},
+	{
 		"id": "银",
 		"selected": false,
 		"timestamp": 1712586061259
@@ -91,7 +111,7 @@
 	},
 	{
 		"id": "飞行汽车",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1710179473387
 	},
 	{
@@ -301,7 +321,7 @@
 	},
 	{
 		"id": "国企",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1672761397190
 	},
 	{
@@ -341,7 +361,7 @@
 	},
 	{
 		"id": "央企",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1650162678163
 	},
 	{

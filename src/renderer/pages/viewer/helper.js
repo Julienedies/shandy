@@ -16,7 +16,7 @@ import ocr from '../../../libs/baidu-ocr'
 import stockQuery from '../../../libs/stock-query'
 
 import ju from '../../../libs/jodb-user'
-import jsonDb from '../../../libs/json-jo'
+import jsonDb from '../../../libs/jsono-short'
 
 const nativeImage = electron.nativeImage;
 const viewerDbFactory = jsonDb('viewer');

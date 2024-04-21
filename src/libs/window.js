@@ -5,15 +5,24 @@
 import path from 'path'
 import electron from 'electron'
 
-import setting from './setting.js'
+/*import setting from './setting.js'*/
 import config from './config.js'
+import jdb from './jsono-short'
+
 
 const BrowserWindow = electron.remote.BrowserWindow;
 
+
+
+function getSettingDb () {
+    return jdb('setting');
+}
+
 function getBounds (name) {
-    if(typeof name === 'string') {
-        return setting.refresh().get(`${ name }.bounds`) || {};
-    }else{
+    if (typeof name === 'string') {
+        let settingDb = getSettingDb();
+        return settingDb.get(`${ name }.bounds`) || {};
+    } else {
         return {};
     }
 }
@@ -36,7 +45,7 @@ class Win {
 
     constructor (opt) {
         if (!this instanceof Win) return new Win(opt);
-        name = opt.name;
+        let name = opt.name;
 
         this.win = null;
 
@@ -81,8 +90,9 @@ class Win {
         });
 
         // 如果窗口有name, 则保存window bounds信息
-        if(this.opt.name) {
+        if (this.opt.name) {
             win.on('resize', () => {
+                console.log('resize event');
                 this.saveBounds();
             });
 
@@ -95,7 +105,7 @@ class Win {
 
         url && this.load(url);
 
-        if(this.opt.show !== false) {
+        if (this.opt.show !== false) {
             win.show();
         }
     }
@@ -121,7 +131,7 @@ class Win {
         this.win.webContents.openDevTools();
     }
 
-    onClose ( ){
+    onClose () {
 
     }
 
@@ -133,7 +143,9 @@ class Win {
         let name = this.getWindowName();
         let bounds = this.win.getBounds();
         if (name && name !== 'news') {
-            setting.refresh().set(`${ name }.bounds`, bounds);
+            console.log(bounds);
+            let settingDb = getSettingDb();
+            settingDb.set(`${ name }.bounds`, bounds);
         }
     }
 }

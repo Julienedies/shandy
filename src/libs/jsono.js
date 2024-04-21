@@ -31,6 +31,7 @@ class Jo {
                 let str = fs.readFileSync(this.jsonPath, 'utf8')
                 this.json = JSON.parse(str)
             } catch (e) {
+                console.error(`new Jo error on => ${jsonPath}`);
                 throw new Error(e)
             }
         }

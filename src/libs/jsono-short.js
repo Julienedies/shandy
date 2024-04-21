@@ -9,7 +9,7 @@ import jo from './jsono'
 /**
  *
  * @param name {String}  json文件名称
- * @returns {Function}
+ * @returns {Function || Jo}
  */
 export default function (name) {
 
@@ -35,9 +35,7 @@ export default function (name) {
                 return jo(path.resolve(config.USER_DIR, `./reader/${ name }.json`), initData)
             }
         case 'setting':
-            return (name, initData) => {
                 return jo(path.resolve(config.USER_DIR, './setting.json'))
-            }
         default:
             return (name, initData) => {
                 return jo(path.resolve(config.USER_DIR, `./${ name }.json`), initData)

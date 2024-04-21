@@ -9,7 +9,7 @@ import request from 'request'
 import csv from 'csv'
 import moment from 'moment'
 
-import jsonDb from './json-jo'
+import jsonDb from './jsono-short'
 
 const tempDb = jsonDb('temp')
 
