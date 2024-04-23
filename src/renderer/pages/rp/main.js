@@ -33,6 +33,10 @@ import '../../js/common-stock.js'
 import setTagCtrl from '../tags/set-tag-ctrl'
 import selectTagsCtrl from '../tags/select-tags-ctrl'
 
+import setRpCtrl from './setRp'
+
+import replayCtrl from './replayCtrl'
+
 //brick.set('ic-event.extend', 'click,change,dblclick,focus,hover');
 
 brick.set('ic-select-cla', 'is-info');
@@ -40,11 +44,15 @@ brick.set('ic-select-cla', 'is-info');
 brick.reg('setTagCtrl', setTagCtrl);
 brick.reg('selectTagsCtrl', selectTagsCtrl);
 
+brick.reg('setRpCtrl', setRpCtrl);
 
-brick.reg('todoListCtrl', function (scope) {
+brick.reg('replayCtrl', replayCtrl);
 
-    const dragOverCla = 'onDragOver';
-    let filterByType = 'rp';
+
+brick.reg('rpListCtrl', function (scope) {
+
+    let filterByType = 'rp';  // 默认要显示的类型
+    let dragOverCla = 'onDragOver';
     let rpMap = window.RPMQS_MAP = {};
 
     let $elm = this.$elm;
@@ -54,7 +62,35 @@ brick.reg('todoListCtrl', function (scope) {
 
     let listManager = brick.services.get('recordManager')();
 
+    scope.listManager = listManager;
 
+    // window.GET_TAGS_FOR_RP =
+    function getTagsForRp (arr) {
+        if (Array.isArray(arr)) {
+            // 如果只有一个标签选项，并且这个选项是type类型的标签，则把这个标签替换成该类型的所有标签
+            if (arr.length === 1) {
+                let id = arr[0];
+                let o = window.TAGS_MAP_BY_ID[id];
+                let type = o.type;
+                if (type === 'type') {
+                    arr = window.TAGS_MAP[o.text] || [];
+                    arr = arr.map((item) => {
+                        return item.id;
+                    });
+                }
+            }
+
+            return arr;
+
+        } else {
+            return arr;
+            /*return arr.map( (id) => {
+                return window.TAGS_MAP_BY_ID[id];
+            });*/
+        }
+    }
+
+    // 把rp.json这个数组按type进行分组，生成一个map；
     function getMapByType (arr) {
         let mapByType = {};
         let rpmqs = TAGS_MAP['rpmqs'];
@@ -74,6 +110,7 @@ brick.reg('todoListCtrl', function (scope) {
         return mapByType;
     }
 
+    // 渲染rpList
     function render () {
         let rpList = listManager.get();
         rpList.sort((a, b) => {
@@ -85,24 +122,32 @@ brick.reg('todoListCtrl', function (scope) {
 
         // 根据类型过滤
         if (filterByType) {
-            if(filterByType === 'Re') {
-                rpList = rpList.filter( (v, i)=> {
+            if (filterByType === 'Re') {
+                rpList = rpList.filter((v, i) => {
                     return v.re === 'true';
                 });
-            }else{
+            } else {
                 rpList = mapByType[filterByType];
             }
         }
+
+        // 对rpList数据进行处理，以方便显示
+        rpList = rpList.map((item) => {
+            let options = item.options;
+            item.options = getTagsForRp(options);
+            return item;
+        });
         //console.log(filterByType, todoArr);
         scope.render('types', {model: {mapByType: mapByType, filterByType: filterByType}});
 
-        scope.render('todoList', {model: {rpList, rpForm}}, function () {
-             $(this).find('li').on('dragstart', scope.dragstart)
-                 .on('dragover', scope.dragover)
-                 .on('dragleave', scope.dragleave)
-                 .on('drop', scope.drop);
+        scope.render('rpList', {model: {rpList, rpForm, filterByType}}, function () {
+            $(this).find('li').on('dragstart', scope.dragstart)
+                .on('dragover', scope.dragover)
+                .on('dragleave', scope.dragleave)
+                .on('drop', scope.drop);
         });
 
+        // 修改document.title, 主要用于save2Text chrome插件;
         $title.text(`rp_${ rpMap[filterByType] }_${ formatDate() }`);
     }
 
@@ -124,9 +169,19 @@ brick.reg('todoListCtrl', function (scope) {
 
     function setList (d2, d3) {
         listManager.init(d2);
+
         rpForm = d3 || rpForm;
         render();
+        createRpMap(d2);
     }
+
+    function createRpMap (rpArr) {
+        window.RP_MAP = {};
+        rpArr.forEach((v) => {
+            RP_MAP[v.id + ''] = v;
+        })
+    }
+
 
     // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
     scope.on(GET_TAGS_DONE, function (e, data) {
@@ -139,45 +194,11 @@ brick.reg('todoListCtrl', function (scope) {
     getRpData();
     getRpForm();
 
-    function submit () {
-        $elm.find('[ic-form="rp"]').icFormSubmit();
-    }
-
-    $elm.on('keyup', 'textarea', _.throttle(submit, 2900));
-
-    scope.on('rp.change', function (e, data) {
-        setList(data);
-    });
-
-    scope.on('move', function (e, data) {
-        console.log('move', data);
-        let id = data.id;
-        let dest = data.dest;
-        let a = listManager.get(id);
-        let b = listManager.get(dest);
-        a.level = b.level * 1 + 1;
-        $.post('/stock/rp', a).done((data) => {
-            setList(data);
-        });
-        /*        $.post('/stock/rp/move', data).done((data) => {
-                    setList(data);
-                });*/
-    });
 
     scope.reset = function () {
         $elm.find('#rpPlanItem').text('');
     };
 
-    scope.replay = {
-        before: function (fields) {
-            console.info(fields);
-            return fields;
-        },
-        done: function (data) {
-            //$.icMsg(JSON.stringify(data.replay));
-            rpForm = data || rpForm;
-        }
-    };
 
     scope.filter = scope.onFilterKeyChange2 = function (e, type) {
         _onFilter(type);
@@ -212,11 +233,17 @@ brick.reg('todoListCtrl', function (scope) {
     };
 
     scope.addTodo = function (e) {
-        scope.emit('setTodo', {type:filterByType});
+        scope.emit('setRp', {type: filterByType});
     };
 
     scope.edit = function (e, id) {
-        scope.emit('setTodo', listManager.get(id));
+        scope.emit('setRp', listManager.get(id));
+    };
+
+    scope.copy = function (e, id) {
+        let item = listManager.get(id);
+        delete item.id;
+        scope.emit('setRp', item);
     };
 
     scope.delBeforeConfirm = function (e) {
@@ -230,7 +257,7 @@ brick.reg('todoListCtrl', function (scope) {
     // re
     scope.re = function (e, id) {
         let item = listManager.get(id);
-        item.re = item.re === 'true' ? 'false': 'true';
+        item.re = item.re === 'true' ? 'false' : 'true';
         $.post('/stock/rp', item).done((data) => {
             $.icMsg(data && data.length);
             setList(data);
@@ -254,18 +281,65 @@ brick.reg('todoListCtrl', function (scope) {
 
     // ---------------------------------------------------------------------------------------
 
+    scope.on('rp.change', function (e, data) {
+        setList(data);
+    });
 
     $(document.body).on('dblclick', () => {
         console.log('dblclick');
         scope.toggleForm();
     });
 
+    scope.createReplay = function (e) {
+        scope.emit('createReplay', rpForm);
+    };
 
-    $elm.on('ic-select.change', '[ic-select][ic-form-field]', function (e) {
-        let data = $elm.find('[ic-form="rp"]').icForm();
-        let $th = $(this);
-        let name = $th.attr('ic-form-field');
+
+    // 获取复盘表单数据的ajax回调函数
+    scope.replay = {
+        before: function (fields) {
+            console.info('复盘表单数据 =》', fields);
+            return fields;
+        },
+        done: function (data) {
+            rpForm = data || rpForm;
+        }
+    };
+
+    // 提交复盘表单
+    function submit () {
+        $elm.find('#rpForm[ic-form="rp"]').icFormSubmit();
+    }
+
+    // 根据键盘输入，随时提交数据进行保存；
+    $elm.on('keyup', 'textarea', _.throttle(submit, 2900));
+
+
+    // 表单数据保存
+    $elm.on('ic-select.change', '[ic-select][ic-form-field]', function (e, msg) {
+        console.log('on ic-select.change', msg);
+        submit();
+        // let data = $elm.find('[ic-form="rp"]').icForm();
+        // let $th = $(this);
+        // let name = $th.attr('ic-form-field');
+        // console.log('form => ',data);
         //model.replay[name] = $th.attr('ic-val');
+    });
+
+
+    scope.on('move', function (e, data) {
+        console.log('move', data);
+        let id = data.id;
+        let dest = data.dest;
+        let a = listManager.get(id);
+        let b = listManager.get(dest);
+        a.level = b.level * 1 + 1;
+        $.post('/stock/rp', a).done((data) => {
+            setList(data);
+        });
+        /*        $.post('/stock/rp/move', data).done((data) => {
+                    setList(data);
+                });*/
     });
 
 
@@ -304,76 +378,21 @@ brick.reg('todoListCtrl', function (scope) {
 });
 
 
-brick.reg('setTodoCtrl', function (scope) {
+/*brick.reg('tagsCtrl', function (scope) {
 
-    let $elm = scope.$elm;
-    let $editor;
-    let model = {};
-
-    scope.on('setTodo', function (e, data) {
-        brick.view.to('setTodo');
-        model = data || {};
-        scope.emit(READY_SELECT_TAGS, model.tags);
-        render();
-    });
-
-    scope.on(TAG_SELECT_CHANGE, function (e, data) {
-        console.log('ON_TAG_SELECT_CHANGE', data);
-        model = getFormVm();
-        model.content = $editor.froalaEditor('html.get', true);
-        model.tags = data.value;
-        render();
-    });
-
-    function getFormVm () {
-        return $elm.find('[ic-form]').icForm();
-    }
-
-    function render () {
-        scope.render('setTodo', {model}, function () {
-            $editor = $elm.find('#editor').froalaEditor({
-                ...FroalaEditorConfig,
-                height: 360,
-            });
-            $editor.froalaEditor('html.set', model.content || '');
-        });
-    }
-
-    // ajax请求服务端前的表单数据处理
-    this.before = function (fields) {
-        fields.content = $editor.froalaEditor('html.get', true);
-        //$editor.froalaEditor('destroy');
-    };
-
-    this.done = function (data) {
-        scope.emit('rp.change', data);
-        brick.view.to('todoList');
-    };
-
-    this.reset = function () {
-        scope.render('setTodo', {model: {}});
-    };
-
-    this.cancel = function (e) {
-        brick.view.to('todoList');
-    };
-
-
-});
-
-
-brick.reg('tagsCtrl', function (scope) {
+    alert(1);
+    console.log(222);
 
     let model = {tags: {}, rp: {}};
 
     // tags数据保存在setTagCtrl
     scope.on(GET_TAGS_DONE, function (e, data) {
         //console.log(data);
-        model.tags = data;
+        model.options = data;
         render();
     });
 
-    scope.on('setTodo', function (e, data) {
+    scope.on('setRp', function (e, data) {
         model.rp = data || {};
         render();
     });
@@ -388,10 +407,10 @@ brick.reg('tagsCtrl', function (scope) {
         scope.render('tags', {model});
     }
 
-});
+});*/
 
 
-brick.reg('replayCtrl', function () {
+/*brick.reg('replayCtrl', function () {
 
     let scope = this;
     let $elm = this.$elm;
@@ -442,21 +461,21 @@ brick.reg('replayCtrl', function () {
 
     $.get(`/stock/replay?date=${ formatDate() }`).done(scope.onGetReplayDone);
 
-});
+});*/
 
 
-brick.reg('prepareCtrl', function (scope) {
+/*brick.reg('prepareCtrl', function (scope) {
     scope.on('prepare', function (e, _todoItem) {
         brick.view.to('prepare');
     });
-});
+});*/
 
 
-brick.reg('mistakeCtrl', function (scope) {
+/*brick.reg('mistakeCtrl', function (scope) {
     scope.on('mistake', function (e, _todoItem) {
         brick.view.to('mistake');
     });
-});
+});*/
 
 
 brick.reg('planCtrl', function (scope) {

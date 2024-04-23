@@ -11,7 +11,7 @@
 <body>
 <div ic-view-stage ic-ctrl="mainCtrl">
 
-    <div id="todoList" class="-shrink" ic-ctrl="todoListCtrl" ic-view="todoList" ic-active>
+    <div id="rpList" class="-shrink" ic-ctrl="rpListCtrl" ic-view="rpList" ic-active>
         <div class="column">
 
             <header id="mainHeader" ic-tpl="types">
@@ -25,10 +25,11 @@
                                 {{ RPMQS_MAP[v] }}
                             </button>
 
-                            <button ic-select-item ic-val="Re" ic-class="button is-small {{ model.filterByType==='Re'?'is-primary':''  }}">
+                            <button ic-select-item ic-val="Re" ic-class="button is-small {{ model.filterByType==='Re'?'is-primary':'' }}">
                                 Re
                             </button>
                             <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
+                            <button class="button is-primary is-small" ic-click="createReplay">归纳复盘</button>
                             <button class="button is-primary is-small" ic-click="toggleForm">显示表单</button>
                             <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>
                         </div>
@@ -37,8 +38,8 @@
                 </div>
             </header>
 
-            <div id="mainContent" ic-tpl="todoList">
-                <div ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm;">
+            <div id="mainContent" ic-tpl="rpList">
+                <div id="rpForm" ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm;">
                     <ul>
                         <li class="box" ic-for="i,v in rpList" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
                             ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
@@ -50,22 +51,22 @@
 
                             <div class="wrap">
 
-                                <div class="field is-grouped is-grouped-multiline" ic-if="v.tags && v.tags.length"
+                                <div class="field is-grouped is-grouped-multiline" ic-if="v.options && v.options.length"
                                      ic-select
                                      ic-select-cla="is-danger"
                                      ic-select-type="checkbox"
                                      ic-select-item=".button"
-                                     ic-form-field="{{ 'k_'+v.id }}">
+                                     ic-form-field="{{ v.id }}">
 
-                                    <div class="control" ic-for="j,k in v.tags">
-                                        <div class="buttons has-addons" ic-init="o=TAGS_MAP_BY_ID[k]">
+                                    <div class="control" ic-for="j,k in v.options">
+                                        <div class="buttons has-addons" ic-init="o=TAGS_MAP_BY_ID[k]; m=rpForm[v.id]||[];">
                                             <span class="button" ic-if-start="o.type==='交易错误'||o.type==='要解决的问题'" ic-val="{{ k }}">
                                                 {{ o.text }}
                                             </span>
                                             <span class="button" ic-else-if="o.type==='交易要素'" ic-val="{{ k }}">
                                                 {{ o.text }}
                                             </span>
-                                            <span class="button is-light" ic-else ic-val="{{ k }}">
+                                            <span class="button is-light" ic-else ic-val="{{ k }}" ic-has-selected="m.includes(k)">
                                                 {{ o.text }}
                                             </span>
                                         </div>
@@ -89,12 +90,16 @@
                                         <span class="tag is-small" ic-click="edit:{{ v.id }}">
                                             <i class="far fa-edit" title="编辑"></i>
                                         </span>
+                                        <span class="tag is-small" ic-click="copy:{{ v.id }}">
+                                            <i class="far fa-copy" title="拷贝"></i>
+                                        </span>
                                         <span class="tag is-small" ic-click="plus:{{ v.id }}">
                                             <i class="fas fa-plus" title="加权"></i>
                                         </span>
                                         <!--<span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>-->
+
                                         <span ic-class="tag is-small {{ v.re==='true' ? 'is-primary':'' }}" ic-click="re:{{ v.id }}">
-                                            <i class="far fa-copy" title="Re"></i>
+                                            <i class="far fa-star" title="Re"></i>
                                         </span>
                                         <span class="tag is-small"
                                               ic-ajax
@@ -139,6 +144,9 @@
                                         </button>
                                     </div>
                                     <div class="control">
+                                        <button class="button is-primary is-small" ic-click="createReplay">归纳复盘</button>
+                                    </div>
+                                    <div class="control">
                                         <button class="button is-primary is-small" ic-click="reset">
                                             重置
                                         </button>
@@ -154,11 +162,10 @@
         </div>
     </div>
 
-    <div ic-view="setTodo" ic-ctrl="setTodoCtrl">
+    <div ic-view="setRp" ic-ctrl="setRpCtrl">
         <div class="column">
-            <div ic-tpl="setTodo" ic-tpl-init="{}">
-                <div ic-form>
-
+            <div ic-tpl="setRp" ic-tpl-init="{}">
+                <div ic-form="setRp">
                     <div class="field has-addons">
                         <div class="control">
                             <button class="button is-info">标题</button>
@@ -202,7 +209,25 @@
                         </div>
                     </div>
 
-                    <div class="field is-grouped is-grouped-multiline" ic-select="items" ic-select-type="checkbox" ic-form-field="tags">
+                    <!-- 添加所属项 -->
+                    <div class="field is-grouped is-grouped-multiline" ic-select="options" ic-select-type="checkbox" ic-form-field="options">
+                        <div class="control" ic-for="i,v in model.options">
+                            <div class="tags has-addons">
+                            <span class="tag is-medium" ic-select-item ic-val="{{ v }}" selected>
+                                {{ TAGS_MAP_BY_ID[v].text }}
+                            </span>
+                            </div>
+                        </div>
+
+                        <p class="control"> <!-- ic-view-to="tags" ic-click="gotoAddItems"-->
+                            <button class="button is-primary is-fullwidth" ic-popup-target="selectTags">
+                                添加新项
+                            </button>
+                        </p>
+                    </div>
+
+                    <!-- 添加标签 -->
+<!--                    <div class="field is-grouped is-grouped-multiline" ic-select="items" ic-select-type="checkbox" ic-form-field="tags">
                         <div class="control" ic-for="i,v in model.tags">
                             <div class="tags has-addons">
                             <span class="tag is-medium" ic-select-item ic-val="{{ v }}" selected>
@@ -211,13 +236,15 @@
                             </div>
                         </div>
 
-                        <p class="control"> <!-- ic-view-to="tags" -->
-                            <button class="button is-primary is-fullwidth" ic-popup-target="selectTags">
+                        <p class="control">
+                            <button class="button is-primary is-fullwidth" ic-click="gotoAddTags" ic-popup-target="selectTags">
                                 添加新项
                             </button>
                         </p>
-                    </div>
+                    </div>-->
 
+
+                    <!-- 按钮组 -->
                     <div class="field has-addons">
                         <div class="control" style="width:60%;">
                             <button class="button is-primary"
@@ -231,7 +258,7 @@
                                 重置
                             </button>
                             <button class="button" ic-click="cancel" style="width:100px;">取消</button>
-                            <button class="button" ic-view-to="todoList" style="width:200px;">
+                            <button class="button" ic-view-to="rpList" style="width:200px;">
                                 返回
                             </button>
                         </div>
@@ -277,6 +304,8 @@
             </div>
         </div>
     </div>
+
+    ${ require('./replay.html') }
 
     ${ require('../tags/select-tags.html') }
     ${ require('../tags/set-tag.html') }

@@ -1,5 +1,50 @@
 [
 	{
+		"title": "次日市场可能的走势是什么？",
+		"id": "id_1713833101103_6050",
+		"type": "rp",
+		"caution": "",
+		"comment": "",
+		"options": [
+			"id_1643851450740_8022"
+		],
+		"level": "681",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"items": [],
+		"timestamp": 1713833101104
+	},
+	{
+		"title": "日内走势如何？",
+		"id": "id_1713833031884_2237",
+		"type": "rp",
+		"caution": "",
+		"comment": "",
+		"options": [
+			"id_1643851450740_8022"
+		],
+		"level": "681",
+		"role": "0",
+		"re": "",
+		"content": "",
+		"items": [],
+		"timestamp": 1713833031884
+	},
+	{
+		"title": "它是主升吗？它是领涨龙头吗？还是跟风弱势杂毛？",
+		"id": "id_1713074926788_0653",
+		"type": "rp",
+		"caution": "",
+		"comment": "",
+		"level": "705",
+		"role": "0",
+		"re": "true",
+		"content": "",
+		"options": [],
+		"timestamp": 1713074926788
+	},
+	{
 		"title": "市场每个阶段都肯定会有抱团的，都肯定会有龙头的，",
 		"id": "id_1712769599503_6134",
 		"type": "mistake",
@@ -9,7 +54,7 @@
 		"role": "0",
 		"re": "true",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1712769599503
 	},
 	{
@@ -22,7 +67,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1712717601752
 	},
 	{
@@ -35,7 +80,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1712490242310
 	},
 	{
@@ -48,7 +93,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1712490224063
 	},
 	{
@@ -61,7 +106,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1712117721636
 	},
 	{
@@ -74,7 +119,7 @@
 		"role": "0",
 		"re": "true",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1711215792556
 	},
 	{
@@ -87,7 +132,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1711195568751
 	},
 	{
@@ -100,8 +145,9 @@
 		"role": "0",
 		"re": "true",
 		"content": "",
-		"tags": [],
-		"timestamp": 1711069231539
+		"timestamp": 1711069231539,
+		"options": [],
+		"tags": []
 	},
 	{
 		"title": "竞价低开就恐慌卖出；",
@@ -113,7 +159,7 @@
 		"role": "0",
 		"re": "true",
 		"content": "<p>我恐慌的本能如此强烈。多少次大盘因外围低开就恐慌卖出。</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1710737710362"
 	},
 	{
@@ -126,7 +172,7 @@
 		"role": "1",
 		"re": "true",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1710511531288
 	},
 	{
@@ -139,7 +185,7 @@
 		"role": "0",
 		"re": "",
 		"content": "<p>深南电路</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1710088931698
 	},
 	{
@@ -152,7 +198,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1707987194485
 	},
 	{
@@ -165,7 +211,7 @@
 		"role": "0",
 		"re": "true",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1706667955509
 	},
 	{
@@ -178,7 +224,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1706071163653
 	},
 	{
@@ -191,7 +237,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1706071138334
 	},
 	{
@@ -204,7 +250,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1704673951771
 	},
 	{
@@ -217,7 +263,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1703837967165
 	},
 	{
@@ -230,7 +276,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1703837918237
 	},
 	{
@@ -243,7 +289,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1703837011718
 	},
 	{
@@ -256,7 +302,7 @@
 		"role": "0",
 		"re": "false",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1703833502350"
 	},
 	{
@@ -269,7 +315,7 @@
 		"role": "2",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1703606288650"
 	},
 	{
@@ -282,7 +328,7 @@
 		"role": "0",
 		"re": "",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 14.1551%;\">市场合力</td><td style=\"width: 85.7719%;\">人工智能行情、锂电池行情</td></tr><tr><td style=\"width: 14.1551%;\">题材趋势<br></td><td style=\"width: 85.7719%;\"><br></td></tr><tr><td style=\"width: 14.1551%;\">题材情绪</td><td style=\"width: 85.7719%;\"><br></td></tr><tr><td style=\"width: 14.1551%;\">投机情绪</td><td style=\"width: 85.7719%;\"><br></td></tr><tr><td style=\"width: 14.1551%;\">运作资金</td><td style=\"width: 85.7719%;\">内幕资金、预期套利、庄股</td></tr><tr><td style=\"width: 14.1551%;\">蓝筹趋势<br></td><td style=\"width: 85.7719%;\"><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1703407444764"
 	},
 	{
@@ -295,7 +341,7 @@
 		"role": "0",
 		"re": "",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 50.0000%;\">市场强势，有主线热点；主升周期；</td><td style=\"width: 50.0000%;\"><br></td></tr><tr><td style=\"width: 50.0000%;\">市场弱势；无主线热点；</td><td style=\"width: 50.0000%;\"><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1703260054529
 	},
 	{
@@ -308,7 +354,7 @@
 		"role": "0",
 		"re": "false",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1703168770770"
 	},
 	{
@@ -321,7 +367,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1703088597049
 	},
 	{
@@ -334,7 +380,7 @@
 		"role": "0",
 		"re": "true",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1702955110746"
 	},
 	{
@@ -347,7 +393,7 @@
 		"role": "0",
 		"re": "true",
 		"content": "<p><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 0, 0); font-size: 22px;\"><strong>主升的时候犹豫不敢买，卖飞，恐高测顶；高潮的时候管不住手去接盘；</strong></span></p><p>行情启动、主升的时候犹豫不敢买，卖飞，恐高测顶；行情高潮退潮的时候管不住手，去接盘；</p><p>行情启动、转折时，浑浑噩噩，犹豫不决；高潮时管不住手；</p><p>主升期后知后觉，退潮期高潮期管不住手；</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1702954541887"
 	},
 	{
@@ -360,7 +406,7 @@
 		"role": "0",
 		"re": "",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 50.0000%;\">如果向上打不开空间，退潮</td><td style=\"width: 50.0000%;\"><br></td></tr><tr><td style=\"width: 50.0000%;\">如果有向上突破的个股，分化</td><td style=\"width: 50.0000%;\"><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1702602334128
 	},
 	{
@@ -373,7 +419,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1702462653561
 	},
 	{
@@ -386,7 +432,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1702462615526
 	},
 	{
@@ -399,7 +445,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1702462589179
 	},
 	{
@@ -412,7 +458,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1702462492242
 	},
 	{
@@ -425,7 +471,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1701766577382
 	},
 	{
@@ -438,7 +484,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1701766463085
 	},
 	{
@@ -451,7 +497,7 @@
 		"role": "0",
 		"re": "",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td>消息是否是预期内</td><td><br></td></tr><tr><td style=\"width: 50.0000%;\">高位出利好</td><td style=\"width: 50.0000%;\"><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1701737628388
 	},
 	{
@@ -464,7 +510,7 @@
 		"role": "0",
 		"re": "",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 50.0000%;\">买其它分支龙头</td><td style=\"width: 50.0000%;\"><br></td></tr><tr><td>买最近跟风</td><td><br></td></tr><tr><td>10cm买不到，买20cm</td><td><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1701737552234
 	},
 	{
@@ -477,7 +523,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1700999463045
 	},
 	{
@@ -490,7 +536,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1700978842601
 	},
 	{
@@ -503,7 +549,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1700978812448
 	},
 	{
@@ -516,7 +562,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1700140144621"
 	},
 	{
@@ -529,7 +575,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1700140126810"
 	},
 	{
@@ -542,7 +588,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1700140112897"
 	},
 	{
@@ -555,7 +601,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1699682641466"
 	},
 	{
@@ -568,7 +614,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1699682586027"
 	},
 	{
@@ -581,7 +627,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1693873582777"
 	},
 	{
@@ -594,7 +640,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1693786569250"
 	},
 	{
@@ -607,7 +653,7 @@
 		"role": "0",
 		"re": "",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 18.5443%;\">国家政策</td><td style=\"width: 81.3825%;\">新能源政策、一带一路、基建保增长（）</td></tr><tr><td style=\"width: 18.5443%;\">行业产业变化</td><td style=\"width: 81.3825%;\">新能源（光伏、电动车、储能）</td></tr><tr><td style=\"width: 18.5443%;\">个股基本面变化</td><td style=\"width: 81.3825%;\"><br></td></tr><tr><td>消息刺激</td><td><br></td></tr><tr><td>锚定补涨<br></td><td><br></td></tr><tr><td>跟风套利</td><td><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1689770399934
 	},
 	{
@@ -620,7 +666,7 @@
 		"role": "0",
 		"re": "false",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1689693052094"
 	},
 	{
@@ -633,7 +679,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1688861807247
 	},
 	{
@@ -646,7 +692,7 @@
 		"role": "0",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1687678444271
 	},
 	{
@@ -659,7 +705,7 @@
 		"role": "3",
 		"re": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1687088255190"
 	},
 	{
@@ -672,7 +718,7 @@
 		"role": "0",
 		"re": "",
 		"content": "<p>22年5月的新能源引领的指数反弹行情；</p><p>20年、21年的指数主升浪；</p><p>光伏行情（宝馨科技、京山轻机、爱旭股份、钧达股份）；</p><p>特斯拉机器人行情（中大力德、巨轮智能、绿的谐波、江苏北人）；</p><p>汽配行情（广东鸿图、合力科技）；</p><p>汽车行情（中通客车、浙江世宝、长安汽车）；</p><p>风电反弹行情（大金重工、大连重工）；</p><p>地产行情（中交地产、天保基建）；</p><p>基建行情（浙江建投、湖南发展）；</p><p>新冠特效药行情（九安医疗、新华制药、华润双鹤、中国医药、精华制药）；</p><p>数字经济数字货币行情（翠微股份、恒宝股份）；</p><p>元宇宙行情（中青宝、湖北广电）；</p><p>妖股行情 （三羊马、陕西金叶、中锐股份）；</p><p>磷酸铁锂行情（清水源、云天化、湖北宜化）；</p><p>鸿蒙行情 （润和软件）；</p><p>锂矿行情（江特电机、天齐锂业、）；</p><p>新能源汽车行情（比亚迪）；</p><p>华为汽车行情（小康股份）；</p><p>医美行情（朗姿股份、奥园美谷、哈三联）；</p><p>次新及妖股行情（顺控发展、泰坦股份、美邦服饰）；</p><p>汽车芯片行情（上海贝岭、北京君正、富满微）； 汽车芯片缺货，价格上涨几十倍；</p><p>碳中和行情（长源电力、华银电力、中材节能、南网能源、雪迪龙、森特股份）；</p><p>超跌妖股行情（仁东控股）；指数双顶，下跌中；</p><p>稀土行情（包钢股份、北方稀土、盛和资源）；</p><p>蓝筹核心行情、货币放水驱动的全球牛市；</p><p>锂矿行情第一波（天齐锂业、川能动力）</p><p>光伏行情（阳光电源）、</p><p>免税行情（中国中免、王府井）；</p><p>证券行情（光大证券、浙江证券）；</p><p>军工行情（中航沈飞）、</p><p>白酒行情（老白干、金徽酒）、</p><p>疫苗行情（复星医药）；</p><p>口罩行情（泰达股份、道恩股份、）。</p><p><br></p><p>我是怎么错过21年货币放水的指数主升行情？</p><p>我是怎么错过22年5月份开始的新能源引领的指数反弹行情？</p><p><br></p><p>我是怎么错过光伏行情的宝馨科技、京山轻机？</p><p>我是怎么错过特斯拉机器人的巨轮智能、中大力德？</p><p>我是怎么错过汽配行情的广东鸿图、合力科技？</p><p>我是怎么错过汽车行情的中通客车、浙江世宝、长安汽车？</p><p>我是怎么错过风电行情的大金重工，大连重工？</p><p>我是怎么错过锂矿行情的天齐锂业？</p><p>我是怎么错过泰林转债、盘龙转债，这波转债行情？</p><p>我是怎么错过稳增长基建行情的浙江建投、中交地产？</p><p><br></p><p>我是怎么错过疫情行情的九安医疗、华润双鹤、新华制药、中国医药、精华制药？</p><p><br></p><p>我是怎么错过数字经济数字货币行情的翠微股份；</p><p>我是怎么错过元宇宙行情的中青宝？</p><p>我是怎么错过妖股行情的中锐股份、陕西金叶、三羊马；</p><p>我是怎么错过储能行情的百川股份？</p><p>我是怎么错过磷酸铁锂行情的清水源、云天化、湖北宜化？</p><p>我是怎么错过华为汽车的小康股份？</p><p>我是怎么错过医美行情的朗姿股份？</p><p><br></p><p><br></p>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1687085708245
 	},
 	{
@@ -685,7 +731,7 @@
 		"role": "2",
 		"re": "true",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1687064331216"
 	},
 	{
@@ -698,7 +744,7 @@
 		"role": "2",
 		"re": "true",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1686844950491"
 	},
 	{
@@ -710,7 +756,7 @@
 		"level": "801",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1686628413382",
 		"re": "false"
 	},
@@ -723,7 +769,7 @@
 		"level": "980",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1686375348395",
 		"re": ""
 	},
@@ -736,7 +782,7 @@
 		"level": "600",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1684640213334"
 	},
 	{
@@ -748,7 +794,7 @@
 		"level": "855",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1682046230502",
 		"re": "true"
 	},
@@ -761,7 +807,7 @@
 		"role": "0",
 		"content": "",
 		"timestamp": "1682038336268",
-		"tags": [],
+		"options": [],
 		"id": "id_1682038365143_9174",
 		"re": ""
 	},
@@ -774,7 +820,7 @@
 		"level": "924",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1682019363010"
 	},
 	{
@@ -786,7 +832,7 @@
 		"role": "0",
 		"content": "<p>思维方式一直难以改变。为何我总是主观看空那些超出我预期的票？</p>",
 		"timestamp": "1664856368922",
-		"tags": [],
+		"options": [],
 		"id": "id_1682016868591_0564",
 		"re": "true"
 	},
@@ -799,7 +845,7 @@
 		"role": "0",
 		"content": "",
 		"timestamp": "1664856384764",
-		"tags": [],
+		"options": [],
 		"id": "id_1682016866828_5360",
 		"re": "true"
 	},
@@ -812,7 +858,7 @@
 		"level": "859",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1681047755355",
 		"re": "true"
 	},
@@ -825,7 +871,7 @@
 		"level": "670",
 		"role": "0",
 		"content": "<p>人工智能昨天板块高开低走，今天低开高走反包；蓝色光标昨天反包失败，今天终于反包大涨；</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1678984218013"
 	},
 	{
@@ -837,7 +883,7 @@
 		"level": "481",
 		"role": "0",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 56.7301%;\">情绪指数共振一致上涨，情绪一致抢，情绪股龙头买不到；</td><td style=\"width: 43.1967%;\"><br></td></tr><tr><td style=\"width: 56.7301%;\">情绪指数共振一致上涨，分流，造成情绪股并不特别一致；</td><td style=\"width: 43.1967%;\"><br></td></tr><tr><td style=\"width: 56.7301%;\">情绪指数背离；资金从情绪股切换到指数股；情绪抱团、逆势上涨票、老周期人气股瓦解补跌；</td><td style=\"width: 43.1967%;\"><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674819512176"
 	},
 	{
@@ -849,7 +895,7 @@
 		"level": "411",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674819495901",
 		"re": ""
 	},
@@ -862,7 +908,7 @@
 		"level": "1",
 		"role": "0",
 		"content": "<p>将死未死之拔地（市场情绪）；众人烧火之合力（资金推土）；味同嚼蜡之弱反（有形无神）；神鬼通杀无生机（做多错多）。</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1674736097410
 	},
 	{
@@ -874,7 +920,7 @@
 		"level": "702",
 		"role": "2",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674711300537",
 		"re": ""
 	},
@@ -887,7 +933,7 @@
 		"level": "430",
 		"role": "0",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 50.0000%;\"><br></td><td style=\"width: 50.0000%;\"><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674702762733"
 	},
 	{
@@ -899,7 +945,7 @@
 		"level": "411",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674661111780"
 	},
 	{
@@ -911,7 +957,7 @@
 		"level": "906",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674649994199"
 	},
 	{
@@ -923,7 +969,7 @@
 		"level": "440",
 		"role": "0",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 37.6214%;\">主流高潮或强分歧，次主流轮动；<br></td><td style=\"width: 62.3048%;\"><br></td></tr><tr><td style=\"width: 37.6214%;\">高位同期龙头走势分离，龙2在龙1走弱后，趁机卡位<br></td><td style=\"width: 62.3048%;\">中通天地板，攀钢钒钛尾盘拉升；天保基建天地板，中交地产地天板；英飞拓跌停，久其软件上位；<br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674634789448"
 	},
 	{
@@ -935,7 +981,7 @@
 		"level": "410",
 		"role": "0",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 52.108%;\">指数趋势向下或震荡，没有明显的指数行情，市场以情绪资金主导，主要为短线题材股行情</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">出政策消息</td><td style=\"width: 31.7932%;\">高位兑现高开低走、低位引爆、预期内冲高回落、</td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">市场大跌，今天涨停的票次日补跌</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">市场普涨，高位抱团瓦解杀跌</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">指数情绪共振上涨</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">高位退潮杀跌，低位崛起，高低切换；</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">市场向上，但没有主线板块，板块轮动</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">市场趋势向下，短线情绪抱团炒妖</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">市场修复，昨天被大盘带崩的分歧股，今天分歧转一致修复；</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">同批情绪高位股分化，是走卡位竞争还是走一致完蛋；强者恒强，弱者淘汰；</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">高位同期龙头走势分离，龙2在龙1走弱后，趁机卡位</td><td style=\"width: 31.7932%;\">龙头个股本身生命周期走到尽头，但大趋势向上，龙2趁机卡位</td><td style=\"width: 16.0242%;\">西安饮食杀跌，人人乐上位；<br>天保基建跌停；中交地产上位；</td></tr><tr><td style=\"width: 52.108%;\">市场普涨，之前逆势的高位抱团票瓦解退潮（切换）</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">高位崩溃退潮，低位崛起（切换）</td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">龙头涨，低位不涨；龙头死，低位反而积极补涨；</td><td style=\"width: 31.7932%;\">西安饮食，中通客车；</td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">妖股、龙头股出现</td><td style=\"width: 31.7932%;\">上海电影、中国科传、中通客车、中交地产、中国医药</td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td style=\"width: 52.108%;\">分歧不等于下跌，分歧做龙头低吸；<br></td><td style=\"width: 31.7932%;\"><br></td><td style=\"width: 16.0242%;\"><br></td></tr><tr><td>龙头一字买不到</td><td><br></td><td><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1674634674460,
 		"re": ""
 	},
@@ -948,7 +994,7 @@
 		"level": "547",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674571457471",
 		"re": ""
 	},
@@ -961,7 +1007,7 @@
 		"level": "501",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674571392794"
 	},
 	{
@@ -973,7 +1019,7 @@
 		"level": "501",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674571370416"
 	},
 	{
@@ -985,7 +1031,7 @@
 		"level": "574",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674571284573",
 		"re": ""
 	},
@@ -998,7 +1044,7 @@
 		"level": "572",
 		"role": "0",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 100.0000%;\">龙头分歧或者高位<br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674571247253",
 		"re": ""
 	},
@@ -1011,7 +1057,7 @@
 		"level": "501",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674571171790"
 	},
 	{
@@ -1023,7 +1069,7 @@
 		"level": "578",
 		"role": "0",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 63.8034%;\">突发消息刺激，低位而不是已经反映了预期的高位，高位有利好消息可能趁机出货<br></td><td style=\"width: 36.1227%;\"><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674571031552",
 		"re": ""
 	},
@@ -1036,7 +1082,7 @@
 		"role": "0",
 		"content": "",
 		"timestamp": "1672230153644",
-		"tags": [],
+		"options": [],
 		"id": "id_1674561833851_4313",
 		"re": "true"
 	},
@@ -1049,7 +1095,7 @@
 		"level": "460",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674546559829"
 	},
 	{
@@ -1061,7 +1107,7 @@
 		"level": "461",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674546392450"
 	},
 	{
@@ -1073,7 +1119,7 @@
 		"level": "430",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674546252848"
 	},
 	{
@@ -1085,7 +1131,7 @@
 		"level": "482",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674543024787"
 	},
 	{
@@ -1097,7 +1143,7 @@
 		"level": "446",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674543004101"
 	},
 	{
@@ -1109,7 +1155,7 @@
 		"level": "1",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1674542972733
 	},
 	{
@@ -1121,7 +1167,7 @@
 		"level": "470",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674542797646"
 	},
 	{
@@ -1133,7 +1179,7 @@
 		"level": "451",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674542765857",
 		"re": ""
 	},
@@ -1146,7 +1192,7 @@
 		"level": "451",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674542709312"
 	},
 	{
@@ -1158,7 +1204,7 @@
 		"level": "477",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674542698590"
 	},
 	{
@@ -1170,7 +1216,7 @@
 		"level": "446",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674542679202"
 	},
 	{
@@ -1182,7 +1228,7 @@
 		"level": "430",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674542668042"
 	},
 	{
@@ -1194,7 +1240,7 @@
 		"level": "487",
 		"role": "0",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 58.6118%;\">空间板如果是顶一字，则是进攻日；但要排除情绪高潮，盛极而衰；<br></td><td style=\"width: 41.3882%;\"><br></td></tr><tr><td style=\"width: 58.6118%;\">龙头大单一字</td><td style=\"width: 41.3882%;\">龙头买不到。低吸其它分支龙头，或低吸龙二。<br></td></tr><tr><td style=\"width: 58.6118%;\">龙头缩量秒板<br></td><td style=\"width: 41.3882%;\"><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674542603135"
 	},
 	{
@@ -1206,7 +1252,7 @@
 		"level": "451",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674542525525"
 	},
 	{
@@ -1218,7 +1264,7 @@
 		"level": "896",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674220843776",
 		"re": "true"
 	},
@@ -1231,7 +1277,7 @@
 		"level": "619",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1674063027461",
 		"re": ""
 	},
@@ -1244,7 +1290,7 @@
 		"level": "519",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1673800484704"
 	},
 	{
@@ -1256,7 +1302,7 @@
 		"level": "884",
 		"role": "0",
 		"content": "<p>加入自选或看好，但是没有明确的判断锚点和买入条件；不知道如何参与；</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1673456278881",
 		"re": ""
 	},
@@ -1269,7 +1315,7 @@
 		"level": "700",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1673454958018",
 		"re": ""
 	},
@@ -1282,7 +1328,7 @@
 		"level": "986",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1673108149879",
 		"re": "false"
 	},
@@ -1295,7 +1341,7 @@
 		"level": "881",
 		"role": "0",
 		"content": "<p>没有想过自选股的可能走势及如何应对；</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1673025062617",
 		"re": "true"
 	},
@@ -1308,7 +1354,7 @@
 		"level": "1",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1672420604369
 	},
 	{
@@ -1320,7 +1366,7 @@
 		"level": "858",
 		"role": "0",
 		"content": "<p>没有大局观，看不到大趋势，总是错过主升行情；</p><p>没有大局观，总是后知后觉，等行情走完或末期才意识到行情的存在;</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672374868324",
 		"re": "true"
 	},
@@ -1333,7 +1379,7 @@
 		"level": "700",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672374847599",
 		"re": ""
 	},
@@ -1346,7 +1392,7 @@
 		"level": "859",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672304353463",
 		"re": "true"
 	},
@@ -1359,7 +1405,7 @@
 		"level": "887",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672226152680",
 		"re": "true"
 	},
@@ -1372,7 +1418,7 @@
 		"level": "706",
 		"role": "2",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672226125420",
 		"re": "false"
 	},
@@ -1385,7 +1431,7 @@
 		"level": "715",
 		"role": "2",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672226086290",
 		"re": "true"
 	},
@@ -1398,7 +1444,7 @@
 		"level": "847",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672225631844",
 		"re": "true"
 	},
@@ -1411,7 +1457,7 @@
 		"level": "499",
 		"role": "2",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672222753746",
 		"re": ""
 	},
@@ -1424,7 +1470,7 @@
 		"level": "880",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672222725420",
 		"re": ""
 	},
@@ -1437,7 +1483,7 @@
 		"level": "893",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672222709482",
 		"re": "true"
 	},
@@ -1450,7 +1496,7 @@
 		"level": "843",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1672222207381",
 		"re": "true"
 	},
@@ -1463,7 +1509,7 @@
 		"level": "821",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1671964240631",
 		"re": "true"
 	},
@@ -1476,7 +1522,7 @@
 		"level": "800",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1671949487746,
 		"re": ""
 	},
@@ -1489,7 +1535,7 @@
 		"level": "501",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1669479835656"
 	},
 	{
@@ -1501,7 +1547,7 @@
 		"level": "576",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1668786842842"
 	},
 	{
@@ -1513,7 +1559,7 @@
 		"level": "501",
 		"role": "0",
 		"content": "<p>天顺股份，</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1665588122839"
 	},
 	{
@@ -1525,7 +1571,7 @@
 		"level": "660",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1665588056007"
 	},
 	{
@@ -1537,7 +1583,7 @@
 		"level": "670",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1665504038109"
 	},
 	{
@@ -1549,7 +1595,7 @@
 		"level": "1000",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1664961509777
 	},
 	{
@@ -1561,7 +1607,7 @@
 		"level": "660",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1664878930910"
 	},
 	{
@@ -1573,7 +1619,7 @@
 		"level": "660",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1664615474270"
 	},
 	{
@@ -1585,7 +1631,7 @@
 		"level": "670",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1663939482184"
 	},
 	{
@@ -1597,7 +1643,7 @@
 		"level": "670",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1663764242711"
 	},
 	{
@@ -1609,7 +1655,7 @@
 		"level": "581",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1663516885760"
 	},
 	{
@@ -1621,7 +1667,7 @@
 		"level": "680",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1663202364360"
 	},
 	{
@@ -1633,7 +1679,7 @@
 		"level": "799",
 		"role": "2",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1662883124119",
 		"re": ""
 	},
@@ -1646,7 +1692,7 @@
 		"level": "501",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1662684219683"
 	},
 	{
@@ -1658,7 +1704,7 @@
 		"level": "501",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1662684145300"
 	},
 	{
@@ -1668,10 +1714,12 @@
 		"caution": "",
 		"comment": "贵绳股份；天顺股份、粤宏远；",
 		"level": "679",
-		"role": "0",
+		"role": "1",
 		"content": "",
-		"tags": [],
-		"timestamp": "1662652817442"
+		"options": [],
+		"timestamp": "1662652817442",
+		"re": "",
+		"items": []
 	},
 	{
 		"title": "最高板是哪个？背后的逻辑我理解了吗？龙头就在最高板里，你知道这个概率吗？",
@@ -1682,7 +1730,7 @@
 		"level": "671",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1662652730665",
 		"re": ""
 	},
@@ -1695,7 +1743,7 @@
 		"level": "1000",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1662303941447,
 		"re": ""
 	},
@@ -1708,7 +1756,7 @@
 		"level": "999",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1662180439243",
 		"re": ""
 	},
@@ -1721,7 +1769,7 @@
 		"level": "1144",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1661928026347",
 		"re": "false"
 	},
@@ -1734,7 +1782,7 @@
 		"level": "682",
 		"role": "2",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1661873158063",
 		"re": ""
 	},
@@ -1747,7 +1795,7 @@
 		"level": "506",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1661598514785"
 	},
 	{
@@ -1759,7 +1807,7 @@
 		"level": "501",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1661598437089"
 	},
 	{
@@ -1771,7 +1819,7 @@
 		"level": "650",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1661592048372"
 	},
 	{
@@ -1783,7 +1831,7 @@
 		"level": "660",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1660965722720"
 	},
 	{
@@ -1795,7 +1843,7 @@
 		"level": "591",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1660662900502"
 	},
 	{
@@ -1807,7 +1855,7 @@
 		"level": "590",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1660662869250"
 	},
 	{
@@ -1819,7 +1867,7 @@
 		"level": "680",
 		"role": "1",
 		"content": "<p>有没有新的引领市场突破的强势票？</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1660231588769",
 		"re": ""
 	},
@@ -1832,7 +1880,7 @@
 		"level": "670",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1659790923913"
 	},
 	{
@@ -1844,7 +1892,7 @@
 		"level": "660",
 		"role": "0",
 		"content": "<p>我是怎么错过中美博弈背景下的芯片行情？（华大九天、大港股份）</p><p>我是怎么错过机器人的？（巨轮智能、中大力德、绿的谐波、江苏北人）</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1659789660452"
 	},
 	{
@@ -1856,7 +1904,7 @@
 		"level": "675",
 		"role": "1",
 		"content": "<p>错过机器人行情： 巨轮智能、中大力德、江苏北人、绿的谐波一直涨，我他妈的为什么就眼瞎看不见？</p><p>错过芯片行情：光刻机的彤程新材、万业企业、大港股份一直在上涨，我他妈为什么眼瞎看不见？为什么我脑子没有想过背后的逻辑?</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1659713118365",
 		"re": ""
 	},
@@ -1869,7 +1917,7 @@
 		"level": "661",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1659237555228"
 	},
 	{
@@ -1881,11 +1929,11 @@
 		"level": "670",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1658794344412"
 	},
 	{
-		"title": "围绕当前主流热点龙头；当前主流热点龙头是什么？",
+		"title": "围绕主流热点龙头；当前主流热点龙头是什么？",
 		"id": "id_1658676109153_8213",
 		"type": "rp",
 		"caution": "",
@@ -1893,9 +1941,12 @@
 		"level": "679",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [
+			"id_1713686367964_2656"
+		],
 		"timestamp": "1658676109153",
-		"re": ""
+		"re": "",
+		"items": []
 	},
 	{
 		"title": "关键是应对：今天盘面可能是那种状态，我又该如何应对？",
@@ -1906,7 +1957,7 @@
 		"level": "410",
 		"role": "0",
 		"content": "<table style=\"width: 100%; margin-left: calc(0%);\"><tbody><tr><td style=\"width: 23.9015%;\">大局观<br></td><td style=\"width: 19.5312%;\">周期节奏</td><td style=\"width: 33.9112%;\">信号</td><td style=\"width: 22.5793%;\">预案</td></tr><tr><td style=\"width: 23.9015%;\">指数趋势向上，有主流热点，赚钱效应强</td><td style=\"width: 19.5312%;\">进攻日：主流热点主升</td><td style=\"width: 33.9112%;\">空间板如果是顶一字，则是进攻日；但要排除盛极而衰，情绪高潮；<br></td><td style=\"width: 22.5793%;\"><strong>龙头买不到。低吸其它分支龙头，或低吸龙二。</strong><br></td></tr><tr><td style=\"width: 23.9015%;\"><br></td><td style=\"width: 19.5312%;\">转折日</td><td style=\"width: 33.9112%;\"><br></td><td style=\"width: 22.5793%;\"><br></td></tr><tr><td style=\"width: 23.9015%;\"><br></td><td style=\"width: 19.5312%;\">弱转强</td><td style=\"width: 33.9112%;\"><br></td><td style=\"width: 22.5793%;\">主流热点高位震荡<br></td></tr><tr><td style=\"width: 23.9015%;\"><br></td><td style=\"width: 19.5312%;\">分歧日</td><td style=\"width: 33.9112%;\"><br></td><td style=\"width: 22.5793%;\"><br></td></tr><tr><td style=\"width: 23.9015%;\"><br></td><td style=\"width: 19.5312%;\"><strong>冰点否极泰来, 盘中大V形浪</strong><br></td><td style=\"width: 33.9112%;\"><br></td><td style=\"width: 22.5793%;\"><br></td></tr><tr><td style=\"width: 23.9015%;\"><br></td><td style=\"width: 19.5312%;\">高低切换</td><td style=\"width: 33.9112%;\"><br></td><td style=\"width: 22.5793%;\"><br></td></tr><tr><td style=\"width: 23.9015%;\"><br></td><td style=\"width: 19.5312%;\">轮动</td><td style=\"width: 33.9112%;\"><br></td><td style=\"width: 22.5793%;\"><br></td></tr><tr><td style=\"width: 23.9015%;\"><br></td><td style=\"width: 19.5312%;\"><strong>龙头停牌，低位补涨；</strong><br></td><td style=\"width: 33.9112%;\"><br></td><td style=\"width: 22.5793%;\"><br></td></tr><tr><td style=\"width: 23.9015%;\"><br></td><td style=\"width: 19.5312%;\">逆势补跌</td><td style=\"width: 33.9112%;\"><br></td><td style=\"width: 22.5793%;\"><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1658633450236",
 		"re": ""
 	},
@@ -1919,7 +1970,7 @@
 		"level": "681",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1646581630249"
 	},
 	{
@@ -1928,7 +1979,7 @@
 		"type": "rp",
 		"comment": "",
 		"content": "<h2><span style=\"font-size: 16px;\">6-8月份的大盘主升浪，为什么我眼瞎看不到？</span></h2>",
-		"tags": [
+		"options": [
 			"3246368",
 			"9619207",
 			"2614022",
@@ -1950,7 +2001,7 @@
 		"level": "685",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1658627456517",
 		"re": ""
 	},
@@ -1963,7 +2014,7 @@
 		"level": "603",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1651063336665"
 	},
 	{
@@ -1972,18 +2023,24 @@
 		"type": "rp",
 		"comment": "行情好多做；行情不好管住手；做的话，做最强；弱势管住手，强势踏准节奏；现在行情是好是坏？最强的股票是谁？",
 		"content": "",
-		"tags": [],
+		"options": [
+			"id_1713187214498_1815",
+			"id_1713187192842_0112",
+			"id_1713187202751_6149",
+			"id_1713187249158_6600"
+		],
 		"timestamp": "1639656009272",
 		"caution": "跌停是否增多？有没有系统性风险？",
 		"level": "682",
-		"role": "1"
+		"role": "1",
+		"re": ""
 	},
 	{
 		"title": "围绕主流热点龙头：我有没有围绕主流热点龙头操作？市场上最能凝聚合力资金的方向是什么？",
 		"id": "1243691",
 		"type": "rp",
 		"comment": "",
-		"tags": [],
+		"options": [],
 		"content": "<p>任何时候市场都是有主线的。不要着眼于市场的各种小波动。</p><p>除非有明确的结束信号，否则永远不要主观看空主流热点。</p>",
 		"name": "1243691",
 		"timestamp": "1638676655275",
@@ -2000,7 +2057,7 @@
 		"level": "640",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1649636913917"
 	},
 	{
@@ -2012,7 +2069,7 @@
 		"level": "501",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1658547761700"
 	},
 	{
@@ -2024,7 +2081,7 @@
 		"level": "670",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1656732745051",
 		"re": ""
 	},
@@ -2034,7 +2091,7 @@
 		"type": "question",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638719166797",
 		"caution": "",
 		"level": "985",
@@ -2050,7 +2107,7 @@
 		"level": "590",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1651908426056"
 	},
 	{
@@ -2062,7 +2119,7 @@
 		"level": "670",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1651905771671"
 	},
 	{
@@ -2074,7 +2131,7 @@
 		"level": "675",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1650555834295"
 	},
 	{
@@ -2085,7 +2142,7 @@
 		"content": "<p>捷荣技术、华映科技、首创证券、太平洋、金科股份、鸿博股份、中际旭创、中国科传、上海电影、英飞拓、</p><p>汽车、次新转债、基建、新冠特效药 数字货币、疫情行情、中药行情、元宇宙、锂矿行情、碳中和行情、医美行情、口罩、</p><p>锦州港、直真科技、浙江建投、翠微股份、九安医疗、雅本化学、精华制药、龙津药业、三羊马、陕西金叶、中锐股份、中青宝、大金重工、江特电机、联创股份、湖北宜化、郑州煤电、星期六</p>",
 		"name": "9141600",
 		"timestamp": "1638679624532",
-		"tags": [],
+		"options": [],
 		"caution": "后知后觉；主观；",
 		"level": "990",
 		"role": "0",
@@ -2100,7 +2157,7 @@
 		"level": "849",
 		"role": "0",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1649637221385",
 		"re": "false"
 	},
@@ -2113,7 +2170,7 @@
 		"level": "191",
 		"role": "1",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 33.3089%;\">整体指数状态、节奏</td><td style=\"width: 38.1788%;\">转折？ 修复？ &nbsp;分歧？ 分化？ &nbsp;退潮？ 高潮？ 调整观望？</td><td style=\"width: 28.4425%;\"><br></td></tr><tr><td style=\"width: 33.3089%;\">整体短线情绪、节奏</td><td style=\"width: 38.1788%;\">分歧、高低切、</td><td style=\"width: 28.4425%;\">轮动、卡位</td></tr><tr><td>板块热点生命周期</td><td style=\"width: 38.1788%;\">启动爆发？ &nbsp;分歧震荡？&nbsp; 退潮？</td><td style=\"width: 28.4425%;\"><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1645108028841
 	},
 	{
@@ -2125,7 +2182,7 @@
 		"level": "575",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1644151441536"
 	},
 	{
@@ -2137,7 +2194,7 @@
 		"level": "790",
 		"role": "2",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1649560024357"
 	},
 	{
@@ -2146,7 +2203,7 @@
 		"type": "idea",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638952381928",
 		"caution": "什么条件做什么操作；",
 		"level": "785",
@@ -2161,7 +2218,7 @@
 		"level": "740",
 		"role": "2",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1649436886281"
 	},
 	{
@@ -2173,7 +2230,7 @@
 		"level": "670",
 		"role": "1",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1644766787315",
 		"re": ""
 	},
@@ -2186,7 +2243,7 @@
 		"level": "186",
 		"role": "1",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 35.7594%;\">趋势向上，有主线热点，趋势风格，赚钱效应强；</td><td style=\"width: 10.4244%;\"><br></td><td style=\"width: 53.7356%;\"><br></td></tr><tr><td style=\"width: 35.7594%;\">趋势向上，有主线热点，情绪风格，赚钱效应强；<br></td><td style=\"width: 10.4244%;\"><br></td><td style=\"width: 53.7356%;\"><br></td></tr><tr><td style=\"width: 35.7594%;\">趋势向上，无主线热点；趋势风格，</td><td style=\"width: 10.4244%;\"><br></td><td style=\"width: 53.7356%;\"><br></td></tr><tr><td style=\"width: 35.7594%;\">无明显趋势，有主线热点，情绪风格为主；有赚钱效应；</td><td style=\"width: 10.4244%;\">碳中和行情；</td><td style=\"width: 53.7356%;\"><br></td></tr><tr><td style=\"width: 35.7594%;\">趋势高位震荡</td><td style=\"width: 10.4244%;\"><br></td><td style=\"width: 53.7356%;\"><br></td></tr><tr><td style=\"width: 35.7594%;\">趋势向下</td><td style=\"width: 10.4244%;\"><br></td><td style=\"width: 53.7356%;\"><br></td></tr><tr><td style=\"width: 35.7594%;\">趋势低位震荡</td><td style=\"width: 10.4244%;\"><br></td><td style=\"width: 53.7356%;\"><br></td></tr><tr><td><br></td><td><br></td><td><br></td></tr></tbody></table><p><br></p><table style=\"width: 100%;\"><tbody><tr><td style=\"width: 35.9128%;\">弱势市场：亏钱效应强；存量博弈，卖出倾向大于买入倾向</td><td style=\"width: 64.0059%;\">跟风后排没有博弈空间，因为是存量博弈的弱势市场</td></tr><tr><td style=\"width: 35.9128%;\">强势市场：赚钱效应强，买入倾向大于卖出倾向</td><td style=\"width: 64.0059%;\">跟风后排有博弈空间；因为是增量市场；</td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1643558454557"
 	},
 	{
@@ -2195,7 +2252,7 @@
 		"type": "mistake",
 		"comment": "行情在疯狂中毁灭，在半信半疑中成长，在憧憬中成熟，在绝望中诞生，黎明即将到来",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1639654683017",
 		"caution": "我有没有忽略了市场风格转换或行情启动？",
 		"level": "859",
@@ -2210,7 +2267,7 @@
 		"comment": "",
 		"level": "502",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1642928924173",
 		"role": "1"
 	},
@@ -2219,24 +2276,16 @@
 		"id": "8059392",
 		"type": "rp",
 		"comment": "",
-		"tags": [
-			"8141386",
-			"4193713",
-			"8892599",
-			"3657132",
-			"id_1642945870791",
-			"id_1642945877771",
-			"4725762",
-			"6448349",
-			"3502595",
-			"7913663"
+		"options": [
+			"5920754"
 		],
-		"content": "<p><span style=\"font-size: 18px;\">赚钱效应有没有持续性？</span><span style=\"font-size: 18px;\">低吸赚钱效应怎么样？追涨赚钱效应怎么样？ 接力板赚钱效应怎么样？</span></p>",
+		"content": "<p><span style=\"font-size: 16px;\">赚钱效应有没有持续性？低吸赚钱效应怎么样？追涨赚钱效应怎么样？ 接力板赚钱效应怎么样？</span></p>",
 		"timestamp": "1638692867662",
 		"caution": "越快意识到市场变化越能获取更大的利润。",
-		"level": "681",
+		"level": "682",
 		"role": "1",
-		"re": ""
+		"re": "",
+		"items": []
 	},
 	{
 		"title": "预测可能的日内状态；准备好预案；临盘验证是否符合预测；可以小仓位试错；客观跟随；",
@@ -2247,7 +2296,7 @@
 		"level": "400",
 		"role": "1",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 40.0422%;\">大局观：大周期</td><td style=\"width: 59.8772%;\">指数趋势、情绪强弱、赚钱效应；</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 阶段</td><td style=\"width: 59.8772%;\">主升期、高位震荡期、主跌期、低位震荡期</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 市场风格</td><td style=\"width: 59.8772%;\">蓝筹趋势、情绪题材、趋势题材；</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 主线热点</td><td style=\"width: 59.8772%;\">做核心龙头、挖掘低位、</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 人气龙头</td><td style=\"width: 59.8772%;\">盈亏同源，持续一致；</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 节奏</td><td style=\"width: 59.8772%;\">分歧、分歧转一致、弱转强、强更强、高潮</td></tr><tr><td style=\"width: 40.0422%;\">大局观： 切换</td><td style=\"width: 59.8772%;\">风格切换、高低切换、</td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1643988980468,
 		"re": ""
 	},
@@ -2259,7 +2308,7 @@
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 25.0118%;\"><span style=\"font-size: 16px;\">转折进攻、爆发加强、强更强</span><br></td><td style=\"width: 74.9075%;\"><br></td></tr><tr><td style=\"width: 25.0118%;\">分歧修复、分歧转一致、弱转强</td><td style=\"width: 74.9075%;\"><br></td></tr><tr><td style=\"width: 25.0118%;\"><span style=\"font-size: 16px;\">分歧分化、</span><strong><br></strong></td><td style=\"width: 74.9075%;\">管住手或做低位首板；超短资金同质性很强；一致高潮就是顶；不要做什么高位活口；主流分歧，非主流卡位</td></tr><tr><td style=\"width: 25.0118%;\"><span style=\"font-size: 16px;\">高潮退潮</span><br></td><td style=\"width: 74.9075%;\"><br></td></tr><tr><td style=\"width: 25.0118%;\"><span style=\"font-size: 16px;\">调整观望</span><br></td><td style=\"width: 74.9075%;\"><br></td></tr><tr><td style=\"width: 25.0118%;\">市场趋势向上，高位主流强分歧或调整</td><td style=\"width: 74.9075%;\">超跌轮动、<br></td></tr><tr><td style=\"width: 25.0118%;\">市场趋势向上，板块不强</td><td style=\"width: 74.9075%;\">轮动</td></tr><tr><td>退潮期</td><td>高低切换</td></tr></tbody></table><p><br></p><p><span style=\"font-size: 18px;\"><u>我有做好市场转强的预案吗？</u><u>时机就是一切。弱势管住手，强势踏准节奏。买在转折点。</u></span></p>",
 		"name": "",
 		"timestamp": "1638681951111",
-		"tags": [
+		"options": [
 			"6159551",
 			"7971170",
 			"id_1646839471054_4253",
@@ -2279,7 +2328,7 @@
 		"type": "rp",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1639486936279",
 		"caution": "",
 		"level": "665",
@@ -2291,7 +2340,7 @@
 		"type": "rp",
 		"comment": "",
 		"content": "",
-		"tags": [
+		"options": [
 			"6249700",
 			"2937591",
 			"5282078",
@@ -2315,7 +2364,7 @@
 		"type": "rp",
 		"comment": "为何所有的龙头股我都错过？恐高；主观看空；客观跟随；",
 		"content": "<p><span style=\"font-size: 18px;\"><u>一定要做龙头。龙头就是最重要的判断锚点之一；</u></span><u><span style=\"font-size: 18px;\">龙头就是大概率；盈亏同源，持续一致性</span></u></p><p><span style=\"font-size: 18px;\">三羊马、京城股份、陕西金叶、九安医疗、小康股份、清水源、中青宝、湖北宜化、大金重工、爱康科技、朗姿股份、豫能控股</span></p>",
-		"tags": [
+		"options": [
 			"id_1642946186530",
 			"id_1642998273390",
 			"id_1642998254195",
@@ -2333,7 +2382,7 @@
 		"id": "0743188",
 		"type": "rp",
 		"comment": "",
-		"tags": [
+		"options": [
 			"id_1642928350537",
 			"id_1642928404719",
 			"id_1642928591697",
@@ -2352,7 +2401,7 @@
 		"type": "rp",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1640166033380",
 		"caution": "",
 		"level": "590",
@@ -2364,7 +2413,7 @@
 		"type": "rp",
 		"comment": "我总是错过市场转强最好的交易机会。",
 		"content": "<p><u>高开放量大阴线，也可以反包。</u><u>首次分歧，也可以转一致。</u></p><p><u>低吸大长腿；&nbsp; 分歧转一致；</u></p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1639655524225",
 		"caution": "",
 		"level": "650",
@@ -2375,7 +2424,7 @@
 		"id": "5225087",
 		"type": "rp",
 		"comment": "",
-		"tags": [],
+		"options": [],
 		"content": "<p>新城市、本川智能、中国卫通、中国电信；</p>",
 		"name": "5225087",
 		"timestamp": "1638680127622",
@@ -2389,7 +2438,7 @@
 		"type": "rp",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638692460734",
 		"caution": "",
 		"level": "660",
@@ -2401,7 +2450,7 @@
 		"type": "rp",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638717864581",
 		"caution": "",
 		"level": "620",
@@ -2413,7 +2462,7 @@
 		"type": "mistake",
 		"comment": "",
 		"content": "<p>看不到更大的交易逻辑。后知后觉，牛市或牛股走出来，我才意识到。</p><p>看不到大势下的确定性，着眼于小波动。看不到大盘主升中。看不到板块行情进行中。</p><p>行情启动时犹豫，行情退潮时，管不住手。</p><p>不知道市场参与者的行为逻辑</p><p>没有消息资讯优势</p><p><span style=\"font-size: 16px;\">上涨初期，不在意。</span></p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638964854760",
 		"caution": "",
 		"level": "856",
@@ -2425,7 +2474,7 @@
 		"type": "system",
 		"comment": "围绕市场龙头寻找介入机会。",
 		"content": "<h2><span style=\"font-size: 18px;\"><u>简单纯粹取舍重复，只做龙头。</u></span></h2><h2><br></h2><p><br></p><table><thead><tr><th>系统类型</th><th>逻辑</th><th>代表人物</th></tr></thead><tbody><tr></tr><tr><td>分仓打首板</td><td>客观跟随热点、概率优势</td><td>之江小生、北京炒家、创世纪、陈小豪、走刀口1991</td></tr><tr><td>基于大盘和板块的首板</td><td><br></td><td>管手剁</td></tr><tr><td>数板接力板</td><td><br></td><td>股长升、A女王</td></tr><tr><td>基于市场理解力的应对</td><td>市场资金流向</td><td>涅盘重升、花一样的土豆、短线至上</td></tr><tr><td>搜集市场强势股，寻找介入机会</td><td><br></td><td>独孤一剑、</td></tr><tr><td>看高做低</td><td>盈亏比高；锚定&amp;复制&amp;补涨；</td><td>爱学习的人、衡山五神剑、奔狼</td></tr><tr><td>机械概率</td><td><br></td><td>纵横股道、寂寞和弦</td></tr><tr><td>日内热点捕捉</td><td><br></td><td>张英雄</td></tr><tr><td>趋势波段<br></td><td><br></td></tr></tbody></table><p><br></p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638935323630",
 		"caution": "",
 		"level": "905",
@@ -2437,7 +2486,7 @@
 		"type": "warn",
 		"comment": "",
 		"content": "<p>我每天还是在重复以前的交易动作。\n我需要做出真正的改变。我必须做出真正的改变。\n问题没有解决。\n错误仍在重复。</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1638966078422,
 		"caution": "",
 		"level": "1000",
@@ -2449,7 +2498,7 @@
 		"type": "question",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1639280320568",
 		"caution": "",
 		"level": "905",
@@ -2461,7 +2510,7 @@
 		"type": "idea",
 		"comment": "",
 		"content": "<p>(趋势切换到情绪；极端悲观切换到狂热)</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1639229730111",
 		"caution": "",
 		"level": "701",
@@ -2473,7 +2522,7 @@
 		"id": "9179906",
 		"type": "question",
 		"comment": "",
-		"tags": [
+		"options": [
 			"1665398",
 			"8681578",
 			"9611600",
@@ -2496,7 +2545,7 @@
 		"type": "market",
 		"comment": "",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 26.337%;\">大盘与主线板块的关系<br></td><td style=\"width: 73.5897%;\">板块周期和市场大周期是共振还是背离？是会穿越还是补跌？<br></td></tr><tr><td>个股与板块的关系</td><td><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1639231180401
 	},
 	{
@@ -2505,7 +2554,7 @@
 		"type": "market",
 		"comment": "",
 		"content": "<p>启动/爆发 &nbsp; 加强 &nbsp;分歧/分化 &nbsp;调整 &nbsp;高潮 &nbsp;退潮</p><table style=\"width: 100%;\"><tbody><tr><td style=\"width: 50.0000%;\"><br></td><td style=\"width: 50.0000%;\"><br></td></tr><tr><td><br></td><td><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": 1639230239112,
 		"caution": "",
 		"level": "6",
@@ -2517,7 +2566,7 @@
 		"type": "market",
 		"comment": "",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 50.0000%;\">龙头<br></td><td style=\"width: 50.0000%;\"><br></td></tr><tr><td>卡位先锋<br></td><td><br></td></tr><tr><td>跟风套利<br></td><td><br></td></tr><tr><td>低位补涨<br></td><td><br></td></tr></tbody></table>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1639230657557",
 		"level": "6"
 	},
@@ -2527,7 +2576,7 @@
 		"type": "null",
 		"comment": "思维没有方向；判断没有锚点；",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1639282041994",
 		"caution": "",
 		"level": "5",
@@ -2540,7 +2589,7 @@
 		"type": "mistake",
 		"comment": "",
 		"content": "<p><span style=\"font-size: 16px;\">没有对热点龙头的推演和预案。临盘被动应对。<br></span></p><p><span style=\"font-size: 16px;\">没有明确的交易计划，什么样的条件做什么操作。</span></p><p><span style=\"font-size: 16px;\">没有明确的目标行情意识。没有明确的判断锚点，临盘犹豫。</span></p><p><span style=\"font-size: 16px;\">从来没有做好市场转强的准备，总是错过最好的交易机会。</span></p><p><span style=\"font-size: 16px;\">每次都踏错节奏，每次市场转强、每次逼空都没有标的。</span></p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638964775096",
 		"caution": "",
 		"level": "886",
@@ -2553,7 +2602,7 @@
 		"type": "mistake",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1639747301594",
 		"caution": "",
 		"level": "806",
@@ -2566,7 +2615,7 @@
 		"type": "mistake",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1639230976753",
 		"caution": "",
 		"level": "826",
@@ -2579,7 +2628,7 @@
 		"type": "mistake",
 		"comment": "",
 		"content": "<p>左右打脸，犹豫不决。不能持续一致性。为何我总是卖飞&amp;过山车？ 高开下杀卖在最低点。</p><p>操作总想着钱，而不是对错。持仓影响我的判断。因为持仓，就因为下跌恐慌。或急于兑现利润导致卖飞。</p><p>急于赚钱，交易上瘾，管不住手。空仓总想着买。持仓总想着卖。</p><p><br></p><p>鸡肋头寸、非预期头寸，止损犹豫；浪费时间和机会成本；</p><p>优柔寡断、三心二意、没有耐心；</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638719303089",
 		"caution": "",
 		"level": "800",
@@ -2592,7 +2641,7 @@
 		"type": "idea",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638952363323",
 		"caution": "你什么都想抓，什么也抓不住；重复那些赚钱的交易；",
 		"level": "791",
@@ -2605,7 +2654,7 @@
 		"type": "idea",
 		"comment": "总是有两种可能性；我恐高是对的，但也放弃了主升浪；",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638952394462",
 		"caution": "只做龙头、只做主升、只做最强；",
 		"level": "795",
@@ -2618,7 +2667,7 @@
 		"type": "idea",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1639212076634",
 		"caution": "",
 		"level": "700",
@@ -2631,7 +2680,7 @@
 		"type": "rp",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638964563037",
 		"caution": "",
 		"level": "591",
@@ -2643,7 +2692,7 @@
 		"type": "warn",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1638872582085,
 		"caution": "",
 		"level": "791",
@@ -2655,7 +2704,7 @@
 		"type": "warn",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1638965965443,
 		"caution": "",
 		"level": "796",
@@ -2667,7 +2716,7 @@
 		"type": "mistake",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638966036834",
 		"caution": "",
 		"level": "806",
@@ -2679,7 +2728,7 @@
 		"type": "question",
 		"comment": "",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": "1640441042409",
 		"caution": "没有信息优势，不知道市场资金的行为逻辑，后知后觉；",
 		"level": "915",
@@ -2692,7 +2741,7 @@
 		"type": "question",
 		"comment": "",
 		"content": "<p>湖北宜化的3波主升浪我眼瞎吗？下一个大金重工我能抓住吗？</p>",
-		"tags": [],
+		"options": [],
 		"timestamp": "1638965751427",
 		"caution": "",
 		"level": "910",
@@ -2704,7 +2753,7 @@
 		"type": "question",
 		"comment": "资金？资讯？反应？控制力？理解力？执行力？",
 		"content": "",
-		"tags": [],
+		"options": [],
 		"timestamp": 1638965605140,
 		"caution": "",
 		"level": "980",
@@ -2718,7 +2767,7 @@
 		"content": "<table style=\"width: 100%; margin-left: calc(0%);\"><tbody><tr><td>消息刺激的板块首板前排</td><td>突发消息刺激，低位而不是已经反映了预期的高位，高位有利好消息可能趁机出货</td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">做核心龙头<br></td><td style=\"width: 50.8664%;\">市场主升期、题材诞生<br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">低位补涨<br></td><td style=\"width: 50.8664%;\">高低切换、锚定、复制、补涨<br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">板块爆发首板；有板块效应的前排首板<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">板块爆发加强晋级<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">主升浪第一次分歧转一致</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">主流热点分歧调整后的卡位回流先锋<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">主流热点低位补涨首板<br></td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">恐惧转贪婪，低吸它长腿</td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">低吸龙头分歧</td><td style=\"width: 50.8664%;\"><br></td><td style=\"width: 22.4542%;\"><br></td></tr><tr><td style=\"width: 26.5979%;\">大盘转势共振领涨板</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">超预期加速<br></td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">预判轮动低吸</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">修复/分歧转一致</td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr><tr><td style=\"width: 26.5979%;\">转折/弱转强<br></td><td style=\"width: 50.8664%;\"><br></td><td><br></td></tr></tbody></table><p><br></p>",
 		"name": "3676210",
 		"timestamp": "1638620495062",
-		"tags": [],
+		"options": [],
 		"caution": "围绕市场合力、主流热点；客观跟随；",
 		"level": "500",
 		"role": "0",

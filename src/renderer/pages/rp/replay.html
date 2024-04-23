@@ -1,0 +1,55 @@
+<div id="replay" ic-ctrl="replayCtrl" ic-view="replay">
+    <div class="column" style="position: fixed; z-index:10; top:0; left:4%; right: 4%;">
+        <div class="button is-primary is-fullwidth" ic-view-back>返回</div>
+    </div>
+    <div class="column" style="padding-top:4em;">
+        <div ic-tpl="replay">
+            <ul style="padding:0 0 0 5%;" ic-init="o = model;">
+                <li ic-for="i,v in model" ic-if="v">
+                    <div ic-init="tag=TAGS_MAP_BY_ID[v], p=RP_MAP[i];">
+                        <h4>{{ (p && p.title) || i }}</h4>
+                        <div ic-if-start="Array.isArray(v)">
+                            <div class="control" ic-for="j,k in v">
+                                <div class="buttons has-addons" ic-init="o=TAGS_MAP_BY_ID[k];">
+                                                <span class="button" ic-if-start="o.type==='交易错误'||o.type==='要解决的问题'" ic-val="{{ k }}">
+                                                    {{ o.text }}
+                                                </span>
+                                    <span class="button" ic-else-if="o.type==='交易要素'" ic-val="{{ k }}">
+                                                    {{ o.text }}
+                                                </span>
+                                    <span class="button is-info" ic-else ic-val="{{ k }}">
+                                                    {{ o.text }}
+                                                </span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="pre" ic-else>
+                            {{ v }}
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="table_3">
+                <div>
+                    <h6>日期: </h6>
+                    <div class="pre">{{ o['date'] }}</div>
+                </div>
+                <div>
+                    <h6>阶段变量: </h6>
+                    <div class="pre">{{ o['阶段变量'] }}</div>
+                </div>
+                <div>
+                    <h6>交易计划: </h6>
+                    <div class="pre">{{ o['交易计划'] }}</div>
+                </div>
+                <!--<div ic-for="i,v in o" ic-if="i=='date'||i=='交易计划'">
+                    <h6 class="">{{i}} : </h6>
+                    <div class="pre">{{v}}</div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>

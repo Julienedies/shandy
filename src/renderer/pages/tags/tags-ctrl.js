@@ -41,6 +41,9 @@ export default function () {
     };
 
     scope.view = function (e, type) {
+        let target = e.target;
+        console.log(this, target);
+        if(target.hasAttribute('ic-ajax')) return false;
         scope.emit('view-details', type);
     };
 
@@ -52,7 +55,7 @@ export default function () {
         return false; // 禁止事件冒泡，触发父元素的事件绑定，有用;
     };
 
-    scope.edit2 = function (e, id, type, text) {
+    scope.goto = function (e, id, type, text) {
         if (type === 'type') {
             let $target = $(`[tabindex=${ text }]`);
             if($target.length){
