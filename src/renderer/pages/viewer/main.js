@@ -39,7 +39,7 @@ debugMenu.install();
 // 交易记录json
 const tradeArr = userJo('SEL', []).get();
 
-const viewerJodb = ju('viewer', [], {key:'img'});
+const viewerJodb = ju('viewer', [], {key: 'img'});
 const tagsJodb = jd('tags');
 const systemJodb = jd('system');
 
@@ -96,16 +96,16 @@ brick.reg('mainCtrl', function (scope) {
             arr2.push(item);
         });
 
-        for(let i in map){
+        for (let i in map) {
             let arr = map[i];
             // 是否有多个相同的img路径或id
-            if(arr.length > 1) {
+            if (arr.length > 1) {
                 let b = arr[0];
                 let id = b.id;
-                b.id = `id_${b.timestamp}`;
-               /* if (confirm(`是否修改此项${ id } ：\r\n ${ JSON.stringify(b, null, '\t') }`)) {
-                    viewerJodb.set(b);
-                }*/
+                b.id = `id_${ b.timestamp }`;
+                /* if (confirm(`是否修改此项${ id } ：\r\n ${ JSON.stringify(b, null, '\t') }`)) {
+                     viewerJodb.set(b);
+                 }*/
 
                 /*arr.forEach((v) =>{
                     r2.push(v);
@@ -198,10 +198,15 @@ brick.reg('mainCtrl', function (scope) {
         }, 40);
     };
 
-    // 显示目录下图片列表
+    /**
+     * 显示目录下图片列表
+     * @param dir {Array| String} 图片数组或图片目录路径
+     * @returns {Promise<*>}
+     * @private
+     */
     scope._init = async function (dir) {
         let urls;
-        // 如果直接传递一个数组
+        // 如果直接传递一个图片数组
         if (Array.isArray(dir)) {
 
             urls = dir;
@@ -224,9 +229,11 @@ brick.reg('mainCtrl', function (scope) {
             if (!urls.length) {
                 return $.icMsg('no images.');
             }
+
+            // 遍历，绑定交易、标签等数据
             urls.forEach(o => {
 
-                if (isAddTrade) {
+ /*               if (isAddTrade) {
                     let arr = o.tradeInfo = tradeArr.filter(arr => {
                         // 交易信息 对应 code 和 时间
                         return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
@@ -238,12 +245,14 @@ brick.reg('mainCtrl', function (scope) {
                         arr.reverse(); // 当日多个交易记录按照时间先后显示
                         o.tradeInfoText = arr.join('\r\n').replace(/,/g, '    ');
                     }
-                }
+                }*/
 
                 // 附加标签信息 和 交易系统信息
                 let obj = viewerJodb.get(o.f, 'img')[0] || {tags: [], system: []};
                 let arr = obj.tags || [];
                 let arr2 = obj.system || [];
+
+                o.tradeInfoText = obj.tradeInfo;
 
                 o.tags = arr.map((v) => {
                     return tagsMap[v];
@@ -349,11 +358,10 @@ brick.reg('mainCtrl', function (scope) {
     // ------------------------------------------------------------------------------------------------
 
     historyModel.on('change', () => {
-        scope.render('history', {model: historyModel.get2()});
+        scope.render('history', {model: {dirs: historyModel.get2(), dir: scope.imgDir}});
         setting.refresh().set('viewer.history', historyModel.get());
     });
 
-    historyModel.init(setting.get('viewer.history') || []);
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     // main 程序入口
@@ -362,11 +370,10 @@ brick.reg('mainCtrl', function (scope) {
     let imgDir = setting.get('viewer.imgDir');
     scope.imgDir = imgDir;
 
+    historyModel.init(setting.get('viewer.history') || []);
+
     if (imgDir) {
         scope.init(imgDir);
-        setTimeout(function () {
-            //console.log(scope.$elm.find(`#history a.tag[data-dir="${ imgDir }"]`).addClass('is-danger'), `#history a.tag[data-dir="${imgDir}"]`);
-        }, 2000);
     }
 
     scope.viewerVm = setting.get('viewer');

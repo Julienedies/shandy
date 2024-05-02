@@ -32,7 +32,7 @@ export default {
      * 获取文件夹里的图片对象数组: imgObjArr
      * @param dir {String|Array} 文件夹路径 或 图片数组
      * @param [conf] {Boolean|Object} 图片对象是否只包含路径
-     * @returns {Array} [{f:图片路径，c:图片创建时间戳，d:图片创建日期, code: 股票code}]
+     * @returns {Array} 图片数组  [{f:图片路径，c:图片创建时间戳，d:图片创建日期, code: 股票code}]
      */
     getImages: function (dir, conf = {isOnlyPath: false, isReverse: true, isRefresh: false, isOrigin: false}) {
         console.log('getImages => ', dir);
@@ -55,6 +55,7 @@ export default {
         let cacheArr = dirJo.get();
 
         if (cacheArr && cacheArr.length && !conf.isRefresh && !conf.isOrigin) {
+            console.log(`使用缓存=》${ key }`);
             arr = cacheArr;
         } else {
             arr = fs.readdirSync(dir);

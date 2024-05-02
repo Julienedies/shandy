@@ -64,12 +64,12 @@
                 </div>
             </div>
             <div id="history" class="column is-8" ic-tpl="history">
-                <div ic-select ic-select-item="a.tag" ic-select-cla="is-danger">
-                    <div class="field is-grouped is-grouped-multiline" ic-for="i,k in ['X交割单学习','目标行情','交易记录']" ic-for-init="arr=model[k]">
+                <div ic-select ic-select-item="a.tag" ic-select-auto="false" ic-select-cla="is-danger" ic-init="dirs=model.dirs">
+                    <div class="field is-grouped is-grouped-multiline" ic-for="i,k in ['X交割单学习','目标行情','交易记录']" ic-for-init="arr=dirs[k]">
                         <h6 class="tag is-primary is-medium" style="margin-right:1em;">{{ k }}</h6>
                         <div class="control" ic-for="i,v in arr">
                             <div class="tags has-addons">
-                                <a class="tag is-info is-medium" ic-click="show" data-dir="{{ v }}">{{ v.split("\\\\").pop() }}</a>
+                                <a class="tag is-info is-medium" ic-has-selected="v===model.dir" ic-click="show" data-dir="{{ v }}">{{ v.split("\\\\").pop() }}</a>
                                 <!--<a class="tag is-delete" ic-click="remove" data-dir="{{ v }}"></a>-->
                             </div>
                         </div>
