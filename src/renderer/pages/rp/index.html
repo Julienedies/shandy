@@ -11,7 +11,7 @@
 <body>
 <div ic-view-stage ic-ctrl="mainCtrl">
 
-    <div id="rpList" class="-shrink" ic-ctrl="rpListCtrl" ic-view="rpList" ic-active>
+    <div id="rpList" class="-shrink" ic-ctrl="rpListCtrl" ic-view="rpList" ic-active ic-view-ani-id="7">
         <div class="column">
 
             <header id="mainHeader" ic-tpl="types">
@@ -162,7 +162,7 @@
         </div>
     </div>
 
-    <div ic-view="setRp" ic-ctrl="setRpCtrl">
+    <div ic-ctrl="setRpCtrl" ic-view="setRp" ic-view-ani-id="42">
         <div class="column">
             <div ic-tpl="setRp" ic-tpl-init="{}">
                 <div ic-form="setRp">
@@ -280,6 +280,7 @@
                                     <option value="1" ic-has-selected="model.role==1">复盘思考</option>
                                     <option value="2" ic-has-selected="model.role==2">关键理念</option>
                                     <option value="3" ic-has-selected="model.role==3">错误&警告</option>
+                                    <option value="4" ic-has-selected="model.role==4">key</option>
                                 </select>
                             </p>
                         </div>

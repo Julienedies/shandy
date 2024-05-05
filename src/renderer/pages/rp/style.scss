@@ -119,10 +119,10 @@ html, body {
       }
 
       &.role_1 {
-        background: blue !important;
+        background: yellow !important;
 
         h3 {
-          color: #fff; // #0360d3
+          color: black; // #0360d3  #0354d3
         }
       }
 
@@ -139,6 +139,14 @@ html, body {
 
         h3 {
           color: red;
+        }
+      }
+
+      &.role_4 {
+        background: blue!important;
+
+        h3 {
+          color: white;
         }
       }
 
