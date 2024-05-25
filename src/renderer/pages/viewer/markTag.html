@@ -26,7 +26,7 @@
             <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-cla="is-info" ic-select-on-change="onChange" ic-select-auto="false">
                 <div class="tags">
                     <div ic-for="k,arr in model.tags"> <!-- ic-for-end -start -->
-                        <span class="tag is-primary is-large"  ic-if-start="k!=='type'">{{k}}</span>
+                        <span class="tag is-primary is-large"  ic-if-start="(TAGS_FILTER && TAGS_FILTER.includes(k)) || (!!!TAGS_FILTER && k!=='type')">{{k}}</span>
                         <span class="tag is-medium is-black"  ic-if-end ic-for="i,v in arr" ic-select-item ic-val="{{ v.id }}"
                               ic-has-selected="model.img.tags && model.img.tags.includes(v.id)">
                             {{v.text}}

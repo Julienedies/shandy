@@ -46,9 +46,12 @@ const systemJodb = jd('system');
 window.$ = $;
 window.brick = brick;
 
+window.TAGS_FILTER = ['交易错误','交易统计','交易风险','行情类型', '目标行情'];
+
 brick.services.reg('historyModel', historyModel);
 
 brick.set('ic-viewer-interval', setting.get('viewer.interval') || 10);
+
 
 brick.reg('mainCtrl', function (scope) {
 
@@ -283,8 +286,8 @@ brick.reg('mainCtrl', function (scope) {
     scope.onSelectImgDirDone = (paths) => {
         if (!paths) return;
         let dir = paths[0];
-        historyModel.add(dir);
         scope.imgDir = dir;
+        historyModel.add(dir);
         scope.init(dir);
     };
 

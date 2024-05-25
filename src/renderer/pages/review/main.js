@@ -68,6 +68,22 @@ brick.reg('uploadTradingCtrl', function (scope) {
         });
     }
 
+    scope.addTrading = function (tradingFile){
+        let $th = $(document.body).icSetLoading();
+        let cb = (data) => {
+            add(data);
+            brick.emit('add-trading');
+            $th.icClearLoading();
+        };
+
+        if (/\.txt$/.test(tradingFile)) {
+            jhandy.csv(tradingFile, null, [0,1,3,4,5,6,7,8,9,10,11,12,13,14], false).then(cb);
+        } else if (/\.json$/.test(tradingFile)) {
+            let json = jo(tradingFile).json;
+            cb(json);
+        }
+    };
+
 
     scope.uploadTrading = function (fields) {
         let $th = $(this).icSetLoading();

@@ -41,13 +41,13 @@ export default {
     refresh (req, res) {
         let reverse = req.query.reverse;
         viewerMap.refresh(reverse);
-        res.json({msg: 'ok'});
+        res.json({msg: 'refresh tag&system ok'});
     },
 
     // 为viewer.json绑定交易信息
     bindTradeInfo (req, res) {
         viewerMap.bindTradeInfo();
-        res.json({msg: 'ok'});
+        res.json({msg: 'bindTradeInfo ok'});
     }
 
 }

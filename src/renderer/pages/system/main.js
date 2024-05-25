@@ -30,6 +30,9 @@ const setting = bridge.setting();
 //brick.set('debug', true)
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
 
+
+window.TAGS_FILTER = null;
+
 brick.set('ic-select-cla', 'is-info');
 
 brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
