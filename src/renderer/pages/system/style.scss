@@ -40,12 +40,13 @@ body, html {
 
 .table_4 {
   .tr {
-    padding: 24px 10px;
+    padding: 14px 10px;
     border-bottom: solid 1px #e7e7ea;
 
     .td:first-child {
+      min-width:7em;
       text-align: right;
-      padding-right: 4em;
+      padding-right: 2em;
     }
 
     &:last-child {

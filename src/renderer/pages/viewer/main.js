@@ -46,7 +46,7 @@ const systemJodb = jd('system');
 window.$ = $;
 window.brick = brick;
 
-window.TAGS_FILTER = ['交易错误','交易统计','交易风险','行情类型', '目标行情'];
+window.TAGS_FILTER = ['交易错误','交易统计','交易风险','行情类型', '目标行情', '行情驱动因素'];
 
 brick.services.reg('historyModel', historyModel);
 
