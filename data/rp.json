@@ -1,5 +1,31 @@
 [
 	{
+		"title": "市场的走势总是在我预期之外；我毫无预期和准备；",
+		"id": "id_1716914817579_6039",
+		"type": "mistake",
+		"caution": "",
+		"comment": "",
+		"level": "1900",
+		"role": "0",
+		"re": "true",
+		"content": "",
+		"items": [],
+		"timestamp": 1716914817579
+	},
+	{
+		"title": "行情类型",
+		"id": "id_1716694870139_4930",
+		"type": "null",
+		"caution": "",
+		"comment": "",
+		"level": "1900",
+		"role": "0",
+		"re": "",
+		"content": "<p>1. 技术上</p><p>2. 资金类型</p><p>3. 合力程度</p><p>4. 驱动类型</p><p><br></p><p><br></p><table style=\"width: 100%;\"><tbody><tr><td style=\"width: 33.3333%;\"><br></td><td style=\"width: 33.3333%;\"><br></td><td style=\"width: 33.3333%;\"><br></td></tr><tr><td style=\"width: 33.3333%;\"><br></td><td style=\"width: 33.3333%;\"><br></td><td style=\"width: 33.3333%;\"><br></td></tr><tr><td style=\"width: 33.3333%;\"><br></td><td style=\"width: 33.3333%;\"><br></td><td style=\"width: 33.3333%;\"><br></td></tr><tr><td style=\"width: 33.3333%;\"><br></td><td style=\"width: 33.3333%;\"><br></td><td style=\"width: 33.3333%;\"><br></td></tr><tr><td style=\"width: 33.3333%;\"><br></td><td style=\"width: 33.3333%;\"><br></td><td style=\"width: 33.3333%;\"><br></td></tr></tbody></table>",
+		"items": [],
+		"timestamp": 1716694870139
+	},
+	{
 		"title": "很多时候，题材本身不重要，关键是周期和时机；题材只是载体；",
 		"id": "id_1716560327506_7354",
 		"type": "mistake",
@@ -7,23 +33,10 @@
 		"comment": "",
 		"level": "1900",
 		"role": "0",
-		"re": "",
+		"re": "true",
 		"content": "",
 		"items": [],
-		"timestamp": 1716560327506
-	},
-	{
-		"title": "主观看空所有的新题材；",
-		"id": "id_1716560276949_4819",
-		"type": "mistake",
-		"caution": "",
-		"comment": "",
-		"level": "1900",
-		"role": "0",
-		"re": "",
-		"content": "",
-		"items": [],
-		"timestamp": 1716560276949
+		"timestamp": "1716560327506"
 	},
 	{
 		"title": "没有爆发前，总是忽略，直到一致上涨，已经他妈的买不到了；",
@@ -182,7 +195,7 @@
 		"title": "线性思维，主观看空；",
 		"id": "id_1711215792556_0993",
 		"type": "mistake",
-		"caution": " 看空新题材；上冲回落就看空；没有想过会修复；没有想过二波；没有想过V形浪；",
+		"caution": "上冲回落就看空；没有想过会修复；没有想过二波；没有想过V形浪；",
 		"comment": "",
 		"level": "1900",
 		"role": "0",
@@ -196,14 +209,15 @@
 		"title": "主观看空新题材；主观看空新题材；主观看空新题材；",
 		"id": "id_1711195568751_7873",
 		"type": "mistake",
-		"caution": "",
+		"caution": "很多时候，题材本身不重要，关键是周期和时机；题材只是载体；",
 		"comment": "",
 		"level": "1900",
 		"role": "0",
 		"re": "",
 		"content": "",
 		"options": [],
-		"timestamp": 1711195568751
+		"timestamp": 1711195568751,
+		"items": []
 	},
 	{
 		"title": "节奏，节奏，节奏，市场是有节奏的，时机节点、时机节点、时机节点；",
@@ -1150,12 +1164,13 @@
 		"caution": "",
 		"comment": "",
 		"level": "990",
-		"role": "0",
+		"role": "3",
 		"content": "",
 		"timestamp": "1672230153644",
 		"options": [],
 		"id": "id_1674561833851_4313",
-		"re": "true"
+		"re": "true",
+		"items": []
 	},
 	{
 		"title": "主升浪第一次分歧：",
@@ -2534,8 +2549,10 @@
 		"options": [],
 		"timestamp": "1638964854760",
 		"caution": "",
-		"level": "856",
-		"role": "0"
+		"level": "858",
+		"role": "0",
+		"re": "",
+		"items": []
 	},
 	{
 		"title": "我的交易系统是什么？",
