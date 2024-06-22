@@ -44,7 +44,7 @@ body, html {
     border-bottom: solid 1px #e7e7ea;
 
     .td:first-child {
-      min-width:7em;
+      min-width: 7em;
       text-align: right;
       padding-right: 2em;
     }
@@ -67,9 +67,9 @@ body, html {
 
 #ic-viewer-info {
   bottom: 0 !important;
-  font-size: 1.4em;
-  line-height: 1.6;
-  padding: 10px 0;
+  font-size: 1.2em;
+  line-height: 1.2;
+  padding: 2px 0;
   background: rgba(0, 0, 0, 0.6) !important;
 }
 
@@ -79,7 +79,6 @@ body, html {
 }
 
 #ic-viewer-handle {
-  padding-right: 23% !important;
   padding-left: 20px;
 }
 

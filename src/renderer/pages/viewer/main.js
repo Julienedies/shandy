@@ -6,8 +6,9 @@ import 'babel-polyfill'
 
 import './index.html'
 import '../../css/common/common.scss'
-import './style.scss'
 import './icViewer.scss'
+import './style.scss'
+
 
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
@@ -283,9 +284,8 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     // 图片目录路径选中后回调
-    scope.onSelectImgDirDone = (paths) => {
-        if (!paths) return;
-        let dir = paths[0];
+    scope.onSelectImgDirDone = (dir) => {
+        if (!dir) return;
         scope.imgDir = dir;
         historyModel.add(dir);
         scope.init(dir);

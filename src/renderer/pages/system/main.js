@@ -6,8 +6,9 @@ import 'babel-polyfill'
 
 import './index.html'
 import '../../css/common/common.scss'
-import './style.scss'
 import '../viewer/icViewer.scss'
+import './style.scss'
+
 
 import _ from 'lodash'
 import $ from 'jquery'

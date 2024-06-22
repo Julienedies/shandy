@@ -19,10 +19,10 @@ brick.directives.reg('ic-select-path', {
             console.log(isDir);
             let filePaths = isDir? utils.selectDir() : utils.select();
             let onDone = $th.icPp2('ic-select-path-on-done')
-            console.log(onDone);
-            let file = filePaths ? filePaths[0] : ($th.attr('ic-select-path-default') || '')
+            //console.log(onDone);
+            let file = filePaths ? filePaths[0] : ($th.attr('ic-select-path-default') || '');
             $(`input[name="${ $th.attr('ic-select-path') }"]`).val(file)
-            onDone && onDone(file)
+            onDone && onDone(file);
             // 如果选择的路径被回调处理, 并返回false, 则结束, 不用再为关联的input赋值
             //if (onDone && onDone(file) === false) return;
 

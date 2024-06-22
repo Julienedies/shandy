@@ -50,14 +50,14 @@
     <div id="systemList">
         <ul ic-tpl="systemList">
             <li ic-for="i,v in model" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" data-id="{{ v.id }}" id="{{ 'k'+v.id }}">
-                <div class="box">
+                <div class="box" ic-init="len=(v && v['示例图片'].length)||0;">
                     <div class="columns" style="align-items: start;">
                         <!-- left column is-10 -->
                         <div style="flex-grow:1; min-width: 0;">
                             <header style="padding-bottom: 1.2rem;">
                                 <h3>
                                     <span class="title is-4">{{ v.name }} </span>
-                                    <sup style="padding:0 1em;">{{ v && v['示例图片'].length }}</sup>
+                                    <sup style="padding:0 1em;" ic-class="{{ len>6000?'tag is-large is-danger ani-warn':'' }}">{{ len }}</sup>
 
                                     <span class="tag is-danger" ic-if="Array.isArray(v['交易系统逻辑'])" ic-for="j,o in v['交易系统逻辑']">
                                         {{ o }}

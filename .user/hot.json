@@ -1,7 +1,37 @@
 [
 	{
-		"id": "商业航天",
+		"id": "比亚迪",
+		"selected": false,
+		"timestamp": 1718246628024
+	},
+	{
+		"id": "苹果",
 		"selected": true,
+		"timestamp": 1718159922636
+	},
+	{
+		"id": "EDA",
+		"selected": false,
+		"timestamp": 1718152874407
+	},
+	{
+		"id": "PCB",
+		"selected": true,
+		"timestamp": 1717697823568
+	},
+	{
+		"id": "智能交通",
+		"selected": false,
+		"timestamp": 1717562589053
+	},
+	{
+		"id": "车联网",
+		"selected": true,
+		"timestamp": 1717503219223
+	},
+	{
+		"id": "商业航天",
+		"selected": false,
 		"timestamp": 1717075385222
 	},
 	{
@@ -11,7 +41,7 @@
 	},
 	{
 		"id": "HBM",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1716856314849
 	},
 	{
@@ -31,12 +61,12 @@
 	},
 	{
 		"id": "有色",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1716219550793
 	},
 	{
 		"id": "电力",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1716216465935
 	},
 	{
@@ -111,7 +141,7 @@
 	},
 	{
 		"id": "化工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1715005835712
 	},
 	{
@@ -296,17 +326,12 @@
 	},
 	{
 		"id": "消费电子",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1703692763520
 	},
 	{
-		"id": "虚拟现实",
-		"selected": false,
-		"timestamp": 1703638901950
-	},
-	{
 		"id": "光伏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1703392539246
 	},
 	{
@@ -316,7 +341,7 @@
 	},
 	{
 		"id": "PEEK",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1703032698584
 	},
 	{
@@ -326,13 +351,8 @@
 	},
 	{
 		"id": "先进封装",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1700044304730
-	},
-	{
-		"id": "短剧",
-		"selected": false,
-		"timestamp": 1699318210961
 	},
 	{
 		"id": "工业",
@@ -346,7 +366,7 @@
 	},
 	{
 		"id": "卫星",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1693962374343
 	},
 	{
@@ -376,7 +396,7 @@
 	},
 	{
 		"id": "无人驾驶",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1688482143101
 	},
 	{
@@ -391,7 +411,7 @@
 	},
 	{
 		"id": "CPO",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1679493252776
 	},
 	{

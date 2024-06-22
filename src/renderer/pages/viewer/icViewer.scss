@@ -1,6 +1,50 @@
 /**
  * 提取出样式，供tags, system页面公用
  */
+
+[ic-ctrl="viewerMarkTagCtrl"] {
+  background: none !important;
+  transition: opacity 0ms !important;
+
+
+  .ic-select {
+    margin: -10px 0 10px 0;
+
+    /*  > .tags {
+        display: inline-block;
+        margin-bottom: 0;
+      }*/
+  }
+
+  .tags .tag:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .tag, .button {
+    opacity: 0;
+  }
+
+  .tag.is-info {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+    animation: flash 1.5s infinite ease-in-out;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8) !important;
+
+    .tag, .button {
+      opacity: 1;
+    }
+
+    .tag.is-info {
+      animation: none;
+    }
+  }
+}
+
+
+
 [ic-popup="viewerMarkTag"] {
   overflow: hidden !important;
 
@@ -10,9 +54,11 @@
 
   &.horizontal {
     width: 71% !important;
-    top: 59% !important;
+    top: 55% !important;
   }
 }
+
+
 
 #viewerAttach p {
   margin-left: 59%;
