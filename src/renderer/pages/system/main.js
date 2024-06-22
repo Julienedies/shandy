@@ -40,6 +40,27 @@ brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
 
 brick.reg('setTagCtrl', setTagCtrl);
 
+///////////////////////////////////////////
+/*function handleStopWheel(e) {
+    e.preventDefault();
+}
+
+window.addEventListener("wheel", handleStopWheel, {
+    passive: false
+})
+
+$(document).on('scroll', function (e){
+    console.log(111, e);
+// 禁止事件的默认行为
+    e.preventDefault();
+    // 禁止事件继续传播
+    e.stopPropagation();
+    return false;
+});*/
+///////////////////////////////////////////////////
+
+
+
 brick.reg('systemCtrl', function () {
 
     let scope = this;

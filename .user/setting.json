@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2023-10",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2024-01",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -331,10 +331,10 @@
 	},
 	"stock_diary": {
 		"bounds": {
-			"x": -7,
-			"y": -7,
-			"width": 2209,
-			"height": 1209
+			"x": 527,
+			"y": 202,
+			"width": 1239,
+			"height": 428
 		}
 	},
 	"stock_c": {

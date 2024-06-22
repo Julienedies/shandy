@@ -48,7 +48,7 @@ const systemJodb = jd('system');
 window.$ = $;
 window.brick = brick;
 
-window.TAGS_FILTER = ['交易错误','交易统计','交易风险','行情类型', '目标行情', '行情驱动因素'];
+window.TAGS_FILTER = ['交易错误', '交易统计', '交易风险', '行情类型', '目标行情', '行情驱动因素'];
 
 brick.services.reg('historyModel', historyModel);
 
@@ -86,15 +86,12 @@ brick.reg('mainCtrl', function (scope) {
         $.icMsg(val);
     };
 
-    // 检查viewer.json里的数据是否有重复和冲突
-    scope.ls = function (){
-        helper2.setTo(viewerJodb);
+    // 特定临时操作
+    scope.ls = function () {
+        if (confirm('确定此次临时操作？？？')) {
+            helper2.setTo(viewerJodb);
+        }
     };
-
-    // 检查viewer.json里的数据是否有重复和冲突
-    // scope.ls2 = function (){
-    //     helper2.checkRepeat(viewerJodb);
-    // };
 
     // 检查viewer.json里包含的图片是否存在于文件系统，不存在的话删除viewer.json里的记录
     scope.clean = function (e) {
@@ -207,19 +204,19 @@ brick.reg('mainCtrl', function (scope) {
             // 遍历，绑定交易、标签等数据
             urls.forEach(o => {
 
- /*               if (isAddTrade) {
-                    let arr = o.tradeInfo = tradeArr.filter(arr => {
-                        // 交易信息 对应 code 和 时间
-                        return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
-                    });
-                    if(arr){
-                        arr = arr.map(a => {
-                            return [a[1], a[4], a[6], a[5]];  // => 时间, 买入/卖出, 数量, 价格
-                        });
-                        arr.reverse(); // 当日多个交易记录按照时间先后显示
-                        o.tradeInfoText = arr.join('\r\n').replace(/,/g, '    ');
-                    }
-                }*/
+                /*               if (isAddTrade) {
+                                   let arr = o.tradeInfo = tradeArr.filter(arr => {
+                                       // 交易信息 对应 code 和 时间
+                                       return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
+                                   });
+                                   if(arr){
+                                       arr = arr.map(a => {
+                                           return [a[1], a[4], a[6], a[5]];  // => 时间, 买入/卖出, 数量, 价格
+                                       });
+                                       arr.reverse(); // 当日多个交易记录按照时间先后显示
+                                       o.tradeInfoText = arr.join('\r\n').replace(/,/g, '    ');
+                                   }
+                               }*/
 
                 // 附加标签信息 和 交易系统信息
                 let obj = viewerJodb.get(o.f, 'img')[0] || {tags: [], system: []};
