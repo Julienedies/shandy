@@ -26,6 +26,7 @@ import setting from '../../../libs/setting'
 import utils from '../../../libs/utils'
 
 import helper from './helper'
+import helper2 from './helper2'
 import backTop from '../../js/back-top'
 
 import historyModel from './historyModel'
@@ -86,45 +87,14 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     // 检查viewer.json里的数据是否有重复和冲突
-    scope.check = function () {
-        let imgArr = viewerJodb.get();
-        let map = {};
-        let result = [];
-        let r2 = [];
-        imgArr.forEach((item) => {
-            let id = item.id;
-            let img = item.img;
-            let arr = map[id] = map[id] || [];
-            let arr2 = map[img] = map[img] || [];
-            arr.push(item);
-            arr2.push(item);
-        });
-
-        for (let i in map) {
-            let arr = map[i];
-            // 是否有多个相同的img路径或id
-            if (arr.length > 1) {
-                let b = arr[0];
-                let id = b.id;
-                b.id = `id_${ b.timestamp }`;
-                /* if (confirm(`是否修改此项${ id } ：\r\n ${ JSON.stringify(b, null, '\t') }`)) {
-                     viewerJodb.set(b);
-                 }*/
-
-                /*arr.forEach((v) =>{
-                    r2.push(v);
-                });*/
-                result.push(arr);
-            }
-        }
-
-        console.log(result);
-        let r3 = result.filter((a) => {
-            return JSON.stringify(a[0]) === JSON.stringify(a[1]);
-        });
-
-        //console.log(JSON.stringify(r3, null, '\t'));
+    scope.ls = function (){
+        helper2.setTo(viewerJodb);
     };
+
+    // 检查viewer.json里的数据是否有重复和冲突
+    // scope.ls2 = function (){
+    //     helper2.checkRepeat(viewerJodb);
+    // };
 
     // 检查viewer.json里包含的图片是否存在于文件系统，不存在的话删除viewer.json里的记录
     scope.clean = function (e) {
