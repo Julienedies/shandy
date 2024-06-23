@@ -53,9 +53,9 @@ const plugins = [
     }),
     //new webpack.NoEmitOnErrorsPlugin(),  // 有错误的话就不输出编译文件
     new ManifestPlugin(),
-    new CleanPlugin([`dist/web`], {
+/*    new CleanPlugin([`dist/web`], {
         root: projectRoot
-    })
+    })*/
 ]
 
 const devServerPort = 8090
