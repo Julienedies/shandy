@@ -1,5 +1,20 @@
 [
 	{
+		"id": "财税",
+		"selected": true,
+		"timestamp": 1719857327032
+	},
+	{
+		"id": "智慧政务",
+		"selected": true,
+		"timestamp": 1719535233281
+	},
+	{
+		"id": "工业母机",
+		"selected": true,
+		"timestamp": 1719321379666
+	},
+	{
 		"id": "比亚迪",
 		"selected": false,
 		"timestamp": 1718246628024
@@ -36,12 +51,12 @@
 	},
 	{
 		"id": "大基金",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1717068051400
 	},
 	{
 		"id": "HBM",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1716856314849
 	},
 	{
@@ -51,7 +66,7 @@
 	},
 	{
 		"id": "光刻",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1716814876792
 	},
 	{
@@ -226,7 +241,7 @@
 	},
 	{
 		"id": "数据要素",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1711415020547
 	},
 	{
@@ -241,7 +256,7 @@
 	},
 	{
 		"id": "铜缆",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1711283823712
 	},
 	{
@@ -341,7 +356,7 @@
 	},
 	{
 		"id": "PEEK",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1703032698584
 	},
 	{
@@ -351,7 +366,7 @@
 	},
 	{
 		"id": "先进封装",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1700044304730
 	},
 	{
@@ -411,7 +426,7 @@
 	},
 	{
 		"id": "CPO",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1679493252776
 	},
 	{
@@ -446,12 +461,12 @@
 	},
 	{
 		"id": "人工智能",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1675040054433
 	},
 	{
 		"id": "机器人",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1674148171248
 	},
 	{
@@ -506,7 +521,7 @@
 	},
 	{
 		"id": "芯片",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1610979058468
 	},
 	{

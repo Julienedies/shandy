@@ -38,7 +38,7 @@ brick.set('ic-select-cla', 'is-info');
 
 brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
 
-brick.reg('setTagCtrl', setTagCtrl);
+
 
 ///////////////////////////////////////////
 /*function handleStopWheel(e) {
@@ -58,6 +58,12 @@ $(document).on('scroll', function (e){
     return false;
 });*/
 ///////////////////////////////////////////////////
+
+brick.reg('setTagCtrl', setTagCtrl);
+
+brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);
+
+brick.reg('viewerAttachCtrl', attachCtrl);
 
 
 
@@ -86,6 +92,7 @@ brick.reg('systemCtrl', function () {
         scope.render('systemList', model.system);
     };
 
+    // markTag模块也会调用ajax：/stock/system，所以页面实际会执行两次
     scope.onGetSystemDone = function (data) {
         console.info(data);
         model = data;
@@ -124,7 +131,7 @@ brick.reg('systemCtrl', function () {
         viewId = id;
         let system = systemManager.get(id);
         scope.render('details', {model: system});
-        $details.icPopup(true);
+        //$details.icPopup(true);
     };
 
     scope.onDeleteDone = function () {
@@ -184,6 +191,8 @@ brick.reg('systemCtrl', function () {
     };
 
 });
+
+
 
 
 brick.reg('setSystemCtrl', function () {
@@ -267,6 +276,3 @@ brick.reg('setSystemCtrl', function () {
 });
 
 
-brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);
-
-brick.reg('viewerAttachCtrl', attachCtrl);

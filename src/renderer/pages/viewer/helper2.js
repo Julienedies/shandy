@@ -34,17 +34,17 @@ export default {
             }
 
             let arr3 = d.split('-');
-            // 如果图片日期为2023年，并且在8月份以后，如果有system标签里有热点2023的id，则替换成热点2023-b的id
+            // 如果图片日期为2023年，并且在8月份以后，如果有system标签里有热点2023的id，则替换成热点2023-b的id   && y * 1 === 2024
             let y = arr3[0];
             let m = arr3[1];
 
             let system = item.system;
 
             // 2023:3290846, 2023-B: id_1718946154869_74907  2024:7032958
-            if (system && y * 1 === 2024) {
-                let systemIndex = system.indexOf('');
+            if (system) {
+                let systemIndex = system.indexOf('3306275');
                 if (systemIndex > -1) {
-                    //system[systemIndex] = '';
+                    system[systemIndex] = '2673493';
                     result.push(item);
                 }
             }

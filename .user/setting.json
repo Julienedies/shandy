@@ -3,10 +3,10 @@
 		"tdx_extern_user_file": "E:\\new_tdx\\T0002\\signals\\extern_user.txt",
 		"csdPath": "E:\\dev\\csd",
 		"bounds": {
-			"x": 340,
-			"y": 144,
-			"width": 1619,
-			"height": 1036
+			"x": 338,
+			"y": 86,
+			"width": 1621,
+			"height": 1038
 		},
 		"fetchSources": [
 			"ths_new",
@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2024-01",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2024-06",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -339,10 +339,10 @@
 	},
 	"stock_c": {
 		"bounds": {
-			"x": 2791,
-			"y": 16,
-			"width": 1893,
-			"height": 1023
+			"x": 2970,
+			"y": 33,
+			"width": 1894,
+			"height": 1024
 		}
 	},
 	"news2": {
