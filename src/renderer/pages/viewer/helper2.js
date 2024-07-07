@@ -42,11 +42,11 @@ export default {
 
             // 2023:3290846, 2023-B: id_1718946154869_74907  2024:7032958
             if (system) {
-                let systemIndex = system.indexOf('3306275');
+                /*let systemIndex = system.indexOf('3306275');
                 if (systemIndex > -1) {
                     system[systemIndex] = '2673493';
                     result.push(item);
-                }
+                }*/
             }
 
         });

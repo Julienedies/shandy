@@ -11,7 +11,8 @@
 		"fetchSources": [
 			"ths_new",
 			"ths_p",
-			"ths_c"
+			"ths_c",
+			"xgb"
 		],
 		"fetchByStocks": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
 		"fetchFromIndex": 305,
@@ -31,7 +32,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2024-06",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2023-10",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -45,6 +46,8 @@
 			"height": 36
 		},
 		"history": [
+			"E:\\dev\\simg\\交易记录\\2407",
+			"E:\\dev\\simg\\目标行情\\2024-07",
 			"E:\\dev\\simg\\目标行情\\2024-06",
 			"E:\\dev\\simg\\交易记录\\2406",
 			"E",
@@ -339,10 +342,10 @@
 	},
 	"stock_c": {
 		"bounds": {
-			"x": 2970,
-			"y": 33,
-			"width": 1894,
-			"height": 1024
+			"x": 3217,
+			"y": 65,
+			"width": 1898,
+			"height": 1027
 		}
 	},
 	"news2": {
