@@ -1,5 +1,45 @@
 [
 	{
+		"text": "git log --date=format:\"%Y-%m-%d\"",
+		"type": "",
+		"id": "id_1719159343301_6826",
+		"timestamp": 1719159343301
+	},
+	{
+		"id": "id_1719150893104_9750",
+		"type": "",
+		"level": "0",
+		"text": "disk 2 - s/n 2040fy456406.short self test unsuccessful, terminated by controller or drive firmware, retry test",
+		"timestamp": 1719150893104
+	},
+	{
+		"text": "window.addEventListener(\"wheel\", handleStopWheel, {\n    passive: false\n})\n\nfunction handleStopWheel(e) {\n   e.preventDefault();\n}",
+		"type": "",
+		"id": "id_1719035482119_2750",
+		"timestamp": 1719035482119,
+		"level": "0"
+	},
+	{
+		"text": "function stopBodyScroll (isFixed) {\n  if (isFixed) {\n    top = window.scrollY\n\n    bodyEl.style.position = 'fixed'\n    bodyEl.style.top = -top + 'px'\n  } else {\n    bodyEl.style.position = ''\n    bodyEl.style.top = ''\n\n    window.scrollTo(0, top) // 回到原先的top\n  }\n}",
+		"type": "js",
+		"id": "id_1719035467332_3671",
+		"timestamp": 1719035467332,
+		"level": "0"
+	},
+	{
+		"text": "// 禁止事件的默认行为\n    e.preventDefault();\n\n    // 禁止事件继续传播\n    e.stopPropagation();",
+		"type": "",
+		"id": "id_1719030521255_3917",
+		"timestamp": 1719030521255,
+		"level": "0"
+	},
+	{
+		"text": "如果在Windows的启动项中找不到你想要禁止的进程，可能需要采取一些不同的方法来阻止它自动启动。以下是一些可能的步骤：\n\n检查服务：\n\n有些程序可能以服务的形式运行。你可以打开“运行”对话框（Win + R），输入services.msc，然后回车。在服务列表中查找该进程对应的服务，然后右键选择“属性”，在“启动类型”中选择“禁用”。",
+		"type": "",
+		"id": "id_1718970093886_0412",
+		"timestamp": 1718970093886
+	},
+	{
 		"text": "不过这里感觉市场还是有点恐慌过头了，如果单论国九条的话，其实对于微盘股并没有特别大的利空。\n\nST新规指出，主板只要是盈利的公司，只需要将近三年累计利润的10%拿出来分红，或者三年累计分红超过5000万即可不被ST；而双创的公司三年累计分红金额标准是3000万，同时近三年研发费率累计超过15%或3亿元即可；而对于亏损个股，主板个股营收超过3亿，创业板营收超过1亿，那基本也没啥问题。\n\n所以，对于绝大部分微盘股，这些要求都很容易达到，所以这两天很多绩优小盘股也被无差别杀了十几二十个点，确实有点过了。",
 		"type": "",
 		"id": "id_1713314281651_2627",
@@ -107,7 +147,7 @@
 		"timestamp": 1679757826803
 	},
 	{
-		"text": "更新指定依赖安装包（根据前缀符号更新，有时需要在 package.json 手动更改依赖包相应版本号再更新）\n\nnpm update tdesign-miniprogram -S  (--save/-S or --save-dev/-D)\n\nnpm i  jhandy@0.5.4 -S\n\nnpm i  @julienedies/brick@0.9.4 -S",
+		"text": "更新指定依赖安装包（根据前缀符号更新，有时需要在 package.json 手动更改依赖包相应版本号再更新）\n\nnpm update tdesign-miniprogram -S  (--save/-S or --save-dev/-D)\n\nnpm i  jhandy@0.5.4 -S\n\nnpm i  @julienedies/brick@0.9.45 -S",
 		"type": "npm",
 		"id": "id_1679757364314_8192",
 		"timestamp": 1679757364314,

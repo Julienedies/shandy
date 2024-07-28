@@ -64,7 +64,7 @@
     <ul class="column is-10 is-offset-1" id="diaryList" ic-tpl="diaryList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre scroll">{{v && v.text}}</div>
-            <div style="padding:10px 0 6px 0;">
+            <div class="tags" style="padding:10px 0 6px 0; margin-bottom: 0;">
                 <span class="tag is-danger" ic-if="v.tags" ic-for="k,j in v.tags" ic-click="onFilterKeyChange2:{{ j }}">
                     {{ TAGS_MAP_BY_ID[j] && TAGS_MAP_BY_ID[j].text }}
                 </span>

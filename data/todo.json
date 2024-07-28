@@ -14,7 +14,7 @@
 		"timestamp": 1661941742710,
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1717722522087
+		"prevPromptTime": 1721955724220
 	},
 	{
 		"name": "",
@@ -47,7 +47,7 @@
 		"title": "每天沉迷于无效的日常交易；依然没有建立明确的交易系统；",
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1717725222662
+		"prevPromptTime": 1721958424444
 	},
 	{
 		"name": "",
@@ -64,7 +64,7 @@
 		"title": "真他妈的恨死自己了，一个人怎么可以这样？每天跟赌博一样，着眼于转债的小波动；",
 		"tag": "无改变",
 		"promptTimes": 1,
-		"prevPromptTime": 1717727922433
+		"prevPromptTime": 1721961124393
 	},
 	{
 		"name": "",
@@ -112,7 +112,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1717736022766
+		"prevPromptTime": 1721969224667
 	},
 	{
 		"name": "",
@@ -128,7 +128,7 @@
 		"level": 980,
 		"title": "为何我总是临盘犹豫，手足无措，错过最好的交易机会？",
 		"promptTimes": 1,
-		"prevPromptTime": 1717738721937
+		"prevPromptTime": 1721971923965
 	},
 	{
 		"name": "",
@@ -160,7 +160,7 @@
 		"duration": 17,
 		"timestamp": 1665225867007,
 		"promptTimes": 2,
-		"prevPromptTime": 1717741422302
+		"prevPromptTime": 1721974624030
 	},
 	{
 		"name": "",
@@ -177,7 +177,7 @@
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1717749522647
+		"prevPromptTime": 1721982724270
 	},
 	{
 		"type": "错误",
@@ -194,7 +194,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1717752222835
+		"prevPromptTime": 1721985425007
 	},
 	{
 		"name": "",
@@ -211,7 +211,7 @@
 		"title": "我的交易系统是什么？我要捕捉的目标行情是什么？",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1717754921929
+		"prevPromptTime": 1721988124741
 	},
 	{
 		"name": "",
@@ -228,7 +228,7 @@
 		"title": "我以什么做为判断锚点？为何我的预判总是错误？",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1717757622667
+		"prevPromptTime": 1721990823424
 	},
 	{
 		"name": "",
@@ -245,7 +245,7 @@
 		"title": "对市场理解不够，不知道市场参与者的行为逻辑。",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1717760322634
+		"prevPromptTime": 1721993523211
 	},
 	{
 		"name": "",
@@ -262,7 +262,7 @@
 		"level": "900",
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"promptTimes": 1,
-		"prevPromptTime": 1717763022565
+		"prevPromptTime": 1721996223268
 	},
 	{
 		"name": "",
@@ -279,7 +279,7 @@
 		"title": "思维没有方向，操作没有系统；我每天脑子在想什么？",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1717765721371
+		"prevPromptTime": 1721998923533
 	},
 	{
 		"name": "",
@@ -296,7 +296,7 @@
 		"title": "思维没有方向，操作没有系统；每天盘前脑子完全是空的， 临盘被市场牵着鼻子走。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1717768420846
+		"prevPromptTime": 1722001624140
 	},
 	{
 		"type": "错误",
@@ -313,7 +313,7 @@
 		"duration": "17",
 		"timestamp": "1681838241354",
 		"promptTimes": 1,
-		"prevPromptTime": 1717771121258
+		"prevPromptTime": 1722004324334
 	},
 	{
 		"name": "",
@@ -330,7 +330,7 @@
 		"title": "无系统、无计划，临盘随意交易是我最大的亏损来源。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1717773821262
+		"prevPromptTime": 1722007024110
 	},
 	{
 		"name": "",
@@ -390,9 +390,7 @@
 		"timestamp": 1618223159947,
 		"level": "837",
 		"title": "永远没有做好市场转强的准备；永远没有做好进攻的准备；总是错过最好的交易机会；",
-		"tag": "无系统",
-		"promptTimes": 1,
-		"prevPromptTime": 1717806688716
+		"tag": "无系统"
 	},
 	{
 		"name": "",

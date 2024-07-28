@@ -273,7 +273,7 @@ brick.reg('rpListCtrl', function (scope) {
     scope.plus = function (e, id) {
         let item = listManager.get(id);
         let level = (item.level || 1) * 1;
-        item.level = level + 5;
+        item.level = level + 1;
         $.post('/stock/rp', item).done((data) => {
             setList(data);
         });
