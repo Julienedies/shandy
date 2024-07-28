@@ -38,12 +38,12 @@ export default {
         console.log('getImages => ', dir);
         let arr;
         // 测试是否是交易记录图片, 因为主要功能是浏览k线截图
-       /* if (dir.indexOf('截图') === -1) {
-            let files = glob.sync(path.join(dir, './!*.+(jpg|png)')) || [];
-            return files.map((path) => {
-                return {f: path};
-            })
-        }*/
+        /* if (dir.indexOf('截图') === -1) {
+             let files = glob.sync(path.join(dir, './!*.+(jpg|png)')) || [];
+             return files.map((path) => {
+                 return {f: path};
+             })
+         }*/
 
         // 首先尝试使用图片目录缓存
         //console.log(this.getDirKey(dir));
@@ -94,10 +94,10 @@ export default {
         let arr = dirPath.split(/[\\/]+/img);
         let date = arr.pop();
         let name = arr.pop();
-        if(name && date){
+        if (name && date) {
             return `${ name }_${ date }`;
-        }else{
-            throw new Error(`no result for imageHelper.getDirKey => ${dirPath}`);
+        } else {
+            throw new Error(`no result for imageHelper.getDirKey => ${ dirPath }`);
         }
         //let key = dir.replace(/[/\s.\\:]+/img, '_');
     },
@@ -164,11 +164,12 @@ export default {
      * @param arr 要排序的图片数组
      * @param isReverse  排序方式，默认为反转排序，即最新排在最前面
      * @param chunkSize {Number} 每次排序区块大小，默认为4
+     * @param isMerge {Boolean}  是否合并相邻区块里的同一支股票
      * @returns {*[]} 返回排序过的数组
      */
-    sort: function (arr, isReverse=true, chunkSize=4) {
+    sort: function (arr, isReverse = true, chunkSize = 4, isMerge = true) {
         arr = this.supplement(arr);
-        arr = this._sort(arr, isReverse, chunkSize);
+        arr = this._sort(arr, isReverse, chunkSize, isMerge);
         return arr.map((item, i) => {
             return item.f;
         });
@@ -179,9 +180,10 @@ export default {
      * @param images  {Array} imgObjArr 图片对象数组
      * @param isReverse [Bool] 是否反转排序
      * @param chunkSize {Number} 每次排序区块大小，默认为4
+     * * @param isMerge {Boolean}  是否合并相邻区块里的同一支股票
      * @returns {Array} imgObjArr
      */
-    _sort: function (images, isReverse, chunkSize) {
+    _sort: function (images, isReverse, chunkSize, isMerge = true) {
         chunkSize = chunkSize || 4;
         // 先按时间排序
         images.sort((a, b) => {
@@ -218,20 +220,23 @@ export default {
         //console.log('dateMapArr', dateMapArr);
 
         // 处理相邻日期chunk数组里相同code被分割在两个chunk数组里的情况，移动相同code的imgObj到同一个chunk数组
-        _.reduceRight(dateMapArr, function (currentArr, prevArr) {
-            //console.log(prevArr, currentArr);
-            prevArr.forEach((imgObj, index) => {
-                for (let i = currentArr.length - 1; i >= 0; i--) {
-                    let imgObj2 = currentArr[i];
-                    if (imgObj2.code === imgObj.code) {
-                        let arr = currentArr.splice(i, 1);
-                        //console.log('xxxxx', arr);
-                        prevArr.push(arr[0]);
+        if (isMerge) {
+            _.reduceRight(dateMapArr, function (currentArr, prevArr) {
+                //console.log(prevArr, currentArr);
+                prevArr.forEach((imgObj, index) => {
+                    for (let i = currentArr.length - 1; i >= 0; i--) {
+                        let imgObj2 = currentArr[i];
+                        if (imgObj2.code === imgObj.code) {
+                            let arr = currentArr.splice(i, 1);
+                            //console.log('xxxxx', arr);
+                            prevArr.push(arr[0]);
+                        }
                     }
-                }
+                });
+                return prevArr;
             });
-            return prevArr;
-        });
+        }
+
 
         let resultArr = [];
 

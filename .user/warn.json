@@ -59,7 +59,8 @@
 		"content": "为何管不住手?\n为何我总是临盘冲动随意交易？",
 		"repeat": 5,
 		"type": "interval",
-		"timestamp": 1610190810967
+		"timestamp": 1610190810967,
+		"disable": true
 	},
 	{
 		"name": "",

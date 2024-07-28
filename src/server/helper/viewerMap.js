@@ -100,7 +100,7 @@ ViewerMap.instance = {
             //if (['k_3312753', 'k_1305484', 'k_2055992', k_6734208].includes(i)) break;
             console.log(q++, '---', i, '---', arr.length, '---', arr[0]);
 
-            VIEWER_MAP[i] = imagesHelper.sort(arr, !isReverse, 8);
+            VIEWER_MAP[i] = imagesHelper.sort(arr, !isReverse, 4, true);
 
             delete VIEWER_MAP2[i];
         }
