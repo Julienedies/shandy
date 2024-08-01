@@ -215,7 +215,7 @@
 		"comment": "",
 		"level": "861",
 		"role": "0",
-		"re": "",
+		"re": "true",
 		"content": "",
 		"items": [],
 		"timestamp": "1720849430162"
@@ -387,7 +387,7 @@
 		"comment": "",
 		"level": "855",
 		"role": "3",
-		"re": "",
+		"re": "true",
 		"content": "<p>涨停意味着什么? 我应该如何应对？</p><p><br></p><p>如果修复的话，核心股是谁？ 它的表现是怎么样的？ 我该如何应对？</p>",
 		"items": [],
 		"timestamp": "1719549730522"
@@ -429,7 +429,7 @@
 		"comment": "",
 		"level": "865",
 		"role": "0",
-		"re": "",
+		"re": "true",
 		"content": "",
 		"items": [],
 		"timestamp": "1719397198926"
@@ -1622,7 +1622,7 @@
 		"timestamp": "1682038336268",
 		"options": [],
 		"id": "id_1682038365143_9174",
-		"re": "",
+		"re": "true",
 		"items": []
 	},
 	{
@@ -1912,7 +1912,7 @@
 		"timestamp": "1672230153644",
 		"options": [],
 		"id": "id_1674561833851_4313",
-		"re": "true",
+		"re": "false",
 		"items": []
 	},
 	{
@@ -2933,7 +2933,7 @@
 		"caution": "",
 		"level": "856",
 		"role": "3",
-		"re": "",
+		"re": "true",
 		"items": []
 	},
 	{
@@ -2998,7 +2998,7 @@
 		"content": "",
 		"options": [],
 		"timestamp": "1649637221385",
-		"re": "",
+		"re": "true",
 		"items": []
 	},
 	{
