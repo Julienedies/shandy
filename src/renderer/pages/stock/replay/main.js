@@ -15,8 +15,9 @@ import '../../../js/common-stock.js'
 
 import setTagCtrl from '../../tags/set-tag-ctrl'
 import tagsCtrl from '../../tags/tags-ctrl'
+import { GET_TAGS_DONE } from '../../../js/constants'
 
-brick.reg('tags_ctrl', tagsCtrl);
+brick.reg('tagsCtrl', tagsCtrl);
 
 brick.reg('setTagCtrl', setTagCtrl);
 
@@ -26,13 +27,38 @@ brick.reg('replayCtrl', function () {
     let $elm = this.$elm;
 
     let list = brick.services.get('recordManager')();
-    let model;
+    let model;  // 模型数据， {replay: {}, tags: {}}
+
+    let getReplayDef = $.Deferred();
+
+/*    function getReplay () {
+        $.get(`/stock/replay?date=${ formatDate() }`).done(scope.onGetReplayDone);
+    }*/
+
+    function getReplay () {
+        $.get(`/stock/replay?date=${ formatDate2() }`).done((data) => {
+            getReplayDef.resolve(data);
+        });
+    }
+
+    // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
+    scope.on(GET_TAGS_DONE, function (e, data) {
+        $.when(window.GET_TAGS_DEF, getReplayDef).done((d1, d2) => {
+            console.log('when', d1, d2);
+            data = {tags: d1, replay: d2}
+            list.init(scope.tags_convert(d1));
+            model = data;
+            scope.render('replay', model);
+        });
+    });
+
+    getReplay();
 
     scope.onGetReplayDone = function (data) {
         console.info(data);
-        list.init(scope.tags_convert(data.tags));
-        model = data;
-        scope.render('replay', data);
+        //list.init(scope.tags_convert(data.tags));
+        //model = data;
+        //scope.render('replay', data);
     };
 
     scope.replay = {
@@ -46,11 +72,12 @@ brick.reg('replayCtrl', function () {
         }
     };
 
-    scope.tag_edit = function (e, id) {
+    scope.editTag = function (e, id) {
         scope.emit('tag.edit', list.get(id));
     };
 
-    scope.tag_remove_done = function (data) {
+    // 当一个tag被删除
+    scope.onTagDelDone = function (data) {
         model.replay = $elm.find('[ic-form="replay"]').icForm();
         model.tags = data;
         scope.onGetReplayDone(model);
@@ -69,6 +96,5 @@ brick.reg('replayCtrl', function () {
         model.replay[name] = $th.attr('ic-val')
     });
 
-    $.get(`/stock/replay?date=${ formatDate() }`).done(scope.onGetReplayDone);
 
 });

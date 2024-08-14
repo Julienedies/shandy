@@ -19,7 +19,7 @@ import {
     ON_SET_LOGIC_DONE,
     ON_GET_LOGIC_DONE,
     GET_TAGS_DONE,
-    ON_SET_TAG_DONE, ON_DEL_TAG_DONE, DEL_TAG,
+    DEL_TAG,
 } from '../../../js/constants'
 
 import utils from '../../../js/utils'

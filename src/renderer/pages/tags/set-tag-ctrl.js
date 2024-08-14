@@ -4,21 +4,22 @@
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
-import { EDIT_TAG, ADD_TAG, ON_SET_TAG_DONE, DEL_TAG, GET_TAGS_DONE, ON_DEL_TAG_DONE, TAGS_CHANGE } from '../../js/constants'
+import { EDIT_TAG, ADD_TAG, DEL_TAG, GET_TAGS_DONE, TAGS_CHANGE } from '../../js/constants'
 
 export default function () {
 
     let scope = this;
     let $elm = scope.$elm;
-    let types = [];
+    let types = [];  // tag type 数组
 
     // 因为都是通过 setTagCtrl 进行标签添加或修改, setTagCtrl里的标签数据总是最新的
     let tagsManager = brick.services.get('recordManager')();
 
-    window.TAGS_MAP_BY_ID = {};
-    window.TAGS_MAP = {};
-    window.GET_TAGS_DEF = $.Deferred();
+    window.TAGS_MAP_BY_ID = {}; // 以tag id 为 key
+    window.TAGS_MAP = {};  // 以type tag的id为key
+    window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
 
+    // 把tagsMap 转成数组 [tag, tag, tag]
     function tagsMap2Arr (data) {
         let result = [];
         for (let i in data) {
@@ -31,56 +32,88 @@ export default function () {
         return result;
     }
 
-    let onGetTagMapDone = (data) => {
-        window.TAGS_MAP = data;
-        tagsManager.init(tagsMap2Arr(data));
-        types = data['type'];
-        window.GET_TAGS_DEF.resolve();
-        scope.emit(GET_TAGS_DONE, data);
-    };
-
-
-    function getTags () {
+    // ajax 获取 tagsMap数据
+    function getTagsMapByAjax () {
         $.ajax({
             url: '/stock/tags',
             type: 'get',
         }).done(onGetTagMapDone);
     }
 
-    getTags();
+    //
+    function render (model) {
+        model.types = model.types || types;
+        scope.render({model});
+        $elm.icPopup(true);
+    }
+
+    // 更新tag数据
+    function updateData (data) {
+        window.TAGS_MAP = data;
+        types = data['type'];
+        tagsManager.init(tagsMap2Arr(data));
+    }
+
+    // 当从服务器获取到tagsMap数据
+    function onGetTagMapDone (data) {
+        updateData(data);
+        window.GET_TAGS_DEF.resolve(data);
+        scope.emit(GET_TAGS_DONE, data);
+    }
 
     // tag ajax post one done
     scope.onSetTagDone = function (data) {
-        onGetTagMapDone(data);
+        updateData(data);
         $elm.icPopup(false);
-        scope.emit(ON_SET_TAG_DONE, data);
+        //scope.emit(ON_SET_TAG_DONE, data);
+        scope.emit(TAGS_CHANGE, data);
     };
 
+    // 重置setTag表单
     scope.reset = function () {
         scope.render({types});
     };
 
-    scope.on(TAGS_CHANGE, getTags);
+    // 主要是处理electron里修改了数据， web 页面需要刷新数据；目前好像没有用到
+    //scope.on(TAGS_CHANGE, getTagsMapByAjax);
+
     /**
-     * 修改标签对象
+     * 其它ctrl发消息要求删除某个tag
+     * @param id {String} tag id
+     */
+    scope.on(DEL_TAG, function (e, id) {
+        if (window.confirm('确定删除此标签？')) {
+            $.ajax({
+                url: `/stock/tags/${ id }`,
+                method: `delete`,
+            }).done((data) => {
+                updateData(data);
+                //scope.emit(ON_DEL_TAG_DONE, data);
+                scope.emit(TAGS_CHANGE, data);
+
+            });
+        }
+    });
+
+    /**
+     * 有控制器发消息要修改某个tag
      * @param msg {String|Object}  标签Id 或者 标签对象 或者 是单个标签对象数组 ()
      */
     scope.on(EDIT_TAG, function (e, msg) {
         console.info('on edit tag', e, msg);
-        let tagItemVm = msg;
+        let model = msg;
         if (typeof msg === 'number' || typeof msg === 'string') {
-            tagItemVm = tagsManager.get2(msg);
+            model = tagsManager.get2(msg);
         }
         if (Array.isArray(msg)) {
-            tagItemVm = msg[0];
+            model = msg[0];
         }
 
-        tagItemVm.types = tagItemVm.types || types;
-        scope.render({model: tagItemVm});
-        $elm.icPopup(true);
+        render(model);
     });
+
     /**
-     * 添加标签事件
+     * 其它控制器发消息要添加标签
      * @param msg {Object|String}  含有标签类型的标签对象或标签类型
      */
     scope.on(ADD_TAG, function (e, msg) {
@@ -89,27 +122,27 @@ export default function () {
         if (typeof msg === 'string') {
             model = {types, type: msg};
         }
-        model.types = model.types || types;
-        scope.render({model});
-        $elm.icPopup(true);
+        render(model);
     });
 
     /**
-     * 要求删除标签事件
+     * 其它控制器发消息要添加rp对应的tag
+     * 根据rp 创建一个对应的tag
+     * @param msg {Object} 标签对象=》 {text: 'rp'}
      */
-    scope.on(DEL_TAG, function (e, id) {
-        if (window.confirm('确定删除此标签？')) {
-            $.ajax({
-                url: `/stock/tags/${ id }`,
-                method: `delete`,
-            }).done((data) => {
-                scope.emit(ON_DEL_TAG_DONE, data);
-                onGetTagMapDone(data);
-            });
-        }
+    scope.on('createTagByRp', function f (e, msg) {
+        render(msg);
     });
 
 
+
+
+
+    /**
+     *
+     * @param data
+     * @returns {boolean}
+     */
     scope.onSelectPathDone = function (data) {
         // 获取表单数据model
         let model = $elm.find('[ic-form="setTag"]').icForm();
@@ -138,5 +171,9 @@ export default function () {
         });
         scope.render(model);
     };*/
+
+
+    // main
+    getTagsMapByAjax();
 
 }

@@ -2,9 +2,13 @@
  * Created by j on 2019-02-22.
  */
 
+import 'babel-polyfill'
+
 import './index.html'
 import '../../css/common/common.scss'
+import '../viewer/icViewer.scss'
 import './style.scss'
+
 
 import _ from 'lodash'
 import $ from 'jquery'
@@ -21,23 +25,54 @@ import setTagCtrl from '../tags/set-tag-ctrl'
 import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
 
 import bridge from '../../../libs/utils'
+import attachCtrl from '../viewer/attach-ctrl'
 
 const setting = bridge.setting();
 //brick.set('debug', true)
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
 
+
+window.TAGS_FILTER = ['交易风险','行情类型', '目标行情', '行情驱动因素'];
+
 brick.set('ic-select-cla', 'is-info');
 
 brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
 
+
+
+///////////////////////////////////////////
+/*function handleStopWheel(e) {
+    e.preventDefault();
+}
+
+window.addEventListener("wheel", handleStopWheel, {
+    passive: false
+})
+
+$(document).on('scroll', function (e){
+    console.log(111, e);
+// 禁止事件的默认行为
+    e.preventDefault();
+    // 禁止事件继续传播
+    e.stopPropagation();
+    return false;
+});*/
+///////////////////////////////////////////////////
+
 brick.reg('setTagCtrl', setTagCtrl);
+
+brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);
+
+brick.reg('viewerAttachCtrl', attachCtrl);
+
+
 
 brick.reg('systemCtrl', function () {
 
     let scope = this;
     let $elm = scope.$elm;
     let $details = $elm.find('[ic-popup="details"]')
-    let list = brick.services.get('recordManager')();
+    let systemManager = brick.services.get('recordManager')();
     let model = {};  // 存储ajax数据： stock/system
     let viewId = null;
 
@@ -57,10 +92,11 @@ brick.reg('systemCtrl', function () {
         scope.render('systemList', model.system);
     };
 
+    // markTag模块也会调用ajax：/stock/system，所以页面实际会执行两次
     scope.onGetSystemDone = function (data) {
         console.info(data);
         model = data;
-        list.init(data.system);
+        systemManager.init(data.system);
         //scope.render('mqElement', data.tags['行情要素']);
         scope.render('condition', data.tags['交易系统条件']);
         scope.render('systemList', data.system, function () {
@@ -77,13 +113,13 @@ brick.reg('systemCtrl', function () {
     };
 
     scope.edit = function (e, id) {
-        scope.emit(C.EDIT_SYSTEM, {system: list.get(id), tags: model.tags});
+        scope.emit(C.EDIT_SYSTEM, {system: systemManager.get(id), tags: model.tags});
         return false;
     };
 
     scope.view = function (e, id) {
         viewId = id;
-        let system = list.get(id);
+        let system = systemManager.get(id);
         scope.render('details', {model: system});
     };
 
@@ -93,13 +129,18 @@ brick.reg('systemCtrl', function () {
                     return;
                 }*/
         viewId = id;
-        let system = list.get(id);
+        let system = systemManager.get(id);
         scope.render('details', {model: system});
-        $details.icPopup(true);
+        //$details.icPopup(true);
     };
 
     scope.onDeleteDone = function () {
         $(this).closest('li').remove();
+    };
+
+    // 刷新标签图片列表回调
+    scope.onRefreshed = function (data) {
+        alert(data);
     };
 
     scope.on(C.ON_SET_SYSTEM_DONE, function (e, msg) {
@@ -150,6 +191,8 @@ brick.reg('systemCtrl', function () {
     };
 
 });
+
+
 
 
 brick.reg('setSystemCtrl', function () {
@@ -233,5 +276,3 @@ brick.reg('setSystemCtrl', function () {
 });
 
 
-
-brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);

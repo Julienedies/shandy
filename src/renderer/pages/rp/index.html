@@ -28,7 +28,7 @@
                             <button ic-select-item ic-val="Re" ic-class="button is-small {{ model.filterByType==='Re'?'is-primary':'' }}">
                                 Re
                             </button>
-                            <button class="button is-primary is-small" ic-click="addTodo">新Item</button>
+                            <button class="button is-primary is-small" ic-click="addRp">新Item</button>
                             <button class="button is-primary is-small" ic-click="createReplay">归纳复盘</button>
                             <button class="button is-primary is-small" ic-click="toggleForm">显示表单</button>
                             <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>
@@ -45,22 +45,25 @@
                             ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
                             <header ic-click="toggle" ic-class="role_{{ v.role }}">
-                                <h3>{{ v.title }} <b>{{ v.caution }} </b></h3>
+                                <h3>{{ v.title }}
+                                    <b>{{ v.caution }} </b>
+                                </h3>
                                 <h5 class="caution" ic-if="v.caution"></h5>
                             </header>
 
                             <div class="wrap">
 
-                                <div class="field is-grouped is-grouped-multiline" ic-if="v.options && v.options.length"
+                                <!-- 是否有标签选项 -->
+                                <div class="field is-grouped is-grouped-multiline" ic-if="v._options && v._options.length"
                                      ic-select
                                      ic-select-cla="is-danger"
                                      ic-select-type="checkbox"
                                      ic-select-item=".button"
                                      ic-form-field="{{ v.id }}">
 
-                                    <div class="control" ic-for="j,k in v.options">
+                                    <div class="control" ic-for="j,k in v._options">
                                         <div class="buttons has-addons" ic-init="o=TAGS_MAP_BY_ID[k]; m=rpForm[v.id]||[];">
-                                            <span class="button" ic-if-start="o.type==='交易错误'||o.type==='要解决的问题'" ic-val="{{ k }}">
+                                            <span class="button is-light" ic-if-start="o.type==='交易错误'||o.type==='要解决的问题'" ic-val="{{ k }}">
                                                 {{ o.text }}
                                             </span>
                                             <span class="button" ic-else-if="o.type==='交易要素'" ic-val="{{ k }}">
@@ -72,34 +75,47 @@
                                         </div>
                                     </div>
 
+                                    <div class="control">
+                                        <a class="tag is-medium" ic-click="addTag:{{ v.TagType }}">
+                                            <span class="icon"><i class="fas fa-file-medical"></i></span>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <!-- 表单输入框 -->
+                                <div style="padding-bottom: 0.5em;" ic-if="v.input">
+                                    <textarea class="textarea is-medium" ic-form-field="{{ v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
                                 </div>
 
                                 <h6 class="comment" ic-if="v.comment" style="padding: 0.1em"> {{ v.comment }} </h6>
-
-                                <div style="padding-bottom: 0.5em;" ic-if="v.role==9">
-                                    <textarea class="textarea is-medium" ic-form-field="{{ 'k_'+v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
-                                </div>
-
 
                                 <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
 
                                 <div style="padding: 2px 0;">
                                     <div class="tags is-right">
+                                        <span class="tag is-small" ic-if="v.TagType"> {{ v.TagType }}</span>
                                         <span class="tag is-small"> {{ v.level || 0 }}</span>
                                         <span class="tag is-small" ic-click="onFilterKeyChange2:{{ v.type }}"> {{ v.type }}</span>
                                         <span class="tag is-small" ic-click="edit:{{ v.id }}">
                                             <i class="far fa-edit" title="编辑"></i>
                                         </span>
+                                        <span class="tag is-small" ic-click="addLine:{{ v.id }}">
+                                            <i class="fas fa-plus" title="添加项"></i>
+                                        </span>
                                         <span class="tag is-small" ic-click="copy:{{ v.id }}">
                                             <i class="far fa-copy" title="拷贝"></i>
                                         </span>
                                         <span class="tag is-small" ic-click="plus:{{ v.id }}">
-                                            <i class="fas fa-plus" title="加权"></i>
+                                            <i class="fas fa-long-arrow-alt-up" title="加权"></i>
                                         </span>
-                                        <!--<span class="tag is-small" ic-click="focus:{{ v.id }}">置顶</span>-->
+                                        <!--<span class="tag is-small" ic-click="focus:{{ v.id }}">置顶   long-arrow-alt-up </span>-->
 
                                         <span ic-class="tag is-small {{ v.re==='true' ? 'is-primary':'' }}" ic-click="re:{{ v.id }}">
                                             <i class="far fa-star" title="Re"></i>
+                                        </span>
+                                        <span class="tag is-small"  ic-click="createTag:{{ v.id }}">
+                                            <i class="fas fa-retweet" title="生成对应的tag"></i>
                                         </span>
                                         <span class="tag is-small"
                                               ic-ajax
@@ -161,6 +177,7 @@
 
         </div>
     </div>
+
 
     <div ic-ctrl="setRpCtrl" ic-view="setRp" ic-view-ani-id="42">
         <div class="column">
@@ -246,7 +263,7 @@
 
                     <!-- 按钮组 -->
                     <div class="field has-addons">
-                        <div class="control" style="width:60%;">
+                        <div class="control" style="width:48%;">
                             <button class="button is-primary"
                                     style="width:300px;"
                                     ic-form-submit
@@ -258,21 +275,25 @@
                                 重置
                             </button>
                             <button class="button" ic-click="cancel" style="width:100px;">取消</button>
-                            <button class="button" ic-view-to="rpList" style="width:200px;">
+                            <button class="button" ic-view-to="rpList" style="width:100px;">
                                 返回
                             </button>
                         </div>
 
-                        <div class="control" style="width:10px;"></div>
+                        <div class="control" style="width:5px;"></div>
+
                         <div class="control">
                             <button class="button">level</button>
                         </div>
+
                         <div class="control">
                             <input class="input" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1900 }}">
                         </div>
+
                         <div class="control">
                             <button class="button">role</button>
                         </div>
+
                         <div class="control">
                             <p class="select">
                                 <select name="role" ic-form-field>
@@ -280,20 +301,41 @@
                                     <option value="1" ic-has-selected="model.role==1">复盘思考</option>
                                     <option value="2" ic-has-selected="model.role==2">关键理念</option>
                                     <option value="3" ic-has-selected="model.role==3">错误&警告</option>
-                                    <option value="4" ic-has-selected="model.role==4">key</option>
+                                    <option value="4" ic-has-selected="model.role==4">replay</option>
                                 </select>
                             </p>
                         </div>
-                        <div class="control" style="width:60px;"></div>
+
+                        <div class="control" style="width:20px;"></div>
+
                         <div class="control">
                             <label class="checkbox">
                                 <input type="checkbox" name="re" ic-has-checked="model.re==='true'" ic-form-field="re" value="true">
                                 is Re <!--  onclick="this.value=this.checked ? 'true':'false';" brick form指令里，checked选中，则获取value值，否则为''-->
                             </label>
                         </div>
+
+                        <div class="control" style="width:20px;"></div>
+
                         <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox" name="input" ic-form-field="input" ic-has-checked="model.input==='true'" value="true">
+                                is input
+                            </label>
                         </div>
+
+                    <div class="control" style="width:20px;"></div>
+
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" name="isListStyle" ic-form-field ic-has-checked="model.isListStyle==='true'" value="true">
+                            is list
+                        </label>
                     </div>
+
+
+
+                </div>
 
                     <div class="field">
                         <div class="control">
@@ -305,6 +347,8 @@
             </div>
         </div>
     </div>
+
+    ${ require('./addLine.html') }
 
     ${ require('./replay.html') }
 

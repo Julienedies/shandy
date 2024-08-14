@@ -5,7 +5,7 @@
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
-import { GET_TAGS_DONE, TAG_SELECT_CHANGE, READY_SELECT_TAGS } from '../../js/constants'
+import { GET_TAGS_DONE, TAG_SELECT_CHANGE, READY_SELECT_TAGS, TAGS_CHANGE } from '../../js/constants'
 
 export default function () {
 
@@ -13,11 +13,12 @@ export default function () {
     let model = {tags: {}, selected: []};
 
     // tags数据保存在setTagCtrl
-    scope.on(GET_TAGS_DONE, function (e, data) {
+    scope.on(`${GET_TAGS_DONE}, ${TAGS_CHANGE}`, function (e, data) {
         console.log(data);
         model.tags = data;
         render();
     });
+
 
     // 准备选择标签，设置默认选择项
     scope.on(READY_SELECT_TAGS, function (e, data) {

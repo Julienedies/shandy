@@ -11,6 +11,24 @@
 
 }
 
+.table_4 {
+
+    > .tr {
+        display: flex;
+        align-items: start;
+
+        > .td {
+            &:first-child {
+                min-width: 12em;
+            }
+
+            &:nth-child(2) {
+                flex: 1;
+            }
+        }
+    }
+}
+
 /*.table{
     border-style: solid;
     border-width:1px;

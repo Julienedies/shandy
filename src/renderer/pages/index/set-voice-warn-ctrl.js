@@ -12,7 +12,7 @@ import utils from '../../../libs/utils'
 import _ from 'lodash'
 import $ from 'jquery'
 
-import { EDIT_TAG, ADD_TAG, ON_SET_TAG_DONE, DEL_TAG, GET_TAGS_DONE, ON_DEL_TAG_DONE } from '../../js/constants'
+import { EDIT_TAG, ADD_TAG, DEL_TAG, GET_TAGS_DONE, TAGS_CHANGE } from '../../js/constants'
 
 const {ipcRenderer} = electron;
 
@@ -213,7 +213,7 @@ export default function (scope) {
         tradingKeyTags = data['交易要素'];
     });
 
-    scope.on(`${ ON_SET_TAG_DONE }, ${ ON_DEL_TAG_DONE }`, function (e, data) {
+    scope.on(TAGS_CHANGE, function (e, data) {
         tradingKeyTags = data['交易要素'];
         let warnItem = $elm.find('[ic-form="setWarnItem"]').icForm();
         let model = {warnItem, tags: tradingKeyTags};

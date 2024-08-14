@@ -19,13 +19,11 @@ import 'froala-editor/js/froala_editor.pkgd.min.js'
 
 import {
     GET_TAGS_DONE,
-    ON_SET_TAG_DONE,
-    ON_DEL_TAG_DONE,
     DEL_TAG,
     TAG_SELECT_CHANGE,
     READY_SELECT_TAGS,
     TAGS_CHANGE,
-    FroalaEditorConfig
+    FroalaEditorConfig, ADD_TAG
 } from '../../js/constants'
 
 import '../../js/utils.js'
@@ -34,6 +32,7 @@ import setTagCtrl from '../tags/set-tag-ctrl'
 import selectTagsCtrl from '../tags/select-tags-ctrl'
 
 import setRpCtrl from './setRp'
+import addLineCtrl from './addLineCtrl'
 
 import replayCtrl from './replayCtrl'
 
@@ -45,7 +44,7 @@ brick.reg('setTagCtrl', setTagCtrl);
 brick.reg('selectTagsCtrl', selectTagsCtrl);
 
 brick.reg('setRpCtrl', setRpCtrl);
-
+brick.reg('addLineCtrl', addLineCtrl);
 brick.reg('replayCtrl', replayCtrl);
 
 
@@ -63,6 +62,8 @@ brick.reg('rpListCtrl', function (scope) {
     let listManager = brick.services.get('recordManager')();
 
     scope.listManager = listManager;
+
+    window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
 
     // window.GET_TAGS_FOR_RP =
     function getTagsForRp (arr) {
@@ -91,7 +92,7 @@ brick.reg('rpListCtrl', function (scope) {
     }
 
     // 把rp.json这个数组按type进行分组，生成一个map；
-    function getMapByType (arr) {
+    function getRpMapByType (arr) {
         let mapByType = {};
         let rpmqs = TAGS_MAP['rpmqs'];
         for (let i in rpmqs) {
@@ -118,7 +119,7 @@ brick.reg('rpListCtrl', function (scope) {
             let bl = b.level || 0;
             return bl - al;
         });
-        let mapByType = getMapByType(rpList);
+        let mapByType = getRpMapByType(rpList);
 
         // 根据类型过滤
         if (filterByType) {
@@ -134,7 +135,12 @@ brick.reg('rpListCtrl', function (scope) {
         // 对rpList数据进行处理，以方便显示
         rpList = rpList.map((item) => {
             let options = item.options;
-            item.options = getTagsForRp(options);
+            item._options = getTagsForRp(options);
+            if(options && options.length){
+                let id = options[0];
+                let o = window.TAGS_MAP_BY_ID[id];
+                item.TagType = o.text;
+            }
             return item;
         });
         //console.log(filterByType, todoArr);
@@ -152,27 +158,27 @@ brick.reg('rpListCtrl', function (scope) {
     }
 
     //-----------------------------------------------------------
-    let def2 = $.Deferred();
-    let def3 = $.Deferred();
+    let getRpDef = $.Deferred();
+    let getReplayDef = $.Deferred();
 
     function getRpData () {
         $.get('/stock/rp').done((data) => {
-            def2.resolve(data);
+            getRpDef.resolve(data);
         });
     }
 
     function getRpForm () {
         $.get(`/stock/replay?date=${ formatDate2() }`).done((data) => {
-            def3.resolve(data);
+            getReplayDef.resolve(data);
         });
     }
 
-    function setList (d2, d3) {
-        listManager.init(d2);
+    function setList (rpData, replayData) {
+        listManager.init(rpData);
 
-        rpForm = d3 || rpForm;
+        rpForm = replayData || rpForm;
         render();
-        createRpMap(d2);
+        createRpMap(rpData);
     }
 
     function createRpMap (rpArr) {
@@ -182,15 +188,21 @@ brick.reg('rpListCtrl', function (scope) {
         })
     }
 
-
     // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
-    scope.on(GET_TAGS_DONE, function (e, data) {
-        $.when(window.GET_TAGS_DEF, def2, def3).done((d1, d2, d3) => {
-            console.log('when', d2, d3);
+    //scope.on(GET_TAGS_DONE, function (e, data) {
+        $.when(window.GET_TAGS_DEF, getRpDef, getReplayDef).done((d1, d2, d3) => {
+            console.log('when', d1, d2, d3);
             setList(d2, d3);
         });
+   // });
+
+    // 处理tag数据改变事件
+    scope.on(TAGS_CHANGE, function (e, data) {
+        console.log('on TAGS_CHANGE');
+        render();
     });
 
+    // main
     getRpData();
     getRpForm();
 
@@ -228,11 +240,20 @@ brick.reg('rpListCtrl', function (scope) {
         return false;
     };
 
-    scope.refreshTags = function (e) {
-        scope.emit(TAGS_CHANGE);
+    // 创建rp对应的tag
+    scope.createTag = function (e, id) {
+        let rp = listManager.get(id);
+        let type;
+        scope.emit('createTagByRp', {type:type, text:rp.title});
+        return false;
     };
 
-    scope.addTodo = function (e) {
+    // 刷新页面标签数据，主要是处理 electron里修改了标签; 目前好像没有使用
+    /*scope.refreshTags = function (e) {
+        scope.emit(TAGS_CHANGE);
+    };*/
+
+    scope.addRp = function (e) {
         scope.emit('setRp', {type: filterByType});
     };
 
@@ -252,6 +273,11 @@ brick.reg('rpListCtrl', function (scope) {
 
     scope.onDelDone = function (data) {
         setList(data);
+    };
+
+    // 添加主线热点
+    scope.addLine = function (e, id) {
+        scope.emit('addLine', listManager.get(id));
     };
 
     // re
@@ -378,6 +404,29 @@ brick.reg('rpListCtrl', function (scope) {
 });
 
 
+brick.reg('planCtrl', function (scope) {
+
+    $.get({
+        url: '/stock/replay'
+    }).done((data) => {
+        //console.info(data);
+        scope.render('replay', {model: data.replay});
+    });
+
+    $.get({
+        url: '/stock/plan'
+    }).done((data) => {
+        //console.info(data);
+        data.plans && data.plans.length && scope.render('plans', {model: data.plans});
+    });
+
+    scope.on('plan', function (e, _todoItem) {
+        brick.view.to('plan');
+    });
+
+});
+
+
 /*brick.reg('tagsCtrl', function (scope) {
 
     alert(1);
@@ -478,27 +527,6 @@ brick.reg('rpListCtrl', function (scope) {
 });*/
 
 
-brick.reg('planCtrl', function (scope) {
-
-    $.get({
-        url: '/stock/replay'
-    }).done((data) => {
-        //console.info(data);
-        scope.render('replay', {model: data.replay});
-    });
-
-    $.get({
-        url: '/stock/plan'
-    }).done((data) => {
-        //console.info(data);
-        data.plans && data.plans.length && scope.render('plans', {model: data.plans});
-    });
-
-    scope.on('plan', function (e, _todoItem) {
-        brick.view.to('plan');
-    });
-
-});
 
 
 

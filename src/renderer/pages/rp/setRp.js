@@ -8,7 +8,6 @@ import brick from '@julienedies/brick'
 import {
     EDIT_TAG,
     ADD_TAG,
-    ON_SET_TAG_DONE,
     DEL_TAG,
     GET_TAGS_DONE,
     ON_DEL_TAG_DONE,
@@ -56,6 +55,7 @@ export default function () {
 
     // ajax请求服务端前的表单数据处理
     this.before = function (fields) {
+        console.log(222, fields);
         fields.content = $editor.froalaEditor('html.get', true);
         //$editor.froalaEditor('destroy');
     };

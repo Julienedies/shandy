@@ -1,0 +1,122 @@
+<!-- 添加每天的主线热点 -->
+
+<div ic-ctrl="addLineCtrl" ic-view="addLine" ic-view-ani-id="42">
+    <div class="column">
+        <div ic-tpl="addLine" ic-tpl-init="{line:{}, tags:{}}">
+            <div class="table_4" ic-form="setLine" ic-init="line=model.line; tags=model.tags;">
+                <!-- tr 交易系统名称 -->
+                <div class="tr">
+                    <h6 class="td">资金方向</h6>
+                    <div class="td">
+                        <div class="control">
+                            <input class="input" type="text" name="name" value="{{line['name']}}" ic-form-field ic-field-rule="required">
+                            <input type="hidden" name="id" value="{{line.id}}" ic-form-field>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr 目标行情 -->
+                <div class="tr">
+                    <h6 class="td">资金行为逻辑</h6>
+                    <div class="td">
+                        <div class="field is-grouped is-grouped-multiline" ic-select="资金行为逻辑" ic-form-field="资金行为逻辑">
+                            <div class="control" ic-for="i,v in tags['资金行为逻辑']">
+                                <div class="tags has-addons">
+                                <span class="tag"
+                                      ic-select-item
+                                      ic-has-selected="line['资金行为逻辑']===v.text ? 'is-warning':''"
+                                      ic-val="{{v.text}}">{{v.text}}
+                                </span>
+                                    <a class="tag" ic-click="editTag:{{v.id}}">
+                                        <span class="icon"><i class="far fa-edit"></i></span>
+                                    </a>
+                                    <a class="tag is-delete"
+                                       ic-ajax
+                                       ic-submit-data="{{v.text}}"
+                                       ic-submit-method="delete"
+                                       ic-submit-action="/stock/tags/{{v.id}}"
+                                       ic-submit-on-done="onTagDeleteDone"
+                                    ></a>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <a class="tag" ic-click="tag_add:行情驱动因素">
+                                        <span class="icon"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr 目标行情 -->
+                <div class="tr">
+                    <h6 class="td">行情驱动因素</h6>
+                    <div class="td">
+                        <div class="field is-grouped is-grouped-multiline" ic-select="行情驱动因素" ic-form-field="资金行为逻辑">
+                            <div class="control" ic-for="i,v in tags['行情驱动因素']">
+                                <div class="tags has-addons">
+                                <span class="tag"
+                                      ic-select-item
+                                      ic-has-selected="line['行情驱动因素']===v.text ? 'is-warning':''"
+                                      ic-val="{{v.text}}">{{v.text}}
+                                </span>
+                                    <a class="tag" ic-click="editTag:{{v.id}}">
+                                        <span class="icon"><i class="far fa-edit"></i></span>
+                                    </a>
+                                    <a class="tag is-delete"
+                                       ic-ajax
+                                       ic-submit-data="{{v.text}}"
+                                       ic-submit-method="delete"
+                                       ic-submit-action="/stock/tags/{{v.id}}"
+                                       ic-submit-on-done="onTagDeleteDone"
+                                    ></a>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <a class="tag" ic-click="tag_add:行情驱动因素">
+                                        <span class="icon"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- tr 备注 -->
+                <div class="tr">
+                    <h6 class="td">备注</h6>
+                    <div class="td">
+                        <div class="control">
+                            <textarea rows="3" class="textarea" ic-form-field="note">{{line.note}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr -->
+                <div class="tr">
+                    <h6 class="td"></h6>
+                    <div class="td">
+                        <div class="buttons">
+                            <button class="button is-medium is-primary"
+                                    ic-form-submit="setLine"
+                                    ic-submit-action="submit()"
+                                    ic-submit-before="submitBefore"
+                                    ic-submit-on-done="done"
+                            >保存
+                            </button>
+                            <button class="button is-medium" ic-click="reset"> 重置</button>
+                            <button class="button" ic-view-to="rpList" style="width:200px;">
+                                返回
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -22,7 +22,8 @@ import {
     ON_SET_LOGIC_DONE,
     ON_GET_LOGIC_DONE,
     GET_TAGS_DONE,
-    ON_SET_TAG_DONE, ON_DEL_TAG_DONE, DEL_TAG,
+    DEL_TAG,
+    TAGS_CHANGE,
 } from '../../../js/constants'
 
 import utils from '../../../js/utils'
@@ -266,7 +267,7 @@ brick.reg('setLogicCtrl', function () {
         scope.render(vm);
     };
 
-    scope.on(`${ ON_SET_TAG_DONE }, ${ ON_DEL_TAG_DONE }`, function (e, data) {
+    scope.on(TAGS_CHANGE, function (e, data) {
         let vm = scope.vm;
         vm.logic = getFormVm();
         vm.tags = data['交易要素'];
