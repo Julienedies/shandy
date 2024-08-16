@@ -4,7 +4,7 @@
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
-import { EDIT_TAG, ADD_TAG, DEL_TAG, GET_TAGS_DONE, TAGS_CHANGE } from '../../js/constants'
+import { EDIT_TAG, ADD_TAG, DEL_TAG, GET_TAGS_DONE, TAGS_CHANGE, SET_TAG_DONE, DEL_TAG_DONE } from '../../js/constants'
 
 export default function () {
 
@@ -65,7 +65,7 @@ export default function () {
     scope.onSetTagDone = function (data) {
         updateData(data);
         $elm.icPopup(false);
-        //scope.emit(ON_SET_TAG_DONE, data);
+        scope.emit(SET_TAG_DONE, data);
         scope.emit(TAGS_CHANGE, data);
     };
 
@@ -88,9 +88,8 @@ export default function () {
                 method: `delete`,
             }).done((data) => {
                 updateData(data);
-                //scope.emit(ON_DEL_TAG_DONE, data);
+                scope.emit(DEL_TAG_DONE, data);
                 scope.emit(TAGS_CHANGE, data);
-
             });
         }
     });
@@ -120,22 +119,10 @@ export default function () {
         console.info('on add tag', e, msg);
         let model = msg;
         if (typeof msg === 'string') {
-            model = {types, type: msg};
+            model = {type: msg};
         }
         render(model);
     });
-
-    /**
-     * 其它控制器发消息要添加rp对应的tag
-     * 根据rp 创建一个对应的tag
-     * @param msg {Object} 标签对象=》 {text: 'rp'}
-     */
-    scope.on('createTagByRp', function f (e, msg) {
-        render(msg);
-    });
-
-
-
 
 
     /**

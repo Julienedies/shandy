@@ -8,12 +8,12 @@ html, body {
   color: #202020;
   // 24寸+显示器
   font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
-  // iPad
+  // iPad, 屏幕尺寸最大800px
   @media screen and (max-width: 800px) {
     font-size: 16px!important;
   }
 
-  // mac
+  // macBook, 屏幕尺寸最大1440px
   @media screen and (max-width: 1440px) {
     font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
   }

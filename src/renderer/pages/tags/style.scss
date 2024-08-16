@@ -2,10 +2,12 @@ html, body {
   // 飞利浦屏幕34寸
   @media screen and (min-width: 3600px) {
     font-size: 18px !important;
+    border-bottom: solid 2px red;
   }
   // macBook 屏幕
   @media screen and (max-width: 1440px) {
     font-size: 18px !important;
+    border-bottom: solid 2px blue;
   }
 }
 

@@ -18,17 +18,18 @@
                 <div class="field is-grouped is-grouped-centered is-grouped-multiline">
                     <div class="control">
                         <div class="buttons is-centered" ic-select="tags" ic-select-auto="false" ic-select-cla="is-primary"
-                             ic-has-selected="v==model.filterByType" ic-select-on-change="onFilterKeyChange">
+                             ic-select-on-change="onFilterKeyChange">
 
-                            <button ic-for="v,i in model.mapByType" ic-select-item ic-val="{{ v }}"
-                                    ic-class="button is-small {{ v==model.filterByType?'is-primary':''  }}">
-                                {{ RPMQS_MAP[v] }}
+                            <button ic-for="i,o in TAGS_MAP['rpmqs']" ic-select-item ic-val="{{ o.text }}" ic-has-selected="o.text==model.filterByType"
+                                    class="button is-small"> <!--  {{ o.text==model.filterByType?'is-primary':''  }}   {{ RPMQS_MAP[v] }} -->
+                                    {{ o.text }}
                             </button>
 
                             <button ic-select-item ic-val="Re" ic-class="button is-small {{ model.filterByType==='Re'?'is-primary':'' }}">
                                 Re
                             </button>
                             <button class="button is-primary is-small" ic-click="addRp">新Item</button>
+                            <button class="button is-primary is-small" ic-click="addPoint">新Item</button>
                             <button class="button is-primary is-small" ic-click="createReplay">归纳复盘</button>
                             <button class="button is-primary is-small" ic-click="toggleForm">显示表单</button>
                             <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>
@@ -53,25 +54,34 @@
 
                             <div class="wrap">
 
+                                <!-- 是否有嵌入的子元素 -->
+                                <div class="box" ic-if="v.inset">
+                                    -----------------
+                                </div>
+
                                 <!-- 是否有标签选项 -->
                                 <div class="field is-grouped is-grouped-multiline" ic-if="v._options && v._options.length"
                                      ic-select
-                                     ic-select-cla="is-danger"
+                                     ic-select-auto="false"
                                      ic-select-type="checkbox"
-                                     ic-select-item=".button"
-                                     ic-form-field="{{ v.id }}">
+                                     ic-select-cla="is-danger"
+                                     ic-select-item="span.button"
+                                     ic-form-field="{{ v.alias || v.title }}">
 
                                     <div class="control" ic-for="j,k in v._options">
-                                        <div class="buttons has-addons" ic-init="o=TAGS_MAP_BY_ID[k]; m=rpForm[v.id]||[];">
-                                            <span class="button is-light" ic-if-start="o.type==='交易错误'||o.type==='要解决的问题'" ic-val="{{ k }}">
+                                        <div class="buttons has-addons" ic-init="o=TAGS_MAP_BY_ID[k]; m=rpForm[v.alias] || rpForm[v.title] ||[];">
+                                            <span class="button is-light" ic-if-start="o.type==='交易错误'||o.type==='要解决的问题'" ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
                                                 {{ o.text }}
                                             </span>
-                                            <span class="button" ic-else-if="o.type==='交易要素'" ic-val="{{ k }}">
+                                            <span class="button" ic-else-if="o.type==='交易要素'" ic-val="{{ o.text }}">
                                                 {{ o.text }}
                                             </span>
-                                            <span class="button is-light" ic-else ic-val="{{ k }}" ic-has-selected="m.includes(k)">
+                                            <span class="button is-light" ic-else ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
                                                 {{ o.text }}
                                             </span>
+                                            <a class="button is-light" ic-click="editTag:{{o.id}}">
+                                                <span class="icon"><i class="far fa-edit"></i></span>
+                                            </a>
                                         </div>
                                     </div>
 
@@ -83,7 +93,7 @@
 
                                 </div>
 
-                                <!-- 表单输入框 -->
+                                <!-- 是否表单输入框 -->
                                 <div style="padding-bottom: 0.5em;" ic-if="v.input">
                                     <textarea class="textarea is-medium" ic-form-field="{{ v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
                                 </div>
@@ -94,14 +104,15 @@
 
                                 <div style="padding: 2px 0;">
                                     <div class="tags is-right">
-                                        <span class="tag is-small" ic-if="v.TagType"> {{ v.TagType }}</span>
+                                        <span class="tag is-small" title="rp的别名" ic-if="v.alias"> {{ v.alias }}</span>
+                                        <span class="tag is-small" title="关联的tag类型" ic-if="v.TagType"> {{ v.TagType }}</span>
                                         <span class="tag is-small"> {{ v.level || 0 }}</span>
-                                        <span class="tag is-small" ic-click="onFilterKeyChange2:{{ v.type }}"> {{ v.type }}</span>
+                                        <!--<span class="tag is-small" ic-click="onFilterKeyChange2:{{ v.type }}"> {{ v.type }}</span>-->
+                                        <span class="tag is-small" ic-click="addLine:{{ v.id }}" ic-if="v.inset">
+                                            <i class="fas fa-plus" title="添加项"></i>
+                                        </span>
                                         <span class="tag is-small" ic-click="edit:{{ v.id }}">
                                             <i class="far fa-edit" title="编辑"></i>
-                                        </span>
-                                        <span class="tag is-small" ic-click="addLine:{{ v.id }}">
-                                            <i class="fas fa-plus" title="添加项"></i>
                                         </span>
                                         <span class="tag is-small" ic-click="copy:{{ v.id }}">
                                             <i class="far fa-copy" title="拷贝"></i>
@@ -114,7 +125,7 @@
                                         <span ic-class="tag is-small {{ v.re==='true' ? 'is-primary':'' }}" ic-click="re:{{ v.id }}">
                                             <i class="far fa-star" title="Re"></i>
                                         </span>
-                                        <span class="tag is-small"  ic-click="createTag:{{ v.id }}">
+                                        <span class="tag is-small"  ic-click="createTagByRp:{{ v.id }}">
                                             <i class="fas fa-retweet" title="生成对应的tag"></i>
                                         </span>
                                         <span class="tag is-small"
@@ -122,7 +133,7 @@
                                               ic-submit-method="delete"
                                               ic-submit-action="/stock/rp/{{v.id}}"
                                               ic-submit-before="delBeforeConfirm"
-                                              ic-submit-on-done="onDelDone"><i class="fas fa-trash-alt" title="删除"></i></span>
+                                              ic-submit-on-done="onDelRpDone"><i class="fas fa-trash-alt" title="删除"></i></span>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +205,7 @@
                         <p class="control">
                             <span class="select">
                               <select name="type" ic-form-field>
-                                  <option ic-for="i,o in TAGS_MAP['rpmqs']" value="{{o.key}}" ic-has-selected="o.key==model.type">
+                                  <option ic-for="i,o in TAGS_MAP['rpmqs']" value="{{o.text}}" ic-has-selected="o.text==model.type">
                                       {{ o.text }}
                                   </option>
                                   <!-- <option value="rp" ic-has-selected="'rp'==model.type">复盘&计划</option>
@@ -223,6 +234,15 @@
                         </div>
                         <div class="control is-expanded">
                             <input class="input" type="text" placeholder="Text input" value="{{ model.comment }}" ic-form-field="comment">
+                        </div>
+                    </div>
+
+                    <div class="field has-addons">
+                        <div class="control">
+                            <button class="button is-info">别名</button>
+                        </div>
+                        <div class="control is-expanded">
+                            <input class="input" type="text" placeholder="Text input" value="{{ model.alias }}" ic-form-field="alias">
                         </div>
                     </div>
 
@@ -328,8 +348,8 @@
 
                     <div class="control">
                         <label class="checkbox">
-                            <input type="checkbox" name="isListStyle" ic-form-field ic-has-checked="model.isListStyle==='true'" value="true">
-                            is list
+                            <input type="checkbox" name="inset" ic-form-field ic-has-checked="model.inset==='true'" value="true">
+                            is inset
                         </label>
                     </div>
 

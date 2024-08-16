@@ -15,6 +15,24 @@
                     </div>
                 </div>
 
+                <div class="tr">
+                    <h6 class="td">行情周期</h6>
+                    <div class="td">
+                        <div class="control">
+                            <input class="input" type="text" name="name" value="{{line['name']}}" ic-form-field ic-field-rule="required">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tr">
+                    <h6 class="td">节奏</h6>
+                    <div class="td">
+                        <div class="control">
+                            <input class="input" type="text" name="name" value="{{line['name']}}" ic-form-field ic-field-rule="required">
+                        </div>
+                    </div>
+                </div>
+
                 <!-- tr 目标行情 -->
                 <div class="tr">
                     <h6 class="td">资金行为逻辑</h6>
@@ -52,7 +70,7 @@
 
                 <!-- tr 目标行情 -->
                 <div class="tr">
-                    <h6 class="td">行情驱动因素</h6>
+                    <h6 class="td">客观表现/日内走势</h6>
                     <div class="td">
                         <div class="field is-grouped is-grouped-multiline" ic-select="行情驱动因素" ic-form-field="资金行为逻辑">
                             <div class="control" ic-for="i,v in tags['行情驱动因素']">
@@ -81,6 +99,16 @@
                                     </a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr 备注 -->
+                <div class="tr">
+                    <h6 class="td">预判可能的走势及应对</h6>
+                    <div class="td">
+                        <div class="control">
+                            <textarea rows="3" class="textarea" ic-form-field="note">{{line.note}}</textarea>
                         </div>
                     </div>
                 </div>

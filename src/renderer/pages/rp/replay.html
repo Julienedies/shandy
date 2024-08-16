@@ -1,32 +1,29 @@
 <div id="replay" ic-ctrl="replayCtrl" ic-view="replay">
+
     <div class="column" style="position: fixed; z-index:10; top:0; left:4%; right: 4%;">
         <div class="button is-primary is-fullwidth" ic-view-back>返回</div>
     </div>
+
     <div class="column" style="padding-top:4em;">
+
         <div ic-tpl="replay">
             <ul style="padding:0 0 0 5%;" ic-init="o = model;">
                 <li ic-for="i,v in model" ic-if="v">
                     <div ic-init="tag=TAGS_MAP_BY_ID[v], p=RP_MAP[i];">
-                        <h4>{{ (p && p.title) || i }}</h4>
-                        <div ic-if-start="Array.isArray(v)">
-                            <div class="control" ic-for="j,k in v">
-                                <div class="buttons has-addons" ic-init="o=TAGS_MAP_BY_ID[k];">
-                                                <span class="button" ic-if-start="o.type==='交易错误'||o.type==='要解决的问题'" ic-val="{{ k }}">
-                                                    {{ o.text }}
-                                                </span>
-                                    <span class="button" ic-else-if="o.type==='交易要素'" ic-val="{{ k }}">
-                                                    {{ o.text }}
-                                                </span>
-                                    <span class="button is-info" ic-else ic-val="{{ k }}">
-                                                    {{ o.text }}
-                                                </span>
-                                </div>
-                            </div>
 
+                        <h4>{{ (p && p.title) || i }}</h4>
+
+                        <div class="buttons" ic-if-start="Array.isArray(v)">
+                            <span class="button is-danger"  ic-for="j,k in v">
+                                <i  ic-init="o=TAGS_MAP_BY_ID[k] || {};">
+                                      {{ o.text || k }}
+                                </i>
+                            </span>
                         </div>
                         <div class="pre" ic-else>
                             {{ v }}
                         </div>
+
                     </div>
                 </li>
 

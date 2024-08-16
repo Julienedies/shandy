@@ -22,8 +22,9 @@ import {
     DEL_TAG,
     TAG_SELECT_CHANGE,
     READY_SELECT_TAGS,
+    ADD_TAG,
     TAGS_CHANGE,
-    FroalaEditorConfig, ADD_TAG
+    FroalaEditorConfig
 } from '../../js/constants'
 
 import '../../js/utils.js'
@@ -50,9 +51,10 @@ brick.reg('replayCtrl', replayCtrl);
 
 brick.reg('rpListCtrl', function (scope) {
 
-    let filterByType = 'rp';  // 默认要显示的类型
+    let filterByType = '复盘&计划';  // 默认要显示的类型
     let dragOverCla = 'onDragOver';
-    let rpMap = window.RPMQS_MAP = {};
+    //let rpMap = window.RPMQS_MAP = {};
+    let rpMapByType = {};
 
     let $elm = this.$elm;
     let $title = $('title');
@@ -65,7 +67,7 @@ brick.reg('rpListCtrl', function (scope) {
 
     window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
 
-    // window.GET_TAGS_FOR_RP =
+    // 把rp里的options选项里的 type tag ID，换成对应tag元素组
     function getTagsForRp (arr) {
         if (Array.isArray(arr)) {
             // 如果只有一个标签选项，并且这个选项是type类型的标签，则把这个标签替换成该类型的所有标签
@@ -92,7 +94,7 @@ brick.reg('rpListCtrl', function (scope) {
     }
 
     // 把rp.json这个数组按type进行分组，生成一个map；
-    function getRpMapByType (arr) {
+    /*function _getRpMapByType (arr) {
         let mapByType = {};
         let rpmqs = TAGS_MAP['rpmqs'];
         for (let i in rpmqs) {
@@ -109,6 +111,18 @@ brick.reg('rpListCtrl', function (scope) {
 
         //console.log(mapByType);
         return mapByType;
+    }*/
+
+
+    function getRpMapByType (arr) {
+        rpMapByType = {};
+        arr.forEach((v, i) => {
+            let type = v.type || '_null';
+            let arr2 = rpMapByType[v.type || '_null'] = rpMapByType[v.type || '_null'] || [];
+            arr2.push(v);
+        });
+        console.log(2222, rpMapByType);
+        return rpMapByType;
     }
 
     // 渲染rpList
@@ -119,7 +133,8 @@ brick.reg('rpListCtrl', function (scope) {
             let bl = b.level || 0;
             return bl - al;
         });
-        let mapByType = getRpMapByType(rpList);
+
+        rpMapByType = getRpMapByType(rpList);
 
         // 根据类型过滤
         if (filterByType) {
@@ -128,7 +143,7 @@ brick.reg('rpListCtrl', function (scope) {
                     return v.re === 'true';
                 });
             } else {
-                rpList = mapByType[filterByType];
+                rpList = rpMapByType[filterByType];
             }
         }
 
@@ -139,12 +154,12 @@ brick.reg('rpListCtrl', function (scope) {
             if(options && options.length){
                 let id = options[0];
                 let o = window.TAGS_MAP_BY_ID[id];
-                item.TagType = o.text;
+                item.TagType = o.text;  // 显示options对应的tag type
             }
             return item;
         });
-        //console.log(filterByType, todoArr);
-        scope.render('types', {model: {mapByType: mapByType, filterByType: filterByType}});
+
+        scope.render('types', {model: {rpMapByType: rpMapByType, filterByType: filterByType}});
 
         scope.render('rpList', {model: {rpList, rpForm, filterByType}}, function () {
             $(this).find('li').on('dragstart', scope.dragstart)
@@ -154,7 +169,7 @@ brick.reg('rpListCtrl', function (scope) {
         });
 
         // 修改document.title, 主要用于save2Text chrome插件;
-        $title.text(`rp_${ rpMap[filterByType] }_${ formatDate() }`);
+        $title.text(`rp_${ filterByType }_${ formatDate() }`);
     }
 
     //-----------------------------------------------------------
@@ -181,6 +196,7 @@ brick.reg('rpListCtrl', function (scope) {
         createRpMap(rpData);
     }
 
+    // 创建 replay 里使用
     function createRpMap (rpArr) {
         window.RP_MAP = {};
         rpArr.forEach((v) => {
@@ -241,10 +257,9 @@ brick.reg('rpListCtrl', function (scope) {
     };
 
     // 创建rp对应的tag
-    scope.createTag = function (e, id) {
+    scope.createTagByRp = function (e, id) {
         let rp = listManager.get(id);
-        let type;
-        scope.emit('createTagByRp', {type:type, text:rp.title});
+        scope.emit(ADD_TAG, {type: rp.type, text:rp.title});
         return false;
     };
 
@@ -261,6 +276,7 @@ brick.reg('rpListCtrl', function (scope) {
         scope.emit('setRp', listManager.get(id));
     };
 
+    //
     scope.copy = function (e, id) {
         let item = listManager.get(id);
         delete item.id;
@@ -271,7 +287,8 @@ brick.reg('rpListCtrl', function (scope) {
         return confirm('确认删除？');
     };
 
-    scope.onDelDone = function (data) {
+    // 当删除一个rp以后
+    scope.onDelRpDone = function (data) {
         setList(data);
     };
 
@@ -316,6 +333,7 @@ brick.reg('rpListCtrl', function (scope) {
         scope.toggleForm();
     });
 
+    // 创建复盘&交易计划的表格
     scope.createReplay = function (e) {
         scope.emit('createReplay', rpForm);
     };
@@ -343,7 +361,7 @@ brick.reg('rpListCtrl', function (scope) {
 
     // 表单数据保存
     $elm.on('ic-select.change', '[ic-select][ic-form-field]', function (e, msg) {
-        console.log('on ic-select.change', msg);
+        console.log('on ic-select.change, to submit();', msg);
         submit();
         // let data = $elm.find('[ic-form="rp"]').icForm();
         // let $th = $(this);

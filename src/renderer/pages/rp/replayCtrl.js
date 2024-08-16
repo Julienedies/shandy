@@ -15,9 +15,9 @@ export default function () {
     let rpListCtrl = brick.controllers.get('rpListCtrl');
     let listManager = rpListCtrl.listManager;
 
-    scope.on('createReplay', function (e, data) {
+    scope.on('createReplay', function (e, rpForm) {
         brick.view.to('replay');
-        model = data || {};
+        model = rpForm || {};
         scope.render('replay', {model});
     });
 

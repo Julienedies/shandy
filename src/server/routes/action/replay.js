@@ -14,6 +14,7 @@ function initDb () {
     return replay;
 }
 
+
 function getData (date) {
     let result = {};
     let list = replay.get();

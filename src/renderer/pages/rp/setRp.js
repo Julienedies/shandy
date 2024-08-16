@@ -47,7 +47,7 @@ export default function () {
         scope.render('setRp', {model}, function () {
             $editor = $elm.find('#editor').froalaEditor({
                 ...FroalaEditorConfig,
-                height: 360,
+                height: 330,
             });
             $editor.froalaEditor('html.set', model.content || '');
         });

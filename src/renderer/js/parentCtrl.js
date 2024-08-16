@@ -17,6 +17,7 @@ function parentCtrl () {
         scope.tagsMap = data;
     });
 
+    // 把tagsMap转成tags数组
     scope.tagsMap2Arr = scope.tags_convert = function (data) {
         let arr = [];
         for (let i in data) {
