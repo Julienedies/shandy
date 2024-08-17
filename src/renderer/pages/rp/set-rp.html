@@ -1,0 +1,172 @@
+<div ic-ctrl="setRpCtrl" ic-view="setRp" ic-view-ani-id="42">
+    <div class="column">
+        <div ic-tpl="setRp" ic-tpl-init="{}">
+            <div ic-form="setRp">
+                <div class="field has-addons">
+                    <div class="control">
+                        <button class="button is-info">标题</button>
+                    </div>
+                    <div class="control is-expanded">
+                        <input class="input" type="text" placeholder="Text input" value="{{ model.title }}" ic-form-field="title">
+                        <input type="hidden" value="{{ model.id }}" ic-form-field="id">
+                    </div>
+                    <p class="control">
+                            <span class="select">
+                              <select name="type" ic-form-field>
+                                  <option ic-for="i,o in TAGS_MAP['rpmqs']" value="{{o.text}}" ic-has-selected="o.text==model.type">
+                                      {{ o.text }}
+                                  </option>
+                                  <!-- <option value="rp" ic-has-selected="'rp'==model.type">复盘&计划</option>
+                                   <option value="question" ic-has-selected="'question'==model.type">问题</option>
+                                   <option value="mistake" ic-has-selected="'mistake'==model.type">错误</option>
+                                   <option value="warn" ic-has-selected="'warn'==model.type">警告</option>
+                                   <option value="idea" ic-has-selected="'idea'==model.type">理念</option>
+                                   <option value="市场" ic-has-selected="'市场'==model.type">市场</option>-->
+                              </select>
+                            </span>
+                    </p>
+                </div>
+
+                <div class="field has-addons">
+                    <div class="control">
+                        <button class="button is-info">提醒</button>
+                    </div>
+                    <div class="control is-expanded">
+                        <input class="input" type="text" placeholder="Text input" value="{{ model.caution }}" ic-form-field="caution">
+                    </div>
+                </div>
+
+                <div class="field has-addons">
+                    <div class="control">
+                        <button class="button is-info">备注</button>
+                    </div>
+                    <div class="control is-expanded">
+                        <input class="input" type="text" placeholder="Text input" value="{{ model.comment }}" ic-form-field="comment">
+                    </div>
+                </div>
+
+                <div class="field has-addons">
+                    <div class="control">
+                        <button class="button is-info">别名</button>
+                    </div>
+                    <div class="control is-expanded">
+                        <input class="input" type="text" placeholder="Text input" value="{{ model.alias }}" ic-form-field="alias">
+                    </div>
+                </div>
+
+                <!-- 添加所属项 -->
+                <div class="field is-grouped is-grouped-multiline" ic-select="options" ic-select-type="checkbox" ic-form-field="options">
+                    <div class="control" ic-for="i,v in model.options">
+                        <div class="tags has-addons">
+                            <span class="tag is-medium" ic-select-item ic-val="{{ v }}" selected>
+                                {{ TAGS_MAP_BY_ID[v].text }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="control"> <!-- ic-view-to="tags" ic-click="gotoAddItems"-->
+                        <button class="button is-primary is-fullwidth" ic-popup-target="selectTags">
+                            添加选项
+                        </button>
+                    </p>
+                </div>
+
+                <!-- 添加标签 -->
+                <!--                    <div class="field is-grouped is-grouped-multiline" ic-select="items" ic-select-type="checkbox" ic-form-field="tags">
+                                        <div class="control" ic-for="i,v in model.tags">
+                                            <div class="tags has-addons">
+                                            <span class="tag is-medium" ic-select-item ic-val="{{ v }}" selected>
+                                                {{ TAGS_MAP_BY_ID[v].text }}
+                                            </span>
+                                            </div>
+                                        </div>
+
+                                        <p class="control">
+                                            <button class="button is-primary is-fullwidth" ic-click="gotoAddTags" ic-popup-target="selectTags">
+                                                添加新项
+                                            </button>
+                                        </p>
+                                    </div>-->
+
+
+                <!-- 按钮组 -->
+                <div class="field has-addons">
+                    <div class="control" style="width:48%;">
+                        <button class="button is-primary"
+                                style="width:300px;"
+                                ic-form-submit
+                                ic-submit-action="/stock/rp"
+                                ic-submit-before="before"
+                                ic-submit-on-done="done">保存
+                        </button>
+                        <button class="button" ic-click="reset" style="width:100px;">
+                            重置
+                        </button>
+                        <button class="button" ic-click="cancel" style="width:100px;">取消</button>
+                        <button class="button" ic-view-to="rpList" style="width:100px;">
+                            返回
+                        </button>
+                    </div>
+
+                    <div class="control" style="width:5px;"></div>
+
+                    <div class="control">
+                        <button class="button">level</button>
+                    </div>
+
+                    <div class="control">
+                        <input class="input" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1900 }}">
+                    </div>
+
+                    <div class="control">
+                        <button class="button">role</button>
+                    </div>
+
+                    <div class="control">
+                        <p class="select">
+                            <select name="role" ic-form-field>
+                                <option value="0" ic-has-selected="model.role==0">问题&错误</option>
+                                <option value="1" ic-has-selected="model.role==1">复盘思考</option>
+                                <option value="2" ic-has-selected="model.role==2">关键理念</option>
+                                <option value="3" ic-has-selected="model.role==3">错误&警告</option>
+                                <option value="4" ic-has-selected="model.role==4">replay</option>
+                            </select>
+                        </p>
+                    </div>
+
+
+                    <div class="control" style="padding-left:20px;">
+                        <button class="button">input</button>
+                    </div>
+                    <div class="control">
+                        <input class="input" type="text" name="input" ic-form-field="input" ic-value="{{ model.input||'' }}">
+                    </div>
+
+                    <div class="control" style="width:90px; padding-left:10px;">
+                        <label class="checkbox">
+                            <input type="checkbox" name="re" ic-has-checked="model.re==='true'" ic-form-field="re" value="true">
+                            is Re <!--  onclick="this.value=this.checked ? 'true':'false';" brick form指令里，checked选中，则获取value值，否则为''-->
+                        </label>
+                    </div>
+
+
+<!--                    <div class="control" style="width:20px;"></div>
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" name="inset" ic-form-field ic-has-checked="model.inset==='true'" value="true">
+                            is inset
+                        </label>
+                    </div>-->
+
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <textarea id="editor" rows="14" class="textarea" placeholder="内容" ic-form-field="content"></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

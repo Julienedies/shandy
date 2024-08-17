@@ -23,41 +23,44 @@ export default function () {
     let scope = this;
     let $elm = scope.$elm;
     let vm = {};
-    let rp = {};
     let tags = {}; // tags_map
+    let isAction = false;
 
-    const _ADD_Line = 'addLine';
-
-    scope.on(_ADD_Line, function (e, data) {
-        brick.view.to(_ADD_Line);
-        rp = data || {};
-        scope.render(_ADD_Line, { line: {}, tags }, function () {
-
-        });
-    });
-
-    // 从set-tag ctrl 获取最新的tagsMap数据
-    scope.on(GET_TAGS_DONE, (e, data) => {
-        console.log(777, data);
-        tags = data;
-    });
-
-    scope.on(TAG_SELECT_CHANGE, function (e, data) {
-        console.log('ON_TAG_SELECT_CHANGE', data);
-        vm = getFormVm();
-        vm.options = data.value;
-        render();
-    });
+    const SET_LINE = 'SET_LINE';
+    const _SET_LINE = 'setLine';
 
     function getFormVm () {
         return $elm.find('[ic-form]').icForm();
     }
 
     function render () {
-        /*scope.render(_ADD_ITEM, { vm }, function () {
-
-        });*/
+        scope.render(_SET_LINE, { line: vm, tags });
     }
+
+    // 接收SET_LINE事件并处理
+    scope.on(SET_LINE, function (e, data) {
+        brick.view.to(_SET_LINE);
+        isAction = true;
+        vm = data || {};
+        scope.emit(READY_SELECT_TAGS, vm.options);
+        render();
+    });
+
+    // 从set-tag ctrl 获取最新的tagsMap数据
+    scope.on(GET_TAGS_DONE, (e, data) => {
+        tags = data;
+    });
+
+    scope.on(TAG_SELECT_CHANGE, function (e, data) {
+        console.log('ON_TAG_SELECT_CHANGE', data);
+        if(isAction){
+            vm = getFormVm();
+            vm.options = data.value;
+            render();
+        }
+    });
+
+
 
     // 提交保存表单数据
     this.submit = function (fields) {
@@ -72,14 +75,18 @@ export default function () {
     this.done = function (data) {
         scope.emit('rp.change', data);
         brick.view.to('rpList');
+        isAction = false;
     };
 
-    this.reset = function () {
-        scope.render(_ADD_Line, {model: {}});
-    };
 
     this.cancel = function (e) {
         brick.view.to('rpList');
+        isAction = false;
+    };
+
+
+    this.reset = function () {
+
     };
 
 

@@ -32,8 +32,8 @@ import '../../js/common-stock.js'
 import setTagCtrl from '../tags/set-tag-ctrl'
 import selectTagsCtrl from '../tags/select-tags-ctrl'
 
-import setRpCtrl from './setRp'
-import addLineCtrl from './addLineCtrl'
+import setRpCtrl from './set-rp-ctrl'
+import setLineCtrl from './set-line-ctrl'
 
 import replayCtrl from './replayCtrl'
 
@@ -45,7 +45,7 @@ brick.reg('setTagCtrl', setTagCtrl);
 brick.reg('selectTagsCtrl', selectTagsCtrl);
 
 brick.reg('setRpCtrl', setRpCtrl);
-brick.reg('addLineCtrl', addLineCtrl);
+brick.reg('setLineCtrl', setLineCtrl);
 brick.reg('replayCtrl', replayCtrl);
 
 
@@ -66,11 +66,25 @@ brick.reg('rpListCtrl', function (scope) {
     scope.listManager = listManager;
 
     window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
+    window._GET_RP_KEY = function (rp, tagType) {
+        return rp.isLine ? ('line.'+rp.title+'.'+tagType) : (rp.alias || rp.title);
+    };
+    window._GET_RP_KEY2 = function (rp, input) {
+        return  rp.isLine ?  ((rp.alias || rp.title) + '.' + input) : (rp.alias || rp.title || input);
+    };
 
     // 把rp里的options选项里的 type tag ID，换成对应tag元素组
     function getTagsForRp (arr) {
+        let map = {};
         if (Array.isArray(arr)) {
-            // 如果只有一个标签选项，并且这个选项是type类型的标签，则把这个标签替换成该类型的所有标签
+            arr.forEach((typeTagId) => {
+                let tag = window.TAGS_MAP_BY_ID[typeTagId];
+                let type = tag.text;
+                map[type] = window.TAGS_MAP[type] || [];  // 对应的标签数组
+            });
+            return map;
+
+            /*// 如果只有一个标签选项，并且这个选项是type类型的标签，则把这个标签替换成该类型的所有标签
             if (arr.length === 1) {
                 let id = arr[0];
                 let o = window.TAGS_MAP_BY_ID[id];
@@ -83,7 +97,7 @@ brick.reg('rpListCtrl', function (scope) {
                 }
             }
 
-            return arr;
+            return arr;*/
 
         } else {
             return arr;
@@ -121,7 +135,6 @@ brick.reg('rpListCtrl', function (scope) {
             let arr2 = rpMapByType[v.type || '_null'] = rpMapByType[v.type || '_null'] || [];
             arr2.push(v);
         });
-        console.log(2222, rpMapByType);
         return rpMapByType;
     }
 
@@ -151,11 +164,6 @@ brick.reg('rpListCtrl', function (scope) {
         rpList = rpList.map((item) => {
             let options = item.options;
             item._options = getTagsForRp(options);
-            if(options && options.length){
-                let id = options[0];
-                let o = window.TAGS_MAP_BY_ID[id];
-                item.TagType = o.text;  // 显示options对应的tag type
-            }
             return item;
         });
 
@@ -206,11 +214,11 @@ brick.reg('rpListCtrl', function (scope) {
 
     // 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
     //scope.on(GET_TAGS_DONE, function (e, data) {
-        $.when(window.GET_TAGS_DEF, getRpDef, getReplayDef).done((d1, d2, d3) => {
-            console.log('when', d1, d2, d3);
-            setList(d2, d3);
-        });
-   // });
+    $.when(window.GET_TAGS_DEF, getRpDef, getReplayDef).done((d1, d2, d3) => {
+        console.log('when', d1, d2, d3);
+        setList(d2, d3);
+    });
+    // });
 
     // 处理tag数据改变事件
     scope.on(TAGS_CHANGE, function (e, data) {
@@ -259,7 +267,7 @@ brick.reg('rpListCtrl', function (scope) {
     // 创建rp对应的tag
     scope.createTagByRp = function (e, id) {
         let rp = listManager.get(id);
-        scope.emit(ADD_TAG, {type: rp.type, text:rp.title});
+        scope.emit(ADD_TAG, {type: rp.type, text: rp.title});
         return false;
     };
 
@@ -277,10 +285,10 @@ brick.reg('rpListCtrl', function (scope) {
     };
 
     //
-    scope.copy = function (e, id) {
+    scope.copy = function (e, id, isLine) {
         let item = listManager.get(id);
         delete item.id;
-        scope.emit('setRp', item);
+        scope.emit(isLine ? 'SET_LINE' : 'setRp', item);
     };
 
     scope.delBeforeConfirm = function (e) {
@@ -293,8 +301,13 @@ brick.reg('rpListCtrl', function (scope) {
     };
 
     // 添加主线热点
-    scope.addLine = function (e, id) {
-        scope.emit('addLine', listManager.get(id));
+    /* scope.addLine = function (e, id) {
+         scope.emit('addLine', listManager.get(id));
+     };*/
+
+    scope.setLine = function (e, id) {
+        let line = id ? listManager.get(id) : null;
+        scope.emit('SET_LINE', line);
     };
 
     // re

@@ -25,8 +25,8 @@ export default {
         let dob = getDb();
         let data = req.body;
         // 不设为[], 则不会更新items数组项，客户端ajax也无法传输[]或''；
-        if(data.items === undefined) {
-            data.items = [];
+        if(data.options === undefined) {
+            data.options = [];
         }
         dob.set(data);
         res.json(getData());

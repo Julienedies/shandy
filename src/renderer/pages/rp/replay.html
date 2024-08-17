@@ -6,7 +6,42 @@
 
     <div class="column" style="padding-top:4em;">
 
-        <div ic-tpl="replay">
+        <table class="table is-fullwidth is-bordered is-striped" ic-tpl="replay">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>资金方向</th>
+                    <th>变量</th>
+                    <th>客观表现</th>
+                    <th></th>
+                    <th>预判可能的走势及应对</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>{{ model.week }}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr ic-for="i, v in model['line']">
+                    <td>{{ model.week }}</td>
+                    <td> {{ i }}</td>
+                    <td>{{ v['行情生命周期'] }}</td>
+                    <td>{{ v['节奏'] }}</td>
+                    <td>{{ v['板块走势推演'] }}</td>
+                    <td>{{ v['应对'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <div ic-tpl="replay2">
             <ul style="padding:0 0 0 5%;" ic-init="o = model;">
                 <li ic-for="i,v in model" ic-if="v">
                     <div ic-init="tag=TAGS_MAP_BY_ID[v], p=RP_MAP[i];">

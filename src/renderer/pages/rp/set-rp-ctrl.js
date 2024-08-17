@@ -23,20 +23,25 @@ export default function () {
     let $elm = scope.$elm;
     let $editor;
     let model = {};
+    let isAction = false; // 是否处于激活状态
 
     scope.on('setRp', function (e, data) {
         brick.view.to('setRp');
+        isAction = true;
         model = data || {};
         scope.emit(READY_SELECT_TAGS, model.options);
+        console.log(99999, model);
         render();
     });
 
     scope.on(TAG_SELECT_CHANGE, function (e, data) {
         console.log('ON_TAG_SELECT_CHANGE', data);
-        model = getFormVm();
-        model.content = $editor.froalaEditor('html.get', true);
-        model.options = data.value;
-        render();
+        if(isAction){
+            model = getFormVm();
+            model.content = $editor.froalaEditor('html.get', true);
+            model.options = data.value;
+            render();
+        }
     });
 
     function getFormVm () {
@@ -60,18 +65,21 @@ export default function () {
         //$editor.froalaEditor('destroy');
     };
 
+
+
     this.done = function (data) {
         scope.emit('rp.change', data);
         brick.view.to('rpList');
+        isAction = false;
+    };
+
+    this.cancel = function (e) {
+        brick.view.to('rpList');
+        isAction = false;
     };
 
     this.reset = function () {
         scope.render('setRp', {model: {}});
     };
-
-    this.cancel = function (e) {
-        brick.view.to('rpList');
-    };
-
 
 }

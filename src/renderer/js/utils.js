@@ -92,6 +92,18 @@ function formatDate2 () {
     return m.format(f)
 }
 
+/**
+ *  获取是周几
+ * @param dateString  '2024-08-16'
+ * @returns {number}
+ */
+function getDayOfWeek(dateString) {
+    // 创建Date对象
+    const date = new Date(dateString);
+    // 获取星期几，0表示星期天，1表示星期一，以此类推
+    return date.getDay();
+}
+
 
 ////////////////////////////////////////////////////////////////
 // export
@@ -102,6 +114,7 @@ try {
     window.sortByPy = sortByPy;
     window.formatDate = formatDate;
     window.formatDate2 = formatDate2;
+    window.getDayOfWeek = getDayOfWeek;
 } catch (e) {
     console.error(e);
 }

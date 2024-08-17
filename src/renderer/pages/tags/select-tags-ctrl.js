@@ -14,16 +14,14 @@ export default function () {
 
     // tags数据保存在setTagCtrl
     scope.on(`${GET_TAGS_DONE}, ${TAGS_CHANGE}`, function (e, data) {
-        console.log(data);
-        model.tags = data;
+        model.tags = data;  // 保持最新的tags数据
         render();
     });
 
 
-    // 准备选择标签，设置默认选择项
+    // 准备选择标签事件
     scope.on(READY_SELECT_TAGS, function (e, data) {
-        //console.log('READY_SELECT_TAGS', data);
-        model.selected = data || [];
+        model.selected = data || [];  // data => rp.options数据
         render();
     });
 
@@ -33,6 +31,7 @@ export default function () {
         scope.emit(TAG_SELECT_CHANGE, data);
     };
 
+    //
     function render () {
         scope.render('selectTags', {model});
     }

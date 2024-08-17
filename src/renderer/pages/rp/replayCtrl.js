@@ -18,9 +18,41 @@ export default function () {
     scope.on('createReplay', function (e, rpForm) {
         brick.view.to('replay');
         model = rpForm || {};
-        scope.render('replay', {model});
+        let vm = fixData (rpForm);
+        scope.render('replay', {model:vm});
+        scope.render('replay2', {model});
     });
 
+
+    function fixData (rpForm) {
+        let result = {};
+
+        for( let i in rpForm){
+
+            let value = rpForm[i];
+
+            let chain = i.split('.');
+
+            (function fx (chain, result) {
+
+                let k = chain.shift();
+
+                let o = {};
+
+                if (chain.length) {
+                    o = result[k] = result[k] || o;
+                    return fx(chain, o);
+                }
+
+                result[k] = value;
+
+            })(chain, result);
+
+        }
+        result.week = window.getDayOfWeek(rpForm.date);
+        console.log(result);
+        return result;
+    }
 
 
 }

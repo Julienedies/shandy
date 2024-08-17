@@ -29,7 +29,7 @@
                                 Re
                             </button>
                             <button class="button is-primary is-small" ic-click="addRp">新Item</button>
-                            <button class="button is-primary is-small" ic-click="addPoint">新Item</button>
+                            <button class="button is-primary is-small" ic-click="setLine">line</button>
                             <button class="button is-primary is-small" ic-click="createReplay">归纳复盘</button>
                             <button class="button is-primary is-small" ic-click="toggleForm">显示表单</button>
                             <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>
@@ -42,96 +42,112 @@
             <div id="mainContent" ic-tpl="rpList">
                 <div id="rpForm" ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm;">
                     <ul>
-                        <li class="box" ic-for="i,v in rpList" data-id="{{ v.id }}" id="{{ 'k'+v.id }}" draggable="true" ic-dragstart="dragstart"
+                        <li class="box" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}" draggable="true" ic-dragstart="dragstart"
                             ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
-                            <header ic-click="toggle" ic-class="role_{{ v.role }}">
-                                <h3>{{ v.title }}
-                                    <b>{{ v.caution }} </b>
+                            <header ic-click="toggle" ic-class="role_{{ rp.role }}">
+                                <h3>{{ rp.title }}
+                                    <b>{{ rp.caution }} </b>
                                 </h3>
-                                <h5 class="caution" ic-if="v.caution"></h5>
+                                <h5 class="caution" ic-if="rp.caution"></h5>
                             </header>
 
                             <div class="wrap">
 
                                 <!-- 是否有嵌入的子元素 -->
-                                <div class="box" ic-if="v.inset">
-                                    -----------------
-                                </div>
+                               <!-- <div class="box" ic-if="rp.inset">
+                                </div>-->
 
-                                <!-- 是否有标签选项 -->
-                                <div class="field is-grouped is-grouped-multiline" ic-if="v._options && v._options.length"
-                                     ic-select
-                                     ic-select-auto="false"
-                                     ic-select-type="checkbox"
-                                     ic-select-cla="is-danger"
-                                     ic-select-item="span.button"
-                                     ic-form-field="{{ v.alias || v.title }}">
+                                <!-- 是否有标签选项  -->
+                                <div class="options" ic-if="rp.options && rp.options.length">
+                                    <div class="field is-grouped is-grouped-multiline"
+                                         ic-for="tagType,tagArr in rp._options"
+                                         ic-select="{{ _GET_RP_KEY(rp, tagType) }}"
+                                         ic-select-auto="false"
+                                         ic-select-type="checkbox"
+                                         ic-select-cla="is-danger"
+                                         ic-select-item="span.button"
+                                         ic-form-field="{{ _GET_RP_KEY(rp, tagType) }}">
 
-                                    <div class="control" ic-for="j,k in v._options">
-                                        <div class="buttons has-addons" ic-init="o=TAGS_MAP_BY_ID[k]; m=rpForm[v.alias] || rpForm[v.title] ||[];">
-                                            <span class="button is-light" ic-if-start="o.type==='交易错误'||o.type==='要解决的问题'" ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
-                                                {{ o.text }}
-                                            </span>
-                                            <span class="button" ic-else-if="o.type==='交易要素'" ic-val="{{ o.text }}">
-                                                {{ o.text }}
-                                            </span>
-                                            <span class="button is-light" ic-else ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
-                                                {{ o.text }}
-                                            </span>
-                                            <a class="button is-light" ic-click="editTag:{{o.id}}">
-                                                <span class="icon"><i class="far fa-edit"></i></span>
+                                        <div class="control">
+                                            <span class="button is-primary">{{ tagType }}</span>
+                                        </div>
+                                        <div class="control" ic-for="j,o in tagArr">
+                                            <div class="buttons has-addons" ic-init="m=rpForm[_GET_RP_KEY(rp, tagType)] ||[];">
+                                                <span class="button is-light" ic-if-start="o.type==='交易错误'" ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
+                                                    {{ o.text }}
+                                                </span>
+                                                    <span class="button" ic-else-if="o.type==='交易要素'" ic-val="{{ o.text }}">
+                                                    {{ o.text }}
+                                                </span>
+                                                    <span class="button is-light" ic-else ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
+                                                    {{ o.text }}
+                                                </span>
+                                                <a class="button is-light" ic-click="editTag:{{o.id}}">
+                                                    <span class="icon"><i class="far fa-edit"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="control">
+                                            <a class="tag" ic-click="addTag:{{ tagType }}">
+                                                <span class="icon"><i class="fas fa-file-medical"></i></span>
                                             </a>
                                         </div>
-                                    </div>
 
-                                    <div class="control">
-                                        <a class="tag is-medium" ic-click="addTag:{{ v.TagType }}">
-                                            <span class="icon"><i class="fas fa-file-medical"></i></span>
-                                        </a>
                                     </div>
-
                                 </div>
 
                                 <!-- 是否表单输入框 -->
-                                <div style="padding-bottom: 0.5em;" ic-if="v.input">
-                                    <textarea class="textarea is-medium" ic-form-field="{{ v.id }}" rows="1">{{ rpForm[v.id] }}</textarea>
+                                <div ic-if="rp.input">
+                                    <div class="field has-addons" ic-for="i,v in rp.input.split(',')" style="padding: 0.5em 0 0;">
+                                        <div class="control">
+                                            <button class="button">
+                                                {{ v }}
+                                            </button>
+                                        </div>
+                                        <div class="control is-expanded">
+                                            <textarea class="textarea is-medium" ic-form-field="{{ _GET_RP_KEY2(rp,v) }}" rows="1">{{ rpForm[_GET_RP_KEY2(rp,v)] }}</textarea>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <h6 class="comment" ic-if="v.comment" style="padding: 0.1em"> {{ v.comment }} </h6>
 
-                                <div class="pre text" ic-dblclick="toggle">{{ v.content }}</div>
+                                <h6 class="comment" ic-if="rp.comment" style="padding: 0.1em"> {{ rp.comment }} </h6>
+
+                                <div class="pre text" ic-dblclick="toggle">{{ rp.content }}</div>
 
                                 <div style="padding: 2px 0;">
                                     <div class="tags is-right">
-                                        <span class="tag is-small" title="rp的别名" ic-if="v.alias"> {{ v.alias }}</span>
-                                        <span class="tag is-small" title="关联的tag类型" ic-if="v.TagType"> {{ v.TagType }}</span>
-                                        <span class="tag is-small"> {{ v.level || 0 }}</span>
-                                        <!--<span class="tag is-small" ic-click="onFilterKeyChange2:{{ v.type }}"> {{ v.type }}</span>-->
-                                        <span class="tag is-small" ic-click="addLine:{{ v.id }}" ic-if="v.inset">
-                                            <i class="fas fa-plus" title="添加项"></i>
-                                        </span>
-                                        <span class="tag is-small" ic-click="edit:{{ v.id }}">
+                                        <span class="tag is-small" title="rp的别名" ic-if="rp.alias"> {{ rp.alias }}</span>
+                                        <!--<span class="tag is-small" title="关联的tag类型" ic-if="rp.TagType"> {{ rp.TagType }}</span>-->
+                                        <span class="tag is-small"> {{ rp.level || 0 }}</span>
+                                        <!--<span class="tag is-small" ic-click="onFilterKeyChange2:{{ rp.type }}"> {{ rp.type }}</span>-->
+                                        <span class="tag is-small" ic-click="setLine:{{ rp.id }}" ic-if="rp.isLine">
+                                            <!--<i class="fas fa-plus" title="添加项"></i>-->
                                             <i class="far fa-edit" title="编辑"></i>
                                         </span>
-                                        <span class="tag is-small" ic-click="copy:{{ v.id }}">
+                                        <span class="tag is-small" ic-click="edit:{{ rp.id }}" ic-if="!!!rp.isLine">
+                                            <i class="far fa-edit" title="编辑"></i>
+                                        </span>
+                                        <span class="tag is-small" ic-click="copy:{{ rp.id }}:{{ rp.isLine }}">
                                             <i class="far fa-copy" title="拷贝"></i>
                                         </span>
-                                        <span class="tag is-small" ic-click="plus:{{ v.id }}">
+                                        <span class="tag is-small" ic-click="plus:{{ rp.id }}">
                                             <i class="fas fa-long-arrow-alt-up" title="加权"></i>
                                         </span>
-                                        <!--<span class="tag is-small" ic-click="focus:{{ v.id }}">置顶   long-arrow-alt-up </span>-->
+                                        <!--<span class="tag is-small" ic-click="focus:{{ rp.id }}">置顶   long-arrow-alt-up </span>-->
 
-                                        <span ic-class="tag is-small {{ v.re==='true' ? 'is-primary':'' }}" ic-click="re:{{ v.id }}">
+                                        <span ic-class="tag is-small {{ rp.re==='true'?'is-primary':'' }}" ic-click="re:{{ rp.id }}" ic-if="!!!rp.isLine">
                                             <i class="far fa-star" title="Re"></i>
                                         </span>
-                                        <span class="tag is-small"  ic-click="createTagByRp:{{ v.id }}">
+                                        <span class="tag is-small"  ic-click="createTagByRp:{{ rp.id }}" ic-if="!!!rp.isLine">
                                             <i class="fas fa-retweet" title="生成对应的tag"></i>
                                         </span>
                                         <span class="tag is-small"
                                               ic-ajax
                                               ic-submit-method="delete"
-                                              ic-submit-action="/stock/rp/{{v.id}}"
+                                              ic-submit-action="/stock/rp/{{rp.id}}"
                                               ic-submit-before="delBeforeConfirm"
                                               ic-submit-on-done="onDelRpDone"><i class="fas fa-trash-alt" title="删除"></i></span>
                                     </div>
@@ -144,16 +160,16 @@
                         <div>
                             <div>
                                 <div class="field is-grouped">
-                                    <div class="control">阶段变量</div>
+                                    <div class="control"> 消息面</div>
                                     <div class="control is-expanded">
-                                        <textarea class="textarea" ic-form-field="阶段变量" rows="6">{{ rpForm['阶段变量'] }}</textarea>
+                                        <textarea class="textarea" ic-form-field="消息面" rows="6">{{ rpForm['消息面'] }}</textarea>
                                     </div>
                                 </div>
 
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control">交易计划</div>
                                     <div class="control is-expanded">
-                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="20">{{ rpForm['交易计划'] }}</textarea>
+                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="18">{{ rpForm['交易计划'] }}</textarea>
                                     </div>
                                 </div>
 
@@ -190,185 +206,9 @@
     </div>
 
 
-    <div ic-ctrl="setRpCtrl" ic-view="setRp" ic-view-ani-id="42">
-        <div class="column">
-            <div ic-tpl="setRp" ic-tpl-init="{}">
-                <div ic-form="setRp">
-                    <div class="field has-addons">
-                        <div class="control">
-                            <button class="button is-info">标题</button>
-                        </div>
-                        <div class="control is-expanded">
-                            <input class="input" type="text" placeholder="Text input" value="{{ model.title }}" ic-form-field="title">
-                            <input type="hidden" value="{{ model.id }}" ic-form-field="id">
-                        </div>
-                        <p class="control">
-                            <span class="select">
-                              <select name="type" ic-form-field>
-                                  <option ic-for="i,o in TAGS_MAP['rpmqs']" value="{{o.text}}" ic-has-selected="o.text==model.type">
-                                      {{ o.text }}
-                                  </option>
-                                  <!-- <option value="rp" ic-has-selected="'rp'==model.type">复盘&计划</option>
-                                   <option value="question" ic-has-selected="'question'==model.type">问题</option>
-                                   <option value="mistake" ic-has-selected="'mistake'==model.type">错误</option>
-                                   <option value="warn" ic-has-selected="'warn'==model.type">警告</option>
-                                   <option value="idea" ic-has-selected="'idea'==model.type">理念</option>
-                                   <option value="市场" ic-has-selected="'市场'==model.type">市场</option>-->
-                              </select>
-                            </span>
-                        </p>
-                    </div>
+    ${ require('./set-rp.html') }
 
-                    <div class="field has-addons">
-                        <div class="control">
-                            <button class="button is-info">提醒</button>
-                        </div>
-                        <div class="control is-expanded">
-                            <input class="input" type="text" placeholder="Text input" value="{{ model.caution }}" ic-form-field="caution">
-                        </div>
-                    </div>
-
-                    <div class="field has-addons">
-                        <div class="control">
-                            <button class="button is-info">备注</button>
-                        </div>
-                        <div class="control is-expanded">
-                            <input class="input" type="text" placeholder="Text input" value="{{ model.comment }}" ic-form-field="comment">
-                        </div>
-                    </div>
-
-                    <div class="field has-addons">
-                        <div class="control">
-                            <button class="button is-info">别名</button>
-                        </div>
-                        <div class="control is-expanded">
-                            <input class="input" type="text" placeholder="Text input" value="{{ model.alias }}" ic-form-field="alias">
-                        </div>
-                    </div>
-
-                    <!-- 添加所属项 -->
-                    <div class="field is-grouped is-grouped-multiline" ic-select="options" ic-select-type="checkbox" ic-form-field="options">
-                        <div class="control" ic-for="i,v in model.options">
-                            <div class="tags has-addons">
-                            <span class="tag is-medium" ic-select-item ic-val="{{ v }}" selected>
-                                {{ TAGS_MAP_BY_ID[v].text }}
-                            </span>
-                            </div>
-                        </div>
-
-                        <p class="control"> <!-- ic-view-to="tags" ic-click="gotoAddItems"-->
-                            <button class="button is-primary is-fullwidth" ic-popup-target="selectTags">
-                                添加新项
-                            </button>
-                        </p>
-                    </div>
-
-                    <!-- 添加标签 -->
-<!--                    <div class="field is-grouped is-grouped-multiline" ic-select="items" ic-select-type="checkbox" ic-form-field="tags">
-                        <div class="control" ic-for="i,v in model.tags">
-                            <div class="tags has-addons">
-                            <span class="tag is-medium" ic-select-item ic-val="{{ v }}" selected>
-                                {{ TAGS_MAP_BY_ID[v].text }}
-                            </span>
-                            </div>
-                        </div>
-
-                        <p class="control">
-                            <button class="button is-primary is-fullwidth" ic-click="gotoAddTags" ic-popup-target="selectTags">
-                                添加新项
-                            </button>
-                        </p>
-                    </div>-->
-
-
-                    <!-- 按钮组 -->
-                    <div class="field has-addons">
-                        <div class="control" style="width:48%;">
-                            <button class="button is-primary"
-                                    style="width:300px;"
-                                    ic-form-submit
-                                    ic-submit-action="/stock/rp"
-                                    ic-submit-before="before"
-                                    ic-submit-on-done="done">保存
-                            </button>
-                            <button class="button" ic-click="reset" style="width:100px;">
-                                重置
-                            </button>
-                            <button class="button" ic-click="cancel" style="width:100px;">取消</button>
-                            <button class="button" ic-view-to="rpList" style="width:100px;">
-                                返回
-                            </button>
-                        </div>
-
-                        <div class="control" style="width:5px;"></div>
-
-                        <div class="control">
-                            <button class="button">level</button>
-                        </div>
-
-                        <div class="control">
-                            <input class="input" type="number" step="5" name="level" ic-form-field ic-value="{{ model.level||1900 }}">
-                        </div>
-
-                        <div class="control">
-                            <button class="button">role</button>
-                        </div>
-
-                        <div class="control">
-                            <p class="select">
-                                <select name="role" ic-form-field>
-                                    <option value="0" ic-has-selected="model.role==0">问题&错误</option>
-                                    <option value="1" ic-has-selected="model.role==1">复盘思考</option>
-                                    <option value="2" ic-has-selected="model.role==2">关键理念</option>
-                                    <option value="3" ic-has-selected="model.role==3">错误&警告</option>
-                                    <option value="4" ic-has-selected="model.role==4">replay</option>
-                                </select>
-                            </p>
-                        </div>
-
-                        <div class="control" style="width:20px;"></div>
-
-                        <div class="control">
-                            <label class="checkbox">
-                                <input type="checkbox" name="re" ic-has-checked="model.re==='true'" ic-form-field="re" value="true">
-                                is Re <!--  onclick="this.value=this.checked ? 'true':'false';" brick form指令里，checked选中，则获取value值，否则为''-->
-                            </label>
-                        </div>
-
-                        <div class="control" style="width:20px;"></div>
-
-                        <div class="control">
-                            <label class="checkbox">
-                                <input type="checkbox" name="input" ic-form-field="input" ic-has-checked="model.input==='true'" value="true">
-                                is input
-                            </label>
-                        </div>
-
-                    <div class="control" style="width:20px;"></div>
-
-                    <div class="control">
-                        <label class="checkbox">
-                            <input type="checkbox" name="inset" ic-form-field ic-has-checked="model.inset==='true'" value="true">
-                            is inset
-                        </label>
-                    </div>
-
-
-
-                </div>
-
-                    <div class="field">
-                        <div class="control">
-                            <textarea id="editor" rows="14" class="textarea" placeholder="内容" ic-form-field="content"></textarea>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    ${ require('./addLine.html') }
+    ${ require('./set-line.html') }
 
     ${ require('./replay.html') }
 

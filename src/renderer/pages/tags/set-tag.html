@@ -13,9 +13,9 @@
                            ic-select-input="tagType"
                            ic-has-readonly="model.type"
                            ic-form-field
-                           ic-field-rule="required">
+                           ic-field-rule="required"> <!--文本输入框 设定tag类型 -->
 
-                    <div ic-if="model.types">
+                    <div ic-if="model.types">  <!--选择按钮组 设定tag类型 -->
                         <div ic-select="tagType" ic-select-type="radio" ic-select-cla="is-info" ic-form-field="type">
                             <div class="tags">
                                 <span class="tag is-medium"

@@ -52,6 +52,10 @@ html, body {
     margin-bottom: 2.5rem;
   }
 
+  .options .button {
+    font-size: 0.88rem;
+  }
+
   .tag:not(body).is-medium {
     font-size: 1rem;
   }
@@ -114,7 +118,7 @@ html, body {
         background: yellow;
 
         h3 {
-          color: #000;
+          color: black;
         }
       }
 
@@ -145,10 +149,19 @@ html, body {
       }
 
       &.role_4 {
-        background: blue!important;
+        background: blue !important;
 
         h3 {
           color: white;
+        }
+      }
+
+      &.role_5 {
+        background: #02c01f;
+        background: #00d1b2;
+
+        h3 {
+          color: #fff;
         }
       }
 
@@ -167,9 +180,9 @@ html, body {
           font-weight: inherit;
         }
 
-        .createTag{
+        .createTag {
           float: right;
-          margin-top:6px;
+          margin-top: 6px;
           color: white;
           font-size: 0.6em;
         }
@@ -216,6 +229,11 @@ html, body {
 
 }
 
+.buttons-row {
+  .control {
+    padding-left: 3em;
+  }
+}
 
 .table_4 {
   .tr {
