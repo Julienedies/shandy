@@ -79,7 +79,7 @@ socket.on('cls_news', (msg) => {
 
     timer = setTimeout(() => {
         $news.removeClass(activeCla2);
-    }, 19 * 1000);
+    }, 7 * 1000);
 
     /*    if (win) {
         showWin();

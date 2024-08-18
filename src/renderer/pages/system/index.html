@@ -106,31 +106,35 @@
                                         {{ parseImgName(o) }}
                                     </span>
                             </div>
+
+                            <div>
+                                <!-- column is-2 -->
+                                <div class="buttons" style="flex-grow:0; flex-shrink:0; min-width: auto;">
+                                    <button class="button" ic-click="edit:{{v.id}}">编辑</button>
+                                    <button class="button" ic-click="view:{{ v.id }}" ic-popup-target="details">详情</button>
+                                    <button class="button"
+                                            ic-ajax
+                                            ic-submit-method="get"
+                                            ic-submit-action="/stock/system/move/{{v.id}}/"
+                                            ic-submit-on-done="onGetSystemDone">置顶
+                                    </button>
+                                    <button class="button"
+                                            ic-ajax
+                                            ic-submit-method="get"
+                                            ic-submit-action="/viewer/refresh?id={{ v.id }}"
+                                            ic-submit-on-done="onRefreshed">刷新</button>
+                                    <button class="button"
+                                            ic-ajax
+                                            ic-submit-method="delete"
+                                            ic-submit-action="/stock/system/{{v.id}}"
+                                            ic-submit-before="ajax_before_confirm:确认删除?"
+                                            ic-submit-on-done="onDeleteDone">删除
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- column is-2 -->
-                        <div class="buttons" style="flex-grow:0; flex-shrink:0; min-width: auto;">
-                            <button class="button" ic-click="edit:{{v.id}}">编辑</button>
-                            <button class="button" ic-click="view:{{ v.id }}" ic-popup-target="details">详情</button>
-                            <button class="button"
-                                    ic-ajax
-                                    ic-submit-method="get"
-                                    ic-submit-action="/stock/system/move/{{v.id}}/"
-                                    ic-submit-on-done="onGetSystemDone">置顶
-                            </button>
-                            <button class="button"
-                                    ic-ajax
-                                    ic-submit-method="get"
-                                    ic-submit-action="/viewer/refresh?id={{ v.id }}"
-                                    ic-submit-on-done="onRefreshed">刷新</button>
-                            <button class="button"
-                                    ic-ajax
-                                    ic-submit-method="delete"
-                                    ic-submit-action="/stock/system/{{v.id}}"
-                                    ic-submit-before="ajax_before_confirm:确认删除?"
-                                    ic-submit-on-done="onDeleteDone">删除
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </li>

@@ -58,7 +58,7 @@ ViewerMap.instance = {
         this._refresh(0);
         setTimeout(()=> {
             that._refresh();
-        }, 300);
+        }, 500);
 
     },
 
@@ -107,7 +107,7 @@ ViewerMap.instance = {
 
         // 强制更新，objm init 会触发change事件
         viewerMapJsonDb.init(VIEWER_MAP);
-        console.log('viewerMap OK!');
+        console.log(`${ f } ok!`);
         //return VIEWER_MAP;
     },
 
