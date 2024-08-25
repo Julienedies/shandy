@@ -7,19 +7,19 @@ import _tags from './tags.js'
 
 const tags = _tags.tags;
 
-let replay;
+let replayDb;
 
 function initDb () {
-    replay = replay || dob('replay', {key: 'date'});
-    return replay;
+    replayDb = replayDb || dob('replay', {key: 'date'});
+    return replayDb;
 }
 
 
 function getData (date) {
     let result = {};
-    let list = replay.get();
+    let list = replayDb.get();
     if (date) {
-        let item = replay.get2(date, 'date');
+        let item = replayDb.get2(date, 'date');
         if (item) {
             result = item;
         } else {
@@ -47,14 +47,15 @@ export default {
         initDb();
         let obj = req.body;
         let date = obj.date;
-        replay.set(obj);
+        replayDb.remove(date);
+        replayDb.add(obj);
         res.json(getData(date));
     },
 
     del (req, res) {
         initDb();
         let id = req.params.id;
-        replay.remove(id, 'id');
+        replayDb.remove(id, 'id');
         res.json(getData());
     },
 

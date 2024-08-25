@@ -20,8 +20,8 @@
                         <div class="buttons is-centered" ic-select="tags" ic-select-auto="false" ic-select-cla="is-primary"
                              ic-select-on-change="onFilterKeyChange">
 
-                            <button ic-for="i,o in TAGS_MAP['rpmqs']" ic-select-item ic-val="{{ o.text }}" ic-has-selected="o.text==model.filterByType"
-                                    class="button is-small"> <!--  {{ o.text==model.filterByType?'is-primary':''  }}   {{ RPMQS_MAP[v] }} -->
+                            <button class="button is-small" ic-for="i,o in TAGS_MAP['rpmqs']" ic-select-item ic-val="{{ o.text }}" ic-has-selected="o.text==model.filterByType">
+                                    <!--  {{ o.text==model.filterByType?'is-primary':''  }}   {{ RPMQS_MAP[v] }} -->
                                     {{ o.text }}
                             </button>
 
@@ -29,7 +29,8 @@
                                 Re
                             </button>
                             <button class="button is-primary is-small" ic-click="addRp">新Item</button>
-                            <button class="button is-primary is-small" ic-click="setLine">line</button>
+                            <button class="button is-primary is-small" ic-click="setLine">新line</button>
+                            <button class="button is-primary is-small" ic-click="filterLine">line</button>
                             <button class="button is-primary is-small" ic-click="createReplay">归纳复盘</button>
                             <button class="button is-primary is-small" ic-click="toggleForm">显示表单</button>
                             <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>
@@ -42,7 +43,7 @@
             <div id="mainContent" ic-tpl="rpList">
                 <div id="rpForm" ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm;">
                     <ul>
-                        <li class="box" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}" draggable="true" ic-dragstart="dragstart"
+                        <li ic-class="box {{ rp.role==='5'?'line':'' }}" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}" draggable="true" ic-dragstart="dragstart"
                             ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
 
                             <header ic-click="toggle" ic-class="role_{{ rp.role }}">
@@ -66,21 +67,21 @@
                                          ic-select-auto="false"
                                          ic-select-type="checkbox"
                                          ic-select-cla="is-danger"
-                                         ic-select-item="span.button"
+                                         ic-select-item="span.item"
                                          ic-form-field="{{ _GET_RP_KEY(rp, tagType) }}">
 
                                         <div class="control">
-                                            <span class="button is-primary">{{ tagType }}</span>
+                                            <span class="button is-primary">{{ _GET_RP_KEY(rp, tagType) }}</span>
                                         </div>
                                         <div class="control" ic-for="j,o in tagArr">
                                             <div class="buttons has-addons" ic-init="m=rpForm[_GET_RP_KEY(rp, tagType)] ||[];">
-                                                <span class="button is-light" ic-if-start="o.type==='交易错误'" ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
+                                                <span class="button is-light item" ic-if-start="o.type==='交易错误'" ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
                                                     {{ o.text }}
                                                 </span>
-                                                    <span class="button" ic-else-if="o.type==='交易要素'" ic-val="{{ o.text }}">
+                                                    <span class="button item" ic-else-if="o.type==='交易要素'" ic-val="{{ o.text }}">
                                                     {{ o.text }}
                                                 </span>
-                                                    <span class="button is-light" ic-else ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
+                                                    <span class="button is-light item" ic-else ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
                                                     {{ o.text }}
                                                 </span>
                                                 <a class="button is-light" ic-click="editTag:{{o.id}}">
@@ -100,14 +101,14 @@
 
                                 <!-- 是否表单输入框 -->
                                 <div ic-if="rp.input">
-                                    <div class="field has-addons" ic-for="i,v in rp.input.split(',')" style="padding: 0.5em 0 0;">
+                                    <div class="field has-addons" ic-for="i,v in rp.input.split(/[,、，]/img)" style="padding: 0.6em 0 0;">
                                         <div class="control">
                                             <button class="button">
-                                                {{ v }}
+                                                {{ _GET_RP_KEY2(rp,v) }}
                                             </button>
                                         </div>
                                         <div class="control is-expanded">
-                                            <textarea class="textarea is-medium" ic-form-field="{{ _GET_RP_KEY2(rp,v) }}" rows="1">{{ rpForm[_GET_RP_KEY2(rp,v)] }}</textarea>
+                                            <textarea class="textarea is-link" ic-form-field="{{ _GET_RP_KEY2(rp,v) }}" rows="{{rp.rows||2}}">{{ rpForm[_GET_RP_KEY2(rp,v)] }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -162,14 +163,14 @@
                                 <div class="field is-grouped">
                                     <div class="control"> 消息面</div>
                                     <div class="control is-expanded">
-                                        <textarea class="textarea" ic-form-field="消息面" rows="6">{{ rpForm['消息面'] }}</textarea>
+                                        <textarea class="textarea" ic-form-field="消息面" rows="10">{{ rpForm['消息面'] }}</textarea>
                                     </div>
                                 </div>
 
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control">交易计划</div>
                                     <div class="control is-expanded">
-                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="18">{{ rpForm['交易计划'] }}</textarea>
+                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="16">{{ rpForm['交易计划'] }}</textarea>
                                     </div>
                                 </div>
 

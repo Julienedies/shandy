@@ -75,7 +75,14 @@
             <div>
                 <h6>优先级</h6>
                 <div>
-                    <input class="input is-medium" type="number" name="level" ic-value="{{model.level}}" ic-form-field>
+                    <input class="input is-medium" type="number" name="level" ic-value="{{model.level||0}}" ic-form-field>
+                </div>
+            </div>
+
+            <div>
+                <h6>权重</h6>
+                <div>
+                    <input class="input is-medium" type="number" name="weight" ic-value="{{model.weight||0}}" ic-form-field>
                 </div>
             </div>
 

@@ -74,12 +74,12 @@
                 <div class="tr">
                     <h6 class="td">客观表现/日内走势</h6>
                     <div class="td">
-                        <div class="field is-grouped is-grouped-multiline" ic-select="行情驱动因素" ic-form-field="">
+                        <div class="field is-grouped is-grouped-multiline" ic-select="行情驱动因素">
                             <div class="control" ic-for="i,v in tags['行情驱动因素']">
                                 <div class="tags has-addons">
                                 <span class="tag"
                                       ic-select-item
-                                      ic-has-selected="line['行情驱动因素']===v.text ? 'is-warning':''"
+                                      ic-has-selected="line['行情驱动因素']===v.text"
                                       ic-val="{{v.text}}">{{v.text}}
                                 </span>
                                     <a class="tag" ic-click="editTag:{{v.id}}">
@@ -90,13 +90,13 @@
                                        ic-submit-data="{{v.text}}"
                                        ic-submit-method="delete"
                                        ic-submit-action="/stock/tags/{{v.id}}"
-                                       ic-submit-on-done="onTagDeleteDone"
-                                    ></a>
+                                       ic-submit-on-done="onTagDeleteDone">
+                                    </a>
                                 </div>
                             </div>
                             <div class="control">
                                 <div class="tags has-addons">
-                                    <a class="tag" ic-click="tag_add:行情驱动因素">
+                                    <a class="tag" ic-click="addTag:行情驱动因素">
                                         <span class="icon"><i class="fas fa-file-medical"></i></span>
                                     </a>
                                 </div>
@@ -110,7 +110,7 @@
                     <h6 class="td">预判可能的走势及应对</h6>
                     <div class="td">
                         <div class="control">
-                            <textarea rows="3" class="textarea">{{line.note}}</textarea>
+                            <textarea rows="2" class="textarea"></textarea>
                         </div>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
                                 <button class="button">level</button>
                             </div>
                             <div class="control">
-                                <input class="input" type="number" step="5" name="level" ic-form-field ic-value="{{ line.level||691 }}">
+                                <input class="input" type="number" ic-form-field="level" ic-value="{{ line.level||691 }}" style="width:6em;">
                             </div>
 
                             <div class="control" style="padding-left: 2em;">
@@ -187,7 +187,10 @@
                                 <button class="button">input</button>
                             </div>
                             <div class="control">
-                                <input class="input" type="text" name="input" ic-form-field="input" ic-value="{{ line.input||'' }}">
+                                <input class="input" type="text" ic-form-field="input" ic-value="{{ line.input||'备注' }}" style="width:18em;">
+                            </div>
+                            <div class="control">
+                                <input class="input" type="number" name="rows" ic-form-field ic-value="{{ line.rows||1 }}" style="width:6em;">
                             </div>
 
                         </div>

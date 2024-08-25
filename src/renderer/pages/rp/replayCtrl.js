@@ -24,6 +24,7 @@ export default function () {
     });
 
 
+    // 对复盘数据replay进行处理优化
     function fixData (rpForm) {
         let result = {};
 
@@ -50,7 +51,7 @@ export default function () {
 
         }
         result.week = window.getDayOfWeek(rpForm.date);
-        console.log(result);
+        console.log('replay fix => ', result);
         return result;
     }
 

@@ -30,7 +30,6 @@ export default function () {
         isAction = true;
         model = data || {};
         scope.emit(READY_SELECT_TAGS, model.options);
-        console.log(99999, model);
         render();
     });
 

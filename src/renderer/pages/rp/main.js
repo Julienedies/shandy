@@ -48,6 +48,7 @@ brick.reg('setRpCtrl', setRpCtrl);
 brick.reg('setLineCtrl', setLineCtrl);
 brick.reg('replayCtrl', replayCtrl);
 
+window.brick = brick;
 
 brick.reg('rpListCtrl', function (scope) {
 
@@ -66,11 +67,14 @@ brick.reg('rpListCtrl', function (scope) {
     scope.listManager = listManager;
 
     window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
+
     window._GET_RP_KEY = function (rp, tagType) {
-        return rp.isLine ? ('line.'+rp.title+'.'+tagType) : (rp.alias || rp.title);
+        return rp.isLine ? ('line.' + rp.title +'.'+ tagType) : (/[.]/img.test(rp.alias) ? rp.alias : (rp.alias +'.'+ tagType));
     };
     window._GET_RP_KEY2 = function (rp, input) {
-        return  rp.isLine ?  ((rp.alias || rp.title) + '.' + input) : (rp.alias || rp.title || input);
+        //input = input === '-' ? '' : input;
+        let key = rp.isLine ?  (('line.' + rp.title) + '.' + input) : (rp.alias || rp.title) + '.' + input;
+        return key.replace(/\.-$/img, '');
     };
 
     // 把rp里的options选项里的 type tag ID，换成对应tag元素组
@@ -78,6 +82,7 @@ brick.reg('rpListCtrl', function (scope) {
         let map = {};
         if (Array.isArray(arr)) {
             arr.forEach((typeTagId) => {
+                //console.log(typeTagId);
                 let tag = window.TAGS_MAP_BY_ID[typeTagId];
                 let type = tag.text;
                 map[type] = window.TAGS_MAP[type] || [];  // 对应的标签数组
@@ -249,6 +254,10 @@ brick.reg('rpListCtrl', function (scope) {
         render();
     }
 
+    scope.filterLine = function () {
+        $elm.find('li.box').not('.line').toggle();
+    };
+
     scope.toggleForm = function (e) {
         $elm.find('#mainFooter').toggle();
     };
@@ -383,7 +392,7 @@ brick.reg('rpListCtrl', function (scope) {
         //model.replay[name] = $th.attr('ic-val');
     });
 
-
+    // 拖动排序是通过修改level实现的
     scope.on('move', function (e, data) {
         console.log('move', data);
         let id = data.id;
@@ -426,8 +435,10 @@ brick.reg('rpListCtrl', function (scope) {
         let id = e.originalEvent.dataTransfer.getData("Text");
         let destId = $target.data('id') || $target.closest('li[data-id]').data('id');
         if (!destId || destId === id) {
+            $(e.target).removeClass(dragOverCla);
             return console.log('not dist');
         }
+
         //console.log('drop', id, destId + '', e.target);
         scope.emit('move', {id, dest: destId + ''});
         return false;

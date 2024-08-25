@@ -198,14 +198,14 @@ html, body {
     }
 
     > .wrap {
-      padding: 0.4em 1em 0.25em 1em;
+      padding: 0.5em 1em 0.25em 1em;
 
       .textarea {
         border-color: #dfdfdf;
         box-shadow: none;
         font-size: 1.2rem;
         height: auto;
-        padding: 0.1rem 0 0.15rem 0;
+        padding: 0.2rem 0.45rem;
       }
     }
   }
@@ -229,11 +229,28 @@ html, body {
 
 }
 
-.buttons-row {
-  .control {
-    padding-left: 3em;
+#replay {
+
+  .table {
+    color: #0270ee;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+
+    .tag {
+      font-size: 0.88rem;
+    }
+  }
+
+  tr td:nth-child(2) {
+    white-space: nowrap;
+  }
+
+  .item {
+    padding: 0.25rem;
   }
 }
+
 
 .table_4 {
   .tr {
