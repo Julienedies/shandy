@@ -203,7 +203,8 @@ html, body {
       .textarea {
         border-color: #dfdfdf;
         box-shadow: none;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        color:#0270ee;
         height: auto;
         padding: 0.2rem 0.45rem;
       }
@@ -237,8 +238,12 @@ html, body {
     font-size: 14px;
     line-height: 1.6;
 
+    td {
+      padding: 0.4em;
+    }
+
     .tag {
-      font-size: 0.88rem;
+      font-size: 0.92rem;
     }
   }
 

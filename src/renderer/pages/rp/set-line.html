@@ -4,24 +4,34 @@
     <div class="column">
         <div ic-tpl="setLine" ic-tpl-init="{line:{}, tags:{}}">
             <div class="table_4" ic-form="setLine" ic-init="line=model.line; tags=model.tags;">
-                <!-- tr 交易系统名称 -->
+                <!-- tr  -->
                 <div class="tr">
-                    <h6 class="td">资金方向</h6>
+                    <h6 class="td"></h6>
                     <div class="td">
-                        <div class="control">
-                            <input class="input" type="text" name="title" value="{{line['title']}}" ic-form-field ic-field-rule="required">
-                            <input type="hidden" name="id" value="{{line.id}}" ic-form-field>
-                            <input type="hidden" name="isLine" value="true" ic-form-field>
-                            <input type="hidden" name="type" value="复盘&计划" ic-form-field>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tr">
-                    <h6 class="td">行情周期</h6>
-                    <div class="td">
-                        <div class="control">
-                            <input class="input" type="text" name="cycle" value="{{line['cycle']}}">
+                        <div class="field has-addons">
+                            <div class="control">
+                                <button class="button is-info">热点方向</button>
+                            </div>
+                            <div class="control is-expanded">
+                                <input class="input" type="text" name="title" value="{{line['title']}}" ic-form-field ic-field-rule="required">
+                                <input type="hidden" name="id" value="{{line.id}}" ic-form-field>
+                                <input type="hidden" name="isLine" value="true" ic-form-field>
+                            </div>
+                            <p class="control">
+                            <span class="select">
+                              <select name="type" ic-form-field>
+                                  <option ic-for="i,o in TAGS_MAP['rpmqs']" value="{{o.text}}" ic-has-selected="o.text==line.type">
+                                      {{ o.text }}
+                                  </option>
+                                  <!-- <option value="rp" ic-has-selected="'rp'==model.type">复盘&计划</option>
+                                   <option value="question" ic-has-selected="'question'==model.type">问题</option>
+                                   <option value="mistake" ic-has-selected="'mistake'==model.type">错误</option>
+                                   <option value="warn" ic-has-selected="'warn'==model.type">警告</option>
+                                   <option value="idea" ic-has-selected="'idea'==model.type">理念</option>
+                                   <option value="市场" ic-has-selected="'市场'==model.type">市场</option>-->
+                              </select>
+                            </span>
+                            </p>
                         </div>
                     </div>
                 </div>

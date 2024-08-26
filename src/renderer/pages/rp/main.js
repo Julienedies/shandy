@@ -74,7 +74,7 @@ brick.reg('rpListCtrl', function (scope) {
     window._GET_RP_KEY2 = function (rp, input) {
         //input = input === '-' ? '' : input;
         let key = rp.isLine ?  (('line.' + rp.title) + '.' + input) : (rp.alias || rp.title) + '.' + input;
-        return key.replace(/\.-$/img, '');
+        return key.replace(/\.-/img, '');
     };
 
     // 把rp里的options选项里的 type tag ID，换成对应tag元素组
@@ -154,6 +154,8 @@ brick.reg('rpListCtrl', function (scope) {
 
         rpMapByType = getRpMapByType(rpList);
 
+
+
         // 根据类型过滤
         if (filterByType) {
             if (filterByType === 'Re') {
@@ -161,10 +163,11 @@ brick.reg('rpListCtrl', function (scope) {
                     return v.re === 'true';
                 });
             } else {
-                rpList = rpMapByType[filterByType];
+                rpList = rpMapByType[filterByType] || [];  // 某些类型因为没有添加项，rpMapByType里不存在
             }
         }
 
+        //console.log(333, rpMapByType, rpList);
         // 对rpList数据进行处理，以方便显示
         rpList = rpList.map((item) => {
             let options = item.options;
