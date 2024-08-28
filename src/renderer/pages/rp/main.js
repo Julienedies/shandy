@@ -69,12 +69,17 @@ brick.reg('rpListCtrl', function (scope) {
     window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
 
     window._GET_RP_KEY = function (rp, tagType) {
-        return rp.isLine ? ('line.' + rp.title +'.'+ tagType) : (/[.]/img.test(rp.alias) ? rp.alias : (rp.alias +'.'+ tagType));
+        return rp.isLine ? ('line.' + rp.title + '.' + tagType) : (/[.]/img.test(rp.alias) ? rp.alias : (rp.alias + '.' + tagType));
     };
     window._GET_RP_KEY2 = function (rp, input) {
         //input = input === '-' ? '' : input;
-        let key = rp.isLine ?  (('line.' + rp.title) + '.' + input) : (rp.alias || rp.title) + '.' + input;
+        let key = rp.isLine ? (('line.' + rp.title) + '.' + input) : (rp.alias || rp.title) + '.' + input;
         return key.replace(/\.-/img, '');
+    };
+
+    window._IS_PLAN = function (text, type) {
+        type = type || '复盘&计划';
+        return text === type;
     };
 
     // 把rp里的options选项里的 type tag ID，换成对应tag元素组
@@ -153,7 +158,6 @@ brick.reg('rpListCtrl', function (scope) {
         });
 
         rpMapByType = getRpMapByType(rpList);
-
 
 
         // 根据类型过滤
@@ -368,6 +372,10 @@ brick.reg('rpListCtrl', function (scope) {
     scope.replay = {
         before: function (fields) {
             console.info('复盘表单数据 =》', fields);
+            if(filterByType !== '复盘&计划'){
+                alert('必须在 切换到 复盘&计划 中，才能提交复盘数据，否则会损坏数据.');
+                return false;
+            }
             return fields;
         },
         done: function (data) {
@@ -375,8 +383,17 @@ brick.reg('rpListCtrl', function (scope) {
         }
     };
 
+    function checkFrom () {
+        if(filterByType !== '复盘&计划'){
+            return alert('必须在 切换到 复盘&计划 中，才能提交复盘数据，否则会损坏数据.');
+        }
+    }
+
     // 提交复盘表单
     function submit () {
+        if(filterByType !== '复盘&计划'){
+            return alert('必须在 切换到 复盘&计划 中，才能提交复盘数据，否则会损坏数据.');
+        }
         $elm.find('#rpForm[ic-form="rp"]').icFormSubmit();
     }
 

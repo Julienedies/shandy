@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>replay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
+    <script src="/set_node_modules_path.js"></script>
+</head>
+<body>
+    <div ic-ctrl="plansCtrl" class="column">
+
+        <div  ic-tpl="replay">
+
+            <table class="table is-fullwidth is-bordered" ic-for="i, replay in model">
+                <tr>
+                    <th>{{ replay.week }}</th>
+                    <th>{{ replay.date }}</th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <td>{{ replay.week }}</td>
+                    <td>消息面</td>
+                    <td>
+                        <div class="pre">{{ replay['消息面'] }}</div>
+                    </td>
+                </tr>
+
+                <tr ic-for="i, v in replay['变量']">
+                    <td>{{ replay.week }}</td>
+                    <td> {{ i }}</td>
+                    <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
+                </tr>
+
+                <tr ic-for-start="i, v in replay" ic-for-end ic-if="!!!(['line','变量','id','timestamp','week','date','消息面'].includes(i))">
+                    <td>{{ replay.week }}</td>
+                    <td>{{ i }}</td>
+                    <td>
+                        {{ brick.getTpl('replay3')({model:v}) }}
+                    </td>
+                </tr>
+
+
+                <tr ic-for="i, v in replay['line']">
+                    <td>{{ replay.week }}</td>
+                    <td> {{ i }}</td>
+                    <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
+                </tr>
+
+            </table>
+
+
+            <div class="tags" ic-tpl="replay3">
+                <div class="tags" ic-if-start="Array.isArray(model)==='Array'">
+                    <span class="tag" ic-for="i,v in model">{{ v }}</span>
+                </div>
+                <div  ic-else-if="typeof model==='object'"><!-- 包含数组 -->
+
+                    <div class="item" ic-for-start="i,v in model" ic-for-end ic-if="v">
+                        <div class="tags" ic-if-start="typeof v==='object'">
+                            <span class="tag">{{ i }}</span>
+                            <span class="tag is-danger" ic-for="j,k in v">{{ k }}</span>
+                        </div>
+
+                        <div class="subtitle is-6" ic-else>
+                            <span class="tag">{{ i }}</span> {{ v }}
+                        </div>
+                    </div>
+                </div>
+                <span class="" ic-else-if="typeof model==='string'" ic-if-end>{{ model }}</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

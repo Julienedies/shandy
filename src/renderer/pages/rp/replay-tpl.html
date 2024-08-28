@@ -1,0 +1,106 @@
+<div class="column" style="padding-top:4em;">
+
+    <table class="table is-fullwidth is-bordered" ic-tpl="replay">
+        <tr>
+            <th></th>
+            <th>{{ model.date }}</th>
+            <th>资金方向、变量、客观表现、预判可能的走势及应对</th>
+        </tr>
+
+
+        <tr>
+            <td>{{ model.week }}</td>
+            <td>消息面</td>
+            <td>
+                <div class="pre">{{ model['消息面'] }}</div>
+            </td>
+        </tr>
+
+        <tr ic-for="i, v in model['变量']">
+            <td>{{ model.week }}</td>
+            <td> {{ i }}</td>
+            <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
+        </tr>
+
+        <tr ic-for-start="i, v in model" ic-for-end ic-if="!!!(['line','变量','id','timestamp','week','date','消息面'].includes(i))">
+            <td>{{ model.week }}</td>
+            <td>{{ i }}</td>
+            <td>
+                {{ brick.getTpl('replay3')({model:v}) }}
+            </td>
+        </tr>
+
+
+        <tr ic-for="i, v in model['line']">
+            <td>{{ model.week }}</td>
+            <td> {{ i }}</td>
+            <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
+        </tr>
+
+    </table>
+
+
+    <div class="tags" ic-tpl="replay3">
+        <div class="tags" ic-if-start="Array.isArray(model)==='Array'">
+            <span class="tag" ic-for="i,v in model">{{ v }}</span>
+        </div>
+        <div  ic-else-if="typeof model==='object'"><!-- 包含数组 -->
+
+            <div class="item" ic-for-start="i,v in model" ic-for-end ic-if="v">
+                <div class="tags" ic-if-start="typeof v==='object'">
+                    <span class="tag">{{ i }}</span>
+                    <span class="tag is-danger" ic-for="j,k in v">{{ k }}</span>
+                </div>
+
+                <div class="subtitle is-6" ic-else>
+                    <span class="tag">{{ i }}</span> {{ v }}
+                </div>
+            </div>
+        </div>
+        <span class="" ic-else-if="typeof model==='string'" ic-if-end>{{ model }}</span>
+    </div>
+
+
+    <div ic-tpl="replay2">
+        <ul style="padding:0 0 0 5%;" ic-init="o = model;">
+            <li class="table_4" ic-for="i,v in model" ic-if="v">
+                <div class="tr" ic-init="tag=TAGS_MAP_BY_ID[v], p=RP_MAP[i];">
+
+                    <h4 class="td">{{ (p && p.title) || i }}</h4>
+
+                    <div class="buttons td" ic-if-start="Array.isArray(v)">
+                            <span class="button is-danger" ic-for="j,k in v">
+                                <i ic-init="o=TAGS_MAP_BY_ID[k] || {};">
+                                      {{ o.text || k }}
+                                </i>
+                            </span>
+                    </div>
+                    <div class="pre td" ic-else>
+                        {{ v }}
+                    </div>
+
+                </div>
+            </li>
+
+        </ul>
+
+        <div class="table_3">
+            <div>
+                <h6>日期: </h6>
+                <div class="pre">{{ o['date'] }}</div>
+            </div>
+            <div>
+                <h6>阶段变量: </h6>
+                <div class="pre">{{ o['阶段变量'] }}</div>
+            </div>
+            <div>
+                <h6>交易计划: </h6>
+                <div class="pre">{{ o['交易计划'] }}</div>
+            </div>
+            <!--<div ic-for="i,v in o" ic-if="i=='date'||i=='交易计划'">
+                <h6 class="">{{i}} : </h6>
+                <div class="pre">{{v}}</div>
+            </div>-->
+        </div>
+    </div>
+</div>

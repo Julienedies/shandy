@@ -34,6 +34,7 @@
                             <button class="button is-primary is-small" ic-click="createReplay">归纳复盘</button>
                             <button class="button is-primary is-small" ic-click="toggleForm">显示表单</button>
                             <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>
+                            <a class="button is-primary is-small" href="http://127.0.0.1:3300/web/stock_replay2.html" target="_blank">plans</a>
                         </div>
                     </div>
 
@@ -43,14 +44,12 @@
             <div id="mainContent" ic-tpl="rpList">
                 <div id="rpForm" ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm;">
                     <ul>
-                        <li ic-class="box {{ rp.role==='5'?'line':'' }}" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}" draggable="true" ic-dragstart="dragstart"
-                            ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave">
-
+                        <li ic-class="box {{ rp.role==='5'?'line':'' }}" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}">
+                            <!-- draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" -->
                             <header ic-click="toggle" ic-class="role_{{ rp.role }}">
                                 <h3>{{ rp.title }}
                                     <b>{{ rp.caution }} </b>
                                 </h3>
-                                <h5 class="caution" ic-if="rp.caution"></h5>
                             </header>
 
                             <div class="wrap">
@@ -118,7 +117,7 @@
 
                                 <div class="pre text" ic-dblclick="toggle">{{ rp.content }}</div>
 
-                                <div style="padding: 2px 0;">
+                                <div style="padding: 5px 0 3px 0;">
                                     <div class="tags is-right">
                                         <span class="tag is-small" title="rp的别名" ic-if="rp.alias"> {{ rp.alias }}</span>
                                         <!--<span class="tag is-small" title="关联的tag类型" ic-if="rp.TagType"> {{ rp.TagType }}</span>-->
