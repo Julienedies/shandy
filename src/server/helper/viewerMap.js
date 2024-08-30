@@ -37,7 +37,7 @@ ViewerMap.instance = {
     // 默认使用缓存
     get: function (isReverse) {
         let f = isReverse * 1 === 1 ? 'viewerMap_R' : 'viewerMap';
-        console.log(isReverse, f);
+        console.log(1111, isReverse, f);
         let viewerMapJsonDb = ju(f, {});
         ViewerMap.VIEWER_MAP = viewerMapJsonDb.get();
         return ViewerMap.VIEWER_MAP;
@@ -58,7 +58,7 @@ ViewerMap.instance = {
         this._refresh(0);
         setTimeout(()=> {
             that._refresh();
-        }, 500);
+        }, 900);
 
     },
 
@@ -98,7 +98,7 @@ ViewerMap.instance = {
             let arr = VIEWER_MAP2[i];
 
             //if (['k_3312753', 'k_1305484', 'k_2055992', k_6734208].includes(i)) break;
-            console.log(q++, '---', i, '---', arr.length, '---', arr[0]);
+            //console.log(q++, '---', i, '---', arr.length, '---', arr[0]);
 
             VIEWER_MAP[i] = imagesHelper.sort(arr, !isReverse, 4, true);
 
