@@ -34,7 +34,8 @@
                             <button class="button is-primary is-small" ic-click="createReplay">归纳复盘</button>
                             <button class="button is-primary is-small" ic-click="toggleForm">显示表单</button>
                             <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>
-                            <a class="button is-primary is-small" href="http://127.0.0.1:3300/web/stock_replay2.html" target="_blank">plans</a>
+                            <a class="button is-white is-small" href="http://127.0.0.1:3300/web/stock_replay2.html" target="_blank">plans</a>
+                            <span class="button is-white is-small" id="dateTag">{{ J_FORMAT_DATE2() }}</span>
                         </div>
                     </div>
 
@@ -107,13 +108,13 @@
                                             </button>
                                         </div>
                                         <div class="control is-expanded">
-                                            <textarea class="textarea is-link" ic-form-field="{{ _GET_RP_KEY2(rp,v) }}" rows="{{rp.rows||2}}">{{ rpForm[_GET_RP_KEY2(rp,v)] }}</textarea>
+                                            <textarea class="textarea is-link" ic-form-field="{{ _GET_RP_KEY2(rp,v) }}" rows="{{rp.rows||1}}">{{ rpForm[_GET_RP_KEY2(rp,v)] }}</textarea>
                                         </div>
                                     </div>
                                 </div>
 
 
-                                <h6 class="comment" ic-if="rp.comment" style="padding: 0.1em"> {{ rp.comment }} </h6>
+                                <h6 class="comment" ic-if="rp.comment" style="padding: 0.5em 0;"> {{ rp.comment }} </h6>
 
                                 <div class="pre text" ic-dblclick="toggle">{{ rp.content }}</div>
 
@@ -130,16 +131,15 @@
                                         <span class="tag is-small" ic-click="edit:{{ rp.id }}" ic-if="!!!rp.isLine">
                                             <i class="far fa-edit" title="编辑"></i>
                                         </span>
-                                        <span class="tag is-small" ic-click="copy:{{ rp.id }}:{{ rp.isLine }}">
-                                            <i class="far fa-copy" title="拷贝"></i>
-                                        </span>
                                         <span class="tag is-small" ic-click="plus:{{ rp.id }}">
                                             <i class="fas fa-long-arrow-alt-up" title="加权"></i>
                                         </span>
                                         <!--<span class="tag is-small" ic-click="focus:{{ rp.id }}">置顶   long-arrow-alt-up </span>-->
-
                                         <span ic-class="tag is-small {{ rp.re==='true'?'is-primary':'' }}" ic-click="re:{{ rp.id }}" ic-if="!!!rp.isLine">
                                             <i class="far fa-star" title="Re"></i>
+                                        </span>
+                                        <span class="tag is-small" ic-click="copy:{{ rp.id }}:{{ rp.isLine }}">
+                                            <i class="far fa-copy" title="拷贝"></i>
                                         </span>
                                         <span class="tag is-small"  ic-click="createTagByRp:{{ rp.id }}" ic-if="!!!rp.isLine">
                                             <i class="fas fa-retweet" title="生成对应的tag"></i>
@@ -162,20 +162,20 @@
                                 <div class="field is-grouped">
                                     <div class="control"> 消息面</div>
                                     <div class="control is-expanded">
-                                        <textarea class="textarea" ic-form-field="消息面" rows="10">{{ rpForm['消息面'] }}</textarea>
+                                        <textarea class="textarea" ic-form-field="消息面" rows="12">{{ rpForm['消息面'] }}</textarea>
                                     </div>
                                 </div>
 
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control">交易计划</div>
                                     <div class="control is-expanded">
-                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="16">{{ rpForm['交易计划'] }}</textarea>
+                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="7">{{ rpForm['交易计划'] }}</textarea>
                                     </div>
                                 </div>
 
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control">
-                                        <input class="input is-small" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate2() }}">
+                                        <input class="input is-small" type="date" name="date" ic-form-field ic-value="{{model.date || formatDate2() }}" Xic-change="onDateChange">
                                     </div>
                                     <div class="control">
                                         <button class="button is-primary is-small"

@@ -21,6 +21,7 @@ function getData (date) {
     if (date) {
         let item = replayDb.get2(date, 'date');
         if (item) {
+            console.log(date, item.date);
             result = item;
         } else {
             result = Object.assign({}, list[0]);

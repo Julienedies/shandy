@@ -113,7 +113,7 @@ try {
     window.parseImgPath = parseImgPath;
     window.sortByPy = sortByPy;
     window.formatDate = formatDate;
-    window.formatDate2 = formatDate2;
+    window.formatDate2 = window.J_FORMAT_DATE2 = formatDate2;
     window.getDayOfWeek = getDayOfWeek;
 } catch (e) {
     console.error(e);

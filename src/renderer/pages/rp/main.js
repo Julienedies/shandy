@@ -62,6 +62,8 @@ brick.reg('rpListCtrl', function (scope) {
 
     let rpForm = {};
 
+    let isFilterLine = 0;
+
     let listManager = brick.services.get('recordManager')();
 
     scope.listManager = listManager;
@@ -69,10 +71,10 @@ brick.reg('rpListCtrl', function (scope) {
     window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
 
     window._GET_RP_KEY = function (rp, tagType) {
-        return rp.isLine ? ('line.' + rp.title + '.' + tagType) : (/[.]/img.test(rp.alias) ? rp.alias : (rp.alias + '.' + tagType));
+        let key = rp.isLine ? ('line.' + rp.title + '.' + tagType) : (/[.]/img.test(rp.alias) ? rp.alias : (rp.alias + '.' + tagType));
+        return key.replace(/\.-/img, '');
     };
     window._GET_RP_KEY2 = function (rp, input) {
-        //input = input === '-' ? '' : input;
         let key = rp.isLine ? (('line.' + rp.title) + '.' + input) : (rp.alias || rp.title) + '.' + input;
         return key.replace(/\.-/img, '');
     };
@@ -93,51 +95,12 @@ brick.reg('rpListCtrl', function (scope) {
                 map[type] = window.TAGS_MAP[type] || [];  // 对应的标签数组
             });
             return map;
-
-            /*// 如果只有一个标签选项，并且这个选项是type类型的标签，则把这个标签替换成该类型的所有标签
-            if (arr.length === 1) {
-                let id = arr[0];
-                let o = window.TAGS_MAP_BY_ID[id];
-                let type = o.type;
-                if (type === 'type') {
-                    arr = window.TAGS_MAP[o.text] || [];
-                    arr = arr.map((item) => {
-                        return item.id;
-                    });
-                }
-            }
-
-            return arr;*/
-
         } else {
             return arr;
-            /*return arr.map( (id) => {
-                return window.TAGS_MAP_BY_ID[id];
-            });*/
         }
     }
 
     // 把rp.json这个数组按type进行分组，生成一个map；
-    /*function _getRpMapByType (arr) {
-        let mapByType = {};
-        let rpmqs = TAGS_MAP['rpmqs'];
-        for (let i in rpmqs) {
-            let o = rpmqs[i];
-            let key = o.key;
-            mapByType[key] = [];
-            rpMap[key] = o.text;
-        }
-
-        arr.forEach((v, i) => {
-            let arr2 = mapByType[v.type || '_null'] = mapByType[v.type || '_null'] || [];
-            arr2.push(v);
-        });
-
-        //console.log(mapByType);
-        return mapByType;
-    }*/
-
-
     function getRpMapByType (arr) {
         rpMapByType = {};
         arr.forEach((v, i) => {
@@ -158,7 +121,6 @@ brick.reg('rpListCtrl', function (scope) {
         });
 
         rpMapByType = getRpMapByType(rpList);
-
 
         // 根据类型过滤
         if (filterByType) {
@@ -182,10 +144,15 @@ brick.reg('rpListCtrl', function (scope) {
         scope.render('types', {model: {rpMapByType: rpMapByType, filterByType: filterByType}});
 
         scope.render('rpList', {model: {rpList, rpForm, filterByType}}, function () {
-            $(this).find('li').on('dragstart', scope.dragstart)
+            /*$(this).find('li').on('dragstart', scope.dragstart)
                 .on('dragover', scope.dragover)
                 .on('dragleave', scope.dragleave)
-                .on('drop', scope.drop);
+                .on('drop', scope.drop);*/
+
+            if (isFilterLine % 2) {
+                isFilterLine = 0;
+                scope.filterLine();
+            }
         });
 
         // 修改document.title, 主要用于save2Text chrome插件;
@@ -202,23 +169,26 @@ brick.reg('rpListCtrl', function (scope) {
         });
     }
 
-    function getRpForm () {
-        $.get(`/stock/replay?date=${ formatDate2() }`).done((data) => {
+    function getRpForm (date, callback) {
+        date = date || J_FORMAT_DATE2();
+        callback = callback || function (data) {
             getReplayDef.resolve(data);
-        });
+        };
+        $.get(`/stock/replay?date=${ date }`).done(callback);
     }
 
     function setList (rpData, replayData) {
-        listManager.init(rpData);
+        rpData && listManager.init(rpData);
 
         rpForm = replayData || rpForm;
         render();
         createRpMap(rpData);
     }
 
-    // 创建 replay 里使用
+    // 创建 replay 里使用, 废弃，之前是因为表单字段都是Rp id, 现在直接是文字
     function createRpMap (rpArr) {
         window.RP_MAP = {};
+        rpArr = rpArr || [];
         rpArr.forEach((v) => {
             RP_MAP[v.id + ''] = v;
         })
@@ -261,7 +231,9 @@ brick.reg('rpListCtrl', function (scope) {
         render();
     }
 
+    // 筛选line
     scope.filterLine = function () {
+        ++isFilterLine;
         $elm.find('li.box').not('.line').toggle();
     };
 
@@ -280,7 +252,7 @@ brick.reg('rpListCtrl', function (scope) {
         return false;
     };
 
-    // 创建rp对应的tag
+    // 根据rp去创建tag
     scope.createTagByRp = function (e, id) {
         let rp = listManager.get(id);
         scope.emit(ADD_TAG, {type: rp.type, text: rp.title});
@@ -296,17 +268,19 @@ brick.reg('rpListCtrl', function (scope) {
         scope.emit('setRp', {type: filterByType});
     };
 
+    // 编辑一个rp
     scope.edit = function (e, id) {
         scope.emit('setRp', listManager.get(id));
     };
 
-    //
+    // 拷贝一个rp
     scope.copy = function (e, id, isLine) {
         let item = listManager.get(id);
         delete item.id;
         scope.emit(isLine ? 'SET_LINE' : 'setRp', item);
     };
 
+    // 删除前确认
     scope.delBeforeConfirm = function (e) {
         return confirm('确认删除？');
     };
@@ -321,6 +295,7 @@ brick.reg('rpListCtrl', function (scope) {
          scope.emit('addLine', listManager.get(id));
      };*/
 
+    // 添加或修改一个line
     scope.setLine = function (e, id) {
         let line = id ? listManager.get(id) : null;
         scope.emit('SET_LINE', line);
@@ -351,6 +326,12 @@ brick.reg('rpListCtrl', function (scope) {
         });
     };
 
+
+    // 创建复盘&交易计划的表格
+    scope.createReplay = function (e) {
+        scope.emit('createReplay', rpForm);
+    };
+
     // ---------------------------------------------------------------------------------------
 
     scope.on('rp.change', function (e, data) {
@@ -362,46 +343,52 @@ brick.reg('rpListCtrl', function (scope) {
         scope.toggleForm();
     });
 
-    // 创建复盘&交易计划的表格
-    scope.createReplay = function (e) {
-        scope.emit('createReplay', rpForm);
-    };
-
 
     // 获取复盘表单数据的ajax回调函数
     scope.replay = {
         before: function (fields) {
-            console.info('复盘表单数据 =》', fields);
-            if(filterByType !== '复盘&计划'){
-                alert('必须在 切换到 复盘&计划 中，才能提交复盘数据，否则会损坏数据.');
-                return false;
+            console.info('rpForm 提交前check =》', fields);
+            if (checkFrom()) {
+                return fields;
             }
-            return fields;
+            return false;
         },
         done: function (data) {
             rpForm = data || rpForm;
         }
     };
 
+    // 提交表单需要查看是否处在 '复盘&计划' 状态中
     function checkFrom () {
-        if(filterByType !== '复盘&计划'){
-            return alert('必须在 切换到 复盘&计划 中，才能提交复盘数据，否则会损坏数据.');
+        if (filterByType === '复盘&计划') {
+            return true;
+        } else {
+            alert('必须在 切换到 复盘&计划 中，才能提交复盘数据，否则会损坏数据.');
+            return false;
         }
     }
 
     // 提交复盘表单
     function submit () {
-        if(filterByType !== '复盘&计划'){
-            return alert('必须在 切换到 复盘&计划 中，才能提交复盘数据，否则会损坏数据.');
+        if (checkFrom()) {
+            $elm.find('#rpForm[ic-form="rp"]').icFormSubmit();
         }
-        $elm.find('#rpForm[ic-form="rp"]').icFormSubmit();
     }
+
+    // 当表单日期改变，可以查看修改对应日期的复盘表单
+    /*    scope.onDateChange = function (e) {
+            let date = $(this).val();
+            getRpForm(date, (data) => {
+                setList(null, data);
+                $('#dateTag').text(date);
+            });
+        };*/
 
     // 根据键盘输入，随时提交数据进行保存；
     $elm.on('keyup', 'textarea', _.throttle(submit, 2900));
 
 
-    // 表单数据保存
+    // 根据复盘表单选项改变， 随时提交表单数据保存
     $elm.on('ic-select.change', '[ic-select][ic-form-field]', function (e, msg) {
         console.log('on ic-select.change, to submit();', msg);
         submit();
@@ -412,6 +399,8 @@ brick.reg('rpListCtrl', function (scope) {
         //model.replay[name] = $th.attr('ic-val');
     });
 
+
+    // ---------------------------------------------------------------------------------------
     // 拖动排序是通过修改level实现的
     scope.on('move', function (e, data) {
         console.log('move', data);
@@ -429,7 +418,6 @@ brick.reg('rpListCtrl', function (scope) {
     });
 
 
-    // ---------------------------------------------------------------------------------------
     scope.dragstart = function (e) {
         let id = $(this).data('id');
         e.originalEvent.dataTransfer.setData("Text", id);
