@@ -108,7 +108,7 @@
                                             </button>
                                         </div>
                                         <div class="control is-expanded">
-                                            <textarea class="textarea is-link" ic-form-field="{{ _GET_RP_KEY2(rp,v) }}" rows="{{rp.rows||1}}">{{ rpForm[_GET_RP_KEY2(rp,v)] }}</textarea>
+                                            <textarea class="textarea" ic-auto-height ic-form-field="{{ _GET_RP_KEY2(rp,v) }}" rows="1">{{ rpForm[_GET_RP_KEY2(rp,v)] }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -162,14 +162,14 @@
                                 <div class="field is-grouped">
                                     <div class="control"> 消息面</div>
                                     <div class="control is-expanded">
-                                        <textarea class="textarea" ic-form-field="消息面" rows="12">{{ rpForm['消息面'] }}</textarea>
+                                        <textarea class="textarea" ic-form-field="消息面" rows="11">{{ rpForm['消息面'] }}</textarea>
                                     </div>
                                 </div>
 
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control">交易计划</div>
                                     <div class="control is-expanded">
-                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="7">{{ rpForm['交易计划'] }}</textarea>
+                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="11">{{ rpForm['交易计划'] }}</textarea>
                                     </div>
                                 </div>
 

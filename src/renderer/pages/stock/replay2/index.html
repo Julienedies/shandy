@@ -9,7 +9,7 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-    <div ic-ctrl="plansCtrl" class="column">
+    <div id="replay" class="column" ic-ctrl="plansCtrl">
 
         <div  ic-tpl="replay">
 
@@ -23,7 +23,7 @@
                 <tr>
                     <td>{{ replay.week }}</td>
                     <td>消息面</td>
-                    <td>
+                    <td style="font-size:0.9em;">
                         <div class="pre">{{ replay['消息面'] }}</div>
                     </td>
                 </tr>

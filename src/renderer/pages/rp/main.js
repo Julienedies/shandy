@@ -29,6 +29,8 @@ import {
 
 import '../../js/utils.js'
 import '../../js/common-stock.js'
+//import '../../js/ic-textarea-aotoHeight.js'
+
 import setTagCtrl from '../tags/set-tag-ctrl'
 import selectTagsCtrl from '../tags/select-tags-ctrl'
 
@@ -38,8 +40,22 @@ import setLineCtrl from './set-line-ctrl'
 import replayCtrl from './replayCtrl'
 
 //brick.set('ic-event.extend', 'click,change,dblclick,focus,hover');
-
 brick.set('ic-select-cla', 'is-info');
+
+
+brick.directives.reg('ic-autoHeight', function ($elm, attrs) {
+
+    console.log( $elm);
+
+    $elm.css('height', $elm[0].scrollHeight + 'px');
+
+    $elm.on('input', function (e) {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+    });
+
+});
+
 
 brick.reg('setTagCtrl', setTagCtrl);
 brick.reg('selectTagsCtrl', selectTagsCtrl);
@@ -49,6 +65,7 @@ brick.reg('setLineCtrl', setLineCtrl);
 brick.reg('replayCtrl', replayCtrl);
 
 window.brick = brick;
+
 
 brick.reg('rpListCtrl', function (scope) {
 

@@ -1,0 +1,23 @@
+/**
+ *
+ * Created by j on 2024/9/2.
+ */
+
+import $ from 'jquery'
+import brick from '@julienedies/brick'
+
+brick.directives.reg('ic-textarea-autoHeight', {
+    selfExec: true,
+    fn: function ($elm) {
+
+        console.log('ic-textarea-autoHeight', $elm);
+
+        $elm.css('height', $elm[0].scrollHeight + 'px');
+
+        $elm.on('input', function (e) {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+
+    }
+});

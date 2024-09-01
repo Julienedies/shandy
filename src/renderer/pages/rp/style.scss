@@ -166,17 +166,17 @@ html, body {
       }
 
       h2, h3, h5, h6 {
-        padding: 0.1rem 0.1rem;
+        padding: 0.18rem 0.1rem;
         white-space: nowrap;
         overflow: hidden;
         font-weight: inherit;
-        font-size: 20px;
+        font-size: 18px;
         color: #000;
 
         b {
           display: inline-block;
           padding-left: 1.4em;
-          font-size: 0.8em;
+          font-size: 0.82em;
           font-weight: inherit;
         }
 
@@ -204,7 +204,7 @@ html, body {
         border-color: #dfdfdf;
         box-shadow: none;
         font-size: 1.1rem;
-        color:#0270ee;
+        color: #0270ee;
         height: auto;
         padding: 0.2rem 0.45rem;
       }
@@ -217,7 +217,7 @@ html, body {
     //color: #026bdb;
     color: #0270ee;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.8;
 
     table {
@@ -238,11 +238,20 @@ html, body {
 
     //color:#fff;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6;
 
     td {
       padding: 0.4em;
+
+      &:nth-child(2) {
+        text-align: right;
+      }
+    }
+
+    .subtitle {
+      color: inherit;
+      font-size: 1em;
     }
 
     .tag {
@@ -262,7 +271,7 @@ html, body {
 
 .table_4 {
   .tr {
-    padding: 14px 10px;
+    padding: 6px 1px;
     border-bottom: solid 1px #e7e7ea;
 
     .td:first-child {
