@@ -6,11 +6,10 @@
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 
-brick.directives.reg('ic-textarea-autoHeight', {
-    selfExec: true,
+brick.directives.reg('ic-textarea-auto-height', {
     fn: function ($elm) {
 
-        console.log('ic-textarea-autoHeight', $elm);
+        console.log('ic-textarea-auto-height', $elm);
 
         $elm.css('height', $elm[0].scrollHeight + 'px');
 

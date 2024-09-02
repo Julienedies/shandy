@@ -1,32 +1,36 @@
 @import "../../basic/0.7/basic.base.scss";
 
 
-.tr{
-    display: flex;
-    flex-wrap: wrap;
-    @extend .flex-middle;
-    @extend .flex-start;
-}
-.td{
+.tr {
+  display: flex;
+  flex-wrap: wrap;
+  @extend .flex-middle;
+  @extend .flex-start;
 
+  .td {
+    &.is-expanded {
+      flex: 1;
+    }
+  }
 }
+
 
 .table_4 {
 
-    > .tr {
-        display: flex;
-        align-items: start;
+  > .tr {
+    display: flex;
+    align-items: start;
 
-        > .td {
-            &:first-child {
-                min-width: 12em;
-            }
+    > .td {
+      &:first-child {
+        min-width: 12em;
+      }
 
-            &:nth-child(2) {
-                flex: 1;
-            }
-        }
+      &:nth-child(2) {
+        flex: 1;
+      }
     }
+  }
 }
 
 /*.table{
@@ -41,85 +45,97 @@
     }
 }*/
 
-.table_3{
-    >*{
-        @extend .tr;
-        >*{
-            padding-bottom: 5px;
-            &:first-child{
-                font-weight: bold;
-                min-width:5em;
-            }
-        }
+.table_3 {
+  > * {
+    @extend .tr;
+
+    > * {
+      padding-bottom: 5px;
+
+      &:first-child {
+        font-weight: bold;
+        min-width: 5em;
+      }
     }
+  }
 }
 
-.table_0{
-    >*{
-        @extend .tr;
-        >*{
-            padding:10px 10px;
-            &:first-child{
-                @extend .flex-right;
-                flex: 1 1 20%;
-            }
-            &:last-child{
-                flex: 1 1 80%;
-            }
-        }
+.table_0 {
+  > * {
+    @extend .tr;
+
+    > * {
+      padding: 10px 10px;
+
+      &:first-child {
+        @extend .flex-right;
+        flex: 1 1 20%;
+      }
+
+      &:last-child {
+        flex: 1 1 80%;
+      }
     }
+  }
 }
 
 .table_1 {
-    display: flex;
-    flex-wrap: wrap;
-    border-top: solid 1px #bdbdbe;
-    margin: 15px 0;
-    dt, dd {
-        border: solid 1px #bdbdbe;
-        border-top: none;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  border-top: solid 1px #bdbdbe;
+  margin: 15px 0;
 
-    dt {
-        @extend .flex-mc;
-        flex: 1 1 15%;
-        padding: 10px 2px;
-        white-space: nowrap;
-        font-weight: bold !important;
-        * {
-            font-weight: bold;
-        }
-    }
+  dt, dd {
+    border: solid 1px #bdbdbe;
+    border-top: none;
+  }
 
-    dd {
-        flex: 1 1 85%;
-        padding: 10px;
-        border-left: none;
-        li{
-            padding:2px 0;
-        }
+  dt {
+    @extend .flex-mc;
+    flex: 1 1 15%;
+    padding: 10px 2px;
+    white-space: nowrap;
+    font-weight: bold !important;
+
+    * {
+      font-weight: bold;
     }
+  }
+
+  dd {
+    flex: 1 1 85%;
+    padding: 10px;
+    border-left: none;
+
+    li {
+      padding: 2px 0;
+    }
+  }
 }
 
-.table_2{
-    @extend .table_1;
-    &,dt,dd{
-        border:none;
-    }
-    dt,dd{
-        padding-bottom:20px;
-    }
-    dt{
-        @extend .flex-mr;
-        @extend .flex-start;
-    }
+.table_2 {
+  @extend .table_1;
+
+  &, dt, dd {
+    border: none;
+  }
+
+  dt, dd {
+    padding-bottom: 20px;
+  }
+
+  dt {
+    @extend .flex-mr;
+    @extend .flex-start;
+  }
 }
 
-dl.table_1.no-border{
-    &,dt,dd{
-        border:none;
-    }
+dl.table_1.no-border {
+  &, dt, dd {
+    border: none;
+  }
 }
-dl.table_1.v-top{
+
+dl.table_1.v-top {
 
 }

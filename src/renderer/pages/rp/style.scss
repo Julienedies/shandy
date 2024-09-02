@@ -230,6 +230,7 @@ html, body {
 
 }
 
+
 #replay {
 
   .table {
@@ -238,14 +239,14 @@ html, body {
 
     //color:#fff;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1.1rem;
     line-height: 1.6;
 
     td {
       padding: 0.4em;
 
       &:nth-child(2) {
-        text-align: right;
+        //text-align: right;
       }
     }
 
@@ -264,7 +265,7 @@ html, body {
   }
 
   .item {
-    padding: 0.25rem;
+    padding: 0.3rem;
   }
 }
 

@@ -86,14 +86,11 @@
 	{
 		"id": "id_1724717597074_8667",
 		"isLine": "true",
-		"type": "复盘&计划",
-		"options": [
-			"5944533",
-			"4415621"
-		],
+		"type": "行情记录",
+		"options": [],
 		"level": "614",
 		"role": "5",
-		"input": "备注",
+		"input": "",
 		"rows": "1",
 		"title": "房屋检测",
 		"timestamp": 1724717597074
@@ -347,7 +344,7 @@
 		"re": "true",
 		"input": "",
 		"isListStyle": "",
-		"content": "<p><span style=\"font-size: 18px;\">我是怎么错过博士眼镜的？ 我是怎么错过大众交通的？</span></p>",
+		"content": "<p>博士眼镜、大众交通、正丹股份、</p>",
 		"timestamp": 1723828063771,
 		"inset": "",
 		"rows": "1",
@@ -1168,14 +1165,15 @@
 		"caution": "",
 		"comment": "",
 		"level": "676",
-		"role": "0",
+		"role": "4",
 		"re": "true",
 		"content": "",
 		"options": [],
 		"timestamp": "1713074926788",
 		"input": "",
 		"alias": "",
-		"isListStyle": ""
+		"isListStyle": "",
+		"rows": "1"
 	},
 	{
 		"title": "龙头：市场每个阶段都肯定会有抱团的，都肯定会有龙头的，",
@@ -2435,11 +2433,15 @@
 		"type": "应对",
 		"caution": "",
 		"comment": "",
-		"level": "487",
-		"role": "0",
+		"level": "499",
+		"role": "4",
 		"content": "<table style=\"width: 100%;\"><tbody><tr><td style=\"width: 58.6118%;\">空间板如果是顶一字，则是进攻日；但要排除情绪高潮，盛极而衰；<br></td><td style=\"width: 41.3882%;\"><br></td></tr><tr><td style=\"width: 58.6118%;\">龙头大单一字</td><td style=\"width: 41.3882%;\">龙头买不到。低吸其它分支龙头，或低吸龙二。<br></td></tr><tr><td style=\"width: 58.6118%;\">龙头缩量秒板<br></td><td style=\"width: 41.3882%;\"><br></td></tr></tbody></table>",
 		"options": [],
-		"timestamp": "1674542603135"
+		"timestamp": "1674542603135",
+		"alias": "",
+		"input": "",
+		"rows": "1",
+		"re": ""
 	},
 	{
 		"title": "分歧分化：",
@@ -2792,7 +2794,7 @@
 		"caution": "",
 		"comment": "",
 		"level": "686",
-		"role": "0",
+		"role": "4",
 		"content": "",
 		"options": [
 			"5920754"
@@ -2897,7 +2899,7 @@
 		"type": "复盘&计划",
 		"caution": "",
 		"comment": "",
-		"level": "679",
+		"level": "669",
 		"role": "0",
 		"content": "",
 		"options": [],
