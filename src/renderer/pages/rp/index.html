@@ -82,7 +82,7 @@
                                                     {{ o.text }}
                                                 </span>
                                                     <span class="button is-light item" ic-else ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
-                                                    {{ o.text }}
+                                                    {{ o.text }} <sup>{{ o.level }}</sup>
                                                 </span>
                                                 <a class="button is-light" ic-click="editTag:{{o.id}}">
                                                     <span class="icon"><i class="far fa-edit"></i></span>
@@ -167,9 +167,9 @@
                                 </div>
 
                                 <div class="field is-grouped is-grouped-centered">
-                                    <div class="control">交易计划</div>
+                                    <div class="control">交易备注</div>
                                     <div class="control is-expanded">
-                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易计划" ic-field-rule="required" rows="11">{{ rpForm['交易计划'] }}</textarea>
+                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易备注" ic-field-rule="required" rows="11">{{ rpForm['交易备注'] }}</textarea>
                                     </div>
                                 </div>
 

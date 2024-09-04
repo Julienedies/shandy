@@ -23,12 +23,6 @@
                                   <option ic-for="i,o in TAGS_MAP['rpmqs']" value="{{o.text}}" ic-has-selected="_IS_PLAN(o.text, line.type)">
                                       {{ o.text }}
                                   </option>
-                                  <!-- <option value="rp" ic-has-selected="'rp'==model.type">复盘&amp;计划</option>
-                                   <option value="question" ic-has-selected="'question'==model.type">问题</option>
-                                   <option value="mistake" ic-has-selected="'mistake'==model.type">错误</option>
-                                   <option value="warn" ic-has-selected="'warn'==model.type">警告</option>
-                                   <option value="idea" ic-has-selected="'idea'==model.type">理念</option>
-                                   <option value="市场" ic-has-selected="'市场'==model.type">市场</option>-->
                               </select>
                             </span>
                             </p>
@@ -197,10 +191,7 @@
                                 <button class="button">input</button>
                             </div>
                             <div class="control">
-                                <input class="input" type="text" ic-form-field="input" ic-value="{{ line.input||'个股序列、备注' }}" style="width:18em;">
-                            </div>
-                            <div class="control">
-                                <input class="input" type="number" name="rows" ic-form-field ic-value="{{ line.rows||1 }}" style="width:6em;">
+                                <input class="input" type="text" ic-form-field="input" ic-value="{{ line.input||'个股序列、备注' }}" style="width:24em;">
                             </div>
 
                         </div>

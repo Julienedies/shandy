@@ -4,7 +4,6 @@
  */
 
 import '../../../css/common/common.scss'
-import '../../rp/style.scss'
 import './style.scss'
 import './index.html'
 

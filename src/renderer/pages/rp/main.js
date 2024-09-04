@@ -72,11 +72,37 @@ brick.reg('rpListCtrl', function (scope) {
     window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
 
     window._GET_RP_KEY = function (rp, tagType) {
-        let key = rp.isLine ? ('line.' + rp.title + '.' + tagType) : (/[.]/img.test(rp.alias) ? rp.alias : (rp.alias + '.' + tagType));
+        let key = '';
+        if (rp.isLine) {
+            key = 'line.' + (rp.alias || rp.title) + '.' + tagType;
+        } else {
+            // 如果以.结尾，
+            if (/[.]$/img.test(rp.alias)) {
+                key = rp.alias + tagType;
+            } else if (/-/img.test(rp.alias)) {
+                key = rp.alias.replace('-', tagType);
+            } else {
+                key = rp.alias;
+            }
+        }
+        //let key = rp.isLine ? ('line.' + rp.title + '.' + tagType) : (/[.]/img.test(rp.alias) ? rp.alias : (rp.alias + '.' + tagType));
         return key.replace(/\.-/img, '');
     };
+
     window._GET_RP_KEY2 = function (rp, input) {
-        let key = rp.isLine ? (('line.' + rp.title) + '.' + input) : (rp.alias || rp.title) + '.' + input;
+        let key = '';
+        if (rp.isLine) {
+            key = ('line.' + rp.title) + '.' + input
+        } else {
+            // 如果以.结尾，
+            if (/[.]$/img.test(rp.alias)) {
+                key = rp.alias + input;
+            } else if (rp.alias === '-') {
+                key = input;
+            } else {
+                key = rp.alias;
+            }
+        }
         return key.replace(/\.-/img, '');
     };
 

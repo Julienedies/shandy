@@ -8,9 +8,14 @@ html, body {
   color: #202020;
   // 24寸+显示器
   font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
-  // iPad, 屏幕尺寸最大800px
-  @media screen and (max-width: 800px) {
-    font-size: 16px!important;
+
+  // 飞利浦屏幕34寸
+  @media screen and (min-width: 3600px) {
+    font-size: 18px !important;
+  }
+  // macBook 屏幕
+  @media screen and (max-width: 1440px) {
+    font-size: 16px !important;
   }
 
   // macBook, 屏幕尺寸最大1440px
@@ -18,11 +23,18 @@ html, body {
     font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
   }
 
+  // iPad, 屏幕尺寸最大800px
+  @media screen and (max-width: 800px) {
+    font-size: 16px !important;
+  }
+
+  // 滚动条
   &::-webkit-scrollbar {
     //width: 0 !important;
     //display: none;
   }
 }
+
 
 .textarea {
   min-height: 1rem;
@@ -90,12 +102,22 @@ a.tag, a.tag:hover {
   font-style: normal;
 }
 
-.tag sup, .tag sub {
+.tag sup, .tag sub, .button sup {
   margin-top: -0.9em;
-  opacity: 0.6;
+  opacity: 0.5;
   transform: scale(0.8);
   font-size: 0.8em;
   vertical-align: text-top;
+}
+
+.tag:not(body).is-highlight {
+  background-color: #fbf7e8;
+  color: rgb(35, 34, 34);
+}
+
+.tag:not(body).is-highlight2 {
+  background-color: #EAF2FF;
+  color: rgb(35, 34, 34);
 }
 
 ///////////////////

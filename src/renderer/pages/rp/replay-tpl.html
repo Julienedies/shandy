@@ -22,7 +22,7 @@
             <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
         </tr>
 
-        <tr ic-for-start="i, v in model" ic-for-end ic-if="!!!(['line','变量','交易总结','id','timestamp','week','date','消息面'].includes(i))">
+        <tr ic-for-start="i, v in model" ic-for-end ic-if="v && !(['line','变量','交易总结','id','timestamp','week','date','消息面'].includes(i))">
             <td>{{ model.week }}</td>
             <td>{{ i }}</td>
             <td> {{ brick.getTpl('replay3')({model:v}) }} </td>
@@ -43,9 +43,9 @@
     </table>
 
 
-    <div class="tags" ic-tpl="replay3">
+    <div ic-tpl="replay3">
         <div class="tags" ic-if-start="Array.isArray(model)">
-            <span class="tag is-danger" ic-for="i,v in model">{{ v }}</span>
+            <span class="tag is-highlight" ic-for="i,v in model">{{ v }}</span>
         </div>
         <div  ic-else-if="typeof model==='object'"><!-- 包含数组 -->
 
@@ -54,7 +54,7 @@
                     <div class="td" style="padding:0 1em 0 0;"><span class="tag">{{ i }}</span></div>
                     <div class="td is-expanded">
                         <div class="tags">
-                            <span class="tag is-danger" ic-for="j,k in v">{{ k }}</span>
+                            <span class="tag is-highlight" ic-for="j,k in v">{{ k }}</span>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     <h4 class="td">{{ (p && p.title) || i }}</h4>
 
                     <div class="buttons td" ic-if-start="Array.isArray(v)">
-                            <span class="button is-danger" ic-for="j,k in v">
+                            <span class="button is-highlight" ic-for="j,k in v">
                                 <i ic-init="o=TAGS_MAP_BY_ID[k] || {};">
                                       {{ o.text || k }}
                                 </i>
@@ -90,23 +90,5 @@
 
         </ul>
 
-        <div class="table_3">
-            <div>
-                <h6>日期: </h6>
-                <div class="pre">{{ o['date'] }}</div>
-            </div>
-            <div>
-                <h6>阶段变量: </h6>
-                <div class="pre">{{ o['阶段变量'] }}</div>
-            </div>
-            <div>
-                <h6>交易计划: </h6>
-                <div class="pre">{{ o['交易计划'] }}</div>
-            </div>
-            <!--<div ic-for="i,v in o" ic-if="i=='date'||i=='交易计划'">
-                <h6 class="">{{i}} : </h6>
-                <div class="pre">{{v}}</div>
-            </div>-->
-        </div>
     </div>
 </div>

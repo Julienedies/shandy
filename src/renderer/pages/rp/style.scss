@@ -231,43 +231,7 @@ html, body {
 }
 
 
-#replay {
-
-  .table {
-    color: #0270ee;
-    //background: #ea5454;
-
-    //color:#fff;
-    font-weight: 500;
-    font-size: 1.1rem;
-    line-height: 1.6;
-
-    td {
-      padding: 0.4em;
-
-      &:nth-child(2) {
-        //text-align: right;
-      }
-    }
-
-    .subtitle {
-      color: inherit;
-      font-size: 1em;
-    }
-
-    .tag {
-      font-size: 0.92rem;
-    }
-  }
-
-  tr td:nth-child(2) {
-    white-space: nowrap;
-  }
-
-  .item {
-    padding: 0.3rem;
-  }
-}
+@import "./replay.scss";
 
 
 .table_4 {
