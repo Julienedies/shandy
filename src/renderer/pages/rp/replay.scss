@@ -13,7 +13,12 @@
     font-size: 1.1rem;
     line-height: 1.6;
 
-    td {
+    th {
+      background: #0abf9b;
+      color: #fff;
+    }
+
+    th, td {
       padding: 0.4em;
 
       &:nth-child(2) {

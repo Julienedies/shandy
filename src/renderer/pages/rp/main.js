@@ -94,13 +94,14 @@ brick.reg('rpListCtrl', function (scope) {
         if (rp.isLine) {
             key = ('line.' + rp.title) + '.' + input
         } else {
-            // 如果以.结尾，
-            if (/[.]$/img.test(rp.alias)) {
-                key = rp.alias + input;
-            } else if (rp.alias === '-') {
-                key = input;
+            if (/[.]/img.test(input)) {
+                key = input;  // 如果input里含有.,则使用input为key
+            } else if (/[.]$/img.test(rp.alias)) {
+                key = rp.alias + input;  // 如果以.结尾，
+            } else if (/-/img.test(rp.alias)) {
+                key = rp.alias.replace('-', input);
             } else {
-                key = rp.alias;
+                key = rp.alias + '.' + input;
             }
         }
         return key.replace(/\.-/img, '');

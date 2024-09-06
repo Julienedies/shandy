@@ -120,6 +120,52 @@ a.tag, a.tag:hover {
   color: rgb(35, 34, 34);
 }
 
+
+.button.is-replay, .button.is-up, .button.is-down {
+  color: #fff;
+  border-color: transparent;
+
+  &:hover {
+    color: #fff!important;
+    border-color: transparent;
+  }
+}
+
+.button.is-replay {
+  background-color: #0e57f7;
+
+  &:hover {
+    background-color: #003aff;
+  }
+}
+
+.button.is-up {
+  background-color: #ff5c5c;
+
+  &:hover {
+    background-color: #ea5454;
+  }
+}
+
+.button.is-down {
+  background-color: #0bd9b6;
+
+  &:hover {
+    background-color: #0abf9b;
+  }
+}
+
+
+.is-down {
+  background: #0abf9b;
+  color: #fff;
+}
+
+.is-up {
+  background: #ea5454;
+  color: #fff;
+}
+
 ///////////////////
 // forala 样式重写
 /*

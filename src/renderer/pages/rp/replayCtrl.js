@@ -23,6 +23,10 @@ export default function () {
         scope.render('replay2', {model});
     });
 
+    $elm.on('dblclick', function(e){
+        brick.view.back();
+    });
+
 
     // 对复盘数据replay进行处理优化
     function fixData (rpForm) {

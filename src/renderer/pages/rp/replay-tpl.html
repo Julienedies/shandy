@@ -1,11 +1,11 @@
-<div class="column" style="padding-top:4em;">
+<div class="column" style="padding-top:0.4em;">
 
     <table class="table is-fullwidth is-bordered" ic-tpl="replay">
         <tbody ic-init="jo=model['交易总结'];">
-        <tr>
-            <th></th>
+        <tr class="is-up">
+            <th>{{ model.week }}</th>
             <th>{{ model.date }}</th>
-            <th>资金方向、变量、客观表现、预判可能的走势及应对</th>
+            <th></th>
         </tr>
 
         <tr>

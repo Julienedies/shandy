@@ -53,7 +53,7 @@ html, body {
   }
 
   .options .button {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
   }
 
   .tag:not(body).is-medium {
@@ -149,7 +149,7 @@ html, body {
       }
 
       &.role_4 {
-        background: #003aff !important;
+        background: #0e57f7 !important;
 
         h3 {
           color: white;
@@ -157,7 +157,6 @@ html, body {
       }
 
       &.role_5 {
-        background: #02c01f;
         background: #00d1b2;
 
         h3 {
@@ -175,7 +174,7 @@ html, body {
 
         b {
           display: inline-block;
-          padding-left: 1.4em;
+          padding-left: 3.6em;
           font-size: 0.82em;
           font-weight: inherit;
         }
@@ -233,7 +232,19 @@ html, body {
 
 @import "./replay.scss";
 
+#replay {
+  padding-bottom: 2em;
 
+  #backRpBtn {
+    opacity: 0.1;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// 旧的replay布局在用，以后可以废弃
 .table_4 {
   .tr {
     padding: 6px 1px;
