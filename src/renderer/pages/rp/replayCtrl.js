@@ -23,7 +23,7 @@ export default function () {
         scope.render('replay2', {model});
     });
 
-    $elm.on('dblclick', function(e){
+    $elm.on('click', function(e){
         brick.view.back();
     });
 
