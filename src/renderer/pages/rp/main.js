@@ -259,6 +259,22 @@ brick.reg('rpListCtrl', function (scope) {
         render();
     }
 
+    // group
+    scope.onGroupsChange = function (msg) {
+        console.log(msg);
+        let val = msg.value;
+        if (val) {
+            let $target = $(`ul li[tabindex=${ val }]`);
+            if ($target.length) {
+                let targetPosition = $target.position().top + $elm.scrollTop();
+                console.log($target[0], $target.offset().top, targetPosition);
+
+                $('#rpList').animate({scrollTop: targetPosition-90}, 300);
+            }
+        }
+
+    };
+
     // 筛选line
     scope.filterLine = function () {
         ++isFilterLine;

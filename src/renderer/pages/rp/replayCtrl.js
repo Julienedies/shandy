@@ -24,7 +24,10 @@ export default function () {
     });
 
     $elm.on('click', function(e){
+        let originalTarget = e.originalEvent.target;
+        //if(originalTarget.id === 'backRpBtn') return false;
         brick.view.back();
+        return false;
     });
 
 
