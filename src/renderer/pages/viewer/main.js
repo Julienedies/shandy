@@ -89,7 +89,7 @@ brick.reg('mainCtrl', function (scope) {
     // 特定临时操作
     scope.ls = function () {
         if (confirm('确定此次临时操作？？？')) {
-            helper2.setTo(viewerJodb);
+            //helper2.setTo(viewerJodb); // 更改热点系统
         }
     };
 
