@@ -148,10 +148,12 @@ a.tag, a.tag:hover {
 }
 
 .button.is-down {
-  background-color: #0bd9b6;
+  //background-color: #0bd9b6;
+  background-color: #0abf9b;
 
   &:hover {
-    background-color: #0abf9b;
+    //background-color: #0abf9b;
+    background-color: #0bd9b6;
   }
 }
 

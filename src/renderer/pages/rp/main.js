@@ -292,7 +292,8 @@ brick.reg('rpListCtrl', function (scope) {
     };
 
     scope.toggle = function (e) {
-        $(this).nextAll().find('.pre.text').toggle();
+        let cla = 'shrink';
+        $(this).next().toggleClass(cla);
         return false;
     };
 
