@@ -197,7 +197,11 @@ html, body {
     }
 
     > .wrap {
-      padding: 0.75em 1em 0.25em 1em;
+      padding: 0.75em 1em 0.15em 1em;
+
+      &.shrink {
+        display: none;
+      }
 
       .textarea {
         border-color: #dfdfdf;

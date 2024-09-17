@@ -55,7 +55,8 @@
             <div id="mainContent" ic-tpl="rpList">
                 <div id="rpForm" ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm;">
                     <ul>
-                        <li ic-class="box {{ rp.role==='5'?'line':'' }}" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}" tabindex="{{ rp.isLine ? 'line': rp.group }}">
+                        <li ic-class="box {{ rp.role==='5'?'line':'' }}" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}"
+                            tabindex="{{ rp.isLine ? 'line': rp.group }}">
                             <!-- draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" -->
                             <header ic-click="toggle" ic-class="role_{{ rp.role }}">
                                 <h3>{{ rp.title }}
@@ -63,7 +64,7 @@
                                 </h3>
                             </header>
 
-                            <section class="wrap">
+                            <section ic-class="wrap {{ rp.freeze?'shrink':'' }}">
 
                                 <!-- 是否有嵌入的子元素 -->
                                 <!-- <div class="box" ic-if="rp.inset">
@@ -129,42 +130,43 @@
 
                                 <div class="pre text" ic-dblclick="toggle">{{ rp.content }}</div>
 
-                                <div style="padding: 5px 0 3px 0;">
-                                    <div class="tags is-right">
-                                        <span class="tag is-small" title="rp的别名" ic-if="rp.alias"> {{ rp.alias }}</span>
-                                        <!--<span class="tag is-small" title="关联的tag类型" ic-if="rp.TagType"> {{ rp.TagType }}</span>-->
-                                        <span class="tag is-small"> {{ rp.level || 0 }}</span>
-                                        <!--<span class="tag is-small" ic-click="onFilterKeyChange2:{{ rp.type }}"> {{ rp.type }}</span>-->
-                                        <span class="tag is-small" ic-click="setLine:{{ rp.id }}" ic-if="rp.isLine">
+
+                            </section>
+                            <div style="padding: 0.25em 1em;">
+                                <div class="tags is-right">
+                                    <span class="tag is-small" title="rp的别名" ic-if="rp.alias"> {{ rp.alias }}</span>
+                                    <!--<span class="tag is-small" title="关联的tag类型" ic-if="rp.TagType"> {{ rp.TagType }}</span>-->
+                                    <span class="tag is-small"> {{ rp.level || 0 }}</span>
+                                    <!--<span class="tag is-small" ic-click="onFilterKeyChange2:{{ rp.type }}"> {{ rp.type }}</span>-->
+                                    <span class="tag is-small" ic-click="setLine:{{ rp.id }}" ic-if="rp.isLine">
                                             <!--<i class="fas fa-plus" title="添加项"></i>-->
                                             <i class="far fa-edit" title="编辑"></i>
                                         </span>
-                                        <span class="tag is-small" ic-click="edit:{{ rp.id }}" ic-if="!!!rp.isLine">
+                                    <span class="tag is-small" ic-click="edit:{{ rp.id }}" ic-if="!!!rp.isLine">
                                             <i class="far fa-edit" title="编辑"></i>
                                         </span>
-                                        <span class="tag is-small" ic-click="plus:{{ rp.id }}">
+                                    <span class="tag is-small" ic-click="plus:{{ rp.id }}">
                                             <i class="fas fa-long-arrow-alt-up" title="加权"></i>
                                         </span>
-                                        <!--<span class="tag is-small" ic-click="focus:{{ rp.id }}">置顶   long-arrow-alt-up </span>-->
-                                        <span ic-class="tag is-small {{ rp.re==='true'?'is-primary':'' }}" ic-click="re:{{ rp.id }}"
-                                              ic-if="!!!rp.isLine">
+                                    <!--<span class="tag is-small" ic-click="focus:{{ rp.id }}">置顶   long-arrow-alt-up </span>-->
+                                    <span ic-class="tag is-small {{ rp.re==='true'?'is-primary':'' }}" ic-click="re:{{ rp.id }}"
+                                          ic-if="!!!rp.isLine">
                                             <i class="far fa-star" title="Re"></i>
                                         </span>
-                                        <span class="tag is-small" ic-click="copy:{{ rp.id }}:{{ rp.isLine }}">
+                                    <span class="tag is-small" ic-click="copy:{{ rp.id }}:{{ rp.isLine }}">
                                             <i class="far fa-copy" title="拷贝"></i>
                                         </span>
-                                        <span class="tag is-small" ic-click="createTagByRp:{{ rp.id }}" ic-if="!!!rp.isLine">
+                                    <span class="tag is-small" ic-click="createTagByRp:{{ rp.id }}" ic-if="!!!rp.isLine">
                                             <i class="fas fa-retweet" title="生成对应的tag"></i>
                                         </span>
-                                        <span class="tag is-small"
-                                              ic-ajax
-                                              ic-submit-method="delete"
-                                              ic-submit-action="/stock/rp/{{rp.id}}"
-                                              ic-submit-before="delBeforeConfirm"
-                                              ic-submit-on-done="onDelRpDone"><i class="fas fa-trash-alt" title="删除"></i></span>
-                                    </div>
+                                    <span class="tag is-small"
+                                          ic-ajax
+                                          ic-submit-method="delete"
+                                          ic-submit-action="/stock/rp/{{rp.id}}"
+                                          ic-submit-before="delBeforeConfirm"
+                                          ic-submit-on-done="onDelRpDone"><i class="fas fa-trash-alt" title="删除"></i></span>
                                 </div>
-                            </section>
+                            </div>
                         </li>
                     </ul>
 
