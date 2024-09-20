@@ -251,7 +251,7 @@ brick.reg('rts_ctrl', function (scope) {
 });
 
 
-window.addEventListener('beforeunload', serialize);
+//window.addEventListener('beforeunload', serialize);
 
 
 export default {
@@ -261,11 +261,12 @@ export default {
         if (/^\d{6}$/.test(code)) {
             _add(code);
             voice(`封单监控 ${ stock.name }`);
+            serialize();
         } else {
             voice('封单监控失败，无效代码！');
         }
 
-        tdx.active();
+        //tdx.active();
     },
     on_rts_cancel: _remove
 };
