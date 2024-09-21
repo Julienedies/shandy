@@ -60,10 +60,12 @@ export default function () {
     // ajax请求服务端前的表单数据处理
     this.before = function (fields) {
         console.log(222, fields);
+        if(fields.line){
+            return alert(fields.title);
+        }
         fields.content = $editor.froalaEditor('html.get', true);
         //$editor.froalaEditor('destroy');
     };
-
 
 
     this.done = function (data) {

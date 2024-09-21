@@ -123,7 +123,7 @@ html, body {
       }
 
       &.role_1 {
-        background: yellow !important;
+        background: #FFEB3B !important;
 
         h3 {
           color: black; // #0360d3  #0354d3
@@ -224,6 +224,11 @@ html, body {
     font-size: 1rem;
     line-height: 1.8;
 
+    &.shrink {
+      height: 4em;
+      overflow: hidden;
+    }
+
     table {
       td, th {
         border: solid 1px #e3e3e3;
@@ -256,9 +261,9 @@ html, body {
     border-bottom: solid 1px #e7e7ea;
 
     .td:first-child {
-      min-width: 7em;
+      min-width: 11em;
       text-align: right;
-      padding-right: 2em;
+      padding-right: 1em;
     }
 
     &:last-child {

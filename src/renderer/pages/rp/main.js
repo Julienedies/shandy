@@ -73,7 +73,7 @@ brick.reg('rpListCtrl', function (scope) {
 
     window._GET_RP_KEY = function (rp, tagType) {
         let key = '';
-        if (rp.isLine) {
+        if (rp.line) {
             key = 'line.' + (rp.alias || rp.title) + '.' + tagType;
         } else {
             // 如果以.结尾，
@@ -85,13 +85,13 @@ brick.reg('rpListCtrl', function (scope) {
                 key = rp.alias;
             }
         }
-        //let key = rp.isLine ? ('line.' + rp.title + '.' + tagType) : (/[.]/img.test(rp.alias) ? rp.alias : (rp.alias + '.' + tagType));
+        //let key = rp.line ? ('line.' + rp.title + '.' + tagType) : (/[.]/img.test(rp.alias) ? rp.alias : (rp.alias + '.' + tagType));
         return key.replace(/\.-/img, '');
     };
 
     window._GET_RP_KEY2 = function (rp, input) {
         let key = '';
-        if (rp.isLine) {
+        if (rp.line) {
             key = ('line.' + rp.title) + '.' + input
         } else {
             if (/[.]/img.test(input)) {
@@ -291,9 +291,15 @@ brick.reg('rpListCtrl', function (scope) {
         let $th = $(this).text($elm.hasClass(cla) ? '收缩模式' : '展开模式');
     };
 
-    scope.toggle = function (e) {
+    scope.toggleWrap = function (e) {
         let cla = 'shrink';
         $(this).next().toggleClass(cla);
+        return false;
+    };
+
+    scope.togglePre = function(e){
+        let cla = 'shrink';
+        $(this).toggleClass(cla);
         return false;
     };
 

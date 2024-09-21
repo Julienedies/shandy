@@ -15,7 +15,7 @@
                             <div class="control is-expanded">
                                 <input class="input" type="text" name="title" value="{{line['title']}}" ic-form-field ic-field-rule="required">
                                 <input type="hidden" name="id" value="{{line.id}}" ic-form-field>
-                                <input type="hidden" name="isLine" value="true" ic-form-field>
+                                <!--<input type="hidden" name="line" value="true" ic-form-field>-->
                             </div>
                             <p class="control">
                             <span class="select">
@@ -32,10 +32,10 @@
 
 
                 <div class="tr">
-                    <h6 class="td">节奏</h6>
+                    <h6 class="td">提醒</h6>
                     <div class="td">
                         <div class="control">
-                            <input class="input" type="text" name="pace" value="{{line['pace']}}">
+                            <input class="input" type="text" name="caution" value="{{line['caution']||'风险点和博弈点在哪里？盛极而衰、加强爆发？？'}}" ic-form-field="caution">
                         </div>
                     </div>
                 </div>
@@ -112,10 +112,10 @@
 
                 <!-- tr 备注 -->
                 <div class="tr">
-                    <h6 class="td">预判可能的走势及应对</h6>
+                    <h6 class="td">预判走势及应对</h6>
                     <div class="td">
                         <div class="control">
-                            <textarea rows="2" class="textarea" ic-form-field="content"></textarea>
+                            <textarea rows="2" class="textarea" ic-form-field="content">{{ line.content }}</textarea>
                         </div>
                     </div>
                 </div>
@@ -144,13 +144,21 @@
                 </div>
 
                 <div class="tr">
-                    <h6 class="td">freeze</h6>
+                    <h6 class="td"></h6>
                     <div class="td">
-                        <div class="control" style="width:90px; padding-left:10px;">
-                            <label class="checkbox">
-                                <input type="checkbox" name="freeze" ic-has-checked="line.freeze==='true'" ic-form-field="freeze" value="true">
-                                is freeze
-                            </label>
+                        <div class="field is-grouped is-grouped-multiline is-grouped-right">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="freeze" ic-has-checked="line.freeze==='true'" ic-form-field="freeze" value="true">
+                                    is freeze
+                                </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="line" ic-has-checked="line.line==='true'" ic-form-field="line" value="true">
+                                    is line
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>

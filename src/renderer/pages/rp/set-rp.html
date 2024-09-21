@@ -135,6 +135,7 @@
                     <div class="control">
                         <p class="select">
                             <select name="role" ic-form-field>
+                                <option value="">null</option>
                                 <option value="0" ic-has-selected="model.role==0">问题&错误</option>
                                 <option value="1" ic-has-selected="model.role==1">复盘思考</option>
                                 <option value="2" ic-has-selected="model.role==2">关键理念</option>
@@ -162,6 +163,12 @@
                         </label>
                     </div>
 
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" name="line" ic-has-checked="model.line==='true'" ic-form-field="line" value="true">
+                            is line
+                        </label>
+                    </div>
 <!--                    <div class="control" style="width:20px;"></div>
                     <div class="control">
                         <label class="checkbox">
