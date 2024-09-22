@@ -16,7 +16,16 @@ import '../../../js/common-stock.js'
 
 window.brick = brick;
 
-brick.reg('plansCtrl', function (scope) {
+brick.reg('replaysCtrl', function (scope) {
+
+    let $elm = scope.$elm;
+
+    $elm.on('click', 'a.key', function (e) {
+        let key = $(this).text();
+        $elm.find('tr').not(`tr[tabindex=${key}]`).toggle();
+    });
+
+
 
     $.get(`/stock/replay`).done((data) => {
         console.log(data);

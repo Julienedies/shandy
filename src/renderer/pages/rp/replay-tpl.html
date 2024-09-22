@@ -2,7 +2,7 @@
 
     <table class="table is-fullwidth is-bordered" ic-tpl="replay">
         <tbody ic-init="jo=model['交易总结'];">
-        <tr class="is-up">
+        <tr ic-class="{{model['日内']['日标记'].includes('进攻日')?'is-up':'is-down'}}">
             <th>{{ model.week }}</th>
             <th>{{ model.date }}</th>
             <th></th>

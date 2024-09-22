@@ -9,7 +9,7 @@
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-    <div id="replay" class="column" ic-ctrl="plansCtrl">
+    <div id="replay" class="column" ic-ctrl="replaysCtrl">
 
         <div  ic-tpl="replay">
 
@@ -29,15 +29,15 @@
                     </td>
                 </tr>
 
-                <tr ic-for="i, v in replay['变量']">
+                <tr ic-for="i, v in replay['变量']" tabindex="{{ i }}">
                     <td>{{ replay.week }}</td>
-                    <td> {{ i }}</td>
+                    <td><a class="key" ic-data-key="{{ i }}"> {{ i }}</a></td>
                     <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
                 </tr>
 
-                <tr ic-for-start="i, v in replay" ic-for-end ic-if="v && !(['line','变量','交易总结','id','timestamp','week','date','消息面'].includes(i))">
+                <tr ic-for-start="i, v in replay" ic-for-end ic-if="v && !(['line','变量','交易总结','id','timestamp','week','date','消息面'].includes(i))" tabindex="{{ i }}">
                     <td>{{ replay.week }}</td>
-                    <td>{{ i }}</td>
+                    <td><a class="key">{{ i }}</a></td>
                     <td>
                         {{ brick.getTpl('replay3')({model:v}) }}
                     </td>

@@ -88,7 +88,7 @@
                                             <div class="buttons has-addons" ic-init="m=rpForm[_GET_RP_KEY(rp, tagType)] ||[];">
                                                 <span class="button is-light item" ic-if-start="o.type==='交易错误'" ic-val="{{ o.text }}"
                                                       ic-has-selected="m.includes(o.text)">
-                                                    {{ o.text }}
+                                                    {{ o.text }} <sup>{{ o.level }}</sup>
                                                 </span>
                                                 <span class="button item" ic-else-if="o.type==='交易要素'" ic-val="{{ o.text }}">
                                                     {{ o.text }}

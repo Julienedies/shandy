@@ -261,15 +261,14 @@ brick.reg('rpListCtrl', function (scope) {
 
     // group
     scope.onGroupsChange = function (msg) {
-        console.log(msg);
+        //console.log(msg);
         let val = msg.value;
         if (val) {
             let $target = $(`ul li[tabindex=${ val }]`);
             if ($target.length) {
                 let targetPosition = $target.position().top + $elm.scrollTop();
-                console.log($target[0], $target.offset().top, targetPosition);
-
-                $('#rpList').animate({scrollTop: targetPosition-90}, 300);
+                //console.log($target[0], $target.offset().top, targetPosition);
+                $elm.animate({scrollTop: targetPosition-90}, 300);
             }
         }
 

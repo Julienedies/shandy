@@ -155,7 +155,7 @@ brick.reg('logicCtrl', function () {
 
     this.play = function (e) {
         let text = $(this).closest('li').find('.pre').text();
-        text = `${text} ${text} ${text} ${text}`;
+        text = `${text} ${text} ${text}`;
         voice.clear();
         voice(text);
         //voice.cancel(id);
