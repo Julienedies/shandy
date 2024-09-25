@@ -261,7 +261,7 @@ export default {
         if (/^\d{6}$/.test(code)) {
             _add(code);
             voice(`封单监控 ${ stock.name }`);
-            serialize();
+
         } else {
             voice('封单监控失败，无效代码！');
         }

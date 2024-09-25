@@ -15,10 +15,10 @@
 
             <table class="table is-fullwidth is-bordered" ic-for="i, replay in model">
                 <tbody ic-init="jo=replay['交易总结'];">
-                <tr>
+                <tr ic-class="{{(replay['日内'] && (replay['日内']['日标记'])||'').includes('进攻日')?'is-up':'is-down'}}">
                     <th>{{ replay.week }}</th>
                     <th>{{ replay.date }}</th>
-                    <th></th>
+                    <th>{{ (replay['日内'] && (replay['日内']['日标记'])) }}</th>
                 </tr>
 
                 <tr>
@@ -61,7 +61,7 @@
 
             <div ic-tpl="replay3">
                 <div class="tags" ic-if-start="Array.isArray(model)">
-                    <span class="tag is-white" ic-for="i,v in model">{{ v }}</span>
+                    <span class="tag  is-highlight" ic-for="i,v in model">{{ v }}</span>
                 </div>
                 <div  ic-else-if="typeof model==='object'"><!-- 包含数组 -->
 
@@ -70,7 +70,7 @@
                             <div class="td" style="padding:0 1em 0 0;"><span class="tag">{{ i }}</span></div>
                             <div class="td is-expanded">
                                 <div class="tags">
-                                    <span class="tag is-light" ic-for="j,k in v">{{ k }}</span>
+                                    <span class="tag  is-highlight" ic-for="j,k in v">{{ k }}</span>
                                 </div>
                             </div>
                         </div>

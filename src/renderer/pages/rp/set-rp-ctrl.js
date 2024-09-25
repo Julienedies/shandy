@@ -61,7 +61,7 @@ export default function () {
     this.before = function (fields) {
         console.log(222, fields);
         if(fields.line){
-            return alert(fields.title);
+            return alert('不应该是line =》' + fields.title);
         }
         fields.content = $editor.froalaEditor('html.get', true);
         //$editor.froalaEditor('destroy');

@@ -35,7 +35,7 @@
                     <h6 class="td">提醒</h6>
                     <div class="td">
                         <div class="control">
-                            <input class="input" type="text" name="caution" value="{{line['caution']||'风险点和博弈点在哪里？盛极而衰、加强爆发？？'}}" ic-form-field="caution">
+                            <input class="input" type="text" name="caution" value="{{line['caution']}}" ic-form-field="caution">
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                             </div>
                             <div class="control">
                                 <label class="checkbox">
-                                    <input type="checkbox" name="line" ic-has-checked="line.line==='true'" ic-form-field="line" value="true">
+                                    <input type="checkbox" name="line" checked ic-form-field="line" value="true">
                                     is line
                                 </label>
                             </div>
