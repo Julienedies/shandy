@@ -1,7 +1,42 @@
 [
 	{
-		"id": "信创",
+		"id": "白酒",
 		"selected": true,
+		"timestamp": 1727626867403
+	},
+	{
+		"id": "高股息",
+		"selected": true,
+		"timestamp": 1727588602868
+	},
+	{
+		"id": "MSCI",
+		"selected": true,
+		"timestamp": 1727395690102
+	},
+	{
+		"id": "证券",
+		"selected": true,
+		"timestamp": 1727269258132
+	},
+	{
+		"id": "CRO",
+		"selected": false,
+		"timestamp": 1727009549075
+	},
+	{
+		"id": "安全",
+		"selected": false,
+		"timestamp": 1726793574532
+	},
+	{
+		"id": "养老",
+		"selected": false,
+		"timestamp": 1726576319170
+	},
+	{
+		"id": "信创",
+		"selected": false,
 		"timestamp": 1726159624173
 	},
 	{
@@ -11,7 +46,7 @@
 	},
 	{
 		"id": "充电",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1726067116682
 	},
 	{
@@ -51,7 +86,7 @@
 	},
 	{
 		"id": "固态电池",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1724934834987
 	},
 	{
@@ -111,7 +146,7 @@
 	},
 	{
 		"id": "折叠屏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1723657863211
 	},
 	{
@@ -166,7 +201,7 @@
 	},
 	{
 		"id": "金融",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1722399878359
 	},
 	{
@@ -301,7 +336,7 @@
 	},
 	{
 		"id": "房地产",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1715877482879
 	},
 	{
@@ -346,7 +381,7 @@
 	},
 	{
 		"id": "干细胞",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1715182934652
 	},
 	{
@@ -421,7 +456,7 @@
 	},
 	{
 		"id": "锂电池",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1711501398350
 	},
 	{
@@ -521,7 +556,7 @@
 	},
 	{
 		"id": "消费电子",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1703692763520
 	},
 	{
@@ -696,7 +731,7 @@
 	},
 	{
 		"id": "央企",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1650162678163
 	},
 	{
