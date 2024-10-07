@@ -88,10 +88,12 @@ class Rts {
         console.log('rts', this.state);
 
         if (this.codes.length === 0 || this.state === STOP) {
+            this._clearTimer();
             console.log('rts state is STOP.');
-            return this._clearTimer();
+            return;
         }
 
+        console.log('++++++++++++++ new request +++++++++++++++', +new Date);
         request(options, function (error, response, body) {
             //console.log(error, response, body, +new Date);
             if (error) {

@@ -32,10 +32,11 @@
 		"timestamp": 1723552997275
 	},
 	{
-		"text": "git log --date=format:\"%Y-%m-%d\"",
-		"type": "",
+		"text": "git log --date=format:\"%Y-%m-%d\"\n\nTv/jjdjr/2013/al!@#$%^&*",
+		"type": "git",
 		"id": "id_1719159343301_6826",
-		"timestamp": 1719159343301
+		"timestamp": 1719159343301,
+		"level": "0"
 	},
 	{
 		"id": "id_1719150893104_9750",

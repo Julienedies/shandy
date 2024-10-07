@@ -387,17 +387,19 @@ brick.reg('countSwingCtrl', function (scope) {
         console.info(a)
         a = Math.round(a * 100) / 100
         console.info(a)
+        let a1 = p + p * 0.2
+        a1 = Math.round(a1 * 100) / 100
         let b = p - p * 0.1
         console.info(b)
         b = Math.round(b * 100) / 100
         console.info(b)
 
         let text = '';
-        for (let i = -0.025; i <= 0.105; i += 0.005) {
+        for (let i = -0.05; i <= 0.21; i += 0.01) {
             text += `${ Math.round(p * (1 + i) * 100) / 100 }  :  ${ Math.round(i * 1000) / 10 }% \r\n`;
         }
 
-        return ` 现价: ${ p } -------- 涨停价: ${ a } --------- 跌停价: ${ b }\r\n ------------------ \r\n${ text }`;
+        return ` 现价: ${ p } --------- 跌停价: ${ b } -------- 10%涨停价: ${ a } -------- 20%涨停价: ${ a1 }\r\n ----------- \r\n${ text }`;
     }
 
     // 涨跌停价计算

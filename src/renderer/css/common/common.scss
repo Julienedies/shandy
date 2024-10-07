@@ -116,6 +116,11 @@ a.tag, a.tag:hover {
 }
 
 .tag:not(body).is-highlight2 {
+  background-color: #eef6f9;
+  color: rgb(35, 34, 34);
+}
+
+.tag:not(body).is-highlight3 {
   background-color: #EAF2FF;
   color: rgb(35, 34, 34);
 }

@@ -86,6 +86,7 @@ brick.reg('rpListCtrl', function (scope) {
             }
         }
         //let key = rp.line ? ('line.' + rp.title + '.' + tagType) : (/[.]/img.test(rp.alias) ? rp.alias : (rp.alias + '.' + tagType));
+        key = key || '';
         return key.replace(/\.-/img, '');
     };
 
@@ -104,6 +105,7 @@ brick.reg('rpListCtrl', function (scope) {
                 key = rp.alias + '.' + input;
             }
         }
+        key = key || '';
         return key.replace(/\.-/img, '');
     };
 

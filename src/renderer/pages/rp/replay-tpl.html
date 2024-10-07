@@ -1,7 +1,7 @@
 <div class="column" style="padding-top:0.4em;">
 
     <table class="table is-fullwidth is-bordered" ic-tpl="replay">
-        <tbody ic-init="jo=model['交易总结'];">
+        <tbody ic-init="daJuGuan=model['大局观'];kuiian=model['亏钱效应'];zhuanQian=model['赚钱效应'];zhouQi=model['周期节奏'];zhuXian=model['主线热点'];riNei=model['日内'];yingDui=model['推演应对'];muBiao=model['目标行情'];zongJie=model['交易总结'];a1=['大局观', '亏钱效应', '赚钱效应', '周期节奏', '主线热点'];a2=['日内', '推演应对', '目标行情', '交易计划', '交易备注', '交易总结'];">
         <tr ic-class="{{model['日内']['日标记'].includes('进攻日')?'is-up':'is-down'}}">
             <th>{{ model.week }}</th>
             <th>{{ model.date }}</th>
@@ -16,17 +16,23 @@
             </td>
         </tr>
 
-        <tr ic-for="i, v in model['变量']">
+<!--        <tr>
             <td>{{ model.week }}</td>
-            <td> {{ i }}</td>
-            <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
+            <td> 大局观 </td>
+            <td> {{ brick.getTpl('replay3')({model:daJuGuan}) }}</td>
+        </tr>-->
+
+        <tr ic-for="i, v in a1">
+            <td>{{ model.week }}</td>
+            <td> {{ v }} </td>
+            <td> {{ brick.getTpl('replay3')({model:model[v]}) }}</td>
         </tr>
 
-        <tr ic-for-start="i, v in model" ic-for-end ic-if="v && !(['line','变量','交易总结','id','timestamp','week','date','消息面'].includes(i))">
+<!--        <tr ic-for-start="i, v in model" ic-for-end ic-if="v && !(['line','变量','交易总结','id','timestamp','week','date','消息面'].includes(i))">
             <td>{{ model.week }}</td>
             <td>{{ i }}</td>
             <td> {{ brick.getTpl('replay3')({model:v}) }} </td>
-        </tr>
+        </tr>-->
 
         <tr ic-for="i, v in model['line']">
             <td>{{ model.week }}</td>
@@ -34,11 +40,17 @@
             <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
         </tr>
 
-        <tr>
+        <tr ic-for="i, v in a2">
+            <td>{{ model.week }}</td>
+            <td> {{ v }} </td>
+            <td> {{ brick.getTpl('replay3')({model:model[v]}) }}</td>
+        </tr>
+
+<!--        <tr>
             <td>{{ model.week }}</td>
             <td> 交易总结 </td>
-            <td> {{ brick.getTpl('replay3')({ model: jo }) }}</td>
-        </tr>
+            <td> {{ brick.getTpl('replay3')({ model: zongJie }) }}</td>
+        </tr>-->
         </tbody>
     </table>
 
@@ -51,7 +63,7 @@
 
             <div class="item" ic-for-start="i,v in model" ic-for-end ic-if="v">
                 <div class="tr" ic-if-start="typeof v==='object'">
-                    <div class="td" style="padding:0 1em 0 0;"><span class="tag">{{ i }}</span></div>
+                    <div class="td" style="padding:0 1em 0 0;"><span class="tag is-highlight2">{{ i }}</span></div>
                     <div class="td is-expanded">
                         <div class="tags">
                             <span class="tag is-highlight" ic-for="j,k in v">{{ k }}</span>
@@ -59,15 +71,15 @@
                     </div>
                 </div>
                 <div class="tr" ic-else>
-                    <div class="td" style="padding:0 1em 0 0;"><span class="tag">{{ i }}</span></div><div class="td is-expanded pre">{{ v }}</div>
+                    <div class="td" style="padding:0 1em 0 0;"><span class="tag is-highlight2">{{ i }}</span></div><div class="td is-expanded pre">{{ v }}</div>
                 </div>
             </div>
         </div>
-        <span class="" ic-else-if="typeof model==='string'" ic-if-end>{{ model }}</span>
+        <div class="pre" ic-else-if="typeof model==='string'" ic-if-end>{{ model }}</div>
     </div>
 
 
-    <div ic-tpl="replay2">
+    <div class="none" ic-tpl="replay2">
         <ul style="padding:0 0 0 5%;" ic-init="o = model;">
             <li class="table_4" ic-for="i,v in model" ic-if="v">
                 <div class="tr" ic-init="tag=TAGS_MAP_BY_ID[v], p=RP_MAP[i];">

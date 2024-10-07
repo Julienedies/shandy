@@ -123,7 +123,7 @@ html, body {
       }
 
       &.role_1 {
-        background: #f82f57 !important;
+        background: #e30733 !important;
 
         h3 {
           color: #fff; // #0360d3  #0354d3
@@ -139,6 +139,16 @@ html, body {
       }
 
       &.role_3 {
+        background: black;
+
+        h3 {
+          color: yellow;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+
+      &.role_31 {
         background: black;
 
         h3 {
@@ -163,6 +173,15 @@ html, body {
           color: #fff;
         }
       }
+
+      &.role_6 {
+        background: #0275a3 !important;
+
+        h3 {
+          color: #fff; // #0360d3  #0354d3
+        }
+      }
+
 
       h2, h3, h5, h6 {
         padding: 0.18rem 0.1rem;
