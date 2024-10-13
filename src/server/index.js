@@ -68,6 +68,14 @@ app.get('/message/', (req, res) => {
     res.send(`info: ${ info }`);
 });
 
+app.post('/cls_news/', (req, res) => {
+    let data = req.body;
+    let msg = data.msg;
+    console.log('/cls_news', msg);
+    io.emit('cls_news', msg);
+    res.send(`cls_news: ok`);
+});
+
 app.use('/web/', express.static(webStaticDir));
 app.use('/upload/', express.static(config.UPLOAD_DIR));
 app.use(express.static(staticDir));
