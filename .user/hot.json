@@ -1,7 +1,37 @@
 [
 	{
-		"id": "白酒",
+		"id": "AMC",
 		"selected": true,
+		"timestamp": 1728740242564
+	},
+	{
+		"id": "CIPS",
+		"selected": true,
+		"timestamp": 1728621999650
+	},
+	{
+		"id": "中字头",
+		"selected": true,
+		"timestamp": 1728579689967
+	},
+	{
+		"id": "金融科技",
+		"selected": true,
+		"timestamp": 1728117443295
+	},
+	{
+		"id": "互联网金融",
+		"selected": true,
+		"timestamp": 1728117436828
+	},
+	{
+		"id": "参股券商",
+		"selected": true,
+		"timestamp": 1728115516996
+	},
+	{
+		"id": "白酒",
+		"selected": false,
 		"timestamp": 1727626867403
 	},
 	{
@@ -336,7 +366,7 @@
 	},
 	{
 		"id": "房地产",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1715877482879
 	},
 	{

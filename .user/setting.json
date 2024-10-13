@@ -4,9 +4,9 @@
 		"csdPath": "E:\\dev\\csd",
 		"bounds": {
 			"x": 336,
-			"y": 84,
-			"width": 1635,
-			"height": 1047
+			"y": 191,
+			"width": 1530,
+			"height": 941
 		},
 		"fetchSources": [
 			"ths_new",
@@ -32,7 +32,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\交易记录\\2409",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2024-09",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -356,8 +356,8 @@
 		"bounds": {
 			"x": 0,
 			"y": 0,
-			"width": 2196,
-			"height": 1196
+			"width": 2195,
+			"height": 1235
 		}
 	}
 }
