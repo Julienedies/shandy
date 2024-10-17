@@ -3,7 +3,6 @@ html, body {
   min-height: 100%;
   overflow: hidden;
   background: rgba(0, 0, 0, 0);
-  //border: solid 1px blue;
 }
 
 body {
@@ -11,10 +10,11 @@ body {
   padding: 0;
   color: #fff;
   font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  border: solid 2px blue;
 }
 
 
-#cox {
+#container {
   height: 10000px;
 }
 
@@ -57,12 +57,15 @@ body {
   //border: solid 1px blue;
 
   &.active {
-    top: 1080px;
-    left: 12%;
-    right: 26%;
-    max-height: 5em;
+    top: 24%;
+    bottom:42%;
+    left: 20%;
+    right: 20%;
+    max-height: 62%;
+    display: grid;
+    place-items: center;
     color: #fff;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 255, 0.9);
     //border: solid 1px greenyellow;
   }
 }
@@ -72,7 +75,7 @@ body {
   animation: blink 0.5s 30 ease-in-out;
 }
 .blink2 {
-  animation: blink2 0.6s 15 ease-in-out;
+  animation: blink2 0.9s 10 ease-in-out;
 }
 
 @keyframes blink {

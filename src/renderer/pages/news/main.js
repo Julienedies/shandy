@@ -14,8 +14,7 @@ import voice from '../../../libs/voice'
 import setting from '../../../libs/setting'
 
 
-
-let w1 = `
+const w1 = `
 无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
 无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
 无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；`;
@@ -25,6 +24,7 @@ const w2 = `
 卖飞、卖飞、卖飞、截断亏损、让利润奔跑；
 卖飞、卖飞、卖飞、截断亏损、让利润奔跑；
 `;
+
 //const voiceWarnText = setting.get('voiceWarnText') || {};
 const voiceWarnText = {
     'daban': w1,
@@ -32,10 +32,12 @@ const voiceWarnText = {
     'sell': w2,
 }
 
+
 const ipc = electron.ipcRenderer;
 const BrowserWindow = electron.remote.BrowserWindow;
 let win;
 let timer;
+
 
 const socket = io();
 let $news = $('#news');
@@ -44,12 +46,19 @@ let $warn = $('#warn');
 let activeCla = 'active blink';
 let activeCla2 = 'active blink2';
 
+let newsArr = [];
+function getNews (news) {
+    newsArr.unshift(news);
+    newsArr.splice(3, array.length - 3);
+    return newsArr.join('\n');
+}
+
 //////////////////////////////////////////////////////////////
 // 隐藏窗口
 function hideWin () {
     //win.hide();
     //win && win.minimize();
-    $news.removeClass(activeCla);
+    //$news.removeClass(activeCla);
 
 }
 
@@ -75,11 +84,12 @@ ipc.on('id', function (event, windowID) {
 // 有财经新消息显示窗口,  稍后隐藏窗口
 socket.on('cls_news', (msg) => {
     clearTimeout(timer);
-    $news.text(msg).addClass(activeCla2);
+
+    $news.text(getNews(msg)).addClass(activeCla2);
 
     timer = setTimeout(() => {
         $news.removeClass(activeCla2);
-    }, 7 * 1000);
+    }, 47 * 1000);
 
     /*    if (win) {
         showWin();
@@ -93,6 +103,14 @@ socket.on('cls_news', (msg) => {
 //////////////////////////////////////////////////////////////
 // 交易警告文字版
 socket.on('warn', (info) => {
+
+    if (info === 'esc') {
+        $warn.removeClass(activeCla);
+        $news.removeClass(activeCla2);
+        return;
+    }
+
+
     let text = voiceWarnText[info] || info;
     $warn.text(text).addClass(activeCla);
 
@@ -101,7 +119,7 @@ socket.on('warn', (info) => {
     setTimeout(function () {
         $warn.removeClass(activeCla);
         voice.clear();
-    }, 1000 * 3);
+    }, 1000 * 24);
 
     voice(text);
 
