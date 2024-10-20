@@ -7,12 +7,16 @@ import '../../css/common/common.scss'
 import './style.scss'
 
 import electron from 'electron'
+
 import $ from 'jquery'
 
 import voice from '../../../libs/voice'
 
 import setting from '../../../libs/setting'
 
+import debugMenu from 'debug-menu'
+
+debugMenu.install();
 
 const w1 = `
 无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
@@ -46,11 +50,19 @@ let $warn = $('#warn');
 let activeCla = 'active blink';
 let activeCla2 = 'active blink2';
 
+
 let newsArr = [];
+
 function getNews (news) {
+    let result = '';
     newsArr.unshift(news);
-    newsArr.splice(3, array.length - 3);
-    return newsArr.join('\n');
+    newsArr.splice(4);
+    console.log(newsArr);
+    newsArr.forEach((v, i) => {
+        result += `<p>${ v }</p>`;
+    });
+    return result;
+    //return newsArr.join('\r\n');
 }
 
 //////////////////////////////////////////////////////////////
@@ -85,18 +97,12 @@ ipc.on('id', function (event, windowID) {
 socket.on('cls_news', (msg) => {
     clearTimeout(timer);
 
-    $news.text(getNews(msg)).addClass(activeCla2);
+    let html = getNews(msg);
+    $news.html(html).addClass(activeCla2);
 
     timer = setTimeout(() => {
         $news.removeClass(activeCla2);
-    }, 47 * 1000);
-
-    /*    if (win) {
-        showWin();
-        timer = setTimeout(() => {
-            hideWin();
-        }, 14 * 1000);
-    }*/
+    }, 947 * 1000);
 });
 
 
@@ -110,16 +116,15 @@ socket.on('warn', (info) => {
         return;
     }
 
+    $news.removeClass(activeCla2);
 
     let text = voiceWarnText[info] || info;
     $warn.text(text).addClass(activeCla);
 
-    $news.removeClass(activeCla2);
-
     setTimeout(function () {
         $warn.removeClass(activeCla);
         voice.clear();
-    }, 1000 * 24);
+    }, 1000 * 13);
 
     voice(text);
 

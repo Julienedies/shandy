@@ -366,7 +366,7 @@ brick.reg('mainCtrl', function (scope) {
     // 如果是交易时间， 打开消息提示窗口
     if (utils.isTrading()) {
         !scope.newsWin && scope.openNews();
-        !scope.newsWin2 && scope.openNews2();
+        //!scope.newsWin2 && scope.openNews2();
         //!scope.warnWindow && scope.openWarn(null, 1);
     }
 
