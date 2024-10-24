@@ -16,9 +16,9 @@
             <table class="table is-fullwidth is-bordered" ic-for="i, replay in model">
                 <tbody ic-init="jo=replay['交易总结'];">
                 <tr ic-class="{{(replay['日内'] && (replay['日内']['日标记'])||'').includes('进攻日')?'is-up':'is-down'}}">
-                    <th>{{ replay.week }}</th>
-                    <th>{{ replay.date }}</th>
-                    <th>{{ (replay['日内'] && (replay['日内']['日标记'])) }}</th>
+                    <td>{{ replay.week }}<td/>
+                    <td>{{ replay.date }}</td>
+                    <td>{{ (replay['日内'] && (replay['日内']['日标记'])) }}</td>
                 </tr>
 
                 <tr>

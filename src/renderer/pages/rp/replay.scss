@@ -35,7 +35,7 @@
     }
   }
 
-  tr td:nth-child(2) {
+  tr th:nth-child(2), tr td:nth-child(2) {
     white-space: nowrap;
   }
 

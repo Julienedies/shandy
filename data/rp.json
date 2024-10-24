@@ -1,5 +1,19 @@
 [
 	{
+		"id": "id_1729611354361_0332",
+		"type": "复盘&计划",
+		"caution": "",
+		"content": "",
+		"freeze": "",
+		"line": "true",
+		"level": "619",
+		"role": "5",
+		"input": "个股序列、备注",
+		"title": "低空经济",
+		"options": [],
+		"timestamp": 1729611354361
+	},
+	{
 		"id": "id_1729039132763_3726",
 		"type": "复盘&计划",
 		"caution": "",
@@ -10,7 +24,7 @@
 		],
 		"freeze": "",
 		"line": "true",
-		"level": "616",
+		"level": "614",
 		"role": "5",
 		"input": "个股序列、备注",
 		"title": "跨境支付",
@@ -21,14 +35,18 @@
 		"type": "复盘&计划",
 		"caution": "",
 		"content": "",
-		"freeze": "true",
+		"freeze": "",
 		"line": "true",
-		"level": "614",
+		"level": "617",
 		"role": "5",
 		"input": "个股序列、备注",
-		"title": "芯片-AI",
-		"options": [],
-		"timestamp": 1729037309442
+		"title": "芯片",
+		"options": [
+			"5944533",
+			"id_1726446468822_0662",
+			"4415621"
+		],
+		"timestamp": "1729037309442"
 	},
 	{
 		"id": "id_1729037299290_8413",
@@ -37,7 +55,7 @@
 		"content": "",
 		"freeze": "",
 		"line": "true",
-		"level": "619",
+		"level": "615",
 		"role": "5",
 		"input": "个股序列、备注",
 		"title": "化债-基建",
