@@ -1,5 +1,35 @@
 [
 	{
+		"id": "id_1729948885506_8898",
+		"type": "复盘&计划",
+		"caution": "",
+		"content": "",
+		"options": [
+			"4415621"
+		],
+		"freeze": "",
+		"line": "true",
+		"level": "619",
+		"role": "5",
+		"input": "个股序列、备注",
+		"title": "深圳-创投",
+		"timestamp": 1729948885506
+	},
+	{
+		"id": "id_1729948758025_7801",
+		"type": "复盘&计划",
+		"caution": "",
+		"content": "",
+		"freeze": "",
+		"line": "true",
+		"level": "619",
+		"role": "5",
+		"input": "个股序列、备注",
+		"title": "光伏-新能源",
+		"options": [],
+		"timestamp": 1729948758025
+	},
+	{
 		"id": "id_1729611354361_0332",
 		"type": "复盘&计划",
 		"caution": "",
@@ -72,7 +102,7 @@
 		"content": "",
 		"freeze": "true",
 		"line": "true",
-		"level": "614",
+		"level": "615",
 		"role": "5",
 		"input": "个股序列、备注",
 		"title": "军工",
@@ -80,7 +110,7 @@
 			"5944533",
 			"4415621"
 		],
-		"timestamp": 1729037283304
+		"timestamp": "1729037283304"
 	},
 	{
 		"id": "id_1729037263143_4496",

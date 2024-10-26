@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>replay</title>
+    <title>replays</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css" />
     <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
@@ -11,9 +11,15 @@
 <body>
     <div id="replay" class="column" ic-ctrl="replaysCtrl">
 
-        <div  ic-tpl="replay">
+        ${ require('../../rp/replay-tpl.html') }
 
-            <table class="table is-fullwidth is-bordered" ic-for="i, replay in model">
+        <div ic-tpl="replays">
+
+            <div ic-for="i, replay in model">
+                {{ brick.getTpl('replay')({ model: replay }) }}
+            </div>
+
+            <!--<table class="table is-fullwidth is-bordered" ic-for="i, replay in model">
                 <tbody ic-init="jo=replay['交易总结'];">
                 <tr ic-class="{{(replay['日内'] && (replay['日内']['日标记'])||'').includes('进攻日')?'is-up':'is-down'}}">
                     <td>{{ replay.week }}<td/>
@@ -56,14 +62,14 @@
                     <td> {{ brick.getTpl('replay3')({ model: jo }) }}</td>
                 </tr>
                 </tbody>
-            </table>
+            </table>-->
 
-
-            <div ic-tpl="replay3">
+            <!-- 嵌入用的子模板 -->
+            <!--<div ic-tpl="replay3">
                 <div class="tags" ic-if-start="Array.isArray(model)">
                     <span class="tag  is-highlight" ic-for="i,v in model">{{ v }}</span>
                 </div>
-                <div  ic-else-if="typeof model==='object'"><!-- 包含数组 -->
+                <div  ic-else-if="typeof model==='object'">&lt;!&ndash; 包含数组 &ndash;&gt;
 
                     <div class="item" ic-for-start="i,v in model" ic-for-end ic-if="v">
                         <div class="tr" ic-if-start="typeof v==='object'">
@@ -80,7 +86,7 @@
                     </div>
                 </div>
                 <span class="" ic-else-if="typeof model==='string'" ic-if-end>{{ model }}</span>
-            </div>
+            </div>-->
 
         </div>
     </div>

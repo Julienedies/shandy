@@ -5,6 +5,7 @@
 #replay {
 
   .table {
+    margin-bottom: 30px;
     color: #0270ee;
     //background: #ea5454;
 
@@ -20,8 +21,12 @@
     th, td {
       padding: 0.4em;
 
+      &:nth-child(1) {
+        width: 2em;
+      }
+
       &:nth-child(2) {
-        //text-align: right;
+        width: 10em;
       }
     }
 

@@ -428,13 +428,13 @@ brick.reg('rpListCtrl', function (scope) {
     }
 
     // 当表单日期改变，可以查看修改对应日期的复盘表单
-    /*    scope.onDateChange = function (e) {
+        scope.onDateChange = function (e) {
             let date = $(this).val();
             getRpForm(date, (data) => {
                 setList(null, data);
                 $('#dateTag').text(date);
             });
-        };*/
+        };
 
     // 根据键盘输入，随时提交数据进行保存；
     $elm.on('keyup', 'textarea', _.throttle(submit, 2900));

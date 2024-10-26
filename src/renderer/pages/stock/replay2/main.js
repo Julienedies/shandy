@@ -20,12 +20,6 @@ brick.reg('replaysCtrl', function (scope) {
 
     let $elm = scope.$elm;
 
-    $elm.on('click', 'a.key', function (e) {
-        let key = $(this).text();
-        $elm.find('tr').not(`tr[tabindex=${key}]`).toggle();
-    });
-
-
 
     $.get(`/stock/replay`).done((data) => {
         console.log(data);
@@ -36,8 +30,15 @@ brick.reg('replaysCtrl', function (scope) {
         });
 
         console.log(arr[0]);
-        scope.render('replay', arr);
+        scope.render('replays', arr);
     });
+
+
+    $elm.on('click', 'a.key', function (e) {
+        let key = $(this).text();
+        $elm.find('tr').not(`tr[tabindex=${key}]`).toggle();
+    });
+
 
     // 对复盘数据replay进行处理优化
     function fixData (rpForm) {
