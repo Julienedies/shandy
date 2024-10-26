@@ -37,7 +37,7 @@
                             <button class="button is-primary is-small" ic-click="toggleText">展开模式</button>
                             <a class="button is-white is-small" href="http://127.0.0.1:3300/web/stock_replay2.html" target="_blank">plans</a>
                             <!--<span class="button is-white is-small" id="dateTag">{{ J_FORMAT_DATE2() }}</span>-->
-                            <input class="" type="date" value="{{ J_FORMAT_DATE2() }}" ic-change="onDateChange">
+                            <input class="" type="date" ic-value="{{ model.date || J_FORMAT_DATE2() }}" ic-change="onDateChange">
                         </div>
                     </div>
 
@@ -191,7 +191,7 @@
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control">
                                         <input class="input is-small" type="date" name="date" ic-form-field="date"
-                                               ic-value="{{model.date || formatDate2() }}" ic-change="onDateChange">
+                                               ic-value="{{ rpForm.date || J_FORMAT_DATE2() }}" x-ic-change="onDateChange">
                                     </div>
                                     <div class="control">
                                         <button class="button is-primary is-small"

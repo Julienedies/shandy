@@ -171,7 +171,7 @@ brick.reg('rpListCtrl', function (scope) {
             return item;
         });
 
-        scope.render('types', {model: {rpMapByType: rpMapByType, filterByType: filterByType}});
+        scope.render('types', {model: {rpMapByType: rpMapByType, filterByType: filterByType, date: rpForm.date}});
 
         scope.render('rpList', {model: {rpList, rpForm, filterByType}}, function () {
             /*$(this).find('li').on('dragstart', scope.dragstart)
@@ -207,15 +207,16 @@ brick.reg('rpListCtrl', function (scope) {
         $.get(`/stock/replay?date=${ date }`).done(callback);
     }
 
+    // 设置和更新rp数据和replay数据会render
     function setList (rpData, replayData) {
         rpData && listManager.init(rpData);
 
         rpForm = replayData || rpForm;
         render();
-        createRpMap(rpData);
+        createRpMap(rpData);  //replay2里依然有在用
     }
 
-    // 创建 replay 里使用, 废弃，之前是因为表单字段都是Rp id, 现在直接是文字
+    // 创建 replay 里使用, 废弃，之前是因为表单字段都是Rp id, 现在直接是文字; replay2里依然有在用
     function createRpMap (rpArr) {
         window.RP_MAP = {};
         rpArr = rpArr || [];
