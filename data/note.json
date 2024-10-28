@@ -1,5 +1,12 @@
 [
 	{
+		"id": "id_1730009887193_1273",
+		"type": "",
+		"level": "0",
+		"text": "        // 通达信自定义数据格式：北证以2标志、上证以1标志、深证以0标志；\n        let szh = /^[6]/.test(code) ? 1 : /^[84]/.test(code) ? 2 : 0;",
+		"timestamp": 1730009887193
+	},
+	{
 		"text": "Shares China Large-Cap ETF\n\nYuna Hoshizaki ",
 		"type": "",
 		"id": "id_1728806511780_9018",

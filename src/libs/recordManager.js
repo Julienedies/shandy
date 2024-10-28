@@ -136,7 +136,7 @@ let proto = {
 
     },
     /**
-     * 对查询结果记录进行修改
+     * 修改更新一条记录
      * @param data      {Object}            要更新的数据
      * @param query     {String}            对key进行限定，只有对应的key变化，才修改
      * @returns         {Array | false}    返回修改过的记录数组，如果没有修改任何记录，返回false
@@ -180,6 +180,23 @@ let proto = {
     },
 
     /**
+     * 替换一条记录
+     * @param {Object} newRecord  准备覆盖旧record的新记录
+     */
+    replace: function (newRecord) {
+        let that = this;
+        let pool = this._pool;
+        let id = newRecord[this.key];
+        let index = that._getIndex(id);
+        if (index !== undefined) {
+            pool[index] = newRecord;
+            that.emit('change', {e: 'replace', change: newRecord});
+        } else {
+            throw new Error('没有找到要替换的record');
+        }
+
+    },
+    /**
      * 添加一条记录
      * @param {object} record
      */
@@ -189,7 +206,7 @@ let proto = {
         let id = this._queryKeyValue(record);
         // push or unshift
         pool[this.joinType](record);
-        this.emit('change', {type:'add', data: record});
+        this.emit('change', {type: 'add', data: record});
         return this;
     },
     /**
@@ -328,6 +345,13 @@ let proto = {
 
     },
 
+    /**
+     *
+     * @param record
+     * @param query
+     * @returns {string}
+     * @private
+     */
     _getIndex: function (record, query) {
         let pool = this._pool;
 
@@ -338,6 +362,14 @@ let proto = {
             if (this._queryKeyValue(pool[i], query) === v) return i;
 
         }
+    },
+
+    /**
+     *
+     * @param v
+     */
+    getIndex: function (v, k) {
+        return this._getIndex(v, k);
     },
 
     /**

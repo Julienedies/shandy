@@ -20,11 +20,19 @@ brick.reg('replaysCtrl', function (scope) {
 
     let $elm = scope.$elm;
 
+    let date = brick.utils.getQuery('date');
 
-    $.get(`/stock/replay`).done((data) => {
+    scope.filterByDate = function (e, date) {
+        _pushState('date', date);
+    };
+
+    scope.filterByKey = function (e, key) {
+        $elm.find('tr').not(`tr[tabindex=${ key }]`).toggle();
+    };
+
+    $.get(`/stock/replay?date=${ date||'' }`).done((data) => {
         console.log(data);
-        let arr = data;
-        //return console.log(arr);
+        let arr = Array.isArray(data) ? data : [data];
         arr = arr.map((v) => {
             return fixData(v);
         });
@@ -34,9 +42,23 @@ brick.reg('replaysCtrl', function (scope) {
     });
 
 
+
+/*    $.get(url).done((data) => {
+        console.log(data);
+        let arr = data;
+        //return console.log(arr);
+        arr = arr.map((v) => {
+            return fixData(v);
+        });
+
+        console.log(arr[0]);
+        scope.render('replays', arr);
+    });*/
+
+
     $elm.on('click', 'a.key', function (e) {
         let key = $(this).text();
-        $elm.find('tr').not(`tr[tabindex=${key}]`).toggle();
+        $elm.find('tr').not(`tr[tabindex=${ key }]`).toggle();
     });
 
 
@@ -44,7 +66,7 @@ brick.reg('replaysCtrl', function (scope) {
     function fixData (rpForm) {
         let result = {};
 
-        for( let i in rpForm){
+        for (let i in rpForm) {
 
             let value = rpForm[i];
 
@@ -70,5 +92,19 @@ brick.reg('replaysCtrl', function (scope) {
         console.log('replay fix => ', result);
         return result;
     }
+
+    function _pushState (key, val) {
+        let url = location.href;
+        let url2 = url.split('?')[0];
+        let o = brick.utils.getQuery() || {};
+        o[key] = val;
+        let s = '';
+        for (let i in o) {
+            s = s + i + '=' + o[i] + '&';
+        }
+        s = s.replace(/[&]$/img, '');
+        history.pushState(null, null, `${ url2 }?${ s }`);
+    }
+
 
 });

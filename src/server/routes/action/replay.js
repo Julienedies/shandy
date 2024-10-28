@@ -43,15 +43,26 @@ export default {
         res.json(getData(date));
     },
 
-    // 复盘
+    // 复盘; 通过覆盖替换的方式更新一个replay;
     post: function (req, res) {
         initDb();
         let obj = req.body;
         let date = obj.date;
-        replayDb.remove(date);
-        replayDb.add(obj);
+        let oldRecord = replayDb.get2(date, 'date');
+        if (oldRecord) {
+            // 这个主要用于修改旧replay
+            obj.id = obj.id || oldRecord.id;
+            obj.timestamp = obj.timestamp || oldRecord.timestamp;
+            replayDb.replace(obj);
+        } else {
+            // 这个主要用于添加新replay
+            //replayDb.remove(date);
+            replayDb.add(obj);
+        }
+
         res.json(getData(date));
     },
+
 
     del (req, res) {
         initDb();
