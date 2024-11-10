@@ -4,9 +4,9 @@
 		"csdPath": "E:\\dev\\csd",
 		"bounds": {
 			"x": 336,
-			"y": 189,
-			"width": 1533,
-			"height": 947
+			"y": 188,
+			"width": 1535,
+			"height": 951
 		},
 		"fetchSources": [
 			"ths_new",
@@ -32,7 +32,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2024-10",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2024-11",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -46,6 +46,8 @@
 			"height": 36
 		},
 		"history": [
+			"E:\\dev\\simg\\目标行情\\2024-11",
+			"E:\\dev\\simg\\交易记录\\2410",
 			"E:\\dev\\simg\\目标行情\\2024-10",
 			"E:\\dev\\simg\\交易记录\\2409",
 			"E:\\dev\\simg\\目标行情\\2024-09",
@@ -347,10 +349,10 @@
 	},
 	"stock_c": {
 		"bounds": {
-			"x": 3078,
-			"y": -14,
-			"width": 1729,
-			"height": 959
+			"x": 3209,
+			"y": 14,
+			"width": 1733,
+			"height": 963
 		}
 	},
 	"news2": {

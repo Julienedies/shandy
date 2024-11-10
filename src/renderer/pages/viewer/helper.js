@@ -149,6 +149,8 @@ export default {
             let code = arr[0];
             let f2 = f.replace('上午', 'am').replace('下午', 'pm');
 
+            //console.log(f);
+
             let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s*[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/);
             //console.log(f2, arr2);
             let m = moment(arr2[0], "YYYY-MM-DD Ah.m.s");
