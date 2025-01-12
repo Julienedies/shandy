@@ -1,19 +1,49 @@
 [
 	{
-		"id": "id_1729948885506_8898",
+		"id": "id_1734265792861_4429",
 		"type": "复盘&计划",
 		"caution": "",
 		"content": "",
-		"options": [
-			"4415621"
-		],
 		"freeze": "",
 		"line": "true",
 		"level": "619",
 		"role": "5",
 		"input": "个股序列、备注",
+		"title": "机器人",
+		"options": [],
+		"timestamp": 1734265792861
+	},
+	{
+		"id": "id_1734265759471_1086",
+		"type": "复盘&计划",
+		"caution": "",
+		"content": "",
+		"freeze": "",
+		"line": "true",
+		"level": "620",
+		"role": "5",
+		"input": "个股序列、备注",
+		"title": "AI-抖音豆包",
+		"options": [],
+		"timestamp": "1734265759471"
+	},
+	{
+		"id": "id_1729948885506_8898",
+		"type": "行情记录",
+		"caution": "",
+		"content": "",
+		"options": [],
+		"freeze": "",
+		"line": "",
+		"level": "619",
+		"role": "5",
+		"input": "",
 		"title": "深圳-创投",
-		"timestamp": 1729948885506
+		"timestamp": 1729948885506,
+		"comment": "",
+		"alias": "",
+		"group": "",
+		"re": ""
 	},
 	{
 		"id": "id_1729948758025_7801",
@@ -22,111 +52,95 @@
 		"content": "",
 		"freeze": "",
 		"line": "true",
-		"level": "619",
+		"level": "621",
 		"role": "5",
 		"input": "个股序列、备注",
-		"title": "光伏-新能源",
+		"title": "消费-首发经济",
 		"options": [],
-		"timestamp": 1729948758025
+		"timestamp": "1729948758025"
 	},
 	{
 		"id": "id_1729611354361_0332",
-		"type": "复盘&计划",
+		"type": "行情记录",
 		"caution": "",
 		"content": "",
 		"freeze": "",
-		"line": "true",
+		"line": "",
 		"level": "619",
 		"role": "5",
-		"input": "个股序列、备注",
+		"input": "",
 		"title": "低空经济",
 		"options": [],
 		"timestamp": 1729611354361
 	},
 	{
 		"id": "id_1729039132763_3726",
-		"type": "复盘&计划",
+		"type": "行情记录",
 		"caution": "",
 		"content": "",
-		"options": [
-			"5944533",
-			"4415621"
-		],
+		"options": [],
 		"freeze": "",
-		"line": "true",
+		"line": "",
 		"level": "614",
 		"role": "5",
-		"input": "个股序列、备注",
+		"input": "",
 		"title": "跨境支付",
 		"timestamp": 1729039132763
 	},
 	{
 		"id": "id_1729037309442_7747",
-		"type": "复盘&计划",
+		"type": "行情记录",
 		"caution": "",
 		"content": "",
 		"freeze": "",
-		"line": "true",
+		"line": "",
 		"level": "617",
 		"role": "5",
-		"input": "个股序列、备注",
+		"input": "",
 		"title": "芯片",
-		"options": [
-			"5944533",
-			"id_1726446468822_0662",
-			"4415621"
-		],
+		"options": [],
 		"timestamp": "1729037309442"
 	},
 	{
 		"id": "id_1729037299290_8413",
-		"type": "复盘&计划",
+		"type": "行情记录",
 		"caution": "",
 		"content": "",
 		"freeze": "",
-		"line": "true",
+		"line": "",
 		"level": "615",
 		"role": "5",
-		"input": "个股序列、备注",
+		"input": "",
 		"title": "化债-基建",
-		"options": [
-			"5944533",
-			"4415621"
-		],
+		"options": [],
 		"timestamp": 1729037299290
 	},
 	{
 		"id": "id_1729037283304_1903",
-		"type": "复盘&计划",
+		"type": "行情记录",
 		"caution": "",
 		"content": "",
 		"freeze": "true",
-		"line": "true",
+		"line": "",
 		"level": "615",
 		"role": "5",
 		"input": "个股序列、备注",
 		"title": "军工",
-		"options": [
-			"5944533",
-			"4415621"
-		],
+		"options": [],
 		"timestamp": "1729037283304"
 	},
 	{
 		"id": "id_1729037263143_4496",
-		"type": "复盘&计划",
+		"type": "行情记录",
 		"caution": "",
 		"content": "",
 		"freeze": "",
-		"line": "true",
+		"line": "",
 		"level": "617",
 		"role": "5",
 		"input": "个股序列、备注",
 		"title": "华为-鸿蒙",
-		"options": [
-			"5944533",
-			"4415621"
-		],
+		"options": [],
 		"timestamp": 1729037263143
 	},
 	{
@@ -215,10 +229,10 @@
 		"caution": "",
 		"content": "",
 		"freeze": "",
-		"line": "true",
+		"line": "",
 		"level": "619",
 		"role": "5",
-		"input": "个股序列、备注",
+		"input": "",
 		"title": "蓝筹-大消费",
 		"options": [],
 		"timestamp": 1727365912965
@@ -512,20 +526,20 @@
 	{
 		"title": "信创-鸿蒙 ",
 		"id": "id_1726185929898_5439",
-		"line": "true",
+		"line": "",
 		"type": "行情记录",
-		"options": [
-			"5944533",
-			"id_1726446468822_0662",
-			"4415621"
-		],
+		"options": [],
 		"level": "616",
 		"role": "5",
-		"input": "个股序列、备注",
+		"input": "",
 		"timestamp": 1726185929898,
 		"freeze": "",
 		"caution": "风险点与博弈点在哪里？盛极而衰、加强爆发？？",
-		"content": ""
+		"content": "",
+		"comment": "",
+		"alias": "",
+		"group": "",
+		"re": ""
 	},
 	{
 		"title": "我有捕捉的目标行情是什么？",
@@ -713,14 +727,14 @@
 		"caution": "",
 		"comment": "",
 		"alias": "",
-		"level": "990",
-		"role": "2",
+		"level": "991",
+		"role": "3",
 		"input": "",
 		"rows": "1",
 		"re": "true",
 		"content": "",
 		"options": [],
-		"timestamp": 1724759273778,
+		"timestamp": "1724759273778",
 		"group": ""
 	},
 	{
@@ -3226,7 +3240,7 @@
 		"title": "思维没有方向，操作没有系统；盘前没有明确的交易计划；临盘被市场牵着鼻子走；",
 		"id": "id_1672226152680_4403",
 		"type": "错误&问题",
-		"caution": "",
+		"caution": "无系统，无计划，临盘随意交易是我最大的亏损来源；",
 		"comment": "",
 		"level": "893",
 		"role": "3",
@@ -3234,7 +3248,10 @@
 		"options": [],
 		"timestamp": "1672226152680",
 		"re": "true",
-		"items": []
+		"items": [],
+		"alias": "",
+		"group": "",
+		"input": ""
 	},
 	{
 		"title": "做龙头、做龙头、做龙头；强者恒强；盈亏同源；",
@@ -4668,7 +4685,7 @@
 		"re": ""
 	},
 	{
-		"title": "无系统，无计划，临盘随意交易是我最大的亏损来源；",
+		"title": "",
 		"id": "7617974",
 		"type": "错误&问题",
 		"comment": "",

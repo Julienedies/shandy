@@ -11,9 +11,19 @@
 <body>
     <div id="replay" class="column" ic-ctrl="replaysCtrl">
 
+        <header>
+            <div class="field is-grouped is-grouped-centered is-grouped-multiline">
+                <div class="control">
+                    <div class="buttons is-centered">
+                        <button class="button is-primary is-small" ic-click="toggle">展开或收缩</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         ${ require('../../rp/replay-tpl.html') }
 
-        <div ic-tpl="replays">
+        <div id="list" ic-tpl="replays">
 
             <div ic-for="i, replay in model">
                 {{ brick.getTpl('replay')({ model: replay }) }}

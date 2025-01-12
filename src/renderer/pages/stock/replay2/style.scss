@@ -3,3 +3,28 @@
  */
 
 @import '../../rp/replay.scss';
+
+#replay {
+  header {
+    position: fixed;
+    width: 100%;
+  }
+
+  #list {
+    padding-top: 2em;
+  }
+
+  &.a {
+    .table {
+      tr {
+        display: none;
+
+        &:first-child {
+          display: table-row;
+        }
+      }
+    }
+  }
+}
+
+

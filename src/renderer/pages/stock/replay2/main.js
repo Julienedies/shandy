@@ -22,6 +22,10 @@ brick.reg('replaysCtrl', function (scope) {
 
     let date = brick.utils.getQuery('date');
 
+    scope.toggle = function (e) {
+        $elm.toggleClass('a');
+    };
+
     scope.filterByDate = function (e, date) {
         _pushState('date', date);
     };

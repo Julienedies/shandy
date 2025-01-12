@@ -85,6 +85,7 @@ export default function (app) {
 
     app.get('/stock/replay/:date?', replay.get)
     app.post('/stock/replay', replay.post)
+    app.post('/stock/replay/news', replay.news)
     app.delete('/stock/replay/:id', replay.del)
 
     app.get('/stock/tags/:type?', tags.get)

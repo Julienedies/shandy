@@ -71,4 +71,13 @@ export default {
         res.json(getData());
     },
 
+    // 标记财经消息
+    news (req, res) {
+        initDb();
+        let body = req.body;
+        let news = body.data;
+        console.log(news);
+        res.json({msg: 'ok'});
+    }
+
 }

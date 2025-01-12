@@ -28,11 +28,13 @@ import '@julienedies/brick/dist/brick.css'
 import '../../js/common.js'
 import jd from '../../../libs/jodb-data'
 
-const tagsJd = jd('tags');
-const rpJd = jd('rp');
 
 brick.reg('mainCtrl', function () {
 
+    //修改rp.json里item的type值
+    /*
+    const tagsJd = jd('tags');
+    const rpJd = jd('rp');
     this.fix = function(e) {
         if(window.confirm('确定执行操作，会对json数据做出修改，可能会损坏数据，注意提前备份数据')){
 
@@ -55,9 +57,39 @@ brick.reg('mainCtrl', function () {
             rpJd.save();
             console.log(rpJd.get());
         }
-    };
+    };*/
 
 
+    // 修改diary.json, 补全里面缺少的日记记录
+    const diaryJd = jd('diary');
+    this.fix2 = function (e) {
+        function getDatesBetween (startDate) {
+            const dates = [];
+            const currentDate = new Date(startDate);
+            const today = new Date();
+
+            // 去掉时间部分，只比较日期
+            today.setHours(0, 0, 0, 0);
+            currentDate.setHours(0, 0, 0, 0);
+
+            while (currentDate <= today) {
+                dates.push(new Date(currentDate));
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+
+            return dates;
+        }
+
+// 示例使用
+        const startDate = '2024-09-09'; // 你可以替换成任何日期
+        const datesBetween = getDatesBetween(startDate);
+
+        datesBetween.forEach(date => {
+            console.log(date.toISOString().split('T')[0]);
+        });
+
+
+    }
 
 });
 
