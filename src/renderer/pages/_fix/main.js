@@ -33,11 +33,11 @@ brick.reg('mainCtrl', function () {
 
     //修改rp.json里item的type值
     /*
-    const tagsJd = jd('tags');
-    const rpJd = jd('rp');
     this.fix = function(e) {
-        if(window.confirm('确定执行操作，会对json数据做出修改，可能会损坏数据，注意提前备份数据')){
+        const tagsJd = jd('tags');
+        const rpJd = jd('rp');
 
+        if(window.confirm('确定执行操作，会对json数据做出修改，可能会损坏数据，注意提前备份数据')){
             //
             let result = tagsJd.get('rpmqs', 'type');
             console.log(result);
@@ -61,8 +61,8 @@ brick.reg('mainCtrl', function () {
 
 
     // 修改diary.json, 补全里面缺少的日记记录
-    const diaryJd = jd('diary');
-    this.fix2 = function (e) {
+    /*this.fix2 = function (e) {
+
         function getDatesBetween (startDate) {
             const dates = [];
             const currentDate = new Date(startDate);
@@ -80,16 +80,88 @@ brick.reg('mainCtrl', function () {
             return dates;
         }
 
-// 示例使用
-        const startDate = '2024-09-09'; // 你可以替换成任何日期
+        let diaryJd = jd('diary');
+
+        // 示例使用
+        const startDate = '2024-09-10'; // 你可以替换成任何日期
         const datesBetween = getDatesBetween(startDate);
 
         datesBetween.forEach(date => {
-            console.log(date.toISOString().split('T')[0]);
+            let timestamp = date.getTime();
+            let ymd = date.toISOString().split('T')[0];
+            console.log(ymd, timestamp);
+
+            diaryJd.add({
+                date: ymd,
+                timestamp: timestamp,
+                tag: [],
+                tags: [],
+                text: '',
+            })
+        });
+    }*/
+
+
+    // 补全 replay.json,  补全复盘记录
+    this.fix3 = function (e) {
+        let jsonDb = jd('replay', {key: 'date'});
+
+        let dateArray = jsonDb.get2();
+
+        let currentDate = new Date(dateArray[0].date);
+        let i = 0;
+        let length = dateArray.length;
+
+        while (currentDate >= new Date(dateArray[length - 1].date)) {
+            console.log(i);
+            // 排除周六和周日
+            if (currentDate.getDay() === 6 || currentDate.getDay() === 0) {
+                currentDate.setDate(currentDate.getDate() - 1);
+                continue;
+            }
+
+            let date = new Date(dateArray[i].date);
+
+            if (i < length && date.getTime() === currentDate.getTime()) {
+                // 日期匹配，移动到下一个日期
+                console.log('=', date.toLocaleDateString());
+                i++;
+                currentDate.setDate(currentDate.getDate() - 1);
+            } else {
+                // 找到插入位置
+                let insertIndex = i;
+                while (insertIndex < length && new Date(dateArray[insertIndex].date).getTime() > currentDate.getTime()) {
+                    insertIndex++;
+                }
+
+                // 日期缺失，插入 currentDate
+                let d = currentDate;
+                let dt = d.toISOString().split('T')[0]
+                let obj = {date: dt, timestamp: d.getTime() };
+                console.log('+', dt)
+                jsonDb.add(obj);
+                dateArray.splice(insertIndex, 0, obj);
+                length++; // 更新数组长度
+                i++;
+                currentDate.setDate(currentDate.getDate() - 1);
+            }
+        }
+
+        console.table(dateArray.map((v, i) => {
+            let date = v.date;
+            return {date};
+        }));
+
+        let replayArr = jsonDb.get();
+        replayArr.sort((a, b) => {
+            let ad = new Date(a.date);
+            let bd = new Date(b.date);
+            return bd - ad;
         });
 
-
+        jsonDb.save();
     }
+
 
 });
 

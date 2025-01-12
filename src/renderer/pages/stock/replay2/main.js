@@ -20,44 +20,67 @@ brick.reg('replaysCtrl', function (scope) {
 
     let $elm = scope.$elm;
 
+    let cla = 'shrink';
+    let cla2 = 'expand';
+
     let date = brick.utils.getQuery('date');
 
+    // 展开列表详细内容或收缩
     scope.toggle = function (e) {
-        $elm.toggleClass('a');
+        $elm.toggleClass(cla);
     };
 
-    scope.filterByDate = function (e, date) {
-        _pushState('date', date);
+    scope.toggleTable = function (e) {
+        $(this).toggleClass(cla2);
+    };
+
+    scope.toggleMsgBox = function (e) {
+        $(this).toggleClass(cla);
+    }
+
+    // 编辑特定日期的复盘数据 replay
+    scope.editReplayForDate = function (e, date) {
+        let url = `/web/rp.html?date=${ date }`;
+        window.open(url);
+    };
+
+    // 查看特定日期的复盘数据 replay
+    scope.viewReplayForDate = function (e, date) {
+        let url = `/web/stock_replay2.html?date=${ date }`;
+        window.open(url);
     };
 
     scope.filterByKey = function (e, key) {
         $elm.find('tr').not(`tr[tabindex=${ key }]`).toggle();
     };
 
-    $.get(`/stock/replay?date=${ date||'' }`).done((data) => {
+    $.get(`/stock/replay?date=${ date || '' }`).done((data) => {
         console.log(data);
         let arr = Array.isArray(data) ? data : [data];
         arr = arr.map((v) => {
             return fixData(v);
         });
 
+        if( arr.length === 1) {
+            $elm.removeClass(cla);
+        }
+
         console.log(arr[0]);
         scope.render('replays', arr);
     });
 
 
+    /*    $.get(url).done((data) => {
+            console.log(data);
+            let arr = data;
+            //return console.log(arr);
+            arr = arr.map((v) => {
+                return fixData(v);
+            });
 
-/*    $.get(url).done((data) => {
-        console.log(data);
-        let arr = data;
-        //return console.log(arr);
-        arr = arr.map((v) => {
-            return fixData(v);
-        });
-
-        console.log(arr[0]);
-        scope.render('replays', arr);
-    });*/
+            console.log(arr[0]);
+            scope.render('replays', arr);
+        });*/
 
 
     $elm.on('click', 'a.key', function (e) {
@@ -96,6 +119,7 @@ brick.reg('replaysCtrl', function (scope) {
         console.log('replay fix => ', result);
         return result;
     }
+
 
     function _pushState (key, val) {
         let url = location.href;

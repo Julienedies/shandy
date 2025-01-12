@@ -67,6 +67,12 @@ brick.reg('rpListCtrl', function (scope) {
 
     let listManager = brick.services.get('recordManager')();
 
+    let forDate = brick.utils.getQuery('date');
+
+    if (forDate) {
+        alert(`当前针对的是特定日期： ${ forDate }`);
+    }
+
     scope.listManager = listManager;
 
     window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
@@ -199,6 +205,7 @@ brick.reg('rpListCtrl', function (scope) {
         });
     }
 
+    // 获取特定日期的replay数据
     function getRpForm (date, callback) {
         date = date || J_FORMAT_DATE2();
         callback = callback || function (data) {
@@ -241,7 +248,7 @@ brick.reg('rpListCtrl', function (scope) {
 
     // main
     getRpData();
-    getRpForm();
+    getRpForm(forDate);
 
 
     scope.reset = function () {
@@ -271,7 +278,7 @@ brick.reg('rpListCtrl', function (scope) {
             if ($target.length) {
                 let targetPosition = $target.position().top + $elm.scrollTop();
                 //console.log($target[0], $target.offset().top, targetPosition);
-                $elm.animate({scrollTop: targetPosition-90}, 300);
+                $elm.animate({scrollTop: targetPosition - 90}, 300);
             }
         }
 
@@ -299,7 +306,7 @@ brick.reg('rpListCtrl', function (scope) {
         return false;
     };
 
-    scope.togglePre = function(e){
+    scope.togglePre = function (e) {
         let cla = 'shrink';
         $(this).toggleClass(cla);
         return false;
@@ -429,13 +436,14 @@ brick.reg('rpListCtrl', function (scope) {
     }
 
     // 当表单日期改变，可以查看修改对应日期的复盘表单
-        scope.onDateChange = function (e) {
-            let date = $(this).val();
-            getRpForm(date, (data) => {
-                setList(null, data);
-                $('#dateTag').text(date);
-            });
-        };
+    scope.onDateChange = function (e) {
+        return alert('没有确定');
+        let date = $(this).val();
+        getRpForm(date, (data) => {
+            setList(null, data);
+            $('#dateTag').text(date);
+        });
+    };
 
     // 根据键盘输入，随时提交数据进行保存；
     $elm.on('keyup', 'textarea', _.throttle(submit, 2900));

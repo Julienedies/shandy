@@ -1,18 +1,23 @@
 <!-- daJuGuan=replay['大局观'];kuiian=replay['亏钱效应'];zhuanQian=replay['赚钱效应'];zhouQi=replay['周期节奏'];zhuXian=replay['主线热点'];riNei=replay['日内'];yingDui=replay['推演应对'];muBiao=replay['目标行情'];zongJie=replay['交易总结'] -->
 <div ic-tpl="replay">
-    <table class="table is-fullwidth is-bordered">
+    <table class="table is-fullwidth is-bordered" ic-dblclick="toggleTable">
         <tbody ic-init="replay=model; a1=['大局观', '亏钱效应', '赚钱效应', '周期节奏', '主线热点']; a2=['日内', '推演应对', '目标行情', '交易计划', '交易备注', '交易总结'];">
         <tr ic-class="is-neutral {{replay['日内'] && replay['日内']['日标记'] && (replay['日内']['日标记'].includes('进攻日')?'is-up':'is-down') }}">
             <th>{{ replay.week }}</th>
-            <th><a ic-click="filterByDate:{{replay.date}}">{{ replay.date }}</a></th>
-            <th>{{ replay['日内'] && (replay['日内']['日标记']) }}</th>
+            <th><a ic-click="viewReplayForDate:{{replay.date}}">{{ replay.date }}</a></th>
+            <th>
+                <span>{{ replay['日内'] && (replay['日内']['日标记']) }}</span>
+                <a ic-click="editReplayForDate:{{replay.date}}" style="float:right; padding:0 1em; opacity: 0.5;">
+                    <i class="far fa-edit" title="编辑"></i>
+                </a>
+            </th>
         </tr>
 
         <tr>
             <td>{{ replay.week }}</td>
             <td>消息面</td>
             <td style="font-size:0.9em;">
-                <div class="pre">{{ replay['消息面'] }}</div>
+                <div class="pre msgBox shrink" ic-click="toggleMsgBox">{{ replay['消息面'] }}</div>
             </td>
         </tr>
 

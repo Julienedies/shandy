@@ -14,8 +14,14 @@
     padding-top: 2em;
   }
 
-  &.a {
+  &.shrink {
     .table {
+      &.expand {
+        tr {
+          display: table-row;
+        }
+      }
+
       tr {
         display: none;
 
