@@ -12,10 +12,16 @@
 
   #list {
     padding-top: 2em;
+
+/*    div:first-child {
+      .table tr {
+        display: table-row;
+      }
+    }*/
   }
 
   &.shrink {
-    .table {
+    .tableBox {
       &.expand {
         tr {
           display: table-row;

@@ -31,6 +31,7 @@ brick.reg('replaysCtrl', function (scope) {
     };
 
     scope.toggleTable = function (e) {
+        console.log(this);
         $(this).toggleClass(cla2);
     };
 

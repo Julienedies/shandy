@@ -4,101 +4,101 @@
     <meta charset="UTF-8">
     <title>replays</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css" />
-    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css" />
+    <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-    <div id="replay" class="column shrink" ic-ctrl="replaysCtrl" style="padding-top: 0.25rem;">
+<div id="replay" class="column shrink" ic-ctrl="replaysCtrl" style="padding-top: 0.25rem;">
 
-        <header>
-            <div class="field is-grouped is-grouped-centered is-grouped-multiline">
-                <div class="control">
-                    <div class="buttons is-centered">
-                        <button class="button is-primary is-small" ic-click="toggle">展开或收缩</button>
-                    </div>
+    <header>
+        <div class="field is-grouped is-grouped-centered is-grouped-multiline">
+            <div class="control">
+                <div class="buttons is-centered">
+                    <button class="button is-primary is-small" ic-click="toggle">展开或收缩</button>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        ${ require('../../rp/replay-tpl.html') }
+    ${ require('../../rp/replay-tpl.html') }
 
-        <div id="list" ic-tpl="replays">
+    <div id="list" ic-tpl="replays">
 
-            <div ic-for="i, replay in model">
-                {{ brick.getTpl('replay')({ model: replay }) }}
+        <div ic-for="i, replay in model" ic-class="tableBox {{ i==0?'expand':'' }}"  ic-dblclick="toggleTable">
+            {{ brick.getTpl('replay')({ model: replay }) }}
+        </div>
+
+        <!--<table class="table is-fullwidth is-bordered" ic-for="i, replay in model">
+            <tbody ic-init="jo=replay['交易总结'];">
+            <tr ic-class="{{(replay['日内'] && (replay['日内']['日标记'])||'').includes('进攻日')?'is-up':'is-down'}}">
+                <td>{{ replay.week }}<td/>
+                <td>{{ replay.date }}</td>
+                <td>{{ (replay['日内'] && (replay['日内']['日标记'])) }}</td>
+            </tr>
+
+            <tr>
+                <td>{{ replay.week }}</td>
+                <td>消息面</td>
+                <td style="font-size:0.9em;">
+                    <div class="pre">{{ replay['消息面'] }}</div>
+                </td>
+            </tr>
+
+            <tr ic-for="i, v in replay['变量']" tabindex="{{ i }}">
+                <td>{{ replay.week }}</td>
+                <td><a class="key" ic-data-key="{{ i }}"> {{ i }}</a></td>
+                <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
+            </tr>
+
+            <tr ic-for-start="i, v in replay" ic-for-end ic-if="v && !(['line','变量','交易总结','id','timestamp','week','date','消息面'].includes(i))" tabindex="{{ i }}">
+                <td>{{ replay.week }}</td>
+                <td><a class="key">{{ i }}</a></td>
+                <td>
+                    {{ brick.getTpl('replay3')({model:v}) }}
+                </td>
+            </tr>
+
+
+            <tr ic-for="i, v in replay['line']">
+                <td>{{ replay.week }}</td>
+                <td> {{ i }}</td>
+                <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
+            </tr>
+
+            <tr>
+                <td>{{ model.week }}</td>
+                <td> 交易总结 </td>
+                <td> {{ brick.getTpl('replay3')({ model: jo }) }}</td>
+            </tr>
+            </tbody>
+        </table>-->
+
+        <!-- 嵌入用的子模板 -->
+        <!--<div ic-tpl="replay3">
+            <div class="tags" ic-if-start="Array.isArray(model)">
+                <span class="tag  is-highlight" ic-for="i,v in model">{{ v }}</span>
             </div>
+            <div  ic-else-if="typeof model==='object'">&lt;!&ndash; 包含数组 &ndash;&gt;
 
-            <!--<table class="table is-fullwidth is-bordered" ic-for="i, replay in model">
-                <tbody ic-init="jo=replay['交易总结'];">
-                <tr ic-class="{{(replay['日内'] && (replay['日内']['日标记'])||'').includes('进攻日')?'is-up':'is-down'}}">
-                    <td>{{ replay.week }}<td/>
-                    <td>{{ replay.date }}</td>
-                    <td>{{ (replay['日内'] && (replay['日内']['日标记'])) }}</td>
-                </tr>
-
-                <tr>
-                    <td>{{ replay.week }}</td>
-                    <td>消息面</td>
-                    <td style="font-size:0.9em;">
-                        <div class="pre">{{ replay['消息面'] }}</div>
-                    </td>
-                </tr>
-
-                <tr ic-for="i, v in replay['变量']" tabindex="{{ i }}">
-                    <td>{{ replay.week }}</td>
-                    <td><a class="key" ic-data-key="{{ i }}"> {{ i }}</a></td>
-                    <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
-                </tr>
-
-                <tr ic-for-start="i, v in replay" ic-for-end ic-if="v && !(['line','变量','交易总结','id','timestamp','week','date','消息面'].includes(i))" tabindex="{{ i }}">
-                    <td>{{ replay.week }}</td>
-                    <td><a class="key">{{ i }}</a></td>
-                    <td>
-                        {{ brick.getTpl('replay3')({model:v}) }}
-                    </td>
-                </tr>
-
-
-                <tr ic-for="i, v in replay['line']">
-                    <td>{{ replay.week }}</td>
-                    <td> {{ i }}</td>
-                    <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
-                </tr>
-
-                <tr>
-                    <td>{{ model.week }}</td>
-                    <td> 交易总结 </td>
-                    <td> {{ brick.getTpl('replay3')({ model: jo }) }}</td>
-                </tr>
-                </tbody>
-            </table>-->
-
-            <!-- 嵌入用的子模板 -->
-            <!--<div ic-tpl="replay3">
-                <div class="tags" ic-if-start="Array.isArray(model)">
-                    <span class="tag  is-highlight" ic-for="i,v in model">{{ v }}</span>
-                </div>
-                <div  ic-else-if="typeof model==='object'">&lt;!&ndash; 包含数组 &ndash;&gt;
-
-                    <div class="item" ic-for-start="i,v in model" ic-for-end ic-if="v">
-                        <div class="tr" ic-if-start="typeof v==='object'">
-                            <div class="td" style="padding:0 1em 0 0;"><span class="tag">{{ i }}</span></div>
-                            <div class="td is-expanded">
-                                <div class="tags">
-                                    <span class="tag  is-highlight" ic-for="j,k in v">{{ k }}</span>
-                                </div>
+                <div class="item" ic-for-start="i,v in model" ic-for-end ic-if="v">
+                    <div class="tr" ic-if-start="typeof v==='object'">
+                        <div class="td" style="padding:0 1em 0 0;"><span class="tag">{{ i }}</span></div>
+                        <div class="td is-expanded">
+                            <div class="tags">
+                                <span class="tag  is-highlight" ic-for="j,k in v">{{ k }}</span>
                             </div>
                         </div>
-                        <div class="tr" ic-else>
-                            <div class="td" style="padding:0 1em 0 0;"><span class="tag">{{ i }}</span></div><div class="td is-expanded pre">{{ v }}</div>
-                        </div>
+                    </div>
+                    <div class="tr" ic-else>
+                        <div class="td" style="padding:0 1em 0 0;"><span class="tag">{{ i }}</span></div><div class="td is-expanded pre">{{ v }}</div>
                     </div>
                 </div>
-                <span class="" ic-else-if="typeof model==='string'" ic-if-end>{{ model }}</span>
-            </div>-->
+            </div>
+            <span class="" ic-else-if="typeof model==='string'" ic-if-end>{{ model }}</span>
+        </div>-->
 
-        </div>
     </div>
+</div>
 </body>
 </html>
