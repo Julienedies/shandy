@@ -1,5 +1,185 @@
 [
 	{
+		"type": "groups",
+		"id": "id_1738172596628_0918",
+		"parentId": "",
+		"desc": "",
+		"level": "50",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "要解决的问题",
+		"示例图片": "",
+		"timestamp": 1738172596628
+	},
+	{
+		"type": "groups",
+		"id": "id_1738154857507_6141",
+		"parentId": "",
+		"desc": "",
+		"level": "40",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "克服不了本能",
+		"示例图片": "",
+		"timestamp": 1738154857507
+	},
+	{
+		"type": "groups",
+		"id": "id_1738149231039_9888",
+		"parentId": "",
+		"desc": "",
+		"level": "0",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "_null",
+		"示例图片": "",
+		"timestamp": 1738149231039
+	},
+	{
+		"type": "groups",
+		"id": "id_1738148792856_3972",
+		"parentId": "",
+		"desc": "",
+		"level": "30",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "动态博弈",
+		"示例图片": "",
+		"timestamp": 1738148792856
+	},
+	{
+		"type": "groups",
+		"id": "id_1738131829601_4016",
+		"parentId": "",
+		"desc": "",
+		"level": "38",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "理解预判",
+		"示例图片": "",
+		"timestamp": 1738131829601
+	},
+	{
+		"type": "groups",
+		"id": "id_1738131242115_5098",
+		"parentId": "",
+		"desc": "",
+		"level": "33",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "时机",
+		"示例图片": "",
+		"timestamp": 1738131242115
+	},
+	{
+		"type": "groups",
+		"id": "id_1738130449194_5371",
+		"parentId": "",
+		"desc": "",
+		"level": "35",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "龙头",
+		"示例图片": "",
+		"timestamp": 1738130449194
+	},
+	{
+		"type": "groups",
+		"id": "id_1738130440170_3614",
+		"parentId": "",
+		"desc": "",
+		"level": "39",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "盈亏同源",
+		"示例图片": "",
+		"timestamp": 1738130440171
+	},
+	{
+		"type": "groups",
+		"id": "id_1738130417161_7168",
+		"parentId": "",
+		"desc": "",
+		"level": "30",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "简单纯粹",
+		"示例图片": "",
+		"timestamp": 1738130417161
+	},
+	{
+		"type": "groups",
+		"id": "id_1738130289730_3910",
+		"parentId": "",
+		"desc": "",
+		"level": "37",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "应对",
+		"示例图片": "",
+		"timestamp": 1738130289730
+	},
+	{
+		"type": "groups",
+		"id": "id_1738085237505_4012",
+		"parentId": "",
+		"desc": "",
+		"level": "45",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "没有大局观",
+		"示例图片": "",
+		"timestamp": 1738085237505
+	},
+	{
+		"type": "groups",
+		"id": "id_1738085217002_1905",
+		"parentId": "",
+		"desc": "",
+		"level": "49",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "无系统无计划",
+		"示例图片": "",
+		"timestamp": 1738085217002
+	},
+	{
+		"type": "groups",
+		"id": "id_1738085139697_0090",
+		"parentId": "",
+		"desc": "",
+		"level": "43",
+		"weight": "0",
+		"key": "",
+		"sub": "",
+		"text": "主观&线性思维",
+		"示例图片": "",
+		"timestamp": 1738085139697
+	},
+	{
+		"type": "主线热点",
+		"id": "id_1737994930127_4736",
+		"desc": "",
+		"level": "80",
+		"weight": "0",
+		"key": "",
+		"text": "DeepSeek",
+		"示例图片": "",
+		"timestamp": 1737994930127
+	},
+	{
 		"type": "主线热点",
 		"id": "id_1737075525561_7187",
 		"desc": "",
@@ -380,7 +560,7 @@
 		"level": "67",
 		"weight": "0",
 		"key": "",
-		"text": "AI应用",
+		"text": "AI应用-AI智能体",
 		"示例图片": "",
 		"timestamp": 1731325617825
 	},
@@ -3092,24 +3272,26 @@
 		"id": "id_1725765981282_6073",
 		"parentId": "",
 		"desc": "",
-		"level": "70",
+		"level": "80",
 		"weight": "0",
 		"key": "",
 		"text": "周期节奏",
 		"示例图片": "",
-		"timestamp": 1725765981282
+		"timestamp": 1725765981282,
+		"sub": ""
 	},
 	{
 		"type": "groups",
 		"id": "id_1725765960352_4994",
 		"parentId": "",
 		"desc": "",
-		"level": "59",
+		"level": "70",
 		"weight": "0",
 		"key": "",
 		"text": "line",
 		"示例图片": "",
-		"timestamp": 1725765960352
+		"timestamp": 1725765960352,
+		"sub": ""
 	},
 	{
 		"type": "大盘状态",
@@ -3127,12 +3309,13 @@
 		"id": "id_1725640133249_7731",
 		"parentId": "",
 		"desc": "",
-		"level": "60",
+		"level": "74",
 		"weight": "0",
 		"key": "",
 		"text": "主线热点",
 		"示例图片": "",
-		"timestamp": 1725640133249
+		"timestamp": 1725640133249,
+		"sub": ""
 	},
 	{
 		"type": "主线热点",
@@ -3183,48 +3366,52 @@
 		"id": "id_1725453762968_3373",
 		"parentId": "",
 		"desc": "",
-		"level": "40",
+		"level": "69",
 		"weight": "0",
 		"key": "",
 		"text": "日内",
 		"示例图片": "",
-		"timestamp": 1725453762968
+		"timestamp": 1725453762968,
+		"sub": ""
 	},
 	{
 		"type": "groups",
 		"id": "id_1725453734877_3444",
 		"parentId": "",
 		"desc": "",
-		"level": "0",
+		"level": "61",
 		"weight": "0",
 		"key": "",
 		"text": "目标行情",
 		"示例图片": "",
-		"timestamp": 1725453734877
+		"timestamp": 1725453734877,
+		"sub": ""
 	},
 	{
 		"type": "groups",
 		"id": "id_1725453717617_7926",
 		"parentId": "",
 		"desc": "",
-		"level": "30",
+		"level": "64",
 		"weight": "0",
 		"key": "",
 		"text": "推演应对",
 		"示例图片": "",
-		"timestamp": 1725453717617
+		"timestamp": 1725453717617,
+		"sub": ""
 	},
 	{
 		"type": "groups",
 		"id": "id_1725453700674_4563",
 		"parentId": "",
 		"desc": "",
-		"level": "0",
+		"level": "60",
 		"weight": "0",
 		"key": "",
 		"text": "交易总结",
 		"示例图片": "",
-		"timestamp": 1725453700674
+		"timestamp": 1725453700674,
+		"sub": ""
 	},
 	{
 		"type": "groups",
@@ -3833,7 +4020,7 @@
 		"level": "80",
 		"weight": "0",
 		"key": "",
-		"text": "抖音豆包-AI端侧",
+		"text": "AI端侧-AI眼镜-抖音豆包",
 		"示例图片": "",
 		"timestamp": 1725164713265
 	},
@@ -6857,7 +7044,9 @@
 		"level": "24",
 		"text": "理念",
 		"示例图片": "",
-		"timestamp": 1639283273487
+		"timestamp": 1639283273487,
+		"weight": "0",
+		"sub": "盈亏同源、理解预判、大局观、龙头、客观应对、时机、简单纯粹取舍"
 	},
 	{
 		"id": "0271656",
@@ -6873,14 +7062,15 @@
 	{
 		"id": "7871836",
 		"type": "rpmqs",
-		"key": "无系统、主观、没有大局观",
+		"key": "",
 		"parentId": "",
 		"desc": "",
 		"level": "17",
 		"text": "错误&问题",
 		"示例图片": "",
 		"timestamp": 1639283190660,
-		"weight": "0"
+		"weight": "0",
+		"sub": "要解决的问题、无系统无计划、没有大局观、主观&线性思维、克服不了本能"
 	},
 	{
 		"id": "3495512",
@@ -6903,7 +7093,8 @@
 		"示例图片": "",
 		"timestamp": 1639282945923,
 		"key": "",
-		"weight": "0"
+		"weight": "0",
+		"sub": "大局观、周期节奏、主线热点、line、日内、推演应对、目标行情、交易总结"
 	},
 	{
 		"id": "0014104",

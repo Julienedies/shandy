@@ -54,6 +54,7 @@ window.brick = brick;
 brick.reg('rpListCtrl', function (scope) {
 
     let filterByType = '复盘&计划';  // 默认要显示的类型
+    let filterByGroup = '';  // 编组过滤
     let dragOverCla = 'onDragOver';
     //let rpMap = window.RPMQS_MAP = {};
     let rpMapByType = {};
@@ -70,7 +71,8 @@ brick.reg('rpListCtrl', function (scope) {
     let forDate = brick.utils.getQuery('date');
 
     if (forDate) {
-        alert(`当前针对的是特定日期： ${ forDate }`);
+        // alert(`当前针对的是特定日期： ${ forDate }`);
+        $.icMsg(`当前针对的是特定日期： ${ forDate }`);
     }
 
     scope.listManager = listManager;
@@ -115,10 +117,17 @@ brick.reg('rpListCtrl', function (scope) {
         return key.replace(/\.-/img, '');
     };
 
+    // 是不是 复盘&计划 标签
     window._IS_PLAN = function (text, type) {
         type = type || '复盘&计划';
         return text === type;
     };
+    // 是不是有子标题选项
+    window._HAS_SUB = function (text) {
+        console.log(text);
+        let tagObj = TAGS_MAP_BY_TEXT[text];
+        return tagObj ? tagObj.sub : null;
+    }
 
     // 把rp里的options选项里的 type tag ID，换成对应tag元素组
     function getTagsForRp (arr) {
@@ -168,6 +177,13 @@ brick.reg('rpListCtrl', function (scope) {
                 rpList = rpMapByType[filterByType] || [];  // 某些类型因为没有添加项，rpMapByType里不存在
             }
         }
+
+        // 编组过滤
+        /* if(filterByGroup) {
+             rpList = rpList.filter((v, i) => {
+                 return v.group === filterByGroup;
+             });
+         }*/
 
         //console.log(333, rpMapByType, rpList);
         // 对rpList数据进行处理，以方便显示
@@ -269,19 +285,25 @@ brick.reg('rpListCtrl', function (scope) {
         render();
     }
 
-    // group
+    // 编组过滤
+    scope.filterByGroup = function (e, group) {
+        let escapedVal = $.escapeSelector(group); // 转义特殊字符
+        let $target = $elm.find(`ul li`).not(`[tabindex=${ escapedVal }]`).toggle();
+    };
+
+    // 当二级标题选项改变
     scope.onGroupsChange = function (msg) {
         //console.log(msg);
         let val = msg.value;
         if (val) {
-            let $target = $(`ul li[tabindex=${ val }]`);
+            let escapedVal = $.escapeSelector(val); // 转义特殊字符
+            let $target = $(`ul li[tabindex=${ escapedVal }]`);
             if ($target.length) {
                 let targetPosition = $target.position().top + $elm.scrollTop();
                 //console.log($target[0], $target.offset().top, targetPosition);
                 $elm.animate({scrollTop: targetPosition - 90}, 300);
             }
         }
-
     };
 
     // 筛选line

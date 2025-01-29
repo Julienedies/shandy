@@ -16,6 +16,7 @@ export default function () {
     let tagsManager = brick.services.get('recordManager')();
 
     window.TAGS_MAP_BY_ID = {}; // 以tag id 为 key
+    window.TAGS_MAP_BY_TEXT = {};
     window.TAGS_MAP = {};  // 以type tag的id为key
     window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
 
@@ -26,6 +27,7 @@ export default function () {
             let arr = data[i];
             arr.forEach((item) => {
                 TAGS_MAP_BY_ID[item.id] = item;
+                TAGS_MAP_BY_TEXT[item.text] = item;
             });
             result = result.concat(arr);
         }

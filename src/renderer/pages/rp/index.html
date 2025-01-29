@@ -42,11 +42,12 @@
                     </div>
 
                 </div>
-                <div ic-class="field is-grouped {{ _IS_PLAN(model.filterByType) ? '' : 'none' }}">
+                <!-- 二级标题 -->
+                <div ic-class="field is-grouped {{ _HAS_SUB(model.filterByType) ? '' : 'none' }}" ic-if="_HAS_SUB(model.filterByType)">
                     <div class="control" style="padding-left:24em;">
                         <div class="buttons" ic-select="groups" ic-select-auto="false" ic-select-on-change="onGroupsChange">
-                            <button class="button is-light is-small" ic-for="i,o in TAGS_MAP['groups']" ic-select-item ic-val="{{ o.text }}">
-                                {{ o.text }}
+                            <button class="button is-light is-small" ic-for="i,o in TAGS_MAP_BY_TEXT[model.filterByType].sub.split(/、/)" ic-select-item ic-val="{{ o }}">
+                                {{ o }}
                             </button>
                         </div>
                     </div>
@@ -136,6 +137,7 @@
                             <div style="padding: 0.25em 1em 0.45em 1em;">
                                 <div class="tags is-right">
                                     <span class="tag is-small" title="rp的别名" ic-if="rp.line"> {{ rp.line }}</span>
+                                    <span class="tag is-small" ic-if="rp.group" ic-click="filterByGroup:{{ rp.group }}"> {{ rp.group }}</span>
                                     <!--<span class="tag is-small" title="关联的tag类型" ic-if="rp.TagType"> {{ rp.TagType }}</span>-->
                                     <span class="tag is-small"> {{ rp.level || 0 }}</span>
                                     <!--<span class="tag is-small" ic-click="onFilterKeyChange2:{{ rp.type }}"> {{ rp.type }}</span>-->
