@@ -29,7 +29,7 @@ body {
   background: rgba(0, 0, 0, 0);
   border: solid 0px greenyellow;
   color: greenyellow;
-  font-size: 20px;
+  font-size: 18px;
   white-space: pre;
   transition: all .9ms ease-in-out;
 
@@ -48,10 +48,10 @@ body {
   top: -12px;
   left: 15%;
   right: 15%;
-  padding: 9px 18px;
-  max-height: 1.6em;
+  padding: 3px 18px;
+  max-height: 30px;
   overflow: hidden;
-  font-size: 22px;
+  font-size: 18px;
   /*  color: deepskyblue;
     background: rgba(0, 0, 0, 0.8);*/
   color: #fff;
@@ -60,7 +60,7 @@ body {
 
   &.active {
     top: 24%;
-    bottom: 28%;
+    bottom: 68%;
     left: 20%;
     right: 20%;
     max-height: 62%;
@@ -79,8 +79,7 @@ body {
     padding: 0;
 
     &:first-child {
-      font-size: 26px;
-      font-weight: bold;
+      font-size: 22px;
     }
   }
 

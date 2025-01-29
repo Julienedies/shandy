@@ -21,9 +21,11 @@ debugMenu.install();
 const w1 = `
 无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
 无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
+无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
 无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；`;
 
 const w2 = `
+卖飞、卖飞、卖飞、截断亏损、让利润奔跑；
 卖飞、卖飞、卖飞、截断亏损、让利润奔跑；
 卖飞、卖飞、卖飞、截断亏损、让利润奔跑；
 卖飞、卖飞、卖飞、截断亏损、让利润奔跑；
@@ -89,8 +91,8 @@ function showWin () {
 ipc.on('id', function (event, windowID) {
     win = BrowserWindow.fromId(windowID);
     setTimeout(() => {
-        hideWin();
-    }, 60 * 1000);
+        $news.removeClass(activeCla2);
+    }, 19 * 1000);
 });
 
 
@@ -104,7 +106,7 @@ socket.on('cls_news', (msg) => {
 
     timer = setTimeout(() => {
         $news.removeClass(activeCla2);
-    }, 947 * 1000);
+    }, 7 * 1000);
 });
 
 
@@ -126,7 +128,7 @@ socket.on('warn', (info) => {
     setTimeout(function () {
         $warn.removeClass(activeCla);
         voice.clear();
-    }, 1000 * 13);
+    }, 1000 * 9);
 
     voice(text);
 

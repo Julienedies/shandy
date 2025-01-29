@@ -5,8 +5,8 @@
 		"bounds": {
 			"x": 336,
 			"y": 188,
-			"width": 1535,
-			"height": 951
+			"width": 1546,
+			"height": 954
 		},
 		"fetchSources": [
 			"ths_new",
@@ -32,7 +32,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2024-11",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2025-01",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -46,6 +46,10 @@
 			"height": 36
 		},
 		"history": [
+			"E:\\dev\\simg\\目标行情\\2025-01",
+			"E:\\dev\\simg\\交易记录\\2501",
+			"E:\\dev\\simg\\目标行情\\2024-12",
+			"E:\\dev\\simg\\交易记录\\2412",
 			"E:\\dev\\simg\\目标行情\\2024-11",
 			"E:\\dev\\simg\\交易记录\\2410",
 			"E:\\dev\\simg\\目标行情\\2024-10",
@@ -204,10 +208,10 @@
 	},
 	"review": {
 		"bounds": {
-			"x": 2187,
-			"y": -933,
-			"width": 3856,
-			"height": 2136
+			"x": 2386,
+			"y": -658,
+			"width": 2195,
+			"height": 1195
 		}
 	},
 	"news": {
@@ -276,10 +280,10 @@
 	},
 	"system": {
 		"bounds": {
-			"x": 2187,
-			"y": -933,
-			"width": 3856,
-			"height": 2136
+			"x": -7,
+			"y": -7,
+			"width": 2209,
+			"height": 1209
 		}
 	},
 	"tags": {
@@ -351,8 +355,8 @@
 		"bounds": {
 			"x": 3209,
 			"y": 14,
-			"width": 1733,
-			"height": 963
+			"width": 1737,
+			"height": 966
 		}
 	},
 	"news2": {
