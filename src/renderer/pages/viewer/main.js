@@ -65,10 +65,10 @@ brick.reg('mainCtrl', function (scope) {
     let $imgDir = $('input[name=imgDir]');
     let $countShow;
 
-    let isReverse = true;
+    let isReverse = true; // 图片顺序反转
     let isRefresh = false;
-    let isOrigin = false;
-    let isHasTag = false;
+    let isOrigin = false;  // 按图片原始时间排序
+    let filterByMarked = false; // 根据图片是否被标记进行过滤
 
     let tagsMap = {};
     let systemMap = {};
@@ -148,7 +148,7 @@ brick.reg('mainCtrl', function (scope) {
 
     // 过滤图片是否已经标记
     scope.filterHasTag = function (e) {
-        isHasTag = $(this).prop('checked');
+        filterByMarked = $(this).prop('checked');
         scope.init('');
     };
 
@@ -254,7 +254,7 @@ brick.reg('mainCtrl', function (scope) {
 
 
         // 如果按是否标记对图片进行过滤
-        if (isHasTag) {
+        if (filterByMarked) {
             urls = urls.filter( (v,i) => {
                 console.log(v);
                 return v.system.length || v.tags.length;
