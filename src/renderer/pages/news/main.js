@@ -52,9 +52,11 @@ let $warn = $('#warn');
 let activeCla = 'active blink';
 let activeCla2 = 'active blink2';
 
-
+// 财联社消息数组，主要是保存旧消息
 let newsArr = [];
 
+///////////////////////////////////////////////////////////////
+// 对财联社消息文本组装
 function getNews (news) {
     let result = '';
     if(news !== newsArr[0]) {
@@ -75,10 +77,8 @@ function hideWin () {
     //win.hide();
     //win && win.minimize();
     //$news.removeClass(activeCla);
-
 }
 
-//////////////////////////////////////////////////////////////
 // 显示窗口
 function showWin () {
     // win.showInactive();
@@ -97,7 +97,7 @@ ipc.on('id', function (event, windowID) {
 
 
 //////////////////////////////////////////////////////////////
-// 有财经新消息显示窗口,  稍后隐藏窗口
+// 有财经新消息显示弹出层,  稍后隐藏窗口
 socket.on('cls_news', (msg) => {
     clearTimeout(timer);
 
@@ -106,12 +106,12 @@ socket.on('cls_news', (msg) => {
 
     timer = setTimeout(() => {
         $news.removeClass(activeCla2);
-    }, 7 * 1000);
+    }, 2 * 1000);
 });
 
 
 //////////////////////////////////////////////////////////////
-// 交易警告文字版
+// 买入，卖出等 交易警告文字提示版
 socket.on('warn', (info) => {
 
     if (info === 'esc') {
@@ -128,7 +128,7 @@ socket.on('warn', (info) => {
     setTimeout(function () {
         $warn.removeClass(activeCla);
         voice.clear();
-    }, 1000 * 9);
+    }, 1000 * 4);
 
     voice(text);
 

@@ -68,6 +68,7 @@ brick.reg('mainCtrl', function (scope) {
     let isReverse = true;
     let isRefresh = false;
     let isOrigin = false;
+    let isHasTag = false;
 
     let tagsMap = {};
     let systemMap = {};
@@ -142,6 +143,12 @@ brick.reg('mainCtrl', function (scope) {
     // 按原始顺序排序显示
     scope.toggleOrigin = function (e) {
         isOrigin = $(this).prop('checked');
+        scope.init('');
+    };
+
+    // 过滤图片是否已经标记
+    scope.filterHasTag = function (e) {
+        isHasTag = $(this).prop('checked');
         scope.init('');
     };
 
@@ -243,6 +250,15 @@ brick.reg('mainCtrl', function (scope) {
             urlsByDayMap = {}; // 清空上次月份的单日数据
             scope.render('viewByDay', {model: {}});
             isOrigin && viewByDay(); // 按单日分类图片
+        }
+
+
+        // 如果按是否标记对图片进行过滤
+        if (isHasTag) {
+            urls = urls.filter( (v,i) => {
+                console.log(v);
+                return v.system.length || v.tags.length;
+            });
         }
 
 

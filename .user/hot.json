@@ -1,5 +1,15 @@
 [
 	{
+		"id": "雷达",
+		"selected": true,
+		"timestamp": 1738888106462
+	},
+	{
+		"id": "DeepSeek",
+		"selected": true,
+		"timestamp": 1738717351839
+	},
+	{
 		"id": "AI智能体",
 		"selected": true,
 		"timestamp": 1737877376695
@@ -41,7 +51,7 @@
 	},
 	{
 		"id": "电源",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1734961307700
 	},
 	{
@@ -81,7 +91,7 @@
 	},
 	{
 		"id": "减速器",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1733407259960
 	},
 	{
@@ -436,7 +446,7 @@
 	},
 	{
 		"id": "特斯拉",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1720016638941
 	},
 	{
@@ -451,7 +461,7 @@
 	},
 	{
 		"id": "比亚迪",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1718246628024
 	},
 	{
@@ -556,7 +566,7 @@
 	},
 	{
 		"id": "多模态",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1714322651526
 	},
 	{
@@ -636,7 +646,7 @@
 	},
 	{
 		"id": "铜缆",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1711283823712
 	},
 	{
@@ -786,7 +796,7 @@
 	},
 	{
 		"id": "无人驾驶",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1688482143101
 	},
 	{
@@ -801,7 +811,7 @@
 	},
 	{
 		"id": "CPO",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1679493252776
 	},
 	{
