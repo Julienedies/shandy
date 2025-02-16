@@ -32,7 +32,7 @@ const setting = bridge.setting();
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
 
 
-window.TAGS_FILTER = ['交易风险','行情类型', '目标行情', '行情驱动因素'];
+window.TAGS_FILTER = ['交易错误','交易风险','行情类型', '目标行情', '行情驱动因素'];
 
 brick.set('ic-select-cla', 'is-info');
 

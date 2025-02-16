@@ -5,8 +5,8 @@
 		"bounds": {
 			"x": 336,
 			"y": 188,
-			"width": 1546,
-			"height": 954
+			"width": 1547,
+			"height": 955
 		},
 		"fetchSources": [
 			"ths_new",
@@ -34,10 +34,10 @@
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
 		"imgDir": "E:\\dev\\simg\\目标行情\\2025-02",
 		"bounds": {
-			"x": 2187,
-			"y": -933,
-			"width": 3856,
-			"height": 2136
+			"x": -7,
+			"y": -7,
+			"width": 2209,
+			"height": 1209
 		},
 		"crop": {
 			"x": 3240,

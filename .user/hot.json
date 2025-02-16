@@ -1,7 +1,22 @@
 [
 	{
-		"id": "雷达",
+		"id": "腾讯",
 		"selected": true,
+		"timestamp": 1739717542122
+	},
+	{
+		"id": "阿里",
+		"selected": true,
+		"timestamp": 1739295073445
+	},
+	{
+		"id": "浙江",
+		"selected": true,
+		"timestamp": 1739207874088
+	},
+	{
+		"id": "雷达",
+		"selected": false,
 		"timestamp": 1738888106462
 	},
 	{
@@ -101,7 +116,7 @@
 	},
 	{
 		"id": "抖音",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1733059250057
 	},
 	{
@@ -326,7 +341,7 @@
 	},
 	{
 		"id": "AI眼镜",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1723965304965
 	},
 	{
@@ -566,7 +581,7 @@
 	},
 	{
 		"id": "多模态",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1714322651526
 	},
 	{
@@ -631,7 +646,7 @@
 	},
 	{
 		"id": "数据要素",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1711415020547
 	},
 	{
@@ -796,7 +811,7 @@
 	},
 	{
 		"id": "无人驾驶",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1688482143101
 	},
 	{
@@ -846,7 +861,7 @@
 	},
 	{
 		"id": "人工智能",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1675040054433
 	},
 	{
@@ -876,7 +891,7 @@
 	},
 	{
 		"id": "AIGC",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1668612470235
 	},
 	{
