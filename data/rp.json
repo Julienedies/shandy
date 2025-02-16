@@ -724,7 +724,7 @@
 		"role": "4",
 		"input": "",
 		"re": "",
-		"content": "<p>赚钱效应是在趋强还是趋弱？亏钱效应是在变强还是变弱？现在行情是好是坏？跌停是否增多？有没有系统性风险？</p>",
+		"content": "<p><strong><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 0); font-size: 18px;\">赚钱效应是在趋强还是趋弱？亏钱效应是在变强还是变弱？现在行情是好是坏？跌停是否增多？有没有系统性风险？</span></strong></p>",
 		"timestamp": "1725628022843",
 		"line": ""
 	},
