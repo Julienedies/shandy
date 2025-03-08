@@ -52,6 +52,10 @@ html, body {
     margin-bottom: 2.5rem;
   }
 
+  .button.is-primary {
+    background-color: #04c6a9;
+  }
+
   .options .button {
     font-size: 0.92rem;
   }
@@ -81,7 +85,13 @@ html, body {
     overflow: hidden;
     //color: #026bdb;
     color: #0270ee;
-    //text-decoration: underline;
+    background: yellow;
+    color: black;
+    display: inline-block;
+    margin: 0.5em 0 0;
+    padding: 0.1em 0.5em;
+    font-weight: 500;
+    font-size:1.1em;
   }
 
   &.shrink {
@@ -160,6 +170,7 @@ html, body {
 
       &.role_4 {
         background: #0e57f7 !important;
+        background: #1055ec !important;
 
         h3 {
           color: white;
@@ -176,6 +187,14 @@ html, body {
 
       &.role_6 {
         background: #0275a3 !important;
+        background: #394F78 !important;
+
+        h3 {
+          color: #fff; // #0360d3  #0354d3
+        }
+      }
+      &.role_61 {
+        background: #2C63ae !important;
 
         h3 {
           color: #fff; // #0360d3  #0354d3
@@ -184,11 +203,11 @@ html, body {
 
 
       h2, h3, h5, h6 {
-        padding: 0.18rem 0.1rem;
+        padding: 0.25rem 0.1rem;
         white-space: nowrap;
         overflow: hidden;
         font-weight: inherit;
-        font-size: 18px;
+        font-size: 17px;
         color: #000;
 
         b {
@@ -237,7 +256,7 @@ html, body {
   .pre.text {
     //display: none;
     //color: #026bdb;
-    padding-top: 0.4em;
+    padding: 0.4em 0.5em 0 0.5em;
     color: #0270ee;
     font-weight: 500;
     font-size: 1rem;

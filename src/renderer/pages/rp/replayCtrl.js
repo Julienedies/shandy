@@ -3,6 +3,7 @@
  * Created by j on 2024/4/15.
  */
 
+import $ from 'jquery'
 import brick from '@julienedies/brick'
 import { READY_SELECT_TAGS } from '../../js/constants'
 
@@ -24,11 +25,18 @@ export default function () {
     });
 
     $elm.on('click', function(e){
-        let originalTarget = e.originalEvent.target;
+        //let originalTarget = e.originalEvent.target;
         //if(originalTarget.id === 'backRpBtn') return false;
-        brick.view.back();
-        return false;
+        //brick.view.back();
+        //return false;
     });
+
+    // filterByKey 在不同的控制器内有不同的定义和功能
+    scope.filterByKey = function (e, msg) {
+        //$.icMsg(msg);
+        brick.view.back();
+        scope.emit('go_rp', msg);
+    };
 
 
     // 对复盘数据replay进行处理优化

@@ -23,6 +23,7 @@
 
     th, td {
       padding: 0.4em;
+      font-weight: 500;
 
       &:nth-child(1) {
         width: 2em;
@@ -40,6 +41,10 @@
 
     .tag {
       font-size: 1rem;
+      &.ldt {
+        min-width: 7em;
+        justify-content: flex-start;
+      }
     }
   }
 

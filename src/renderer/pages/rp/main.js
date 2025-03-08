@@ -306,6 +306,10 @@ brick.reg('rpListCtrl', function (scope) {
         }
     };
 
+    scope.on('go_rp', function (e, msg) {
+        scope.onGroupsChange({value: msg});
+    });
+
     // 筛选line
     scope.filterLine = function () {
         ++isFilterLine;
