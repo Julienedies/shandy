@@ -4,6 +4,7 @@
 
 @import '../../rp/replay.scss';
 
+
 #replay {
   header {
     position: fixed;
@@ -11,13 +12,13 @@
   }
 
   #list {
-    padding-top: 2em;
+    padding-top: 2.2em;
 
-/*    div:first-child {
-      .table tr {
-        display: table-row;
-      }
-    }*/
+    /*    div:first-child {
+          .table tr {
+            display: table-row;
+          }
+        }*/
   }
 
   &.shrink {
@@ -33,6 +34,9 @@
 
         &:first-child {
           display: table-row;
+
+          th {
+          }
         }
       }
     }

@@ -21,9 +21,10 @@
         </div>
     </header>
 
+    <!-- 单纯的模板  -->
     ${ require('../../rp/replay-tpl.html') }
 
-    <div id="list" ic-tpl="replays">
+    <div id="list" class="no-select" ic-tpl="replays">
 
         <div ic-for="i, replay in model" ic-class="tableBox {{ i==0?'X-expand':'' }}"  ic-dblclick="toggleTable">
             {{ brick.getTpl('replay')({ model: replay }) }}

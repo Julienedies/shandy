@@ -179,7 +179,11 @@ a.tag, a.tag:hover {
   color: #fff;
 }
 
-
+.tag:not(body).is-info {
+  background: #2C63ae;
+  background: #117de2;
+  color:#fff;
+}
 
 ///////////////////
 // forala 样式重写

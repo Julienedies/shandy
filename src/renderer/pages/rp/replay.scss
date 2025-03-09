@@ -11,12 +11,13 @@
 
     //color:#fff;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.6;
 
     th {
       color: #fff;
-      a{
+
+      a {
         color: inherit;
       }
     }
@@ -34,6 +35,10 @@
       }
     }
 
+    .pre {
+      padding: 0.1rem 0.75rem;
+    }
+
     .subtitle {
       color: inherit;
       font-size: 1em;
@@ -41,8 +46,9 @@
 
     .tag {
       font-size: 1rem;
+
       &.ldt {
-        min-width: 7em;
+        min-width: 8em;
         justify-content: flex-start;
       }
     }
@@ -58,7 +64,7 @@
 }
 
 // 消息面 容器
-.msgBox.shrink{
-  height: 1.1em;
+.msgBox.shrink {
+  height: 1.4em;
   overflow: hidden;
 }
