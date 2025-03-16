@@ -31,7 +31,7 @@
                     <td> {{ brick.getTpl('replay3')({model:daJuGuan}) }}</td>
                 </tr>-->
 
-        <tr ic-for="i, v in a1" tabindex="{{ v }}">
+        <tr ic-for="i, v in a1" tabindex="{{ v }}" ic-if="replay[v]">
             <td>{{ replay.week }}</td>
             <td><a ic-click="filterByKey:{{v}}"> {{ v }} </a></td>
             <td> {{ brick.getTpl('replay3')({model:replay[v]}) }}</td>
@@ -63,6 +63,7 @@
         </tbody>
     </table>
 </div>
+
 
 <!-- 嵌入用的子模板 -->
 <div ic-tpl="replay3">
