@@ -1,5 +1,19 @@
 [
 	{
+		"id": "id_1742714235039_9433",
+		"type": "",
+		"level": "0",
+		"text": "N:=10;\nM:=90;\nA:=(C/REF(LLV(C,N-1),1)-1)*100;\nB:=A>M;\n{STICKLINE(B,C,O,2.5,0),COLORMAGENTA;\nSTICKLINE(B,H,L,0,0),COLORMAGENTA;}\nD:=CROSS(B,0.5);\nF:=IF(D AND CURRBARSCOUNT=N,1,0);\nNOTEXT:DRAWLINE(D,L,REF(D,1),REF(L,1),1);",
+		"timestamp": 1742714235039
+	},
+	{
+		"id": "id_1742569086261_1033",
+		"type": "",
+		"level": "0",
+		"text": "{双色K线公式}\nUP:=CLOSE>OPEN;                          {判断阳线}\nNOTUP:=CLOSE<=OPEN;                      {判断阴线}\n实体高度:=ABS(CLOSE-OPEN);               {计算实体高度}\n十部分高度:=实体高度*0.1;                {计算10%的高度}\n\n{绘制黄色主体部分（90%）}\nSTICKLINE(YD AND UP, OPEN, CLOSE-十部分高度, 0.8, 1), COLORYELLOW;\nSTICKLINE(YD AND NOTUP, CLOSE+十部分高度, OPEN, 0.8, 1), COLORYELLOW;\n\n{绘制紫色顶部/底部（10%）}\nSTICKLINE(YD AND  UP, CLOSE-十部分高度, CLOSE, 0.8, 1), COLORFF00FF; {紫色}\nSTICKLINE(YD AND  NOTUP, CLOSE, CLOSE+十部分高度, 0.8, 1), COLORFF00FF;",
+		"timestamp": 1742569086261
+	},
+	{
 		"text": "603810 丰山集团 603035 常熟汽饰 603612 索通发展 300975 商络电子 603203 快克智能 603297 永新光学 605228 神通科技 688048 长光华芯 688372 伟测科技 300461 田中精机 300679 电连技术 300128 锦富技术 605358 立昂微 2281 光迅科技",
 		"type": "",
 		"id": "id_1741739720208_1070",
@@ -32,7 +46,7 @@
 		"timestamp": 1730009887193
 	},
 	{
-		"text": "Shares China Large-Cap ETF\n\nYuna Hoshizaki ",
+		"text": "Shares China Large-Cap ETF\n",
 		"type": "",
 		"id": "id_1728806511780_9018",
 		"timestamp": 1728806511780,
