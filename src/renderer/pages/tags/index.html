@@ -29,7 +29,7 @@
             <div class="field is-grouped is-grouped-multiline">
                 <div class="control" ic-for="i,v in arr">
                     <div class="tags has-addons">
-                            <a ic-class="tag is-warning hint--top-right" aria-label="{{ v.desc }}"
+                            <a ic-class="tag {{ v.rank > 0 ? 'is-dark' : ' is-warning' }} hint--top-right" aria-label="{{ v.desc }}"
                                ic-click="goto:{{v.id}}:{{v.type }}:{{ v.text }}">
                                 {{v.text}}
                                 <sup> {{ v.level }}</sup>

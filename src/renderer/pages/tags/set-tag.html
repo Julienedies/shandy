@@ -75,7 +75,14 @@
             <div>
                 <h6>优先级</h6>
                 <div>
-                    <input class="input is-medium" type="number" name="level" ic-value="{{model.level||0}}" ic-form-field>
+                    <input class="input is-medium" type="number" name="level" ic-value="{{model.level||0}}" ic-form-field placeholder="标签组排序用">
+                </div>
+            </div>
+
+            <div>
+                <h6>级别</h6>
+                <div>
+                    <input class="input is-medium" type="number" name="rank" ic-value="{{model.rank||0}}" ic-form-field placeholder="标签级别">
                 </div>
             </div>
 
