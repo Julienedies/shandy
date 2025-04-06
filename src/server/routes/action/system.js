@@ -23,6 +23,7 @@ function getData () {
     return {system: systemJodb.get2(), tags: tags.convert()};
 }
 
+
 export default {
 
     get (req, res) {

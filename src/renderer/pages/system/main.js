@@ -26,18 +26,18 @@ import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
 
 import bridge from '../../../libs/utils'
 import attachCtrl from '../viewer/attach-ctrl'
+import { SET_SYSTEM_DONE } from '../../js/constants'
 
 const setting = bridge.setting();
 //brick.set('debug', true)
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
 
 
-window.TAGS_FILTER = ['交易风险','行情类型', '目标行情', '行情驱动因素'];
+window.TAGS_FILTER = ['交易风险', '行情类型', '目标行情', '行情驱动因素'];
 
 brick.set('ic-select-cla', 'is-info');
 
 brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
-
 
 
 ///////////////////////////////////////////
@@ -64,7 +64,6 @@ brick.reg('setTagCtrl', setTagCtrl);
 brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);
 
 brick.reg('viewerAttachCtrl', attachCtrl);
-
 
 
 brick.reg('systemCtrl', function () {
@@ -143,7 +142,7 @@ brick.reg('systemCtrl', function () {
         alert(data);
     };
 
-    scope.on(C.ON_SET_SYSTEM_DONE, function (e, msg) {
+    scope.on(C.SET_SYSTEM_DONE, function (e, msg) {
         console.info('ON_SET_SYSTEM_DONE =>', msg);
         scope.onGetSystemDone(msg);
         if (viewId) {
@@ -191,8 +190,6 @@ brick.reg('systemCtrl', function () {
     };
 
 });
-
-
 
 
 brick.reg('setSystemCtrl', function () {
