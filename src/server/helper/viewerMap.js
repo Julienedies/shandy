@@ -3,7 +3,6 @@
  * Created by j on 2019-09-08.
  */
 
-import moment from 'moment'
 import _ from 'lodash'
 import userJodb from '../../libs/jodb-user'
 import imagesHelper from '../../renderer/pages/viewer/helper'

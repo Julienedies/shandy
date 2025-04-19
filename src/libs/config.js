@@ -7,11 +7,11 @@ import electron from 'electron'
 
 import config from '/Users/j/dev/shandy/config.json'
 
-const SERVER_PORT = 3300
+const SERVER_PORT = config.SERVER_PORT
 //const LOAD_PROTOCOL =  'file:///'
 const LOAD_PROTOCOL = `http://localhost:${SERVER_PORT}`
 
-const ROOT_DIR = path.resolve(__dirname, '/Users/j/dev/shandy/')
+const ROOT_DIR = path.resolve(__dirname, config.ROOT_DIR)
 const CSD_DIR = path.resolve(ROOT_DIR, '../csd/')
 const DATA_DIR = path.join(ROOT_DIR, './data/')
 const STATIC_DIR = path.join(ROOT_DIR, './static/')

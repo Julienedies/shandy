@@ -7,7 +7,7 @@ import _ from 'lodash'
 import dob from '../../../libs/dob.js'
 import _tags from './tags'
 
-import ViewerMap, { beforeGet } from '../../helper/viewerMap'
+import ViewerMap, { beforeGet } from '../../helper/viewerMap2'
 
 const viewerMap = ViewerMap.getInstance();  // 全局单例
 

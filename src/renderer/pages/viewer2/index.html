@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>viewer</title>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
+    <script src="/set_node_modules_path.js"></script>
+</head>
+<body ic-ctrl="mainCtrl">
+<div class="column">
+
+    <div class="box">
+        <div class="field has-addons">
+            <div class="control">
+                <a class="button is-primary is-medium" ic-select-path="imgDir" ic-select-dir="true" ic-select-path-on-done="onSelectImgDirDone">
+                    选择图片文件夹
+                </a>
+            </div>
+            <div class="control is-expanded">
+                <input class="input is-medium" style="color:red;font-weight: bold;" type="text" value="" name="imgDir">
+            </div>
+        </div>
+
+        <div class="columns">
+            <div id="crop" class="column is-4" ic-tpl="crop">
+                <div ic-form>
+                    <div class="column">
+                        <label>x:<input type="number" class="input" ic-value="{{ model.crop.x || 3100 }}" ic-form-field="x"></label>
+                        <label class="">y:<input type="number" class="input" ic-value="{{ model.crop.y || 115 }}" ic-form-field="y"></label>
+                        <label class="">W:<input type="number" class="input" ic-value="{{ model.crop.width || 380 }}" ic-form-field="width"></label>
+                        <label class="">H:<input type="number" class="input" ic-value="{{ model.crop.height || 50 }}" ic-form-field="height"></label>
+                        <label class="">序号:<input type="number" class="input" value="0" id="sn"></label>
+                    </div>
+
+                    <div class="field">
+                        <button class="button is-primary" ic-click="clean">清理数据</button>
+                        <button class="button is-primary" ic-click="refresh">刷新数据</button>
+                        <button class="button is-primary" ic-click="reverse">反转排序</button>
+                        <button class="button is-primary" ic-click="reload">reload</button>
+                        <button class="button is-primary" ic-click="ls">临时特定操作</button>
+                        <!--<button class="button is-primary" ic-click="ocrRename">ocr重命名</button>-->
+                        <!--<button class="button is-primary" ic-click="ocrRename">ocr重命名</button>
+                        <button class="button is-primary" ic-form-submit ic-submit-action="cropTest()">剪切测试</button>
+                        <div style="display: inline-block;">
+                            <img id="view_crop" style="border:solid 1px blue;"/>
+                            <h6 id="ocr_text"></h6>
+                        </div>-->
+                    </div>
+
+                    <div class="field">
+                        <label class="">播放时间:
+                            <input type="number" class="input" value="" id="interval" ic-enter-press="setViewerInterval">
+                        </label>
+                        &nbsp;&nbsp;
+                        <label class="">按原始时间排序:
+                            <input type="checkbox" class="checkbox" value="" ic-change="toggleOrigin">
+                        </label>
+
+                        <label class="">按是否标记过滤:
+                            <input type="checkbox" class="checkbox" value="" ic-change="filterByMarked">
+                        </label>
+                    </div>
+
+                    <div class="field">
+                        <label id="countShow" style="font-size:1.4em;color: red;">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div id="history" class="column is-8" ic-tpl="history">
+                <div ic-select ic-select-item="a.tag" ic-select-auto="false" ic-select-cla="is-danger" ic-init="dirs=model.dirs">
+                    <div class="field is-grouped is-grouped-multiline" ic-for="i,k in ['X交割单学习','目标行情','交易记录']" ic-for-init="arr=dirs[k]">
+                        <h6 class="tag is-primary is-medium" style="margin-right:1em;">{{ k }}</h6>
+                        <div class="control" ic-for="i,v in arr">
+                            <div class="tags has-addons">
+                                <a class="tag is-info is-medium" ic-has-selected="v===model.dir" ic-click="show" data-dir="{{ v }}">{{ v.split("\\\\").pop() }}</a>
+                                <!--<a class="tag is-delete" ic-click="remove" data-dir="{{ v }}"></a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="" ic-tpl="viewByDay">
+            <div class="tags" ic-select ic-select-item=".tag" ic-select-cla="is-danger">
+                <span class="tag is-info is-medium" ic-for="i,v in model" ic-click="viewForDay:{{ i }}">{{ i }}</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div ic-ctrl="viewerListCtrl">
+
+        <div id="list" ic-tpl="list">
+            <ol ic-viewer
+                ic-viewer-item="li"
+                ic-viewer-url="url"
+                ic-viewer-interval=""
+                ic-viewer-on-show="onViewerShow"
+                ic-viewer-on-open="onViewerOpen"
+                ic-viewer-on-close="onViewerClose">
+
+                <li ic-for="i,v in model" url="file://{{v.f}}" ic-class="{{ v.end ? 'is-end':'' }}">
+                    <h5>
+                        <span style="display: inline-block; min-width:42em;">{{v.f}} </span>
+                        <span ic-for="k,o in v.tags"
+                              ic-class="tag is-medium {{o ? o.type=='交易错误'?'is-black' : o.text.includes('亏损') ? 'is-primary': o.text.includes('盈利')?'is-danger':'is-info' : ''}}">
+                            {{ o && o.text }}
+                        </span>
+                        <span ic-for="k,o in v.system" class="tag is-medium is-link">{{ o && o.name }}</span>
+                        <!--is-dark is-black is-success is-danger is-info is-link is-warning  is-primary  -->
+                    </h5>
+                </li>
+
+            </ol>
+        </div>
+
+        ${ require('./viewerAttach.html') }
+
+    </div>
+
+</div>
+
+${ require('./markTag.html') }
+</body>
+</html>

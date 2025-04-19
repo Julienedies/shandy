@@ -1,5 +1,32 @@
 [
 	{
+		"text": "使用快捷键临时显示隐藏文件\n快捷键：在 Finder 窗口中按下 Command (⌘) + Shift + .（英文句号）。\n\n再次按下相同的组合键可以重新隐藏这些文件。\n\n适用场景：快速临时查看隐藏文件，无需终端命令。",
+		"type": "",
+		"id": "id_1744438379053_5835",
+		"timestamp": 1744438379053
+	},
+	{
+		"id": "id_1744157308935_3898",
+		"type": "",
+		"level": "0",
+		"text": "http://124.221.131.241:3300/web/stock_index.html",
+		"timestamp": 1744157308935
+	},
+	{
+		"id": "id_1744036250416_4374",
+		"type": "",
+		"level": "0",
+		"text": "https://github.com/Julienedies/shandy/archive/refs/heads/master.zip",
+		"timestamp": 1744036250416
+	},
+	{
+		"id": "id_1744035129260_5266",
+		"type": "unix",
+		"level": "0",
+		"text": "服务器操作系统：Debian 11.1 64bit\n\n默认用户名：root\n\n登录密码：3_TG2NDZxRkC|yu\nssh root@119.91.206.193\n\n\nssh root@124.221.131.241\n7)5bJ:6qPjXw\n\n sudo - julien\njulien  hello/julien/2012\n\n\nscp ~/dev/up.zip root@124.221.131.241:/home/julien/app/shandy-/\n\nsed -i '' 's|Users/j/dev/shandy/|home/julien/app/shandy-|g'   ./dist/web/server.js\n\n\n\ncurl https://github.com/Julienedies/shandy/archive/refs/heads/master.zip\n\n\nnode  home/julien/app/shandy-/dist/web/server.js\n\n\nnpm install -g pm2\n\npm2  start  home/julien/app/shandy-/dist/web/server.js   \npm2 stop all",
+		"timestamp": 1744035129260
+	},
+	{
 		"id": "id_1742714235039_9433",
 		"type": "",
 		"level": "0",

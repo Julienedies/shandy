@@ -77,7 +77,7 @@ brick.reg('rpListCtrl', function (scope) {
 
     scope.listManager = listManager;
 
-    window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
+
 
     window._GET_RP_KEY = function (rp, tagType) {
         let key = '';
@@ -212,6 +212,7 @@ brick.reg('rpListCtrl', function (scope) {
     }
 
     //-----------------------------------------------------------
+    window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
     let getRpDef = $.Deferred();
     let getReplayDef = $.Deferred();
 

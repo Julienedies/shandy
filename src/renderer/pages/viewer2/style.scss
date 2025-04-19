@@ -1,0 +1,57 @@
+@import "../../css/basic/0.7/basic.base.css";
+
+html, body {
+  // 飞利浦屏幕34寸
+  @media screen and (min-width: 3600px) {
+    font-size: 18px !important;
+  }
+  // macBook 屏幕
+  @media screen and (max-width: 1440px) {
+    font-size: 18px !important;
+  }
+}
+
+body, html {
+  font-size: 18px !important;
+}
+
+
+.wrap {
+  padding-top: 10px;
+  height: 100%;
+  min-height: 100%;
+  overflow-y: scroll;
+}
+
+
+#crop {
+  label {
+    padding-right: 10px;
+  }
+
+  /*  input {
+      line-height: 1.4;
+      font-size: 1.2em;
+      margin-left: 5px;
+    }*/
+
+  .input {
+    width: 4em;
+    padding: 5px;
+    margin-left: 5px;
+  }
+}
+
+
+
+#list li {
+  margin: 0 0 10px 40px;
+
+  &.is-end {
+    padding-bottom: 9px;
+    border-bottom: 0 #b5b3b3 dotted;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0);
+  }
+}
+
+

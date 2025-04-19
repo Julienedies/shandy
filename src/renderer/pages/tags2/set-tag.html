@@ -1,0 +1,188 @@
+<div ic-ctrl="setTagCtrl" ic-popup="setTag">
+    <div class="column is-12" ic-tpl="setTagCtrl">
+        <div class="table_0" ic-form="setTag">
+
+            <div>
+                <h6>标签类型</h6>
+                <div class="field">
+                    <input class="input is-medium"
+                           type="text"
+                           name="type"
+                           ic-if="!model.types"
+                           value="{{model.type}}"
+                           ic-select-input="tagType"
+                           ic-has-readonly="model.type"
+                           ic-form-field
+                           ic-field-rule="required"> <!--文本输入框 设定tag类型 -->
+
+                    <div ic-if="model.types">  <!--选择按钮组 设定tag类型 -->
+                        <div ic-select="tagType" ic-select-type="radio" ic-select-cla="is-info" ic-form-field="type">
+                            <div class="tags">
+                                <span class="tag is-medium"
+                                      ic-for="i,v in model.types"
+                                      ic-select-item
+                                      ic-has-selected="model.type===v.text || model.type===v.id"
+                                      ic-val="{{ v.text }}">
+                                    {{ v.text }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h6>标签名称</h6>
+                <div>
+                    <div class="field has-addons">
+                        <p class="control is-expanded">
+                            <input class="input is-medium" type="text" name="text" value="{{model.text}}" ic-form-field ic-field-rule="required">
+                        </p>
+                        <p class="control">
+                            <input class="input is-medium" type="text" name="id" value="{{model.id}}" ic-form-field readonly/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div ic-if="model.parents || model.type==='交易要素' || model.type==='交易错误'" style="display: none;">
+                <h6>父标签</h6>
+                <div>
+                    <div>
+                        <div ic-select="parentId" ic-form-field="parentId">
+                            <div class="tags" id="setParentIdForTag" style="height: 16em; overflow-y: scroll;">
+                                <span class="tag is-small"
+                                      ic-for="i,v in (model.parents || TAGS_MAP[model.type])"
+                                      ic-select-item
+                                      ic-val="{{ v.id }}"
+                                      ic-has-selected="model.parentId===v.id">
+                                    {{ v.text }}
+                                    <sup>{{ v.level }}</sup>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h6>备注</h6>
+                <div>
+                    <textarea rows="2" class="textarea" ic-form-field="desc">{{model.desc}}</textarea>
+                </div>
+            </div>
+
+            <div>
+                <h6>优先级</h6>
+                <div>
+                    <input class="input is-medium" type="number" name="level" ic-value="{{model.level||0}}" ic-form-field placeholder="标签组排序用">
+                </div>
+            </div>
+
+            <div>
+                <h6>级别</h6>
+                <div>
+                    <input class="input is-medium" type="number" name="rank" ic-value="{{model.rank||0}}" ic-form-field placeholder="标签级别">
+                </div>
+            </div>
+
+            <div>
+                <h6>权重</h6>
+                <div>
+                    <input class="input is-medium" type="number" name="weight" ic-value="{{model.weight||0}}" ic-form-field>
+                </div>
+            </div>
+
+           <!-- <div ic-viewer ic-viewer-url="href">
+                <h6>示例图片</h6>
+                <div>
+                    <div class="field is-grouped is-grouped-multiline" ic-select="示例图片" ic-select-type="checkbox" ic-form-field="示例图片">
+                        <div class="control" ic-for="i,v in (model['示例图片']||[])">
+                            <div class="tags has-addons">
+                                <span class="tag is-medium" ic-select-item ic-has-selected="true" ic-val="{{ v }}">{{ parseImgName(v) }}</span>
+                                <a class="tag is-medium hint&#45;&#45;top" aria-label="图片预览" ic-href="{{ v }}" ic-viewer-item>
+                                    <span class="icon is-medium"><i class="far fa-eye"></i></span>
+                                </a>
+                                <a class="tag is-delete is-medium"
+                                   x-ic-ajax
+                                   ic-submit-data="{{v}}"
+                                   ic-submit-method="delete"
+                                   ic-submit-action="/delete"
+                                   ic-submit-on-done=""
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div ic-select-path ic-select-path-on-done="onSelectPathDone">
+                            <button class="button is-primary">
+                                添加示例图片
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <!-- submit -->
+            <div>
+                <div></div>
+                <div class="buttons">
+                    <button class="button is-primary"
+                            ic-form-submit="setTag"
+                            ic-submit-action="/stock/tags"
+                            ic-submit-before="before"
+                            ic-submit-on-done="onSetTagDone">
+                        保存
+                    </button>
+                    <button class="button" ic-click="reset" style="margin-left:4em;"> 重置</button>
+                    <button class="button" ic-popup-close style="margin-left:4em;"> 关闭</button>
+                </div>
+            </div>
+
+            <div>
+                <h6>key</h6>
+                <div>
+                    <input class="input is-medium" type="text" name="key" value="{{model.key}}" ic-form-field>
+                </div>
+            </div>
+            <div>
+                <h6>sub</h6>
+                <div>
+                    <input class="input is-medium" type="text" name="sub" value="{{model.sub}}" ic-form-field>
+                </div>
+            </div>
+
+            <!-- 上传图片 -->
+            <!--<div ic-viewer ic-viewer-url="href">
+                <h6>示例图片</h6>
+                <div class="field is-grouped is-grouped-multiline" ic-select="示例图片" ic-select-type="checkbox" ic-form-field="示例图片">
+                    <div class="control" ic-for="i,v in (model['示例图片']||[])">
+                        <div class="tags has-addons">
+                            <span class="tag is-medium" ic-select-item ic-has-selected="true" ic-val="{{v}}">{{v}}</span>
+                            <a class="tag is-medium hint&#45;&#45;top" aria-label="图片预览" ic-href="{{ v }}" ic-viewer-item>
+                                <span class="icon is-medium"><i class="far fa-eye"></i></span>
+                            </a>
+                            <a class="tag is-delete is-medium"
+                               x-ic-ajax
+                               ic-submit-data="{{v}}"
+                               ic-submit-method="delete"
+                               ic-submit-action="/delete"
+                               ic-submit-on-done=""
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div ic-upload="img" ic-upload-action="/upload" ic-upload-on-done="onUploadDone">
+                            <label class="button is-info">
+                                <input class="file-input" type="file" name="img" multiple>
+                                上冲示例图片
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!-- 上传图片 end -->
+
+        </div>
+    </div>
+</div>

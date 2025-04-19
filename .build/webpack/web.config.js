@@ -29,7 +29,7 @@ const publicPath = ''
 
 const entry = {}
 
-const entryJs = glob.sync(path.join(context, 'renderer/pages/+(stock|monitor|memo|note|note2|rp)/**/main.js')) || []
+const entryJs = glob.sync(path.join(context, 'renderer/pages/+(stock|monitor|memo|note|note2|rp|system2)/**/main.js')) || []
 
 let pages = entryJs.map((entryJsPath) => {
     let arr = entryJsPath.match(/pages\/(.+)\/main\.js$/i)
@@ -52,11 +52,11 @@ const plugins = [
         'process.env.DEV': JSON.stringify(!isPro),
     }),
     new ManifestPlugin(),
-    //new webpack.NoEmitOnErrorsPlugin(),  // 有错误的话就不输出编译文件
+    new webpack.NoEmitOnErrorsPlugin(),  // 有错误的话就不输出编译文件
     // 清除上次生成的文件
-    // new CleanPlugin([`dist/web`], {
-    //     root: projectRoot
-    // })
+    new CleanPlugin([`dist/web`], {
+        root: projectRoot
+    }),
 ]
 
 const devServerPort = 8090
