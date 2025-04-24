@@ -43,9 +43,14 @@ html, body {
 
 .icon {
   & > .far, & > .fas {
-    opacity: 0.1;
+    opacity: 0.15;
   }
 }
+
+.tag:not(body).is-delete::before, .tag:not(body).is-delete::after{
+  opacity: .4;
+}
+
 
 .tag.is-medium.is-delete {
   opacity: 0.3;
