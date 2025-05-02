@@ -20,7 +20,7 @@
                 ic-submit-action="/stock/tags"
                 ic-submit-on-done="onGetTagsDone">标签列表
         </button>
-        <button class="button is-primary" ic-click="add">添加标签</button>
+        <button class="button is-primary" ic-click="addTag">添加标签</button>
     </div>
 
     <div id="tags" ic-tpl="tags">
@@ -29,12 +29,12 @@
             <div class="field is-grouped is-grouped-multiline">
                 <div class="control" ic-for="i,v in arr">
                     <div class="tags has-addons">
-                            <a ic-class="tag is-black hint--top-right" aria-label="{{ v.desc }}"
-                               ic-click="edit2:{{v.id}}:{{v.type }}:{{ v.text }}">
+                            <a ic-class="tag {{ v.rank > 0 ? 'is-dark' : ' is-warning' }} hint--top-right" aria-label="{{ v.desc }}"
+                               ic-click="goto:{{v.id}}:{{v.type }}:{{ v.text }}">
                                 {{v.text}}
                                 <sup> {{ v.level }}</sup>
                             </a>
-                        <a class="tag" ic-click="edit:{{v.id}}">
+                        <a class="tag" ic-click="editTag:{{v.id}}">
                             <span class="icon"><i class="far fa-edit"></i></span>
                         </a>
                         <a class="tag is-delete"
@@ -42,13 +42,13 @@
                            ic-submit-method="delete"
                            ic-submit-action="/stock/tags/{{v.id}}"
                            ic-submit-before="confirm:确认删除?不可撤销!"
-                           ic-submit-on-done="remove"></a>
+                           ic-submit-on-done="onDelTagDone"></a>
                     </div>
                 </div>
 
                 <!-- 添加标签按钮 -->
                 <div class="control">
-                    <a class="tag" ic-click="add:{{k}}" >
+                    <a class="tag" ic-click="addTag:{{k}}" >
                         <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
                     </a>
                 </div>

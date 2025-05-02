@@ -179,6 +179,7 @@ brick.reg('mainCtrl', function (scope) {
             }
             newsWin = scope.newsWin = new Win(opt);
             newsWin.maximize();
+            //newsWin.setBackgroundColor('#00000000');
             //newsWin.setFullScreen(true);
             newsWin.win.setIgnoreMouseEvents(true);
             newsWin.win.webContents.on('did-finish-load', function () {

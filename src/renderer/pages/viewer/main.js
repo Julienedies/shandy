@@ -211,19 +211,19 @@ brick.reg('mainCtrl', function (scope) {
             // 遍历，绑定交易、标签等数据
             urls.forEach(o => {
 
-                /*               if (isAddTrade) {
-                                   let arr = o.tradeInfo = tradeArr.filter(arr => {
-                                       // 交易信息 对应 code 和 时间
-                                       return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
-                                   });
-                                   if(arr){
-                                       arr = arr.map(a => {
-                                           return [a[1], a[4], a[6], a[5]];  // => 时间, 买入/卖出, 数量, 价格
-                                       });
-                                       arr.reverse(); // 当日多个交易记录按照时间先后显示
-                                       o.tradeInfoText = arr.join('\r\n').replace(/,/g, '    ');
-                                   }
-                               }*/
+                   // if (isAddTrade) {
+                   //     let arr = o.tradeInfo = tradeArr.filter(arr => {
+                   //         // 交易信息 对应 code 和 时间
+                   //         return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
+                   //     });
+                   //     if(arr){
+                   //         arr = arr.map(a => {
+                   //             return [a[1], a[4], a[6], a[5]];  // => 时间, 买入/卖出, 数量, 价格
+                   //         });
+                   //         arr.reverse(); // 当日多个交易记录按照时间先后显示
+                   //         o.tradeInfoText = arr.join('\r\n').replace(/,/g, '    ');
+                   //     }
+                   // }
 
                 // 附加标签信息 和 交易系统信息
                 let obj = viewerJodb.get(o.f, 'img')[0] || {tags: [], system: []};

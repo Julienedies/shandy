@@ -112,6 +112,7 @@ ViewerMap.instance = {
     },
 
     // 为viewer.json里的img项绑定交易记录，主要是在tags页面查看各种统计标签方便查看当时的交易记录
+    // 如果图片没有添加标签，那就不会添加到viewer.json， 也就不会添加交易记录
     bindTradeInfo: function () {
 
         let tradeArr = userJo('SEL', []).get(); // 交易记录json
@@ -124,7 +125,7 @@ ViewerMap.instance = {
             let tradeInfo = item.tradeInfo;  // 默认是空字符串
             let fullPath = item.img;
 
-            if (tradeInfo) return; // 已经附加交易信息
+            if (tradeInfo && tradeInfo.length > 0) return; // 已经附加交易信息
             if (!(/交易记录/img.test(fullPath))) return; // 如果不是交易记录图片，不用附加交易信息
 
             if (!d || !code) {

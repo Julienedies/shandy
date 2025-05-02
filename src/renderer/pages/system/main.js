@@ -108,6 +108,10 @@ brick.reg('systemCtrl', function () {
         });
     };
 
+    scope.toggleShowStyle = function () {
+        $elm.find('#systemList ul').toggleClass('gridStyle');
+    };
+
     scope.addSystem = function () {
         scope.emit(C.ADD_SYSTEM, {system: {}, tags: model.tags});
     };

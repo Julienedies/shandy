@@ -5,14 +5,13 @@
 		"bounds": {
 			"x": 336,
 			"y": 188,
-			"width": 1547,
-			"height": 955
+			"width": 1555,
+			"height": 959
 		},
 		"fetchSources": [
 			"ths_new",
 			"ths_p",
-			"ths_c",
-			"xgb"
+			"ths_c"
 		],
 		"fetchByStocks": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
 		"fetchFromIndex": 305,
@@ -32,12 +31,12 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2025-02",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2025-04",
 		"bounds": {
-			"x": -7,
-			"y": -7,
-			"width": 2209,
-			"height": 1209
+			"x": 2187,
+			"y": -933,
+			"width": 3856,
+			"height": 2176
 		},
 		"crop": {
 			"x": 3240,
@@ -46,6 +45,11 @@
 			"height": 36
 		},
 		"history": [
+			"E:\\dev\\simg\\目标行情\\2025-04",
+			"E:\\dev\\simg\\目标行情",
+			"E:\\dev\\simg\\交易记录\\2504",
+			"E:\\dev\\simg\\交易记录\\2503",
+			"E:\\dev\\simg\\目标行情\\2025-03",
 			"E:\\dev\\simg\\交易记录\\2502",
 			"E:\\dev\\simg\\目标行情\\2025-02",
 			"E:\\dev\\simg\\目标行情\\2025-01",
@@ -210,10 +214,10 @@
 	},
 	"review": {
 		"bounds": {
-			"x": 2386,
-			"y": -658,
-			"width": 2195,
-			"height": 1195
+			"x": 557,
+			"y": 268,
+			"width": 1425,
+			"height": 835
 		}
 	},
 	"news": {
@@ -282,10 +286,10 @@
 	},
 	"system": {
 		"bounds": {
-			"x": 2187,
-			"y": -933,
-			"width": 3856,
-			"height": 2136
+			"x": 0,
+			"y": 0,
+			"width": 2194,
+			"height": 1204
 		}
 	},
 	"tags": {
@@ -293,7 +297,7 @@
 			"x": 2187,
 			"y": -933,
 			"width": 3856,
-			"height": 2136
+			"height": 2176
 		}
 	},
 	"mistake": {
@@ -334,7 +338,7 @@
 			"x": -7,
 			"y": -7,
 			"width": 2209,
-			"height": 1209
+			"height": 1219
 		}
 	},
 	"stock_plan": {
@@ -355,18 +359,18 @@
 	},
 	"stock_c": {
 		"bounds": {
-			"x": 3209,
-			"y": 14,
-			"width": 1737,
-			"height": 966
+			"x": 3186,
+			"y": -91,
+			"width": 1741,
+			"height": 969
 		}
 	},
 	"news2": {
 		"bounds": {
 			"x": 0,
 			"y": 0,
-			"width": 2196,
-			"height": 1196
+			"width": 2195,
+			"height": 1235
 		}
 	}
 }

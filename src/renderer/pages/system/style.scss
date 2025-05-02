@@ -17,6 +17,18 @@ body, html {
 
 
 #systemList {
+
+  ul.gridStyle {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 24%;
+      margin-right: 0.75%;
+    }
+  }
+
+
   header {
     .tag {
       font-size: 0.95rem;
@@ -36,8 +48,6 @@ body, html {
   padding: 1.8rem;
   margin: 1.6rem 0;
 }
-
-
 
 
 .table_4 {

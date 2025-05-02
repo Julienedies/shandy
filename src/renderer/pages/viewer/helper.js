@@ -20,7 +20,7 @@ import jsonDb from '../../../libs/jsono-short'
 
 const nativeImage = electron.nativeImage;
 const viewerDbFactory = jsonDb('viewer');
-const imagesDbFactory = jsonDb('images');
+// const imagesDbFactory = jsonDb('images');
 const viewerJsonDb = ju('viewer');
 
 // images.json 保存着个股图片的附加信息：股票代码、图片时间戳、图片日期，在viewer页面里主要起缓存作用，不用每次都通过图片名称对其解析代码和日期
@@ -38,12 +38,12 @@ export default {
         console.log('getImages => ', dir);
         let arr;
         // 测试是否是交易记录图片, 因为主要功能是浏览k线截图
-        /* if (dir.indexOf('截图') === -1) {
-             let files = glob.sync(path.join(dir, './!*.+(jpg|png)')) || [];
-             return files.map((path) => {
-                 return {f: path};
-             })
-         }*/
+        //  if (dir.indexOf('截图') === -1) {
+        //      let files = glob.sync(path.join(dir, './*.+(jpg|png)')) || [];
+        //      return files.map((path) => {
+        //          return {f: path};
+        //      })
+        //  }
 
         // 首先尝试使用图片目录缓存
         //console.log(this.getDirKey(dir));
@@ -68,9 +68,9 @@ export default {
 
             if (conf.isOrigin) {
                 return arr.sort((a, b) => {
-                    let a1 = +moment(a.d);
-                    let b1 = +moment(b.d);
-                    return a1 - b1;
+                    // let a1 = +moment(a.d);
+                    // let b1 = +moment(b.d);
+                    return a.c - b.c;
                 });
             }
 
@@ -152,7 +152,7 @@ export default {
             //console.log(f);
 
             let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s*[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/);
-            //console.log(f2, arr2);
+            console.log(f2, arr2);
             let m = moment(arr2[0], "YYYY-MM-DD Ah.m.s");
             item = {f: fullPath, c: +m, d: arr2[1], code};
             // 保存到缓存
