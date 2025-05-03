@@ -1,5 +1,39 @@
 [
 	{
+		"title": "没有明确的目标行情意识；",
+		"id": "id_1746274431278_4148",
+		"type": "错误&问题",
+		"caution": "",
+		"warning": "",
+		"comment": "",
+		"alias": "",
+		"group": "无系统无计划",
+		"level": "884",
+		"role": "3",
+		"input": "",
+		"re": "",
+		"content": "",
+		"options": [],
+		"timestamp": 1746274431278
+	},
+	{
+		"title": "没有明确的行情意识，我要捕捉的目标行情是什么？",
+		"id": "id_1746263348520_8834",
+		"type": "要解决的问题",
+		"caution": "",
+		"warning": "",
+		"comment": "",
+		"alias": "",
+		"group": "",
+		"level": "990",
+		"role": "61",
+		"input": "",
+		"re": "true",
+		"content": "",
+		"options": [],
+		"timestamp": 1746263348520
+	},
+	{
 		"title": "不能只从个股层面考虑，有时候个股本身的题材不重要，它只是主升中的一个载体而已；",
 		"id": "id_1745648665152_8285",
 		"type": "复盘&计划",
@@ -655,7 +689,7 @@
 		"role": "3",
 		"input": "",
 		"re": "",
-		"content": "<p><span style=\"font-size: 16px;\">每次都踏错节奏，每次市场转强、每次逼空都没有标的。</span></p>",
+		"content": "<p><span style=\"font-size: 14px;\">每次都踏错节奏，每次市场转强、每次逼空都没有标的。</span></p>",
 		"options": [],
 		"timestamp": "1728108860001",
 		"warning": ""
@@ -2823,17 +2857,21 @@
 		"re": "false"
 	},
 	{
-		"title": "没有明确的判断锚点和买入条件；",
+		"title": "我以什么做为判断锚点和买入条件？",
 		"id": "id_1686375348395_2469",
 		"type": "要解决的问题",
 		"caution": "",
 		"comment": "",
 		"level": "980",
-		"role": "0",
+		"role": "61",
 		"content": "",
 		"options": [],
 		"timestamp": "1686375348395",
-		"re": ""
+		"re": "",
+		"warning": "",
+		"alias": "",
+		"group": "",
+		"input": ""
 	},
 	{
 		"title": "有板块效应的N形趋势买点；",
@@ -2876,7 +2914,7 @@
 		"caution": "",
 		"comment": "",
 		"level": "1899",
-		"role": "31",
+		"role": "3",
 		"content": "<p>为何我错过所有的龙头和大行情？</p><p>我是怎么错过深圳华强、大众交通、正丹股份的？我每天都在主观预测到顶了；</p><p>没有信息优势，不知道市场资金的行为逻辑，被动跟随；</p><p>没有大局观观，后知后觉，意识不到行情进行中；意识不到主升周期；</p><p>主观恐高；主观看空；</p><p>主观；</p><p>线性思维；</p><p><br></p><p>行情初期： &nbsp; &nbsp;没有大局观，没有信息优势，不知道市场参与者的行为逻辑，后知后觉；</p><p>行情进行中：已经处于相对高位，着眼于小波动，看不到大趋势，看不到确定性；主观测顶、主观看空，主观恐高不敢做龙头；</p><p>行情末期： &nbsp; &nbsp;持续上涨，终于控制不住自己的情绪，高潮或退潮期接盘；</p><p><br></p>",
 		"timestamp": "1682038336268",
 		"options": [],
@@ -2885,7 +2923,8 @@
 		"items": [],
 		"alias": "",
 		"group": "",
-		"input": ""
+		"input": "",
+		"warning": ""
 	},
 	{
 		"title": "为何我总是意识不到突破、爆发、主升浪？为什么我总是预期不到个股的可能走势？",
@@ -3438,7 +3477,7 @@
 		"comment": "",
 		"level": "897",
 		"role": "31",
-		"content": "<p><span style=\"font-size: 14px;\"><strong>1. 大局观：行情好的时候大干快上；行情不好的时候管住手；当前市场是好是坏？</strong></span></p><p><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><strong>2. 围绕主流热点龙头；主流热点龙头是什么？ 凝聚市场合力的方向是什么？</strong></span></span></p><p><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><strong>3.&nbsp;</strong><span style=\"font-size: 14px;\"><strong>节奏周期；周期节奏是客观存在的；资金进攻的时机，多空博弈转换；</strong></span></span></span></p>",
+		"content": "<p><span style=\"font-size: 14px;\">1. 大局观：弱势管住手；强势踏准节奏；当前市场强势弱势？</span></p><p><span style=\"font-size: 14px;\">2. 围绕主流热点龙头；主流热点龙头是什么？ 凝聚市场合力的方向是什么？</span></p><p><span style=\"font-size: 14px;\">3. 节奏周期；周期节奏是客观存在的；资金进攻的时机，多空博弈转换；</span></p>",
 		"options": [],
 		"timestamp": "1673108149879",
 		"re": "true",
@@ -4462,7 +4501,7 @@
 		"options": [],
 		"caution": "",
 		"level": "1898",
-		"role": "3",
+		"role": "61",
 		"re": "true",
 		"items": [],
 		"alias": "",
