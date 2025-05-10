@@ -92,7 +92,7 @@ class Win {
         // 如果窗口有name, 则保存window bounds信息
         if (this.opt.name) {
             win.on('resize', () => {
-                console.log('resize event');
+                //console.log('resize event');
                 this.saveBounds();
             });
 
@@ -143,7 +143,7 @@ class Win {
         let name = this.getWindowName();
         let bounds = this.win.getBounds();
         if (name && name !== 'news') {
-            console.log(bounds);
+            //console.log(bounds);
             let settingDb = getSettingDb();
             settingDb.set(`${ name }.bounds`, bounds);
         }

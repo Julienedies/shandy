@@ -5,9 +5,10 @@
 
 
 import jodbData from '../../../libs/jodb-data'
-import tags from './tags'
 
 import ViewerMap, { beforeGet } from '../../helper/viewerMap'
+
+import tags from './tags'
 
 const viewerMap = ViewerMap.getInstance();  // 全局单例
 

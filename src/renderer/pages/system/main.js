@@ -32,7 +32,7 @@ const setting = bridge.setting();
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
 
 
-window.TAGS_FILTER = ['交易错误','交易风险','行情类型', '目标行情', '行情驱动因素'];
+window.TAGS_FILTER = ['交易错误','交易风险','行情类型', '目标行情'];
 
 brick.set('ic-select-cla', 'is-info');
 
@@ -78,6 +78,16 @@ brick.reg('systemCtrl', function () {
 
     scope.vm = {};
 
+    function render (systemData) {
+        scope.render('systemList', systemData, function () {
+            $(this).find('>li')
+                .on('dragstart', scope.dragstart)
+                .on('dragover', scope.dragover)
+                .on('drop', scope.drop)
+                .on('dragleave', scope.dragleave);
+        });
+    }
+
     // 根据条件筛选交易系统
     scope.onConditionChange = function (e) {
         console.log(e);
@@ -89,23 +99,19 @@ brick.reg('systemCtrl', function () {
             let interArrB = _.intersection(filterArr, condArrB);
             return interArrB.length / condArrB.length - interArrA.length / condArrA.length;
         });
-        scope.render('systemList', model.system);
+        render(model.system);
     };
 
     // markTag模块也会调用ajax：/stock/system，所以页面实际会执行两次
     scope.onGetSystemDone = function (data) {
+        console.log('onGetSystemDone:');
         console.info(data);
         model = data;
-        systemManager.init(data.system);
+        let systemData = data.system;
+        systemManager.init(systemData);
         //scope.render('mqElement', data.tags['行情要素']);
         scope.render('condition', data.tags['交易系统条件']);
-        scope.render('systemList', data.system, function () {
-            $(this).find('>li')
-                .on('dragstart', scope.dragstart)
-                .on('dragover', scope.dragover)
-                .on('drop', scope.drop)
-                .on('dragleave', scope.dragleave);
-        });
+        render(systemData);
     };
 
     scope.toggleShowStyle = function () {
@@ -121,6 +127,7 @@ brick.reg('systemCtrl', function () {
         return false;
     };
 
+    // 查看系统详情
     scope.view = function (e, id) {
         viewId = id;
         let system = systemManager.get(id);

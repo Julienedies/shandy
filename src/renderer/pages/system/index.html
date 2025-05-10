@@ -142,7 +142,7 @@
         </ul>
 
 
-        <div class="column" ic-popup="details">
+        <div id="details" class="column" ic-popup="details">
             <div ic-tpl="details">
                 <div ic-init="v=model;">
                     <h5 class="title is-3">
@@ -152,11 +152,17 @@
                     <table class="table is-striped is-bordered is-fullwidth">
                         <tr>
                             <th>示例图片</th>
-                            <td ic-viewer ic-viewer-url="href" ic-viewer-interval="5">
-                                <div class="tags">
+                            <td>
+                                <div class="tags"
+                                     ic-viewer
+                                     ic-viewer-item=">.tag"
+                                     ic-viewer-url="href"
+                                     ic-viewer-interval="5"
+                                     ic-viewer-on-show="onViewerShow"
+                                     ic-viewer-on-open="onViewerOpen"
+                                     ic-viewer-on-close="onViewerClose">
                                     <span class="tag is-info"
                                           ic-for="i,o in (v['示例图片']||[])"
-                                          ic-viewer-item
                                           ic-href="{{ parseImgPath(o) }}">
                                         {{ parseImgName(o) }}
                                     </span>
