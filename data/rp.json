@@ -7,11 +7,11 @@
 		"warning": "",
 		"comment": "",
 		"alias": "",
-		"group": "",
+		"group": "日省",
 		"level": "2000",
 		"role": "31",
 		"input": "",
-		"re": "false",
+		"re": "",
 		"content": "",
 		"options": [],
 		"timestamp": "1746703908825"
@@ -58,8 +58,8 @@
 		"warning": "",
 		"comment": "真他妈的死不足惜；做着做着就忘记了教训和悔恨，沉迷于无效的日常交易，重复所有错误；没有任何改变；",
 		"alias": "",
-		"group": "要解决的问题",
-		"level": "1901",
+		"group": "日省",
+		"level": "1991",
 		"role": "31",
 		"input": "",
 		"re": "true",
@@ -280,7 +280,7 @@
 		"warning": "",
 		"comment": "",
 		"alias": "",
-		"group": "",
+		"group": "大局观",
 		"level": "1991",
 		"role": "61",
 		"input": "",
@@ -417,13 +417,13 @@
 		"comment": "",
 		"alias": "",
 		"group": "市场理解力",
-		"level": "1990",
+		"level": "1991",
 		"role": "31",
 		"input": "",
 		"re": "",
 		"content": "",
 		"options": [],
-		"timestamp": 1741626861174
+		"timestamp": "1741626861174"
 	},
 	{
 		"title": "日内市场整体走势？",
@@ -3953,8 +3953,8 @@
 		"role": "1",
 		"content": "",
 		"options": [
-			"id_1728836097456_6801",
-			"id_1728836083503_6622"
+			"id_1728836083503_6622",
+			"id_1728836097456_6801"
 		],
 		"timestamp": "1664615474270",
 		"alias": "推演应对.",
@@ -3962,7 +3962,8 @@
 		"re": "",
 		"group": "推演应对",
 		"line": "",
-		"freeze": ""
+		"freeze": "",
+		"warning": ""
 	},
 	{
 		"title": "如果市场反转或转强，市场资金会进攻什么方向？",
@@ -4827,9 +4828,9 @@
 		"caution": "",
 		"level": "602",
 		"role": "0",
-		"alias": "其它.",
+		"alias": "",
 		"re": "",
-		"input": "子余",
+		"input": "",
 		"isListStyle": "",
 		"inset": "",
 		"rows": "1",
