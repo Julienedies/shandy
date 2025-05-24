@@ -1,0 +1,323 @@
+/*!
+ * Created by j on 2021/12/4.
+ */
+
+html {
+  overflow: hidden;
+}
+
+html, body {
+  font-size: 18px;
+}
+
+.textarea {
+  font-size: 0.9rem;
+}
+
+#mainHeader {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.4rem;
+  margin-left: -1.6rem;
+  background: #fff;
+  box-shadow: 2px 2px 6px 3px #d9d7d7;
+}
+
+#mainFooter {
+  z-index: 1000;
+  position: fixed;
+  //top: 41px;
+  bottom: 0;
+  width: 100%;
+  padding: 0.4rem 0.4rem 0.4rem 30px;
+  margin-left: -1.6rem;
+  background: #fff;
+  box-shadow: 2px -2px 6px 3px #d9d7d7;
+  display: none;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+#mainContent {
+  padding: 80px 0 60px 0;
+}
+
+//========================================
+#rpList {
+  .box {
+    margin-bottom: 2.5rem;
+  }
+
+  .button.is-primary {
+    background-color: #04c6a9;
+  }
+
+  .options .button {
+    font-size: 0.92rem;
+  }
+
+  .tag:not(body).is-medium {
+    font-size: 1rem;
+  }
+
+  .tag:not(body).is-large {
+    font-size: 1rem;
+  }
+
+  // 选中状态
+  .tag:not(body).is-info {
+    //    background-color: #00d1b2;
+    //background-color: #1f8ef9;
+    background-color: #3899f7;
+    color: #fff;
+  }
+
+  .tags .tag {
+    margin-bottom: 0.2rem;
+  }
+
+  .comment, .warning {
+    white-space: nowrap;
+    overflow: hidden;
+    //color: #026bdb;
+    color: #0270ee;
+    background: yellow;
+    color: black;
+    display: inline-block;
+    margin: 0.5em 0 0;
+    padding: 0.1em 0.5em;
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+
+  .warning {
+    //background: black;
+    //color: yellow;
+  }
+
+  &.shrink {
+    .pre.text {
+      display: none;
+    }
+  }
+
+
+  .box {
+    padding: 0.1rem;
+    color: #3c3c3c;
+
+    > header, > .wrap {
+      padding: 0 1em;
+    }
+
+    > header {
+      color: #000;
+      background: yellow;
+      white-space: nowrap;
+      overflow: hidden;
+      border-radius: 6px 6px 0 0;
+
+      h3 {
+        color: #000;
+      }
+
+      &.role_0, &.role_1, &.role_2, &.role_3 {
+
+      }
+
+      &.role_0 {
+        background: yellow;
+
+        h3 {
+          color: black;
+        }
+      }
+
+      &.role_1 {
+        background: #df0404 !important;
+        background: #D62021 !important;
+
+        h3 {
+          color: #fff; // #0360d3  #0354d3
+        }
+      }
+
+      &.role_2 {
+        background: rgb(158, 0, 201);
+
+        h3 {
+          color: #fff;
+        }
+      }
+
+      &.role_3 {
+        background: black;
+
+        h3 {
+          color: yellow;
+          font-size: 20px;
+          font-weight: 700;
+          span {
+          }
+
+        }
+      }
+
+      &.role_31 {
+        background: black;
+
+        h3 {
+          color: red;
+          font-size: 21px;
+          font-weight: 700;
+        }
+      }
+
+      &.role_4 {
+        background: #0e57f7 !important;
+        background: #1055ec !important;
+
+        h3 {
+          color: white;
+        }
+      }
+
+      &.role_5 {
+        background: #00d1b2;
+
+        h3 {
+          color: #fff;
+        }
+      }
+
+      &.role_6, &.role_61 {
+        background: #0275a3 !important;
+        //background: #394F78 !important;
+
+        h3 {
+          font-size: 18px;
+          font-weight: 500;
+          color: #fff; // #0360d3  #0354d3
+        }
+      }
+
+      &.role_61 {
+        background: #2C63ae !important;
+
+        h3 {
+          color: #fff; // #0360d3  #0354d3
+        }
+      }
+
+
+      h2, h3, h5, h6 {
+        padding: 0.3rem 0.1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: inherit;
+        font-size: 17px;
+        color: #000;
+
+        b {
+          display: inline-block;
+          padding-left: 3.6em;
+          font-size: 0.92em;
+          font-weight: inherit;
+        }
+
+        .createTag {
+          float: right;
+          margin-top: 6px;
+          color: white;
+          font-size: 0.6em;
+        }
+      }
+
+      .caution {
+        //background: #fff;
+        //font-size: 20px !important;
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+    }
+
+    > .wrap {
+      padding: 0.75em 1em 0.15em 1em;
+
+      &.shrink {
+        display: none;
+      }
+
+      .textarea {
+        border-color: #dfdfdf;
+        box-shadow: none;
+        font-size: 1.1rem;
+        color: #0270ee;
+        height: auto;
+        padding: 0.2rem 0.45rem;
+      }
+    }
+  }
+
+
+  .pre.text {
+    //display: none;
+    //color: #026bdb;
+    padding: 0.4em 0.5em 0 0.5em;
+    color: #0270ee;
+    font-weight: 500;
+    font-size: 1.02rem;
+    line-height: 1.8;
+
+    &.shrink {
+      height: 4em;
+      overflow: hidden;
+    }
+
+    table {
+      td, th {
+        border: solid 1px #e3e3e3;
+        padding: 0.2rem 0.5rem;
+      }
+    }
+  }
+
+}
+
+
+@import "./replay.scss";
+
+#replay {
+  padding-bottom: 2em;
+
+  #backRpBtn {
+    opacity: 0.05;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// 旧的replay布局在用，以后可以废弃
+.table_4 {
+  .tr {
+    padding: 6px 1px;
+    border-bottom: solid 1px #e7e7ea;
+
+    .td:first-child {
+      min-width: 11em;
+      text-align: right;
+      padding-right: 1em;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

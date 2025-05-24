@@ -16,17 +16,17 @@ import {
     EDIT_LOGIC,
     DEL_LOGIC,
     ON_DEL_LOGIC_DONE,
-    ON_SET_LOGIC_DONE,
+    SET_LOGIC_DONE,
     ON_GET_LOGIC_DONE,
-    ON_GET_TAGS_DONE,
-    ON_SET_TAG_DONE, ON_DEL_TAG_DONE, DEL_TAG,
+    GET_TAGS_DONE,
+    SET_TAG_DONE, DEL_TAG_DONE, DEL_TAG,
 } from '../../../js/constants'
 
 import utils from '../../../js/utils'
 import '../../../js/common-stock.js'
 import Reader from '../../../../libs/reader'
 
-import setTagCtrl from '../../tags/set-tag-ctrl'
+import setTagCtrl from '../../tags2/set-tag-ctrl'
 
 brick.reg('setTagCtrl', setTagCtrl);
 
@@ -170,7 +170,7 @@ brick.reg('logicCtrl', function () {
         scope.onGetLogicDone(data);
     });
 
-    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+    scope.on(GET_TAGS_DONE, function (e, data) {
         //scope.tagsMap = data;
         scope.tradingKeyTags = data['交易要素'];
         scope.render('tags', scope);
@@ -250,7 +250,7 @@ brick.reg('setLogicCtrl', function () {
         scope.render(vm);
     };
 
-    scope.on(`${ ON_SET_TAG_DONE }, ${ ON_DEL_TAG_DONE }`, function (e, data) {
+    scope.on(`${ SET_TAG_DONE }, ${ ODEL_TAG_DONE }`, function (e, data) {
         let vm = scope.vm;
         vm.logic = getFormVm();
         vm.tags = data['交易要素'];

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Tags</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../../css/vendor/fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css"/>
+    <link rel="stylesheet" href="../../css/vendor/hint.css"/>
+    <script src="/set_node_modules_path.js"></script>
+</head>
+<body ic-ctrl="parentCtrl">
+<div class="column" ic-ctrl="tagsCtrl">
+
+    <div class="buttons">
+        <button class="button is-primary"
+                ic-ajax
+                ic-ajax-auto
+                ic-submit-method="get"
+                ic-submit-action="/stock/tags"
+                ic-submit-on-done="onGetTagsDone">标签列表
+        </button>
+        <button class="button is-primary" ic-click="addTag">添加标签</button>
+    </div>
+
+    <div id="tags" ic-tpl="tags">
+        <div class="box" ic-for="k,arr in model" ic-click="view:{{ k }}">
+            <h6 class="title is-6" tabindex="{{ k }}">{{k}}</h6>
+            <div class="field is-grouped is-grouped-multiline">
+                <div class="control" ic-for="i,v in arr">
+                    <div class="tags has-addons">
+                            <a ic-class="tag {{ v.rank > 0 ? 'is-danger' : ' is-info' }} hint--top-right" aria-label="{{ v.desc }}"
+                               ic-click="goto:{{v.id}}:{{v.type }}:{{ v.text }}">
+                                {{v.text}}
+                                <sup> {{ v.level }}</sup>
+                            </a>
+                        <a class="tag" ic-click="editTag:{{v.id}}">
+                            <span class="icon"><i class="far fa-edit"></i></span>
+                        </a>
+                        <a class="tag is-delete"
+                           ic-ajax
+                           ic-submit-method="delete"
+                           ic-submit-action="/stock/tags/{{v.id}}"
+                           ic-submit-before="confirm:确认删除?不可撤销!"
+                           ic-submit-on-done="onDelTagDone"></a>
+                    </div>
+                </div>
+
+                <!-- 添加标签按钮 -->
+                <div class="control">
+                    <a class="tag" ic-click="addTag:{{k}}" >
+                        <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    ${ require('./details.html')}
+
+</div>
+
+${ require('./set-tag.html')}
+
+${ require('../viewer/viewerAttach.html') }
+
+${ require('../viewer/markTag.html') }
+
+</body>
+</html>

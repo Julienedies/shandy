@@ -18,15 +18,18 @@ const viewerMap = ViewerMap.getInstance();  // 全局单例
     beforeGet
 });*/
 
-let getTagsDb = function () {
-    return tags.getDb();
+// tags 数据， 图片可选
+let getTagsDb = function (notBeforeGet) {
+    return tags.getDb(notBeforeGet);
 }
 
-let getDb = function () {
-    return jodbData('system', [],{beforeGet});
+// system + 图片数据
+let getDb = function (notBeforeGet) {
+    let _beforeGet = notBeforeGet ? null : beforeGet;
+    return jodbData('system', [],{beforeGet:_beforeGet});
 }
 
-
+// system + 图片数据 + tags + 图片数据
 function getData (reverse) {
     viewerMap.get(reverse);
     let systemJodb = getDb();
@@ -34,11 +37,29 @@ function getData (reverse) {
     return {system: systemJodb.get2(), tags: tagsDb.convert()};
 }
 
+
+// system数据 + tags数据， 没有图片数据
+function getData2 (reverse) {
+    viewerMap.get(reverse);
+    let systemJodb = getDb(true);
+    let tagsDb = getTagsDb(true);
+    return {system: systemJodb.get2(), tags: tagsDb.convert()};
+}
+
+
+
 export default {
 
+    // 全部数据： system+图片数据， tags+图片数据
     get (req, res) {
         let reverse = req.query.reverse;
         res.json(getData(reverse));
+    },
+
+    // 不包含图片数据： system， tags
+    get2 (req, res) {
+        let reverse = req.query.reverse;
+        res.json(getData2(reverse));
     },
 
 
@@ -50,12 +71,14 @@ export default {
         res.json(getData());
     },
 
+
     del (req, res) {
         let id = req.params.id;
         let systemJodb = getDb();
         systemJodb.remove(id);
         res.json(getData());
     },
+
 
     move (req, res) {
         let id = req.params.id;

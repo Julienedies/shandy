@@ -1,0 +1,233 @@
+<!-- 添加每天的主线热点 -->
+
+<div ic-ctrl="setLineCtrl" ic-view="setLine" ic-view-ani-id="42">
+    <div class="column">
+        <div ic-tpl="setLine" ic-tpl-init="{line:{}, tags:{}}">
+            <div class="table_4" ic-form="setLine" ic-init="line=model.line; tags=model.tags;">
+                <!-- tr  -->
+                <div class="tr">
+                    <h6 class="td"></h6>
+                    <div class="td">
+                        <div class="field has-addons">
+                            <div class="control">
+                                <button class="button is-info">line</button>
+                            </div>
+                            <div class="control is-expanded">
+                                <input class="input" type="text" name="title" value="{{line['title']}}" ic-form-field ic-field-rule="required">
+                                <input type="hidden" name="id" value="{{line.id}}" ic-form-field>
+                                <!--<input type="hidden" name="line" value="true" ic-form-field>-->
+                            </div>
+                            <p class="control">
+                            <span class="select">
+                              <select name="type" ic-form-field>
+                                  <option ic-for="i,o in TAGS_MAP['rpmqs']" value="{{o.text}}" ic-has-selected="_IS_PLAN(o.text, line.type)">
+                                      {{ o.text }}
+                                  </option>
+                              </select>
+                            </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tr">
+                    <h6 class="td">提醒</h6>
+                    <div class="td">
+                        <div class="control">
+                            <input class="input" type="text" name="caution" value="{{line['caution']}}" ic-form-field="caution">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr 目标行情 -->
+                <div class="tr">
+                    <h6 class="td">资金行为逻辑</h6>
+                    <div class="td">
+                        <div class="field is-grouped is-grouped-multiline" ic-select="资金行为逻辑" ic-form-field="">
+                            <div class="control" ic-for="i,v in tags['资金行为逻辑']">
+                                <div class="tags has-addons">
+                                <span class="tag"
+                                      ic-select-item
+                                      ic-has-selected="line['资金行为逻辑']===v.text ? 'is-warning':''"
+                                      ic-val="{{v.text}}">{{v.text}}
+                                </span>
+                                    <a class="tag" ic-click="editTag:{{v.id}}">
+                                        <span class="icon"><i class="far fa-edit"></i></span>
+                                    </a>
+                                    <a class="tag is-delete"
+                                       ic-ajax
+                                       ic-submit-data="{{v.text}}"
+                                       ic-submit-method="delete"
+                                       ic-submit-action="/stock/tags/{{v.id}}"
+                                       ic-submit-on-done="onTagDeleteDone"
+                                    ></a>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <a class="tag" ic-click="tag_add:行情驱动因素">
+                                        <span class="icon"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr 目标行情 -->
+                <div class="tr">
+                    <h6 class="td">客观表现/日内走势</h6>
+                    <div class="td">
+                        <div class="field is-grouped is-grouped-multiline" ic-select="行情驱动因素">
+                            <div class="control" ic-for="i,v in tags['行情驱动因素']">
+                                <div class="tags has-addons">
+                                <span class="tag"
+                                      ic-select-item
+                                      ic-has-selected="line['行情驱动因素']===v.text"
+                                      ic-val="{{v.text}}">{{v.text}}
+                                </span>
+                                    <a class="tag" ic-click="editTag:{{v.id}}">
+                                        <span class="icon"><i class="far fa-edit"></i></span>
+                                    </a>
+                                    <a class="tag is-delete"
+                                       ic-ajax
+                                       ic-submit-data="{{v.text}}"
+                                       ic-submit-method="delete"
+                                       ic-submit-action="/stock/tags/{{v.id}}"
+                                       ic-submit-on-done="onTagDeleteDone">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="control">
+                                <div class="tags has-addons">
+                                    <a class="tag" ic-click="addTag:行情驱动因素">
+                                        <span class="icon"><i class="fas fa-file-medical"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr 备注 -->
+                <div class="tr">
+                    <h6 class="td">预判走势及应对</h6>
+                    <div class="td">
+                        <div class="control">
+                            <textarea rows="2" class="textarea" ic-form-field="content">{{ line.content }}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr -->
+                <div class="tr">
+                    <h6 class="td"></h6>
+                    <div class="td">
+                        <div class="field is-grouped is-grouped-multiline" ic-select="options" ic-select-type="checkbox" ic-form-field="options">
+                            <div class="control" ic-for="i,v in line.options">
+                                <div class="tags has-addons">
+                                    <span class="tag is-medium" ic-select-item ic-val="{{ v }}" selected>
+                                        {{ TAGS_MAP_BY_ID[v].text }}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="control"> <!-- ic-view-to="tags" ic-click="gotoAddItems"-->
+                                <button class="button is-primary is-fullwidth" ic-popup-target="selectTags">
+                                    添加选项
+                                </button>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tr">
+                    <h6 class="td"></h6>
+                    <div class="td">
+                        <div class="field is-grouped is-grouped-multiline is-grouped-right">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="freeze" ic-has-checked="line.freeze==='true'" ic-form-field="freeze" value="true">
+                                    is freeze
+                                </label>
+                            </div>
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="line" checked ic-form-field="line" value="true">
+                                    is line
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr -->
+                <div class="tr">
+                    <h6 class="td"></h6>
+                    <div class="td">
+                        <div class="field has-addons">
+
+                            <div class="control">
+                                <div class="buttons">
+                                    <button class="button is-medium is-primary"
+                                            style="width:200px;"
+                                            ic-form-submit
+                                            ic-submit-action="/stock/rp"
+                                            ic-submit-before="before"
+                                            ic-submit-on-done="done">保存
+                                    </button>
+                                    <button class="button is-medium" ic-click="reset"> 重置</button>
+                                    <button class="button is-medium" ic-view-to="rpList" style="width:200px;">
+                                        返回
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="control" style="padding-left: 2em;">
+                                <button class="button">level</button>
+                            </div>
+                            <div class="control">
+                                <input class="input" type="number" ic-form-field="level" ic-value="{{ line.level||619 }}" style="width:6em;">
+                            </div>
+
+                            <div class="control" style="padding-left: 2em;">
+                                <button class="button">role</button>
+                            </div>
+                            <div class="control">
+                                <p class="select">
+                                    <select name="role" readonly ic-form-field>
+                                        <option value="0" ic-has-selected="line.role==0">问题&错误</option>
+                                        <option value="1" ic-has-selected="line.role==1">复盘思考</option>
+                                        <option value="2" ic-has-selected="line.role==2">关键理念</option>
+                                        <option value="3" ic-has-selected="line.role==3">错误&警告</option>
+                                        <option value="4" ic-has-selected="line.role==4">replay</option>
+                                        <option value="5" ic-has-selected="line.role==5" selected>line</option>
+                                    </select>
+                                </p>
+                            </div>
+
+                            <div class="control" style="padding-left:20px;">
+                                <button class="button">input</button>
+                            </div>
+                            <div class="control">
+                                <input class="input" type="text" ic-form-field="input" ic-value="{{ line.input||'个股序列、备注' }}" style="width:24em;">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tr -->
+                <div class="tr">
+                    <h6 class="td"></h6>
+                    <div class="td">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

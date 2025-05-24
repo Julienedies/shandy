@@ -12,14 +12,7 @@ import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
 import {
-    ADD_LOGIC,
-    EDIT_LOGIC,
-    DEL_LOGIC,
-    ON_DEL_LOGIC_DONE,
-    ON_SET_LOGIC_DONE,
-    ON_GET_LOGIC_DONE,
-    ON_GET_TAGS_DONE,
-    ON_SET_TAG_DONE, ON_DEL_TAG_DONE, DEL_TAG,
+    GET_TAGS_DONE,
 } from '../../../js/constants'
 
 import utils from '../../../js/utils'

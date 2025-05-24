@@ -41,7 +41,7 @@ debugMenu.install();
 // 交易记录json
 const tradeArr = userJo('SEL', []).get();
 
-const viewerJodb = ju('viewer', [], {key: 'img'});
+const viewerJodb = ju('viewer', [], { key: 'img' });
 const tagsJodb = jd('tags');
 const systemJodb = jd('system');
 
@@ -70,15 +70,19 @@ brick.reg('mainCtrl', function (scope) {
     let isOrigin = false;  // 按图片原始时间排序
     let isFilterByMark = false; // 根据图片是否被标记进行过滤
 
+    let viewerCacheMap = {}; // 
+    let urlsByDayMap = {};
+
     let tagsMap = {};
     let systemMap = {};
-    let urlsByDayMap = {};
+
     tagsJodb.each((item) => {
         tagsMap[item.id] = item;
     });
     systemJodb.each((item) => {
         systemMap[item.id] = item;
     });
+
 
     scope.setViewerInterval = function (e) {
         let val = $(this).val() * 1;
@@ -94,6 +98,7 @@ brick.reg('mainCtrl', function (scope) {
         }
     };
 
+
     // 检查viewer.json里包含的图片是否存在于文件系统，不存在的话删除viewer.json里的记录
     scope.clean = function (e) {
         let imgArr = viewerJodb.get();
@@ -107,7 +112,7 @@ brick.reg('mainCtrl', function (scope) {
         }
 
         if (resultArr.length) {
-            if (confirm(`是否删除以下 ${ resultArr.length } 项：\r\n ${ JSON.stringify(resultArr, null, '\t') }`)) {
+            if (confirm(`是否删除以下 ${resultArr.length} 项：\r\n ${JSON.stringify(resultArr, null, '\t')}`)) {
                 resultArr.forEach((imgObj, index) => {
                     viewerJodb.remove(imgObj.img, 'img');
                 });
@@ -127,9 +132,12 @@ brick.reg('mainCtrl', function (scope) {
     // 刷新目录缓存数据
     scope.refresh = function (e) {
         viewerJodb.refresh();
+        viewerCacheMap = {};
         isRefresh = true;
         scope.init('');
-        //location.reload();
+        setTimeout(() => {
+            isRefresh = false;              
+        }, 200);
     };
 
     // 反转图片列表
@@ -151,16 +159,65 @@ brick.reg('mainCtrl', function (scope) {
         isFilterByMark = $(this).prop('checked');
         scope.init('');
     };
+    
+    // 
+    scope.onFilterByMark = function () {
+
+    };
+
+
+    // 缓存viewer数据
+    function bindViewerData(urls) {
+        urls = urls || scope.urls;
+
+        // 遍历，绑定交易、标签等数据
+        urls.forEach((o, i) => {
+
+            // 附加标签信息 和 交易系统信息
+            let f = o.f;
+            let cacheKey = helper.getKey(f);
+            let value = viewerCacheMap[cacheKey];
+
+            if (!value) {
+
+                value = {};
+                let obj = viewerJodb.get(f, 'img')[0] || { tags: [], system: [] };
+                let arr = obj.tags || [];
+                let arr2 = obj.system || [];
+
+                value.tradeInfoText = obj.tradeInfo;
+
+                value.tags = arr.map((v) => {
+                    return tagsMap[v];
+                });
+
+                value.system = arr2.map((v) => {
+                    return systemMap[v];
+                });
+
+                viewerCacheMap[cacheKey] = value;
+            }
+
+
+            o.tradeInfoText = value.tradeInfo;
+            o.tags = value.tags;;
+            o.system = value.system;
+
+        });
+
+
+    }
+
 
     // 按单日分类图片
-    function viewByDay () {
+    function viewByDay() {
         let urls = scope.urls;
         urls.forEach((v, i) => {
             let d = v.d;
             let arr = urlsByDayMap[d] = urlsByDayMap[d] || [];
             arr.push(v);
         });
-        scope.render('viewByDay', {model: urlsByDayMap});
+        scope.render('viewByDay', { model: urlsByDayMap });
     }
 
     // 点击后显示单日的股票
@@ -170,9 +227,11 @@ brick.reg('mainCtrl', function (scope) {
 
     scope.init = function (dir) {
         $.icSetLoading();
+        // 为什么这里使用定时器？因为 $.icSetLoading
         setTimeout(() => {
             scope._init(dir);
             $.icClearLoading();
+            isRefresh = false;
         }, 40);
     };
 
@@ -196,50 +255,27 @@ brick.reg('mainCtrl', function (scope) {
             dir = dir || scope.imgDir;
             scope.imgDir = dir;
             if (!fs.existsSync(dir)) {
-                return $.icMsg(`${ dir }\r不存在!`);
+                return $.icMsg(`${dir}\r不存在!`);
             }
             $imgDir.val(dir);
 
             // 如果是股票交易记录图片，添加交易记录
-            let isAddTrade = /交易记录/img.test(dir);
+            // let isAddTrade = /交易记录/img.test(dir);
 
-            urls = helper.getImages(dir, {isReverse, isRefresh, isOrigin});
+            urls = helper.getImages(dir, { isReverse, isRefresh, isOrigin });
             if (!urls.length) {
                 return $.icMsg('no images.');
             }
 
-            // 遍历，绑定交易、标签等数据
-            urls.forEach(o => {
+            // 绑定附加viewer数据
+            bindViewerData(urls);
 
-                   // if (isAddTrade) {
-                   //     let arr = o.tradeInfo = tradeArr.filter(arr => {
-                   //         // 交易信息 对应 code 和 时间
-                   //         return o.code === arr[2] && o.d && o.d.replace(/-/g, '') === arr[0];
-                   //     });
-                   //     if(arr){
-                   //         arr = arr.map(a => {
-                   //             return [a[1], a[4], a[6], a[5]];  // => 时间, 买入/卖出, 数量, 价格
-                   //         });
-                   //         arr.reverse(); // 当日多个交易记录按照时间先后显示
-                   //         o.tradeInfoText = arr.join('\r\n').replace(/,/g, '    ');
-                   //     }
-                   // }
-
-                // 附加标签信息 和 交易系统信息
-                let obj = viewerJodb.get(o.f, 'img')[0] || {tags: [], system: []};
-                let arr = obj.tags || [];
-                let arr2 = obj.system || [];
-
-                o.tradeInfoText = obj.tradeInfo;
-
-                o.tags = arr.map((v) => {
-                    return tagsMap[v];
+            // 如果按是否标记对图片进行过滤
+            if (isFilterByMark) {
+                urls = urls.filter((v, i) => {
+                    return v.system.length || v.tags.length;
                 });
-                o.system = arr2.map((v) => {
-                    return systemMap[v];
-                });
-
-            });
+            }
 
             console.log('urls =>', urls);
             scope.urls = urls;
@@ -248,22 +284,14 @@ brick.reg('mainCtrl', function (scope) {
 
             // 原始顺序模式下显示日列表
             urlsByDayMap = {}; // 清空上次月份的单日数据
-            scope.render('viewByDay', {model: {}});
+            scope.render('viewByDay', { model: {} });
             isOrigin && viewByDay(); // 按单日分类图片
         }
 
 
-        // 如果按是否标记对图片进行过滤
-        if (isFilterByMark) {
-            urls = urls.filter((v, i) => {
-                console.log(v);
-                return v.system.length || v.tags.length;
-            });
-        }
-
 
         $list.icRender('list', urls);
-        $('#countShow').text(`共有 ${ urls.length } 项.`);
+        $('#countShow').text(`共有 ${urls.length} 项.`);
     };
 
     // 图片目录路径选中后回调
@@ -274,14 +302,15 @@ brick.reg('mainCtrl', function (scope) {
         scope.init(dir);
     };
 
+
     // 图片剪切测试  fields => {x: 3140, y: 115, width: 310, height: 50}
     // scope.crop = {x: 3140, y: 115, width: 310, height: 50};
     // p2415q => {x: 3100, y: 117, width: 360, height: 50};
     // 328b => {x: 3200, y: 77, width: 190, height: 37};
     scope.cropTest = function (fields) {
         console.info(fields);
-        let {x, y, width, height} = fields || scope.crop;
-        let crop = scope.crop = {x, y, width, height};
+        let { x, y, width, height } = fields || scope.crop;
+        let crop = scope.crop = { x, y, width, height };
         let sn = $('#sn').val();
         let dataUrl = helper.crop(scope.urls[sn].f, fields);
         $('#view_crop').attr('src', dataUrl);
@@ -344,7 +373,7 @@ brick.reg('mainCtrl', function (scope) {
     // ------------------------------------------------------------------------------------------------
 
     historyModel.on('change', () => {
-        scope.render('history', {model: {dirs: historyModel.get2(), dir: scope.imgDir}});
+        scope.render('history', { model: { dirs: historyModel.get2(), dir: scope.imgDir } });
         setting.refresh().set('viewer.history', historyModel.get());
     });
 
@@ -363,7 +392,7 @@ brick.reg('mainCtrl', function (scope) {
     }
 
     scope.viewerVm = setting.get('viewer');
-    scope.render('crop', {model: scope.viewerVm || {}}, () => {
+    scope.render('crop', { model: scope.viewerVm || {} }, () => {
         scope.$elm.find('#interval').val(scope.viewerVm.interval);
     });
 

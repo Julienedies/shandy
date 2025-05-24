@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2025-05",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2025-03",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -288,10 +288,10 @@
 	},
 	"system": {
 		"bounds": {
-			"x": -7,
-			"y": -7,
-			"width": 2209,
-			"height": 1219
+			"x": 0,
+			"y": 0,
+			"width": 2195,
+			"height": 1205
 		}
 	},
 	"tags": {
@@ -363,8 +363,8 @@
 		"bounds": {
 			"x": 3186,
 			"y": -91,
-			"width": 1741,
-			"height": 969
+			"width": 1742,
+			"height": 971
 		}
 	},
 	"news2": {
@@ -373,6 +373,14 @@
 			"y": 0,
 			"width": 2195,
 			"height": 1235
+		}
+	},
+	"tags2": {
+		"bounds": {
+			"x": -7,
+			"y": -7,
+			"width": 2209,
+			"height": 1219
 		}
 	}
 }

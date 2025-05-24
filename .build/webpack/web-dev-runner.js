@@ -167,4 +167,4 @@ function startServer () {
 
 startFront();
 
-startServer();
+//startServer();

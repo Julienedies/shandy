@@ -1,0 +1,46 @@
+/*!
+ * Created by j on 2024/8/27.
+ */
+
+@import '../../rp/replay.scss';
+
+
+#replay {
+  header {
+    position: fixed;
+    width: 100%;
+  }
+
+  #list {
+    padding-top: 2.2em;
+
+    /*    div:first-child {
+          .table tr {
+            display: table-row;
+          }
+        }*/
+  }
+
+  &.shrink {
+    .tableBox {
+      &.expand {
+        tr {
+          display: table-row;
+        }
+      }
+
+      tr {
+        display: none;
+
+        &:first-child {
+          display: table-row;
+
+          th {
+          }
+        }
+      }
+    }
+  }
+}
+
+

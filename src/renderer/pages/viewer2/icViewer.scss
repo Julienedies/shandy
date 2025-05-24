@@ -1,0 +1,102 @@
+/**
+ * 提取出样式，供tags, system页面公用
+ */
+
+[ic-ctrl="viewerMarkTagCtrl"] {
+  background: none !important;
+  transition: opacity 0ms !important;
+
+
+  .ic-select {
+    margin: -10px 0 10px 0;
+
+    /*  > .tags {
+        display: inline-block;
+        margin-bottom: 0;
+      }*/
+  }
+
+  .tags .tag:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .tag, .button {
+    opacity: 0;
+  }
+
+  .tag.is-info {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+    animation: flash 1.5s infinite ease-in-out;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8) !important;
+
+    .tag, .button {
+      opacity: 1;
+    }
+
+    .tag.is-info {
+      animation: none;
+    }
+  }
+}
+
+
+
+[ic-popup="viewerMarkTag"] {
+  overflow: hidden !important;
+
+  &.scrollMode {
+    overflow-y: scroll !important;
+  }
+
+  &.horizontal {
+    width: 71% !important;
+    top: 55% !important;
+  }
+}
+
+
+
+#viewerAttach p {
+  margin-left: 59%;
+}
+
+#ic-viewer-box-wrap {
+  //background: #f2eded!important;
+  background: #fff !important;
+}
+
+#ic-viewer-box-wrap img {
+  margin-top: 10px;
+  width: 100%;
+  height: 100% !important;
+}
+
+
+#ic-viewer-info, #ic-viewer-handle {
+  left: 72% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  width: auto;
+  padding: 3px 20px !important;
+  text-align: left !important;
+}
+
+#ic-viewer-handle {
+  bottom: 16% !important;
+}
+
+#ic-viewer-info {
+  top: 0 !important;
+  height: 1.6em;
+  overflow: hidden;
+  font-size: 1.2em;
+  line-height: 1.4;
+  //color: blue!important;
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+

@@ -3,3 +3,86 @@
 strong {
   font-weight: bold;
 }
+
+a {
+  text-decoration: none !important;
+}
+
+.notification div.pre {
+  color: #000;
+  /*  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;*/
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 600;
+  overflow: visible;
+  text-overflow: ellipsis;
+
+  &.scroll {
+    max-height: 92em;
+    overflow-y: scroll;
+  }
+}
+
+#setParentIdForTag {
+  height: 16em;
+  overflow-y: scroll;
+}
+
+
+#diaryList .tag {
+  font-size: 0.96rem;
+  font-weight: 500;
+}
+
+
+//-----
+/* 分页按钮*/
+.pagination, .pagination-1 {
+  text-align: center;
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+}
+
+.pagination .num, .pagination .prev, .pagination .next{
+  color: #00d1b2;
+  background: #fff;
+  font-size: 1em;
+  padding: 0.1em 0.6em;
+  margin: 0 0.2em;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.pagination .num,
+.pagination-1 .num {
+  border: solid 1px transparent;
+}
+
+.pagination-1 .num {
+  font-size: 1em;
+  margin: 0 0 0 -1px;
+  border: solid 1px #00d1b2;
+}
+
+.pagination .num:hover, .pagination .num.active,
+.pagination-1 .num:hover, .pagination-1 .num.active {
+  color: #fff;
+  background: #00d1b2;
+  border: solid 1px #00d1b2;
+}
+
+.pagination .prev, .pagination .next {
+  font-style: normal;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  border: solid 1px #00d1b2;
+}
+
+.pagination .prev.disabled, .pagination .next.disabled {
+  color: #aeb7c0;
+  border-color: #aeb7c0;
+}

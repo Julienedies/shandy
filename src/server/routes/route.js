@@ -19,6 +19,7 @@ import logic from './action/logic'
 import news from './action/news'
 import plan from './action/plan'
 import replay from './action/replay'
+import rp from './action/rp'
 import tags from './action/tags'
 import system from './action/system'
 import memo from './action/memo'
@@ -28,11 +29,9 @@ import viewer from './action/viewer'
 import todo from './action/todo'
 
 import note from './action/note'
+import note2 from './action/note2'
 import txt from './action/txt'
 import reader from './action/reader'
-
-
-
 
 export default function (app) {
 
@@ -68,23 +67,33 @@ export default function (app) {
     app.get('/stock/diary/up/:id', diary.up)
 
     app.get('/stock/todo/', todo.get)
+    app.post('/stock/todo/', todo.post)
+    app.delete('/stock/todo/:id', todo.del)
 
     app.get('/stock/news', news.get)
     app.post('/stock/news', news.post)
     app.delete('/stock/news/:id', news.del)
 
+    app.get('/stock/rp', rp.get)
+    app.post('/stock/rp', rp.post)
+    app.delete('/stock/rp/:id', rp.del)
+    app.post('/stock/rp/move', rp.move)
+
     app.get('/stock/plan', plan.get)
     app.post('/stock/plan', plan.post)
     app.delete('/stock/plan/:id', plan.del)
 
-    app.get('/stock/replay', replay.get)
+    app.get('/stock/replay/:date?', replay.get)
     app.post('/stock/replay', replay.post)
+    app.post('/stock/replay/news', replay.news)
+    app.delete('/stock/replay/:id', replay.del)
 
     app.get('/stock/tags/:type?', tags.get)
     app.post('/stock/tags', tags.post)
     app.delete('/stock/tags/:id', tags.del)
 
     app.get('/stock/system', system.get)
+    app.get('/stock/system2', system.get2)
     app.post('/stock/system', system.post)
     app.delete('/stock/system/:id', system.del)
     app.get('/stock/system/move/:id/(:dest)?', system.move)
@@ -101,10 +110,16 @@ export default function (app) {
     app.get('/viewer/refresh/:id?', viewer.refresh)
     app.get('/viewer/bindTradeInfo', viewer.bindTradeInfo)
 
+
     app.get('/note', note.get)
     app.post('/note', note.post)
     app.delete('/note/:id', note.del)
     app.get('/stock/note/focus/:id', note.focus)
+
+    app.get('/note2', note2.get)
+    app.post('/note2', note2.post)
+    app.delete('/note2/:id', note2.del)
+    app.get('/stock/note2/focus/:id', note2.focus)
 
     app.get('/txt', txt.get)
     app.post('/txt', txt.post)

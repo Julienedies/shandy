@@ -6,7 +6,7 @@
 import $ from 'jquery'
 import utils from '../../libs/e-bridge'
 import brick from '@julienedies/brick'
-import { ON_GET_TAGS_DONE } from './constants'
+import { GET_TAGS_DONE, ADD_TAG, EDIT_TAG, DEL_TAG } from './constants'
 
 /**
  * 定义一些公用函数，可以被子ctrl继承
@@ -16,7 +16,7 @@ function parentCtrl () {
     let scope = this;
     let $elm = scope.$elm;
 
-    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+    scope.on(GET_TAGS_DONE, function (e, data) {
         scope.tagsMap = data;
     });
 
@@ -29,14 +29,18 @@ function parentCtrl () {
     };
 
     scope.addTag = scope.tag_add = function (e, type) {
-        scope.emit('tag.add', {type});
+        scope.emit(ADD_TAG, {type});
+    };
+
+    scope.delTag = function (e, id) {
+        scope.emit(DEL_TAG, id);
     };
 
     scope.editTag = scope.tag_edit = function (e, id) {
-        scope.emit('tag.edit', id);
+        scope.emit(EDIT_TAG, id);
     };
 
-    scope.tag_remove_done = function (res) {
+    scope.tagRemoveDone = scope.tag_remove_done = function (data) {
         $(this).closest('li').remove();
     };
 
@@ -44,7 +48,7 @@ function parentCtrl () {
         console.info('ic-form-submit-before => ', f);
     };
 
-    this.ajax_before_confirm = function (data, msg) {
+    scope.ajaxBeforeConfirm = this.ajax_before_confirm = function (data, msg) {
         //console.info([].slice.call(arguments));
         return confirm(data || msg);
     };

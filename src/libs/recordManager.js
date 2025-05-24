@@ -81,8 +81,8 @@ let proto = {
         return this;
     },
     /**
-     * 获取查询结果
-     * @param [value]  {*}            要查询的key值
+     * 获取查询结果， 总是返回数组
+     * @param [value]  {*}            要查询的key值， 或者是一个过滤函数
      * @param [query]  {String}       要查询的key
      * @returns      {Array}        根据查询结果返回数组
      * @example
@@ -113,11 +113,12 @@ let proto = {
             return pool;
         }
 
-        //
+        // 如果传入object，value设为object的id， 这是仿自jquery的方法，其实不是很好
         if (typeof value === 'object') {
             query = this.key;
             value = value[query];
         }
+
 
         for (let i = 0; i < pool.length; i++) {
             let record = pool[i];
@@ -129,7 +130,8 @@ let proto = {
         return result;
     },
     /**
-     * get的包装，返回的是this.get()的copy, 如果是get(id), 返回单个对象而不是数组
+     * get的包装，返回的是this.get()的copy, 如果是get(id), 返回单个对象而不是数组；
+     * 另外在返回结果前调用beforeGet函数进行处理，譬如结合 system或tags 的图片数据
      *
      * @param [value] {*}
      * @param [query] {String}

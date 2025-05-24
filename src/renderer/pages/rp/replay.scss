@@ -1,0 +1,70 @@
+/*!
+ * Created by j on 2024/9/4.
+ */
+
+#replay {
+
+  .table {
+    margin-bottom: 30px;
+    color: #0270ee;
+    //background: #ea5454;
+
+    //color:#fff;
+    font-weight: 500;
+    font-size: 1.05rem;
+    line-height: 1.6;
+
+    th {
+      color: #fff;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    th, td {
+      padding: 0.4em;
+      font-weight: 500;
+
+      &:nth-child(1) {
+        width: 2em;
+      }
+
+      &:nth-child(2) {
+        width: 7em;
+      }
+    }
+
+    .pre {
+      padding: 0.1rem 0.75rem;
+    }
+
+    .subtitle {
+      color: inherit;
+      font-size: 1em;
+    }
+
+    .tag {
+      font-size: 1rem;
+
+      &.ldt {
+        min-width: 8em;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  tr th:nth-child(2), tr td:nth-child(2) {
+    white-space: nowrap;
+  }
+
+  .item {
+    padding: 0.3rem;
+  }
+}
+
+// 消息面 容器
+.msgBox.shrink {
+  height: 1.4em;
+  overflow: hidden;
+}

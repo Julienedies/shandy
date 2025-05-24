@@ -12,7 +12,7 @@ import utils from '../../../libs/utils'
 import _ from 'lodash'
 import $ from 'jquery'
 
-import { EDIT_TAG, ADD_TAG, ON_SET_TAG_DONE, DEL_TAG, ON_GET_TAGS_DONE, ON_DEL_TAG_DONE } from '../../js/constants'
+import { EDIT_TAG, ADD_TAG, ON_SET_TAG_DONE, DEL_TAG, GET_TAGS_DONE, ON_DEL_TAG_DONE } from '../../js/constants'
 
 const {ipcRenderer} = electron;
 
@@ -209,7 +209,7 @@ export default function (scope) {
         scope.emit(DEL_TAG, id);
     };
 
-    scope.on(ON_GET_TAGS_DONE, function (e, data) {
+    scope.on(GET_TAGS_DONE, function (e, data) {
         tradingKeyTags = data['交易要素'];
     });
 
@@ -222,7 +222,7 @@ export default function (scope) {
 
     // -------------------------------------------------------------------
 
-    scope.one(ON_GET_TAGS_DONE, (e, data) => {
+    scope.one(GET_TAGS_DONE, (e, data) => {
         console.log('only one');
         tradingKeyTags = data['交易要素'];
         init();

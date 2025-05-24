@@ -11,38 +11,39 @@
 </head>
 <body ic-ctrl="mainCtrl">
 
-<div class="column is-10 is-offset-1" ic-ctrl="logicCtrl">
+<div id="mainContainer" class="column is-12" ic-ctrl="logicCtrl">
 
-    <div class="level">
+    <header class="level">
 
-            <div class="level-left">
-                <div class="buttons has-addons">
-                    <button class="button"
-                            ic-ajax
-                            ic-ajax-auto
-                            ic-submit-method="get"
-                            ic-submit-action="/stock/logic"
-                            ic-submit-on-done="onGetLogicDone">逻辑列表
-                    </button>
-                    <button class="button" ic-click="logic.edit">新逻辑</button>
-                    <button class="button" ic-click="logic.reverse">排序反转</button>
-                    <button class="button" ic-click="createReader">Reader</button>
-                    <button class="button" ic-click="toggleFull">完整显示</button>
-                    <button class="button" ic-click="onFilterKeyChange2">取消过滤</button>
-                </div>
+        <div class="level-left">
+            <div class="buttons has-addons">
+                <button class="button"
+                        ic-ajax
+                        ic-ajax-auto
+                        ic-submit-method="get"
+                        ic-submit-action="/stock/logic"
+                        ic-submit-on-done="onGetLogicDone">逻辑列表
+                </button>
+                <button class="button" ic-click="logic.edit">新逻辑</button>
+                <button class="button" ic-click="logic.reverse">排序反转</button>
+                <button class="button" ic-click="createReader">Reader</button>
+                <button class="button" ic-click="toggleFull">完整显示</button>
+                <button class="button" ic-click="onFilterKeyChange2">取消过滤</button>
             </div>
-
-            <div class="level-right">
-                <div class="buttons has-addons" ic-select="sortType" ic-select-auto="false" ic-select-cla="is-primary" ic-select-on-change="onSortChange">
-                    <button class="button" ic-val="level">level排序</button>
-                    <button class="button" ic-val="time">时间排序</button>
-                </div>
-            </div>
-
         </div>
 
+        <div class="level-right">
+            <div class="buttons has-addons" ic-select="sortType" ic-select-auto="false" ic-select-cla="is-primary" ic-select-on-change="onSortChange">
+                <button class="button" ic-val="level">level排序</button>
+                <button class="button" ic-val="time">时间排序</button>
+            </div>
+        </div>
+
+    </header>
+
     <div class="columns" ic-tpl="tags">
-        <div class="column is-12" ic-select="tags" ic-select-item=".tag" ic-select-auto="true" ic-select-cla="is-primary" ic-select-on-change="onFilterKeyChange">
+        <div class="column is-10 is-offset-1" ic-select="tags" ic-select-item=".tag" ic-select-auto="true" ic-select-cla="is-primary"
+             ic-select-on-change="onFilterKeyChange">
             <div class="tags">
                 <span class="tag" ic-for="i,v in model.authorArr" ic-val="{{ v }}" ic-has-selected="v===model.filterKey">{{ v }}</span>
                 <span class="tag" ic-val="_null">null</span>
@@ -59,21 +60,20 @@
         </div>
     </div>
 
-    <ul class="column is-12" ic-tpl="logic" id="logicList">
+    <ul class="column is-10 is-offset-1" ic-tpl="logic" id="logicList">
         <li ic-for="i,v in model" class="notification" data-id="{{v.id}}">
             <div class="pre scroll">{{v.text}}</div>
-            <div class="tar">
-                <span class="tag is-info" ic-if="v.type" ic-for="k,j in v.type" ic-click="onFilterKeyChange2:{{ j }}">
-                    {{j || ''}}
-                </span>&nbsp;&nbsp;&nbsp;
+            <div class="tar" style="padding-top: 10px;">
                 <span class="tag is-danger" ic-if="v.tag" ic-for="k,j in v.tag" ic-click="onFilterKeyChange2:{{ j }}">
                     {{ TAGS_MAP_BY_ID[j] && TAGS_MAP_BY_ID[j].text }}
+                </span>
+                <span class="tag is-info" ic-if="v.type" ic-for="k,j in v.type" ic-click="onFilterKeyChange2:{{ j }}">
+                    {{j || ''}}
                 </span>
                 <span class="tag is-info" ic-if="v.note">{{v.note || ''}}</span>&nbsp;&nbsp;&nbsp;
                 <span class="tag" ic-if="v.level">{{v.level || ''}}</span>&nbsp;
                 <span class="tag" ic-if="v.author" ic-click="onFilterKeyChange2:{{ v.author }}">{{v.author || ''}}</span>
                 <a class="no" ic-click="logic.edit:{{v.id}}"><span class="icon is-medium" title="编辑"><i class="far fa-edit"></i></span> </a>
-                <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
                 <a class="no"
                    ic-ajax
                    ic-submit-method="get"
@@ -83,28 +83,38 @@
                         <i class="far fa-heart"></i>
                     </span>
                 </a>
+                <a class="no" ic-click="toggleText"><span class="icon is-medium" title="展开"><i class="fas fa-angle-double-down"></i></span> </a>
+                <a class="no" ic-click="play" ic-dblclick="stop"><span class="icon is-medium" title="单击播放，双击停止"><i class="fas fa-play-circle"></i></span></a>
+                <a class="no"
+                        ic-ajax
+                        ic-submit-method="delete"
+                        ic-submit-action="/stock/logic/{{v.id}}"
+                        ic-submit-before="ajax_before_confirm:确认删除?"
+                        ic-submit-on-done="logic.remove">
+                    <span class="icon is-medium" title="删除"><i class="fas fa-trash-alt"></i></span>
+                </a>
             </div>
-            <button class="delete is-medium"
+<!--            <button class="delete is-medium none"
                     ic-ajax
                     ic-submit-method="delete"
                     ic-submit-action="/stock/logic/{{v.id}}"
                     ic-submit-before="ajax_before_confirm:确认删除?"
-                    ic-submit-on-done="logic.remove"></button>
+                    ic-submit-on-done="logic.remove"></button>-->
         </li>
     </ul>
 
 
-<!--    <div class="pagination"
-         ic-pagination="logic"
-         ic-source="logicListModel"
-         ic-pagination-rows="300"
-         ic-pagination-total="10"
-         ic-pagination-step="5" >
-        <span class="prev" ic-role-pagination-prev>&lt;</span>
-        <span class="ellipsis" ic-role-pagination-ellipsis>...</span>
-        <span class="num" ic-role-pagination-num="{{}}">{{}}</span>
-        <span class="next" ic-role-pagination-next>&gt;</span>
-    </div>-->
+    <!--    <div class="pagination"
+             ic-pagination="logic"
+             ic-source="logicListModel"
+             ic-pagination-rows="300"
+             ic-pagination-total="10"
+             ic-pagination-step="5" >
+            <span class="prev" ic-role-pagination-prev>&lt;</span>
+            <span class="ellipsis" ic-role-pagination-ellipsis>...</span>
+            <span class="num" ic-role-pagination-num="{{}}">{{}}</span>
+            <span class="next" ic-role-pagination-next>&gt;</span>
+        </div>-->
 
 
 </div>
@@ -114,13 +124,14 @@
 
     <div class="column is-12" ic-tpl ic-tpl-init="{logic:{}, tags: {}, typeArr:{}, authorArr:{}}">
 
-        <div class="table_0" style="margin-top:-18px;margin-left:-90px;" ic-form="setLogic" ic-init="logic=model.logic; tags=model.tags; typeArr=model.typeArr; authorArr=model.authorArr;">
+        <div class="table_0" style="margin-top:-18px;margin-left:-110px;" ic-form="setLogic"
+             ic-init="logic=model.logic; tags=model.tags; typeArr=model.typeArr; authorArr=model.authorArr;">
 
             <!-- tr -->
             <div>
                 <h6>逻辑</h6>
                 <div>
-                    <textarea rows="11" class="textarea" ic-form-field="text">{{logic.text}}</textarea>
+                    <textarea rows="8" class="textarea" ic-form-field="text">{{logic.text}}</textarea>
                     <input type="hidden" name="id" ic-form-field value="{{logic.id}}"/>
                 </div>
             </div>
@@ -141,9 +152,10 @@
 
             <!-- tr -->
             <div>
-                <h6>交易要素</h6>
+                <h6>要素</h6>
                 <div>
-                    <div class="field is-grouped is-grouped-multiline" ic-select="tradingKeyTags" ic-select-type="checkbox" ic-select-cla="is-primary" ic-form-field="tag">
+                    <div class="field is-grouped is-grouped-multiline" ic-select="tradingKeyTags" ic-select-type="checkbox" ic-select-cla="is-primary"
+                         ic-form-field="tag">
                         <div class="control" ic-for="i,v in tags">
                             <div class="tags has-addons">
                                 <span class="tag is-small" ic-select-item ic-has-selected="logic.tag && logic.tag.includes(v.id)" ic-val="{{v.id}}">
@@ -177,30 +189,9 @@
 
             <!-- tr -->
             <div>
-                <h6>著者</h6>
-                <div>
-                    <div class="tags" ic-select="authors" ic-select-cla="is-primary" ic-form-field="author">
-                        <span ic-for="i,v in authorArr" ic-class="tag is-small" ic-val="{{ v }}" ic-has-selected="v === logic.author">
-                            {{ v }}
-                        </span>
-                        <input type="text" class="input is-small" placeholder="添加标签" ic-enter-press="addLogicAuthor"/>
-                    </div>
-                </div>
-            </div>
-
-            <!-- tr -->
-<!--            <div>
-                <h6>优先级</h6>
-                <div class="tags">
-
-                </div>
-            </div>-->
-
-            <!-- tr -->
-            <div>
                 <h6>优先级</h6>
                 <div class="buttons">
-                    <input class="input is-medium" type="number" step="500" ic-value="{{logic.level || 0}}" ic-form-field="level">
+                    <input class="input is-medium" type="number" step="200" ic-value="{{logic.level || 0}}" ic-form-field="level">
 
                     <button class="button is-primary"
                             style="margin-left:2em;"
@@ -216,6 +207,29 @@
 
             <!-- tr -->
             <div>
+                <h6>著者</h6>
+                <div>
+                    <div class="tags" ic-select="authors" ic-select-cla="is-primary" ic-form-field="author">
+                        <span ic-for="i,v in authorArr" ic-class="tag is-small" ic-val="{{ v }}" ic-has-selected="v === logic.author">
+                            {{ v }}
+                        </span>
+                        <input type="text" class="input is-small" placeholder="添加标签" ic-enter-press="addLogicAuthor"/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- tr -->
+            <!--            <div>
+                            <h6>优先级</h6>
+                            <div class="tags">
+
+                            </div>
+                        </div>-->
+
+
+
+            <!-- tr -->
+            <div>
                 <h6>备注</h6>
                 <div class="control">
                     <input type="text" class="input is-small" name="note" value="{{logic.note}}" ic-form-field="note"/>
@@ -228,6 +242,6 @@
 
 </div>
 
-${ require('../../tags/set-tag.html') }
+${ require('../../tags2/set-tag.html') }
 </body>
 </html>

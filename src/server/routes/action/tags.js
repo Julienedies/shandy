@@ -7,12 +7,16 @@ import jodbData from '../../../libs/jodb-data'
 
 import ViewerMap, { beforeGet } from '../../helper/viewerMap'
 
-let viewerMap = ViewerMap.getInstance(); // 全局单例
+let viewerMap = ViewerMap.getInstance();   // 全局单例，服务器端
 
+// notBeforeGet 表示不要使用beforeGet函数去填充图片数据
+function getDb (notBeforeGet) {
+    let _beforeGet = notBeforeGet ? null : beforeGet;
 
-function getDb () {
-    return jodbData('tags', [],{
-        beforeGet,
+    return jodbData('tags', [], {
+        beforeGet: _beforeGet,
+
+        // 把tags数组转换成 map 结构
         convert: function () {
             let tagsByTypeMap = {};
             let tagsByTypeMap2 = {};
@@ -41,19 +45,24 @@ function getDb () {
 }
 
 
+
+
 export default {
 
-    getDb: function () {
-        return getDb();
+    // notBeforeGet 表示不填充图片数据
+    getDb: function (notBeforeGet) {
+        return getDb(notBeforeGet);
     },
 
     get: function (req, res) {
         viewerMap.get();
         let type = req.params.type;
-        let tagsJodb = getDb();
+        let notBeforeGet = req.query.notimg;
+        let tagsJodb = getDb(notBeforeGet);
         let data = type ? tagsJodb.get2(type, 'type') : tagsJodb.convert();
         res.json(data);
     },
+
 
     post: function (req, res) {
         let obj = req.body;
@@ -63,10 +72,12 @@ export default {
         res.send(tagsJodb.convert());
     },
 
+
     del: function (req, res) {
         let id = req.params.id;
         let tagsJodb = getDb();
         tagsJodb.find(id, 'id').remove();
         res.send(tagsJodb.convert());
     }
+
 }

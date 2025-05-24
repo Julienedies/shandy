@@ -6,17 +6,47 @@
 html, body {
   padding: 1px;
   color: #202020;
+  // 24寸+显示器
   font: 16px/1.8 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
-  @media screen and (max-width: 800px) {
-    font-size: 16px;
+
+  // 飞利浦屏幕34寸
+  @media screen and (min-width: 3600px) {
+    font-size: 18px !important;
+  }
+  // macBook 屏幕
+  @media screen and (max-width: 1440px) {
+    font-size: 16px !important;
   }
 
+  // macBook, 屏幕尺寸最大1440px
+  @media screen and (max-width: 1440px) {
+    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif !important;
+  }
 
+  // iPad, 屏幕尺寸最大800px
+  @media screen and (max-width: 800px) {
+    font-size: 16px !important;
+  }
+
+  // 滚动条
   &::-webkit-scrollbar {
     //width: 0 !important;
     //display: none;
   }
 }
+
+
+.textarea {
+  min-height: 1rem;
+  overflow-y: visible;
+}
+
+.icon {
+  & > .far, & > .fas {
+    opacity: 0.15;
+  }
+}
+
 
 
 .tag:not(body){
@@ -32,16 +62,12 @@ html, body {
   }
 }
 
-.textarea {
-  min-height: 1rem;
-  overflow-y: visible;
+
+
+.tag:not(body).is-delete::before, .tag:not(body).is-delete::after{
+  opacity: .4;
 }
 
-.icon {
-  & > .far, & > .fas {
-    opacity: 0.1;
-  }
-}
 
 .tag.is-medium.is-delete {
   opacity: 0.3;
@@ -52,17 +78,29 @@ label.radio {
   vertical-align: -0.5em;
 }
 
+[ic-ctrl="selectTagsCtrl"] {
+  padding-top: 40px;
+
+  .buttons:first-child {
+    position: fixed;
+    z-index: 1000;
+    top: 10px;
+    left: 1rem;
+    right: 1rem;
+  }
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // bulma 重写
 
 .notification {
   margin-bottom: 0.8rem !important;
-  padding-bottom: 0.5rem;
-  background: #fff7e5; //#f5edd0; //fff1e5
+  padding: 0.8rem 1.2rem 0.4rem 1.2rem;
+  background: #fff9ea; //#f5edd0; //fff1e5
 }
 
 .box {
-  padding: 1rem;
+  padding: 0.6rem;
 }
 
 .title {
@@ -86,13 +124,88 @@ a.tag, a.tag:hover {
   font-style: normal;
 }
 
-.tag sup, .tag sub {
+.tag sup, .tag sub, .button sup {
   margin-top: -0.9em;
-  opacity: 0.6;
+  opacity: 0.5;
   transform: scale(0.8);
   font-size: 0.8em;
   vertical-align: text-top;
 }
+
+.tag:not(body).is-highlight {
+  background-color: #fbf7e8;
+  color: rgb(35, 34, 34);
+}
+
+.tag:not(body).is-highlight2 {
+  background-color: #eef6f9;
+  color: rgb(35, 34, 34);
+}
+
+.tag:not(body).is-highlight3 {
+  background-color: #EAF2FF;
+  color: rgb(35, 34, 34);
+}
+
+
+.button.is-replay, .button.is-up, .button.is-down {
+  color: #fff;
+  border-color: transparent;
+
+  &:hover {
+    color: #fff!important;
+    border-color: transparent;
+  }
+}
+
+.button.is-replay {
+  background-color: #0e57f7;
+
+  &:hover {
+    background-color: #003aff;
+  }
+}
+
+.button.is-up {
+  background-color: #ff5c5c;
+
+  &:hover {
+    background-color: #ea5454;
+  }
+}
+
+.button.is-down {
+  //background-color: #0bd9b6;
+  background-color: #0abf9b;
+
+  &:hover {
+    //background-color: #0abf9b;
+    background-color: #0bd9b6;
+  }
+}
+
+.is-neutral {
+  background: #ccc;
+  color: #fff;
+}
+
+.is-down {
+  background: #0abf9b;
+  //background-color: #0bd9b6;
+  color: #fff;
+}
+
+.is-up {
+  //background: #ea5454;
+  background: #fa5858;
+  color: #fff;
+}
+
+// .tag:not(body).is-info {
+//   background: #2C63ae;
+//   background: #117de2;
+//   color:#fff;
+// }
 
 ///////////////////
 // forala 样式重写
@@ -129,7 +242,36 @@ a.tag, a.tag:hover {
   border: none !important;
 }
 
+[ic-ctrl="viewerMarkTagCtrl"] {
+  background: none !important;
+  transition: opacity 0ms !important;
 
+  .tags .tag:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .tag, .button {
+    opacity: 0;
+  }
+
+  .tag.is-info {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+    animation: flash 1.5s infinite ease-in-out;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.8) !important;
+
+    .tag, .button {
+      opacity: 1;
+    }
+
+    .tag.is-info {
+      animation: none;
+    }
+  }
+}
 
 strong {
   color: inherit;

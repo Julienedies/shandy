@@ -1,5 +1,20 @@
 [
 	{
+		"id": "宠物",
+		"selected": true,
+		"timestamp": 1747754798537
+	},
+	{
+		"id": "航运",
+		"selected": true,
+		"timestamp": 1747317448891
+	},
+	{
+		"id": "成飞",
+		"selected": true,
+		"timestamp": 1747157764224
+	},
+	{
 		"id": "小鹏",
 		"selected": false,
 		"timestamp": 1745431942768
@@ -111,7 +126,7 @@
 	},
 	{
 		"id": "DeepSeek",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1738717351839
 	},
 	{
@@ -336,7 +351,7 @@
 	},
 	{
 		"id": "重组",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1726159617866
 	},
 	{
@@ -381,7 +396,7 @@
 	},
 	{
 		"id": "固态电池",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1724934834987
 	},
 	{
@@ -491,7 +506,7 @@
 	},
 	{
 		"id": "创新药",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1722789740639
 	},
 	{
@@ -601,7 +616,7 @@
 	},
 	{
 		"id": "跨境电商",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1716824862453
 	},
 	{
@@ -826,7 +841,7 @@
 	},
 	{
 		"id": "核聚变",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1704329443336
 	},
 	{
@@ -936,7 +951,7 @@
 	},
 	{
 		"id": "算力",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1676295454175
 	},
 	{

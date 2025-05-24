@@ -3,6 +3,8 @@
  * Created by j on 2019-04-08.
  */
 
+import moment from 'moment';
+
 const FILE_PATH = '/file/?path';
 
 function _isUrlPath (path) {
@@ -19,7 +21,7 @@ function parseImgName (path) {
     if (!path || typeof path !== 'string') return console.log(path);
     path = _isUrlPath(path) ? decodeURIComponent(path) : path;
     let arr = path.match(/^.+-(.+)-\d{6}\.png$/);
-    return arr && arr[1] || 'undefined';
+    return arr && arr[1] || path;
 }
 
 function parseImgPath (path) {
@@ -51,7 +53,10 @@ function sortByPy (param1, param2) {
     return param1.localeCompare(param2, "zh");
 }
 
-// 把当前日期转换为 yyyy-mm-dd格式
+/**
+ * 获取当前日期 yyyy-mm-dd 格式的字符串
+ * @returns {string}
+ */
 function formatDate () {
     let d = new Date;
     return d.toLocaleDateString().split('/').map((v) => {
@@ -59,15 +64,59 @@ function formatDate () {
     }).join('-');
 }
 
-try {
+/**
+ * 获取特定日期 yyyy-mm-dd 格式的字符串，主要是针对复盘与交易计划设定特定日期
+ * @returns {string}
+ */
+function formatDate2 () {
+    let now = moment();
+    let day = now.day();  // 周几
+    let hour = now.hour();
+    let f = 'YYYY-MM-DD';
+    let m;
+    let amount = 1;
 
+    // 如果是周一至周五，并且超过下午3点，则更新时间为当天时间; 否则为前一天开盘日
+    if (day > 0 && day < 6 && hour >= 15) {
+        m = now;
+    } else {
+        if (day === 0) {
+            amount = 2;
+        }
+        if (day === 1) {
+            amount = 3;
+        }
+        m = moment().subtract(amount, 'days');
+    }
+
+    return m.format(f)
+}
+
+/**
+ *  获取是周几
+ * @param dateString  '2024-08-16'
+ * @returns {number}
+ */
+function getDayOfWeek(dateString) {
+    // 创建Date对象
+    const date = new Date(dateString);
+    // 获取星期几，0表示星期天，1表示星期一，以此类推
+    return date.getDay();
+}
+
+
+////////////////////////////////////////////////////////////////
+// export
+
+try {
     window.parseImgName = parseImgName;
     window.parseImgPath = parseImgPath;
     window.sortByPy = sortByPy;
     window.formatDate = formatDate;
-
+    window.formatDate2 = window.J_FORMAT_DATE2 = formatDate2;
+    window.getDayOfWeek = getDayOfWeek;
 } catch (e) {
-    console.error(e)
+    console.error(e);
 }
 
 
