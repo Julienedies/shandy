@@ -70,12 +70,16 @@ function parentCtrl () {
     scope.onViewerShow = function (index, src, $info, isFirstShow) {
         let arr = src.split('=');
         src = arr[1] || arr[0];
-        scope.viewerCurrentImg = {f: src};
-        scope.viewerMarkTag();
         $info.text(src);
 
+        scope.viewerCurrentImg = {f: src};
         brick.emit('viewer-markTag', scope.viewerCurrentImg);
         isFirstShow && $('[ic-popup="viewerMarkTag"]').icPopup(true);
+    };
+
+
+    scope.viewerMarkTag = () => {
+        brick.emit('viewer-markTag', scope.viewerCurrentImg);
     };
 
     scope.editImg = () => {
@@ -94,9 +98,6 @@ function parentCtrl () {
         utils.viewInFtnn(scope.viewerCurrentImg.code);
     };
 
-    scope.viewerMarkTag = () => {
-        brick.emit('viewer-markTag', scope.viewerCurrentImg);
-    };
 
     scope.markMistake = () => {
         copyImageToDist('/Users/j/截图/交易错误/');

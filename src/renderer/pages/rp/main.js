@@ -542,7 +542,7 @@ brick.reg('rpListCtrl', function (scope) {
 });
 
 
-brick.reg('planCtrl', function (scope) {
+/*brick.reg('planCtrl', function (scope) {
 
     $.get({
         url: '/stock/replay'
@@ -562,7 +562,7 @@ brick.reg('planCtrl', function (scope) {
         brick.view.to('plan');
     });
 
-});
+});*/
 
 
 /*brick.reg('tagsCtrl', function (scope) {

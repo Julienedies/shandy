@@ -61,7 +61,8 @@
                             tabindex="{{ rp.line ? 'line': rp.group }}">
                             <!-- draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" -->
                             <header ic-click="toggleWrap" ic-class="role_{{ rp.role }}">
-                                <h3>{{ rp.title }}
+                                <h3>
+                                    <span>{{ rp.title }}</span>
                                     <b>{{ rp.caution }} </b>
                                 </h3>
                             </header>
