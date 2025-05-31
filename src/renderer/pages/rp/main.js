@@ -99,11 +99,15 @@ brick.reg('rpListCtrl', function (scope) {
     };
 
     window._GET_RP_KEY2 = function (rp, input) {
+        //console.log(input);
         let key = '';
         if (rp.line) {
             key = ('line.' + rp.title) + '.' + input
         } else {
-            if (/[.]/img.test(input)) {
+            if (/\^/img.test(input)) {
+                console.log(input);
+                key = input.replace('^', '');  // 如果input里含有^, 则使用input为key
+            } else if (/[.]/img.test(input)) {
                 key = input;  // 如果input里含有.,则使用input为key
             } else if (/[.]$/img.test(rp.alias)) {
                 key = rp.alias + input;  // 如果以.结尾，
@@ -436,6 +440,15 @@ brick.reg('rpListCtrl', function (scope) {
         before: function (fields) {
             console.info('rpForm 提交前check =》', fields);
             if (checkFrom()) {
+                for (let key in fields) {
+                    if (fields.hasOwnProperty(key)) {
+                        let value = fields[key];
+                        // 检查属性值是否为空
+                        if (value === null || value === undefined || value === '' || (Array.isArray(value) && value.length === 0)) {
+                            delete fields[key];
+                        }
+                    }
+                }
                 return fields;
             }
             return false;

@@ -7,13 +7,6 @@
 		"timestamp": 1747448464490
 	},
 	{
-		"id": "id_1746703643952_4992",
-		"type": "",
-		"level": "0",
-		"text": "\n思维没有方向，操作没有系统；\n盘前没有明确的交易计划，临盘被市场牵着鼻子走；\n思维没有方向，操作没有系统；\n盘前没有明确的交易计划，临盘被市场牵着鼻子走；\n思维没有方向，操作没有系统；\n盘前没有明确的交易计划，临盘被市场牵着鼻子走；\n思维没有方向，操作没有系统；\n盘前没有明确的交易计划，临盘被市场牵着鼻子走；\n\n没有明确的行情意识，我要捕捉的目标行情是什么？\n没有明确的行情意识，我要捕捉的目标行情是什么？\n没有明确的行情意识，我要捕捉的目标行情是什么？\n没有明确的行情意识，我要捕捉的目标行情是什么？\n\n\n三心二意，什么都想抓，什么也抓不住；\n简单纯粹取舍-重复；简单纯粹取舍-重复；\n三心二意，什么都想抓，什么也抓不住；\n简单纯粹取舍-重复；简单纯粹取舍-重复；\n三心二意，什么都想抓，什么也抓不住；\n简单纯粹取舍-重复；简单纯粹取舍-重复；\n三心二意，什么都想抓，什么也抓不住；\n简单纯粹取舍-重复；简单纯粹取舍-重复；\n",
-		"timestamp": 1746703643953
-	},
-	{
 		"id": "id_1746426343210_9286",
 		"type": "",
 		"level": "0",
@@ -44,7 +37,7 @@
 		"id": "id_1744035129260_5266",
 		"type": "unix",
 		"level": "0",
-		"text": "服务器操作系统：Debian 11.1 64bit\n\n默认用户名：root\n登录密码：3_TG2NDZxRkC|yu\n\n// 这个是单独上传文件使用的，\nscp ~/dev/shandy-.zip root@119.91.206.193:/home/app/\n\n\nssh root@119.91.206.193\n\nsudo apt update && sudo apt install -y nodejs npm\n\nsudo mkdir -p /home/app && cd /home/app\n\nsed -i  's|Users/j/dev/shandy/|home/app/shandy|g'   ./dist/web/server.js\n\npm2  start  /home/app/shandy/dist/web/server.js   \n-----------------\nssh root@124.221.131.241\n7)5bJ:6qPjXw\n\n sudo - julien\njulien  hello/julien/2012\n\n\nscp ~/dev/shandy-.zip root@124.221.131.241:/home/julien/app/shandy-/\n\nsed -i '' 's|Users/j/dev/shandy/|home/julien/app/shandy-|g'   ./dist/web/server.js\n\n\n\ncurl https://github.com/Julienedies/shandy/archive/refs/heads/master.zip\n\n\nnode  home/julien/app/shandy-/dist/web/server.js\n\n\nnpm install -g pm2\n\npm2  start  home/julien/app/shandy-/dist/web/server.js   \npm2 stop all",
+		"text": "服务器操作系统：Debian 11.1 64bit\n\n默认用户名：root\n登录密码：3_TG2NDZxRkC|yu\n\n// 这个是单独上传文件使用的，\nscp ~/dev/shandy-.zip root@106.55.173.85:/home/app/\n\n\nssh root@106.55.173.85\n\nsudo apt update && sudo apt install -y nodejs npm\n\nsudo mkdir -p /home/app && cd /home/app\n\nsed -i  's|Users/j/dev/shandy/|home/app/shandy|g'   ./dist/web/server.js\n\npm2  start  /home/app/shandy/dist/web/server.js   \n-----------------\nssh root@124.221.131.241\n7)5bJ:6qPjXw\n\n sudo - julien\njulien  hello/julien/2012\n\n\nscp ~/dev/shandy-.zip root@124.221.131.241:/home/julien/app/shandy-/\n\nsed -i '' 's|Users/j/dev/shandy/|home/julien/app/shandy-|g'   ./dist/web/server.js\n\n\n\ncurl https://github.com/Julienedies/shandy/archive/refs/heads/master.zip\n\n\nnode  home/julien/app/shandy-/dist/web/server.js\n\n\nnpm install -g pm2\n\npm2  start  home/julien/app/shandy-/dist/web/server.js   \npm2 stop all",
 		"timestamp": 1744035129260
 	},
 	{
