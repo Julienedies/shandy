@@ -21,7 +21,7 @@ const EventEmitter = require('events').EventEmitter;
  *             };
  * let list = new recordManager(conf);
  */
-function RecordManager (conf) {
+function RecordManager(conf) {
     // 配置
     conf && conf.constructor === Object && Object.assign(this, conf);
     this._pool = [];
@@ -39,6 +39,34 @@ let proto = {
     key: 'id',
     joinType: 'unshift',
     beforeGet: null,
+
+    /**
+     * 插入或修改一条记录时的回调函数
+     * @param record
+     * @param index
+     */
+    beforeSave: function (record, index) {
+        let id = record.id;
+        // 如果没有主键,生成一个随机主键
+        if (typeof id === 'undefined' || id === '') {
+            record.id = this._createId();
+        }
+        // 如果有level属性, 但level为空, 设默认为1;
+        let level = record.level;
+        if (level === '') {
+            // level = 1 + '.' + (+ new Date());
+            record.level = 1;
+        }
+
+        // 添加时间戳
+        let timestamp = record.timestamp;
+        if (typeof timestamp === 'undefined' || timestamp === '') {
+            record.timestamp = +new Date();
+        }
+
+        return record;
+    },
+
     /**
      * @param arr {Array}  要管理的数据对象
      * @return {this}
@@ -53,6 +81,7 @@ let proto = {
         this._pool = arr;
         return this;
     },
+
     /**
      * 遍历数据池, 能直接修改记录管理器里的数据，但并不会将改变直接保存到json文件，需要手动触发
      * @param cb {Function} 遍历回调函数
@@ -63,6 +92,7 @@ let proto = {
         });
         return this;
     },
+
     /**
      * 此方法会触发change事件，保存当前数据池到json文件
      */
@@ -80,6 +110,7 @@ let proto = {
         this.emit('change');
         return this;
     },
+
     /**
      * 获取查询结果， 总是返回数组
      * @param [value]  {*}            要查询的key值， 或者是一个过滤函数
@@ -129,6 +160,7 @@ let proto = {
 
         return result;
     },
+
     /**
      * get的包装，返回的是this.get()的copy, 如果是get(id), 返回单个对象而不是数组；
      * 另外在返回结果前调用beforeGet函数进行处理，譬如结合 system或tags 的图片数据
@@ -151,6 +183,7 @@ let proto = {
         }
 
     },
+
     /**
      * 对查询结果记录进行修改
      * @param data      {Object}            要更新的数据
@@ -186,7 +219,7 @@ let proto = {
 
         });
 
-        that.emit('change', {change: result});
+        that.emit('change', { change: result });
         this.end();
         return result;
     },
@@ -231,6 +264,7 @@ let proto = {
         this.end();
         return find;
     },
+
     /**
      * 清空所有记录
      * @returns {proto}
@@ -238,9 +272,10 @@ let proto = {
     clear: function () {
         this._pool = [];
         this.end();
-        this.emit('change', {e: 'clear'});
+        this.emit('change', { e: 'clear' });
         return this;
     },
+
     /**
      * 根据key value查找记录
      * @param value  {*}            要查询的key值
@@ -250,10 +285,12 @@ let proto = {
      * new recoredManager().init([{x:1,y:2},{x:1,y:{z:7}}]).find(1,'x')  // result this._find == [{x:1,y:2},{x:1,y:5}];
      * new recoredManager().init([{x:1,y:2},{x:1,y:{z:7}}]).find(7,'y.z')  // result this._find == [{x:1,y:{z:7}}];
      */
+
     find: function (value, key) {
         this._find = this.get(value, key);
         return this;
     },
+
     /**
      * 获取查询结果记录集合
      * @returns {Array | undefined}
@@ -263,43 +300,24 @@ let proto = {
     result: function () {
         return this._find;
     },
+
     /**
      * @todo 清空上次链式调用的结果
      */
     end: function () {
         this._find = void (0);
     },
+
     /**
-     * 插入或修改一条记录时的回调函数
-     * @param record
-     * @param index
+     * 生成唯一ID
+     * @returns {String}
      */
-    beforeSave: function (record, index) {
-        let id = record.id;
-        // 如果没有主键,生成一个随机主键
-        if (typeof id === 'undefined' || id === '') {
-            record.id = this._createId();
-        }
-        // 如果有level属性, 但level为空, 设默认为1;
-        let level = record.level;
-        if (level === '') {
-            // level = 1 + '.' + (+ new Date());
-            record.level = 1;
-        }
-
-        // 添加时间戳
-        let timestamp = record.timestamp;
-        if (typeof timestamp === 'undefined' || timestamp === '') {
-            record.timestamp = +new Date();
-        }
-
-        return record;
-    },
     _createId: function () {
         let r = Math.random().toFixed(5).replace('0.', '');
         let timestamp = +new Date();
-        return `id_${ timestamp }_${ r }`;
+        return `id_${timestamp}_${r}`;
     },
+
     /**
      * 查询键值
      * @param record
@@ -314,11 +332,12 @@ let proto = {
     _queryKeyValue: function (record, k) {
         return this._get(record, k).v;
     },
+
     _get: function (record, k) {
 
         let chain = (k || this.key).split('.');
 
-        let value = (function fx (chain, record) {
+        let value = (function fx(chain, record) {
 
             let k = chain.shift();
             let v = record[k];
@@ -331,8 +350,7 @@ let proto = {
 
         })(chain, record);
 
-        return {r: record, v: value};
-
+        return { r: record, v: value };
     },
 
     /**
@@ -351,9 +369,6 @@ let proto = {
             if (this._queryKeyValue(pool[i], query) === v) return i;
         }
 
-        /*for (let i in pool) {
-            if (this._queryKeyValue(pool[i], query) === v) return i;
-        }*/
     },
 
     /**
@@ -377,8 +392,8 @@ let proto = {
         pool.splice(destIndex, 0, record);  // 重新插入
 
         this.emit('change');
-
     },
+
     /**
      * 改变记录索引位置
      * @param id
@@ -405,7 +420,7 @@ let proto = {
             pool.splice(--index, 0, record);
         }
 
-        this.emit('change', {target: record});
+        this.emit('change', { target: record });
 
     }
 

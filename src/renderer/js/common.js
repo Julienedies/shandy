@@ -7,7 +7,6 @@ import utils from '../../libs/utils'
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 
-window.TAGS_FILTER = ['交易错误','交易统计','交易风险','行情类型', '目标行情', '买点'];
 
 brick.directives.reg('ic-select-path', {
     selfExec: true,

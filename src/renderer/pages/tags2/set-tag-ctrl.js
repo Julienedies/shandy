@@ -21,7 +21,7 @@ export default function () {
     window.GET_TAGS_DEF = window.GET_TAGS_DEF || $.Deferred();
 
     // 把tagsMap 转成数组 [tag, tag, tag]
-    function tagsMap2Arr (data) {
+    function tagsMap2Arr(data) {
         let result = [];
         for (let i in data) {
             let arr = data[i];
@@ -35,7 +35,7 @@ export default function () {
     }
 
     // ajax 获取 tagsMap数据
-    function getTagsMapByAjax () {
+    function getTagsMapByAjax() {
         $.ajax({
             url: '/stock/tags',
             type: 'get',
@@ -43,21 +43,21 @@ export default function () {
     }
 
     //
-    function render (model) {
+    function render(model) {
         model.types = model.types || types;
-        scope.render({model});
+        scope.render({ model });
         $elm.icPopup(true);
     }
 
     // 更新tag数据
-    function updateData (data) {
+    function updateData(data) {
         window.TAGS_MAP = data;
         types = data['type'];
         tagsManager.init(tagsMap2Arr(data));
     }
 
     // 当从服务器获取到tagsMap数据
-    function onGetTagMapDone (data) {
+    function onGetTagMapDone(data) {
         updateData(data);
         window.GET_TAGS_DEF.resolve(data);
         scope.emit(GET_TAGS_DONE, data);
@@ -73,7 +73,7 @@ export default function () {
 
     // 重置setTag表单
     scope.reset = function () {
-        scope.render({types});
+        scope.render({ types });
     };
 
     // 主要是处理electron里修改了数据， web 页面需要刷新数据；目前好像没有用到
@@ -86,7 +86,7 @@ export default function () {
     scope.on(DEL_TAG, function (e, id) {
         if (window.confirm('确定删除此标签？')) {
             $.ajax({
-                url: `/stock/tags/${ id }`,
+                url: `/stock/tags/${id}`,
                 method: `delete`,
             }).done((data) => {
                 updateData(data);
@@ -121,7 +121,7 @@ export default function () {
         console.info('on add tag', e, msg);
         let model = msg;
         if (typeof msg === 'string') {
-            model = {type: msg};
+            model = { type: msg };
         }
         render(model);
     });

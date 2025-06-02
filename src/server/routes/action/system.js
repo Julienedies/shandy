@@ -67,7 +67,7 @@ export default {
         let obj = req.body;
         obj['示例图片'] = obj['示例图片'] || '';
         let systemJodb = getDb();
-        systemJodb.set(obj);
+        let result = systemJodb.set(obj);
         res.json(getData());
     },
 

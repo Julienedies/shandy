@@ -5,7 +5,7 @@
 		"bounds": {
 			"x": 336,
 			"y": 188,
-			"width": 1555,
+			"width": 1557,
 			"height": 959
 		},
 		"fetchSources": [
@@ -14,7 +14,7 @@
 			"ths_c"
 		],
 		"fetchByStocks": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
-		"fetchFromIndex": 305,
+		"fetchFromIndex": 260,
 		"stocksCsvFile": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
 		"stocksJsonFile": "E:\\dev\\csd\\stocks.json",
 		"hotCsvFile": "E:\\dev\\simg\\JX.txt",
@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2025-03",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2025-05",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -288,10 +288,10 @@
 	},
 	"system": {
 		"bounds": {
-			"x": 0,
-			"y": 0,
-			"width": 2195,
-			"height": 1205
+			"x": -7,
+			"y": -7,
+			"width": 2209,
+			"height": 1219
 		}
 	},
 	"tags": {
@@ -361,10 +361,10 @@
 	},
 	"stock_c": {
 		"bounds": {
-			"x": 3186,
-			"y": -91,
-			"width": 1742,
-			"height": 971
+			"x": 3216,
+			"y": -153,
+			"width": 1745,
+			"height": 973
 		}
 	},
 	"news2": {
@@ -376,6 +376,14 @@
 		}
 	},
 	"tags2": {
+		"bounds": {
+			"x": -7,
+			"y": -7,
+			"width": 2209,
+			"height": 1219
+		}
+	},
+	"system2": {
 		"bounds": {
 			"x": -7,
 			"y": -7,

@@ -15,9 +15,9 @@ import {
     ADD_LOGIC,
     EDIT_LOGIC,
     DEL_LOGIC,
-    ON_DEL_LOGIC_DONE,
+    DEL_LOGIC_DONE,
     SET_LOGIC_DONE,
-    ON_GET_LOGIC_DONE,
+    GET_LOGIC_DONE,
     GET_TAGS_DONE,
     SET_TAG_DONE, DEL_TAG_DONE, DEL_TAG,
 } from '../../../js/constants'
@@ -166,7 +166,7 @@ brick.reg('logicCtrl', function () {
         }
     };
 
-    scope.on(ON_SET_LOGIC_DONE, function (e, data) {
+    scope.on(SET_LOGIC_DONE, function (e, data) {
         scope.onGetLogicDone(data);
     });
 
@@ -201,7 +201,7 @@ brick.reg('setLogicCtrl', function () {
 
     // 当logic添加或修改完成，广播事件
     scope.done = function (data) {
-        scope.emit(ON_SET_LOGIC_DONE, data);
+        scope.emit(SET_LOGIC_DONE, data);
         $elm.icPopup(false);
     };
 
@@ -250,7 +250,7 @@ brick.reg('setLogicCtrl', function () {
         scope.render(vm);
     };
 
-    scope.on(`${ SET_TAG_DONE }, ${ ODEL_TAG_DONE }`, function (e, data) {
+    scope.on(`${ SET_TAG_DONE }, ${ DEL_TAG_DONE }`, function (e, data) {
         let vm = scope.vm;
         vm.logic = getFormVm();
         vm.tags = data['交易要素'];

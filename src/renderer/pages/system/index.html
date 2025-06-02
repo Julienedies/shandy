@@ -58,7 +58,7 @@
                             <header style="padding-bottom: 1.2rem;">
                                 <h3>
                                     <span class="title is-4"  ic-click="view:{{ v.id }}" ic-popup-target="details"> {{ v.name }} </span>
-                                    <sup style="padding:0 1em;" ic-class="{{ len>6000?'tag is-large is-danger ani-warn':'' }}">{{ len }}</sup>
+                                    <sup style="padding:0 1em;" ic-class="{{ len>6000?'tag is-large is-danger x-ani-warn':'' }}">{{ len }}</sup>
 
                                     <span class="tag is-danger" ic-if="Array.isArray(v['交易系统逻辑'])" ic-for="j,o in v['交易系统逻辑']">
                                         {{ o }}
@@ -93,7 +93,7 @@
                                 </span>
                             </div>-->
 
-<!--                            <div class="tags"
+                           <!-- <div class="tags"
                                  ic-viewer
                                  ic-viewer-item=">span"
                                  ic-viewer-url="href"
@@ -106,7 +106,7 @@
                                           ic-href="{{ parseImgPath(o) }}">
                                         {{ parseImgName(o) }}
                                     </span>
-                            </div>-->
+                            </div> -->
 
                             <div>
                                 <!-- column is-2 -->

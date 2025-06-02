@@ -18,12 +18,12 @@ import '../../js/common.js'
 import '../../js/common-stock.js'
 import '../../js/utils.js'
 
+import bridge from '../../../libs/utils'
+
 import tagsCtrl from './tags-ctrl'
 import detailsCtrl from './details-ctrl'
 import setTagCtrl from './set-tag-ctrl'
 import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
-
-import bridge from '../../../libs/utils'
 import attachCtrl from '../viewer/attach-ctrl'
 
 const setting = bridge.setting();

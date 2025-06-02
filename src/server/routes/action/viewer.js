@@ -26,8 +26,8 @@ export default {
     post (req, res) {
         let item = req.body;
         let viewerJsonDb = getDB();
-        viewerJsonDb.set(item);
-        res.json(viewerJsonDb.get());
+        let result = viewerJsonDb.set(item);
+        res.json(result);
     },
 
     del (req, res) {

@@ -133,13 +133,14 @@ export default {
         // 使用局部目录imagesJsonDb 代替全局 globalImagesJsonDb，解决文件大小问题
         // 已经使用viewer替代images目录进行缓存
         //let imagesJsonDb = dir ? imagesDbFactory(this.getDirKey(dir)) : globalImagesJsonDb;
-        console.log('supplement =>', arr);
+        //console.log('supplement =>', arr);
 
         return arr.map(f => {
-            // 先尝试从缓存images读取
+            
             let item;
 
             // 以下这段从缓存读取数据的代码会在生成viewerMap数据时造成内存溢出
+            // 先尝试从缓存images读取
             // let key = this.getKey(f);
             // item = imagesJsonDb.get(key);
             // if (item && item.c && item.d) return item;

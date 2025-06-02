@@ -28,6 +28,9 @@ brick.reg('mainCtrl', parentCtrl);
 brick.reg('parentCtrl', parentCtrl);
 
 
+window.TAGS_FILTER = ['交易错误','交易统计','交易风险','行情类型', '目标行情', '买点'];
+
+
 setTimeout(function () {
     brick.bootstrap();
 }, 30);

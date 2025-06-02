@@ -103,12 +103,14 @@ brick.reg('rpListCtrl', function (scope) {
         if (rp.line) {
             key = ('line.' + rp.title) + '.' + input
         } else {
-            if (/[.]/img.test(input)) {
-                key = input;  // 如果input里含有.,则使用input为key
+            if (/\^/img.test(input)) {
+                key = input.replace('^','');  // 如果input里含有^,则使用input为key, 但是删除^
+            } else if (/[.]/img.test(input)) {
+                key = input;  // 如果input里含有., 则使用input为key,保留.
             } else if (/[.]$/img.test(rp.alias)) {
-                key = rp.alias + input;  // 如果以.结尾，
+                key = rp.alias + input;  // 如果alias以.结尾，则key = 
             } else if (/-/img.test(rp.alias)) {
-                key = rp.alias.replace('-', input);
+                key = rp.alias.replace('-', input);  // 如果alias含-，则key = 
             } else {
                 key = rp.alias + '.' + input;
             }

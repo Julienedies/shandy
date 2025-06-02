@@ -43,12 +43,6 @@ body, html {
   }
 }
 
-#details{
-  .table th{
-    white-space: nowrap;
-  }
-}
-
 
 .box {
   padding: 1.8rem;
@@ -56,7 +50,7 @@ body, html {
 }
 
 
-/*.table_4 {
+.table_4 {
   .tr {
     padding: 14px 10px;
     border-bottom: solid 1px #e7e7ea;
@@ -71,7 +65,7 @@ body, html {
       border: none;
     }
   }
-}*/
+}
 
 
 [ic-viewer-popup] {

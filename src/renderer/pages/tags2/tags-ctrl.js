@@ -39,9 +39,9 @@ export default function () {
     // 点击type标签后把页面滚动到对应的标签组
     scope.goto = function (e, id, type, text) {
         if (type === 'type') {
-            let $target = $(`[tabindex=${ text }]`);
+            let $target = $(`[tabindex=${text}]`);
             if ($target.length) {
-                $('html, body').animate({scrollTop: $target.offset().top}, 500);
+                $('html, body').animate({ scrollTop: $target.offset().top }, 500);
             }
             return false;
         } else {
@@ -52,7 +52,7 @@ export default function () {
 
     // 添加标签
     scope.addTag = function (e, type) {
-        let vm = {type, parents: scope.model[type], types: types};
+        let vm = { type, parents: scope.model[type], types: types };
         scope.emit(SET_TAG, vm);
         return false;
     };

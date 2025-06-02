@@ -12,6 +12,7 @@ import '../../../js/common-stock.js'
 
 import bridge from 'e-bridge'
 
+
 brick.reg('c_ctrl', function () {
 
     let scope = this;
@@ -56,7 +57,8 @@ brick.reg('set_c_ctrl', function () {
         bridge.openExternal(url)
     }
 
-    alert(window.screen.screenLeft);
+
+    //alert(window.screen.screenLeft);
 
     if (window.screen.screenLeft >= 1700 || window.innerWidth === 1200) {
 

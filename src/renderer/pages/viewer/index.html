@@ -59,6 +59,9 @@
                         <label class="">按是否标记过滤:
                             <input type="checkbox" class="checkbox" value="" ic-change="filterByMarked">
                         </label>
+                        <label class="">过滤:
+                            <input style="width:7em;" type="text" class="input" ic-value="{{ model.filterInput || '' }}" ic-form-field="filterInput" id="filterInput" ic-enter-press="filterByInput">
+                        </label>
                     </div>
 
                     <div class="field">

@@ -49,7 +49,7 @@
     </div>
 
     <div id="systemList">
-        <ul class="gridStyle" ic-tpl="systemList">
+        <ul ic-tpl="systemList">
             <li ic-for="i,v in model" draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" data-id="{{ v.id }}" id="{{ 'k'+v.id }}">
                 <div class="box" ic-init="len=(v && v['示例图片'].length)||0;">
                     <div class="columns" style="align-items: start;">
@@ -57,8 +57,8 @@
                         <div style="flex-grow:1; min-width: 0;">
                             <header style="padding-bottom: 1.2rem;">
                                 <h3>
-                                    <span class="title is-4"  ic-click="view:{{ v.id }}" ic-popup-target="details"> {{ v.name }} </span>
-                                    <sup style="padding:0 1em;" ic-class="{{ len>6000?'tag is-large is-danger ani-warn':'' }}">{{ len }}</sup>
+                                    <span class="title is-4">{{ v.name }} </span>
+                                    <sup style="padding:0 1em;" ic-class="{{ len>6000?'tag is-large is-danger':'' }}">{{ len }}</sup>
 
                                     <span class="tag is-danger" ic-if="Array.isArray(v['交易系统逻辑'])" ic-for="j,o in v['交易系统逻辑']">
                                         {{ o }}
@@ -93,7 +93,7 @@
                                 </span>
                             </div>-->
 
-<!--                            <div class="tags"
+                            <div class="tags"
                                  ic-viewer
                                  ic-viewer-item=">span"
                                  ic-viewer-url="href"
@@ -106,13 +106,13 @@
                                           ic-href="{{ parseImgPath(o) }}">
                                         {{ parseImgName(o) }}
                                     </span>
-                            </div>-->
+                            </div>
 
                             <div>
                                 <!-- column is-2 -->
                                 <div class="buttons" style="flex-grow:0; flex-shrink:0; min-width: auto;">
-                                    <button class="button" ic-click="view:{{ v.id }}" ic-popup-target="details">  &nbsp; 详情 &nbsp;  </button>
                                     <button class="button" ic-click="edit:{{v.id}}">编辑</button>
+                                    <button class="button" ic-click="view:{{ v.id }}" ic-popup-target="details">详情</button>
                                     <button class="button"
                                             ic-ajax
                                             ic-submit-method="get"
@@ -142,7 +142,7 @@
         </ul>
 
 
-        <div id="details" class="column" ic-popup="details">
+        <div class="column" ic-popup="details">
             <div ic-tpl="details">
                 <div ic-init="v=model;">
                     <h5 class="title is-3">
@@ -152,17 +152,11 @@
                     <table class="table is-striped is-bordered is-fullwidth">
                         <tr>
                             <th>示例图片</th>
-                            <td>
-                                <div class="tags"
-                                     ic-viewer
-                                     ic-viewer-item=">.tag"
-                                     ic-viewer-url="href"
-                                     ic-viewer-interval="5"
-                                     ic-viewer-on-show="onViewerShow"
-                                     ic-viewer-on-open="onViewerOpen"
-                                     ic-viewer-on-close="onViewerClose">
+                            <td ic-viewer ic-viewer-url="href" ic-viewer-interval="5">
+                                <div class="tags">
                                     <span class="tag is-info"
                                           ic-for="i,o in (v['示例图片']||[])"
+                                          ic-viewer-item
                                           ic-href="{{ parseImgPath(o) }}">
                                         {{ parseImgName(o) }}
                                     </span>
@@ -177,7 +171,6 @@
 
                     <div class="column">
                         <div class="buttons">
-                            <button class="button is-primary" ic-popup-close="details">返回</button>
                             <button class="button is-primary" ic-click="edit:{{v.id}}">编辑</button>
                         </div>
                     </div>
@@ -192,9 +185,9 @@
     ${ require('../tags/set-tag.html') }
 </div>
 
-${ require('../viewer/viewerAttach.html') }
 
 ${ require('../viewer/markTag.html') }
+${ require('../viewer/viewerAttach.html') }
 
 </body>
 </html>

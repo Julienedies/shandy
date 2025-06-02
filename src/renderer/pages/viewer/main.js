@@ -39,7 +39,7 @@ import attachCtrl from './attach-ctrl'
 debugMenu.install();
 
 // 交易记录json
-const tradeArr = userJo('SEL', []).get();
+// const tradeArr = userJo('SEL', []).get();
 
 const viewerJodb = ju('viewer', [], { key: 'img' });
 const tagsJodb = jd('tags');
@@ -69,6 +69,7 @@ brick.reg('mainCtrl', function (scope) {
     let isRefresh = false;
     let isOrigin = false;  // 按图片原始时间排序
     let isFilterByMark = false; // 根据图片是否被标记进行过滤
+    let filterInput = '';
 
     let viewerCacheMap = {}; // 
     let urlsByDayMap = {};
@@ -97,6 +98,7 @@ brick.reg('mainCtrl', function (scope) {
             //helper2.setTo(viewerJodb); // 更改热点系统
         }
     };
+
 
 
     // 检查viewer.json里包含的图片是否存在于文件系统，不存在的话删除viewer.json里的记录
@@ -134,9 +136,9 @@ brick.reg('mainCtrl', function (scope) {
         viewerJodb.refresh();
         viewerCacheMap = {};
         isRefresh = true;
-        scope.init('');
+        scope.init();
         setTimeout(() => {
-            isRefresh = false;              
+            isRefresh = false;
         }, 200);
     };
 
@@ -145,24 +147,30 @@ brick.reg('mainCtrl', function (scope) {
         //scope.urls.reverse();
         //$list.icRender('list', scope.urls);
         isReverse = !isReverse;
-        scope.init('');
+        scope.init();
     };
 
     // 按原始顺序排序显示
     scope.toggleOrigin = function (e) {
         isOrigin = $(this).prop('checked');
-        scope.init('');
+        scope.init();
     };
 
     // 过滤图片是否已经标记
     scope.filterByMarked = function (e) {
         isFilterByMark = $(this).prop('checked');
-        scope.init('');
+        scope.init();
     };
-    
+
     // 
     scope.onFilterByMark = function () {
 
+    };
+
+    // 关键词过滤
+    scope.filterByInput = function (e) {
+        filterInput = $(this).val();
+        scope.init();
     };
 
 
@@ -198,13 +206,11 @@ brick.reg('mainCtrl', function (scope) {
                 viewerCacheMap[cacheKey] = value;
             }
 
-
             o.tradeInfoText = value.tradeInfo;
-            o.tags = value.tags;;
+            o.tags = value.tags;
             o.system = value.system;
 
         });
-
 
     }
 
@@ -225,6 +231,10 @@ brick.reg('mainCtrl', function (scope) {
         scope._init(urlsByDayMap[day]);
     };
 
+    /**
+     * 
+     * @param {*} [dir]
+     */
     scope.init = function (dir) {
         $.icSetLoading();
         // 为什么这里使用定时器？因为 $.icSetLoading
@@ -237,7 +247,7 @@ brick.reg('mainCtrl', function (scope) {
 
     /**
      * 显示目录下图片列表
-     * @param dir {Array| String} 图片数组或图片目录路径
+     * @param [dir] {Array| String} 图片数组或图片目录路径
      * @returns {Promise<*>}
      * @private
      */
@@ -274,6 +284,33 @@ brick.reg('mainCtrl', function (scope) {
             if (isFilterByMark) {
                 urls = urls.filter((v, i) => {
                     return v.system.length || v.tags.length;
+                });
+            }
+
+            // 如果有过滤关键词
+            if (filterInput) {
+                urls = urls.filter((v, i) => {
+                    let a = [];
+                    let b = [];
+                    if (v.f.includes(filterInput)) {
+                        return true;
+                    }
+                    if (v.system.length) {
+                        a = v.system.filter((v) => {
+                            return v.name.includes(filterInput);
+                        });
+                        if (a.length) {
+                            return true;
+                        }
+                    }
+                    if (v.tags.length) {
+                        b = v.tags.filter((v) => {
+                            return v.text.includes(filterInput);
+                        });
+                        if (b.length) {
+                            return true;
+                        }
+                    }
                 });
             }
 

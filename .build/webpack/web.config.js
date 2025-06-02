@@ -25,11 +25,11 @@ const context = path.resolve(__dirname, '../../src')
 const outputPath = path.resolve(__dirname, '../../dist/web/')
 const publicPath = ''
 
-///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////// 
 
 const entry = {}
 
-const entryJs = glob.sync(path.join(context, 'renderer/pages/+(stock|monitor|note|rp|rp2)/**/main.js')) || []
+const entryJs = glob.sync(path.join(context, 'renderer/pages/+(stock|monitor|note|rp|rp2|system2|tags2)/**/main.js')) || []
 
 let pages = entryJs.map((entryJsPath) => {
     let arr = entryJsPath.match(/pages\/(.+)\/main\.js$/i)
@@ -52,11 +52,11 @@ const plugins = [
         'process.env.DEV': JSON.stringify(!isPro),
     }),
     new ManifestPlugin(),
-    //new webpack.NoEmitOnErrorsPlugin(),  // 有错误的话就不输出编译文件
+    new webpack.NoEmitOnErrorsPlugin(),  // 有错误的话就不输出编译文件
     
-    // new CleanPlugin([`dist/web`], {
-    //     root: projectRoot
-    // })
+    new CleanPlugin([`dist/web`], {
+        root: projectRoot
+    })
 ]
 
 const devServerPort = 8090

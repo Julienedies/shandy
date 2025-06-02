@@ -2,7 +2,7 @@
  * Created by j on 2019-02-22.
  */
 
-import 'babel-polyfill'
+//import 'babel-polyfill'
 
 import './index.html'
 import '../../css/common/common.scss'
@@ -15,55 +15,37 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-import '../../js/common.js'
+//import '../../js/common.js'
 import '../../js/common-stock.js'
 import '../../js/utils.js'
 
 import C from '../../js/constants.js'
 
-import setTagCtrl from '../tags/set-tag-ctrl'
+import setTagCtrl from '../tags2/set-tag-ctrl'
+
 import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
+//import attachCtrl from '../viewer2/attach-ctrl'
 
-import bridge from '../../../libs/utils'
-import attachCtrl from '../viewer/attach-ctrl'
+//import bridge from '../../../libs/utils'
 
-const setting = bridge.setting();
+//const setting = bridge.setting();
+
 //brick.set('debug', true)
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
 
 
-window.TAGS_FILTER = ['交易错误','交易风险','行情类型', '目标行情'];
+window.TAGS_FILTER = ['交易错误','交易风险','行情类型', '目标行情', '行情驱动因素'];
 
 brick.set('ic-select-cla', 'is-info');
 
-brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
+brick.set('ic-viewer-interval', 3);
 
-
-
-///////////////////////////////////////////
-/*function handleStopWheel(e) {
-    e.preventDefault();
-}
-
-window.addEventListener("wheel", handleStopWheel, {
-    passive: false
-})
-
-$(document).on('scroll', function (e){
-    console.log(111, e);
-// 禁止事件的默认行为
-    e.preventDefault();
-    // 禁止事件继续传播
-    e.stopPropagation();
-    return false;
-});*/
-///////////////////////////////////////////////////
 
 brick.reg('setTagCtrl', setTagCtrl);
 
 brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);
 
-brick.reg('viewerAttachCtrl', attachCtrl);
+//brick.reg('viewerAttachCtrl', attachCtrl);
 
 
 
@@ -78,16 +60,6 @@ brick.reg('systemCtrl', function () {
 
     scope.vm = {};
 
-    function render (systemData) {
-        scope.render('systemList', systemData, function () {
-            $(this).find('>li')
-                .on('dragstart', scope.dragstart)
-                .on('dragover', scope.dragover)
-                .on('drop', scope.drop)
-                .on('dragleave', scope.dragleave);
-        });
-    }
-
     // 根据条件筛选交易系统
     scope.onConditionChange = function (e) {
         console.log(e);
@@ -99,19 +71,23 @@ brick.reg('systemCtrl', function () {
             let interArrB = _.intersection(filterArr, condArrB);
             return interArrB.length / condArrB.length - interArrA.length / condArrA.length;
         });
-        render(model.system);
+        scope.render('systemList', model.system);
     };
 
-    // markTag模块也会调用ajax：/stock/system，所以页面实际会执行两次
+    // markTag模块也会调用ajax：/stock/system，所以页面实际会执行两次/stock/system
     scope.onGetSystemDone = function (data) {
-        console.log('onGetSystemDone:');
         console.info(data);
         model = data;
-        let systemData = data.system;
-        systemManager.init(systemData);
+        systemManager.init(data.system);
         //scope.render('mqElement', data.tags['行情要素']);
         scope.render('condition', data.tags['交易系统条件']);
-        render(systemData);
+        scope.render('systemList', data.system, function () {
+            $(this).find('>li')
+                .on('dragstart', scope.dragstart)
+                .on('dragover', scope.dragover)
+                .on('drop', scope.drop)
+                .on('dragleave', scope.dragleave);
+        });
     };
 
     scope.toggleShowStyle = function () {
@@ -127,7 +103,6 @@ brick.reg('systemCtrl', function () {
         return false;
     };
 
-    // 查看系统详情
     scope.view = function (e, id) {
         viewId = id;
         let system = systemManager.get(id);
@@ -136,9 +111,6 @@ brick.reg('systemCtrl', function () {
 
     scope.view2 = function (e, id) {
         console.log(e.target.tagName)
-        /*        if(!/li/img.test(e.target.tagName)){
-                    return;
-                }*/
         viewId = id;
         let system = systemManager.get(id);
         scope.render('details', {model: system});
@@ -154,7 +126,7 @@ brick.reg('systemCtrl', function () {
         alert(data);
     };
 
-    scope.on(C.ON_SET_SYSTEM_DONE, function (e, msg) {
+    scope.on(C.SET_SYSTEM_DONE, function (e, msg) {
         console.info('ON_SET_SYSTEM_DONE =>', msg);
         scope.onGetSystemDone(msg);
         if (viewId) {
@@ -162,7 +134,7 @@ brick.reg('systemCtrl', function () {
         }
     });
 
-    scope.on('tag.edit.done', function (e, data) {
+    scope.on(C.SET_TAG_DONE, function (e, data) {
         model.tags = data;
     });
 
@@ -233,8 +205,10 @@ brick.reg('setSystemCtrl', function () {
         $elm.icPopup(true);
     }
 
+    // Ajax请求前 数据处理
     scope.submitBefore = function (data) {
-        // note: 如果上传数据的值是空数组[]，则被jquery忽略，所以把[]替换为''，才能覆盖旧值;
+        // 如果上传数据的值是空数组[]，则被jquery忽略，所以把[]替换为''，才能在服务器端覆盖旧值; 服务器端更新数据是通过Object.assign
+        // 我在有的地方是通过设置ajax  contentType: 'application/json', 把对象转成JSON.stringify(obj)上传
         for (let i in data) {
             let v = data[i];
             if (Array.isArray(v) && v.length === 0) {
@@ -252,11 +226,11 @@ brick.reg('setSystemCtrl', function () {
     scope.done = function (data) {
         console.log(data);
         $elm.icPopup(false);
-        scope.emit(C.ON_SET_SYSTEM_DONE, data);
+        scope.emit(C.SET_SYSTEM_DONE, data);
     };
 
     scope.editTag = function (e, id) {
-        scope.emit('tag.edit', tagsManager.get(id));
+        scope.emit(C.SET_TAG, tagsManager.get(id));
     };
 
     scope.onTagDeleteDone = render;
@@ -264,7 +238,7 @@ brick.reg('setSystemCtrl', function () {
     scope.on(C.ADD_SYSTEM, edit);
     scope.on(C.EDIT_SYSTEM, edit);
 
-    scope.on('tag.edit.done', function (e, data) {
+    scope.on(C.SET_TAG_DONE, function (e, data) {
         render(data);
     });
 

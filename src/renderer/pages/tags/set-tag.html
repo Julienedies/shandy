@@ -13,9 +13,9 @@
                            ic-select-input="tagType"
                            ic-has-readonly="model.type"
                            ic-form-field
-                           ic-field-rule="required">
+                           ic-field-rule="required"> <!--文本输入框 设定tag类型 -->
 
-                    <div ic-if="model.types">
+                    <div ic-if="model.types">  <!--选择按钮组 设定tag类型 -->
                         <div ic-select="tagType" ic-select-type="radio" ic-select-cla="is-info" ic-form-field="type">
                             <div class="tags">
                                 <span class="tag is-medium"
@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <div ic-if="model.parents || model.type==='交易要素' || model.type==='交易错误'">
+            <div ic-if="model.parents || model.type==='交易要素' || model.type==='交易错误'" style="display: none;">
                 <h6>父标签</h6>
                 <div>
                     <div>
@@ -75,7 +75,21 @@
             <div>
                 <h6>优先级</h6>
                 <div>
-                    <input class="input is-medium" type="number" name="level" ic-value="{{model.level}}" ic-form-field>
+                    <input class="input is-medium" type="number" name="level" ic-value="{{model.level||0}}" ic-form-field placeholder="标签组排序用">
+                </div>
+            </div>
+
+            <div>
+                <h6>级别</h6>
+                <div>
+                    <input class="input is-medium" type="number" name="rank" ic-value="{{model.rank||0}}" ic-form-field placeholder="标签级别">
+                </div>
+            </div>
+
+            <div>
+                <h6>权重</h6>
+                <div>
+                    <input class="input is-medium" type="number" name="weight" ic-value="{{model.weight||0}}" ic-form-field>
                 </div>
             </div>
 
@@ -129,6 +143,12 @@
                 <h6>key</h6>
                 <div>
                     <input class="input is-medium" type="text" name="key" value="{{model.key}}" ic-form-field>
+                </div>
+            </div>
+            <div>
+                <h6>sub</h6>
+                <div>
+                    <input class="input is-medium" type="text" name="sub" value="{{model.sub}}" ic-form-field>
                 </div>
             </div>
 

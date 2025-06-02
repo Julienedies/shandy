@@ -23,11 +23,12 @@ import C from '../../js/constants.js'
 
 import setTagCtrl from '../tags/set-tag-ctrl'
 import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
-
-import bridge from '../../../libs/utils'
 import attachCtrl from '../viewer/attach-ctrl'
 
-const setting = bridge.setting();
+//import bridge from '../../../libs/utils'
+
+//const setting = bridge.setting();
+
 //brick.set('debug', true)
 //brick.set('ic-event.extend', 'click,change,drag,drop,dragover')
 
@@ -36,28 +37,8 @@ window.TAGS_FILTER = ['交易错误','交易风险','行情类型', '目标行�
 
 brick.set('ic-select-cla', 'is-info');
 
-brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
+//brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
 
-
-
-///////////////////////////////////////////
-/*function handleStopWheel(e) {
-    e.preventDefault();
-}
-
-window.addEventListener("wheel", handleStopWheel, {
-    passive: false
-})
-
-$(document).on('scroll', function (e){
-    console.log(111, e);
-// 禁止事件的默认行为
-    e.preventDefault();
-    // 禁止事件继续传播
-    e.stopPropagation();
-    return false;
-});*/
-///////////////////////////////////////////////////
 
 brick.reg('setTagCtrl', setTagCtrl);
 
@@ -154,7 +135,7 @@ brick.reg('systemCtrl', function () {
         alert(data);
     };
 
-    scope.on(C.ON_SET_SYSTEM_DONE, function (e, msg) {
+    scope.on(C.SET_SYSTEM_DONE, function (e, msg) {
         console.info('ON_SET_SYSTEM_DONE =>', msg);
         scope.onGetSystemDone(msg);
         if (viewId) {

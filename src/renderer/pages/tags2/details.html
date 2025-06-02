@@ -1,14 +1,15 @@
 <div class="column" id="details" ic-popup="details" ic-ctrl="detailsCtrl">
     <h3 class="title is-4">&nbsp;&nbsp;<span id="typeTitle"></span></h3>
+
     <div ic-tpl="details">
         <table class="table is-bordered is-fullwidth" ic-click="close">
             <tr ic-for="i,v in model">
-                <th style="width:9em;">
+                <th style="width:12em;">
                     <div style="white-space: nowrap;">
                         <button class="button is-black" ic-click="edit:{{ v.id }}">{{ v.text }}</button>
                         <br/>
                         <!--<sub style="margin-left:1em;">id: {{ v.id }}</sub>-->
-                        <sub style="margin-left:1em;" ic-if="(v['示例图片']||[]).length"> len: {{ (v['示例图片']||[]).length }}</sub>
+                        <sub ic-if="(v['示例图片']||[]).length"> len: {{ (v['示例图片']||[]).length }}</sub>
                     </div>
                     <div class="pre">{{ v.desc }}</div>
                     <div class="tags"
@@ -33,7 +34,7 @@
                     <div class="nest" ic-if-start="v.children">
                         {{ brick.getTpl('details')({model:v.children}) }}
                     </div>
-                    <div style="overflow-y: scroll; max-height: 10em;" ic-else>
+                    <div ic-else>
                         <div class="tags"
                              ic-viewer
                              ic-viewer-item=">a"
