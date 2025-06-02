@@ -50,7 +50,7 @@ export default function (scope) {
         // viewer.json里并不包含所有img，所以有些图片的交易信息只能在viewer.init里进行绑定；
         let imgPath = currentImg.f;
 
-        if(!imgPath){
+        if (!imgPath) {
             return;
         }
 
@@ -78,15 +78,16 @@ export default function (scope) {
 
     }
 
-    
+
     // markTagCtrl控制器会独立获取system和tags数据，不附加图片数据
     scope.onGetSystemDone = function (data) {
         console.info('markTagCtrl onGetSystemDone', data);
-        model = data;  
+        model = data;
         // 首次获取数据render调用无用，但是system更新时有用
         render();
     };
 
+    
     // 响应其它控制器调用，这里会传进来当前查看的图片
     scope.on('viewer-markTag', function (e, msg) {
         console.log('markTagCtrl on viewer-markTag', msg);
@@ -99,6 +100,8 @@ export default function (scope) {
     scope.onChange = function (val) {
         imgObj[val.name] = val.value;
         console.log('markTagCtrl:onChange', imgObj);
+
+        scope.emit('viewer-change', imgObj);
 
         // let viewerJodb = getViewerDb();
         // viewerJodb.set(imgObj);
@@ -114,7 +117,7 @@ export default function (scope) {
         }).fail((msg) => {
             alert(msg);
         });
-        
+
     };
 
 

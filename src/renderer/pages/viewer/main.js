@@ -71,7 +71,8 @@ brick.reg('mainCtrl', function (scope) {
     let isFilterByMark = false; // 根据图片是否被标记进行过滤
     let filterInput = '';
 
-    let viewerCacheMap = {}; // 
+    let viewerCacheJo;
+    let viewerCacheMap = {}; // 废弃
     let urlsByDayMap = {};
 
     let tagsMap = {};
@@ -98,7 +99,6 @@ brick.reg('mainCtrl', function (scope) {
             //helper2.setTo(viewerJodb); // 更改热点系统
         }
     };
-
 
 
     // 检查viewer.json里包含的图片是否存在于文件系统，不存在的话删除viewer.json里的记录
@@ -178,41 +178,62 @@ brick.reg('mainCtrl', function (scope) {
     function bindViewerData(urls) {
         urls = urls || scope.urls;
 
+        let cacheJson = viewerCacheJo.json;
+
         // 遍历，绑定交易、标签等数据
         urls.forEach((o, i) => {
 
             // 附加标签信息 和 交易系统信息
             let f = o.f;
-            let cacheKey = helper.getKey(f);
-            let value = viewerCacheMap[cacheKey];
+            let cacheKey = helper.getImgKey(f);
+            let value = viewerCacheJo.get(cacheKey);
 
+            // 貌似没有标记的img每次都要遍历, 好像不是，默认会存一个空{ tags: [], system: [] }，下次就是undefined
             if (!value) {
 
                 value = {};
-                let obj = viewerJodb.get(f, 'img')[0] || { tags: [], system: [] };
+                let obj = viewerJodb.get2(f, 'img') || { tags: [], system: [] };
                 let arr = obj.tags || [];
                 let arr2 = obj.system || [];
 
                 value.tradeInfoText = obj.tradeInfo;
 
-                value.tags = arr.map((v) => {
-                    return tagsMap[v];
-                });
+                value.tags = arr;
 
-                value.system = arr2.map((v) => {
-                    return systemMap[v];
-                });
+                value.system = arr2;
 
-                viewerCacheMap[cacheKey] = value;
+                //viewerCacheJo.set(cacheKey, obj); // 避免频繁读写文件，影响效率
+                cacheJson[cacheKey] = value;
+
             }
 
+            value.tags = value.tags || [];
+            value.system = value.system || [];
+
             o.tradeInfoText = value.tradeInfo;
-            o.tags = value.tags;
-            o.system = value.system;
+            o.tags = value.tags.map((v) => {
+                return tagsMap[v];
+            });
+            o.system = value.system.map((v) => {
+                return systemMap[v];
+            });
 
         });
 
+        viewerCacheJo.save();
     }
+
+    // viewer mark change , 同时保存数据到相关目录
+    scope.on('viewer-change', function (e, obj) {
+        console.log('viewer-change', e, obj);
+        //let cacheKey = helper.getImgKey(obj.img);
+        //viewerCacheJo.set(cacheKey, obj);
+        // 服务器端会更新
+        setTimeout(() => {
+            viewerCacheJo.refresh();
+        }, 1000);
+
+    });
 
 
     // 按单日分类图片
@@ -273,12 +294,18 @@ brick.reg('mainCtrl', function (scope) {
             // let isAddTrade = /交易记录/img.test(dir);
 
             urls = helper.getImages(dir, { isReverse, isRefresh, isOrigin });
+
+            viewerCacheJo = helper.getViewerCacheJo(dir);
+
             if (!urls.length) {
                 return $.icMsg('no images.');
             }
 
             // 绑定附加viewer数据
             bindViewerData(urls);
+            urls.forEach((v) => {
+                // console.log(v.f)
+            });
 
             // 如果按是否标记对图片进行过滤
             if (isFilterByMark) {

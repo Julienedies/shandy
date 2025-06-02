@@ -5,17 +5,18 @@
 
 import jodbUser from '../../../libs/jodb-user'
 import ViewerMap, { beforeGet } from '../../helper/viewerMap'
+import imagesHelper from '../../../renderer/pages/viewer/helper'
 
 const viewerMap = ViewerMap.getInstance();  // 全局单例
 
 const getDB = function () {
-    return jodbUser('viewer', [], {key: 'img'});
+    return jodbUser('viewer', [], { key: 'img' });
 }
 
 
 export default {
 
-    get (req, res) {
+    get(req, res) {
         let id = req.params.id;
         let [[key, value]] = Object.entries(req.query);
         let viewerJsonDb = getDB();
@@ -23,14 +24,21 @@ export default {
         res.json(result);
     },
 
-    post (req, res) {
+    post(req, res) {
         let item = req.body;
         let viewerJsonDb = getDB();
         let result = viewerJsonDb.set(item);
         res.json(result);
+
+        // 同时更新特定的目录数据
+        let imgPath = item.img;
+        let viewerCacheJo = imagesHelper.getViewerCacheJo(imgPath);
+        let key = imagesHelper.getImgKey(imgPath);
+        let value = { tags: item.tags, system: item.system, tradeInfo: item.tradeInfo };
+        viewerCacheJo.set(key, value);
     },
 
-    del (req, res) {
+    del(req, res) {
         let id = req.params.id;
         let viewerJsonDb = getDB();
         viewerJsonDb.remove(id, 'id');
@@ -38,16 +46,16 @@ export default {
     },
 
     // 更新viewerMap.json
-    refresh (req, res) {
+    refresh(req, res) {
         let reverse = req.query.reverse;
         viewerMap.refresh(reverse);
-        res.json({msg: 'refresh tag&system ok'});
+        res.json({ msg: 'refresh tag&system ok' });
     },
 
     // 为viewer.json绑定交易信息
-    bindTradeInfo (req, res) {
+    bindTradeInfo(req, res) {
         viewerMap.bindTradeInfo();
-        res.json({msg: 'bindTradeInfo ok'});
+        res.json({ msg: 'bindTradeInfo ok' });
     }
 
 }
