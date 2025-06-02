@@ -231,7 +231,7 @@
 	},
 	{
 		"id": "IP经济",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1733048919195
 	},
 	{
@@ -791,7 +791,7 @@
 	},
 	{
 		"id": "无人机",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1710264325990
 	},
 	{
