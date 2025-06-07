@@ -44,7 +44,7 @@
                 </div>
                 <!-- 二级标题 -->
                 <div ic-class="field is-grouped {{ _HAS_SUB(model.filterByType) ? '' : 'none' }}" ic-if="_HAS_SUB(model.filterByType)">
-                    <div class="control" style="padding-left:24em;">
+                    <div class="control" style="padding-left:16em;">
                         <div class="buttons" ic-select="groups" ic-select-auto="false" ic-select-on-change="onGroupsChange">
                             <button class="button is-light is-small" ic-for="i,o in TAGS_MAP_BY_TEXT[model.filterByType].sub.split(/、/)" ic-select-item ic-val="{{ o }}">
                                 {{ o }}

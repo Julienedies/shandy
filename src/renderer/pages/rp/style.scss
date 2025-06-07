@@ -94,9 +94,9 @@ html, body {
     font-size: 1.1em;
   }
 
-  .warning {
-    //background: black;
-    //color: yellow;
+  .comment {
+    background: #0270ee;
+    color: #fff;
   }
 
   &.shrink {
@@ -268,7 +268,7 @@ html, body {
   .pre.text {
     //display: none;
     //color: #026bdb;
-    padding: 0.4em 0.5em 0 0.5em;
+    padding: 0.7em 0.5em 0 0.5em;
     color: #0270ee;
     font-weight: 500;
     font-size: 1.02rem;

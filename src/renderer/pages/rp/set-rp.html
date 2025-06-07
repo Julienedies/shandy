@@ -74,6 +74,15 @@
                     </p>
                 </div>
 
+                <div class="field has-addons">
+                    <div class="control">
+                        <button class="button is-info">别名</button>
+                    </div>
+                    <div class="control is-expanded">
+                        <input class="input" type="text" placeholder="Text input" value="{{ model.alias2 }}" ic-form-field="alias2">
+                    </div>
+                </div>
+
                 <!-- 添加所属项 -->
                 <div class="field is-grouped is-grouped-multiline" ic-select="options" ic-select-type="checkbox" ic-form-field="options">
                     <div class="control" ic-for="i,v in model.options">

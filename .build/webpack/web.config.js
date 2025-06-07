@@ -29,7 +29,7 @@ const publicPath = ''
 
 const entry = {}
 
-const entryJs = glob.sync(path.join(context, 'renderer/pages/+(stock|monitor|memo|note|note2|rp|system2)/**/main.js')) || []
+const entryJs = glob.sync(path.join(context, 'renderer/pages/+(stock|monitor|memo|note|note2|rp|tags2|system2)/**/main.js')) || []
 
 let pages = entryJs.map((entryJsPath) => {
     let arr = entryJsPath.match(/pages\/(.+)\/main\.js$/i)

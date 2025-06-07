@@ -5,6 +5,7 @@
 import './index.html'
 import '../../css/common/common.scss'
 import './style.scss'
+import '../viewer/icViewer.scss'
 
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
@@ -17,16 +18,19 @@ import '../../js/common.js'
 import '../../js/common-stock.js'
 import '../../js/utils.js'
 
+import bridge from '../../../libs/utils'
+
 import tagsCtrl from './tags-ctrl'
 import detailsCtrl from './details-ctrl'
 import setTagCtrl from './set-tag-ctrl'
 import viewerMarkTagCtrl from '../viewer/markTag-ctrl'
-
-import bridge from '../../../libs/utils'
+import attachCtrl from '../viewer/attach-ctrl'
 
 const setting = bridge.setting();
 
-window.brick = brick; // 不是测试用；模板里需要全局获取
+window.brick = brick; // 不是测试用；模板里需要全局获取用于嵌套模板 {{ brick.getTpl('details')({model:v.children}) }}
+
+window.TAGS_FILTER = ['交易错误','交易统计','交易风险','行情类型', '目标行情', '买点'];
 
 brick.set('ic-viewer-interval', setting.get('icViewerInterval'));
 
@@ -36,4 +40,7 @@ brick.reg('setTagCtrl', setTagCtrl);
 
 brick.reg('detailsCtrl', detailsCtrl);
 
+
 brick.reg('viewerMarkTagCtrl', viewerMarkTagCtrl);
+
+brick.reg('viewerAttachCtrl', attachCtrl);

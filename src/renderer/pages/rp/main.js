@@ -78,13 +78,28 @@ brick.reg('rpListCtrl', function (scope) {
     scope.listManager = listManager;
 
 
+
     window._GET_RP_KEY = function (rp, tagType) {
         let key = '';
+
+        const getAliasMap = function (str) {
+            let result = {};
+            let arr = str.split(/[;||；]/img);
+            arr.map((v) => {
+                let a = v.split(/[:：]/);
+                result[a[0]] = a[1];
+            });
+            return result;
+        };
+
         if (rp.line) {
             key = 'line.' + (rp.alias || rp.title) + '.' + tagType;
         } else {
-            // 如果以.结尾，
-            if (/[.]$/img.test(rp.alias)) {
+            if (rp.alias2) {
+                let map = getAliasMap(rp.alias2);
+                key = rp.alias + '.' + (map[tagType] || tagType);
+                key = key.replace('..', '.');
+            } else if (/[.]$/img.test(rp.alias)) { // 如果以.结尾，
                 key = rp.alias + tagType;
             } else if (/-/img.test(rp.alias)) {
                 key = rp.alias.replace('-', tagType);
@@ -456,7 +471,7 @@ brick.reg('rpListCtrl', function (scope) {
     scope.plus = function (e, id) {
         let item = listManager.get(id);
         let level = (item.level || 1) * 1;
-        item.level = level + 1;
+        item.level = level + 500;
         $.post('/stock/rp', item).done((data) => {
             setList(data);
         });

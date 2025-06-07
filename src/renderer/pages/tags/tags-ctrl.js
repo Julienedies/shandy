@@ -5,7 +5,7 @@
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 
-import { SET_TAG, EDIT_TAG, SET_TAG_DONE } from '../../js/constants'
+import { SET_TAG, SET_TAG_DONE } from '../../js/constants'
 
 export default function () {
 
