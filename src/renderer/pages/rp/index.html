@@ -5,6 +5,7 @@
     <title>rp</title>
     <link rel="stylesheet" href="../../css/vendor/bulma/bulma.css">
     <link rel="stylesheet" href="../../css/vendor/effeckt/animations.css">
+    <link rel="stylesheet" href="../../css/vendor/hint.css"/>
     <script src="/set_node_modules_path.js"></script>
     <script src="/socket.io/socket.io.js"></script>
 </head>
@@ -46,7 +47,7 @@
                 <div ic-class="field is-grouped {{ _HAS_SUB(model.filterByType) ? '' : 'none' }}" ic-if="_HAS_SUB(model.filterByType)">
                     <div class="control" style="padding-left:16em;">
                         <div class="buttons" ic-select="groups" ic-select-auto="false" ic-select-on-change="onGroupsChange">
-                            <button class="button is-light is-small" ic-for="i,o in TAGS_MAP_BY_TEXT[model.filterByType].sub.split(/、/)" ic-select-item ic-val="{{ o }}">
+                            <button class="button is-light is-small" ic-for="i,o in TAGS_MAP_BY_TEXT[model.filterByType].sub.split(/、/)"  ic-select-item ic-val="{{ o }}">
                                 {{ o }}
                             </button>
                         </div>
@@ -67,7 +68,7 @@
                                 </h3>
                             </header>
 
-                            <section ic-class="wrap {{ rp.freeze?'shrink':'' }}">
+                            <div ic-class="wrap {{ rp.freeze?'shrink':'' }}">
 
                                 <!-- 是否有嵌入的子元素 -->
                                 <!-- <div class="box" ic-if="rp.inset">
@@ -76,6 +77,7 @@
                                 <!-- 是否有标签选项  -->
                                 <div class="options" ic-if="rp.options && rp.options.length">
                                     <div class="field is-grouped is-grouped-multiline"
+                                         style="padding-bottom: 0.4rem;"
                                          ic-for="tagType,tagArr in rp._options"
                                          ic-select="{{ _GET_RP_KEY(rp, tagType) }}"
                                          ic-select-auto="false"
@@ -84,29 +86,38 @@
                                          ic-select-item="span.item"
                                          ic-form-field="{{ _GET_RP_KEY(rp, tagType) }}">
 
+                                        <!-- 标签选项标题 -->
                                         <div class="control">
                                             <span class="button is-primary">{{ _GET_RP_KEY(rp, tagType) }}</span>
                                         </div>
+
+                                        <!-- 标签列表 -->
                                         <div class="control" ic-for="j,o in tagArr">
                                             <div class="buttons has-addons" ic-init="m=rpForm[_GET_RP_KEY(rp, tagType)] ||[];">
-                                                <span class="button is-light item" ic-if-start="o.type==='交易错误'" ic-val="{{ o.text }}"
-                                                      ic-has-selected="m.includes(o.text)">
+                                                <span class="button is-light item hint--top-right" ic-if-start="o.type==='交易错误'" ic-val="{{ o.text }}"
+                                                      ic-has-selected="m.includes(o.text)" aria-label="{{ o.desc }}">
                                                     {{ o.text }} <sup>{{ o.level }}</sup>
                                                 </span>
-                                                <span class="button item" ic-else-if="o.type==='交易要素'" ic-val="{{ o.text }}">
+                                                <span class="button item hint--top-right" ic-else-if="o.type==='交易要素'" ic-val="{{ o.text }}"
+                                                      aria-label="{{ o.desc }}">
                                                     {{ o.text }}
                                                 </span>
-                                                <span class="button is-light item" ic-else ic-val="{{ o.text }}" ic-has-selected="m.includes(o.text)">
+                                                <span class="button is-light item hint--top-right" ic-else ic-val="{{ o.text }}"
+                                                      ic-has-selected="m.includes(o.text)" aria-label="{{ o.desc }}">
                                                     {{ o.text }} <sup>{{ o.level }}</sup>
                                                 </span>
-                                                <a class="button is-light" ic-click="editTag:{{o.id}}">
+                                                <a class="button is-light" ic-click="editTag:{{ o.id }}" title="修改">
                                                     <span class="icon"><i class="far fa-edit"></i></span>
                                                 </a>
+                                                <button class="button is-light delBtn" ic-click="delTag:{{ o.id }}" title="删除">
+                                                    <!--<span class="icon"><i class="far fa-times"></i></span>-->
+                                                    <span class="tag is-delete"></span>
+                                                </button>
                                             </div>
                                         </div>
 
                                         <div class="control">
-                                            <a class="tag" ic-click="addTag:{{ tagType }}">
+                                            <a class="button is-light" ic-click="addTag:{{ tagType }}" title="添加新标签">
                                                 <span class="icon"><i class="fas fa-file-medical"></i></span>
                                             </a>
                                         </div>
@@ -115,7 +126,7 @@
                                 </div>
 
                                 <!-- 是否表单输入框 -->
-                                <div ic-if="rp.input">
+                                <div class="inputBox" ic-if="rp.input">
                                     <div class="field has-addons" ic-for="i,v in rp.input.split(/[,、，]/img)" style="padding: 0.65em 0 0;">
                                         <div class="control">
                                             <button class="button is-primary">
@@ -133,8 +144,8 @@
 
                                 <div class="pre text" ic-click="togglePre">{{ rp.content }}</div>
 
+                            </div>
 
-                            </section>
                             <div style="padding: 0.25em 1em 0.45em 1em;">
                                 <div class="tags is-right">
                                     <span class="tag is-small" title="rp的别名" ic-if="rp.line"> {{ rp.line }}</span>
@@ -184,12 +195,12 @@
                                     </div>
                                 </div>
 
-                               <!-- <div class="field is-grouped is-grouped-centered">
-                                    <div class="control">交易备注</div>
-                                    <div class="control is-expanded">
-                                        <textarea id="rpPlanItem" class="textarea" ic-form-field="交易备注" rows="1">{{ rpForm['交易备注'] }}</textarea>
-                                    </div>
-                                </div>-->
+                                <!-- <div class="field is-grouped is-grouped-centered">
+                                     <div class="control">交易备注</div>
+                                     <div class="control is-expanded">
+                                         <textarea id="rpPlanItem" class="textarea" ic-form-field="交易备注" rows="1">{{ rpForm['交易备注'] }}</textarea>
+                                     </div>
+                                 </div>-->
 
                                 <div class="field is-grouped is-grouped-centered">
                                     <div class="control">

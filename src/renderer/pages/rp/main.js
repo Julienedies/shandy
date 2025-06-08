@@ -78,7 +78,6 @@ brick.reg('rpListCtrl', function (scope) {
     scope.listManager = listManager;
 
 
-
     window._GET_RP_KEY = function (rp, tagType) {
         let key = '';
 
@@ -140,9 +139,9 @@ brick.reg('rpListCtrl', function (scope) {
         type = type || '复盘&计划';
         return text === type;
     };
-    // 是不是有子标题选项
+
+    // tag是不是有子标题选项
     window._HAS_SUB = function (text) {
-        console.log(text);
         let tagObj = TAGS_MAP_BY_TEXT[text];
         return tagObj ? tagObj.sub : null;
     }
@@ -299,7 +298,6 @@ brick.reg('rpListCtrl', function (scope) {
 
         listManager.init(rpData);
 
-
         render();
         createRpMap(rpData);  //replay2里依然有在用
     }
@@ -321,7 +319,7 @@ brick.reg('rpListCtrl', function (scope) {
     });
     // });
 
-    // 处理tag数据改变事件
+    // 处理tag数据改变事件, 这些都是setTagCtrl广播的事件
     scope.on(TAGS_CHANGE, function (e, data) {
         console.log('on TAGS_CHANGE');
         render();
@@ -330,6 +328,11 @@ brick.reg('rpListCtrl', function (scope) {
     // main
     getRpData();
     getRpForm(forDate);
+
+    // 删除一个标签，通过setTagCtrl全局统一处理
+    scope.delTag = function (e, id) {
+        scope.emit(DEL_TAG, id);
+    };
 
 
     scope.reset = function () {
@@ -471,7 +474,7 @@ brick.reg('rpListCtrl', function (scope) {
     scope.plus = function (e, id) {
         let item = listManager.get(id);
         let level = (item.level || 1) * 1;
-        item.level = level + 500;
+        item.level = level + 1;
         $.post('/stock/rp', item).done((data) => {
             setList(data);
         });

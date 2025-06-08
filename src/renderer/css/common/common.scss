@@ -47,7 +47,7 @@ html, body {
   }
 }
 
-.tag:not(body).is-delete::before, .tag:not(body).is-delete::after{
+.tag:not(body).is-delete::before, .tag:not(body).is-delete::after {
   opacity: .4;
 }
 
@@ -108,6 +108,7 @@ a.tag, a.tag:hover {
 }
 
 .tag sup, .tag sub, .button sup {
+  display: inline-block;
   margin-top: -0.9em;
   opacity: 0.5;
   transform: scale(0.8);
@@ -130,18 +131,18 @@ a.tag, a.tag:hover {
   color: rgb(35, 34, 34);
 }
 
-
-.button.is-replay, .button.is-up, .button.is-down {
+// rp page options button
+.button.is-replay, .button.is-up, .button.is-down, .tag.is-replay, .tag.is-up, .tag.is-down {
   color: #fff;
   border-color: transparent;
 
   &:hover {
-    color: #fff!important;
+    color: #fff !important;
     border-color: transparent;
   }
 }
 
-.button.is-replay {
+.button.is-replay, .tag.is-replay {
   background-color: #0e57f7;
 
   &:hover {
@@ -149,7 +150,7 @@ a.tag, a.tag:hover {
   }
 }
 
-.button.is-up {
+.button.is-up, .tag.is-up {
   background-color: #ff5c5c;
 
   &:hover {
@@ -157,7 +158,7 @@ a.tag, a.tag:hover {
   }
 }
 
-.button.is-down {
+.button.is-down, .tag.is-down {
   //background-color: #0bd9b6;
   background-color: #0abf9b;
 
@@ -187,7 +188,7 @@ a.tag, a.tag:hover {
 .tag:not(body).is-info {
   background: #2C63ae;
   background: #117de2;
-  color:#fff;
+  color: #fff;
 }
 
 ///////////////////

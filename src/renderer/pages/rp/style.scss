@@ -48,6 +48,8 @@ html, body {
 
 //========================================
 #rpList {
+    overflow-x: hidden;
+
   .box {
     margin-bottom: 2.5rem;
   }
@@ -56,9 +58,24 @@ html, body {
     background-color: #04c6a9;
   }
 
-  .options .button {
-    font-size: 0.92rem;
+  .options {
+    .button {
+      font-size: 0.92rem;
+      margin-right: 1px;
+    }
+
+    .delBtn {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .tag.is-delete {
+      font-size: 0.94rem;
+      width: 1.7em;
+      background: transparent !important;
+    }
   }
+
 
   .tag:not(body).is-medium {
     font-size: 1rem;
@@ -88,7 +105,7 @@ html, body {
     background: yellow;
     color: black;
     display: inline-block;
-    margin: 0.5em 0 0;
+    margin: 0.9em 0 0;
     padding: 0.1em 0.5em;
     font-weight: 500;
     font-size: 1.1em;
@@ -161,6 +178,7 @@ html, body {
           color: yellow;
           font-size: 20px;
           font-weight: 700;
+
           span {
           }
 
