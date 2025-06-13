@@ -90,7 +90,7 @@ export default function (scope) {
     
     // 响应其它控制器调用，这里会传进来当前查看的图片
     scope.on('viewer-markTag', function (e, msg) {
-        console.log('markTagCtrl on viewer-markTag', msg);
+        //console.log('markTagCtrl on viewer-markTag', msg);
         currentImg = msg;
         render();
     });
@@ -113,7 +113,7 @@ export default function (scope) {
             contentType: 'application/json',
             data: JSON.stringify(imgObj)
         }).done((data) => {
-            console.log(data);
+            console.log('viewer post ok: ', data[0]);
         }).fail((msg) => {
             alert(msg);
         });

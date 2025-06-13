@@ -61,22 +61,23 @@ brick.reg('mainCtrl', function (scope) {
 
     const historyModel = brick.services.get('historyModel');
 
+    let $elm = scope.$elm;
     let $list = $('#list');
     let $imgDir = $('input[name=imgDir]');
     let $countShow;
 
     let isReverse = true; // 图片顺序反转
-    let isRefresh = false;
+    let isRefresh = false;  // 是否刷新
     let isOrigin = false;  // 按图片原始时间排序
     let isFilterByMark = false; // 根据图片是否被标记进行过滤
-    let filterInput = '';
+    let filterInput = ''; // 过滤关键词
 
-    let viewerCacheJo;
-    let viewerCacheMap = {}; // 废弃
-    let urlsByDayMap = {};
+    let viewerCacheJo;  // 针对目录的viewer tag 、system 数据
+    let urlsByDayMap = {}; // 图片按日期分组map
+    let viewDate;  // 要查看的日期
 
-    let tagsMap = {};
-    let systemMap = {};
+    let tagsMap = {};  // 以tag id 为Key 生成 tags Map
+    let systemMap = {}; // 以system id 为key 生成 system Map
 
     tagsJodb.each((item) => {
         tagsMap[item.id] = item;
@@ -86,6 +87,7 @@ brick.reg('mainCtrl', function (scope) {
     });
 
 
+    // 设置viewer播放间隔
     scope.setViewerInterval = function (e) {
         let val = $(this).val() * 1;
         brick.icViewer.set('interval', val);
@@ -95,7 +97,7 @@ brick.reg('mainCtrl', function (scope) {
 
     // 特定临时操作
     scope.ls = function () {
-        if (confirm('确定此次临时操作？？？')) {
+        if (confirm('确定此次临时操作？？？ 记得先备份数据，避免数据损坏！')) {
             //helper2.setTo(viewerJodb); // 更改热点系统
         }
     };
@@ -126,7 +128,7 @@ brick.reg('mainCtrl', function (scope) {
 
     };
 
-    // 刷新目录缓存数据
+    // 刷新page
     scope.reload = function (e) {
         location.reload();
     };
@@ -134,15 +136,16 @@ brick.reg('mainCtrl', function (scope) {
     // 刷新目录缓存数据
     scope.refresh = function (e) {
         viewerJodb.refresh();
-        viewerCacheMap = {};
         isRefresh = true;
+        isFilterByMark = false;
+        filterInput = '';
         scope.init();
         setTimeout(() => {
             isRefresh = false;
         }, 200);
     };
 
-    // 反转图片列表
+    // 反转图片列表排序
     scope.reverse = function (e) {
         //scope.urls.reverse();
         //$list.icRender('list', scope.urls);
@@ -157,24 +160,61 @@ brick.reg('mainCtrl', function (scope) {
     };
 
     // 过滤图片是否已经标记
-    scope.filterByMarked = function (e) {
+    scope.onFilterByMarked = function (e) {
         isFilterByMark = $(this).prop('checked');
         scope.init();
     };
 
-    // 
-    scope.onFilterByMark = function () {
-
+    // 按照点击的tag过滤图片urls
+    scope.onFilterByTag = function (e, tag) {
+        console.log(tag);
+        e.stopPropagation();
+        filterInput = tag;
+        $elm.find('#filterInput').val(tag);
+        let urls = _filterByInput(scope.urls, filterInput);
+        scope._init(urls);
     };
 
-    // 关键词过滤
-    scope.filterByInput = function (e) {
+    // 根据输入的关键词过滤图片urls
+    scope.onFilterByInput = function (e) {
         filterInput = $(this).val();
-        scope.init();
+        if (filterInput) {
+            let urls = _filterByInput(scope.urls, filterInput);
+            scope._init(urls);
+        } else {
+            scope.init();
+        }
     };
 
+    // 根据输入的关键词过滤图片urls
+    function _filterByInput(urls, filterInput) {
+        return urls.filter((v, i) => {
+            let a = [];
+            let b = [];
+            if (v.f.includes(filterInput)) {
+                return true;
+            }
+            if (v.system.length) {
+                a = v.system.filter((v) => {
+                    return v.name.includes(filterInput);
+                });
+                if (a.length) {
+                    return true;
+                }
+            }
+            if (v.tags.length) {
+                b = v.tags.filter((v) => {
+                    return v.text.includes(filterInput);
+                });
+                if (b.length) {
+                    return true;
+                }
+            }
+        });
+    }
 
-    // 缓存viewer数据
+
+    // 缓存viewer数据, 局部目录
     function bindViewerData(urls) {
         urls = urls || scope.urls;
 
@@ -235,6 +275,12 @@ brick.reg('mainCtrl', function (scope) {
 
     });
 
+    // viewer关闭后，因为markTag标签改变，需要更新urls数据
+    scope.on('viewer-close', function () {
+        bindViewerData(scope.urls);
+        scope._init(scope.urls);
+    });
+
 
     // 按单日分类图片
     function viewByDay() {
@@ -244,11 +290,12 @@ brick.reg('mainCtrl', function (scope) {
             let arr = urlsByDayMap[d] = urlsByDayMap[d] || [];
             arr.push(v);
         });
-        scope.render('viewByDay', { model: urlsByDayMap });
+        scope.render('viewByDay', { model: { map: urlsByDayMap, date: viewDate } });
     }
 
     // 点击后显示单日的股票
     scope.viewForDay = function (e, day) {
+        viewDate = day;
         scope._init(urlsByDayMap[day]);
     };
 
@@ -274,10 +321,10 @@ brick.reg('mainCtrl', function (scope) {
      */
     scope._init = async function (dir) {
         let urls;
-        // 如果直接传递一个图片数组
+        // 如果直接传递一个图片数组, 通常是查看某天图片
         if (Array.isArray(dir)) {
-
             urls = dir;
+            console.log('init调用参数 传递了一个数组，而不是一个目录');
             console.log('urls =>', urls);
             scope.urls = urls;
 
@@ -290,9 +337,6 @@ brick.reg('mainCtrl', function (scope) {
             }
             $imgDir.val(dir);
 
-            // 如果是股票交易记录图片，添加交易记录
-            // let isAddTrade = /交易记录/img.test(dir);
-
             urls = helper.getImages(dir, { isReverse, isRefresh, isOrigin });
 
             viewerCacheJo = helper.getViewerCacheJo(dir);
@@ -303,9 +347,6 @@ brick.reg('mainCtrl', function (scope) {
 
             // 绑定附加viewer数据
             bindViewerData(urls);
-            urls.forEach((v) => {
-                // console.log(v.f)
-            });
 
             // 如果按是否标记对图片进行过滤
             if (isFilterByMark) {
@@ -316,43 +357,27 @@ brick.reg('mainCtrl', function (scope) {
 
             // 如果有过滤关键词
             if (filterInput) {
-                urls = urls.filter((v, i) => {
-                    let a = [];
-                    let b = [];
-                    if (v.f.includes(filterInput)) {
-                        return true;
-                    }
-                    if (v.system.length) {
-                        a = v.system.filter((v) => {
-                            return v.name.includes(filterInput);
-                        });
-                        if (a.length) {
-                            return true;
-                        }
-                    }
-                    if (v.tags.length) {
-                        b = v.tags.filter((v) => {
-                            return v.text.includes(filterInput);
-                        });
-                        if (b.length) {
-                            return true;
-                        }
-                    }
-                });
+                urls = _filterByInput(urls, filterInput);
             }
 
             console.log('urls =>', urls);
             scope.urls = urls;
 
-            setting.refresh().set('viewer.imgDir', dir);
-
             // 原始顺序模式下显示日列表
             urlsByDayMap = {}; // 清空上次月份的单日数据
-            scope.render('viewByDay', { model: {} });
-            isOrigin && viewByDay(); // 按单日分类图片
+            scope.render('viewByDay', { model: { map: {}, date: '' } });
+            if (isOrigin) {
+                viewByDay(); // 按单日分类图片
+                if (viewDate) {
+                    urls = urlsByDayMap[viewDate];
+                    scope.urls = urls;
+                }
+            }
+
+
+            setting.refresh().set('viewer.imgDir', dir);
+
         }
-
-
 
         $list.icRender('list', urls);
         $('#countShow').text(`共有 ${urls.length} 项.`);

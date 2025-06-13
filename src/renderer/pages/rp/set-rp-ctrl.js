@@ -10,7 +10,7 @@ import {
     ADD_TAG,
     DEL_TAG,
     GET_TAGS_DONE,
-    ON_DEL_TAG_DONE,
+    DEL_TAG_DONE,
     TAGS_CHANGE,
     READY_SELECT_TAGS,
     TAG_SELECT_CHANGE, FroalaEditorConfig

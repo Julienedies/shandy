@@ -38,11 +38,12 @@ export default {
      * @returns {Array} 图片数组  [{f:图片路径，c:图片创建时间戳，d:图片创建日期, code: 股票code}]
      */
     getImages: function (dir, conf = { isOnlyPath: false, isReverse: true, isRefresh: false, isOrigin: false }) {
+
         console.log('getImages => ', dir);
+
         let arr;
 
         // 首先尝试使用图片目录缓存
-        //console.log(this.getDirKey(dir));
         let key = this.getDirKey(dir);
         if (conf.isReverse === false) {
             key = key + '_R';

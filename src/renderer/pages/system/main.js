@@ -233,7 +233,7 @@ brick.reg('setSystemCtrl', function () {
     scope.done = function (data) {
         console.log(data);
         $elm.icPopup(false);
-        scope.emit(C.ON_SET_SYSTEM_DONE, data);
+        scope.emit(C.SET_SYSTEM_DONE, data);
     };
 
     scope.editTag = function (e, id) {

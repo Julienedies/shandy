@@ -1,5 +1,20 @@
 [
 	{
+		"id": "稀土永磁",
+		"selected": true,
+		"timestamp": 1749574372786
+	},
+	{
+		"id": "体育",
+		"selected": true,
+		"timestamp": 1749494246359
+	},
+	{
+		"id": "摘帽",
+		"selected": false,
+		"timestamp": 1749054978056
+	},
+	{
 		"id": "数字货币",
 		"selected": true,
 		"timestamp": 1748527356692
@@ -146,7 +161,7 @@
 	},
 	{
 		"id": "核电",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1736296983336
 	},
 	{
@@ -356,7 +371,7 @@
 	},
 	{
 		"id": "重组",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1726159617866
 	},
 	{
@@ -401,7 +416,7 @@
 	},
 	{
 		"id": "固态电池",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1724934834987
 	},
 	{
@@ -731,7 +746,7 @@
 	},
 	{
 		"id": "黄金",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1712031538867
 	},
 	{
@@ -791,7 +806,7 @@
 	},
 	{
 		"id": "无人机",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1710264325990
 	},
 	{
@@ -921,7 +936,7 @@
 	},
 	{
 		"id": "无人驾驶",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1688482143101
 	},
 	{

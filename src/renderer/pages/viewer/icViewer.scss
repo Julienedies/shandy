@@ -20,7 +20,8 @@
     margin-right: 1rem;
   }
 
-  .tag, .button {
+  .tag,
+  .button {
     opacity: 0;
   }
 
@@ -33,7 +34,8 @@
   &:hover {
     background: rgba(0, 0, 0, 0.8) !important;
 
-    .tag, .button {
+    .tag,
+    .button {
       opacity: 1;
     }
 
@@ -76,7 +78,8 @@
 }
 
 
-#ic-viewer-info, #ic-viewer-handle {
+#ic-viewer-info,
+#ic-viewer-handle {
   left: 74% !important;
   right: auto !important;
   top: auto !important;
@@ -92,6 +95,7 @@
 
 #ic-viewer-info {
   top: 0 !important;
+  margin:-1px 0 0 -90px;
   height: 1.6em;
   overflow: hidden;
   font-size: 1.2em;
@@ -99,4 +103,3 @@
   //color: blue!important;
   background: rgba(0, 0, 0, 0.9) !important;
 }
-
