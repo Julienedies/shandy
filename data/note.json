@@ -55,18 +55,6 @@
 		"timestamp": 1742569086261
 	},
 	{
-		"text": "603810 丰山集团 603035 常熟汽饰 603612 索通发展 300975 商络电子 603203 快克智能 603297 永新光学 605228 神通科技 688048 长光华芯 688372 伟测科技 300461 田中精机 300679 电连技术 300128 锦富技术 605358 立昂微 2281 光迅科技",
-		"type": "",
-		"id": "id_1741739720208_1070",
-		"timestamp": 1741739720208
-	},
-	{
-		"text": "欧菲光、全志科技、弘信电子、京城股份、友阿股份、信测标准、震裕科技、美力科技、联创电子、汉威科技、永利股份、江苏雷利、德迈仕、金杨股份、拓普集团、豪能股份、聚赛龙、模塑科技、山东威达、兆威机电、横河精密、钧崴电子、瑞芯微、石头科技等",
-		"type": "",
-		"id": "id_1741503560451_9500",
-		"timestamp": 1741503560451
-	},
-	{
 		"id": "id_1732454882560_1727",
 		"type": "",
 		"level": "0",
@@ -101,7 +89,7 @@
 	},
 	{
 		"id": "id_1726614867916_1058",
-		"type": "",
+		"type": "ps",
 		"level": "0",
 		"text": "wifi密码：sceehqaq",
 		"timestamp": 1726614867916
@@ -126,7 +114,7 @@
 		"timestamp": 1723552997275
 	},
 	{
-		"text": "git log --date=format:\"%Y-%m-%d\"\n\nTv/jjdjr/2013/al!@#$%^&*",
+		"text": "git log --date=format:\"%Y-%m-%d\"\n",
 		"type": "git",
 		"id": "id_1719159343301_6826",
 		"timestamp": 1719159343301,
@@ -298,12 +286,6 @@
 		"type": "",
 		"id": "id_1664871184719_2978",
 		"timestamp": 1664871184719
-	},
-	{
-		"text": "苏联诺贝尔文学奖获得者帕斯捷尔纳克说：大谈爱国的只有两类人，一类是毫无底线无耻的骗子，一类是非常激动的傻子。这两类人是绝配，前者负责收割，后者负责奉献。",
-		"type": "",
-		"id": "id_1661045062156_0705",
-		"timestamp": 1661045062156
 	},
 	{
 		"text": "缓慢的、持久的、有纪律的努力，最终会导致令人难以置信的结果。\n\n每当我无法忍受日常生活时，我就提醒自己，没有什么比每天坚持做下去更重要了。虽然我很难看到未来会怎样，但我知道持久性具有强大的威力，就像一句古老格言说的\"继续去做\"（keep doing）。",
@@ -975,9 +957,9 @@
 	},
 	{
 		"id": "3563317",
-		"text": "为项目重新设置git remote url\ngit remote set-url origin git@github.com:gushenwei/ac.git\n\ngit remote set-url origin git@github.com:Julienedies/jhandy-cli.git\n",
+		"text": "为项目重新设置git remote url\n\ngit remote set-url origin git@github.com:gushenwei/ac.git\n\ngit remote set-url origin git@github.com:Julienedies/jhandy-cli.git\n\ngit remote set-url origin git@github.com:Julienedies/crx-jhandy.git\n",
 		"type": "git",
-		"level": "1.1558359935432",
+		"level": "1",
 		"timestamp": 1563086678967
 	},
 	{
