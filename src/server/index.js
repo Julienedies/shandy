@@ -108,7 +108,7 @@ function F () {
     this.start = function (port) {
         port = port || 3300;
         httpServer.listen(port, function () {
-            console.log(`============== server start on port:${ port } ====================`);
+            console.log(`============== server start on port:${ port } ${ new Date().toLocaleString() }====================`);
         });
     }
     this.close = function () {
