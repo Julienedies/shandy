@@ -13,7 +13,7 @@
     "web": "nodemon .build/webpack/web-dev-runner.js --watch .build/webpack/web-dev-runner.js .build/webpack/web.config.js",
     "dev:web": "cross-env NODE_ENV=develoment node .build/webpack/web-dev-runner.js",
     "pro:web": "cross-env NODE_ENV=production node .build/webpack/web-dev-runner.js",
-    "start": "electron ./dist/electron/main.js",
+    "start": "electron ./dist/electron/electron_main.js",
     "start:web": "node ./dist/web/server.js",
     "build": "node ./.build/build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
