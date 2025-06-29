@@ -15,6 +15,8 @@ import config from '../libs/config'
 
 import favicon from '../renderer/img/favicon.ico'
 
+const SERVER_PORT = 3301;
+
 const app = express();
 const httpServer = http.Server(app);
 const io = socket(httpServer, {
@@ -32,7 +34,7 @@ const webStaticDir = path.resolve(__dirname, '../web');
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 //////////////////////////////////////////////////////////////////////////////////////////////
-
+// 这段js主要是为了处理web浏览器和electron renderer环境的兼容性，这段代码只会在electron renderer中正常运行
 app.get('/set_node_modules_path.js', (req, res) => {
     res.send(`
         try{
@@ -81,7 +83,7 @@ route(app);
 io.on('connection', function (socket) {
 
     socket.on('disconnect', function () {
-
+        console.log('socket on disconnect!!');
     });
 
     socket.on('cls_news', function (msg) {
@@ -106,7 +108,7 @@ function F () {
     this.httpServer = httpServer;
     this.io = io;
     this.start = function (port) {
-        port = port || 3300;
+        port = port || SERVER_PORT;
         httpServer.listen(port, function () {
             console.log(`============== server start on port:${ port } ${ new Date().toLocaleString() }====================`);
         });

@@ -223,7 +223,24 @@ let proto = {
         this.end();
         return result;
     },
-
+    
+    /**
+     * 替换一条记录
+     * @param {Object} newRecord  准备覆盖旧record的新记录
+     */
+    replace: function (newRecord) {
+        let that = this;
+        let pool = this._pool;
+        let id = newRecord[this.key];
+        let index = that._getIndex(id);
+        if (index !== undefined) {
+            pool[index] = newRecord;
+            that.emit('change', {e: 'replace', change: newRecord});
+        } else {
+            throw new Error('没有找到要替换的record');
+        }
+    },
+    
     /**
      * 添加一条记录
      * @param {object} record
