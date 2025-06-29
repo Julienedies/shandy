@@ -94,25 +94,48 @@ if (isPro) {
   };
 
   // hmr
-  Object.entries(entry).forEach(([k, v]) => {
-    v = Array.isArray(v) ? v : [v];
-    v.push(
-      `webpack-hot-middleware/client?noInfo=true&reload=true&path=http://localhost:${devServerPort}/__webpack_hmr`
-    );
-    // v.unshift(`webpack-dev-server/client?http://localhost:${ devServerPort }/`)
-    entry[k] = v;
-  });
-  plugins.push(new webpack.HotModuleReplacementPlugin());
+  // 添加 hmr 插件
+  plugins.push(new webpack.HotModuleReplacementPlugin())
+    // 客户端js
+  let hmrClientJs = [
+    // 模块热替换的运行时代码
+    'webpack/hot/dev-server.js',
+    // 用于 web 套接字传输、热重载逻辑的 web server 客户端
+    'webpack-dev-server/client/index.js?hot=true&live-reload=true&port=8090',
+  ];
+  
+    Object.entries(entry).forEach(([k, v]) => {
+      v = Array.isArray(v) ? v : [v];
+      v = [...hmrClientJs, ...v];
+      entry[k] = v;
+    });
+  
+  // webpack 4
+  // Object.entries(entry).forEach(([k, v]) => {
+  //   v = Array.isArray(v) ? v : [v];
+  //   v.push(
+  //     `webpack-hot-middleware/client?noInfo=true&reload=true&path=http://localhost:${devServerPort}/__webpack_hmr`
+  //   );
+  //   // v.unshift(`webpack-dev-server/client?http://localhost:${ devServerPort }/`)
+  //   entry[k] = v;
+  // });
 
-  /*devServer = {
-            publicPath: publicPath,
-            contentBase: outputPath,
-            port: devServerPort,
-            writeToDisk: true,
-            quiet: false,
-            hot: true,
-            disableHostCheck: true
-        }*/
+  devServer =  {
+        host: "localhost",
+        port: 8090,
+        hot: false,
+        client: false,
+        // client: {
+        // 	logging: "none",
+        // 	webSocketURL: "ws://localhost:9081/ws",
+        // },
+        static: {
+          directory: path.resolve(__dirname, "../../dist/web/"),
+        },
+        devMiddleware: {
+          writeToDisk: true,
+        },
+      };
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -525,17 +548,17 @@ const serverConfig = {
   ],
   module: {
     rules: [
-      {
-        test: /\.(js)$/,
-        enforce: "pre",
-        exclude: /node_modules/,
-        use: {
-          // loader: "eslint-loader",
-          // options: {
-          //   // formatter: require('eslint-friendly-formatter')
-          // },
-        },
-      },
+      // {
+      //   test: /\.(js)$/,
+      //   enforce: "pre",
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: "eslint-loader",
+      //     options: {
+      //       // formatter: require('eslint-friendly-formatter')
+      //     },
+      //   },
+      // },
       {
         test: /\.js$/,
         use: "babel-loader",

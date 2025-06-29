@@ -1,8 +1,11 @@
 /*!
  * Created by j on 2019-03-05.
  */
-const { spawn } = require('child_process');
+
 const path = require('path')
+
+//const { spawn } = require('child_process');
+const spawn = require('cross-spawn');
 
 const nodemon = require('nodemon');
 const chalk = require('chalk')
@@ -59,109 +62,160 @@ function serverLog (data, color) {
 }
 
 
+// webapck 打包 前端代码
+function startFront() {
+    
+	const devServerPort = 8090; // 这里端口不一样，是为了可以同时跑npm run pro:web 和 npm run dev
 
-function startFront () {
+	const compiler = webpack(frontConfig);
 
-    const devServerPort = 8090
+	compiler.hooks.done.tap("done", (stats) => {
+		logStats("Front", stats);
+	});
 
-    const compiler = webpack(frontConfig)
+	if (frontConfig.mode === "production") {
+		compiler.watch(
+			{
+				aggregateTimeout: 300,
+				poll: undefined,
+			},
+			(err, stats) => {
+				if (err) {
+					console.log(err);
+					return;
+				}
+				logStats("front", stats);
+			}
+		);
 
-    compiler.hooks.done.tap('done', stats => {
-        logStats('Front', stats)
-    });
+		return;
+	}
 
-    if (frontConfig.mode === 'production') {
+	// 开发 环境
+	// const hotMiddleware = webpackHotMiddleware(compiler, {
+	//     log: false,
+	//     heartbeat: 2500
+	// })
 
-        compiler.watch({
-            aggregateTimeout: 300,
-            poll: undefined
-        }, (err, stats) => {
-            if (err) {
-                console.log(err)
-                return
-            }
-            logStats('front', stats)
-        });
-
-        return;
-    }
-
-    const hotMiddleware = webpackHotMiddleware(compiler, {
-        log: false,
-        heartbeat: 2500
-    })
-
-    /*compiler.hooks.compilation.tap('compilation', compilation => {
+	/*compiler.hooks.compilation.tap('compilation', compilation => {
         compilation.hooks.htmlWebpackPluginAfterEmit.tapAsync('html-webpack-plugin-after-emit', (data, cb) => {
             hotMiddleware.publish({action: 'reload'})
             cb()
         })
     })*/
 
+	// const server = new WebpackDevServer(compiler,
+	//     {
+	//         port: 9080,
+	//         publicPath: 'locahost:9080', // 静态资源路径
+	//         sockPath: '/sockjs-node', // 显式指定 WebSocket 路径
+	//         contentBase: path.join(__dirname, '../../'),
+	//         quiet: true,
+	//         writeToDisk: true,
+	//         before (app, ctx) {
+	//             app.use(hotMiddleware)
+	//             ctx.middleware.waitUntilValid(() => {
+	//                 console.log('++++++++ WebpackDevServer.start +++++++++++')
+	//             })
+	//         }
+	//     }
+	// )
 
-    const server = new WebpackDevServer(compiler,
-        {
-            port: 9080,
-            publicPath: 'locahost:9080', // 静态资源路径
-            sockPath: '/sockjs-node', // 显式指定 WebSocket 路径           
-            contentBase: path.join(__dirname, '../../'),
-            quiet: true,
-            writeToDisk: true,
-            before (app, ctx) {
-                app.use(hotMiddleware)
-                ctx.middleware.waitUntilValid(() => {
-                    console.log('++++++++ WebpackDevServer.start +++++++++++')
-                })
-            }
-        }
-    )
+	// server.listen(devServerPort)
 
-    server.listen(devServerPort)
+	const server = new WebpackDevServer(
+        frontConfig.devServer,
+		compiler
+	);
+
+	//server.start();
+    server.startCallback(() => {
+			console.log("Successfully started WebpackDevServer on http://localhost:" + frontConfig.devServer.port);
+		});
 }
 
 
+// 服务器端开发，使用webpack打包，通过nodemon观察打包文件变化，重启服务器
 function startServer () {
 
     const compiler = webpack(serverConfig);
+    let serverJs = path.resolve(serverConfig.output.path, './server.js');
+    
+    let nodemonInstance = null;
+    let timer;
 
     compiler.watch({}, (err, stats) => {
         if (err) {
             console.log(err)
             return
         }
-        logStats('server', stats)
-
-        if (spawnNodemonProcess) {
-            spawnNodemonProcess.send('restart');
+        logStats('webpack server', stats)
+        
+        
+         if (nodemonInstance) {
+            
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                nodemonInstance.restart();
+            }, 4000)
+            
         } else {
-
-            let serverJs = path.resolve(serverConfig.output.path, './server.js');
-
-            spawnNodemonProcess = spawn('nodemon', [serverJs, '--watch', serverJs], {
-                stdio: ['pipe', 'pipe', 'pipe', 'ipc']
+            
+            nodemonInstance = nodemon({
+                script: serverJs,
+                //watch: [serverJs],
+                stdout: false,
+                stderr: false
             });
 
-            spawnNodemonProcess.stdout.on('data', data => {
-                serverLog(data, 'blue')
-            })
-            spawnNodemonProcess.stderr.on('data', data => {
-                serverLog(data, 'red')
-            })
-
-            spawnNodemonProcess.on('message', function (event) {
-                if (event.type === 'start') {
-                    console.log('nodemon started');
-                } else if (event.type === 'crash') {
-                    console.error(event)
-                    console.log('script crashed for some reason');
-                    setTimeout(() => {
-                        spawnNodemonProcess = spawn('nodemon', [serverJs, '--watch', serverJs], {
-                            stdio: ['pipe', 'pipe', 'pipe', 'ipc']
-                        }, 4000);
-                    })
-                }
-            });
+            nodemonInstance
+							.on("start", () => console.log("nodemon started"))
+							.on("restart", () => console.log("nodemon Restarted"))
+							.on("crash", () => console.log("nodemon crashed"))
+							.on("quit", () => {
+								console.log("quit");
+								process.exit();
+							});
         }
+        
+        nodemonInstance.on("stdout", (data) => {
+			serverLog(data, 'blue')
+		})
+
+		nodemonInstance.on("stderr", (data) => {
+			serverLog(data, 'red')
+		})
+
+        // if (spawnNodemonProcess) {
+        //     spawnNodemonProcess.send('restart');
+        // } else {
+        //     // 改为使用本地安装的nodemon
+        //     const nodemonPath = path.resolve(__dirname, '../../node_modules', '.bin', 'nodemon');
+        //     spawnNodemonProcess = spawn(nodemonPath, [serverJs, '--watch', serverJs], {
+        //         stdio: ['pipe', 'pipe', 'pipe', 'ipc']
+        //     });
+
+        //     spawnNodemonProcess.stdout.on('data', data => {
+        //         serverLog(data, 'blue')
+        //     })
+        //     spawnNodemonProcess.stderr.on('data', data => {
+        //         serverLog(data, 'red')
+        //     })
+
+        //     spawnNodemonProcess.on('message', function (event) {
+        //         if (event.type === 'start') {
+        //             console.log('nodemon started');
+        //         } else if (event.type === 'crash') {
+        //             console.error(event)
+        //             console.log('script crashed for some reason');
+        //             setTimeout(() => {
+        //                 spawnNodemonProcess = spawn(nodemonPath, [serverJs, '--watch', serverJs], {
+        //                     stdio: ['pipe', 'pipe', 'pipe', 'ipc']
+        //                 }, 4000);
+        //             })
+        //         }
+        //     });
+        // }
 
     })
 

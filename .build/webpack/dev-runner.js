@@ -62,6 +62,7 @@ function electronLog(data, color) {
 }
 
 /////////////////////////////////////////////////////////////////////////////
+// 使用webpack打包主进程代码， 代码有变化，重启electron => startElectron()
 function startMain() {
     
     return new Promise((resolve, reject) => {
@@ -110,7 +111,8 @@ function startMain() {
     })
 }
 
-///////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+// 使用webpack 打包renderer 代码，
 function startRenderer() {
     
     return new Promise((resolve, reject) => {
@@ -136,7 +138,7 @@ function startRenderer() {
                 compilation.hooks.htmlWebpackPluginAfterEmit.tapAsync(
                     'html-webpack-plugin-after-emit',
                     (data, cb) => {
-                        console.log('========================================================================================* _ *'+ new Date().toLocaleString())
+                        console.log('===========================================================* _ *'+ new Date().toLocaleString())
                         hotMiddleware.publish({ action: 'reload' })
                         cb()
                     }
@@ -149,7 +151,7 @@ function startRenderer() {
             logStats('Renderer', stats)
         })
 
-
+        // webpack4 代码
         // const server = new WebpackDevServer(
         //     compiler,
         //     {
@@ -170,15 +172,15 @@ function startRenderer() {
         // )
         // server.listen(9080)
         
-           const server = new WebpackDevServer(
+        const server = new WebpackDevServer(
 							{
                                 host: 'localhost',
-								port: 9080,
+								port: 9081,
                                 hot: false, 
                                 client: false,
                                 // client: {
 								// 	logging: "none",
-								// 	webSocketURL: "ws://localhost:9080/ws",
+								// 	webSocketURL: "ws://localhost:9081/ws",
 								// },
 								static: {
 									directory: path.resolve(__dirname, "../../dist/electron/"),
@@ -190,12 +192,14 @@ function startRenderer() {
 							compiler
 						);
 
-						server.start().then(() => resolve());
+		server.start().then(() => resolve());
 
     });
     
     
 }
+
+
 
 function startElectron() {
     let args = [

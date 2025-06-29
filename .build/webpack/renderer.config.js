@@ -38,11 +38,12 @@ const entry = {};
 
 //const entryJs = glob.sync(path.join(context, 'renderer/pages/_test/main.js')) || [];
 // 'renderer/pages/+(index|csd|monitor|rp|system|tags|viewer|news|todo|reminder|_test)/**/main.js'
+// +(index|tags|viewer|system)/
 const entryJs =
   glob.sync(
     path.join(
       context,
-      'renderer/pages/+(index|tags|viewer|system)/**/main.js'
+      'renderer/pages/**/main.js'
     )
   ) || [];
   
@@ -109,20 +110,22 @@ if (isPro) {
   };
 
   // hmr
-  let as = [
+  // 添加 hmr 插件
+  plugins.push(new webpack.HotModuleReplacementPlugin())
+  // 客户端js
+  let hmrClientJs = [
     // 模块热替换的运行时代码
     'webpack/hot/dev-server.js',
     // 用于 web 套接字传输、热重载逻辑的 web server 客户端
-    'webpack-dev-server/client/index.js?hot=true&live-reload=true&port=9080',
+    'webpack-dev-server/client/index.js?hot=true&live-reload=true&port=9081',
   ];
   
   Object.entries(entry).forEach(([k, v]) => {
     v = Array.isArray(v) ? v : [v];
-	v = [...as, ...v];
+	v = [...hmrClientJs, ...v];
     entry[k] = v;
   });
-  // 添加 hmr 插件
-  plugins.push(new webpack.HotModuleReplacementPlugin())
+
 }
 
 //console.log(entry)
