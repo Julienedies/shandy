@@ -23,7 +23,7 @@ let mainConfig = {
         main: [path.join(__dirname, '../../src/main/main.js')]
     },
     output: {
-        filename: '[name].js',
+        filename: 'electron_main.js',
         libraryTarget: 'commonjs2',
         path: path.join(__dirname, '../../dist/electron')
     },

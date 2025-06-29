@@ -20,6 +20,13 @@ let electronProcess = null
 let manualRestart = false
 let hotMiddleware
 
+let webpackDevServerOpt = rendererConfig.devServer;
+
+/**
+ * 
+ * @param {*} proc 
+ * @param {*} data 
+ */
 function logStats (proc, data) {
     let log = ''
 
@@ -42,6 +49,11 @@ function logStats (proc, data) {
     console.log(log)
 }
 
+/**
+ * 
+ * @param {*} data 
+ * @param {*} color 
+ */
 function electronLog (data, color) {
     let log = ''
     data = data.toString().split(/\r?\n/)
@@ -59,6 +71,10 @@ function electronLog (data, color) {
     }
 }
 
+/**
+ * 
+ * @returns 
+ */
 function startMain () {
     return new Promise((resolve, reject) => {
 
@@ -94,6 +110,10 @@ function startMain () {
     })
 }
 
+/**
+ * 
+ * @returns 
+ */
 function startRenderer () {
     return new Promise((resolve, reject) => {
 
@@ -120,9 +140,7 @@ function startRenderer () {
         const server = new WebpackDevServer(
             compiler,
             {
-                contentBase: path.resolve(__dirname, '../../dist/electron/'),
-                quiet: true,
-                writeToDisk: true,
+                ...rendererConfig.devServer,
                 before (app, ctx) {
                     app.use(hotMiddleware)
                     ctx.middleware.waitUntilValid(() => {
@@ -131,15 +149,18 @@ function startRenderer () {
                 }
             }
         )
-        server.listen(9080)
+        server.listen(rendererConfig.devServer.port)
 
     })
 }
 
+/**
+ * 
+ */
 function startElectron () {
     let args = [
         '--inspect=5858',
-        path.join(__dirname, '../../dist/electron/main.js')
+        path.join(__dirname, '../../dist/electron/electron_main.js')
     ]
 
     if (process.env.npm_execpath.endsWith('yarn.js')) {
@@ -162,6 +183,9 @@ function startElectron () {
     })
 }
 
+/**
+ * 
+ */
 function init () {
     Promise.all([startRenderer(), startMain()])
         .then(() => {
@@ -172,4 +196,5 @@ function init () {
         })
 }
 
+/////////////////////////////////////////////////////////////////////
 init()
