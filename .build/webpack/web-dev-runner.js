@@ -101,6 +101,9 @@ function startFront () {
 
     const server = new WebpackDevServer(compiler,
         {
+            port: 9080,
+            publicPath: 'locahost:9080', // 静态资源路径
+            sockPath: '/sockjs-node', // 显式指定 WebSocket 路径           
             contentBase: path.join(__dirname, '../../'),
             quiet: true,
             writeToDisk: true,
@@ -165,6 +168,6 @@ function startServer () {
 }
 
 
-startFront();
+//startFront();
 
-//startServer();
+startServer();

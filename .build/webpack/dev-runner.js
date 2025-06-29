@@ -5,8 +5,8 @@
 const chalk = require('chalk')
 const electron = require('electron')
 const path = require('path')
-const {say} = require('cfonts')
-const {spawn} = require('child_process')
+const { say } = require('cfonts')
+const { spawn } = require('child_process')
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const webpackDevMiddleware = require('webpack-dev-middleware')
@@ -20,17 +20,12 @@ let electronProcess = null
 let manualRestart = false
 let hotMiddleware
 
-let webpackDevServerOpt = rendererConfig.devServer;
 
-/**
- * 
- * @param {*} proc 
- * @param {*} data 
- */
-function logStats (proc, data) {
+
+function logStats(proc, data) {
     let log = ''
 
-    log += chalk.yellow.bold(` ${ proc } Process ${ new Array((19 - proc.length) + 1).join('-') }`)
+    log += chalk.yellow.bold(` ${proc} Process ${new Array((19 - proc.length) + 1).join('-')}`)
     log += '\n\n'
 
     if (typeof data === 'object') {
@@ -41,24 +36,19 @@ function logStats (proc, data) {
             log += '  ' + line + '\n'
         })
     } else {
-        log += `  ${ data }\n`
+        log += `  ${data}\n`
     }
 
-    log += '\n' + chalk.yellow.bold(` ${ new Array(28 + 1).join('-') } ${ (new Date).toLocaleString() }`) + '\n'
+    log += '\n' + chalk.yellow.bold(` ${new Array(28 + 1).join('-')} ${(new Date).toLocaleString()}`) + '\n'
 
     console.log(log)
 }
 
-/**
- * 
- * @param {*} data 
- * @param {*} color 
- */
-function electronLog (data, color) {
+function electronLog(data, color) {
     let log = ''
     data = data.toString().split(/\r?\n/)
     data.forEach(line => {
-        log += `  ${ line }\n`
+        log += `  ${line}\n`
     })
     if (/[0-9A-z]+/.test(log)) {
         console.log(
@@ -71,18 +61,28 @@ function electronLog (data, color) {
     }
 }
 
-/**
- * 
- * @returns 
- */
-function startMain () {
+/////////////////////////////////////////////////////////////////////////////
+function startMain() {
+    
     return new Promise((resolve, reject) => {
 
         const compiler = webpack(mainConfig)
 
+        // 确保先添加 devMiddleware，再添加 hotMiddleware
+        // const devMiddlewareInstance = webpackDevMiddleware(compiler, {
+        //     publicPath: config.output.publicPath,
+        //     stats: 'minimal'
+        // });
+
+        hotMiddleware = webpackHotMiddleware(compiler, {
+            log: console.log,
+            path: '/__webpack_hmr',
+            heartbeat: 10 * 1000
+        });
+
         compiler.hooks.watchRun.tapAsync('watch-run', (compilation, done) => {
             logStats('Main', chalk.white.bold('compiling...'))
-            hotMiddleware.publish({action: 'compiling'})
+            hotMiddleware.publish({ action: 'compiling' })
             done()
         })
 
@@ -110,11 +110,9 @@ function startMain () {
     })
 }
 
-/**
- * 
- * @returns 
- */
-function startRenderer () {
+///////////////////////////////////////////////////
+function startRenderer() {
+    
     return new Promise((resolve, reject) => {
 
         const compiler = webpack(rendererConfig)
@@ -124,40 +122,82 @@ function startRenderer () {
             heartbeat: 2500
         })
 
-        compiler.hooks.compilation.tap('compilation', compilation => {
-            compilation.hooks.htmlWebpackPluginAfterEmit.tapAsync('html-webpack-plugin-after-emit', (data, cb) => {
-                console.log('========================================================================================* _ *')
-                hotMiddleware.publish({action: 'reload'})
-                cb()
-            })
-        })
+        // compiler.hooks.compilation.tap('compilation', compilation => {
+        //     compilation.hooks.htmlWebpackPluginAfterEmit.tapAsync('html-webpack-plugin-after-emit', (data, cb) => {
+        //         console.log('========================================================================================* _ *')
+        //         hotMiddleware.publish({ action: 'reload' })
+        //         cb()
+        //     })
+        // })
+
+
+        compiler.hooks.compilation.tap('html-webpack-plugin-after-emit', (compilation) => {
+            if (compilation.hooks.htmlWebpackPluginAfterEmit) {
+                compilation.hooks.htmlWebpackPluginAfterEmit.tapAsync(
+                    'html-webpack-plugin-after-emit',
+                    (data, cb) => {
+                        console.log('========================================================================================* _ *'+ new Date().toLocaleString())
+                        hotMiddleware.publish({ action: 'reload' })
+                        cb()
+                    }
+                );
+            }
+        });
+
 
         compiler.hooks.done.tap('done', stats => {
             logStats('Renderer', stats)
         })
 
 
-        const server = new WebpackDevServer(
-            compiler,
-            {
-                ...rendererConfig.devServer,
-                before (app, ctx) {
-                    app.use(hotMiddleware)
-                    ctx.middleware.waitUntilValid(() => {
-                        resolve()
-                    })
-                }
-            }
-        )
-        server.listen(rendererConfig.devServer.port)
+        // const server = new WebpackDevServer(
+        //     compiler,
+        //     {
+        //         port: 9080,
+        //         publicPath: 'locahost:9080', // 静态资源路径
+        //         sockPath: '/sockjs-node', // 显式指定 WebSocket 路径
+        //         contentBase: path.resolve(__dirname, '../../dist/electron/'),
+        //         hot: true, 
+        //         quiet: true,
+        //         writeToDisk: true,
+        //         before(app, ctx) {
+        //             app.use(hotMiddleware)
+        //             ctx.middleware.waitUntilValid(() => {
+        //                 resolve()
+        //             })
+        //         }
+        //     }
+        // )
+        // server.listen(9080)
+        
+           const server = new WebpackDevServer(
+							{
+                                host: 'localhost',
+								port: 9080,
+                                hot: false, 
+                                client: false,
+                                // client: {
+								// 	logging: "none",
+								// 	webSocketURL: "ws://localhost:9080/ws",
+								// },
+								static: {
+									directory: path.resolve(__dirname, "../../dist/electron/"),
+								},
+								devMiddleware: {
+									writeToDisk: true,
+								},
+							},
+							compiler
+						);
 
-    })
+						server.start().then(() => resolve());
+
+    });
+    
+    
 }
 
-/**
- * 
- */
-function startElectron () {
+function startElectron() {
     let args = [
         '--inspect=5858',
         path.join(__dirname, '../../dist/electron/electron_main.js')
@@ -183,10 +223,9 @@ function startElectron () {
     })
 }
 
-/**
- * 
- */
-function init () {
+
+
+function init() {
     Promise.all([startRenderer(), startMain()])
         .then(() => {
             startElectron()
@@ -196,5 +235,6 @@ function init () {
         })
 }
 
-/////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////
 init()

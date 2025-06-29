@@ -17,7 +17,7 @@ const publicPath = ''
 
 let mainConfig = {
     mode: isPro? 'production' : 'development',
-    devtool: 'cheap-module-source-map',
+    devtool: isPro ? 'source-map' : 'inline-source-map',  // 开发环境（可调试）: 生产环境（生成独立 .map 文件）
     target: 'electron-main',
     entry: {
         main: [path.join(__dirname, '../../src/main/main.js')]
@@ -35,17 +35,17 @@ let mainConfig = {
     ],
     module: {
         rules: [
-            {
-                test: /\.(js)$/,
-                enforce: 'pre',
-                exclude: /node_modules/,
-                use: {
-                    loader: 'eslint-loader',
-                    options: {
-                        // formatter: require('eslint-friendly-formatter')
-                    }
-                }
-            },
+            // {
+            //     test: /\.(js)$/,
+            //     enforce: 'pre',
+            //     exclude: /node_modules/,
+            //     use: {
+            //         loader: 'eslint-loader',
+            //         options: {
+            //             // formatter: require('eslint-friendly-formatter')
+            //         }
+            //     }
+            // },
             {
                 test: /\.js$/,
                 use: 'babel-loader',
