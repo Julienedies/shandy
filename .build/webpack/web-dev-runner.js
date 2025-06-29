@@ -154,16 +154,16 @@ function startServer () {
         
          if (nodemonInstance) {
             
-            clearTimeout(timer);
-            timer = setTimeout(() => {
-                nodemonInstance.restart();
-            }, 4000)
+            // clearTimeout(timer);
+            // timer = setTimeout(() => {
+            //     nodemonInstance.restart();
+            // }, 4000)
             
         } else {
             
             nodemonInstance = nodemon({
                 script: serverJs,
-                //watch: [serverJs],
+                watch: [serverJs],
                 stdout: false,
                 stderr: false
             });
@@ -222,6 +222,6 @@ function startServer () {
 }
 
 
-//startFront();
+startFront();
 
 startServer();
