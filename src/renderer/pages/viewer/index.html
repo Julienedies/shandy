@@ -60,7 +60,7 @@
                             <input type="checkbox" class="checkbox" value="" ic-change="onFilterByMarked">
                         </label>
                         <label class="">搜索:
-                            <input style="width:9em;" type="text" id="filterInput" class="input" ic-value="{{ model.filterInput || '' }}" ic-form-field="filterInput" ic-enter-press="onFilterByInput">
+                            <input style="width:13em;" type="text" id="filterInput" class="input" ic-value="{{ model.filterInput || '焦点or龙头or昨日or最近' }}" ic-form-field="filterInput" ic-dblclick="setFilterInput" ic-enter-press="onFilterByInput">
                         </label>
                     </div>
 
@@ -85,10 +85,10 @@
             </div>
         </div>
 
-        <!-- -->
+        <!-- 按日查看行情 -->
         <div class="" ic-tpl="viewByDay">
-            <div class="tags" ic-select ic-select-item=".tag" ic-select-auto="false" ic-select-cla="is-danger">
-                <span class="tag is-info is-medium" ic-for="i,v in model.map" ic-has-selected="i===model.date" ic-click="viewForDay:{{ i }}">{{ i }}</span>
+            <div class="tags" ic-select ic-select-item=".tag" ic-select-auto="false"  ic-select-on-change="onChangeOfViewDay" ic-select-cla="is-danger">
+                <span class="tag is-info is-medium" ic-for="i,v in model.map" ic-has-selected="i===model.date" ic-val="{{i}}" x-ic-click="viewForDay:{{ i }}">{{ i }}</span>
             </div>
         </div>
 

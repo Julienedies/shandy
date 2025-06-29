@@ -57,7 +57,10 @@
                         </label>
 
                         <label class="">按是否标记过滤:
-                            <input type="checkbox" class="checkbox" value="" ic-change="filterByMarked">
+                            <input type="checkbox" class="checkbox" value="" ic-change="onFilterByMarked">
+                        </label>
+                        <label class="">搜索:
+                            <input style="width:13em;" type="text" id="filterInput" class="input" ic-value="{{ model.filterInput || '焦点or龙头or昨日or最近' }}" ic-form-field="filterInput" ic-dblclick="setFilterInput" ic-enter-press="onFilterByInput">
                         </label>
                     </div>
 
@@ -82,33 +85,35 @@
             </div>
         </div>
 
+        <!-- 按日查看行情 -->
         <div class="" ic-tpl="viewByDay">
-            <div class="tags" ic-select ic-select-item=".tag" ic-select-cla="is-danger">
-                <span class="tag is-info is-medium" ic-for="i,v in model" ic-click="viewForDay:{{ i }}">{{ i }}</span>
+            <div class="tags" ic-select ic-select-item=".tag" ic-select-auto="false"  ic-select-on-change="onChangeOfViewDay" ic-select-cla="is-danger">
+                <span class="tag is-info is-medium" ic-for="i,v in model.map" ic-has-selected="i===model.date" ic-val="{{i}}" x-ic-click="viewForDay:{{ i }}">{{ i }}</span>
             </div>
         </div>
 
     </div>
 
+
     <div ic-ctrl="viewerListCtrl">
 
         <div id="list" ic-tpl="list">
             <ol ic-viewer
-                ic-viewer-item="li"
+                ic-viewer-item=".imgTag"
                 ic-viewer-url="url"
                 ic-viewer-interval=""
                 ic-viewer-on-show="onViewerShow"
                 ic-viewer-on-open="onViewerOpen"
                 ic-viewer-on-close="onViewerClose">
 
-                <li ic-for="i,v in model" url="file://{{v.f}}" ic-class="{{ v.end ? 'is-end':'' }}">
+                <li ic-for="i,v in model" ic-class="{{ v.end ? 'is-end':'' }}">
                     <h5>
-                        <span style="display: inline-block; min-width:42em;">{{v.f}} </span>
+                        <span class="imgTag" style="display: inline-block; min-width:42em;" url="file://{{v.f}}">{{v.f}} </span>
                         <span ic-for="k,o in v.tags"
-                              ic-class="tag is-medium {{o ? o.type=='交易错误'?'is-black' : o.text.includes('亏损') ? 'is-primary': o.text.includes('盈利')?'is-danger':'is-info' : ''}}">
+                              ic-class="tag is-medium {{o ? o.type=='交易错误'?'is-black' : o.text.includes('亏损') ? 'is-primary': o.text.includes('盈利')?'is-danger':'is-info' : ''}}" ic-click="onFilterByTag:{{ o.text }}">
                             {{ o && o.text }}
                         </span>
-                        <span ic-for="k,o in v.system" class="tag is-medium is-link">{{ o && o.name }}</span>
+                        <span ic-for="k,o in v.system" class="tag is-medium is-link" ic-click="onFilterByTag:{{ o && o.name }}">{{ o && o.name }}</span>
                         <!--is-dark is-black is-success is-danger is-info is-link is-warning  is-primary  -->
                     </h5>
                 </li>

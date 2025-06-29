@@ -37,12 +37,13 @@ export default {
      * @param [conf] {Boolean|Object} 图片对象是否只包含路径
      * @returns {Array} 图片数组  [{f:图片路径，c:图片创建时间戳，d:图片创建日期, code: 股票code}]
      */
-    getImages: function (dir, conf = {isOnlyPath: false, isReverse: true, isRefresh: false, isOrigin: false}) {
+    getImages: function (dir, conf = { isOnlyPath: false, isReverse: true, isRefresh: false, isOrigin: false }) {
+
         console.log('getImages => ', dir);
+
         let arr;
 
         // 首先尝试使用图片目录缓存
-        //console.log(this.getDirKey(dir));
         let key = this.getDirKey(dir);
         if (conf.isReverse === false) {
             key = key + '_R';
@@ -53,7 +54,7 @@ export default {
 
         if (cacheArr && cacheArr.length && !conf.isRefresh) {
             //  && !conf.isOrigin
-            console.log(`使用缓存=> ${ key }`);
+            console.log(`使用缓存=> ${key}`);
             arr = cacheArr;
         } else {
             arr = fs.readdirSync(dir);
@@ -74,8 +75,8 @@ export default {
         // 返回 按原始顺序排序
         if (conf.isOrigin) {
             return arr.sort((a, b) => {
-                    return a.c - b.c;
-                });
+                return a.c - b.c;
+            });
         }
 
 
@@ -84,42 +85,50 @@ export default {
         });
     },
 
+
     /**
-     * 把文件目录路径转成一个字符串，用于缓存数据的文件名
-     * @param dirPath
+     * 缓存图片信息
+     */
+    getViewerCacheJo: function (dir) {
+        let key = this.getDirKey(dir);
+        key = key + '_V';
+        return viewerDbFactory(key);
+        // return ju(`viewer/${key}`, [], { key: 'img' });
+    },
+
+
+    /**
+     * 把文件目录路径转成一个字符串，用于缓存数据的文件名, 
+     * "E:\\dev\\simg\\目标行情\\2025-05"
+     * "E:\\dev\\simg\\目标行情\\2025-05\\浙文互联 2025-05-06下午3.20.41 -浙文互联-600986.png" 
+     * @param dirPath {String} 
      * @returns {string}
      */
     getDirKey: function (dirPath) {
         console.log(dirPath);
+        dirPath = dirPath.replace(/\\[^\\]+\.[a-zA-Z]+$/, ''); // 主要是处理路径里有文件名的情况
+        dirPath = dirPath.replace(/\\$/, '');  // 去除路径最后的空\
         let arr = dirPath.split(/[\\/]+/img);
         let date = arr.pop();
         let name = arr.pop();
         if (name && date) {
-            return `${ name }_${ date }`;
+            return `${name}_${date}`;
         } else {
-            throw new Error(`no result for imageHelper.getDirKey => ${ dirPath }`);
+            throw new Error(`no result for imageHelper.getDirKey => ${dirPath}`);
         }
         //let key = dir.replace(/[/\s.\\:]+/img, '_');
     },
 
 
-    /**
-     * 缓存图片信息
-     */
-    cache: function () {
-
-    },
-
 
     /**
      * 根据图片路径，生成一个只包含图片名称的字符串，作为存储数据的键
-     * @param imgPath
+     * @param imgPath {String}  E:\\dev\\simg\\目标行情\\2025-05\\浙文互联 2025-05-06下午3.20.41 -浙文互联-600986.png
      * @returns {*}
      */
-    getKey: function (imgPath) {
-        /* let arr = imgPath.split(/[\]|[/]/img);
-         console.log(imgPath, arr);*/
-        return imgPath.split('/').pop().replace(/\s+|\./img, '_').replace(/_png$/, '');
+    getImgKey: function (imgPath) {
+        //console.log(imgPath);
+        return imgPath.split(/[\\/]+/img).pop().replace(/\s+|\./img, '_').replace(/_png$/, '');
     },
 
 
@@ -133,13 +142,14 @@ export default {
         // 使用局部目录imagesJsonDb 代替全局 globalImagesJsonDb，解决文件大小问题
         // 已经使用viewer替代images目录进行缓存
         //let imagesJsonDb = dir ? imagesDbFactory(this.getDirKey(dir)) : globalImagesJsonDb;
-        console.log('supplement =>', arr);
+        //console.log('supplement =>', arr);
 
         return arr.map(f => {
-            // 先尝试从缓存images读取
+
             let item;
 
             // 以下这段从缓存读取数据的代码会在生成viewerMap数据时造成内存溢出
+            // 先尝试从缓存images读取
             // let key = this.getKey(f);
             // item = imagesJsonDb.get(key);
             // if (item && item.c && item.d) return item;
@@ -154,7 +164,7 @@ export default {
             let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s*[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/);
             //console.log(f2, arr2);
             let m = moment(arr2[0], "YYYY-MM-DD Ah.m.s");
-            item = {f: fullPath, c: +m, d: arr2[1], code};
+            item = { f: fullPath, c: +m, d: arr2[1], code };
             // 保存到缓存
             //imagesJsonDb.set(key, item);
             return item;
@@ -299,7 +309,7 @@ export default {
         let img = nativeImage.createFromPath(imgPath);
         img = img.crop(crop);
         let dataUrl = img.toDataURL();
-        console.info("%c", `border:solid 1px blue;padding:20px 240px; line-height:60px;background:url(${ dataUrl }) no-repeat 0 0`);
+        console.info("%c", `border:solid 1px blue;padding:20px 240px; line-height:60px;background:url(${dataUrl}) no-repeat 0 0`);
         return dataUrl;
     },
 
@@ -318,7 +328,7 @@ export default {
             images = [images]
         }
 
-        (function fn (arr) {
+        (function fn(arr) {
             let imgPath = arr.shift();
 
             // 忽略富途大盘指数截图
@@ -351,13 +361,13 @@ export default {
                 image: dataUrl,
                 callback: function (words) {
                     //$ocr_text.text(words);
-                    cb({dataUrl, words});
+                    cb({ dataUrl, words });
                     let stock = stockQuery(words);
                     if (stock.code) {
                         let rename = imgPath
                             .replace('屏幕快照', stock.name)
-                            .replace('(2)', `-${ stock.name }`)
-                            .replace(/\.png$/, `-${ stock.code }.png`);
+                            .replace('(2)', `-${stock.name}`)
+                            .replace(/\.png$/, `-${stock.code}.png`);
                         fs.renameSync(imgPath, rename);
                     } else {
                         console.error('ocr fail: ', imgPath, stock);

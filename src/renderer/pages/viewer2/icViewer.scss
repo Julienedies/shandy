@@ -20,20 +20,22 @@
     margin-right: 1rem;
   }
 
-  .tag, .button {
+  .tag,
+  .button {
     opacity: 0;
   }
 
   .tag.is-info {
     opacity: 1;
-    transform: scale(1.1, 1.1);
+    transform: scale(1.04, 1.04);
     animation: flash 1.5s infinite ease-in-out;
   }
 
   &:hover {
     background: rgba(0, 0, 0, 0.8) !important;
 
-    .tag, .button {
+    .tag,
+    .button {
       opacity: 1;
     }
 
@@ -53,7 +55,7 @@
   }
 
   &.horizontal {
-    width: 71% !important;
+    width: 72% !important;
     top: 55% !important;
   }
 }
@@ -76,8 +78,9 @@
 }
 
 
-#ic-viewer-info, #ic-viewer-handle {
-  left: 72% !important;
+#ic-viewer-info,
+#ic-viewer-handle {
+  left: 74% !important;
   right: auto !important;
   top: auto !important;
   bottom: auto !important;
@@ -92,6 +95,7 @@
 
 #ic-viewer-info {
   top: 0 !important;
+  margin:-1px 0 0 -90px;
   height: 1.6em;
   overflow: hidden;
   font-size: 1.2em;
@@ -99,4 +103,3 @@
   //color: blue!important;
   background: rgba(0, 0, 0, 0.9) !important;
 }
-
