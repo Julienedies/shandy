@@ -1,12 +1,22 @@
 [
 	{
+		"id": "天然气",
+		"selected": false,
+		"timestamp": 1750004469105
+	},
+	{
+		"id": "核污染",
+		"selected": false,
+		"timestamp": 1750004458077
+	},
+	{
 		"id": "稀土永磁",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1749574372786
 	},
 	{
 		"id": "体育",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1749494246359
 	},
 	{
@@ -106,7 +116,7 @@
 	},
 	{
 		"id": "小米",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1740326712860
 	},
 	{
@@ -246,7 +256,7 @@
 	},
 	{
 		"id": "IP经济",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1733048919195
 	},
 	{
@@ -521,17 +531,17 @@
 	},
 	{
 		"id": "军工",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1722906362371
 	},
 	{
 		"id": "创新药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1722789740639
 	},
 	{
 		"id": "金融",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1722399878359
 	},
 	{
@@ -746,7 +756,7 @@
 	},
 	{
 		"id": "黄金",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1712031538867
 	},
 	{
@@ -861,7 +871,7 @@
 	},
 	{
 		"id": "核聚变",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1704329443336
 	},
 	{

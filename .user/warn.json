@@ -1,6 +1,17 @@
 [
 	{
 		"name": "",
+		"id": "3181636",
+		"tag": "6166677",
+		"trigger": "1",
+		"content": "为何管不住手?\n为何我总是临盘冲动随意交易？",
+		"repeat": 5,
+		"type": "interval",
+		"timestamp": 1610190810967,
+		"disable": true
+	},
+	{
+		"name": "",
 		"id": "0315994",
 		"tag": "0238231",
 		"trigger": "1",
@@ -50,17 +61,6 @@
 		"type": "interval",
 		"timestamp": 1607080778750,
 		"disable": false
-	},
-	{
-		"name": "",
-		"id": "3181636",
-		"tag": "6166677",
-		"trigger": "1",
-		"content": "为何管不住手?\n为何我总是临盘冲动随意交易？",
-		"repeat": 5,
-		"type": "interval",
-		"timestamp": 1610190810967,
-		"disable": true
 	},
 	{
 		"name": "",
