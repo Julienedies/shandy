@@ -36,6 +36,8 @@ wt.json
 
 #临时文件
 ls.js
+_test/
 
 # 标记win分支的占位符文件
 win_pla.txt
+
