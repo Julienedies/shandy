@@ -1,4 +1,4 @@
-@import "../logic/style.scss";
+@use "../logic/style.scss" as *;
 
 strong {
   font-weight: bold;

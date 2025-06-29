@@ -177,3 +177,6 @@ ipcRenderer.on('screenCapture', function (event, arg) {
 });
 
 
+// if (module.hot) {
+//     module.hot.accept();
+// }

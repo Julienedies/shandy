@@ -2,7 +2,7 @@
  * Created by j on 2024/8/27.
  */
 
-@import '../../rp/replay.scss';
+@use "../../rp/replay.scss" as *;
 
 
 #replay {

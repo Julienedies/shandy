@@ -2,6 +2,8 @@
  * Created by j on 2021/12/4.
  */
 
+@use "./replay.scss" as *;
+
 html {
   overflow: hidden;
 }
@@ -290,7 +292,6 @@ html, body {
 }
 
 
-@import "./replay.scss";
 
 #replay {
   padding-bottom: 2em;

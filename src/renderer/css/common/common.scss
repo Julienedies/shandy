@@ -1,7 +1,7 @@
-@import "include/layout";
-@import "include/cla";
-@import "include/ani";
-@import "include/components";
+@use "include/layout" as *;
+@use "include/cla" as *;
+@use "include/ani" as *;
+@use "include/components" as *;
 
 html, body {
   padding: 1px;

@@ -7,13 +7,14 @@ html, body {
   font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
   font-size: 18px;
   overflow-x: hidden;
+  border: solid 2px red;
 }
 
 input {
   font-size: 20px;
   display: inline-block;
   //margin: 7px 0;
-  padding: 3px 5px;
+  padding: 33px 3px!important;
 }
 
 .nav-group-item .icon {
