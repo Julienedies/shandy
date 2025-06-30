@@ -1,5 +1,113 @@
 [
 	{
+		"title": "今天是进攻日吗？今天是进攻日吗？今天是进攻日吗？方向是哪里？方向是哪里？方向是哪里？",
+		"id": "id_1751267388533_4133",
+		"type": "复盘&计划",
+		"caution": "",
+		"warning": "",
+		"comment": "",
+		"alias": "",
+		"group": "",
+		"alias2": "",
+		"level": "2990",
+		"role": "31",
+		"input": "",
+		"re": "",
+		"content": "",
+		"options": [],
+		"timestamp": 1751267388533
+	},
+	{
+		"id": "id_1750865809398_1940",
+		"type": "复盘&计划",
+		"caution": "",
+		"content": "",
+		"options": [
+			"5944533",
+			"id_1723790304863_3685",
+			"4415621"
+		],
+		"freeze": "",
+		"line": "true",
+		"level": "622",
+		"role": "5",
+		"input": "个股序列、备注",
+		"title": "大金融",
+		"timestamp": 1750865809398
+	},
+	{
+		"id": "id_1750865779956_3158",
+		"type": "复盘&计划",
+		"caution": "9.3阅兵预期",
+		"content": "",
+		"options": [
+			"5944533",
+			"id_1723790304863_3685",
+			"4415621"
+		],
+		"freeze": "",
+		"line": "true",
+		"level": "622",
+		"role": "5",
+		"input": "个股序列、备注",
+		"title": "军工",
+		"timestamp": 1750865779956
+	},
+	{
+		"id": "id_1750776989519_4978",
+		"type": "复盘&计划",
+		"caution": "",
+		"content": "",
+		"options": [
+			"5944533",
+			"id_1723790304863_3685",
+			"4415621"
+		],
+		"freeze": "",
+		"line": "true",
+		"level": "624",
+		"role": "5",
+		"input": "个股序列、备注",
+		"title": "固态电池",
+		"timestamp": 1750776989519
+	},
+	{
+		"title": "节奏日行情",
+		"id": "id_1750697363411_4846",
+		"type": "复盘&计划",
+		"caution": "转折日、修复日",
+		"warning": "",
+		"comment": "",
+		"alias": "",
+		"group": "目标行情",
+		"alias2": "",
+		"level": "796",
+		"role": "4",
+		"input": "",
+		"re": "",
+		"content": "",
+		"options": [],
+		"timestamp": 1750697363411
+	},
+	{
+		"title": "思维定势，临盘没有博弈思维；",
+		"id": "id_1750691857771_3304",
+		"type": "错误&问题",
+		"caution": "",
+		"warning": "",
+		"comment": "",
+		"alias": "",
+		"group": "主观&线性思维",
+		"alias2": "",
+		"level": "851",
+		"role": "0",
+		"input": "",
+		"re": "",
+		"content": "",
+		"options": [],
+		"timestamp": 1750691857771
+	},
+	{
 		"id": "id_1750010079108_7676",
 		"type": "复盘&计划",
 		"caution": "",
@@ -26,9 +134,9 @@
 			"5944533",
 			"4415621"
 		],
-		"freeze": "",
+		"freeze": "true",
 		"line": "true",
-		"level": "623",
+		"level": "620",
 		"role": "5",
 		"input": "个股序列、备注",
 		"title": "以色列袭击伊朗",
@@ -44,7 +152,7 @@
 		"alias": "",
 		"group": "",
 		"alias2": "",
-		"level": "33990",
+		"level": "3990",
 		"role": "0",
 		"input": "",
 		"re": "",
@@ -62,7 +170,7 @@
 		"alias": "",
 		"group": "日省",
 		"alias2": "",
-		"level": "111990",
+		"level": "3990",
 		"role": "61",
 		"input": "",
 		"re": "",
@@ -80,7 +188,7 @@
 		"alias": "",
 		"group": "",
 		"alias2": "",
-		"level": "22990",
+		"level": "3990",
 		"role": "3",
 		"input": "",
 		"re": "",
@@ -102,7 +210,7 @@
 		"role": "61",
 		"input": "",
 		"re": "",
-		"content": "",
+		"content": "<p><strong><span style=\"font-size: 18px; background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">越容易获利的方法，就有越高的本能排斥</span></strong></p>",
 		"options": [],
 		"timestamp": 1749460034196
 	},
@@ -117,7 +225,7 @@
 			"4415621",
 			"id_1726446468822_0662"
 		],
-		"freeze": "",
+		"freeze": "true",
 		"line": "true",
 		"level": "616",
 		"role": "5",
@@ -172,7 +280,7 @@
 			"4415621",
 			"id_1726446468822_0662"
 		],
-		"freeze": "",
+		"freeze": "true",
 		"line": "true",
 		"level": "619",
 		"role": "5",
@@ -253,7 +361,7 @@
 		"timestamp": 1748521154325
 	},
 	{
-		"title": "因为鸡肋交易错过最好的交易机会；",
+		"title": "管不住手，因为鸡肋交易错过最好的交易机会；",
 		"id": "id_1748513003689_9741",
 		"type": "错误&问题",
 		"caution": "",
@@ -262,12 +370,13 @@
 		"alias": "",
 		"group": "",
 		"level": "834",
-		"role": "",
+		"role": "0",
 		"input": "",
 		"re": "",
 		"content": "",
 		"options": [],
-		"timestamp": 1748513003689
+		"timestamp": 1748513003689,
+		"alias2": ""
 	},
 	{
 		"id": "id_1748452719635_5166",
@@ -279,7 +388,7 @@
 			"id_1723790304863_3685",
 			"4415621"
 		],
-		"freeze": "",
+		"freeze": "true",
 		"line": "true",
 		"level": "619",
 		"role": "5",
@@ -296,7 +405,7 @@
 		"comment": "",
 		"alias": "",
 		"group": "",
-		"level": "17991",
+		"level": "3991",
 		"role": "61",
 		"input": "",
 		"re": "",
@@ -314,7 +423,7 @@
 		"comment": "",
 		"alias": "",
 		"group": "",
-		"level": "18990",
+		"level": "3990",
 		"role": "61",
 		"input": "",
 		"re": "",
@@ -332,13 +441,14 @@
 		"comment": "",
 		"alias": "",
 		"group": "",
-		"level": "11990",
+		"level": "1990",
 		"role": "61",
 		"input": "",
 		"re": "",
 		"content": "<p><span style=\"font-size: 16px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">1：市场情绪龙头是谁？ 不要三心二意，什么都想抓，什么也抓不到；盈亏同源，做龙头大概率盈亏比高；我的钱都是亏在临盘随意交易和杂毛上；</span></p><p><span style=\"font-size: 16px; background-color: rgb(148, 0, 211); color: rgb(255, 255, 255);\">2：可能的走势及如何应对； 买不到；延续；分歧转一致； 修复； V形反转； 大盘支撑； 板块支撑； 个股人气； 周期时机支撑；</span></p>",
 		"options": [],
-		"timestamp": 1748307510087
+		"timestamp": 1748307510087,
+		"alias2": ""
 	},
 	{
 		"title": "在一个真正的上涨周期内，一定会有能让大家都参与的赚钱票。",
@@ -436,12 +546,13 @@
 		"alias": "",
 		"group": "没有大局观",
 		"level": "866",
-		"role": "0",
+		"role": "3",
 		"input": "",
 		"re": "",
 		"content": "",
 		"options": [],
-		"timestamp": 1746368901233
+		"timestamp": 1746368901233,
+		"alias2": ""
 	},
 	{
 		"title": "没有明确的行情意识，我要捕捉的目标行情是什么？",
@@ -469,13 +580,14 @@
 		"comment": "",
 		"alias": "",
 		"group": "无系统无计划",
-		"level": "885",
+		"level": "886",
 		"role": "3",
 		"input": "",
 		"re": "",
-		"content": "",
+		"content": "<p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\"><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">选股：</span></strong>寻找当前市场的情绪龙头；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">择时：每次的进攻日，我都傻乎乎，没有意识；</span></strong></p><p><strong><span style=\"font-size: 20px; background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);\">后知后觉，意识不到主升周期；</span></strong></p>",
 		"options": [],
-		"timestamp": "1746274431278"
+		"timestamp": "1746274431278",
+		"alias2": ""
 	},
 	{
 		"title": "没有明确的行情意识，我要捕捉的目标行情是什么？",
@@ -756,13 +868,14 @@
 		"comment": "",
 		"alias": "",
 		"group": "市场理解力",
-		"level": "19900",
+		"level": "1900",
 		"role": "31",
 		"input": "",
 		"re": "",
 		"content": "<p>渝三峡A， 红墙股份、成飞集成、利君股份、中航成飞、国芳集团、红宝丽、襄阳轴承、尤夫股份、</p><p>我对行情性质理解的够吗？</p><p>为什么我错过机器人趋势股兆威机电、长盛轴承？ &nbsp;华为机器人； 宇树机器人；</p>",
 		"options": [],
-		"timestamp": "1741626861174"
+		"timestamp": "1741626861174",
+		"alias2": ""
 	},
 	{
 		"title": "日内市场整体走势？",
@@ -1243,14 +1356,14 @@
 		"timestamp": 1726890800497
 	},
 	{
-		"title": "关键是做好加强爆发的准备",
+		"title": "永远没有做好市场转强或进攻的准备；总是错过市场转强最好的交易机会。",
 		"id": "id_1726889530659_0468",
 		"type": "复盘&计划",
-		"caution": "为何我错过所有的机会",
+		"caution": "我是不是线性思维，主观看空？有没有预期之外的准备？",
 		"comment": "",
 		"alias": "",
 		"group": "推演应对",
-		"level": "855",
+		"level": "888",
 		"role": "3",
 		"input": "",
 		"re": "",
@@ -1258,7 +1371,9 @@
 		"content": "",
 		"options": [],
 		"timestamp": "1726889530660",
-		"freeze": ""
+		"freeze": "",
+		"warning": "",
+		"alias2": ""
 	},
 	{
 		"title": "关键是做好加强爆发的准备",
@@ -4160,7 +4275,7 @@
 		"title": "空仓就想着买；持仓就想着卖；",
 		"id": "id_1671964240631_6909",
 		"type": "错误&问题",
-		"caution": "管不住手；",
+		"caution": "",
 		"comment": "",
 		"level": "836",
 		"role": "3",
@@ -4172,7 +4287,8 @@
 		"input": "",
 		"rows": "1",
 		"group": "克服不了本能",
-		"warning": ""
+		"warning": "",
+		"alias2": ""
 	},
 	{
 		"title": "低吸没有确定性，追涨没有性价比，不知道怎么参与一些趋势股？",
@@ -4651,7 +4767,7 @@
 		"type": "复盘&计划",
 		"caution": "",
 		"comment": "",
-		"level": "1700",
+		"level": "1701",
 		"role": "1",
 		"content": "",
 		"options": [],
@@ -4851,7 +4967,7 @@
 		"comment": "",
 		"level": "1204",
 		"role": "4",
-		"content": "<p>印巴空战；中美贸易战；deepSeek中国科技创新突破；9.24结构行情；华为7纳米芯片突破；chatGPT-AI行业突破；世界能源市场危机；7国限制俄油价格；俄断供欧洲天然气；疫情行情：新冠特效药；疫情导致的美国金融大放水；新能源产业行情；</p>",
+		"content": "<p><span style=\"background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);\">印巴空战；中美贸易战；deepSeek中国科技创新突破；9.24结构行情；华为7纳米芯片突破；chatGPT-AI行业突破；世界能源市场危机；7国限制俄油价格；俄断供欧洲天然气；疫情行情：新冠特效药；疫情导致的美国金融大放水；新能源产业行情；</span></p>",
 		"options": [],
 		"timestamp": "1658627456517",
 		"re": "",
@@ -5205,8 +5321,8 @@
 		"title": "日内资金攻击方向是哪里？",
 		"id": "8324702",
 		"type": "复盘&计划",
-		"comment": "日内热点是什么？行情性质？与市场主线的关系？次日可能的走势？",
-		"content": "",
+		"comment": "",
+		"content": "<p>日内热点是什么？行情性质？与市场主线的关系？次日可能的走势？</p>",
 		"options": [
 			"id_1713686367964_2656"
 		],
@@ -5287,14 +5403,14 @@
 		"re": ""
 	},
 	{
-		"title": "关键是应对：做好市场进攻的准备，做好市场转强的准备。",
+		"title": "关键是应对：关键是做好加强爆发的准备；做好市场进攻的准备，做好市场转强的准备。",
 		"id": "6255155",
 		"type": "复盘&计划",
 		"comment": "",
-		"content": "<p>理解、预判、验证、跟随；什么条件做什么操作；&nbsp;</p><p><br></p><p><u>高开放量大阴线，也可以反包。</u><u>首次分歧，也可以转一致。</u></p><p><u>低吸大长腿； &nbsp;分歧转一致；</u></p><p>涨停意味着什么? 我应该如何应对？</p>",
+		"content": "<p><span style=\"background-color: rgb(0, 0, 0); color: rgb(255, 255, 0); font-size: 22px;\"><strong>永远没有做好市场转强或进攻的准备；我总是错过市场转强最好的交易机会。我是不是线性思维，主观看空？有没有预期之外的准备？</strong></span></p><p><br></p><p>理解、预判、验证、跟随；什么条件做什么操作；&nbsp;</p><p><br></p><p><u>高开放量大阴线，也可以反包。</u><u>首次分歧，也可以转一致。</u></p><p><u>低吸大长腿； &nbsp;分歧转一致；</u></p><p>涨停意味着什么? 我应该如何应对？</p>",
 		"options": [],
 		"timestamp": "1639655524225",
-		"caution": "如果修复的话，核心股是谁？ 它的表现是怎么样的？ 我该如何应对？",
+		"caution": "如果修复的话，核心股是谁？  我该如何应对？",
 		"level": "890",
 		"role": "3",
 		"alias": "",
@@ -5303,7 +5419,7 @@
 		"re": "",
 		"group": "推演应对",
 		"line": "",
-		"warning": "永远没有做好市场转强或进攻的准备；我总是错过市场转强最好的交易机会。我是不是线性思维，主观看空？有没有预期之外的准备？",
+		"warning": "",
 		"alias2": ""
 	},
 	{
@@ -5610,7 +5726,7 @@
 		"role": "0"
 	},
 	{
-		"title": "多空动态博弈；一点点小波动都承受不了，你还炒什么股？",
+		"title": "多空动态博弈；一点小波动都承受不了，你还炒什么股？",
 		"id": "2516575",
 		"type": "错误&问题",
 		"comment": "",
@@ -5624,7 +5740,8 @@
 		"group": "克服不了本能",
 		"input": "",
 		"re": "",
-		"warning": ""
+		"warning": "",
+		"alias2": ""
 	},
 	{
 		"title": "市场参与者的行为逻辑是什么？",
