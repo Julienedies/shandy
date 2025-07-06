@@ -65,9 +65,10 @@
     }
   },
   "engines": {
-    "node": "14.x"
+    "node": "20.19.x"
   },
   "dependencies": {
+    "@electron/remote": "^2.1.2",
     "@fortawesome/fontawesome-free": "^5.7.2",
     "@julienedies/brick": "^0.9.43",
     "@vue/compiler-sfc": "^3.5.17",
@@ -79,10 +80,10 @@
     "cheerio-httpcli": "^0.7.3",
     "chokidar": "^3.0.2",
     "csv": "^5.1.1",
+    "dayjs": "^1.11.13",
     "debug-menu": "^0.6.1",
     "dialogs": "^1.1.20",
     "echarts": "^4.1.0",
-    "electron": "^13.1.1",
     "electron-debug": "^2.0.0",
     "events": "^3.0.0",
     "express": "^4.16.3",
@@ -126,13 +127,12 @@
     "cross-spawn": "^7.0.6",
     "css-loader": "^7.1.2",
     "del": "^4.0.0",
+    "electron": "^34.5.3",
     "eslint": "^9.29.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-html": "^4.0.3",
     "eslint-webpack-plugin": "^4.2.0",
-    "express": "^4.16.3",
     "extract-loader": "^5.1.0",
-    "fibers": "^5.0.3",
     "file-loader": "^6.2.0",
     "filemanager-webpack-plugin": "^2.0.5",
     "html-loader": "^5.1.0",
@@ -144,7 +144,6 @@
     "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
-    "undefined": "^0.1.0",
     "url-loader": "^4.1.1",
     "vue-loader": "^17.4.2",
     "vue-style-loader": "^4.1.3",
