@@ -10,9 +10,8 @@ import config from './config.js'
 import jdb from './jsono-short'
 
 
-const BrowserWindow = electron.remote.BrowserWindow;
-
-
+//const BrowserWindow = electron.remote.BrowserWindow;
+import { BrowserWindow } from '@electron/remote';
 
 function getSettingDb () {
     return jdb('setting');
@@ -59,7 +58,7 @@ class Win {
                 contextIsolation: false,
                 // 在electron 10.0.0之后，remote模块默认关闭, 不推荐使用
                 // 必须手动设置webPreferences中的enableRemoteModule为true之后才能使用
-                enableRemoteModule: true,   // 打开remote模块
+                //enableRemoteModule: true,   // 打开remote模块, 废弃使用
             },
             ...getBounds(name)
         };
@@ -78,9 +77,9 @@ class Win {
     create () {
         let that = this;
         let url = this.opt.url;
-
+        console.log(2222, this.opt);
         let win = new BrowserWindow(this.opt);
-
+        
         this.win = win;
 
         win.on('close', function () {
@@ -92,7 +91,7 @@ class Win {
         // 如果窗口有name, 则保存window bounds信息
         if (this.opt.name) {
             win.on('resize', () => {
-                //console.log('resize event');
+                console.log('resize event');
                 this.saveBounds();
             });
 

@@ -5,12 +5,17 @@
 
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
 
+import fs from 'fs'
 import path from 'path'
 import electron from 'electron'
+
+import * as remoteMain from '@electron/remote/main';
+
 
 import config from '../libs/config'
 
 import stockQuery from '../libs/stock-query'
+import screenCapture from '../libs/screen-capture'
 
 import ac from '../libs/ac'
 import server from '../server/index'
@@ -19,11 +24,35 @@ const {app, ipcMain, BrowserWindow, globalShortcut} = electron;
 
 const port = config.SERVER_PORT;
 
+
 app.SHARED_CONFIG = config;
 
 server.start(port);
 
+remoteMain.initialize();
+
+
 let mainWindow;
+
+function screenshot(arg) {
+        //mainWindow.webContents.send('screenCapture');
+        console.log(arg);
+        let stock = stockQuery(arg.name);
+
+        screenCapture({
+            returnType: "file",
+            dir: config.STOCK_IMG_DIR,
+            callback: (imgPath) => {
+                //kcAudio.play();
+                let rename = imgPath
+                    .replace("屏幕快照", stock.name)
+                    .replace("(2)", `-${stock.name}`)
+                    .replace(/[*]ST/gim, "ST")
+                    .replace(/\.png$/, `-${stock.code}.png`);
+                fs.renameSync(imgPath, rename);
+            },
+        });
+}
 
 // 创建主窗口，一个渲染进程
 function createWindow () {
@@ -56,6 +85,11 @@ function createWindow () {
     } else {
         mainWindow.loadURL(`${ config.LOAD_PROTOCOL }/index.html`);
     }
+    
+    // 启用 #########################################################
+    remoteMain.enable(mainWindow.webContents);
+     // 启用 #########################################################
+    
     mainWindow.webContents.openDevTools()
     mainWindow.maximize();
     mainWindow.on('closed', function () {
@@ -65,6 +99,7 @@ function createWindow () {
     mainWindow.webContents.on('did-finish-load', function () {
         mainWindow.webContents.send('windowId', mainWindow.id);
     });
+    
 }
 
 //
@@ -114,9 +149,7 @@ function ready () {
         });
     });
 
-    function screenshot () {
-        mainWindow.webContents.send('screenCapture');
-    }
+
 
     // 截屏: 快捷键 => 只截大屏幕的图
     globalShortcut.register('CommandOrControl+shift+2', function () {
@@ -159,7 +192,8 @@ function ready () {
     // 截屏: 通过鼠标手势向server发送截屏请求
     server.on('screenshot', function (msg) {
         console.log('server 要求截屏', msg);
-        mainWindow.webContents.send('screenCapture', msg);
+        //mainWindow.webContents.send('screenCapture', msg);
+        screenshot(msg);
     });
 
     // renderer进程 (打板封单监控数据) => socket.io => socket.client (浏览器页面 http://192.168.3.20:3000/)
@@ -204,6 +238,12 @@ function ready () {
 //#############################################################################
 //
 app.on('ready', ready);
+
+// ############################################################################
+// 不安全， 但这样就能在所有渲染窗口使用require("@electron/remote"); 主要是为了解决 config.js里ROOT_DIR在渲染进程和主进程解析不一样的问题
+app.on('web-contents-created', (_, contents) => {
+  remoteMain.enable(contents); // 自动为所有窗口启用
+});
 
 app.on('window-all-closed', () => {
     // 在 macOS 上，除非用户用 Cmd + Q 确定地退出，

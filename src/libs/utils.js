@@ -20,8 +20,10 @@ import stocksManager from './stocks-manager'
 
 import _utils from './_utils.js'
 
-const {remote, shell} = electron;
-const dialog = remote.dialog;
+//const {remote, shell} = electron;
+//const dialog = remote.dialog;
+
+import {dialog, shell} from '@electron/remote';
 
 // https://github.com/shelljs/shelljs/issues/480
 let nodePath = (shellJs.which('node').toString());

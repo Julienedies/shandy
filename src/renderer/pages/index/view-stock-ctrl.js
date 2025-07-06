@@ -17,8 +17,11 @@ import $ from 'jquery'
 import brick from '@julienedies/brick'
 import '@julienedies/brick/dist/brick.css'
 
-const shell = electron.shell;
-const BrowserWindow = electron.remote.BrowserWindow;
+//const shell = electron.shell;
+//const BrowserWindow = electron.remote.BrowserWindow;
+
+import {BrowserWindow,  shell} from '@electron/remote';
+
 const ipc = electron.ipcRenderer;
 const clipboard = electron.clipboard;
 

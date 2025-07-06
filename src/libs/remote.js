@@ -5,7 +5,6 @@
 
 import electron from 'electron'
 
-const {remote} = electron
 
 export default {
 

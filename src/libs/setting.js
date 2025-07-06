@@ -8,6 +8,8 @@ import path from 'path'
 import jo from './jsono'
 import config from './config'
 
-const setting = jo(path.resolve(config.USER_DIR, './setting.json'));
+let settingJsonPath = path.resolve(config.USER_DIR, './setting.json');
+
+const setting = jo(settingJsonPath);
 
 export default setting;

@@ -247,7 +247,7 @@ brick.reg("mainCtrl", function (scope) {
 
 		let cacheJson = viewerCacheJo.json;
 
-		// 遍历，绑定交易、标签等数据
+		// 遍历，从本地缓存json里绑定交易、标签等数据， 如果本地缓存没有数据的话，从服务器json获取数据，并保存到本地json
 		urls.forEach((o, i) => {
 			// 附加标签信息 和 交易系统信息
 			let f = o.f;
@@ -304,10 +304,8 @@ brick.reg("mainCtrl", function (scope) {
 	});
 
 	// 按单日分类图片
-	function viewByDay() {
+	function viewByDay(urls) {
 		urlsByDayMap = {}; // 清空上次月份的单日数据
-		let urls = scope.urls;
-		console.log(urls.length);
 		urls.forEach((v, i) => {
 			let d = v.d;
 			let arr = (urlsByDayMap[d] = urlsByDayMap[d] || []);
@@ -363,7 +361,7 @@ brick.reg("mainCtrl", function (scope) {
 			scope.urls = urls;
 
 		if (isOrigin && !viewDate) {
-				viewByDay();
+				viewByDay(urls);
 			}
 		} else {
 			dir = dir || scope.imgDir;
@@ -402,7 +400,7 @@ brick.reg("mainCtrl", function (scope) {
 			// 原始顺序模式下显示日列表
 			// 需要清空上次的数据
 			if (isOrigin) {
-				viewByDay(); // 按单日分类图片
+				viewByDay(urls); // 按单日分类图片
 				if (viewDate) {
 					urls = urlsByDayMap[viewDate];
 					scope.urls = urls;
@@ -422,6 +420,7 @@ brick.reg("mainCtrl", function (scope) {
 	// 图片目录路径选中后回调
 	scope.onSelectImgDirDone = (dir) => {
 		if (!dir) return;
+		viewDate = undefined;
 		scope.imgDir = dir;
 		historyModel.add(dir);
 		scope.init(dir);
@@ -515,6 +514,7 @@ brick.reg("mainCtrl", function (scope) {
 	}
 
 	scope.viewerVm = setting.get("viewer");
+	console.log(setting, scope.viewerVm)
 	scope.render("crop", { model: scope.viewerVm || {} }, () => {
 		scope.$elm.find("#interval").val(scope.viewerVm.interval);
 	});

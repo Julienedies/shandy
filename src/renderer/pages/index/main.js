@@ -30,8 +30,9 @@ import view_stock from './view-stock-ctrl'
 import rtsc from './real-time-stock-ctrl'
 
 
-const {remote, shell, ipcRenderer} = electron;
-const {BrowserWindow} = remote;
+const {ipcRenderer} = electron;
+//const {BrowserWindow} = remote;
+//import {shell} from '@electron/remote';
 
 debugMenu.install();
 
@@ -43,7 +44,7 @@ chrome ${ process.versions.chrome }
 electron ${ process.versions.electron }
 `);
 
-console.log('remote is =>', remote);
+//console.log('remote is =>', remote);
 //const config = remote.getGlobal('config')
 //const config = remote.app.config
 //console.log(config)
@@ -173,7 +174,7 @@ ipcRenderer.on('screenCapture', function (event, arg) {
                 .replace(/\.png$/, `-${ stock.code }.png`);
             fs.renameSync(imgPath, rename);
         }
-    }, );
+    });
 });
 
 

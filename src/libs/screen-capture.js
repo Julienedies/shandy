@@ -10,12 +10,13 @@ import path from 'path'
 import electron from 'electron'
 import moment from 'moment'
 
-const desktopCapturer = electron.desktopCapturer;
-const electronScreen = electron.screen;
+// const desktopCapturer = electron.desktopCapturer;
+// const screen = electron.screen;
+import { desktopCapturer, screen } from 'electron'
 
 function determineScreenShotSize () {
     console.log(electron);
-    const screenSize = electronScreen.getPrimaryDisplay().workAreaSize;
+    const screenSize = screen.getPrimaryDisplay().workAreaSize;
     const maxDimension = Math.max(screenSize.width, screenSize.height);
     return {
         width: maxDimension * window.devicePixelRatio,
@@ -24,12 +25,16 @@ function determineScreenShotSize () {
 }
 
 function createDateStr () {
-    let now = new Date();
-    let str = now.toLocaleString().replace(/\//img, '-').replace(/[:]/img, '.');
-    // 为单个日期数字添加前缀0
-    let str2 = str.replace(/\d{4}-\d{1,2}-\d{1,2}/, moment(now).format('YYYY-MM-DD'));
-    console.log(str2);
-    return str2;
+    return moment().format('YYYY-MM-DDah.mm.ss')
+    .replace('am', '上午')
+    .replace('pm', '下午');
+    // let now = new Date();
+    // let str = now.toLocaleString().replace(/\//img, '-').replace(/[:]/img, '.');
+    // console.log(333, str);
+    // // 为单个日期数字添加前缀0
+    // let str2 = str.replace(/\d{4}-\d{1,2}-\d{1,2}/, moment(now).format('YYYY-MM-DD'));
+    // console.log(str2);
+    // return str2;
 }
 
 /*
@@ -51,8 +56,10 @@ export default function (args, options = {}) {
             console.log('screenCapture => ', arg);
         }
     }, args);
+    
+    //const sources = await desktopCapturer.getSources(options);
 
-    desktopCapturer.getSources(options).then( sources => {
+    return desktopCapturer.getSources(options).then( sources => {
 
             sources.forEach(function (source) {
 
@@ -61,7 +68,7 @@ export default function (args, options = {}) {
 
                 let img = source.thumbnail;
 
-                if (source.name === 'Screen 2') {
+                if (source.name === '屏幕 2') {
 
                     if (args.crop) {
                         img = img.crop(args.crop);

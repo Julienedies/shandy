@@ -2,26 +2,20 @@
  * Created by j on 18/6/16.
  */
 
-import electron from 'electron'
-
 import $ from 'jquery'
 import brick from '@julienedies/brick'
 
-import Win from '../../../libs/window.js'
-
 import tdx from '../../../libs/tdx'
-import ac from '../../../libs/ac'
-import rts from '../../../libs/real-time-stock'
 
-import cm from '../../../libs/console'
 import config from '../../../libs/config'
 import getToken from '../../../libs/get-baidu-token'
 import utils from '../../../libs/utils'
 import setting from '../../../libs/setting'
 import helper from '../viewer/helper'
 
-const {remote, shell} = electron;
-const {dialog} = electron.remote;
+//const {remote, shell} = electron;
+//const {dialog} = electron.remote;
+import {app, shell} from '@electron/remote';
 
 
 brick.reg('toolBarCtrl', function (scope) {
@@ -37,12 +31,13 @@ brick.reg('toolBarCtrl', function (scope) {
     };
 
     this.relaunch = function () {
-        remote.app.relaunch();
-        remote.app.exit();
+        app.relaunch();
+        app.exit();
     };
 
     this.quit = function () {
-        remote.app.exit();
+        //remote.app.exit();
+        app.exit();
     };
 
     this.refresh = function (e) {
