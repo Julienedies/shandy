@@ -514,7 +514,6 @@ brick.reg("mainCtrl", function (scope) {
 	}
 
 	scope.viewerVm = setting.get("viewer");
-	console.log(setting, scope.viewerVm)
 	scope.render("crop", { model: scope.viewerVm || {} }, () => {
 		scope.$elm.find("#interval").val(scope.viewerVm.interval);
 	});

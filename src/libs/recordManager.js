@@ -224,7 +224,7 @@ let proto = {
         return result;
     },
     
-    /**
+        /**
      * 替换一条记录
      * @param {Object} newRecord  准备覆盖旧record的新记录
      */
@@ -240,7 +240,7 @@ let proto = {
             throw new Error('没有找到要替换的record');
         }
     },
-    
+
     /**
      * 添加一条记录
      * @param {object} record
