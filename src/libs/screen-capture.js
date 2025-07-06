@@ -24,12 +24,15 @@ function determineScreenShotSize () {
 }
 
 function createDateStr () {
-    let now = new Date();
-    let str = now.toLocaleString().replace(/\//img, '-').replace(/[:]/img, '.');
-    // 为单个日期数字添加前缀0
-    let str2 = str.replace(/\d{4}-\d{1,2}-\d{1,2}/, moment(now).format('YYYY-MM-DD'));
-    console.log(str2);
-    return str2;
+    return moment().format('YYYY-MM-DDah.mm.ss')
+    .replace('am', '上午')
+    .replace('pm', '下午');
+    // let now = new Date();
+    // let str = now.toLocaleString().replace(/\//img, '-').replace(/[:]/img, '.');
+    // // 为单个日期数字添加前缀0
+    // let str2 = str.replace(/\d{4}-\d{1,2}-\d{1,2}/, moment(now).format('YYYY-MM-DD'));
+    // console.log(str2);
+    // return str2;
 }
 
 /*
