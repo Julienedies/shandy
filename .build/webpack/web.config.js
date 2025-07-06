@@ -26,7 +26,7 @@ const nodeSassIncludePaths = [path.resolve(__dirname, "../../")];
 const projectRoot = path.resolve(__dirname, "../../");
 const context = path.resolve(__dirname, "../../src");
 const outputPath = path.resolve(__dirname, "../../dist/web/");
-const publicPath = "";
+const publicPath = "http://localhost:3301/web/";
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -57,16 +57,19 @@ let pages = entryJs.map((entryJsPath) => {
 });
 
 const plugins = [
-  ...pages,
-  new VueLoaderPlugin(),
-  new webpack.DefinePlugin({
-    "process.env.DEV": JSON.stringify(!isPro),
-  }),
-  new WebpackManifestPlugin(),
+	...pages,
+	new VueLoaderPlugin(),
+	new webpack.DefinePlugin({
+		"process.env.DEV": JSON.stringify(!isPro),
+		__VUE_OPTIONS_API__: JSON.stringify(true), // 开发true，生产可false
+		__VUE_PROD_DEVTOOLS__: JSON.stringify(false), // 生产必须false
+		__VUE_PROD_HYDRATION_MISMATCH_DETAILS__: JSON.stringify(false),
+	}),
+	new WebpackManifestPlugin(),
 
-  new CleanPlugin([`dist/web`], {
-    root: projectRoot,
-  }),
+	new CleanPlugin([`dist/web`], {
+		root: projectRoot,
+	}),
 ];
 
 const devServerPort = 8090;
@@ -89,6 +92,8 @@ if (isPro) {
     })
   );
 } else {
+  
+  
   cssLoader = {
     loader: "vue-style-loader",
   };
@@ -100,13 +105,13 @@ if (isPro) {
   let hmrClientJs = [
     // 模块热替换的运行时代码
     'webpack/hot/dev-server.js',
-    // 用于 web 套接字传输、热重载逻辑的 web server 客户端
+    // 用于 web 套接字传输、热重载逻辑的 web server 客户端 
     'webpack-dev-server/client/index.js?hot=true&live-reload=true&port=8090',
   ];
   
     Object.entries(entry).forEach(([k, v]) => {
       v = Array.isArray(v) ? v : [v];
-      v = [...hmrClientJs, ...v];
+      v = [...v, ...hmrClientJs];
       entry[k] = v;
     });
   
@@ -124,15 +129,19 @@ if (isPro) {
         host: "localhost",
         port: 8090,
         hot: false,
-        client: false,
+        //liveReload: false, // 仅使用 Live Reload
+        //open:true,
+        //client: false,
         // client: {
-        // 	logging: "none",
-        // 	webSocketURL: "ws://localhost:9081/ws",
+        // 	logging: "info",
+        //   overlay: true,
+        // 	//webSocketURL: "ws://localhost:9081/ws",
         // },
         static: {
           directory: path.resolve(__dirname, "../../dist/web/"),
         },
         devMiddleware: {
+          publicPath: publicPath,
           writeToDisk: true,
         },
       };
@@ -147,6 +156,7 @@ let whiteListedModules = [
   "@julienedies/brick",
   "echarts",
   "moment",
+  "events", // 这个包是hmr有用到，删除的话，hmr client js 会报bootstrap:27 Uncaught ReferenceError: events is not defined
 ];
 
 // web客户端配置， 对应的还有web server 端配置在下面

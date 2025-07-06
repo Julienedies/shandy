@@ -122,7 +122,7 @@ if (isPro) {
   
   Object.entries(entry).forEach(([k, v]) => {
     v = Array.isArray(v) ? v : [v];
-	v = [...hmrClientJs, ...v];
+	v = [...v, ...hmrClientJs];
     entry[k] = v;
   });
 
@@ -157,9 +157,9 @@ const config = {
 		sourceMapFilename: "[file].map",
 		libraryTarget: "commonjs2",
 	},
+	// electron运行的时候，是从node_modules找这些类库的，也就是说node_modules是程序运行的一部分，如果发布的时候不包含node_modules，那么这些都要通过webpack打包进去最终的发布文件
 	externals: [...Object.keys(dependencies).filter((d) => {
 		return d;
-		// electron运行的时候，是从node_modules找这些类库的，也就是说node_modules是程序运行的一部分，如果发布的时候不包含node_modules，那么这些都要通过webpack打包进去最终的发布文件
 		//return !whiteListedModules.includes(d);
 	})],
 	resolve: {
@@ -407,7 +407,8 @@ const config = {
 						options: {
 							sassOptions: {
 								includePaths: nodeSassIncludePaths || [""],
-								quietDeps: true, // 静默弃用警告
+								quietDeps: false, // 静默弃用警告
+								implementation: require("sass"), // 强制使用 Dart Sass
 							},
 						},
 					},
