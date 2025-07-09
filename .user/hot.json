@@ -1,5 +1,20 @@
 [
 	{
+		"id": "玻纤",
+		"selected": true,
+		"timestamp": 1751980989804
+	},
+	{
+		"id": "脑机",
+		"selected": false,
+		"timestamp": 1751385666590
+	},
+	{
+		"id": "RWA",
+		"selected": true,
+		"timestamp": 1751287712559
+	},
+	{
 		"id": "天然气",
 		"selected": false,
 		"timestamp": 1750004469105
@@ -86,7 +101,7 @@
 	},
 	{
 		"id": "化工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1742904544032
 	},
 	{
@@ -116,7 +131,7 @@
 	},
 	{
 		"id": "小米",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1740326712860
 	},
 	{
@@ -536,12 +551,12 @@
 	},
 	{
 		"id": "创新药",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1722789740639
 	},
 	{
 		"id": "金融",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1722399878359
 	},
 	{
@@ -621,7 +636,7 @@
 	},
 	{
 		"id": "PCB",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1717697823568
 	},
 	{
@@ -881,7 +896,7 @@
 	},
 	{
 		"id": "光伏",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1703392539246
 	},
 	{
