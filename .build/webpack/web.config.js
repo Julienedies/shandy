@@ -26,7 +26,7 @@ const nodeSassIncludePaths = [path.resolve(__dirname, "../../")];
 const projectRoot = path.resolve(__dirname, "../../");
 const context = path.resolve(__dirname, "../../src");
 const outputPath = path.resolve(__dirname, "../../dist/web/");
-const publicPath = "http://localhost:3301/web/";
+const publicPath = "";  // http://localhost:3301/web/
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -159,6 +159,13 @@ let whiteListedModules = [
   "events", // 这个包是hmr有用到，删除的话，hmr client js 会报bootstrap:27 Uncaught ReferenceError: events is not defined
 ];
 
+a = [
+  ...Object.keys(dependencies || {}).filter(
+      (d) => !whiteListedModules.includes(d)
+    ),
+];
+console.info(333, a);
+
 // web客户端配置， 对应的还有web server 端配置在下面
 const frontConfig = {
   name: "frontend",
@@ -184,6 +191,7 @@ const frontConfig = {
   },
   // 定义外部类库，不参与打包
   externals: [
+    'electron',
     ...Object.keys(dependencies || {}).filter(
       (d) => !whiteListedModules.includes(d)
     ),
