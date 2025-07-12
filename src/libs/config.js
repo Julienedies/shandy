@@ -3,7 +3,6 @@
  */
 
 import path from "path";
-import electron from "electron";
 
 import jo from "../libs/jsono";
 
@@ -43,6 +42,7 @@ let cfg = {
 	STOCK_IMG_DIR,
 };
 
+// 这个文件其实也会在server端使用； @electron/remote这种打包的话会导致server端错误；
 // main process or render process, 主进程是browser
 // 主进程能够获取正确的目录路径，但是渲染进程，鬼知道它的__dirname解析到哪里去了？
 if (process.type === "browser") {

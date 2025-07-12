@@ -9,7 +9,7 @@ import path from 'path'
 import glob from 'glob'
 import moment from 'moment'
 
-import electron from 'electron'
+//import electron from 'electron'
 
 import _ from 'lodash'
 import ocr from '../../../libs/baidu-ocr'
@@ -18,7 +18,7 @@ import stockQuery from '../../../libs/stock-query'
 import ju from '../../../libs/jodb-user'
 import jsonDbFactory from '../../../libs/jsono-short'
 
-const nativeImage = electron.nativeImage;
+//const nativeImage = electron.nativeImage;
 const viewerDbFactory = jsonDbFactory('viewer');
 // const viewerJsonDb = ju('viewer');
 
@@ -305,12 +305,12 @@ export default {
      * @returns {string} 图片dataUrl
      */
     crop: function (imgPath, crop) {
-        console.info('crop => ', imgPath, crop);
-        let img = nativeImage.createFromPath(imgPath);
-        img = img.crop(crop);
-        let dataUrl = img.toDataURL();
-        console.info("%c", `border:solid 1px blue;padding:20px 240px; line-height:60px;background:url(${dataUrl}) no-repeat 0 0`);
-        return dataUrl;
+        // console.info('crop => ', imgPath, crop);
+        // let img = nativeImage.createFromPath(imgPath);
+        // img = img.crop(crop);
+        // let dataUrl = img.toDataURL();
+        // console.info("%c", `border:solid 1px blue;padding:20px 240px; line-height:60px;background:url(${dataUrl}) no-repeat 0 0`);
+        // return dataUrl;
     },
 
 
