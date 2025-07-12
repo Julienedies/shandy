@@ -1,21 +1,398 @@
 [
 	{
-		"text": "而深市转债临时停牌期间可委托买入或卖出，所以14:57分复牌时，要先对停牌期间委托的单子来一次集合竞价撮合成交，再进入收盘集合竞价，一共进行了2次集合竞价，产生了2次成交：",
+		"id": "id_1750321507581_8567",
 		"type": "",
-		"id": "2064997",
-		"timestamp": 1621067326970
+		"level": "0",
+		"text": "https://github.com/coreybutler/nvm-windows/releases",
+		"timestamp": 1750321507581
+	},
+	{
+		"id": "id_1747448464490_1458",
+		"type": "",
+		"level": "0",
+		"text": "https://space.bilibili.com/508717881?spm_id_from=333.337.0.0",
+		"timestamp": 1747448464490
+	},
+	{
+		"id": "id_1746426343210_9286",
+		"type": "",
+		"level": "0",
+		"text": "https://blog.csdn.net/qq_46394486/article/details/146047674",
+		"timestamp": 1746426343210
+	},
+	{
+		"text": "使用快捷键临时显示隐藏文件\n快捷键：在 Finder 窗口中按下 Command (⌘) + Shift + .（英文句号）。\n\n再次按下相同的组合键可以重新隐藏这些文件。\n\n适用场景：快速临时查看隐藏文件，无需终端命令。",
+		"type": "",
+		"id": "id_1744438379053_5835",
+		"timestamp": 1744438379053
+	},
+	{
+		"id": "id_1744157308935_3898",
+		"type": "",
+		"level": "0",
+		"text": "http://124.221.131.241:3300/web/stock_index.html",
+		"timestamp": 1744157308935
+	},
+	{
+		"id": "id_1744036250416_4374",
+		"type": "",
+		"level": "0",
+		"text": "https://github.com/Julienedies/shandy/archive/refs/heads/master.zip",
+		"timestamp": 1744036250416
+	},
+	{
+		"id": "id_1744035129260_5266",
+		"type": "unix",
+		"level": "0",
+		"text": "服务器操作系统：Debian 11.1 64bit\n\n默认用户名：root\n登录密码：3_TG2NDZxRkC|yu\n\n// 这个是单独上传文件使用的，\nscp ~/dev/shandy-.zip root@106.55.173.85:/home/app/\n\n\nssh root@106.55.173.85\n\nsudo apt update && sudo apt install -y nodejs npm\n\nsudo mkdir -p /home/app && cd /home/app\n\nsed -i  's|Users/j/dev/shandy/|home/app/shandy|g'   ./dist/web/server.js\n\npm2  start  /home/app/shandy/dist/web/server.js   \n-----------------\nssh root@124.221.131.241\n7)5bJ:6qPjXw\n\n sudo - julien\njulien  hello/julien/2012\n\n\nscp ~/dev/shandy-.zip root@124.221.131.241:/home/julien/app/shandy-/\n\nsed -i '' 's|Users/j/dev/shandy/|home/julien/app/shandy-|g'   ./dist/web/server.js\n\n\n\ncurl https://github.com/Julienedies/shandy/archive/refs/heads/master.zip\n\n\nnode  home/julien/app/shandy-/dist/web/server.js\n\n\nnpm install -g pm2\n\npm2  start  home/julien/app/shandy-/dist/web/server.js   \npm2 stop all",
+		"timestamp": 1744035129260
+	},
+	{
+		"id": "id_1742714235039_9433",
+		"type": "",
+		"level": "0",
+		"text": "N:=10;\nM:=90;\nA:=(C/REF(LLV(C,N-1),1)-1)*100;\nB:=A>M;\n{STICKLINE(B,C,O,2.5,0),COLORMAGENTA;\nSTICKLINE(B,H,L,0,0),COLORMAGENTA;}\nD:=CROSS(B,0.5);\nF:=IF(D AND CURRBARSCOUNT=N,1,0);\nNOTEXT:DRAWLINE(D,L,REF(D,1),REF(L,1),1);",
+		"timestamp": 1742714235039
+	},
+	{
+		"id": "id_1742569086261_1033",
+		"type": "",
+		"level": "0",
+		"text": "{双色K线公式}\nUP:=CLOSE>OPEN;                          {判断阳线}\nNOTUP:=CLOSE<=OPEN;                      {判断阴线}\n实体高度:=ABS(CLOSE-OPEN);               {计算实体高度}\n十部分高度:=实体高度*0.1;                {计算10%的高度}\n\n{绘制黄色主体部分（90%）}\nSTICKLINE(YD AND UP, OPEN, CLOSE-十部分高度, 0.8, 1), COLORYELLOW;\nSTICKLINE(YD AND NOTUP, CLOSE+十部分高度, OPEN, 0.8, 1), COLORYELLOW;\n\n{绘制紫色顶部/底部（10%）}\nSTICKLINE(YD AND  UP, CLOSE-十部分高度, CLOSE, 0.8, 1), COLORFF00FF; {紫色}\nSTICKLINE(YD AND  NOTUP, CLOSE, CLOSE+十部分高度, 0.8, 1), COLORFF00FF;",
+		"timestamp": 1742569086261
+	},
+	{
+		"id": "id_1732454882560_1727",
+		"type": "",
+		"level": "0",
+		"text": "sudo killall -HUP mDNSResponder",
+		"timestamp": 1732454882560
+	},
+	{
+		"text": "很多发展中国家当年吸引外资，给出了低税率、低土地成本、低劳动力成本、低环境污染容忍度等等的条件，从经济学意义上说，就是以相对低于发达国家的制造业成本，让他们觉得有更多利润可图，那他们自己就来了。\n\n这是资本的自然行为，是无法阻挡的。而一旦他们纷至沓来，带来的资金、技术、产业链，就足以支撑一个国家发展至繁荣。",
+		"type": "",
+		"id": "id_1730995015363_0063",
+		"timestamp": 1730995015363
+	},
+	{
+		"id": "id_1730009887193_1273",
+		"type": "",
+		"level": "0",
+		"text": "        // 通达信自定义数据格式：北证以2标志、上证以1标志、深证以0标志；\n        let szh = /^[6]/.test(code) ? 1 : /^[84]/.test(code) ? 2 : 0;",
+		"timestamp": 1730009887193
+	},
+	{
+		"text": "Shares China Large-Cap ETF\n",
+		"type": "",
+		"id": "id_1728806511780_9018",
+		"timestamp": 1728806511780,
+		"level": "0"
+	},
+	{
+		"text": "大陆最好的dns应该是腾讯和阿里的，一个大佬说的\n\n我把这两个给大家\n\n阿里DNS\n\n223.5.5.5\n\n腾讯DNS\n\n19.29.29.29",
+		"type": "",
+		"id": "id_1727426729355_2992",
+		"timestamp": 1727426729355
+	},
+	{
+		"id": "id_1726614867916_1058",
+		"type": "ps",
+		"level": "0",
+		"text": "wifi密码：sceehqaq",
+		"timestamp": 1726614867916
+	},
+	{
+		"text": "C:\\Users\\Administrator\\Documents\\Tencent Files",
+		"type": "",
+		"id": "id_1726577692958_1161",
+		"timestamp": 1726577692958
+	},
+	{
+		"text": "ZSQJ3:=IF(SHZB,\"999998$C\"/REF(\"999998$C\",3)-1,\"399107$C\"/REF(\"399107$C\",3)-1)*100;",
+		"type": "",
+		"id": "id_1725152588505_4420",
+		"timestamp": 1725152588505
+	},
+	{
+		"id": "id_1723552997275_2267",
+		"type": "",
+		"level": "0",
+		"text": "style=\"height:expression((this.scrollHeight>150)?'150px':(this.scrollHeight+5)+'px');overflow:auto;\"",
+		"timestamp": 1723552997275
+	},
+	{
+		"text": "git log --date=format:\"%Y-%m-%d\"\n",
+		"type": "git",
+		"id": "id_1719159343301_6826",
+		"timestamp": 1719159343301,
+		"level": "0"
+	},
+	{
+		"id": "id_1719150893104_9750",
+		"type": "",
+		"level": "0",
+		"text": "disk 2 - s/n 2040fy456406.short self test unsuccessful, terminated by controller or drive firmware, retry test",
+		"timestamp": 1719150893104
+	},
+	{
+		"text": "window.addEventListener(\"wheel\", handleStopWheel, {\n    passive: false\n})\n\nfunction handleStopWheel(e) {\n   e.preventDefault();\n}",
+		"type": "",
+		"id": "id_1719035482119_2750",
+		"timestamp": 1719035482119,
+		"level": "0"
+	},
+	{
+		"text": "function stopBodyScroll (isFixed) {\n  if (isFixed) {\n    top = window.scrollY\n\n    bodyEl.style.position = 'fixed'\n    bodyEl.style.top = -top + 'px'\n  } else {\n    bodyEl.style.position = ''\n    bodyEl.style.top = ''\n\n    window.scrollTo(0, top) // 回到原先的top\n  }\n}",
+		"type": "js",
+		"id": "id_1719035467332_3671",
+		"timestamp": 1719035467332,
+		"level": "0"
+	},
+	{
+		"text": "// 禁止事件的默认行为\n    e.preventDefault();\n\n    // 禁止事件继续传播\n    e.stopPropagation();",
+		"type": "",
+		"id": "id_1719030521255_3917",
+		"timestamp": 1719030521255,
+		"level": "0"
+	},
+	{
+		"text": "如果在Windows的启动项中找不到你想要禁止的进程，可能需要采取一些不同的方法来阻止它自动启动。以下是一些可能的步骤：\n\n检查服务：\n\n有些程序可能以服务的形式运行。你可以打开“运行”对话框（Win + R），输入services.msc，然后回车。在服务列表中查找该进程对应的服务，然后右键选择“属性”，在“启动类型”中选择“禁用”。",
+		"type": "",
+		"id": "id_1718970093886_0412",
+		"timestamp": 1718970093886
+	},
+	{
+		"text": "不过这里感觉市场还是有点恐慌过头了，如果单论国九条的话，其实对于微盘股并没有特别大的利空。\n\nST新规指出，主板只要是盈利的公司，只需要将近三年累计利润的10%拿出来分红，或者三年累计分红超过5000万即可不被ST；而双创的公司三年累计分红金额标准是3000万，同时近三年研发费率累计超过15%或3亿元即可；而对于亏损个股，主板个股营收超过3亿，创业板营收超过1亿，那基本也没啥问题。\n\n所以，对于绝大部分微盘股，这些要求都很容易达到，所以这两天很多绩优小盘股也被无差别杀了十几二十个点，确实有点过了。",
+		"type": "",
+		"id": "id_1713314281651_2627",
+		"timestamp": 1713314281651
+	},
+	{
+		"text": "viewportWidth = window.innerWidth;\n\ncss media",
+		"type": "js",
+		"id": "id_1712489429392_4665",
+		"timestamp": 1712489429392,
+		"level": "0"
+	},
+	{
+		"text": "深证Ａ股:=INBLOCK('深证Ａ股'); INDEH:=IF(中小企业=1,\"399005$H\",IF(创业板=1,\"399006$H\",IF(上证Ａ股=1,\"999999$H\",\"399001$H\"))),NODRAW; INDEO:=IF(中小企业=1,\"399005$O\",IF(创业板=1,\"399006$O\",IF(上证Ａ股=1,\"999999$O\",\"399001$O\"))),NODRAW; INDEL:=IF(中小企业=1,\"399005$L\",IF(创业板=1,\"399006$L\",IF(上证Ａ股=1,\"999999$L\",\"399001$L\"))),NODRAW; INDEC:=IF(中小企业=1,\"399005$C\",IF(创业板=1,\"399006$C\",IF(上证Ａ股=1,\"999999$C\",\"399001$C\"))),NODRAW; AA指:=REF(INDEC,1); 指数涨幅:=IF(AA指>0,(INDEC-AA指)*100/AA指,0); 大盘:=IF(中小企业=1,'中小企业指数',IF(创业板=1,'创业板指数',IF(上证Ａ股=1,'上证指数','深证指数')));  涨幅:=STRCAT(':',CON2STR(指数涨幅,2)); MSG1:=STRCAT(大盘,涨幅); DRAWTEXT_FIX(1,0,0,0,MSG1),COLORYELLOW;",
+		"type": "",
+		"id": "id_1711465061188_6286",
+		"timestamp": 1711465061188
+	},
+	{
+		"id": "id_1711446301305_6147",
+		"type": "",
+		"level": "0",
+		"text": "5.15+1.47+3.17+1.7+0.52+1.03+1.3+1.2+0.44+2.35+(-3.8)+3.36+1.08+0.18+(-0.59)+0.22+(-1.2)+1.08+2.12+0.82+(-0.11)+(-0.59)+0.95+1.62+(-0.43)+0.61+(-0.13)+(-1.22)+(-1.86)+0.18\n\n10+10.06+6.33+6.45+(-2.33)+(-0.79)+5.13+1.37+6.02+(-0.71)+(-7)+9.98+1.68+0.69+6.14+0.77+2.42+9.34+10.02+10.04+6.87+(-4.58)+9.96+9.98+7.48+1.21+3.3+(-0.81)+(-1.23)+4.85\n\n221.91-22.29= 199.62；\n\n192.65-16.31= 176.34；",
+		"timestamp": 1711446301305
+	},
+	{
+		"id": "id_1711260887242_3877",
+		"type": "",
+		"level": "0",
+		"text": "选股宝 概念 ajax\nhttps://flash-api.xuangubao.cn/api/stage2/plates_by_any_stock?symbol=600973.SS&fields=core_avg_pcp,plate_name\n\n同花顺 同业 ajax\nhttps://basic.10jqka.com.cn/mapp/300799/a_companies_list.json",
+		"timestamp": 1711260887242
+	},
+	{
+		"text": "STR:='要显示的文字文字文字文字文字文字文字';\nSL:=CEILING(STRLEN(STR)/2);\nDRAWTEXT(CURRBARSCOUNT=SL, REFX(H,SL-1), STR),DRAWABOVE;",
+		"type": "",
+		"id": "id_1710809124939_6731",
+		"timestamp": 1710809124939
+	},
+	{
+		"text": "DRAWTEXT(ISLASTBAR, IF(BARPOSX()<80, BARPOSX()*1.1, BARPOSX()/1.1), HIGH*1.08, '要显示的文字文字文字",
+		"type": "",
+		"id": "id_1710780177075_2467",
+		"timestamp": 1710780177075
+	},
+	{
+		"text": "一周是一年的2%。",
+		"type": "",
+		"id": "id_1710753293958_6461",
+		"timestamp": 1710753293958
+	},
+	{
+		"id": "id_1710686842830_5019",
+		"type": "tdx",
+		"level": "0",
+		"text": "A1:=C>=REF(C,1)*1.095 AND C>=H;\nXG:=REF(A1,N);",
+		"timestamp": 1710686842831
+	},
+	{
+		"text": "【美国国债收益率升至2007年以来最高 通胀担忧重燃】财联社9月20日电，加拿大通胀数据高于预期以及油价上涨加剧了全球对通胀压力再度抬头的担忧，推动美国5年期和10年期国债收益率双双升至2007年以来的最高水平。美国5年期国债收益率一度上涨7个基点，至4.52%，而10年期收益率一度上涨6个基点，至4.365%。两年期国债收益率距离多年新高仅差一个基点。PGIM Fixed Income联席首席投资官Gregory Peters表示，这些变动反映出债市意识到美联储将在更长一段时间内把政策利率保持在高位。",
+		"type": "",
+		"id": "id_1695169318185_0397",
+		"timestamp": 1695169318185
+	},
+	{
+		"text": "在任何一个领域，刻意练习都是造就顶尖人才的方法，也是顶尖人才用来保持领先地位的方法。如果你想成为专业人士，刻意训练自己是绝对必不可少的。",
+		"type": "",
+		"id": "id_1690696039928_7596",
+		"timestamp": 1690696039928
+	},
+	{
+		"text": "Get-ItemProperty HKLM:\\SYSTEM\\CurrentControlSet\\Enum\\HID\\*\\*\\Device` Parameters FlipFlopWheel -EA 0 | ForEach-Object { Set-ItemProperty $_.PSPath FlipFlopWheel 1 }\n\npowerShell以管理员身份执行，用于设置windoiws下滚轮方向和mac一样；",
+		"type": "",
+		"id": "id_1689780802439_9720",
+		"timestamp": 1689780802439
+	},
+	{
+		"text": "const webview = document.getElementById('foo')\nwebview.openDevTools();",
+		"type": "",
+		"id": "id_1689518050862_0707",
+		"timestamp": 1689518050862
+	},
+	{
+		"text": "菲茨杰拉德的那句名言，“检验一流智力的标准，就是看你能不能在头脑中同时存在两种相反的想法，还能维持正常行事的能力”",
+		"type": "",
+		"id": "id_1687709158923_3974",
+		"timestamp": 1687709158923
+	},
+	{
+		"text": "天道好还，中国有必伸之理；人心效顺，匹夫无不报之仇",
+		"type": "",
+		"id": "id_1682670318427_7075",
+		"timestamp": 1682670318427
+	},
+	{
+		"id": "id_1679762294091_4304",
+		"type": "vim",
+		"level": "0",
+		"text": "q！忽略修改退出\nwq 保存改变退出",
+		"timestamp": 1679762294091
+	},
+	{
+		"text": "//安装最新版本覆盖旧版本\nnpm install tdesign-miniprogram@0.11.2",
+		"type": "",
+		"id": "id_1679757826803_7244",
+		"timestamp": 1679757826803
+	},
+	{
+		"text": "更新指定依赖安装包（根据前缀符号更新，有时需要在 package.json 手动更改依赖包相应版本号再更新）\n\nnpm update tdesign-miniprogram -S  (--save/-S or --save-dev/-D)\n\nnpm i  jhandy@0.5.43 -S\n\nnpm i  @julienedies/brick@0.9.45 -S\n\n@latest",
+		"type": "npm",
+		"id": "id_1679757364314_8192",
+		"timestamp": 1679757364314,
+		"level": "0"
+	},
+	{
+		"id": "id_1676983017478_9936",
+		"type": "",
+		"level": "0",
+		"text": "\n股票异动停牌“新”规则（附指标公式）\n\nhttps://zhuanlan.zhihu.com/p/548697315?utm_id=0",
+		"timestamp": 1676983017478
+	},
+	{
+		"text": "落后者的原罪\n\n一方面由于客观现实变化太快，一方面又由于主观认识反应太慢，总之，今天的很多人生活水平进入了2018，而思想却长期停留在1978、1988，停留在了中国是个极为落后的国家、中国一切都要以西方为楷模为标准、中国必须接受批评和指导这样一个思想水平上，没有任何变化。\n\n也不能全怪他们。近现代的几百年，是一个社会达尔文主义的大争之世，先进者为所欲为、落后者挨打挨骂是天经地义，落后者不仅必须接受先进者的统治和领导，而且还要不断自省、自责、自我否定，不能有任何自信、自立、自我肯定的表现，就像奴隶和主人、罪犯和法官的关系一样。总之，落后成了一种原罪，需要终生寻求救赎，否则随时遭受惩罚。\n\n由于众所周知的原因，在相当长的一段时间里，中国人都背负着这种原罪，就因为在经济、科技、知识等方面的落后而被认为整体愚昧、无知、低能、卑贱，被认为什么都不是，什么都不行，什么都要向西方看齐。\n\n西方人自己当然要不断强化这样的定位，因为他人的原罪正是其全球统治的合法性来源，殖民主义时代一手持剑、一手持圣经打遍全球无敌手的历史辉煌早已成了他们融化在血液中的记忆，只要非西方民族都承认自己有原罪，那么西方人就理所当然成了全人类的上帝。\n\n但事情的难解之处在于，同时还有相当一部分中国人，长期以来一直比西方人还要卖力、还要执着地在强化着中国的原罪定位。对他们来说，中国必须是落后的，必须是追随西方的，必须是差距很大而且做什么都不对的，如果不是这样，他们自己就没有用处了，没有价值了，因为引导本国接受西方的救赎一直是他们的专属职业。\n\n在被称为“中国政治改革”这个领域里，集中了最多的职业说教者、引导员、批评家，他们坚定地认为这是中国最为落后的一个领域，无论中国的经济发展、民生改善、社会进步取得了多大的成绩，都不足以让他们放弃“中国政治体制严重落后”这个认知，而先进的标准也完全不看经济发展、民生改善和社会进步，只看是不是接近了西方式的自由民主。",
+		"type": "",
+		"id": "id_1674823351152_5603",
+		"timestamp": 1674823351152
+	},
+	{
+		"text": "教你活得好",
+		"type": "",
+		"id": "id_1664871184719_2978",
+		"timestamp": 1664871184719
+	},
+	{
+		"text": "缓慢的、持久的、有纪律的努力，最终会导致令人难以置信的结果。\n\n每当我无法忍受日常生活时，我就提醒自己，没有什么比每天坚持做下去更重要了。虽然我很难看到未来会怎样，但我知道持久性具有强大的威力，就像一句古老格言说的\"继续去做\"（keep doing）。",
+		"type": "",
+		"id": "id_1648822367902_5901",
+		"timestamp": 1648822367902
+	},
+	{
+		"id": "id_1642931657898",
+		"type": "",
+		"level": "0",
+		"text": "http://www.xiepp.cc/film/107399/\n\nhttps://33tool.com/idea/\n\nYULK6MEOCK-eyJsaWNlbnNlSWQiOiJZVUxLNk1FT0NLIiwibGljZW5zZWVOYW1lIjoi5rC45LmF5r+A5rS7IHd3d8K3YWppaHVvwrdjb20iLCJhc3NpZ25lZU5hbWUiOiIiLCJhc3NpZ25lZUVtYWlsIjoiIiwibGljZW5zZVJlc3RyaWN0aW9uIjoiIiwiY2hlY2tDb25jdXJyZW50VXNlIjpmYWxzZSwicHJvZHVjdHMiOlt7ImNvZGUiOiJEUE4iLCJwYWlkVXBUbyI6IjIwMjItMDMtMDEiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkRCIiwicGFpZFVwVG8iOiIyMDIyLTAzLTAxIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJQUyIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiSUkiLCJwYWlkVXBUbyI6IjIwMjItMDMtMDEiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJTQyIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJHTyIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiRE0iLCJwYWlkVXBUbyI6IjIwMjItMDMtMDEiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJTRiIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJEUyIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUEMiLCJwYWlkVXBUbyI6IjIwMjItMDMtMDEiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJDIiwicGFpZFVwVG8iOiIyMDIyLTAzLTAxIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiV1MiLCJwYWlkVXBUbyI6IjIwMjItMDMtMDEiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJEIiwicGFpZFVwVG8iOiIyMDIyLTAzLTAxIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJSUzAiLCJwYWlkVXBUbyI6IjIwMjItMDMtMDEiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJNIiwicGFpZFVwVG8iOiIyMDIyLTAzLTAxIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUlNWIiwicGFpZFVwVG8iOiIyMDIyLTAzLTAxIiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IkRDIiwicGFpZFVwVG8iOiIyMDIyLTAzLTAxIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJSU1UiLCJwYWlkVXBUbyI6IjIwMjItMDMtMDEiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkRQIiwicGFpZFVwVG8iOiIyMDIyLTAzLTAxIiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBEQiIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQV1MiLCJwYWlkVXBUbyI6IjIwMjItMDMtMDEiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFNJIiwicGFpZFVwVG8iOiIyMDIyLTAzLTAxIiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBQUyIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQQ1dNUCIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQR08iLCJwYWlkVXBUbyI6IjIwMjItMDMtMDEiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUFBDIiwicGFpZFVwVG8iOiIyMDIyLTAzLTAxIiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IlBSQiIsInBhaWRVcFRvIjoiMjAyMi0wMy0wMSIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJQU1ciLCJwYWlkVXBUbyI6IjIw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",
+		"timestamp": 1642931657898
+	},
+	{
+		"text": "人最缺少的一种能力就是去改变自己的能力。",
+		"type": "",
+		"id": "id_1641015389075",
+		"timestamp": 1641015389075
+	},
+	{
+		"id": "id_1641011207039",
+		"type": "中转",
+		"level": "0",
+		"text": "https://discussionschinese.apple.com/thread/250809848",
+		"timestamp": 1641011207039
+	},
+	{
+		"text": "你怎样过一天，就怎样过一生",
+		"type": "",
+		"id": "4556457",
+		"timestamp": 1636587842481,
+		"level": 21
+	},
+	{
+		"text": "为了方便理解，再打个比方：\n\n如果把人比作一把手枪，那么心灵就是扳机，而激情或情感就是扣下扳机的那股力（power）。没有这股力，扳机不会扣下，子弹不会出膛（行动）。",
+		"type": "",
+		"id": "0239485",
+		"timestamp": 1636165554995
+	},
+	{
+		"text": "自我在人性中具有极大的调和能力，它抗拒一切外来打击，任何不能接受的都是不能接受的，它天然的保护着本我的存在，自我是本我的奴隶，而它倾向于自认自己是主子，这就是自我的可爱之处。自我在人性中具有极大的调和能力就是叫做自欺的功能，这一功能是人性最重要的保护装置，自我企图用外在世界的⎧规则⎫对本我施加影响力，抗拒潜意识以快乐为原则的游戏规则，而本能的强大却不以抑制为转移，人性天然的向潜意识靠拢，把欲望转为行动，再赋予欲望以道理，似乎是自我理性的主张。而一切心理症候群都反映出压抑与释放不畅的特征。短线交易类似于竞技⎧体育⎫，它与人的状态密不可分，人在任何一种意志、欲望、梦想笼罩下的行为都会产生过激特性，佛说一切执迷都是错，道要求人们清静无为，人只有处于清静无我的状态下才能理性行动。",
+		"type": "",
+		"id": "2617489",
+		"timestamp": 1634818604575
+	},
+	{
+		"text": "Update 2021: A few months after I posted this question, the flag I referenced in my original answer was removed, and instead of disabling a security feature I was forced to solve the problem more satisfactorily.\n\n2021年更新: 在我发布这个问题的几个月后，我在原始答案中提到的国旗被移除了，我被迫更加令人满意地解决了这个问题，而不是禁用一个安全特性。\n\nPrivate Network Access (formerly CORS-RFC1918) is a specification that forbids requests from less private network resources to more private network resources. Like HTTP to HTTPS, or a remote host to localhost.\n\n专用网络接入(原 CORS-RFC1918)是一个规范，禁止从较少的专用网络资源请求更多的专用网络资源。比如 HTTP 到 HTTPS，或者远程主机到本地主机。\n\nThe ultimate solution was to add a self-signed certificate, and Access-Control-* headers, which enabled requests from my remote dev server to my localhost webpack-dev-server for assets.\n\n最终的解决方案是添加一个自签名的证书和 Access-Control-* 头，它允许从远程开发服务器向本地主机 webpack-dev-server 请求资产。\n\nGenerate certificates\n生成证书\ncd path/to/.ssl\nnpx mkcert create-cert\nConfigure webpack-dev-server to use certificates\n配置 webpack-dev-server 以使用证书\nmodule.exports = {\n  //...\n  devServer: {\n    https: {\n      key: readFileSync('./.ssl/cert.key'),\n      cert: readFileSync('./.ssl/cert.crt'),\n      cacert: readFileSync('./.ssl/ca.crt'),\n    },\n    headers: {\n      'Access-Control-Allow-Private-Network': true,\n      'Access-Control-Allow-Origin': '*',\n    }\n  }\n}",
+		"type": "",
+		"id": "2323825",
+		"timestamp": 1634382798386
+	},
+	{
+		"text": "此中有真意，欲辨已忘言。",
+		"type": "",
+		"id": "8269307",
+		"timestamp": 1633482030288
+	},
+	{
+		"id": "7940816",
+		"type": "",
+		"level": "0",
+		"text": "The request client is not a secure context and the resource is in more-priva",
+		"timestamp": 1633437941153
+	},
+	{
+		"text": "app.options(\"/*\", function(req, res, next) {\n    res.header('Access-Control-Allow-Origin', '*');\n    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');\n    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');\n    res.sendStatus(200);\n});\n\napp.all('*', function(req, res, next) {\n    res.header(\"Access-Control-Allow-Origin\", \"*\");\n    next();\n});",
+		"type": "",
+		"id": "1791347",
+		"timestamp": 1633437726226
+	},
+	{
+		"text": "雷电3还有其它强大的专属功能，如带动高速SSD移动硬盘（通常写入速度在700MB/s以上，读取速度过1500MB/s）；多屏超清画面扩展，满足高端的商业、金融用户和极客玩家，追求多屏扩展、分辨率高、鼠标操控无拖沓感的需求；外接显卡，采用集成显卡的轻薄类笔记本玩不了大型3D游戏，但利用雷电3接口外接强劲的显卡，轻薄本也能轻松吃鸡。",
+		"type": "",
+		"id": "2823115",
+		"timestamp": 1627133986042
+	},
+	{
+		"text": "此心安处是我乡",
+		"type": "",
+		"id": "9599645",
+		"timestamp": 1625400893418
+	},
+	{
+		"text": "測試正常，請改用标准BT软件吧，如：bitcoment、BitSpirit、uTorrent、qbittorrent、Transmission、Deluge、BitTorrent",
+		"type": "",
+		"id": "5272154",
+		"timestamp": 1624180888900
+	},
+	{
+		"text": "有一天，白猫在它身边静静地不动了。它哭了起来，从夜里哭到早上，又从早上哭到夜里，它哭了有100万次。一天中午，它的哭声停止了。它在白猫的身边静静地不动了。 猫，再也没有起死回生过。",
+		"type": "",
+		"id": "9412361",
+		"timestamp": 1624024010310
 	},
 	{
 		"text": "I shot for the sky\nI‘m stuck on the ground\nSo why do I try, I know I‘m gonna to fall down\nI thought I could fly, so why did I drown?\nNever know why it‘s coming down, down, down.\n\nI‘m tired of waiting,\nWaiting here in line, hoping that I‘ll find what I‘ve been chasing.\n\nI shot for the sky\nI‘m stuck on the ground\nit‘s coming down, down, down.",
 		"type": "",
 		"id": "7530490",
 		"timestamp": 1616915861104
-	},
-	{
-		"text": "此心安处是我乡",
-		"type": "",
-		"id": "4473274",
-		"timestamp": 1616075332790
 	},
 	{
 		"text": "四连扳的公式, 过滤一字板\n\nZT:=C>=ZTPRICE(REF(C,1),0.095) AND C>L;\nBARSLASTCOUNT(ZT)=4;",
@@ -35,18 +412,6 @@
 		"id": "6418861",
 		"timestamp": 1614480440411,
 		"level": "0"
-	},
-	{
-		"text": "海外网9月16日电 据新快网援引ABC新闻网报道，据悉，名为“安宁药丸”（peaceful pill）的“戊巴比妥钠”(Nembutal)药物正是被“安乐死”倡议者视为最好与最平静结束生命的药物，可在服药1小时内夺走一个人的生命。近年来，不少澳洲人从中国购入了这种药物，而中国近2年更是占据了整个市场。澳洲“安乐死”倡议者，科学家尼奇科博士（Dr Philip Nitschke）表示，致命药物没几种，最好的便是“戊巴比妥钠”了。\n\n“我见过不少人服用这种药物离世，他们服药后越睡越沉，最后停止了呼吸.....在旁观人士看来，这是最平静的离世方式。但要小心，因为这是违法的。”据澳洲法律，走私入境或加工“戊巴比妥钠”的人士将面临监禁刑罚或罚款82.5万元。但尼奇科博士表示，近几年来有数百名澳洲人非法买入了这种药物。据ABC新闻专访，澳洲联邦警方披露自2007年以来共缴获15公斤此类药物，但尚未检控任何一人。\n\n中国“戊巴比妥钠”多真货",
-		"type": "",
-		"id": "2859178",
-		"timestamp": 1614242344454
-	},
-	{
-		"text": "安乐死药是氰化钠、氰化钾等我国严格管控的剧毒化学品，人只要服用0.1克就足以致死。",
-		"type": "",
-		"id": "3307743",
-		"timestamp": 1614242170493
 	},
 	{
 		"text": "搞定了，舒服，谢谢大家！\n默认的主图指标只能一个，我把编写的主图叠加指标和均线指标合在一起成为一个公式，然后用键盘敲出新的指标名称进入就可以了，这下成默认了！\n注意的是系统默认的均线公式里不能再添加公式，只能自己另外编写一个公式包含叠加指标和均线，一个公式就搞定。",
@@ -72,6 +437,12 @@
 		"type": "",
 		"id": "0787580",
 		"timestamp": 1603874175560
+	},
+	{
+		"text": "一百多年前美国有一个物理学家叫做亨利·罗兰，做过一次演讲，他说假如我们停止科学的进步而只留意科学的应用，很快就会退化成中国人那样。多少代人以来，中国人都没有什么进步，因为他们只满足科学应用，却从来没有追问过他们所做事情的原理。",
+		"type": "",
+		"id": "0060364",
+		"timestamp": 1602218733116
 	},
 	{
 		"id": "3951777",
@@ -108,17 +479,17 @@
 		"timestamp": 1593147877667
 	},
 	{
-		"id": "3198541",
-		"type": "",
-		"level": "0",
-		"text": "QYYBAC9D3J-eyJsaWNlbnNlSWQiOiJRWVlCQUM5RDNKIiwibGljZW5zZWVOYW1lIjoi6LaF57qnIOeoi+W6j+WRmCIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiIiLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IklJIiwiZmFsbGJhY2tEYXRlIjoiMjAyMC0wMS0wNCIsInBhaWRVcFRvIjoiMjAyMS0wMS0wMyJ9LHsiY29kZSI6IkFDIiwiZmFsbGJhY2tEYXRlIjoiMjAyMC0wMS0wNCIsInBhaWRVcFRvIjoiMjAyMS0wMS0wMyJ9LHsiY29kZSI6IkRQTiIsImZhbGxiYWNrRGF0ZSI6IjIwMjAtMDEtMDQiLCJwYWlkVXBUbyI6IjIwMjEtMDEtMDMifSx7ImNvZGUiOiJQUyIsImZhbGxiYWNrRGF0ZSI6IjIwMjAtMDEtMDQiLCJwYWlkVXBUbyI6IjIwMjEtMDEtMDMifSx7ImNvZGUiOiJHTyIsImZhbGxiYWNrRGF0ZSI6IjIwMjAtMDEtMDQiLCJwYWlkVXBUbyI6IjIwMjEtMDEtMDMifSx7ImNvZGUiOiJETSIsImZhbGxiYWNrRGF0ZSI6IjIwMjAtMDEtMDQiLCJwYWlkVXBUbyI6IjIwMjEtMDEtMDMifSx7ImNvZGUiOiJDTCIsImZhbGxiYWNrRGF0ZSI6IjIwMjAtMDEtMDQiLCJwYWlkVXBUbyI6IjIwMjEtMDEtMDMifSx7ImNvZGUiOiJSUzAiLCJmYWxsYmFja0RhdGUiOiIyMDIwLTAxLTA0IiwicGFpZFVwVG8iOiIyMDIxLTAxLTAzIn0seyJjb2RlIjoiUkMiLCJmYWxsYmFja0RhdGUiOiIyMDIwLTAxLTA0IiwicGFpZFVwVG8iOiIyMDIxLTAxLTAzIn0seyJjb2RlIjoiUkQiLCJmYWxsYmFja0RhdGUiOiIyMDIwLTAxLTA0IiwicGFpZFVwVG8iOiIyMDIxLTAxLTAzIn0seyJjb2RlIjoiUEMiLCJmYWxsYmFja0RhdGUiOiIyMDIwLTAxLTA0IiwicGFpZFVwVG8iOiIyMDIxLTAxLTAzIn0seyJjb2RlIjoiUk0iLCJmYWxsYmFja0RhdGUiOiIyMDIwLTAxLTA0IiwicGFpZFVwVG8iOiIyMDIxLTAxLTAzIn0seyJjb2RlIjoiV1MiLCJmYWxsYmFja0RhdGUiOiIyMDIwLTAxLTA0IiwicGFpZFVwVG8iOiIyMDIxLTAxLTAzIn0seyJjb2RlIjoiREIiLCJmYWxsYmFja0RhdGUiOiIyMDIwLTAxLTA0IiwicGFpZFVwVG8iOiIyMDIxLTAxLTAzIn0seyJjb2RlIjoiREMiLCJmYWxsYmFja0RhdGUiOiIyMDIwLTAxLTA0IiwicGFpZFVwVG8iOiIyMDIxLTAxLTAzIn0seyJjb2RlIjoiUlNVIiwiZmFsbGJhY2tEYXRlIjoiMjAyMC0wMS0wNCIsInBhaWRVcFRvIjoiMjAyMS0wMS0wMyJ9XSwiaGFzaCI6IjE2MDgwOTA5LzAiLCJncmFjZVBlcmlvZERheXMiOjcsImF1dG9Qcm9sb25nYXRlZCI6ZmFsc2UsImlzQXV0b1Byb2xvbmdhdGVkIjpmYWxzZX0=-I7c5mu4hUCMxcldrwZEJMaT+qkrzrF1bjJi0i5QHcrRxk2LO0jqzUe2fBOUR4L+x+7n6kCwAoBBODm9wXst8dWLXdq179EtjU3rfJENr1wXGgtef//FNow+Id5iRufJ4W+p+3s5959GSFibl35YtbELELuCUH2IbCRly0PUBjitgA0r2y+9jV5YD/dmrd/p4C87MccC74NxtQfRdeUEGx87vnhsqTFH/sP4C2VljSo/F/Ft9JqsSlGfwSKjzU8BreYt1QleosdMnMK7a+fkfxh7n5zg4DskdVlNbfe6jvYgMVE16DMXd6F1Zhwq+lrmewJA2jPToc+H5304rcJfa9w==-MIIElTCCAn2gAwIBAgIBCTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE4MTEwMTEyMjk0NloXDTIwMTEwMjEyMjk0NlowaDELMAkGA1UEBhMCQ1oxDjAMBgNVBAgMBU51c2xlMQ8wDQYDVQQHDAZQcmFndWUxGTAXBgNVBAoMEEpldEJyYWlucyBzLnIuby4xHTAbBgNVBAMMFHByb2QzeS1mcm9tLTIwMTgxMTAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxcQkq+zdxlR2mmRYBPzGbUNdMN6OaXiXzxIWtMEkrJMO/5oUfQJbLLuMSMK0QHFmaI37WShyxZcfRCidwXjot4zmNBKnlyHodDij/78TmVqFl8nOeD5+07B8VEaIu7c3E1N+e1doC6wht4I4+IEmtsPAdoaj5WCQVQbrI8KeT8M9VcBIWX7fD0fhexfg3ZRt0xqwMcXGNp3DdJHiO0rCdU+Itv7EmtnSVq9jBG1usMSFvMowR25mju2JcPFp1+I4ZI+FqgR8gyG8oiNDyNEoAbsR3lOpI7grUYSvkB/xVy/VoklPCK2h0f0GJxFjnye8NT1PAywoyl7RmiAVRE/EKwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQAF8uc+YJOHHwOFcPzmbjcxNDuGoOUIP+2h1R75Lecswb7ru2LWWSUMtXVKQzChLNPn/72W0k+oI056tgiwuG7M49LXp4zQVlQnFmWU1wwGvVhq5R63Rpjx1zjGUhcXgayu7+9zMUW596Lbomsg8qVve6euqsrFicYkIIuUu4zYPndJwfe0YkS5nY72SHnNdbPhEnN8wcB2Kz+OIG0lih3yz5EqFhld03bGp222ZQCIghCTVL6QBNadGsiN/lWLl4JdR3lJkZzlpFdiHijoVRdWeSWqM4y0t23c92HXKrgppoSV18XMxrWVdoSM3nuMHwxGhFyde05OdDtLpCv+jlWf5REAHHA201pAU6bJSZINyHDUTB+Beo28rRXSwSh3OUIvYwKNVeoBY+KwOJ7WnuTCUq1meE6GkKc4D/cXmgpOyW/1SmBz3XjVIi/zprZ0zf3qH5mkphtg6ksjKgKjmx1cXfZAAX6wcDBNaCL+Ortep1Dh8xDUbqbBVNBL4jbiL3i3xsfNiyJgaZ5sX7i8tmStEpLbPwvHcByuf59qJhV/bZOl8KqJBETCDJcY6O2aqhTUy+9x93ThKs1GKrRPePrWPluud7ttlgtRveit/pcBrnQcXOl1rHq7ByB8CFAxNotRUYL9IF5n3wJOgkPojMy6jetQA5Ogc8Sm7RG6vg1yow==",
-		"timestamp": 1593147825885
-	},
-	{
 		"text": "来来来,全源码 剔除ST,停牌,未开板新股,首日上市新股,科创板个股\n\nZQ:=BARSCOUNT(C);\nYZ:=C=ZTPRICE(REF(C,1),0.1) AND L=H;\nXG:=(EVERY(YZ,ZQ) OR ZQ=1);\nNOT(XG OR NAMELIKE('ST') OR NAMELIKE('*ST') OR NAMELIKE('S')\nOR DYNAINFO(4)=0 OR INBLOCK('科创板'));",
 		"type": "",
 		"id": "6382804",
 		"timestamp": 1589722851522
+	},
+	{
+		"id": "9382096",
+		"type": "",
+		"level": "0",
+		"text": "显示兄还没有入门，你为什么打板？为打板而打板吗？\n\n\n\n打板的本质是为了跟随捕捉市场上的热点爆点。\n\n你打的那些板都是冷门杂毛，溢价从何而来？\n\n\n\n行情性质、资金类型、行情生命周期\n\n多空博弈，节奏周期\n\n主线热点，人气龙头",
+		"timestamp": 1589432425011
 	},
 	{
 		"text": "count(ma(c,N)>=ref(ma(c,n),1),M)=M;{N为均线周线,选5代表5日均线,M为均线形态周期,选10表示连续10日走平或向上,如果只要向上不要走平的话,就把ref(ma......前的等号删去}",
@@ -158,20 +529,6 @@
 		"id": "4590964",
 		"timestamp": 1578722756278,
 		"level": "0"
-	},
-	{
-		"id": "5663422",
-		"type": "",
-		"level": "0",
-		"text": "{ 基本单位 START ------------------------------------- }\n百万:= 100 * 10000;\n千万:= 1000 * 10000;\n亿:= 10000 * 10000;\n{ 基本单位 END --------------------------------------- }\n\n{ 基本参数 START ------------------------------------- }\n上市天数:= FINANCE(42);\n流通市值:= FINANCE(40);\n前收盘价:= DYNAINFO(3);\n昨收盘价:= 前收盘价;\n涨停价:= ZTPRICE( DYNAINFO(3), 0.1);\n开盘价:= DYNAINFO(4);\n量比:= DYNAINFO(17);\n昨日额:= REF(AMO,1);\n近日均额:= IF(上市天数 >= 21, REF(MA(AMO, 5), 1), 昨日额);\n竞价额:= DYNAINFO(15);\n\n昨竞比:= 竞价额/昨日额;\n竞均比:= 竞价额/近日均额;\n\n高开:= (开盘价-昨收盘价)/昨收盘价; \n\n\n涨幅F:= (C - REF(C, 1))/REF(C, 1);\n昨涨幅:= IF(CURRBARSCOUNT=1, REF(涨幅F, 1), 0);\n\n昨最高涨幅F:= (H - REF(C, 1))/REF(C, 1);\n昨最高涨幅:= IF(CURRBARSCOUNT=1, REF(昨最高涨幅F, 1), 0);\n\n昨回落:= IF(CURRBARSCOUNT=1, 昨最高涨幅-昨涨幅, 0);\n\n昨最低跌幅F:= (L - REF(C, 1))/REF(C, 1);\n昨最低跌幅:= IF(CURRBARSCOUNT=1, REF(昨最低跌幅F, 1), 0);\n\n昨量比F:= VOL/REF(VOL,1);\n昨量比:= IF(CURRBARSCOUNT=1, REF(昨量比F, 1), 0);\n\n\n近日最高价:= REF(HHV(H, 7), 1);\n近日回落F:= (C-近日最高价)/近日最高价;\n近日回落:= IF(CURRBARSCOUNT=1, REF(近日回落F, 1), 0);\n\n近日最低价:= REF(LLV(L, 7), 1);\n近日涨幅F:= (C-近日最低价)/近日最低价;\n近日涨幅:= IF(CURRBARSCOUNT=1, REF(近日涨幅F, 1), 0);\n\n{ 中线均额:  30日平均成交金额 }\n中线均额:= IF(上市天数 > 45, REF(MA(AMO, 30), 1), 近日均额);\n中均流比:= 中线均额/流通市值;\n\n{ 240日最高价，最低价，判断当前价是新高，底部, 接近压力位，接近支撑位 }\n最高价_IN_240:= HHV(L, 240);\n最低价_IN_240:= LLV(L, 240);\n距顶部_IN_240:= (昨收盘价-最高价_IN_240)/最高价_IN_240;\n距底部_IN_240:= (昨收盘价-最低价_IN_240)/最低价_IN_240;\n振幅_IN_240:= (最高价_IN_240-最低价_IN_240)/最低价_IN_240;\n\n{ 均线形态: 最近15日, 15日均线向上}\nIS_10日均线向上:= 上市天数 >= 45 AND COUNT( MA(C,10) >= REF(MA(C,10),1), 10) > 7;\nIS_15日均线向上:= 上市天数 >= 45 AND COUNT( MA(C,15) >= REF(MA(C,15),1), 19) > 15;\nIS_24日均线向上:= 上市天数 >= 45 AND COUNT( MA(C,24) >= REF(MA(C,24),1), 30) > 24;\nIS_近日均线向上:= IS_24日均线向上 OR  IS_15日均线向上;\nIS_近日趋势向上:= IS_24日均线向上 AND IS_15日均线向上;\n\n\nIS_仙股:= 上市天数 >= 30 AND 中线均额 < 4 * 千万 AND 中均流比 < 2/100;\nIS_冷门:= 上市天数 >= 30 AND 中线均额 < 9 * 千万 AND 中均流比 < 2/100;\nIS_中性:= (中线均额 > 2 * 亿 AND 中均流比 >= 3/100) OR (中线均额 > 5 * 亿 AND 中均流比 >= 2/100);\nIS_活跃:= (中线均额 > 3 * 亿 AND 中均流比 >= 5/100) OR (中线均额 > 5 * 亿 AND 中均流比 >= 4/100);\n\nIS_昨上冲回落:= 昨最高涨幅 >= 5/100 AND 昨回落 >= 5/100;\nIS_昨大跌:= 昨涨幅 < -4/100;\nIS_近日大跌:= 近日回落 < -6/100;\nIS_竞价跳高:= 开盘价 > REF(H,1);\nIS_竞价新高:= 开盘价 > REF(HHV(H, 240), 1);\n{ 基本参数 END --------------------------------------- }\n\n\n{ 条件辅助 START ------------------------------------- }\nNOT_IN_封板:= FINDSTR(ZDBLOCK, 'X封板') = 0;\n\nIN_封板:= FINDSTR(ZDBLOCK, 'X封板');\nIN_破板:= FINDSTR(ZDBLOCK, 'X破板');\nIN_上冲:= FINDSTR(ZDBLOCK, 'X上冲');\nIN_竞价强:= FINDSTR(ZDBLOCK, '竞价强');\nIN_XJ2:= FINDSTR(ZDBLOCK, 'XJ2');\nIN_XJ3:= FINDSTR(ZDBLOCK, 'XJ3');\n\nIN_O:= FINDSTR(ZDBLOCK, 'O');\nIN_OZ:= IN_O OR FINDSTR(ZDBLOCK, 'Z');\nIN_OC:= INBLOCK('自选股') OR FINDSTR(ZDBLOCK, 'O龙头') OR FINDSTR(ZDBLOCK, 'OC');\nIN_OZS:= INBLOCK('自选股') OR FINDSTR(ZDBLOCK, 'O') OR FINDSTR(ZDBLOCK, 'Z') OR FINDSTR(ZDBLOCK, 'S');\n\nIN_OC_封板:= IN_封板 AND IN_OC;\nIN_OZS_NOT封板:= IN_OZS AND NOT_IN_封板;\nIN_OC_O_NOT封板:= IN_OC OR NOT_IN_封板;\n\nIS_自选:= IN_OZS;  { 所有OZS级自选 }\nIS_自选2:= IN_OZS_NOT封板 OR IN_OC_封板;  { 所有非板自选 和 OC级封板自选  }\n\nIS_XJ:= IN_竞价强 OR IN_XJ2 OR IN_XJ3 OR FINDSTR(ZDBLOCK, 'JQ');\nIS_龙头:= FINDSTR(ZDBLOCK, 'O龙头');\nIS_老龙:= FINDSTR(ZDBLOCK, 'Z老龙');\nIS_热门:= FINDSTR(ZDBLOCK, 'O');\n\nIS_主线:= FINDSTR(ZDBLOCK, 'JM');\nIS_风口:= FINDSTR(ZDBLOCK, 'JF');\nIS_热点:= IS_主线 OR IS_风口;\n\nIS_蓝筹:= FINDSTR(FGBLOCK,'重仓') OR FINDSTR(FGBLOCK,'绩优') OR FINDSTR(FGBLOCK,'社保') OR FINDSTR(FGBLOCK,'证金') OR FINDSTR(FGBLOCK,'保险') OR FINDSTR(FGBLOCK,'QFII');\n\n\nIS_超小盘:= 流通市值 < 30 * 亿;\nIS_小盘:= 流通市值 >= 30 * 亿 AND 流通市值 < 60 * 亿;\nIS_中盘:= 流通市值 >= 60 * 亿 AND 流通市值 < 100 * 亿;\nIS_中大盘:= 流通市值 >= 100 * 亿 AND 流通市值 < 300 * 亿;\nIS_大盘:= 流通市值 >= 300 * 亿 AND 流通市值 < 900 * 亿;\nIS_超大盘:= 流通市值 >= 900 * 亿;\n\nLT_中盘:= 流通市值 < 60 * 亿;\nGT_中盘:= 流通市值 >= 60 * 亿;\nLT_中大盘:= 流通市值 < 100 * 亿;\nGT_中大盘:= 流通市值 >= 100 * 亿;\nLT_大盘:= 流通市值 < 300 * 亿;\nGT_大盘:= 流通市值 >= 300 * 亿;\nLT_超大盘:= 流通市值 < 900 * 亿;\nGT_超大盘:= 流通市值 >= 900 * 亿;\n\n\n微量1:= LT_中盘 AND 竞价额 >= 4 * 百万 AND 竞均比 >= 0.8/100;\n微量2:= LT_大盘 AND 竞价额 >= 7 * 百万 AND 竞均比 >= 0.7/100;\n微量3:= 竞价额 >= 1 * 千万 AND 竞均比 >= 0.8/100;\nGT_微量:= 微量1 OR 微量2 OR 微量3;\n\n小量1:= LT_中盘   AND 竞价额 >= 5 * 百万 AND 竞均比 >= 1/100;\n小量2:= LT_中大盘 AND 竞价额 >= 6 * 百万 AND 竞均比 >= 1/100;\n小量3:= LT_大盘   AND 竞价额 >= 7 * 百万 AND 竞均比 >= 1/100;\n小量4:= LT_超大盘 AND 竞价额 >= 8 * 百万 AND 竞均比 >= 1/100;\n小量5:= IS_超大盘 AND ( (竞价额 >= 1 * 千万 AND 竞均比 >= 1/100) OR (竞价额 >= 2 * 千万 AND 竞均比 >= 0.8/100) );\nGT_小量:= 小量1 OR 小量2 OR 小量3 OR 小量4 OR 小量5;\n\n放量1:= LT_中盘   AND ( (竞价额 >= 5 * 百万 AND 竞均比 >= 2/100)   OR (竞价额 >= 6 * 百万 AND 竞均比 >= 1.5/100) );\n放量2:= LT_中大盘 AND ( (竞价额 >= 7 * 百万 AND 竞均比 >= 1.5/100) OR (竞价额 >= 8 * 百万 AND 竞均比 >= 1/100) );\n放量3:= LT_大盘   AND ( (竞价额 >= 9 * 百万 AND 竞均比 >= 1.5/100) OR (竞价额 >= 1 * 千万 AND 竞均比 >= 1/100) );\n放量4:= LT_超大盘 AND    竞价额 >= 1.5 * 千万 AND 竞均比 >= 1/100;\n放量5:= IS_超大盘 AND    竞价额 >= 2 * 千万 AND 竞均比 >= 1/100;\nGT_放量:= 放量1 OR 放量2 OR 放量3 OR 放量4 OR 放量5;\n\n巨量1:= LT_大盘   AND 竞价额 >= 4 * 千万 AND 竞均比 >= 6/100;\n巨量2:= LT_超大盘 AND 竞价额 >= 5 * 千万 AND 竞均比 >= 5/100;\n巨量3:= LT_超大盘 AND 竞价额 >= 6 * 千万 AND 竞均比 >= 4/100;\n巨量4:= IS_超大盘 AND 竞价额 >= 9 * 千万 AND 竞均比 >= 4/100;\nGT_巨量:= 巨量1 OR 巨量2 OR 巨量3 OR 巨量4;\n\n爆量1:= LT_超大盘 AND 竞价额 >= 5 * 千万 AND 竞均比 >= 8/100;\n爆量2:= LT_超大盘 AND 竞价额 >= 6 * 千万 AND 竞均比 >= 7/100;\n爆量3:= LT_超大盘 AND 竞价额 >= 7 * 千万 AND 竞均比 >= 6/100;\n爆量4:= IS_超大盘 AND 竞价额 >= 2 * 亿   AND 竞均比 >= 5/100;\nGT_爆量:= 爆量1 OR 爆量2 OR 爆量3 OR 爆量4;\n\n\nABS_放量:= 竞价额 >= 1 * 千万 AND 竞均比 >= 1/100;\nABS_大量:= 竞价额 >= 2 * 千万 AND 竞均比 >= 2/100;\nABS_巨量:= 竞价额 >= 3 * 千万 AND 竞均比 >= 3/100;\n\n\nIN_微低:= 高开 >= -0.5/100 AND 高开 <= 0/100;\nIN_微高:= 高开 > 0/100 AND 高开 < 1/100;\nIN_微跳:= 高开 >= 1/100 AND 高开 < 2/100;\nIN_起跳:= 高开 >= 2/100 AND 高开 < 5/100;\nIN_高跳:= 高开 >= 5/100 AND 高开 < 8/100;\n\nGT_微低:= 高开 >= -0.5/100;\nGT_微高:= 高开 > 0/100;\nGT_微跳:= 高开 >= 1/100;\nGT_起跳:= 高开 >= 2/100;\nGT_高跳:= 高开 >= 5/100;\nGT_板跳:= 高开 >= 8/100;\nIS_一字板:= 开盘价 = 涨停价;\n{ 条件辅助 END --------------------------------------- }\n\n\n{ 基本选股条件 START --------------------------------- }\n价格条件:= 前收盘价 > 3;\n基本选股条件:= 价格条件;\n{ 基本选股条件 END ----------------------------------- }\n\n\n{ 小量 放量  巨量  爆量\n微高 微跳  起跳 高跳  板跳 }\nGT_微量微低:= GT_微量 AND GT_微低;\nGT_微量微高:= GT_微量 AND GT_微高;\nGT_微量微跳:= GT_微量 AND GT_微跳;\nGT_微量起跳:= GT_微量 AND GT_起跳;\n\nGT_小量微低:= GT_小量 AND GT_微低;\nGT_小量微高:= GT_小量 AND GT_微高;\nGT_小量微跳:= GT_小量 AND GT_微跳;\nGT_小量起跳:= GT_小量 AND GT_起跳;\nGT_小量高跳:= GT_小量 AND GT_高跳;\n\nGT_放量微低:= GT_放量 AND GT_微低;\nGT_放量微高:= GT_放量 AND GT_微高;\nGT_放量微跳:= GT_放量 AND GT_微跳;\nGT_放量起跳:= GT_放量 AND GT_起跳;\n\nGT_巨量微高:= GT_巨量 AND GT_微高;\nGT_巨量微跳:= GT_巨量 AND GT_微跳;\nGT_巨量起跳:= GT_巨量 AND GT_起跳;\n\n{ 最低过滤标准 }\nIS_通用竞价强:= GT_小量微高 OR GT_微量微跳 OR GT_放量微低;\n\n{ 非涨停板竞价强: 日内热点, 超短标的; }\nIS_非板竞价强:= IS_通用竞价强 AND NOT_IN_封板; \n\nIS_过滤竞价强:=  IS_通用竞价强 AND (IS_自选 OR NOT_IN_封板);\nIS_过滤竞价强2:= IS_通用竞价强 AND (IS_自选2 OR NOT_IN_封板);\n\n{ 条件汇总 START -----------------------------------------------------------------------------------}\n\n{ 逻辑: 多头超强势。通常用在底部首浪启动抢筹 }\n连续上冲1:= IN_上冲 AND GT_放量微高 AND 近日涨幅 < 20/100 AND (IS_自选 OR IS_热点 OR ABS_放量);\n连续上冲2:= IN_上冲 AND IS_自选 AND ( (GT_放量微低 AND ABS_放量) OR (IN_OC AND GT_微量微高) OR GT_小量微跳 );\nIS_连续上冲:= 连续上冲1 OR 连续上冲2; \nIS_强势跳高:= IN_上冲 AND GT_放量微跳 AND IS_竞价跳高 AND (IS_自选 OR IS_热点 OR ABS_放量);\n\n{ 逻辑: 超预期。意味着若转强，分歧转一致 }\nIS_烂板不弱:= IN_破板 AND (GT_放量微高 OR GT_小量微跳) AND (IS_自选 OR IS_热点);\nIS_烂板强:=   IN_破板 AND GT_放量微跳;\nIS_烂板上冲:= IN_破板 AND GT_放量起跳 AND ABS_放量;\n\n{逻辑: 多空博弈, 多空动态转换 }\n多空反转1:= 昨涨幅 < -6/100 AND 昨涨幅 > -9.7/100 AND GT_放量微低 AND IS_自选 AND ABS_放量;            { 短期情绪 }\n多空反转2:= 昨涨幅 < -4/100 AND (GT_小量微跳 OR GT_放量微高) AND (IS_自选 OR IS_热点 OR ABS_放量);     { 短期情绪 }\n多空反转3:= 近日回落 < -7/100 AND (GT_小量微跳 OR GT_放量微高) AND (IS_自选 OR IS_热点 OR ABS_放量);   { 多日回调 }\nIS_多空反转:= 多空反转1 OR 多空反转2 OR 多空反转3;\n\n{ 逻辑: 趋势意味着主线和反身性 }\nIS_趋势起跳:= IS_非板竞价强 AND IS_近日趋势向上 AND GT_放量微跳 AND ABS_放量 AND (IS_自选 OR IS_热点);\nIS_调整起跳:= IS_非板竞价强 AND IS_近日趋势向上 AND 近日回落<-5/100 AND ( GT_放量微高 OR GT_小量微跳 OR (IS_自选 AND GT_微量微跳) );\nIS_突破起跳:= IS_非板竞价强 AND IS_近日均线向上 AND 上市天数 > 45 AND IS_竞价新高 AND GT_放量起跳 AND ABS_放量;\n\nIS_热点起跳:= IS_非板竞价强 AND GT_放量起跳 AND (IS_自选2 OR IS_热点);\n\n{ 逻辑: 热点中的热点, 人气和热钱所在 }\nIS_龙头模式:= IS_过滤竞价强 AND IS_龙头;\nIS_龙二波:=   IS_过滤竞价强 AND IS_老龙 AND GT_放量微跳 AND ABS_放量;\n\n\n{ T字板: 加速; 抢筹; 最强; 一致; }\nIS_T字板:= IS_过滤竞价强 AND ABS_放量 AND IS_一字板;\n\n\nIS_一字龙头平开:= 0;\nIS_共振转强:= 0;\nIS_分歧转一致:= 0;\nIS_弱转强:= IS_烂板上冲;\n\nIS_人气模式:= IS_龙头模式 OR IS_龙二波   OR IS_一字龙头平开;   { 热点中的热点 }\nIS_转强模式:= IS_烂板不弱 OR IS_烂板强   OR IS_烂板上冲;        { 该弱不弱，意味着转强}\nIS_趋势模式:= IS_趋势起跳 OR IS_突破起跳 OR IS_调整起跳;      { 主线趋势 }\nIS_强势模式:= IS_连续上冲 OR IS_强势跳高;                     { 强势 }\nIS_博弈模式:= IS_多空反转;                                    { 转折; 贪婪与恐惧循环往复; }\nIS_热点模式:= IS_热点起跳;\n\nIS_模式:=  IS_龙头模式 OR IS_转强模式 OR IS_趋势模式 OR IS_博弈模式 OR IS_强势模式 OR IS_热点模式;\n\n{ 模式: 相对异动，条件要求更高，但核心都是围绕着热点，趋势，博弈，反转，超预期，超强势 --------------------------------------------- }\n\nIS_自选异动:= IS_自选2 AND (GT_放量微高 OR GT_微量微跳);\nIS_热点异动:= IS_热点 AND (GT_放量微高 OR GT_小量微跳);\n\nIS_趋势异动:= IS_自选2 AND IS_近日均线向上 AND (GT_放量微高 OR GT_小量微跳);\nIS_上冲异动:= IN_上冲 AND (GT_小量微高 OR GT_放量微低);\nIS_烂板异动:= IN_破板 AND (GT_放量微低 OR GT_小量微高);\nIS_反转异动:= (昨涨幅 < -6/100 OR 近日回落 < -7/100) AND GT_微量起跳;\nIS_蓝筹异动:= GT_中大盘 AND GT_放量微跳 AND ABS_放量;\n\nIS_异动:= IS_热点异动 OR IS_自选异动 OR IS_蓝筹异动 OR IS_趋势异动 OR IS_上冲异动 OR IS_烂板异动 OR IS_反转异动 OR IS_T字板;\n\nIS_特别关注:= IS_过滤竞价强2 AND GT_放量起跳;\n{ 条件汇总 END --------------------------------------- }\n\n\n\n\n\n\n\n\n{ 条件分级 }\n竞价条件A:= IS_通用竞价强;\n竞价条件B:= IS_非板竞价强;\n\n竞价条件C:= IS_过滤竞价强 AND (IS_异动 OR IS_特别关注);\n\n竞价条件D:= IS_过滤竞价强 AND IS_模式;\n\n\nIS_ALL自选:= IN_OZS OR FINDSTR(ZDBLOCK, 'JV');\nIS增强1:= (IS_ALL自选 AND ABS_放量) OR (GT_大盘 AND ABS_巨量) OR (LT_大盘 AND ABS_大量) OR (LT_中大盘 AND ABS_放量);\nIS增强:= IS_过滤竞价强 AND (IS_异动 OR IS_模式) AND IS增强1 AND NOT(IS_冷门 OR IS_仙股);\n\n\n{ 最终输出 START ----------------------------------- }\n竞价条件0:= IS_通用竞价强;\n竞价条件1:= IS_过滤竞价强;\n竞价条件2:= 竞价条件C OR 竞价条件D;\n竞价条件3:= IS_过滤竞价强 AND NOT(IN_XJ2);\n竞价条件4:= 竞价条件D;\n\n\n\nXG:= IF(JL4, 竞价条件4, IF(JL2, 竞价条件2, IF(JL3, 竞价条件3, IF(JL1, 竞价条件1, 竞价条件0) ) ) );\n\nIF( (JL4 OR JL2) AND 增强C, XG AND IS增强,  XG);",
-		"timestamp": 1578389367650
-	},
-	{
-		"id": "6237200",
-		"type": "",
-		"level": "0",
-		"text": "微量1:= 竞价额 >= 4 * 百万 AND 竞均比 >= 0.8/100;\n微量2:= 竞价额 >= 6 * 百万 AND 竞均比 >= 0.7/100;\n微量3:= 竞价额 >= 1 * 千万 AND 竞均比 >= 0.6/100;\nIS_微量:= 微量1 OR 微量2 OR 微量3;\n\n小量1:= IS_超小盘 AND 竞价额 >= 3 * 百万 AND 竞均比 >= 3/100;\n小量2:= LT_中盘 AND 竞价额 >= 4 * 百万 AND 竞均比 >= 1/100;\n小量3:= LT_中大盘 AND 竞价额 >= 5 * 百万 AND 竞均比 >= 1/100;\n小量4:= LT_超大盘 AND 竞价额 >= 7 * 百万 AND 竞均比 >= 1/100;\n小量5:= IS_超大盘 AND 竞价额 >= 1 * 千万 AND 竞均比 >= 1/100;\nIS_小量:= 小量1 OR 小量2 OR 小量3 OR 小量4 OR 小量5;\n\n放量1:= IS_超小盘 AND 竞价额 >= 4 * 百万 AND 竞均比 >= 2/100;\n放量2:= LT_中大盘 AND 竞价额 >= 5 * 百万 AND 竞均比 >= 2/100;\n放量3:= LT_中大盘 AND 竞价额 >= 7 * 百万 AND 竞均比 >= 1/100;\n放量4:= LT_超大盘 AND ((竞价额 >= 1 * 千万 AND 竞均比 >= 1/100) OR (竞价额 >= 8 * 百万 AND 竞均比 >= 2/100));\n放量5:= IS_超大盘 AND 竞价额 >= 2 * 千万 AND 竞均比 >= 1/100;\nIS_放量:= 放量1 OR 放量2 OR 放量3 OR 放量4 OR 放量5;\n\n巨量1:= LT_超大盘 AND 竞价额 >= 3 * 千万 AND 竞均比 >= 9/100;\n巨量2:= LT_超大盘 AND 竞价额 >= 4 * 千万 AND 竞均比 >= 7/100;\n巨量3:= LT_超大盘 AND 竞价额 >= 5 * 千万 AND 竞均比 >= 6/100;\n巨量4:= IS_超大盘 AND 竞价额 >= 6 * 千万 AND 竞均比 >= 5/100;\nIS_巨量:= 巨量1 OR 巨量2 OR 巨量3 OR 巨量4;\n\n爆量1:= LT_超大盘 AND 竞价额 >= 4 * 千万 AND 竞均比 >= 9/100;\n爆量2:= LT_超大盘 AND 竞价额 >= 5 * 千万 AND 竞均比 >= 6/100;\n爆量3:= LT_超大盘 AND 竞价额 >= 6 * 千万 AND 竞均比 >= 5/100;\n爆量4:= IS_超大盘 AND 竞价额 >= 9 * 千万 AND 竞均比 >= 5/100;\nIS_爆量:= 爆量1 OR 爆量2 OR 爆量3 OR 爆量4;\n\n\nGT_放量:= 竞价额 >= 1 * 千万 AND 竞均比 >= 1/100;\nGT_巨量:= 竞价额 >= 5 * 千万 AND 竞均比 >= 2/100;",
-		"timestamp": 1577621444736
 	},
 	{
 		"text": "当某种骗术有受众基础时那说明我们自身存在很大的弱点而被人利用，你可以把骗子消灭但最好把自己的漏洞先堵上。",
@@ -431,6 +788,13 @@
 		"timestamp": 1563086678967
 	},
 	{
+		"text": "赵海英 滨州市中心医院   主治医师\n擅长: 白癜风,荨麻疹,银屑病,黄褐斑,湿疹,痤疮,腋臭,\n免费提问  帮助网友：9432称赞：1\n微信扫一扫，随时问医生\n2018-06-13 10:12:20 我要投诉\n      湿疹是过敏性的疾病，一般瘙痒剧烈，对称分布，迁延不愈，反复发作。痒的时候别抓是很关键的治疗方法。可以口服左西替利嗪或者氯雷他定一天一个，复方甘草酸甘，一次两个，一天三次治疗，外涂曲安奈德益康唑乳膏，一天三次，少涂轻揉至吸收，疗效确切。",
+		"type": "生活",
+		"id": "1584384",
+		"level": 1.1558359935432,
+		"timestamp": 1563086678967
+	},
+	{
 		"text": "echo \"# shandy-react\" >> README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit remote add origin https://github.com/Julienedies/shandy-react.git\ngit push -u origin master",
 		"type": "git",
 		"id": "5761121",
@@ -438,17 +802,10 @@
 		"timestamp": 1563086678967
 	},
 	{
-		"text": "echo \"# bookmarks-crx\" >> README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit remote add origin https://github.com/Julienedies/bookmarks-crx.git\ngit push -u origin master",
-		"type": "git",
-		"id": "8642408",
-		"level": 1.1558359935432,
-		"timestamp": 1563086678967
-	},
-	{
 		"id": "9210054",
 		"text": "BIRJ9FJWHN-eyJsaWNlbnNlSWQiOiJCSVJKOUZKV0hOIiwibGljZW5zZWVOYW1lIjoi5q2j54mI5o6I5p2DIC4iLCJhc3NpZ25lZU5hbWUiOiIiLCJhc3NpZ25lZUVtYWlsIjoiIiwibGljZW5zZVJlc3RyaWN0aW9uIjoiRm9yIGVkdWNhdGlvbmFsIHVzZSBvbmx5IiwiY2hlY2tDb25jdXJyZW50VXNlIjpmYWxzZSwicHJvZHVjdHMiOlt7ImNvZGUiOiJJSSIsInBhaWRVcFRvIjoiMjAyMC0wMi0xNiJ9LHsiY29kZSI6IkFDIiwicGFpZFVwVG8iOiIyMDIwLTAyLTE2In0seyJjb2RlIjoiRFBOIiwicGFpZFVwVG8iOiIyMDIwLTAyLTE2In0seyJjb2RlIjoiUFMiLCJwYWlkVXBUbyI6IjIwMjAtMDItMTYifSx7ImNvZGUiOiJHTyIsInBhaWRVcFRvIjoiMjAyMC0wMi0xNiJ9LHsiY29kZSI6IkRNIiwicGFpZFVwVG8iOiIyMDIwLTAyLTE2In0seyJjb2RlIjoiQ0wiLCJwYWlkVXBUbyI6IjIwMjAtMDItMTYifSx7ImNvZGUiOiJSUzAiLCJwYWlkVXBUbyI6IjIwMjAtMDItMTYifSx7ImNvZGUiOiJSQyIsInBhaWRVcFRvIjoiMjAyMC0wMi0xNiJ9LHsiY29kZSI6IlJEIiwicGFpZFVwVG8iOiIyMDIwLTAyLTE2In0seyJjb2RlIjoiUEMiLCJwYWlkVXBUbyI6IjIwMjAtMDItMTYifSx7ImNvZGUiOiJSTSIsInBhaWRVcFRvIjoiMjAyMC0wMi0xNiJ9LHsiY29kZSI6IldTIiwicGFpZFVwVG8iOiIyMDIwLTAyLTE2In0seyJjb2RlIjoiREIiLCJwYWlkVXBUbyI6IjIwMjAtMDItMTYifSx7ImNvZGUiOiJEQyIsInBhaWRVcFRvIjoiMjAyMC0wMi0xNiJ9LHsiY29kZSI6IlJTVSIsInBhaWRVcFRvIjoiMjAyMC0wMi0xNiJ9XSwiaGFzaCI6IjEyMDA2NTUwLzAiLCJncmFjZVBlcmlvZERheXMiOjAsImF1dG9Qcm9sb25nYXRlZCI6ZmFsc2UsImlzQXV0b1Byb2xvbmdhdGVkIjpmYWxzZX0=-Ax1mSSdkV6mJpU2F77OrlY5LDcPN/FpkNz1wvxS1Jeflhhe+dAN/h7S8eEx6jABWcSWa18EgdpKaEQso9ye/gdwtV5SxvlXRfJDn7Tz1rg9sk59Wwoi6PpAI/dCv8cZ3UpvfoGq9/55SDaYGqmbKgrv4j8y10mp3af1TUue0ktfsTBMt1u8eRfkY7KaNiZ70iuEEk1nNwMXu4ocrvokv5EFVkzWdDpKqSDhitEXh0ERol2kDg/J8v0J1Ofy4Ti9j0BNLJS/0op2QNCnz7in2m9i527I8SRubUUtCFObTuUgi4s/0fLkQXaySwtf5Uen8qE24phkPyUUBZSeKbg9JnA==-MIIElTCCAn2gAwIBAgIBCTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB",
-		"type": "unix",
-		"level": 1.1558359935432,
+		"type": "",
+		"level": "1.1558359935432",
 		"timestamp": 1563086678967
 	},
 	{
@@ -462,13 +819,6 @@
 		"text": "# 第一步：在你的用户文件下新建一个文件夹，这个.npm-global 名字可以用你自己喜欢的名字替换，推荐直接使用这个名字。\nmkdir ~/.npm-global\n#第二步：更改node的安装连接\nnpm config set prefix '~/.npm-global'\n#第三步：在用户的profile下增加path，为的是系统能够找到可执行文件的目录\n export PATH=~/.npm-global/bin:$PATH\n#第四步：update profile。使其生效\nsource .bash_profile",
 		"type": "npm",
 		"id": "7392923",
-		"level": 1.1558359935432,
-		"timestamp": 1563086678967
-	},
-	{
-		"id": "1826389",
-		"text": "杀手是因为手在扳机上，等候的时间更长，准备的更充分，而不是他叫杀手。",
-		"type": "stock",
 		"level": 1.1558359935432,
 		"timestamp": 1563086678967
 	},
@@ -508,17 +858,17 @@
 		"timestamp": 1563086678967
 	},
 	{
-		"text": "#列出所有分支名称如下：\ngit branch -a\nremotes/origin/dev\nremotes/origin/release\n#checkout远程的dev分支，在本地起名为dev分支，并切换到本地的dev分支\ngit checkout -b dev origin/dev",
+		"text": "#列出所有分支名称如下：\ngit branch -a\nremotes/origin/dev\nremotes/origin/release\n\n#checkout远程的dev分支，在本地起名为dev分支，并切换到本地的dev分支\ngit checkout -b dev origin/dev",
 		"type": "git",
 		"id": "2685650",
-		"level": 1.1558359935432,
+		"level": "1.1558359935432",
 		"timestamp": 1563086678967
 	},
 	{
 		"text": "把文件从 Git 仓库中删除,但保留文件\ngit rm --cached",
 		"type": "git",
 		"id": "9371367",
-		"level": 1.1558359935432,
+		"level": 11.1558359935432,
 		"timestamp": 1563086678967
 	},
 	{
@@ -614,9 +964,9 @@
 	},
 	{
 		"id": "3563317",
-		"text": "为项目重新设置git remote url\ngit remote set-url origin git@github.com:gushenwei/ac.git\n",
+		"text": "为项目重新设置git remote url\n\ngit remote set-url origin git@github.com:gushenwei/ac.git\n\ngit remote set-url origin git@github.com:Julienedies/jhandy-cli.git\n\ngit remote set-url origin git@github.com:Julienedies/crx-jhandy.git\n",
 		"type": "git",
-		"level": 1.1558359935432,
+		"level": "1",
 		"timestamp": 1563086678967
 	},
 	{
