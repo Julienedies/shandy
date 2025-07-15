@@ -53,6 +53,10 @@ html, body {
   .box {
     margin-bottom: 2.5rem;
   }
+  
+  .line.freeze{
+    opacity: 0.5;
+  }
 
   .button.is-primary {
     background-color: #04c6a9;

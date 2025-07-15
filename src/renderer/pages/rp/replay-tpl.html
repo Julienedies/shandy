@@ -45,9 +45,9 @@
                     <td> {{ brick.getTpl('replay3')({model:v}) }} </td>
                 </tr>-->
 
-        <tr ic-for="i, v in replay['line']">
+        <tr ic-for="i, v in replay['line']"  tabindex="{{ i }}">
             <td>{{ replay.week }}</td>
-            <td> {{ i }}</td>
+            <td><a ic-click="filterByKey:{{i}}"> {{ i }} </a></td>
             <td> {{ brick.getTpl('replay3')({model:v}) }}</td>
         </tr>
 

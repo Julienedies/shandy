@@ -71,13 +71,13 @@ brick.reg('rpListCtrl', function (scope) {
     let forDate = brick.utils.getQuery('date');
 
     if (forDate) {
-        // alert(`当前针对的是特定日期： ${ forDate }`);
-        $.icMsg(`当前针对的是特定日期： ${ forDate }`);
+        $.icMsg(`当前针对的是特定日期: ${ forDate }`);
     }
 
     scope.listManager = listManager;
 
 
+    // 创建标签key
     window._GET_RP_KEY = function (rp, tagType) {
         let key = '';
 
@@ -111,6 +111,7 @@ brick.reg('rpListCtrl', function (scope) {
         return key.replace(/\.-/img, '');
     };
 
+    // 创建输入key 
     window._GET_RP_KEY2 = function (rp, input) {
         //console.log(input);
         let key = '';
@@ -175,6 +176,7 @@ brick.reg('rpListCtrl', function (scope) {
 
     // 渲染rpList
     function render () {
+        $.icMsg('render rpList');
         let rpList = listManager.get();
         rpList.sort((a, b) => {
             let al = a.level || 0;
@@ -434,7 +436,7 @@ brick.reg('rpListCtrl', function (scope) {
         scope.emit(isLine ? 'SET_LINE' : 'setRp', item);
     };
 
-    // 删除前确认
+    // 删除rp前确认
     scope.delBeforeConfirm = function (e) {
         return confirm('确认删除？');
     };
@@ -444,10 +446,6 @@ brick.reg('rpListCtrl', function (scope) {
         setList(data);
     };
 
-    // 添加主线热点
-    /* scope.addLine = function (e, id) {
-         scope.emit('addLine', listManager.get(id));
-     };*/
 
     // 添加或修改一个line
     scope.setLine = function (e, id) {
@@ -475,6 +473,16 @@ brick.reg('rpListCtrl', function (scope) {
         let item = listManager.get(id);
         let level = (item.level || 1) * 1;
         item.level = level + 1;
+        $.post('/stock/rp', item).done((data) => {
+            setList(data);
+        });
+    };
+    
+    // 降权
+    scope.minus = function (e, id) {
+        let item = listManager.get(id);
+        let level = (item.level || 1) * 1;
+        item.level = level - 1;
         $.post('/stock/rp', item).done((data) => {
             setList(data);
         });

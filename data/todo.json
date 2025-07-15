@@ -106,7 +106,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1752198650009
+		"prevPromptTime": 1752545654894
 	},
 	{
 		"name": "",
@@ -122,7 +122,7 @@
 		"level": 980,
 		"title": "为何我总是临盘犹豫，手足无措，错过最好的交易机会？",
 		"promptTimes": 1,
-		"prevPromptTime": 1752212148842
+		"prevPromptTime": 1752556454631
 	},
 	{
 		"name": "",
@@ -154,7 +154,7 @@
 		"duration": 17,
 		"timestamp": 1665225867007,
 		"promptTimes": 2,
-		"prevPromptTime": 1752201349731
+		"prevPromptTime": 1752548354698
 	},
 	{
 		"name": "",
@@ -171,7 +171,7 @@
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 1,
-		"prevPromptTime": 1752217548690
+		"prevPromptTime": 1752564554416
 	},
 	{
 		"type": "错误",
@@ -188,7 +188,7 @@
 		"title": "为何我错过所有的大行情？为何我错过所有的龙头？",
 		"tag": "错过大行情和龙头",
 		"promptTimes": 2,
-		"prevPromptTime": 1752209449219
+		"prevPromptTime": 1752559154053
 	},
 	{
 		"name": "",
@@ -205,7 +205,7 @@
 		"title": "我的交易系统是什么？我要捕捉的目标行情是什么？",
 		"tag": "",
 		"promptTimes": 4,
-		"prevPromptTime": 1752225649727
+		"prevPromptTime": 1752572653826
 	},
 	{
 		"name": "",
@@ -222,7 +222,7 @@
 		"title": "我以什么做为判断锚点？为何我的预判总是错误？",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1752222950000
+		"prevPromptTime": 1752569953991
 	},
 	{
 		"name": "",
@@ -239,7 +239,7 @@
 		"title": "对市场理解不够，不知道市场参与者的行为逻辑。",
 		"tag": "",
 		"promptTimes": 1,
-		"prevPromptTime": 1752228348361
+		"prevPromptTime": 1752575353518
 	},
 	{
 		"name": "",
@@ -256,7 +256,7 @@
 		"level": "900",
 		"title": "为何我总是错过大行情？为何我总是后知后觉？",
 		"promptTimes": 1,
-		"prevPromptTime": 1752231048246
+		"prevPromptTime": 1752578053733
 	},
 	{
 		"name": "",
@@ -273,7 +273,7 @@
 		"title": "思维没有方向，操作没有系统；我每天脑子在想什么？",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1752233748742
+		"prevPromptTime": 1752580753782
 	},
 	{
 		"name": "",
@@ -290,7 +290,7 @@
 		"title": "思维没有方向，操作没有系统；每天盘前脑子完全是空的， 临盘被市场牵着鼻子走。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1752236448367
+		"prevPromptTime": 1752583454099
 	},
 	{
 		"type": "错误",
@@ -307,7 +307,7 @@
 		"duration": "17",
 		"timestamp": "1681838241354",
 		"promptTimes": 1,
-		"prevPromptTime": 1752239148163
+		"prevPromptTime": 1752586154664
 	},
 	{
 		"name": "",
@@ -324,7 +324,7 @@
 		"title": "无系统、无计划，临盘随意交易是我最大的亏损来源。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1752241847882
+		"prevPromptTime": 1752588853547
 	},
 	{
 		"name": "",
@@ -341,7 +341,7 @@
 		"title": "无系统，无计划，临盘犹豫应对差，机会转瞬即逝；",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1752244548034
+		"prevPromptTime": 1752591553685
 	},
 	{
 		"name": "",
@@ -358,7 +358,7 @@
 		"title": "永远没有明确的交易计划和准备，没有做盘面的推演和应对。",
 		"tag": "无系统",
 		"promptTimes": 1,
-		"prevPromptTime": 1752247248348
+		"prevPromptTime": 1752594253056
 	},
 	{
 		"type": "错误",

@@ -58,7 +58,7 @@
             <div id="mainContent" ic-tpl="rpList">
                 <div id="rpForm" ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm;">
                     <ul>
-                        <li ic-class="box {{ rp.role==='5'?'line':'' }}" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}"
+                        <li ic-class="box {{ rp.role==='5'?'line':'' }} {{ rp.freeze? 'freeze':''}}" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}"
                             tabindex="{{ rp.line ? 'line': rp.group }}">
                             <!-- draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" -->
                             <header ic-click="toggleWrap" ic-class="role_{{ rp.role }}">
@@ -68,7 +68,7 @@
                                 </h3>
                             </header>
 
-                            <div ic-class="wrap {{ rp.freeze?'shrink':'' }}">
+                            <div ic-class="wrap {{ rp.line?'':'' }}" ic-if="!(rp.line && rp.freeze)">
 
                                 <!-- 是否有嵌入的子元素 -->
                                 <!-- <div class="box" ic-if="rp.inset">
@@ -162,6 +162,9 @@
                                         </span>
                                     <span class="tag is-small" ic-click="plus:{{ rp.id }}">
                                             <i class="fas fa-long-arrow-alt-up" title="加权"></i>
+                                        </span>
+                                    <span class="tag is-small" ic-click="minus:{{ rp.id }}">
+                                            <i class="fas fa-long-arrow-alt-down" title="降权"></i>
                                         </span>
                                     <!--<span class="tag is-small" ic-click="focus:{{ rp.id }}">置顶   long-arrow-alt-up </span>-->
                                     <span ic-class="tag is-small {{ rp.re==='true'?'is-primary':'' }}" ic-click="re:{{ rp.id }}"
