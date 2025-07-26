@@ -7,11 +7,11 @@
             <th><a ic-click="viewReplayForDate:{{replay.date}}">{{ replay.date }}</a></th>
             <th>
                 <div style="display: flex; width:100%;">
+                    <span style="display: inline-block; width:13em;">{{ cycle }}</span>
+                    <span style="display: inline-block; width:12em;">{{ node }}</span>
                     <span style="display: inline-block; width:7em;">{{ dayMark }}</span>
-                    <span style="display: inline-block; width:11em;">{{ cycle }}</span>
-                    <span style="display: inline-block; width:9em;">{{ node }}</span>
 
-                    <span style="flex: 1;">{{ point && point.join('、') }}</span>
+                    <span style="flex: 1; padding:0 0 0 1.5em;">{{ point && point.join('、') }}</span>
                     <a ic-click="editReplayForDate:{{replay.date}}" style="float:right; padding:0 1em; opacity: 0.5;">
                         <i class="far fa-edit" title="编辑"></i>
                     </a>

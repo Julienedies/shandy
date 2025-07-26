@@ -63,13 +63,13 @@
                             <!-- draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" -->
                             <header ic-click="toggleWrap" ic-class="role_{{ rp.role }}">
                                 <h3>
-                                    <span>{{ rp.title }}</span>
+                                    <span>{{ rp.title }} {{ rp._TEMP_FILL?'---- 临时填充':'' }}</span>
                                     <b>{{ rp.caution }} </b>
                                 </h3>
                             </header>
 
                             <div ic-class="wrap {{ rp.line?'':'' }}" ic-if="!(rp.line && rp.freeze)">
-
+                                <!--冻结的line 不渲染 form 选项-->
                                 <!-- 是否有嵌入的子元素 -->
                                 <!-- <div class="box" ic-if="rp.inset">
                                  </div>-->

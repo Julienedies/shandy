@@ -293,6 +293,7 @@ brick.reg('rpListCtrl', function (scope) {
             let lineObj = JSON.parse(JSON.stringify(linePla));
             lineObj.title = v;
             lineObj.level = lineObj.level * 1 + 1;
+            lineObj._TEMP_FILL = true; // 临时填充标记，表示这个line并不是当前真的在rp list里
             delete lineObj.id;
             console.log(i, v, lineObj);
             rpData.push(lineObj);
@@ -557,7 +558,7 @@ brick.reg('rpListCtrl', function (scope) {
     };
 
     // 根据键盘输入，随时提交数据进行保存；
-    $elm.on('keyup', 'textarea', _.throttle(submit, 2900));
+    $elm.on('keyup', 'textarea', _.throttle(submit, 4900));
 
 
     // 根据复盘表单选项改变， 随时提交表单数据保存
