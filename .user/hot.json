@@ -1,7 +1,37 @@
 [
 	{
-		"id": "玻纤",
+		"id": "雅下",
 		"selected": true,
+		"timestamp": 1753198448482
+	},
+	{
+		"id": "雅江",
+		"selected": true,
+		"timestamp": 1753197598189
+	},
+	{
+		"id": "特高压",
+		"selected": false,
+		"timestamp": 1753191175963
+	},
+	{
+		"id": "雅下水电",
+		"selected": false,
+		"timestamp": 1753119242339
+	},
+	{
+		"id": "建材",
+		"selected": false,
+		"timestamp": 1753115486429
+	},
+	{
+		"id": "RDA",
+		"selected": false,
+		"timestamp": 1752422953518
+	},
+	{
+		"id": "玻纤",
+		"selected": false,
 		"timestamp": 1751980989804
 	},
 	{
@@ -26,7 +56,7 @@
 	},
 	{
 		"id": "稀土永磁",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1749574372786
 	},
 	{
@@ -116,7 +146,7 @@
 	},
 	{
 		"id": "三胎",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1742135834612
 	},
 	{
@@ -376,7 +406,7 @@
 	},
 	{
 		"id": "CRO",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1727009549075
 	},
 	{
@@ -441,7 +471,7 @@
 	},
 	{
 		"id": "固态电池",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1724934834987
 	},
 	{
@@ -856,7 +886,7 @@
 	},
 	{
 		"id": "AI",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1709435416242
 	},
 	{
@@ -896,7 +926,7 @@
 	},
 	{
 		"id": "光伏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1703392539246
 	},
 	{
@@ -976,7 +1006,7 @@
 	},
 	{
 		"id": "CPO",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1679493252776
 	},
 	{
@@ -1043,11 +1073,6 @@
 		"id": "AIGC",
 		"selected": false,
 		"timestamp": 1668612470235
-	},
-	{
-		"id": "国资云",
-		"selected": false,
-		"timestamp": 1668612377145
 	},
 	{
 		"id": "Chiplet",
