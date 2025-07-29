@@ -16,7 +16,7 @@ import "../../js/common.js";
 
 import fs from "fs";
 import $ from "jquery";
-import debugMenu from "debug-menu";
+//import debugMenu from "debug-menu";
 
 import userJo from "../../../libs/jsono-user";
 import ju from "../../../libs/jodb-user";
@@ -35,7 +35,7 @@ import listCtrl from "./list-ctrl";
 import attachCtrl from "./attach-ctrl";
 
 // activate context menu
-debugMenu.install();
+//debugMenu.install();
 
 // 交易记录json
 // const tradeArr = userJo('SEL', []).get();

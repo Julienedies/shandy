@@ -15,7 +15,7 @@ import config from '../libs/config'
 
 import favicon from '../renderer/img/favicon.ico'
 
-const SERVER_PORT = 3301;
+const SERVER_PORT = 3300;
 
 const app = express();
 const httpServer = http.Server(app);

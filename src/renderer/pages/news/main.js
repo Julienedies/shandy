@@ -7,6 +7,7 @@ import '../../css/common/common.scss'
 import './style.scss'
 
 import electron from 'electron'
+import {BrowserWindow} from '@electron/remote';
 
 import $ from 'jquery'
 
@@ -14,9 +15,9 @@ import voice from '../../../libs/voice'
 
 import setting from '../../../libs/setting'
 
-import debugMenu from 'debug-menu'
+// import debugMenu from 'debug-menu'
 
-debugMenu.install();
+// debugMenu.install();
 
 const w1 = `
 无系统,无计划，临盘被市场牵着鼻子走；随意冲动交易；
@@ -40,7 +41,7 @@ const voiceWarnText = {
 
 
 const ipc = electron.ipcRenderer;
-const BrowserWindow = electron.remote.BrowserWindow;
+//const BrowserWindow = electron.remote.BrowserWindow;
 let win;
 let timer;
 

@@ -10,6 +10,7 @@ import fs from 'fs'
 import electron from 'electron'
 
 import config from '../../../libs/config'
+import setting from '../../../libs/setting.js'
 import utils from '../../../libs/utils'
 import Win from '../../../libs/window'
 import tdx from '../../../libs/tdx'
@@ -18,7 +19,7 @@ import stockQuery from '../../../libs/stock-query'
 import captureOcr from '../../../libs/capture-ocr'
 import voice from '../../../libs/voice'
 
-import debugMenu from 'debug-menu'
+//import debugMenu from 'debug-menu'
 
 import $ from 'jquery'
 import brick from '@julienedies/brick'
@@ -34,7 +35,7 @@ const {ipcRenderer} = electron;
 //const {BrowserWindow} = remote;
 //import {shell} from '@electron/remote';
 
-debugMenu.install();
+//debugMenu.install();
 
 window.voice = voice;
 
@@ -98,6 +99,7 @@ ipcRenderer.on('set_stock_c', function (event, stock) {
     if (stock.code) {
         new Win({
             name:'stock_c',
+            ...() => {setting.get('stock_c.bounds') || {}},
             // width: 1200,
             // height: 800,
             // x: 2800,
@@ -161,6 +163,7 @@ ipcRenderer.on('rts_cancel', function (event, arg) {
 // 截屏
 ipcRenderer.on('screenCapture', function (event, arg) {
 
+    return kcAudio.play();
     console.log(arg);
     let stock = stockQuery(arg.name);
 
@@ -178,6 +181,6 @@ ipcRenderer.on('screenCapture', function (event, arg) {
 });
 
 
-// if (module.hot) {
-//     module.hot.accept();
-// }
+if (module.hot) {
+    module.hot.accept();
+}

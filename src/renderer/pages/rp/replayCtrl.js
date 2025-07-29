@@ -24,11 +24,12 @@ export default function () {
         scope.render('replay2', {model});
     });
 
+    // 点击 退出 快捷方便
     $elm.on('click', function(e){
-        //let originalTarget = e.originalEvent.target;
-        //if(originalTarget.id === 'backRpBtn') return false;
-        //brick.view.back();
-        //return false;
+        let originalTarget = e.originalEvent.target;
+        if(originalTarget.id === 'backRpBtn') return false;
+        brick.view.back();
+        return false;
     });
 
     // filterByKey 在不同的控制器内有不同的定义和功能

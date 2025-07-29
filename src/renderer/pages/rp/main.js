@@ -30,8 +30,8 @@ import {
 import '../../js/utils.js'
 import '../../js/common-stock.js'
 
-import setTagCtrl from '../tags2/set-tag-ctrl'
-import selectTagsCtrl from '../tags2/select-tags-ctrl'
+import setTagCtrl from '../tags/set-tag-ctrl'
+import selectTagsCtrl from '../tags/select-tags-ctrl'
 
 import setRpCtrl from './set-rp-ctrl'
 import setLineCtrl from './set-line-ctrl'
@@ -78,14 +78,27 @@ brick.reg('rpListCtrl', function (scope) {
     scope.listManager = listManager;
 
 
-
     window._GET_RP_KEY = function (rp, tagType) {
         let key = '';
+
+        const getAliasMap = function (str) {
+            let result = {};
+            let arr = str.split(/[;||；]/img);
+            arr.map((v) => {
+                let a = v.split(/[:：]/);
+                result[a[0]] = a[1];
+            });
+            return result;
+        };
+
         if (rp.line) {
             key = 'line.' + (rp.alias || rp.title) + '.' + tagType;
         } else {
-            // 如果以.结尾，
-            if (/[.]$/img.test(rp.alias)) {
+            if (rp.alias2) {
+                let map = getAliasMap(rp.alias2);
+                key = rp.alias + '.' + (map[tagType] || tagType);
+                key = key.replace('..', '.');
+            } else if (/[.]$/img.test(rp.alias)) { // 如果以.结尾，
                 key = rp.alias + tagType;
             } else if (/-/img.test(rp.alias)) {
                 key = rp.alias.replace('-', tagType);
@@ -99,18 +112,20 @@ brick.reg('rpListCtrl', function (scope) {
     };
 
     window._GET_RP_KEY2 = function (rp, input) {
+        //console.log(input);
         let key = '';
         if (rp.line) {
             key = ('line.' + rp.title) + '.' + input
         } else {
             if (/\^/img.test(input)) {
-                key = input.replace('^','');  // 如果input里含有^,则使用input为key, 但是删除^
+                console.log(input);
+                key = input.replace('^', '');  // 如果input里含有^, 则使用input为key
             } else if (/[.]/img.test(input)) {
-                key = input;  // 如果input里含有., 则使用input为key,保留.
+                key = input;  // 如果input里含有.,则使用input为key
             } else if (/[.]$/img.test(rp.alias)) {
-                key = rp.alias + input;  // 如果alias以.结尾，则key = 
+                key = rp.alias + input;  // 如果以.结尾，
             } else if (/-/img.test(rp.alias)) {
-                key = rp.alias.replace('-', input);  // 如果alias含-，则key = 
+                key = rp.alias.replace('-', input);
             } else {
                 key = rp.alias + '.' + input;
             }
@@ -124,9 +139,9 @@ brick.reg('rpListCtrl', function (scope) {
         type = type || '复盘&计划';
         return text === type;
     };
-    // 是不是有子标题选项
+
+    // tag是不是有子标题选项
     window._HAS_SUB = function (text) {
-        console.log(text);
         let tagObj = TAGS_MAP_BY_TEXT[text];
         return tagObj ? tagObj.sub : null;
     }
@@ -235,9 +250,54 @@ brick.reg('rpListCtrl', function (scope) {
 
     // 设置和更新rp数据和replay数据会render
     function setList (rpData, replayData) {
-        rpData && listManager.init(rpData);
-
+        rpData = rpData || [];
         rpForm = replayData || rpForm;
+        console.log(replayData, rpData);
+
+        // 在这里整合一下rp 和 replay, 添加没有rp项的line
+        // 筛选对象属性名是否包含特定字符
+        const filterKeys = (object, searchString) => {
+            return Object.keys(object).filter(key =>
+                key.includes(searchString)
+            );
+        };
+
+        // 筛选出 line
+        let filteredKeys = filterKeys(rpForm, 'line.');
+        console.log(filteredKeys);   // 输出: ['line.**.**']
+        filteredKeys = filteredKeys.map((v) => {
+            return v.split('.')[1];  // 只要 line的名称部分，譬如"line.核聚变.个股序列"只要 核聚变
+        });
+        filteredKeys = [...new Set(filteredKeys)]; // 去重
+
+        let linePla; // line占位模板引用
+        rpData.forEach((v, i) => {
+            if (v.type === '复盘&计划' && v.line) {
+                let title = v.title;
+                let index = filteredKeys.indexOf(title);
+                // 准备使用的填充模板
+                if (!linePla && title === '占位模板') {
+                    linePla = v;
+                }
+                // 如果rp里面包含了此line，则从列表里移除，不用填充
+                if (index > -1) {
+                    filteredKeys.splice(index, 1);
+                }
+            }
+        });
+
+        // 填充不在rp里的line
+        filteredKeys.map((v, i) => {
+            let lineObj = JSON.parse(JSON.stringify(linePla));
+            lineObj.title = v;
+            lineObj.level = lineObj.level * 1 + 1;
+            delete lineObj.id;
+            console.log(i, v, lineObj);
+            rpData.push(lineObj);
+        });
+
+        listManager.init(rpData);
+
         render();
         createRpMap(rpData);  //replay2里依然有在用
     }
@@ -259,7 +319,7 @@ brick.reg('rpListCtrl', function (scope) {
     });
     // });
 
-    // 处理tag数据改变事件
+    // 处理tag数据改变事件, 这些都是setTagCtrl广播的事件
     scope.on(TAGS_CHANGE, function (e, data) {
         console.log('on TAGS_CHANGE');
         render();
@@ -268,6 +328,11 @@ brick.reg('rpListCtrl', function (scope) {
     // main
     getRpData();
     getRpForm(forDate);
+
+    // 删除一个标签，通过setTagCtrl全局统一处理
+    scope.delTag = function (e, id) {
+        scope.emit(DEL_TAG, id);
+    };
 
 
     scope.reset = function () {
@@ -438,6 +503,15 @@ brick.reg('rpListCtrl', function (scope) {
         before: function (fields) {
             console.info('rpForm 提交前check =》', fields);
             if (checkFrom()) {
+                for (let key in fields) {
+                    if (fields.hasOwnProperty(key)) {
+                        let value = fields[key];
+                        // 检查属性值是否为空
+                        if (value === null || value === undefined || value === '' || (Array.isArray(value) && value.length === 0)) {
+                            delete fields[key];
+                        }
+                    }
+                }
                 return fields;
             }
             return false;
@@ -467,11 +541,11 @@ brick.reg('rpListCtrl', function (scope) {
     // 当表单日期改变，可以查看修改对应日期的复盘表单
     scope.onDateChange = function (e) {
         return alert('没有确定');
-        let date = $(this).val();
-        getRpForm(date, (data) => {
-            setList(null, data);
-            $('#dateTag').text(date);
-        });
+        /* let date = $(this).val();
+         getRpForm(date, (data) => {
+             setList(null, data);
+             $('#dateTag').text(date);
+         });*/
     };
 
     // 根据键盘输入，随时提交数据进行保存；

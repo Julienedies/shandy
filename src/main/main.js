@@ -3,7 +3,8 @@
  * Created by j on 18/5/21.
  */
 
-process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
+// webSecurity 为 false 的安全警告
+//process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
 
 import fs from 'fs'
 import path from 'path'
@@ -13,6 +14,7 @@ import * as remoteMain from '@electron/remote/main';
 
 
 import config from '../libs/config'
+import setting from '../libs/setting.js'
 
 import stockQuery from '../libs/stock-query'
 import screenCapture from '../libs/screen-capture'
@@ -29,13 +31,14 @@ app.SHARED_CONFIG = config;
 
 server.start(port);
 
+//
 remoteMain.initialize();
 
 
 let mainWindow;
 
+// 截屏
 function screenshot(arg) {
-        //mainWindow.webContents.send('screenCapture');
         console.log(arg);
         let stock = stockQuery(arg.name);
 
@@ -58,8 +61,8 @@ function screenshot(arg) {
 function createWindow () {
 
     let windowOptions = {
-        width: 1360,
-        minWidth: 1360,
+        width: 1280,
+        minWidth: 1280,
         height: 820,
         x: 0,
         y: 0,
@@ -67,13 +70,13 @@ function createWindow () {
         title: app.getName(),
         webPreferences: {
             webviewTag: true,
-            webSecurity: false,
+            webSecurity: true,
             nodeIntegration: true, // 赋予此窗口页面中的JavaScript访问Node.js环境的能力
             // 官网似乎说是默认false，但是这里必须设置contextIsolation
             contextIsolation: false,
             // 在electron 10.0.0之后，remote模块默认关闭, 不推荐使用
             // 必须手动设置webPreferences中的enableRemoteModule为true之后才能使用
-            enableRemoteModule: true,   // 打开remote模块
+            //enableRemoteModule: true,   // 打开remote模块
         }
     };
 
@@ -86,11 +89,10 @@ function createWindow () {
         mainWindow.loadURL(`${ config.LOAD_PROTOCOL }/index.html`);
     }
     
-    // 启用 #########################################################
+    // 启用remote模块的替代
     remoteMain.enable(mainWindow.webContents);
-     // 启用 #########################################################
     
-    mainWindow.webContents.openDevTools()
+    //mainWindow.webContents.openDevTools()
     mainWindow.maximize();
     mainWindow.on('closed', function () {
         mainWindow = null;
@@ -121,40 +123,39 @@ function ready () {
         isExit && app.quit();
     });
 
+    // 鼠标手势直接发出http请求，electron server端接受请求后直接调用就行了，不用中间触发快捷键，然后调用
     // 鼠标手势  => 快捷键 =>  apple script获取通达信个股代码  => 在浏览器打开同花顺个股资料页面
-    globalShortcut.register('CommandOrControl+Alt+x', function () {
-        ac.getStockName(function (stock) {
-            mainWindow.webContents.send('view_stock_info', stock);
-        });
-    });
+    // globalShortcut.register('CommandOrControl+Alt+x', function () {
+    //     ac.getStockName(function (stock) {
+    //         mainWindow.webContents.send('view_stock_info', stock);
+    //     });
+    // });
 
-    // 鼠标手势 => 快捷键 =>  apple script获取通达信个股代码  => 个股资料编辑
-    globalShortcut.register('CommandOrControl+Alt+b', function () {
-        ac.getStockName(function (stock) {
-            mainWindow.webContents.send('set_stock_c', stock);
-        });
-    });
+    // // 鼠标手势 => 快捷键 =>  apple script获取通达信个股代码  => 个股资料编辑
+    // globalShortcut.register('CommandOrControl+Alt+b', function () {
+    //     ac.getStockName(function (stock) {
+    //         mainWindow.webContents.send('set_stock_c', stock);
+    //     });
+    // });
 
-    // 鼠标手势 => 快捷键 =>  apple script获取通达信个股代码  => 打板封单监控
-    globalShortcut.register('CommandOrControl+Alt+z', function () {
-        ac.getStockName(function (stock) {
-            mainWindow.webContents.send('rts_db_monitor', stock);
-        });
-    });
+    // // 鼠标手势 => 快捷键 =>  apple script获取通达信个股代码  => 打板封单监控
+    // globalShortcut.register('CommandOrControl+Alt+z', function () {
+    //     ac.getStockName(function (stock) {
+    //         mainWindow.webContents.send('rts_db_monitor', stock);
+    //     });
+    // });
 
-    // 鼠标手势 => 快捷键 =>  apple script获取通达信个股代码  => 在富途里显示
-    globalShortcut.register('CommandOrControl+Alt+p', function () {
-        ac.getStockName(function (stock) {
-            mainWindow.webContents.send('view_in_ftnn', stock);
-        });
-    });
+    // // 鼠标手势 => 快捷键 =>  apple script获取通达信个股代码  => 在富途里显示
+    // globalShortcut.register('CommandOrControl+Alt+p', function () {
+    //     ac.getStockName(function (stock) {
+    //         mainWindow.webContents.send('view_in_ftnn', stock);
+    //     });
+    // });
 
-
-
-    // 截屏: 快捷键 => 只截大屏幕的图
-    globalShortcut.register('CommandOrControl+shift+2', function () {
-        screenshot();
-    });
+    // // 截屏: 快捷键 => 只截大屏幕的图
+    // globalShortcut.register('CommandOrControl+shift+2', function () {
+    //     screenshot();
+    // });
 
 /*    // 监听通达信F9买入动作， 会覆盖F9功能，并不起到监控键盘按下的动作
     globalShortcut.register('F9', function () {
@@ -173,7 +174,7 @@ function ready () {
 
     // 查看个股信息: 鼠标手势 =》 http =>  查看个股信息
     server.on('viewStock', function (msg) {
-        console.log('打板封单监控', msg);
+        console.log('查看个股信息', msg);
         mainWindow.webContents.send('view_stock_info', msg);
     });
 
@@ -192,8 +193,8 @@ function ready () {
     // 截屏: 通过鼠标手势向server发送截屏请求
     server.on('screenshot', function (msg) {
         console.log('server 要求截屏', msg);
-        //mainWindow.webContents.send('screenCapture', msg);
-        screenshot(msg);
+        screenshot(msg);  // 升级electron34后，截屏代码要运行在主进程;
+        mainWindow.webContents.send('screenCapture', msg); 
     });
 
     // renderer进程 (打板封单监控数据) => socket.io => socket.client (浏览器页面 http://192.168.3.20:3000/)

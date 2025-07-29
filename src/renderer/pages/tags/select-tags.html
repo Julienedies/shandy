@@ -1,0 +1,49 @@
+<div ic-popup="selectTags" ic-ctrl="selectTagsCtrl">
+    <div class="column">
+
+        <div class="buttons">
+            <button class="button is-primary is-fullwidth" ic-popup-close>返回</button>
+        </div>
+
+        <div class="" ic-tpl="selectTags">
+
+            <div class="ic-select" ic-select="tags" ic-select-type="checkbox" ic-select-auto="false" x-ic-select-order="true" ic-select-on-change="onChange">
+
+                <div class="box" ic-for="k,arr in model.tags" x-ic-if="k!=='type'">
+
+                    <h3 style="padding-bottom:0.6rem;">
+                        <span class="tag is-primary is-large">{{ k }}</span>
+                    </h3>
+
+                    <div class="field is-grouped is-grouped-multiline">
+                        <div class="control" ic-for="i,v in arr">
+                            <div class="tags has-addons">
+                                <span class="tag is-medium is-black" ic-select-item ic-val="{{ v.id }}"
+                                      ic-has-selected="model.selected && model.selected.includes(v.id)">
+                                    {{v.text}}
+                                    <sup>{{ v.level }}</sup>
+                                </span>
+
+                                <a class="tag is-medium" ic-click="editTag:{{v.id}}">
+                                    <span class="icon is-medium"><i class="far fa-edit"></i></span>
+                                </a>
+
+                                <a class="tag is-delete is-medium" ic-click="delTag:{{ v.id }}"></a>
+                            </div>
+                        </div>
+
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <a class="tag is-medium" ic-click="addTag:{{ k }}">
+                                    <span class="icon is-medium"><i class="fas fa-file-medical"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

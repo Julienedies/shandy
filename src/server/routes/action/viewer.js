@@ -35,6 +35,7 @@ export default {
         let viewerCacheJo = imagesHelper.getViewerCacheJo(imgPath);
         let key = imagesHelper.getImgKey(imgPath);
         let value = { tags: item.tags, system: item.system, tradeInfo: item.tradeInfo };
+        console.info(key ,value);
         viewerCacheJo.set(key, value);
     },
 
