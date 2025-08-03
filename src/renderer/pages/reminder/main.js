@@ -38,7 +38,15 @@ brick.reg('reminderCtrl', function (scope) {
 
 
     $.when(def1, def2).done((d1, d2) => {
-        let mq = '为何我错过所有的大行情和大龙头？为何我错过所有的大行情和大龙头？为何我错过所有的大行情和大龙头？为何我错过所有的大行情和大龙头？'
+        let mq = `
+        做着做着就忘记了教训和悔恨，沉迷于无效的日常交易，重复所有错误；没有任何改变;
+        做着做着就忘记了教训和悔恨，沉迷于无效的日常交易，重复所有错误；没有任何改变；
+        为何我错过所有的大行情和大龙头？为何我错过所有的大行情和大龙头？
+        无系统，无计划；
+        没有大局观，着眼于小波动；
+        主观与线性思维；
+        客服不了本能，控制不住情绪；
+        `;
         let plan = d1['交易计划'] || '如果没有明确的交易计划，就不要交易; 无系统、无计划、临盘随意交易是我最大的亏损来源';
         $memo.html(`<pre>${ mq } </pre><pre>${ plan } </pre> <pre>${ plan }</pre> <pre>${ plan }</pre>  ${ d2.text }`);
         let reader = new Reader('#memo');
@@ -64,7 +72,7 @@ brick.reg('reminderCtrl', function (scope) {
             //scope.render('principle', data);
         });*/
 
-    let timer = 320; // 10分钟，600秒
+    let timer = 240; // 秒
     let $timer = $('#timer');
 
     setInterval(() => {
