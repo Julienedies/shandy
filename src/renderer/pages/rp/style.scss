@@ -311,6 +311,13 @@ html, body {
 
 }
 
+#lineLinks{
+  position: sticky;
+  bottom:0;
+  z-index: 100;
+  background: rgba(0, 0, 0, .4);
+  padding: 5px;
+}
 
 @import "./replay.scss";
 

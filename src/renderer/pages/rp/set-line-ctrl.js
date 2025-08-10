@@ -69,6 +69,7 @@ export default function () {
 
     // ajax请求服务端前的表单数据处理
     this.before = function (fields) {
+        brick.emit('_setRpBefore', fields);
     };
 
     // 表单提交完成后
