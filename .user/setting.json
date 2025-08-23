@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2025-07",
+		"imgDir": "E:\\dev\\simg\\目标行情\\2025-08",
 		"bounds": {
 			"x": 2187,
 			"y": -933,
@@ -45,6 +45,8 @@
 			"height": 36
 		},
 		"history": [
+			"E:\\dev\\simg\\目标行情\\2025-08",
+			"E:\\dev\\simg\\交易记录\\2508",
 			"E:\\dev\\simg\\交易记录\\2507",
 			"E:\\dev\\simg\\目标行情\\2025-07",
 			"E:\\dev\\simg\\交易记录\\2506",
@@ -292,10 +294,10 @@
 	},
 	"system": {
 		"bounds": {
-			"x": 2187,
-			"y": -933,
-			"width": 3856,
-			"height": 2176
+			"x": -7,
+			"y": -7,
+			"width": 2209,
+			"height": 1219
 		}
 	},
 	"tags": {
@@ -389,10 +391,10 @@
 	},
 	"system2": {
 		"bounds": {
-			"x": -7,
-			"y": -7,
-			"width": 2209,
-			"height": 1219
+			"x": 2187,
+			"y": -933,
+			"width": 3856,
+			"height": 2176
 		}
 	},
 	"viewer2": {
