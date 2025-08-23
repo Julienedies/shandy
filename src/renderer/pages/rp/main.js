@@ -61,6 +61,7 @@ brick.reg("rpListCtrl", function (scope) {
 	let $title = $("title");
 
 	let rpForm = {};
+	let lines = [];
 
 	let isFilterLine = 0;
     
@@ -179,6 +180,7 @@ brick.reg("rpListCtrl", function (scope) {
 	function render() {
 		$.icMsg("render rpList");
 		let rpList = listManager.get();
+		lines = [];
 		rpList.sort((a, b) => {
 			let al = a.level || 0;
 			let bl = b.level || 0;
@@ -210,6 +212,9 @@ brick.reg("rpListCtrl", function (scope) {
 		rpList = rpList.map((item) => {
 			let options = item.options;
 			item._options = getTagsForRp(options);
+			if (item.line && !item.freeze) {
+				lines.push(item.title);
+			}
 			return item;
 		});
 
@@ -245,6 +250,8 @@ brick.reg("rpListCtrl", function (scope) {
                 }
 			}
 		);
+		
+		scope.render("lineLinks", { model: lines});
 
 		// 修改document.title, 主要用于save2Text chrome插件;
 		$title.text(`rp_${filterByType}_${formatDate()}`);
@@ -621,7 +628,9 @@ brick.reg("rpListCtrl", function (scope) {
 		console.log("on ic-select.change, to submit();", msg);
 		submit();
 		if (msg.name === "日内.资金方向") {
-			scope.render("lineLinks", { model: msg.value });
+			let arr = [...lines, ...msg.value];
+			let uniqueArr = [...new Set(arr)];
+			scope.render("lineLinks", { model: uniqueArr});
 		}
 		// let data = $elm.find('[ic-form="rp"]').icForm();
 		// let $th = $(this);
