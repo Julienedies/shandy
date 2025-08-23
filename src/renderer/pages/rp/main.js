@@ -339,7 +339,7 @@ brick.reg('rpListCtrl', function (scope) {
         $elm.find('#rpPlanItem').text('');
     };
 
-
+    // 一级选项改变
     scope.filter = scope.onFilterKeyChange2 = function (e, type) {
         _onFilter(type);
     };

@@ -50,11 +50,11 @@ electron ${ process.versions.electron }
 //const config = remote.app.config
 //console.log(config)
 
-utils.timer('23:55', function () {
-    if (window.confirm('夜晚了，是否退出？')) {
-        ipcRenderer.send('quit', true);
-    }
-});
+// utils.timer('23:55', function () {
+//     if (window.confirm('夜晚了，是否退出？')) {
+//         ipcRenderer.send('quit', true);
+//     }
+// });
 
 brick.set('ic-event.extend', 'click,change,dblclick');
 
