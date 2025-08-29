@@ -61,12 +61,12 @@
 	},
 	{
 		"id": "玻纤",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1751980989804
 	},
 	{
 		"id": "脑机",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1751385666590
 	},
 	{
@@ -101,7 +101,7 @@
 	},
 	{
 		"id": "数字货币",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1748527356692
 	},
 	{
@@ -606,12 +606,12 @@
 	},
 	{
 		"id": "军工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1722906362371
 	},
 	{
 		"id": "创新药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1722789740639
 	},
 	{
@@ -666,7 +666,7 @@
 	},
 	{
 		"id": "铜箔",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1720051991111
 	},
 	{
@@ -691,7 +691,7 @@
 	},
 	{
 		"id": "苹果",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1718159922636
 	},
 	{
@@ -966,7 +966,7 @@
 	},
 	{
 		"id": "PEEK",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1703032698584
 	},
 	{
@@ -1046,7 +1046,7 @@
 	},
 	{
 		"id": "昇腾",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1676336860960
 	},
 	{
