@@ -58,18 +58,18 @@
             <div id="mainContent" ic-tpl="rpList">
                 <div id="rpForm" ic-form="rp" ic-init="rpList=model.rpList; rpForm=model.rpForm;">
                     <ul>
-                        <li ic-class="box {{ rp.role==='5'?'line':'' }}" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}"
-                            tabindex="{{ rp.line ? 'line': rp.group }}">
+                        <li ic-class="box {{ rp.role==='5'?'line':'' }} {{ rp.freeze? 'freeze':''}}" ic-for="i,rp in rpList" data-id="{{ rp.id }}" id="{{ 'k'+rp.id }}"
+                            tabindex="{{ rp.line ? 'line': rp.group }}" data-title="{{ rp.title }}">
                             <!-- draggable="true" ic-dragstart="dragstart" ic-drop="drop" ic-dragover="dragover" ic-dragleave="dragleave" -->
                             <header ic-click="toggleWrap" ic-class="role_{{ rp.role }}">
                                 <h3>
-                                    <span>{{ rp.title }}</span>
+                                    <span>{{ rp.title }} {{ rp._TEMP_FILL?'---- 临时填充':'' }}</span>
                                     <b>{{ rp.caution }} </b>
                                 </h3>
                             </header>
 
-                            <div ic-class="wrap {{ rp.freeze?'shrink':'' }}">
-
+                            <div ic-class="wrap {{ rp.line?'':'' }}" ic-if="!(rp.line && rp.freeze)">
+                                <!--冻结的line 不渲染 form 选项-->
                                 <!-- 是否有嵌入的子元素 -->
                                 <!-- <div class="box" ic-if="rp.inset">
                                  </div>-->
@@ -163,6 +163,9 @@
                                     <span class="tag is-small" ic-click="plus:{{ rp.id }}">
                                             <i class="fas fa-long-arrow-alt-up" title="加权"></i>
                                         </span>
+                                    <span class="tag is-small" ic-click="minus:{{ rp.id }}">
+                                            <i class="fas fa-long-arrow-alt-down" title="降权"></i>
+                                        </span>
                                     <!--<span class="tag is-small" ic-click="focus:{{ rp.id }}">置顶   long-arrow-alt-up </span>-->
                                     <span ic-class="tag is-small {{ rp.re==='true'?'is-primary':'' }}" ic-click="re:{{ rp.id }}"
                                           ic-if="!!!rp.line">
@@ -232,6 +235,12 @@
                 </div>
             </div>
 
+            <div id="lineLinks" ic-tpl="lineLinks">
+                <div class="buttons is-centered">
+                    <span class="button is-replay is-small" ic-for="i,v in model" ic-click="linkToLine:{{ v }}">{{ v }}</span>
+                </div>
+            </div>
+            
         </div>
     </div>
 
@@ -242,7 +251,7 @@
 
     ${ require('./replay.html') }
 
-    ${ require('../tags2/select-tags.html') }
+    ${ require('../tags/select-tags.html') }
     ${ require('../tags/set-tag.html') }
 </div>
 </body>

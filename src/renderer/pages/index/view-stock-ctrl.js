@@ -50,10 +50,10 @@ function view_stock (code) {
     clipboard.writeText(code);
 
 
-    let flag = objm.get('is_mashup') ? 0 : 1;
+    let flag = objm.get('is_mashup') ? 0 : 2;
 
 
-    shell.openExternal(stockUrl(code, flag) + (flag === 1 ? '?self=1' : ''));
+    shell.openExternal(stockUrl(code, flag) + (flag === 2 ? '?self=1' : ''));
     //ac.activeTdx();
 
     /*    if (!objm.get('is_open')) {

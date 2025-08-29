@@ -11,8 +11,41 @@
 </head>
 <body>
 <div class="column">
-    <section id="rts" ic-ctrl="rts_ctrl">
-        <ul id="rts_list" ic-tpl="list">
+    <section id="rts" ic-ctrl="rtsCtrl">
+        <table class="" id="rts_list" ic-tpl="list">
+            <tr ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
+                <td>
+                      <span class="name">
+                        {{v.name}}
+                    </span>
+                </td>
+                <td>
+                    <span class="increase">
+                        {{v.increase}}%
+                    </span>
+                </td>
+                <td>
+                    <span class="b1">
+                        {{ b1Amount( v.b1*100*v.price ) }}
+                    </span>
+                </td>
+                <td>
+                    <span class="b1">
+                        {{ (v.b1/1000).toFixed(1) }} <i>k</i>
+                    </span>
+                </td>
+                <td  ic-class="b1_reduce {{v.b1_reduce > 0 ? 'up':'down'}}">
+                    <span>{{v.b1_reduce}}</span>
+                </td>
+                <td class="time">
+                     {{v.time}}
+                </td>
+                <td class="cancel">
+                    <a herf="#" code="{{v.code}}" ic-click="cancel" style="white-space: nowrap;">取消</a>
+                </td>
+            </tr>
+        </table>
+        <!-- <ul id="rts_list" ic-tpl="list">
             <li ic-for="i,v in model" code="{{v.code}}" ic-class="{{(v.warning ? 'warning':'') + ' ' +(v.rout ?'rout':'')}}">
                 <div class="flex flex-mc">
                     <span class="code">{{v.code}} </span>
@@ -34,10 +67,10 @@
                     <button class="button" code="{{v.code}}" ic-click="cancel">取消监控</button>
                 </div>
             </li>
-        </ul>
+        </ul> -->
     </section>
 
-    <section ic-ctrl="x-plans_ctrl" style="display: none;">
+    <!-- <section ic-ctrl="x-plans_ctrl" style="display: none;">
         <div class="columns">
             <div class="column is5" ic-tpl="replay">
                 <ul class="box">
@@ -59,19 +92,19 @@
                 </ul>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section ic-ctrl="rts_ctrl">
+    <section ic-ctrl="rtsCtrl">
 
         <div id="notify_news" ic-click="notify_news"></div>
 
-        <div style="position:absolute;bottom:0;right:0;padding:10px;display: none;">
+        <!-- <div style="position:absolute;bottom:0;right:0;padding:10px;display: none;">
             <button id="tdx_view" code="" event="" ic-click="view">查看股票</button>
             <button id="active_ftnn" ic-click="active_ftnn">激活富途和通达信</button>
-        </div>
+        </div> -->
     </section>
 
-    <footer style="position: fixed;bottom:0; left:0; right:0;" ic-ctrl="help_ctrl">
+    <footer style="position: fixed;bottom:0; left:0; right:0; display: none;" ic-ctrl="helpCtrl">
         <div ic-tpl="links">
             <!--<a class="button is-info" ic-href="http://{{model.ip}}/web/stock_plan.html" target="_blank">当前计划</a>-->
             <a class="button is-info" href="/web/stock_plan.html" target="_blank">当前计划</a>

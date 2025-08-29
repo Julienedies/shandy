@@ -65,6 +65,7 @@ export default function () {
             return false;
         }
         fields.content = $editor.froalaEditor('html.get', true);
+        brick.emit('_setRpBefore', fields);
         //$editor.froalaEditor('destroy');
     };
 

@@ -1,7 +1,25 @@
 html, body {
   font-family: 'BlinkMacSystemFont', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
-  font-size: 20px;
-  line-height: 1.8;
+  font-size: 20px !important;
+  line-height: 1.5;
+  background: #000;
+  overflow-y: hidden;
+}
+
+@media screen and (max-device-width: 768px) {
+  body {
+    border: solid 2px blue;
+    font-size: 26px !important;
+  }
+}
+
+section {
+  margin: 0 0 10px 0;
+}
+
+.box {
+  margin: 10px 0 0 0;
+  padding: 0.3rem 0.5rem;
 }
 
 .pre {
@@ -13,12 +31,13 @@ html, body {
 }
 
 .warn {
-  animation: ani 0.5s 3 ease-in-out;
+  animation: ani 0.9s 5 ease-in-out;
 }
 
 .rout {
-  opacity: 0.5;
-  background: greenyellow;
+  //opacity: 0.5;
+  //background: #fff;
+  color: greenyellow;
 }
 
 @keyframes ani {
@@ -32,89 +51,151 @@ html, body {
   }
 }
 
-#rts_list {
+table#rts_list {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  background: transparent;
+
+  tr {
+    color: red;
+    &:hover{
+      background: blue;
+    }
+
+    &.rout {
+      color: greenyellow;
+    }
+
+    td {
+      padding: 0.2em 0.2em 0.2em 0;
+      white-space: nowrap;
+      vertical-align: middle;
+      color: inherit;
+      border-bottom: solid 1px #7a7a7a;
+      //border-right:solid 1px #7a7a7a;
+
+      &.up {
+        color: red !important;
+      }
+
+      &.down {
+        color: greenyellow !important;
+      }
+
+      &.time {
+        font-size: 0.6em;
+        color: #fff;
+      }
+
+      &.cancel {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+}
+
+ul#rts_list {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 1.4em;
+  font-size: 1em;
 
   .up {
     color: red !important;
   }
 
   .down {
-    color: green !important;
+    color: greenyellow !important;
   }
 
-  li div {
-    margin: 0;
-    padding: 0 0;
-  }
+  li {
+    padding: 5px 1px;
+    border-bottom: solid 1px #7a7a7a;
+    color: red;
+    
+    &:hover{
+      background: blue;
+    }
 
-  button {
-    display: inline-block;
-    flex: 1;
+    &.rout {
+      color: greenyellow;
+    }
+
+    div {
+      margin: 0;
+      padding: 0 0;
+    }
+
+    button {
+      display: inline-block;
+      //flex: 1;
+    }
   }
 
 }
 
-#rts_list li {
-  padding: 5px 10px;
-}
-
-#rts_list li span {
-  border: solid 0 blue;
-}
-
+/*
 #rts_list span.name, #rts_list span.b1 {
-  width: 9em;
-  color: red;
+  width: 10em;
+  color: inherit;
   flex: 1;
   white-space: nowrap;
 
   & > b {
     display: inline-block;
-    width: 5em;
+    width: 4em;
   }
 }
 
 #rts_list span.b1 {
-  width: 8em;
+  width: 9em;
+
   & > b {
-    width: 4em;
+    width: 5em;
     font-weight: normal;
   }
 }
 
 #rts_list span.b1_reduce {
   width: 4em;
+  text-align: center;
 }
 
 #rts_list span.code, #rts_list span.time, #rts_list span.increase, #rts_list span.price {
   font-size: 0.6em;
-  color: #ccc;
+  color: #fff;
   padding: 0 5px;
 }
 
 #rts_list span.increase, #rts_list span.price {
   font-size: 0.8em;
-  color: #333;
+  color: #fff;
   padding: 0 10px;
   width: 4em;
 }
 
 #rts_list span.time {
 }
+*/
 
 #notify_news {
   padding: 0.2rem 0.7rem;
+  min-height: 1em;
+  border: solid 1px white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 6em;
+  overflow: hidden;
+  color: #fff;
+  background: black;
 }
 
-.box {
-  margin: 10px 0 0 0;
-  padding: 0.3rem 0.5rem;
-}
 
-section {
-  margin: 0 0 10px 0;
-}
+
+
+
+

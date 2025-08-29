@@ -2,7 +2,7 @@
  * Created by j on 2021/12/4.
  */
  
- @use "./replay.scss" as *;
+@use "./replay.scss" as *;
 
 html {
   overflow: hidden;
@@ -54,6 +54,10 @@ html, body {
 
   .box {
     margin-bottom: 2.5rem;
+  }
+  
+  .line.freeze{
+    opacity: 0.5;
   }
 
   .button.is-primary {
@@ -307,6 +311,14 @@ html, body {
     }
   }
 
+}
+
+#lineLinks{
+  position: sticky;
+  bottom:0;
+  z-index: 100;
+  background: rgba(0, 0, 0, .4);
+  padding: 5px;
 }
 
 
