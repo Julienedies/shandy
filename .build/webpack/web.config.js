@@ -319,33 +319,69 @@ const frontConfig = {
                 const isTemplateLiteralSupported = content[0] === "`";
 
                 return content;
-
                 // return content
                 //   .replace(/<%=/g, isTemplateLiteralSupported ? `\${` : '" +')
                 //   .replace(/%>/g, isTemplateLiteralSupported ? "}" : '+ "');
               },
               preprocessor: (content, loaderContext) => {
-                // console.log(11111111111111111, loaderContext);
                 let sourceHtmlPath = loaderContext.resource;
                 let sourceDir = path.dirname(sourceHtmlPath);
+                
+                // 把html文件里require或link import替换成实际内容
+                const reg1 = /^\s*\${ *require\(['"](.*?)['"]\) *}\s*$/gm;
+                const reg2 = /^\s*<link\s+rel="import"\s+href="([^"]+)"\s*\/?>\s*$/gm;
+                const combinedRegex = /^\s*(?:\${ *require\(['"](.*?)['"]\) *}|<link\s+rel="import"\s+href="([^"]+)"\s*\/?>)\s*$/gm;
+                
+                function parse(reg, content, sourceDir, processedFiles = new Set()) {
+                    return content.replace(
+                      reg,
+                      (match, requirePath, linkHref) => {
+                        // 确定是哪种匹配并获取路径
+                        const filePath = requirePath || linkHref;
+                        
+                        // 如果没有匹配到路径，保持原内容不变
+                        if (!filePath) return match;
+                        
+                        let fullPath = path.resolve(sourceDir, filePath);
+                        
+                        // 防止循环引用
+                        if (processedFiles.has(fullPath)) {
+                            throw new Error(`检测到循环引用: ${fullPath}`);
+                        }
+                        
+                        // 标记当前文件正在处理
+                        processedFiles.add(fullPath);
+                        
+                        try {
+                            let fileContent = fs.readFileSync(fullPath, "utf8");
+                            // 递归处理文件内容中的require语句
+                            return parse(reg, fileContent, path.dirname(fullPath), processedFiles);
+                        } finally {
+                            // 处理完成后移除标记
+                            processedFiles.delete(fullPath);
+                        }
+                      }
+                    );
+                }
+                
+                return parse(combinedRegex, content, sourceDir);
 
-                let result = content.replace(
-                  /\${ *require\(['"](.*?)['"]\) *}/g,
-                  (match, _path) => {
-                    let fullPath = path.resolve(sourceDir, _path);
-                    //console.log(2222222222222222222222222, fullPath);
-                    return fs.readFileSync(fullPath, "utf8");
-                  }
-                );
+                // let result = content.replace(
+                //   /\${ *require\(['"](.*?)['"]\) *}/g,
+                //   (match, _path) => {
+                //     let fullPath = path.resolve(sourceDir, _path);
+                //     return fs.readFileSync(fullPath, "utf8");
+                //   }
+                // );
 
-                return result.replace(
-                  /<link\s+rel="import"\s+href="([^"]+)"\s*\/?>/g,
-                  (match, _path) => {
-                    let fullPath = path.resolve(sourceDir, _path);
-                    // console.log(2222222222222222222222222, fullPath);
-                    return fs.readFileSync(fullPath, "utf8");
-                  }
-                );
+                // return result.replace(
+                //   /<link\s+rel="import"\s+href="([^"]+)"\s*\/?>/g,
+                //   (match, _path) => {
+                //     let fullPath = path.resolve(sourceDir, _path);
+                //     return fs.readFileSync(fullPath, "utf8");
+                //   }
+                // );
+                
               },
             },
           },
