@@ -501,7 +501,7 @@
 	},
 	{
 		"id": "固态电池",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1724934834987
 	},
 	{
@@ -996,7 +996,7 @@
 	},
 	{
 		"id": "鲲鹏",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1693849437961
 	},
 	{
@@ -1046,7 +1046,7 @@
 	},
 	{
 		"id": "昇腾",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1676336860960
 	},
 	{
