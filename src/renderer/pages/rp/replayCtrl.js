@@ -36,7 +36,7 @@ export default function () {
     scope.filterByKey = function (e, msg) {
         //$.icMsg(msg);
         brick.view.back();
-        scope.emit('go_rp', msg);
+        scope.emit('_goToRp', msg);
     };
 
 

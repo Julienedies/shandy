@@ -64,8 +64,8 @@ brick.reg("rpListCtrl", function (scope) {
 	let lines = [];
 
 	let isFilterLine = 0;
-    
-    let _setRpBefore = null; // 修改的rp，用于渲染列表后的定位
+
+	let _setRpBefore = null; // 修改的rp，用于渲染列表后的定位
 
 	let listManager = brick.services.get("recordManager")();
 
@@ -175,6 +175,15 @@ brick.reg("rpListCtrl", function (scope) {
 		});
 		return rpMapByType;
 	}
+	
+	// 
+	function createLineLinks(hotPoint) {
+		hotPoint = hotPoint || rpForm['日内.资金方向'];
+		let arr = [...lines, ...hotPoint];
+		let uniqueArr = [...new Set(arr)];
+		scope.render("lineLinks", { model: uniqueArr });
+		//scope.render("lineLinks", { model: lines });
+	}
 
 	// 渲染rpList
 	function render() {
@@ -234,39 +243,40 @@ brick.reg("rpListCtrl", function (scope) {
                 .on('dragover', scope.dragover)
                 .on('dragleave', scope.dragleave)
                 .on('drop', scope.drop);*/
-                
-                // 是否只显示line rp
+
+				// 是否只显示line rp
 				if (isFilterLine % 2) {
 					isFilterLine = 0;
 					scope.filterLine();
 				}
-                
-                // 每次添加rp，重新render后定位到新添加的rp
-                if(_setRpBefore){
-                    setTimeout( () => {
-                       goToRp(_setRpBefore);
-                       _setRpBefore = null;
-                    }, 30);
-                }
+
+				// 每次添加rp，重新render后定位到新添加的rp
+				if (_setRpBefore) {
+					setTimeout(() => {
+						goToRp(_setRpBefore);
+						_setRpBefore = null;
+					}, 30);
+				}
 			}
 		);
-		
-		scope.render("lineLinks", { model: lines});
+
+
+		createLineLinks();
 
 		// 修改document.title, 主要用于save2Text chrome插件;
 		$title.text(`rp_${filterByType}_${formatDate()}`);
 	}
-   
-    // 滚动到相关rp位置
-    function goToRp(title) {
-        $.icMsg(title);
-        let escapedVal = $.escapeSelector(title); // 转义特殊字符
-        let $target = $(`ul li[data-title="${escapedVal}"]`);
-        console.log(`ul li[data-title*="${escapedVal}"]`);
-        if ($target.length) {
-            let targetPosition = $target.position().top + $elm.scrollTop();
-            $elm.animate({ scrollTop: targetPosition - 90 }, 300);
-        }
+
+	// 滚动到相关rp位置
+	function goToRp(title) {
+		$.icMsg(title);
+		let escapedVal = $.escapeSelector(title); // 转义特殊字符
+		let $target = $(`ul li[data-title="${escapedVal}"]`);
+		console.log(`ul li[data-title*="${escapedVal}"]`);
+		if ($target.length) {
+			let targetPosition = $target.position().top + $elm.scrollTop();
+			$elm.animate({ scrollTop: targetPosition - 90 }, 300);
+		}
 	}
 
 	//-----------------------------------------------------------
@@ -353,6 +363,20 @@ brick.reg("rpListCtrl", function (scope) {
 		});
 	}
 
+	// 当二级标题改变后，显示一个提醒，为何我错过所有的大行情？
+	function reminder(msg) {
+		switch (msg) {
+			case '大局观':
+				return $.icMsg('没有大局观，着眼于小波动');
+			case '周期节奏':
+				return $.icMsg(msg);
+			case '主线热点龙头':
+				return $.icMsg('围绕主流热点龙头，不要因为分歧就线性看空，除非有明显的结束信号，否则永远不要主观看空');
+			default:
+				return $.icMsg('为何我依然错过所有的大行情？');
+		}
+	}
+
 	// 等待标签数据获取后，否则 TAGS_MAP_BY_ID 不存在
 	//scope.on(GET_TAGS_DONE, function (e, data) {
 	$.when(window.GET_TAGS_DEF, getRpDef, getReplayDef).done((d1, d2, d3) => {
@@ -399,28 +423,36 @@ brick.reg("rpListCtrl", function (scope) {
 		let $target = $elm.find(`ul li`).not(`[tabindex=${escapedVal}]`).toggle();
 	};
 
-	// 当二级标题选项改变
-	scope.onGroupsChange = function (msg) {
-		//console.log(msg);
-		let val = msg.value;
+	// 定位页面到编组RP
+	function _goToRp2(val) {
 		if (val) {
 			let escapedVal = $.escapeSelector(val); // 转义特殊字符
 			let $target = $(`ul li[tabindex=${escapedVal}]`);
 			if ($target.length) {
 				let targetPosition = $target.position().top + $elm.scrollTop();
-				//console.log($target[0], $target.offset().top, targetPosition);
 				$elm.animate({ scrollTop: targetPosition - 90 }, 300);
 			}
 		}
+	}
+
+	// 当二级标题选项被点击, 滚动页面到对应的rp 项
+	scope.onGroupsChange = function (msg) {
+		let val = msg.value;
+		if (val) {
+			reminder(val);
+			_goToRp2(val);
+		}
 	};
 
-	scope.on("go_rp", function (e, msg) {
-		scope.onGroupsChange({ value: msg });
+	// replayCtrl会广播事件
+	scope.on("_goToRp", function (e, msg) {
+		//console.info(3333, e, msg);
+		_goToRp2(msg);
 	});
-    
-    scope.on('_setRpBefore', function (e, msg) {
-        _setRpBefore = msg.title;
-    });
+
+	scope.on("_setRpBefore", function (e, msg) {
+		_setRpBefore = msg.title;
+	});
 
 	// 筛选line
 	scope.filterLine = function () {
@@ -534,7 +566,7 @@ brick.reg("rpListCtrl", function (scope) {
 		scope.emit("createReplay", rpForm);
 	};
 
-    // 快捷方式到line
+	// 快捷方式到line
 	scope.linkToLine = function (e, msg) {
 		let escapedVal = $.escapeSelector(msg); // 转义特殊字符
 		let arr = escapedVal.split(/[-_:：]+/gim);
@@ -542,7 +574,7 @@ brick.reg("rpListCtrl", function (scope) {
 		arr.forEach((v, i) => {
 			selectors += `,ul li[data-title*="${v}"]`;
 		});
-        console.log(11111, selectors);
+		console.log(11111, selectors);
 		let $target = $(selectors);
 		if ($target.length) {
 			let targetPosition = $target.position().top + $elm.scrollTop();
@@ -554,8 +586,8 @@ brick.reg("rpListCtrl", function (scope) {
 	};
 
 	// ---------------------------------------------------------------------------------------
-    
-    // 当rp 数据增删改
+
+	// 当rp 数据增删改
 	scope.on("rp.change", function (e, data) {
 		setList(data);
 	});
@@ -628,9 +660,7 @@ brick.reg("rpListCtrl", function (scope) {
 		console.log("on ic-select.change, to submit();", msg);
 		submit();
 		if (msg.name === "日内.资金方向") {
-			let arr = [...lines, ...msg.value];
-			let uniqueArr = [...new Set(arr)];
-			scope.render("lineLinks", { model: uniqueArr});
+			createLineLinks(msg.value);
 		}
 		// let data = $elm.find('[ic-form="rp"]').icForm();
 		// let $th = $(this);

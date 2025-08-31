@@ -25,6 +25,7 @@ export default function () {
     let model = {};
     let isAction = false; // 是否处于激活状态
 
+    // 监听添加或修改rp项 事件
     scope.on('setRp', function (e, data) {
         brick.view.to('setRp');
         isAction = true;
@@ -33,6 +34,7 @@ export default function () {
         render();
     });
 
+    // 监听 tag 被选择事件
     scope.on(TAG_SELECT_CHANGE, function (e, data) {
         console.log('ON_TAG_SELECT_CHANGE', data);
         if(isAction){
@@ -59,7 +61,7 @@ export default function () {
 
     // ajax请求服务端前的表单数据处理
     this.before = function (fields) {
-        console.log(222, fields);
+        console.log('ajax setRp before', fields);
         if(fields.line){
             alert('不应该是line =》' + fields.title);
             return false;
@@ -70,6 +72,7 @@ export default function () {
     };
 
 
+    // 完成修改或添加rp
     this.done = function (data) {
         scope.emit('rp.change', data);
         brick.view.to('rpList');
