@@ -1,5 +1,37 @@
 [
 	{
+		"title": "实际上越怂越容易买到垃圾票",
+		"id": "id_1757083404727_32203",
+		"type": "复盘&计划",
+		"caution": "",
+		"warning": "",
+		"comment": "",
+		"alias": "",
+		"group": "",
+		"alias2": "",
+		"level": "4990",
+		"role": "31",
+		"input": "",
+		"re": "true",
+		"content": "",
+		"options": [],
+		"timestamp": "1757083404727"
+	},
+	{
+		"id": "id_1756999143425_09987",
+		"type": "复盘&计划",
+		"caution": "光伏、储能、固态电池",
+		"content": "",
+		"freeze": "",
+		"line": "true",
+		"level": "629",
+		"role": "5",
+		"input": "个股序列、备注、预案",
+		"title": "新能源",
+		"options": [],
+		"timestamp": 1756999143425
+	},
+	{
 		"id": "id_1756611214715_67535",
 		"type": "复盘&计划",
 		"caution": "",

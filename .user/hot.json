@@ -101,7 +101,7 @@
 	},
 	{
 		"id": "数字货币",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1748527356692
 	},
 	{
@@ -231,7 +231,7 @@
 	},
 	{
 		"id": "DeepSeek",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1738717351839
 	},
 	{
@@ -611,7 +611,7 @@
 	},
 	{
 		"id": "创新药",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1722789740639
 	},
 	{
@@ -691,7 +691,7 @@
 	},
 	{
 		"id": "苹果",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1718159922636
 	},
 	{
@@ -916,7 +916,7 @@
 	},
 	{
 		"id": "AI",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1709435416242
 	},
 	{
@@ -941,7 +941,7 @@
 	},
 	{
 		"id": "储能",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1704904055615
 	},
 	{
@@ -951,12 +951,12 @@
 	},
 	{
 		"id": "消费电子",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1703692763520
 	},
 	{
 		"id": "光伏",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1703392539246
 	},
 	{
@@ -996,7 +996,7 @@
 	},
 	{
 		"id": "鲲鹏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1693849437961
 	},
 	{
@@ -1061,7 +1061,7 @@
 	},
 	{
 		"id": "华为",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1675788052630
 	},
 	{
