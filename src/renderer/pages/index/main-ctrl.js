@@ -373,7 +373,7 @@ brick.reg('mainCtrl', function (scope) {
 
     if (utils.isTradingDate()) {
         utils.timer('9:00', () => {
-            //scope.openReminder();
+            scope.openReminder();
         });
         utils.timer('12:45', () => {
             //scope.openReminder();

@@ -4,9 +4,25 @@ html, body {
   margin: 0;
 }
 
+#timerBox {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 1px 2px 3px #cfcfcf;
+}
+
+#memo{
+  pre{
+    width:100%;
+    font-size:1.3em;
+  }
+}
+
 .wrapper {
   height: 100vh;
   display: flex;
+  padding-top: 42px;
 
   .h-wrapper {
     flex: 1;
@@ -18,12 +34,10 @@ html, body {
       padding: 1rem;
       border-left: solid 1px #ccc;
 
-      &:nth-child(0){
-        flex:1 1 30%;
+      &:nth-child(0) {
+        flex: 1 1 60%;
       }
-      &:nth-child(1){
-        flex: 1 1 30%;
-      }
+
       &:last-child {
         flex: 1 1 40%;
       }
