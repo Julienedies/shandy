@@ -1,5 +1,35 @@
 [
 	{
+		"id": "量子",
+		"selected": true,
+		"timestamp": 1761246563364
+	},
+	{
+		"id": "充电桩",
+		"selected": false,
+		"timestamp": 1760549961193
+	},
+	{
+		"id": "稀土",
+		"selected": false,
+		"timestamp": 1760017585118
+	},
+	{
+		"id": "甲醇",
+		"selected": false,
+		"timestamp": 1759081550230
+	},
+	{
+		"id": "绿氢",
+		"selected": false,
+		"timestamp": 1759081544312
+	},
+	{
+		"id": "模拟芯片",
+		"selected": false,
+		"timestamp": 1757869364477
+	},
+	{
 		"id": "锂矿",
 		"selected": false,
 		"timestamp": 1754928349087
@@ -246,7 +276,7 @@
 	},
 	{
 		"id": "核电",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1736296983336
 	},
 	{
@@ -356,7 +386,7 @@
 	},
 	{
 		"id": "短剧",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1729606219301
 	},
 	{
@@ -526,7 +556,7 @@
 	},
 	{
 		"id": "深圳",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1724601127274
 	},
 	{
@@ -611,7 +641,7 @@
 	},
 	{
 		"id": "创新药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1722789740639
 	},
 	{
@@ -696,7 +726,7 @@
 	},
 	{
 		"id": "PCB",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1717697823568
 	},
 	{
@@ -921,7 +951,7 @@
 	},
 	{
 		"id": "液冷",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1709435389857
 	},
 	{
@@ -946,7 +976,7 @@
 	},
 	{
 		"id": "核聚变",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1704329443336
 	},
 	{
@@ -956,7 +986,7 @@
 	},
 	{
 		"id": "光伏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1703392539246
 	},
 	{
@@ -1016,7 +1046,7 @@
 	},
 	{
 		"id": "存储芯片",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1689608707882
 	},
 	{
@@ -1026,7 +1056,7 @@
 	},
 	{
 		"id": "英伟达",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1685407879348
 	},
 	{
@@ -1036,7 +1066,7 @@
 	},
 	{
 		"id": "CPO",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1679493252776
 	},
 	{
@@ -1086,7 +1116,7 @@
 	},
 	{
 		"id": "国企",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1672761397190
 	},
 	{
