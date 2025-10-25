@@ -254,6 +254,22 @@ brick.reg("mainCtrl", function (scope) {
 			let cacheKey = helper.getImgKey(f);
 			let value = viewerCacheJo.get(cacheKey);
 
+			// 修复蓝屏重启丢失的viewer.josn部分数据
+			// if (value) {
+			// 	let obj3 = { img: f };
+			// 	if (value.tags && value.tags.length) {
+			// 		obj3.tags = value.tags;
+			// 	}
+			// 	if (value.system && value.system.length) {
+			// 		obj3.system = value.system;
+			// 	}
+				
+			// 	if(obj3.system || obj3.tags){
+			// 		console.log(i, obj3);
+			// 		//viewerJodb.set(obj3);
+			// 	}
+			// }
+
 			// 貌似没有标记的img每次都要遍历, 好像不是，默认会存一个空{ tags: [], system: [] }，下次就是undefined
 			if (!value) {
 				value = {};
