@@ -1,5 +1,15 @@
 [
 	{
+		"id": "福建",
+		"selected": true,
+		"timestamp": 1761674487726
+	},
+	{
+		"id": "海峡",
+		"selected": true,
+		"timestamp": 1761674482852
+	},
+	{
 		"id": "量子",
 		"selected": true,
 		"timestamp": 1761246563364
@@ -386,7 +396,7 @@
 	},
 	{
 		"id": "短剧",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1729606219301
 	},
 	{
@@ -556,7 +566,7 @@
 	},
 	{
 		"id": "深圳",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1724601127274
 	},
 	{
@@ -726,7 +736,7 @@
 	},
 	{
 		"id": "PCB",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1717697823568
 	},
 	{
@@ -756,7 +766,7 @@
 	},
 	{
 		"id": "光刻",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1716814876792
 	},
 	{
@@ -811,7 +821,7 @@
 	},
 	{
 		"id": "航天",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1715266894420
 	},
 	{
@@ -1056,7 +1066,7 @@
 	},
 	{
 		"id": "英伟达",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1685407879348
 	},
 	{
@@ -1066,7 +1076,7 @@
 	},
 	{
 		"id": "CPO",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1679493252776
 	},
 	{
