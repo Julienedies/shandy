@@ -254,7 +254,7 @@ brick.reg("mainCtrl", function (scope) {
 			let cacheKey = helper.getImgKey(f);
 			let value = viewerCacheJo.get(cacheKey);
 
-			// 修复蓝屏重启丢失的viewer.josn部分数据
+			// 修复蓝屏重启丢失的viewer.josn部分数据； 把目录缓存viewer数据复制到viewer.json
 			// if (value) {
 			// 	let obj3 = { img: f };
 			// 	if (value.tags && value.tags.length) {
@@ -271,6 +271,7 @@ brick.reg("mainCtrl", function (scope) {
 			// }
 
 			// 貌似没有标记的img每次都要遍历, 好像不是，默认会存一个空{ tags: [], system: [] }，下次就是undefined
+			// 这个操作主要用于从viewer.json 复制数据到 对应的月目录，优化数据读取
 			if (!value) {
 				value = {};
 				let obj = viewerJodb.get2(f, "img") || { tags: [], system: [] };
@@ -284,7 +285,12 @@ brick.reg("mainCtrl", function (scope) {
 				value.system = arr2;
 
 				//viewerCacheJo.set(cacheKey, obj); // 避免频繁读写文件，影响效率
-				cacheJson[cacheKey] = value;
+				if(value.tags.length || value.system.length || obj.tradeInfo) {
+					cacheJson[cacheKey] = value;
+				} else {
+					//delete cacheJson[cacheKey];
+				}
+				
 			}
 
 			value.tags = value.tags || [];
