@@ -69,7 +69,7 @@ app.post('/cls_news/', (req, res) => {
     let msg = data.msg;
     console.log('/cls_news', msg);
     io.emit('cls_news', msg);
-    res.send(`cls_news: ok`);
+    res.send({msg: `cls_news: ok`});
 });
 
 app.use('/web/', express.static(webStaticDir));
