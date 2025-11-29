@@ -1,5 +1,12 @@
 [
 	{
+		"id": "id_1763898443555_05799",
+		"type": "",
+		"level": "0",
+		"text": ".ad-box {\n  display: none;\n}\n\n.telegraph-content{\n  max-height: 1990px!important;\n}\n.o-h{\noverflow: visible!important;\n}\ntable.w-100p.watch-table *{\n  font-size:16px;\n}\ntable.w-100p.watch-table td{\n  height: 74px;\n  padding: 18px;\n}\n\n.watch-quote-reason{\n  width: 100%;\n  -webkit-line-clamp: 13;\n  overflow: visible;\n  line-height: 1.4;\n  \n}",
+		"timestamp": 1763898443555
+	},
+	{
 		"id": "id_1755409970776_8461",
 		"type": "",
 		"level": "0",
