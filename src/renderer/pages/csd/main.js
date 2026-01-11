@@ -12,9 +12,12 @@ import './style.scss'
 import fs from 'fs'
 import path from 'path'
 
+
 import _ from 'lodash'
 
 import jhandy from 'jhandy'
+
+
 import utils from '../../../libs/utils'
 import jo from '../../../libs/jsono'
 import stockJo from '../../../libs/jsono-stock'
@@ -259,7 +262,7 @@ brick.reg('mainCtrl', function (scope) {
 
             stocks.forEach(([code, name]) => {
                 // 通达信自定义数据格式：北证以2标志、上证以1标志、深证以0标志；
-                let szh = /^[6]/.test(code) ? 1 : /^[84]/.test(code) ? 2 : 0;
+                let szh = /^[6]/.test(code) ? 1 : /^[9]/.test(code) ? 2 : 0;
                 let sjo = jo(path.resolve(csdPath, `./s/${ code }.json`));  // ${ sjo.get('概念y') }
                 let concept = `${ sjo.get('概念') } ${ sjo.get('概念x') } ${ sjo.get('概念z') } ${ sjo.get('行业') } ${ sjo.get('产品') } ${ sjo.get('业务') }`;
                 let hotStr = '';
