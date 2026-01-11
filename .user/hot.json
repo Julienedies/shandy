@@ -41,7 +41,7 @@
 	},
 	{
 		"id": "海峡",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1761674482852
 	},
 	{
@@ -141,7 +141,7 @@
 	},
 	{
 		"id": "脑机",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1751385666590
 	},
 	{
@@ -306,12 +306,12 @@
 	},
 	{
 		"id": "DeepSeek",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1738717351839
 	},
 	{
 		"id": "AI智能体",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1737877376695
 	},
 	{
@@ -346,7 +346,7 @@
 	},
 	{
 		"id": "数据中心",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1735172905526
 	},
 	{
@@ -386,7 +386,7 @@
 	},
 	{
 		"id": "新零售",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1734005332565
 	},
 	{
@@ -401,7 +401,7 @@
 	},
 	{
 		"id": "抖音",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1733059250057
 	},
 	{
@@ -671,7 +671,7 @@
 	},
 	{
 		"id": "光纤",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1723092275536
 	},
 	{
@@ -926,7 +926,7 @@
 	},
 	{
 		"id": "锂电池",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1711501398350
 	},
 	{
@@ -961,7 +961,7 @@
 	},
 	{
 		"id": "大飞机",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1710895395426
 	},
 	{
