@@ -1,5 +1,12 @@
 [
 	{
+		"id": "id_1768116088126_82952",
+		"type": "git",
+		"level": "0",
+		"text": "git log  --data=iso",
+		"timestamp": 1768116088126
+	},
+	{
 		"id": "id_1763898443555_05799",
 		"type": "",
 		"level": "0",
@@ -135,7 +142,7 @@
 		"timestamp": 1723552997275
 	},
 	{
-		"text": "git log --date=format:\"%Y-%m-%d\"\n",
+		"text": "git log --date=format:\"%Y-%m-%d\"\n\ngit log  --data=iso\n",
 		"type": "git",
 		"id": "id_1719159343301_6826",
 		"timestamp": 1719159343301,
