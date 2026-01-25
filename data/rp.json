@@ -270,7 +270,7 @@
 		"caution": "",
 		"content": "",
 		"options": [],
-		"freeze": "",
+		"freeze": "true",
 		"line": "true",
 		"level": "630",
 		"role": "5",

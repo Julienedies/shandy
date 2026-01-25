@@ -1,7 +1,7 @@
 [
 	{
 		"id": "工业互联",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1768323512788
 	},
 	{
@@ -146,7 +146,7 @@
 	},
 	{
 		"id": "脑机",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1751385666590
 	},
 	{
@@ -361,7 +361,7 @@
 	},
 	{
 		"id": "脑机接口",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1734520119829
 	},
 	{
@@ -751,7 +751,7 @@
 	},
 	{
 		"id": "特斯拉",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1720016638941
 	},
 	{
@@ -866,7 +866,7 @@
 	},
 	{
 		"id": "航空",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1715096479988
 	},
 	{
@@ -1056,7 +1056,7 @@
 	},
 	{
 		"id": "先进封装",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1700044304730
 	},
 	{
@@ -1071,7 +1071,7 @@
 	},
 	{
 		"id": "卫星",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1693962374343
 	},
 	{
@@ -1096,7 +1096,7 @@
 	},
 	{
 		"id": "存储芯片",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1689608707882
 	},
 	{
