@@ -245,7 +245,7 @@ brick.reg('mainCtrl', function (scope) {
 
 
     // ------------------------------------------------------------------------------
-    // 创建通达信自定义数据文件
+    // 创建通达信自定义数据文件, 生成编号为99的自定义数据，用于标识当前热点
     this.createTdxFile = function (fields) {
         console.log(fields);
         let $th = $(this).icSetLoading();
@@ -293,10 +293,12 @@ brick.reg('mainCtrl', function (scope) {
             });
     };
 
+    //
     this.onHotPointsChange = function (msg) {
         hotDob.set({id: msg.change, selected: msg.selected});
     };
 
+    //
     this.removeHot = function (e, id) {
         hotDob.remove(id);
         renderHotPoints();
