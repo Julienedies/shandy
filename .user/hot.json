@@ -1,5 +1,55 @@
 [
 	{
+		"id": "白银",
+		"selected": true,
+		"timestamp": 1771867727771
+	},
+	{
+		"id": "智谱",
+		"selected": true,
+		"timestamp": 1771867209498
+	},
+	{
+		"id": "石油",
+		"selected": true,
+		"timestamp": 1770571936644
+	},
+	{
+		"id": "中药",
+		"selected": false,
+		"timestamp": 1770337862469
+	},
+	{
+		"id": " 新零售",
+		"selected": false,
+		"timestamp": 1770311587690
+	},
+	{
+		"id": "光伏设备",
+		"selected": false,
+		"timestamp": 1770138191523
+	},
+	{
+		"id": "AI营销",
+		"selected": false,
+		"timestamp": 1769714443459
+	},
+	{
+		"id": "算力租赁",
+		"selected": false,
+		"timestamp": 1769475866478
+	},
+	{
+		"id": "3D打印",
+		"selected": false,
+		"timestamp": 1769362094770
+	},
+	{
+		"id": "钙钛矿",
+		"selected": false,
+		"timestamp": 1769345343809
+	},
+	{
 		"id": "工业互联",
 		"selected": false,
 		"timestamp": 1768323512788
@@ -31,7 +81,7 @@
 	},
 	{
 		"id": "磷化工",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1762474084902
 	},
 	{
@@ -296,7 +346,7 @@
 	},
 	{
 		"id": "阿里",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1739295073445
 	},
 	{
@@ -316,7 +366,7 @@
 	},
 	{
 		"id": "AI智能体",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1737877376695
 	},
 	{
@@ -351,7 +401,7 @@
 	},
 	{
 		"id": "数据中心",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1735172905526
 	},
 	{
@@ -406,7 +456,7 @@
 	},
 	{
 		"id": "抖音",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1733059250057
 	},
 	{
@@ -676,7 +726,7 @@
 	},
 	{
 		"id": "光纤",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1723092275536
 	},
 	{
@@ -776,7 +826,7 @@
 	},
 	{
 		"id": "PCB",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1717697823568
 	},
 	{
@@ -786,7 +836,7 @@
 	},
 	{
 		"id": "商业航天",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1717075385222
 	},
 	{
@@ -806,7 +856,7 @@
 	},
 	{
 		"id": "光刻",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1716814876792
 	},
 	{
@@ -911,7 +961,7 @@
 	},
 	{
 		"id": "黄金",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1712031538867
 	},
 	{
@@ -1116,7 +1166,7 @@
 	},
 	{
 		"id": "CPO",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1679493252776
 	},
 	{
@@ -1156,7 +1206,7 @@
 	},
 	{
 		"id": "机器人",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1674148171248
 	},
 	{
