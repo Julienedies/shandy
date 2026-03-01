@@ -252,7 +252,8 @@ brick.reg("mainCtrl", function (scope) {
 			// 附加标签信息 和 交易系统信息
 			let f = o.f;
 			let cacheKey = helper.getImgKey(f);
-			let value = viewerCacheJo.get(cacheKey);
+			let localCacheValue = viewerCacheJo.get(cacheKey);
+			console.log(cacheKey, localCacheValue);
 
 			// 修复蓝屏重启丢失的viewer.josn部分数据； 把目录缓存viewer数据复制到viewer.json
 			// if (value) {
@@ -270,37 +271,41 @@ brick.reg("mainCtrl", function (scope) {
 			// 	}
 			// }
 
-			// 貌似没有标记的img每次都要遍历, 好像不是，默认会存一个空{ tags: [], system: [] }，下次就是undefined
+			// 貌似没有标记的img每次都要遍历, 所以默认要存一个空{ tags: [], system: [] }，否则每次都要重复遍历服务器数据，很费时间
 			// 这个操作主要用于从viewer.json 复制数据到 对应的月目录，优化数据读取
-			if (!value) {
-				value = {};
+			if (!localCacheValue) {
+				console.log(f, '没有缓存值.');
+				localCacheValue = {};
 				let obj = viewerJodb.get2(f, "img") || { tags: [], system: [] };
 				let arr = obj.tags || [];
 				let arr2 = obj.system || [];
 
-				value.tradeInfoText = obj.tradeInfo;
+				localCacheValue.tradeInfoText = obj.tradeInfo;
 
-				value.tags = arr;
+				localCacheValue.tags = arr;
 
-				value.system = arr2;
+				localCacheValue.system = arr2;
 
 				//viewerCacheJo.set(cacheKey, obj); // 避免频繁读写文件，影响效率
-				if(value.tags.length || value.system.length || obj.tradeInfo) {
-					cacheJson[cacheKey] = value;
-				} else {
-					//delete cacheJson[cacheKey];
-				}
+				// if(localCacheValue.tags.length || localCacheValue.system.length || obj.tradeInfo) {
+				// 	cacheJson[cacheKey] = localCacheValue;
+				// } else {
+				// 	//delete cacheJson[cacheKey];
+				// }
+				
+				// 没有标记的图片就为localCacheValue存一个空数组，否则每次都要重复遍历所有图片
+				cacheJson[cacheKey] = localCacheValue;
 				
 			}
 
-			value.tags = value.tags || [];
-			value.system = value.system || [];
+			localCacheValue.tags = localCacheValue.tags || [];
+			localCacheValue.system = localCacheValue.system || [];
 
-			o.tradeInfoText = value.tradeInfo;
-			o.tags = value.tags.map((v) => {
+			o.tradeInfoText = localCacheValue.tradeInfo;
+			o.tags = localCacheValue.tags.map((v) => {
 				return tagsMap[v];
 			});
-			o.system = value.system.map((v) => {
+			o.system = localCacheValue.system.map((v) => {
 				return systemMap[v];
 			});
 		});
@@ -382,7 +387,7 @@ brick.reg("mainCtrl", function (scope) {
 			console.log("urls =>", urls);
 			scope.urls = urls;
 
-		if (isOrigin && !viewDate) {
+			if (isOrigin && !viewDate) {
 				viewByDay(urls);
 			}
 		} else {
@@ -392,17 +397,23 @@ brick.reg("mainCtrl", function (scope) {
 				return $.icMsg(`${dir}\r不存在!`);
 			}
 			$imgDir.val(dir);
-
+			
+			console.log('helper.getImages start');
 			urls = helper.getImages(dir, { isReverse, isRefresh, isOrigin });
+			console.log('helper.getImages end');
 
+			console.log('helper.getViewerCacheJo start');
 			viewerCacheJo = helper.getViewerCacheJo(dir);
+			console.log('helper.getViewerCacheJo end');
 
 			if (!urls.length) {
 				return $.icMsg("no images.");
 			}
 
 			// 绑定附加viewer数据
+			console.log('bindViewerData start');
 			bindViewerData(urls);
+			console.log('bindViewerData end');
 
 			// 如果按是否标记对图片进行过滤
 			if (isFilterByMark) {
