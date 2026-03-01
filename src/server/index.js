@@ -67,7 +67,7 @@ app.get('/message/', (req, res) => {
 app.post('/cls_news/', (req, res) => {
     let data = req.body;
     let msg = data.msg;
-    console.log('/cls_news', msg);
+    //console.log('/cls_news', msg);
     io.emit('cls_news', msg);
     res.send({msg: `cls_news: ok`});
 });
