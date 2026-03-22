@@ -59,11 +59,11 @@ body {
   //border: solid 1px blue;
 
   &.active {
-    top: 24%;
-    bottom: 68%;
+    top: 28%;
+    bottom: 64%;
     left: 20%;
     right: 20%;
-    max-height: 62%;
+    max-height: 48%;
     display: grid;
     place-items: center;
     //align-items: center; /* 垂直居中 */
@@ -91,7 +91,7 @@ body {
 }
 
 .blink2 {
-  animation: blink2 0.5s 10 linear;
+  animation: blink2 0.5s 4 linear;
 }
 
 @keyframes blink {

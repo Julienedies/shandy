@@ -63,7 +63,7 @@ function getNews (news) {
     if(news !== newsArr[0]) {
         newsArr.unshift(news);
     }
-    newsArr.splice(3);
+    newsArr.splice(1);
     console.log(newsArr);
     newsArr.forEach((v, i) => {
         result += `<p>${ v }</p>`;
