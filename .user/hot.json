@@ -1,27 +1,32 @@
 [
 	{
-		"id": "绿色电力",
+		"id": "医药",
 		"selected": true,
+		"timestamp": 1775154451653
+	},
+	{
+		"id": "绿色电力",
+		"selected": false,
 		"timestamp": 1773761537361
 	},
 	{
 		"id": "煤炭",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1773621448584
 	},
 	{
 		"id": "化肥",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1773429706615
 	},
 	{
 		"id": "绿电",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1773236171941
 	},
 	{
 		"id": "PVC",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1772981131880
 	},
 	{
@@ -136,7 +141,7 @@
 	},
 	{
 		"id": "谷歌",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1763402906365
 	},
 	{
@@ -236,7 +241,7 @@
 	},
 	{
 		"id": "特高压",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1753191175963
 	},
 	{
@@ -426,12 +431,12 @@
 	},
 	{
 		"id": "DeepSeek",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1738717351839
 	},
 	{
 		"id": "AI智能体",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1737877376695
 	},
 	{
@@ -461,7 +466,7 @@
 	},
 	{
 		"id": "变压器",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1735490618722
 	},
 	{
@@ -666,7 +671,7 @@
 	},
 	{
 		"id": "医疗",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1725892130680
 	},
 	{
@@ -806,7 +811,7 @@
 	},
 	{
 		"id": "创新药",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1722789740639
 	},
 	{
@@ -891,7 +896,7 @@
 	},
 	{
 		"id": "PCB",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1717697823568
 	},
 	{
@@ -901,7 +906,7 @@
 	},
 	{
 		"id": "商业航天",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1717075385222
 	},
 	{
@@ -936,7 +941,7 @@
 	},
 	{
 		"id": "电力",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1716216465935
 	},
 	{
@@ -1136,7 +1141,7 @@
 	},
 	{
 		"id": "储能",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1704904055615
 	},
 	{
@@ -1201,17 +1206,17 @@
 	},
 	{
 		"id": "次新",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1691642162355
 	},
 	{
 		"id": "减肥药",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1691628674122
 	},
 	{
 		"id": "存储芯片",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1689608707882
 	},
 	{
@@ -1251,7 +1256,7 @@
 	},
 	{
 		"id": "算力",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1676295454175
 	},
 	{
@@ -1316,7 +1321,7 @@
 	},
 	{
 		"id": "芯片",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1610979058468
 	},
 	{
