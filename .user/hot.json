@@ -81,7 +81,7 @@
 	},
 	{
 		"id": "石油",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1770571936644
 	},
 	{
@@ -276,7 +276,7 @@
 	},
 	{
 		"id": "天然气",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1750004469105
 	},
 	{
@@ -896,7 +896,7 @@
 	},
 	{
 		"id": "PCB",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1717697823568
 	},
 	{
@@ -941,7 +941,7 @@
 	},
 	{
 		"id": "电力",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1716216465935
 	},
 	{
@@ -1121,7 +1121,7 @@
 	},
 	{
 		"id": "液冷",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1709435389857
 	},
 	{
@@ -1211,12 +1211,12 @@
 	},
 	{
 		"id": "减肥药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1691628674122
 	},
 	{
 		"id": "存储芯片",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1689608707882
 	},
 	{
@@ -1256,7 +1256,7 @@
 	},
 	{
 		"id": "算力",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1676295454175
 	},
 	{
@@ -1321,7 +1321,7 @@
 	},
 	{
 		"id": "芯片",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1610979058468
 	},
 	{
