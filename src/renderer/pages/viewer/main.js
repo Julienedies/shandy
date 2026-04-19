@@ -76,7 +76,7 @@ brick.reg("mainCtrl", function (scope) {
 	let isFilterByMark = false; // 根据图片是否被标记进行过滤
 	let filterInput = ""; // 过滤关键词
 
-	let viewerCacheJo; // 针对目录的viewer tag 、system 数据
+	let viewerCacheJo; // // 这是局部目录缓存, 针对目录的viewer tag 、system 数据
 	let urlsByDayMap = {}; // 图片按日期分组map
 	let viewDate; // 要查看的日期
 
@@ -313,19 +313,25 @@ brick.reg("mainCtrl", function (scope) {
 		viewerCacheJo.save();
 	}
 
-	// viewer mark change , 同时保存数据到相关目录
+	// viewer mark change ,需要更新本地viewerCacheJo
 	scope.on("viewer-change", function (e, obj) {
 		console.log("viewer-change", e, obj);
 		//let cacheKey = helper.getImgKey(obj.img);
 		//viewerCacheJo.set(cacheKey, obj);
-		// 服务器端会更新
-		setTimeout(() => {
-			viewerCacheJo.refresh();
-		}, 1000);
+		
+		// 服务器端会更新, 客户端需要延迟才是获取新数据，但依然不太确定
+		// 更新数据放到 viewer-close里更有效率和准确， viewer-change事件 太频繁， 很多无效消耗
+		//setTimeout(() => {
+			//viewerCacheJo.refresh();
+		//}, 1000);
+		//
 	});
 
 	// viewer关闭后，因为markTag标签改变，需要更新urls数据
+	// 这里可以优化，并不是每次一定会有标签改变，也许只是单纯查看
 	scope.on("viewer-close", function () {
+		// 首先 更新 本地数据
+		viewerCacheJo.refresh();
 		bindViewerData(scope.urls);
 		scope._init(scope.urls);
 	});
@@ -403,7 +409,7 @@ brick.reg("mainCtrl", function (scope) {
 			console.log('helper.getImages end');
 
 			console.log('helper.getViewerCacheJo start');
-			viewerCacheJo = helper.getViewerCacheJo(dir);
+			viewerCacheJo = helper.getViewerCacheJo(dir);  // 这是局部目录缓存
 			console.log('helper.getViewerCacheJo end');
 
 			if (!urls.length) {
