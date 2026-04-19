@@ -7,7 +7,7 @@
     "dev": "node .build/webpack/dev-runner.js",
     "dev:main": "cross-env NODE_ENV=develoment webpack --config .build/webpack/main.config.js --watch",
     "dev:renderer": "cross-env NODE_ENV=develoment webpack --config .build/webpack/renderer.config.js --watch",
-    "pro": "npm run pro:main && npm run pro:renderer && npm run start",
+    "pro": "npm run pro:renderer && npm run pro:main && npm run start",
     "pro:main": "cross-env NODE_ENV=production webpack --config .build/webpack/main.config.js",
     "pro:renderer": "cross-env NODE_ENV=production webpack --config .build/webpack/renderer.config.js",
     "web": "nodemon .build/webpack/web-dev-runner.js --watch .build/webpack/web-dev-runner.js .build/webpack/web.config.js",
