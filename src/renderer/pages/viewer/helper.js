@@ -171,7 +171,7 @@ export default {
                 return item;
             } catch (err) {
                 console.error(err);
-                alert("解析时间错误：" + f);
+                alert("supplement: 解析时间错误, " + f);
             }
         });
     },

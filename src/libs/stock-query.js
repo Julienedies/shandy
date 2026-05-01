@@ -10,12 +10,12 @@ function trim (str) {
 }
 
 /**
- * @param words {String} words = '天首发展000611' or '天首发展' or 'TCL 集团'
+ * @param words {String} words = '天首发展000611' or '天首发展' or 'TCL 集团'  || 002714 || 2714
  * @returns {Object}  {code:'000002', name:'万科'} or {name:undefined, code:undefined} or {}
  */
 export default function (words) {
 
-    console.info('参数 =>', words);
+    console.info('stock-query 参数 =>', words);
 
     if (!words) return {};
 
@@ -31,18 +31,18 @@ export default function (words) {
     }
 
     // 使用完整code匹配
-    let code_arr = words.match(/\b\d{6}(?!\d)/);
-    if (code_arr) {
+    let codeArr = words.match(/\b\d{6}(?!\d)/);
+    if (codeArr) {
         let result = stocks.filter(stock => {
-            return code_arr[0] === stock[0];
+            return codeArr[0] === stock[0];
         });
         result = result[0] || [];
-        return {code: code_arr[0], name: result[1]};
+        return {code: codeArr[0], name: result[1]};
     }
 
     // 对包含名称和代码的words进行处理； 这是早前通过百度截图识字时用到的(?:.+)?
     let arr = words.match(/([\u4e00-\u9fa5][\u4e00-\u9fa5\s]*[\u4e00-\u9fa5][A]?)(\d{4,6})?/) || ['', '', ''];
-    console.info(arr);
+    //console.info(arr);
     let name = arr[1] || words;
     let code = arr[2];
 
@@ -55,13 +55,13 @@ export default function (words) {
         return words === stock[1] || code === stock[0];
     });
 
-    console.log(result && result[0]);
+    //console.log(result && result[0]);
 
     result = result.length ? result : stocks.filter(stock => {
         return name === stock[1] || stock[0] === code;
     });
 
-    console.log(result && result[0]);
+    //console.log(result && result[0]);
 
     // 模糊匹配
     result = result.length ? result : stocks.filter(stock => {
@@ -70,7 +70,7 @@ export default function (words) {
         let isXDR = /^[C]|[N]|(?:XD)|(?:XR)|(?:DR)/img;
 
         if(isXDR.test(name)){
-            console.log('模糊匹配: ', name, sName, name1);
+            //console.log('模糊匹配: ', name, sName, name1);
             let xName = name.replace(isXDR, '');
             return xName.includes(name);
         }
@@ -80,7 +80,7 @@ export default function (words) {
         return r_name.test(name1);
     });
 
-    console.log(result && result[0]);
+    //console.log(result && result[0]);
 
     let stock = result[0] || [];
 

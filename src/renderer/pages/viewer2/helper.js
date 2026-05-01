@@ -9,7 +9,7 @@ import path from 'path'
 import glob from 'glob'
 import moment from 'moment'
 
-import electron from 'electron'
+//import electron from 'electron'
 
 import _ from 'lodash'
 import ocr from '../../../libs/baidu-ocr'
@@ -18,7 +18,7 @@ import stockQuery from '../../../libs/stock-query'
 import ju from '../../../libs/jodb-user'
 import jsonDbFactory from '../../../libs/jsono-short'
 
-const nativeImage = electron.nativeImage;
+//const nativeImage = electron.nativeImage;
 const viewerDbFactory = jsonDbFactory('viewer');
 // const viewerJsonDb = ju('viewer');
 
@@ -160,14 +160,19 @@ export default {
             let f2 = f.replace('上午', 'am').replace('下午', 'pm');
 
             //console.log(f);
-
-            let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s*[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/);
-            //console.log(f2, arr2);
-            let m = moment(arr2[0], "YYYY-MM-DD Ah.m.s");
-            item = { f: fullPath, c: +m, d: arr2[1], code };
-            // 保存到缓存
-            //imagesJsonDb.set(key, item);
-            return item;
+            
+            try {
+                let arr2 = f2.match(/(\d{4}-\d{2}-\d{2})\s*[ap]m\d{1,2}\.\d{1,2}\.\d{1,2}/);
+                //console.log(f2, arr2);
+                let m = moment(arr2[0], "YYYY-MM-DD Ah.m.s");
+                item = { f: fullPath, c: +m, d: arr2[1], code };
+                // 保存到缓存
+                //imagesJsonDb.set(key, item);
+                return item;
+            } catch (err) {
+                console.error(err);
+                alert("解析时间错误：" + f);
+            }
         });
     },
 
@@ -305,12 +310,12 @@ export default {
      * @returns {string} 图片dataUrl
      */
     crop: function (imgPath, crop) {
-        console.info('crop => ', imgPath, crop);
-        let img = nativeImage.createFromPath(imgPath);
-        img = img.crop(crop);
-        let dataUrl = img.toDataURL();
-        console.info("%c", `border:solid 1px blue;padding:20px 240px; line-height:60px;background:url(${dataUrl}) no-repeat 0 0`);
-        return dataUrl;
+        // console.info('crop => ', imgPath, crop);
+        // let img = nativeImage.createFromPath(imgPath);
+        // img = img.crop(crop);
+        // let dataUrl = img.toDataURL();
+        // console.info("%c", `border:solid 1px blue;padding:20px 240px; line-height:60px;background:url(${dataUrl}) no-repeat 0 0`);
+        // return dataUrl;
     },
 
 

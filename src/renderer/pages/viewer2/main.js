@@ -9,23 +9,21 @@ import "../../css/common/common.scss";
 import "./icViewer.scss";
 import "./style.scss";
 
+import $ from "jquery";
+
 import brick from "@julienedies/brick";
 import "@julienedies/brick/dist/brick.css";
 
 import "../../js/common.js";
 
 import fs from "fs";
-import $ from "jquery";
-import debugMenu from "debug-menu";
 
-import userJo from "../../../libs/jsono-user";
 import ju from "../../../libs/jodb-user";
 import jd from "../../../libs/jodb-data";
 import setting from "../../../libs/setting";
 import utils from "../../../libs/utils";
 
 import helper from "./helper";
-import helper2 from "./helper2";
 import backTop from "../../js/back-top";
 
 import historyModel from "./historyModel";
@@ -34,11 +32,6 @@ import markTagCtrl from "./markTag-ctrl";
 import listCtrl from "./list-ctrl";
 import attachCtrl from "./attach-ctrl";
 
-// activate context menu
-debugMenu.install();
-
-// 交易记录json
-// const tradeArr = userJo('SEL', []).get();
 
 const viewerJodb = ju("viewer", [], { key: "img" });
 const tagsJodb = jd("tags");
@@ -56,9 +49,11 @@ window.TAGS_FILTER = [
 	"行情驱动因素",
 ];
 
-brick.services.reg("historyModel", historyModel);
+
 
 brick.set("ic-viewer-interval", setting.get("viewer.interval") || 10);
+
+brick.services.reg("historyModel", historyModel);
 
 brick.reg("mainCtrl", function (scope) {
 	backTop();
@@ -247,38 +242,42 @@ brick.reg("mainCtrl", function (scope) {
 
 		let cacheJson = viewerCacheJo.json;
 
-		// 遍历，绑定交易、标签等数据
+		// 遍历，从本地缓存json里绑定交易、标签等数据， 如果本地缓存没有数据的话，从服务器json获取数据，并保存到本地json
 		urls.forEach((o, i) => {
 			// 附加标签信息 和 交易系统信息
 			let f = o.f;
 			let cacheKey = helper.getImgKey(f);
-			let value = viewerCacheJo.get(cacheKey);
+			let localCacheValue = viewerCacheJo.get(cacheKey);
+			//console.log(cacheKey, localCacheValue);
 
-			// 貌似没有标记的img每次都要遍历, 好像不是，默认会存一个空{ tags: [], system: [] }，下次就是undefined
-			if (!value) {
-				value = {};
+			// 貌似没有标记的img每次都要遍历, 所以默认要存一个空{ tags: [], system: [] }，否则每次都要重复遍历服务器数据，很费时间
+			// 这个操作主要用于从viewer.json 复制数据到 对应的月目录，优化数据读取
+			if (!localCacheValue) {
+				console.log(f, '没有缓存值.');
+				localCacheValue = {};
 				let obj = viewerJodb.get2(f, "img") || { tags: [], system: [] };
 				let arr = obj.tags || [];
 				let arr2 = obj.system || [];
 
-				value.tradeInfoText = obj.tradeInfo;
+				localCacheValue.tradeInfoText = obj.tradeInfo;
 
-				value.tags = arr;
+				localCacheValue.tags = arr;
 
-				value.system = arr2;
+				localCacheValue.system = arr2;
 
-				//viewerCacheJo.set(cacheKey, obj); // 避免频繁读写文件，影响效率
-				cacheJson[cacheKey] = value;
+				// 没有标记的图片就为localCacheValue存一个空数组，否则每次都要重复遍历所有图片
+				cacheJson[cacheKey] = localCacheValue;
+				
 			}
 
-			value.tags = value.tags || [];
-			value.system = value.system || [];
+			localCacheValue.tags = localCacheValue.tags || [];
+			localCacheValue.system = localCacheValue.system || [];
 
-			o.tradeInfoText = value.tradeInfo;
-			o.tags = value.tags.map((v) => {
+			o.tradeInfoText = localCacheValue.tradeInfo;
+			o.tags = localCacheValue.tags.map((v) => {
 				return tagsMap[v];
 			});
-			o.system = value.system.map((v) => {
+			o.system = localCacheValue.system.map((v) => {
 				return systemMap[v];
 			});
 		});
@@ -304,10 +303,8 @@ brick.reg("mainCtrl", function (scope) {
 	});
 
 	// 按单日分类图片
-	function viewByDay() {
+	function viewByDay(urls) {
 		urlsByDayMap = {}; // 清空上次月份的单日数据
-		let urls = scope.urls;
-		console.log(urls.length);
 		urls.forEach((v, i) => {
 			let d = v.d;
 			let arr = (urlsByDayMap[d] = urlsByDayMap[d] || []);
@@ -362,8 +359,8 @@ brick.reg("mainCtrl", function (scope) {
 			console.log("urls =>", urls);
 			scope.urls = urls;
 
-		if (isOrigin && !viewDate) {
-				viewByDay();
+			if (isOrigin && !viewDate) {
+				viewByDay(urls);
 			}
 		} else {
 			dir = dir || scope.imgDir;
@@ -372,17 +369,23 @@ brick.reg("mainCtrl", function (scope) {
 				return $.icMsg(`${dir}\r不存在!`);
 			}
 			$imgDir.val(dir);
-
+			
+			console.log('helper.getImages start');
 			urls = helper.getImages(dir, { isReverse, isRefresh, isOrigin });
+			console.log('helper.getImages end');
 
+			console.log('helper.getViewerCacheJo start');
 			viewerCacheJo = helper.getViewerCacheJo(dir);
+			console.log('helper.getViewerCacheJo end');
 
 			if (!urls.length) {
 				return $.icMsg("no images.");
 			}
 
 			// 绑定附加viewer数据
+			console.log('bindViewerData start');
 			bindViewerData(urls);
+			console.log('bindViewerData end');
 
 			// 如果按是否标记对图片进行过滤
 			if (isFilterByMark) {
@@ -402,7 +405,7 @@ brick.reg("mainCtrl", function (scope) {
 			// 原始顺序模式下显示日列表
 			// 需要清空上次的数据
 			if (isOrigin) {
-				viewByDay(); // 按单日分类图片
+				viewByDay(urls); // 按单日分类图片
 				if (viewDate) {
 					urls = urlsByDayMap[viewDate];
 					scope.urls = urls;
@@ -422,55 +425,13 @@ brick.reg("mainCtrl", function (scope) {
 	// 图片目录路径选中后回调
 	scope.onSelectImgDirDone = (dir) => {
 		if (!dir) return;
+		viewDate = undefined;
 		scope.imgDir = dir;
 		historyModel.add(dir);
 		scope.init(dir);
 	};
 
-	// 图片剪切测试  fields => {x: 3140, y: 115, width: 310, height: 50}
-	// scope.crop = {x: 3140, y: 115, width: 310, height: 50};
-	// p2415q => {x: 3100, y: 117, width: 360, height: 50};
-	// 328b => {x: 3200, y: 77, width: 190, height: 37};
-	scope.cropTest = function (fields) {
-		console.info(fields);
-		let { x, y, width, height } = fields || scope.crop;
-		let crop = (scope.crop = { x, y, width, height });
-		let sn = $("#sn").val();
-		let dataUrl = helper.crop(scope.urls[sn].f, fields);
-		$("#view_crop").attr("src", dataUrl);
-		setting.refresh().set("viewer.crop", crop);
-	};
 
-	// 图片列表重命名
-	scope.ocrRename = function (e) {
-		let $th = $(this);
-		let $view_crop = $("#view_crop");
-		let $ocr_text = $("#ocr_text");
-
-		let that = this;
-
-		let arr = scope.urls.map((o) => {
-			return o.f;
-		});
-
-		let crop = scope.crop;
-
-		if (!crop) {
-			return alert("请先进行剪切测试!");
-		}
-
-		$(this).icSetLoading();
-
-		helper.renameByOcr(arr, crop, (info) => {
-			if (info) {
-				$view_crop.attr("src", info.dataUrl);
-				$ocr_text.text(info.words);
-			} else {
-				$th.icClearLoading();
-				scope.init();
-			}
-		});
-	};
 
 	// 显示某个历史目录
 	scope.show = function (e, dir) {

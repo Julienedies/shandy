@@ -55,8 +55,9 @@
   }
 
   &.horizontal {
-    width: 72% !important;
+    width: 74.2% !important;
     top: 55% !important;
+    left:-10px!important;
   }
 }
 
@@ -80,7 +81,7 @@
 
 #ic-viewer-info,
 #ic-viewer-handle {
-  left: 74% !important;
+  left: 74.2% !important;
   right: auto !important;
   top: auto !important;
   bottom: auto !important;

@@ -101,7 +101,8 @@ export default function (scope) {
         imgObj[val.name] = val.value;
         console.log('markTagCtrl:onChange', imgObj);
 
-        scope.emit('viewer-change', imgObj);
+        // 移动到post succeed 里触发
+        //scope.emit('viewer-change', imgObj);
 
         // let viewerJodb = getViewerDb();
         // viewerJodb.set(imgObj);
@@ -113,6 +114,8 @@ export default function (scope) {
             contentType: 'application/json',
             data: JSON.stringify(imgObj)
         }).done((data) => {
+            // 这时才真正改变成功
+            scope.emit('viewer-change', imgObj);
             console.log('viewer post ok: ', data[0]);
         }).fail((msg) => {
             alert(msg);
