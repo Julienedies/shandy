@@ -37,7 +37,7 @@ const entryJs =
   glob.sync(
     path.join(
       context,
-      "renderer/pages/+(stock|monitor|note|rp|rp2|system2|tags2|_test)/**/main.js"
+      "renderer/pages/+(stock|monitor|note|note2|rp|rp2|system2|tags2|_test)/**/main.js"
     )
   ) || [];
 
