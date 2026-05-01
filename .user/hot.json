@@ -1,7 +1,27 @@
 [
 	{
-		"id": "宁德时代",
+		"id": "激光器",
+		"selected": false,
+		"timestamp": 1777232287080
+	},
+	{
+		"id": "工业气体",
 		"selected": true,
+		"timestamp": 1777045933680
+	},
+	{
+		"id": "覆铜板",
+		"selected": true,
+		"timestamp": 1776869352846
+	},
+	{
+		"id": "华为算力",
+		"selected": true,
+		"timestamp": 1776626253273
+	},
+	{
+		"id": "宁德时代",
+		"selected": false,
 		"timestamp": 1776085721285
 	},
 	{
@@ -436,7 +456,7 @@
 	},
 	{
 		"id": "DeepSeek",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1738717351839
 	},
 	{
@@ -816,7 +836,7 @@
 	},
 	{
 		"id": "创新药",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1722789740639
 	},
 	{
@@ -871,12 +891,12 @@
 	},
 	{
 		"id": "铜箔",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1720051991111
 	},
 	{
 		"id": "特斯拉",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1720016638941
 	},
 	{
@@ -1251,7 +1271,7 @@
 	},
 	{
 		"id": "昇腾",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1676336860960
 	},
 	{
@@ -1266,7 +1286,7 @@
 	},
 	{
 		"id": "华为",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1675788052630
 	},
 	{
