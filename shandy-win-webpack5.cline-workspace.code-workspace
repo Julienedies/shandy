@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "shandy-win-webpack5",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "off",
+		"files.autoSaveDelay": 7000
+	}
+}
