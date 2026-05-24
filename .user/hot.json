@@ -1,12 +1,47 @@
 [
 	{
+		"id": "电子陶瓷",
+		"selected": true,
+		"timestamp": 1779627721974
+	},
+	{
+		"id": "MLCC",
+		"selected": true,
+		"timestamp": 1779465135174
+	},
+	{
+		"id": "电容",
+		"selected": true,
+		"timestamp": 1779465126034
+	},
+	{
+		"id": "长鑫",
+		"selected": false,
+		"timestamp": 1779034961363
+	},
+	{
+		"id": "三代半导体",
+		"selected": false,
+		"timestamp": 1778802241967
+	},
+	{
+		"id": "碳化硅",
+		"selected": false,
+		"timestamp": 1778802223130
+	},
+	{
+		"id": "光学",
+		"selected": false,
+		"timestamp": 1778156328602
+	},
+	{
 		"id": "激光器",
 		"selected": false,
 		"timestamp": 1777232287080
 	},
 	{
 		"id": "工业气体",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1777045933680
 	},
 	{
@@ -16,7 +51,7 @@
 	},
 	{
 		"id": "华为算力",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1776626253273
 	},
 	{
@@ -46,7 +81,7 @@
 	},
 	{
 		"id": "绿电",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1773236171941
 	},
 	{
@@ -66,7 +101,7 @@
 	},
 	{
 		"id": "煤化工",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1772958710208
 	},
 	{
@@ -821,7 +856,7 @@
 	},
 	{
 		"id": "光纤",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1723092275536
 	},
 	{
@@ -951,7 +986,7 @@
 	},
 	{
 		"id": "光刻",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1716814876792
 	},
 	{
@@ -1076,7 +1111,7 @@
 	},
 	{
 		"id": "锂电池",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1711501398350
 	},
 	{
@@ -1231,7 +1266,7 @@
 	},
 	{
 		"id": "次新",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1691642162355
 	},
 	{
@@ -1271,7 +1306,7 @@
 	},
 	{
 		"id": "昇腾",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1676336860960
 	},
 	{
@@ -1286,7 +1321,7 @@
 	},
 	{
 		"id": "华为",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1675788052630
 	},
 	{
@@ -1301,7 +1336,7 @@
 	},
 	{
 		"id": "机器人",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1674148171248
 	},
 	{
