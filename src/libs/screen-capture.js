@@ -63,8 +63,8 @@ export default function (args, options = {}) {
 
             sources.forEach(function (source) {
 
-                console.info(source);
-                console.info(os.tmpdir());
+                // console.info(source);
+                // console.info(os.tmpdir());
 
                 let img = source.thumbnail;
 
