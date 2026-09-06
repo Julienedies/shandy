@@ -178,13 +178,21 @@ brick.reg("mainCtrl", function (scope) {
 	scope.onFilterByTag = function (e, tag) {
 		console.log(tag);
 		e.stopPropagation();
-		filterInput = tag;
-		$elm.find("#filterInput").val(tag);
-		let urls = _filterByInput(scope.urls, filterInput);
-		scope._init(urls);
+		let $input = $elm.find("#filterInput");
+		
+		if (filterInput === tag) {
+			filterInput = "";
+			$input.val(filterInput);
+			scope.init();
+		} else {
+			filterInput = tag;
+			$input.val(filterInput);
+			let urls = _filterByInput(scope.urls, filterInput);
+			scope._init(urls);
+		}
 	};
 
-	// 根据输入的关键词过滤图片urls
+	// 根据输入的关键词过滤图片urls, 回车键触发
 	scope.onFilterByInput = function (e) {
 		filterInput = $(this).val();
 		if (filterInput) {
@@ -194,10 +202,32 @@ brick.reg("mainCtrl", function (scope) {
 			scope.init();
 		}
 	};
-
-	scope.setFilterInput = function (e) {
-		$(this).val("焦点or龙头or昨日or最近");
+	
+	// 搜索按钮点击触发
+	scope.search = function (e) {
+		filterInput = $(this).prev().val();
+		if (filterInput) {
+			let urls = _filterByInput(scope.urls, filterInput);
+			scope._init(urls);
+		} else {
+			scope.init();
+		}
 	};
+	
+	// 重置过滤
+	scope.resetTheFilter = function (e) {
+		let $input = $(this).prevAll('input[type="search"]');
+		$input.val('');
+		scope.onFilterByInput.apply($input);
+	};
+
+	// 预设过滤
+	scope.setFilterInput = function (e) {
+		let $input = $(this).prevAll('input[type="search"]');
+		$input.val("焦点or龙头or昨日or最近");
+		scope.onFilterByInput.apply($input);
+	};
+	
 
 	/**
 	 * 根据输入的关键词过滤图片urls
@@ -206,6 +236,8 @@ brick.reg("mainCtrl", function (scope) {
 	 * @returns {Array}
 	 */
 	function _filterByInput(urls, filterInput) {
+		
+		// 把输入按or分割为数组，逐项检查值匹配情况
 		String.prototype.J_includes = function (input) {
 			let arr = input.split(/or/gim);
 			for (let i = 0; i < arr.length; i++) {

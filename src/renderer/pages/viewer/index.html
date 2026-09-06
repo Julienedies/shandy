@@ -60,7 +60,15 @@
                             <input type="checkbox" class="checkbox" value="" ic-change="onFilterByMarked">
                         </label>
                         <label class="">搜索:
-                            <input style="width:13em;" type="text" id="filterInput" class="input" ic-value="{{ model.filterInput || '焦点or龙头or昨日or最近' }}" ic-form-field="filterInput" ic-dblclick="setFilterInput" ic-enter-press="onFilterByInput">
+                            <input style="width:19em;" type="search" id="filterInput" class="input"
+                             ic-value="{{ model.filterInput || '日内or列表or焦点or龙头or昨日or最近' }}"
+                             ic-form-field="filterInput"
+                             ic-dblclick="setFilterInput"
+                             ic-enter-press="onFilterByInput">
+                             
+                            <button ic-click="search">搜索</button>
+                            <button ic-click="resetTheFilter">重置</button>
+                            <button ic-click="setFilterInput">预设</button>
                         </label>
                     </div>
 
