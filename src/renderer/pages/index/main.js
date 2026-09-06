@@ -163,7 +163,9 @@ ipcRenderer.on('rts_cancel', function (event, arg) {
 // 截屏
 ipcRenderer.on('screenCapture', function (event, arg) {
 
+    // electron升级后，必须在主进程处理
     return kcAudio.play();
+    
     console.log(arg);
     let stock = stockQuery(arg.name);
 
