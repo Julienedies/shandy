@@ -37,9 +37,11 @@ remoteMain.initialize();
 
 let mainWindow;
 
+
+
 // 截屏
 function screenshot(arg) {
-        console.log(arg);
+        // console.log(arg);
         let stock = stockQuery(arg.name);
 
         screenCapture({
@@ -52,10 +54,18 @@ function screenshot(arg) {
                     .replace("(2)", `-${stock.name}`)
                     .replace(/[*]ST/gim, "ST")
                     .replace(/\.png$/, `-${stock.code}.png`);
-                fs.renameSync(imgPath, rename);
-            },
+                    
+                    try {
+                        fs.renameSync(imgPath, rename);
+                    } catch (e) {
+                        console.log("截屏出现错误，详见控制台");
+                        console.log(e);
+                    }    
+            }
         });
 }
+
+
 
 // 创建主窗口，一个渲染进程
 function createWindow () {
@@ -194,6 +204,7 @@ function ready () {
     server.on('screenshot', function (msg) {
         console.log('server 要求截屏', msg);
         screenshot(msg);  // 升级electron34后，截屏代码要运行在主进程;
+        // 渲染进程只处理截图声效
         mainWindow.webContents.send('screenCapture', msg); 
     });
 
