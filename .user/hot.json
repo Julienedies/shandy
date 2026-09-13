@@ -11,17 +11,17 @@
 	},
 	{
 		"id": "mRNA",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1787231948378
 	},
 	{
 		"id": "疫苗",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1787166505268
 	},
 	{
 		"id": "股权",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1787081869928
 	},
 	{
@@ -481,7 +481,7 @@
 	},
 	{
 		"id": "农业",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1744108360524
 	},
 	{
@@ -566,12 +566,12 @@
 	},
 	{
 		"id": "DeepSeek",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1738717351839
 	},
 	{
 		"id": "AI智能体",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1737877376695
 	},
 	{
@@ -691,7 +691,7 @@
 	},
 	{
 		"id": "短剧",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1729606219301
 	},
 	{
@@ -896,7 +896,7 @@
 	},
 	{
 		"id": "折叠屏",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1723657863211
 	},
 	{
@@ -1026,7 +1026,7 @@
 	},
 	{
 		"id": "苹果",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1718159922636
 	},
 	{
