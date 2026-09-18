@@ -3,10 +3,10 @@
 		"tdx_extern_user_file": "E:\\new_tdx64\\T0002\\signals\\extern_user.txt",
 		"csdPath": "E:\\dev\\csd",
 		"bounds": {
-			"x": 336,
-			"y": 188,
-			"width": 1490,
-			"height": 947
+			"x": 312,
+			"y": 171,
+			"width": 1493,
+			"height": 949
 		},
 		"fetchSources": [
 			"ths_new",
@@ -31,7 +31,7 @@
 	},
 	"viewer": {
 		"MQ_DIR": "E:\\dev\\simg\\目标行情",
-		"imgDir": "E:\\dev\\simg\\目标行情\\2026-09",
+		"imgDir": "E:\\dev\\simg\\交易记录\\2609",
 		"bounds": {
 			"x": 2187,
 			"y": -933,

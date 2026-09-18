@@ -86,7 +86,7 @@
 	},
 	{
 		"id": "MLCC",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1779465135174
 	},
 	{
@@ -156,7 +156,7 @@
 	},
 	{
 		"id": "化肥",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1773429706615
 	},
 	{
@@ -481,7 +481,7 @@
 	},
 	{
 		"id": "农业",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1744108360524
 	},
 	{
@@ -536,12 +536,12 @@
 	},
 	{
 		"id": "智能医疗",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1739766792598
 	},
 	{
 		"id": "AI医疗",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1739766732173
 	},
 	{
@@ -646,7 +646,7 @@
 	},
 	{
 		"id": "新零售",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1734005332565
 	},
 	{
@@ -931,7 +931,7 @@
 	},
 	{
 		"id": "光纤",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1723092275536
 	},
 	{
@@ -1456,7 +1456,7 @@
 	},
 	{
 		"id": "芯片",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1610979058468
 	},
 	{
