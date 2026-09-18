@@ -17,6 +17,8 @@ import "froala-editor/css/froala_editor.pkgd.css";
 import "froala-editor/css/froala_style.min.css";
 import "froala-editor/js/froala_editor.pkgd.min.js";
 
+import voice from "../../../libs/voice.js"
+
 import {
 	GET_TAGS_DONE,
 	DEL_TAG,
@@ -95,11 +97,12 @@ brick.reg("rpListCtrl", function (scope) {
 			key = "line." + (rp.alias || rp.title) + "." + tagType;
 		} else {
 			if (rp.alias2) {
+				// 别名2 是 一个 map结构， 用映射处理复杂输出
 				let map = getAliasMap(rp.alias2);
 				key = rp.alias + "." + (map[tagType] || tagType);
 				key = key.replace("..", ".");
 			} else if (/[.]$/gim.test(rp.alias)) {
-				// 如果以.结尾，
+				// 如果别名以.结尾，则别名为前缀， 别名 + 标签类型
 				key = rp.alias + tagType;
 			} else if (/-/gim.test(rp.alias)) {
 				key = rp.alias.replace("-", tagType);
@@ -187,7 +190,7 @@ brick.reg("rpListCtrl", function (scope) {
 
 	// 渲染rpList
 	function render() {
-		$.icMsg("render rpList");
+		//$.icMsg("render rpList");
 		let rpList = listManager.get();
 		lines = [];
 		rpList.sort((a, b) => {
@@ -269,7 +272,7 @@ brick.reg("rpListCtrl", function (scope) {
 
 	// 滚动到相关rp位置
 	function goToRp(title) {
-		$.icMsg(title);
+		//$.icMsg(title);
 		let escapedVal = $.escapeSelector(title); // 转义特殊字符
 		let $target = $(`ul li[data-title="${escapedVal}"]`);
 		console.log(`ul li[data-title*="${escapedVal}"]`);
@@ -428,9 +431,12 @@ brick.reg("rpListCtrl", function (scope) {
 		if (val) {
 			let escapedVal = $.escapeSelector(val); // 转义特殊字符
 			let $target = $(`ul li[tabindex=${escapedVal}]`);
+			let text = $target.first().find('header').text();
 			if ($target.length) {
 				let targetPosition = $target.position().top + $elm.scrollTop();
 				$elm.animate({ scrollTop: targetPosition - 90 }, 300);
+				//$.icMsg(text)
+				voice(text);
 			}
 		}
 	}
@@ -439,8 +445,8 @@ brick.reg("rpListCtrl", function (scope) {
 	scope.onGroupsChange = function (msg) {
 		let val = msg.value;
 		if (val) {
-			reminder(val);
 			_goToRp2(val);
+			//reminder(val);
 		}
 	};
 

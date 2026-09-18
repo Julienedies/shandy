@@ -2,19 +2,20 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>replays</title>
+    <title>replays---</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" href="../../../css/vendor/fontawesome/css/all.css"/>
     <link rel="stylesheet" href="../../../css/vendor/bulma/bulma.css"/>
     <script src="/set_node_modules_path.js"></script>
 </head>
 <body>
-<div id="replay" class="column shrink" ic-ctrl="replaysCtrl" style="padding-top: 0.25rem;">
+<div id="replay" class="column shrink" ic-ctrl="replaysCtrl" style="padding: 0.25rem 0 0 0;">
 
     <header>
         <div class="field is-grouped is-grouped-centered is-grouped-multiline">
             <div class="control">
                 <div class="buttons is-centered">
+                    <button class="button is-primary is-small" ic-click="toggleLeft">左收缩或展开</button>
                     <button class="button is-primary is-small" ic-click="toggle">展开或收缩</button>
                 </div>
             </div>

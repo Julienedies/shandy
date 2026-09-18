@@ -3,68 +3,107 @@
  */
 
 #replay {
+	.table {
+		margin-bottom: 20px;
+		color: #0270ee;
+		//color:#fff;
+		//background: #ea5454;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.8;
 
-  .table {
-    margin-bottom: 30px;
-    color: #0270ee;
-    //background: #ea5454;
+		th {
+			color: #fff;
+			user-select: none;
 
-    //color:#fff;
-    font-weight: 500;
-    font-size: 1.05rem;
-    line-height: 1.6;
+			a {
+				color: inherit;
+			}
+      
+			.thbox{
+				display: flex; 
+				width:100%;
+				align-items: center;
+				
+				.cycle, .dayMark, .node{
+					display: inline-block;
+					padding-right: 0em;
+					width: 5em;
+					white-space: nowrap;
+				}
+				.cycle{
+					width: 8em;
+				}
+				.node{
+					width: 11em;
+				}
+				
+				.point{
+					flex:1; 
+					padding: 0 0 0 1px; 
+					background: #fff;
+					
+					i.tab {
+						display: inline-block;
+						width: 6em;
+						margin: 0 -3px 0 0;
+						padding: 0.5rem 0.1rem 0.5rem 0.4rem;
+						border: solid 0px #dbdbdb;
+						white-space: nowrap;
+						font-size: 0.8rem;
+						font-style: normal;
+					}
+				}
+			}
+		}
 
-    th {
-      color: #fff;
+		th,
+		td {
+			padding: 0 0 0 0.4em;
+      		vertical-align: middle;
+			font-weight: 500;
 
-      a {
-        color: inherit;
-      }
-    }
+			&:nth-child(1) {
+				width: 1.6em; // 星期几
+			}
 
-    th, td {
-      padding: 0.4em;
-      font-weight: 500;
+			&:nth-child(2) {
+				width: 5em; // 日期
+			}
+		}
 
-      &:nth-child(1) {
-        width: 2em;
-      }
+		tr th:nth-child(2),
+		tr td:nth-child(2) {
+			white-space: nowrap;
+		}
 
-      &:nth-child(2) {
-        width: 7em;
-      }
-    }
+		.pre {
+			padding: 0.1rem 0.75rem;
+		}
 
-    .pre {
-      padding: 0.1rem 0.75rem;
-    }
+		.subtitle {
+			color: inherit;
+			font-size: 1em;
+		}
 
-    .subtitle {
-      color: inherit;
-      font-size: 1em;
-    }
 
-    .tag {
-      font-size: 1rem;
+		.tag {
+			font-size: 1rem;
 
-      &.ldt {
-        min-width: 8em;
-        justify-content: flex-start;
-      }
-    }
-  }
+			&.ldt {
+				min-width: 8em;
+				justify-content: flex-start;
+			}
+		}
+	}
 
-  tr th:nth-child(2), tr td:nth-child(2) {
-    white-space: nowrap;
-  }
-
-  .item {
-    padding: 0.3rem;
-  }
+	.item {
+		padding: 0.3rem;
+	}
 }
 
 // 消息面 容器
 .msgBox.shrink {
-  height: 1.4em;
-  overflow: hidden;
+	height: 1.4em;
+	overflow: hidden;
 }
