@@ -29,6 +29,21 @@ function parseImgPath (path) {
     return _isUrlPath(path) ? path : `${ FILE_PATH }=${ path }`;
 }
 
+function parseCla (dayMark) {
+    let cla = '';
+    
+    if (/高潮/.test(dayMark)){
+        cla = 'is-upsurge';
+    } else if(/反转/.test(dayMark)) {
+        cla = 'is-reverse';
+    } else if(/冰点/.test(dayMark)) {
+        cla = 'is-ice';
+    } else {
+        cla = /[进攻|修复]日/.test(dayMark)?'is-up':'is-down';
+    }
+    return cla;
+}
+
 /**
  * 统计每个标签数量
  * @param arr {Array} 标签数组
@@ -111,6 +126,7 @@ function getDayOfWeek(dateString) {
 try {
     window.parseImgName = parseImgName;
     window.parseImgPath = parseImgPath;
+    window.parseCla = parseCla;
     window.sortByPy = sortByPy;
     window.formatDate = formatDate;
     window.formatDate2 = window.J_FORMAT_DATE2 = formatDate2;
