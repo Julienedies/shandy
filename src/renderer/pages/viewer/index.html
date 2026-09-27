@@ -61,14 +61,22 @@
                         </label>
                         <label class="">搜索:
                             <input style="width:19em;" type="search" id="filterInput" class="input"
-                             ic-value="{{ model.filterInput || '日内or列表or焦点or龙头or昨日or最近' }}"
+                             ic-value="{{ model.filterInput || '日内or列表or龙头or焦点or昨日or最近' }}"
                              ic-form-field="filterInput"
                              ic-dblclick="setFilterInput"
                              ic-enter-press="onFilterByInput">
                              
-                            <button ic-click="search">搜索</button>
-                            <button ic-click="resetTheFilter">重置</button>
-                            <button ic-click="setFilterInput">预设</button>
+                            <button class="button is-medium" ic-click="search">搜索</button>
+                            <button class="button is-medium" ic-click="resetTheFilter">重置</button>
+                            <button class="button is-medium" ic-click="setFilterInput">预设</button>
+                            <br/>
+                            <span style="display: inline-block; text-align: right;" class="tags has-addons">
+                                <i class="tag is-medium" ic-click="searchForSelf">undefined</i>
+                                <i class="tag is-medium" ic-click="searchForSelf">龙头</i>
+                                <i class="tag is-medium" ic-click="searchForSelf">日内</i>
+                                <i class="tag is-medium" ic-click="searchForSelf">日焦</i>
+                                <i class="tag is-medium" ic-click="searchForSelf">列表or日焦</i>
+                            </span>
                         </label>
                     </div>
 
@@ -117,12 +125,15 @@
                 <li ic-for="i,v in model" ic-class="{{ v.end ? 'is-end':'' }}">
                     <h5>
                         <span class="imgTag" style="display: inline-block; min-width:42em;" url="file://{{v.f}}">{{v.f}} </span>
+                        
+                        <span ic-for="k,o in v.system" class="tag is-medium is-link" ic-click="onFilterByTag:{{ o && o.name }}">{{ o && o.name }}</span>
+                        <!--is-dark is-black is-success is-danger is-info is-link is-warning  is-primary  -->
+                                                
                         <span ic-for="k,o in v.tags"
                               ic-class="tag is-medium {{o ? o.type=='交易错误'?'is-black' : o.text.includes('亏损') ? 'is-primary': o.text.includes('盈利')?'is-danger':'is-info' : ''}}" ic-click="onFilterByTag:{{ o.text }}">
                             {{ o && o.text }}
                         </span>
-                        <span ic-for="k,o in v.system" class="tag is-medium is-link" ic-click="onFilterByTag:{{ o && o.name }}">{{ o && o.name }}</span>
-                        <!--is-dark is-black is-success is-danger is-info is-link is-warning  is-primary  -->
+ 
                     </h5>
                 </li>
 

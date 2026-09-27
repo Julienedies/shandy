@@ -57,7 +57,7 @@ brick.reg('replaysCtrl', function (scope) {
     };
 
     scope.filterByKey = function (e, key) {
-        $elm.find('tr').not(`tr[tabindex=${ key }]`).toggle();
+        $elm.find('tr:not(:first-child)').not(`tr[tabindex=${ key }]`).toggle();
     };
 
     $.get(`/stock/replay?date=${ date || '' }`).done((data) => {

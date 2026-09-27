@@ -228,6 +228,14 @@ brick.reg("mainCtrl", function (scope) {
 		scope.onFilterByInput.apply($input);
 	};
 	
+	// 预设过滤
+	scope.searchForSelf = function (e) {
+		let $th = $(this);
+		let $input = $th.parent().prevAll('input[type="search"]');
+		$input.val($th.text());
+		scope.onFilterByInput.apply($input);
+	};
+	
 
 	/**
 	 * 根据输入的关键词过滤图片urls
@@ -285,7 +293,7 @@ brick.reg("mainCtrl", function (scope) {
 			let f = o.f;
 			let cacheKey = helper.getImgKey(f);
 			let localCacheValue = viewerCacheJo.get(cacheKey);
-			console.log(cacheKey, localCacheValue);
+			//console.log(cacheKey, localCacheValue);
 
 			// 修复蓝屏重启丢失的viewer.josn部分数据； 把目录缓存viewer数据复制到viewer.json
 			// if (value) {
