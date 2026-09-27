@@ -184,6 +184,14 @@ function startRenderer() {
 								// },
 								static: {
 									directory: path.resolve(__dirname, "../../dist/electron/"),
+									// 关闭静态目录的文件监听(WDS 默认开启):
+									// dev 下 writeToDisk=true,每次重建 webpack 都会重写 dist/electron 里的 js,
+									// 而静态监听一发现文件变化,客户端就"立刻" location.reload()(没有延迟/去抖)
+									// —— 既抢掉了 css 的热替换,又可能刷到"写了一半"的 js
+									// (页面由 electron 主进程 express.static 直接读盘),结果就是页面半成品、
+									// 部分 js 不执行,过一会手动 F5 才正常。
+									// 关掉后刷新统一交给 HMR:css 走 style-loader 热替换,js/html 改动走 abort → 整页刷新。
+									watch: false,
 								},
 								devMiddleware: {
 									writeToDisk: true,
