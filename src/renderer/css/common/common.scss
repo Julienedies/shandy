@@ -197,13 +197,17 @@ a.tag, a.tag:hover {
 
 .is-up {
   //background: #ea5454;
-  background: #fa5858;
+  background: #cf3434;
   color: #fff;
 }
 
 .is-up2 {
   //background: #ea5454;
-  background: #d43c3c;
+  background-image: url('img/bg-replay.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #d43c3c;
+  background-color: #7d0303;
   color: #fff;
 }
 
@@ -216,6 +220,23 @@ a.tag, a.tag:hover {
 .is-place2 {
   color: #fff;
   background: #959494;
+}
+
+// 反转，否极泰来
+.is-reverse {
+  color: #fff;
+  background: #83a506;
+}
+// 高潮 
+.is-upsurge {
+  color: #fff;
+  background: #b607b8;
+}
+
+// 冰点 
+.is-ice {
+  color: #fff;
+  background: #2b7738;
 }
 
 // .tag:not(body).is-info {
