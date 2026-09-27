@@ -26,7 +26,7 @@
 	},
 	{
 		"id": "粮食",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1787080827835
 	},
 	{
@@ -71,7 +71,7 @@
 	},
 	{
 		"id": "半导体",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1781118086186
 	},
 	{
@@ -86,7 +86,7 @@
 	},
 	{
 		"id": "MLCC",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1779465135174
 	},
 	{
@@ -546,7 +546,7 @@
 	},
 	{
 		"id": "腾讯",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1739717542122
 	},
 	{
@@ -931,7 +931,7 @@
 	},
 	{
 		"id": "光纤",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1723092275536
 	},
 	{
@@ -1256,7 +1256,7 @@
 	},
 	{
 		"id": "液冷",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1709435389857
 	},
 	{
@@ -1341,7 +1341,7 @@
 	},
 	{
 		"id": "次新",
-		"selected": false,
+		"selected": true,
 		"timestamp": 1691642162355
 	},
 	{
@@ -1371,7 +1371,7 @@
 	},
 	{
 		"id": "CPO",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1679493252776
 	},
 	{
@@ -1456,7 +1456,7 @@
 	},
 	{
 		"id": "芯片",
-		"selected": true,
+		"selected": false,
 		"timestamp": 1610979058468
 	},
 	{

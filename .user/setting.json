@@ -14,7 +14,7 @@
 			"ths_c"
 		],
 		"fetchByStocks": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
-		"fetchFromIndex": 305,
+		"fetchFromIndex": 158,
 		"stocksCsvFile": "E:\\dev\\csd\\沪深Ａ股20210606.txt",
 		"stocksJsonFile": "E:\\dev\\csd\\stocks.json",
 		"hotCsvFile": "E:\\dev\\simg\\JX.txt",
