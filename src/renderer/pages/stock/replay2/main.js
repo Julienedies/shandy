@@ -56,10 +56,12 @@ brick.reg('replaysCtrl', function (scope) {
         window.open(url);
     };
 
+    //
     scope.filterByKey = function (e, key) {
         $elm.find('tr:not(:first-child)').not(`tr[tabindex=${ key }]`).toggle();
     };
 
+    //
     $.get(`/stock/replay?date=${ date || '' }`).done((data) => {
         console.log(data);
         let arr = Array.isArray(data) ? data : [data];
